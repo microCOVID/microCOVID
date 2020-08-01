@@ -16,7 +16,7 @@ import { SelectControl } from './components/SelectControl'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
-// const SAVED_DATA_KEY = 'savedEntries'
+const SAVED_DATA_KEY = 'savedEntries'
 
 export const App = () => {
   const previousData = JSON.parse(localStorage.getItem(FORM_STATE_KEY) || '{}')
@@ -57,28 +57,45 @@ export const App = () => {
     window.location.reload()
   }
 
-  // TODO: implement saving
-  // const showSaveModel = () => {}
-  // const saveCalculation = () => {}
+  // Save and restore data
+  const [showSaveForm, setShowSaveForm] = useState(false)
+  const [saveName, setSaveName] = useState('')
 
+  const saved: Array<[string, any]> = JSON.parse(
+    localStorage.getItem(SAVED_DATA_KEY) || '[]'
+  )
+
+  const saveCalculation = () => {
+    const newData = {
+      persistedAt: Date.now(),
+      prevalence,
+      riskProfile,
+      interaction,
+      personCount,
+      setting,
+      distance,
+      duration,
+      theirMask,
+      yourMask,
+    }
+
+    saved.push([saveName, newData])
+    localStorage.setItem(SAVED_DATA_KEY, JSON.stringify(saved))
+
+    setSaveName('')
+    setShowSaveForm(false)
+  }
+
+  const loadData = (index: number) => {
+    const data = saved[index]
+    if (data) {
+      localStorage.setItem(FORM_STATE_KEY, JSON.stringify(data[1]))
+      window.location.reload()
+    }
+  }
+
+  // Risk calculation
   const points = useMemo(() => {
-    // Store data for refresh
-    localStorage.setItem(
-      FORM_STATE_KEY,
-      JSON.stringify({
-        persistedAt: Date.now(),
-        prevalence,
-        riskProfile,
-        interaction,
-        personCount,
-        setting,
-        distance,
-        duration,
-        theirMask,
-        yourMask,
-      })
-    )
-
     let points = Prevalence[prevalence].multiplier
 
     // Person risk
@@ -99,6 +116,23 @@ export const App = () => {
         Interaction[interaction].multiplier *
         Math.min((duration || 60) / 60.0, 4)
     }
+
+    // Store data for refresh
+    localStorage.setItem(
+      FORM_STATE_KEY,
+      JSON.stringify({
+        persistedAt: Date.now(),
+        prevalence,
+        riskProfile,
+        interaction,
+        personCount,
+        setting,
+        distance,
+        duration,
+        theirMask,
+        yourMask,
+      })
+    )
 
     return points > 10 ? Math.round(points) : points.toFixed(2)
   }, [
@@ -128,15 +162,34 @@ export const App = () => {
               microCOVIDs from a given activity.
             </p>
 
-            <p>
-              <button
-                type='button'
-                className='btn btn-secondary'
-                onClick={resetForm}
-              >
-                Reset form
-              </button>
-            </p>
+            <div className='mb-4'>
+              <div className='row'>
+                <div className='col'>
+                  <button
+                    type='button'
+                    className='btn btn-secondary'
+                    onClick={resetForm}
+                  >
+                    Reset form
+                  </button>
+                </div>
+                <div className='col'>
+                  {saved.length > 0 && (
+                    <select
+                      className='form-control'
+                      onChange={(e) => loadData(parseInt(e.target.value))}
+                    >
+                      <option>Load a saved result</option>
+                      {saved.map((v, i) => (
+                        <option key={i} value={i}>
+                          {v[0]}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+                </div>
+              </div>
+            </div>
 
             <Card title='Location/Prevalence'>
               <p>
@@ -229,15 +282,38 @@ export const App = () => {
                 {interaction === 'repeated' && '/week'}
               </h1>
 
-              {/* <p>
-                <button
-                  type='button'
-                  className='btn btn-primary'
-                  onClick={showSaveModel}
-                >
-                  Save parameters
-                </button>
-              </p> */}
+              {!showSaveForm && (
+                <p>
+                  <button
+                    type='button'
+                    className='btn btn-primary'
+                    onClick={() => setShowSaveForm(true)}
+                  >
+                    Save parameters
+                  </button>
+                </p>
+              )}
+
+              {showSaveForm && (
+                <div className='input-group'>
+                  <input
+                    className='form-control'
+                    type='text'
+                    placeholder='Enter metric name'
+                    value={saveName}
+                    onChange={(e) => setSaveName(e.target.value)}
+                  />
+                  <div className='input-group-append'>
+                    <button
+                      type='button'
+                      className='btn btn-info'
+                      onClick={saveCalculation}
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              )}
             </Card>
           </div>
         </div>
