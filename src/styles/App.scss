@@ -1,5 +1,14 @@
 // Override default variables before the import
-$body-bg: #ccc;
+@import './variables.scss';
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+input,
+select {
+  color: $gray-800 !important;
+}
+
+.container {
+  overflow: hidden;
+}
