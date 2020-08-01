@@ -15,10 +15,11 @@ import { Card } from './components/Card'
 import { SelectControl } from './components/SelectControl'
 
 const localStorage = window.localStorage
-const STORAGE_KEY = 'formData'
+const FORM_STATE_KEY = 'formData'
+// const SAVED_DATA_KEY = 'savedEntries'
 
 export const App = () => {
-  const previousData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')
+  const previousData = JSON.parse(localStorage.getItem(FORM_STATE_KEY) || '{}')
 
   // Location risk state
   const [prevalence, setPrevalence] = useState<string>(
@@ -51,10 +52,21 @@ export const App = () => {
     previousData.yourMask || 'masked'
   )
 
-  const persist = () => {
+  const resetForm = () => {
+    localStorage.setItem(FORM_STATE_KEY, JSON.stringify({}))
+    window.location.reload()
+  }
+
+  // TODO: implement saving
+  // const showSaveModel = () => {}
+  // const saveCalculation = () => {}
+
+  const points = useMemo(() => {
+    // Store data for refresh
     localStorage.setItem(
-      STORAGE_KEY,
+      FORM_STATE_KEY,
       JSON.stringify({
+        persistedAt: Date.now(),
         prevalence,
         riskProfile,
         interaction,
@@ -66,11 +78,6 @@ export const App = () => {
         yourMask,
       })
     )
-  }
-
-  const points = useMemo(() => {
-    // Store data for refresh
-    persist()
 
     let points = Prevalence[prevalence].multiplier
 
@@ -119,6 +126,16 @@ export const App = () => {
               calculator tool to help you estimate and multiply the person risk,
               activity risk, and any discounts, to get an estimated number of
               microCOVIDs from a given activity.
+            </p>
+
+            <p>
+              <button
+                type='button'
+                className='btn btn-secondary'
+                onClick={resetForm}
+              >
+                Reset form
+              </button>
             </p>
 
             <Card title='Location/Prevalence'>
@@ -211,6 +228,16 @@ export const App = () => {
                 {points} points
                 {interaction === 'repeated' && '/week'}
               </h1>
+
+              {/* <p>
+                <button
+                  type='button'
+                  className='btn btn-primary'
+                  onClick={showSaveModel}
+                >
+                  Save parameters
+                </button>
+              </p> */}
             </Card>
           </div>
         </div>
