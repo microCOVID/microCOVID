@@ -9,58 +9,69 @@ import {
   Distance,
   TheirMask,
   YourMask,
-  FormValue,
 } from './data'
 
-const Card: React.FunctionComponent<{ title: string }> = (props) => (
-  <div className='card mb-3'>
-    <div className='card-header'>{props.title}</div>
-    <div className='card-body'>{props.children}</div>
-  </div>
-)
+import { Card } from './components/Card'
+import { SelectControl } from './components/SelectControl'
 
-const SelectControl: React.FunctionComponent<{
-  id: string
-  setter: (value: any) => void
-  value: string
-  data: { [key: string]: FormValue }
-  label?: string
-}> = (props) => (
-  <div className='form-group'>
-    {props.label && <label htmlFor={props.id}>{props.label}</label>}
-    <select
-      id={props.id}
-      className='form-control form-control-lg'
-      onChange={(e) => props.setter(e.target.value)}
-      value={props.value}
-    >
-      {Object.keys(props.data).map((value, index) => (
-        <option key={index} value={value}>
-          {props.data[value].label}
-        </option>
-      ))}
-      <optgroup label=''></optgroup>
-    </select>
-  </div>
-)
+const localStorage = window.localStorage
+const STORAGE_KEY = 'formData'
 
 export const App = () => {
+  const previousData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')
+
   // Location risk state
-  const [prevalence, setPrevalence] = useState<string>('sf')
+  const [prevalence, setPrevalence] = useState<string>(
+    previousData.prevalence || 'sf'
+  )
 
   // Person risk state
-  const [riskProfile, setRiskProfile] = useState<string>('average')
-  const [interaction, setInteraction] = useState<string>('oneTime')
-  const [personCount, setPersonCount] = useState<number>(1)
+  const [riskProfile, setRiskProfile] = useState<string>(
+    previousData.riskProfile || 'average'
+  )
+  const [interaction, setInteraction] = useState<string>(
+    previousData.interaction || 'oneTime'
+  )
+  const [personCount, setPersonCount] = useState<number>(
+    previousData.personCount || 1
+  )
 
   // Activity risk state
-  const [setting, setSetting] = useState<string>('outdoor')
-  const [distance, setDistance] = useState<string>('normal')
-  const [duration, setDuration] = useState<number>(60)
-  const [theirMask, setTheirMask] = useState<string>('masked')
-  const [yourMask, setYourMask] = useState<string>('masked')
+  const [setting, setSetting] = useState<string>(
+    previousData.setting || 'outdoor'
+  )
+  const [distance, setDistance] = useState<string>(
+    previousData.distance || 'normal'
+  )
+  const [duration, setDuration] = useState<number>(previousData.duration || 60)
+  const [theirMask, setTheirMask] = useState<string>(
+    previousData.theirMask || 'masked'
+  )
+  const [yourMask, setYourMask] = useState<string>(
+    previousData.yourMask || 'masked'
+  )
+
+  const persist = () => {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        prevalence,
+        riskProfile,
+        interaction,
+        personCount,
+        setting,
+        distance,
+        duration,
+        theirMask,
+        yourMask,
+      })
+    )
+  }
 
   const points = useMemo(() => {
+    // Store data for refresh
+    persist()
+
     let points = Prevalence[prevalence].multiplier
 
     // Person risk
