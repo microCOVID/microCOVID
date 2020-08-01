@@ -9,12 +9,38 @@ import {
   Distance,
   TheirMask,
   YourMask,
+  FormValue,
 } from './data'
 
 const Card: React.FunctionComponent<{ title: string }> = (props) => (
   <div className='card mb-3'>
     <div className='card-header'>{props.title}</div>
     <div className='card-body'>{props.children}</div>
+  </div>
+)
+
+const SelectControl: React.FunctionComponent<{
+  id: string
+  setter: (value: any) => void
+  value: string
+  data: { [key: string]: FormValue }
+  label?: string
+}> = (props) => (
+  <div className='form-group'>
+    {props.label && <label htmlFor={props.id}>{props.label}</label>}
+    <select
+      id={props.id}
+      className='form-control form-control-lg'
+      onChange={(e) => props.setter(e.target.value)}
+      value={props.value}
+    >
+      {Object.keys(props.data).map((value, index) => (
+        <option key={index} value={value}>
+          {props.data[value].label}
+        </option>
+      ))}
+      <optgroup label=''></optgroup>
+    </select>
   </div>
 )
 
@@ -89,21 +115,12 @@ export const App = () => {
                 Prevalence options are rough estimates for a given place and
                 time.
               </p>
-              <div className='form-group'>
-                <select
-                  id='prevalence'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setPrevalence(e.target.value)}
-                  value={prevalence}
-                >
-                  {Object.keys(Prevalence).map((value, index) => (
-                    <option key={index} value={value}>
-                      {Prevalence[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='prevalence'
+                setter={setPrevalence}
+                value={prevalence}
+                data={Prevalence}
+              />
             </Card>
 
             <Card title='Person Risk'>
@@ -117,77 +134,39 @@ export const App = () => {
                 />
               </div>
 
-              <div className='form-group'>
-                <label htmlFor='riskProfile'>Person(s) Risk Profile</label>
-                <select
-                  id='riskProfile'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setRiskProfile(e.target.value)}
-                  value={riskProfile}
-                >
-                  {Object.keys(RiskProfile).map((value, index) => (
-                    <option key={index} value={value}>
-                      {RiskProfile[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='riskProfile'
+                label='Person(s) Risk Profile'
+                setter={setRiskProfile}
+                value={riskProfile}
+                data={RiskProfile}
+              />
 
-              <div className='form-group'>
-                <label htmlFor='interactionType'>
-                  Frequency of Interaction
-                </label>
-                <select
-                  id='interactionType'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setInteraction(e.target.value)}
-                  value={interaction}
-                >
-                  {Object.keys(Interaction).map((value, index) => (
-                    <option key={index} value={value}>
-                      {Interaction[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='interactionType'
+                label='Frequency of Interaction'
+                setter={setInteraction}
+                value={interaction}
+                data={Interaction}
+              />
             </Card>
 
             <Card title='Activity Risk'>
-              <div className='form-group'>
-                <label htmlFor='setting'>Settings</label>
-                <select
-                  id='setting'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setSetting(e.target.value)}
-                  value={setting}
-                >
-                  {Object.keys(Setting).map((value, index) => (
-                    <option key={index} value={value}>
-                      {Setting[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='setting'
+                label='Setting'
+                setter={setSetting}
+                value={setting}
+                data={Setting}
+              />
 
-              <div className='form-group'>
-                <label htmlFor='distance'>Distance</label>
-                <select
-                  id='distance'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setDistance(e.target.value)}
-                  value={distance}
-                >
-                  {Object.keys(Distance).map((value, index) => (
-                    <option key={index} value={value}>
-                      {Distance[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='distance'
+                label='Distance'
+                setter={setDistance}
+                value={distance}
+                data={Distance}
+              />
 
               <div className='form-group'>
                 <label htmlFor='duration'>Duration (in minutes)</label>
@@ -199,39 +178,21 @@ export const App = () => {
                 />
               </div>
 
-              <div className='form-group'>
-                <label htmlFor='theirMask'>Their Mask</label>
-                <select
-                  id='theirMask'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setTheirMask(e.target.value)}
-                  value={theirMask}
-                >
-                  {Object.keys(TheirMask).map((value, index) => (
-                    <option key={index} value={value}>
-                      {TheirMask[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='theirMask'
+                label='Their Mask'
+                setter={setTheirMask}
+                value={theirMask}
+                data={TheirMask}
+              />
 
-              <div className='form-group'>
-                <label htmlFor='yourMask'>Your Mask</label>
-                <select
-                  id='yourMask'
-                  className='form-control form-control-lg'
-                  onChange={(e) => setYourMask(e.target.value)}
-                  value={yourMask}
-                >
-                  {Object.keys(YourMask).map((value, index) => (
-                    <option key={index} value={value}>
-                      {YourMask[value].label}
-                    </option>
-                  ))}
-                  <optgroup label=''></optgroup>
-                </select>
-              </div>
+              <SelectControl
+                id='yourMask'
+                label='Your Mask'
+                setter={setYourMask}
+                value={yourMask}
+                data={YourMask}
+              />
             </Card>
 
             <Card title='Result'>

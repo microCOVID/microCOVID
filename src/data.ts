@@ -1,4 +1,4 @@
-interface FormValue {
+export interface FormValue {
   label: string
   multiplier: number
 }
