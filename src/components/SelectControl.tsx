@@ -1,19 +1,19 @@
 import React from 'react'
 
-import { FormValue } from '../data'
+import { FormValue } from 'data/data'
 
 export const SelectControl: React.FunctionComponent<{
   id: string
-  setter: (value: any) => void
+  setter: (value: string) => void
   value: string
   data: { [key: string]: FormValue }
   label?: string
 }> = (props) => (
-  <div className='form-group'>
+  <div className="form-group">
     {props.label && <label htmlFor={props.id}>{props.label}</label>}
     <select
       id={props.id}
-      className='form-control form-control-lg'
+      className="form-control form-control-lg"
       onChange={(e) => props.setter(e.target.value)}
       value={props.value}
     >
@@ -22,7 +22,7 @@ export const SelectControl: React.FunctionComponent<{
           {props.data[value].label}
         </option>
       ))}
-      <optgroup label=''></optgroup>
+      <optgroup label=""></optgroup>
     </select>
   </div>
 )
