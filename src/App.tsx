@@ -10,32 +10,34 @@ import 'styles/App.scss'
 export const App = (): React.ReactElement => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/calculator">Calculator</Link>
-            </li>
-            <li>
-              <Link to="/post">Post</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="App">
+        <div className="container">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/calculator">Calculator</Link>
+              </li>
+              <li>
+                <Link to="/post/1-intro">Post</Link>
+              </li>
+            </ul>
+          </nav>
 
-        <Switch>
-          <Route path="/calculator">
-            <Calculator />
-          </Route>
-          <Route path="/post">
-            <Post />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/calculator">
+              <Calculator />
+            </Route>
+            <Route path="/post/:id">
+              <Post />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   )

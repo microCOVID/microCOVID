@@ -148,175 +148,170 @@ export const Calculator = (): React.ReactElement => {
   ])
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <h1 className="mt-4">microCOVID Calculator</h1>
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <h1 className="mt-4">microCOVID Calculator</h1>
 
-            <p>
-              It can be pretty annoying to calculate microCOVIDs for every
-              activity you’re considering. With that in mind, we developed a
-              calculator tool to help you estimate and multiply the person risk,
-              activity risk, and any discounts, to get an estimated number of
-              microCOVIDs from a given activity.
-            </p>
+        <p>
+          It can be pretty annoying to calculate microCOVIDs for every activity
+          you’re considering. With that in mind, we developed a calculator tool
+          to help you estimate and multiply the person risk, activity risk, and
+          any discounts, to get an estimated number of microCOVIDs from a given
+          activity.
+        </p>
 
-            <div className="mb-4">
-              <div className="row">
-                <div className="col">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    onClick={resetForm}
-                  >
-                    Reset form
-                  </button>
-                </div>
-                <div className="col">
-                  {saved.length > 0 && (
-                    <select
-                      className="form-control"
-                      onChange={(e) => loadData(parseInt(e.target.value))}
-                    >
-                      <option>Load a saved result</option>
-                      {saved.map((v, i) => (
-                        <option key={i} value={i}>
-                          {v[0]}
-                        </option>
-                      ))}
-                    </select>
-                  )}
-                </div>
-              </div>
+        <div className="mb-4">
+          <div className="row">
+            <div className="col">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={resetForm}
+              >
+                Reset form
+              </button>
             </div>
-
-            <Card title="Location/Prevalence">
-              <p>
-                Prevalence options are rough estimates for a given place and
-                time.
-              </p>
-              <SelectControl
-                id="prevalence"
-                setter={setPrevalence}
-                value={prevalence}
-                data={Prevalence}
-              />
-            </Card>
-
-            <Card title="Person Risk">
-              <div className="form-group">
-                <label htmlFor="personCount">Number of people</label>
-                <input
-                  className="form-control form-control-lg"
-                  type="number"
-                  value={personCount}
-                  onChange={(e) => setPersonCount(parseInt(e.target.value))}
-                />
-              </div>
-
-              <SelectControl
-                id="riskProfile"
-                label="Person(s) Risk Profile"
-                setter={setRiskProfile}
-                value={riskProfile}
-                data={RiskProfile}
-              />
-
-              <SelectControl
-                id="interactionType"
-                label="Frequency of Interaction"
-                setter={setInteraction}
-                value={interaction}
-                data={Interaction}
-              />
-            </Card>
-
-            <Card title="Activity Risk">
-              <SelectControl
-                id="setting"
-                label="Setting"
-                setter={setSetting}
-                value={setting}
-                data={Setting}
-              />
-
-              <SelectControl
-                id="distance"
-                label="Distance"
-                setter={setDistance}
-                value={distance}
-                data={Distance}
-              />
-
-              <div className="form-group">
-                <label htmlFor="duration">Duration (in minutes)</label>
-                <input
-                  className="form-control form-control-lg"
-                  type="number"
-                  value={duration}
-                  onChange={(e) => setDuration(parseInt(e.target.value))}
-                />
-              </div>
-
-              <SelectControl
-                id="theirMask"
-                label="Their Mask"
-                setter={setTheirMask}
-                value={theirMask}
-                data={TheirMask}
-              />
-
-              <SelectControl
-                id="yourMask"
-                label="Your Mask"
-                setter={setYourMask}
-                value={yourMask}
-                data={YourMask}
-              />
-            </Card>
-
-            <Card title="Result">
-              <h1>
-                {points} points
-                {interaction === 'repeated' && '/week'}
-              </h1>
-
-              {!showSaveForm && (
-                <p>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    onClick={() => setShowSaveForm(true)}
-                  >
-                    Save parameters
-                  </button>
-                </p>
+            <div className="col">
+              {saved.length > 0 && (
+                <select
+                  className="form-control"
+                  onChange={(e) => loadData(parseInt(e.target.value))}
+                >
+                  <option>Load a saved result</option>
+                  {saved.map((v, i) => (
+                    <option key={i} value={i}>
+                      {v[0]}
+                    </option>
+                  ))}
+                </select>
               )}
-
-              {showSaveForm && (
-                <div className="input-group">
-                  <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Enter metric name"
-                    value={saveName}
-                    onChange={(e) => setSaveName(e.target.value)}
-                  />
-                  <div className="input-group-append">
-                    <button
-                      type="button"
-                      className="btn btn-info"
-                      onClick={saveCalculation}
-                    >
-                      Save
-                    </button>
-                  </div>
-                </div>
-              )}
-            </Card>
+            </div>
           </div>
         </div>
+
+        <Card title="Location/Prevalence">
+          <p>
+            Prevalence options are rough estimates for a given place and time.
+          </p>
+          <SelectControl
+            id="prevalence"
+            setter={setPrevalence}
+            value={prevalence}
+            data={Prevalence}
+          />
+        </Card>
+
+        <Card title="Person Risk">
+          <div className="form-group">
+            <label htmlFor="personCount">Number of people</label>
+            <input
+              className="form-control form-control-lg"
+              type="number"
+              value={personCount}
+              onChange={(e) => setPersonCount(parseInt(e.target.value))}
+            />
+          </div>
+
+          <SelectControl
+            id="riskProfile"
+            label="Person(s) Risk Profile"
+            setter={setRiskProfile}
+            value={riskProfile}
+            data={RiskProfile}
+          />
+
+          <SelectControl
+            id="interactionType"
+            label="Frequency of Interaction"
+            setter={setInteraction}
+            value={interaction}
+            data={Interaction}
+          />
+        </Card>
+
+        <Card title="Activity Risk">
+          <SelectControl
+            id="setting"
+            label="Setting"
+            setter={setSetting}
+            value={setting}
+            data={Setting}
+          />
+
+          <SelectControl
+            id="distance"
+            label="Distance"
+            setter={setDistance}
+            value={distance}
+            data={Distance}
+          />
+
+          <div className="form-group">
+            <label htmlFor="duration">Duration (in minutes)</label>
+            <input
+              className="form-control form-control-lg"
+              type="number"
+              value={duration}
+              onChange={(e) => setDuration(parseInt(e.target.value))}
+            />
+          </div>
+
+          <SelectControl
+            id="theirMask"
+            label="Their Mask"
+            setter={setTheirMask}
+            value={theirMask}
+            data={TheirMask}
+          />
+
+          <SelectControl
+            id="yourMask"
+            label="Your Mask"
+            setter={setYourMask}
+            value={yourMask}
+            data={YourMask}
+          />
+        </Card>
+
+        <Card title="Result">
+          <h1>
+            {points} points
+            {interaction === 'repeated' && '/week'}
+          </h1>
+
+          {!showSaveForm && (
+            <p>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => setShowSaveForm(true)}
+              >
+                Save parameters
+              </button>
+            </p>
+          )}
+
+          {showSaveForm && (
+            <div className="input-group">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Enter metric name"
+                value={saveName}
+                onChange={(e) => setSaveName(e.target.value)}
+              />
+              <div className="input-group-append">
+                <button
+                  type="button"
+                  className="btn btn-info"
+                  onClick={saveCalculation}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          )}
+        </Card>
       </div>
     </div>
   )

@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/ban-ts-comment': 'off',
     'sort-imports': ['error', { ignoreDeclarationSort: true }],
     'import/order': [
       'error',
@@ -39,6 +40,10 @@ module.exports = {
           },
           {
             pattern: 'pages/**',
+            group: 'sibling',
+          },
+          {
+            pattern: 'post/**',
             group: 'sibling',
           },
         ],
