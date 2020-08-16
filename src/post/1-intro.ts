@@ -1,4 +1,7 @@
-const content = `# Intro
+const title = 'Intro'
+const content = `
+# 1. Intro
+
 ## How safe is “safe”? How risky is “risky”?
 
 You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But *just how much* do these things help? How big a deal is it if you remove your mask when hanging out with a friend? What happens if you get closer than 6ft? Bars and restaurants are opening, but is it safe to go inside? It’s tough to make good choices when you don’t know how large or small the risks really are.
@@ -11,7 +14,9 @@ We’ll show you:
 - Exactly how risky various common activities are
 - How you can estimate the COVID risk of your own actions (using our handy-dandy COVID risk calculator)
 - And, most importantly, how to make decisions that balance freedom and fun with safety and health.
-  
 `
 
-export default content
+const next = '2-riskiness'
+
+const post = { title, content, next }
+export default post

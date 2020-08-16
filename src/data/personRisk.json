@@ -1,0 +1,12 @@
+{
+  "riskProfile": {
+    "average": {
+      "label": "Average",
+      "multiplier": 1
+    },
+    "livingAlone": {
+      "label": "A person who lives alone/is isolating",
+      "multiplier": 0.1
+    }
+  }
+}
