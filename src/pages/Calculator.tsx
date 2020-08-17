@@ -77,84 +77,99 @@ export const Calculator = (): React.ReactElement => {
       </button>
     </p>
   )
-  const saveControl = showSaveForm ? saveForm : saveButton
+  const saveControl = (
+    <Card title="Result">
+      <h1>
+        {points} points
+        {calculatorData.interaction === 'repeated' && '/week'}
+      </h1>
+
+      {showSaveForm ? saveForm : saveButton}
+    </Card>
+  )
 
   return (
-    <div className="row justify-content-center">
-      <div className="col-md-6">
-        <h1 className="mt-4">microCOVID Calculator</h1>
+    <div>
+      <div className="row">
+        <div className="col-md-12 col-lg-8">
+          <h1 className="mt-4">microCOVID Calculator</h1>
 
-        <p>
-          It can be pretty annoying to calculate microCOVIDs for every activity
-          you’re considering. With that in mind, we developed a calculator tool
-          to help you estimate and multiply the person risk, activity risk, and
-          any discounts, to get an estimated number of microCOVIDs from a given
-          activity.
-        </p>
+          <p>
+            It can be pretty annoying to calculate microCOVIDs for every
+            activity you’re considering. With that in mind, we developed a
+            calculator tool to help you estimate and multiply the person risk,
+            activity risk, and any discounts, to get an estimated number of
+            microCOVIDs from a given activity.
+          </p>
 
-        {/* Form controls */}
-        <div className="mb-4">
-          <div className="row">
-            <div className="col">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                onClick={resetForm}
-              >
-                Reset form
-              </button>
-            </div>
-            <div className="col">
-              {savedItems().length > 0 && (
-                <select
-                  className="form-control"
-                  onChange={(e) => loadData(parseInt(e.target.value))}
+          {/* Form controls */}
+          <div className="mb-4">
+            <div className="row">
+              <div className="col">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={resetForm}
                 >
-                  <option>Load a saved result</option>
-                  {savedItems().map((v, i) => (
-                    <option key={i} value={i}>
-                      {v}
-                    </option>
-                  ))}
-                </select>
-              )}
+                  Reset form
+                </button>
+              </div>
+              <div className="col-4">
+                {savedItems().length > 0 && (
+                  <select
+                    className="form-control"
+                    onChange={(e) => loadData(parseInt(e.target.value))}
+                  >
+                    <option>Load a saved result</option>
+                    {savedItems().map((v, i) => (
+                      <option key={i} value={i}>
+                        {v}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
             </div>
           </div>
         </div>
+        <div className="d-none d-lg-block col-lg-4">{saveControl}</div>
+      </div>
 
-        <Card title="Location/Prevalence">
-          <p>
-            Prevalence options are rough estimates for a given place and time.
-          </p>
+      <hr />
 
-          <PrevalanceControls
-            data={calculatorData}
-            setter={setCalculatorData}
-          />
-        </Card>
+      <div className="row">
+        <div className="col-md-12 col-lg-4">
+          <Card title="Location/Prevalence">
+            <p>
+              Prevalence options are rough estimates for a given place and time.
+            </p>
 
-        <Card title="Person Risk">
-          <PersonRiskControls
-            data={calculatorData}
-            setter={setCalculatorData}
-          />
-        </Card>
+            <PrevalanceControls
+              data={calculatorData}
+              setter={setCalculatorData}
+            />
+          </Card>
+        </div>
 
-        <Card title="Activity Risk">
-          <ActivityRiskControls
-            data={calculatorData}
-            setter={setCalculatorData}
-          />
-        </Card>
+        <div className="col-md-12 col-lg-4">
+          <Card title="Person Risk">
+            <PersonRiskControls
+              data={calculatorData}
+              setter={setCalculatorData}
+            />
+          </Card>
+        </div>
 
-        <Card title="Result">
-          <h1>
-            {points} points
-            {calculatorData.interaction === 'repeated' && '/week'}
-          </h1>
+        <div className="col-md-12 col-lg-4">
+          <Card title="Activity Risk">
+            <ActivityRiskControls
+              data={calculatorData}
+              setter={setCalculatorData}
+            />
+          </Card>
+        </div>
 
-          {saveControl}
-        </Card>
+        <div className="d-lg-none col-md-12 col-lg-4">{saveControl}</div>
       </div>
     </div>
   )
