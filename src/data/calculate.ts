@@ -47,46 +47,50 @@ export const defaultValues: CalculatorData = {
 
 const ONE_MILLION = 1e6 // One 'full' COVID
 
-export const calculate = (data: CalculatorData): number => {
-  let points
+export const calculate = (data: CalculatorData): number | null => {
+  try {
+    let points
 
-  // Prevalence
-  const lastWeek = 7 * data.casesPerDay
-  const population = Number(data.population.replace(/[^0-9.e]/g, ''))
-  let underreportingFactor
+    // Prevalence
+    const lastWeek = 7 * data.casesPerDay
+    const population = Number(data.population.replace(/[^0-9.e]/g, ''))
+    let underreportingFactor
 
-  // Under-reporting factor
-  if (data.positiveCasePercentage < 5) {
-    underreportingFactor = 6
-  } else if (data.positiveCasePercentage < 15) {
-    underreportingFactor = 8
-  } else {
-    underreportingFactor = 10
+    // Under-reporting factor
+    if (data.positiveCasePercentage < 5) {
+      underreportingFactor = 6
+    } else if (data.positiveCasePercentage < 15) {
+      underreportingFactor = 8
+    } else {
+      underreportingFactor = 10
+    }
+
+    // --------
+    // Points for "random person from X location"
+    const personRisk = (lastWeek * underreportingFactor) / population
+    points = personRisk * ONE_MILLION
+
+    // Person risk
+    points *= data.personCount
+    points *= RiskProfile[data.riskProfile].multiplier
+
+    // Activity risk
+    points *= Setting[data.setting].multiplier
+    points *= Distance[data.distance].multiplier
+    points *= TheirMask[data.theirMask].multiplier
+    points *= YourMask[data.yourMask].multiplier
+
+    // Duration + interaction type
+    if (data.interaction === 'repeated') {
+      points *= Interaction[data.interaction].multiplier
+    } else {
+      points *=
+        Interaction[data.interaction].multiplier *
+        Math.min((data.duration || 60) / 60.0, 4)
+    }
+
+    return points
+  } catch {
+    return null
   }
-
-  // --------
-  // Points for "random person from X location"
-  const personRisk = (lastWeek * underreportingFactor) / population
-  points = personRisk * ONE_MILLION
-
-  // Person risk
-  points *= data.personCount
-  points *= RiskProfile[data.riskProfile].multiplier
-
-  // Activity risk
-  points *= Setting[data.setting].multiplier
-  points *= Distance[data.distance].multiplier
-  points *= TheirMask[data.theirMask].multiplier
-  points *= YourMask[data.yourMask].multiplier
-
-  // Duration + interaction type
-  if (data.interaction === 'repeated') {
-    points *= Interaction[data.interaction].multiplier
-  } else {
-    points *=
-      Interaction[data.interaction].multiplier *
-      Math.min((data.duration || 60) / 60.0, 4)
-  }
-
-  return points
 }

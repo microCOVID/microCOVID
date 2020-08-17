@@ -35,6 +35,12 @@ export const Calculator = (): React.ReactElement => {
     // Risk calculation
     const computedValue = calculate(calculatorData)
 
+    // Something went wrong
+    if (computedValue === null) {
+      setCalculatorData(defaultValues)
+      return 0
+    }
+
     // Store data for refresh
     localStorage.setItem(
       FORM_STATE_KEY,
