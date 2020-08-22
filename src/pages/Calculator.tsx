@@ -3,9 +3,10 @@ import React, { useMemo, useState } from 'react'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import { PrevalanceControls } from 'components/calculator/PrevalenceControls'
+import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
 import { CalculatorData, calculate, defaultValues } from 'data/calculate'
-import { loadData, saveCalculation, savedItems } from 'data/localStorage'
+import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
@@ -121,19 +122,10 @@ export const Calculator = (): React.ReactElement => {
                 </button>
               </div>
               <div className="col-4">
-                {savedItems().length > 0 && (
-                  <select
-                    className="form-control"
-                    onChange={(e) => loadData(parseInt(e.target.value))}
-                  >
-                    <option>Load a saved result</option>
-                    {savedItems().map((v, i) => (
-                      <option key={i} value={i}>
-                        {v}
-                      </option>
-                    ))}
-                  </select>
-                )}
+                <SavedDataSelector
+                  currentData={calculatorData}
+                  setter={setCalculatorData}
+                />
               </div>
             </div>
           </div>
