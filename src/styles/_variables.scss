@@ -8,14 +8,14 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
-  sm: 420px,
+  sm: 600px,
   md: 720px,
   lg: 1400px
 );
 
 // Bootswatch: Flatly
 
-$white: #fff !default;
+$white: rgb(248, 248, 251) !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #ecf0f1 !default;
 $gray-300: #dee2e6 !default;
@@ -38,9 +38,11 @@ $green: #18bc9c !default;
 $teal: #20c997 !default;
 $cyan: #3498db !default;
 
-$primary: $blue !default;
+$microcov-brand: #D018A1;
+
+$primary: $microcov-brand !default;
 $secondary: $gray-600 !default;
-$success: $green !default;
+$success: $microcov-brand !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
@@ -61,9 +63,9 @@ $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 
 $font-size-base: 0.9375rem !default;
 
-$h1-font-size: 3rem !default;
-$h2-font-size: 2.5rem !default;
-$h3-font-size: 2rem !default;
+// $h1-font-size: 3rem !default;
+// $h2-font-size: 2.5rem !default;
+// $h3-font-size: 2rem !default;
 
 // Tables
 
