@@ -1,5 +1,6 @@
+import MarkdownIt from 'markdown-it'
+import markdownItFootnote from 'markdown-it-footnote'
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
 import { useParams } from 'react-router-dom'
 
 import { posts } from 'post/index'
@@ -18,9 +19,12 @@ export const Post = (): React.ReactElement => {
   const prev = post.prev
   const next = post.next
 
+  const processor = new MarkdownIt().use(markdownItFootnote)
+  const processed = { __html: processor.render(markdownContent) }
+
   return (
     <div>
-      <ReactMarkdown source={markdownContent} />
+      <div dangerouslySetInnerHTML={processed} />
 
       {prev && <a href={`/post/${prev}`}>Previous: {posts[prev].title} </a>}
       {next && <a href={`/post/${next}`}>Next: {posts[next].title} </a>}
