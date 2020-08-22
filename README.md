@@ -1,6 +1,6 @@
 ![CI](https://github.com/microcovid/microcovid/workflows/CI/badge.svg?branch=main)
 
-# http://microcovid.org
+# microcovid.org
 
 ## Local Development
 
