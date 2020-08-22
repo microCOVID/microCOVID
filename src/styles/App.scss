@@ -13,6 +13,23 @@ select {
   overflow: hidden;
 }
 
+// Layout overrides
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-link {
+  padding: 0.5rem 0 !important;
+  margin: 0 8px;
+  border-bottom: 2px solid transparent;
+
+  &.active {
+    border-bottom: 2px solid $primary;
+  }
+}
+
 // Home page
 
 // Calculator
@@ -20,9 +37,23 @@ select {
 // Whitepaper
 
 #paperPage {
+  max-width: 900px;
+
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto Slab';
     font-weight: 700;
     color: $primary;
+  }
+
+  #pageTitle {
+    margin-bottom: 36px;
+  }
+  
+  .sectionIndicator {
+    margin-bottom: 0;
+    color: $gray-500;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-family-sans-serif;
   }
 }

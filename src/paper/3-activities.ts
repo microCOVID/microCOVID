@@ -1,8 +1,8 @@
-const title = 'Activity Cost'
+const title = 'How many microCOVIDs are different activities?'
+const shortTitle = 'Activity Cost'
 const content = `
-# 3. How many microCOVIDs are different activities?
 
-## 3a) Understanding COVID transmission
+### Understanding COVID transmission
 
 First, we’d like to strengthen your intuitive model of COVID transmission.
 
@@ -13,7 +13,5 @@ We suggest a helpful metaphor from our friend Matt Bell—think of everyone arou
 If you inhale just a bit of “smoke” from someone with COVID, you might be fine. But if you inhale lots of “smoke,” you’re likely to get COVID. If you’re wondering about the riskiness of a situation, then it’s helpful to imagine, “What if everyone here were smoking a cigarette? How much smoke would I breathe?”  If you’d be breathing other people’s smoke, then it’s a risky situation.
 `
 
-const prev = '2-riskiness'
-
-const post = { title, content, prev }
+const post = { title, shortTitle, content }
 export default post

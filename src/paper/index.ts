@@ -6,8 +6,6 @@ interface PostContent {
   title: string
   shortTitle?: string
   content: string
-  next?: string
-  prev?: string
 }
 
 export const pages: { [key: string]: PostContent } = {
