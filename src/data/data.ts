@@ -9,7 +9,7 @@ export const Prevalence: { [key: string]: FormValue } = {
 }
 
 export const RiskProfile: { [key: string]: FormValue } = {
-  average: { label: 'Any average person in your area', multiplier: 1 },
+  average: { label: 'An average person in your area', multiplier: 1 },
   livingAlone: {
     label: 'A person who lives alone, is isolating',
     multiplier: 0.1,
