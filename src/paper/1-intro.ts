@@ -14,7 +14,7 @@ We’ll show you:
 - how you can estimate the COVID risk of your own actions (using our handy-dandy [calculator](/calculator))
 - and, most importantly, how to make decisions that balance living your life with safety and health.
 
-You’re in the target audience of this post if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
+You’re in the target audience of this writeup if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
 
 
 If you want to skip the intro & framing, and jump to our final estimates of COVID risk, click here. [TODO create link.]
