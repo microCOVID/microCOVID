@@ -20,7 +20,7 @@ We’ll show you:
 
 - How we measure COVID infection risk, in units of “microCOVIDs”
 - How risky we think various common activities are
-- How you can estimate the COVID risk of your own actions (using our handy-dandy COVID risk calculator TODO link)
+- How you can estimate the COVID risk of your own actions (using our handy-dandy [COVID risk calculator](/calculator))
 - And, most importantly, how to make decisions that balance freedom and fun with safety and health.
 
 You’re in the target audience of this post if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
