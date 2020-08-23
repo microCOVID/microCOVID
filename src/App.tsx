@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
@@ -9,6 +9,7 @@ import {
   Switch,
 } from 'react-router-dom'
 
+import { Footer } from 'components/Footer'
 import { Calculator } from 'pages/Calculator'
 import { Home } from 'pages/Home'
 import { Paper } from 'pages/Paper'
@@ -26,61 +27,61 @@ export const App = (): React.ReactElement => {
           />
         </Helmet>
 
-        <div className="App">
-          <div className="container">
-            <Navbar expand="sm">
-              <Navbar.Brand href="/">microCOVID Project</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto">
-                  <Nav.Item>
-                    <NavLink
-                      to="/"
-                      className="nav-link"
-                      exact
-                      activeClassName="active"
-                    >
-                      Home
-                    </NavLink>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <NavLink
-                      to="/calculator"
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      Calculator
-                    </NavLink>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <NavLink
-                      to="/paper"
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      White Paper
-                    </NavLink>
-                  </Nav.Item>
-                </Nav>
-              </Navbar.Collapse>
-            </Navbar>
+        <Container>
+          <Navbar expand="sm">
+            <Navbar.Brand href="/">microCOVID Project</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <Nav.Item>
+                  <NavLink
+                    to="/"
+                    className="nav-link"
+                    exact
+                    activeClassName="active"
+                  >
+                    Home
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    to="/calculator"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Calculator
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    to="/paper"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    White Paper
+                  </NavLink>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
 
-            <Switch>
-              <Route path="/calculator">
-                <Calculator />
-              </Route>
-              <Route path="/paper/:id">
-                <Paper />
-              </Route>
-              <Route exact path="/paper">
-                <Redirect to="/paper/1-intro" />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </div>
-        </div>
+          <Switch>
+            <Route path="/calculator">
+              <Calculator />
+            </Route>
+            <Route path="/paper/:id">
+              <Paper />
+            </Route>
+            <Route exact path="/paper">
+              <Redirect to="/paper/1-intro" />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Container>
+
+        <Footer />
       </Router>
     </HelmetProvider>
   )
