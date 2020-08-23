@@ -108,7 +108,7 @@ export const Calculator = (): React.ReactElement => {
   const saveControl = (
     <Card title="Result">
       <h1>
-        {showPoints ? points : '-'} points
+        {showPoints ? points : '-'} µCOV
         {calculatorData.interaction === 'repeated' && '/week'}
       </h1>
       {showPoints && (showSaveForm ? saveForm : saveButton)}
