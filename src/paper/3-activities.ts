@@ -51,7 +51,7 @@ We'll think about our actions in terms of how much they "cost" us in microCOVIDs
 Let’s explore how you can estimate these two numbers (Activity Risk and Person Risk) for an activity you’d like to do.
 
 
-### Activity Risk: The chance this activity transmits COVID to you
+### Activity Risk: the chance this activity transmits COVID to you
 
 We’re going to summarize four key factors that affect Activity Risk:
 
@@ -95,7 +95,7 @@ There is substantial uncertainty in many of these numbers. We’ve generally cho
 _Important disclaimer for the tables above: We keep calling these numbers “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
 
 
-### Indoor Unmasked Transmission
+### Indoor unmasked transmission
 
 Indoor unmasked transmission is quite risky, though it’s far from guaranteed that you’ll get COVID from an indoor interaction with someone who is COVID-positive.
 
@@ -108,7 +108,7 @@ If the person you live with is a spouse or partner, the number is even higher, b
 In any case, indoor unmasked contact is quite risky. But you can reduce your Activity Risk by MODifiying your activity—doing it Masked, Outdoors, and Distanced.
 
 
-### Modifiers to Activity Risk: Masked, Outdoors, Distanced
+### Modifiers to Activity Risk: masked, outdoors, distanced
 
 Instead of meeting a friend indoors, let’s say you choose to hang out outdoors, masked, and distanced. How much does that decrease your risk in microCOVIDs?
 
@@ -136,72 +136,66 @@ There are plenty of other precautions you can take to reduce your risk that we d
 Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
-### III.D) Person Risk: The chance your contact has COVID
+### Person Risk: the chance your contact has COVID
 
-So you’ve decided to meet a friend for lunch. What’s the chance that they have COVID? They aren’t coughing and they feel totally fine. Can you conclude they don’t have COVID? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_![^4]
+So you’ve decided to meet a friend for lunch. What’s the chance that they have COVID? They aren’t coughing and they feel totally fine. Can you conclude they don’t have COVID? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_.[^4]
 
 Not all diseases work this way—for example, [ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and this disease in particular has a high rate of transmission from people _who don’t show symptoms_.
 
-This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10-or-so days, not just whether they’re actively showing symptoms.
+This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10 days or so, not just whether they’re actively showing symptoms.
 
 We’ll show you three different methods of guessing someone’s chance of having COVID.
 
 *   The **basic method** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
 *   The **intermediate method** adds adjustments for whether the person is or isn’t an essential worker.
-*   The **advanced method** is to add up each individual activity for the person, based on their recent behavior. \
+*   The **advanced method** is to add up the risk of each individual activity that person has done recently. 
 
 
 **Basic method: Regional prevalence**
 
 As we know, prevalence varies widely across different geographic locations. For example, at the time of writing, Sydney has much less COVID than San Francisco. So the Person Risk from your friend in Sydney will be much lower than the risk from your friend in San Francisco.
 
-To estimate the chance a random resident has COVID, you need to guess at the number of new_ _infections_ last week_ in your region. This is because a typical person is infectious for about a one-week period[^5].
+To estimate the chance a random resident in your area has COVID, you need to figure out the number of **new infections last week** in your area. This is because a typical person is infectious for about a one-week period[^5].
 
-With some Googling you can look up the number of _new reported cases_ in your region last week. (Make sure to look up _new_ cases, not _total_ cases). But you need to take into account two important factors when estimating the actual number of new infections.
+With some Googling, you can look up the number of **new reported cases** in your region last week. (Make sure to look up _new_ cases, not _total_ cases). But before you can use this number, you need to take into account two important factors.
 
-The first consideration is **underreporting**. Many people with COVID won’t ever get counted in the official statistics. They might not think their symptoms are anything unusual, and so they don’t get tested. Or they might not be able to access testing.[^6]
+The first factor is **underreporting**. Many people with COVID won’t ever get counted in the official statistics. They might not think their symptoms are anything unusual, so they don’t get tested. Or they might not be able to access testing.[^6]
 
-The second consideration is **delay**. There’s a delay of 1-2 weeks between when people got infected and when their positive test results come back. The true number of cases _last_ week isn’t known yet, and won’t be known until those tests come back _next_ week.
+The second factor is **delay**. There’s a delay of 1-2 weeks between when people got infected and when their positive test results come back. The true number of cases _last_ week isn’t known yet, and won’t be known until those tests come back _next_ week.
 
-To estimate the prevalence of COVID in your area, start by looking up the number of reported cases last week in your region. You decide how to define your region; this might be based on the county where you live, or you might want to include multiple counties if you live in a major metropolitan area. If data is limited, you might have to use your entire state.
+To estimate the prevalence of COVID where you live, start by looking up the number of reported cases last week in your region. You decide how to define your region. This might be based on the county where you live, or you might want to include multiple counties if you live in a major metropolitan area. If data is limited, you might have to use your entire state.
 
-
-
-*   If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new cases per _100,000_ population, so you need to multiply by 7 to get a week’s worth of cases.
+If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new cases per _100,000_ people. To get a week's worth of cases for your entire region, you'll need to calculate: \`daily new cases per 100,000 people * 7 days * population of your region / 100,000\`.
 
 We then suggest using the following factors to adjust for underreporting and delay:
 
-
-
-*   **Underreporting factor**: You can use the _positive test rate _(i.e. the percentage of tests that come back COVID-positive) as some evidence about how many infections are being caught by testing. If you live in the US, you can look up the positive test rate in your state at [https://covidactnow.org](https://covidactnow.org). If a high percentage of tests are coming back positive, then there are probably a lot _more_ infected people out there than the testing data shows.
+*   **Underreporting factor:** You can use the _positive test rate_ (the percentage of tests that come back COVID-positive) as some evidence about how many infections are being caught by testing. Ideally, the positive test rate should be very low, indicating that contact tracing is working to find all contacts of an infected person, and that testing is available for each contact. If a high percentage of tests are coming back positive, then there are probably a lot _more_ infected people out there than the testing data shows. If you live in the US, you can look up the positive test rate in your state at [CovidActNow](https://covidactnow.org). 
     *   If the percentage of positive tests is 5% or lower, we suggest a 4x underreporting factor.[^7]
 
 
     *   If the percentage of positive tests is between 5% and 15%, we suggest a 5x factor.
-    *   If the percentage of positive tests is greater than 15%, we suggest _at least_ a 7x factor. This indicates dangerously little testing in your area, compared to the number of infected people. \
+    *   If the percentage of positive tests is greater than 15%, we suggest _at least_ a 7x factor. This indicates dangerously little testing in your area compared to the number of infected people. 
 
-*   **Delay factor:** If cases are rising, then we suggest multiplying last week’s cases by the latest week-over-week rate of increase. To do this, compare last week's case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, 120 / 80 = 1.5, so the week-over-week rate of increase is 1.5x. We would use 1.5x as our delay factor.
+*   **Delay factor:** Since test results take about one week to come back on average, the number of _new reported cases_ in your region last week really represents the number of _new positive test results_ in your region _the week before that_. If cases are flat or falling, it's fine to use this number as is. If cases are rising, then we need to estimate the increase by comparing last week's reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor.
 
 Use this equation (along with the two factors above) to calculate the regional prevalence of COVID in your area:
 
-<p class="calloutText">Actual Infections Last Week = Cases ⨉ Underreporting Factor ⨉ Delay Factor</p>
+<p class="calloutText">Actual Infections Last Week = Reported Cases ⨉ Underreporting Factor ⨉ Delay Factor</p>
 
 
 From there, calculate the basic person risk by comparing the actual infections last week with the overall population in your region.
 
 <p class="calloutText">Basic Person Risk = Actual Infections Last Week / Population In Millions</p>
 
-To add specific numbers to this:
+Here are two examples:
 
+*   As of July 26, 2020, the state of New South Wales in Australia (where Sydney is located) had [81 new cases in the last week](https://web.archive.org/web/20200726233453/https://www.health.nsw.gov.au/Infectious/covid-19/Pages/stats-nsw.aspx), and a population of around 7.5 million. The week before that, there were 62 new cases. \`81 / 62 = 1.3\` so we’ll use a 1.3x delay factor. The percentage of positive COVID tests is extremely low: \`81 cases / 135,089 tests = 0.05%\` so we'll use our minimum 4x underreporting factor. Therefore, \`81 reported cases * 1.3 * 4 = 421 actual infections last week\`.[^8] So the Person Risk (the chance that a random resident in New South Wales has COVID) is \`421 infections / 7,500,000 people = 0.000056 or 0.0056%\`. An easier way to talk about this tiny number is to multiply it by a million: \`0.000056 * 1,000,000 = 56\`. This is the same as if we had just divided by 7.5 (the population _in millions_). So if all you know about a person is that they live in New South Wales, their Person Risk is **56**, which means there's a **56-in-a-million** chance that they currently have COVID (for this particular week). 
 
+*   Compare this with San Francisco County in California, which had [749 new cases](https://data.sfgov.org/stories/s/dak2-gvuj) during that same week, and a population of 0.88 million.[^9] Cases at that time were declining, so we won’t use a delay factor. The [positive test rate is 4.3%](https://data.sfgov.org/stories/s/d96w-cdge), so we’ll use a 6x underreporting factor. Therefore, \`749 reported cases * 6 = 4494 actual infections last week\`. To get the Person Risk, divide by the population (in millions): \`4494 infections / 0.88 million people = 5107\`.[^10] So a resident of San Francisco has a Person Risk of **5107**, or a **5107-in-a-million** chance of currently having COVID (for this particular week). 
 
-*   As of July 26, 2020, the state of New South Wales (where Sydney is located) had [81 new cases in the past week](https://web.archive.org/web/20200726233453/https://www.health.nsw.gov.au/Infectious/covid-19/Pages/stats-nsw.aspx), and a population of around 7.5 million. Cases are rising about 1.3x week-over-week, so we’ll use a 1.3x delay factor. The percentage of COVID tests that are positive is extremely low (81 cases divided by 135,089 tests = 0.05%) so we’ll multiply by our minimum 6x underreporting factor to get 630 infections total in the past week.[^8] So the Person Risk (the chance that a random resident has COVID) is 630 divided by 7.5 million, or **84-in-a-million** (we’ll just say **84** when talking about Person Risk, but that means 84-in-a-million chance of_ currently having_ COVID).
+5107-in-a-million (in San Francisco) is about 90 times higher than 56-in-a-million (in Sydney). So the average Person Risk in San Francisco is 90x as high as in Sydney!
 
-
-*   Compare this with San Francisco County, which had [749 new cases](https://data.sfgov.org/stories/s/dak2-gvuj) during the week ending July 26, and a population of 0.88 million.[^9] Cases at that time were declining, so we won’t add a delay factor. The [positive test rate is 4.3%](https://data.sfgov.org/stories/s/d96w-cdge), so we’ll use a 6x underreporting factor. This works out to 749 x 6 / 0.88 = **5106**[^10].
-5106-in-a-million (in San Francisco) is about 60 times higher than 84-in-a-million (in Sydney). So the average Person Risk in San Francisco is 60x as high as in Sydney!
-
-This means that inviting _one_ random person over for coffee in San Francisco at the time of writing is about as risky as inviting_ sixty_ random Sydney residents to your home.
+Another way to think about this is that inviting _one_ random person over for coffee (indoors, unmasked, undistanced) in San Francisco at the time of writing is about as risky as inviting _90_ random Sydney residents to your home.
 
 But of course, not everyone is average. The Person Risk of someone who works at a grocery store is different from the Person Risk of someone who works from home and doesn’t leave the house, even if they live in the same city, because these two people have significantly different behaviors. How can we model those differences?
 
