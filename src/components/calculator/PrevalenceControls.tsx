@@ -54,16 +54,6 @@ export const PrevalanceControls: React.FunctionComponent<{
       </div>
 
       <div className="form-group">
-        <label htmlFor="duration">Population</label>
-        <input
-          className="form-control form-control-lg"
-          type="text"
-          value={data.population}
-          onChange={(e) => setter({ ...data, population: e.target.value })}
-        />
-      </div>
-
-      <div className="form-group">
         <label htmlFor="duration">Reported cases in past week</label>
         <input
           className="form-control form-control-lg"
@@ -84,6 +74,16 @@ export const PrevalanceControls: React.FunctionComponent<{
           onChange={(e) =>
             setter({ ...data, casesWeekBefore: parseInt(e.target.value) })
           }
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="duration">Per how many people?</label>
+        <input
+          className="form-control form-control-lg"
+          type="text"
+          value={data.population}
+          onChange={(e) => setter({ ...data, population: e.target.value })}
         />
       </div>
 
