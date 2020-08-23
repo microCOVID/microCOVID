@@ -68,8 +68,8 @@ export const SavedDataSelector: React.FunctionComponent<{
       onChange={(e) => setSavedData(e.target.value)}
     >
       <option value="">Load a saved result...</option>
-      {prepopulatedOptions}
       {userSavedData}
+      {prepopulatedOptions}
     </select>
   )
 }

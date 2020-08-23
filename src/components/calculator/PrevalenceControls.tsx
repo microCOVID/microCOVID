@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { CalculatorData } from 'data/calculate'
 import { ExampleLocations } from 'data/location'
@@ -7,7 +7,6 @@ export const PrevalanceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
-  const [selectedLocation, setSelectedLocation] = useState('')
   return (
     <React.Fragment>
       <div className="form-group">
@@ -16,27 +15,38 @@ export const PrevalanceControls: React.FunctionComponent<{
         </label>
         <select
           className="form-control form-control-lg"
+          value={data.location}
           onChange={(e) => {
-            setSelectedLocation(e.target.value)
             const exampleData = ExampleLocations[e.target.value]
 
             if (exampleData) {
               setter({
                 ...data,
+                location: e.target.value,
                 population: exampleData.population,
                 casesPerDay: exampleData.casesPerDay,
                 positiveCasePercentage: exampleData.positiveCasePercentage,
               })
             }
+
+            if (e.target.value === 'custom') {
+              setter({
+                ...data,
+                location: 'custom',
+                population: '',
+                casesPerDay: 0,
+                positiveCasePercentage: 0,
+              })
+            }
           }}
-          value={selectedLocation}
         >
-          <option value=""></option>
+          <option value="">Select one...</option>
           {Object.keys(ExampleLocations).map((value, index) => (
             <option key={index} value={value}>
               {ExampleLocations[value].label}
             </option>
           ))}
+          <option value="custom">Custom location</option>
         </select>
       </div>
 

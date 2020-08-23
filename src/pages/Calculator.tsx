@@ -5,7 +5,12 @@ import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import { PrevalanceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
-import { CalculatorData, calculate, defaultValues } from 'data/calculate'
+import {
+  CalculatorData,
+  calculate,
+  defaultValues,
+  parsePopulation,
+} from 'data/calculate'
 import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
@@ -23,6 +28,7 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const resetForm = () => {
+    localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
   }
 
@@ -36,12 +42,6 @@ export const Calculator = (): React.ReactElement => {
     // Risk calculation
     const computedValue = calculate(calculatorData)
 
-    // Something went wrong
-    if (computedValue === null) {
-      setCalculatorData(defaultValues)
-      return 0
-    }
-
     // Store data for refresh
     localStorage.setItem(
       FORM_STATE_KEY,
@@ -51,11 +51,32 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
+    if (computedValue === null) {
+      return 0
+    }
+
     // Round points < 10
     return computedValue > 10
       ? Math.round(computedValue)
       : computedValue.toFixed(2)
   }, [calculatorData])
+
+  const showPersonRisk =
+    parsePopulation(calculatorData.population) > 0 &&
+    calculatorData.casesPerDay > 0 &&
+    calculatorData.positiveCasePercentage > 0
+  const showActivityRisk =
+    calculatorData.personCount > 0 &&
+    calculatorData.riskProfile !== '' &&
+    calculatorData.interaction !== ''
+  const showPoints =
+    showPersonRisk &&
+    showActivityRisk &&
+    calculatorData.setting !== '' &&
+    calculatorData.distance !== '' &&
+    calculatorData.duration > 0 &&
+    calculatorData.theirMask !== '' &&
+    calculatorData.yourMask !== ''
 
   const saveForm = (
     <div className="input-group">
@@ -87,11 +108,10 @@ export const Calculator = (): React.ReactElement => {
   const saveControl = (
     <Card title="Result">
       <h1>
-        {points} points
+        {showPoints ? points : '-'} points
         {calculatorData.interaction === 'repeated' && '/week'}
       </h1>
-
-      {showSaveForm ? saveForm : saveButton}
+      {showPoints && (showSaveForm ? saveForm : saveButton)}
     </Card>
   )
 
@@ -135,7 +155,7 @@ export const Calculator = (): React.ReactElement => {
 
       <div className="row">
         <div className="col-md-12 col-lg-4">
-          <Card title="Location/Prevalence">
+          <Card title="Step 1: Location/Prevalence">
             <p>
               Prevalence options are rough estimates for a given place and time.
             </p>
@@ -148,20 +168,28 @@ export const Calculator = (): React.ReactElement => {
         </div>
 
         <div className="col-md-12 col-lg-4">
-          <Card title="Person Risk">
-            <PersonRiskControls
-              data={calculatorData}
-              setter={setCalculatorData}
-            />
+          <Card title="Step 2: Person Risk">
+            {showPersonRisk ? (
+              <PersonRiskControls
+                data={calculatorData}
+                setter={setCalculatorData}
+              />
+            ) : (
+              <span>First, fill out prevalance information.</span>
+            )}
           </Card>
         </div>
 
         <div className="col-md-12 col-lg-4">
-          <Card title="Activity Risk">
-            <ActivityRiskControls
-              data={calculatorData}
-              setter={setCalculatorData}
-            />
+          <Card title="Step 3: Activity Risk">
+            {showActivityRisk ? (
+              <ActivityRiskControls
+                data={calculatorData}
+                setter={setCalculatorData}
+              />
+            ) : (
+              <span>Then, fill out details about person risk.</span>
+            )}
           </Card>
         </div>
 
