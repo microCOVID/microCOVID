@@ -63,7 +63,8 @@ export const Calculator = (): React.ReactElement => {
 
   const showPersonRisk =
     parsePopulation(calculatorData.population) > 0 &&
-    calculatorData.casesPerDay > 0 &&
+    calculatorData.casesPastWeek > 0 &&
+    calculatorData.casesWeekBefore > 0 &&
     calculatorData.positiveCasePercentage > 0
   const showActivityRisk =
     calculatorData.personCount > 0 &&

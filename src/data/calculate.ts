@@ -14,7 +14,8 @@ export interface CalculatorData {
   // Prevalence
   location: string
   population: string
-  casesPerDay: number
+  casesPastWeek: number
+  casesWeekBefore: number
   positiveCasePercentage: number
 
   // Person risk
@@ -33,7 +34,8 @@ export interface CalculatorData {
 export const defaultValues: CalculatorData = {
   location: '',
   population: '',
-  casesPerDay: 0,
+  casesPastWeek: 0,
+  casesWeekBefore: 0,
   positiveCasePercentage: 0,
 
   riskProfile: '',
@@ -58,7 +60,8 @@ export const calculate = (data: CalculatorData): number | null => {
 
     if (
       !(
-        data.casesPerDay &&
+        data.casesPastWeek &&
+        data.casesWeekBefore &&
         data.population &&
         data.positiveCasePercentage &&
         data.personCount &&
@@ -74,22 +77,24 @@ export const calculate = (data: CalculatorData): number | null => {
     }
 
     // Prevalence
-    const lastWeek = 7 * data.casesPerDay
     const population = parsePopulation(data.population)
     let underreportingFactor
 
     // Under-reporting factor
     if (data.positiveCasePercentage < 5) {
-      underreportingFactor = 6
+      underreportingFactor = 4
     } else if (data.positiveCasePercentage < 15) {
-      underreportingFactor = 8
+      underreportingFactor = 5
     } else {
-      underreportingFactor = 10
+      underreportingFactor = 7
     }
+
+    const lastWeek = data.casesPastWeek
+    const delayFactor = Math.max(1, lastWeek / data.casesWeekBefore)
 
     // --------
     // Points for "random person from X location"
-    const personRisk = (lastWeek * underreportingFactor) / population
+    const personRisk = (lastWeek * underreportingFactor * delayFactor) / population
     points = personRisk * ONE_MILLION
 
     // Person risk
@@ -108,7 +113,7 @@ export const calculate = (data: CalculatorData): number | null => {
     } else {
       points *=
         Interaction[data.interaction].multiplier *
-        Math.min((data.duration || 60) / 60.0, 4)
+        Math.min((data.duration || 60) / 60.0, 5)
     }
 
     return points

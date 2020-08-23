@@ -2,7 +2,7 @@ import { CalculatorData } from './calculate'
 
 export type PartialData = Omit<
   CalculatorData,
-  'location' | 'population' | 'casesPerDay' | 'positiveCasePercentage'
+  'location' | 'population' | 'casesPastWeek' | 'casesWeekBefore' | 'positiveCasePercentage'
 >
 
 export const prepopulated: {

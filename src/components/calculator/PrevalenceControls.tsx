@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { CalculatorData } from 'data/calculate'
-import { ExampleLocations } from 'data/location'
+import { ExampleLocations, PrevalenceDataDate } from 'data/location'
 
 export const PrevalanceControls: React.FunctionComponent<{
   data: CalculatorData
@@ -22,7 +22,8 @@ export const PrevalanceControls: React.FunctionComponent<{
                 ...data,
                 location: selectedValue,
                 population: exampleData.population,
-                casesPerDay: exampleData.casesPerDay,
+                casesPastWeek: exampleData.casesPastWeek,
+                casesWeekBefore: exampleData.casesWeekBefore,
                 positiveCasePercentage: exampleData.positiveCasePercentage,
               })
             }
@@ -32,18 +33,23 @@ export const PrevalanceControls: React.FunctionComponent<{
                 ...data,
                 location: selectedValue,
                 population: '',
-                casesPerDay: 0,
+                casesPastWeek: 0,
+                casesWeekBefore: 0,
                 positiveCasePercentage: 0,
               })
             }
           }}
         >
           <option value="">Select location...</option>
+          <optgroup label="Examples from post">
           {Object.keys(ExampleLocations).map((value, index) => (
             <option key={index} value={value}>
               {ExampleLocations[value].label}
             </option>
           ))}
+          </optgroup>
+          <optgroup label={"US states as of " + PrevalenceDataDate}>
+          </optgroup>
           <option value="custom">Custom location</option>
         </select>
       </div>
@@ -59,13 +65,25 @@ export const PrevalanceControls: React.FunctionComponent<{
       </div>
 
       <div className="form-group">
-        <label htmlFor="duration">Cases per day</label>
+        <label htmlFor="duration">Cases in past week</label>
         <input
           className="form-control form-control-lg"
           type="number"
-          value={data.casesPerDay}
+          value={data.casesPastWeek}
           onChange={(e) =>
-            setter({ ...data, casesPerDay: parseInt(e.target.value) })
+            setter({ ...data, casesPastWeek: parseInt(e.target.value) })
+          }
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="duration">Cases in week before last</label>
+        <input
+          className="form-control form-control-lg"
+          type="number"
+          value={data.casesWeekBefore}
+          onChange={(e) =>
+            setter({ ...data, casesWeekBefore: parseInt(e.target.value) })
           }
         />
       </div>
