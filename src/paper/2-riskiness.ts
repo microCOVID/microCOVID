@@ -1,4 +1,4 @@
-const title = 'The riskiness of interactions is measured in “microCOVIDs”'
+const title = 'We measure the riskiness of interactions in “microCOVIDs”'
 const shortTitle = 'Riskiness'
 
 
@@ -6,27 +6,34 @@ const content = `
 
 You might have seen images categorizing COVID risk as [“high”, “medium”, or “low”](https://twitter.com/SaskiaPopescu/status/1279133758965248000) or rating activities on [a riskiness scale from 1 through 9](https://www.newsweek.com/texas-doctors-rank-1-9-risks-catching-covid-19-these-activities-1515790). This is helpful, but personally we found that we had to dig further—into actual numbers—so we could make confident decisions.
 
-Calling an event “high risk” is like categorizing a furniture purchase as “expensive.” If I’m buying a rug, and I know it’s “expensive,” but it would really complete the look of my room, can I afford to splurge this time? Maybe, or maybe not! If the rug is $100, that might be a sensible purchase. But if the rug is $10,000 then I might have difficulty paying for rent and groceries if I buy it! 
+[TODO image: put the aforementioned images here?]
 
-Similarly: if I’ve been told that going to gatherings is “high risk” but I really truly miss my friends and there’s a picnic coming up I want to attend, should I go? Is this high risk like skiing, or high risk like [jumping off a cliff](https://en.wikipedia.org/wiki/BASE_jumping#:~:text=BASE%20jumping%20is%20one%20of,BASE%20jumping%20since%20April%201981.)?
+Calling an event “high risk” is like categorizing a furniture purchase as “expensive.” If I’m buying a rug, and I know it’s “expensive,” but it would really complete the look of my room, can I afford to splurge this time? Maybe, or maybe not! If the rug is $100, that might be a sensible purchase. But if the rug is $10,000 then I might have difficulty paying for rent and groceries if I buy it!
 
-We’d like to give you a research-based, quantitative framework to answer questions like these.  \
- \
-Some people might not realize that it's even possible to measure and numerically quantify the risk of getting COVID. Most sources tend to give non-quantitative advice, such as "the CDC recommends that everyone wear a mask to reduce transmission." This advice is good, but we would like to go even further. 
+Similarly: if I’ve been told that going to gatherings is “high risk” but I really truly miss my friends and there’s a picnic coming up I want to attend, should I go? Is this high risk like skiing, or high risk like jumping off a cliff?
+
+We would like to give you a research-based, quantitative framework to answer questions like these.
+
+### We can use research to numerically estimate COVID risk
+
+Some people might not realize that it's even possible to measure and numerically quantify the risk of getting COVID. Most sources tend to give non-quantitative advice, such as "the CDC recommends that everyone wear a mask to reduce transmission." This advice is good, but we would like to go even further.
 
 Fortunately, there are now many research papers available about the numerical likelihood of getting COVID from different kinds of interactions. You can find these studies at [Google Scholar](https://scholar.google.com/) and read them yourself. Some of these studies are not peer-reviewed (which is the gold standard for scientific publication), so it's extra important to analyze them carefully. We have experience interpreting scientific studies due to our academic background, and so we feel comfortable wading into the literature to come up with numerical estimates. We explain more of our reasoning in footnotes and in the Research Sources [TODO link] section.
 
-**Measuring COVID risk in “microCOVIDs”**
+### Measuring COVID risk in “microCOVIDs”
 
-So let’s get started. To quantify the risk of an individual interaction—say, meeting a friend for coffee—we’re going to think in terms of **_microCOVIDs_ (abbreviated μCoV)[^1]: a one-in-a-million chance of getting COVID[^2]**.
+So let’s get started. To quantify the risk of an individual interaction—say, meeting a friend for coffee—we’re going to think in terms of **_microCOVIDs_** (abbreviated μCoV)[^1]: **a one-in-a-million chance of getting COVID[^2]**.
 
-For example, if you live in a region where about 1 in 1,000 people currently has COVID, then meeting a friend for coffee indoors has about a 1 in 17,000 chance of giving you COVID. Such small numbers are hard to think about, so we use microCOVIDs instead. Your coffee date would be about 60 microCOVIDs.
+<p class="calloutText">1 microCOVID = a one-in-a-million chance of getting COVID</p>
 
-Another benefit of using microCOVIDs is that you can straightforwardly add up microCOVIDs to estimate your risk over longer periods of time.[^3] Here's an example (using some made-up numbers): last week you made two trips to the grocery store (25 microCOVIDs each), went for two masked outdoor walks with friends (1 microCOVID each), and otherwise stayed home alone, so your total risk for that week would be 52 microCOVIDs. You can imagine doing the same calculation over longer time intervals to estimate your chance of getting COVID in a month or even a year of activities.
+For example, if you live in a region where about 1 in 1,000 people currently has COVID, then you could calculate based on studies of other indoor interactions (as we will explain later in this writeup) that meeting a friend for coffee indoors has about a 1 in 17,000 chance of giving you COVID. Such small numbers are hard to think about, so we can use microCOVIDs instead. Your coffee date would be about 60 microCOVIDs. By the end of this writeup, you will understand how to do these calculations yourself.
+
+One benefit of using microCOVIDs is that you can straightforwardly add up microCOVIDs to estimate your risk over longer periods of time.[^3]
+* Here's an example (using some made-up numbers): last week you made two trips to the grocery store (25 microCOVIDs each), went for two masked outdoor walks with friends (1 microCOVID each), and otherwise stayed home alone, so your total risk for that week would be 52 microCOVIDs. You can imagine doing the same calculation over longer time intervals to estimate your chance of getting COVID in a month or even a year of activities.
 
 We use microCOVIDs rather than some other scale factor (milliCOVIDs? nanoCOVIDs?) because they tend to come out as conveniently-sized numbers.
 
-**How much is a microCOVID?**
+### How much is a microCOVID?
 
 We—the authors—are a group of 30-something-year-olds in San Francisco who live together in a communal house and mostly work from home. After much discussion (which we hope to explain later in a future post), we agreed that we would aim to keep each of our individual risks of getting COVID below **1% per year**[^4] (i.e., about 10,000 microCOVIDs per year[^5]). We don’t regularly interact with anyone who is at high risk of severe illness from COVID, but we also care a lot about doing our part to reduce the spread of the pandemic.
 
@@ -38,7 +45,7 @@ So, given that we each have 10,000 microCOVIDs to spend per year, and many of th
 |                                      10 μCoV | moderate risk       | several times per week                                                    |
 
 
-  
+
 \n
 \n
 
@@ -61,7 +68,7 @@ Let’s now explore how to quantify the risk of various activities in terms of m
 
 
 <!-- Footnotes themselves at the bottom. -->
-## Notes
+
 
 [^1]:
      μ is the standard abbreviation for “micro,” the unit prefix meaning “one millionth.” For example, one microgram (μg) is one millionth of a gram.

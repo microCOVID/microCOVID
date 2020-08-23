@@ -6,7 +6,7 @@ const content = `
 
 First, we’d like to strengthen our intuitive model of COVID transmission.
 
-COVID is transmitted primarily through tiny droplets produced when an infected person talks, coughs, or sneezes ([CDC FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)), many of which can [remain suspended in the air](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) for minutes to hours. Touching contaminated surfaces or objects is _possibly_ a way that COVID spreads, but the [CDC](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html) believes the _main_ way it spreads is person-to-person through respiratory droplets. Therefore, in this post, we focus primarily on the risk from exhaled droplets in the air.[^1] 
+COVID is transmitted primarily through tiny droplets produced when an infected person talks, coughs, or sneezes ([CDC FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)), many of which can [remain suspended in the air](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) for minutes to hours. Touching contaminated surfaces or objects is _possibly_ a way that COVID spreads, but the [CDC](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html) believes the _main_ way it spreads is person-to-person through respiratory droplets. Therefore, in this post, we focus primarily on the risk from exhaled droplets in the air.[^1]
 
 To visualize how exhaled droplets work, we suggest a helpful metaphor from our friend [Matt Bell](https://medium.com/@llebttam_45762/summer-vacations-in-the-era-of-covid-ab5576a7b302). Think of everyone around you exhaling cigarette smoke. If someone is smoking a cigarette in a park 30 feet away from you, you might not even smell it. But in a crowded bar where indoor smoking is permitted, the air will be thick with people’s smoky exhalations.
 
@@ -24,9 +24,9 @@ So we know what to _avoid:_ the 3 C’s. But besides staying in our homes, what 
 ![alt_text](images/image2.png "image_tooltip") [TODO fix this image]
 
 
-In the section below, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet away or 10 feet? 
+In the section below, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet away or 10 feet?
 
-In order to answer these questions with microCOVID numbers (not just “high” or “low” risk), we’ll now dive into the research. You can also skip right to the [calculator](/calculator) to start playing with numbers if you prefer. 
+In order to answer these questions with microCOVID numbers (not just “high” or “low” risk), we’ll now dive into the research. You can also skip right to the [calculator](/calculator) to start playing with numbers if you prefer.
 
 ### The cost of activities in microCOVIDs
 
@@ -35,7 +35,7 @@ In order to calculate the actual microCOVIDs of an activity, we need to combine 
 *   _Activity Risk:_ the chance that this activity will transmit COVID to you, if the other person currently has COVID
 *   _Person Risk:_ the chance that the other person currently has COVID. This is based on overall prevalence in your area and their recent behaviors.
 
-For example: 
+For example:
 
 *   Let’s say you do an activity with someone (like watching a movie indoors) that has an 8% chance of transmitting COVID to you. We call that an Activity Risk of 8%.
 *   And let’s say that person has a 1% chance of currently being COVID-positive. We call that a Person Risk of 10,000. (Just like for microCOVIDs, if someone has a one-in-a-million chance of having COVID, we’ll say their Person Risk is 1.)
@@ -46,19 +46,19 @@ For example:
 
 We'll think about our actions in terms of how much they "cost" us in microCOVIDs:
 
-\`Cost = Activity Risk ⨉ Person Risk\`
+<p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
 
 Let’s explore how you can estimate these two numbers (Activity Risk and Person Risk) for an activity you’d like to do.
 
 
 ### Activity Risk: The chance this activity transmits COVID to you
 
-We’re going to summarize four key factors that affect Activity Risk: 
+We’re going to summarize four key factors that affect Activity Risk:
 
-* duration of contact 
-* masks 
+* duration of contact
+* masks
 * location (outdoor vs. indoor), and
-* distance from each other. 
+* distance from each other.
 
 For speculation about other factors, see the Q&A [TODO].
 
@@ -112,17 +112,17 @@ In any case, indoor unmasked contact is quite risky. But you can reduce your Act
 
 Instead of meeting a friend indoors, let’s say you choose to hang out outdoors, masked, and distanced. How much does that decrease your risk in microCOVIDs?
 
-*   **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x [(for a reasonably well-fitting surgical mask under normal conditions)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). And _their_ mask decreases risk (to _you_) by 4x. 
+*   **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x [(for a reasonably well-fitting surgical mask under normal conditions)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). And _their_ mask decreases risk (to _you_) by 4x.
     *   Note: We are assuming basic surgical masks for this modeling. For more protection, there are other types of masks you can consider (addressed in the Q&A at the end) (TODO link). And bandanas or single-layer coverings provide _less_ protection than we estimate here (TODO link).
 *   **Outdoors** reduces your risk by:
     *   10x because the outdoors is well-ventilated.
     *   If you’re 20 feet away *and* outdoors, you can probably ignore the risk from that person.
-*   **Distance** reduces your risk by 2x if you’re 6 feet away, and another 2x for each additional 3 feet up to 12 feet. This gives a total risk reduction of: 
+*   **Distance** reduces your risk by 2x if you’re 6 feet away, and another 2x for each additional 3 feet up to 12 feet. This gives a total risk reduction of:
     *   2x if you’re 6-9 feet away
     *   4x if you’re 9-12 feet away
     *   8x if you’re >12 feet away
 
-Curious how we got these numbers? Again, check out the Research Sources [TODO check internal link copied] section! 
+Curious how we got these numbers? Again, check out the Research Sources [TODO check internal link copied] section!
 
 By multiplying these three modifiers together, \`8 * 10 * 2 = 160\`, we can see that a MODified hangout (Masked, Outdoors, & Distanced) is **160 times** less risky than a non-masked, indoor, non-distanced hangout. If you have a 6% chance of getting sick from a one-hour indoor visit with someone who turns out to be COVID-positive, then you have a 6% / 160 = **0.04% chance** with full MOD protection. Please protect yourself!
 
@@ -138,16 +138,15 @@ Ok, so we now understand Activity Risk—how your chance of getting the virus ch
 
 ### III.D) Person Risk: The chance your contact has COVID
 
-So you’ve decided to meet a friend for lunch. What’s the chance that they have COVID? They aren’t coughing and they feel totally fine. Can you conclude they don’t have COVID? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_![^4] 
+So you’ve decided to meet a friend for lunch. What’s the chance that they have COVID? They aren’t coughing and they feel totally fine. Can you conclude they don’t have COVID? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_![^4]
 
 Not all diseases work this way—for example, [ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and this disease in particular has a high rate of transmission from people _who don’t show symptoms_.
 
 This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10-or-so days, not just whether they’re actively showing symptoms.
 
-We’ll show you three different methods of guessing someone’s chance of having COVID. 
+We’ll show you three different methods of guessing someone’s chance of having COVID.
 
-
-*   The **basic method** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID. 
+*   The **basic method** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
 *   The **intermediate method** adds adjustments for whether the person is or isn’t an essential worker.
 *   The **advanced method** is to add up each individual activity for the person, based on their recent behavior. \
 
@@ -188,7 +187,7 @@ Use this equation (along with the two factors above) to calculate the regional p
 <p class="calloutText">Actual Infections Last Week = Cases ⨉ Underreporting Factor ⨉ Delay Factor</p>
 
 
-From there, calculate the basic person risk by comparing the actual infections last week with the overall population in your region.  
+From there, calculate the basic person risk by comparing the actual infections last week with the overall population in your region.
 
 <p class="calloutText">Basic Person Risk = Actual Infections Last Week / Population In Millions</p>
 
@@ -218,7 +217,7 @@ To get an _even more_ accurate estimate for Person Risk, we can actually add up 
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
 
-We can do this by looking at all of their activities in the past ten days or so[^12] and determining the risk of each individual activity. Or if they do the same things every week, what does their typical week look like?  
+We can do this by looking at all of their activities in the past ten days or so[^12] and determining the risk of each individual activity. Or if they do the same things every week, what does their typical week look like?
 
 If you already know that this sort of detailed calculation isn’t something that you want to do, go ahead and skip forward to the next section of this blog post. [TODO: skip ahead link].
 
@@ -230,7 +229,7 @@ We suggest thinking about this in three categories: socializing, errands, and wo
 
 For socializing, just estimate each social activity in microCOVIDs (using “Cost = Activity Risk ⨉ Person Risk”) and add them together. This is the place to count the exposure from all their household members as well.
 
-Errands include grocery shopping, transit, and other public settings. These can be harder to estimate individually; we have some guidelines in the [Q&A section](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO verify link copying]. But if estimating each one individually sounds hard, a faster way to model errands and work combined is to use the following rule of thumb: use 10% of the Intermediate Person Risk to stand in for the total of all their public activity combined. This doesn’t factor in how many times per week they grocery shop, or what exactly their workplace is; it’s a way to avoid having to think about those details. You might prefer to estimate each individual excursion separately. 
+Errands include grocery shopping, transit, and other public settings. These can be harder to estimate individually; we have some guidelines in the [Q&A section](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO verify link copying]. But if estimating each one individually sounds hard, a faster way to model errands and work combined is to use the following rule of thumb: use 10% of the Intermediate Person Risk to stand in for the total of all their public activity combined. This doesn’t factor in how many times per week they grocery shop, or what exactly their workplace is; it’s a way to avoid having to think about those details. You might prefer to estimate each individual excursion separately.
 
 <p class="calloutText">Errands + Work = Intermediate Person Risk ⨉ 10%</p>
 
@@ -273,7 +272,7 @@ We can now multiply Activity Risk by Person Risk to get the microCOVID cost of a
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
 
-Let’s say you would like to hang out with Reasonable Rosie (from the example above), whose Person Risk is 369 using the Advanced Method. An indoors meetup has a 6% Activity Risk per hour, so it costs you 6% per hour ⨉ 1.5 hours ⨉ 369 Person Risk = **33 microCOVIDs**. 
+Let’s say you would like to hang out with Reasonable Rosie (from the example above), whose Person Risk is 369 using the Advanced Method. An indoors meetup has a 6% Activity Risk per hour, so it costs you 6% per hour ⨉ 1.5 hours ⨉ 369 Person Risk = **33 microCOVIDs**.
 
 <p class="calloutText">33 microCOVIDs = 6% per hour (Activity Risk) ⨉ 1.5 hr ⨉ 369 (Person Risk)</p>
 
@@ -288,8 +287,8 @@ Should you do these activities? It depends on how important you believe it is to
 
 
 *   If you’re aiming for 1% risk per year (833 microCOVIDs per month), an indoor unmasked hangout with Reasonable Rosie is something you can do multiple times per month, and you can treat the outdoor masked hangout as totally “free.”
-*   However, if you’re aiming for 0.1% risk per year (83 microCOVIDs per month), _two_ unmasked indoor hangouts with Reasonable Rosie add up to almost as much risk as you were willing to spend in an_ entire month_. To spend your microCOVIDs more efficiently, you’ll want to use protective measures like wearing a mask or only hanging out outdoors. Unless, of course, Reasonable Rosie is the only person you want to see all month. 
-*   And if you’re highly vulnerable and aiming for 0.01% risk per year (8.3 microCOVIDs per month), the outdoor mask walk is something you can afford, but you should limit yourself to just a few per week, and you _cannot_ hang out indoors with Reasonable Rosie _even once_ without jeopardizing a large fraction of your budget for the entire year. 
+*   However, if you’re aiming for 0.1% risk per year (83 microCOVIDs per month), _two_ unmasked indoor hangouts with Reasonable Rosie add up to almost as much risk as you were willing to spend in an_ entire month_. To spend your microCOVIDs more efficiently, you’ll want to use protective measures like wearing a mask or only hanging out outdoors. Unless, of course, Reasonable Rosie is the only person you want to see all month.
+*   And if you’re highly vulnerable and aiming for 0.01% risk per year (8.3 microCOVIDs per month), the outdoor mask walk is something you can afford, but you should limit yourself to just a few per week, and you _cannot_ hang out indoors with Reasonable Rosie _even once_ without jeopardizing a large fraction of your budget for the entire year.
 
 Note that all these values depend on _San Francisco prevalence in July 2020_. If you’re reading this at a different place or time, we suggest you re-do the math for your own region today! (reminder: Actual Infections Last Week = Cases ⨉ Underreporting Factor ⨉ Delay Factor, and Basic Person Risk = Infections Last Week divided by Population)
 
