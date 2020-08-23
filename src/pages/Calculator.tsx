@@ -118,16 +118,37 @@ export const Calculator = (): React.ReactElement => {
   return (
     <div>
       <div className="row">
-        <div className="col-md-12 col-lg-8">
-          <p className="mt-5">
-            It can be pretty annoying to calculate microCOVIDs for every
-            activity you’re considering. With that in mind, we developed a
-            calculator tool to help you estimate and multiply the person risk,
-            activity risk, and any discounts, to get an estimated number of
-            microCOVIDs from a given activity.
+        <div className="col-md-12 col-lg-6">
+          <p>
+            We created a calculator to assess “cost” in microCOVIDs of various
+            activities. We hope you’ll use it to build your intuition about the
+            comparative risk of different activities and as a harm-reduction
+            tool to make safer choices.
           </p>
+          <p>
+            The “cost” of any given activity is based on several factors,
+            including the prevalence of COVID in your area, how many people
+            you’re with, if you’re inside or outside, if masks are on, duration
+            and frequency, etc.
+          </p>
+          <p>
+            Start with the list of common scenarios in the drop down, then
+            customize to reflect your specific situation. (For example,
+            everyone’s risk in these scenarios is set to “average person in your
+            area,” which is based on the prevalence of COVID in your geographic
+            area. If someone is a frontline worker, or in a closed pod, you can
+            adjust their Person Risk to get a more accurate picture).
+          </p>
+          <p>
+            As you model the various activities you engage in, you can save your
+            custom scenarios to come back to. Play around with the calculator!
+            Change the variables and see how they affect the points total.
+          </p>
+        </div>
 
-          {/* Form controls */}
+        <div className="d-none d-lg-block col-lg-4 offset-lg-2">
+          {saveControl}
+
           <div className="mb-4">
             <div className="row">
               <div className="col">
@@ -148,7 +169,6 @@ export const Calculator = (): React.ReactElement => {
             </div>
           </div>
         </div>
-        <div className="d-none d-lg-block col-lg-4">{saveControl}</div>
       </div>
 
       <hr />

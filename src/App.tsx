@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 
 import { Footer } from 'components/Footer'
+import { ScrollToTop } from 'components/ScrollToTop'
 import { Calculator } from 'pages/Calculator'
 import { Home } from 'pages/Home'
 import { Paper } from 'pages/Paper'
@@ -26,6 +27,8 @@ export const App = (): React.ReactElement => {
             rel="stylesheet"
           />
         </Helmet>
+
+        <ScrollToTop />
 
         <Container>
           <Navbar expand="sm">
