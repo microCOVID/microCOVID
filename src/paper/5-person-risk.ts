@@ -67,18 +67,18 @@ Another way to think about this is that inviting one random person over for coff
 
 But of course, not everyone is average. The Person Risk of someone who works at a grocery store is different from the Person Risk of someone who works from home and doesn’t leave the house, even if they live in the same city, because these two people have significantly different behaviors. How can we model those differences?
 
-**Intermediate method: Adjust for essential work**
+**Intermediate method: Adjust for essential workers**
 
-For a slightly more nuanced estimate, we can adjust for the fact that work circumstances matter. Front-line essential workers unfortunately have a higher chance of infection than others. Compared to the average resident, we estimate that:
+For a slightly more nuanced estimate, we can adjust for the fact that work circumstances matter. Frontline essential workers unfortunately have a higher chance of infection than others. Compared to the average resident, we estimate that:
 
-* front-line workers are **3x more likely** to have COVID, and 
-* anyone who is not a front-line worker is **0.5x as likely**[^11] to be infected. 
+* frontline workers are **3x more likely** to have COVID, and 
+* anyone who is not a frontline worker is **0.5x as likely**[^11] to be infected. 
 
 We can use the following equation to adjust our estimate of Person Risk:
 
-<p class="calloutText">Person Risk (Intermediate) = Person Risk (Basic) ⨉ Front-Line Work Factor</p>
+<p class="calloutText">Person Risk (Intermediate) = Person Risk (Basic) ⨉ Frontline Work Factor</p>
 
-In the example above, if all you know about someone is that they live in San Francisco, their Person Risk is 5107 (for the week ending July 26, 2020). If you also know that they are a front-line worker, then \`5107 * 3 = 15,321\` so their Person Risk increases to 15,321. If instead you know that they are not a front-line worker, then \`5107 * 0.5 = 2553\` so their Person Risk goes down to 2553. 
+In the example above, if all you know about someone is that they live in San Francisco, their Person Risk is 5107 (for the week ending July 26, 2020). If you also know that they are a frontline worker, then \`5107 * 3 = 15,321\` so their Person Risk increases to 15,321. If instead you know that they are not a frontline worker, then \`5107 * 0.5 = 2553\` so their Person Risk goes down to 2553. 
 
 [TODO add thank you to essential workers?]
 
@@ -141,38 +141,34 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
 
 
 [^4]:
-     Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _pre_symptomatic is much more common: this accounts for about 50% of all transmissions, as opposed to _a_symptomatic transmission which accounts for only about 5%. The popular discourse tends to muddy this fact somewhat. There are a _lot_ of asymptomatic _infections_, which are inherently harder to measure (because you probably won’t get tested if you don’t show symptoms). However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk budget that much.
+     Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won't get tested if you don't show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
 
 [^5]:
      The most-infectious period starts a couple days after infection, but the day-to-day noise in new case numbers is enough that “0-7 days ago” and “2-9 days ago” are unlikely to be meaningfully different. We’ve found Figure 2 in [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) most helpful when thinking about this.
 
 [^6]:
-     As an example, New York City in March–April 2020 was completely overwhelmed by COVID, with widespread reports that even people with obvious and severe symptoms were unable to receive a test. We’ll look specifically at the five boroughs plus Westchester, Nassau, and Suffolk counties, an area containing 12.2 million residents. A survey for COVID antibodies in these counties performed between April 25–May 6 [found](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/commercial-lab-surveys.html) that 23% of people had previously been infected, but according to the [Johns Hopkins dashboard](https://coronavirus.jhu.edu/us-map) only 263,900 cases (2.2% of the area’s population) had been officially recorded by May 1.
+     As an example, New York City in March–April 2020 was completely overwhelmed by COVID, with widespread reports that even people with obvious and severe symptoms were unable to receive a test. We’ll look specifically at the five boroughs plus Westchester, Nassau, and Suffolk counties, an area containing 12.2 million residents. A survey for COVID antibodies in these counties performed between April 25–May 6 [found](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/commercial-lab-surveys.html) that 23% of people had previously been infected, but according to the [Johns Hopkins dashboard](https://coronavirus.jhu.edu/us-map) only 263,900 cases (2.2% of the area’s population) had been officially recorded by May 1. 
 
 [^7]:
-
-     Note there are _contagiousness-adjusted_ underreporting factors: that is, we think the total number of infections might be 6x the reported number of cases, but additionally that the unreported infections are somewhat less contagious (due to containing a higher proportion of asymptomatic individuals), so we adjust this factor down. See Research Sources TODO for our full methodology and reasoning here.
+     Note these are _contagiousness-adjusted_ underreporting factors: that is, we think the total number of infections might be 6x the reported number of cases, but additionally that the unreported infections are somewhat less contagious (due to containing a higher proportion of asymptomatic individuals), so we adjust this factor down. See Research Sources TODO for our full methodology and reasoning here.
 
 [^8]:
-
-     With _this_ low of a positive test rate, an _even lower_ underreporting factor is quite plausible, but we don’t have data in this regime to estimate just how low we should go.
+     With this low of a positive test rate, an even lower underreporting factor is quite plausible, but we don’t have enough data to estimate just how low we should go.
 
 [^9]:
-
      Tip: if your data source lists a “7-day moving average” of cases on a certain day, the number of cases in the preceding week is just 7 times that.
 
 [^10]:
-     This seems high to us: a 5106-in-a-million chance over a week-long period of getting COVID from being an average SF resident implies the average SF resident has a 23% annualized chance of getting COVID. That seems pretty bad. We really hope we’re wrong somewhere and the real number is lower; perhaps we don’t need as high as a 6x underreporting factor anymore?
+     This seems high to us: a 5107-in-a-million chance over a week-long period of getting COVID from being an average SF resident implies the average SF resident has a 23% annualized chance of getting COVID. That seems pretty bad. We really hope we’re wrong somewhere and the real number is lower; perhaps we don’t need as high as a 6x underreporting factor anymore?
 
 [^11]:
-     We derive this from data about US essential workers, and from a blanket testing initiative in the Mission in San Francisco. First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/) showing that around 55 million people in the US are essential workers (38% of workforce and 17% of the population); we sanity-check this against [another source](https://bayareaequityatlas.org/essential-workers) citing 28% of workers in the Bay Area are essential workers. In [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)’s blanket testing survey of residents in the Mission in San Francisco, they found a positive test rate of 5% among frontline service workers and 0.8% among non-frontline workers (6.27x higher for frontline workers). The overall prevalence is a population-weighted average: prevalence_total = 0.17 x p_essential + 0.83 x (p_essential / 6.27). From this we compute p_essential = 3.3 x prevalence_total. We round off to 3x for essential workers, and 0.5x for all others.
+     We derive this from data about US essential workers, and from a blanket testing initiative in the Mission District in San Francisco. First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/) showing that around 55 million people in the US are essential workers (38% of workforce and 17% of the population); we sanity-check this against [another source](https://bayareaequityatlas.org/essential-workers) citing 28% of workers in the Bay Area are essential workers. In [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)’s blanket testing survey of residents in the Mission District in San Francisco, they found a positive test rate of 5% among frontline service workers and 0.8% among non-frontline workers (6.27x higher for frontline workers). The overall prevalence is a population-weighted average: \`prevalence_total = 0.17 x p_essential + 0.83 x (p_essential / 6.27)\`. From this we compute \`p_essential = 3.3 x prevalence_total\`. We round off to 3x for essential workers, and 0.5x for all others.
 
 [^12]:
      Technically we care most about their activities between 2–9 days ago, because that is the most likely range of time intervals between infections ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) “generation time”).
 
 [^13]:
-
-     Technically, Rosie and her roommate each pose a risk of 85 microCOVIDs to each other.  If the people in your household ( or “bubble”, or “pod”, or whatever term you want to use) have any significant exposure to the outside world (including groceries, essential work, etc.) then you will need to include your own contact with your housemates (or others in your pod) in your estimate of how many microCOVIDs of exposure _you_ have incurred, because those people’s Activity Risk is not zero. The fact that they are “in your bubble” does not change the fact that everything they have done in the past 10 days poses a risk to you.
+     Technically, Rosie and her roommate each pose a risk of 85 microCOVIDs to each other. If the people in your household (or “bubble,” or “pod,” or whatever term you want to use) have any significant exposure to the outside world (including groceries, essential work, etc.) then you will need to include your own contact with your housemates (or others in your pod) in your estimate of how many microCOVIDs of exposure _you_ have incurred, because those people’s Activity Risk is not zero. The fact that they are “in your bubble” does not change the fact that everything they have done in the past 10 days poses a risk to you.
 
 [^14]:
      If Reasonable Rosie keeps up this rate of 369 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is lower than the average American, but is too high for comfort for some people!

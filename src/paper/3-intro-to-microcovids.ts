@@ -51,8 +51,10 @@ We'll think about our actions in terms of how much they "cost" us in microCOVIDs
 
 Let’s explore how you can estimate these two numbers (Activity Risk and Person Risk) for an activity you’d like to do.
 
+
+
 [^1]:
-     If you’re worried about surfaces, the best thing to do is to be careful not to touch your face (mouth, nose, or eyes) when out and about, unless you’ve just washed your hands thoroughly. Getting the virus on your hands isn’t harmful in itself; it has to get to your mucous membranes in order to infect you.
+     If you’re worried about surfaces, the best thing to do is to be careful not to touch your face (mouth, nose, or eyes) when out and about, unless you’ve just washed or sanitized your hands thoroughly. Getting the virus on your hands isn’t harmful in itself; it has to get to your mucous membranes in order to infect you.
 
 
 `
