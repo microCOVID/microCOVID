@@ -42,14 +42,13 @@ export const PrevalanceControls: React.FunctionComponent<{
         >
           <option value="">Select location...</option>
           <optgroup label="Examples from post">
-          {Object.keys(ExampleLocations).map((value, index) => (
-            <option key={index} value={value}>
-              {ExampleLocations[value].label}
-            </option>
-          ))}
+            {Object.keys(ExampleLocations).map((value, index) => (
+              <option key={index} value={value}>
+                {ExampleLocations[value].label}
+              </option>
+            ))}
           </optgroup>
-          <optgroup label={"US states as of " + PrevalenceDataDate}>
-          </optgroup>
+          <optgroup label={'US states as of ' + PrevalenceDataDate}></optgroup>
           <option value="custom">Custom location</option>
         </select>
       </div>

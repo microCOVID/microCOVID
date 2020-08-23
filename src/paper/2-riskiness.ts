@@ -1,7 +1,6 @@
 const title = 'We measure the riskiness of interactions in “microCOVIDs”'
 const shortTitle = 'Riskiness'
 
-
 const content = `
 
 You might have seen images categorizing COVID risk as [“high”, “medium”, or “low”](https://twitter.com/SaskiaPopescu/status/1279133758965248000) or rating activities on [a riskiness scale from 1 through 9](https://www.newsweek.com/texas-doctors-rank-1-9-risks-catching-covid-19-these-activities-1515790). This is helpful, but personally we found that we had to dig further—into actual numbers—so we could make confident decisions.

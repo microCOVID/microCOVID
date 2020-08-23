@@ -23,5 +23,4 @@ export const ExampleLocations: { [key: string]: Location } = {
   },
 }
 
-export const PrevalenceDataDate: string = 'August 22, 2020';
-
+export const PrevalenceDataDate = 'August 22, 2020'

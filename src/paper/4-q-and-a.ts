@@ -206,13 +206,9 @@ In terms of qualitative scales, we like the following:
 
 `
 
-
-
 const prev = '3-activites'
 const next = '5-research-sources'
 
 const post = { title, content, prev, next }
-
-
 
 export default post

@@ -94,7 +94,8 @@ export const calculate = (data: CalculatorData): number | null => {
 
     // --------
     // Points for "random person from X location"
-    const personRisk = (lastWeek * underreportingFactor * delayFactor) / population
+    const personRisk =
+      (lastWeek * underreportingFactor * delayFactor) / population
     points = personRisk * ONE_MILLION
 
     // Person risk
