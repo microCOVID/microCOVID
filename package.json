@@ -9,6 +9,7 @@
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-github-headings": "^2.0.0",
     "markdown-it-link-attributes": "^3.0.0",
+    "markdown-to-jsx": "^6.11.4",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
