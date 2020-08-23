@@ -29,15 +29,14 @@ export const SelectControl: React.FunctionComponent<{
       onChange={(e) =>
         props.setter({ ...props.data, [props.id]: e.target.value })
       }
-      value={props.data[props.id]}
+      value={props.data[props.id] || ''}
     >
+      <option value="">Select one...</option>
       {Object.keys(props.source).map((value, index) => (
         <option key={index} value={value}>
           {props.source[value].label}
         </option>
       ))}
-
-      <optgroup label=""></optgroup>
     </select>
   </div>
 )

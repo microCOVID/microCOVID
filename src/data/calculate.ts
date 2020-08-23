@@ -12,6 +12,7 @@ export interface CalculatorData {
   persistedAt?: number
 
   // Prevalence
+  location: string
   population: string
   casesPerDay: number
   positiveCasePercentage: number
@@ -30,30 +31,51 @@ export interface CalculatorData {
 }
 
 export const defaultValues: CalculatorData = {
-  population: '7,500,000',
-  casesPerDay: 1000,
-  positiveCasePercentage: 3,
+  location: '',
+  population: '',
+  casesPerDay: 0,
+  positiveCasePercentage: 0,
 
-  riskProfile: 'average',
-  interaction: 'oneTime',
-  personCount: 1,
+  riskProfile: '',
+  interaction: '',
+  personCount: 0,
 
-  setting: 'indoor',
-  distance: 'sixFt',
-  duration: 60,
-  theirMask: 'masked',
-  yourMask: 'masked',
+  setting: '',
+  distance: '',
+  duration: 0,
+  theirMask: '',
+  yourMask: '',
 }
 
 const ONE_MILLION = 1e6 // One 'full' COVID
+
+export const parsePopulation = (input: string): number =>
+  Number(input.replace(/[^0-9.e]/g, ''))
 
 export const calculate = (data: CalculatorData): number | null => {
   try {
     let points
 
+    if (
+      !(
+        data.casesPerDay &&
+        data.population &&
+        data.positiveCasePercentage &&
+        data.personCount &&
+        data.riskProfile &&
+        data.setting &&
+        data.interaction &&
+        data.distance &&
+        data.theirMask &&
+        data.yourMask
+      )
+    ) {
+      return null
+    }
+
     // Prevalence
     const lastWeek = 7 * data.casesPerDay
-    const population = Number(data.population.replace(/[^0-9.e]/g, ''))
+    const population = parsePopulation(data.population)
     let underreportingFactor
 
     // Under-reporting factor
