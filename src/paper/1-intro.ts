@@ -36,9 +36,7 @@ _This article (and corresponding calculator) was collaboratively written by the 
 
 **Cite us collectively as:** Ibasho and friends
 
-**White paper (prose):** Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
-
-**White paper (research and modeling):** Catherine Olsson, Joshua Oreman
+**White paper:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
 
 **Website and calculator:** Dominic Dagradi, Sarah Dobro, Deb Lyon
 
