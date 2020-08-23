@@ -32,7 +32,7 @@ We—the authors—are a group of 30-something-year-olds in San Francisco who li
 
 So, given that we each have 10,000 microCOVIDs to spend per year, and many of those are taken up by having housemates and running errands:
 
-| An activity costing this many microCOVIDs... | … feels this risky… | … and we could do the activity this often, if we were not doing much else |
+| An activity costing this many microCOVIDs... | feels this risky… | … and we could do the activity this often, if we were not doing much else |
 |----------------------------------------------|---------------------|---------------------------------------------------------------------------|
 |                                       1 μCoV | almost negligible   | dozens of times per week                                                  |
 |                                      10 μCoV | moderate risk       | several times per week                                                    |
@@ -42,21 +42,20 @@ So, given that we each have 10,000 microCOVIDs to spend per year, and many of th
 \n
 \n
 
-If you’re young and healthy; don’t regularly visit anyone who is [older](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age) or has [COVID risk factors](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html); and in general are able to make voluntary choices about your risk exposure; then we think aiming for a 1% risk of COVID per year is a plausible choice, based on two important considerations: risk to _you_, and risk to _others_.
-
+In general, if you are young and healthy, don’t regularly visit anyone who is [older](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age) or has [COVID risk factors](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html), and are lucky enough to be able to make voluntary choices about your risk exposure, then we think aiming for a 1% risk of COVID per year is a plausible choice. This is based on two important considerations: risk to _you_, and risk to _others_.
 
 
 *   **Risk to you:** If you are in the under-40 age bracket and do not have other risk factors, then a 1% chance of COVID per year puts your risk of disability due to COVID at about the same level as your risk of disability due to driving a car.[^6]
 
 
 *   **Risk to others**: Even if you are personally comfortable with risk-taking, it’s important to choose a lower risk tolerance in order to protect vulnerable members of your community. Here are a few ways to think about that:
-    *   If you get COVID, on average you will pass it on to at least one other person, who in turn will pass it on to others. Eventually it will reach someone who is at very high risk of death. By avoiding getting infected yourself, you are protecting these vulnerable members of your community.
-    *   A useful ethical rule-of-thumb is to behave in a way that would be good if _everyone_ behaved that way. So, we can ask: what risk tolerance would keep the pandemic at manageable levels if everyone followed it? In most places in the US right now, a 1% yearly risk of COVID would keep the pandemic at manageable levels. For public health, we wouldn’t recommend voluntarily choosing a risk tolerance higher than 3%.[^7]
+    *   If you get COVID, on average you will pass it to at least one other person, who in turn will pass it to others. Eventually it will reach someone who is at very high risk of death. By avoiding getting infected yourself, you are protecting these vulnerable members of your community.
+    *   A useful ethical rule-of-thumb is to behave in a way that would be good if _everyone_ behaved that way. So, we can ask: what risk tolerance would keep the pandemic at manageable levels if everyone followed it? In most places in the US right now, a 1% yearly risk of COVID would keep the pandemic at manageable levels. For public health reasons, we wouldn’t recommend voluntarily choosing a risk tolerance higher than 3%.[^7]
 
 
-    *   Some people (such as essential workers) have no choice but to run a high risk of COVID; that only works out across society if those of us who _do_ have a choice choose to take fewer risks.
+    *   Some people (such as essential workers) have no choice but to run a high risk of getting COVID. Containing the pandemic across society only works if those of us who _do_ have a choice choose to take fewer risks.
 
-What we want you to take away from this section is that for people in the authors’ demographics, an activity that is 1 microCOVID is** very low risk** and 1000 microCOVIDs is** very high risk**; and any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
+What we want you to take away from this section is that for people in the authors’ demographics, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
 
 Let’s now explore how to quantify the risk of various activities in terms of microCOVIDs.
 
