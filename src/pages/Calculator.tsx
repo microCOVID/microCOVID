@@ -53,7 +53,7 @@ export const Calculator = (): React.ReactElement => {
     )
 
     if (computedValue === null) {
-      return 0
+      return -1
     }
 
     // Round points < 10
@@ -67,24 +67,7 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.casesPastWeek > 0 &&
     calculatorData.casesWeekBefore > 0 &&
     calculatorData.positiveCasePercentage > 0
-  const showPersonRisk =
-    parsePopulation(calculatorData.population) > 0 &&
-    calculatorData.casesPastWeek > 0 &&
-    calculatorData.casesWeekBefore > 0 &&
-    calculatorData.positiveCasePercentage > 0
-  const showActivityRisk =
-    showPersonRisk &&
-    calculatorData.personCount > 0 &&
-    calculatorData.riskProfile !== '' &&
-    calculatorData.interaction !== ''
-  const showPoints =
-    showPersonRisk &&
-    showActivityRisk &&
-    calculatorData.setting !== '' &&
-    calculatorData.distance !== '' &&
-    calculatorData.duration > 0 &&
-    calculatorData.theirMask !== '' &&
-    calculatorData.yourMask !== ''
+  const showPoints = points >= 0
 
   const saveForm = (
     <div className="input-group">
@@ -113,7 +96,7 @@ export const Calculator = (): React.ReactElement => {
       </button>
     </p>
   )
-  const saveControl = (
+  const pointsDisplay = (
     <Card title="Result">
       <h1>
         {showPoints ? points : '-'} µCOV
@@ -125,8 +108,8 @@ export const Calculator = (): React.ReactElement => {
 
   return (
     <div id="calculator">
-      <div className="row">
-        <div className="col-md-12 col-lg-8">
+      <Row>
+        <Col md="12" lg="8">
           <p>
             We created a calculator to assess “cost” in microCOVIDs of various
             activities. We hope you’ll use it to build your intuition about the
@@ -144,14 +127,16 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>
-        </div>
-        <div className="col-lg-4 col-md-12">{saveControl}</div>
-      </div>
+        </Col>
+        <Col lg="4" md="12">
+          {pointsDisplay}
+        </Col>
+      </Row>
 
       <hr />
 
-      <div id="calculator-fields" className="row">
-        <div className="col-md-12 col-lg-4">
+      <Row>
+        <Col md="12" lg="4">
           <Card id="location" title="Location & Prevalence">
             <div className="subheading">
               First, select a location to use in your calculations, or fill in
@@ -163,9 +148,9 @@ export const Calculator = (): React.ReactElement => {
               setter={setCalculatorData}
             />
           </Card>
-        </div>
+        </Col>
 
-        <div className="col-md-12 col-lg-8">
+        <Col md="12" lg="8">
           <Card id="person-risk" title="Risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
@@ -181,13 +166,13 @@ export const Calculator = (): React.ReactElement => {
                 </div>
 
                 <Row>
-                  <Col>
+                  <Col md="12" lg="6">
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
                     />
                   </Col>
-                  <Col>
+                  <Col md="12" lg="6">
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
@@ -201,8 +186,8 @@ export const Calculator = (): React.ReactElement => {
               </div>
             )}
           </Card>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   )
 }
