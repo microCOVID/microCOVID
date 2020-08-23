@@ -9,6 +9,7 @@ export const PrevalanceControls: React.FunctionComponent<{
 }> = ({ data, setter }): React.ReactElement => {
   return (
     <React.Fragment>
+      <header id="location">Step 1 - Choose a location</header>
       <div className="form-group">
         <select
           className="form-control form-control-lg"
@@ -88,7 +89,9 @@ export const PrevalanceControls: React.FunctionComponent<{
       </div>
 
       <div className="form-group">
-        <label htmlFor="duration">Percent of tests that come back positive</label>
+        <label htmlFor="duration">
+          Percent of tests that come back positive
+        </label>
         <div className="input-group mb-3">
           <input
             className="form-control form-control-lg"

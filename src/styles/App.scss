@@ -31,7 +31,7 @@ a {
   margin-top: 20px;
   background-color: $gray-300;
   border-top: 1px solid $gray-400;
-  
+
   p {
     margin: 10px 0;
   }
@@ -67,58 +67,66 @@ a {
 // Home page
 
 // Calculator
-
-.calc-col-header {
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-
-  @media (min-width: map-get($grid-breakpoints, 'lg')) {
-    min-height: 140px;    
+#calculator {
+  // Colorful section headers
+  .card header {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  header#location {
+    background: $primary;
   }
 
-  &.filled {
-    background:rgba(0,0,0,0.03);
-    border: 1px solid $gray-400;  
+  header#person-risk {
+    background: $indigo;
   }
-}
 
-#location .card-header {
-  background: $primary;
-  color: white;
-  font-weight: bold;
-}
+  header#activity-risk {
+    background: $cyan;
+  }
 
-#person-risk .card-header {
-  background: $indigo;
-  color: white;
-  font-weight: bold;
-}
+  // Card subheader
+  .subheading {
+    height: 100px;
+    border-bottom: 1px solid $gray-300;
+    margin-bottom: 15px;
+  }
 
-#activity-risk .card-header {
-  background: $cyan;
-  color: white;
-  font-weight: bold;
-}
+  // Equal height columns
+  .card {
+    height: 100%;
+  }
 
-.empty {
-  display: flex;
-  height: 300px;
-  align-items: center;
-  justify-content: center;
-}
-
-.form-group {
-  label {
+  // Empty state
+  .card-body {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
   }
 
-  .badge {
-    cursor: pointer;
-    border-radius: 12px;
-    width: 20px;
+  .empty {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Tooltip button/badge styles
+  .form-group {
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge {
+      cursor: pointer;
+      border-radius: 12px;
+      width: 20px;
+    }
   }
 }
 
@@ -138,7 +146,7 @@ a {
   #pageTitle {
     margin-bottom: 36px;
   }
-  
+
   .sectionIndicator {
     margin-bottom: 0;
     color: $gray-500;
@@ -162,7 +170,7 @@ a {
     @media (min-width: 600px) {
       min-width: 200px;
     }
-    
+
     &:last-child {
       border-right: none;
     }

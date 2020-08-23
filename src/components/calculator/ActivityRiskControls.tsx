@@ -9,6 +9,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => (
   <React.Fragment>
+    <header id="activity-risk">Step 3 - Activity Risk</header>
     <SelectControl
       id="setting"
       label="Setting"

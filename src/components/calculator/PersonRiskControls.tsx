@@ -17,6 +17,7 @@ export const PersonRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => (
   <React.Fragment>
+    <header id="person-risk">Step 2 - Person Risk</header>
     <div className="form-group">
       <label htmlFor="personCount">Number of people</label>
       <input

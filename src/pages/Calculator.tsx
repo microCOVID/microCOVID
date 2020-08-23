@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react'
+import { Col, Row } from 'react-bootstrap'
 
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
@@ -61,12 +62,18 @@ export const Calculator = (): React.ReactElement => {
       : computedValue.toFixed(2)
   }, [calculatorData])
 
+  const prevalenceIsFilled =
+    parsePopulation(calculatorData.population) > 0 &&
+    calculatorData.casesPastWeek > 0 &&
+    calculatorData.casesWeekBefore > 0 &&
+    calculatorData.positiveCasePercentage > 0
   const showPersonRisk =
     parsePopulation(calculatorData.population) > 0 &&
     calculatorData.casesPastWeek > 0 &&
     calculatorData.casesWeekBefore > 0 &&
     calculatorData.positiveCasePercentage > 0
   const showActivityRisk =
+    showPersonRisk &&
     calculatorData.personCount > 0 &&
     calculatorData.riskProfile !== '' &&
     calculatorData.interaction !== ''
@@ -117,9 +124,9 @@ export const Calculator = (): React.ReactElement => {
   )
 
   return (
-    <div>
+    <div id="calculator">
       <div className="row">
-        <div className="col-md-12 col-lg-6">
+        <div className="col-md-12 col-lg-8">
           <p>
             We created a calculator to assess “cost” in microCOVIDs of various
             activities. We hope you’ll use it to build your intuition about the
@@ -130,19 +137,27 @@ export const Calculator = (): React.ReactElement => {
             Play around with the calculator! Change the variables and see how
             they affect the total.
           </p>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={resetForm}
+          >
+            Reset form
+          </button>
         </div>
+        <div className="col-lg-4 col-md-12">{saveControl}</div>
       </div>
 
       <hr />
 
-      <div className="row">
+      <div id="calculator-fields" className="row">
         <div className="col-md-12 col-lg-4">
-          <div className="calc-col-header filled">
-            First, select a location to use in your calculations, or fill in
-            your own values based on data available in your area....
-          </div>
+          <Card id="location" title="Location & Prevalence">
+            <div className="subheading">
+              First, select a location to use in your calculations, or fill in
+              your own values based on data available in your area....
+            </div>
 
-          <Card id="location" title="Step 1: Location/Prevalence">
             <PrevalanceControls
               data={calculatorData}
               setter={setCalculatorData}
@@ -150,67 +165,42 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </div>
 
-        <div className="col-md-12 col-lg-4">
-          <div className="calc-col-header filled">
-            <p>
-              ...then select a scenario from the list below (or make your own).
-            </p>
-            <SavedDataSelector
-              currentData={calculatorData}
-              setter={setCalculatorData}
-            />
-          </div>
+        <div className="col-md-12 col-lg-8">
+          <Card id="person-risk" title="Risk">
+            {prevalenceIsFilled ? (
+              <React.Fragment>
+                <div className="subheading">
+                  <p>
+                    ...then select a scenario from the list below (or make your
+                    own).
+                  </p>
+                  <SavedDataSelector
+                    currentData={calculatorData}
+                    setter={setCalculatorData}
+                  />
+                </div>
 
-          <Card id="person-risk" title="Step 2: Person Risk">
-            {showPersonRisk ? (
-              <PersonRiskControls
-                data={calculatorData}
-                setter={setCalculatorData}
-              />
+                <Row>
+                  <Col>
+                    <PersonRiskControls
+                      data={calculatorData}
+                      setter={setCalculatorData}
+                    />
+                  </Col>
+                  <Col>
+                    <ActivityRiskControls
+                      data={calculatorData}
+                      setter={setCalculatorData}
+                    />
+                  </Col>
+                </Row>
+              </React.Fragment>
             ) : (
-              <span className="empty">
+              <div className="empty">
                 First, fill out prevalance information.
-              </span>
-            )}
-          </Card>
-        </div>
-
-        <div className="col-md-12 col-lg-4">
-          <div className="calc-col-header filled">
-            Customize the calculator to fit your specific scenario, and save
-            your results to come back to later.
-          </div>
-
-          <Card id="activity-risk" title="Step 3: Activity Risk">
-            {showActivityRisk ? (
-              <ActivityRiskControls
-                data={calculatorData}
-                setter={setCalculatorData}
-              />
-            ) : (
-              <span className="empty">
-                Then, fill out details about person risk.
-              </span>
-            )}
-          </Card>
-        </div>
-
-        <div className="col-lg-4 col-md-12">
-          {saveControl}
-
-          <div className="mb-4">
-            <div className="row">
-              <div className="col">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  onClick={resetForm}
-                >
-                  Reset form
-                </button>
               </div>
-            </div>
-          </div>
+            )}
+          </Card>
         </div>
       </div>
     </div>
