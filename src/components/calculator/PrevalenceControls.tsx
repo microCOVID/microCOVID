@@ -10,29 +10,27 @@ export const PrevalanceControls: React.FunctionComponent<{
   return (
     <React.Fragment>
       <div className="form-group">
-        <label htmlFor="prevalence">
-          Fill in your own values, or use a pre-existing location
-        </label>
         <select
           className="form-control form-control-lg"
           value={data.location}
           onChange={(e) => {
-            const exampleData = ExampleLocations[e.target.value]
+            const selectedValue = e.target.value
+            const exampleData = ExampleLocations[selectedValue]
 
             if (exampleData) {
               setter({
                 ...data,
-                location: e.target.value,
+                location: selectedValue,
                 population: exampleData.population,
                 casesPerDay: exampleData.casesPerDay,
                 positiveCasePercentage: exampleData.positiveCasePercentage,
               })
             }
 
-            if (e.target.value === 'custom') {
+            if (selectedValue === 'custom' || selectedValue == '') {
               setter({
                 ...data,
-                location: 'custom',
+                location: selectedValue,
                 population: '',
                 casesPerDay: 0,
                 positiveCasePercentage: 0,
@@ -40,7 +38,7 @@ export const PrevalanceControls: React.FunctionComponent<{
             }
           }}
         >
-          <option value="">Select one...</option>
+          <option value="">Select location...</option>
           {Object.keys(ExampleLocations).map((value, index) => (
             <option key={index} value={value}>
               {ExampleLocations[value].label}

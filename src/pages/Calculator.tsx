@@ -126,27 +126,75 @@ export const Calculator = (): React.ReactElement => {
             tool to make safer choices.
           </p>
           <p>
-            The “cost” of any given activity is based on several factors,
-            including the prevalence of COVID in your area, how many people
-            you’re with, if you’re inside or outside, if masks are on, duration
-            and frequency, etc.
-          </p>
-          <p>
-            Start with the list of common scenarios in the drop down, then
-            customize to reflect your specific situation. (For example,
-            everyone’s risk in these scenarios is set to “average person in your
-            area,” which is based on the prevalence of COVID in your geographic
-            area. If someone is a frontline worker, or in a closed pod, you can
-            adjust their Person Risk to get a more accurate picture).
-          </p>
-          <p>
-            As you model the various activities you engage in, you can save your
-            custom scenarios to come back to. Play around with the calculator!
-            Change the variables and see how they affect the points total.
+            Play around with the calculator! Change the variables and see how
+            they affect the total.
           </p>
         </div>
+      </div>
 
-        <div className="d-none d-lg-block col-lg-4 offset-lg-2">
+      <hr />
+
+      <div className="row">
+        <div className="col-md-12 col-lg-4">
+          <div className="calc-col-header filled">
+            First, select a location to use in your calculations, or fill in
+            your own values based on data available in your area....
+          </div>
+
+          <Card id="location" title="Step 1: Location/Prevalence">
+            <PrevalanceControls
+              data={calculatorData}
+              setter={setCalculatorData}
+            />
+          </Card>
+        </div>
+
+        <div className="col-md-12 col-lg-4">
+          <div className="calc-col-header filled">
+            <p>
+              ...then select a scenario from the list below (or make your own).
+            </p>
+            <SavedDataSelector
+              currentData={calculatorData}
+              setter={setCalculatorData}
+            />
+          </div>
+
+          <Card id="person-risk" title="Step 2: Person Risk">
+            {showPersonRisk ? (
+              <PersonRiskControls
+                data={calculatorData}
+                setter={setCalculatorData}
+              />
+            ) : (
+              <span className="empty">
+                First, fill out prevalance information.
+              </span>
+            )}
+          </Card>
+        </div>
+
+        <div className="col-md-12 col-lg-4">
+          <div className="calc-col-header filled">
+            Customize the calculator to fit your specific scenario, and save
+            your results to come back to later.
+          </div>
+
+          <Card id="activity-risk" title="Step 3: Activity Risk">
+            {showActivityRisk ? (
+              <ActivityRiskControls
+                data={calculatorData}
+                setter={setCalculatorData}
+              />
+            ) : (
+              <span className="empty">
+                Then, fill out details about person risk.
+              </span>
+            )}
+          </Card>
+        </div>
+
+        <div className="col-lg-4 col-md-12">
           {saveControl}
 
           <div className="mb-4">
@@ -160,60 +208,9 @@ export const Calculator = (): React.ReactElement => {
                   Reset form
                 </button>
               </div>
-              <div className="col-4">
-                <SavedDataSelector
-                  currentData={calculatorData}
-                  setter={setCalculatorData}
-                />
-              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <hr />
-
-      <div className="row">
-        <div className="col-md-12 col-lg-4">
-          <Card title="Step 1: Location/Prevalence">
-            <p>
-              Prevalence options are rough estimates for a given place and time.
-            </p>
-
-            <PrevalanceControls
-              data={calculatorData}
-              setter={setCalculatorData}
-            />
-          </Card>
-        </div>
-
-        <div className="col-md-12 col-lg-4">
-          <Card title="Step 2: Person Risk">
-            {showPersonRisk ? (
-              <PersonRiskControls
-                data={calculatorData}
-                setter={setCalculatorData}
-              />
-            ) : (
-              <span>First, fill out prevalance information.</span>
-            )}
-          </Card>
-        </div>
-
-        <div className="col-md-12 col-lg-4">
-          <Card title="Step 3: Activity Risk">
-            {showActivityRisk ? (
-              <ActivityRiskControls
-                data={calculatorData}
-                setter={setCalculatorData}
-              />
-            ) : (
-              <span>Then, fill out details about person risk.</span>
-            )}
-          </Card>
-        </div>
-
-        <div className="d-lg-none col-md-12 col-lg-4">{saveControl}</div>
       </div>
     </div>
   )

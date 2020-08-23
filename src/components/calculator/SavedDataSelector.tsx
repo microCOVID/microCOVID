@@ -67,7 +67,7 @@ export const SavedDataSelector: React.FunctionComponent<{
       className="form-control"
       onChange={(e) => setSavedData(e.target.value)}
     >
-      <option value="">Load a saved result...</option>
+      <option value="">Select a scenario or saved item...</option>
       {userSavedData}
       {prepopulatedOptions}
     </select>

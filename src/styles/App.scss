@@ -68,6 +68,46 @@ a {
 
 // Calculator
 
+.calc-col-header {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
+    min-height: 140px;    
+  }
+
+  &.filled {
+    background:rgba(0,0,0,0.03);
+    border: 1px solid $gray-400;  
+  }
+}
+
+#location .card-header {
+  background: $primary;
+  color: white;
+  font-weight: bold;
+}
+
+#person-risk .card-header {
+  background: $indigo;
+  color: white;
+  font-weight: bold;
+}
+
+#activity-risk .card-header {
+  background: $cyan;
+  color: white;
+  font-weight: bold;
+}
+
+.empty {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
 .form-group {
   label {
     display: flex;
@@ -119,7 +159,9 @@ a {
   td, th {
     border-right: 1px solid $gray-500;
     padding: 10px;
-    min-width: 200px;
+    @media (min-width: 600px) {
+      min-width: 200px;
+    }
     
     &:last-child {
       border-right: none;
@@ -142,5 +184,6 @@ a {
   }
   section.footnotes {
     font-size: 14px;
+    max-width: 600px;
   }
 }
