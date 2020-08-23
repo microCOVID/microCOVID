@@ -95,7 +95,7 @@ There is substantial uncertainty in many of these numbers. We’ve generally cho
 _Important disclaimer for the tables above: We keep calling these numbers “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
 
 
-### III.C.1) Indoor unmasked transmission
+### Indoor Unmasked Transmission
 
 Indoor unmasked transmission is quite risky, though it’s far from guaranteed that you’ll get COVID from an indoor interaction with someone who is COVID-positive.
 
@@ -103,41 +103,37 @@ If you “just” see someone with COVID indoors _one time_ for an hour-long cof
 
 If someone you _live with_ gets COVID, the chance you’ll get it is higher—more like 30%. This makes sense, because this is someone you might see as often as _every day_, not just once.[^3]
 
-If the person you live with is a spouse or partner, the number is _even higher_, because this is someone you _not only_ see every day _but also_ might share a bed with (with your heads very close together). We estimate this at 48%.
+If the person you live with is a spouse or partner, the number is even higher, because this is someone you not only see every day but also might share a bed with (with your heads very close together). We estimate this at 48%.
 
 In any case, indoor unmasked contact is quite risky. But you can reduce your Activity Risk by MODifiying your activity—doing it Masked, Outdoors, and Distanced.
 
 
-### III.C.2) Modifiers to Activity Risk: Masked, Outdoors, Distanced
+### Modifiers to Activity Risk: Masked, Outdoors, Distanced
 
 Instead of meeting a friend indoors, let’s say you choose to hang out outdoors, masked, and distanced. How much does that decrease your risk in microCOVIDs?
 
-
-
 *   **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x [(for a reasonably well-fitting surgical mask under normal conditions)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). And _their_ mask decreases risk (to _you_) by 4x. 
-    *   Note: We are assuming basic surgical masks for this modeling. For _more_ protection, there are other types of masks you can consider (addressed in the Q&A at the end) (TODO link). And bandanas or single-layer coverings provide _less_ protection than we estimate here.
-*   **Outdoors:** Reduce your risk by:
+    *   Note: We are assuming basic surgical masks for this modeling. For more protection, there are other types of masks you can consider (addressed in the Q&A at the end) (TODO link). And bandanas or single-layer coverings provide _less_ protection than we estimate here (TODO link).
+*   **Outdoors** reduces your risk by:
     *   10x because the outdoors is well-ventilated.
-    *   If you’re 20 feet away *and* outdoors, you can probably ignore the person.
-*   **Distance:** Reduce your risk by 2x if you’re 6 feet away, and for each additional 3ft up to 12 ft, so that’s a risk reduction of:
+    *   If you’re 20 feet away *and* outdoors, you can probably ignore the risk from that person.
+*   **Distance** reduces your risk by 2x if you’re 6 feet away, and another 2x for each additional 3 feet up to 12 feet. This gives a total risk reduction of: 
     *   2x if you’re 6-9 feet away
     *   4x if you’re 9-12 feet away
     *   8x if you’re >12 feet away
 
-Curious how we got these numbers? Again, check out the [Research Sources](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.fchc31gy5ii4) **[TODO check internal link copied]** section! 
+Curious how we got these numbers? Again, check out the Research Sources [TODO check internal link copied] section! 
 
-By combining these three modifiers together, we can see that a MODified hangout (Masked, Outdoors, & Distanced) is 8 ⨉ 10 ⨉ 2 = **160 times** less risky than a non-masked, indoor, non-distanced hangout. If you have a 6% chance of getting sick from a one-hour indoor visit with someone who turns out to be COVID-positive, then you have a 6% / 160 = **0.04% chance** with full MOD protection. Please protect yourself!
-
+By multiplying these three modifiers together, \`8 * 10 * 2 = 160\`, we can see that a MODified hangout (Masked, Outdoors, & Distanced) is **160 times** less risky than a non-masked, indoor, non-distanced hangout. If you have a 6% chance of getting sick from a one-hour indoor visit with someone who turns out to be COVID-positive, then you have a 6% / 160 = **0.04% chance** with full MOD protection. Please protect yourself!
 
 ![alt_text](images/image3.png "image_tooltip")
-
 
 **TODO fix the above image (the Indoor Contact ratio is wrong)**
 
 
 There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
 
-Ok, so we now understand Activity Risk—how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the person is COVID-positive. What are the actual chances that someone has COVID? Let’s look at Person Risk to understand that.
+Ok, so we now understand Activity Risk—how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
 ### III.D) Person Risk: The chance your contact has COVID
@@ -149,7 +145,6 @@ Not all diseases work this way—for example, [ebola](https://www.ncbi.nlm.nih.g
 This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10-or-so days, not just whether they’re actively showing symptoms.
 
 We’ll show you three different methods of guessing someone’s chance of having COVID. 
-
 
 
 *   The **basic method** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID. 
