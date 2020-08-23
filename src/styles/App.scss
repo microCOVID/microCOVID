@@ -76,4 +76,9 @@ select {
     font-weight: 700;
     font-family: $font-family-sans-serif;
   }
+
+  td, th {
+    border: 1px solid grey
+  }
+
 }
