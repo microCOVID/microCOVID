@@ -1,5 +1,6 @@
 import MarkdownIt from 'markdown-it'
 import markdownItFootnote from 'markdown-it-footnote'
+import markdownItHeadings from 'markdown-it-github-headings'
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
@@ -23,7 +24,9 @@ export const Paper = (): React.ReactElement => {
 
   const processor = new MarkdownIt({
     html: true,
-  }).use(markdownItFootnote)
+  })
+    .use(markdownItFootnote)
+    .use(markdownItHeadings)
   const processed = { __html: processor.render(markdownContent) }
 
   return (

@@ -170,6 +170,22 @@ a {
     font-family: 'Roboto Slab';
     font-weight: 700;
     color: $primary;
+
+    // Flip text and anchor links left-to-right 
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+
+    a {
+      display: none;
+    }
+
+    &:hover {
+      a {
+        display: initial;
+        padding-left: 5px;
+      }
+    }
   }
 
   #pageTitle {
