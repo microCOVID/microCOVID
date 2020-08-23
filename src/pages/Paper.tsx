@@ -30,18 +30,21 @@ export const Paper = (): React.ReactElement => {
       <div className="sectionIndicator">
         Section {Object.keys(pages).indexOf(id) + 1}
       </div>
+
       <h1 id="pageTitle">{page.title}</h1>
 
       <div dangerouslySetInnerHTML={processed} />
 
+	  <br/>
       {prev && (
         <Link to={`/paper/${prev}`}>
-          Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
+         {'\u2B05'} Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
         </Link>
       )}
+	  {'  //  '}
       {next && (
         <Link to={`/paper/${next}`}>
-          Next: {pages[next].shortTitle || pages[next].title}{' '}
+          Next: {pages[next].shortTitle || pages[next].title} {'\u27A1'}{' '}
         </Link>
       )}
     </div>
