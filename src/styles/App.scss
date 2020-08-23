@@ -13,16 +13,67 @@ select {
   overflow: hidden;
 }
 
+// Layout overrides
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  font-family: 'Roboto Slab';
+  font-size: 30px;
+}
+
+.nav-link {
+  padding: 0.5rem 0 !important;
+  margin: 0 0.5rem;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 1px;
+
+  &.active {
+    border-bottom: 2px solid $primary;
+  }
+}
+
 // Home page
 
 // Calculator
 
+.form-group {
+  label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .badge {
+    cursor: pointer;
+    border-radius: 12px;
+    width: 20px;
+  }
+}
+
 // Whitepaper
 
 #paperPage {
+  max-width: 900px;
+
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto Slab';
     font-weight: 700;
     color: $primary;
+  }
+
+  #pageTitle {
+    margin-bottom: 36px;
+  }
+  
+  .sectionIndicator {
+    margin-bottom: 0;
+    color: $gray-500;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-family-sans-serif;
   }
 }

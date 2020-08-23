@@ -17,7 +17,5 @@ We’ll show you:
 [^asdf]: Footnote!
 `
 
-const next = '2-riskiness'
-
-const post = { title, content, next }
+const post = { title, content }
 export default post

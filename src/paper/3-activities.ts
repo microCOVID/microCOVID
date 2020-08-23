@@ -1,8 +1,8 @@
-const title = 'Activity Cost'
+const title = 'How many microCOVIDs are different activities?'
+const shortTitle = 'Activity Cost'
 const content = `
-# 3. How many microCOVIDs are different activities?
 
-## 3a) Understanding COVID transmission
+### Understanding COVID transmission
 
 First, we’d like to strengthen your intuitive model of COVID transmission.
 
@@ -16,5 +16,8 @@ If you inhale just a bit of “smoke” from someone with COVID, you might be fi
 const prev = '2-riskiness'
 const next = '4-qanda'
 
-const post = { title, content, prev, next }
+const post = { title, shortTitle, content, prev, next }
+
+
+
 export default post

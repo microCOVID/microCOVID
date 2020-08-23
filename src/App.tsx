@@ -1,6 +1,13 @@
 import React from 'react'
+import { Nav, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom'
+import {
+  NavLink,
+  Redirect,
+  Route,
+  BrowserRouter as Router,
+  Switch,
+} from 'react-router-dom'
 
 import { Calculator } from 'pages/Calculator'
 import { Home } from 'pages/Home'
@@ -21,45 +28,42 @@ export const App = (): React.ReactElement => {
 
         <div className="App">
           <div className="container">
-            <nav className="navbar navbar-expand-sm navbar-light">
-              <a className="navbar-brand" href="/">
-                microCOVID Project
-              </a>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-
-              <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-              >
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <Link to="/" className="nav-link">
+            <Navbar expand="sm">
+              <Navbar.Brand href="/">microCOVID Project</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ml-auto">
+                  <Nav.Item>
+                    <NavLink
+                      to="/"
+                      className="nav-link"
+                      exact
+                      activeClassName="active"
+                    >
                       Home
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/calculator" className="nav-link">
+                    </NavLink>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <NavLink
+                      to="/calculator"
+                      className="nav-link"
+                      activeClassName="active"
+                    >
                       Calculator
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/paper/1-intro" className="nav-link">
-                      Whitepaper
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+                    </NavLink>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <NavLink
+                      to="/paper"
+                      className="nav-link"
+                      activeClassName="active"
+                    >
+                      White Paper
+                    </NavLink>
+                  </Nav.Item>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
 
             <Switch>
               <Route path="/calculator">
@@ -67,6 +71,9 @@ export const App = (): React.ReactElement => {
               </Route>
               <Route path="/paper/:id">
                 <Paper />
+              </Route>
+              <Route exact path="/paper">
+                <Redirect to="/paper/1-intro" />
               </Route>
               <Route path="/">
                 <Home />

@@ -1,8 +1,16 @@
 import React from 'react'
+import { Popover } from 'react-bootstrap'
 
 import { SelectControl } from './SelectControl'
 import { CalculatorData } from 'data/calculate'
 import { Interaction, RiskProfile } from 'data/data'
+
+const personRiskPopover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">Person Risk Tooltip</Popover.Title>
+    <Popover.Content>Some content goes here.</Popover.Content>
+  </Popover>
+)
 
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -27,6 +35,7 @@ export const PersonRiskControls: React.FunctionComponent<{
     <SelectControl
       id="riskProfile"
       label="Person(s) Risk Profile"
+      popover={personRiskPopover}
       data={data}
       setter={setter}
       source={RiskProfile}
