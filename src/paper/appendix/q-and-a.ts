@@ -15,14 +15,8 @@ Other important precautions include washing & sanitizing your hands, covering yo
 
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
 [^2]:
-
-
-
-
 `
 
-
-const post = { title, content}
-
+const post = { title, content }
 
 export default post

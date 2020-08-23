@@ -1,4 +1,5 @@
 import React from 'react'
+import { Badge, OverlayTrigger } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
@@ -9,9 +10,19 @@ export const SelectControl: React.FunctionComponent<{
   data: CalculatorData
   source: { [key: string]: FormValue }
   label?: string
+  popover?: JSX.Element
 }> = (props) => (
   <div className="form-group">
-    {props.label && <label htmlFor={props.id}>{props.label}</label>}
+    {props.label && (
+      <label htmlFor={props.id}>
+        {props.label}
+        {props.popover && (
+          <OverlayTrigger trigger="click" overlay={props.popover}>
+            <Badge variant="secondary">?</Badge>
+          </OverlayTrigger>
+        )}
+      </label>
+    )}
     <select
       id={props.id}
       className="form-control form-control-lg"

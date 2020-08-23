@@ -99,9 +99,7 @@ export const Calculator = (): React.ReactElement => {
     <div>
       <div className="row">
         <div className="col-md-12 col-lg-8">
-          <h1 className="mt-4">microCOVID Calculator</h1>
-
-          <p>
+          <p className="mt-5">
             It can be pretty annoying to calculate microCOVIDs for every
             activity you’re considering. With that in mind, we developed a
             calculator tool to help you estimate and multiply the person risk,
