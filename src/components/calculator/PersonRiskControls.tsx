@@ -8,7 +8,11 @@ import { Interaction, RiskProfile } from 'data/data'
 const personRiskPopover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">Person Risk Tooltip</Popover.Title>
-    <Popover.Content>Some content goes here.</Popover.Content>
+    <Popover.Content>
+	<p>An "average risk person in your area" is based on the prevalence of COVID in your geographic area, as explained in the Basic Method from the white paper.</p>
+	<p>We have modeled several additional Person Risk examples using the Advanced Method from the white paper. Select the one that most closely matches the person or people you are planning to interact with. We suggest you "round up" if you are uncertain.</p>
+	<p>If you  use the <a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ/edit#gid=601829656" target="_blank">activity log spreadsheet</a> to calculate someone's Person Risk based on a list of their recent behaviors, then you can insert this number as a custom value.</p>
+	</Popover.Content>
   </Popover>
 )
 
