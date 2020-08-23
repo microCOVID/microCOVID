@@ -1,6 +1,7 @@
 import MarkdownIt from 'markdown-it'
 import markdownItFootnote from 'markdown-it-footnote'
 import markdownItHeadings from 'markdown-it-github-headings'
+import markdownItLinkAttributes from 'markdown-it-link-attributes'
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
@@ -27,6 +28,12 @@ export const Paper = (): React.ReactElement => {
   })
     .use(markdownItFootnote)
     .use(markdownItHeadings)
+    .use(markdownItLinkAttributes, {
+      attrs: {
+        target: '_blank',
+        rel: 'noopener',
+      },
+    })
   const processed = { __html: processor.render(markdownContent) }
 
   return (
