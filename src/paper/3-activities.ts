@@ -4,19 +4,19 @@ const content = `
 
 ### Understanding COVID transmission
 
-First, we’d like to strengthen our intuitive model of COVID transmission.
+First, let's strengthen our intuitive model of COVID transmission.
 
 COVID is transmitted primarily through tiny droplets produced when an infected person talks, coughs, or sneezes ([CDC FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)), many of which can [remain suspended in the air](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) for minutes to hours. Touching contaminated surfaces or objects is _possibly_ a way that COVID spreads, but the [CDC](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html) believes the _main_ way it spreads is person-to-person through respiratory droplets. Therefore, in this writeup, we focus primarily on the risk from exhaled droplets in the air.[^1]
 
 To visualize how exhaled droplets work, we suggest a helpful metaphor from our friend [Matt Bell](https://medium.com/@llebttam_45762/summer-vacations-in-the-era-of-covid-ab5576a7b302). Think of everyone around you exhaling cigarette smoke. If someone is smoking a cigarette in a park 30 feet away from you, you might not even smell it. But in a crowded bar where indoor smoking is permitted, the air will be thick with people’s smoky exhalations.
 
-If you inhale just a bit of “smoke” (exhaled air) from someone with COVID, you might be fine. But if you inhale lots of “smoke,” you’re likely to get COVID. If you’re wondering about the riskiness of a situation, then it’s helpful to imagine, “What if everyone here were smoking a cigarette? How much smoke would I breathe?” If you’d be breathing other people’s smoke, then it’s a risky situation.
+If you inhale just a bit of “smoke” (exhaled air) from someone with COVID, you might be fine. But if you inhale lots of “smoke,” you’re likely to get COVID. If you’re wondering about the riskiness of a situation, then it’s helpful to imagine, “What if everyone here were smoking a cigarette? How much smoke would I breathe in?” If you’d be breathing in other people’s smoke, then it’s a risky situation.
 
 ![LaVision imaging technique shows how masks restrict the spread of exhaled air](https://miro.medium.com/max/864/1*zyx-Sh2FQFwRGyQWkiherg.gif)
 
 Source: [https://www.lavision.de/en/news/2020/4302/](https://www.lavision.de/en/news/2020/4302/)
 
-Concretely, this means it’s important to avoid situations that feature the [3 C’s](https://www.businessinsider.com/how-japan-tackled-coronavirus-without-a-lockdown-2020-5): Crowds, Closed Spaces, and Close Contact. Why? Because if anyone there has COVID, which becomes likelier as the size of the crowd increases, their “smoke” will be blown into your face. Even if you're not standing near them, it will build up in the enclosed space, making it more likely that you’ll breathe it in.
+Concretely, this means it’s important to avoid situations that feature the [3 C’s](https://www.businessinsider.com/how-japan-tackled-coronavirus-without-a-lockdown-2020-5): Crowds, Closed Spaces, and Close Contact. Why? Because if anyone there has COVID, which becomes likelier as the size of the crowd increases, their “smoke” will be blown into your face. Even if you're not standing near them, it will build up in the enclosed space, making it more likely that you’ll inhale it.
 
 So we know what to _avoid:_ the 3 C’s. But besides staying in our homes, what should we _do_? We can choose to have “MOD” hangouts: 1-on-1 or small-group socializing that is Masked, Outdoors, and Distanced. These hangouts are MODified from normal. The COVID “smoke” gets stopped by your mask, falls to the ground before it reaches the other person, and dissipates into the air. MODified hangouts are much safer, especially when they don’t involve many people.
 
@@ -39,7 +39,7 @@ For example:
 
 *   Let’s say you do an activity with someone (like watching a movie indoors) that has an 8% chance of transmitting COVID to you. We call that an Activity Risk of 8%.
 *   And let’s say that person has a 1% chance of currently being COVID-positive. We call that a Person Risk of 10,000. (Just like for microCOVIDs, if someone has a one-in-a-million chance of having COVID, we’ll say their Person Risk is 1.)
-*   Then your chance of contracting COVID from that activity-and-person pair is \`8% x 10,000 = 800 microCOVIDs (0.08%)\`.
+*   Then your chance of contracting COVID from that activity-and-person pair is \`8% x 10,000 = 800 microCOVIDs (or 0.08%)\`.
 *   If you’re aiming for at most 1% per year risk of COVID (which is 833 microCOVIDs per month), then you’ve spent almost a whole month’s worth of risk on this one activity!
 
 **In other words, whenever you’re deciding to do an activity, ask: How risky is the activity itself? And how risky are the people you’re doing it with?**
@@ -86,9 +86,9 @@ We looked through a bunch of research [TODO check internal link] and extracted t
 | Each additional 3 feet of distance (up to 12 feet) | 2x | Same sources as above |
 
 
-If you're taking multiple precautions, multiply these COVID risk reductions. So if you’re wearing a mask and they’re wearing a mask, then your reduction in COVID risk is 2x times 4x, which is 8x.
+If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask and they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
-These numbers assume a conversation at normal volume. For louder contexts (singing, chanting, or speaking loudly) or quieter contexts (such as a subway car where nobody is speaking), you can adjust up or down; we brainstorm about how much to adjust in the Q&A section [TODO link].
+These numbers assume a conversation at normal volume. For louder contexts (such as singing or shouting, which project respiratory droplets farther) or quieter contexts (such as a subway car where no one is speaking), you can adjust up or down. We brainstorm about how much to adjust in the Q&A section [TODO link].
 
 There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of Research Sources (TODO link) for details about the data we based these numbers on.
 
@@ -112,19 +112,19 @@ In any case, indoor unmasked contact is quite risky. But you can reduce your Act
 
 Instead of meeting a friend indoors, let’s say you choose to hang out outdoors, masked, and distanced. How much does that decrease your risk in microCOVIDs?
 
-*   **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x [(for a reasonably well-fitting surgical mask under normal conditions)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). And _their_ mask decreases risk (to _you_) by 4x.
+*   **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x [(for a reasonably well-fitting surgical mask under normal conditions)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). And _their_ mask decreases risk to _you_ by 4x.
     *   Note: We are assuming basic surgical masks for this modeling. For more protection, there are other types of masks you can consider (addressed in the Q&A at the end) (TODO link). And bandanas or single-layer coverings provide _less_ protection than we estimate here (TODO link).
 *   **Outdoors** reduces your risk by:
     *   10x because the outdoors is well-ventilated.
     *   If you’re 20 feet away *and* outdoors, you can probably ignore the risk from that person.
-*   **Distance** reduces your risk by 2x if you’re 6 feet away, and another 2x for each additional 3 feet up to 12 feet. This gives a total risk reduction of:
+*   **Distance** reduces your risk by 2x if you’re 6 feet away, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
     *   2x if you’re 6-9 feet away
     *   4x if you’re 9-12 feet away
     *   8x if you’re >12 feet away
 
 Curious how we got these numbers? Again, check out the Research Sources [TODO check internal link copied] section!
 
-By multiplying these three modifiers together, \`8 * 10 * 2 = 160\`, we can see that a MODified hangout (Masked, Outdoors, & Distanced) is **160 times** less risky than a non-masked, indoor, non-distanced hangout. If you have a 6% chance of getting sick from a one-hour indoor visit with someone who turns out to be COVID-positive, then you have a 6% / 160 = **0.04% chance** with full MOD protection. Please protect yourself!
+By multiplying these three modifiers together, \`8 * 10 * 2 = 160\`, we can see that a MODified hangout (Masked, Outdoors, & Distanced) is **160 times** less risky than a non-masked, indoor, non-distanced hangout. If you have a 6% chance of getting sick from a one-hour indoor visit with someone who turns out to be COVID-positive, then with full MOD protection, your risk goes down to \`6% / 160 = 0.04%\`. That's only a **0.04% chance** of getting sick from this interaction if you're masked, outside, and 6 feet apart! Please protect yourself!
 
 ![alt_text](images/image3.png "image_tooltip")
 
@@ -133,7 +133,7 @@ By multiplying these three modifiers together, \`8 * 10 * 2 = 160\`, we can see 
 
 There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
 
-Ok, so we now understand Activity Risk—how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
+Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
 ### III.D) Person Risk: The chance your contact has COVID
