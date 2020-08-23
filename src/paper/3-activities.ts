@@ -187,13 +187,12 @@ We then suggest using the following factors to adjust for underreporting and del
 
 Use this equation (along with the two factors above) to calculate the regional prevalence of COVID in your area:
 
-Actual Infections Last Week = Cases ⨉ Underreporting Factor ⨉ Delay Factor
-
+<p class="centeredText">Actual Infections Last Week = Cases ⨉ Underreporting Factor ⨉ Delay Factor</p>
 
 
 From there, calculate the basic person risk by comparing the actual infections last week with the overall population in your region.  
 
-Basic Person Risk = Actual Infections Last Week / Population In Millions
+<p class="centeredText">Basic Person Risk = Actual Infections Last Week / Population In Millions</p>
 
 To add specific numbers to this:
 
@@ -213,13 +212,13 @@ But of course, not everyone is average. The Person Risk of someone who works at 
 
 For a slightly more nuanced estimate, we can adjust for the fact that front-line essential workers (unfortunately) have a higher chance of infection. We estimate that front-line workers are **3x more likely** than average to have COVID, and that anyone who is _not_ a front-line worker is **1/2 as likely**[^11] to be infected. So we can use the following equation to adjust our estimate of Person Risk:
 
-Intermediate Person Risk = Basic Person Risk ⨉ Front-Line Work Factor
+<p class="centeredText">Intermediate Person Risk = Basic Person Risk ⨉ Front-Line Work Factor</p>
 
 **Advanced method: Add up risks for an individual person given their recent behavior**
 
 To get an _even more_ accurate estimate for Person Risk, we can actually add up the risk (in microCOVIDs!) of _their_ recent behavior. Remember, a single microCOVID represents a one-in-a-million chance of getting COVID. Just like you can calculate this for each of your actions, you can also calculate it for your friend’s actions, using the same formula:
 
-Cost = Activity Risk ⨉ Person Risk
+<p class="centeredText">Cost = Activity Risk ⨉ Person Risk</p>
 
 We can do this by looking at all of their activities in the past ten days or so[^12] and determining the risk of each individual activity. Or if they do the same things every week, what does their typical week look like?  
 
@@ -229,13 +228,13 @@ This is an advanced method because it requires knowing—and calculating the ris
 
 We suggest thinking about this in three categories: socializing, errands, and work.  To calculate total Person Risk using the advanced method, you can add these three categories together, as follows:
 
-Advanced Person Risk = Socializing + Errands + Work
+<p class="centeredText">Advanced Person Risk = Socializing + Errands + Work</p>
 
 For socializing, just estimate each social activity in microCOVIDs (using “Cost = Activity Risk ⨉ Person Risk”) and add them together. This is the place to count the exposure from all their household members as well.
 
 Errands include grocery shopping, transit, and other public settings. These can be harder to estimate individually; we have some guidelines in the [Q&A section](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO verify link copying]. But if estimating each one individually sounds hard, a faster way to model errands and work combined is to use the following rule of thumb: use 10% of the Intermediate Person Risk to stand in for the total of all their public activity combined. This doesn’t factor in how many times per week they grocery shop, or what exactly their workplace is; it’s a way to avoid having to think about those details. You might prefer to estimate each individual excursion separately. 
 
-Errands + Work = Intermediate Person Risk ⨉ 10%
+<p class="centeredText">Errands + Work = Intermediate Person Risk ⨉ 10%</p>
 
 **Person Risk example**
 
@@ -274,16 +273,16 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
 
 We can now multiply Activity Risk by Person Risk to get the microCOVID cost of a given interaction.
 
-Cost = Activity Risk ⨉ Person Risk
+<p class="centeredText">Cost = Activity Risk ⨉ Person Risk</p>
 
 Let’s say you would like to hang out with Reasonable Rosie (from the example above), whose Person Risk is 369 using the Advanced Method. An indoors meetup has a 6% Activity Risk per hour, so it costs you 6% per hour ⨉ 1.5 hours ⨉ 369 Person Risk = **33 microCOVIDs**. 
 
-33 microCOVIDs = 6% per hour (Activity Risk) ⨉ 1.5 hr ⨉ 369 (Person Risk)
+<p class="centeredText">33 microCOVIDs = 6% per hour (Activity Risk) ⨉ 1.5 hr ⨉ 369 (Person Risk)</p>
 
 If you both wear masks, it costs you 8x less: only **4 microCOVIDs.** And if you hang out outside instead of inside, it costs you _an additional _10x less, for just 0.4 microCOVIDs (**less than 1 microCOVID!**) \
 
 
-0.4 microCOVIDs = 6% per hour ⨉ 1.5 hr ⨉ (1/8 masks) ⨉ (1/10 outdoors) ⨉ 369 (Person Risk) \
+<p class="centeredText">0.4 microCOVIDs = 6% per hour ⨉ 1.5 hr ⨉ (1/8 masks) ⨉ (1/10 outdoors) ⨉ 369 (Person Risk)</p>
 
 
 Should you do these activities? It depends on how important you believe it is to avoid COVID (for your own health, and to protect others), and how important seeing Rosie is to you!
