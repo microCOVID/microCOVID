@@ -51,40 +51,48 @@ We'll think about our actions in terms of how much they "cost" us in microCOVIDs
 Let’s explore how you can estimate these two numbers (Activity Risk and Person Risk) for an activity you’d like to do.
 
 
-### III.C) Activity Risk: The chance this activity transmits COVID to you
+### Activity Risk: The chance this activity transmits COVID to you
 
-We’re going to summarize four key factors that affect Activity Risk: duration of contact; masks; location (outdoor vs. indoor); and distance from each other. For speculation about other factors, see the Q&A [TODO].
+We’re going to summarize four key factors that affect Activity Risk: 
 
-We looked through a bunch of research **[TODO check internal link]**, and extracted the following guesses for Activity Risk:
+* duration of contact 
+* masks 
+* location (outdoor vs. indoor), and
+* distance from each other. 
+
+For speculation about other factors, see the Q&A [TODO].
+
+We looked through a bunch of research [TODO check internal link] and extracted the following guesses for Activity Risk:
 
 **Indoor Unmasked Transmission**
 
-| Type of Contact | Rough chance you’ll get COVID if they have COVID | Citations: Why do we think this? (See Research Sources [TODO] for detailed reasoning) |
+| Type of Contact | Rough chance you’ll get COVID if they have COVID | Citations: Why do we think this? <br> (See Research Sources [TODO] for detailed reasoning) |
 |--|--|--|
-| One-time contact (i.e., visiting 1 friend indoors) | about 6% per hour | Rough estimate from combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. |
-| Household member | about 30% | Directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis.|
+| One-time contact (e.g., visiting one friend indoors) | about 6% per hour | Rough estimate from combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study |
+| Household member | about 30% | Directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis|
 | Partner | perhaps 48% | Speculative. Adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) |
+
+[TODO: replace "perhaps" above with something more useful - can we just keep "about"?]
 
 
 **Risk Reduction from Protective Measures**
 
-| Protective Measure | Reduction in COVID risk to me | Citations: Why do we think this? (See Research Sources [TODO] for detailed reasoning) |
+| Protective Measure | Reduction in COVID risk to me | Citations: Why do we think this? <br> (See Research Sources [TODO] for detailed reasoning) |
 |--|--|--|
-| I’m wearing a high-quality mask[^2] | 2x | [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x). |
-| Other person wearing a high-quality mask | 4x | [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x). |
-| Outdoors | 10x [TODO CHANGE TO 20x]| Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China. [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277). Lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html). Anecdotal CO2 data from protests. [Zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US. |
-| >6ft distance | 2x | [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study. |
-| Each additional 3ft (up to 12 ft) | 2x | Same sources as above |
+| I’m wearing a high-quality mask[^2] | 2x | [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x) |
+| Other person wearing a high-quality mask | 4x | [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x) |
+| Outdoors | 10x [TODO CHANGE TO 20x]| Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US |
+| > 6 feet distance | 2x | [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
+| Each additional 3 feet of distance (up to 12 feet) | 2x | Same sources as above |
 
 
+If you're taking multiple precautions, multiply these COVID risk reductions. So if you’re wearing a mask and they’re wearing a mask, then your reduction in COVID risk is 2x times 4x, which is 8x.
 
-Multiply these COVID risk reductions if you’re taking multiple precautions. So if you’re wearing a mask and they’re wearing a mask, then your reduction in COVID risk is 2x times 4x, which is 8x.
+These numbers assume a conversation at normal volume. For louder contexts (singing, chanting, or speaking loudly) or quieter contexts (such as a subway car where nobody is speaking), you can adjust up or down; we brainstorm about how much to adjust in the Q&A section [TODO link].
 
-These numbers assume a conversation at normal volume. For louder contexts (singing, chanting, or speaking loudly) or quieter contexts (such as a subway car where nobody is speaking), you can adjust up or down; we brainstorm about how much in the Q&A section.
+There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of Research Sources (TODO link) for details about the data we based these numbers on.
 
-There is substantial uncertainty in many of these numbers; we’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of Research Sources (TODO link) for details about the data we based these on.
-
-_Important disclaimer on the above: We keep calling these numbers “guesses” and “rough estimates”. Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal life decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the [Research Sources](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.fchc31gy5ii4) **[TODO check internal link]** section in the Appendix._
+_Important disclaimer for the tables above: We keep calling these numbers “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
 
 
 ### III.C.1) Indoor unmasked transmission
