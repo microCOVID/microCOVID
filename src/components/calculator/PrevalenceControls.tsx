@@ -41,7 +41,7 @@ export const PrevalanceControls: React.FunctionComponent<{
           }}
         >
           <option value="">Select location...</option>
-          <optgroup label="Examples from post">
+          <optgroup label="Examples from white paper">
             {Object.keys(ExampleLocations).map((value, index) => (
               <option key={index} value={value}>
                 {ExampleLocations[value].label}
@@ -64,7 +64,7 @@ export const PrevalanceControls: React.FunctionComponent<{
       </div>
 
       <div className="form-group">
-        <label htmlFor="duration">Cases in past week</label>
+        <label htmlFor="duration">Reported cases in past week</label>
         <input
           className="form-control form-control-lg"
           type="number"
@@ -76,7 +76,7 @@ export const PrevalanceControls: React.FunctionComponent<{
       </div>
 
       <div className="form-group">
-        <label htmlFor="duration">Cases in week before last</label>
+        <label htmlFor="duration">Reported cases in week before last</label>
         <input
           className="form-control form-control-lg"
           type="number"
@@ -88,7 +88,7 @@ export const PrevalanceControls: React.FunctionComponent<{
       </div>
 
       <div className="form-group">
-        <label htmlFor="duration">Positive case percentage</label>
+        <label htmlFor="duration">Percent of tests that come back positive</label>
         <div className="input-group mb-3">
           <input
             className="form-control form-control-lg"
