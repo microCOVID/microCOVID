@@ -27,7 +27,7 @@ export const PrevalanceControls: React.FunctionComponent<{
               })
             }
 
-            if (selectedValue === 'custom' || selectedValue == '') {
+            if (selectedValue === 'custom' || selectedValue === '') {
               setter({
                 ...data,
                 location: selectedValue,

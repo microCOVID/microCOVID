@@ -1,6 +1,7 @@
 import MarkdownIt from 'markdown-it'
 import markdownItFootnote from 'markdown-it-footnote'
 import React from 'react'
+import { Button } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
 
 import { pages } from 'paper/index'
@@ -35,17 +36,20 @@ export const Paper = (): React.ReactElement => {
 
       <div dangerouslySetInnerHTML={processed} />
 
-	  <br/>
       {prev && (
-        <Link to={`/paper/${prev}`}>
-         {'\u2B05'} Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
-        </Link>
+        <Button size="lg" variant="link">
+          <Link to={`/paper/${prev}`}>
+            {'\u2B05'} Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
+          </Link>
+        </Button>
       )}
-	  {'  //  '}
+
       {next && (
-        <Link to={`/paper/${next}`}>
-          Next: {pages[next].shortTitle || pages[next].title} {'\u27A1'}{' '}
-        </Link>
+        <Button size="lg" variant="link">
+          <Link to={`/paper/${next}`}>
+            Next: {pages[next].shortTitle || pages[next].title} {'\u27A1'}{' '}
+          </Link>
+        </Button>
       )}
     </div>
   )
