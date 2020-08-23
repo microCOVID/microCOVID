@@ -1,12 +1,11 @@
-import post1intro from 'paper/1-intro'
-import post2riskiness from 'paper/2-riskiness'
-import post3introtomicrocovids from 'paper/3-intro-to-microcovids'
-import post4activityrisk from 'paper/4-activity-risk'
-import post5personrisk from 'paper/5-person-risk'
-import post6calculatingpoints from 'paper/6-calculating-points'
-import post7calculatorandconclusion from 'paper/7-calculator-and-conclusion'
-import post8qanda from 'paper/8-q-and-a'
-import post9researchsources from 'paper/9-research-sources'
+import post1 from 'paper/1-intro'
+import post2 from 'paper/2-riskiness'
+import post3 from 'paper/3-activities'
+import post4 from  'paper/4-person-and-activity-risk'
+import post5 from 'paper/5-activity-risk'
+import post10 from 'paper/10-calculator-and-conclusion'
+import post11 from 'paper/11-q-and-a'
+import post12 from 'paper/12-research-sources'
 
 interface PostContent {
   title: string
@@ -15,13 +14,13 @@ interface PostContent {
 }
 
 export const pages: { [key: string]: PostContent } = {
-  '1-intro': post1intro,
-  '2-riskiness': post2riskiness,
-  '3-intro-to-microcovids': post3introtomicrocovids,
-  '4-activity-risk': post4activityrisk,
-  '5-person-risk': post5personrisk,
-  '6-calculating-points': post6calculatingpoints,
-  '7-calculator-and-conclusion': post7calculatorandconclusion,
-  '8-q-and-a': post8qanda,
-  '9-research-sources': post9researchsources,
+  '1-intro': post1,
+  '2-riskiness': post2,
+  '3-activites': post3,
+  '4-person-and-activity-risk': post4,
+  '5-activity-risk': post5,
+  '10-calculator-and-conclusion': post10,
+  '11-qanda': post11,
+  '12-research-sources': post12,
+
 }
