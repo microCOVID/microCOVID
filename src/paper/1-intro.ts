@@ -12,17 +12,16 @@ We’ll show you:
 - how we measure COVID infection risk, in units of “microCOVIDs”
 - how risky we think various common activities are
 - how you can estimate the COVID risk of your own actions (using our handy-dandy [calculator](/calculator))
-- and, most importantly, how to make decisions that balance freedom and fun with safety and health.
+- and, most importantly, how to make decisions that balance living your life with safety and health.
 
 You’re in the target audience of this post if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
 
-This is the first part of a two-part post. In the second part [TODO link], we’ll go into more detail about how we use these COVID risk estimates as part of a “risk budget” system for our communal house.
 
 If you want to skip the intro & framing, and jump to our final estimates of COVID risk, click here. [TODO create link.]
 
 If you want to skip the entire article and just use the calculator tool, click [here](/calculator).
 
-## How to navigate this whitepaper
+## How to navigate this white paper
 
 Use the "previous" and "next" links at the bottom of the page to navigate from one section to the next.
 
@@ -35,13 +34,13 @@ _This article (and corresponding calculator) was collaboratively written by the 
 
 ## Authors:
 
-**Research and modeling:** _Catherine Olsson, Joshua Oreman_
+**Research and modeling:** Catherine Olsson, Joshua Oreman
 
-**White paper:** _Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich_
+**White paper:** Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
 
-**Website and calculator:** _Dominic Dagradi, Sarah Dobro, Deb Lyon_
+**Website and calculator:** Dominic Dagradi, Sarah Dobro, Deb Lyon
 
-**Feedback & assistance thanks to:** _Ajeya Cotra, David Mears, Danny Hernandez, Katja Grace, Andrew Critch, Matt Bell, Ben Shaya, Zvi Mowshowitz, Derek Foster, Jess Watson Miller, Elliot Olds, Ivan Gayton, Eugene Shvarts, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this post.)
+_Feedback & assistance thanks to: Ajeya Cotra, David Mears, Danny Hernandez, Katja Grace, Andrew Critch, Matt Bell, Ben Shaya, Zvi Mowshowitz, Derek Foster, Jess Watson Miller, Elliot Olds, Ivan Gayton, Eugene Shvarts, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this writeup.)
 
 ---
 
