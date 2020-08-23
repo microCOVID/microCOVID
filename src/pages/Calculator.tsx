@@ -99,7 +99,7 @@ export const Calculator = (): React.ReactElement => {
   const pointsDisplay = (
     <Card title="Result">
       <h1>
-        {showPoints ? points : '-'} µCOV
+        {showPoints ? points : '-'} µCoV
         {calculatorData.interaction === 'repeated' && '/week'}
       </h1>
       {showPoints && (showSaveForm ? saveForm : saveButton)}
@@ -111,10 +111,10 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col md="12" lg="8">
           <p>
-            We created a calculator to assess “cost” in microCOVIDs of various
-            activities. We hope you’ll use it to build your intuition about the
-            comparative risk of different activities and as a harm-reduction
-            tool to make safer choices.
+            We created a calculator to assess “cost” of various activities in microCOVIDs (µCoV), where 1&nbsp;microCOVID is a one-in-a-million chance of getting COVID.
+		  </p>
+		  <p>
+		    We hope you’ll use this tool to build your intuition about the comparative risk of different activities and as a harm-reduction tool to make safer choices.
           </p>
           <p>
             Play around with the calculator! Change the variables and see how

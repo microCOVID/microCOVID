@@ -25,7 +25,7 @@ So let’s get started. To quantify the risk of an individual interaction—say,
 
 <p class="calloutText">1 microCOVID = a one-in-a-million chance of getting COVID</p>
 
-For example, if you live in a region where about 1 in 1,000 people currently has COVID, then you could calculate based on studies of other indoor interactions (as we will explain later in this writeup) that meeting a friend for coffee indoors has about a 1 in 17,000 chance of giving you COVID. Such small numbers are hard to think about, so we can use microCOVIDs instead. Your coffee date would be about 60 microCOVIDs. By the end of this writeup, you will understand how to do these calculations yourself.
+For example, if you live in a region where about 1 in 1,000 people currently has COVID, then you could calculate based on studies of other indoor interactions (as we will explain later in this writeup) that meeting a friend for coffee indoors has about a 1 in 17,000 chance of giving you COVID. Such small numbers are hard to think about, so we can use microCOVIDs instead. Your coffee date would be about 60 microCOVIDs. By the end of this white paper, you will understand how to do these calculations yourself.
 
 One benefit of using microCOVIDs is that you can straightforwardly add up microCOVIDs to estimate your risk over longer periods of time.[^3]
 * Here's an example (using some made-up numbers): last week you made two trips to the grocery store (25 microCOVIDs each), went for two masked outdoor walks with friends (1 microCOVID each), and otherwise stayed home alone, so your total risk for that week would be 52 microCOVIDs. You can imagine doing the same calculation over longer time intervals to estimate your chance of getting COVID in a month or even a year of activities.
@@ -42,13 +42,15 @@ So, given that we each have 10,000 microCOVIDs to spend per year, and many of th
 |----------------------------------------------|---------------------|---------------------------------------------------------------------------|
 |                                       1 μCoV | almost negligible   | dozens of times per week                                                  |
 |                                      10 μCoV | moderate risk       | several times per week                                                    |
+|                                      100 μCoV | quite substantial risk       | once or twice a month                                                    |
+|                                      1000 μCoV | borderline reckless       | once a year, *maybe*                                                    |
 
 
 
 \n
 \n
 
-In general, if you are young and healthy, don’t regularly visit anyone who is [older](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age) or has [COVID risk factors](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html), and are lucky enough to be able to make voluntary choices about your risk exposure, then we think aiming for a 1% risk of COVID per year is a plausible choice. This is based on two important considerations: risk to _you_, and risk to _others_.
+In general, if you are young and healthy, don’t regularly visit anyone who is [older](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age) or has [COVID risk factors](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html), and are lucky enough to be able to make voluntary choices about your risk exposure, then we think aiming for 10,000 microCOVIDs per year (corresponding to 1% risk of COVID per year) is a plausible choice. This is based on two important considerations: risk to _you_, and risk to _others_.
 
 
 *   **Risk to you:** If you are in the under-40 age bracket and do not have other risk factors, then a 1% chance of COVID per year puts your risk of disability due to COVID at about the same level as your risk of disability due to driving a car.[^6]

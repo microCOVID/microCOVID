@@ -14,7 +14,7 @@ We’ll show you:
 - how you can estimate the COVID risk of your own actions (using our handy-dandy [calculator](/calculator))
 - and, most importantly, how to make decisions that balance living your life with safety and health.
 
-You’re in the target audience of this writeup if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
+You’re in the target audience of this white paper if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
 
 
 If you want to skip the intro & framing, and jump to our final estimates of COVID risk, click here. [TODO create link.]
@@ -36,11 +36,13 @@ _This article (and corresponding calculator) was collaboratively written by the 
 
 **Cite us collectively as:** Ibasho and friends
 
-**White paper:** Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
+**White paper (prose):** Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
+
+**White paper (research and modeling):** Catherine Olsson, Joshua Oreman
 
 **Website and calculator:** Dominic Dagradi, Sarah Dobro, Deb Lyon
 
-_Feedback & assistance thanks to: Ajeya Cotra, David Mears, Danny Hernandez, Katja Grace, Andrew Critch, Matt Bell, Ben Shaya, Zvi Mowshowitz, Derek Foster, Jess Watson Miller, Elliot Olds, Ivan Gayton, Eugene Shvarts, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this writeup.)
+_Feedback & assistance thanks to: Ajeya Cotra, David Mears, Danny Hernandez, Katja Grace, Andrew Critch, Matt Bell, Ben Shaya, Zvi Mowshowitz, Derek Foster, Jess Watson Miller, Elliot Olds, Ivan Gayton, Eugene Shvarts, Peter Hurford, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this writeup.)
 
 ---
 
