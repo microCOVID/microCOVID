@@ -86,7 +86,7 @@ export const Calculator = (): React.ReactElement => {
     </div>
   )
   const saveButton = (
-    <p>
+    <span>
       <button
         type="button"
         className="btn btn-primary"
@@ -94,7 +94,7 @@ export const Calculator = (): React.ReactElement => {
       >
         Save parameters
       </button>
-    </p>
+    </span>
   )
   const pointsDisplay = (
     <Card title="Result">
@@ -128,14 +128,14 @@ export const Calculator = (): React.ReactElement => {
             Reset form
           </button>
         </Col>
-        <Col lg="4" md="12">
+        <Col lg="4" md="12" className="d-none d-lg-block">
           {pointsDisplay}
         </Col>
       </Row>
 
       <hr />
 
-      <Row>
+      <Row id="calculator-fields">
         <Col md="12" lg="4">
           <Card id="location" title="Location & Prevalence">
             <div className="subheading">
@@ -186,6 +186,10 @@ export const Calculator = (): React.ReactElement => {
               </div>
             )}
           </Card>
+        </Col>
+
+        <Col lg="4" md="12" className="d-lg-none">
+          {pointsDisplay}
         </Col>
       </Row>
     </div>

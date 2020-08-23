@@ -4,6 +4,14 @@
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 600px) { @content; }
+}
+
 html, body, #root {
   min-height: 100%;
   display: flex;
@@ -68,13 +76,19 @@ a {
 
 // Calculator
 #calculator {
+  #calculator-fields {
+    .col-md-12 {
+      margin-bottom: 30px;
+    }
+  }
+
   // Colorful section headers
   .card header {
     color: white;
     font-weight: bold;
     padding: 10px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   header#location {
     background: $primary;
@@ -86,13 +100,26 @@ a {
 
   header#activity-risk {
     background: $cyan;
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+  .card {
+    border: none;
+    background: lighten($gray-200, 1.5);
+    border-radius: 8px;
   }
 
   // Card subheader
   .subheading {
-    height: 100px;
+    padding-bottom: 15px;
     border-bottom: 1px solid $gray-300;
     margin-bottom: 15px;
+    @include desktop {
+      height: 100px;
+    }
   }
 
   // Equal height columns
@@ -102,8 +129,10 @@ a {
 
   // Empty state
   .card-body {
-    display: flex;
-    flex-direction: column;
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .empty {
@@ -167,7 +196,7 @@ a {
   td, th {
     border-right: 1px solid $gray-500;
     padding: 10px;
-    @media (min-width: 600px) {
+    @include desktop {
       min-width: 200px;
     }
 
