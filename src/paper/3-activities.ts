@@ -14,6 +14,7 @@ If you inhale just a bit of “smoke” from someone with COVID, you might be fi
 `
 
 const prev = '2-riskiness'
+const next = '4-qanda'
 
-const post = { title, content, prev }
+const post = { title, content, prev, next }
 export default post
