@@ -15,8 +15,24 @@ Requirements:
     ```sh
     $ yarn install
     ```
-1. Start local server
+1. Start local **server**
     ```sh
     $ yarn start
     ```
 1. Open http://localhost:3000
+
+## Linting
+
+We use `eslint` to standardize our style across files. To check your files with the linter run:
+
+```sh
+$ yarn lint
+```
+
+If you see warnings, you can attempt to auto-correct them with:
+
+```sh
+$ yarn lint --fix
+```
+
+If there are errors it can't fix, please fix them manually before committing.

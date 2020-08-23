@@ -17,6 +17,7 @@ module.exports = {
   plugins: ['import'],
   rules: {
     'react/prop-types': 'off',
+    'react/no-unescaped-entities': ['error', { forbid: ['>', '}'] }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/ban-ts-comment': 'off',
     'sort-imports': ['error', { ignoreDeclarationSort: true }],

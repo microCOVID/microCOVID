@@ -108,7 +108,6 @@ export const prepopulated: {
     yourMask: 'none',
   },
 
-
   'Going to bar': {
     riskProfile: 'average',
     interaction: 'oneTime',
@@ -144,5 +143,4 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
   },
-
 }
