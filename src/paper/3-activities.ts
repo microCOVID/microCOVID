@@ -185,7 +185,7 @@ Use this equation (along with the two factors above) to calculate the regional p
 
 From there, calculate the basic person risk by comparing the actual infections last week with the overall population in your region.
 
-<p class="calloutText">Basic Person Risk = Actual Infections Last Week / Population In Millions</p>
+<p class="calloutText">Person Risk (Basic) = Actual Infections Last Week / Population In Millions</p>
 
 Here are two examples:
 
@@ -195,15 +195,24 @@ Here are two examples:
 
 5107-in-a-million (in San Francisco) is about 90 times higher than 56-in-a-million (in Sydney). So the average Person Risk in San Francisco is 90x as high as in Sydney!
 
-Another way to think about this is that inviting _one_ random person over for coffee (indoors, unmasked, undistanced) in San Francisco at the time of writing is about as risky as inviting _90_ random Sydney residents to your home.
+Another way to think about this is that inviting one random person over for coffee (indoors, unmasked, undistanced) in San Francisco at the time of writing is about as risky as inviting 90 random Sydney residents to your home.
 
 But of course, not everyone is average. The Person Risk of someone who works at a grocery store is different from the Person Risk of someone who works from home and doesn’t leave the house, even if they live in the same city, because these two people have significantly different behaviors. How can we model those differences?
 
 **Intermediate method: Adjust for essential work**
 
-For a slightly more nuanced estimate, we can adjust for the fact that front-line essential workers (unfortunately) have a higher chance of infection. We estimate that front-line workers are **3x more likely** than average to have COVID, and that anyone who is _not_ a front-line worker is **1/2 as likely**[^11] to be infected. So we can use the following equation to adjust our estimate of Person Risk:
+For a slightly more nuanced estimate, we can adjust for the fact that work circumstances matter. Front-line essential workers unfortunately have a higher chance of infection than others. Compared to the average resident, we estimate that:
 
-<p class="calloutText">Intermediate Person Risk = Basic Person Risk ⨉ Front-Line Work Factor</p>
+* front-line workers are **3x more likely** to have COVID, and 
+* anyone who is not a front-line worker is **0.5x as likely**[^11] to be infected. 
+
+We can use the following equation to adjust our estimate of Person Risk:
+
+<p class="calloutText">Person Risk (Intermediate) = Person Risk (Basic) ⨉ Front-Line Work Factor</p>
+
+In the example above, if all you know about someone is that they live in San Francisco, their Person Risk is 5107 (for the week ending July 26, 2020). If you also know that they are a front-line worker, then \`5107 * 3 = 15,321\` so their Person Risk increases to 15,321. If instead you know that they are not a front-line worker, then \`5107 * 0.5 = 2553\` so their Person Risk goes down to 2553. 
+
+[TODO add thank you to essential workers?]
 
 **Advanced method: Add up risks for an individual person given their recent behavior**
 
@@ -219,13 +228,13 @@ This is an advanced method because it requires knowing—and calculating the ris
 
 We suggest thinking about this in three categories: socializing, errands, and work.  To calculate total Person Risk using the advanced method, you can add these three categories together, as follows:
 
-<p class="calloutText">Advanced Person Risk = Socializing + Errands + Work</p>
+<p class="calloutText">Person Risk (Advanced) = Socializing + Errands + Work</p>
 
 For socializing, just estimate each social activity in microCOVIDs (using “Cost = Activity Risk ⨉ Person Risk”) and add them together. This is the place to count the exposure from all their household members as well.
 
 Errands include grocery shopping, transit, and other public settings. These can be harder to estimate individually; we have some guidelines in the [Q&A section](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO verify link copying]. But if estimating each one individually sounds hard, a faster way to model errands and work combined is to use the following rule of thumb: use 10% of the Intermediate Person Risk to stand in for the total of all their public activity combined. This doesn’t factor in how many times per week they grocery shop, or what exactly their workplace is; it’s a way to avoid having to think about those details. You might prefer to estimate each individual excursion separately.
 
-<p class="calloutText">Errands + Work = Intermediate Person Risk ⨉ 10%</p>
+<p class="calloutText">Errands + Work = Person Risk (Intermediate) ⨉ 10%</p>
 
 **Person Risk example**
 
