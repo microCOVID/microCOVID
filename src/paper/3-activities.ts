@@ -140,7 +140,7 @@ Now we understand Activity Risk, or how your chance of getting the virus changes
 
 So you’ve decided to meet a friend for lunch. What’s the chance that they have COVID? They aren’t coughing and they feel totally fine. Can you conclude they don’t have COVID? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_.[^4]
 
-Not all diseases work this way—for example, [ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and this disease in particular has a high rate of transmission from people _who don’t show symptoms_.
+Not all diseases work this way—for example, [ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and one of its defining features is that it has a high rate of transmission from people _who don’t show symptoms_.
 
 This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10 days or so, not just whether they’re actively showing symptoms.
 
@@ -216,19 +216,21 @@ In the example above, if all you know about someone is that they live in San Fra
 
 **Advanced method: Add up risks for an individual person given their recent behavior**
 
-To get an _even more_ accurate estimate for Person Risk, we can actually add up the risk (in microCOVIDs!) of _their_ recent behavior. Remember, a single microCOVID represents a one-in-a-million chance of getting COVID. Just like you can calculate this for each of your actions, you can also calculate it for your friend’s actions, using the same formula:
+To get an even more accurate estimate for Person Risk, we can actually add up the risk (in microCOVIDs) of their recent behavior. Remember, a single microCOVID represents a one-in-a-million chance of getting COVID. Just like you can calculate this for each of your actions, you can also calculate it for your friend’s actions, using the same formula:
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
 
-We can do this by looking at all of their activities in the past ten days or so[^12] and determining the risk of each individual activity. Or if they do the same things every week, what does their typical week look like?
+We can do this by looking at all of their activities in the past 10 days or so[^12] and determining the risk of each individual activity. Or if they do the same things every week, what does their typical week look like?
 
 If you already know that this sort of detailed calculation isn’t something that you want to do, go ahead and skip forward to the next section of this blog post. [TODO: skip ahead link].
 
-This is an advanced method because it requires knowing—and calculating the risk of—your friend’s recent or typical errands, hangouts, and other activities. (And because the riskiness of each of your friend’s contacts is based on _that_ person’s history of activities and exposures!)
+This is an advanced method because it requires asking about—and calculating the risk of—each of your friend’s recent or typical errands, hangouts, and other activities. And you might have to ask about your friend's contacts too! 
 
-We suggest thinking about this in three categories: socializing, errands, and work.  To calculate total Person Risk using the advanced method, you can add these three categories together, as follows:
+We suggest thinking about this in three categories: socializing, errands, and work. To calculate total Person Risk using the advanced method, you can add these three categories together, as follows:
 
 <p class="calloutText">Person Risk (Advanced) = Socializing + Errands + Work</p>
+
+Note that this formula uses addition, whereas everything else we've done until now has been multiplication. 
 
 For socializing, just estimate each social activity in microCOVIDs (using “Cost = Activity Risk ⨉ Person Risk”) and add them together. This is the place to count the exposure from all their household members as well.
 
