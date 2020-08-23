@@ -20,7 +20,9 @@ export const Paper = (): React.ReactElement => {
   const prev = slugs[slugs.indexOf(id) - 1]
   const next = slugs[slugs.indexOf(id) + 1]
 
-  const processor = new MarkdownIt().use(markdownItFootnote)
+  const processor = new MarkdownIt({
+    html: true,
+  }).use(markdownItFootnote)
   const processed = { __html: processor.render(markdownContent) }
 
   return (
