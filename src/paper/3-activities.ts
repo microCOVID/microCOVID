@@ -340,14 +340,8 @@ Note that all these values depend on _San Francisco prevalence in July 2020_. If
 
 [^14]:
      If Reasonable Rosie keeps up this rate of 369 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is lower than the average American, but is too high for comfort for some people!
-
-
-
 `
 
-const prev = '2-riskiness'
-const next = '3b-calculator-and-conclusion'
-
-const post = { title, shortTitle, content, prev, next }
+const post = { title, shortTitle, content }
 
 export default post

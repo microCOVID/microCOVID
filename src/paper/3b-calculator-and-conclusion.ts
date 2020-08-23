@@ -6,7 +6,7 @@ const content = `
 
 It can be pretty annoying to calculate microCOVIDs for every activity you’re considering. With that in mind, we developed a calculator tool to help you estimate and multiply the Person Risk, Activity Risk, and any modifiers for safer behavior (like wearing a mask), to get an estimated number of microCOVIDs from a given activity.
 
-Check it out here: [https://www.microcovid.org/calculator](Calculator)
+Check it out here: [https://www.microcovid.org/calculator](/calculator)
 
 It’s pretty amazing! You can give it your local COVID infection rate and the type of activity you’ll be doing, and it will tell you the “cost” of your activity in microCOVIDs. 
 
@@ -26,9 +26,6 @@ Thanks for reading!
 
 `
 
-const prev = '3-activites'
-const next = '4-qanda'
-
-const post = { title, content, prev, next }
+const post = { title, content }
 
 export default post
