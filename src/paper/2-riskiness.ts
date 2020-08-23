@@ -18,7 +18,7 @@ Fortunately, there are now many research papers available about the numerical li
 
 **Measuring COVID risk in “microCOVIDs”**
 
-So let’s get started. To quantify the risk of an individual interaction—say, meeting a friend for coffee—we’re going to think in terms of **_microCOVIDs_ **(abbreviated** _μCoV_**)[^1]**: a one-in-a-million chance of getting COVID**[^2].
+So let’s get started. To quantify the risk of an individual interaction—say, meeting a friend for coffee—we’re going to think in terms of **_microCOVIDs_ (abbreviated μCoV)[^1]: a one-in-a-million chance of getting COVID[^2]**.
 
 For example, if you live in a region where about 1 in 1,000 people currently has COVID, then meeting a friend for coffee indoors has about a 1 in 17,000 chance of giving you COVID. Such small numbers are hard to think about, so we use microCOVIDs instead. Your coffee date would be about 60 microCOVIDs.
 
