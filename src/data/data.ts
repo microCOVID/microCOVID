@@ -4,8 +4,8 @@ export interface FormValue {
 }
 
 export const Prevalence: { [key: string]: FormValue } = {
-  sf: { label: 'San Francisco (July 2020)', multiplier: 614 },
-  sydney: { label: 'Sydney (July 2020)', multiplier: 13 },
+  sf: { label: 'San Francisco (Aug 2020)', multiplier: 614 },
+  sydney: { label: 'Sydney (Aug 2020)', multiplier: 13 },
 }
 
 export const RiskProfile: { [key: string]: FormValue } = {
@@ -26,6 +26,10 @@ export const Interaction: { [key: string]: FormValue } = {
   repeated: {
     label: 'Repeated Contact (coworker, housemate, child, etc.)',
     multiplier: 0.3,
+  },
+  partner: {
+    label: 'Partner',
+    multiplier: 0.48,
   },
 }
 

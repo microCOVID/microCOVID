@@ -18,7 +18,7 @@ export const Footer = (): React.ReactElement => (
           property="cc:attributionName"
           rel="cc:attributionURL"
         >
-          Catherine Olsson et al.
+          Ibasho and friends
         </a>
         {' is licensed under a '}
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">

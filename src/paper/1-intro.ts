@@ -34,7 +34,7 @@ _This article (and corresponding calculator) was collaboratively written by the 
 
 ## Authors:
 
-**Research and modeling:** Catherine Olsson, Joshua Oreman
+**Cite us collectively as:** Ibasho and friends (or Ibasho et al.)
 
 **White paper:** Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
 
