@@ -132,29 +132,22 @@ If you have a 6% chance of getting sick from a one-hour indoor visit with someon
 
 **TODO fix the above image (the Indoor Contact ratio is wrong)**
 
-
 There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
-
-
-
 
 There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of Research Sources (TODO link) for details about the data we based these numbers on.
 
 _Important disclaimer for the tables above: We keep calling these numbers “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
-
-
-
-
-
 
 Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
 ### Person Risk: the chance your contact has COVID
 
-So you’ve decided to meet a friend for lunch. What’s the chance that they have COVID? They aren’t coughing and they feel totally fine. Can you conclude they don’t have COVID? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_.[^4]
+So you’ve decided to meet a friend for lunch. You know the Activity Risk is 6% per hour (for an indoor unmasked lunch) and much less if you MODify your hangout. But the Activity Risk _assumes_ that they have COVID. 
 
-Not all diseases work this way—for example, [ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and one of its defining features is that it has a high rate of transmission from people _who don’t show symptoms_.
+What’s the chance that your friend actually has COVID? They aren’t coughing and they feel totally fine. Can you conclude they aren't infected? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_.[^4]
+
+Not all diseases work this way—for example, [Ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and one of its defining features is that it has a high rate of transmission from people _who don’t show symptoms_.
 
 This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10 days or so, not just whether they’re actively showing symptoms.
 
