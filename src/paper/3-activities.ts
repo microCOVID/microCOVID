@@ -347,7 +347,7 @@ Note that all these values depend on _San Francisco prevalence in July 2020_. If
 `
 
 const prev = '2-riskiness'
-const next = '4-qanda'
+const next = '3b-calculator-and-conclusion'
 
 const post = { title, shortTitle, content, prev, next }
 

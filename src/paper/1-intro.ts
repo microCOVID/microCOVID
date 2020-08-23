@@ -2,6 +2,16 @@ const title = 'Introduction'
 
 const content = `
 
+#### Authors:
+
+**Research & modeling:** _Catherine Olsson, Joshua Oreman_
+
+**Blog post:** _Catherine Olsson, Rhys Lindmark, Joshua Oreman, Stephanie Bachar, Sarah Dobro, Jacob Falkovich, Anna Tsykalova, Matt Bell_ [TODO add others who contributed prose]
+
+**Feedback & assistance thanks to:** _Ajeya Cotra, David Mears, Danny Hernandez, Katja Grace, Andrew Critch, Matt Bell, Ben Shaya, Zvi Mowshowitz, Derek Foster, Jess Watson Miller, Elliot Olds, Ivan Gayton, Eugene Shvarts, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this post.) TODO: Peter Hurford and Paul Christiano?
+
+---
+
 You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But *just how much* do these things help? How big a deal is it if you remove your mask when hanging out with a friend? What happens if you get closer than 6ft? Bars and restaurants are opening, but is it safe to go inside? It’s tough to make good choices when you don’t know how large or small the risks really are.
 
 We—the authors—were really struggling with this. We wanted a rigorous way to make decisions about COVID risk. So we did some research and crunched some numbers.  We trawled the scientific literature for data.  We spent hours estimating the COVID risk of various activities. And in this blog post, we’ll share our research (and some practical tools!) with you.
