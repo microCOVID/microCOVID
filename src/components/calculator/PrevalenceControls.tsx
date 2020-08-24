@@ -18,47 +18,33 @@ const PrevalenceField: React.FunctionComponent<{
   inputType,
   isEditable,
 }): React.ReactElement => {
-  let body: React.ReactElement
-  if (isEditable) {
+  let body: React.ReactElement = (
+    <input
+      className="form-control form-control-lg"
+      type={inputType}
+      value={value}
+      readOnly={!isEditable}
+      onChange={(e) => setter(e.target.value)}
+    />
+  )
+  if (unit) {
     body = (
-      <input
-        className="form-control form-control-lg"
-        type={inputType}
-        value={value}
-        onChange={(e) => setter(e.target.value)}
-      />
-    )
-    if (unit) {
-      body = (
-        <div className="input-group mb-3">
-          {body}
-          <div className="input-group-append">
-            <span className="input-group-text" id="basic-addon2">
-              %
-            </span>
-          </div>
-        </div>
-      )
-    }
-    body = (
-      <div className="form-group">
-        <label htmlFor="duration">{label}</label>
+      <div className="input-group mb-3">
         {body}
+        <div className="input-group-append">
+          <span className="input-group-text" id="basic-addon2">
+            %
+          </span>
+        </div>
       </div>
     )
-  } else {
-    body = (
-      <p>
-        {label}: {}
-        <b>
-          {value}
-          {unit}
-        </b>
-      </p>
-    )
   }
-
-  return body
+  return (
+    <div className="form-group">
+      <label htmlFor="duration">{label}</label>
+      {body}
+    </div>
+  )
 }
 
 export const PrevalenceControls: React.FunctionComponent<{
