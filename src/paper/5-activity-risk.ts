@@ -78,11 +78,6 @@ We do the calculation differently for household members and spouses/partners bec
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](9-research-sources) for slightly more detail.
 
-
-
-
-
-
 ### TODO title
 
 We looked through a bunch of research [TODO check internal link] and extracted the following guesses for Activity Risk.
