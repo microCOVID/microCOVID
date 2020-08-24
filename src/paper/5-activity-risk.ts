@@ -4,7 +4,7 @@ const content = `
 
 Activity Risk is the chance that an activity will transmit COVID to you, if the other person currently has COVID.
 
-In this section we explain how we estimate Activity Risk. If you just want to compare our estimates of risk of specific activities (such as grocery shopping for 1 hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, we suggest skipping this section and exploring the example scenarios in the [calculator](/calculator).
+In this section we explain how we estimate Activity Risk. If you just want to compare our estimates of risk of specific activities (such as grocery shopping for 1 hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
 
 ### Our estimate starts with indoor unmasked conversation
@@ -40,9 +40,10 @@ Here are our estimates for the change in risk based on these modifiers:
 |--|--|--|
 | I’m wearing a high-quality mask[^2] | 2x | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
 | Other person is wearing a high-quality mask | 4x | <sub><super>[Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x)</super></sub> |
-| Outdoors | 20x | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
+| Outdoors | 20x or more | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
 | >6 feet distance | 2x | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
 | Each additional 3 feet of distance (up to 12 feet) | 2x | <sub><super>Same sources as above</super></sub> |
+
 
 If an activity involves multiple people, you can generally add the risks together. So if hanging out with one friend for an hour (indoors, unmasked, undistanced) means a 6% chance you'll get COVID if they have COVID, then hanging out with two friends in the same way means a 12% chance (that's if they _both_ have COVID).
 
@@ -50,13 +51,13 @@ If an activity involves multiple people, you can generally add the risks togethe
 If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask and they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
 
-### MOD emphasis TODO title
+### Masked, outdoor, distanced interactions are much lower risk
 
 Being outdoors and wearing masks both make a _huge_ difference.
 
-**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [(a reasonably well-fitting surgical mask under normal conditions)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the Q&A) (TODO link). Bandanas or single-layer coverings provide significantly less protection than we estimate here (TODO link).
+**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the Q&A) (TODO link). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link) and so we treat that as "no mask".
 
-**Outdoors** reduces your risk by 10x because the outdoors is well-ventilated so respiratory droplets can't accumulate. If there is any wind, the risk is even less.
+**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets can't accumulate. If there is any wind, the risk is even less.
 
 **Distance** is not quite as beneficial as wearing a mask and being outdoors. Keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
 
@@ -75,14 +76,14 @@ We do the calculation differently for household members and spouses/partners. We
 
 <p class="calloutText">Activity Risk of 1 spouse/partner for 1 week = 48%</p>
 
-Sources: [^household]
+<sub><super>Sources: The household member estimate is directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See Research Sources for slightly more detail.</super></sub>
+
+
 
 
 
 
 ### TODO title
-
-Let's say you choose to hang out with your friend in the park, with both of you wearing well-fitting high-quality masks, sitting 6 feet apart. This is now a MODified interaction (Masked, Outdoors, Distanced). How much does that decrease your risk in microCOVIDs?
 
 We looked through a bunch of research [TODO check internal link] and extracted the following guesses for Activity Risk.
 
@@ -99,6 +100,10 @@ These numbers assume you are interacting by talking at normal volume, where resp
 
 
 If you'd like to read more about modeling the risks of specific activities, see the Q&A section (TODO: link). In any case, indoor unmasked interactions are quite risky. For now, let's look at what we can do to reduce these risks.
+
+
+
+Let's say you choose to hang out with your friend in the park, with both of you wearing well-fitting high-quality masks, sitting 6 feet apart. This is now a MODified interaction (Masked, Outdoors, Distanced). How much does that decrease your risk in microCOVIDs?
 
 
 ## MOD hangouts
@@ -119,12 +124,6 @@ _Important disclaimer for the tables above: We keep calling these numbers “gue
 
 Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
-[^onetime]:
-
-[^household]: The household member estimate is directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/). See Research Sources for slightly more detail. |
-
-
-[^why?]: Please see Research Sources [TODO] for detailed reasoning! (In general, any estimate in the main text of the white paper is explained in much greater detail in the Research Sources and/or the Q&A).
 
 [^2]:
      We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will likely give less protection than this.
