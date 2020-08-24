@@ -3,11 +3,6 @@ export interface FormValue {
   multiplier: number
 }
 
-export const Prevalence: { [key: string]: FormValue } = {
-  sf: { label: 'San Francisco (Aug 2020)', multiplier: 614 },
-  sydney: { label: 'Sydney (Aug 2020)', multiplier: 13 },
-}
-
 export const RiskProfile: { [key: string]: FormValue } = {
   average: {
     label: 'An average person in your area',
@@ -75,6 +70,10 @@ export const RiskProfile: { [key: string]: FormValue } = {
      * who are not wearing masks and are talking loudly.
      */
     multiplier: 6 * 0.06 * (2 + 10 * 0.5) * 5,
+  },
+  hasCovid: {
+    label: 'Has COVID',
+    multiplier: -1,
   },
 }
 

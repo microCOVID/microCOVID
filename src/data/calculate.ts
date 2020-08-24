@@ -96,11 +96,16 @@ export const calculate = (data: CalculatorData): number | null => {
     // Points for "random person from X location"
     const personRisk =
       (lastWeek * underreportingFactor * delayFactor) / population
-    points = personRisk * ONE_MILLION
 
     // Person risk
+    if (data.riskProfile === 'hasCovid') {
+      // Special case COVID: they have a 100% chance of having it
+      points = ONE_MILLION
+    } else {
+      points = personRisk * ONE_MILLION
+      points *= RiskProfile[data.riskProfile].multiplier
+    }
     points *= data.personCount
-    points *= RiskProfile[data.riskProfile].multiplier
 
     // Activity risk
     points *= Setting[data.setting].multiplier
