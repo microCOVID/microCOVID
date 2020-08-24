@@ -13,7 +13,6 @@ import post7 from 'paper/7-basic-method'
 import post8 from 'paper/8-intermediate-method'
 import post9 from 'paper/9-advanced-method'
 
-
 interface PostContent {
   title: string
   shortTitle?: string

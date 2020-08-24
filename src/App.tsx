@@ -65,7 +65,8 @@ export const App = (): React.ReactElement => {
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                  <a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ"
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ"
                     className="nav-link"
                   >
                     Activity Log

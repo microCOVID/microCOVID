@@ -105,7 +105,10 @@ export const Calculator = (): React.ReactElement => {
         {showPoints ? points.toLocaleString() : '-'} microCOVIDs
         {repeatedEvent && '/week'}
       </h1>
-	  <p className="readout">You have a {showPoints ? points.toLocaleString() : '-'}-in-a-million chance of getting COVID from this activity with these people.</p>
+      <p className="readout">
+        You have a {showPoints ? points.toLocaleString() : '-'}-in-a-million
+        chance of getting COVID from this activity with these people.
+      </p>
       {showPoints && (showSaveForm ? saveForm : saveButton)}
     </Card>
   )

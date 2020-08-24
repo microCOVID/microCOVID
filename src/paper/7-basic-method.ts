@@ -1,4 +1,5 @@
-const title = 'The Basic Method of calculating Person Risk is the regional average'
+const title =
+  'The Basic Method of calculating Person Risk is the regional average'
 const shortTitle = 'Basic Method'
 const content = `
 

@@ -1,4 +1,4 @@
-const title = "Comparing Person Risk methods with an example"
+const title = 'Comparing Person Risk methods with an example'
 const shortTitle = 'Comparing Methods'
 const content = `
 

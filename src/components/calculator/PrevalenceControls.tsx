@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { CalculatorData, calculateLocationPersonAverage } from 'data/calculate'
+import { CalculatorData } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
 
 const PrevalenceField: React.FunctionComponent<{
