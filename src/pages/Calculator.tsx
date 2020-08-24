@@ -77,7 +77,7 @@ export const Calculator = (): React.ReactElement => {
       <input
         className="form-control"
         type="text"
-        placeholder="Enter metric name"
+        placeholder="Enter name to save your custom scenario to the scenario list"
         value={saveName}
         onChange={(e) => setSaveName(e.target.value)}
       />
@@ -95,7 +95,7 @@ export const Calculator = (): React.ReactElement => {
         className="btn btn-primary"
         onClick={() => setShowSaveForm(true)}
       >
-        Save parameters
+        Save as custom scenario
       </button>
     </span>
   )
@@ -109,7 +109,6 @@ export const Calculator = (): React.ReactElement => {
         {showPoints ? points.toLocaleString() : '-'} microCOVIDs
         {repeatedEvent && '/week'}
       </h1>
-      {showPoints && (showSaveForm ? saveForm : saveButton)}
     </Card>
   )
 
@@ -138,6 +137,7 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>
+          {showPoints && (showSaveForm ? saveForm : saveButton)}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block">
           {pointsDisplay}
@@ -194,7 +194,7 @@ export const Calculator = (): React.ReactElement => {
               </React.Fragment>
             ) : (
               <div className="empty">
-                First, fill out prevalance information.
+                First, fill out prevalence information.
               </div>
             )}
           </Card>
