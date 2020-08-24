@@ -4,7 +4,7 @@ const content = `
 
 Activity Risk is the chance that an activity will transmit COVID to you, if the other person currently has COVID.
 
-In this section we explain how we estimate Activity Risk. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
+In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
 
 ### Our estimate starts with indoor unmasked conversation
@@ -13,28 +13,29 @@ We start by first estimating the risk of interacting with a single COVID-positiv
 
 <p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 6%</p>
 
-So if you have a friend over to your house for an hour, the way you might have before pandemic times, and your friend turns out to have COVID, the chance of you getting COVID from that single interaction is 6%. 
+So if you have a friend over to your house for an hour, and your friend turns out to have COVID, the chance of you getting COVID from that single interaction is 6%.
 
 How did we come up with this number? It's a rough estimate combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/9-research-sources).
 
 Think of this as our "reference interaction." We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
 
-### Modifiers: duration, number, masks, location, distance
+### Modifiers: duration, masks, location, distance
 
-Not all interactions are exactly one hour, exactly one person, etc.
+Not all interactions are exactly one hour, at a three foot distance, etc.
 
-To estimate the Activity Risk of a different interaction (like a visit to two friends, or a trip to a store or restaurant), we modify our estimate based on how the interaction in question is different from the "reference interaction" above, based on the following factors:
+To estimate the Activity Risk of a different interaction (an outdoor picnic, or being in a restaurant), we modify our estimate based on how the interaction in question is different from the "reference interaction" above, based on the following factors:
 
 * duration of interaction
-* number of people
 * masks
 * location (outdoor vs. indoor), and
-* distance from each other.
+* distance from each other
 
-For example, we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with roughly 5 people at a time (number), who are more than 6 feet away most of the time (distance), and who are wearing masks. 
+For now, we will still imagine there is just 1 other person (a picnic with 1 friend, just 1 other person in the restaurant, etc.) We will adjust for number of people in the Person Risk section.
 
-Or we might consider having lunch with two friends in the park as interacting for 2 hours (duration), outdoors (location), with 2 people (number), who are sitting about 6 feet away (distance), without masks because you are eating. 
+For example, we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet away most of the time (distance), and who are wearing masks.
+
+Or we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating.
 
 Here are our estimates for the change in risk based on these modifiers:
 
@@ -46,7 +47,6 @@ Here are our estimates for the change in risk based on these modifiers:
 | >6 feet distance | 2x | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
 | Each additional 3 feet of distance (up to 12 feet) | 2x | <sub><super>Same sources as above</super></sub> |
 
-If an activity involves multiple people, you can generally add the risks together (or multiply by the number of people involved). So if hanging out with one friend for an hour (indoors, unmasked, undistanced) means a 6% chance you'll get COVID if they have COVID, then hanging out with two friends in the same way means a 12% chance (if they _both_ have COVID).
 
 If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 

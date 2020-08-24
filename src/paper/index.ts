@@ -22,7 +22,7 @@ export const pages: { [key: string]: PostContent } = {
   '4-computing-microcovids': post4,
   '5-activity-risk': post5,
   '6-person-risk': post6,
-  'y-calculating-points': post7,
+  '7-calculating-points': post7,
   '10-calculator-and-conclusion': post10,
   '11-q-and-a': post11,
   '12-research-sources': post12,
