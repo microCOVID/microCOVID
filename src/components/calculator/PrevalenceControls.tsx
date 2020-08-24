@@ -51,9 +51,22 @@ export const PrevalenceControls: React.FunctionComponent<{
     }
   }
 
-  const subPrompt = topLocation.startsWith('US_')
-    ? 'Entire state, or select county...'
-    : 'Entire country, or select region...'
+  let subPrompt: string
+  if (topLocation.startsWith('US_')) {
+    if (Locations[topLocation].label === "Louisiana") {
+      subPrompt = 'Entire state, or select parish...'
+    } else if (Locations[topLocation].label === "Alaska") {
+      subPrompt = 'Entire state, or select borough...'
+    } else {
+      subPrompt = 'Entire state, or select county...'
+    }
+  } else {
+    subPrompt = 'Entire country, or select region...'
+  }
+
+  const showSubLocation = (
+    topLocation !== '' && Locations[topLocation].subdivisions.length > 1
+  )
 
   return (
     <React.Fragment>
@@ -80,8 +93,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           ))}
         </select>
       </div>
-      {topLocation === '' ||
-      Locations[topLocation].subdivisions.length === 0 ? null : (
+      {!showSubLocation ? null : (
         <div className="form-group">
           <select
             className="form-control form-control-lg"
