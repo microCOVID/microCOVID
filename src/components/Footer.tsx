@@ -31,7 +31,7 @@ export const Footer = (): React.ReactElement => (
         href="https://github.com/microcovid/microcovid/blob/main/LICENSE"
         rel="cc:morePermissions"
       >
-	  https://github.com/microcovid/microcovid/blob/main/LICENSE
+        https://github.com/microcovid/microcovid/blob/main/LICENSE
       </a>
     </Container>
   </footer>
