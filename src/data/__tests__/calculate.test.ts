@@ -1,14 +1,19 @@
 import { CalculatorData, calculate } from 'data/calculate'
-import { ExampleLocations } from 'data/location'
 import { prepopulated } from 'data/prepopulated'
 
 describe('calculate', () => {
   it('returns the correct value', () => {
-    const location = 'sf'
+    const exampleLocation = {
+      label: 'San Francisco (July 2020)',
+      population: '7,500,000',
+      casesPastWeek: 7000,
+      casesIncreasingPercentage: 0,
+      positiveCasePercentage: 3,
+    }
     const scenario = 'Outdoor masked hangout with 2 people'
     const data: CalculatorData = {
-      location,
-      ...ExampleLocations[location],
+      location: 'sf',
+      ...exampleLocation,
       ...prepopulated[scenario],
     }
 
