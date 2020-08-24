@@ -171,7 +171,7 @@ a {
     font-weight: 700;
     color: $primary;
 
-    // Flip text and anchor links left-to-right
+    // Flip text and anchor links left-to-right 
     display: flex;
     justify-content: flex-end;
     flex-direction: row-reverse;
@@ -234,14 +234,6 @@ a {
     font-size:1.5em;
     line-height: 1.5em;
     margin: 30px 100px;
-  }
-
-  .figure {
-    text-align:center;
-	display: block;
-    margin-left: auto;
-	margin-right: auto;
-	width: 50%;
   }
 
   hr.footnotes-sep {
