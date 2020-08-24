@@ -34,13 +34,13 @@ _This article (and corresponding calculator) was collaboratively written by the 
 
 ## Authors:
 
-**Cite us collectively as:** Ibasho and friends
+**Cite us collectively as:** The Ibasho community. We are members and friends of Ibasho, a communal house in San Francisco.
 
-**White paper:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Stephanie Bachar, Sarah Dobro, Anna Tsykalova, Matt Bell, Jacob Falkovich
+**White paper:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Anna Tsykalova, Stephanie Bachar, Sarah Dobro, Matt Bell
 
 **Website and calculator:** Dominic Dagradi, Sarah Dobro, Deb Lyon
 
-_Feedback & assistance thanks to: Ajeya Cotra, David Mears, Danny Hernandez, Katja Grace, Andrew Critch, Matt Bell, Ben Shaya, Zvi Mowshowitz, Derek Foster, Jess Watson Miller, Elliot Olds, Ivan Gayton, Eugene Shvarts, Peter Hurford, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this writeup.)
+_Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Ben Shaya, Danny Hernandez, David Mears, Derek Foster, Elliot Olds, Eugene Shvarts, Jacob Falkovich, Jess Watson Miller, Ivan Gayton, Katja Grace, Matt Bell, Peter Hurford, Zvi Mowshowitz, and other friends who chose to remain anonymous._ (Giving feedback does not imply endorsement of, or agreement with, this writeup.)
 
 ---
 

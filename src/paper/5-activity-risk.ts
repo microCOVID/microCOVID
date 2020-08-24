@@ -6,7 +6,6 @@ const content = `
 
 In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
-
 ### Our estimate starts with indoor unmasked conversation
 
 We start by first estimating the risk of interacting with a single COVID-positive person indoors for 1 hour at a normal socializing distance of 3 feet while having a normal-volume conversation.
@@ -29,7 +28,7 @@ To estimate the Activity Risk of a different interaction (an outdoor picnic, or 
 * duration of interaction
 * masks
 * location (outdoor vs. indoor)
-* distance from each other, and 
+* distance from each other, and
 * volume of conversation.
 
 For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating, talking at a normal volume.
@@ -63,7 +62,7 @@ There is substantial uncertainty in many of these numbers. We’ve generally cho
 
 To calculate the Activity Risk of lunch in the park with your friend, start with 6% (the Activity Risk for our "reference interaction") and apply modifiers as needed: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks or volume because the reference interaction is already unmasked and at normal volume.
 
-What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, and at normal volume, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID. 
+What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, and at normal volume, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID.
 
 Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That's a big difference! Remember, your friend won't necessarily know that they have COVID, and it's very common to be infectious before you show symptoms. And that's with only one person!
 
@@ -76,7 +75,7 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](8-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link), so we treat them as "no mask."
 
-**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. Being outdoors is by far the most valuable thing you can do, although even that is not a guarantee. 
+**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. Being outdoors is by far the most valuable thing you can do, although even that is not a guarantee.
 
 **Distance** is not quite as beneficial as wearing a mask or being outdoors. Keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
 
@@ -86,7 +85,7 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 If you’re outdoors _and_ 20 feet away from a person, you can probably ignore the risk from them.
 
-**Volume** also matters. If both people aren't talking, that reduces the risk by about 5x, because you are not projecting your respiratory droplets nearly as much. This actually makes some activities where people don't talk much, like going to the grocery store or taking public transportation, safer than they would otherwise be. On the other hand, loud talking, shouting, or singing _increase_ the risk by about 5x (as compared to a conversation at normal volume) because they are very efficient at projecting respiratory droplets. 
+**Volume** also matters. If both people aren't talking, that reduces the risk by about 5x, because you are not projecting your respiratory droplets nearly as much. This actually makes some activities where people don't talk much, like going to the grocery store or taking public transportation, safer than they would otherwise be. On the other hand, loud talking, shouting, or singing _increase_ the risk by about 5x (as compared to a conversation at normal volume) because they are very efficient at projecting respiratory droplets.
 
 Curious how we got these numbers? Again, check out the [Research Sources](9-research-sources)!
 
@@ -102,7 +101,7 @@ We do the calculation differently for household members and spouses/partners bec
 
 These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? 
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)?
 
 Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. [TODO link] These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
 

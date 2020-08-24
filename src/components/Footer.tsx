@@ -14,11 +14,11 @@ export const Footer = (): React.ReactElement => (
       <p>
         <span property="dct:title">microCOVID Project</span> by{' '}
         <a
-          href="https://microcovid.org/"
+          href="https://www.microcovid.org/paper/1-intro#authors"
           property="cc:attributionName"
           rel="cc:attributionURL"
         >
-          Ibasho and friends
+          the Ibasho community
         </a>
         {' is licensed under a '}
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">

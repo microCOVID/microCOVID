@@ -42,6 +42,22 @@ export const Paper = (): React.ReactElement => {
         Section {Object.keys(pages).indexOf(id) + 1}
       </div>
 
+      {prev && (
+        <Button size="lg" variant="link">
+          <Link to={`/paper/${prev}`}>
+            {'\u2B05'} Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
+          </Link>
+        </Button>
+      )}
+
+      {next && (
+        <Button size="lg" variant="link">
+          <Link to={`/paper/${next}`}>
+            Next: {pages[next].shortTitle || pages[next].title} {'\u27A1'}{' '}
+          </Link>
+        </Button>
+      )}
+
       <h1 id="pageTitle">{page.title}</h1>
 
       <div dangerouslySetInnerHTML={processed} />

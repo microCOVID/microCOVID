@@ -88,7 +88,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
 
       <span className="readout">
-        Activity Risk: <b>{((activityRisk || 0)*100).toFixed(2)}%</b> chance of getting COVID if they currently have COVID
+        Activity Risk: <b>{((activityRisk || 0)*100).toFixed(2)}%</b> chance of getting COVID from one person who currently has COVID
       </span>
     </React.Fragment>
   )
