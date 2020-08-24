@@ -19,11 +19,26 @@ However, this is just a start. You cannot use this number directly because it un
 
 2. The first factor is **underreporting**. Many people with COVID won’t ever get counted in the official statistics. They might not think their symptoms are anything unusual, so they don’t get tested. Or they might not be able to access testing.[^6]
 
-3. The second factor is **delay**. There’s a delay of 1-2 weeks between when people got infected and when their positive test results come back. The true number of cases _last_ week isn’t known yet, and won’t be known until those tests come back _next_ week. If cases are rising, last week's statistics will be too low.
+3. The second factor is **delay**. There’s a delay of 1-2 weeks between when people got infected and when their positive test results come back. The true number of confirmed cases who were sick _last_ week isn’t known yet, and won’t be known until those tests come back _next_ week. If cases are rising, last week's statistics will be too low.
 
 The [calculator](/calculator) can look up new reported cases automatically, and takes these adjustments into account as well.
 
-To do these steps manually, or to understand how the calculator does it, follow these instructions:
+## The chance someone has COVID is very different in different geographic regions.
+
+At the time of writing, in July 2020, we calculated the Person Risk (Basic Method) in San Francisco as about 3405-in-a-million, and about 56-in-a-million in Sydney.
+
+This means that the risk of doing a specific activity in San Francisco that month was about 60 times higher than doing the same activity in Sydney.
+
+Inviting **one** random person over for coffee (indoors, unmasked, undistanced) in San Francisco would've been about as risky as inviting **60** random Sydney residents to your home!
+
+There is not just one answer for "How risky is it to invite one person over for coffee?". It depends on where they live and how widespread COVID is there.
+
+
+## Detailed steps for Basic Method
+To learn how do these steps manually, or to understand how the calculator does it, read the rest of this page.
+
+Or skip to the next page to learn about the [Intermediate Method](/paper/8-intermediate-method)\u27A1.
+
 
 
 ### Step one: Look up reported cases
@@ -34,63 +49,67 @@ To estimate the prevalence of COVID where you live, start by looking up the numb
 
 You decide how to define your region. This might be based on the county where you live, or you might want to include multiple counties if you live in a major metropolitan area. If data is limited, you might have to use your entire state.
 
-If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new cases per _100,000_ people. To get a week's worth of cases, you'll need to calculate: \`daily new cases per 100,000 people * 7 days\`. You will then use 100,000 as the population.
+If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new reported cases per _100,000_ people. To get a week's worth of cases, you'll need to calculate: \`daily new reported cases per 100,000 people * 7 days\`. You will then use 100,000 as the population.
 
 
 ### Step two: Underreporting factor
 
 Many people with COVID won't ever get counted in the official statistics. The official statistics are **underreporting** the real number of new infections.
 
-You can use the _positive test rate_ (the percentage of tests that come back COVID-positive) as some evidence about how many infections are being caught by testing. Ideally, the positive test rate should be very low, indicating that contact tracing is working to find all contacts of an infected person, and that testing is available for each contact. If a high percentage of tests are coming back positive, then there are probably a lot _more_ infected people out there than the testing data shows. If you live in the US, you can look up the positive test rate in your state at [CovidActNow](https://covidactnow.org).
+You can use the _positive test rate_ (the percentage of tests that come back COVID-positive) as some evidence about how many infections are being caught by testing. Ideally, the positive test rate should be very low, indicating that contact tracing is working to find all contacts of an infected person, and that testing is available for each contact. If a high percentage of tests are coming back positive, then there are probably a lot _more_ infected people out there than the testing data shows.
+
+If you live in the US, you can look up the positive test rate in your state at [CovidActNow](https://covidactnow.org).
+
+We use these multipliers:
   *   If the percentage of positive tests is 5% or lower, we suggest a 4x underreporting factor.[^7]
 
   *   If the percentage of positive tests is between 5% and 15%, we suggest a 5x factor.
   *   If the percentage of positive tests is greater than 15%, we suggest _at least_ a 7x factor. This indicates dangerously little testing in your area compared to the number of infected people.
+
+_Note: we are using a lower underreporting factor for the purposes of this calculation than other sources suggest, because we want to adjust for the likelihood that unreported cases are less likely to have symptoms, and thus pose less risk to you than reported cases. See Research Sources for more about what we are doing here and why._
 
 ### Step three: Delay factor
 Since test results take about one week to come back on average, the number of _new reported cases_ in your region last week really represents the number of _new positive test results_ in your region _the week before that_. The results are **delayed**.
 
 If cases are flat or falling, it's fine to use this number as is.
 
-If cases are rising, then we need to estimate the increase by comparing last week's reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor
+If cases are rising, then we need to estimate the increase by comparing last week's reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor.
 
 * In the [calculator](/calculator) this would be displayed as a 50% increase in cases from last week to this week
 
-### Step four: Estimate actual infections
-
+### Step four: Estimate number of new infections last week
 Use this equation to combine the previous three steps to estimate the regional prevalence of COVID in your area:
 
-<p class="calloutText">Actual Infections Last Week = Reported Cases ⨉ Underreporting Factor ⨉ Delay Factor</p>
+<p class="calloutText">New Infections Last Week = Reported Cases ⨉ Underreporting Factor ⨉ Delay Factor</p>
 
 ### Step five: Divide by population to get a final estimate
-From there, calculate the basic person risk by comparing the actual infections last week with the overall population in your region.
+From there, calculate the basic person risk by comparing the new infections last week with the overall population in your region.
 
-<p class="calloutText">Person Risk (Basic) = Actual Infections Last Week / Population In Millions</p>
+<p class="calloutText">Person Risk (Basic) = New Infections Last Week / Population In Millions</p>
 
-## Example calculations
+## Example Sydney and San Francisco calculations
 Here are two examples:
 
 ### Sydney in July 2020 (lower prevalence)
-* Step 1: As of July 26, 2020, the state of New South Wales in Australia (where Sydney is located) had [81 new cases in the last week](https://web.archive.org/web/20200726233453/https://www.health.nsw.gov.au/Infectious/covid-19/Pages/stats-nsw.aspx), and a population of around 7.5 million.
+* Step 1: As of July 26, 2020, the state of New South Wales in Australia (where Sydney is located) had [81 reported cases in the last week](https://web.archive.org/web/20200726233453/https://www.health.nsw.gov.au/Infectious/covid-19/Pages/stats-nsw.aspx), and a population of around 7.5 million.
 
-* Step 2: The week before that, there were 62 new cases. \`81 / 62 = 1.3\` so we’ll use a 1.3x delay factor. (i.e. a 30% increase in cases from last week to this week)
+* Step 2: The week before that, there were 62 reported cases. \`81 / 62 = 1.3\` so we’ll use a 1.3x delay factor. (i.e. a 30% increase in cases from last week to this week)
 
 * Step 3: The percentage of positive COVID tests is extremely low: \`81 cases / 135,089 tests = 0.05%\` so we'll use our minimum 4x underreporting factor.[^8]
 
-* Step 4: Therefore, \`81 reported cases * 1.3 * 4 = 421 actual infections last week\`.
+* Step 4: Therefore, \`81 reported cases * 1.3 * 4 = 421 new infections last week\`.
 
 * Step 5: So the Person Risk (the chance that a random resident in New South Wales has COVID) is \`421 infections / 7,500,000 people = 0.000056 or 0.0056%\`.
-    *  An easier way to talk about this tiny number is to multiply it by a million:  \`0.000056 * 1,000,000 = 56\`. This is the same as if we had just divided by 7.5 (the population _in millions_).
+    *  An easier way to talk about this tiny number is to multiply it by a million:  \`0.000056 * 1,000,000 = 56\`.
+	* This is the same as if we had just divided by \`7.5\` (the population _in millions_).
 
-So if all you know about a person is that they live in New South Wales, their Person Risk is **56**, which means there's a **56-in-a-million** chance that they currently have COVID (for this particular week).
+So if all you knew about a person is that they lived in New South Wales in July 2020, their Person Risk at the time would've been **56**, which means there's a **56-in-a-million** chance that they had COVID (in that particular week).
 
 ### San Francisco in July 2020 (higher prevalence)
-Compare this with San Francisco County in California, which had [749 new cases](https://data.sfgov.org/stories/s/dak2-gvuj) during that same week, and a population of 0.88 million.[^9] Cases at that time were declining, so we won’t use a delay factor. The [positive test rate is 4.3%](https://data.sfgov.org/stories/s/d96w-cdge), so we’ll use a 6x underreporting factor. Therefore, \`749 reported cases * 6 = 4494 actual infections last week\`. To get the Person Risk, divide by the population (in millions): \`4494 infections / 0.88 million people = 5107\`.[^10] So a resident of San Francisco has a Person Risk of **5107**, or a **5107-in-a-million** chance of currently having COVID (for this particular week).
+Compare this with San Francisco County in California, which had [749 new reported cases](https://data.sfgov.org/stories/s/dak2-gvuj) during that same week, and a population of 0.88 million.[^9] Cases at that time were declining, so we won’t use a delay factor. The [positive test rate was 4.3%](https://data.sfgov.org/stories/s/d96w-cdge), so we’ll use a 4x underreporting factor. Therefore, \`749 reported cases * 4 = 2996 new infections last week\`. To get the Person Risk, divide by the population (in millions): \`2996 infections / 0.88 million people = 3405\`.[^10] So a resident of San Francisco had a Person Risk of **3405**, or a **3405-in-a-million** chance of currently having COVID (for this particular week).
 
 ### Comparing the above examples
-5107-in-a-million (in San Francisco) is about 90 times higher than 56-in-a-million (in Sydney). So the average Person Risk in San Francisco is 90x as high as in Sydney!
-
-Another way to think about this is that inviting one random person over for coffee (indoors, unmasked, undistanced) in San Francisco at the time of writing is about as risky as inviting 90 random Sydney residents to your home.
+3405-in-a-million (in San Francisco) is about 60 times higher than 56-in-a-million (in Sydney). So the average Person Risk in San Francisco is 60x as high as in Sydney!
 
 
 
