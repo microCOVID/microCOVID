@@ -2,7 +2,11 @@ import React from 'react'
 import { Popover } from 'react-bootstrap'
 
 import { SelectControl } from './SelectControl'
-import { CalculatorData } from 'data/calculate'
+import {
+  CalculatorData,
+  calclulateLocationPersonAverage,
+  calculatePersonRisk,
+} from 'data/calculate'
 import { Interaction, RiskProfile } from 'data/data'
 
 const personRiskPopover = (
@@ -39,39 +43,49 @@ const personRiskPopover = (
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
-}> = ({ data, setter }): React.ReactElement => (
-  <React.Fragment>
-    <header id="person-risk">Step 2 - Person Risk</header>
-    <div className="form-group">
-      <label htmlFor="personCount">Number of people</label>
-      <input
-        className="form-control form-control-lg"
-        type="number"
-        value={data.personCount}
-        onChange={(e) =>
-          setter({
-            ...data,
-            personCount: parseInt(e.target.value),
-          })
-        }
+}> = ({ data, setter }): React.ReactElement => {
+  const locationRisk = calclulateLocationPersonAverage(data)
+  if (!locationRisk) {
+    return <div></div>
+  }
+
+  const adjustedPersonRisk = Math.round(
+    calculatePersonRisk(data, locationRisk) || 0,
+  )
+
+  return (
+    <React.Fragment>
+      <header id="person-risk">Step 2 - Person Risk</header>
+      <div className="form-group">
+        <label htmlFor="personCount">Number of people</label>
+        <input
+          className="form-control form-control-lg"
+          type="number"
+          value={data.personCount}
+          onChange={(e) =>
+            setter({
+              ...data,
+              personCount: parseInt(e.target.value),
+            })
+          }
+        />
+      </div>
+      <SelectControl
+        id="riskProfile"
+        label="Person(s) Risk Profile"
+        popover={personRiskPopover}
+        data={data}
+        setter={setter}
+        source={RiskProfile}
       />
-    </div>
-
-    <SelectControl
-      id="riskProfile"
-      label="Person(s) Risk Profile"
-      popover={personRiskPopover}
-      data={data}
-      setter={setter}
-      source={RiskProfile}
-    />
-
-    <SelectControl
-      id="interaction"
-      label="Frequency of Interaction"
-      data={data}
-      setter={setter}
-      source={Interaction}
-    />
-  </React.Fragment>
-)
+      <SelectControl
+        id="interaction"
+        label="Frequency of Interaction"
+        data={data}
+        setter={setter}
+        source={Interaction}
+      />
+      Adjusted person risk: {adjustedPersonRisk} uCOV
+    </React.Fragment>
+  )
+}

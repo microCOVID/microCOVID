@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { SelectControl } from './SelectControl'
-import { CalculatorData } from 'data/calculate'
+import { CalculatorData, calculateActivityRisk } from 'data/calculate'
 import { Distance, Setting, TheirMask, YourMask } from 'data/data'
 
 export const ActivityRiskControls: React.FunctionComponent<{
@@ -10,6 +10,8 @@ export const ActivityRiskControls: React.FunctionComponent<{
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   const header = <header id="activity-risk">Step 3 - Activity Risk</header>
+
+  const activityRisk = calculateActivityRisk(data)
 
   if (repeatedEvent) {
     return (
@@ -33,7 +35,6 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Setting}
       />
-
       <SelectControl
         id="distance"
         label="Distance"
@@ -41,7 +42,6 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Distance}
       />
-
       <div className="form-group">
         <label htmlFor="duration">Duration (in minutes)</label>
         <input
@@ -56,7 +56,6 @@ export const ActivityRiskControls: React.FunctionComponent<{
           }
         />
       </div>
-
       <SelectControl
         id="theirMask"
         label="Their Mask"
@@ -64,7 +63,6 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={TheirMask}
       />
-
       <SelectControl
         id="yourMask"
         label="Your Mask"
@@ -72,6 +70,8 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={YourMask}
       />
+
+      <span>Activity risk multiplier: {(activityRisk || 0).toFixed(5)}</span>
     </React.Fragment>
   )
 }

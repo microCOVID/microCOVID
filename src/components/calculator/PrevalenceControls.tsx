@@ -1,12 +1,38 @@
 import React from 'react'
 
-import { CalculatorData } from 'data/calculate'
+import { CalculatorData, calclulateLocationPersonAverage } from 'data/calculate'
 import { ExampleLocations, PrevalenceDataDate } from 'data/location'
 
 export const PrevalanceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
+  const setLocationData = (selectedValue: string) => {
+    const exampleData = ExampleLocations[selectedValue]
+
+    if (exampleData) {
+      setter({
+        ...data,
+        location: selectedValue,
+        population: exampleData.population,
+        casesPastWeek: exampleData.casesPastWeek,
+        casesWeekBefore: exampleData.casesWeekBefore,
+        positiveCasePercentage: exampleData.positiveCasePercentage,
+      })
+    }
+
+    if (selectedValue === 'custom' || selectedValue === '') {
+      setter({
+        ...data,
+        location: selectedValue,
+        population: '',
+        casesPastWeek: 0,
+        casesWeekBefore: 0,
+        positiveCasePercentage: 0,
+      })
+    }
+  }
+
   return (
     <React.Fragment>
       <header id="location">Step 1 - Choose a location</header>
@@ -14,32 +40,7 @@ export const PrevalanceControls: React.FunctionComponent<{
         <select
           className="form-control form-control-lg"
           value={data.location}
-          onChange={(e) => {
-            const selectedValue = e.target.value
-            const exampleData = ExampleLocations[selectedValue]
-
-            if (exampleData) {
-              setter({
-                ...data,
-                location: selectedValue,
-                population: exampleData.population,
-                casesPastWeek: exampleData.casesPastWeek,
-                casesWeekBefore: exampleData.casesWeekBefore,
-                positiveCasePercentage: exampleData.positiveCasePercentage,
-              })
-            }
-
-            if (selectedValue === 'custom' || selectedValue === '') {
-              setter({
-                ...data,
-                location: selectedValue,
-                population: '',
-                casesPastWeek: 0,
-                casesWeekBefore: 0,
-                positiveCasePercentage: 0,
-              })
-            }
-          }}
+          onChange={(e) => setLocationData(e.target.value)}
         >
           <option value="">Select location...</option>
           <optgroup label="Examples from white paper">
@@ -53,7 +54,6 @@ export const PrevalanceControls: React.FunctionComponent<{
           <option value="custom">Custom location</option>
         </select>
       </div>
-
       <div className="form-group">
         <label htmlFor="duration">Reported cases in past week</label>
         <input
@@ -65,7 +65,6 @@ export const PrevalanceControls: React.FunctionComponent<{
           }
         />
       </div>
-
       <div className="form-group">
         <label htmlFor="duration">Reported cases in week before last</label>
         <input
@@ -77,7 +76,6 @@ export const PrevalanceControls: React.FunctionComponent<{
           }
         />
       </div>
-
       <div className="form-group">
         <label htmlFor="duration">Per how many people?</label>
         <input
@@ -87,7 +85,6 @@ export const PrevalanceControls: React.FunctionComponent<{
           onChange={(e) => setter({ ...data, population: e.target.value })}
         />
       </div>
-
       <div className="form-group">
         <label htmlFor="duration">
           Percent of tests that come back positive
@@ -111,6 +108,8 @@ export const PrevalanceControls: React.FunctionComponent<{
           </div>
         </div>
       </div>
+      Local person risk:{' '}
+      {Math.round(calclulateLocationPersonAverage(data) || 0)} uCOV
     </React.Fragment>
   )
 }
