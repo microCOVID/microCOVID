@@ -18,7 +18,9 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <React.Fragment>
         {header}
         <div className="empty">
-          When estimating your risk of infection from a household member or partner/spouse we assume these interactions are indoors, unmasked, and undistanced.
+          When estimating your risk of infection from a household member or
+          partner/spouse we assume these interactions are indoors, unmasked, and
+          undistanced.
         </div>
       </React.Fragment>
     )
@@ -70,7 +72,9 @@ export const ActivityRiskControls: React.FunctionComponent<{
         source={YourMask}
       />
 
-      <span>Activity risk multiplier: {(activityRisk || 0).toFixed(5)}</span>
+      <span>
+        Activity risk multiplier: <b>{(activityRisk || 0).toFixed(5)}</b>
+      </span>
     </React.Fragment>
   )
 }

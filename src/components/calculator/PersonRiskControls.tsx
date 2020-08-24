@@ -85,7 +85,7 @@ export const PersonRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Interaction}
       />
-      Adjusted person risk: {adjustedPersonRisk} uCOV
+      Adjusted person risk: <b>{adjustedPersonRisk} µCoV</b>
     </React.Fragment>
   )
 }

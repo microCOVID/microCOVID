@@ -3,6 +3,64 @@ import React, { useState } from 'react'
 import { CalculatorData, calculateLocationPersonAverage } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
 
+const PrevalenceField: React.FunctionComponent<{
+  label: string
+  value: string | number
+  unit?: string
+  setter: (newValue: string) => void
+  inputType: string
+  isEditable: boolean
+}> = ({
+  label,
+  value,
+  setter,
+  unit,
+  inputType,
+  isEditable,
+}): React.ReactElement => {
+  let body: React.ReactElement
+  if (isEditable) {
+    body = (
+      <input
+        className="form-control form-control-lg"
+        type={inputType}
+        value={value}
+        onChange={(e) => setter(e.target.value)}
+      />
+    )
+    if (unit) {
+      body = (
+        <div className="input-group mb-3">
+          {body}
+          <div className="input-group-append">
+            <span className="input-group-text" id="basic-addon2">
+              %
+            </span>
+          </div>
+        </div>
+      )
+    }
+    body = (
+      <div className="form-group">
+        <label htmlFor="duration">{label}</label>
+        {body}
+      </div>
+    )
+  } else {
+    body = (
+      <p>
+        {label}: {}
+        <b>
+          {value}
+          {unit}
+        </b>
+      </p>
+    )
+  }
+
+  return body
+}
+
 export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
@@ -53,9 +111,9 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   let subPrompt: string
   if (topLocation.startsWith('US_')) {
-    if (Locations[topLocation].label === "Louisiana") {
+    if (Locations[topLocation].label === 'Louisiana') {
       subPrompt = 'Entire state, or select parish...'
-    } else if (Locations[topLocation].label === "Alaska") {
+    } else if (Locations[topLocation].label === 'Alaska') {
       subPrompt = 'Entire state, or select borough...'
     } else {
       subPrompt = 'Entire state, or select county...'
@@ -64,9 +122,8 @@ export const PrevalenceControls: React.FunctionComponent<{
     subPrompt = 'Entire country, or select region...'
   }
 
-  const showSubLocation = (
+  const showSubLocation =
     topLocation !== '' && Locations[topLocation].subdivisions.length > 1
-  )
 
   return (
     <React.Fragment>
@@ -116,94 +173,72 @@ export const PrevalenceControls: React.FunctionComponent<{
           </select>
         </div>
       )}
-      <div className="form-group">
-        <label htmlFor="duration">Reported cases in past week</label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.casesPastWeek}
-          onChange={(e) =>
-            setter({ ...data, casesPastWeek: parseInt(e.target.value) })
+      <PrevalenceField
+        label="Reported cases in past week"
+        value={data.casesPastWeek.toString()}
+        setter={(value) => setter({ ...data, casesPastWeek: parseInt(value) })}
+        inputType="number"
+        isEditable={topLocation === ''}
+      />
+      <PrevalenceField
+        label="Per how many people?"
+        value={data.population}
+        setter={(value) => setter({ ...data, population: value })}
+        inputType="text"
+        isEditable={topLocation === ''}
+      />
+      {topLocation !== '' && data.casesIncreasingPercentage === 0 ? (
+        <p>Cases are stable or decreasing.</p>
+      ) : (
+        <PrevalenceField
+          label="Percent increase in cases from last week to this week"
+          value={data.casesIncreasingPercentage}
+          unit="%"
+          setter={(value) =>
+            setter({ ...data, casesIncreasingPercentage: Number(value) })
           }
+          inputType="number"
+          isEditable={topLocation === ''}
         />
-      </div>
-      <div className="form-group">
-        <label htmlFor="duration">Per how many people?</label>
-        <input
-          className="form-control form-control-lg"
-          type="text"
-          value={data.population}
-          onChange={(e) => setter({ ...data, population: e.target.value })}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="duration">Percent increase in cases from last week to this week</label>
-        <div className="input-group mb-3">
-          <input
-            className="form-control form-control-lg"
-            type="number"
-            value={data.casesIncreasingPercentage}
-            onChange={(e) =>
-              setter({
-                ...data,
-                casesIncreasingPercentage: Number(e.target.value),
-              })
-            }
-          />
-          <div className="input-group-append">
-            <span className="input-group-text" id="basic-addon2">
-              %
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="form-group">
-        <label htmlFor="duration">
-          Percent of tests that come back positive
-        </label>
-        <div className="input-group mb-3">
-          <input
-            className="form-control form-control-lg"
-            type="number"
-            value={data.positiveCasePercentage}
-            onChange={(e) =>
-              setter({
-                ...data,
-                positiveCasePercentage: Number(e.target.value),
-              })
-            }
-          />
-          <div className="input-group-append">
-            <span className="input-group-text" id="basic-addon2">
-              %
-            </span>
-          </div>
-        </div>
-      </div>
+      )}
+      <PrevalenceField
+        label="Percent of tests that come back positive"
+        value={data.positiveCasePercentage.toString()}
+        unit="%"
+        setter={(value) =>
+          setter({ ...data, positiveCasePercentage: Number(value) })
+        }
+        inputType="number"
+        isEditable={topLocation === ''}
+      />
       <p>
         Local person risk: {}
-        {Math.round(calculateLocationPersonAverage(data) || 0)} uCOV
+        <b>{Math.round(calculateLocationPersonAverage(data) || 0)} µCoV</b>
       </p>
-      <p>
-        Prevalence data consolidated from {}
-        <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
-          Johns Hopkins CSSE
-        </a>{' '}
-        (reported cases), {}
-        <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
-          Covid Act Now
-        </a>{' '}
-        (US positive test rates), and {}
-        <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
-          Our World in Data
-        </a>{' '}
-        (international positive test rates).
-      </p>
-      <p>
-        If test positivity data for a region is not available, it will be
-        displayed as 20%.
-      </p>
-      <p>Last updated {PrevalenceDataDate}.</p>
+      {topLocation === '' ? null : (
+        <div>
+          <p>
+            Prevalence data consolidated from {}
+            <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
+              Johns Hopkins CSSE
+            </a>{' '}
+            (reported cases), {}
+            <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
+              Covid Act Now
+            </a>{' '}
+            (US positive test rates), and {}
+            <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
+              Our World in Data
+            </a>{' '}
+            (international positive test rates).
+          </p>
+          <p>
+            If test positivity data for a region is not available, it will be
+            displayed as 20%.
+          </p>
+          <p>Data last updated {PrevalenceDataDate}.</p>
+        </div>
+      )}
     </React.Fragment>
   )
 }
