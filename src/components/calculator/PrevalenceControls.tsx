@@ -125,7 +125,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         />
       </div>
       <div className="form-group">
-        <label htmlFor="duration">Week-over-week increase in cases</label>
+        <label htmlFor="duration">Percent increase in cases from last week to this week</label>
         <div className="input-group mb-3">
           <input
             className="form-control form-control-lg"
