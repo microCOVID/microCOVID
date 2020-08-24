@@ -66,12 +66,18 @@ export const calculate = (data: CalculatorData): number | null => {
         data.positiveCasePercentage &&
         data.personCount &&
         data.riskProfile &&
-        data.setting &&
-        data.interaction &&
-        data.distance &&
-        data.theirMask &&
-        data.yourMask
+        data.interaction
       )
+    ) {
+      return null
+    }
+
+    const repeatedInteraction = ['repeated', 'partner'].includes(
+      data.interaction,
+    )
+    if (
+      !repeatedInteraction &&
+      !(data.setting && data.distance && data.theirMask && data.yourMask)
     ) {
       return null
     }
@@ -107,16 +113,16 @@ export const calculate = (data: CalculatorData): number | null => {
     }
     points *= data.personCount
 
-    // Activity risk
-    points *= Setting[data.setting].multiplier
-    points *= Distance[data.distance].multiplier
-    points *= TheirMask[data.theirMask].multiplier
-    points *= YourMask[data.yourMask].multiplier
-
-    // Duration + interaction type
-    if (data.interaction === 'repeated') {
+    // Interaction type
+    if (repeatedInteraction) {
       points *= Interaction[data.interaction].multiplier
     } else {
+      // Activity risk
+      points *= Setting[data.setting].multiplier
+      points *= Distance[data.distance].multiplier
+      points *= TheirMask[data.theirMask].multiplier
+      points *= YourMask[data.yourMask].multiplier
+
       points *=
         Interaction[data.interaction].multiplier *
         Math.min((data.duration || 60) / 60.0, 5)
@@ -124,6 +130,7 @@ export const calculate = (data: CalculatorData): number | null => {
 
     return points
   } catch {
+    // Something went wrong; fail gracefully
     return null
   }
 }

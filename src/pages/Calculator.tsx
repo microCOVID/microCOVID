@@ -67,6 +67,9 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.casesPastWeek > 0 &&
     calculatorData.casesWeekBefore > 0 &&
     calculatorData.positiveCasePercentage > 0
+  const repeatedEvent = ['repeated', 'partner'].includes(
+    calculatorData.interaction,
+  )
   const showPoints = points >= 0
 
   const saveForm = (
@@ -100,7 +103,7 @@ export const Calculator = (): React.ReactElement => {
     <Card title="Result">
       <h1>
         {showPoints ? points : '-'} µCoV
-        {calculatorData.interaction === 'repeated' && '/week'}
+        {repeatedEvent && '/week'}
       </h1>
       {showPoints && (showSaveForm ? saveForm : saveButton)}
     </Card>
@@ -180,6 +183,7 @@ export const Calculator = (): React.ReactElement => {
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
+                      repeatedEvent={repeatedEvent}
                     />
                   </Col>
                 </Row>
