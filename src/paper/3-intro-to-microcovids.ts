@@ -1,5 +1,5 @@
 const title = 'How many microCOVIDs are different activities?'
-const shortTitle = 'Activity Cost'
+const shortTitle = 'Intro to microCOVIDs'
 
 const content = `
 
@@ -59,5 +59,5 @@ Let’s explore how you can estimate these two numbers (Activity Risk and Person
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 export default post

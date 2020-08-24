@@ -23,5 +23,5 @@ export const pages: { [key: string]: PostContent } = {
   '6-calculating-points': post6calculatingpoints,
   '7-calculator-and-conclusion': post7calculatorandconclusion,
   '8-q-and-a': post8qanda,
-  '9-research-sources': post9researchsources
+  '9-research-sources': post9researchsources,
 }
