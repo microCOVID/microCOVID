@@ -197,10 +197,6 @@ export const PrevalenceControls: React.FunctionComponent<{
         inputType="number"
         isEditable={topLocation === ''}
       />
-      <p>
-        Local person risk: {}
-        <b>{Math.round(calculateLocationPersonAverage(data) || 0)} µCoV</b>
-      </p>
       {topLocation === '' ? null : (
         <div>
           <p>

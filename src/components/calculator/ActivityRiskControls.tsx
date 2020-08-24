@@ -72,8 +72,8 @@ export const ActivityRiskControls: React.FunctionComponent<{
         source={YourMask}
       />
 
-      <span>
-        Activity risk multiplier: <b>{(activityRisk || 0).toFixed(5)}</b>
+      <span className="readout">
+        Activity Risk: <b>{((activityRisk || 0)*100).toFixed(2)}%</b> chance of getting COVID if they currently have COVID
       </span>
     </React.Fragment>
   )

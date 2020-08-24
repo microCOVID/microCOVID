@@ -6,6 +6,7 @@ import {
   CalculatorData,
   calculateLocationPersonAverage,
   calculatePersonRisk,
+  calculatePersonRiskEach,
 } from 'data/calculate'
 import { Interaction, RiskProfile } from 'data/data'
 
@@ -49,7 +50,11 @@ export const PersonRiskControls: React.FunctionComponent<{
     return <div></div>
   }
 
-  const adjustedPersonRisk = Math.round(
+  const personRiskEach = Math.round(
+    calculatePersonRiskEach(data, locationRisk) || 0,
+  )
+
+  const personRiskAll = Math.round(
     calculatePersonRisk(data, locationRisk) || 0,
   )
 
@@ -85,7 +90,9 @@ export const PersonRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Interaction}
       />
-      Adjusted person risk: <b>{adjustedPersonRisk} µCoV</b>
+	  <br/>
+	  <p className="readout">Each person has a <b>{personRiskEach.toLocaleString()}</b>-in-a-million chance of currently having COVID</p>
+	  <p className="readout">Person Risk (after multiplying by number of people): <b>{personRiskAll.toLocaleString()}</b></p>
     </React.Fragment>
   )
 }

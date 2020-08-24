@@ -81,7 +81,7 @@ export const calculateLocationPersonAverage = (
   return personRisk * ONE_MILLION
 }
 
-export const calculatePersonRisk = (
+export const calculatePersonRiskEach = (
   data: CalculatorData,
   averagePersonRisk: number,
 ): number | null => {
@@ -94,6 +94,23 @@ export const calculatePersonRisk = (
       risk = averagePersonRisk
       risk *= RiskProfile[data.riskProfile].multiplier
     }
+
+    return risk
+  } catch {
+    return null
+  }
+}
+
+export const calculatePersonRisk = (
+  data: CalculatorData,
+  averagePersonRisk: number,
+): number | null => {
+  try {
+    let risk = calculatePersonRiskEach(data, averagePersonRisk)
+    if (!risk) {
+      return null
+    }
+
     risk *= data.personCount
 
     return risk

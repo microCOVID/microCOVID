@@ -143,6 +143,11 @@ a {
     justify-content: center;
   }
 
+  // Intermediate value readouts
+  .readout {
+    font-size: 1.17188rem;
+  }
+
   // Tooltip button/badge styles
   .form-group {
     label {
@@ -171,7 +176,7 @@ a {
     font-weight: 700;
     color: $primary;
 
-    // Flip text and anchor links left-to-right 
+    // Flip text and anchor links left-to-right
     display: flex;
     justify-content: flex-end;
     flex-direction: row-reverse;
