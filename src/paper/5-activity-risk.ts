@@ -2,7 +2,7 @@ const title = 'Activity Risk'
 
 const content = `
 
-Activity Risk is the chance that an activity will transmit COVID to you, if the other person currently has COVID.
+Activity Risk is the chance that an activity will transmit COVID to you, _if_ the other person currently has COVID.
 
 In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
@@ -22,14 +22,14 @@ Think of this as our "reference interaction." We can now use it as a starting po
 
 ### Modifiers: duration, masks, location, distance
 
-Not all interactions are exactly one hour, at a three foot distance, etc.
+Not all interactions are exactly an hour, at a distance of 3 feet, etc.
 
 To estimate the Activity Risk of a different interaction (an outdoor picnic, or being in a restaurant), we modify our estimate based on how the interaction in question is different from the "reference interaction" above, based on the following factors:
 
 * duration of interaction
 * masks
 * location (outdoor vs. indoor), and
-* distance from each other
+* distance from each other.
 
 For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating.
 
@@ -49,19 +49,22 @@ Here are our estimates for the change in risk based on these modifiers:
 
 If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
-What about if the interaction is with more than one other person? We will get to this later, in the Person Risk section. For now, even though it may seem a little silly, we will still imagine there is just 1 other person (a picnic with 1 friend, just 1 other person in the restaurant, etc.)
+What about if the interaction is with more than one other person? We will get to this later, in the Person Risk section. For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
+
+There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
+
+There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of Research Sources (TODO link) for details about the data we based these numbers on.
+
 
 ### Example calculations
 
-To calculate the Activity Risk of lunch in the park, start with 6% and apply modifiers: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks because the reference interaction is already unmasked.
+To calculate the Activity Risk of lunch in the park with your friend, start with 6% (the Activity Risk for our "reference interaction") and apply modifiers as needed: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks because the reference interaction is already unmasked.
 
-For the grocery store, start the same way with 6% (the Activity Risk for our "reference interaction") and then apply the modifiers as needed: \`6% * 0.5 (hours) * / 2 (distance of 6-9 feet) / 8 (everyone is masked) = 0.19%\`. You have a **0.19%** chance of getting COVID from one person in a grocery store with you who has COVID. Note that there is no modifier for being indoors because the reference interaction is already indoors. (Again, this assumes that one person in the grocery store with you currently has COVID. In the Person Risk section, we will talk about how to estimate how likely that is given the prevalence of COVID in your area.)
+What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID. 
 
+Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That's a big difference! Remember, your friend won't necessarily know that they have COVID, and it's very common to be infectious before you show symptoms. And that's with only one person! 
 
-Now consider going out to a bar. You're there for 3 hours, with 15 people, indoors, at a distance of 6 feet (because you're trying), and none of you are wearing masks. This works out to: \`6% * 3 (hours) * 15 (number of people) / 2 (distance of 6-9 feet) = 135%\`. [TODO: LOL NEEDS FIXING] 
-
-Hopefully this puts the risk of going out to a bar into perspective! To compare the Activity Risk of other activities, such as riding in a car or attending a large outdoor party, try our [calculator](/calculator). 
-
+Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the Q&A for tips and tricks [TODO link]. In the next section, we will look at calculating the risk of activities with multiple people.
 
 
 ### Masked, outdoor, distanced interactions are much lower risk
@@ -100,7 +103,9 @@ Our main guess is that people often reduce contact with household members who ha
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](9-research-sources) for slightly more detail.
 
+_Important disclaimer for the numbers above: We keep calling these “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
 
+Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
 ### TODO title
@@ -108,37 +113,16 @@ The household member estimate comes directly from [Curmei et al.](https://www.me
 These numbers assume you are interacting by talking at normal volume, where respiratory droplets are projected a certain distance. To estimate the risk for activities that require stronger breathing (such as singing, shouting, or exercising) or quieter breathing (such as riding a subway car where no one is talking), you can adjust the numbers up or down. We brainstorm how much to adjust in the Q&A section (TODO link).
 
 
-If you'd like to read more about modeling the risks of specific activities, see the Q&A section (TODO: link). In any case, indoor unmasked interactions are quite risky. For now, let's look at what we can do to reduce these risks.
 
-
-
-Let's say you choose to hang out with your friend in the park, with both of you wearing well-fitting high-quality masks, sitting 6 feet apart. This is now a MODified interaction (Masked, Outdoors, Distanced). How much does that decrease your risk in microCOVIDs?
-
-
-## MOD hangouts
-
-By multiplying these three modifiers together, \`8 * 10 * 2 = 160\`, we can see that a MODified hangout (Masked, Outdoors, & Distanced) is **160 times** less risky than a non-masked, indoor, non-distanced hangout.
-
-If you have a 6% chance of getting sick from a one-hour indoor visit with someone who turns out to be COVID-positive, then with full MOD protection, your risk goes down to \`6% / 160 = 0.04%\`. That's only a **0.04% chance** of getting sick from this interaction if you're masked, outside, and 6 feet apart! Please protect yourself!
 
 ![alt_text](images/image3.png "image_tooltip")
 
 **TODO fix the above image (the Indoor Contact ratio is wrong)**
 
-There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
-
-There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of Research Sources (TODO link) for details about the data we based these numbers on.
-
-_Important disclaimer for the tables above: We keep calling these numbers “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
-
-Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
 [^2]:
      We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will likely give less protection than this.
-
-[^3]:
-     You might ask: why isn’t the risk of getting COVID from someone in your house _even more risky_ compared to the risk from hanging out with a friend? Why is the household member risk (30%) only as bad as about 5 hours of one-time interaction (at 6% per hour)? Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same normal behavior you have with household members ordinarily. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
 
 `
 
