@@ -4,12 +4,12 @@ const content = `
 
 Activity Risk is the chance that an activity will transmit COVID to you, if the other person currently has COVID.
 
-In this section we explain how we estimate Activity Risk. If you just want to compare our estimates of risk of specific activities (such as grocery shopping for an hour or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
+In this section we explain how we estimate Activity Risk. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
 
 ### Our estimate starts with indoor unmasked conversation
 
-We start by first estimating the risk of interacting with a single COVID-positive person indoors for 1 hour at a normal socializing distance (3 feet) while having a normal-volume conversation.
+We start by first estimating the risk of interacting with a single COVID-positive person indoors for 1 hour at a normal socializing distance of 3 feet while having a normal-volume conversation.
 
 <p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 6%</p>
 
@@ -32,8 +32,9 @@ To estimate the Activity Risk of a different interaction (like a visit to two fr
 * location (outdoor vs. indoor), and
 * distance from each other.
 
-For example, we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with roughly 5 people at a time (number) who are more than 6 feet away most of the time (distance) and who are wearing masks.
+For example, we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with roughly 5 people at a time (number), who are more than 6 feet away most of the time (distance), and who are wearing masks. 
 
+Or we might consider having lunch with two friends in the park as interacting for 2 hours (duration), outdoors (location), with 2 people (number), who are sitting about 6 feet away (distance), without masks because you are eating. 
 
 Here are our estimates for the change in risk based on these modifiers:
 
@@ -45,9 +46,17 @@ Here are our estimates for the change in risk based on these modifiers:
 | >6 feet distance | 2x | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
 | Each additional 3 feet of distance (up to 12 feet) | 2x | <sub><super>Same sources as above</super></sub> |
 
-If an activity involves multiple people, you can generally add the risks together. So if hanging out with one friend for an hour (indoors, unmasked, undistanced) means a 6% chance you'll get COVID if they have COVID, then hanging out with two friends in the same way means a 12% chance (if they _both_ have COVID).
+If an activity involves multiple people, you can generally add the risks together (or multiply by the number of people involved). So if hanging out with one friend for an hour (indoors, unmasked, undistanced) means a 6% chance you'll get COVID if they have COVID, then hanging out with two friends in the same way means a 12% chance (if they _both_ have COVID).
 
-If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask and they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
+If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
+
+So for our grocery store example, start with 6% (the Activity Risk for our "reference interaction") and then apply the modifiers as needed: \`6% * 0.5 (hours) * 5 (number of people near you) / 2 (distance of 6-9 feet) / 8 (everyone is masked) = 0.93%\`. You have a **0.93%** chance of getting COVID from this single activity. Note that there is no modifier for being indoors because the reference interaction is already indoors. (Again, this assumes that the 5 people who come near you in the grocery store all have COVID. In the next section, we will talk about how to estimate how likely that is given the prevalence of COVID in your area.)
+
+And for our lunch in the park example, start the same way with 6% and apply modifiers: \`6% * 2 (hours) * 2 (number of people) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity. Note no modifier for masks because the reference interaction is already unmasked.
+
+Now consider going out to a bar. You're there for 3 hours, with 2 people at 3 feet and another 5 people at [CURRENTLY WORKING ON THIS]
+
+
 
 
 ### Masked, outdoor, distanced interactions are much lower risk
@@ -68,6 +77,8 @@ If you’re outdoors _and_ 20 feet away from a person, you can probably ignore t
 
 Curious how we got these numbers? Again, check out the [Research Sources](9-research-sources)!
 
+
+
 ### Household members and spouses/partners are estimated differently
 
 We do the calculation differently for household members and spouses/partners because you're likely to interact with them on a recurring basis. We estimate a single, fixed Activity Risk for one week of living in the same household as someone who is COVID-positive.
@@ -77,6 +88,14 @@ We do the calculation differently for household members and spouses/partners bec
 <p class="calloutText">Activity Risk of living with 1 spouse/partner, who has COVID, for 1 week = 48%</p>
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](9-research-sources) for slightly more detail.
+
+
+
+
+
+
+
+
 
 ### TODO title
 
