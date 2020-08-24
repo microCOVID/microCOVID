@@ -2,7 +2,7 @@ import React from 'react'
 
 import { SelectControl } from './SelectControl'
 import { CalculatorData, calculateActivityRisk } from 'data/calculate'
-import { Distance, Setting, TheirMask, YourMask } from 'data/data'
+import { Distance, Setting, TheirMask, YourMask, Interaction } from 'data/data'
 
 export const ActivityRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -13,10 +13,18 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
   const activityRisk = calculateActivityRisk(data)
 
+
   if (repeatedEvent) {
     return (
       <React.Fragment>
         {header}
+      <SelectControl
+        id="interaction"
+        label="Type of Interaction"
+        data={data}
+        setter={setter}
+        source={Interaction}
+      />
         <div className="empty">
           When estimating your risk of infection from a household member or
           partner/spouse we assume these interactions are indoors, unmasked, and
@@ -29,6 +37,13 @@ export const ActivityRiskControls: React.FunctionComponent<{
   return (
     <React.Fragment>
       {header}
+      <SelectControl
+        id="interaction"
+        label="Type of Interaction"
+        data={data}
+        setter={setter}
+        source={Interaction}
+      />
       <SelectControl
         id="setting"
         label="Setting"

@@ -8,7 +8,7 @@ import {
   calculatePersonRisk,
   calculatePersonRiskEach,
 } from 'data/calculate'
-import { Interaction, RiskProfile } from 'data/data'
+import { RiskProfile } from 'data/data'
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -82,13 +82,6 @@ export const PersonRiskControls: React.FunctionComponent<{
         data={data}
         setter={setter}
         source={RiskProfile}
-      />
-      <SelectControl
-        id="interaction"
-        label="Frequency of Interaction"
-        data={data}
-        setter={setter}
-        source={Interaction}
       />
 	  <br/>
 	  <p className="readout">Each person has a <b>{personRiskEach.toLocaleString()}</b>-in-a-million chance of currently having COVID</p>
