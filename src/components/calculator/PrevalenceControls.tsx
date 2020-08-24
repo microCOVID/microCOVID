@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { CalculatorData, calculateLocationPersonAverage } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
@@ -19,6 +19,9 @@ export const PrevalenceControls: React.FunctionComponent<{
       members.push(key)
     }
   }
+
+  const [topLocation, setTopLocation] = useState('')
+  const [subLocation, setSubLocation] = useState('')
 
   const setLocationData = (selectedValue: string) => {
     const locationData = Locations[selectedValue]
@@ -48,14 +51,22 @@ export const PrevalenceControls: React.FunctionComponent<{
     }
   }
 
+  const subPrompt = topLocation.startsWith('US_')
+    ? 'Entire state, or select county...'
+    : 'Entire country, or select region...'
+
   return (
     <React.Fragment>
       <header id="location">Step 1 - Choose a location</header>
       <div className="form-group">
         <select
           className="form-control form-control-lg"
-          value={data.location}
-          onChange={(e) => setLocationData(e.target.value)}
+          value={topLocation}
+          onChange={(e) => {
+            setTopLocation(e.target.value)
+            setSubLocation('')
+            setLocationData(e.target.value)
+          }}
         >
           <option value="">Select location or enter data...</option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
@@ -69,6 +80,30 @@ export const PrevalenceControls: React.FunctionComponent<{
           ))}
         </select>
       </div>
+      {topLocation == '' ||
+      Locations[topLocation].subdivisions.length == 0 ? null : (
+        <div className="form-group">
+          <select
+            className="form-control form-control-lg"
+            value={subLocation}
+            onChange={(e) => {
+              setSubLocation(e.target.value)
+              if (e.target.value == '') {
+                setLocationData(topLocation)
+              } else {
+                setLocationData(e.target.value)
+              }
+            }}
+          >
+            <option value="">{subPrompt}</option>
+            {Locations[topLocation].subdivisions.map((key, index) => (
+              <option key={index} value={key}>
+                {Locations[key].label}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       <div className="form-group">
         <label htmlFor="duration">Reported cases in past week</label>
         <input

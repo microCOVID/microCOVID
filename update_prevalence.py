@@ -11,6 +11,7 @@ import json
 import re
 import os
 from datetime import date, datetime, timedelta
+from operator import attrgetter
 from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any
 
 try:
@@ -655,18 +656,19 @@ def main() -> None:
     data.rollup_totals()
 
     app_locations: Dict[str, AppLocation] = {}
+    namegetter = attrgetter("name")
 
     # US states first so they float to the top of the list
-    for state in data.countries["US"].states.values():
+    for state in sorted(data.countries["US"].states.values(), key=namegetter):
         if state.fips is not None and int(state.fips) < 60:  # real states
             app_locations[state.app_key] = state.as_app_data()
 
-    for state in data.countries["US"].states.values():
+    for state in sorted(data.countries["US"].states.values(), key=namegetter):
         if state.app_key not in app_locations:  # then territories etc
             app_locations[state.app_key] = state.as_app_data()
 
     # Then everything else
-    for country in data.countries.values():
+    for country in sorted(data.countries.values(), key=namegetter):
         app_locations[country.app_key] = country.as_app_data()
         for state in country.states.values():
             if state.app_key not in app_locations:
