@@ -2,7 +2,7 @@ const title = 'Activity Risk'
 
 const content = `
 
-_Activity Risk_ is the chance that an activity will transmit COVID to you, _if_ the other person currently has COVID.
+**Activity Risk** is the chance that an activity will transmit COVID to you, _assuming_ the other person currently has COVID.
 
 In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
@@ -13,14 +13,14 @@ We start by first estimating the risk of interacting with a single COVID-positiv
 
 <p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 6%</p>
 
-So if you have a friend over to your house for an hour, and your friend turns out to have COVID, the chance of you getting COVID from that single interaction is 6%.
+So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, the chance of you getting COVID from that single interaction is 6%.
 
 How did we come up with this number? It's a rough estimate combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/9-research-sources).
 
 Think of this as our "reference interaction." We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
 
-### Modifiers: duration, masks, location, distance
+### Modifiers: duration, masks, location, distance, volume
 
 Not all interactions are exactly an hour, at a distance of 3 feet, etc.
 
@@ -28,28 +28,31 @@ To estimate the Activity Risk of a different interaction (an outdoor picnic, or 
 
 * duration of interaction
 * masks
-* location (outdoor vs. indoor), and
-* distance from each other.
+* location (outdoor vs. indoor)
+* distance from each other, and 
+* volume of conversation.
 
-For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating.
+For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating, talking at a normal volume.
 
-Or we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet away most of the time (distance), and who are wearing masks.
+Or we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet away most of the time (distance), who are wearing masks, and who are not talking.
 
 
 Here are our estimates for the change in risk based on these modifiers:
 
-| Modification | Reduction in COVID risk to me | Citations: Why do we think this? <br>|
+| Modification | Change in COVID risk to me | Citations: Why do we think this? <br>|
 |--|--|--|
-| I’m wearing a high-quality mask[^2] | 2x | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
-| Other person is wearing a high-quality mask | 4x | <sub><super>[Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x)</super></sub> |
-| Outdoors | 20x or more | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
-| >6 feet distance | 2x | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
-| Each additional 3 feet of distance (up to 12 feet) | 2x | <sub><super>Same sources as above</super></sub> |
+| I’m wearing a high-quality mask[^1] | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
+| Other person is wearing a high-quality mask | / 4 | <sub><super>[Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x)</super></sub> |
+| Outdoors | / 20 or more | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
+| >6 feet distance | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
+| Each additional 3 feet of distance (up to 12 feet) | / 2 | <sub><super>Same as above</super></sub> |
+| Loud talking (shouting, talking over music, singing) | * 5 | [<sub><super>Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277)</super></sub> |
+| Not talking (such as riding the train) | / 5 | <sub><super>Same as above</super></sub> |
 
 
 If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
-What about if the interaction is with more than one other person? We will get to this later, in the Person Risk section. For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
+What about if the interaction is with more than one other person? We'll get to this later, in the Person Risk section. For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
 
 There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
 
@@ -58,9 +61,9 @@ There is substantial uncertainty in many of these numbers. We’ve generally cho
 
 ### Example calculations
 
-To calculate the Activity Risk of lunch in the park with your friend, start with 6% (the Activity Risk for our "reference interaction") and apply modifiers as needed: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks because the reference interaction is already unmasked.
+To calculate the Activity Risk of lunch in the park with your friend, start with 6% (the Activity Risk for our "reference interaction") and apply modifiers as needed: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks or volume because the reference interaction is already unmasked and at normal volume.
 
-What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID.
+What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, and at normal volume, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID. 
 
 Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That's a big difference! Remember, your friend won't necessarily know that they have COVID, and it's very common to be infectious before you show symptoms. And that's with only one person!
 
@@ -73,7 +76,7 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](8-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link), so we treat them as "no mask."
 
-**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets can't accumulate. If there is any wind, the risk is even less.
+**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. Being outdoors is by far the most valuable thing you can do, although even that is not a guarantee. 
 
 **Distance** is not quite as beneficial as wearing a mask or being outdoors. Keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
 
@@ -82,6 +85,8 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 * 8x if you’re >12 feet away
 
 If you’re outdoors _and_ 20 feet away from a person, you can probably ignore the risk from them.
+
+**Volume** also matters. If both people aren't talking, that reduces the risk by about 5x, because you are not projecting your respiratory droplets nearly as much. This actually makes some activities where people don't talk much, like going to the grocery store or taking public transportation, safer than they would otherwise be. On the other hand, loud talking, shouting, or singing _increase_ the risk by about 5x (as compared to a conversation at normal volume) because they are very efficient at projecting respiratory droplets. 
 
 Curious how we got these numbers? Again, check out the [Research Sources](9-research-sources)!
 
@@ -97,32 +102,23 @@ We do the calculation differently for household members and spouses/partners bec
 
 These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of one-time interaction (at 6% per hour)?
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? 
 
-Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
+Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. [TODO link] These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](9-research-sources) for slightly more detail.
 
 _Important disclaimer for the numbers above: We keep calling these “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the Research Sources [TODO check internal link] section in the Appendix._
 
+
+### How likely is it that the other person has COVID?
+
 Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 
-### TODO title
 
-These numbers assume you are interacting by talking at normal volume, where respiratory droplets are projected a certain distance. To estimate the risk for activities that require stronger breathing (such as singing, shouting, or exercising) or quieter breathing (such as riding a subway car where no one is talking), you can adjust the numbers up or down. We brainstorm how much to adjust in the Q&A section (TODO link).
-
-
-
-
-![alt_text](images/image3.png "image_tooltip")
-
-**TODO fix the above image (the Indoor Contact ratio is wrong)**
-
-
-
-[^2]:
-     We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will likely give less protection than this.
+[^1]:
+     We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will give less protection than this.
 
 `
 
