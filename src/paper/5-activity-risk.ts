@@ -2,7 +2,7 @@ const title = 'Activity Risk'
 
 const content = `
 
-Activity Risk is the chance that an activity will transmit COVID to you, _if_ the other person currently has COVID.
+_Activity Risk_ is the chance that an activity will transmit COVID to you, _if_ the other person currently has COVID.
 
 In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
@@ -60,9 +60,9 @@ There is substantial uncertainty in many of these numbers. We’ve generally cho
 
 To calculate the Activity Risk of lunch in the park with your friend, start with 6% (the Activity Risk for our "reference interaction") and apply modifiers as needed: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks because the reference interaction is already unmasked.
 
-What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID. 
+What about indoor dining with that friend? You're there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, you don't need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID.
 
-Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That's a big difference! Remember, your friend won't necessarily know that they have COVID, and it's very common to be infectious before you show symptoms. And that's with only one person! 
+Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That's a big difference! Remember, your friend won't necessarily know that they have COVID, and it's very common to be infectious before you show symptoms. And that's with only one person!
 
 Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the Q&A for tips and tricks [TODO link]. In the next section, we will look at calculating the risk of activities with multiple people.
 
@@ -95,9 +95,9 @@ We do the calculation differently for household members and spouses/partners bec
 
 <p class="calloutText">Activity Risk of living with 1 spouse/partner, who has COVID, for 1 week = 48%</p>
 
-These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%. 
+These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of one-time interaction (at 6% per hour)? 
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of one-time interaction (at 6% per hour)?
 
 Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
 
