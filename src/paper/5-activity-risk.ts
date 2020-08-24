@@ -51,7 +51,7 @@ Here are our estimates for the change in risk based on these modifiers:
 
 If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
-What about if the interaction is with more than one other person? We'll get to this later, in the Person Risk section. For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
+What about if the interaction is with more than one other person? We'll get to this later, in the section on [Putting it all together](/paper/11-putting-it-all-together#multiple-person-interactions). For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
 
 There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](https://docs.google.com/document/d/1hOxv2F_XCf1tUEOU-yQ6vsJcBWBex5ZlP3poT9iGJUk/edit#heading=h.l40d9yf3rvx6) [TODO internal link].
 

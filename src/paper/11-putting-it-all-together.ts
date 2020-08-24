@@ -6,6 +6,17 @@ We can now multiply Activity Risk by Person Risk to get the microCOVID cost of a
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
 
+## Multiple-person interactions
+
+So far we have assumed you are interacting with just one other person (a picnic with one friend, just one other person in the restaurant, etc.).
+
+If you are interacting with multiple people (lunch with _two_ friends; being near _five_ people at a time in a grocery store), you can add the microCOVID costs together (or, to say it differently, multiply by the number of people).
+
+<p class="calloutText">Cost = Activity Risk ⨉ Person Risk for one person ⨉ Number of people</p>
+
+In the [calculator](/calculator) we display both the Person Risk for _each_ person, and the _total_ Person Risk after multiplying by number of people.
+
+
 ## An example of combining Activity Risk and Person Risk to get a total Cost
 
 
