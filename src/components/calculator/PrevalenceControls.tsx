@@ -80,15 +80,15 @@ export const PrevalenceControls: React.FunctionComponent<{
           ))}
         </select>
       </div>
-      {topLocation == '' ||
-      Locations[topLocation].subdivisions.length == 0 ? null : (
+      {topLocation === '' ||
+      Locations[topLocation].subdivisions.length === 0 ? null : (
         <div className="form-group">
           <select
             className="form-control form-control-lg"
             value={subLocation}
             onChange={(e) => {
               setSubLocation(e.target.value)
-              if (e.target.value == '') {
+              if (e.target.value === '') {
                 setLocationData(topLocation)
               } else {
                 setLocationData(e.target.value)
