@@ -80,11 +80,11 @@ export const RiskProfile: { [key: string]: FormValue } = {
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: { label: 'One-time contact', multiplier: 0.08 },
   repeated: {
-    label: 'Repeated Contact (coworker, housemate, child, etc.)',
+    label: 'Household member',
     multiplier: 0.3,
   },
   partner: {
-    label: 'Partner',
+    label: 'Partner / spouse',
     multiplier: 0.48,
   },
 }

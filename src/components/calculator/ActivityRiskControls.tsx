@@ -18,8 +18,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <React.Fragment>
         {header}
         <div className="empty">
-          Repeated interactions with co-workers or partners are not impacted by
-          activity type.
+          When estimating your risk of infection from a household member or partner/spouse we assume these interactions are indoors, unmasked, and undistanced.
         </div>
       </React.Fragment>
     )
