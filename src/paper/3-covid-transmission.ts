@@ -35,5 +35,5 @@ In order to answer these questions with microCOVID numbers (not just “high” 
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 export default post

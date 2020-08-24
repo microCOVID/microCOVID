@@ -1,5 +1,4 @@
 const title = 'Computing microCOVIDs'
-const shortTitle = 'Computing microCOVIDs'
 
 const content = `
 
