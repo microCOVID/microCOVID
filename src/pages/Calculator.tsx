@@ -88,6 +88,7 @@ export const Calculator = (): React.ReactElement => {
       </div>
     </div>
   )
+
   const saveButton = (
     <span>
       <button
@@ -136,7 +137,7 @@ export const Calculator = (): React.ReactElement => {
             onClick={resetForm}
           >
             Reset form
-          </button>
+          </button>{' '}
           {showPoints && (showSaveForm ? saveForm : saveButton)}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block">
