@@ -28,10 +28,10 @@ export const Footer = (): React.ReactElement => (
       </p>
       Permissions beyond the scope of this license may be available at{' '}
       <a
-        href="https://github.com/microcovid/microcovid"
+        href="https://github.com/microcovid/microcovid/blob/main/LICENSE"
         rel="cc:morePermissions"
       >
-        https://github.com/microcovid/microcovid
+	  https://github.com/microcovid/microcovid/blob/main/LICENSE
       </a>
     </Container>
   </footer>
