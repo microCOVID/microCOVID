@@ -121,17 +121,20 @@ export const calculatePersonRisk = (
 
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
   try {
+    const repeatedInteraction = ['repeated', 'partner'].includes(
+      data.interaction,
+    )
+
     let multiplier = 1
+    multiplier *= Interaction[data.interaction].multiplier
 
-    multiplier *= Setting[data.setting].multiplier
-    multiplier *= Distance[data.distance].multiplier
-    multiplier *= TheirMask[data.theirMask].multiplier
-    multiplier *= YourMask[data.yourMask].multiplier
-
-    multiplier *=
-      Interaction[data.interaction].multiplier *
-      Math.min((data.duration || 60) / 60.0, 5)
-
+    if (!repeatedInteraction) {
+      multiplier *= Setting[data.setting].multiplier
+      multiplier *= Distance[data.distance].multiplier
+      multiplier *= TheirMask[data.theirMask].multiplier
+      multiplier *= YourMask[data.yourMask].multiplier
+      multiplier *= Math.min((data.duration || 60) / 60.0, 5)
+    }
     return multiplier
   } catch {
     return null

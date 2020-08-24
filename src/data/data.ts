@@ -78,7 +78,7 @@ export const RiskProfile: { [key: string]: FormValue } = {
 }
 
 export const Interaction: { [key: string]: FormValue } = {
-  oneTime: { label: 'One-time interaction', multiplier: 0.08 },
+  oneTime: { label: 'One-time interaction', multiplier: 0.06 },
   repeated: {
     label: 'Household member',
     multiplier: 0.3,
