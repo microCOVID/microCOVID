@@ -4,7 +4,7 @@ const content = `
 
 Activity Risk is the chance that an activity will transmit COVID to you, if the other person currently has COVID.
 
-In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
+In this section we explain how we estimate Activity Risk for an activity involving one other person. If you just want to compare our risk estimates of specific activities (such as grocery shopping for an hour, or eating in a restaurant), and you are not interested in learning how to do those calculations yourself, you could skip this section and instead explore the example scenarios in the [calculator](/calculator).
 
 
 ### Our estimate starts with indoor unmasked conversation
@@ -31,11 +31,10 @@ To estimate the Activity Risk of a different interaction (an outdoor picnic, or 
 * location (outdoor vs. indoor), and
 * distance from each other
 
-For now, we will still imagine there is just 1 other person (a picnic with 1 friend, just 1 other person in the restaurant, etc.) We will adjust for number of people in the Person Risk section.
+For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating.
 
-For example, we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet away most of the time (distance), and who are wearing masks.
+Or we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet away most of the time (distance), and who are wearing masks.
 
-Or we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating.
 
 Here are our estimates for the change in risk based on these modifiers:
 
@@ -50,9 +49,14 @@ Here are our estimates for the change in risk based on these modifiers:
 
 If you're taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
-So for our grocery store example, start with 6% (the Activity Risk for our "reference interaction") and then apply the modifiers as needed: \`6% * 0.5 (hours) * 5 (number of people near you) / 2 (distance of 6-9 feet) / 8 (everyone is masked) = 0.93%\`. You have a **0.93%** chance of getting COVID from this single activity. Note that there is no modifier for being indoors because the reference interaction is already indoors. (Again, this assumes that the 5 people who come near you in the grocery store all have COVID. In the next section, we will talk about how to estimate how likely that is given the prevalence of COVID in your area.)
+What about if the interaction is with more than one other person? We will get to this later, in the Person Risk section. For now, even though it may seem a little silly, we will still imagine there is just 1 other person (a picnic with 1 friend, just 1 other person in the restaurant, etc.)
 
-And for our lunch in the park example, start the same way with 6% and apply modifiers: \`6% * 2 (hours) * 2 (number of people) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity. Note no modifier for masks because the reference interaction is already unmasked.
+### Example calculations
+
+To calculate the Activity Risk of lunch in the park, start with 6% and apply modifiers: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks because the reference interaction is already unmasked.
+
+For the grocery store, start the same way with 6% (the Activity Risk for our "reference interaction") and then apply the modifiers as needed: \`6% * 0.5 (hours) * / 2 (distance of 6-9 feet) / 8 (everyone is masked) = 0.19%\`. You have a **0.19%** chance of getting COVID from one person in a grocery store with you who has COVID. Note that there is no modifier for being indoors because the reference interaction is already indoors. (Again, this assumes that one person in the grocery store with you currently has COVID. In the Person Risk section, we will talk about how to estimate how likely that is given the prevalence of COVID in your area.)
+
 
 Now consider going out to a bar. You're there for 3 hours, with 2 people at 3 feet and another 5 people at [CURRENTLY WORKING ON THIS]
 
