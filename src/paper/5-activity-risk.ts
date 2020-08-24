@@ -58,14 +58,15 @@ To calculate the Activity Risk of lunch in the park, start with 6% and apply mod
 For the grocery store, start the same way with 6% (the Activity Risk for our "reference interaction") and then apply the modifiers as needed: \`6% * 0.5 (hours) * / 2 (distance of 6-9 feet) / 8 (everyone is masked) = 0.19%\`. You have a **0.19%** chance of getting COVID from one person in a grocery store with you who has COVID. Note that there is no modifier for being indoors because the reference interaction is already indoors. (Again, this assumes that one person in the grocery store with you currently has COVID. In the Person Risk section, we will talk about how to estimate how likely that is given the prevalence of COVID in your area.)
 
 
-Now consider going out to a bar. You're there for 3 hours, with 2 people at 3 feet and another 5 people at [CURRENTLY WORKING ON THIS]
+Now consider going out to a bar. You're there for 3 hours, with 15 people, indoors, at a distance of 6 feet (because you're trying), and none of you are wearing masks. This works out to: \`6% * 3 (hours) * 15 (number of people) / 2 (distance of 6-9 feet) = 135%\`. [TODO: LOL NEEDS FIXING] 
 
+Hopefully this puts the risk of going out to a bar into perspective! To compare the Activity Risk of other activities, such as riding in a car or attending a large outdoor party, try our [calculator](/calculator). 
 
 
 
 ### Masked, outdoor, distanced interactions are much lower risk
 
-Being outdoors and wearing masks both make a _huge_ difference.
+Indoor unmasked interactions are quite risky, but being outdoors and wearing masks both make a _huge_ difference.
 
 **Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](8-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link), so we treat them as "no mask."
 
@@ -91,28 +92,18 @@ We do the calculation differently for household members and spouses/partners bec
 
 <p class="calloutText">Activity Risk of living with 1 spouse/partner, who has COVID, for 1 week = 48%</p>
 
+These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%. 
+
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of one-time interaction (at 6% per hour)? 
+
+Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
+
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](9-research-sources) for slightly more detail.
 
 
 
 
-
-
-
-
-
 ### TODO title
-
-We looked through a bunch of research [TODO check internal link] and extracted the following guesses for Activity Risk.
-
-
-Indoor unmasked transmission is quite risky, though it’s far from guaranteed that you’ll get COVID from an indoor interaction with someone who is COVID-positive. In fact, if you've been reading the news about how easy it is to spread COVID, these numbers might look suspiciously low to you. However, [TODO: insert that paragraph speculating about why household transmission is low].
-
-If you “just” see someone with COVID indoors _one time_ for an hour-long coffee meetup, then you have about a 6% chance of getting COVID from that one interaction.
-
-If someone you live with gets COVID, the chance you’ll get it is higher, more like 30%. This makes sense, because this is someone you might see as often as _every day_, not just once.[^3]
-
-If the person you live with is a spouse or partner, the number is even higher, because this is someone you not only see every day but also might share a bed with (with your heads very close together). We estimate this at 48%.
 
 These numbers assume you are interacting by talking at normal volume, where respiratory droplets are projected a certain distance. To estimate the risk for activities that require stronger breathing (such as singing, shouting, or exercising) or quieter breathing (such as riding a subway car where no one is talking), you can adjust the numbers up or down. We brainstorm how much to adjust in the Q&A section (TODO link).
 
