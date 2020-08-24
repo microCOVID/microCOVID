@@ -1,13 +1,14 @@
 import post1 from 'paper/1-intro'
-import post10 from 'paper/10-calculator-and-conclusion'
-import post11 from 'paper/11-q-and-a'
-import post12 from 'paper/12-research-sources'
+import post11 from 'paper/11-putting-it-all-together'
+import post12 from 'paper/12-calculator-and-conclusion'
+import post13 from 'paper/13-q-and-a'
+import post14 from 'paper/14-research-sources'
 import post2 from 'paper/2-riskiness'
 import post3 from 'paper/3-covid-transmission'
 import post4 from 'paper/4-computing-microcovids'
 import post5 from 'paper/5-activity-risk'
 import post6 from 'paper/6-person-risk'
-import post9 from 'paper/9-putting-it-all-together'
+
 
 interface PostContent {
   title: string
@@ -22,8 +23,8 @@ export const pages: { [key: string]: PostContent } = {
   '4-computing-microcovids': post4,
   '5-activity-risk': post5,
   '6-person-risk': post6,
-  '9-putting-it-all-together': post9,
-  '10-calculator-and-conclusion': post10,
-  '11-q-and-a': post11,
-  '12-research-sources': post12,
+  '11-putting-it-all-together': post11,
+  '12-calculator-and-conclusion': post12,
+  '13-q-and-a': post13,
+  '14-research-sources': post14,
 }
