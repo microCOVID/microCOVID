@@ -204,6 +204,11 @@ a {
     font-family: $font-family-sans-serif;
   }
 
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 2.4rem;
+    margin-bottom: 1.3rem;
+  }
+
   table {
     margin: 40px 0;
     table-layout: fixed;
