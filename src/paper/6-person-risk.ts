@@ -4,20 +4,33 @@ const content = `
 
 _Person Risk_ is the chance that the other person currently has COVID. This is based on overall prevalence in your area and their recent behaviors.
 
-So you’ve decided to meet a friend for lunch. You know the Activity Risk is 6% per hour (for an indoor unmasked lunch) and much less if you MODify your hangout. But the Activity Risk _assumes_ that they have COVID.
+So you’ve decided to meet a friend for lunch. You know the Activity Risk is 6% per hour (for an indoor unmasked lunch) and much less if you MODify your hangout. But the Activity Risk _assumes_ that they currently have COVID.
 
 What’s the chance that your friend actually has COVID? They aren’t coughing and they feel totally fine. Can you conclude they aren't infected? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_.[^4]
 
-Not all diseases work this way—for example, [Ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and one of its defining features is that it has a high rate of transmission from people _who don’t show symptoms_.
+ * Not all diseases work this way—for example, [Ebola](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358015/) is only contagious when the person is already exhibiting symptoms. However, COVID is a different disease, and one of its defining features is that it has a high rate of transmission from people _who don’t yet have symptoms_.
 
 This means that the chance someone has COVID (which we’re calling “Person Risk”) depends on their actions and choices in the past 10 days or so, not just whether they’re actively showing symptoms.
 
-We’ll show you three different methods of guessing someone’s chance of having COVID.
+We use three different methods of guessing someone’s chance of having COVID.
 
 *   The **basic method** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
 *   The **intermediate method** adds adjustments for whether the person is or isn’t an essential worker.
 *   The **advanced method** is to add up the risk of each individual activity that person has done recently.
 
+### Skip ahead and takeaways
+If you would like to understand how we use the basic, intermediate, and advanced methods to compute Person Risk, read on.
+
+If you would like to skip ahead, please first read the following takeaways that we think are the most important things conveyed in the next few sections:
+
+* The chance someone has COVID is very different in different geographic regions.
+  * The very same activity that is fairly safe where I live might be fairly dangerous where my parents live, because the risk that people have COVID there is higher.
+* People who go to work and interact with the public are at greater risk of having COVID.
+  * We estimate essential workers are 3x more likely than average to have COVID.
+  * People who are not essential workers are half as likely as average to have COVID.
+
+
+Skip ahead to [Putting it all together](/paper/9-putting-it-all-together)\u27A1, or read on for more detail.
 
 ## Basic method: Regional prevalence
 
@@ -173,6 +186,7 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
 [^14]:
      If Reasonable Rosie keeps up this rate of 369 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is lower than the average American, but is too high for comfort for some people!
 
+[^essential]: By "essential worker" we mean roughly the same thing as the following two definitions. First: "Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers." ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)) Second: "Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60." (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/))
 `
 
 const post = { title, content }
