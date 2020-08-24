@@ -4,7 +4,7 @@ import { Popover } from 'react-bootstrap'
 import { SelectControl } from './SelectControl'
 import {
   CalculatorData,
-  calclulateLocationPersonAverage,
+  calculateLocationPersonAverage,
   calculatePersonRisk,
 } from 'data/calculate'
 import { Interaction, RiskProfile } from 'data/data'
@@ -44,7 +44,7 @@ export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
-  const locationRisk = calclulateLocationPersonAverage(data)
+  const locationRisk = calculateLocationPersonAverage(data)
   if (!locationRisk) {
     return <div></div>
   }

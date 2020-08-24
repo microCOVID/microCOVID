@@ -1,33 +1,48 @@
 import React from 'react'
 
-import { CalculatorData, calclulateLocationPersonAverage } from 'data/calculate'
-import { ExampleLocations, PrevalenceDataDate } from 'data/location'
+import { CalculatorData, calculateLocationPersonAverage } from 'data/calculate'
+import { Locations, PrevalenceDataDate } from 'data/location'
 
-export const PrevalanceControls: React.FunctionComponent<{
+export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
-  const setLocationData = (selectedValue: string) => {
-    const exampleData = ExampleLocations[selectedValue]
+  const locationGroups: { [key: string]: Array<string> } = {}
+  for (const key in Locations) {
+    const location = Locations[key]
+    if (location.topLevelGroup !== null) {
+      let members = locationGroups[location.topLevelGroup]
+      if (members === undefined) {
+        members = []
+        locationGroups[location.topLevelGroup] = members
+      }
+      members.push(key)
+    }
+  }
 
-    if (exampleData) {
+  const setLocationData = (selectedValue: string) => {
+    const locationData = Locations[selectedValue]
+
+    if (locationData) {
       setter({
         ...data,
         location: selectedValue,
-        population: exampleData.population,
-        casesPastWeek: exampleData.casesPastWeek,
-        casesWeekBefore: exampleData.casesWeekBefore,
-        positiveCasePercentage: exampleData.positiveCasePercentage,
+        population: locationData.population,
+        casesPastWeek: locationData.casesPastWeek,
+        casesIncreasingPercentage:
+          Math.round(locationData.casesIncreasingPercentage * 10) / 10,
+        positiveCasePercentage:
+          Math.round(locationData.positiveCasePercentage * 10) / 10,
       })
     }
 
-    if (selectedValue === 'custom' || selectedValue === '') {
+    if (selectedValue === '') {
       setter({
         ...data,
         location: selectedValue,
         population: '',
         casesPastWeek: 0,
-        casesWeekBefore: 0,
+        casesIncreasingPercentage: 0,
         positiveCasePercentage: 0,
       })
     }
@@ -42,16 +57,16 @@ export const PrevalanceControls: React.FunctionComponent<{
           value={data.location}
           onChange={(e) => setLocationData(e.target.value)}
         >
-          <option value="">Select location...</option>
-          <optgroup label="Examples from white paper">
-            {Object.keys(ExampleLocations).map((value, index) => (
-              <option key={index} value={value}>
-                {ExampleLocations[value].label}
-              </option>
-            ))}
-          </optgroup>
-          <optgroup label={'US states as of ' + PrevalenceDataDate}></optgroup>
-          <option value="custom">Custom location</option>
+          <option value="">Select location or enter data...</option>
+          {Object.keys(locationGroups).map((groupName, groupInd) => (
+            <optgroup key={groupInd} label={groupName}>
+              {locationGroups[groupName].map((locKey, locInd) => (
+                <option key={locInd} value={locKey}>
+                  {Locations[locKey].label}
+                </option>
+              ))}
+            </optgroup>
+          ))}
         </select>
       </div>
       <div className="form-group">
@@ -66,17 +81,6 @@ export const PrevalanceControls: React.FunctionComponent<{
         />
       </div>
       <div className="form-group">
-        <label htmlFor="duration">Reported cases in week before last</label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.casesWeekBefore}
-          onChange={(e) =>
-            setter({ ...data, casesWeekBefore: parseInt(e.target.value) })
-          }
-        />
-      </div>
-      <div className="form-group">
         <label htmlFor="duration">Per how many people?</label>
         <input
           className="form-control form-control-lg"
@@ -84,6 +88,27 @@ export const PrevalanceControls: React.FunctionComponent<{
           value={data.population}
           onChange={(e) => setter({ ...data, population: e.target.value })}
         />
+      </div>
+      <div className="form-group">
+        <label htmlFor="duration">Week-over-week increase in cases</label>
+        <div className="input-group mb-3">
+          <input
+            className="form-control form-control-lg"
+            type="number"
+            value={data.casesIncreasingPercentage}
+            onChange={(e) =>
+              setter({
+                ...data,
+                casesIncreasingPercentage: Number(e.target.value),
+              })
+            }
+          />
+          <div className="input-group-append">
+            <span className="input-group-text" id="basic-addon2">
+              %
+            </span>
+          </div>
+        </div>
       </div>
       <div className="form-group">
         <label htmlFor="duration">
@@ -108,8 +133,30 @@ export const PrevalanceControls: React.FunctionComponent<{
           </div>
         </div>
       </div>
-      Local person risk:{' '}
-      {Math.round(calclulateLocationPersonAverage(data) || 0)} uCOV
+      <p>
+        Local person risk: {}
+        {Math.round(calculateLocationPersonAverage(data) || 0)} uCOV
+      </p>
+      <p>
+        Prevalence data consolidated from {}
+        <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
+          Johns Hopkins CSSE
+        </a>{' '}
+        (reported cases), {}
+        <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
+          Covid Act Now
+        </a>{' '}
+        (US positive test rates), and {}
+        <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
+          Our World in Data
+        </a>{' '}
+        (international positive test rates).
+      </p>
+      <p>
+        If test positivity data for a region is not available, it will be
+        displayed as 20%.
+      </p>
+      <p>Last updated {PrevalenceDataDate}.</p>
     </React.Fragment>
   )
 }

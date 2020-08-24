@@ -5,7 +5,7 @@ export type PartialData = Omit<
   | 'location'
   | 'population'
   | 'casesPastWeek'
-  | 'casesWeekBefore'
+  | 'casesIncreasingPercentage'
   | 'positiveCasePercentage'
 >
 

@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap'
 
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
-import { PrevalanceControls } from 'components/calculator/PrevalenceControls'
+import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
 import {
@@ -65,7 +65,7 @@ export const Calculator = (): React.ReactElement => {
   const prevalenceIsFilled =
     parsePopulation(calculatorData.population) > 0 &&
     calculatorData.casesPastWeek > 0 &&
-    calculatorData.casesWeekBefore > 0 &&
+    calculatorData.casesIncreasingPercentage >= 0 &&
     calculatorData.positiveCasePercentage > 0
   const repeatedEvent = ['repeated', 'partner'].includes(
     calculatorData.interaction,
@@ -150,7 +150,7 @@ export const Calculator = (): React.ReactElement => {
               your own values based on data available in your area....
             </div>
 
-            <PrevalanceControls
+            <PrevalenceControls
               data={calculatorData}
               setter={setCalculatorData}
             />

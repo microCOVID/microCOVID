@@ -15,7 +15,7 @@ export interface CalculatorData {
   location: string
   population: string
   casesPastWeek: number
-  casesWeekBefore: number
+  casesIncreasingPercentage: number
   positiveCasePercentage: number
 
   // Person risk
@@ -35,7 +35,7 @@ export const defaultValues: CalculatorData = {
   location: '',
   population: '',
   casesPastWeek: 0,
-  casesWeekBefore: 0,
+  casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
 
   riskProfile: '',
@@ -54,7 +54,7 @@ const ONE_MILLION = 1e6 // One 'full' COVID
 export const parsePopulation = (input: string): number =>
   Number(input.replace(/[^0-9.e]/g, ''))
 
-export const calclulateLocationPersonAverage = (
+export const calculateLocationPersonAverage = (
   data: CalculatorData,
 ): number | null => {
   // Prevalence
@@ -71,7 +71,7 @@ export const calclulateLocationPersonAverage = (
   }
 
   const lastWeek = data.casesPastWeek
-  const delayFactor = Math.max(1, lastWeek / data.casesWeekBefore)
+  const delayFactor = 1 + Math.max(0, data.casesIncreasingPercentage / 100)
 
   // --------
   // Points for "random person from X location"
@@ -129,7 +129,7 @@ export const calculate = (data: CalculatorData): number | null => {
       data.interaction,
     )
 
-    const averagePersonRisk = calclulateLocationPersonAverage(data)
+    const averagePersonRisk = calculateLocationPersonAverage(data)
     if (!averagePersonRisk) {
       return null
     }
