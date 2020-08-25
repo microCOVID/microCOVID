@@ -57,9 +57,7 @@ export const Calculator = (): React.ReactElement => {
     }
 
     // Round points < 10
-    return computedValue > 10
-      ? Math.round(computedValue)
-      : computedValue
+    return computedValue > 10 ? Math.round(computedValue) : computedValue
   }, [calculatorData])
 
   const prevalenceIsFilled =
@@ -103,9 +101,9 @@ export const Calculator = (): React.ReactElement => {
   const pointsDisplay = (
     <Card title="Result">
       <p className="readout">
-        You have a {showPoints ? points.toLocaleString() : '-'}-in-a-million
-        ({showPoints ? ((points/1e6 || 0) * 100).toFixed(2) : '-'}%)
-        chance of getting COVID from this activity with these people.
+        You have a {showPoints ? points.toLocaleString() : '-'}-in-a-million (
+        {showPoints ? ((points / 1e6 || 0) * 100).toFixed(2) : '-'}%) chance of
+        getting COVID from this activity with these people.
       </p>
       <h1>
         {showPoints ? points.toLocaleString() : '-'} microCOVIDs

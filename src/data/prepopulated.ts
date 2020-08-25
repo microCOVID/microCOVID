@@ -180,5 +180,4 @@ export const prepopulated: {
     yourMask: 'none',
     voice: 'normal',
   },
-
 }
