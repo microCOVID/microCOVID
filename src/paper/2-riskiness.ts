@@ -32,7 +32,7 @@ We use microCOVIDs rather than some other scale factor (milliCOVIDs? nanoCOVIDs?
 
 ### How much is a microCOVID?
 
-We—the authors—are a group of 30-something-year-olds in San Francisco who live together in a communal house and mostly work from home. After much discussion (which we hope to explain later in a future post), we agreed that we would aim to keep each of our individual risks of getting COVID below **1% per year**[^4] (i.e., about 10,000 microCOVIDs per year[^5]). We don’t regularly interact with anyone who is at high risk of severe illness from COVID, but we also care a lot about doing our part to reduce the spread of the pandemic.
+We—the authors—are a group of 30-something-year-olds in San Francisco who live together in a communal house and mostly work from home. After much discussion (which we hope to explain later in a future post), we agreed that we would aim to keep each of our individual risks of getting COVID below **1% per year**[^4] (i.e., about **10,000 microCOVIDs per year**[^5]). We don’t regularly interact with anyone who is at high risk of severe illness from COVID, but we also care a lot about doing our part to reduce the spread of the pandemic.
 
 So, given that we each have 10,000 microCOVIDs to spend per year, and many of those are taken up by having housemates and running errands:
 
