@@ -28,7 +28,7 @@ One thing you will notice is that when we re-compute the Person Risk used for a 
 
 With a total COVID risk of 369 microCOVIDs, Rosie is being more cautious than average![^14] It’s also possible we’re still _over_estimating her risk, even using the Advanced Method. She may be incurring less risk from errands than the 10% rule of thumb suggests, and if her friends are similar to her, then they are probably more cautious than average as well, which would reduce her COVID risk from socializing.
 
-In our microCOVIDs calculator [TODO link], we’ve provided some Person Risk examples that you can use as a starting point to create your own calculations.
+In our [microCOVIDs calculator](/calculator), we’ve provided some Person Risk examples that you can use as a starting point to create your own calculations.
 
 Now that we’ve looked at Person Risk, we can combine it with Activity Risk to get the cost in microCOVIDs of a given activity. Hooray, you made it!
 
