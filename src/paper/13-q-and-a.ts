@@ -55,9 +55,16 @@ To summarize, _reducing your total amount of contact_ (and choosing to hang out 
 
 **So if my housemate really wants to see a partner in another house, you believe it is sometimes better from a _risk_ standpoint _not_ to negotiate for the partner’s entire house to get added to our bubble?**
 
-Right! To illustrate, imagine a full group dinner between the two houses of several people each. This could be quite a large gathering, where everyone is exposed to everyone. If any of these people have been to work, on public transit, or in stores, then everyone at the dinner is indirectly exposed to those external sources of risk. By contrast, imagine that just your housemate sees just their partner, in the partner’s room with the door closed. One person is exposed to one other person. This is less overall contact. Of course, without a “closed bubble” agreement, the partner might be doing other socializing of their own.
+Right! To illustrate, compare the following two scenarios:
 
-Which strategy is less risky depends on which factor dominates: the partner’s other socializing, or every bubble member’s combined external exposure. This is why we think closed bubbles are less risky for people who are generally not working or going out at all, and reducing total contact is less risky for people who have a moderate amount of external exposure. We haven’t done the math on this yet, and we would be interested to see an analysis of this.
+1. The two houses merge into one large "bubble". Everyone gets together for a full group dinner between the two houses.
+    * This could be quite a large gathering, where everyone is exposed to everyone. If any of these people have been to work, on public transit, or in stores, then everyone at the dinner is indirectly exposed to those external sources of risk.
+
+2. No specific bubble arrangement, but nobody else in your house socializes with anyone else in the other house. Just your housemate sees just their partner, in the partner’s room with the door closed.
+    * One person is exposed to one other person. This is less overall contact.
+    * Of course, if you choose not to make a “closed bubble” agreement, the partner might be doing other socializing of their own.
+
+Which strategy is less risky depends on which factor dominates: the partner’s other socializing, or every bubble member’s combined external exposure. This is why we think closed bubbles are the safer choice for people who are generally not working or going out at all, and reducing total contact is the safer choice for people who have a moderate amount of external exposure. We haven’t done the math on this yet, and we would be interested to see an analysis of this.
 
 ### MOD: Masked, Outdoors, and Distance
 
