@@ -18,7 +18,7 @@ We hope our mindset towards COVID risk modeling makes you feel less trapped and 
 
 First, please use the calculator! We hope it helps you in your own life. Let us know if you have any feedback.
 
-Second, if you would like to contribute, please email info@microcovid.org. Or -- even better, if you are able to! -- submit a [pull request](https://github.com/microcovid/microcovid) with your contribution.
+Second, if you would like to contribute, please email info@microcovid.org. Or even better, submit a [pull request](https://github.com/microcovid/microcovid) with your contribution.
 
 Thanks for reading!
 

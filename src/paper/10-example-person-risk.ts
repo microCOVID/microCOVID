@@ -6,7 +6,7 @@ Let’s work through a quick example to compare the different approaches for est
 
 Reasonable Rosie lives with one roommate in San Francisco and works from home. Rosie rides the bus to the park and also grocery shops once a week in a well-fitting cloth mask. Nobody else visits Rosie’s apartment, and she doesn’t hang out with anyone else indoors. She went on 5 separate 1.5 hour masked outdoor walks with friends over the past ten days. For simplicity, we’ll assume her roommate does the exact same set of activities that she does.
 
-You’re planning to hang out with Rosie and want to know her Person Risk, so you can know what precautions to take.  You calculate:
+You’re planning to hang out with Rosie and want to know her Person Risk, so you can know what precautions to take. You calculate:
 
 
 
@@ -22,7 +22,7 @@ You’re planning to hang out with Rosie and want to know her Person Risk, so yo
     *   If Rosie’s roommate did the same things (grocery shopping, bus riding, five walks with friends), then Rosie’s roommate’s risk of getting COVID, in microCOVIDs, (_due to sources other than Rosie)_ is the same: 284. Multiply this by the 30% Activity Risk of being a roommate and you learn that Rosie’s roommate poses a risk to Rosie of 0.30 x 293 = 85 microCOVIDs.[^13]
 
 
-    *   So the total COVID risk for Rosie, based on her behaviors, is 255 + 29 + 85 = 369 microCOVIDs.  Now you can use this number as the “Person Risk” when you’re calculating your own chance of getting COVID from Rosie.
+    *   So the total COVID risk for Rosie, based on her behaviors, is 255 + 29 + 85 = 369 microCOVIDs. Now you can use this number as the “Person Risk” when you’re calculating your own chance of getting COVID from Rosie.
 
 One thing you will notice is that when we re-compute the Person Risk used for a hangout with Rosie via more detailed methods, we get substantially smaller numbers. This is because the Basic and Intermediate method both assume Rosie is about average, which is not true. The more you know about a person’s behavior, the more accurate your estimate can be. In some cases it might go up, in other cases it might go down.
 
@@ -38,7 +38,7 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
 [^14]:
      If Reasonable Rosie keeps up this rate of 369 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is lower than the average American, but is too high for comfort for some people!
 
-[^essential]: By "essential worker" we mean roughly the same thing as the following two definitions. First: "Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers." ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)) Second: "Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60." (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/))
+[^essential]: By “essential worker” we mean roughly the same thing as the following two definitions. First: “Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers.” ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)) Second: “Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60.” (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/))
 `
 
 const post = { title, shortTitle, content }

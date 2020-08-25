@@ -19,7 +19,7 @@ However, this is just a start. You cannot use this number directly because it un
 
 2. The first factor is **underreporting**. Many people with COVID won’t ever get counted in the official statistics. They might not think their symptoms are anything unusual, so they don’t get tested. Or they might not be able to access testing.[^6]
 
-3. The second factor is **delay**. There’s a delay of 1-2 weeks between when people got infected and when their positive test results come back. The true number of confirmed cases who were sick _last_ week isn’t known yet, and won’t be known until those tests come back _next_ week. If cases are rising, last week's statistics will be too low.
+3. The second factor is **delay**. There’s a delay of 1-2 weeks between when people got infected and when their positive test results come back. The true number of confirmed cases who were sick _last_ week isn’t known yet, and won’t be known until those tests come back _next_ week. If cases are rising, last week’s statistics will be too low.
 
 The [calculator](/calculator) can look up new reported cases automatically, and takes these adjustments into account as well.
 
@@ -29,15 +29,15 @@ At the time of writing, in July 2020, we calculated the Person Risk (Basic Metho
 
 This means that the risk of doing a specific activity in San Francisco that month was about 60 times higher than doing the same activity in Sydney.
 
-Inviting **one** random person over for coffee (indoors, unmasked, undistanced) in San Francisco would've been about as risky as inviting **60** random Sydney residents to your home!
+Inviting **one** random person over for coffee (indoors, unmasked, undistanced) in San Francisco would’ve been about as risky as inviting **60** random Sydney residents to your home!
 
-There is not just one answer for "How risky is it to invite one person over for coffee?". It depends on where they live and how widespread COVID is there.
+There is not just one answer for “How risky is it to invite one person over for coffee?” It depends on where they live and how widespread COVID is there.
 
 
 ## Detailed steps for Basic Method
 To learn how do these steps manually, or to understand how the calculator does it, read the rest of this page.
 
-Or skip to the next page to learn about the [Intermediate Method](/paper/8-intermediate-method)\u27A1.
+Or skip to the next page to learn about the [Intermediate Method](/paper/8-intermediate-method).
 
 
 
@@ -49,12 +49,12 @@ To estimate the prevalence of COVID where you live, start by looking up the numb
 
 You decide how to define your region. This might be based on the county where you live, or you might want to include multiple counties if you live in a major metropolitan area. If data is limited, you might have to use your entire state.
 
-If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new reported cases per _100,000_ people. To get a week's worth of cases, you'll need to calculate: \`daily new reported cases per 100,000 people * 7 days\`. You will then use 100,000 as the population.
+If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new reported cases per _100,000_ people. To get a week’s worth of cases, you’ll need to calculate: \`daily new reported cases per 100,000 people * 7 days\`. You will then use 100,000 as the population.
 
 
 ### Step two: Underreporting factor
 
-Many people with COVID won't ever get counted in the official statistics. The official statistics are **underreporting** the real number of new infections.
+Many people with COVID won’t ever get counted in the official statistics. The official statistics are **underreporting** the real number of new infections.
 
 You can use the _positive test rate_ (the percentage of tests that come back COVID-positive) as some evidence about how many infections are being caught by testing. Ideally, the positive test rate should be very low, indicating that contact tracing is working to find all contacts of an infected person, and that testing is available for each contact. If a high percentage of tests are coming back positive, then there are probably a lot _more_ infected people out there than the testing data shows.
 
@@ -71,9 +71,9 @@ _Note: we are using a lower underreporting factor for the purposes of this calcu
 ### Step three: Delay factor
 Since test results take about one week to come back on average, the number of _new reported cases_ in your region last week really represents the number of _new positive test results_ in your region _the week before that_. The results are **delayed**.
 
-If cases are flat or falling, it's fine to use this number as is.
+If cases are flat or falling, it’s fine to use this number as is.
 
-If cases are rising, then we need to estimate the increase by comparing last week's reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor.
+If cases are rising, then we need to estimate the increase by comparing last week’s reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor.
 
 * In the [calculator](/calculator) this would be displayed as a 50% increase in cases from last week to this week
 
@@ -95,15 +95,15 @@ Here are two examples:
 
 * Step 2: The week before that, there were 62 reported cases. \`81 / 62 = 1.3\` so we’ll use a 1.3x delay factor. (i.e. a 30% increase in cases from last week to this week)
 
-* Step 3: The percentage of positive COVID tests is extremely low: \`81 cases / 135,089 tests = 0.05%\` so we'll use our minimum 4x underreporting factor.[^8]
+* Step 3: The percentage of positive COVID tests is extremely low: \`81 cases / 135,089 tests = 0.05%\` so we’ll use our minimum 4x underreporting factor.[^8]
 
 * Step 4: Therefore, \`81 reported cases * 1.3 * 4 = 421 new infections last week\`.
 
 * Step 5: So the Person Risk (the chance that a random resident in New South Wales has COVID) is \`421 infections / 7,500,000 people = 0.000056 or 0.0056%\`.
     *  An easier way to talk about this tiny number is to multiply it by a million:  \`0.000056 * 1,000,000 = 56\`.
-	* This is the same as if we had just divided by \`7.5\` (the population _in millions_).
+  * This is the same as if we had just divided by \`7.5\` (the population _in millions_).
 
-So if all you knew about a person is that they lived in New South Wales in July 2020, their Person Risk at the time would've been **56**, which means there's a **56-in-a-million** chance that they had COVID (in that particular week).
+So if all you knew about a person is that they lived in New South Wales in July 2020, their Person Risk at the time would’ve been **56**, which means there’s a **56-in-a-million** chance that they had COVID (in that particular week).
 
 ### San Francisco in July 2020 (higher prevalence)
 Compare this with San Francisco County in California, which had [749 new reported cases](https://data.sfgov.org/stories/s/dak2-gvuj) during that same week, and a population of 0.88 million.[^9] Cases at that time were declining, so we won’t use a delay factor. The [positive test rate was 4.3%](https://data.sfgov.org/stories/s/d96w-cdge), so we’ll use a 4x underreporting factor. Therefore, \`749 reported cases * 4 = 2996 new infections last week\`. To get the Person Risk, divide by the population (in millions): \`2996 infections / 0.88 million people = 3405\`.[^10] So a resident of San Francisco had a Person Risk of **3405**, or a **3405-in-a-million** chance of currently having COVID (for this particular week).
@@ -115,7 +115,7 @@ Compare this with San Francisco County in California, which had [749 new reporte
 
 
 [^4]:
-     Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won't get tested if you don't show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
+     Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won’t get tested if you don’t show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
 
 [^5]:
      The most-infectious period starts a couple days after infection, but the day-to-day noise in new case numbers is enough that “0-7 days ago” and “2-9 days ago” are unlikely to be meaningfully different. We’ve found Figure 2 in [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) most helpful when thinking about this.
@@ -147,7 +147,9 @@ Compare this with San Francisco County in California, which had [749 new reporte
 [^14]:
      If Reasonable Rosie keeps up this rate of 369 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is lower than the average American, but is too high for comfort for some people!
 
-[^essential]: By "essential worker" we mean roughly the same thing as the following two definitions. First: "Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers." ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)) Second: "Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60." (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/))
+[^essential]: By “essential worker” we mean roughly the same thing as the following two definitions. First: “Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers” ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)). Second: “Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60” (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/)).
+
+
 `
 
 const post = { title, shortTitle, content }

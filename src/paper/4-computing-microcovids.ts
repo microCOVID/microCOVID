@@ -19,13 +19,13 @@ For example:
 1. **How risky is the activity itself?**
 2. **How risky is the person you’re doing it with?**
 
-We'll think about our actions in terms of how much they "cost" us in microCOVIDs:
+We’ll think about our actions in terms of how much they “cost” us in microCOVIDs:
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
 
 Note that the Activity Risk does _not_ factor in the prevalence of COVID in your area. Nor does it take into account the recent behaviors of the person you are interacting with. It is just about the activity itself, specifically how risky it would be if the person currently had COVID.
 
-The Person Risk is the part of the calculation that takes into account the prevalence of COVID in your area, and the other person's recent behaviors, e.g. if they have behaved in a lower-risk or higher-risk manner recently.
+The Person Risk is the part of the calculation that takes into account the prevalence of COVID in your area, and the other person’s recent behaviors, e.g. if they have behaved in a lower-risk or higher-risk manner recently.
 
 Let’s explore how you can estimate these two numbers (Activity Risk and Person Risk) for an activity you’d like to do.
 

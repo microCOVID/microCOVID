@@ -3,7 +3,7 @@ const shortTitle = 'COVID transmission'
 
 const content = `
 
-First, let's strengthen our intuitive model of COVID transmission.
+First, let’s strengthen our intuitive model of COVID transmission.
 
 COVID is transmitted primarily through tiny droplets produced when an infected person talks, coughs, or sneezes ([CDC FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)), many of which can [remain suspended in the air](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) for minutes to hours. Touching contaminated surfaces or objects is _possibly_ a way that COVID spreads, but the [CDC](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html) believes the _main_ way it spreads is person-to-person through respiratory droplets. Therefore, in this writeup, we focus primarily on the risk from exhaled droplets in the air.[^1]
 
@@ -15,7 +15,7 @@ If you inhale just a bit of “smoke” (exhaled air) from someone with COVID, y
 
 Source: [https://www.lavision.de/en/news/2020/4302/](https://www.lavision.de/en/news/2020/4302/)
 
-Concretely, this means it’s important to avoid situations that feature the [3 C’s](https://www.businessinsider.com/how-japan-tackled-coronavirus-without-a-lockdown-2020-5): Crowds, Closed Spaces, and Close Contact. Why? Because if anyone there has COVID, which becomes likelier as the size of the crowd increases, their “smoke” will be blown into your face. Even if you're not standing near them, it will build up in the enclosed space, making it more likely that you’ll inhale it.
+Concretely, this means it’s important to avoid situations that feature the [3 C’s](https://www.businessinsider.com/how-japan-tackled-coronavirus-without-a-lockdown-2020-5): Crowds, Closed Spaces, and Close Contact. Why? Because if anyone there has COVID, which becomes likelier as the size of the crowd increases, their “smoke” will be blown into your face. Even if you’re not standing near them, it will build up in the enclosed space, making it more likely that you’ll inhale it.
 
 So we know what to _avoid:_ the 3 C’s. But besides staying in our homes, what should we _do_? We can choose to have “MOD” hangouts: 1-on-1 or small-group socializing that is Masked, Outdoors, and Distanced. These hangouts are MODified from normal. The COVID “smoke” gets stopped by your mask, falls to the ground before it reaches the other person, and dissipates into the air. MODified hangouts are much safer, especially when they don’t involve many people.
 

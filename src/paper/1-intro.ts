@@ -2,9 +2,9 @@ const title = 'Introduction'
 
 const content = `
 
-You're already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But *just how much* do these things help? How big a deal is it if you remove your mask when hanging out with a friend? What happens if you get closer than 6 feet? Bars and restaurants are opening, but is it safe to go inside? It’s tough to make good choices when you don’t know how large or small the risks really are.
+You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But *just how much* do these things help? How big a deal is it if you remove your mask when hanging out with a friend? What happens if you get closer than 6 feet? Bars and restaurants are opening, but is it safe to go inside? It’s tough to make good choices when you don’t know how large or small the risks really are.
 
-We, the authors, were really struggling with this. We wanted a rigorous way to make decisions about COVID risk. So we did some research and crunched some numbers.  We trawled the scientific literature for data.  We spent hours estimating the COVID risk of various activities. And in this writeup, we’ll share our research (and some practical tools!) with you.
+We, the authors, were really struggling with this. We wanted a rigorous way to make decisions about COVID risk. So we did some research and crunched some numbers. We trawled the scientific literature for data. We spent hours estimating the COVID risk of various activities. And in this writeup, we’ll share our research (and some practical tools!) with you. 
 
 
 We’ll show you:
@@ -20,7 +20,7 @@ If you want to skip the intro & framing and just use the calculator tool, click 
 
 ## How to navigate this white paper
 
-Use the "previous" and "next" links at the top or bottom of the page to navigate from one section to the next.
+Use the “previous” and “next” links at the top or bottom of the page to navigate from one section to the next.
 
 Footnotes[^demo] usually contain nerdy details for detail-loving readers, and often a link to even more gory detail in the [Research Sources](/paper/14-research-sources) section.
 

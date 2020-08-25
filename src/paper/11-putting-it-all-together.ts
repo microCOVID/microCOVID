@@ -36,7 +36,7 @@ Should you do these activities? It depends on how important you believe it is to
 *   However, if you’re aiming for 0.1% risk per year (83 microCOVIDs per month), _two_ unmasked indoor hangouts with Reasonable Rosie add up to almost as much risk as you were willing to spend in an _entire month_. To spend your microCOVIDs more efficiently, you’ll want to use protective measures like wearing a mask or only hanging out outdoors. Unless, of course, Reasonable Rosie is the only person you want to see all month.
 *   And if you’re highly vulnerable and aiming for 0.01% risk per year (8.3 microCOVIDs per month), the outdoor mask walk is something you can afford to do, and you _cannot_ hang out indoors with Reasonable Rosie _even once_ without jeopardizing a large fraction of your budget for the entire year.
 
-Now that you have seen the whole process end-to-end and several example numbers, it might be a good time to revisit ["How much is a microCOVID?"](/paper/2-riskiness#how-much-is-a-microcovid).
+Now that you have seen the whole process end-to-end and several example numbers, it might be a good time to revisit [“How much is a microCOVID?”](/paper/2-riskiness#how-much-is-a-microcovid).
 
 
 Remember that Reasonable Rosie is a specific example person, from a specific example place and time. Her risk of having COVID depends on her recent hypothetical behaviors. If you’re hanging out with someone at a different place or time, the Activity Risk would be the same, but the Person Risk is likely to be very different, and so the overall Cost would be very different.

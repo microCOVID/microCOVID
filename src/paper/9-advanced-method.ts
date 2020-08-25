@@ -1,4 +1,4 @@
-const title = "The Advanced Method makes a list of the person's recent behavior"
+const title = 'The Advanced Method makes a list of the person’s recent behavior'
 const shortTitle = 'Advanced Method'
 const content = `
 
@@ -12,15 +12,15 @@ Just like you can calculate this for each of your actions, you can also calculat
 
 We can do this by looking at all of their activities in the past 2–9 days[^12] and determining the risk of each individual activity. Or if they do the same things every week, what does their typical week look like?
 
-This is an advanced method because it requires asking about—and calculating the risk of—each of your friend’s recent or typical errands, hangouts, and other activities. And you might have to ask about your friend's contacts too!
+This is an advanced method because it requires asking about—and calculating the risk of—each of your friend’s recent or typical errands, hangouts, and other activities. And you might have to ask about your friend’s contacts too!
 
-## Add up the person's socializing, errands, and work
+## Add up the person’s socializing, errands, and work
 
 We suggest thinking about this in three categories: socializing, errands, and work. To calculate total Person Risk using the advanced method, you can add these three categories together, as follows:
 
 <p class="calloutText">Person Risk (Advanced) = Socializing + Errands + Work</p>
 
-Note that this formula uses addition, whereas everything else we've done until now has been multiplication.
+Note that this formula uses addition, whereas everything else we’ve done until now has been multiplication.
 
 For socializing, just estimate each social activity in microCOVIDs (using “Cost = Activity Risk ⨉ Person Risk”) and add them together. This is the place to count the exposure from all their household members as well.
 
@@ -34,7 +34,7 @@ Let’s work through a quick example to compare the different approaches for est
 
 Reasonable Rosie lives with one roommate in San Francisco and works from home. Rosie rides the bus to the park and also grocery shops once a week in a well-fitting cloth mask. Nobody else visits Rosie’s apartment, and she doesn’t hang out with anyone else indoors. She went on 5 separate 1.5 hour masked outdoor walks with friends over the past ten days. For simplicity, we’ll assume her roommate does the exact same set of activities that she does.
 
-You’re planning to hang out with Rosie and want to know her Person Risk, so you can know what precautions to take.  You calculate:
+You’re planning to hang out with Rosie and want to know her Person Risk, so you can know what precautions to take. You calculate:
 
 
 
@@ -50,7 +50,7 @@ You’re planning to hang out with Rosie and want to know her Person Risk, so yo
     *   If Rosie’s roommate did the same things (grocery shopping, bus riding, five walks with friends), then Rosie’s roommate’s risk of getting COVID, in microCOVIDs, (_due to sources other than Rosie)_ is the same: 284. Multiply this by the 30% Activity Risk of being a roommate and you learn that Rosie’s roommate poses a risk to Rosie of 0.30 x 293 = 85 microCOVIDs.[^13]
 
 
-    *   So the total COVID risk for Rosie, based on her behaviors, is 255 + 29 + 85 = 369 microCOVIDs.  Now you can use this number as the “Person Risk” when you’re calculating your own chance of getting COVID from Rosie.
+    *   So the total COVID risk for Rosie, based on her behaviors, is 255 + 29 + 85 = 369 microCOVIDs. Now you can use this number as the “Person Risk” when you’re calculating your own chance of getting COVID from Rosie.
 
 One thing you will notice is that when we re-compute the Person Risk used for a hangout with Rosie via more detailed methods, we get substantially smaller numbers. This is because the Basic and Intermediate method both assume Rosie is about average, which is not true. The more you know about a person’s behavior, the more accurate your estimate can be. In some cases it might go up, in other cases it might go down.
 
@@ -62,7 +62,7 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
 
 
 [^4]:
-     Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won't get tested if you don't show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
+     Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won’t get tested if you don’t show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
 
 [^5]:
      The most-infectious period starts a couple days after infection, but the day-to-day noise in new case numbers is enough that “0-7 days ago” and “2-9 days ago” are unlikely to be meaningfully different. We’ve found Figure 2 in [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) most helpful when thinking about this.

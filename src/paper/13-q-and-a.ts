@@ -6,7 +6,7 @@ const content = `
 **If there’s a precaution I don’t see a multiplier for here, should I still do it?**
 
 Yes, definitely! The most important such precaution, in our opinion, is communication around symptoms:
-- Ask people _directly and clearly_ if they have any symptoms, _right before_ hanging out with them. Even if they only have “mild” symptoms that seem like “nothing to worry about”, consider if you can take a rain check, or at least MODify your hangout.
+- Ask people _directly and clearly_ if they have any symptoms, _right before_ hanging out with them. Even if they only have “mild” symptoms that seem like “nothing to worry about,” consider if you can take a rain check, or at least MODify your hangout.
 - If you have any more concerning symptoms[^1] then _immediately_ notify anyone you saw in the past 10 days, and contact your doctor for medical advice.
 - If a household member develops more concerning symptoms, follow [CDC best practices for home isolation](https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/isolation.html) straight away while you contact a doctor for medical advice.
 
@@ -20,19 +20,19 @@ In the case of a long indoor hangout, we suggest just to cap the total Activity 
 
 **If you live with multiple people, do you account for the additional risk of a longer infection chain?**
 
-No. We'll explain what this means and why we don't account for it.
+No. We’ll explain what this means and why we don’t account for it.
 
 Imagine I live with Alice and Bob. Alice gets sick. There are two things that could happen next that could get me sick:
 
 1. I get it _directly_ from Alice.
-2. I _don’t_ get it from Alice, but Bob does. Then Bob infects _me_!
+2. I don’t get it from Alice, but _Bob_ does. Then Bob infects _me_!
 
-There's a \`30%\` chance that I get sick directly from Alice. There's a \`70% * 30% * 30% = 6%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 36% than 30%.
+There’s a \`30%\` chance that I get sick directly from Alice. There’s a \`70% * 30% * 30% = 6%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 36% than 30%.
 
 We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.
 
-Here's why isolating helps reduce this source of error:
-* Prompt isolation means it's less likely I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
+Here’s why isolating helps reduce this source of error:
+* Prompt isolation means it’s less likely I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
 * Even if Bob gets it, Bob and I can now start avoiding each other. Although it’s easy for Alice to give COVID to Bob before Alice has symptoms, it’s much much harder for Bob to pass it on to me _before Alice has symptoms_[^2].
 
 As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
@@ -57,7 +57,7 @@ To summarize, _reducing your total amount of contact_ (and choosing to hang out 
 
 Right! To illustrate, compare the following two scenarios:
 
-1. The two houses merge into one large "bubble". Everyone gets together for a full group dinner between the two houses.
+1. The two houses merge into one large “bubble”. Everyone gets together for a full group dinner between the two houses.
     * This could be quite a large gathering, where everyone is exposed to everyone. If any of these people have been to work, on public transit, or in stores, then everyone at the dinner is indirectly exposed to those external sources of risk.
 
 2. No specific bubble arrangement, but nobody else in your house socializes with anyone else in the other house. Just your housemate sees just their partner, in the partner’s room with the door closed.
@@ -96,7 +96,7 @@ The “outdoors” modifier is the one we have the least confidence of. At large
 
 **Basic method: Other than essential workers, is anyone above average?**
 
-Of course! Someone should probably be considered “above average risk” if they have lots of contact with others and minimal protection; if they regularly attend gatherings, or recently attended a large gathering, especially indoors; or if they seem to think "this isn't a big deal" or "I don't care" when considering precautions.
+Of course! Someone should probably be considered “above average risk” if they have lots of contact with others and minimal protection; if they regularly attend gatherings, or recently attended a large gathering, especially indoors; or if they seem to think “this isn’t a big deal” or “I don’t care” when considering precautions.
 
 # Specific Activities Q&A
 
@@ -120,7 +120,7 @@ These assume you are already sufficiently distanced (at least 6 feet) that the s
 
 **Should I use an extra multiplier for cuddling? Going on a date?**
 
-We personally use an additional multiplier of at least 2x for cuddling, Our original take on this was based on the assumption that our data for infection risk under “no particular distance” (which were largely collected in hospitals) reflect a distance closer to 3 feet than 0 feet. If each additional 3 feet adds a 2x improvement in safety, then being right on top of each other (0ft apart) might involve a 2x reduction in safety. This looks consistent with recently released data from train passengers sitting directly adjacent to one another versus merely in the same row ([Hu et al.](https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa1057/5877944)).  If you’re breathing right into each other’s faces, more so than train passengers would, maybe use a higher number.
+We personally use an additional multiplier of at least 2x for cuddling, Our original take on this was based on the assumption that our data for infection risk under “no particular distance” (which were largely collected in hospitals) reflect a distance closer to 3 feet than 0 feet. If each additional 3 feet adds a 2x improvement in safety, then being right on top of each other (0ft apart) might involve a 2x reduction in safety. This looks consistent with recently released data from train passengers sitting directly adjacent to one another versus merely in the same row ([Hu et al.](https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa1057/5877944)). If you’re breathing right into each other’s faces, more so than train passengers would, maybe use a higher number.
 
 We think it doesn’t make sense to take the full “outdoor” bonus when cuddling, because your faces are very close together. Finally, we think a brief hug probably doesn’t meaningfully change your risk, but we don’t have any evidence for that. Basically, we really don’t know and don’t have any evidence here, so take this with more grain of salt than the rest of our more-research-backed numbers.
 
@@ -142,7 +142,7 @@ Touch is a psychologically powerful way to show affection and appreciation. In o
 
 We don’t currently count microCOVIDs from packages, because of our understanding that fomite transmission is not a primary driver of the spread; most of our risk comes from time we spend indoors with others. People maintaining much lower annual risk levels than us might prefer to sanitize packages to maintain a stricter risk tolerance.
 
-Health officials are often quoted as saying the risk from packages is “[very low](https://www.hackensackmeridianhealth.org/HealthU/2020/03/26/can-you-get-coronavirus-from-packages-and-mail/)” and “[unlikely](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)”, but until they quantify that in microCOVIDs we’re just going to proceed with assuming it’s less than 1 microCOVID per package. We do know there’s [no known evidence of transmission from food packages](https://www.fda.gov/food/food-safety-during-emergencies/shopping-food-during-covid-19-pandemic-information-consumers).
+Health officials are often quoted as saying the risk from packages is “[very low](https://www.hackensackmeridianhealth.org/HealthU/2020/03/26/can-you-get-coronavirus-from-packages-and-mail/)” and “[unlikely](https://www.cdc.gov/coronavirus/2019-ncov/faq.html),” but until they quantify that in microCOVIDs we’re just going to proceed with assuming it’s less than 1 microCOVID per package. We do know there’s [no known evidence of transmission from food packages](https://www.fda.gov/food/food-safety-during-emergencies/shopping-food-during-covid-19-pandemic-information-consumers).
 
 **Lyfts/Ubers?**
 
@@ -168,7 +168,7 @@ which adds up to 41 people. (The plane is divided into “zones” of 5–7 rows
 
 For the Person Risk, we suggest you use the maximum prevalence of your source or destination region.
 
-What about the _airport_ rather than the plane? We still suggest you wear a high-quality mask. However we also note that airports are huge spaces and at the time of writing we're still at only about [20% of the passenger volume per day](https://www.statista.com/statistics/1107016/coronavirus-tsa-checkpoint-travel-numbers-us-airports/) compared to what we saw last year—with decreases in demand, the flights get fewer but the airports don't get smaller. It's also easier to distance in the airport. Our intuition is that most of your risk comes from the plane.
+What about the _airport_ rather than the plane? We still suggest you wear a high-quality mask. However we also note that airports are huge spaces and at the time of writing we’re still at only about [20% of the passenger volume per day](https://www.statista.com/statistics/1107016/coronavirus-tsa-checkpoint-travel-numbers-us-airports/) compared to what we saw last year—with decreases in demand, the flights get fewer but the airports don’t get smaller. It’s also easier to distance in the airport. Our intuition is that most of your risk comes from the plane.
 
 Overall, there are very few documented cases of transmission on airplanes, which is surprising given that 500,000 or more Americans are flying every day at the time of writing (which, if we naively assume current US-wide prevalence rates, would mean ~100 COVID-positive passengers per day). We are aware of [one flight in China in January 2020](https://www.medrxiv.org/content/10.1101/2020.03.28.20040097v1) that infected 12 people, [one case in February](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7194574/) probably acquired on a flight, and [one flight in March from London to Vietnam](https://www.npr.org/sections/goatsandsoda/2020/07/04/886788377/international-flights-are-ramping-up-slowly-and-with-plenty-of-caveats) that infected 13 people. Erin Bromage has written more on [flying in the age of COVID-19](https://www.erinbromage.com/post/flying-in-the-age-of-covid-19).
 
@@ -208,8 +208,6 @@ In terms of qualitative scales, we like the following:
 
 
 
-
-
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
 [^2]: This is due to the fact that very little transmission occurs more than 2 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms. We ran a Monte Carlo simulation using the probability distributions from He and Ferretti and found that that only occurred 1% of the time. The broader picture isn’t quite that rosy due to the facts that people might not always correctly identify their symptoms and that some transmission occurs from people who will remain asymptomatic, but we still think the chance of second-hop infections within a careful household is manageably low.
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
@@ -218,8 +216,6 @@ In terms of qualitative scales, we like the following:
 
 `
 
-const prev = '3-activites'
-const next = '5-research-sources'
 
 const post = { title, content, prev, next }
 
