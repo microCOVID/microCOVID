@@ -1,6 +1,33 @@
 const title = 'Research Sources'
 
 const content = `
+
+Read this section if you are interested in the epistemic nitty-gritty behind our estimates of Activity Risk and Person Risk.
+
+# Person Risk
+
+### Underreporting factor
+
+In order to make suggestions about underreporting factor, we threw together a quick comparison of two data sources.
+
+* The first data source is state-by-state historical Positive Test Rates from [Covid Act Now](https://covidactnow.org/).
+* The second is the CAR (case ascertainment ratio) columns of [this table](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239078/bin/NIHPP2020.04.29.20083485-supplement-1.pdf) from the NIH, as explained in [Chow et al.](https://www.medrxiv.org/content/10.1101/2020.04.29.20083485v1) (which used a computational model to estimate these numbers).
+  * We typed these in by hand hastily. We excluded the NY and NJ numbers as the two that did not have a specified Positive Test Rate, being listed just over , in the relevant timeframe. If you would like to check our work, this [code snippet](https://gist.github.com/catherio/8d95858c0f69023a9d5427fc5ef02671) shows what we did.
+
+There was a visible correlation, so we eyeballed some approximate ranges. Here's the data we see, with a simple linear regression line drawn on top. We eyeball this as being roughly "1 in 6" on the left-hand side; "1 in 8" in the middle; and "1 in 10" on the right-hand side.
+
+![Positive test rate](/paper/positive-test-rate.png)
+
+One question that came up is whether we're overestimating the _contagious_ cases, because asymptomatic cases are probably a high proportion of all cases (a literature review Oran et 40 al. estimates 40-45%) and _especially_ a high proportion of _unreported_ cases, but they are resposible for a much lower proportion of infections ([Ferretti et al.](https://science.sciencemag.org/content/368/6491/eabb6936) concluded 5%). Our data about transmission likelihood (Activity Risk) are probably drawn from mostly symptomatic index cases, which suggests that asymptomatic cases should count for "less" in the prevalence numbers, which would decrease the effective underreporting factor.
+
+We make a fairly speculative guess at a "contagiousness-adjusted" prevalence figure as follows. Testing provider [Color](https://www.color.com/new-covid-19-test-data-majority-of-people-who-test-positive-for-covid-19-have-mild-symptoms-or-are-asymptomatic?utm_source=Press+%26+Media+Contacts&utm_campaign=9f99621884-Press+Outreach+-++COVID+Testing+Data+6+20&utm_medium=email&utm_term=0_cd48a5177d-9f99621884-230595282) observes that 30% of their positive test results do not have any symptoms at the time of testing, and thus we infer are either presymptomatic or asymptomatic. If we again use the ratio from [Oran et al.](https://www.acpjournals.org/doi/10.7326/M20-3012), we might guess 40% of those 30% will never show symptoms; which is to say, we guess 12% of all [Color](https://www.color.com/new-covid-19-test-data-majority-of-people-who-test-positive-for-covid-19-have-mild-symptoms-or-are-asymptomatic?utm_source=Press+%26+Media+Contacts&utm_campaign=9f99621884-Press+Outreach+-++COVID+Testing+Data+6+20&utm_medium=email&utm_term=0_cd48a5177d-9f99621884-230595282)-reported positive tests are from asymptomatic cases, and the remaining 88% are from presymptomatic and symptomatic cases. By contrast, 60% of all total infections (by [Oran et al.](https://www.acpjournals.org/doi/10.7326/M20-3012) again) are presymptomatic or symptomatic. This tells us that we might expect 0.6/0.88 = ~2/3 as many of the unreported cases are highly contagious. While this calculation is far from perfect, it gives us a rough estimate that we use as our "contagiousness adjustment factor" of 2/3.
+
+
+We combine our original guesses with the rough 2/3 contagiousness adjustment factor, to make our final recommendations:
+* Positive test rate 5% or lower => 4x underreporting factor
+* Positive test rate between 5% and 15% => 5x underreporting factor
+* Positive test rate between greater than 15% => at least a 7x underreporting factor.
+
 ### Indoor unmasked transmission
 
 **One-Time Contact**
@@ -37,7 +64,7 @@ As for protection to the other party by wearing a mask (also known as “source 
 
 
 *   [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza estimated around 5x protection for homemade cloth masks and around 7x for surgical masks (see Figure 4).
-*   [Milton et al](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) provided a somewhat lower estimate of 3x reduction in viral copy numbers from wearing surgical masks in a source control scenario.  
+*   [Milton et al](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) provided a somewhat lower estimate of 3x reduction in viral copy numbers from wearing surgical masks in a source control scenario.
 
 We combine these numbers to estimate approximately a 4x reduction. Again, this is a case where we have seen other analyses (especially those estimating _population-wide_ efficacy of mask-wearing) knock these numbers down somewhat. We keep the higher numbers here because we believe that if _you personally_ are hanging out with someone and they are _not actually wearing_ their mask (for example, it is hanging off their chin) you will notice that they aren’t wearing a mask, and not count this as giving you any extra protection factor. These types of “imperfect use” considerations need to be factored in more strongly than we do here when analyzing mask efficacy at the societal level.
 
@@ -48,7 +75,7 @@ We note that we think masks on the infected person might not help proportionatel
 This is one of the tougher numbers to estimate, but we currently feel good estimating that being outdoors reduces your risk by more than 10x (unless you’re super close together, in which case we’re really not sure). \
 
 
-Almost every news article about outdoor transmission cites the same two sources: [Nishiura et al.](https://www.medrxiv.org/content/10.1101/2020.02.28.20029272v2) and [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) Nishiura et al. is the source of the “18.7x” figure that we see all over the place, but we don’t put much stock in this specific paper for two reasons. For one, many summaries seem to miss that this is an _odds ratio_ and not a relative risk ratio (that is, it tells us that 18.7x as many of the transmissions came from indoors, but if people in general usually had 18.7x as much indoor contact as outdoor contact, this would not imply any difference in risk!)[^1]. For another, Nishiura et al. also uses a very small sample size, it’s only six scant pages with very little explanation, and we can’t make heads or tails of the bar chart at the end. 
+Almost every news article about outdoor transmission cites the same two sources: [Nishiura et al.](https://www.medrxiv.org/content/10.1101/2020.02.28.20029272v2) and [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) Nishiura et al. is the source of the “18.7x” figure that we see all over the place, but we don’t put much stock in this specific paper for two reasons. For one, many summaries seem to miss that this is an _odds ratio_ and not a relative risk ratio (that is, it tells us that 18.7x as many of the transmissions came from indoors, but if people in general usually had 18.7x as much indoor contact as outdoor contact, this would not imply any difference in risk!)[^1]. For another, Nishiura et al. also uses a very small sample size, it’s only six scant pages with very little explanation, and we can’t make heads or tails of the bar chart at the end.
 
 Instead, we put stock in two sources:
 
@@ -60,7 +87,7 @@ There’s also anecdotal evidence. In addition to the reports that there was no 
 
 Finally, there have been zero outdoor outbreaks of any kind in the US, whereas in Colorado 9 percent of outbreaks [are reported](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html) to have been traced to bars and restaurants, despite the fact that both indoor and outdoor restaurant dining are open throughout the US.
 
-The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hurford assumes a 5x benefit from being outdoors. We feel good about calling it “more than 10x” for now and waiting for more evidence_, _with a warning about not trusting this number as much if you’re very close to one another because we have no data about outdoor cuddling. 
+The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hurford assumes a 5x benefit from being outdoors. We feel good about calling it “more than 10x” for now and waiting for more evidence_, _with a warning about not trusting this number as much if you’re very close to one another because we have no data about outdoor cuddling.
 
 **Distance**
 
@@ -69,7 +96,7 @@ This is another [Chu et al](https://www.thelancet.com/journals/lancet/article/PI
 We get some corroboration for this number from the study of train passengers, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) Looking for example at Figure 3, for passengers that were 1 row apart, moving an additional 2 columns away (seats 0.5m wide, so about 1m away) decreased the risk from what I eyeball as 0.2ish to 0.1ish, and then from 0.1ish to 0.05ish for an additional 2 columns. It’s worth noting that they report a steeper drop from sitting _right next to_ the index patient to sitting 1m away, which could be relevant to hangouts at closer than a normal social distance from someone.
 
 [^1]:
-     We find it easier to understand the difference between an odds ratio and a risk ratio in a medical context. If 100 people walk into your clinic with heart disease, and twice as many were smokers as non-smokers, then the odds ratio is 2x. But that doesn’t tell you what you would get if you _started_ with 50 smokers and 50 nonsmokers and watched for heart disease later. You don’t know what the base rate of smoking was in your original dataset. See [https://psychscenehub.com/psychpedia/odds-ratio-2](https://psychscenehub.com/psychpedia/odds-ratio-2) for more on this. 
+     We find it easier to understand the difference between an odds ratio and a risk ratio in a medical context. If 100 people walk into your clinic with heart disease, and twice as many were smokers as non-smokers, then the odds ratio is 2x. But that doesn’t tell you what you would get if you _started_ with 50 smokers and 50 nonsmokers and watched for heart disease later. You don’t know what the base rate of smoking was in your original dataset. See [https://psychscenehub.com/psychpedia/odds-ratio-2](https://psychscenehub.com/psychpedia/odds-ratio-2) for more on this.
 
 [^2]:
 
