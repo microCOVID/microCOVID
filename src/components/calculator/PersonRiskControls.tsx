@@ -15,26 +15,20 @@ const personRiskPopover = (
     <Popover.Content>
       <p>
         An "average risk person in your area" is based on the prevalence of
-        COVID in your geographic area, as explained in the Basic Method from the
-        white paper.
-      </p>
-      <p>
-        We have modeled several additional Person Risk examples using the
-        Advanced Method from the white paper. Select the one that most closely
-        matches the person or people you are planning to interact with. We
-        suggest you "round up" if you are uncertain.
-      </p>
-      <p>
-        If you use the{' '}
-        <a
-          href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ/edit#gid=601829656"
-          target="_blank"
-          rel="noreferrer"
-        >
-          activity log spreadsheet
+        COVID in your geographic area, as explained in the{' '}
+        <a href="/paper/7-basic-method" target="_blank">
+          Basic Method
         </a>{' '}
-        to calculate someone's Person Risk based on a list of their recent
-        behaviors, then you can insert this number as a custom value.
+        from the white paper.
+      </p>
+      <p>
+        We have modeled several additional Person Risk examples using the{' '}
+        <a href="/paper/9-advanced-method" target="_blank">
+          Advanced Method
+        </a>{' '}
+        from the white paper. Select the one that most closely matches the
+        person or people you are planning to interact with. We suggest you
+        "round up" if you are uncertain.
       </p>
     </Popover.Content>
   </Popover>
