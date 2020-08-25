@@ -19,10 +19,6 @@ Concretely, this means it’s important to avoid situations that feature the [3 
 
 So we know what to _avoid:_ the 3 C’s. But besides staying in our homes, what should we _do_? We can choose to have “MOD” hangouts: 1-on-1 or small-group socializing that is Masked, Outdoors, and Distanced. These hangouts are MODified from normal. The COVID “smoke” gets stopped by your mask, falls to the ground before it reaches the other person, and dissipates into the air. MODified hangouts are much safer, especially when they don’t involve many people.
 
-
-![alt_text](images/image2.png "image_tooltip") [TODO fix this image]
-
-
 In the section below, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet away or 10 feet?
 
 In order to answer these questions with microCOVID numbers (not just “high” or “low” risk), we’ll now dive into the research. You can also skip right to the [calculator](/calculator) to start playing with numbers if you prefer.

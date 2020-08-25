@@ -1,5 +1,4 @@
-const title =
-  'The Intermediate Method makes slight adjustments to the Basic Method'
+const title = 'The Intermediate Method makes slight adjustments to the Basic Method'
 const shortTitle = 'Intermediate Method'
 const content = `
 

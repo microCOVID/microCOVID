@@ -14,7 +14,7 @@ We start by first estimating the risk of interacting with a single COVID-positiv
 
 So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, the chance of you getting COVID from that single interaction is 6%.
 
-How did we come up with this number? It's a rough estimate combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/14-research-sources).
+How did we come up with this number? It's a rough estimate combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/paper/14-research-sources).
 
 Think of this as our "reference interaction." We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
@@ -53,7 +53,7 @@ If you're taking multiple precautions, multiply the COVID risk reductions togeth
 
 What about if the interaction is with more than one other person? We'll get to this later, in the section on [Putting it all together](/paper/11-putting-it-all-together#multiple-person-interactions). For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
 
-There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](/13-q-and-a).
+There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](/paper/13-q-and-a).
 
 There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of [Research Sources](14-research-sources) for details about the data we based these numbers on.
 
@@ -66,18 +66,18 @@ What about indoor dining with that friend? You're there for 2 hours, indoors, at
 
 Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That's a big difference! Remember, your friend won't necessarily know that they have COVID, and it's very common to be infectious before you show symptoms. And that's with only one person!
 
-Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the [Q&A](/13-q-and-a) for tips and tricks. In the next section, we will look at calculating the risk of activities with multiple people.
+Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the [Q&A](/paper/13-q-and-a) for tips and tricks. In the next section, we will look at calculating the risk of activities with multiple people.
 
 
 ### Masked, outdoor, distanced interactions are much lower risk
 
 Indoor unmasked interactions are quite risky, but being outdoors and wearing masks both make a _huge_ difference.
 
-**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link), so we treat them as "no mask."
+**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link), so we treat them as "no mask."
 
-**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. Being outdoors is by far the most valuable thing you can do, although even that is not a guarantee.
+**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
 
-**Distance** is not quite as beneficial as wearing a mask or being outdoors. Keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
+**Distance** is not quite as beneficial as wearing a mask or being outdoors. We estimate keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
 
 * 2x if you’re 6-9 feet away
 * 4x if you’re 9-12 feet away
@@ -85,9 +85,9 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 If you’re outdoors _and_ 20 feet away from a person, you can probably ignore the risk from them.
 
-**Volume** also matters. If both people aren't talking, that reduces the risk by about 5x, because you are not projecting your respiratory droplets nearly as much. This actually makes some activities where people don't talk much, like going to the grocery store or taking public transportation, safer than they would otherwise be. On the other hand, loud talking, shouting, or singing _increase_ the risk by about 5x (as compared to a conversation at normal volume) because they are very efficient at projecting respiratory droplets.
+**Volume of conversation** also matters. If the other person isn't talking, that reduces the risk to you by about 5x, because they are not expelling as many respiratory droplets. This actually makes some activities where people don't talk much, taking public transportation, safer than they would otherwise be. On the other hand, loud talking, shouting, or singing _increases_ the risk by about 5x (as compared to a conversation at normal volume) because more respiratory droplets are exhaled and expelled when you are speaking or breathing forcefully.
 
-Curious how we got these numbers? Again, check out the [Research Sources](/14-research-sources)!
+Curious how we got these numbers? Again, check out the [Research Sources](/paper/14-research-sources)!
 
 
 
@@ -105,9 +105,9 @@ You might ask: why isn’t the risk of getting COVID from someone in your house 
 
 Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. [TODO link] These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
 
-The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](/14-research-sources) for slightly more detail.
+The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](/paper/14-research-sources) for slightly more detail.
 
-_Important disclaimer for the numbers above: We keep calling these “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the [Research Sources](/14-research-sources) section._
+_Important disclaimer for the numbers above: We keep calling these “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the [Research Sources](/paper/14-research-sources) section._
 
 
 ### How likely is it that the other person has COVID?

@@ -5,8 +5,6 @@ const content = `
 
 You might have seen images categorizing COVID risk as [“high”, “medium”, or “low”](https://twitter.com/SaskiaPopescu/status/1279133758965248000) or rating activities on [a riskiness scale from 1 through 9](https://www.newsweek.com/texas-doctors-rank-1-9-risks-catching-covid-19-these-activities-1515790). This is helpful, but personally we found that we had to dig further—into actual numbers—so we could make confident decisions.
 
-[TODO image: put the aforementioned images here?]
-
 Calling an event “high risk” is like categorizing a furniture purchase as “expensive.” If I’m buying a rug, and I know it’s “expensive,” but it would really complete the look of my room, can I afford to splurge this time? Maybe, or maybe not! If the rug is $100, that might be a sensible purchase. But if the rug is $10,000 then I might have difficulty paying for rent and groceries if I buy it!
 
 Similarly: if I’ve been told that going to gatherings is “high risk” but I really truly miss my friends and there’s a picnic coming up I want to attend, should I go? Is this high risk like skiing, or high risk like jumping off a cliff?
@@ -17,7 +15,7 @@ We would like to give you a research-based, quantitative framework to answer que
 
 Some people might not realize that it's even possible to measure and numerically quantify the risk of getting COVID. Most sources tend to give non-quantitative advice, such as "the CDC recommends that everyone wear a mask to reduce transmission." This advice is good, but we would like to go even further.
 
-Fortunately, there are now many research papers available about the numerical likelihood of getting COVID from different kinds of interactions. You can find these studies at [Google Scholar](https://scholar.google.com/) and read them yourself. Some of these studies are not peer-reviewed (which is the gold standard for scientific publication), so it's extra important to analyze them carefully. We have experience interpreting scientific studies due to our academic background, and so we feel comfortable wading into the literature to come up with numerical estimates. We explain more of our reasoning in footnotes and in the [Research Sources](/14-research-sources) section.
+Fortunately, there are now many research papers available about the numerical likelihood of getting COVID from different kinds of interactions. You can find these studies at [Google Scholar](https://scholar.google.com/) and read them yourself. Some of these studies are not peer-reviewed (which is the gold standard for scientific publication), so it's extra important to analyze them carefully. We have experience interpreting scientific studies due to our academic background, and so we feel comfortable wading into the literature to come up with numerical estimates. We explain more of our reasoning in footnotes and in the [Research Sources](/paper/14-research-sources) section.
 
 ### Measuring COVID risk in “microCOVIDs”
 

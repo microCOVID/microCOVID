@@ -57,7 +57,7 @@ Which strategy is less risky depends on which factor dominates: the partner’s 
 
 **I was told to wear masks to protect others, not myself. Do masks actually protect me?**
 
-Yes! Cloth masks and surgical masks protect others more than they protect _you_ [see [Research Sources](/14-research-sources), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
+Yes! Cloth masks and surgical masks protect others more than they protect _you_ [see [Research Sources](/paper/14-research-sources), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
 
 **What about masks that provide more protection, like an N95 or P100 respirator?**
 
@@ -71,7 +71,7 @@ If you think your mask has better filtration than a surgical mask (2x modifier),
 
 **Is it reasonable to just multiply together all the modifiers? 8x for masks, 10x for outdoors, and 2x for 6ft of distance?**
 
-Each of these modifiers changes the total number of particles that might reach you, so we do think it’s reasonable to keep piling them on _somehow. How exactly_ they combine is not precisely clear. But if you consult the [Research Sources](/14-research-sources) section, the masks and distance modifiers were estimated from data including healthcare settings where they were sometimes combined.
+Each of these modifiers changes the total number of particles that might reach you, so we do think it’s reasonable to keep piling them on _somehow. How exactly_ they combine is not precisely clear. But if you consult the [Research Sources](/paper/14-research-sources) section, the masks and distance modifiers were estimated from data including healthcare settings where they were sometimes combined.
 
 The “outdoors” modifier is the one we have the least confidence of. At larger distances, we speculate that outdoors might provide _more_ than 10x protection, because particles have more time to diffuse upwards into the vast empty space above everyone’s heads, whereas indoors small particles could hang in the enclosed room air. On the other hand, at smaller distances (especially at close range: cuddling, tango dancing, etc.) we don’t have any reported data that we feel sheds light on how much of a protection factor there might be, so we suggest _not_ to use the 10x modifier for outdoor interactions with unusually close range or with other factors associated with superspreader events (yelling, dense crowds, etc.).
 
