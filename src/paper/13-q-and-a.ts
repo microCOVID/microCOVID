@@ -216,6 +216,6 @@ In terms of qualitative scales, we like the following:
 
 `
 
-const post = { title, content, prev, next }
+const post = { title, content }
 
 export default post
