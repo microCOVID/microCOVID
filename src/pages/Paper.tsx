@@ -3,10 +3,24 @@ import markdownItFootnote from 'markdown-it-footnote'
 import markdownItHeadings from 'markdown-it-github-headings'
 import markdownItLinkAttributes from 'markdown-it-link-attributes'
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
 
 import { pages } from 'paper/index'
+
+const processor = new MarkdownIt({
+  html: true,
+})
+  .use(markdownItFootnote)
+  .use(markdownItHeadings, {
+    prefixHeadingIds: false,
+  })
+  .use(markdownItLinkAttributes, {
+    pattern: /^https:/,
+    attrs: {
+      target: '_blank',
+      rel: 'noopener',
+    },
+  })
 
 export const Paper = (): React.ReactElement => {
   const { id } = useParams()
@@ -23,20 +37,24 @@ export const Paper = (): React.ReactElement => {
   const prev = slugs[slugs.indexOf(id) - 1]
   const next = slugs[slugs.indexOf(id) + 1]
 
-  const processor = new MarkdownIt({
-    html: true,
-  })
-    .use(markdownItFootnote)
-    .use(markdownItHeadings, {
-      prefixHeadingIds: false,
-    })
-    .use(markdownItLinkAttributes, {
-      pattern: /^https:/,
-      attrs: {
-        target: '_blank',
-        rel: 'noopener',
-      },
-    })
+  const navigation = (
+    <div className="navigation">
+      <span>
+        {prev && (
+          <Link to={`/paper/${prev}`}>
+            ← Previous: {pages[prev].shortTitle || pages[prev].title}
+          </Link>
+        )}
+      </span>
+
+      {next && (
+        <Link to={`/paper/${next}`} className="next">
+          Next: {pages[next].shortTitle || pages[next].title} →
+        </Link>
+      )}
+    </div>
+  )
+
   const processed = { __html: processor.render(markdownContent) }
 
   return (
@@ -44,42 +62,15 @@ export const Paper = (): React.ReactElement => {
       <div className="sectionIndicator">
         Section {Object.keys(pages).indexOf(id) + 1}
       </div>
-
-      {prev && (
-        <Button size="lg" variant="link">
-          <Link to={`/paper/${prev}`}>
-            {'\u2B05'} Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
-          </Link>
-        </Button>
-      )}
-
-      {next && (
-        <Button size="lg" variant="link">
-          <Link to={`/paper/${next}`}>
-            Next: {pages[next].shortTitle || pages[next].title} {'\u27A1'}{' '}
-          </Link>
-        </Button>
-      )}
-
       <h1 id="pageTitle">{page.title}</h1>
+
+      {navigation}
+
+      <hr />
 
       <div dangerouslySetInnerHTML={processed} />
 
-      {prev && (
-        <Button size="lg" variant="link">
-          <Link to={`/paper/${prev}`}>
-            {'\u2B05'} Previous: {pages[prev].shortTitle || pages[prev].title}{' '}
-          </Link>
-        </Button>
-      )}
-
-      {next && (
-        <Button size="lg" variant="link">
-          <Link to={`/paper/${next}`}>
-            Next: {pages[next].shortTitle || pages[next].title} {'\u27A1'}{' '}
-          </Link>
-        </Button>
-      )}
+      {navigation}
     </div>
   )
 }

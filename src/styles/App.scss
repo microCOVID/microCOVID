@@ -21,6 +21,7 @@ html, body, #root {
 
 #root {
   justify-content: space-between;
+  overflow: hidden;
 }
 
 input,
@@ -199,7 +200,8 @@ a {
   }
 
   #pageTitle {
-    margin-bottom: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .sectionIndicator {
@@ -208,6 +210,26 @@ a {
     font-size: 18px;
     font-weight: 700;
     font-family: $font-family-sans-serif;
+  }
+
+  .navigation {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $gray-800;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+
+    .next {
+      text-align: right;
+    }
   }
 
   h1,h2,h3,h4,h5,h6 {
