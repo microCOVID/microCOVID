@@ -165,8 +165,8 @@ export const PrevalenceControls: React.FunctionComponent<{
       )}
       <PrevalenceField
         label="Reported cases in past week"
-        value={data.casesPastWeek.toString()}
-        setter={(value) => setter({ ...data, casesPastWeek: parseInt(value) })}
+        value={(data.casesPastWeek || 0).toString()}
+        setter={(value) => setter({ ...data, casesPastWeek: parseInt((value || '')) })}
         inputType="number"
         isEditable={topLocation === ''}
       />
@@ -193,7 +193,7 @@ export const PrevalenceControls: React.FunctionComponent<{
       )}
       <PrevalenceField
         label="Percent of tests that come back positive"
-        value={data.positiveCasePercentage.toString()}
+        value={(data.positiveCasePercentage || 0).toString()}
         unit="%"
         setter={(value) =>
           setter({ ...data, positiveCasePercentage: Number(value) })
