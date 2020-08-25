@@ -59,7 +59,7 @@ export const Calculator = (): React.ReactElement => {
     // Round points < 10
     return computedValue > 10
       ? Math.round(computedValue)
-      : computedValue.toFixed(2)
+      : computedValue
   }, [calculatorData])
 
   const prevalenceIsFilled =
@@ -104,6 +104,7 @@ export const Calculator = (): React.ReactElement => {
     <Card title="Result">
       <p className="readout">
         You have a {showPoints ? points.toLocaleString() : '-'}-in-a-million
+        ({showPoints ? ((points/1e6 || 0) * 100).toFixed(2) : '-'}%)
         chance of getting COVID from this activity with these people.
       </p>
       <h1>
