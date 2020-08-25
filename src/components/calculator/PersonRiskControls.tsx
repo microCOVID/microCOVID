@@ -5,7 +5,6 @@ import { SelectControl } from './SelectControl'
 import {
   CalculatorData,
   calculateLocationPersonAverage,
-  calculatePersonRisk,
   calculatePersonRiskEach,
 } from 'data/calculate'
 import { RiskProfile } from 'data/data'
@@ -54,8 +53,6 @@ export const PersonRiskControls: React.FunctionComponent<{
     calculatePersonRiskEach(data, locationRisk) || 0,
   )
 
-  const personRiskAll = Math.round(calculatePersonRisk(data, locationRisk) || 0)
-
   return (
     <React.Fragment>
       <header id="person-risk">Step 2 - Person Risk</header>
@@ -83,12 +80,8 @@ export const PersonRiskControls: React.FunctionComponent<{
       />
       <br />
       <p className="readout">
-        Each person has a <b>{personRiskEach.toLocaleString()}</b>-in-a-million
-        chance of currently having COVID
-      </p>
-      <p className="readout">
-        Person Risk (after multiplying by number of people):{' '}
-        <b>{personRiskAll.toLocaleString()}</b>
+        Person Risk: Each person has a <b>{personRiskEach.toLocaleString()}</b>
+        -in-a-million chance of currently having COVID
       </p>
     </React.Fragment>
   )

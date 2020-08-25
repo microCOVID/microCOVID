@@ -201,22 +201,14 @@ export const PrevalenceControls: React.FunctionComponent<{
         inputType="number"
         isEditable={topLocation === ''}
       />
-      <span className="readout">
+      <p>
         Reported prevalence:{' '}
-        <b>
-          {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
-        </b>
-      </span>
-      <span className="readout">
+        {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
+        <br />
         Adjusted prevalence:{' '}
-        <b>
-          {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(
-            2,
-          )}
-          %
-        </b>
-      </span>
-      <p />
+        {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2)}
+        %
+      </p>
       {topLocation === '' ? null : (
         <div>
           <p>
