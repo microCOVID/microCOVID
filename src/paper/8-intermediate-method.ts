@@ -28,7 +28,6 @@ In the example above, if all you know about someone is that they live in San Fra
 * If instead you know that they _are not_ a frontline worker, then \`5107 * 0.5 = 2553\` so their Person Risk goes down to 2553.
 * If you're not certain, don't make any adjustment.
 
-[TODO add thank you to essential workers?]
 
 [^4]:
      Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won't get tested if you don't show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.

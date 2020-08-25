@@ -73,7 +73,7 @@ Hopefully this puts the risk of indoor gatherings into perspective. To compare t
 
 Indoor unmasked interactions are quite risky, but being outdoors and wearing masks both make a _huge_ difference.
 
-**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (TODO link), so we treat them as "no mask."
+**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources), so for simplicity we treat them as "no mask", even though we do believe they provide some benefit.
 
 **Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
 
@@ -101,9 +101,7 @@ We do the calculation differently for household members and spouses/partners bec
 
 These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)?
-
-Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. Another possibility is that some people naturally produce more respiratory droplets and project them farther when they talk and breathe. [TODO link] These people are superspreaders, and they are the ones driving the pandemic. So if you live with a superspreader, you're almost guaranteed to get it, but most people are not that highly infectious. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk. We look forward to improved data.
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? Our main guess is that people often reduce contact with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk.[^super] We look forward to improved data.
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](/paper/14-research-sources) for slightly more detail.
 
@@ -119,6 +117,8 @@ Now we understand Activity Risk, or how your chance of getting the virus changes
 [^1]:
      We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will give less protection than this.
 
+[^super]:
+    Another possibility we considered, which is much more speculative, is that this has to do with some people naturally producing more respiratory droplets when they talk and breathe ([Meselson](https://www.nejm.org/doi/full/10.1056/nejmc2009324). These people are called superspreaders. Therefore it might be the case (but we are just speculating) that if you live with a superspreader, you are almost certain to get it, but most people are not that highly infectious.
 `
 
 const post = { title, content }
