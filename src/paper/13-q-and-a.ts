@@ -2,7 +2,7 @@ const title = 'Q&A'
 
 const content = `
 
-### General
+# General Q&A
 **If there’s a precaution I don’t see a multiplier for here, should I still do it?**
 
 Yes, definitely! The most important such precaution, in our opinion, is communication around symptoms:
@@ -12,24 +12,30 @@ Yes, definitely! The most important such precaution, in our opinion, is communic
 
 Other important precautions include washing & sanitizing your hands, covering your sneezes with your elbow including when you are at home, using a better-fitting mask, and wearing eye protection (we particularly recommend wearing goggles and a P100 mask if you are looking for extra safety when shopping!)
 
-### Activity Risk
-
-[TODO many of these questions are about housemates AND budgeting, hence need to be more granularly pulled apart to be included in both Part 1 and Part 2]
-
-**How much riskier is a spouse/partner I live with than a regular household member?**
-
-We’re not sure, but we might guess at this based on [Li et al.](https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa450/5821281) which found a 1.6x times higher infection rate among spouses than among other adult household members. This implies an Activity Risk of 48% rather than 30%.
+# Activity Risk Q&A
 
 **What if I hang out with someone indoors for a long time? If we hang out for 5 hours, that’s an Activity Risk of 6% ⨉ 5 = 30%, which is the same risk as for a household member.**
 
 In the case of a long indoor hangout, we suggest just to cap the total Activity Risk at the household member number (30%). Or if you’re cuddling or being intimate, cap the total Activity Risk at 48% as mentioned above for spouse/partner. These are not particularly principled answers. As we’ve mentioned in footnotes before, the ability to just add microCOVIDs (rather than multiplying probabilities) starts to break down as probabilities get larger. Additionally, the data we’re basing our guesses off is more relevant to the smaller risks that we more commonly see with typical activities. Certainly don’t use an Activity Risk larger than 100% for anything.
 
-**If you live with multiple people, how do you account for the additional risk of a longer infection chain?**
+**If you live with multiple people, do you account for the additional risk of a longer infection chain?**
 
-In other words, imagine my housemate Alice gets sick. Perhaps I get it _directly_ from Alice. Or perhaps I _don’t_ get it from Alice, but a second housemate Bob does get it from her... and then Bob infects _me_! Doesn’t this mean that 30% housemate transmission is an underestimate of how risky it is for me if Alice gets sick, because it’s missing the indirect routes?
+No. We'll explain what this means and why we don't account for it.
 
+Imagine I live with Alice and Bob. Alice gets sick. There are two things that could happen next that could get me sick:
 
-We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating at the first sign that they’re feeling unwell. Ideally such isolation would also include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared. While it’s easy for Alice to give COVID to Bob before Alice has symptoms, it’s much harder for Bob to pass it on to Carol _before Alice has symptoms_[^2]. That means that if Bob reduces his contact with Carol as soon as Alice shows symptoms, the chance of a second-hop infection within the household can be substantially reduced. Being extra conscientious about prompt isolation also probably reduces the first-hop housemate Activity Risk somewhat below 30%, since that number was drawn from an average of data covering a range of different levels of isolation caution. As a result, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a housemate.
+1. I get it _directly_ from Alice.
+2. I _don’t_ get it from Alice, but Bob does. Then Bob infects _me_!
+
+There's a \`30%\` chance that I get sick directly from Alice. There's a \`70% * 30% * 30% = 6%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 36% than 30%.
+
+We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.
+
+Here's why isolating helps reduce this source of error:
+* Prompt isolation means it's less likely I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
+* Even if Bob gets it, Bob and I can now start avoiding each other. Although it’s easy for Alice to give COVID to Bob before Alice has symptoms, it’s much much harder for Bob to pass it on to me _before Alice has symptoms_[^2].
+
+As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
 
 Of note here: while full isolation is the gold standard for reducing infection risk, it’s useful to also have some lighter-weight tools that you can deploy if you’re uneasy about infection risk for some reason but not uneasy enough to find hard isolation to be worth the (admittedly considerable) social and practical costs. Extrapolating from the MOD factors, we think wearing a mask around the house for several days probably reduces your risk of infecting your housemates by about 4x, which is a lot of protection to get from a relatively simple intervention. In the authors’ household we deploy this one if we’re feeling at all unusual, even if the symptoms (such as a scratchy throat) aren’t suggestive of COVID; or if we’ve recently done something moderately higher-risk than usual.
 
@@ -57,15 +63,19 @@ Which strategy is less risky depends on which factor dominates: the partner’s 
 
 **I was told to wear masks to protect others, not myself. Do masks actually protect me?**
 
-Yes! Cloth masks and surgical masks protect others more than they protect _you_ [see [Research Sources](/paper/14-research-sources), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
+Yes! Cloth masks and surgical masks protect others more than they protect _you_ (see [Research Sources](/paper/14-research-sources)), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
 
 **What about masks that provide more protection, like an N95 or P100 respirator?**
 
-These masks provide more protection than a cloth or surgical mask, it’s true. For a well-fitted, well-sealed N95, we roughly estimate a 10x reduction in risk for the wearer (versus 2x for a surgical mask or high-quality cloth mask). A P100 is even better. Since P100s are generally not used in medical settings, there isn’t the sort of research that would let one state a protection
+These masks provide more protection than a cloth or surgical mask, it’s true:
 
-factor under typical use with any kind of confidence. [One study](https://l.messenger.com/l.php?u=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F24011377%2F&h=AT0VSXC16pfmydLzFwe4I4iMM9mntA6ncWcryALZFpqZviFlN3cldl3eNGym6u9y5Kyah8KHRJF11baGm-oKugw36kZQgAs-d6xD6I3bp9n6RGl26KKY_jTE01XYaJBMWrB2NcE) found P100s to filter out a virus aerosol at their stated 99.97% filtration efficiency, but at those levels your risk probably starts to be dominated by previously-small effects like surface transmission and getting virus in your eyes. We think that under ideal conditions, the risk reduction with a P100 might plausibly be as high as 100x compared to no mask, but we’re really not sure.  Note that P100 respirators typically have an outflow valve, meaning they provide minimal protection to others from you, so if you take this route, you should at least cover the outflow valve with a surgical mask.
+* For a well-fitted, well-sealed N95, we roughly estimate a 10x reduction in risk for the wearer (versus 2x for a surgical mask or high-quality cloth mask).
+  * But remember, these masks are only effective if you get a tight seal around your face, and unless you’re professionally trained in how to do this, you probably don’t! All of the studies on N95s are from hospitals, where the medical professionals are fit-tested and have training in mask wearing. Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [fit test](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) and watch some online training in order to effectively use your N95.
 
-But remember, these masks are only effective if you get a tight seal around your face, and unless you’re professionally trained in how to do this, you probably don’t! All of the studies on N95s are from hospitals, where the medical professionals are fit-tested and have training in mask wearing. Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [fit test](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) and watch some online training in order to effectively use your N95 or P100.
+* A P100 is even better. Since P100s are generally not used in medical settings, there isn’t the sort of research that would let one state a protection factor under typical use with any kind of confidence. [One study](https://l.messenger.com/l.php?u=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F24011377%2F&h=AT0VSXC16pfmydLzFwe4I4iMM9mntA6ncWcryALZFpqZviFlN3cldl3eNGym6u9y5Kyah8KHRJF11baGm-oKugw36kZQgAs-d6xD6I3bp9n6RGl26KKY_jTE01XYaJBMWrB2NcE) found P100s to filter out a virus aerosol at their stated 99.97% filtration efficiency, but at those levels your risk probably starts to be dominated by previously-small effects like surface transmission and getting virus in your eyes. We think that under ideal conditions, the risk reduction with a P100 might plausibly be as high as 100x compared to no mask, but we’re really not sure.
+  * P100s are easier to test the seal on. You can search for online training on how to do this.
+  * Note that P100 respirators typically have an outflow valve, meaning they provide minimal protection to others from you, so if you take this route, you should at least cover the outflow valve with a surgical mask.
+
 
 If you think your mask has better filtration than a surgical mask (2x modifier), but it _doesn’t_ seal on your face, we advise against counting it as a 10x improvement. We recommend a 5x modifier at most.
 
@@ -73,21 +83,15 @@ If you think your mask has better filtration than a surgical mask (2x modifier),
 
 Each of these modifiers changes the total number of particles that might reach you, so we do think it’s reasonable to keep piling them on _somehow. How exactly_ they combine is not precisely clear. But if you consult the [Research Sources](/paper/14-research-sources) section, the masks and distance modifiers were estimated from data including healthcare settings where they were sometimes combined.
 
-The “outdoors” modifier is the one we have the least confidence of. At larger distances, we speculate that outdoors might provide _more_ than 10x protection, because particles have more time to diffuse upwards into the vast empty space above everyone’s heads, whereas indoors small particles could hang in the enclosed room air. On the other hand, at smaller distances (especially at close range: cuddling, tango dancing, etc.) we don’t have any reported data that we feel sheds light on how much of a protection factor there might be, so we suggest _not_ to use the 10x modifier for outdoor interactions with unusually close range or with other factors associated with superspreader events (yelling, dense crowds, etc.).
+The “outdoors” modifier is the one we have the least confidence of. At larger distances, we speculate that outdoors might provide _more_ than 20x protection, because particles have more time to diffuse upwards into the vast empty space above everyone’s heads, whereas indoors small particles could hang in the enclosed room air. On the other hand, at smaller distances (especially at close range: cuddling, tango dancing, etc.) we don’t have any reported data that we feel sheds light on how much of a protection factor there might be, so we suggest _not_ to use the 20x modifier for outdoor interactions with unusually close range or with other factors associated with superspreader events (yelling, dense crowds, etc.).
 
-### Person Risk
+# Person Risk Q&A
 
 **Basic method: Other than essential workers, is anyone above average?**
 
 Of course! Someone should probably be considered “above average risk” if they have lots of contact with others and minimal protection; if they regularly attend gatherings, or recently attended a large gathering, especially indoors; or if they seem to think "this isn't a big deal" or "I don't care" when considering precautions.
 
-**Why is 10% prevalence a rule of thumb for grocery shopping etc.?**
-
-This figure comes from contact tracing studies. If you get COVID, you either got it from someone you know (e.g., the friend you saw last Tuesday) or from someone you don’t (e.g., the person in line behind you at the grocery store or sitting next to you on the bus). If a contact tracer asks you about all of your known contacts, and one of them has COVID, that’s probably who you got it from. If none of them have COVID, you probably got it from someone you don’t know. In various countries that effectively contained COVID outbreaks, such as Singapore and South Korea, contact tracers were able to link about 90% of cases to a known contact [anecdotal observation cited in [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936)]. The remaining 10% “environmental” infections are the ones to which a person with no known contacts might still be exposed just from being in public areas. This is why we suggest using “10% the Person Risk of a random person” as a rule-of-thumb starting point meant to cover the risk of a typical level of exposure to public spaces, before adding close contacts to the estimate.
-
-If this feels too high (e.g. if you get all your groceries delivered and don’t leave the house), you can also skip the rule of thumb and instead tally each outing individually.
-
-### Specific Activities
+# Specific Activities Q&A
 
 **Can I let a friend use the bathroom in my house?**
 
@@ -162,6 +166,7 @@ What about the _airport_ rather than the plane? We still suggest you wear a high
 Overall, there are very few documented cases of transmission on airplanes, which is surprising given that 500,000 or more Americans are flying every day at the time of writing (which, if we naively assume current US-wide prevalence rates, would mean ~100 COVID-positive passengers per day). We are aware of [one flight in China in January 2020](https://www.medrxiv.org/content/10.1101/2020.03.28.20040097v1) that infected 12 people, [one case in February](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7194574/) probably acquired on a flight, and [one flight in March from London to Vietnam](https://www.npr.org/sections/goatsandsoda/2020/07/04/886788377/international-flights-are-ramping-up-slowly-and-with-plenty-of-caveats) that infected 13 people. Erin Bromage has written more on [flying in the age of COVID-19](https://www.erinbromage.com/post/flying-in-the-age-of-covid-19).
 
 **Grocery stores? Drug stores? Haircuts?**
+
 For grocery stores, we count the average number of people near us: in our neighborhood this is usually about 5 people, keeping 6 feet away, everyone wearing masks. For drug stores, pharmacy pickup, or medical buildings, you might want to add an extra boost to Person Risk to account for the fact that the people you’re encountering are more likely than average to be sick.
 
 Haircuts can be modeled by counting each person in the hair salon. We definitely recommend wearing the best mask you have that won’t interfere with the haircut, and checking in advance that your mask style will be fine. If your stylist is usually chatty, we suggest for an extra safety margin to ask the hair stylist to chat less! We found an anecdote [on Twitter](https://twitter.com/robshirkey/status/1269369868182315014) about 140 clients who were in close contact with two infected hair stylists, indoors, with both client and stylist wearing masks. 45 clients were tested – all negative – and we haven’t heard of any cases among the others. Last we checked this was statistically consistent with the Activity Risk and modifier suggestions we use in this writeup.
@@ -172,7 +177,7 @@ The risk of attending a protest depends on how close you get to others, whether 
 
 The most important thing to remember in attending a protest is that you may not have control over what happens to you. Police might [pull your mask off](https://nypost.com/2020/05/31/nypd-cop-pulls-mask-off-man-pepper-sprays-him-in-the-face-video/). If pepper spray is used, people are likely to cough uncontrollably. You might get [kettled](https://en.wikipedia.org/wiki/Kettling) into a small area, even if you were planning to keep your distance from others. One thing you can do to help stay safer is to make a plan in advance about what you will and won’t do: for example, you might decide in advance that if you see any gas used near the protest, you will leave. By thinking about what you are and are not up for, and making choices that take into account the risks, we hope you can confidently and proudly participate in protests that make sense for your risk tolerance.
 
-### Related Work
+# Related Work
 
 **How do microCOVIDs relate to initial viral load?**
 
