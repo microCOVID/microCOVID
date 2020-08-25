@@ -4,29 +4,7 @@ const content = `
 
 Read this section if you are interested in the epistemic nitty-gritty behind our estimates of Activity Risk and Person Risk.
 
-# Person Risk
-
-### Underreporting factor
-
-In order to make suggestions about underreporting factor, we threw together a quick comparison of two data sources.
-
-* The first data source is state-by-state historical Positive Test Rates from [Covid Act Now](https://covidactnow.org/).
-* The second is the CAR (case ascertainment ratio) columns of [this table](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239078/bin/NIHPP2020.04.29.20083485-supplement-1.pdf) from the NIH, as explained in [Chow et al.](https://www.medrxiv.org/content/10.1101/2020.04.29.20083485v1) (which used a computational model to estimate these numbers).
-  * We typed these in by hand hastily. We excluded the NY and NJ numbers as the two that did not have a specified Positive Test Rate, being listed just over , in the relevant timeframe. If you would like to check our work, this [code snippet](https://gist.github.com/catherio/8d95858c0f69023a9d5427fc5ef02671) shows what we did.
-
-There was a visible correlation, so we eyeballed some approximate ranges. Here’s the data we see, with a simple linear regression line drawn on top. We eyeball this as being roughly “1 in 6” on the left-hand side; “1 in 8” in the middle; and “1 in 10” on the right-hand side.
-
-![Positive test rate](/paper/positive-test-rate.png)
-
-One question that came up is whether we’re overestimating the _contagious_ cases, because asymptomatic cases are probably a high proportion of all cases (a literature review Oran et 40 al. estimates 40-45%) and _especially_ a high proportion of _unreported_ cases, but they are resposible for a much lower proportion of infections ([Ferretti et al.](https://science.sciencemag.org/content/368/6491/eabb6936) concluded 5%). Our data about transmission likelihood (Activity Risk) are probably drawn from mostly symptomatic index cases, which suggests that asymptomatic cases should count for “less” in the prevalence numbers, which would decrease the effective underreporting factor.
-
-We make a fairly speculative guess at a “contagiousness-adjusted” prevalence figure as follows. Testing provider [Color](https://www.color.com/new-covid-19-test-data-majority-of-people-who-test-positive-for-covid-19-have-mild-symptoms-or-are-asymptomatic?utm_source=Press+%26+Media+Contacts&utm_campaign=9f99621884-Press+Outreach+-++COVID+Testing+Data+6+20&utm_medium=email&utm_term=0_cd48a5177d-9f99621884-230595282) observes that 30% of their positive test results do not have any symptoms at the time of testing, and thus we infer are either presymptomatic or asymptomatic. If we again use the ratio from [Oran et al.](https://www.acpjournals.org/doi/10.7326/M20-3012), we might guess 40% of those 30% will never show symptoms; which is to say, we guess 12% of all [Color](https://www.color.com/new-covid-19-test-data-majority-of-people-who-test-positive-for-covid-19-have-mild-symptoms-or-are-asymptomatic?utm_source=Press+%26+Media+Contacts&utm_campaign=9f99621884-Press+Outreach+-++COVID+Testing+Data+6+20&utm_medium=email&utm_term=0_cd48a5177d-9f99621884-230595282)-reported positive tests are from asymptomatic cases, and the remaining 88% are from presymptomatic and symptomatic cases. By contrast, 60% of all total infections (by [Oran et al.](https://www.acpjournals.org/doi/10.7326/M20-3012) again) are presymptomatic or symptomatic. This tells us that we might expect 0.6/0.88 = ~2/3 as many of the unreported cases are highly contagious. While this calculation is far from perfect, it gives us a rough estimate that we use as our “contagiousness adjustment factor” of 2/3.
-
-
-We combine our original guesses with the rough 2/3 contagiousness adjustment factor, to make our final recommendations:
-* Positive test rate 5% or lower => 4x underreporting factor
-* Positive test rate between 5% and 15% => 5x underreporting factor
-* Positive test rate between greater than 15% => at least a 7x underreporting factor.
+# Activity Risk
 
 ### Indoor unmasked transmission
 
@@ -72,7 +50,7 @@ We note that we think masks on the infected person might not help proportionatel
 
 **Outdoor**
 
-This is one of the tougher numbers to estimate, but we currently feel good estimating that being outdoors reduces your risk by more than 10x (unless you’re super close together, in which case we’re really not sure). \
+This is one of the tougher numbers to estimate, but we currently feel good estimating that being outdoors reduces your risk by more than 20x (unless you’re super close together, in which case we’re really not sure). \
 
 
 Almost every news article about outdoor transmission cites the same two sources: [Nishiura et al.](https://www.medrxiv.org/content/10.1101/2020.02.28.20029272v2) and [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) Nishiura et al. is the source of the “18.7x” figure that we see all over the place, but we don’t put much stock in this specific paper for two reasons. For one, many summaries seem to miss that this is an _odds ratio_ and not a relative risk ratio (that is, it tells us that 18.7x as many of the transmissions came from indoors, but if people in general usually had 18.7x as much indoor contact as outdoor contact, this would not imply any difference in risk!)[^1]. For another, Nishiura et al. also uses a very small sample size, it’s only six scant pages with very little explanation, and we can’t make heads or tails of the bar chart at the end.
@@ -87,13 +65,43 @@ There’s also anecdotal evidence. In addition to the reports that there was no 
 
 Finally, there have been zero outdoor outbreaks of any kind in the US, whereas in Colorado 9 percent of outbreaks [are reported](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html) to have been traced to bars and restaurants, despite the fact that both indoor and outdoor restaurant dining are open throughout the US.
 
-The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hurford assumes a 5x benefit from being outdoors. We feel good about calling it “more than 10x” for now and waiting for more evidence_, _with a warning about not trusting this number as much if you’re very close to one another because we have no data about outdoor cuddling.
+The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hurford assumes a 5x benefit from being outdoors. We feel good about calling it “more than 20x” for now and waiting for more evidence, with a warning about not trusting this number if you’re very close to one another because we have no data about outdoor cuddling.
 
 **Distance**
 
-This is another [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) estimate. Each meter of distance was associated with about a 2x reduction in infection risk; specifically they find that being one meter apart is 2x better than baseline, and two meters 2x better than one meter. Although this data came from a healthcare setting in which “0m” means direct physical contact with the patient, we instead conservatively take “baseline” as “normal socializing” ≈ one meter. This is also part of why we estimate “cuddling” = zero meters is twice as risky as baseline.
+This is another [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) estimate. Each meter of distance was associated with about a 2x reduction in infection risk; specifically they find that being one meter apart is 2x better than baseline, and two meters 2x better than one meter. Although this data came from a healthcare setting in which “0m” means direct physical contact with the patient, we instead conservatively take “baseline” as “normal socializing” ≈ one meter. When doing our own personal risk calculations, we estimate “cuddling” = zero meters as twice as risky as baseline.
 
-We get some corroboration for this number from the study of train passengers, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) Looking for example at Figure 3, for passengers that were 1 row apart, moving an additional 2 columns away (seats 0.5m wide, so about 1m away) decreased the risk from what I eyeball as 0.2ish to 0.1ish, and then from 0.1ish to 0.05ish for an additional 2 columns. It’s worth noting that they report a steeper drop from sitting _right next to_ the index patient to sitting 1m away, which could be relevant to hangouts at closer than a normal social distance from someone.
+We get some corroboration for this number from the study of train passengers, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) Looking for example at Figure 3, for passengers that were 1 row apart, moving an additional 2 columns away (seats 0.5m wide, so about 1m away) decreased the risk from what we eyeball as 0.2ish to 0.1ish, and then from 0.1ish to 0.05ish for an additional 2 columns. It’s worth noting that they report a steeper drop from sitting _right next to_ the index patient to sitting 1m away, which could be relevant to hangouts at closer than a normal social distance from someone.
+
+# Person Risk
+
+### Basic Method: Underreporting factor
+
+In order to make suggestions about underreporting factor, we threw together a quick comparison of two data sources.
+
+* The first data source is state-by-state historical Positive Test Rates from [Covid Act Now](https://covidactnow.org/).
+* The second is the CAR (case ascertainment ratio) columns of [this table](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239078/bin/NIHPP2020.04.29.20083485-supplement-1.pdf) from the NIH, as explained in [Chow et al.](https://www.medrxiv.org/content/10.1101/2020.04.29.20083485v1) (which used a computational model to estimate these numbers).
+  * We typed these in by hand hastily. We excluded the NY and NJ numbers as the two that did not have a specified Positive Test Rate, being listed just as "over 20%", in the relevant timeframe. If you would like to check our work, this [code snippet](https://gist.github.com/catherio/8d95858c0f69023a9d5427fc5ef02671) shows what we did.
+
+There was a visible correlation, so we eyeballed some approximate ranges. Here's the data we see, with a simple linear regression line drawn on top. We eyeball this as being roughly "1 in 6" on the left-hand side; "1 in 8" in the middle; and "1 in 10" on the right-hand side.
+
+![Positive test rate](/paper/positive-test-rate.png)
+
+One question that came up is whether we're overestimating the _contagious_ cases, because asymptomatic cases are probably a high proportion of all cases (a literature review Oran et 40 al. estimates 40-45%) and _especially_ a high proportion of _unreported_ cases, but they are resposible for a much lower proportion of infections ([Ferretti et al.](https://science.sciencemag.org/content/368/6491/eabb6936) concluded 5%). Our data about transmission likelihood (Activity Risk) are probably drawn from mostly symptomatic index cases, which suggests that asymptomatic cases should count for "less" in the prevalence numbers, which would decrease the effective underreporting factor.
+
+We make a fairly speculative guess at a "contagiousness-adjusted" prevalence figure as follows. Testing provider [Color](https://www.color.com/new-covid-19-test-data-majority-of-people-who-test-positive-for-covid-19-have-mild-symptoms-or-are-asymptomatic?utm_source=Press+%26+Media+Contacts&utm_campaign=9f99621884-Press+Outreach+-++COVID+Testing+Data+6+20&utm_medium=email&utm_term=0_cd48a5177d-9f99621884-230595282) observes that 30% of their positive test results do not have any symptoms at the time of testing, and thus we infer are either presymptomatic or asymptomatic. If we again use the ratio from [Oran et al.](https://www.acpjournals.org/doi/10.7326/M20-3012), we might guess 40% of those 30% will never show symptoms; which is to say, we guess 12% of all [Color](https://www.color.com/new-covid-19-test-data-majority-of-people-who-test-positive-for-covid-19-have-mild-symptoms-or-are-asymptomatic?utm_source=Press+%26+Media+Contacts&utm_campaign=9f99621884-Press+Outreach+-++COVID+Testing+Data+6+20&utm_medium=email&utm_term=0_cd48a5177d-9f99621884-230595282)-reported positive tests are from asymptomatic cases, and the remaining 88% are from presymptomatic and symptomatic cases. By contrast, 60% of all *total* infections found via *blanket* testing (by [Oran et al.](https://www.acpjournals.org/doi/10.7326/M20-3012) again) are presymptomatic or symptomatic. This tells us that we might expect 0.6/0.88 = ~2/3 as many of the unreported cases are highly contagious (by virtue of being presymptomatic or symptomatic instead of asymptomatic). While this calculation is far from perfect, it gives us a rough estimate that we use as our "contagiousness adjustment factor" of 2/3.
+
+
+We combine our original guesses with the rough 2/3 contagiousness adjustment factor, to make our final recommendations:
+* Positive test rate 5% or lower => 4x underreporting factor
+* Positive test rate between 5% and 15% => 5x underreporting factor
+* Positive test rate between greater than 15% => at least a 7x underreporting factor.
+
+### Intermediate Method: Frontline worker adjustment
+We estimated that frontline workers are 3x more likely to have COVID, and anyone who is not a frontline worker is 0.5x as likely to be infected. Here is how we made that calculation.
+
+First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/) showing that around 55 million people in the US are essential workers (38% of workforce and 17% of the population); we sanity-check this against [another source](https://bayareaequityatlas.org/essential-workers) citing 28% of workers in the Bay Area are essential workers. In [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)’s blanket testing survey of residents in the Mission District in San Francisco, they found a positive test rate of 5% among frontline service workers and 0.8% among non-frontline workers (6.27x higher for frontline workers). The overall prevalence is a population-weighted average: \`prevalence_total = 0.17 x p_essential + 0.83 x (p_essential / 6.27)\`. From this we compute \`p_essential = 3.3 x prevalence_total\`. We round off to 3x for essential workers, and 0.5x for all others.
+
 
 [^1]:
      We find it easier to understand the difference between an odds ratio and a risk ratio in a medical context. If 100 people walk into your clinic with heart disease, and twice as many were smokers as non-smokers, then the odds ratio is 2x. But that doesn’t tell you what you would get if you _started_ with 50 smokers and 50 nonsmokers and watched for heart disease later. You don’t know what the base rate of smoking was in your original dataset. See [https://psychscenehub.com/psychpedia/odds-ratio-2](https://psychscenehub.com/psychpedia/odds-ratio-2) for more on this.

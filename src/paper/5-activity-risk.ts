@@ -12,9 +12,9 @@ We start by first estimating the risk of interacting with a single COVID-positiv
 
 <p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 6%</p>
 
-So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, the chance of you getting COVID from that single interaction is 6%.
+So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, we estimate the chance of you getting COVID from that single interaction as 6%.
 
-How did we come up with this number? It’s a rough estimate combining many sources: [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) contact tracing data, [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/paper/14-research-sources).
+How did we come up with this number? It's a rough estimate combining many sources: the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, and the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/paper/14-research-sources).
 
 Think of this as our “reference interaction.” We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
@@ -73,11 +73,13 @@ Hopefully this puts the risk of indoor gatherings into perspective. To compare t
 
 Indoor unmasked interactions are quite risky, but being outdoors and wearing masks both make a _huge_ difference.
 
-**Masks** reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources), so for simplicity we treat them as “no mask,” even though we do believe they provide some benefit.
 
-**Outdoors** reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
+**Masks**: We estimate that masks reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources), so for simplicity we treat them as "no mask", even though we do believe they provide some benefit.
 
-**Distance** is not quite as beneficial as wearing a mask or being outdoors. We estimate keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
+
+**Outdoors**: We estimate that being outside reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
+
+**Distance** seems to be not quite as beneficial as wearing a mask or being outdoors. We estimate keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
 
 * 2x if you’re 6-9 feet away
 * 4x if you’re 9-12 feet away
@@ -85,7 +87,8 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 If you’re outdoors _and_ 20 feet away from a person, you can probably ignore the risk from them.
 
-**Volume of conversation** also matters. If the other person isn’t talking, that reduces the risk to you by about 5x, because they are not expelling as many respiratory droplets. This actually makes some activities where people don’t talk much, taking public transportation, safer than they would otherwise be. On the other hand, loud talking, shouting, or singing _increases_ the risk by about 5x (as compared to a conversation at normal volume) because more respiratory droplets are exhaled and expelled when you are speaking or breathing forcefully.
+**Volume of conversation** also matters. If the other person isn't talking, we estimate that reduces the risk to you by about 5x, because they are not expelling as many respiratory droplets. This actually makes some activities where people don't talk much, taking public transportation, safer than they would otherwise be. On the other hand, we estimate that loud talking, shouting, or singing _increases_ the risk by about 5x (as compared to a conversation at normal volume) because more respiratory droplets are exhaled and expelled when you are speaking or breathing forcefully.
+
 
 Curious how we got these numbers? Again, check out the [Research Sources](/paper/14-research-sources)!
 
@@ -101,24 +104,28 @@ We do the calculation differently for household members and spouses/partners bec
 
 These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? Our main guess is that people often reduce their level of interaction with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk.[^super] We look forward to improved data.
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the estimate of household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? Our main guess is that people often reduce their level of interaction with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk.[^super] We look forward to improved data.
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](/paper/14-research-sources) for slightly more detail.
 
-_Important disclaimer for the numbers above: We keep calling these “guesses” and “rough estimates.” Please take our uncertainty seriously! Our goal in sharing these numbers is to enable ordinary people to do back-of-the-envelope calculations and [order-of-magnitude estimates](https://en.wikipedia.org/wiki/Fermi_problem) to make personal decisions. Although these numbers are based on multiple sources of evidence rather than being pulled out of thin air, we are nonetheless deviating from a firm medical standard of evidence. Additionally, we have made simplifications for ease-of-use. To learn more about the research supporting these estimates, please see the [Research Sources](/paper/14-research-sources) section._
+### Important note
+
+_We keep calling these numbers “estimates.” Please take our uncertainty seriously! The evidence for these numbers is far from conclusive. We cannot say that the true probability **is** 6%. All we can say is that **we estimate** it at 6%._
+
+_This work is licensed [CC-BY](http://creativecommons.org/licenses/by/4.0/), for use with attribution. Please provide attribution to us when you use our estimates, so that others can check our work. This is an important way to fight misinformation._
+
+_To learn about the scientific research supporting our estimates, please see the [Research Sources](/paper/14-research-sources) section._
 
 
 ### How likely is it that the other person has COVID?
 
-Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you’re interacting with has COVID? Let’s look at Person Risk to understand that.
-
-
+Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 [^1]:
      We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will give less protection than this.
 
 [^super]:
-    Another possibility we considered, which is much more speculative, is that this has to do with some people naturally producing more respiratory droplets when they talk and breathe ([Meselson](https://www.nejm.org/doi/full/10.1056/nejmc2009324). These people are called superspreaders. Therefore it might be the case (but we are just speculating) that if you live with a superspreader, you are almost certain to get it, but most people are not that highly infectious.
+    Another possibility we considered, which is much more speculative, is that this has to do with some people naturally producing more respiratory droplets when they talk and breathe ([Meselson](https://www.nejm.org/doi/full/10.1056/nejmc2009324)). These people are called superspreaders. Therefore it might be the case that if you live with a superspreader, you are almost certain to get it, but most people are not that highly infectious.
 `
 
 const post = { title, content }

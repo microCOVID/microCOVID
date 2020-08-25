@@ -118,8 +118,8 @@ export const Calculator = (): React.ReactElement => {
         <Col md="12" lg="8">
           <p>
             We created a calculator to assess “cost” of various activities in
-            microCOVIDs, where 1&nbsp;microCOVID is a one-in-a-million
-            chance of getting COVID.
+            microCOVIDs, where 1&nbsp;microCOVID is a one-in-a-million chance of
+            getting COVID.
           </p>
           <p>
             We hope you’ll use this tool to build your intuition about the
