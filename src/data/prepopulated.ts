@@ -123,7 +123,7 @@ export const prepopulated: {
 
     setting: 'indoor',
     distance: 'sixFt',
-    duration: 180,
+    duration: 120,
     theirMask: 'none',
     yourMask: 'none',
     voice: 'loud',
