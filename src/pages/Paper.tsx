@@ -27,8 +27,11 @@ export const Paper = (): React.ReactElement => {
     html: true,
   })
     .use(markdownItFootnote)
-    .use(markdownItHeadings)
+    .use(markdownItHeadings, {
+      prefixHeadingIds: false,
+    })
     .use(markdownItLinkAttributes, {
+      pattern: /^https:/,
       attrs: {
         target: '_blank',
         rel: 'noopener',
