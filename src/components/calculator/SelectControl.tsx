@@ -17,7 +17,11 @@ export const SelectControl: React.FunctionComponent<{
       <label htmlFor={props.id}>
         {props.label}
         {props.popover && (
-          <OverlayTrigger trigger="click" overlay={props.popover}>
+          <OverlayTrigger
+            trigger="click"
+            overlay={props.popover}
+            rootClose={true}
+          >
             <Badge variant="secondary">?</Badge>
           </OverlayTrigger>
         )}
