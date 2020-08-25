@@ -22,6 +22,7 @@ export const prepopulated: {
     duration: 60,
     theirMask: 'masked',
     yourMask: 'masked',
+    voice: 'normal',
   },
 
   'Indoor unmasked hangout with 2 people': {
@@ -34,6 +35,7 @@ export const prepopulated: {
     duration: 60,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'normal',
   },
 
   'Car ride with 1 person for 15 mins': {
@@ -46,6 +48,7 @@ export const prepopulated: {
     duration: 15,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'normal',
   },
 
   'Physically intimate with person': {
@@ -58,6 +61,7 @@ export const prepopulated: {
     duration: 60,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'normal',
   },
 
   'Grocery store for 60 minutes': {
@@ -70,6 +74,7 @@ export const prepopulated: {
     duration: 60,
     theirMask: 'none',
     yourMask: 'masked',
+    voice: 'silent',
   },
 
   'Plane ride': {
@@ -82,6 +87,7 @@ export const prepopulated: {
     duration: 360,
     theirMask: 'masked',
     yourMask: 'masked',
+    voice: 'silent',
   },
 
   'Eating in restaurant, outdoors': {
@@ -94,6 +100,7 @@ export const prepopulated: {
     duration: 90,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'normal',
   },
 
   'Eating in restaurant, indoors': {
@@ -106,6 +113,7 @@ export const prepopulated: {
     duration: 90,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'normal',
   },
 
   'Going to bar': {
@@ -118,6 +126,7 @@ export const prepopulated: {
     duration: 180,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'loud',
   },
 
   'Large outdoor party: masked with 250 people': {
@@ -130,6 +139,7 @@ export const prepopulated: {
     duration: 180,
     theirMask: 'masked',
     yourMask: 'masked',
+    voice: 'normal',
   },
 
   'Small indoor party: unmasked with 25 people': {
@@ -142,5 +152,6 @@ export const prepopulated: {
     duration: 180,
     theirMask: 'none',
     yourMask: 'none',
+    voice: 'normal',
   },
 }

@@ -2,7 +2,14 @@ import React from 'react'
 
 import { SelectControl } from './SelectControl'
 import { CalculatorData, calculateActivityRisk } from 'data/calculate'
-import { Distance, Interaction, Setting, TheirMask, YourMask } from 'data/data'
+import {
+  Distance,
+  Interaction,
+  Setting,
+  TheirMask,
+  Voice,
+  YourMask,
+} from 'data/data'
 
 export const ActivityRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -42,7 +49,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       {header}
       <SelectControl
         id="interaction"
-        label="Type of Interaction"
+        label="Type of interaction"
         data={data}
         setter={setter}
         source={Interaction}
@@ -77,17 +84,24 @@ export const ActivityRiskControls: React.FunctionComponent<{
       </div>
       <SelectControl
         id="theirMask"
-        label="Their Mask"
+        label="Their mask"
         data={data}
         setter={setter}
         source={TheirMask}
       />
       <SelectControl
         id="yourMask"
-        label="Your Mask"
+        label="Your mask"
         data={data}
         setter={setter}
         source={YourMask}
+      />
+      <SelectControl
+        id="voice"
+        label="Volume of conversation"
+        data={data}
+        setter={setter}
+        source={Voice}
       />
 
       <span className="readout">

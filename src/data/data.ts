@@ -115,3 +115,14 @@ export const YourMask: { [key: string]: FormValue } = {
     multiplier: 0.5,
   },
 }
+export const Voice: { [key: string]: FormValue } = {
+  silent: {
+    label: 'Not talking (such as quietly riding the train)',
+    multiplier: 0.2,
+  },
+  normal: { label: 'Normal conversation', multiplier: 1 },
+  loud: {
+    label: 'Loud talking (shouting, talking over music, singing)',
+    multiplier: 5,
+  },
+}

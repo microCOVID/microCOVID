@@ -4,6 +4,7 @@ import {
   RiskProfile,
   Setting,
   TheirMask,
+  Voice,
   YourMask,
 } from 'data/data'
 
@@ -29,6 +30,7 @@ export interface CalculatorData {
   duration: number
   theirMask: string
   yourMask: string
+  voice: string
 }
 
 export const defaultValues: CalculatorData = {
@@ -47,6 +49,7 @@ export const defaultValues: CalculatorData = {
   duration: 0,
   theirMask: '',
   yourMask: '',
+  voice: '',
 }
 
 const ONE_MILLION = 1e6 // One 'full' COVID
@@ -146,6 +149,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       multiplier *= Distance[data.distance].multiplier
       multiplier *= TheirMask[data.theirMask].multiplier
       multiplier *= YourMask[data.yourMask].multiplier
+      multiplier *= Voice[data.voice].multiplier
       multiplier *= Math.min((data.duration || 60) / 60.0, 5)
     }
     return multiplier
