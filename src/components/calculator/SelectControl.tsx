@@ -14,8 +14,8 @@ export const SelectControl: React.FunctionComponent<{
 }> = (props) => (
   <div className="form-group">
     {props.label && (
-      <label htmlFor={props.id}>
-        {props.label}
+      <div className="label-wrapper">
+        <label htmlFor={props.id}>{props.label}</label>
         {props.popover && (
           <OverlayTrigger
             trigger="click"
@@ -25,7 +25,7 @@ export const SelectControl: React.FunctionComponent<{
             <Badge variant="secondary">?</Badge>
           </OverlayTrigger>
         )}
-      </label>
+      </div>
     )}
     <select
       id={props.id}
