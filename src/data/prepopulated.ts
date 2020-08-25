@@ -41,7 +41,7 @@ export const prepopulated: {
   'Car ride with 1 person for 15 mins': {
     riskProfile: 'average',
     interaction: 'oneTime',
-    personCount: 2,
+    personCount: 1,
 
     setting: 'indoor',
     distance: 'normal',
@@ -154,4 +154,31 @@ export const prepopulated: {
     yourMask: 'none',
     voice: 'normal',
   },
+
+  'Outdoor, masked hangout with person who has COVID': {
+    riskProfile: 'hasCovid',
+    interaction: 'oneTime',
+    personCount: 1,
+
+    setting: 'outdoor',
+    distance: 'normal',
+    duration: 60,
+    theirMask: 'masked',
+    yourMask: 'masked',
+    voice: 'normal',
+  },
+
+  'Indoor, unmasked hangout with person who has COVID': {
+    riskProfile: 'hasCovid',
+    interaction: 'oneTime',
+    personCount: 1,
+
+    setting: 'indoor',
+    distance: 'normal',
+    duration: 60,
+    theirMask: 'none',
+    yourMask: 'none',
+    voice: 'normal',
+  },
+
 }

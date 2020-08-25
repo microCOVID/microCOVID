@@ -105,7 +105,7 @@ export const TheirMask: { [key: string]: FormValue } = {
   none: { label: 'None (including bandanas & buffs)', multiplier: 1 },
   masked: {
     label: 'Masked (surgical, double layer cotton, etc)',
-    multiplier: 0.2,
+    multiplier: 0.25,
   },
 }
 export const YourMask: { [key: string]: FormValue } = {

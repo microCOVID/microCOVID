@@ -150,7 +150,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       multiplier *= TheirMask[data.theirMask].multiplier
       multiplier *= YourMask[data.yourMask].multiplier
       multiplier *= Voice[data.voice].multiplier
-      multiplier *= Math.min((data.duration || 60) / 60.0, 5)
+      multiplier *= (data.duration || 60) / 60.0
     }
     return multiplier
   } catch {
