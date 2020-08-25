@@ -9,6 +9,16 @@ export const RiskProfile: { [key: string]: FormValue } = {
     multiplier: 1,
   },
 
+  frontline: {
+    label: 'An essential or front-line worker in your area',
+    multiplier: 3,
+  },
+
+  nonFrontline: {
+    label: 'Someone in your area who is NOT an essential or front-line worker',
+    multiplier: 0.5,
+  },
+
   livingAlone: {
     label: 'Lives alone and only grocery shops',
     /*
