@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
-import { CalculatorData } from 'data/calculate'
+import {
+  CalculatorData,
+  calculateLocationPersonAverage,
+  calculateLocationReportedPrevalence,
+} from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
 
 const PrevalenceField: React.FunctionComponent<{
@@ -197,6 +201,22 @@ export const PrevalenceControls: React.FunctionComponent<{
         inputType="number"
         isEditable={topLocation === ''}
       />
+      <span className="readout">
+        Reported prevalence:{' '}
+        <b>
+          {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
+        </b>
+      </span>
+      <span className="readout">
+        Adjusted prevalence:{' '}
+        <b>
+          {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(
+            2,
+          )}
+          %
+        </b>
+      </span>
+      <p />
       {topLocation === '' ? null : (
         <div>
           <p>

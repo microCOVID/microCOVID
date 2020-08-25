@@ -54,11 +54,26 @@ const ONE_MILLION = 1e6 // One 'full' COVID
 export const parsePopulation = (input: string): number =>
   Number(input.replace(/[^0-9.e]/g, ''))
 
+export const calculateLocationReportedPrevalence = (
+  data: CalculatorData,
+): number | null => {
+  const population = parsePopulation(data.population)
+  const lastWeek = data.casesPastWeek
+  const prevalence = lastWeek / population
+
+  return prevalence
+}
+
 export const calculateLocationPersonAverage = (
   data: CalculatorData,
 ): number | null => {
   // Prevalence
-  const population = parsePopulation(data.population)
+
+  const prevalence = calculateLocationReportedPrevalence(data)
+  if (!prevalence) {
+    return null
+  }
+
   let underreportingFactor
 
   // Under-reporting factor
@@ -70,13 +85,11 @@ export const calculateLocationPersonAverage = (
     underreportingFactor = 7
   }
 
-  const lastWeek = data.casesPastWeek
   const delayFactor = 1 + Math.max(0, data.casesIncreasingPercentage / 100)
 
   // --------
   // Points for "random person from X location"
-  const personRisk =
-    (lastWeek * underreportingFactor * delayFactor) / population
+  const personRisk = prevalence * underreportingFactor * delayFactor
 
   return personRisk * ONE_MILLION
 }
