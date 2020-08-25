@@ -169,7 +169,7 @@ a {
 
 #paperPage {
   font-size: 18px;
-  line-height: 25px;
+  line-height: 30px;
   max-width: 850px;
 
   h1,h2,h3,h4,h5,h6 {
@@ -193,6 +193,10 @@ a {
         padding-left: 5px;
       }
     }
+  }
+
+  p, ul {
+    margin-bottom: 1.6rem;
   }
 
   code {
