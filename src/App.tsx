@@ -11,7 +11,7 @@ import {
 
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
-import { ActivityLog } from 'pages/ActivityLog'
+import { Spreadsheet } from 'pages/Spreadsheet'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Home } from 'pages/Home'
@@ -99,8 +99,8 @@ export const App = (): React.ReactElement => {
             <Route exact path="/paper">
               <Redirect to="/paper/1-intro" />
             </Route>
-            <Route path="/activitylog">
-              <ActivityLog />
+            <Route path="/spreadsheet">
+              <Spreadsheet />
             </Route>
             <Route path="/contact">
               <Contact />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ActivityLog = (): React.ReactElement => {
+export const Spreadsheet = (): React.ReactElement => {
   return (
     <div>
       Activity Log!{' '}
