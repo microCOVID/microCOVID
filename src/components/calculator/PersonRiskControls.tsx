@@ -74,7 +74,8 @@ export const PersonRiskControls: React.FunctionComponent<{
       />
       <br />
       <p className="readout">
-        Person Risk: Each person has a <b>{personRiskEach.toLocaleString()}</b>
+        The <i>first</i> part of the calculation is Person Risk: Each other
+        person has a <b>{personRiskEach.toLocaleString()}</b>
         -in-a-million chance of currently having COVID
       </p>
     </React.Fragment>
