@@ -1,5 +1,7 @@
 import positiveTestRate from './img/positive-test-rate.png';
-import transmissionDynamics from './img/transmission-dynamics.png';
+import heExtended from './img/he-extended-fig-1.png'
+import ferrettiFig1 from './img/ferretti-fig-1.png'
+import ferrettiFig2 from './img/ferretti-infectiousness.gif'
 
 const title = 'Research Sources'
 
@@ -100,10 +102,29 @@ We combine our original guesses with the rough 2/3 contagiousness adjustment fac
 * Positive test rate between 5% and 15% => 5x underreporting factor
 * Positive test rate between greater than 15% => at least a 7x underreporting factor.
 
-### Basic Method: Transmision Dynamics
-TODO(Catherio): Write Copy 
+### Basic Method: Infectious period
 
-![He et al](${transmissionDynamics})
+We mentioned in the [Basic Method](/paper/7-basic-method) that the reason we use a week's worth of cases in our prevalence estimate is that people are most infectious in a roughly week-long span of time from 2 to 9 days after they were infectious. Similarly, the [Advanced Method](/paper/9-advanced-method) works by tallying up all of someone's activities in the past 2 through 9 days.
+
+We have found the following graph useful for thinking about this. From [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) Figure 1, it shows in the black curves their estimations of the “generation time”, which is the time between when a person gets infected and when they transmit the disease to someone else. We observe that not very many transmissions occur fewer than 2 days after infection or more than 9 days after infection. (Not a *negligible* fraction from a public health standpoint, but few enough to not dominate our personal judgments about our risk).
+
+![Ferretti et al](${ferrettiFig1})
+
+### Note on Infectious Period: Contacts' symptoms
+
+Another important thing to know about the infectious period is that only about 9% of transmissions from people who eventually show symptoms occur more than 3 days before the appearance of symptoms, and 1% occur more than 5 days before symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph):
+
+![He et al](${heExtended})
+
+Additionally, only about 6% of transmissions come from people who won't ever show symptoms ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936))[^ferretti].
+
+![Ferretti et al](${ferrettiFig2})
+
+These two facts combined imply that, if you interact with someone and then wait more than 3 days, and the person you were in contact with has not yet shown symptoms, then you should be about 7 times more confident than you were before that they did not transmit COVID to you: \`0.94*0.09 + 0.06 = 0.14 ≈ 1/7 \`.
+
+And if you wait as many as 5 days and your contact still has no symptoms, you should have an additional 2x as much certainty (total of 14 times more confident): \`0.94*0.01 + 0.06 = 0.07 ≈ 1/14.
+
+
 
 ### Intermediate Method: Frontline worker adjustment
 We estimated that frontline workers are 3x more likely to have COVID, and anyone who is not a frontline worker is 0.5x as likely to be infected. Here is how we made that calculation.
@@ -116,6 +137,8 @@ First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/
 
 [^2]:
      We understand there’s currently somewhat of a [debate or discussion](https://slate.com/technology/2020/07/droplets-aerosols-coronavirus-covid-19.html) around whether COVID is best thought of as being transmitted by smaller droplets that can linger in the air, or mostly by larger droplets that fall down quickly due to gravity. We already thought the evidence was pointing towards lingering droplets, and [Prof. Jimenez’s writeup](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) on the topic summarizes this perspective far better than we could.
+
+[^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
 `
 
 const post = { title, content }
