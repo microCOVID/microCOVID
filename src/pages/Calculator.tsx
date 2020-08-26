@@ -69,8 +69,27 @@ export const Calculator = (): React.ReactElement => {
   const repeatedEvent = ['repeated', 'partner'].includes(
     calculatorData.interaction,
   )
+
   const showPoints = points >= 0
   const tooManyPoints = points >= MAX_POINTS
+
+  const howRisky = (points: number): string[] => {
+    if (points < 3) {
+      return ['close to negligible', 'dozens of times per week']
+    } else if (points < 30) {
+      return ['low', 'several times per week']
+    } else if (points < 100) {
+      return ['moderate', 'a few times a month']
+    } else if (points < 300) {
+      return ['substantial', 'once or twice a month']
+    } else if (points < 1000) {
+      return ['high', 'a few times a year']
+    } else if (points < 3000) {
+      return ['very high', 'once a year']
+    } else {
+      return ['dangerously high', 'zero times per year']
+    }
+  }
 
   const saveForm = (
     <div className="input-group">
@@ -107,7 +126,7 @@ export const Calculator = (): React.ReactElement => {
         {showPoints ? points.toLocaleString() : '-'}
         -in-a-million ({tooManyPoints ? '>' : ''}
         {showPoints ? ((points / 1e6 || 0) * 100).toFixed(2) : '-'}%) chance of
-        getting COVID from this activity with these people.
+        getting COVID from this activity with these people:
       </p>
       <h1>
         {tooManyPoints ? '>' : ''}
@@ -120,6 +139,13 @@ export const Calculator = (): React.ReactElement => {
             ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
             : ''}
         </b>
+      </p>
+      <p className="readout">
+        If you have a budget of 10,000 microCOVIDs per year (1% chance of
+        COVID), this is a <b>{showPoints ? howRisky(points)[0] : '--'}</b> risk
+        activity and you could afford to do it{' '}
+        <b>{showPoints ? howRisky(points)[1] : '--'}</b> if you were not doing
+        much else.
       </p>
     </Card>
   )

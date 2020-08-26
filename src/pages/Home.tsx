@@ -39,7 +39,11 @@ export const Home = (): React.ReactElement => {
         <b>Donations</b>: This is an all-volunteer effort, with no current
         funding source, nor part of any existing organization. If you found our
         work helpful and want to send along a tip or a donation, we would truly
-        appreciate it. Please do so <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MC4NDX6RTR6Q&item_name=microCOVID+project&currency_code=USD&source=url">here</a>.
+        appreciate it. Please do so{' '}
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MC4NDX6RTR6Q&item_name=microCOVID+project&currency_code=USD&source=url">
+          here
+        </a>
+        .
       </p>
 
       <p>
