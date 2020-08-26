@@ -32,8 +32,8 @@ There’s a \`30%\` chance that I get sick directly from Alice. There’s a \`70
 We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.
 
 Here’s why isolating helps reduce this source of error:
-* Prompt isolation means it’s less likely I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
-* Even if Bob gets it, Bob and I can now start avoiding each other. Although it’s easy for Alice to give COVID to Bob before Alice has symptoms, it’s much much harder for Bob to pass it on to me _before Alice has symptoms_[^2].
+* Prompt isolation means it’s less likely[^isolation] I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
+* Even if Bob ends up getting sick, Bob and I can start avoiding each other immediately, as soon as Alice gets symptoms. Although it’s quite possible for Alice to give COVID to Bob before Alice has symptoms, it’s extremely unlikely for Bob to pass it on to me _before Alice has symptoms_[^2].
 
 As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
 
@@ -45,15 +45,15 @@ So long as the people in your “bubble” have some risk of getting infected fr
 
 In short, we think “closed quarantine bubbles” are a good strategy for very-low-risk groups who don’t venture outside the house often, but make less sense for larger bubbles with more exposure to the outside world.
 
-To spell it out a bit more: If nobody in your bubble has any exposure to other people or public spaces outside the bubble, then in fact you can count their Person Risk as very minimal[^3]. This isn’t a magical property of the bubble being closed per se; it’s a result of everyone only socializing with other people who also have very minimal Person Risk. Seeing a friend who lives completely alone and literally never leaves the house would also keep you at this same low risk level. The “closed bubble” framework is a way to coordinate around maintaining a very low risk level together.
+To spell it out a bit more: If nobody in your bubble has any exposure to other people or public spaces outside the bubble, then in fact you can count their Person Risk as very minimal[^3]. This isn’t a magical property of the bubble being "closed" per se; it’s a result of everyone only socializing with other people who also have very minimal Person Risk. Seeing a friend who lives completely alone and literally never leaves the house would also keep you at this same low risk level. The “closed bubble” framework is a way to coordinate around maintaining a very low risk level together.
 
 But if people in the bubble are doing things that expose them to others somewhat—going to work, grocery shopping, taking trips—then even if they aren’t meeting up for coffee, dates, or events with anyone outside the bubble, they still have some nonzero Person Risk, and you should multiply this with the Activity Risk of seeing them.
 
 This means that, if the people “in your bubble” have some exposure to the outside world, then reducing your _total_ amount of contact is likely more important than making sure you are only seeing people in your bubble.
 
-To summarize, _reducing your total amount of contact_ (and choosing to hang out infrequently with people who are also doing this) is for most people the most important way to stay safe.
+To summarize, _reducing your total amount of contact_ (and choosing to socialize only with other people who are also reducing _their_ total amount of contact) is (we think, for most people) the most important strategy for staying safe.
 
-**So if my housemate really wants to see a partner in another house, you believe it is sometimes better from a _risk_ standpoint _not_ to negotiate for the partner’s entire house to get added to our bubble?**
+**So if my housemate really wants to see a partner in another house, you believe it is sometimes better from a _risk_ standpoint _not_ to negotiate for the partner’s entire house to get added to a closed bubble with us?**
 
 Right! To illustrate, compare the following two scenarios:
 
@@ -64,7 +64,7 @@ Right! To illustrate, compare the following two scenarios:
     * One person is exposed to one other person. This is less overall contact.
     * Of course, if you choose not to make a “closed bubble” agreement, the partner might be doing other socializing of their own.
 
-Which strategy is less risky depends on which factor dominates: the partner’s other socializing, or every bubble member’s combined external exposure. This is why we think closed bubbles are the safer choice for people who are generally not working or going out at all, and reducing total contact is the safer choice for people who have a moderate amount of external exposure. We haven’t done the math on this yet, and we would be interested to see an analysis of this.
+Which strategy is less risky depends on which factor dominates: the partner’s other socializing, or every bubble member’s combined external exposure. This is why we think closed bubbles are the safer choice for people who are generally not working outside home or going out at all, and reducing total contact is the safer choice for people who have a moderate amount of external exposure. We haven’t done the math on this yet, and we would be interested to see an analysis of this.
 
 ### MOD: Masked, Outdoors, and Distance
 
@@ -212,7 +212,7 @@ In terms of qualitative scales, we like the following:
 [^2]: This is due to the fact that very little transmission occurs more than 2 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms. We ran a Monte Carlo simulation using the probability distributions from He and Ferretti and found that that only occurred 1% of the time. The broader picture isn’t quite that rosy due to the facts that people might not always correctly identify their symptoms and that some transmission occurs from people who will remain asymptomatic, but we still think the chance of second-hop infections within a careful household is manageably low.
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
-
+[^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.
 
 `
 
