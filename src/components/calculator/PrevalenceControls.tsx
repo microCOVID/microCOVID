@@ -1,3 +1,4 @@
+import { isNumber } from 'lodash'
 import React, { useState } from 'react'
 
 import {
@@ -6,7 +7,6 @@ import {
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
-import { isNumber } from 'lodash';
 
 const PrevalenceField: React.FunctionComponent<{
   label: string
@@ -35,14 +35,14 @@ const PrevalenceField: React.FunctionComponent<{
       readOnly={!isEditable}
       onChange={(e) => {
         if (isNumber(max) || isNumber(min)) {
-          let newValue = Number.parseFloat(e.target.value);
-          console.log(newValue);
-          newValue = (isNumber(max) && newValue > max) ? max : newValue;
-          newValue = (isNumber(min) && newValue < min) ? min : newValue;
-          console.log(newValue);
-          setter(newValue.toString());
+          let newValue = Number.parseFloat(e.target.value)
+          console.log(newValue)
+          newValue = isNumber(max) && newValue > max ? max : newValue
+          newValue = isNumber(min) && newValue < min ? min : newValue
+          console.log(newValue)
+          setter(newValue.toString())
         } else {
-          setter(e.target.value);
+          setter(e.target.value)
         }
       }}
     />
