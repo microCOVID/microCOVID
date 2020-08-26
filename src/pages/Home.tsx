@@ -27,7 +27,7 @@ export const Home = (): React.ReactElement => {
 	<ul>
 		<li>How we measure COVID infection risk, in units of “microCOVIDs”</li>
 		<li>How risky we think various common activities are</li>
-		<li>How you can estimate the COVID risk of your own actions (using our handy-dandy [COVID risk calculator](https://www.microcovid.org/calculator))</li>
+		<li>How you can estimate the COVID risk of your own actions (using our handy-dandy <a href = "https://www.microcovid.org/calculator">COVID risk calculator</a>)</li>
 		<li>And, most importantly, how to make decisions that balance freedom and fun with safety and health.</li>
 	</ul>
 
