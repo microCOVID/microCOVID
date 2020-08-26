@@ -37,25 +37,31 @@ export const Paper = (): React.ReactElement => {
   const prev = slugs[slugs.indexOf(id) - 1]
   const next = slugs[slugs.indexOf(id) + 1]
 
-  const navigation = (
-    <div className="navigation">
-      <span>
-        {prev && (
-          <Link to={`/paper/${prev}`}>
-            ← Previous: {pages[prev].shortTitle || pages[prev].title}
+  function Navigation() {
+    return (
+      <div className="navigation">
+        <span>
+          {prev && (
+            <Link to={`/paper/${prev}`}>
+              ← Previous: {pages[prev].shortTitle || pages[prev].title}
+            </Link>
+          )}
+        </span>
+
+        {next && (
+          <Link to={`/paper/${next}`} className="next">
+            Next: {pages[next].shortTitle || pages[next].title} →
           </Link>
         )}
-      </span>
-
-      {next && (
-        <Link to={`/paper/${next}`} className="next">
-          Next: {pages[next].shortTitle || pages[next].title} →
-        </Link>
-      )}
-    </div>
-  )
+      </div>
+    )
+  }
 
   const processed = { __html: processor.render(markdownContent) }
+
+  const [body, footnotes] = processed.__html.split(
+    '<!-- Footnotes themselves at the bottom. -->',
+  )
 
   return (
     <div id="paperPage">
@@ -64,13 +70,25 @@ export const Paper = (): React.ReactElement => {
       </div>
       <h1 id="pageTitle">{page.title}</h1>
 
-      {navigation}
+      <Navigation />
 
       <hr />
 
-      <div dangerouslySetInnerHTML={processed} />
+      <div dangerouslySetInnerHTML={{ __html: body }} />
 
-      {navigation}
+      <Navigation />
+
+      {footnotes ? (
+        [
+          <div
+            dangerouslySetInnerHTML={{ __html: footnotes }}
+            key="footnotes"
+          />,
+          <Navigation key="bottomNav" />,
+        ]
+      ) : (
+        <div />
+      )}
     </div>
   )
 }
