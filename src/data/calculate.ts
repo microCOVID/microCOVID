@@ -54,6 +54,8 @@ export const defaultValues: CalculatorData = {
 
 const ONE_MILLION = 1e6 // One 'full' COVID
 
+export const MAX_ACTIVITY_RISK = 0.48
+
 export const parsePopulation = (input: string): number =>
   Number(input.replace(/[^0-9.e]/g, ''))
 
@@ -152,6 +154,9 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       multiplier *= Voice[data.voice].multiplier
       multiplier *= (data.duration || 60) / 60.0
     }
+	if (multiplier > MAX_ACTIVITY_RISK) {
+	   multiplier = MAX_ACTIVITY_RISK
+	}
     return multiplier
   } catch {
     return null
