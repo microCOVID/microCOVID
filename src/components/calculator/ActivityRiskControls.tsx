@@ -14,6 +14,7 @@ import {
   Voice,
   YourMask,
 } from 'data/data'
+import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
 export const ActivityRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -38,7 +39,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         <span className="readout">
           The <i>second</i> part of the calculation is Activity Risk: assuming 1
           such person has COVID, then you would have a{' '}
-          <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance of getting
+          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
           COVID.
         </span>
         <div className="empty">
@@ -114,7 +115,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         <p>
           The <i>second</i> part of the calculation is Activity Risk: assuming 1
           person at this activity has COVID, then you would have a{' '}
-          <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance of getting
+          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
           COVID.
           <b>
             {activityRisk && activityRisk >= MAX_ACTIVITY_RISK

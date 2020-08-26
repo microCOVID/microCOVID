@@ -13,11 +13,11 @@ import {
   defaultValues,
   parsePopulation,
 } from 'data/calculate'
+import { fixedPointPrecision, fixedPointPrecisionPercent } from 'data/FormatPrecision';
 import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
-const SIGFIGS = 2;
 
 export const Calculator = (): React.ReactElement => {
   const previousData = JSON.parse(
@@ -101,22 +101,8 @@ export const Calculator = (): React.ReactElement => {
     </span>
   )
 
-  // Format points for display - fixed point with a set precision.
-  // This is necessary because float.toPrecision will use exponential notation for large or small numbers.
-  function fixedPointPrecision(val: number): string {
-    if (val === 0) {
-      return '0';
-    }
-    const orderOfMagnitude = Math.floor(Math.log10(val));
-    const orderOfMangitudeToDisplay = orderOfMagnitude - SIGFIGS + 1;
-    const decimalsToDisplay = orderOfMangitudeToDisplay > 0 ? 0 : - orderOfMangitudeToDisplay;
-    
-    const roundedValue = Number.parseFloat(val.toPrecision(SIGFIGS));
-    return roundedValue.toFixed(decimalsToDisplay);
-  }
-
   const displayPoints = showPoints ? fixedPointPrecision(points) : '-';
-  const displayPercent = showPoints ? fixedPointPrecision((points / 1e6 || 0) * 100) : '-';
+  const displayPercent = showPoints ? fixedPointPrecisionPercent(points * 1e-6) : '-%';
 
   const pointsDisplay = (
     <Card title="Result">
@@ -124,7 +110,7 @@ export const Calculator = (): React.ReactElement => {
         In total, you have a {tooManyPoints ? '>' : ''}
         {displayPoints}
         -in-a-million ({tooManyPoints ? '>' : ''}
-        {displayPercent}%) chance of
+        {displayPercent}) chance of
         getting COVID from this activity with these people.
       </p>
       <h1>
