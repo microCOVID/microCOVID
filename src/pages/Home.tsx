@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const Home = (): React.ReactElement => {
   return (
@@ -17,28 +18,32 @@ export const Home = (): React.ReactElement => {
       <p>
         This website contains three outputs of our investigation:{' '}
         <b>
-          a <a href="/calculator">calculator</a> that you can use to calculate
-          your COVID risk, a <a href="/paper">white paper</a> that explains our
-          estimation method, and a <a href="/spreadsheet/">spreadsheet</a> to
+          a <Link to="/calculator">calculator</Link> that you can use to calculate
+          your COVID risk, a <Link to="/paper">white paper</Link> that explains our
+          estimation method, and a <Link to="/spreadsheet/">spreadsheet</Link> to
           compute your COVID risk in more detail and to track your risk over
           time.
         </b>
       </p>
       <p>
-        You should start with either the <a href="/calculator">calculator</a> or
-        the <a href="/paper">white paper</a>.
+        You should start with either the <Link to="/calculator">calculator</Link> or
+        the <Link to="/paper">white paper</Link>.
       </p>
 
       <h2>Thanks!</h2>
       <p>
         <b>Contact us</b>: If you have any feedback, questions, or would like to
-        help out, please contact us <a href="/contact">here</a>.
+        help out, please contact us <Link to="/contact">here</Link>.
       </p>
       <p>
         <b>Donations</b>: This is an all-volunteer effort, with no current
         funding source, nor part of any existing organization. If you found our
         work helpful and want to send along a tip or a donation, we would truly
-        appreciate it. Please do so <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MC4NDX6RTR6Q&item_name=microCOVID+project&currency_code=USD&source=url">here</a>.
+        appreciate it. Please do so{' '}
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MC4NDX6RTR6Q&item_name=microCOVID+project&currency_code=USD&source=url">
+          here
+        </a>
+        .
       </p>
 
       <p>
