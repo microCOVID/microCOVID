@@ -2,15 +2,14 @@ import React from 'react'
 
 export const Home = (): React.ReactElement => {
   return (
-    <div id="paperPage" style={{fontSize: '16px', lineHeight: '30px'}}>
+    <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
       <h2>What is the microCOVID project?</h2>
       <p>
         This is a project to quantitatively estimate the COVID risk to you from
-        your ordinary daily activities.
-        We trawled the scientific literature for data about the likelihood of
-        getting COVID from different situations, and combined the data into a
-        model that people can use.
-        We estimate COVID risk in units of microCOVIDs, where 1 microCOVID = a
+        your ordinary daily activities. We trawled the scientific literature for
+        data about the likelihood of getting COVID from different situations,
+        and combined the data into a model that people can use. We estimate
+        COVID risk in units of microCOVIDs, where 1 microCOVID = a
         one-in-a-million chance of getting COVID.
       </p>
 
@@ -30,7 +29,7 @@ export const Home = (): React.ReactElement => {
         the <a href="/paper">white paper</a>.
       </p>
 
-	  <h3>Thanks!</h3>
+      <h2>Thanks!</h2>
       <p>
         <b>Contact us</b>: If you have any feedback, questions, or would like to
         help out, please contact us <a href="/contact">here</a>.

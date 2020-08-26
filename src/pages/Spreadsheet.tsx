@@ -3,7 +3,7 @@ import React from 'react'
 export const Spreadsheet = (): React.ReactElement => {
   return (
     <div id="paperPage">
-	<h1>Spreadsheet</h1>
+      <h1>Spreadsheet</h1>
       <p>
         The{' '}
         <a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ">
@@ -25,8 +25,8 @@ export const Spreadsheet = (): React.ReactElement => {
             The spreadsheet makes it easy to add up the activities.
           </li>
           <li>
-            The second is to <b>track your own microCOVIDs</b> over a
-            longer period of time. You might do this for a few reasons:
+            The second is to <b>track your own microCOVIDs</b> over a longer
+            period of time. You might do this for a few reasons:
             <ul>
               <li>assessing your own risk,</li>
               <li>

@@ -8,6 +8,7 @@ import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
+  MAX_POINTS,
   calculate,
   defaultValues,
   parsePopulation,
@@ -69,6 +70,7 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.interaction,
   )
   const showPoints = points >= 0
+  const tooManyPoints = points >= MAX_POINTS
 
   const saveForm = (
     <div className="input-group">
@@ -101,15 +103,24 @@ export const Calculator = (): React.ReactElement => {
   const pointsDisplay = (
     <Card title="Result">
       <p className="readout">
-        In total, you have a {showPoints ? points.toLocaleString() : '-'}
-        -in-a-million (
+        In total, you have a {tooManyPoints ? '>' : ''}
+        {showPoints ? points.toLocaleString() : '-'}
+        -in-a-million ({tooManyPoints ? '>' : ''}
         {showPoints ? ((points / 1e6 || 0) * 100).toFixed(2) : '-'}%) chance of
         getting COVID from this activity with these people.
       </p>
       <h1>
+        {tooManyPoints ? '>' : ''}
         {showPoints ? points.toLocaleString() : '-'} microCOVIDs
         {repeatedEvent && '/week'}
       </h1>
+      <p>
+        <b>
+          {showPoints && tooManyPoints
+            ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
+            : ''}
+        </b>
+      </p>
     </Card>
   )
 

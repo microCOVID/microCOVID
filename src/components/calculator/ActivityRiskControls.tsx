@@ -36,8 +36,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
           source={Interaction}
         />
         <span className="readout">
-          Activity Risk: <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance
-          of getting COVID from one person who currently has COVID
+          The <i>second</i> part of the calculation is Activity Risk: assuming 1
+          such person has COVID, then you would have a{' '}
+          <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance of getting
+          COVID.
         </span>
         <div className="empty">
           When estimating your risk of infection from a household member or
