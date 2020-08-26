@@ -5,7 +5,7 @@ import markdownItLinkAttributes from 'markdown-it-link-attributes'
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-import { pages } from 'paper/index'
+import { pages } from '../paper/index'
 
 const processor = new MarkdownIt({
   html: true,

@@ -1,3 +1,5 @@
+import positiveTestRate from './img/positive-test-rate.png';
+
 const title = 'Research Sources'
 
 const content = `
@@ -85,7 +87,7 @@ In order to make suggestions about underreporting factor, we threw together a qu
 
 There was a visible correlation, so we eyeballed some approximate ranges. Here's the data we see, with a simple linear regression line drawn on top. We eyeball this as being roughly "1 in 6" on the left-hand side; "1 in 8" in the middle; and "1 in 10" on the right-hand side.
 
-![Positive test rate](/paper/positive-test-rate.png)
+![Positive test rate](${positiveTestRate})
 
 One question that came up is whether we're overestimating the _contagious_ cases, because asymptomatic cases are probably a high proportion of all cases (a literature review Oran et 40 al. estimates 40-45%) and _especially_ a high proportion of _unreported_ cases, but they are resposible for a much lower proportion of infections ([Ferretti et al.](https://science.sciencemag.org/content/368/6491/eabb6936) concluded 5%). Our data about transmission likelihood (Activity Risk) are probably drawn from mostly symptomatic index cases, which suggests that asymptomatic cases should count for "less" in the prevalence numbers, which would decrease the effective underreporting factor.
 
