@@ -154,9 +154,9 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       multiplier *= Voice[data.voice].multiplier
       multiplier *= (data.duration || 60) / 60.0
     }
-	if (multiplier > MAX_ACTIVITY_RISK) {
-	   multiplier = MAX_ACTIVITY_RISK
-	}
+    if (multiplier > MAX_ACTIVITY_RISK) {
+      multiplier = MAX_ACTIVITY_RISK
+    }
     return multiplier
   } catch {
     return null

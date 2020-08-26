@@ -11,7 +11,9 @@ import {
 
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
+import { ActivityLog } from 'pages/ActivityLog'
 import { Calculator } from 'pages/Calculator'
+import { Contact } from 'pages/Contact'
 import { Home } from 'pages/Home'
 import { Paper } from 'pages/Paper'
 
@@ -65,12 +67,22 @@ export const App = (): React.ReactElement => {
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                  <a
-                    href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ"
+                  <NavLink
+                    to="/activitylog"
                     className="nav-link"
+                    activeClassName="active"
                   >
-                    Activity Log
-                  </a>
+                    Spreadsheet
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    to="/contact"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Contact Us
+                  </NavLink>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
@@ -85,6 +97,12 @@ export const App = (): React.ReactElement => {
             </Route>
             <Route exact path="/paper">
               <Redirect to="/paper/1-intro" />
+            </Route>
+            <Route path="/activitylog">
+              <ActivityLog />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
             <Route path="/">
               <Home />
