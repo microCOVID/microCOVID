@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Contact = (): React.ReactElement => {
   return (
@@ -8,9 +9,18 @@ export const Contact = (): React.ReactElement => {
       <p>
         If there is something you think should be <b>changed or improved</b>,
         you can submit an{' '}
-        <a href="https://github.com/microcovid/microcovid/issues">issue</a> on
-        github, or email us at{' '}
-        <a href="mailto: info@microcovid.org">info@microcovid.org</a>.
+        <a
+          href="https://github.com/microcovid/microcovid/issues"
+          target="_blank"
+          rel="noreferrer"
+        >
+          issue
+        </a>{' '}
+        on github, or email us at{' '}
+        <a href="mailto: info@microcovid.org" target="_blank" rel="noreferrer">
+          info@microcovid.org
+        </a>
+        .
       </p>
       <p>
         That said: if you're up for it, we would be delighted if want to take a
@@ -18,13 +28,23 @@ export const Contact = (): React.ReactElement => {
         <ul>
           <li>
             This project is hosted on{' '}
-            <a href="https://github.com/microcovid/microcovid">github</a>. We
-            welcome all types of improvements.
+            <a
+              href="https://github.com/microcovid/microcovid"
+              target="_blank"
+              rel="noreferrer"
+            >
+              github
+            </a>
+            . We welcome all types of improvements.
           </li>
           <li>
             You don't need to know how to code. Similar to a wiki, you can edit
             the text{' '}
-            <a href="https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository">
+            <a
+              href="https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-another-users-repository"
+              target="_blank"
+              rel="noreferrer"
+            >
               directly on github
             </a>{' '}
             in your browser; this will propose a change which we will review
@@ -35,11 +55,13 @@ export const Contact = (): React.ReactElement => {
       <h3>Questions</h3>
       <p>
         If you have a question or something is confusing, and it's not in the
-        relevant section of the <a href="/paper">white paper</a> or the{' '}
-        <a href="/paper/13-q-and-a">Q&A</a> section, then drop us a line at{' '}
-        <a href="mailto: info@microcovid.org">info@microcovid.org</a> and we
-        would be glad to help you out! We love helping more people use our
-        system.
+        relevant section of the <Link to="/paper">white paper</Link> or the{' '}
+        <Link to="/paper/13-q-and-a">Q&A</Link> section, then drop us a line at{' '}
+        <a href="mailto: info@microcovid.org" target="_blank" rel="noreferrer">
+          info@microcovid.org
+        </a>{' '}
+        and we would be glad to help you out! We love helping more people use
+        our system.
       </p>
       <h3>Gratitude</h3>
       <p>

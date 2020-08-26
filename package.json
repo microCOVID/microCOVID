@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint src",
+    "fix": "eslint src --fix",
     "typecheck": "tsc"
   },
   "browserslist": {
