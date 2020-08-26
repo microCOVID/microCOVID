@@ -1,6 +1,6 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export const Footer = (): React.ReactElement => (
   <footer className="footer">

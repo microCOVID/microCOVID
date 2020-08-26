@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { isNumber } from 'lodash'
+import React, { useEffect, useState } from 'react'
 
 import {
   CalculatorData,
@@ -89,15 +89,15 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   // Load stored location from localstorage
   useEffect(() => {
-    const storedTopLocation = localStorage.getItem('topLocation');
-    const storedSubLocation = localStorage.getItem('subLocation');
+    const storedTopLocation = localStorage.getItem('topLocation')
+    const storedSubLocation = localStorage.getItem('subLocation')
     if (storedTopLocation) {
-      setTopLocation(storedTopLocation);
+      setTopLocation(storedTopLocation)
     }
     if (storedSubLocation) {
-      setSubLocation(storedSubLocation);
+      setSubLocation(storedSubLocation)
     }
-  }, []);
+  }, [])
 
   const setLocationData = (selectedValue: string) => {
     const locationData = Locations[selectedValue]
@@ -151,11 +151,11 @@ export const PrevalenceControls: React.FunctionComponent<{
           className="form-control form-control-lg"
           value={topLocation}
           onChange={(e) => {
-            setTopLocation(e.target.value);
-            localStorage.setItem('topLocation', e.target.value);
-            setSubLocation('');
-            localStorage.setItem('subLocation', '');
-            setLocationData(e.target.value);
+            setTopLocation(e.target.value)
+            localStorage.setItem('topLocation', e.target.value)
+            setSubLocation('')
+            localStorage.setItem('subLocation', '')
+            setLocationData(e.target.value)
           }}
         >
           <option value="">Select location or enter data...</option>
@@ -177,7 +177,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             value={subLocation}
             onChange={(e) => {
               setSubLocation(e.target.value)
-              localStorage.setItem('subLocation', e.target.value);
+              localStorage.setItem('subLocation', e.target.value)
               if (e.target.value === '') {
                 setLocationData(topLocation)
               } else {

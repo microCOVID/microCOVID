@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export const Home = (): React.ReactElement => {
   return (
@@ -18,16 +18,17 @@ export const Home = (): React.ReactElement => {
       <p>
         This website contains three outputs of our investigation:{' '}
         <b>
-          a <Link to="/calculator">calculator</Link> that you can use to calculate
-          your COVID risk, a <Link to="/paper">white paper</Link> that explains our
-          estimation method, and a <Link to="/spreadsheet/">spreadsheet</Link> to
-          compute your COVID risk in more detail and to track your risk over
-          time.
+          a <Link to="/calculator">calculator</Link> that you can use to
+          calculate your COVID risk, a <Link to="/paper">white paper</Link> that
+          explains our estimation method, and a{' '}
+          <Link to="/spreadsheet/">spreadsheet</Link> to compute your COVID risk
+          in more detail and to track your risk over time.
         </b>
       </p>
       <p>
-        You should start with either the <Link to="/calculator">calculator</Link> or
-        the <Link to="/paper">white paper</Link>.
+        You should start with either the{' '}
+        <Link to="/calculator">calculator</Link> or the{' '}
+        <Link to="/paper">white paper</Link>.
       </p>
 
       <h2>Thanks!</h2>

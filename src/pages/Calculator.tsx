@@ -13,7 +13,10 @@ import {
   defaultValues,
   parsePopulation,
 } from 'data/calculate'
-import { fixedPointPrecision, fixedPointPrecisionPercent } from 'data/FormatPrecision';
+import {
+  fixedPointPrecision,
+  fixedPointPrecisionPercent,
+} from 'data/FormatPrecision'
 import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
@@ -58,7 +61,7 @@ export const Calculator = (): React.ReactElement => {
       return -1
     }
 
-    return computedValue;
+    return computedValue
   }, [calculatorData])
 
   const prevalenceIsFilled =
@@ -120,8 +123,10 @@ export const Calculator = (): React.ReactElement => {
     </span>
   )
 
-  const displayPoints = showPoints ? fixedPointPrecision(points) : '-';
-  const displayPercent = showPoints ? fixedPointPrecisionPercent(points * 1e-6) : '-%';
+  const displayPoints = showPoints ? fixedPointPrecision(points) : '-'
+  const displayPercent = showPoints
+    ? fixedPointPrecisionPercent(points * 1e-6)
+    : '-%'
 
   const pointsDisplay = (
     <Card title="Result">
@@ -129,8 +134,8 @@ export const Calculator = (): React.ReactElement => {
         In total, you have a {tooManyPoints ? '>' : ''}
         {displayPoints}
         -in-a-million ({tooManyPoints ? '>' : ''}
-        {displayPercent}) chance of
-        getting COVID from this activity with these people.
+        {displayPercent}) chance of getting COVID from this activity with these
+        people.
       </p>
       <h1>
         {tooManyPoints ? '>' : ''}
