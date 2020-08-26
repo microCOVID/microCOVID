@@ -34,7 +34,7 @@ If you would like to skip ahead, please first read the following takeaways that 
 If you would like to understand how we use the basic, intermediate, and advanced methods to calculate Person Risk, read on.
 
 
-Skip ahead to [Putting it all together](/paper/9-putting-it-all-together)\u23E9, or read on about the [Basic Method](/paper/7-basic-method)\u27A1 for more detail.
+Skip ahead to [Putting it all together](/paper/9-putting-it-all-together), or read on about the [Basic Method](/paper/7-basic-method) for more detail.
 
 [^4]:
      Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won’t get tested if you don’t show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
