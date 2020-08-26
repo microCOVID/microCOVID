@@ -55,6 +55,7 @@ export const defaultValues: CalculatorData = {
 const ONE_MILLION = 1e6 // One 'full' COVID
 
 export const MAX_ACTIVITY_RISK = 0.48
+export const MAX_POINTS = 100000
 
 export const parsePopulation = (input: string): number =>
   Number(input.replace(/[^0-9.e]/g, ''))
@@ -190,6 +191,10 @@ export const calculate = (data: CalculatorData): number | null => {
       if (activityRisk != null) {
         points *= activityRisk
       }
+    }
+
+    if (points > MAX_POINTS) {
+      points = MAX_POINTS
     }
 
     return points

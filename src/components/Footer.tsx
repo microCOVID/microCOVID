@@ -1,5 +1,6 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const Footer = (): React.ReactElement => (
   <footer className="footer">
@@ -13,13 +14,13 @@ export const Footer = (): React.ReactElement => (
       </a>
       <p>
         <span property="dct:title">microCOVID Project</span> by{' '}
-        <a
-          href="https://www.microcovid.org/paper/1-intro#authors"
+        <Link
+          to="/paper/1-intro#authors"
           property="cc:attributionName"
           rel="cc:attributionURL"
         >
           the Ibasho community
-        </a>
+        </Link>
         {' is licensed under a '}
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           Creative Commons Attribution 4.0 International License

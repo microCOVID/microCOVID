@@ -4,7 +4,7 @@ const content = `
 
 You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But *just how much* do these things help? How big a deal is it if you remove your mask when hanging out with a friend? What happens if you get closer than 6 feet? Bars and restaurants are opening, but is it safe to go inside? It’s tough to make good choices when you don’t know how large or small the risks really are.
 
-We, the authors, were really struggling with this. We wanted a rigorous way to make decisions about COVID risk. So we did some research and crunched some numbers. We trawled the scientific literature for data. We spent hours estimating the COVID risk of various activities. And in this writeup, we’ll share our research (and some practical tools!) with you. 
+We, the authors, were really struggling with this. We wanted a rigorous way to make decisions about COVID risk. So we did some research and crunched some numbers. We trawled the scientific literature for data. We spent hours estimating the COVID risk of various activities. And in this writeup, we’ll share our research (and some practical tools!) with you.
 
 
 We’ll show you:
@@ -30,7 +30,7 @@ _This article (and corresponding calculator) was collaboratively written by the 
 
 _We have based our numbers in this writeup on scientific research. However, unlike a medical or scientific standard of evidence, we state our best guess based on available evidence, even when that evidence is far from conclusive. Our goal in doing so is to enable ordinary people to do back-of-the-envelope calculations to make personal decisions. For scientific data, please see the [Research Sources](/paper/14-research-sources) that we have used in forming our guesses._
 
-_None of us are epidemiologists. Please continue to follow government guidance._
+_None of us are epidemiologists. This work has not been scientifically peer-reviewed. Please continue to follow government guidance._
 
 
 ## Authors:

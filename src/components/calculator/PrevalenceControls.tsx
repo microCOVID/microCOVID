@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { isNumber } from 'lodash'
 
 import {
   CalculatorData,
@@ -14,6 +15,8 @@ const PrevalenceField: React.FunctionComponent<{
   setter: (newValue: string) => void
   inputType: string
   isEditable: boolean
+  max?: number
+  min?: number
 }> = ({
   label,
   value,
@@ -21,6 +24,8 @@ const PrevalenceField: React.FunctionComponent<{
   unit,
   inputType,
   isEditable,
+  max,
+  min,
 }): React.ReactElement => {
   let body: React.ReactElement = (
     <input
@@ -28,7 +33,18 @@ const PrevalenceField: React.FunctionComponent<{
       type={inputType}
       value={value}
       readOnly={!isEditable}
-      onChange={(e) => setter(e.target.value)}
+      onChange={(e) => {
+        if (isNumber(max) || isNumber(min)) {
+          let newValue = Number.parseFloat(e.target.value)
+          console.log(newValue)
+          newValue = isNumber(max) && newValue > max ? max : newValue
+          newValue = isNumber(min) && newValue < min ? min : newValue
+          console.log(newValue)
+          setter(newValue.toString())
+        } else {
+          setter(e.target.value)
+        }
+      }}
     />
   )
   if (unit) {
@@ -216,6 +232,8 @@ export const PrevalenceControls: React.FunctionComponent<{
           setter({ ...data, positiveCasePercentage: Number(value) })
         }
         inputType="number"
+        max={100}
+        min={0}
         isEditable={topLocation === ''}
       />
       <p>

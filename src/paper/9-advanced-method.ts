@@ -6,6 +6,8 @@ To get an even more accurate estimate for Person Risk, we can actually add up th
 
 The **Advanced Method** is to add up the risk of each individual activity that person has done recently.
 
+The [spreadsheet](/spreadsheet) is a tool that can help you add up activities in the Advanced Method.
+
 Just like you can calculate this for each of your actions, you can also calculate it for your friend’s actions, using the same formula:
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
@@ -26,39 +28,6 @@ For socializing, just estimate each social activity in microCOVIDs (using “Cos
 
 Errands include grocery shopping, transit, and other public settings. These can be harder to estimate individually; we have some guidelines in the [Q&A](/paper/13-q-and-a).
 
-
-
-**Person Risk example**
-
-Let’s work through a quick example to compare the different approaches for estimating Person Risk.
-
-Reasonable Rosie lives with one roommate in San Francisco and works from home. Rosie rides the bus to the park and also grocery shops once a week in a well-fitting cloth mask. Nobody else visits Rosie’s apartment, and she doesn’t hang out with anyone else indoors. She went on 5 separate 1.5 hour masked outdoor walks with friends over the past ten days. For simplicity, we’ll assume her roommate does the exact same set of activities that she does.
-
-You’re planning to hang out with Rosie and want to know her Person Risk, so you can know what precautions to take. You calculate:
-
-
-
-*   Basic method: **5106** Person Risk.
-    *   Because we estimate the San Francisco prevalence of COVID infection (at the time of writing) as 5106-in-a-million. This would change if prevalence changed.
-*   Intermediate method: **2553** Person Risk.
-    *   Rosie is _not_ an essential worker, so we can reduce our estimate by the Essential Work Factor of 1/2.
-*   Advanced method with a rule-of-thumb measurement of COVID risk from errands: **381** Person Risk
-    *   _Remember, here you’re calculating **Rosie’s own** risk of getting COVID from **her** activities, in microCOVIDs, which you can then use in calculating your risk of getting COVID from her._
-    *   Using the rule of thumb suggested above, calculate Rosie’s grocery shopping and bus riding at 10% of the Intermediate method estimate of **2553**, which contributes 255 microCOVIDs to her total.
-    *   Each walk starts with a 6% Activity Risk (for one-time contact per hour) times 1.5 hours, and then gets a decrease of 2x for Rosie’s mask, 4x for her friend’s mask, and 10x for being outdoors. We’ll treat the friends as average residents. Five walks in the past ten days adds up to 0.06/hr ⨉ 1.5hr ⨉ 5 ⨉ 5106 ⨉ (1/2) ⨉ (1/4) ⨉ (1/10) = 29 microCOVIDs.
-    *   So Rosie’s errands plus her walks gives her a risk of 255 + 29 = 284 microCOVIDs (or 284-in-a-million chance of catching COVID).
-    *   If Rosie’s roommate did the same things (grocery shopping, bus riding, five walks with friends), then Rosie’s roommate’s risk of getting COVID, in microCOVIDs, (_due to sources other than Rosie)_ is the same: 284. Multiply this by the 30% Activity Risk of being a roommate and you learn that Rosie’s roommate poses a risk to Rosie of 0.30 x 293 = 85 microCOVIDs.[^13]
-
-
-    *   So the total COVID risk for Rosie, based on her behaviors, is 255 + 29 + 85 = 369 microCOVIDs. Now you can use this number as the “Person Risk” when you’re calculating your own chance of getting COVID from Rosie.
-
-One thing you will notice is that when we re-compute the Person Risk used for a hangout with Rosie via more detailed methods, we get substantially smaller numbers. This is because the Basic and Intermediate method both assume Rosie is about average, which is not true. The more you know about a person’s behavior, the more accurate your estimate can be. In some cases it might go up, in other cases it might go down.
-
-With a total COVID risk of 369 microCOVIDs, Rosie is being more cautious than average![^14] It’s also possible we’re still _over_estimating her risk, even using the Advanced Method. She may be incurring less risk from errands than the 10% rule of thumb suggests, and if her friends are similar to her, then they are probably more cautious than average as well, which would reduce her COVID risk from socializing.
-
-In our [calculator](/calculator) we’ve provided some Person Risk Profiles that were made using the Advanced Method. You can use as a starting point to create your own calculations.
-
-Now that we’ve looked at Person Risk, we can combine it with Activity Risk to get the cost in microCOVIDs of a given activity. Hooray, you made it!
 
 
 [^4]:
@@ -86,7 +55,7 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
      We derive this from data about US essential workers, and from a blanket testing initiative in the Mission District in San Francisco. First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/) showing that around 55 million people in the US are essential workers (38% of workforce and 17% of the population); we sanity-check this against [another source](https://bayareaequityatlas.org/essential-workers) citing 28% of workers in the Bay Area are essential workers. In [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)’s blanket testing survey of residents in the Mission District in San Francisco, they found a positive test rate of 5% among frontline service workers and 0.8% among non-frontline workers (6.27x higher for frontline workers). The overall prevalence is a population-weighted average: \`prevalence_total = 0.17 x p_essential + 0.83 x (p_essential / 6.27)\`. From this we compute \`p_essential = 3.3 x prevalence_total\`. We round off to 3x for essential workers, and 0.5x for all others.
 
 [^12]:
-     The reason we care most about their activities between 2–9 days ago is because that is the most likely range of time intervals between infections ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) “generation time”).
+     The reason we care most about their activities between 2–9 days ago is because that is the most likely range of time intervals between infections. ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph; [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) “generation time”). See [Research Sources](/paper/14-research-sources) for graphs and more about the infectious period.
 
 `
 

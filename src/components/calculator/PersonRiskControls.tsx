@@ -51,7 +51,7 @@ export const PersonRiskControls: React.FunctionComponent<{
     <React.Fragment>
       <header id="person-risk">Step 2 - Person Risk</header>
       <div className="form-group">
-        <label htmlFor="personCount">Number of people</label>
+        <label htmlFor="personCount">Number of people near you</label>
         <input
           className="form-control form-control-lg"
           type="number"

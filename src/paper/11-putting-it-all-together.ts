@@ -20,14 +20,14 @@ In the [calculator](/calculator) we display both the Person Risk for _each_ pers
 ## An example of combining Activity Risk and Person Risk to get a total Cost
 
 
-Let’s say you would like to hang out with Reasonable Rosie (from an earlier example), whose Person Risk is 369 using the Advanced Method. An indoors meetup has a 6% Activity Risk per hour, so it costs you 6% per hour ⨉ 1.5 hours ⨉ 369 Person Risk = **33 microCOVIDs**.
+Let’s say you would like to spend an afternoon catching up with Reasonable Rosie (from an earlier example), whose Person Risk is 217 using the Advanced Method. An indoors meetup has a 6% Activity Risk per hour, so it costs you 6% per hour ⨉ 2 hours ⨉ 369 Person Risk = **26 microCOVIDs**.
 
-<p class="calloutText">33 microCOVIDs = 6% per hour (Activity Risk) ⨉ 1.5 hr ⨉ 369 (Person Risk)</p>
+<p class="calloutText">26 microCOVIDs = 6% per hour (Activity Risk) ⨉ 2 hr ⨉ 217 (Person Risk)</p>
 
-If you both wear masks, it costs you 8x less: only **4 microCOVIDs.** And if you hang out outside instead of inside, it costs you _an additional_ 20x less, for just 0.2 microCOVIDs (**less than 1 microCOVID!**) \
+If you both wear masks, it costs you 8x less: only **3 microCOVIDs.** And if you hang out outside instead of inside, it costs you _an additional_ 20x less, for just 0.2 microCOVIDs (**less than 1 microCOVID!**) \
 
 
-<p class="calloutText">0.2 microCOVIDs = 6% per hour ⨉ 1.5 hr ⨉ (1/8 masks) ⨉ (1/20 outdoors) ⨉ 369 (Person Risk)</p>
+<p class="calloutText">0.2 microCOVIDs = 6% per hour ⨉ 2 hr ⨉ (1/8 masks) ⨉ (1/20 outdoors) ⨉ 217 (Person Risk)</p>
 
 
 Should you do these activities? It depends on how important you believe it is to avoid COVID (for your own health, and to protect others), and how important seeing Rosie is to you!

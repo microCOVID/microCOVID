@@ -3,7 +3,7 @@ const title = 'Q&A'
 const content = `
 
 # General Q&A
-**If there’s a precaution I don’t see a multiplier for here, should I still do it?**
+### If there’s a precaution I don’t see a multiplier for here, should I still do it?
 
 Yes, definitely! The most important such precaution, in our opinion, is communication around symptoms:
 - Ask people _directly and clearly_ if they have any symptoms, _right before_ hanging out with them. Even if they only have “mild” symptoms that seem like “nothing to worry about,” consider if you can take a rain check, or at least MODify your hangout.
@@ -14,11 +14,11 @@ Other important precautions include washing & sanitizing your hands, covering yo
 
 # Activity Risk Q&A
 
-**What if I hang out with someone indoors for a long time? If we hang out for 5 hours, that’s an Activity Risk of 6% ⨉ 5 = 30%, which is the same risk as for a household member.**
+### What if I hang out with someone indoors for a long time? If we hang out for 5 hours, that’s an Activity Risk of 6% ⨉ 5 = 30%, which is the same risk as for a household member.
 
 In the case of a long indoor hangout, we suggest just to cap the total Activity Risk at the household member number (30%). Or if you’re cuddling or being intimate, cap the total Activity Risk at 48% as mentioned above for spouse/partner. These are not particularly principled answers. As we’ve mentioned in footnotes before, the ability to just add microCOVIDs (rather than multiplying probabilities) starts to break down as probabilities get larger. Additionally, the data we’re basing our guesses off is more relevant to the smaller risks that we more commonly see with typical activities. Certainly don’t use an Activity Risk larger than 100% for anything.
 
-**If you live with multiple people, do you account for the additional risk of a longer infection chain?**
+### If you live with multiple people, do you account for the additional risk of a longer infection chain?
 
 No. We’ll explain what this means and why we don’t account for it.
 
@@ -33,13 +33,13 @@ We currently don’t model this effect, and we think that’s pretty safe if (an
 
 Here’s why isolating helps reduce this source of error:
 * Prompt isolation means it’s less likely[^isolation] I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
-* Even if Bob ends up getting sick, Bob and I can start avoiding each other immediately, as soon as Alice gets symptoms. Although it’s quite possible for Alice to give COVID to Bob before Alice has symptoms, it’s extremely unlikely for Bob to pass it on to me _before Alice has symptoms_[^2].
+* Even if Bob ends up getting sick, Bob and I can start avoiding each other immediately, as soon as Alice gets symptoms. Although it’s quite possible for Alice to give COVID to Bob before Alice has symptoms, it’s much less likely for Bob to pass it on to me _before Alice has symptoms_[^2].
 
 As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
 
 Of note here: while full isolation is the gold standard for reducing infection risk, it’s useful to also have some lighter-weight tools that you can deploy if you’re uneasy about infection risk for some reason but not uneasy enough to find hard isolation to be worth the (admittedly considerable) social and practical costs. Extrapolating from the MOD factors, we think wearing a mask around the house for several days probably reduces your risk of infecting your housemates by about 4x, which is a lot of protection to get from a relatively simple intervention. In the authors’ household we deploy this one if we’re feeling at all unusual, even if the symptoms (such as a scratchy throat) aren’t suggestive of COVID; or if we’ve recently done something moderately higher-risk than usual.
 
-**Why do I need to account for my household members? I thought it was “free” to hang out with people as often as I want, so long as they’re all in the same “bubble”?**
+### Why do I need to account for my household members? I thought it was “free” to hang out with people as often as I want, so long as they’re all in the same “bubble”?
 
 So long as the people in your “bubble” have some risk of getting infected from anywhere, the risk they pose to you contributes to your total microCOVIDs.
 
@@ -53,7 +53,7 @@ This means that, if the people “in your bubble” have some exposure to the ou
 
 To summarize, _reducing your total amount of contact_ (and choosing to socialize only with other people who are also reducing _their_ total amount of contact) is (we think, for most people) the most important strategy for staying safe.
 
-**So if my housemate really wants to see a partner in another house, you believe it is sometimes better from a _risk_ standpoint _not_ to negotiate for the partner’s entire house to get added to a closed bubble with us?**
+### So if my housemate really wants to see a partner in another house, you believe it is sometimes better from a risk standpoint not to negotiate for the partner’s entire house to get added to a closed bubble with us?
 
 Right! To illustrate, compare the following two scenarios:
 
@@ -66,13 +66,13 @@ Right! To illustrate, compare the following two scenarios:
 
 Which strategy is less risky depends on which factor dominates: the partner’s other socializing, or every bubble member’s combined external exposure. This is why we think closed bubbles are the safer choice for people who are generally not working outside home or going out at all, and reducing total contact is the safer choice for people who have a moderate amount of external exposure. We haven’t done the math on this yet, and we would be interested to see an analysis of this.
 
-### MOD: Masked, Outdoors, and Distance
+##  MOD: Masked, Outdoors, and Distance
 
-**I was told to wear masks to protect others, not myself. Do masks actually protect me?**
+### I was told to wear masks to protect others, not myself. Do masks actually protect me?
 
 Yes! Cloth masks and surgical masks protect others more than they protect _you_ (see [Research Sources](/paper/14-research-sources)), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
 
-**What about masks that provide more protection, like an N95 or P100 respirator?**
+### What about masks that provide more protection, like an N95 or P100 respirator?
 
 These masks provide more protection than a cloth or surgical mask, it’s true:
 
@@ -86,7 +86,11 @@ These masks provide more protection than a cloth or surgical mask, it’s true:
 
 If you think your mask has better filtration than a surgical mask (2x modifier), but it _doesn’t_ seal on your face, we advise against counting it as a 10x improvement. We recommend a 5x modifier at most.
 
-**Is it reasonable to just multiply together all the modifiers? 8x for masks, 10x for outdoors, and 2x for 6ft of distance?**
+### What P100 do you recommend?
+
+We absolutely love the GVS Elipse. They're available <a href="https://www.google.com/search?q=gvs+elipse+ebay">on eBay</a> for $60-90.
+
+### Is it reasonable to just multiply together all the modifiers? 8x for masks, 10x for outdoors, and 2x for 6ft of distance?
 
 Each of these modifiers changes the total number of particles that might reach you, so we do think it’s reasonable to keep piling them on _somehow. How exactly_ they combine is not precisely clear. But if you consult the [Research Sources](/paper/14-research-sources) section, the masks and distance modifiers were estimated from data including healthcare settings where they were sometimes combined.
 
@@ -94,21 +98,21 @@ The “outdoors” modifier is the one we have the least confidence of. At large
 
 # Person Risk Q&A
 
-**Basic method: Other than essential workers, is anyone above average?**
+### Basic method: Other than essential workers, is anyone above average?
 
 Of course! Someone should probably be considered “above average risk” if they have lots of contact with others and minimal protection; if they regularly attend gatherings, or recently attended a large gathering, especially indoors; or if they seem to think “this isn’t a big deal” or “I don’t care” when considering precautions.
 
 # Specific Activities Q&A
 
-**Can I let a friend use the bathroom in my house?**
+### Can I let a friend use the bathroom in my house?
 
 We believe that if the person is indoors for <5 mins and wears a mask the whole time, then the risk will be negligible for all but the most cautious risk budgets. This is especially true if you can open a window to ventilate the bathroom space. See [this article](https://www.huffpost.com/entry/is-it-safe-people-use-bathroom-coronavirus_l_5ef43b8fc5b66c3126820ec8) for more tips about this.
 
-**Silence? Singing, chanting, yelling? Speaking loudly? Exercising?**
+### Silence? Singing, chanting, yelling? Speaking loudly? Exercising?
 
 Based on the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), we could contemplate up to a 5x reduction in risk for silence, and a 5x penalty for singing, chanting, yelling, or speaking loudly; plus an additional 5x penalty for heavy exercise.
 
-**Are small rooms riskier than large spaces?**
+### Are small rooms riskier than large spaces?
 
 Yes! Based on the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277) and estimates of the total area of rooms of different sizes, we think you might consider the following multipliers:
 ×4 _higher_ risk for a ‘tiny room’ (~10ft across)
@@ -118,7 +122,7 @@ Yes! Based on the [Jimenez Aerosol Transmission Model](https://docs.google.com/s
 
 These assume you are already sufficiently distanced (at least 6 feet) that the size of the room is relevant to the amount of aerosol you’ll breathe. In close quarters, we think the size of the room has less of an impact.
 
-**Should I use an extra multiplier for cuddling? Going on a date?**
+### Should I use an extra multiplier for cuddling? Going on a date?
 
 We personally use an additional multiplier of at least 2x for cuddling, Our original take on this was based on the assumption that our data for infection risk under “no particular distance” (which were largely collected in hospitals) reflect a distance closer to 3 feet than 0 feet. If each additional 3 feet adds a 2x improvement in safety, then being right on top of each other (0ft apart) might involve a 2x reduction in safety. This looks consistent with recently released data from train passengers sitting directly adjacent to one another versus merely in the same row ([Hu et al.](https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa1057/5877944)). If you’re breathing right into each other’s faces, more so than train passengers would, maybe use a higher number.
 
@@ -127,7 +131,7 @@ We think it doesn’t make sense to take the full “outdoor” bonus when cuddl
 We don’t have an additional multiplier for kissing. A one-time hangout combined with the cuddling multiplier is already an Activity Risk of 2 ⨉ 6% per hour = 12% per hour, which makes two and a half hours of cuddling appear riskier than having a roommate. As a side note, it seems to us that masked sex might be a lot safer from a COVID standpoint than making out without masks... provided you actually have the willpower to keep your masks on!
 
 
-**Cuddling and hugging aside, is it risky to touch the other person if we remain a normal socializing distance apart?**
+### Cuddling and hugging aside, is it risky to touch the other person if we remain a normal socializing distance apart?
 
 We don’t feel we have enough data to fully model this risk. But if we assume you aren’t changing how far apart you are, then we think that hand-to-hand touching is more risky than other kinds of touch. Any type of touch is safer if you wash or thoroughly sanitize your hands both before and after touching.
 
@@ -138,13 +142,13 @@ The CDC says that contact transmission is not a main driver, but we haven’t ye
 Touch is a psychologically powerful way to show affection and appreciation. In our experience, outdoor masked hand-holding has a huge positive impact on our mental health and feeling of connection, as compared to assiduously not touching one another. Feeling “touch starved” [is a real thing](https://asu.pure.elsevier.com/en/publications/relational-and-health-correlates-of-affection-deprivation) with real psychological effects, and for many people we think touch is a good use of your risk budget.
 
 
-**How do I count receiving a package?**
+### How do I count receiving a package?
 
 We don’t currently count microCOVIDs from packages, because of our understanding that fomite transmission is not a primary driver of the spread; most of our risk comes from time we spend indoors with others. People maintaining much lower annual risk levels than us might prefer to sanitize packages to maintain a stricter risk tolerance.
 
 Health officials are often quoted as saying the risk from packages is “[very low](https://www.hackensackmeridianhealth.org/HealthU/2020/03/26/can-you-get-coronavirus-from-packages-and-mail/)” and “[unlikely](https://www.cdc.gov/coronavirus/2019-ncov/faq.html),” but until they quantify that in microCOVIDs we’re just going to proceed with assuming it’s less than 1 microCOVID per package. We do know there’s [no known evidence of transmission from food packages](https://www.fda.gov/food/food-safety-during-emergencies/shopping-food-during-covid-19-pandemic-information-consumers).
 
-**Lyfts/Ubers?**
+### Lyfts/Ubers?
 
 You’re indoors, about six feet away from one other person (the driver), and both of you are hopefully wearing masks. It’s an unusually tiny space with poor air circulation by default.
 
@@ -152,11 +156,11 @@ We did some informal tests with a CO2 meter in a Lyft[^4], and found that if you
 
 If you keep the windows all the way open, the air circulation according to our CO2 meter is just about as good as being outdoors, so you’ll probably reap some of the benefits of being outdoors. We wouldn’t recommend taking the full 10x outdoor modifier for a windows-open Lyft, since it’s unclear how much of the safety of outdoor interactions is due to factors like UV light that aren’t present inside a car. But 2x or so might be reasonable.
 
-**Public transit?**
+### Public transit?
 
 You can very conservatively treat transit as an indoor hangout with however many other people are in the bus or train car with you, continuing to take a decrease of 2x per additional 3 feet away that the people are. You’re also probably up to 5x safer in the likely event that nobody is talking (but if anyone starts yelling, which happens on public transit sometimes, you could be 5x _less_ safe). Overall, [very few transmission clusters](https://www.scientificamerican.com/article/there-is-little-evidence-that-mass-transit-poses-a-risk-of-coronavirus-outbreaks/) have been linked to public transit.
 
-**Airplanes?**
+### Airplanes?
 
 Unlike transit, airplanes have pretty good air filtration systems: all the air is replaced with new air from outside every 4–5 minutes, and all the air passes through a HEPA filter that eliminates 99.97% of particles (the same as a P100 respirator) every 2–3 minutes ([source](https://www.travelandleisure.com/airlines-airports/how-airplane-cabin-air-works)). That means your risk will primarily be from people near you.
 
@@ -172,13 +176,13 @@ What about the _airport_ rather than the plane? We still suggest you wear a high
 
 Overall, there are very few documented cases of transmission on airplanes, which is surprising given that 500,000 or more Americans are flying every day at the time of writing (which, if we naively assume current US-wide prevalence rates, would mean ~100 COVID-positive passengers per day). We are aware of [one flight in China in January 2020](https://www.medrxiv.org/content/10.1101/2020.03.28.20040097v1) that infected 12 people, [one case in February](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7194574/) probably acquired on a flight, and [one flight in March from London to Vietnam](https://www.npr.org/sections/goatsandsoda/2020/07/04/886788377/international-flights-are-ramping-up-slowly-and-with-plenty-of-caveats) that infected 13 people. Erin Bromage has written more on [flying in the age of COVID-19](https://www.erinbromage.com/post/flying-in-the-age-of-covid-19).
 
-**Grocery stores? Drug stores? Haircuts?**
+### Grocery stores? Drug stores? Haircuts?
 
 For grocery stores, we count the average number of people near us: in our neighborhood this is usually about 5 people, keeping 6 feet away, everyone wearing masks. For drug stores, pharmacy pickup, or medical buildings, you might want to add an extra boost to Person Risk to account for the fact that the people you’re encountering are more likely than average to be sick.
 
 Haircuts can be modeled by counting each person in the hair salon. We definitely recommend wearing the best mask you have that won’t interfere with the haircut, and checking in advance that your mask style will be fine. If your stylist is usually chatty, we suggest for an extra safety margin to ask the hair stylist to chat less! We found an anecdote [on Twitter](https://twitter.com/robshirkey/status/1269369868182315014) about 140 clients who were in close contact with two infected hair stylists, indoors, with both client and stylist wearing masks. 45 clients were tested – all negative – and we haven’t heard of any cases among the others. Last we checked this was statistically consistent with the Activity Risk and modifier suggestions we use in this writeup.
 
-**Going to a protest?**
+### Going to a protest?
 
 The risk of attending a protest depends on how close you get to others, whether they are yelling/chanting, whether they are wearing masks, and other factors we have not modeled in this writeup (for example, we have heard anecdotally that it is lower risk to be in a group where people are moving constantly, rather than staying near the same people for a long time). If you are in a shoulder-to-shoulder group of yelling people without masks, you might be near 10 people within 6 feet: Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ 5x yelling (see earlier in Q&A) = 30% per hour. Alternately, if you are in a group of cyclists protesting by biking down the road banging drums and gongs, that might be more like Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ (1/5 silent) ⨉ (1/2 at least 6 ft away) = 0.6% per hour. This is a 50 times less risky activity. There are many ways to protest. We encourage you to keep all the same heuristics in mind: if possible, avoid very dense crowds, yelling, and enclosed spaces; and wear masks to protect yourself and others.
 
@@ -186,14 +190,14 @@ The most important thing to remember in attending a protest is that you may not 
 
 # Related Work
 
-**How do microCOVIDs relate to initial viral load?**
+### How do microCOVIDs relate to initial viral load?
 
 “[Initial viral load](https://thezvi.wordpress.com/2020/04/01/taking-initial-viral-load-seriously/)” refers to how big a “dose” of virus you get when you first get exposed to the virus. If you’re exposed to more viral particles, evidence suggests that you’re more likely to develop a severe infection. This means it’s important to try to reduce the strength of your initial exposure, not just in order to avoid getting sick.
 
 For the same total number of microCOVIDs, our guess is that getting them from many smaller independent sources (many mask walks, numerous brief grocery runs, etc.) is more likely to involve a low initial viral load than getting them from fewer riskier contacts (household members who don’t take many precautions; cuddling a random person whose recent activities you don’t know). \
 
 
-**Are there other similar models or scales?**
+### Are there other similar models or scales?
 
 Here are some quantitative analyses we like:
 
@@ -209,7 +213,7 @@ In terms of qualitative scales, we like the following:
 
 
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
-[^2]: This is due to the fact that very little transmission occurs more than 2 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms. We ran a Monte Carlo simulation using the probability distributions from He and Ferretti and found that that only occurred 1% of the time. The broader picture isn’t quite that rosy due to the facts that people might not always correctly identify their symptoms and that some transmission occurs from people who will remain asymptomatic, but we still think the chance of second-hop infections within a careful household is manageably low.
+[^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
 [^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.

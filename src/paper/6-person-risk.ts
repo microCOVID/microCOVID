@@ -14,11 +14,11 @@ This means that the chance someone has COVID (which we’re calling “Person Ri
 
 We use three different methods of guessing someone’s chance of having COVID.
 
-*   The **Basic Method** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
-*   The **Intermediate Method** adds adjustments for whether the person is or isn’t an essential worker.
-*   The **Advanced Method** is to add up the risk of each individual activity that person has done recently.
+*   The **[Basic Method](/paper/7-basic-method)** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
+*   The **[Intermediate Method](/paper/8-intermediate-method)** adds adjustments for whether the person is or isn’t an essential worker.
+*   The **[Advanced Method](/paper/9-advanced-method)** is to add up the risk of each individual activity that person has done recently.
 
-You do not need to understand exactly how these methods work to use the [calculator](/calculator), but if you want to create your own custom estimates for specific people in your life then we strongly recommend learning to use the Advanced Method.
+You do not need to understand exactly how these methods work to use the [calculator](/calculator), but if you want to create your own custom estimates for specific people in your life then we strongly recommend learning to use the [Advanced Method](/paper-9-advanced-method) and the associated [spreadsheet](/spreadsheet).
 
 
 ### Skip ahead and takeaways
