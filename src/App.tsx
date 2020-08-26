@@ -69,7 +69,7 @@ export const App = (): React.ReactElement => {
                 </Nav.Item>
                 <Nav.Item>
                   <NavLink
-                    to="/activitylog"
+                    to="/spreadsheet"
                     className="nav-link"
                     activeClassName="active"
                   >
