@@ -106,7 +106,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
       <span className="readout">
         Activity Risk: If 1 person at this activity has COVID, then you have a <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance of getting COVID.
-	    <p><b>{(activityRisk && activityRisk >= MAX_ACTIVITY_RISK) ? ' NOTE: The scenario you have entered has hit the maximum Activity Risk. We have capped it to prevent it going above the maximum value.' : ''}</b></p>
+	    <p><b>{(activityRisk && activityRisk >= MAX_ACTIVITY_RISK) ? ' NOTE: We have capped this number at the maximum Activity Risk.' : ''}</b></p>
       </span>
     </React.Fragment>
   )
