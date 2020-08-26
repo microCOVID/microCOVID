@@ -48,15 +48,7 @@ export const App = (): React.ReactElement => {
                     Home
                   </NavLink>
                 </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/paper"
-                    className="nav-link"
-                    activeClassName="active"
-                  >
-                    White Paper
-                  </NavLink>
-                </Nav.Item>
+                
                 <Nav.Item>
                   <NavLink
                     to="/calculator"
@@ -64,6 +56,15 @@ export const App = (): React.ReactElement => {
                     activeClassName="active"
                   >
                     Calculator
+                  </NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    to="/paper"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    White Paper
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
