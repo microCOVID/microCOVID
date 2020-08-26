@@ -11,11 +11,11 @@ import {
 
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
-import { Spreadsheet } from 'pages/Spreadsheet'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Home } from 'pages/Home'
 import { Paper } from 'pages/Paper'
+import { Spreadsheet } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
 
@@ -48,7 +48,7 @@ export const App = (): React.ReactElement => {
                     Home
                   </NavLink>
                 </Nav.Item>
-                
+
                 <Nav.Item>
                   <NavLink
                     to="/calculator"

@@ -1,7 +1,7 @@
-import positiveTestRate from './img/positive-test-rate.png';
-import heExtended from './img/he-extended-fig-1.png'
 import ferrettiFig1 from './img/ferretti-fig-1.png'
 import ferrettiFig2 from './img/ferretti-infectiousness.gif'
+import heExtended from './img/he-extended-fig-1.png'
+import positiveTestRate from './img/positive-test-rate.png'
 
 const title = 'Research Sources'
 
@@ -112,7 +112,7 @@ We have found the following graph useful for thinking about this. From [Ferretti
 
 ### Note on Infectious Period: Contacts' symptoms
 
-Another important thing to know about the infectious period is that only about 9% of transmissions from people who eventually show symptoms occur more than 3 days before the appearance of symptoms, and 1% occur more than 5 days before symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph):
+Another important thing to know about the infectious period is that only about 9% of transmissions from people who eventually show symptoms occur more than 3 days before the appearance of symptoms, and 1% occur more than 5 days before symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph, new version since the [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z):
 
 ![He et al](${heExtended})
 
