@@ -6,6 +6,8 @@ To get an even more accurate estimate for Person Risk, we can actually add up th
 
 The **Advanced Method** is to add up the risk of each individual activity that person has done recently.
 
+The [spreadsheet](/spreadsheet) is a tool that can help you add up activities in the Advanced Method.
+
 Just like you can calculate this for each of your actions, you can also calculate it for your friend’s actions, using the same formula:
 
 <p class="calloutText">Cost = Activity Risk ⨉ Person Risk</p>
