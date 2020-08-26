@@ -16,15 +16,19 @@ export const Contact = (): React.ReactElement => {
         >
           issue
         </a>{' '}
-        on github, or email us at{' '}
-        <a href="mailto: info@microcovid.org" target="_blank" rel="noreferrer">
-          info@microcovid.org
+        on github, tweet at{' '}
+        <a href="https://twitter.com/microcovid" target="_blank" rel="noreferrer">
+          @microcovid
         </a>
-        .
+        , or email us at{' '}
+        <a href="mailto: info@microcovid.org">info@microcovid.org</a>. We can't
+        promise we'll get to your suggestion promptly, but we do appreciate
+        hearing about it.
       </p>
       <p>
-        That said: if you're up for it, we would be delighted if want to take a
-        stab at making the change directly yourself!
+        That said: if you're up for it, and your suggestion is a small change
+        (like a typo, or a clarification) then we would be delighted if want to
+        take a stab at making the change directly yourself!
         <ul>
           <li>
             This project is hosted on{' '}
@@ -35,7 +39,6 @@ export const Contact = (): React.ReactElement => {
             >
               github
             </a>
-            . We welcome all types of improvements.
           </li>
           <li>
             You don't need to know how to code. Similar to a wiki, you can edit
@@ -51,6 +54,11 @@ export const Contact = (): React.ReactElement => {
             before it becomes final.
           </li>
         </ul>
+        <p>
+          We're an all-volunteer team, and we don't yet know how much time and
+          energy we will have to incorporate larger changes. If you want to fork
+          our project and implement larger changes yourself, be our guest!
+        </p>
       </p>
       <h3>Questions</h3>
       <p>
