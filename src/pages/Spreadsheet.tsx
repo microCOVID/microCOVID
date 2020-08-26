@@ -1,25 +1,33 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const calculator = (<Link to="/calculator">calculator</Link>);
+
+/**
+ * Returns a link to the spreadsheet.
+ * @param text Display text for the link. Defaults to 'spreadsheet'
+ */
+function spreadsheet(text = 'spreadsheet') {
+  return (<a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ">
+    {text}
+  </a>);
+}
 
 export const Spreadsheet = (): React.ReactElement => {
   return (
     <div id="paperPage">
       <h1>Spreadsheet</h1>
       <p>
-        The{' '}
-        <a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ">
-          spreadsheet
-        </a>{' '}
-        is a tool to help you with two things that the{' '}
-        <a href="/calculator">calculator</a> is not quite powerful enough for:
+        The {spreadsheet()} is a tool to help you with two things that the {calculator} is not quite powerful enough for:
       </p>
       <p>
         <ol>
           <li>
             The first is to{' '}
             <b>
-              calculate someone's <a href="/paper/6-person-risk">Person Risk</a>
+              calculate someone's <Link to="/paper/6-person-risk">Person Risk</Link>
             </b>{' '}
-            using the <a href="/paper/9-advanced-method">Advanced Method</a> as
+            using the <Link to="/paper/9-advanced-method">Advanced Method</Link> as
             described in the white paper. The Advanced Method consists of adding
             up the person's risk in from their behaviors in the last 2-9 days.
             The spreadsheet makes it easy to add up the activities.
@@ -43,17 +51,15 @@ export const Spreadsheet = (): React.ReactElement => {
         </ol>
       </p>
       <p>
-        The spreadsheet includes a few multipliers that we mention in the{' '}
-        <a href="/paper/13-q-and-a">Q&A</a> section but did not include in the
-        main text or in the <a href="/calculator">calculator</a> for simplicity,
+        The {spreadsheet()} includes a few multipliers that we mention in the
+        <Link to="/paper/13-q-and-a">Q&A</Link> section but did not include in the
+        main text or in the {calculator} for simplicity,
         such as better masks. Other than that, each row on the spreadsheet does
-        exactly the same thing as the <a href="/calculator">calculator</a>.
+        exactly the same thing as the {calculator}.
       </p>
 
       <p>
-        <a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ">
-          Use the spreadsheet here
-        </a>
+        {spreadsheet('Use the spreadsheet here')}
       </p>
     </div>
   )
