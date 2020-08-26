@@ -13,6 +13,7 @@ import {
   defaultValues,
   parsePopulation,
 } from 'data/calculate'
+import { fixedPointPrecision, fixedPointPrecisionPercent } from 'data/FormatPrecision';
 import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
@@ -57,8 +58,7 @@ export const Calculator = (): React.ReactElement => {
       return -1
     }
 
-    // Round points < 10
-    return computedValue > 10 ? Math.round(computedValue) : computedValue
+    return computedValue;
   }, [calculatorData])
 
   const prevalenceIsFilled =
@@ -119,18 +119,22 @@ export const Calculator = (): React.ReactElement => {
       </button>
     </span>
   )
+
+  const displayPoints = showPoints ? fixedPointPrecision(points) : '-';
+  const displayPercent = showPoints ? fixedPointPrecisionPercent(points * 1e-6) : '-%';
+
   const pointsDisplay = (
     <Card title="Result">
       <p className="readout">
         In total, you have a {tooManyPoints ? '>' : ''}
-        {showPoints ? points.toLocaleString() : '-'}
+        {displayPoints}
         -in-a-million ({tooManyPoints ? '>' : ''}
-        {showPoints ? ((points / 1e6 || 0) * 100).toFixed(2) : '-'}%) chance of
-        getting COVID from this activity with these people:
+        {displayPercent}) chance of
+        getting COVID from this activity with these people.
       </p>
       <h1>
         {tooManyPoints ? '>' : ''}
-        {showPoints ? points.toLocaleString() : '-'} microCOVIDs
+        {displayPoints} microCOVIDs
         {repeatedEvent && '/week'}
       </h1>
       <p>
