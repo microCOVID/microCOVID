@@ -43,8 +43,11 @@ export const Spreadsheet = (): React.ReactElement => {
         </ol>
       </p>
       <p>
-        Each row on the spreadsheet does exactly the same thing as the{' '}
-        <a href="/calculator">calculator</a>.
+        The spreadsheet includes a few multipliers that we mention in the{' '}
+        <a href="/paper/13-q-and-a">Q&A</a> section but did not include in the
+        main text or in the <a href="/calculator">calculator</a> for simplicity,
+        such as better masks. Other than that, each row on the spreadsheet does
+        exactly the same thing as the <a href="/calculator">calculator</a>.
       </p>
 
       <p>
