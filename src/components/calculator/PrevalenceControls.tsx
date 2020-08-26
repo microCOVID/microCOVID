@@ -166,7 +166,9 @@ export const PrevalenceControls: React.FunctionComponent<{
       <PrevalenceField
         label="Reported cases in past week"
         value={(data.casesPastWeek || 0).toString()}
-        setter={(value) => setter({ ...data, casesPastWeek: parseInt((value || '')) })}
+        setter={(value) =>
+          setter({ ...data, casesPastWeek: parseInt(value || '') })
+        }
         inputType="number"
         isEditable={topLocation === ''}
       />

@@ -1,7 +1,11 @@
 import React from 'react'
 
 import { SelectControl } from './SelectControl'
-import { CalculatorData, calculateActivityRisk, MAX_ACTIVITY_RISK } from 'data/calculate'
+import {
+  CalculatorData,
+  MAX_ACTIVITY_RISK,
+  calculateActivityRisk,
+} from 'data/calculate'
 import {
   Distance,
   Interaction,
@@ -105,8 +109,21 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
 
       <span className="readout">
-        Activity Risk: If 1 person at this activity has COVID, then you have a <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance of getting COVID.
-	    <p><b>{(activityRisk && activityRisk >= MAX_ACTIVITY_RISK) ? ' NOTE: We have capped this number at the maximum Activity Risk.' : ''}</b></p>
+        <p>
+          The <i>second</i> part of the calculation is Activity Risk: assuming 1
+          person at this activity has COVID, then you would have a{' '}
+          <b>{((activityRisk || 0) * 100).toFixed(2)}%</b> chance of getting
+          COVID.
+          <b>
+            {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
+              ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+              : ''}
+          </b>
+        </p>
+        <p>
+          Finally, we multiply Person Risk and Activity Risk to get the total
+          result.
+        </p>
       </span>
     </React.Fragment>
   )

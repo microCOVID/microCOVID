@@ -1,4 +1,5 @@
 import positiveTestRate from './img/positive-test-rate.png';
+import transmissionDynamics from './img/transmission-dynamics.png';
 
 const title = 'Research Sources'
 
@@ -98,6 +99,11 @@ We combine our original guesses with the rough 2/3 contagiousness adjustment fac
 * Positive test rate 5% or lower => 4x underreporting factor
 * Positive test rate between 5% and 15% => 5x underreporting factor
 * Positive test rate between greater than 15% => at least a 7x underreporting factor.
+
+### Basic Method: Transmision Dynamics
+TODO(Catherio): Write Copy 
+
+![He et al](${transmissionDynamics})
 
 ### Intermediate Method: Frontline worker adjustment
 We estimated that frontline workers are 3x more likely to have COVID, and anyone who is not a frontline worker is 0.5x as likely to be infected. Here is how we made that calculation.

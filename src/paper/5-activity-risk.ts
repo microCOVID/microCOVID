@@ -112,7 +112,7 @@ The household member estimate comes directly from [Curmei et al.](https://www.me
 
 _We keep calling these numbers “estimates.” Please take our uncertainty seriously! The evidence for these numbers is far from conclusive. We cannot say that the true probability **is** 6%. All we can say is that **we estimate** it at 6%._
 
-_This work is licensed [CC-BY](http://creativecommons.org/licenses/by/4.0/), for use with attribution. Please provide attribution to us when you use our estimates, so that others can check our work. This is an important way to fight misinformation._
+_Please provide attribution to us when you use our estimates, so that others can check our work. This is an important way to fight misinformation._
 
 _To learn about the scientific research supporting our estimates, please see the [Research Sources](/paper/14-research-sources) section._
 
