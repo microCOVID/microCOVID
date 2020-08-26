@@ -46,7 +46,7 @@ _Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Ben Shaya, Danny H
 ---
 
 
-[^demo]: This is an example footnote! Click the arrow to return to where you came from in the text:
+[^demo]: Throughout the text, you will see footnotes like this. Usually they will have some content, but this one is just a demo! You can click the arrow to return to where you came from in the text:
 
 `
 
