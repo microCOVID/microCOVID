@@ -17,6 +17,7 @@ import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
+const SIGFIGS = 2;
 
 export const Calculator = (): React.ReactElement => {
   const previousData = JSON.parse(
@@ -57,8 +58,7 @@ export const Calculator = (): React.ReactElement => {
       return -1
     }
 
-    // Round points < 10
-    return computedValue > 10 ? Math.round(computedValue) : computedValue
+    return computedValue;
   }, [calculatorData])
 
   const prevalenceIsFilled =
@@ -100,18 +100,36 @@ export const Calculator = (): React.ReactElement => {
       </button>
     </span>
   )
+
+  // Format points for display - fixed point with a set precision.
+  // This is necessary because float.toPrecision will use exponential notation for large or small numbers.
+  function fixedPointPrecision(val: number): string {
+    if (val === 0) {
+      return '0';
+    }
+    const orderOfMagnitude = Math.floor(Math.log10(val));
+    const orderOfMangitudeToDisplay = orderOfMagnitude - SIGFIGS + 1;
+    const decimalsToDisplay = orderOfMangitudeToDisplay > 0 ? 0 : - orderOfMangitudeToDisplay;
+    
+    const roundedValue = Number.parseFloat(val.toPrecision(SIGFIGS));
+    return roundedValue.toFixed(decimalsToDisplay);
+  }
+
+  const displayPoints = showPoints ? fixedPointPrecision(points) : '-';
+  const displayPercent = showPoints ? fixedPointPrecision((points / 1e6 || 0) * 100) : '-';
+
   const pointsDisplay = (
     <Card title="Result">
       <p className="readout">
         In total, you have a {tooManyPoints ? '>' : ''}
-        {showPoints ? points.toLocaleString() : '-'}
+        {displayPoints}
         -in-a-million ({tooManyPoints ? '>' : ''}
-        {showPoints ? ((points / 1e6 || 0) * 100).toFixed(2) : '-'}%) chance of
+        {displayPercent}%) chance of
         getting COVID from this activity with these people.
       </p>
       <h1>
         {tooManyPoints ? '>' : ''}
-        {showPoints ? points.toLocaleString() : '-'} microCOVIDs
+        {displayPoints} microCOVIDs
         {repeatedEvent && '/week'}
       </h1>
       <p>
