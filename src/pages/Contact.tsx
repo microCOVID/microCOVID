@@ -17,7 +17,11 @@ export const Contact = (): React.ReactElement => {
           issue
         </a>{' '}
         on github, tweet at{' '}
-        <a href="https://twitter.com/microcovid" target="_blank" rel="noreferrer">
+        <a
+          href="https://twitter.com/microcovid"
+          target="_blank"
+          rel="noreferrer"
+        >
           @microcovid
         </a>
         , or email us at{' '}
