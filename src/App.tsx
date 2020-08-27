@@ -8,6 +8,7 @@ import {
   Route,
   BrowserRouter as Router,
   Switch,
+  useLocation,
 } from 'react-router-dom'
 
 import { Footer } from 'components/Footer'
@@ -21,12 +22,12 @@ import { Spreadsheet } from 'pages/Spreadsheet'
 import 'styles/App.scss'
 
 ReactGA.initialize('UA-176544991-1')
-ReactGA.pageview(window.location.pathname + window.location.search)
 
 export const App = (): React.ReactElement => {
   return (
     <HelmetProvider>
       <Router>
+        <PageViews />
         <Helmet>
           <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@500&display=swap"
@@ -92,7 +93,6 @@ export const App = (): React.ReactElement => {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-
           <Switch>
             <Route path="/calculator">
               <Calculator />
@@ -119,4 +119,10 @@ export const App = (): React.ReactElement => {
       </Router>
     </HelmetProvider>
   )
+}
+
+const PageViews = (): React.ReactElement => {
+  const location = useLocation()
+  ReactGA.pageview(location.pathname)
+  return <div />
 }
