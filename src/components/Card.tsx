@@ -10,3 +10,5 @@ export const Card: React.FunctionComponent<{ id?: string; title: string }> = (
     </div>
   </div>
 )
+
+export default Card
