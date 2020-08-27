@@ -5,6 +5,7 @@ import markdownItLinkAttributes from 'markdown-it-link-attributes'
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+import Donation from '../components/Donation'
 import { pages } from '../paper/index'
 
 const processor = new MarkdownIt({
@@ -59,6 +60,8 @@ export const Paper = (): React.ReactElement => {
 
   const processed = processor.render(markdownContent)
 
+  // Split the text to put navigation between text and footnotes.
+  // TODO(Ben): Do not continue hacking more of these in. If we need another tag, make it general-purpose.
   const indexOfFootnotes = processed.indexOf('<hr class="footnotes-sep">')
   let body = processed
   let footnotes = ''
@@ -66,6 +69,9 @@ export const Paper = (): React.ReactElement => {
     body = processed.substr(0, indexOfFootnotes)
     footnotes = processed.substr(indexOfFootnotes)
   }
+
+  // Hack to allow inserting a donation component from markdown.
+  const includeDonation = processed.indexOf('<!-- Donation -->') >= 0
 
   return (
     <div id="paperPage">
@@ -80,19 +86,18 @@ export const Paper = (): React.ReactElement => {
 
       <div dangerouslySetInnerHTML={{ __html: body }} />
 
+      {includeDonation ? <Donation /> : null}
       <Navigation />
 
-      {footnotes ? (
-        [
-          <div
-            dangerouslySetInnerHTML={{ __html: footnotes }}
-            key="footnotes"
-          />,
-          <Navigation key="bottomNav" />,
-        ]
-      ) : (
-        <div />
-      )}
+      {footnotes
+        ? [
+            <div
+              dangerouslySetInnerHTML={{ __html: footnotes }}
+              key="footnotes"
+            />,
+            <Navigation key="bottomNav" />,
+          ]
+        : null}
     </div>
   )
 }
