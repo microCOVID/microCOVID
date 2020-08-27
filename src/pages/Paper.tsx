@@ -57,11 +57,15 @@ export const Paper = (): React.ReactElement => {
     )
   }
 
-  const processed = { __html: processor.render(markdownContent) }
+  const processed = processor.render(markdownContent)
 
-  const [body, footnotes] = processed.__html.split(
-    '<!-- Footnotes themselves at the bottom. -->',
-  )
+  const indexOfFootnotes = processed.indexOf('<hr class="footnotes-sep">')
+  let body = processed
+  let footnotes = ''
+  if (indexOfFootnotes > 0) {
+    body = processed.substr(0, indexOfFootnotes)
+    footnotes = processed.substr(indexOfFootnotes)
+  }
 
   return (
     <div id="paperPage">
