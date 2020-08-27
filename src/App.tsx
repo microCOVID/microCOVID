@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import ReactGA from 'react-ga'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
@@ -8,7 +9,6 @@ import {
   BrowserRouter as Router,
   Switch,
 } from 'react-router-dom'
-import ReactGA from 'react-ga';
 
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
@@ -20,8 +20,8 @@ import { Spreadsheet } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
 
-ReactGA.initialize('UA-176544991-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize('UA-176544991-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 export const App = (): React.ReactElement => {
   return (
