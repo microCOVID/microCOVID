@@ -166,16 +166,15 @@ export const Calculator = (): React.ReactElement => {
           <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
           <p>
             We hear that some folks are circulating this website beyond our
-            circle of beta testers. While we appreciate the publicity, we the
+            circle of beta testers ;). While we appreciate the publicity, we the
             maintainers are still trying to finish our workweek of our full-time
             jobs in peace and quiet, and we are NOT personally ready for hordes
             of attention until the weekend. Please wait until Saturday before
             sharing this link any further.
           </p>
           <p>
-            Thank you for respecting our sanity! We can't wait to see your
-            amazing publicity posts on the weekend! In the meantime feel free to
-            check out our tool privately and send us any feedback :)
+            That said, in the meantime YES you are definitely welcome to be
+            here, to check out our tool privately and send us any feedback :)
           </p>
           <p>
             We created a calculator to assess “cost” of various activities in
