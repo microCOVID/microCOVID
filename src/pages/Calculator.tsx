@@ -104,7 +104,7 @@ export const Calculator = (): React.ReactElement => {
   return (
     <div id="calculator">
       <Row>
-        <Col md="12" lg="8" id="calculator-introduction>
+        <Col md="12" lg="8" id="calculator-introduction">
           <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
           <p>
             We hear that some folks are circulating this website beyond our
@@ -132,24 +132,18 @@ export const Calculator = (): React.ReactElement => {
             Play around with the calculator! Change the variables and see how
             they affect the total.
           </p>
-          <div id="button-wrapper">
-            <button
-              id="reset-form-button"
-              type="button"
-              className="btn btn-secondary"
-              onClick={resetForm}
-            >
-              Reset form
-            </button>{' '}
-          </div>
-          {showPoints && (showSaveForm ? saveForm : saveButton)}
+          <button
+            id="reset-form-button"
+            type="button"
+            className="btn btn-secondary"
+            onClick={resetForm}
+          >
+            Reset form
+          </button>{' '}
+          {points > 0 && (showSaveForm ? saveForm : saveButton)}
         </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block">
-        </Col>
+        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
-
-      <hr />
-
       <Row id="calculator-fields">
         <Col md="12" lg="4">
           <Card id="location" title="Location & Prevalence">
