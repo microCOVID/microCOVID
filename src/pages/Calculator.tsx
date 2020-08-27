@@ -3,20 +3,16 @@ import { Col, Row } from 'react-bootstrap'
 
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
+import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
-  MAX_POINTS,
   calculate,
   defaultValues,
   parsePopulation,
 } from 'data/calculate'
-import {
-  fixedPointPrecision,
-  fixedPointPrecisionPercent,
-} from 'data/FormatPrecision'
 import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
@@ -73,27 +69,6 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.interaction,
   )
 
-  const showPoints = points >= 0
-  const tooManyPoints = points >= MAX_POINTS
-
-  const howRisky = (points: number): string[] => {
-    if (points < 3) {
-      return ['close to negligible', 'dozens of times per week']
-    } else if (points < 30) {
-      return ['low', 'several times per week']
-    } else if (points < 100) {
-      return ['moderate', 'a few times a month']
-    } else if (points < 300) {
-      return ['substantial', 'once or twice a month']
-    } else if (points < 1000) {
-      return ['high', 'a few times a year']
-    } else if (points < 3000) {
-      return ['very high', 'once a year']
-    } else {
-      return ['dangerously high', 'zero times per year']
-    }
-  }
-
   const saveForm = (
     <div className="input-group">
       <input
@@ -121,42 +96,6 @@ export const Calculator = (): React.ReactElement => {
         Save as custom scenario
       </button>
     </span>
-  )
-
-  const displayPoints = showPoints ? fixedPointPrecision(points) : '-'
-  const displayPercent = showPoints
-    ? fixedPointPrecisionPercent(points * 1e-6)
-    : '-%'
-
-  const pointsDisplay = (
-    <Card title="Result">
-      <p className="readout">
-        In total, you have a {tooManyPoints ? '>' : ''}
-        {displayPoints}
-        -in-a-million ({tooManyPoints ? '>' : ''}
-        {displayPercent}) chance of getting COVID from this activity with these
-        people.
-      </p>
-      <h1>
-        {tooManyPoints ? '>' : ''}
-        {displayPoints} microCOVIDs
-        {repeatedEvent && '/week'}
-      </h1>
-      <p>
-        <b>
-          {showPoints && tooManyPoints
-            ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
-            : ''}
-        </b>
-      </p>
-      <p className="readout">
-        If you have a budget of 10,000 microCOVIDs per year (1% chance of
-        COVID), this is a <b>{showPoints ? howRisky(points)[0] : '--'}</b> risk
-        activity and you could afford to do it{' '}
-        <b>{showPoints ? howRisky(points)[1] : '--'}</b> if you were not doing
-        much else.
-      </p>
-    </Card>
   )
 
   return (
@@ -197,10 +136,10 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>{' '}
-          {showPoints && (showSaveForm ? saveForm : saveButton)}
+          {points > 0 && (showSaveForm ? saveForm : saveButton)}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block">
-          {pointsDisplay}
+          <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
 
@@ -261,7 +200,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
 
         <Col lg="4" md="12" className="d-lg-none">
-          {pointsDisplay}
+          <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
     </div>
