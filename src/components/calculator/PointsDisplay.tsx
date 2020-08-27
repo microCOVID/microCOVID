@@ -78,17 +78,15 @@ export function PointsDisplay(props: {
 function howRisky(points: number, budget: number): string[] {
   const normalizedPoints = points / (budget / 10000)
   if (normalizedPoints < 3) {
-    return ['close to negligible', 'dozens of times per week']
+    return ['very low', 'dozens of times per week']
   } else if (normalizedPoints < 30) {
     return ['low', 'several times per week']
   } else if (normalizedPoints < 100) {
     return ['moderate', 'a few times a month']
   } else if (normalizedPoints < 300) {
-    return ['substantial', 'once or twice a month']
+    return ['high', 'once or twice a month']
   } else if (normalizedPoints < 1000) {
-    return ['high', 'a few times a year']
-  } else if (normalizedPoints < 3000) {
-    return ['very high', 'once a year']
+    return ['very high', 'a few times a year']
   } else {
     return ['dangerously high', 'zero times per year']
   }
