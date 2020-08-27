@@ -20,6 +20,12 @@ If you have any feedback or questions, or you are interested in contributing to 
 
 Thanks for reading!
 
+---
+
+If you've found this paper or the calculator valuable, consider supporting the project with a small donation. We are all unpaid volunteers and we don't currently have any funding to
+work on this project. Thank you in advance!
+<!-- Donation -->
+
 `
 
 const post = { title, content }
