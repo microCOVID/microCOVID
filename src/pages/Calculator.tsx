@@ -162,7 +162,7 @@ export const Calculator = (): React.ReactElement => {
   return (
     <div id="calculator">
       <Row>
-        <Col md="12" lg="8">
+        <Col md="12" lg="8" id="calculator-introduction">
           <p>
             We created a calculator to assess “cost” of various activities in
             microCOVIDs, where 1&nbsp;microCOVID is a one-in-a-million chance of
@@ -177,13 +177,16 @@ export const Calculator = (): React.ReactElement => {
             Play around with the calculator! Change the variables and see how
             they affect the total.
           </p>
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={resetForm}
-          >
-            Reset form
-          </button>{' '}
+          <div id="button-wrapper">
+            <button
+              id="reset-form-button"
+              type="button"
+              className="btn btn-secondary"
+              onClick={resetForm}
+            >
+              Reset form
+            </button>{' '}
+          </div>
           {showPoints && (showSaveForm ? saveForm : saveButton)}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block">
