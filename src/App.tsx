@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
 } from 'react-router-dom'
+import ReactGA from 'react-ga';
 
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
@@ -18,6 +19,9 @@ import { Paper } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
+
+ReactGA.initialize('UA-176544991-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export const App = (): React.ReactElement => {
   return (
