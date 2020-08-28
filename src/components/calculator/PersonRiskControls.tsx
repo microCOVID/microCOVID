@@ -63,6 +63,7 @@ export const PersonRiskControls: React.FunctionComponent<{
             })
           }
         />
+        <GroupSizeWarning people={data.personCount} />
       </div>
       <SelectControl
         id="riskProfile"
@@ -80,4 +81,24 @@ export const PersonRiskControls: React.FunctionComponent<{
       </p>
     </React.Fragment>
   )
+}
+
+function GroupSizeWarning(props: { people: number }): React.ReactElement {
+  if (props.people >= 100) {
+    return (
+      <div className="warning">
+        Warning: This is a VERY large group of people; getting them together is
+        a high risk of a dangerous superspreading event.
+      </div>
+    )
+  }
+  if (props.people >= 25) {
+    return (
+      <div className="warning">
+        Warning: This is a large group of people; getting them together puts
+        everyone at risk.{' '}
+      </div>
+    )
+  }
+  return <div />
 }
