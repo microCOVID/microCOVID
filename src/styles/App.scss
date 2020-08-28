@@ -21,7 +21,7 @@ html, body, #root {
 
 #root {
   justify-content: space-between;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 input,
@@ -166,6 +166,26 @@ a {
 
   .warning {
     color: red;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    padding-bottom: 0;
+    margin-bottom: -20px;
+  }
+
+  .top-half-card {
+    border: none;
+    background: lighten($gray-200, 1.5);
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+  .explanation {
+    padding-top: 0;
   }
 }
 

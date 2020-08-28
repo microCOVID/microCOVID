@@ -3,7 +3,10 @@ import { Col, Row } from 'react-bootstrap'
 
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
-import PointsDisplay from 'components/calculator/PointsDisplay'
+import {
+  ExplanationCard,
+  PointsDisplay,
+} from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
@@ -138,9 +141,6 @@ export const Calculator = (): React.ReactElement => {
           </button>{' '}
           {points > 0 && (showSaveForm ? saveForm : saveButton)}
         </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block">
-          <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
-        </Col>
       </Row>
 
       <hr />
@@ -198,9 +198,17 @@ export const Calculator = (): React.ReactElement => {
             )}
           </Card>
         </Col>
-
-        <Col lg="4" md="12" className="d-lg-none">
+      </Row>
+      <Row className="sticky">
+        <Col />
+        <Col md="12" lg="8">
           <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
+        </Col>
+      </Row>
+      <Row className="explanation">
+        <Col />
+        <Col md="12" lg="8">
+          <ExplanationCard points={points} />
         </Col>
       </Row>
     </div>

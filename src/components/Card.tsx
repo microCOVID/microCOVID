@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Card: React.FunctionComponent<{ id?: string; title: string }> = (
+export const Card: React.FunctionComponent<{ id?: string; title?: string }> = (
   props,
 ) => (
   <div id={props.id} className={`card mb-3`}>

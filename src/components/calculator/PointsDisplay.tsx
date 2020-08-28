@@ -7,38 +7,38 @@ import {
   fixedPointPrecisionPercent,
 } from 'data/FormatPrecision'
 
-export function PointsDisplay(props: {
-  points: number
-  repeatedEvent: boolean
-}): React.ReactElement {
+function showPoints(points: number): boolean {
+  return points >= 0
+}
+
+function displayPoints(points: number): string {
+  return showPoints(points) ? fixedPointPrecision(points) : '-'
+}
+
+function tooManyPoints(points: number): boolean {
+  return points >= MAX_POINTS
+}
+
+export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
   const points = props.points
 
-  const showPoints = points >= 0
-  const tooManyPoints = points >= MAX_POINTS
-
-  const displayPoints = showPoints ? fixedPointPrecision(points) : '-'
-  const displayPercent = showPoints
+  const displayPercent = showPoints(points)
     ? fixedPointPrecisionPercent(points * 1e-6)
     : '-%'
 
   const [risky, allowedFrequency] = howRisky(points, riskBudget)
 
   return (
-    <Card title="Result">
+    <Card>
       <p className="readout">
-        In total, you have a {tooManyPoints ? '>' : ''}
-        {displayPoints}
-        -in-a-million ({tooManyPoints ? '>' : ''}
+        In total, you have a {tooManyPoints(points) ? '>' : ''}
+        {displayPoints(points)}
+        -in-a-million ({tooManyPoints(points) ? '>' : ''}
         {displayPercent}) chance of getting COVID from this activity with these
         people.
       </p>
-      <h1>
-        {tooManyPoints ? '>' : ''}
-        {displayPoints} microCOVIDs
-        {props.repeatedEvent && '/week'}
-      </h1>
       <p>
         <b>
           {showPoints && tooManyPoints
@@ -67,12 +67,12 @@ export function PointsDisplay(props: {
       <p className="readout">
         If you have a budget of {riskBudget} microCOVIDs per year (
         {riskBudget * 1e-4}% chance of COVID), this is a{' '}
-        <b>{showPoints ? risky : '--'}</b> risk activity.
+        <b>{showPoints(points) ? risky : '--'}</b> risk activity.
       </p>
       {allowedFrequency === '' ? null : (
         <p className="readout">
           You could do it
-          <b>{showPoints ? allowedFrequency : '--'}</b>
+          <b>{showPoints(points) ? allowedFrequency : '--'}</b>
           if you were not doing much else.
         </p>
       )}
@@ -97,4 +97,17 @@ function howRisky(points: number, budget: number): string[] {
   }
 }
 
-export default PointsDisplay
+export function PointsDisplay(props: {
+  points: number
+  repeatedEvent: boolean
+}): React.ReactElement {
+  return (
+    <div className="top-half-card">
+      <strong>Results:</strong>
+      <h1>
+        {tooManyPoints(props.points) ? '>' : ''}
+        {displayPoints(props.points)} microCOVIDs
+      </h1>
+    </div>
+  )
+}
