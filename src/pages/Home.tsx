@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import Donation from '../components/Donation'
+
 export const Home = (): React.ReactElement => {
   return (
     <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
@@ -45,45 +47,17 @@ export const Home = (): React.ReactElement => {
         <Link to="/paper">white paper</Link>.
       </p>
 
-      <h2>Thanks!</h2>
+      <h3>Contact us</h3>
       <p>
-        <b>Contact us</b>: If you have any feedback, questions, or would like to
-        help out, please contact us <Link to="/contact">here</Link>.
+        If you have any feedback, questions, or would like to help out, please
+        contact us <Link to="/contact">here</Link>.
       </p>
+      <h3>Donations</h3>
       <p>
-        <b>Donations</b>: This is an all-volunteer effort, with no current
-        funding source, nor part of any existing organization. If you found our
-        work helpful and want to send along a tip or a donation, we would truly
-        appreciate it. Please do so{' '}
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MC4NDX6RTR6Q&item_name=microCOVID+project&currency_code=USD&source=url">
-          here
-        </a>
-        .
-      </p>
-      <p>
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_donations" />
-          <input type="hidden" name="business" value="8MC4NDX6RTR6Q" />
-          <input type="hidden" name="item_name" value="microCOVID project" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <input
-            type="image"
-            src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-            name="submit"
-            title="PayPal - The safer, easier way to pay online!"
-            alt="Donate with PayPal button"
-          />
-          <img
-            alt=""
-            src="https://www.paypal.com/en_US/i/scr/pixel.gif"
-            width="1"
-            height="1"
-          />
-        </form>
+        We also welcome donations and tips, if you feel so moved. No pressure,
+        truly. We're all volunteers and we don't currently have any funding to
+        work on this project. Thank you in advance!
+        <Donation />
       </p>
 
       <p>
