@@ -1,4 +1,4 @@
-const SIGFIGS = 2
+const SIGFIGS = 1
 
 /**
  * Format points for display - fixed point with a set precision.
