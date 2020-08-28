@@ -87,8 +87,8 @@ function GroupSizeWarning(props: { people: number }): React.ReactElement {
   if (props.people >= 100) {
     return (
       <div className="warning">
-        This is a very large group of people; seriousy consider if this
-        interraction is worth the risk it puts on everyone.
+        Warning: This is a VERY large group of people; getting them together is
+        a high risk of a dangerous superspreading event.
       </div>
     )
   }

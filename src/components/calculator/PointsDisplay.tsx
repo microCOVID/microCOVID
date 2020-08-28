@@ -69,7 +69,7 @@ export function PointsDisplay(props: {
         {riskBudget * 1e-4}% chance of COVID), this is a{' '}
         <b>{showPoints ? risky : '--'}</b> risk activity.
       </p>
-      {allowedFrequency == '' ? null : (
+      {allowedFrequency === '' ? null : (
         <p className="readout">
           You could do it
           <b>{showPoints ? allowedFrequency : '--'}</b>
