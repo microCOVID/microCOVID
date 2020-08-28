@@ -1,4 +1,5 @@
 ![CI](https://github.com/microcovid/microcovid/workflows/CI/badge.svg?branch=main)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb98f6c2-daea-4b6f-8fbe-8eb74ee0c539/deploy-status)](https://app.netlify.com/sites/microcov/deploys)
 
 # microcovid.org
 
