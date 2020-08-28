@@ -67,10 +67,15 @@ export function PointsDisplay(props: {
       <p className="readout">
         If you have a budget of {riskBudget} microCOVIDs per year (
         {riskBudget * 1e-4}% chance of COVID), this is a{' '}
-        <b>{showPoints ? risky : '--'}</b> risk activity and you could afford to
-        do it <b>{showPoints ? allowedFrequency : '--'}</b> if you were not
-        doing much else.
+        <b>{showPoints ? risky : '--'}</b> risk activity.
       </p>
+      {allowedFrequency == '' ? null : (
+        <p className="readout">
+          You could do it
+          <b>{showPoints ? allowedFrequency : '--'}</b>
+          if you were not doing much else.
+        </p>
+      )}
     </Card>
   )
 }
@@ -86,9 +91,9 @@ function howRisky(points: number, budget: number): string[] {
   } else if (normalizedPoints < 300) {
     return ['high', 'once or twice a month']
   } else if (normalizedPoints < 1000) {
-    return ['very high', 'a few times a year']
+    return ['high', '']
   } else {
-    return ['dangerously high', 'zero times per year']
+    return ['dangerously high', '']
   }
 }
 
