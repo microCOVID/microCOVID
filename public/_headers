@@ -2,5 +2,5 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src https: 'self'; object-src 'none'; img-src *; script-src 'self' 'https://www.google-analytics.com' 'sha256-62751cbdc0016e72b286eb50a71fea2f99d2842fc4dff505a717263318f56f8f'
+  Content-Security-Policy: default-src https: 'self'; object-src 'none'; img-src *; script-src 'self' https://www.google-analytics.com 'sha256-YnUcvcABbnKyhutQpx/qL5nShC/E3/UFpxcmMxj1b48='
 
