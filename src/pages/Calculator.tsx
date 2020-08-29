@@ -108,7 +108,7 @@ export const Calculator = (): React.ReactElement => {
           <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
           <p>
             We reviewed published research about COVID, and used it to make
-            rough estimates about the “cost” of various activities in
+            rough estimates about the risk level of various activities in
             microCOVIDs. 1&nbsp;microCOVID is a one-in-a-million chance of
             getting COVID.
           </p>
@@ -122,7 +122,7 @@ export const Calculator = (): React.ReactElement => {
             they affect the total.
           </p>
           <p className="warning">
-            <b>Important:</b> In this tool we state our best guess based on
+            <b>Important:</b> In this tool we state our best estimate based on
             available evidence, even when that evidence is not conclusive. We
             are not experts on this topic. This work has not been scientifically
             peer-reviewed. There is still a lot of uncertainty about COVID. Do
