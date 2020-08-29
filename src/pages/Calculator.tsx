@@ -130,7 +130,8 @@ export const Calculator = (): React.ReactElement => {
             have read a lot of experts' research, but we are not ourselves
             experts in this topic. This work has not been scientifically
             peer-reviewed. There is still a lot of uncertainty about COVID. Do
-            not rely on this tool for medical advice.
+            not rely on this tool for medical advice. Please continue to follow
+            government guidance.
           </p>
           <button
             id="reset-form-button"
