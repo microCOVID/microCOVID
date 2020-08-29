@@ -58,8 +58,8 @@ export const Home = (): React.ReactElement => {
         We also welcome donations and tips, if you feel so moved. No pressure,
         truly. We're all volunteers and we don't currently have any funding to
         work on this project. Thank you in advance!
-        <Donation />
       </p>
+      <Donation />
     </div>
   )
 }
