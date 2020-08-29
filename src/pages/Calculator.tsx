@@ -120,10 +120,6 @@ export const Calculator = (): React.ReactElement => {
             Play around with the calculator! Change the variables and see how
             they affect the total.
           </p>
-          <p>
-            Play around with the calculator! Change the variables and see how
-            they affect the total.
-          </p>
           <button
             id="reset-form-button"
             type="button"
