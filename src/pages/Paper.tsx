@@ -43,9 +43,13 @@ const PaperContents: React.FunctionComponent<{
     // Replace links to pages with links within the one big page
     markdownContent = markdownContent.replace(
       /\]\(([1-9][0-9a-z-]+)([#)])/g,
-      (match: string, p1: string, p2: string, offset: number, string: string) => (
-        p2 === '#' ? ('](' + p2) : ('](#' + p1 + p2)
-      )
+      (
+        _match: string,
+        p1: string,
+        p2: string,
+        _offset: number,
+        _string: string,
+      ) => (p2 === '#' ? '](' + p2 : '](#' + p1 + p2),
     )
   }
 
@@ -95,9 +99,10 @@ const PaperContents: React.FunctionComponent<{
   let body = processed
   if (allInOnePage) {
     // Uniqify footnote labels
-    let pageIdx = slugs.indexOf(id) + 1
+    const pageIdx = slugs.indexOf(id) + 1
     body = body.replace(
-      /( href="#| id=")fn((ref)?[0-9]+)"/g, '$1fn' + pageIdx + '_$2"'
+      /( href="#| id=")fn((ref)?[0-9]+)"/g,
+      '$1fn' + pageIdx + '_$2"',
     )
   }
 
