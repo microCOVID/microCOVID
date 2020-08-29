@@ -21,6 +21,7 @@ html, body, #root {
 
 #root {
   justify-content: space-between;
+  overflow: hidden;
 }
 
 input,
@@ -94,10 +95,6 @@ a {
 
 // Calculator
 #calculator {
-  // iOS devices have giant horizontal scroll with sticky points
-  // without this set.
-  overflow-x: hidden;
-  
   #calculator-introduction {
     padding: 20px;
     font-size: $h4-font-size;
