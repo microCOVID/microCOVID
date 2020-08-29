@@ -108,8 +108,9 @@ export const Calculator = (): React.ReactElement => {
         <Col md="12" lg="8" id="calculator-introduction">
           <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
           <p>
-            We created a calculator to assess “cost” of various activities in
-            microCOVIDs, where 1&nbsp;microCOVID is a one-in-a-million chance of
+            We reviewed published research about COVID, and used it to make
+            rough estimates about the risk level of various activities in
+            microCOVIDs. 1&nbsp;microCOVID is a one-in-a-million chance of
             getting COVID.
           </p>
           <p>
@@ -120,6 +121,13 @@ export const Calculator = (): React.ReactElement => {
           <p>
             Play around with the calculator! Change the variables and see how
             they affect the total.
+          </p>
+          <p className="warning">
+            <b>Important:</b> In this tool we state our best estimate based on
+            available evidence, even when that evidence is not conclusive. We
+            are not experts on this topic. This work has not been scientifically
+            peer-reviewed. There is still a lot of uncertainty about COVID. Do
+            not rely on this tool for medical advice.
           </p>
           <button
             id="reset-form-button"
