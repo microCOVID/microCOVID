@@ -21,7 +21,7 @@ describe('calculate', () => {
 
     const response = calculate(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
-    expect(response).toBe(((((0.004 * 2) / 10) * 0.06) / 2 / 8) * 1e6)
+    expect(response).toBe(((((0.006 * 2) / 10) * 0.06) / 2 / 8) * 1e6)
   })
 
   it.each`
