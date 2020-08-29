@@ -97,7 +97,7 @@ const PaperContents: React.FunctionComponent<{
 
   return (
     <div className="paperPage">
-      <a id={id}></a>
+      <span id={id}></span>
       <div className="sectionIndicator">
         Section {Object.keys(pages).indexOf(id) + 1}
       </div>
