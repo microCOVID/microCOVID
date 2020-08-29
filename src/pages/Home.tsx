@@ -52,7 +52,19 @@ export const Home = (): React.ReactElement => {
         <Link to="/paper">white paper</Link>.
       </p>
 
-      <h3>Contact us</h3>
+      <p className="warning">
+        <h2>Disclaimer</h2>
+        This work was collaboratively created by the members and
+        friends of Ibasho, a communal house in San Francisco. We have based
+        the numbers in our model on scientific research. However, unlike a
+        medical or scientific standard of evidence, we state our best guess
+        based on available evidence, even when that evidence is far from
+        conclusive. None of us are epidemiologists. This work has not been
+        scientifically peer-reviewed. Do not rely on this work for
+        medical advice. Please continue to follow government guidance.
+      </p>
+
+      <h2>Contact us</h2>
       <p>
         If you have any feedback, questions, or would like to help out, please
         contact us <Link to="/contact">here</Link>.
@@ -63,19 +75,6 @@ export const Home = (): React.ReactElement => {
         truly. We're all volunteers and we don't currently have any funding to
         work on this project. Thank you in advance!
         <Donation />
-      </p>
-
-      <p>
-        <i>
-          Disclaimer: This work was collaboratively created by the members and
-          friends of Ibasho, a communal house in San Francisco. We have based
-          our numbers in this writeup on scientific research. However, unlike a
-          medical or scientific standard of evidence, we state our best guess
-          based on available evidence, even when that evidence is far from
-          conclusive. None of us are epidemiologists. This work has not been
-          scientifically peer-reviewed. Please continue to follow government
-          guidance.
-        </i>
       </p>
     </div>
   )

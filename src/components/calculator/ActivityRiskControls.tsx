@@ -70,7 +70,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="distance"
-        label="Distance"
+        label="Distance (most of the time)"
         data={data}
         setter={setter}
         source={Distance}
@@ -84,7 +84,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
           onChange={(e) =>
             setter({
               ...data,
-              duration: parseInt(e.target.value),
+              duration: Math.max(0, parseInt(e.target.value)),
             })
           }
         />

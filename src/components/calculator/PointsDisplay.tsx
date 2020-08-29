@@ -12,11 +12,11 @@ function showPoints(points: number): boolean {
 }
 
 function displayPoints(points: number): string {
-  return showPoints(points) ? fixedPointPrecision(points) : '-'
+  return showPoints(points) ? fixedPointPrecision(points) : '—'
 }
 
 function displayPercent(points: number): string {
-  return showPoints(points) ? fixedPointPrecisionPercent(points * 1e-6) : '-%'
+  return showPoints(points) ? fixedPointPrecisionPercent(points * 1e-6) : '—%'
 }
 
 function tooManyPoints(points: number): boolean {
@@ -26,7 +26,7 @@ function tooManyPoints(points: number): boolean {
 function pointsPerWeekToAnnual(points: number): string {
   return showPoints(points)
     ? fixedPointPrecisionPercent(1 - (1 - points * 1e-6) ** 52)
-    : '-%'
+    : '—%'
 }
 
 function maybeGreater(points: number): string {
@@ -60,17 +60,16 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       >
         <optgroup label=""></optgroup>
         <option value="1000">
-          0.1% per year (over 40 years old or regularly interracting with people
-          over 40)
+          0.1% per year (suggested if at high risk or interacting with people at high risk)
         </option>
         <option value="10000">
-          1% per year (under 40 years old, not interracting with anyone elderly)
+          1% per year (suggested if not at high risk nor interacting with people at high risk)
         </option>
       </select>
       <p className="readout">
         ... then for you this is a{' '}
         <span className={riskyStyle}>
-          <b>{showPoints(points) ? risky : '--'}</b>
+          <b>{showPoints(points) ? risky : '——'}</b>
         </span>{' '}
         risk activity.
       </p>
@@ -119,13 +118,18 @@ export function PointsDisplay(props: {
   return (
     <div className="top-half-card">
       <strong>Results:</strong>
-      <h1>
-        {tooManyPoints(props.points) ? '>' : '~'}
-        {displayPoints(props.points)} microCOVIDs ({maybeGreater(props.points)}
-        {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-        {maybeGreater(props.points)}
-        {displayPoints(props.points * ERROR_FACTOR)})
-      </h1>
+      {showPoints(props.points) ? (
+        <h1>
+          {tooManyPoints(props.points) ? '>' : '~'}
+          {displayPoints(props.points)} microCOVIDs (
+          {maybeGreater(props.points)}
+          {displayPoints(props.points / ERROR_FACTOR)} to{' '}
+          {maybeGreater(props.points)}
+          {displayPoints(props.points * ERROR_FACTOR)})
+        </h1>
+      ) : (
+        <h1>fill in calculator to see</h1>
+      )}
     </div>
   )
 }

@@ -13,7 +13,23 @@ export function fixedPointPrecision(val: number | null): string {
   const decimalsToDisplay =
     orderOfMangitudeToDisplay > 0 ? 0 : -orderOfMangitudeToDisplay
   const roundedValue = Number.parseFloat(val.toPrecision(SIGFIGS))
-  return roundedValue.toFixed(decimalsToDisplay)
+  const withoutCommas = roundedValue.toFixed(decimalsToDisplay)
+  if (withoutCommas.indexOf('.') !== -1 || withoutCommas.length <= 3) {
+    return withoutCommas
+  }
+  // This is a super clumsy way to do this, but it's late and it worrrks
+  let withCommas = ''
+  const firstChunkLen = withoutCommas.length % 3
+  if (firstChunkLen !== 0) {
+    withCommas = withoutCommas.slice(0, firstChunkLen) + ','
+  }
+  for (let i = firstChunkLen; i < withoutCommas.length; i += 3) {
+    withCommas += withoutCommas.slice(i, i + 3)
+    if (i + 3 < withoutCommas.length) {
+      withCommas += ','
+    }
+  }
+  return withCommas
 }
 
 /**
