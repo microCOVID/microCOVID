@@ -169,9 +169,9 @@ In this writeup, we've presented individual numbers for all the parameters of ou
 
 Based on the sources we've described so far, we think these numbers are the best estimate of the truth — that's why we're presenting them instead of some other numbers. But of course there's still a lot of uncertainty about the details of COVID transmission, which means that it's possible, even likely, that some or all of the numbers we're using will turn out to be off by a little or a lot. In this section, we attempt to answer the question: "if we're wrong, how wrong might we be?".
 
-The top-line answer: **we think it is 90% likely that the numbers produced by our calculator for one-on-one or small-group interactions report your risk accurately to within a factor of 3**. That is, if the calculator says some activity has a risk of 300 microCOVIDs, the risk might actually be 100 or 1000 microCOVIDs, but we don't think it'll be 50 or 2000 microCOVIDs. (And the calculator will tell you that, alongside the result it gives you.)
+The top-line answer: **we think the numbers produced by our calculator are correct within a factor of 10, and probably within a factor of 3**. That is, if the calculator says some activity has a risk of 300 microCOVIDs, the risk might well actually be 100 or 1000 microCOVIDs. (And the calculator will tell you that, alongside the result it gives you.) It *could* be as few as 30 or as many as 3000 microCOVIDs, but that would be a lot more surprising to us.
 
-The rest of this section explains how we came up with that factor of 3, and will be much more jargon-heavy.
+The rest of this section explains how we came up with those bounds, and will be much more jargon-heavy.
 
 We estimated underlying probability distributions for a subset of the parameters in our model: the protection factors for masks, distance, and outdoors, the baseline Activity Risk of 6%, and the underreporting factor for prevalence. In some of these cases, we were able to do this estimation using the confidence intervals that were reported in the scientific papers that we used as sources. In other cases, our sources did not provide clear confidence intervals, so we had to resort to fuzzier intuition. We then combined these distributions using Monte Carlo simulation to produce distributions for the risk of three example activities, and compared these to the calculator outputs.
 
@@ -180,7 +180,7 @@ We did this analysis using [Guesstimate](https://www.getguesstimate.com), an onl
 * [Masks and distance data](https://www.getguesstimate.com/models/16799) (using uncertainties from published sources)
 * [Overall model](https://www.getguesstimate.com/models/16798) (using uncertainties from the masks-and-distance model and from the authors' current beliefs)
 
-The remainder of this section provides more detail on the rationale behind the distributions in the Guesstimate models. When we say "A (B to C)", we mean we think a random variable is distributed with median A and 90% confidence interval B to C. We have represented 95% confidence intervals in our sources as 90% confidence intervals in the Guesstimate models, because Guesstimate is designed to work with 90% confidence intervals and we figure the extra uncertainty doesn't hurt.
+In the following subsections, we go into more detail on the rationale behind the distributions in the Guesstimate models. When we say "A (B to C)", we mean we think a random variable is distributed with median A and 90% confidence interval B to C. We have represented 95% confidence intervals in our sources as 90% confidence intervals in the Guesstimate models, because Guesstimate is designed to work with 90% confidence intervals and we figure the extra uncertainty doesn't hurt.
 
 ### Masks
 
@@ -204,7 +204,7 @@ We limit our analysis to the decrease in risk specifically between one meter and
 
 ### Remaining parameters
 
-These are in the main model, not the "masks and distance" sub-model, because we're departing the realm of basing our distributions on the confidence intervals from our sources. The remaining parameters come from sources without obviously usable confidence intervals. We don't have fully legible justifications for the intervals that we've chosen; they're derived from our intuitions based on thinking about this problem for a few months. If you want to see the impact of different choices, you can edit the Guesstimate model. (Don't worry, it won't change what anyone else sees.)
+These are in the [main Guesstimate sheet](https://www.getguesstimate.com/models/16798), not the [sub-sheet](https://www.getguesstimate.com/models/16799) that was used for the mask and distance data, because we're no longer able to base our distributions on the confidence intervals from our sources: the remaining parameters come from sources without obviously usable confidence intervals. We don't have fully legible justifications for the intervals that we've chosen; they're derived from our intuitions based on reading papers and listening to statements by public health officials for a few months. If you want to see the impact of different choices, you can edit the Guesstimate model. (Don't worry, it won't change what anyone else sees.)
 
 * Reduction in risk from being outdoors: 28x (9x to 95x), computed by combining the following guesses:
   * Transmission due to breathing and speaking might be reduced by 10x to 100x, lognormal (implies a median of 31x, mean 40x).
@@ -217,17 +217,17 @@ These are in the main model, not the "masks and distance" sub-model, because we'
 
 Now that we have all the above distributions, we can multiply them together for typical scenarios, and compare the results against what we get using the calculator.
 
-* Outdoor hangout (\`prevalence ⨉ baseline / outdoors\`): calculator says 12 μCoV, model says 1.5 to 36 μCoV (mean 10, median 6).
-* Indoor masked hangout (\`prevalence ⨉ baseline / (my mask ⨉ their mask)\`): calculator says 30 μCoV, model says 7.7 to 92 μCoV (mean 32, median 24).
-* Indoor unmasked hangout (\`prevalence ⨉ baseline\`): calculator says 236 μCoV, model says 67 to 640 μCoV (mean 230, median 179).
+* Outdoor hangout (\`prevalence ⨉ baseline / outdoors\`): calculator says 12 μCoV, uncertainty-based model says 1.5 to 36 μCoV (mean 10, median 6).
+* Indoor masked hangout (\`prevalence ⨉ baseline / (my mask ⨉ their mask)\`): calculator says 30 μCoV, uncertainty-based model says 7.7 to 92 μCoV (mean 32, median 24).
+* Indoor unmasked hangout (\`prevalence ⨉ baseline\`): calculator says 236 μCoV, uncertainty-based model says 67 to 640 μCoV (mean 230, median 179).
 
 We note the following:
 
-* The calculator result is quite close to the mean of the underlying distribution. Taking into account all of the information available to us, that means we think we're neither overestimating nor underestimating *on average* (i.e., low or no bias).
+* The calculator result is quite close to the mean of the underlying distribution of the uncertainty-based model. Taking into account all of the information available to us, that means we think we're neither overestimating nor underestimating *on average* (i.e., low or no bias).
 
 * Multiplying the calculator result by 3 yields in each case a value that is close to or above the upper end of the 90% confidence interval from the model. Dividing the calculator result by 3 yields a value that is somewhere between 1.2x and 2.6x higher than the lower end of the 90% confidence interval from the model. For ease of communication, we'll call that a **3x margin of error in either direction**. We think we might be overestimating by a greater factor than we might be underestimating, but that's the direction we'd prefer to err in if we must — no disaster will befall if some action turns out to be safer than we told our users it might be.
 
-**Note:** This analysis is about _known_ unknowns, i.e., places where we know there's uncertainty and can reasonably estimate how much. It is entirely possible that there is more uncertainty beyond that, due to some unforeseen problem in our (individual or collective) understanding of COVID transmission dynamics. We do not attempt to estimate the magnitude of such "unknown unknowns" here; indeed, almost by definition we can't.
+**Note:** This analysis is about _known_ unknowns, i.e., places where we know there's uncertainty and can reasonably estimate how much. We have not characterized the uncertainty in all parameters of the model; we have only demonstrated that, under some typical scenarios, the uncertainty might be low enough to make the results usable. Additionally, it is entirely possible that there is more uncertainty beyond what we've calculated here, due to some unforeseen problem in our (individual or society-wide) understanding of COVID transmission dynamics. At the beginning of this section we quoted bounds of 10x, not 3x; this discrepancy is intended as a hedge against such "unknown unknowns", but we have no way of knowing if it's enough. Use our model with care.
 
 
 [^1]:
