@@ -56,7 +56,7 @@ a {
       @media (max-width: 900px) {
         font-size: 20px;
        }
-    
+
   }
   a {
     text-decoration: none;
@@ -73,7 +73,7 @@ a {
   margin: 0;
 
   border-bottom: 2px solid transparent;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
 
   &.active {
     border-left: 2px solid $primary;
@@ -183,7 +183,7 @@ a {
   }
 
   .warning {
-    color: red;
+    color: $warning;
   }
 
   .sticky {
