@@ -58,10 +58,11 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       <p>If your risk tolerance is...</p>
       <select
         id="budget-selector"
-        className="form-control form-control-lg"
+        className="form-control"
         onChange={(e) => setRiskBudget(Number.parseInt(e.target.value))}
         value={riskBudget}
       >
+        <optgroup label=""></optgroup>
         <option value="1000">
           0.1% per year (over 40 years old or regularly interracting with people
           over 40)
