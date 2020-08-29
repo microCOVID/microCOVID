@@ -55,7 +55,7 @@ What about if the interaction is with more than one other person? We’ll get to
 
 There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](/paper/13-q-and-a).
 
-There is substantial uncertainty in many of these numbers. We’ve generally chosen to err on the more conservative side, so that even if we’re off the mark it’s unlikely to expose you to more risk than you’re comfortable with. See the discussion of [Research Sources](14-research-sources) for details about the data we based these numbers on.
+There is substantial uncertainty in many of these numbers. We’ve taken uncertainty into account when giving our estimates, so that even if we’re off the mark it’s unlikely to expose you to much more risk than you’re comfortable with. We've also used a slightly conservative prevalence estimate, so that our overall estimates are conservative without distorting the relative risk comparisons. See the discussion of [Research Sources](14-research-sources) for details about the data we based these numbers on.
 
 
 ### Example calculations
