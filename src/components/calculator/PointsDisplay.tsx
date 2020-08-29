@@ -35,8 +35,8 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
   const points = props.points
   const maybeGreater = tooManyPoints(points) ? '>' : ''
 
-  const risky = howRisky(points, riskBudget)[0]
-  const riskyStyle = howRisky(points, riskBudget)[1]
+  const [risky, riskyStyle] = howRisky(points, riskBudget)
+
   return (
     <Card>
       <p className="readout">
