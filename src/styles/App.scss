@@ -95,6 +95,21 @@ a {
 
 // Calculator
 #calculator {
+  #calculator-introduction {
+    padding: 20px;
+    font-size: $h4-font-size;
+    position: relative;
+
+    #button-wrapper {
+      margin-top: 30px;
+
+      #reset-form-button {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
   #calculator-fields {
     .col-md-12 {
       margin-bottom: 30px;
