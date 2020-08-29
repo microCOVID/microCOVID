@@ -4,11 +4,11 @@ import { Badge, OverlayTrigger } from 'react-bootstrap'
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
 
-export const SelectControl: React.FunctionComponent<{
-  id: keyof CalculatorData
-  setter: (value: CalculatorData) => void
-  data: CalculatorData
+export const GenericSelectControl: React.FunctionComponent<{
+  id: string
+  setter: (value: string) => void
   source: { [key: string]: FormValue }
+  value: string | number
   label?: string
   popover?: JSX.Element
 }> = (props) => (
@@ -30,10 +30,8 @@ export const SelectControl: React.FunctionComponent<{
     <select
       id={props.id}
       className="form-control form-control-lg"
-      onChange={(e) =>
-        props.setter({ ...props.data, [props.id]: e.target.value })
-      }
-      value={props.data[props.id] || ''}
+      onChange={(e) => props.setter(e.target.value)}
+      value={props.value}
     >
       <option value="">Select one...</option>
       {Object.keys(props.source).map((value, index) => (
@@ -45,3 +43,23 @@ export const SelectControl: React.FunctionComponent<{
     </select>
   </div>
 )
+
+export const SelectControl: React.FunctionComponent<{
+  id: keyof CalculatorData
+  setter: (value: CalculatorData) => void
+  data: CalculatorData
+  source: { [key: string]: FormValue }
+  label?: string
+  popover?: JSX.Element
+}> = (props) => (
+  <GenericSelectControl
+    id={props.id}
+    setter={(value) => props.setter({ ...props.data, [props.id]: value })}
+    source={props.source}
+    value={props.data[props.id] || ''}
+    label={props.label}
+    popover={props.popover}
+  />
+)
+
+export default SelectControl

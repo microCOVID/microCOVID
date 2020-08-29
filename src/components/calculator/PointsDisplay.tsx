@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import { Popover } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
+import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
 import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
 import {
@@ -34,7 +37,7 @@ function maybeGreater(points: number): string {
 }
 
 export function ExplanationCard(props: { points: number }): React.ReactElement {
-  const [riskBudget, setRiskBudget] = useState(1000)
+  const [riskBudget, setRiskBudget] = useState(10000)
 
   const points = props.points
 
@@ -51,21 +54,24 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </b>
       </p>
       <h2>How risky is this?</h2>
-      <p>If your risk tolerance is...</p>
-      <select
+      <GenericSelectControl
         id="budget-selector"
-        className="form-control"
-        onChange={(e) => setRiskBudget(Number.parseInt(e.target.value))}
+        label="If your risk tolerance is..."
+        popover={riskTolerancePopover}
+        setter={(e: string) => setRiskBudget(Number.parseInt(e))}
         value={riskBudget}
-      >
-        <optgroup label=""></optgroup>
-        <option value="1000">
-          0.1% per year (suggested if at high risk or interacting with people at high risk)
-        </option>
-        <option value="10000">
-          1% per year (suggested if not at high risk nor interacting with people at high risk)
-        </option>
-      </select>
+        source={{
+          '10000': {
+            label: '1% per year (suggested if not at elevated risk)',
+            multiplier: 1,
+          },
+          '1000': {
+            label:
+              '0.1% per year (suggest if at elevated risk or regularly interracting with people at elevated risk)',
+            multiplier: 0.1,
+          },
+        }}
+      />
       <p className="readout">
         ... then for you this is a{' '}
         <span className={riskyStyle}>
@@ -133,3 +139,54 @@ export function PointsDisplay(props: {
     </div>
   )
 }
+
+const riskTolerancePopover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">About At Risk Populations</Popover.Title>
+    <Popover.Content>
+      <p>
+        In our living group, we have agreed to a 1% risk of getting covid per
+        year. For people not at elevated risk, this&nbsp;
+        <Link to="/paper/2-riskiness">
+          conveys a similar level of risk of long-term health effects as
+          driving.
+        </Link>
+      </p>
+      <p>
+        For people at elevated risk, we recommend being more cautious. These
+        populations include:
+        <ul>
+          <li>
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html">
+              People over the age of 60
+            </a>
+          </li>
+          <li>Cancer patients</li>
+          <li>People with chronic kidney disease</li>
+          <li>People with COPD or other heart conditions</li>
+          <li>Immunocompromised from solid organ transplant</li>
+          <li>BMI of 30 or higher</li>
+          <li>Sickle cell disease</li>
+          <li>Type 2 diabetes mellitus</li>
+        </ul>
+        <i>
+          Source:&nbsp;
+          <a href="https://www.worldometers.info/coronavirus/coronavirus-death-rate/">
+            worldometers
+          </a>
+          ,&nbsp;
+          <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html">
+            CDC
+          </a>
+          ,
+        </i>
+      </p>
+      <p>
+        Additionally, if you are not in an at-risk category but regularly come
+        into contact with someone in an at-risk category (ex: living with a
+        grandparent), we suggest being more cautious as well - your actions
+        affect more than just you!
+      </p>
+    </Popover.Content>
+  </Popover>
+)
