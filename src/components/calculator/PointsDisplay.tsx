@@ -46,7 +46,7 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       </p>
       <p>
         <b>
-          {showPoints && tooManyPoints
+          {(showPoints && tooManyPoints(points))
             ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
             : ''}
         </b>
