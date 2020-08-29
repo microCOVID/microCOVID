@@ -6,7 +6,6 @@ import Donation from '../components/Donation'
 export const Home = (): React.ReactElement => {
   return (
     <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
-      <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
       <h2>What is the microCOVID project?</h2>
       <p>
         This is a project to quantitatively estimate the COVID risk to you from

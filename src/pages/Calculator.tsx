@@ -108,7 +108,6 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
           <p>
             We reviewed published research about COVID, and used it to make
             rough estimates about the risk level of various activities in
