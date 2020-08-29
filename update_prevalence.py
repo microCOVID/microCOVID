@@ -132,7 +132,7 @@ class CANActuals(pydantic.BaseModel):
 
 
 class CANMetrics(pydantic.BaseModel):
-    testPositivity: Optional[float]  # 7-day rolling average
+    testPositivityRatio: Optional[float]  # 7-day rolling average
     caseDensity: Optional[float]  # cases per 100k pop, 7-day rolling average
 
 
@@ -208,7 +208,7 @@ class Place(pydantic.BaseModel):
     def as_app_data(self) -> "AppLocation":
         last_week = self.cases_last_week
         week_before = sum(self.recent_daily_cases[-14:-7])
-        if last_week <= week_before or week_before == 0:
+        if last_week <= week_before or week_before <= 0:
             increase = 0
         else:
             increase = last_week / week_before - 1
@@ -530,6 +530,8 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
                     kw[field] = "0"
                 else:
                     kw[field] = ""
+            elif val.endswith(".0") and val[:-2].isdigit():
+                kw[field] = val[:-2]
             else:
                 kw[field] = val
         result.append(model(**kw))
@@ -631,13 +633,18 @@ def main() -> None:
             county = data.fips_to_county[str(item.fips)]
             assert item.stateName == county.state
             if item.metrics is not None:
-                county.test_positivity_rate = item.metrics.testPositivity
+                county.test_positivity_rate = item.metrics.testPositivityRatio
 
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
             state = data.countries["US"].states[item.stateName]
-            assert item.metrics is not None
-            assert item.metrics.testPositivity is not None
-            state.test_positivity_rate = item.metrics.testPositivity
+            if item.metrics is not None:
+                state.test_positivity_rate = item.metrics.testPositivityRatio
+
+        # Hack: covidactnow isn't reporting WA state positive test data,
+        # even though it's available on their website. Copy in the website
+        # field.
+        if effective_date == date(2020, 8, 28):
+            data.countries["US"].states["Washington"].test_positivity_rate = 0.034
 
         # Test positivity per non-US country
         for line in parse_csv(cache, OWIDTestingData, OWIDTestingData.SOURCE):
