@@ -67,6 +67,7 @@ export const SavedDataSelector: React.FunctionComponent<{
       className="form-control"
       onChange={(e) => setSavedData(e.target.value)}
     >
+      <optgroup label=""></optgroup>
       <option value="">Select a scenario or saved item...</option>
       {userSavedData}
       {prepopulatedOptions}

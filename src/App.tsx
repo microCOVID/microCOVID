@@ -120,8 +120,8 @@ export const App = (): React.ReactElement => {
   )
 }
 
-const PageViews = (): React.ReactElement => {
+const PageViews = (): null => {
   const location = useLocation()
   ReactGA.pageview(location.pathname)
-  return <div />
+  return null
 }

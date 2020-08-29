@@ -48,7 +48,6 @@ a {
 // Layout overrides
 
 .navbar {
-  overflow-x: hidden;
   padding-left: 0;
   padding-right: 0;
 
@@ -95,10 +94,33 @@ a {
 
 // Calculator
 #calculator {
+  // iOS devices have giant horizontal scroll with sticky points
+  // without this set.
+  overflow-x: hidden;
+  
+  #calculator-introduction {
+    padding: 20px;
+    font-size: $h4-font-size;
+    position: relative;
+
+    #button-wrapper {
+      margin-top: 30px;
+
+      #reset-form-button {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
   #calculator-fields {
     .col-md-12 {
       margin-bottom: 30px;
     }
+  }
+
+  a {
+    color: $body-color;
   }
 
   // Colorful section headers
@@ -167,6 +189,20 @@ a {
     font-size: 1em;
   }
 
+  // Risk emphasis
+  .low-risk, .medium-risk, .high-risk {
+    font-size: 2em;
+  }
+  .low-risk {
+    color: $indigo;
+  }
+  .medium-risk {
+    color: $cyan;
+  }
+  .high-risk {
+    color: $red
+  }
+
   // Tooltip button/badge styles
   .form-group {
     .label-wrapper {
@@ -183,8 +219,9 @@ a {
   }
 
   .warning {
-    color: red;
+    color: $warning;
   }
+
 
   .sticky {
     position: -webkit-sticky;

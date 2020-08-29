@@ -29,23 +29,20 @@ function pointsPerWeekToAnnual(points: number): string {
     : '-%'
 }
 
+function maybeGreater(points: number): string {
+  return tooManyPoints(points) ? '>' : ''
+}
+
 export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
   const points = props.points
-  const maybeGreater = tooManyPoints(points) ? '>' : ''
 
-  const risky = howRisky(points, riskBudget)
+  const [risky, riskyStyle] = howRisky(points, riskBudget)
+
   return (
     <Card>
       <p className="readout">
-        In total, we guess you have somewhere between a {maybeGreater}
-        {displayPoints(points / ERROR_FACTOR)}
-        -in-a-million ({maybeGreater}
-        {displayPercent(points / ERROR_FACTOR)}) and a {maybeGreater}
-        {displayPoints(points * ERROR_FACTOR)}-in-a-million ({maybeGreater}
-        {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
-        this activity with these people.
         <b>
           {' '}
           {showPoints && tooManyPoints(points)
@@ -57,10 +54,11 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       <p>If your risk tolerance is...</p>
       <select
         id="budget-selector"
-        className="form-control form-control-lg"
+        className="form-control"
         onChange={(e) => setRiskBudget(Number.parseInt(e.target.value))}
         value={riskBudget}
       >
+        <optgroup label=""></optgroup>
         <option value="1000">
           0.1% per year (over 40 years old or regularly interracting with people
           over 40)
@@ -70,8 +68,18 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </option>
       </select>
       <p className="readout">
-        ... then for you this is a <b>{showPoints(points) ? risky : '--'}</b>{' '}
+        ... then for you this is a{' '}
+        <span className={riskyStyle}>
+          <b>{showPoints(points) ? risky : '--'}</b>
+        </span>{' '}
         risk activity.
+      </p>
+      <h2>What does this mean numerically?</h2>
+      <p>
+        This is a roughly {maybeGreater(points)}
+        {displayPoints(points)}-in-a-million ({maybeGreater(points)}
+        {displayPercent(points)}) chance of getting COVID from this activity
+        with these people.
       </p>
       <p>
         If you did this once per week, you would have an additional{' '}
@@ -82,20 +90,25 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
   )
 }
 
-function howRisky(points: number, budget: number): string {
+const riskyStyles = ['low-risk', 'medium-risk', 'high-risk']
+const STYLE_LOW = 0
+const STYLE_MEDIUM = 1
+const STYLE_HIGH = 2
+
+function howRisky(points: number, budget: number): string[] {
   const normalizedPoints = points / (budget / 10000)
   if (normalizedPoints < 3) {
-    return 'very low'
-  } else if (normalizedPoints < 30) {
-    return 'low'
+    return ['very low', riskyStyles[STYLE_LOW]]
+  } else if (normalizedPoints < 25) {
+    return ['low', riskyStyles[STYLE_LOW]]
   } else if (normalizedPoints < 100) {
-    return 'moderate'
+    return ['moderate', riskyStyles[STYLE_MEDIUM]]
   } else if (normalizedPoints < 300) {
-    return 'high'
+    return ['high', riskyStyles[STYLE_HIGH]]
   } else if (normalizedPoints < 1000) {
-    return 'high'
+    return ['very high', riskyStyles[STYLE_HIGH]]
   } else {
-    return 'dangerously high'
+    return ['dangerously high', riskyStyles[STYLE_HIGH]]
   }
 }
 
@@ -107,8 +120,11 @@ export function PointsDisplay(props: {
     <div className="top-half-card">
       <strong>Results:</strong>
       <h1>
-        about {tooManyPoints(props.points) ? '>' : ''}
-        {displayPoints(props.points)} microCOVIDs
+        {tooManyPoints(props.points) ? '>' : '~'}
+        {displayPoints(props.points)} microCOVIDs ({maybeGreater(props.points)}
+        {displayPoints(props.points / ERROR_FACTOR)} to{' '}
+        {maybeGreater(props.points)}
+        {displayPoints(props.points * ERROR_FACTOR)})
       </h1>
     </div>
   )
