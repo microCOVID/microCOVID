@@ -87,7 +87,8 @@ export const calculateLocationReportedPrevalence = (
     return null
   }
 
-  const prevalence = lastWeek / population
+  // Additive smoothing, only relevant for super low case numbers
+  const prevalence = (lastWeek + 1) / population
   return prevalence
 }
 
