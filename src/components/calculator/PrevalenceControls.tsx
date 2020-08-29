@@ -183,32 +183,44 @@ export const PrevalenceControls: React.FunctionComponent<{
         inputType="text"
         isEditable={!locationSet}
       />
-      {data.topLocation !== '' && data.casesIncreasingPercentage === 0 ? (
+      {locationSet && data.casesIncreasingPercentage === 0 ? (
         <p>Cases are stable or decreasing.</p>
       ) : (
         <PrevalenceField
           label="Percent increase in cases from last week to this week"
           value={data.casesIncreasingPercentage}
           unit="%"
-          setter={(value) =>
+          setter={(value) => {
             setter({ ...data, casesIncreasingPercentage: Number(value) })
-          }
+          }}
           inputType="number"
+          min={0}
           isEditable={!locationSet}
         />
       )}
-      <PrevalenceField
-        label="Percent of tests that come back positive"
-        value={(data.positiveCasePercentage || 0).toString()}
-        unit="%"
-        setter={(value) =>
-          setter({ ...data, positiveCasePercentage: Number(value) })
-        }
-        inputType="number"
-        max={100}
-        min={0}
-        isEditable={!locationSet}
-      />
+      {data.positiveCasePercentage === null ? (
+        <PrevalenceField
+          label="Percent of tests that come back positive"
+          value="no data available"
+          unit="%"
+          setter={(_value) => null}
+          inputType="text"
+          isEditable={false}
+        />
+      ) : (
+        <PrevalenceField
+          label="Percent of tests that come back positive"
+          value={data.positiveCasePercentage.toString()}
+          unit="%"
+          setter={(value) => {
+            setter({ ...data, positiveCasePercentage: Number(value) })
+          }}
+          inputType="number"
+          max={100}
+          min={0}
+          isEditable={!locationSet}
+        />
+      )}
       <p>
         Reported prevalence:{' '}
         {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
@@ -217,7 +229,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2)}
         %
       </p>
-      {locationSet ? null : (
+      {!locationSet ? null : (
         <div>
           <p>
             Prevalence data consolidated from {}
@@ -234,10 +246,6 @@ export const PrevalenceControls: React.FunctionComponent<{
             </a>{' '}
             (international positive test rates).
           </p>
-          <p>
-            If test positivity data for a region is not available, it will be
-            displayed as 20%.
-          </p>
           <p>Data last updated {PrevalenceDataDate}.</p>
         </div>
       )}
@@ -249,7 +257,7 @@ interface PrevalanceData {
   population: string
   casesPastWeek: number
   casesIncreasingPercentage: number
-  positiveCasePercentage: number
+  positiveCasePercentage: number | null
 }
 
 function dataForLocation(location: string): PrevalanceData {
@@ -263,7 +271,9 @@ function dataForLocation(location: string): PrevalanceData {
       casesIncreasingPercentage:
         Math.round(locationData.casesIncreasingPercentage * 10) / 10,
       positiveCasePercentage:
-        Math.round(locationData.positiveCasePercentage * 10) / 10,
+        locationData.positiveCasePercentage === null
+          ? null
+          : Math.round(locationData.positiveCasePercentage * 10) / 10,
     }
   }
 
