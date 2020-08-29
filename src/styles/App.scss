@@ -101,6 +101,10 @@ a {
     }
   }
 
+  a {
+    color: $body-color;
+  }
+
   // Colorful section headers
   .card header {
     color: white;
@@ -167,6 +171,20 @@ a {
     font-size: 1em;
   }
 
+  // Risk emphasis
+  .low-risk, .medium-risk, .high-risk {
+    font-size: 2em;
+  }
+  .low-risk {
+    color: $indigo;
+  }
+  .medium-risk {
+    color: $cyan;
+  }
+  .high-risk {
+    color: $red
+  }
+
   // Tooltip button/badge styles
   .form-group {
     .label-wrapper {
@@ -183,8 +201,9 @@ a {
   }
 
   .warning {
-    color: red;
+    color: $red;
   }
+
 
   .sticky {
     position: -webkit-sticky;

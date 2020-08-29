@@ -35,7 +35,8 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
   const points = props.points
   const maybeGreater = tooManyPoints(points) ? '>' : ''
 
-  const risky = howRisky(points, riskBudget)
+  const [risky, riskyStyle] = howRisky(points, riskBudget)
+
   return (
     <Card>
       <p className="readout">
@@ -70,7 +71,10 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </option>
       </select>
       <p className="readout">
-        ... then for you this is a <b>{showPoints(points) ? risky : '--'}</b>{' '}
+        ... then for you this is a{' '}
+        <span className={riskyStyle}>
+          <b>{showPoints(points) ? risky : '--'}</b>
+        </span>{' '}
         risk activity.
       </p>
       <p>
@@ -82,20 +86,25 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
   )
 }
 
-function howRisky(points: number, budget: number): string {
+const riskyStyles = ['low-risk', 'medium-risk', 'high-risk']
+const STYLE_LOW = 0
+const STYLE_MEDIUM = 1
+const STYLE_HIGH = 2
+
+function howRisky(points: number, budget: number): string[] {
   const normalizedPoints = points / (budget / 10000)
   if (normalizedPoints < 3) {
-    return 'very low'
+    return ['very low', riskyStyles[STYLE_LOW]]
   } else if (normalizedPoints < 30) {
-    return 'low'
+    return ['low', riskyStyles[STYLE_LOW]]
   } else if (normalizedPoints < 100) {
-    return 'moderate'
+    return ['moderate', riskyStyles[STYLE_MEDIUM]]
   } else if (normalizedPoints < 300) {
-    return 'high'
+    return ['high', riskyStyles[STYLE_HIGH]]
   } else if (normalizedPoints < 1000) {
-    return 'high'
+    return ['very high', riskyStyles[STYLE_HIGH]]
   } else {
-    return 'dangerously high'
+    return ['dangerously high', riskyStyles[STYLE_HIGH]]
   }
 }
 
