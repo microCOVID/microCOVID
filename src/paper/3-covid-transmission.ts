@@ -13,13 +13,13 @@ If you inhale just a bit of “smoke” (exhaled air) from someone with COVID, y
 
 ![LaVision imaging technique shows how masks restrict the spread of exhaled air](https://miro.medium.com/max/864/1*zyx-Sh2FQFwRGyQWkiherg.gif)
 
-Source: [https://www.lavision.de/en/news/2020/4302/](https://www.lavision.de/en/news/2020/4302/)
+_With enough technology, we can see this "smoke" and see how masks reduce it. Source: [https://www.lavision.de/en/news/2020/4302/](https://www.lavision.de/en/news/2020/4302/)_
 
 Concretely, this means it’s important to avoid situations that feature the [3 C’s](https://www.businessinsider.com/how-japan-tackled-coronavirus-without-a-lockdown-2020-5): Crowds, Closed Spaces, and Close Contact. Why? Because if anyone there has COVID, which becomes likelier as the size of the crowd increases, their “smoke” will be blown into your face. Even if you’re not standing near them, it will build up in the enclosed space, making it more likely that you’ll inhale it.
 
 So we know what to _avoid:_ the 3 C’s. But besides staying in our homes, what should we _do_? We can choose to have “MOD” hangouts: 1-on-1 or small-group socializing that is Masked, Outdoors, and Distanced. These hangouts are MODified from normal. The COVID “smoke” gets stopped by your mask, falls to the ground before it reaches the other person, and dissipates into the air. MODified hangouts are much safer, especially when they don’t involve many people.
 
-In the section below, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet away or 10 feet?
+Later in this document, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet away or 10 feet?
 
 In order to answer these questions with microCOVID numbers (not just “high” or “low” risk), we’ll now dive into the research. You can also skip right to the [calculator](/calculator) to start playing with numbers if you prefer.
 

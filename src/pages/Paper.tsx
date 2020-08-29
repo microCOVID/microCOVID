@@ -27,23 +27,37 @@ const processor = new MarkdownIt({
 
 const PaperContents: React.FunctionComponent<{
   id: string
-  fullPage: boolean
-}> = ({ id, fullPage }) => {
+  allInOnePage: boolean
+}> = ({ id, allInOnePage }) => {
   // Return 404 for unknown pages
   if (!slugs.includes(id)) {
     return <div>PAGE NOT FOUND</div>
   }
 
   const page = pages[id]
-  const markdownContent = page.content
+  let markdownContent = page.content
   const prev = slugs[slugs.indexOf(id) - 1]
   const next = slugs[slugs.indexOf(id) + 1]
+
+  if (allInOnePage) {
+    // Replace links to pages with links within the one big page
+    markdownContent = markdownContent.replace(
+      /\]\(([1-9][0-9a-z-]+)([#)])/g,
+      (
+        _match: string,
+        p1: string,
+        p2: string,
+        _offset: number,
+        _string: string,
+      ) => (p2 === '#' ? '](' + p2 : '](#' + p1 + p2),
+    )
+  }
 
   const PageLink: React.FunctionComponent<{
     toId: string
     className?: string
   }> = (props) => {
-    if (fullPage) {
+    if (allInOnePage) {
       return (
         <a href={`#${props.toId}`} className={props.className}>
           {props.children}
@@ -82,14 +96,23 @@ const PaperContents: React.FunctionComponent<{
 
   const processed = processor.render(markdownContent)
 
+  let body = processed
+  if (allInOnePage) {
+    // Uniqify footnote labels
+    const pageIdx = slugs.indexOf(id) + 1
+    body = body.replace(
+      /( href="#| id=")fn((ref)?[0-9]+)"/g,
+      '$1fn' + pageIdx + '_$2"',
+    )
+  }
+
   // Split the text to put navigation between text and footnotes.
   // TODO(Ben): Do not continue hacking more of these in. If we need another tag, make it general-purpose.
-  const indexOfFootnotes = processed.indexOf('<hr class="footnotes-sep">')
-  let body = processed
+  const indexOfFootnotes = body.indexOf('<hr class="footnotes-sep">')
   let footnotes = ''
   if (indexOfFootnotes > 0) {
-    body = processed.substr(0, indexOfFootnotes)
-    footnotes = processed.substr(indexOfFootnotes)
+    footnotes = body.substr(indexOfFootnotes)
+    body = body.substr(0, indexOfFootnotes)
   }
 
   // Hack to allow inserting a donation component from markdown.
@@ -126,12 +149,12 @@ export const Paper = (): React.ReactElement => {
     return (
       <div>
         {Object.keys(pages).map((pageId, pageIndex) => (
-          <PaperContents id={pageId} key={pageIndex} fullPage={true} />
+          <PaperContents id={pageId} key={pageIndex} allInOnePage={true} />
         ))}
       </div>
     )
   } else {
-    return <PaperContents id={id} fullPage={false} />
+    return <PaperContents id={id} allInOnePage={false} />
   }
 }
 

@@ -2,7 +2,7 @@ const title = 'Person Risk'
 
 const content = `
 
-_Person Risk_ is the chance that the other person currently has COVID. This is based on overall prevalence in your area and their recent behaviors.
+**Person Risk** is the chance that the other person currently has COVID. This is based on overall prevalence in your area and their recent behaviors.
 
 So you’ve decided to meet a friend for lunch. You know the Activity Risk is 6% per hour (for an indoor unmasked lunch) and much less if you MODify your hangout. But the Activity Risk _assumes_ that they currently have COVID.
 
@@ -14,9 +14,9 @@ This means that the chance someone has COVID (which we’re calling “Person Ri
 
 We use three different methods of guessing someone’s chance of having COVID.
 
-*   The **[Basic Method](/paper/7-basic-method)** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
-*   The **[Intermediate Method](/paper/8-intermediate-method)** adds adjustments for whether the person is or isn’t an essential worker.
-*   The **[Advanced Method](/paper/9-advanced-method)** is to add up the risk of each individual activity that person has done recently.
+*   The **[Basic Method](7-basic-method)** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
+*   The **[Intermediate Method](8-intermediate-method)** adds adjustments for whether the person is or isn’t an essential worker.
+*   The **[Advanced Method](9-advanced-method)** is to add up the risk of each individual activity that person has done recently.
 
 You do not need to understand exactly how these methods work to use the [calculator](/calculator), but if you want to create your own custom estimates for specific people in your life then we strongly recommend learning to use the [Advanced Method](/paper-9-advanced-method) and the associated [spreadsheet](/spreadsheet).
 
@@ -34,7 +34,7 @@ If you would like to skip ahead, please first read the following takeaways that 
 If you would like to understand how we use the basic, intermediate, and advanced methods to calculate Person Risk, read on.
 
 
-Skip ahead to [Putting it all together](/paper/11-putting-it-all-together), or read on about the [Basic Method](/paper/7-basic-method) for more detail.
+Skip ahead to [Putting it all together](11-putting-it-all-together), or read on about the [Basic Method](7-basic-method) for more detail.
 
 [^4]:
      Note that this figure includes both _presymptomatic_ transmissions (where the person transmitting COVID will eventually show symptoms, usually within a few days, but hasn’t yet) and _asymptomatic_ transmissions (where the person transmitting will never show symptoms). Catching COVID from someone _presymptomatic_ is much more common: this accounts for about 50% of all transmissions, as opposed to _asymptomatic_ transmissions which account for only about 5%. The COVID discourse tends to muddy this fact somewhat. Asymptomatic infections are inherently harder to measure (because you probably won’t get tested if you don’t show symptoms), and there are indeed plenty of them. However, most of them don’t infect anyone else. Thus, they don’t wind up affecting our risk calculations that much.
@@ -46,7 +46,7 @@ Skip ahead to [Putting it all together](/paper/11-putting-it-all-together), or r
      As an example, New York City in March–April 2020 was completely overwhelmed by COVID, with widespread reports that even people with obvious and severe symptoms were unable to receive a test. We’ll look specifically at the five boroughs plus Westchester, Nassau, and Suffolk counties, an area containing 12.2 million residents. A survey for COVID antibodies in these counties performed between April 25–May 6 [found](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/commercial-lab-surveys.html) that 23% of people had previously been infected, but according to the [Johns Hopkins dashboard](https://coronavirus.jhu.edu/us-map) only 263,900 cases (2.2% of the area’s population) had been officially recorded by May 1.
 
 [^7]:
-     Note these are _contagiousness-adjusted_ underreporting factors: that is, we think the total number of infections might be 6x the reported number of cases, but additionally that the unreported infections are somewhat less contagious (due to containing a higher proportion of asymptomatic individuals), so we adjust this factor down. See [Research Sources](/paper/14-research-sources) for our full methodology and reasoning here.
+     Note these are _contagiousness-adjusted_ underreporting factors: that is, we think the total number of infections might be 6x the reported number of cases, but additionally that the unreported infections are somewhat less contagious (due to containing a higher proportion of asymptomatic individuals), so we adjust this factor down. See [Research Sources](14-research-sources) for our full methodology and reasoning here.
 
 [^8]:
      With this low of a positive test rate, an even lower underreporting factor is quite plausible, but we don’t have enough data to estimate just how low we should go.

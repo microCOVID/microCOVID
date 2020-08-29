@@ -2,6 +2,8 @@ const title = 'Q&A'
 
 const content = `
 
+Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
+
 # General Q&A
 ### If there’s a precaution I don’t see a multiplier for here, should I still do it?
 
@@ -33,7 +35,7 @@ We currently don’t model this effect, and we think that’s pretty safe if (an
 
 Here’s why isolating helps reduce this source of error:
 * Prompt isolation means it’s less likely[^isolation] I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
-* Even if Bob ends up getting sick, Bob and I can start avoiding each other immediately, as soon as Alice gets symptoms. Although it’s quite possible for Alice to give COVID to Bob before Alice has symptoms, it’s much less likely for Bob to pass it on to me _before Alice has symptoms_[^2].
+* Even if Bob ends up getting sick, Bob and I can start avoiding each other immediately, as soon as Alice gets symptoms. Although it’s quite possible for Alice to give COVID to Bob before Alice has symptoms, it’s much less likely for Bob to pass it on to me _before Alice has symptoms_.[^2]
 
 As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
 
@@ -45,7 +47,7 @@ So long as the people in your “bubble” have some risk of getting infected fr
 
 In short, we think “closed quarantine bubbles” are a good strategy for very-low-risk groups who don’t venture outside the house often, but make less sense for larger bubbles with more exposure to the outside world.
 
-To spell it out a bit more: If nobody in your bubble has any exposure to other people or public spaces outside the bubble, then in fact you can count their Person Risk as very minimal[^3]. This isn’t a magical property of the bubble being "closed" per se; it’s a result of everyone only socializing with other people who also have very minimal Person Risk. Seeing a friend who lives completely alone and literally never leaves the house would also keep you at this same low risk level. The “closed bubble” framework is a way to coordinate around maintaining a very low risk level together.
+To spell it out a bit more: If nobody in your bubble has any exposure to other people or public spaces outside the bubble, then in fact you can count their Person Risk as very minimal.[^3] This isn’t a magical property of the bubble being "closed" per se; it’s a result of everyone only socializing with other people who also have very minimal Person Risk. Seeing a friend who lives completely alone and literally never leaves the house would also keep you at this same low risk level. The “closed bubble” framework is a way to coordinate around maintaining a very low risk level together.
 
 But if people in the bubble are doing things that expose them to others somewhat—going to work, grocery shopping, taking trips—then even if they aren’t meeting up for coffee, dates, or events with anyone outside the bubble, they still have some nonzero Person Risk, and you should multiply this with the Activity Risk of seeing them.
 
@@ -70,7 +72,7 @@ Which strategy is less risky depends on which factor dominates: the partner’s 
 
 ### I was told to wear masks to protect others, not myself. Do masks actually protect me?
 
-Yes! Cloth masks and surgical masks protect others more than they protect _you_ (see [Research Sources](/paper/14-research-sources)), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
+Yes! Cloth masks and surgical masks protect others more than they protect _you_ (see [Research Sources](14-research-sources)), but they still reduce your risk of catching COVID by half, so they’re well worth it even from a selfish perspective.
 
 ### What about masks that provide more protection, like an N95 or P100 respirator?
 
@@ -92,7 +94,7 @@ We absolutely love the GVS Elipse. They're available <a href="https://www.google
 
 ### Is it reasonable to just multiply together all the modifiers? 8x for masks, 10x for outdoors, and 2x for 6ft of distance?
 
-Each of these modifiers changes the total number of particles that might reach you, so we do think it’s reasonable to keep piling them on _somehow. How exactly_ they combine is not precisely clear. But if you consult the [Research Sources](/paper/14-research-sources) section, the masks and distance modifiers were estimated from data including healthcare settings where they were sometimes combined.
+Each of these modifiers changes the total number of particles that might reach you, so we do think it’s reasonable to keep piling them on _somehow. How exactly_ they combine is not precisely clear. But if you consult the [Research Sources](14-research-sources) section, the masks and distance modifiers were estimated from data including healthcare settings where they were sometimes combined.
 
 The “outdoors” modifier is the one we have the least confidence of. At larger distances, we speculate that outdoors might provide _more_ than 20x protection, because particles have more time to diffuse upwards into the vast empty space above everyone’s heads, whereas indoors small particles could hang in the enclosed room air. On the other hand, at smaller distances (especially at close range: cuddling, tango dancing, etc.) we don’t have any reported data that we feel sheds light on how much of a protection factor there might be, so we suggest _not_ to use the 20x modifier for outdoor interactions with unusually close range or with other factors associated with superspreader events (yelling, dense crowds, etc.).
 
