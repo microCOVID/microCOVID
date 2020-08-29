@@ -1,5 +1,6 @@
 import {
   Distance,
+  FormValue,
   Interaction,
   RiskProfile,
   Setting,
@@ -18,7 +19,7 @@ export interface CalculatorData {
   population: string
   casesPastWeek: number
   casesIncreasingPercentage: number
-  positiveCasePercentage: number
+  positiveCasePercentage: number | null
 
   // Person risk
   riskProfile: string
@@ -68,13 +69,26 @@ export const ERROR_FACTOR = 3
 export const parsePopulation = (input: string): number =>
   Number(input.replace(/[^0-9.e]/g, ''))
 
+// Convention: all of these functions return null if they determine
+// that we have insufficient data filled in to do the calculation
+
 export const calculateLocationReportedPrevalence = (
   data: CalculatorData,
 ): number | null => {
   const population = parsePopulation(data.population)
-  const lastWeek = data.casesPastWeek
-  const prevalence = lastWeek / population
+  if (population === 0) {
+    return null
+  }
 
+  const lastWeek = data.casesPastWeek
+  if (lastWeek === 0 && data.topLocation === '') {
+    // If the data say zero cases, go with it; but if the user
+    // entered zero cases, call it incomplete.
+    return null
+  }
+
+  // Additive smoothing, only relevant for super low case numbers
+  const prevalence = (lastWeek + 1) / population
   return prevalence
 }
 
@@ -84,14 +98,17 @@ export const calculateLocationPersonAverage = (
   // Prevalence
 
   const prevalence = calculateLocationReportedPrevalence(data)
-  if (!prevalence) {
+  if (prevalence === null) {
     return null
   }
 
   let underreportingFactor
 
   // Under-reporting factor
-  if (data.positiveCasePercentage < 5) {
+  if (data.positiveCasePercentage === null) {
+    // No positive test rate data available => assume the worst
+    underreportingFactor = 10
+  } else if (data.positiveCasePercentage < 5) {
     underreportingFactor = 6
   } else if (data.positiveCasePercentage < 15) {
     underreportingFactor = 8
@@ -112,102 +129,90 @@ export const calculatePersonRiskEach = (
   data: CalculatorData,
   averagePersonRisk: number,
 ): number | null => {
-  try {
-    let risk
-    if (data.riskProfile === 'hasCovid') {
-      // Special case COVID: they have a 100% chance of having it
-      risk = ONE_MILLION
-    } else {
-      risk = averagePersonRisk
-      risk *= RiskProfile[data.riskProfile].multiplier
-    }
-
-    return risk
-  } catch {
+  let risk
+  if (data.riskProfile === 'hasCovid') {
+    // Special case COVID: they have a 100% chance of having it
+    risk = ONE_MILLION
+  } else if (data.riskProfile === '') {
+    // If risk profile isn't selected, call it incomplete
     return null
+  } else {
+    risk = averagePersonRisk
+    risk *= RiskProfile[data.riskProfile].multiplier
   }
+  return risk
 }
 
 export const calculatePersonRisk = (
   data: CalculatorData,
   averagePersonRisk: number,
 ): number | null => {
-  try {
-    let risk = calculatePersonRiskEach(data, averagePersonRisk)
-    if (!risk) {
-      return null
-    }
-
-    risk *= data.personCount
-
-    return risk
-  } catch {
+  let risk = calculatePersonRiskEach(data, averagePersonRisk)
+  if (risk === null || data.personCount === 0) {
     return null
   }
+  risk *= data.personCount
+  return risk
 }
 
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
-  try {
-    const repeatedInteraction = ['repeated', 'partner'].includes(
-      data.interaction,
-    )
-
-    let multiplier = 1
-    multiplier *= Interaction[data.interaction].multiplier
-
-    if (!repeatedInteraction) {
-      multiplier *= Setting[data.setting].multiplier
-      multiplier *= Distance[data.distance].multiplier
-      multiplier *= TheirMask[data.theirMask].multiplier
-      multiplier *= YourMask[data.yourMask].multiplier
-      multiplier *= Voice[data.voice].multiplier
-      multiplier *= (data.duration || 60) / 60.0
-    }
-    if (multiplier > MAX_ACTIVITY_RISK) {
-      multiplier = MAX_ACTIVITY_RISK
-    }
-    return multiplier
-  } catch {
+  if (data.interaction === '') {
     return null
   }
+
+  const repeatedInteraction = ['repeated', 'partner'].includes(data.interaction)
+
+  let multiplier = 1
+  multiplier *= Interaction[data.interaction].multiplier
+
+  if (!repeatedInteraction) {
+    // If something isn't selected, use the "baseline" value (indoor, unmasked,
+    // undistanced, regular conversation)
+    const mulFor = (
+      table: { [key: string]: FormValue },
+      given: string,
+    ): number => (given === '' ? 1 : table[given].multiplier)
+    multiplier *= mulFor(Setting, data.setting)
+    multiplier *= mulFor(Distance, data.distance)
+    multiplier *= mulFor(TheirMask, data.theirMask)
+    multiplier *= mulFor(YourMask, data.yourMask)
+    multiplier *= mulFor(Voice, data.voice)
+
+    if (data.duration === 0) {
+      return null
+    }
+    multiplier *= data.duration / 60.0
+  }
+  if (multiplier > MAX_ACTIVITY_RISK) {
+    multiplier = MAX_ACTIVITY_RISK
+  }
+  return multiplier
 }
 
 export const calculate = (data: CalculatorData): number | null => {
-  try {
-    let points
+  let points
 
-    const repeatedInteraction = ['repeated', 'partner'].includes(
-      data.interaction,
-    )
-
-    const averagePersonRisk = calculateLocationPersonAverage(data)
-    if (!averagePersonRisk) {
-      return null
-    }
-
-    // Person risk
-    points = calculatePersonRisk(data, averagePersonRisk)
-    if (!points) {
-      return null
-    }
-
-    // Interaction type
-    if (repeatedInteraction) {
-      points *= Interaction[data.interaction].multiplier
-    } else {
-      const activityRisk = calculateActivityRisk(data)
-      if (activityRisk != null) {
-        points *= activityRisk
-      }
-    }
-
-    if (points > MAX_POINTS) {
-      points = MAX_POINTS
-    }
-
-    return points
-  } catch {
-    // Something went wrong; fail gracefully
+  const averagePersonRisk = calculateLocationPersonAverage(data)
+  if (averagePersonRisk === null) {
     return null
   }
+
+  // Person risk
+  points = calculatePersonRisk(data, averagePersonRisk)
+  if (points === null) {
+    return null
+  }
+
+  // Activity risk
+  const activityRisk = calculateActivityRisk(data)
+  if (activityRisk === null) {
+    return null
+  }
+  points *= activityRisk
+
+  if (points > MAX_POINTS) {
+    points = MAX_POINTS
+  }
+
+  return points
 }

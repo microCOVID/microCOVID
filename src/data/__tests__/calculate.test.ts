@@ -6,7 +6,7 @@ describe('calculate', () => {
   const exampleLocation = {
     label: 'mock city',
     population: '1,000,000',
-    casesPastWeek: 1000,
+    casesPastWeek: 999, // will add 1 in pseudocount
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 1,
   }
