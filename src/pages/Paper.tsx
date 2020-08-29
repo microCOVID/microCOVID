@@ -89,15 +89,9 @@ export const Paper = (): React.ReactElement => {
       {includeDonation ? <Donation /> : null}
       <Navigation />
 
-      {footnotes
-        ? [
-            <div
-              dangerouslySetInnerHTML={{ __html: footnotes }}
-              key="footnotes"
-            />,
-            <Navigation key="bottomNav" />,
-          ]
-        : null}
+      {footnotes && (
+        <div dangerouslySetInnerHTML={{ __html: footnotes }} key="footnotes" />
+      )}
     </div>
   )
 }

@@ -216,10 +216,13 @@ a {
   line-height: 30px;
   max-width: 850px;
 
+  h1 { color: $primary}
+
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto Slab';
     font-weight: 700;
-    color: $primary;
+    margin-top: 2.4rem;
+    margin-bottom: 1.3rem;
 
     // Flip text and anchor links left-to-right
     display: flex;
@@ -280,11 +283,6 @@ a {
     }
   }
 
-  h1,h2,h3,h4,h5,h6 {
-    margin-top: 2.4rem;
-    margin-bottom: 1.3rem;
-  }
-
   table {
     margin: 40px 0;
     table-layout: fixed;
@@ -314,7 +312,10 @@ a {
     text-align:center;
     font-size:1.5em;
     line-height: 1.5em;
-    margin: 30px 100px;
+    margin: 30px 50px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #eee;
   }
 
   hr.footnotes-sep {
