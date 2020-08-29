@@ -33,7 +33,6 @@ function maybeGreater(points: number): string {
   return tooManyPoints(points) ? '>' : ''
 }
 
-
 export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
@@ -75,12 +74,13 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </span>{' '}
         risk activity.
       </p>
-	  <h2>What does this mean numerically?</h2>
-	  <p>
-        This is a roughly ({maybeGreater(points)}
-        {displayPercent(points)})-in-a-million chance of getting COVID from
-        this activity with these people.
-</p>
+      <h2>What does this mean numerically?</h2>
+      <p>
+        This is a roughly {maybeGreater(points)}
+        {displayPoints(points)}-in-a-million ({maybeGreater(points)}
+        {displayPercent(points)}) chance of getting COVID from this activity
+        with these people.
+      </p>
       <p>
         If you did this once per week, you would have an additional{' '}
         {pointsPerWeekToAnnual(points)}-or-so chance of getting COVID this year
@@ -122,7 +122,8 @@ export function PointsDisplay(props: {
       <h1>
         {tooManyPoints(props.points) ? '>' : '~'}
         {displayPoints(props.points)} microCOVIDs ({maybeGreater(props.points)}
-        {displayPoints(props.points / ERROR_FACTOR)} to {maybeGreater(props.points)}
+        {displayPoints(props.points / ERROR_FACTOR)} to{' '}
+        {maybeGreater(props.points)}
         {displayPoints(props.points * ERROR_FACTOR)})
       </h1>
     </div>
