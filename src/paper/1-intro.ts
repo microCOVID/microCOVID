@@ -2,21 +2,19 @@ const title = 'Introduction'
 
 const content = `
 
-You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But *just how much* do these things help? How big a deal is it if you remove your mask when hanging out with a friend? What happens if you get closer than 6 feet? Bars and restaurants are opening, but is it safe to go inside? It’s tough to make good choices when you don’t know how large or small the risks really are.
+You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
 
-We, the authors, were really struggling with this. We wanted a rigorous way to make decisions about COVID risk. So we did some research and crunched some numbers. We trawled the scientific literature for data. We spent hours estimating the COVID risk of various activities. And in this writeup, we’ll share our research (and some practical tools!) with you.
+We, the authors, were really struggling with this. We wanted a better way to make decisions about COVID risk. So we read some papers and crunched some numbers. We spent hours building a model to estimate the COVID risk of various activities. And in this writeup, we’ll share our model (and some practical tools!) with you.
 
 
 We’ll show you:
 
-- how we measure COVID infection risk, in units of “microCOVIDs”
+- how we estimate COVID infection risk, in units of “microCOVIDs”
 - how risky we think various common activities are
-- how you can estimate the COVID risk of your own actions (using our handy-dandy [calculator](/calculator))
+- how you can estimate the COVID risk of your own actions (by hand, or using our handy-dandy [calculator](/calculator))
 - and, most importantly, how to make decisions that balance living your life with safety and health.
 
 You’re in the target audience of this white paper if you are comfortable with numbers and want to think about how your personal choices affect your chance of getting COVID-19. We are not focusing on society-wide pandemic dynamics, policy responses, or suggestions for public health officials.
-
-If you want to skip the intro & framing and just use the calculator tool, click [here](/calculator).
 
 ## How to navigate this white paper
 
