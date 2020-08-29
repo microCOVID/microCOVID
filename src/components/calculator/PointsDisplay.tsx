@@ -28,8 +28,7 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
 
   const points = props.points
 
-  const [risky, allowedFrequency] = howRisky(points, riskBudget)
-
+  const risky = howRisky(points, riskBudget)
   return (
     <Card>
       <p className="readout">
@@ -43,17 +42,13 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         {tooManyPoints(points) ? '>' : ''}
         {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
         this activity with these people.
-      </p>
-      <p>
         <b>
-          {(showPoints && tooManyPoints(points))
+          {showPoints && tooManyPoints(points)
             ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
             : ''}
         </b>
       </p>
-      <p>
-        <strong>Relative Risk</strong>
-      </p>
+      <h2>How risky is this?</h2>
       <p>If your risk tolerance is...</p>
       <select
         id="budget-selector"
@@ -70,35 +65,32 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </option>
       </select>
       <p className="readout">
-        If you have a budget of {riskBudget} microCOVIDs per year (
-        {riskBudget * 1e-4}% chance of COVID), this is a{' '}
-        <b>{showPoints(points) ? risky : '--'}</b> risk activity.
+        ... then for you this is a <b>{showPoints(points) ? risky : '--'}</b>{' '}
+        risk activity.
       </p>
-      {allowedFrequency === '' ? null : (
-        <p className="readout">
-          You could do it
-          <b>{showPoints(points) ? allowedFrequency : '--'}</b>
-          if you were not doing much else.
-        </p>
-      )}
+      <p>
+        If you did this once per week, you would have an additional{' '}
+        {displayPercent(52 * points)}-or-so chance of getting COVID this year,
+        on top of your risk from everything else you were already doing.
+      </p>
     </Card>
   )
 }
 
-function howRisky(points: number, budget: number): string[] {
+function howRisky(points: number, budget: number): string {
   const normalizedPoints = points / (budget / 10000)
   if (normalizedPoints < 3) {
-    return ['very low', 'dozens of times per week']
+    return 'very low'
   } else if (normalizedPoints < 30) {
-    return ['low', 'several times per week']
+    return 'low'
   } else if (normalizedPoints < 100) {
-    return ['moderate', 'a few times a month']
+    return 'moderate'
   } else if (normalizedPoints < 300) {
-    return ['high', 'once or twice a month']
+    return 'high'
   } else if (normalizedPoints < 1000) {
-    return ['high', '']
+    return 'high'
   } else {
-    return ['dangerously high', '']
+    return 'dangerously high'
   }
 }
 
