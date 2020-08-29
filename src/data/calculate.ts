@@ -13,7 +13,8 @@ export interface CalculatorData {
   persistedAt?: number
 
   // Prevalence
-  location: string
+  topLocation: string
+  subLocation: string
   population: string
   casesPastWeek: number
   casesIncreasingPercentage: number
@@ -34,7 +35,8 @@ export interface CalculatorData {
 }
 
 export const defaultValues: CalculatorData = {
-  location: '',
+  topLocation: '',
+  subLocation: '',
   population: '',
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,

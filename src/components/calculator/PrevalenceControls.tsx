@@ -1,5 +1,5 @@
 import { isNumber } from 'lodash'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 import {
   CalculatorData,
@@ -84,54 +84,24 @@ export const PrevalenceControls: React.FunctionComponent<{
     }
   }
 
-  const [topLocation, setTopLocation] = useState('')
-  const [subLocation, setSubLocation] = useState('')
-
-  // Load stored location from localstorage
-  useEffect(() => {
-    const storedTopLocation = localStorage.getItem('topLocation')
-    const storedSubLocation = localStorage.getItem('subLocation')
-    if (storedTopLocation) {
-      setTopLocation(storedTopLocation)
-    }
-    if (storedSubLocation) {
-      setSubLocation(storedSubLocation)
-    }
-  }, [])
-
-  const setLocationData = (selectedValue: string) => {
-    const locationData = Locations[selectedValue]
-
-    if (locationData) {
-      setter({
-        ...data,
-        location: selectedValue,
-        population: locationData.population,
-        casesPastWeek: locationData.casesPastWeek,
-        casesIncreasingPercentage:
-          Math.round(locationData.casesIncreasingPercentage * 10) / 10,
-        positiveCasePercentage:
-          Math.round(locationData.positiveCasePercentage * 10) / 10,
-      })
-    }
-
-    if (selectedValue === '') {
-      setter({
-        ...data,
-        location: selectedValue,
-        population: '',
-        casesPastWeek: 0,
-        casesIncreasingPercentage: 0,
-        positiveCasePercentage: 0,
-      })
-    }
+  const setLocationData = (topLocation: string, subLocation: string) => {
+    setter({ ...data, ...dataForLocation, topLocation, subLocation })
   }
 
+  // If a stored location exists, load latest data for that location.
+  useEffect(() => {
+    if (data.subLocation !== '' || data.topLocation !== '') {
+      setLocationData(data.topLocation, data.subLocation)
+    }
+    // Intentionally not depending on data so that this runs once on mount.
+    // eslint-disable-next-line
+  }, [])
+
   let subPrompt: string
-  if (topLocation.startsWith('US_')) {
-    if (Locations[topLocation].label === 'Louisiana') {
+  if (data.topLocation.startsWith('US_')) {
+    if (Locations[data.topLocation].label === 'Louisiana') {
       subPrompt = 'Entire state, or select parish...'
-    } else if (Locations[topLocation].label === 'Alaska') {
+    } else if (Locations[data.topLocation].label === 'Alaska') {
       subPrompt = 'Entire state, or select borough...'
     } else {
       subPrompt = 'Entire state, or select county...'
@@ -141,7 +111,10 @@ export const PrevalenceControls: React.FunctionComponent<{
   }
 
   const showSubLocation =
-    topLocation !== '' && Locations[topLocation].subdivisions.length > 1
+    data.topLocation !== '' &&
+    Locations[data.topLocation].subdivisions.length > 1
+
+  const locationSet = data.topLocation !== ''
 
   return (
     <React.Fragment>
@@ -149,13 +122,9 @@ export const PrevalenceControls: React.FunctionComponent<{
       <div className="form-group">
         <select
           className="form-control form-control-lg"
-          value={topLocation}
+          value={data.topLocation}
           onChange={(e) => {
-            setTopLocation(e.target.value)
-            localStorage.setItem('topLocation', e.target.value)
-            setSubLocation('')
-            localStorage.setItem('subLocation', '')
-            setLocationData(e.target.value)
+            setLocationData(e.target.value, '')
           }}
         >
           <option value="">Select location or enter data...</option>
@@ -174,19 +143,17 @@ export const PrevalenceControls: React.FunctionComponent<{
         <div className="form-group">
           <select
             className="form-control form-control-lg"
-            value={subLocation}
+            value={data.subLocation}
             onChange={(e) => {
-              setSubLocation(e.target.value)
-              localStorage.setItem('subLocation', e.target.value)
               if (e.target.value === '') {
-                setLocationData(topLocation)
+                setLocationData(data.topLocation, '')
               } else {
-                setLocationData(e.target.value)
+                setLocationData(data.topLocation, e.target.value)
               }
             }}
           >
             <option value="">{subPrompt}</option>
-            {Locations[topLocation].subdivisions.map((key, index) => (
+            {Locations[data.topLocation].subdivisions.map((key, index) => (
               <option key={index} value={key}>
                 {Locations[key].label}
               </option>
@@ -201,16 +168,16 @@ export const PrevalenceControls: React.FunctionComponent<{
           setter({ ...data, casesPastWeek: parseInt(value || '') })
         }
         inputType="number"
-        isEditable={topLocation === ''}
+        isEditable={!locationSet}
       />
       <PrevalenceField
         label="Per how many people?"
         value={data.population}
         setter={(value) => setter({ ...data, population: value })}
         inputType="text"
-        isEditable={topLocation === ''}
+        isEditable={!locationSet}
       />
-      {topLocation !== '' && data.casesIncreasingPercentage === 0 ? (
+      {data.topLocation !== '' && data.casesIncreasingPercentage === 0 ? (
         <p>Cases are stable or decreasing.</p>
       ) : (
         <PrevalenceField
@@ -221,7 +188,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             setter({ ...data, casesIncreasingPercentage: Number(value) })
           }
           inputType="number"
-          isEditable={topLocation === ''}
+          isEditable={!locationSet}
         />
       )}
       <PrevalenceField
@@ -234,7 +201,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         inputType="number"
         max={100}
         min={0}
-        isEditable={topLocation === ''}
+        isEditable={!locationSet}
       />
       <p>
         Reported prevalence:{' '}
@@ -244,7 +211,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2)}
         %
       </p>
-      {topLocation === '' ? null : (
+      {locationSet ? null : (
         <div>
           <p>
             Prevalence data consolidated from {}
@@ -270,4 +237,33 @@ export const PrevalenceControls: React.FunctionComponent<{
       )}
     </React.Fragment>
   )
+}
+
+interface PrevalanceData {
+  population: string
+  casesPastWeek: number
+  casesIncreasingPercentage: number
+  positiveCasePercentage: number
+}
+
+function dataForLocation(location: string): PrevalanceData {
+  const locationData = Locations[location]
+
+  if (locationData) {
+    return {
+      population: locationData.population,
+      casesPastWeek: locationData.casesPastWeek,
+      casesIncreasingPercentage:
+        Math.round(locationData.casesIncreasingPercentage * 10) / 10,
+      positiveCasePercentage:
+        Math.round(locationData.positiveCasePercentage * 10) / 10,
+    }
+  }
+
+  return {
+    population: '',
+    casesPastWeek: 0,
+    casesIncreasingPercentage: 0,
+    positiveCasePercentage: 0,
+  }
 }

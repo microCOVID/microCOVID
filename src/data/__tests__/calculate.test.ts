@@ -13,7 +13,8 @@ describe('calculate', () => {
   it('', () => {
     const scenario = 'Outdoor masked hangout with 2 people'
     const data: CalculatorData = {
-      location: 'sf',
+      subLocation: 'sf',
+      topLocation: 'California',
       ...exampleLocation,
       ...prepopulated[scenario],
     }
