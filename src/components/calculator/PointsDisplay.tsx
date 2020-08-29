@@ -23,6 +23,12 @@ function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
 }
 
+function pointsPerWeekToAnnual(points: number): string {
+  return showPoints(points)
+    ? fixedPointPrecisionPercent(1 - (1 - points * 1e-6) ** 52)
+    : '-%'
+}
+
 export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
@@ -43,6 +49,7 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
         this activity with these people.
         <b>
+          {' '}
           {showPoints && tooManyPoints(points)
             ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
             : ''}
@@ -70,8 +77,8 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       </p>
       <p>
         If you did this once per week, you would have an additional{' '}
-        {displayPercent(52 * points)}-or-so chance of getting COVID this year,
-        on top of your risk from everything else you were already doing.
+        {pointsPerWeekToAnnual(points)}-or-so chance of getting COVID this year
+        (<i>not</i> including your risk from everything else you do!)
       </p>
     </Card>
   )
