@@ -7,6 +7,16 @@ export const Contact = (): React.ReactElement => {
   return (
     <div id="paperPage">
       <h1>Contact Us</h1>
+      <h3>Sign up for updates</h3>
+      <p>
+        If you would like to receive updates when we make substantial changes to
+        our model, or if you are interested in learning more about how we use
+        this tool as part of an agreement/protocol for our group house, please{' '}
+        <a href="http://eepurl.com/hb6y4T" target="_blank" rel="noreferrer">
+          sign up here
+        </a>{' '}
+        for our mailing list.
+      </p>
       <h3>Suggestions</h3>
       <p>
         If there is something you think should be <b>changed or improved</b>,
