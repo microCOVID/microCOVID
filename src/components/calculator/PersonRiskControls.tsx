@@ -38,11 +38,7 @@ export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
-  const locationRisk = calculateLocationPersonAverage(data)
-  if (!locationRisk) {
-    return <div></div>
-  }
-
+  const locationRisk = calculateLocationPersonAverage(data) || 0
   const personRiskEach = Math.round(
     calculatePersonRiskEach(data, locationRisk) || 0,
   )
@@ -59,7 +55,7 @@ export const PersonRiskControls: React.FunctionComponent<{
           onChange={(e) =>
             setter({
               ...data,
-              personCount: parseInt(e.target.value),
+              personCount: Math.max(0, parseInt(e.target.value)),
             })
           }
         />
@@ -77,7 +73,7 @@ export const PersonRiskControls: React.FunctionComponent<{
       <p className="readout">
         The <i>first</i> part of the calculation is Person Risk: Each other
         person has a <b>{personRiskEach.toLocaleString()}</b>
-        -in-a-million chance of currently having COVID
+        -in-a-million chance of currently having COVID.
       </p>
     </React.Fragment>
   )

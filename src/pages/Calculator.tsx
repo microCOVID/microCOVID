@@ -65,10 +65,12 @@ export const Calculator = (): React.ReactElement => {
   }, [calculatorData])
 
   const prevalenceIsFilled =
-    parsePopulation(calculatorData.population) > 0 &&
-    calculatorData.casesPastWeek > 0 &&
-    calculatorData.casesIncreasingPercentage >= 0 &&
-    calculatorData.positiveCasePercentage > 0
+    calculatorData.topLocation !== '' ||
+    (parsePopulation(calculatorData.population) > 0 &&
+      calculatorData.casesPastWeek > 0 &&
+      calculatorData.casesIncreasingPercentage >= 0 &&
+      calculatorData.positiveCasePercentage !== null &&
+      calculatorData.positiveCasePercentage > 0)
   const repeatedEvent = ['repeated', 'partner'].includes(
     calculatorData.interaction,
   )
