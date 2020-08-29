@@ -54,14 +54,14 @@ export const Home = (): React.ReactElement => {
 
       <p className="warning">
         <h2>Disclaimer</h2>
-        This work was collaboratively created by the members and
-        friends of Ibasho, a communal house in San Francisco. We have based
-        the numbers in our model on scientific research. However, unlike a
-        medical or scientific standard of evidence, we state our best guess
-        based on available evidence, even when that evidence is far from
-        conclusive. None of us are epidemiologists. This work has not been
-        scientifically peer-reviewed. Do not rely on this work for
-        medical advice. Please continue to follow government guidance.
+        This work was collaboratively created by the members and friends of
+        Ibasho, a communal house in San Francisco. We have based the numbers in
+        our model on scientific research. However, unlike a medical or
+        scientific standard of evidence, we state our best guess based on
+        available evidence, even when that evidence is far from conclusive. None
+        of us are epidemiologists. This work has not been scientifically
+        peer-reviewed. Do not rely on this work for medical advice. Please
+        continue to follow government guidance.
       </p>
 
       <h2>Contact us</h2>

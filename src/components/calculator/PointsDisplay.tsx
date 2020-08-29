@@ -62,12 +62,12 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         value={riskBudget}
         source={{
           '10000': {
-            label: '1% per year (suggested if not at elevated risk)',
+            label: '1% per year (suggested if not at increased risk)',
             multiplier: 1,
           },
           '1000': {
             label:
-              '0.1% per year (suggest if at elevated risk or regularly interracting with people at elevated risk)',
+              '0.1% per year (suggest if at increased risk or regularly interracting with people at increased risk)',
             multiplier: 0.1,
           },
         }}
@@ -145,47 +145,43 @@ const riskTolerancePopover = (
     <Popover.Title as="h3">About At Risk Populations</Popover.Title>
     <Popover.Content>
       <p>
-        In our living group, we have agreed to a 1% risk of getting covid per
-        year. For people not at elevated risk, this&nbsp;
-        <Link to="/paper/2-riskiness">
-          conveys a similar level of risk of long-term health effects as
-          driving.
-        </Link>
+        Our living group (all at average risk) has agreed to a{' '}
+        <Link to="/paper/2-riskiness">1% risk of getting COVID per year. </Link>
       </p>
       <p>
-        For people at elevated risk, we recommend being more cautious. These
-        populations include:
+        We suggest more caution (0.1% risk per year) for people at increased
+        risk of severe illness (or in contact with people at increased risk).
+      </p>
+      <p>
+        <p>
+          <a
+            href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Risk increases with age.
+          </a>{' '}
+          We think age over 60 confers substantial increased risk.
+        </p>
+        <p>
+          <a
+            href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Certain underlying medical conditions
+          </a>{' '}
+          also confer increased risk:
+        </p>
         <ul>
-          <li>
-            <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html">
-              People over the age of 60
-            </a>
-          </li>
-          <li>Cancer patients</li>
-          <li>People with chronic kidney disease</li>
-          <li>People with COPD or other heart conditions</li>
-          <li>Immunocompromised from solid organ transplant</li>
           <li>BMI of 30 or higher</li>
-          <li>Sickle cell disease</li>
           <li>Type 2 diabetes mellitus</li>
+          <li>COPD or other heart conditions</li>
+          <li>Cancer</li>
+          <li>Chronic kidney disease</li>
+          <li>Immunocompromise from solid organ transplant</li>
+          <li>Sickle cell disease</li>
         </ul>
-        <i>
-          Source:&nbsp;
-          <a href="https://www.worldometers.info/coronavirus/coronavirus-death-rate/">
-            worldometers
-          </a>
-          ,&nbsp;
-          <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html">
-            CDC
-          </a>
-          ,
-        </i>
-      </p>
-      <p>
-        Additionally, if you are not in an at-risk category but regularly come
-        into contact with someone in an at-risk category (ex: living with a
-        grandparent), we suggest being more cautious as well - your actions
-        affect more than just you!
       </p>
     </Popover.Content>
   </Popover>
