@@ -50,6 +50,7 @@ a {
 .navbar {
   padding-left: 0;
   padding-right: 0;
+  overflow-x: hidden;
 
   .navbar-brand {
       @media (max-width: 900px) {
@@ -94,9 +95,6 @@ a {
 
 // Calculator
 #calculator {
-  // iOS devices have giant horizontal scroll with sticky points
-  // without this set.
-  overflow-x: hidden;
   
   #calculator-introduction {
     padding: 20px;
