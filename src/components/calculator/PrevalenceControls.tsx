@@ -98,7 +98,7 @@ export const PrevalenceControls: React.FunctionComponent<{
   }, [])
 
   let subPrompt: string
-  if (data.topLocation.startsWith('US_')) {
+  if (data.topLocation && data.topLocation.startsWith('US_')) {
     if (Locations[data.topLocation].label === 'Louisiana') {
       subPrompt = 'Entire state, or select parish...'
     } else if (Locations[data.topLocation].label === 'Alaska') {
@@ -112,7 +112,8 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const showSubLocation =
     data.topLocation !== '' &&
-    Locations[data.topLocation].subdivisions.length > 1
+    Locations[data.topLocation] &&
+	Locations[data.topLocation].subdivisions.length > 1
 
   const locationSet = data.topLocation !== ''
 
