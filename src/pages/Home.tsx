@@ -65,6 +65,7 @@ export const Home = (): React.ReactElement => {
         </a>
         , or to venmo user @Catherine-Olsson.
       </p>
+      <Donation />
     </div>
   )
 }
