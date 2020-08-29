@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Card from 'components/Card'
-import { MAX_POINTS } from 'data/calculate'
+import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -15,40 +15,49 @@ function displayPoints(points: number): string {
   return showPoints(points) ? fixedPointPrecision(points) : '-'
 }
 
+function displayPercent(points: number): string {
+  return showPoints(points) ? fixedPointPrecisionPercent(points * 1e-6) : '-%'
+}
+
 function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
 }
+
+function pointsPerWeekToAnnual(points: number): string {
+  return showPoints(points)
+    ? fixedPointPrecisionPercent(1 - (1 - points * 1e-6) ** 52)
+    : '-%'
+}
+
 
 export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
   const points = props.points
+  const maybeGreater = tooManyPoints(points) ? '>' : ''
 
-  const displayPercent = showPoints(points)
-    ? fixedPointPrecisionPercent(points * 1e-6)
-    : '-%'
-
-  const [risky, allowedFrequency] = howRisky(points, riskBudget)
-
+  const risky = howRisky(points, riskBudget)
   return (
     <Card>
       <p className="readout">
-        In total, you have a {tooManyPoints(points) ? '>' : ''}
-        {displayPoints(points)}
-        -in-a-million ({tooManyPoints(points) ? '>' : ''}
-        {displayPercent}) chance of getting COVID from this activity with these
-        people.
-      </p>
-      <p>
+        In total, we guess you have somewhere between a{' '}
+		{maybeGreater}
+        {displayPoints(points / ERROR_FACTOR)}
+        -in-a-million ({maybeGreater}
+        {displayPercent(points / ERROR_FACTOR)}) and a{' '}
+		{maybeGreater}
+        {displayPoints(points * ERROR_FACTOR)}-in-a-million (
+		{maybeGreater}
+        {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
+        this activity with these people.
         <b>
-          {showPoints && tooManyPoints
+          {' '}
+          {showPoints && tooManyPoints(points)
             ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
             : ''}
         </b>
       </p>
-      <p>
-        <strong>Relative Risk</strong>
-      </p>
+      <h2>How risky is this?</h2>
       <p>If your risk tolerance is...</p>
       <select
         id="budget-selector"
@@ -65,35 +74,32 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </option>
       </select>
       <p className="readout">
-        If you have a budget of {riskBudget} microCOVIDs per year (
-        {riskBudget * 1e-4}% chance of COVID), this is a{' '}
-        <b>{showPoints(points) ? risky : '--'}</b> risk activity.
+        ... then for you this is a <b>{showPoints(points) ? risky : '--'}</b>{' '}
+        risk activity.
       </p>
-      {allowedFrequency === '' ? null : (
-        <p className="readout">
-          You could do it
-          <b>{showPoints(points) ? allowedFrequency : '--'}</b>
-          if you were not doing much else.
-        </p>
-      )}
+      <p>
+        If you did this once per week, you would have an additional{' '}
+        {pointsPerWeekToAnnual(points)}-or-so chance of getting COVID this year
+        (<i>not</i> including your risk from everything else you do!)
+      </p>
     </Card>
   )
 }
 
-function howRisky(points: number, budget: number): string[] {
+function howRisky(points: number, budget: number): string {
   const normalizedPoints = points / (budget / 10000)
   if (normalizedPoints < 3) {
-    return ['very low', 'dozens of times per week']
+    return 'very low'
   } else if (normalizedPoints < 30) {
-    return ['low', 'several times per week']
+    return 'low'
   } else if (normalizedPoints < 100) {
-    return ['moderate', 'a few times a month']
+    return 'moderate'
   } else if (normalizedPoints < 300) {
-    return ['high', 'once or twice a month']
+    return 'high'
   } else if (normalizedPoints < 1000) {
-    return ['high', '']
+    return 'high'
   } else {
-    return ['dangerously high', '']
+    return 'dangerously high'
   }
 }
 
@@ -105,7 +111,7 @@ export function PointsDisplay(props: {
     <div className="top-half-card">
       <strong>Results:</strong>
       <h1>
-        {tooManyPoints(props.points) ? '>' : ''}
+        about {tooManyPoints(props.points) ? '>' : ''}
         {displayPoints(props.points)} microCOVIDs
       </h1>
     </div>

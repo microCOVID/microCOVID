@@ -57,6 +57,12 @@ const ONE_MILLION = 1e6 // One 'full' COVID
 export const MAX_ACTIVITY_RISK = 0.48
 export const MAX_POINTS = 100000
 
+// --------
+// our sheet at https://www.getguesstimate.com/models/16798
+// suggests that given known unknowns we could be about 3x off
+// in either direction
+export const ERROR_FACTOR = 3
+
 export const parsePopulation = (input: string): number =>
   Number(input.replace(/[^0-9.e]/g, ''))
 
