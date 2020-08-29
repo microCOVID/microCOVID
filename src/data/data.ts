@@ -120,7 +120,7 @@ export const TheirMask: { [key: string]: FormValue } = {
 }
 export const YourMask: { [key: string]: FormValue } = {
   none: {
-    label: 'No mask or poorly-worn mask"
+    label: 'No mask or poorly-worn mask',
     multiplier: 1,
   },
   masked: {
