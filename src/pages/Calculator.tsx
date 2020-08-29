@@ -28,9 +28,10 @@ export const Calculator = (): React.ReactElement => {
 
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [saveName, setSaveName] = useState('')
-  const [calculatorData, setCalculatorData] = useState<CalculatorData>(
-    previousData || defaultValues,
-  )
+  const [calculatorData, setCalculatorData] = useState<CalculatorData>({
+    ...defaultValues,
+    ...previousData,
+  })
 
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
@@ -104,7 +105,7 @@ export const Calculator = (): React.ReactElement => {
   return (
     <div id="calculator">
       <Row>
-        <Col md="12" lg="8">
+        <Col md="12" lg="8" id="calculator-introduction">
           <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
           <p>
             We reviewed published research about COVID, and used it to make
@@ -129,6 +130,7 @@ export const Calculator = (): React.ReactElement => {
             not rely on this tool for medical advice.
           </p>
           <button
+            id="reset-form-button"
             type="button"
             className="btn btn-secondary"
             onClick={resetForm}
@@ -137,10 +139,8 @@ export const Calculator = (): React.ReactElement => {
           </button>{' '}
           {points > 0 && (showSaveForm ? saveForm : saveButton)}
         </Col>
+        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
-
-      <hr />
-
       <Row id="calculator-fields">
         <Col md="12" lg="4">
           <Card id="location" title="Location & Prevalence">

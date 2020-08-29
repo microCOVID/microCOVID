@@ -2,7 +2,8 @@ import { CalculatorData } from './calculate'
 
 export type PartialData = Omit<
   CalculatorData,
-  | 'location'
+  | 'topLocation'
+  | 'subLocation'
   | 'population'
   | 'casesPastWeek'
   | 'casesIncreasingPercentage'

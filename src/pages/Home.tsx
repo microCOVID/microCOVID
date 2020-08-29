@@ -31,16 +31,21 @@ export const Home = (): React.ReactElement => {
       </p>
 
       <h2>Where do I start?</h2>
-      <p>
-        This website contains three outputs of our investigation:{' '}
-        <b>
+      <p>This website contains three outputs of our investigation: </p>
+      <ul>
+        <li>
           a <Link to="/calculator">calculator</Link> that you can use to
-          calculate your COVID risk, a <Link to="/paper">white paper</Link> that
-          explains our estimation method, and a{' '}
-          <Link to="/spreadsheet/">spreadsheet</Link> to compute your COVID risk
-          in more detail and to track your risk over time.
-        </b>
-      </p>
+          calculate your COVID risk
+        </li>
+        <li>
+          a <Link to="/paper">white paper</Link> that explains our estimation
+          method
+        </li>
+        <li>
+          and a <Link to="/spreadsheet/">spreadsheet</Link> to compute your
+          COVID risk in more detail and to track your risk over time.
+        </li>
+      </ul>
       <p>
         You should start with either the{' '}
         <Link to="/calculator">calculator</Link> or the{' '}

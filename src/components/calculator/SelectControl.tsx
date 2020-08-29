@@ -41,6 +41,7 @@ export const SelectControl: React.FunctionComponent<{
           {props.source[value].label}
         </option>
       ))}
+      <optgroup></optgroup>
     </select>
   </div>
 )
