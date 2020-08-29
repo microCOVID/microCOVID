@@ -3,7 +3,7 @@ const title =
 const shortTitle = 'Basic Method'
 const content = `
 
-As we know, prevalence varies widely across different geographic locations. For example, at the time of writing, Sydney has much lower rates off COVID than San Francisco. So the Person Risk from your friend in Sydney will be much lower than the risk from your friend in San Francisco.
+As we know, prevalence varies widely across different geographic locations. For example, at the time of writing, Sydney has much lower rates of COVID than San Francisco. So the Person Risk from your friend in Sydney will be much lower than the risk from your friend in San Francisco.
 
 The **Basic Method** is to just assume that a person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in their geographic area has COVID.
 
