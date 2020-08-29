@@ -4,7 +4,6 @@ import ReactGA from 'react-ga'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
-  Redirect,
   Route,
   BrowserRouter as Router,
   Switch,
@@ -16,7 +15,7 @@ import { ScrollToTop } from 'components/ScrollToTop'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Home } from 'pages/Home'
-import { Paper } from 'pages/Paper'
+import { Paper, PaperTOC } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
@@ -101,7 +100,7 @@ export const App = (): React.ReactElement => {
               <Paper />
             </Route>
             <Route exact path="/paper">
-              <Redirect to="/paper/1-intro" />
+              <PaperTOC />
             </Route>
             <Route path="/spreadsheet">
               <Spreadsheet />

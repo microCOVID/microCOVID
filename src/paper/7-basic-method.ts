@@ -66,7 +66,6 @@ We use these multipliers:
   *   If the percentage of positive tests is between 5% and 15%, we suggest a 8x factor.
   *   If the percentage of positive tests is greater than 15%, we suggest _at least_ a 10x factor. This indicates dangerously little testing in your area compared to the number of infected people.
 
-
 ### Step three: Delay factor
 Since test results take about one week to come back on average, the number of _new reported cases_ in your region last week really represents the number of _new positive test results_ in your region _the week before that_. The results are **delayed**.
 
