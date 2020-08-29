@@ -2,14 +2,15 @@ import { CalculatorData, calculate } from 'data/calculate'
 import { prepopulated } from 'data/prepopulated'
 
 describe('calculate', () => {
-  it('returns the correct value', () => {
-    const exampleLocation = {
-      label: 'San Francisco (July 2020)',
-      population: '7,500,000',
-      casesPastWeek: 7000,
-      casesIncreasingPercentage: 0,
-      positiveCasePercentage: 3,
-    }
+  // Prevailance is .1% with 4x underreproting factor
+  const exampleLocation = {
+    label: 'mock city',
+    population: '1,000,000',
+    casesPastWeek: 1000,
+    casesIncreasingPercentage: 0,
+    positiveCasePercentage: 1,
+  }
+  it('', () => {
     const scenario = 'Outdoor masked hangout with 2 people'
     const data: CalculatorData = {
       location: 'sf',
@@ -18,6 +19,7 @@ describe('calculate', () => {
     }
 
     const response = calculate(data)
-    expect(response).toBe(1)
+    // average * 2 people * outdoor * 1 hr * their mask * your mask
+    expect(response).toBe(((((0.004 * 2) / 10) * 0.06) / 2 / 8) * 1e6)
   })
 })
