@@ -14,7 +14,7 @@ We start by first estimating the risk of interacting with a single COVID-positiv
 
 So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, we estimate the chance of you getting COVID from that single interaction as 6%.
 
-How did we come up with this number? It's a rough estimate combining many sources: the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, and the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](/paper/14-research-sources).
+How did we come up with this number? It's a rough estimate combining many sources: the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, and the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](14-research-sources#one-time-contact).
 
 Think of this as our “reference interaction.” We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
@@ -41,7 +41,7 @@ Here are our estimates for the change in risk based on these modifiers:
 | Modification | Change in COVID risk to me | Citations: Why do we think this? <br>|
 |--|--|--|
 | I’m wearing a high-quality mask[^1] | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
-| Other person is wearing a high-quality mask | / 4 | <sub><super>[Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x)</super></sub> |
+| Other person is wearing a high-quality mask | / 4 | <sub><super>[Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x), [Fischer et al](https://advances.sciencemag.org/content/early/2020/08/07/sciadv.abd3083) on droplet attenuation by various mask types</super></sub> |
 | Outdoors | / 20 or more | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
 | >6 feet distance | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
 | Each additional 3 feet of distance (up to 12 feet) | / 2 | <sub><super>Same as above</super></sub> |
@@ -51,11 +51,11 @@ Here are our estimates for the change in risk based on these modifiers:
 
 If you’re taking multiple precautions, multiply the COVID risk reductions together. So if you’re wearing a mask _and_ they’re wearing a mask, then your reduction in COVID risk is \`2x * 4x = 8x\`.
 
-What about if the interaction is with more than one other person? We’ll get to this later, in the section on [Putting it all together](/paper/11-putting-it-all-together#multiple-person-interactions). For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc.)
+What about if the interaction is with more than one other person? We’ll get to this later, in the section on [Putting it all together](11-putting-it-all-together#multiple-person-interactions). For now, even though it may seem a little silly, we will still imagine there is just one other person (a picnic with one friend, just one other person in the restaurant, etc).
 
-There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](/paper/13-q-and-a).
+There are plenty of other precautions you can take to reduce your risk that we don’t describe here. For more on other precautions, see the [Q&A](13-q-and-a).
 
-There is substantial uncertainty in many of these numbers. We’ve taken uncertainty into account when giving our estimates, so that even if we’re off the mark it’s unlikely to expose you to much more risk than you’re comfortable with. We've also used a slightly conservative prevalence estimate, so that our overall estimates are conservative without distorting the relative risk comparisons. See the discussion of [Research Sources](14-research-sources) for details about the data we based these numbers on.
+There is substantial uncertainty in many of these numbers. We’ve taken uncertainty into account when giving our estimates, so that even if we’re off the mark it’s unlikely to expose you to much more risk than you’re comfortable with. We've also used a slightly conservative prevalence estimate, so that our overall estimates are conservative without distorting the relative risk comparisons. See the discussion of [Research Sources](14-research-sources#modifiers-to-activity-risk-masked-outdoors-distanced) for details about the data we based these numbers on.
 
 
 ### Example calculations
@@ -66,7 +66,7 @@ What about indoor dining with that friend? You’re there for 2 hours, indoors, 
 
 Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That’s a big difference! Remember, your friend won’t necessarily know that they have COVID, and it’s very common to be infectious before you show symptoms. And that’s with only one person!
 
-Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the [Q&A](/paper/13-q-and-a) for tips and tricks. In the next section, we will look at calculating the risk of activities with multiple people.
+Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the [Q&A](13-q-and-a#specific-activities-qa) for tips and tricks. In the next section, we will look at calculating the risk of activities with multiple people.
 
 
 ### Masked, outdoor, distanced interactions are much lower risk
@@ -87,10 +87,10 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 If you’re outdoors _and_ 20 feet away from a person, you can probably ignore the risk from them.
 
-**Volume of conversation** also matters. If the other person isn't talking, we estimate that reduces the risk to you by about 5x, because they are not expelling as many respiratory droplets. This actually makes some activities where people don't talk much, taking public transportation, safer than they would otherwise be. On the other hand, we estimate that loud talking, shouting, or singing _increases_ the risk by about 5x (as compared to a conversation at normal volume) because more respiratory droplets are exhaled and expelled when you are speaking or breathing forcefully.
+**Volume of conversation** also matters. If the other person isn't talking, we estimate that reduces the risk to you by about 5x, because they are not expelling as many respiratory droplets. This actually makes some activities where people don't talk much, such as taking public transportation, safer than they would otherwise be. On the other hand, we estimate that loud talking, shouting, or singing _increases_ the risk by about 5x (as compared to a conversation at normal volume) because more respiratory droplets are exhaled and expelled when you are speaking or breathing forcefully.
 
 
-Curious how we got these numbers? Again, check out the [Research Sources](/paper/14-research-sources)!
+Curious how we got these numbers? Again, check out the [Research Sources](14-research-sources#modifiers-to-activity-risk-masked-outdoors-distanced)!
 
 
 
@@ -106,7 +106,7 @@ These numbers clearly show that if your housemate gets COVID, it is _not_ inevit
 
 You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the estimate of household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? Our main guess is that people often reduce their level of interaction with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk.[^super] We look forward to improved data.
 
-The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](/paper/14-research-sources) for slightly more detail.
+The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](14-research-sources#household-member) for slightly more detail.
 
 ### Important note
 
@@ -114,7 +114,7 @@ _We keep calling these numbers “estimates.” Please take our uncertainty seri
 
 _Please provide attribution to us when you use our estimates, so that others can check our work. This is an important way to fight misinformation._
 
-_To learn about the scientific research supporting our estimates, please see the [Research Sources](/paper/14-research-sources) section._
+_To learn about the scientific research supporting our estimates, please see the [Research Sources](14-research-sources) section._
 
 
 ### How likely is it that the other person has COVID?

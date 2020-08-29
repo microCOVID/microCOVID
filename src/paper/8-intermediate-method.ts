@@ -5,7 +5,7 @@ const content = `
 
 One difficulty with the [Basic Method](/7-basic-method) is that not everyone is average. The Person Risk of someone who works at a grocery store is different from the Person Risk of someone who works from home and doesn’t leave the house, even if they live in the same city, because these two people have significantly different behaviors. How can we model those differences?
 
-The **Intermediate Method** adds adjustments for whether the person is or isn’t an essential worker.
+The **Intermediate Method** adds adjustments for whether the person is or isn’t a frontline worker.
 
 
 ## Intermediate method: Adjust for frontline workers
@@ -34,7 +34,7 @@ In the example above, if all you know about someone is that they live in San Fra
 
 
 [^11]:
-     We derive this from data showing that 17% of the US population are essential workers ([McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/)), and from a blanket testing initiative in the Mission District in San Francisco ([Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)) that found a ~6x higher positive test rate among frontline service workers. See [Research Sources](/paper/14-research-sources) for the full calculation.
+     We derive this from data showing that 17% of the US population are essential workers ([McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/)), and from a blanket testing initiative in the Mission District in San Francisco ([Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)) that found a ~6x higher positive test rate among frontline service workers. See [Research Sources](14-research-sources#intermediate-method-frontline-worker-adjustment) for the full calculation.
 
 [^essential]: Here are two definitions we have seen of “frontline” or “essential” workers. First: “Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers” ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)). Second: “Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60” (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/)).
 
