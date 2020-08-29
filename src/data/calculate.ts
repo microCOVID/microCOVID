@@ -92,11 +92,11 @@ export const calculateLocationPersonAverage = (
 
   // Under-reporting factor
   if (data.positiveCasePercentage < 5) {
-    underreportingFactor = 4
+    underreportingFactor = 6
   } else if (data.positiveCasePercentage < 15) {
-    underreportingFactor = 5
+    underreportingFactor = 8
   } else {
-    underreportingFactor = 7
+    underreportingFactor = 10
   }
 
   const delayFactor = 1 + Math.max(0, data.casesIncreasingPercentage / 100)

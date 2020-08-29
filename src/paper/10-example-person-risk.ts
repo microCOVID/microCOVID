@@ -10,8 +10,8 @@ You’re planning to hang out with Rosie and want to know her Person Risk, so yo
 
 
 
-*   Basic method: **5106** Person Risk.
-    *   Because we estimate the San Francisco prevalence of COVID infection (at the time of writing) as 5106-in-a-million. This would change if prevalence changed.
+*   Basic method: **5107** Person Risk.
+    *   Because we estimate the San Francisco prevalence of COVID infection (at the time of writing) as 5107-in-a-million. This would change if prevalence changed.
 *   Intermediate method: **2553** Person Risk.
     *   Rosie is _not_ an essential worker, so we can reduce our estimate by the Essential Work Factor of 1/2.
 *   Advanced method: **217** Person Risk
