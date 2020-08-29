@@ -200,14 +200,12 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky">
-        <Col />
-        <Col md="12" lg="8">
+        <Col lg={{ span: 8, offset: 4 }}>
           <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
       <Row className="explanation">
-        <Col />
-        <Col md="12" lg="8">
+        <Col lg={{ span: 8, offset: 4 }}>
           <ExplanationCard points={points} />
         </Col>
       </Row>
