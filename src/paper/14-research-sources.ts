@@ -93,7 +93,7 @@ There was a visible correlation, so we eyeballed some approximate ranges. Here's
 
 ![Positive test rate](${positiveTestRate})
 
-#### Contagiousness adjustment?
+#### Contagiousness adjustment
 
 One question that came up is whether we're overestimating the _contagious_ cases, because asymptomatic cases are probably a high proportion of all cases (a literature review by [Oran et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7281624/) estimates 40-45%) and _especially_ a high proportion of _unreported_ cases, but they are resposible for a much lower proportion of infections ([Ferretti et al.](https://science.sciencemag.org/content/368/6491/eabb6936) concluded 5%). Our data about transmission likelihood (Activity Risk) are probably drawn from mostly symptomatic index cases, which suggests that asymptomatic cases should count for "less" in the prevalence numbers, which would decrease the effective underreporting factor.
 
