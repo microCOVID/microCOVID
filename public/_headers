@@ -2,4 +2,4 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; img-src *; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self' https://www.google-analytics.com 'sha256-YnUcvcABbnKyhutQpx/qL5nShC/E3/UFpxcmMxj1b48='
+  Content-Security-Policy: default-src 'self'; form-action 'self' https://www.paypal.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; img-src *; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self' https://www.google-analytics.com 'sha256-YnUcvcABbnKyhutQpx/qL5nShC/E3/UFpxcmMxj1b48='
