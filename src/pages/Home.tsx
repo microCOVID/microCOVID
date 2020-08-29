@@ -7,19 +7,6 @@ export const Home = (): React.ReactElement => {
   return (
     <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
       <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
-      <p>
-        We hear that some folks are circulating this website beyond our circle
-        of beta testers ;). While we appreciate the publicity, we the
-        maintainers are still trying to finish our workweek of our full-time
-        jobs in peace and quiet, and we are NOT personally ready for hordes of
-        attention until the weekend. Please wait until Saturday before sharing
-        this link any further.
-      </p>
-      <p>
-        That said, in the meantime YES you are definitely welcome to be here, to
-        check out our tool privately and send us any feedback :)
-      </p>
-
       <h2>What is the microCOVID project?</h2>
       <p>
         This is a project to quantitatively estimate the COVID risk to you from
@@ -54,14 +41,12 @@ export const Home = (): React.ReactElement => {
 
       <p className="warning">
         <h2>Disclaimer</h2>
-        This work was collaboratively created by the members and friends of
-        Ibasho, a communal house in San Francisco. We have based the numbers in
-        our model on scientific research. However, unlike a medical or
-        scientific standard of evidence, we state our best guess based on
-        available evidence, even when that evidence is far from conclusive. None
-        of us are epidemiologists. This work has not been scientifically
-        peer-reviewed. Do not rely on this work for medical advice. Please
-        continue to follow government guidance.
+        In this tool we state our best estimate based on available evidence,
+        even when that evidence is not conclusive. We have read a lot of
+        experts' research, but we are not ourselves experts in this topic. This
+        work has not been scientifically peer-reviewed. There is still a lot of
+        uncertainty about COVID. Do not rely on this tool for medical advice.
+        Please continue to follow government guidance.
       </p>
 
       <h2>Contact us</h2>

@@ -25,15 +25,16 @@ Footnotes[^demo] usually contain nerdy details for detail-loving readers, and of
 
 <div class="warning">
 <h2>Disclaimer</h2>
-<p>This article (and corresponding calculator) was collaboratively written by the members and friends of Ibasho, a communal house in San Francisco. Our goal is to protect our broader community’s physical and mental health during the pandemic, by promoting balanced evidence-based decision-making by individuals in our community.</p>
+<p>We have based our numbers in this writeup on published scientific research. However, unlike a medical or scientific standard of evidence, we state our best guess based on available evidence, even when that evidence is far from conclusive. Our goal in doing so is to enable ordinary people to do back-of-the-envelope calculations to make personal decisions. For scientific data, please see the <a href="paper/14-research-sources">Research Sources</a> that we have used in forming our guesses.</p>
 
-<p>_We have based our numbers in this writeup on scientific research. However, unlike a medical or scientific standard of evidence, we state our best guess based on available evidence, even when that evidence is far from conclusive. Our goal in doing so is to enable ordinary people to do back-of-the-envelope calculations to make personal decisions. For scientific data, please see the [Research Sources](14-research-sources) that we have used in forming our guesses._</p>
 
-<p>None of us are epidemiologists. This work has not been scientifically peer-reviewed. Do not rely on this work for medical advice. Please continue to follow government guidance.</p>
+<p>We have read a lot of experts' research, but we are not ourselves experts in this topic. This is not a primary source of new information about COVID. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance.</p>
 </div>
 
 
 ## Authors:
+
+This article (and corresponding calculator) was collaboratively written by the members and friends of Ibasho, a communal house in San Francisco. Our goal is to protect our broader community’s physical and mental health during the pandemic, by promoting balanced evidence-based decision-making by individuals in our community.
 
 **Cite us collectively as:** The Ibasho community. We are members and friends of Ibasho, a communal house in San Francisco.
 
