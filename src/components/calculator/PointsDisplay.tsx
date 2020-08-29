@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Card from 'components/Card'
-import { MAX_POINTS } from 'data/calculate'
+import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -15,6 +15,10 @@ function displayPoints(points: number): string {
   return showPoints(points) ? fixedPointPrecision(points) : '-'
 }
 
+function displayPercent(points: number): string {
+  return showPoints(points) ? fixedPointPrecisionPercent(points * 1e-6) : '-%'
+}
+
 function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
 }
@@ -24,20 +28,21 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
 
   const points = props.points
 
-  const displayPercent = showPoints(points)
-    ? fixedPointPrecisionPercent(points * 1e-6)
-    : '-%'
-
   const [risky, allowedFrequency] = howRisky(points, riskBudget)
 
   return (
     <Card>
       <p className="readout">
-        In total, you have a {tooManyPoints(points) ? '>' : ''}
-        {displayPoints(points)}
+        In total, we guess you have somewhere between a{' '}
+        {tooManyPoints(points) ? '>' : ''}
+        {displayPoints(points / ERROR_FACTOR)}
         -in-a-million ({tooManyPoints(points) ? '>' : ''}
-        {displayPercent}) chance of getting COVID from this activity with these
-        people.
+        {displayPercent(points / ERROR_FACTOR)}) and a{' '}
+        {tooManyPoints(points) ? '>' : ''}
+        {displayPoints(points * ERROR_FACTOR)}-in-a-million (
+        {tooManyPoints(points) ? '>' : ''}
+        {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
+        this activity with these people.
       </p>
       <p>
         <b>
@@ -105,7 +110,7 @@ export function PointsDisplay(props: {
     <div className="top-half-card">
       <strong>Results:</strong>
       <h1>
-        {tooManyPoints(props.points) ? '>' : ''}
+        about {tooManyPoints(props.points) ? '>' : ''}
         {displayPoints(props.points)} microCOVIDs
       </h1>
     </div>
