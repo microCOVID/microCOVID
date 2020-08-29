@@ -43,7 +43,7 @@ Footnotes[^demo] usually contain nerdy details for detail-loving readers, and of
 
 **Website and calculator:** Dominic Dagradi, Sarah Dobro, Deb Lyon
 
-_Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Ben Shaya, Danny Hernandez, David Mears, Derek Foster, Elliot Olds, Eugene Shvarts, Jacob Falkovich, Jeremy Howard, Jessica Watson Miller, Ivan Gayton, Katja Grace, Matt Bell, Peter Hurford, Zvi Mowshowitz, and other friends who chose to remain anonymous. (Giving feedback does not imply endorsement of, or agreement with, this writeup.)_
+_Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Ben Shaya, Danny Hernandez, David Mears, Derek Foster, Elliot Olds, Eugene Shvarts, Jacob Falkovich, Jeremy Howard, Jessica Watson Miller, Ivan Gayton, Katja Grace, Matt Bell, Peter Favaloro, Peter Hurford, Zvi Mowshowitz, and other friends who chose to remain anonymous. (Giving feedback does not imply endorsement of, or agreement with, this writeup.)_
 
 ---
 
