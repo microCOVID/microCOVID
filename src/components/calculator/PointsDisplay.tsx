@@ -29,24 +29,20 @@ function pointsPerWeekToAnnual(points: number): string {
     : '-%'
 }
 
+function maybeGreater(points: number): string {
+  return tooManyPoints(points) ? '>' : ''
+}
+
 export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
   const points = props.points
-  const maybeGreater = tooManyPoints(points) ? '>' : ''
 
   const [risky, riskyStyle] = howRisky(points, riskBudget)
 
   return (
     <Card>
       <p className="readout">
-        In total, we guess you have somewhere between a {maybeGreater}
-        {displayPoints(points / ERROR_FACTOR)}
-        -in-a-million ({maybeGreater}
-        {displayPercent(points / ERROR_FACTOR)}) and a {maybeGreater}
-        {displayPoints(points * ERROR_FACTOR)}-in-a-million ({maybeGreater}
-        {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
-        this activity with these people.
         <b>
           {' '}
           {showPoints && tooManyPoints(points)
@@ -78,6 +74,13 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         </span>{' '}
         risk activity.
       </p>
+      <h2>What does this mean numerically?</h2>
+      <p>
+        This is a roughly {maybeGreater(points)}
+        {displayPoints(points)}-in-a-million ({maybeGreater(points)}
+        {displayPercent(points)}) chance of getting COVID from this activity
+        with these people.
+      </p>
       <p>
         If you did this once per week, you would have an additional{' '}
         {pointsPerWeekToAnnual(points)}-or-so chance of getting COVID this year
@@ -96,7 +99,7 @@ function howRisky(points: number, budget: number): string[] {
   const normalizedPoints = points / (budget / 10000)
   if (normalizedPoints < 3) {
     return ['very low', riskyStyles[STYLE_LOW]]
-  } else if (normalizedPoints < 30) {
+  } else if (normalizedPoints < 25) {
     return ['low', riskyStyles[STYLE_LOW]]
   } else if (normalizedPoints < 100) {
     return ['moderate', riskyStyles[STYLE_MEDIUM]]
@@ -117,8 +120,11 @@ export function PointsDisplay(props: {
     <div className="top-half-card">
       <strong>Results:</strong>
       <h1>
-        about {tooManyPoints(props.points) ? '>' : ''}
-        {displayPoints(props.points)} microCOVIDs
+        {tooManyPoints(props.points) ? '>' : '~'}
+        {displayPoints(props.points)} microCOVIDs ({maybeGreater(props.points)}
+        {displayPoints(props.points / ERROR_FACTOR)} to{' '}
+        {maybeGreater(props.points)}
+        {displayPoints(props.points * ERROR_FACTOR)})
       </h1>
     </div>
   )
