@@ -39279,4 +39279,4 @@ export const Locations: { [key: string]: Location } = {
   // update_prevalence locations end
 }
 
-export const PrevalenceDataDate = 'August 28, 2020'  // update_prevalence date
+export const PrevalenceDataDate = 'August 28, 2020' // update_prevalence date
