@@ -48,7 +48,6 @@ a {
 // Layout overrides
 
 .navbar {
-  overflow-x: hidden;
   padding-left: 0;
   padding-right: 0;
 
@@ -95,6 +94,10 @@ a {
 
 // Calculator
 #calculator {
+  // iOS devices have giant horizontal scroll with sticky points
+  // without this set.
+  overflow-x: hidden;
+  
   #calculator-introduction {
     padding: 20px;
     font-size: $h4-font-size;
