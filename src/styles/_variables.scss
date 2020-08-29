@@ -1,4 +1,4 @@
-// Breakpoints 
+// Breakpoints
 
 $grid-breakpoints: (
   xs: 0,
@@ -47,7 +47,8 @@ $primary: $microcov-brand !default;
 $secondary: $gray-600 !default;
 $success: $microcov-brand !default;
 $info: $cyan !default;
-$warning: $yellow !default;
+$warning-border: $yellow !default;
+$warning-fill: #fbdfb1 !default;
 $danger: $red !default;
 $light: $gray-200 !default;
 $dark: $gray-700 !default;
