@@ -221,7 +221,7 @@ class Place(pydantic.BaseModel):
             positiveCasePercentage=(
                 self.test_positivity_rate * 100
                 if self.test_positivity_rate is not None
-                else 20
+                else None
             ),
         )
 
