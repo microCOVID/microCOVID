@@ -56,7 +56,7 @@ export const Spreadsheet = (): React.ReactElement => {
       </p>
       <p>
         The {spreadsheet()} includes a few multipliers that we mention in the
-        <Link to="/paper/13-q-and-a">Q&A</Link> section but did not include in
+        {' '}<Link to="/paper/13-q-and-a">Q&A</Link> section but did not include in
         the main text or in the {calculator} for simplicity, such as better
         masks. Other than that, each row on the spreadsheet does exactly the
         same thing as the {calculator}.
