@@ -85,7 +85,12 @@ export const PrevalenceControls: React.FunctionComponent<{
   }
 
   const setLocationData = (topLocation: string, subLocation: string) => {
-    setter({ ...data, ...dataForLocation, topLocation, subLocation })
+    setter({
+      ...data,
+      ...dataForLocation(subLocation || topLocation),
+      topLocation,
+      subLocation,
+    })
   }
 
   // If a stored location exists, load latest data for that location.
@@ -248,6 +253,7 @@ interface PrevalanceData {
 }
 
 function dataForLocation(location: string): PrevalanceData {
+  console.log('get data for ' + location)
   const locationData = Locations[location]
 
   if (locationData) {
