@@ -25,9 +25,10 @@ const processor = new MarkdownIt({
     },
   })
 
-const PaperContents: React.FunctionComponent<{ id: string, fullPage: boolean }> = (
-  {id, fullPage},
-) => {
+const PaperContents: React.FunctionComponent<{
+  id: string
+  fullPage: boolean
+}> = ({ id, fullPage }) => {
   // Return 404 for unknown pages
   if (!slugs.includes(id)) {
     return <div>PAGE NOT FOUND</div>
@@ -38,9 +39,10 @@ const PaperContents: React.FunctionComponent<{ id: string, fullPage: boolean }> 
   const prev = slugs[slugs.indexOf(id) - 1]
   const next = slugs[slugs.indexOf(id) + 1]
 
-  const PageLink: React.FunctionComponent<{ toId: string, className?: string }> = (
-    props
-  ) => {
+  const PageLink: React.FunctionComponent<{
+    toId: string
+    className?: string
+  }> = (props) => {
     if (fullPage) {
       return (
         <a href={`#${props.toId}`} className={props.className}>
@@ -65,9 +67,7 @@ const PaperContents: React.FunctionComponent<{ id: string, fullPage: boolean }> 
               ← Previous: {pages[prev].shortTitle || pages[prev].title}
             </PageLink>
           ) : (
-            <Link to="/paper">
-              ← Table of Contents
-            </Link>
+            <Link to="/paper">← Table of Contents</Link>
           )}
         </span>
 
@@ -147,17 +147,16 @@ export const PaperTOC = (): React.ReactElement => {
         </Link>
       </div>
       <hr />
-      This writeup describes the reasoning behind the numbers and
-      calculations used in the <Link to="/calculator">calculator</Link>,
-      and will teach you how to model situations that are more complex
-      than the calculator can describe.
-
-      You can read it <Link to="/paper/all">all in one page</Link> (good
-      for searching or reading offline) or select the page you want
-      below:
+      This writeup describes the reasoning behind the numbers and calculations
+      used in the <Link to="/calculator">calculator</Link>, and will teach you
+      how to model situations that are more complex than the calculator can
+      describe. You can read it <Link to="/paper/all">all in one page</Link>{' '}
+      (good for searching or reading offline) or select the page you want below:
       <ol className="toc">
         {Object.keys(pages).map((pageId, pageIndex) => (
-          <li><Link to={`/paper/${pageId}`}>{pages[pageId].title}</Link></li>
+          <li key={pageIndex}>
+            <Link to={`/paper/${pageId}`}>{pages[pageId].title}</Link>
+          </li>
         ))}
       </ol>
     </div>

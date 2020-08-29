@@ -4,7 +4,6 @@ import ReactGA from 'react-ga'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
-  Redirect,
   Route,
   BrowserRouter as Router,
   Switch,
