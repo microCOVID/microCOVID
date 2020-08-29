@@ -133,13 +133,13 @@ These two facts combined imply that, if you interacted with someone more than 3 
 
 And if your interaction was 5 days ago and your contact still has no symptoms, you should have an additional 2x as much certainty (total of 14 times more confident): \`0.94*0.01 + 0.06 = 0.07 ≈ 1/14\`.
 
-To see where these factors might be useful in practice, imagine that Alice lives with risk-averse housemates but wishes to spend undistanced time with her high-risk partner Bob. Without further information, Alice might imagine that she needs to isolate for 10 days after spending time with Bob in order to avoid exposing her housemates to more risk than they're comfortable with. But suppose seeing Bob is the only high-risk thing Alice is doing, and suppose that Alice and her housemates all agree that Bob is only 5x "too risky". (That is, if Bob were 5x less likely to have COVID at the time of Alice's visit, Alice's housemates would be fine with Alice seeing Bob and then coming back home without further isolation.) Then Alice could safely follow a procedure where she:
+To see where these factors might be useful in practice, imagine that Alice lives with risk-averse housemates but wishes to spend undistanced time with her partner Bob, who generally acts in riskier ways. Without further information, Alice might imagine that she needs to isolate for 10 days after spending time with Bob in order to avoid exposing her housemates to more risk than they're comfortable with. But suppose seeing Bob is the only high-risk thing Alice is doing, and suppose that Alice and her housemates all agree that Bob is only 5x "too risky." (That is, if Bob were 5x less likely to have COVID at the time of Alice's visit, Alice's housemates would be fine with Alice seeing Bob and then coming back home without further isolation.) Then Alice could safely follow a procedure where she:
 * has her visit with Bob;
-* waits 3 full days;
+* waits 3 full days without interacting with Bob or her housemates;
 * verifies that Bob is not experiencing any potential symptoms of COVID-19, even mild or ambiguous ones;
 * and then returns home.
 
-This works because Bob is less than 7x "too risky". If he were 10x "too risky", Alice could safely wait 5 days instead of 3, because 10x is less than the 14x increased confidence that you can have after 5 days.
+This works because Bob is less than 7x "too risky." If he were 10x "too risky," Alice could safely wait 5 days instead of 3, because 10x is less than the 14x increased confidence that you can have after 5 days.
 
 If each visit only requires 3 or 5 days of isolation instead of 10, Alice can probably see her partner more often, which is likely to be good for both Alice's and Bob's mental health.
 
