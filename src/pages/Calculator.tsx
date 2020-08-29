@@ -28,9 +28,10 @@ export const Calculator = (): React.ReactElement => {
 
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [saveName, setSaveName] = useState('')
-  const [calculatorData, setCalculatorData] = useState<CalculatorData>(
-    previousData || defaultValues,
-  )
+  const [calculatorData, setCalculatorData] = useState<CalculatorData>({
+    ...defaultValues,
+    ...previousData,
+  })
 
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
