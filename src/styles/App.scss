@@ -101,6 +101,10 @@ a {
     }
   }
 
+  a {
+    color: $body-color;
+  }
+
   // Colorful section headers
   .card header {
     color: white;
@@ -167,6 +171,20 @@ a {
     font-size: 1em;
   }
 
+  // Risk emphasis
+  .low-risk, .medium-risk, .high-risk {
+    font-size: 2em;
+  }
+  .low-risk {
+    color: $indigo;
+  }
+  .medium-risk {
+    color: $cyan;
+  }
+  .high-risk {
+    color: $red
+  }
+
   // Tooltip button/badge styles
   .form-group {
     .label-wrapper {
@@ -186,24 +204,27 @@ a {
     color: $warning;
   }
 
+
   .sticky {
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1;
     padding-bottom: 0;
-    margin-bottom: -20px;
   }
 
   .top-half-card {
-    border: none;
-    background: lighten($gray-200, 1.5);
-    border-radius: 8px;
-    padding: 15px;
+    background: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15)
   }
 
-  .explanation {
-    padding-top: 0;
+  .explanation .card {
+    border: 1px solid $border-color;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -214,10 +235,13 @@ a {
   line-height: 30px;
   max-width: 850px;
 
+  h1 { color: $primary}
+
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Roboto Slab';
     font-weight: 700;
-    color: $primary;
+    margin-top: 2.4rem;
+    margin-bottom: 1.3rem;
 
     // Flip text and anchor links left-to-right
     display: flex;
@@ -278,11 +302,6 @@ a {
     }
   }
 
-  h1,h2,h3,h4,h5,h6 {
-    margin-top: 2.4rem;
-    margin-bottom: 1.3rem;
-  }
-
   table {
     margin: 40px 0;
     table-layout: fixed;
@@ -312,7 +331,10 @@ a {
     text-align:center;
     font-size:1.5em;
     line-height: 1.5em;
-    margin: 30px 100px;
+    margin: 30px 50px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #eee;
   }
 
   hr.footnotes-sep {
