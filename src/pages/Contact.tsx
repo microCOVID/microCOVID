@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Donation from 'components/Donation'
-
 export const Contact = (): React.ReactElement => {
   return (
     <div id="paperPage">
@@ -95,9 +93,16 @@ export const Contact = (): React.ReactElement => {
       <p>
         We also welcome donations and tips, if you feel so moved. No pressure,
         truly. We're all volunteers and we don't currently have any funding to
-        work on this project. Thank you in advance!
+        work on this project. Thank you in advance! Please donate{' '}
+        <a
+          href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MC4NDX6RTR6Q&currency_code=USD&source=url"
+          target="_blank"
+          rel="noreferrer"
+        >
+          using this paypal link
+        </a>
+        , or to venmo user @Catherine-Olsson.
       </p>
-      <Donation />
     </div>
   )
 }
