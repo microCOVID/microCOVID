@@ -180,20 +180,14 @@ We limit our analysis to the decrease in risk specifically between one meter and
   * In another, we compare "one row and one column away" (1.02 meters distance, by the Pythagorean theorem since rows are 0.9 meters apart and columns are 0.5 meters apart) with "one row and three columns away" (1.74 meters distance). ("Column" here refers to the number of seats away in the direction perpendicular to the direction the passengers are facing.) We used three columns away rather than four columns away, even though four columns was closer to 2 meters, because the attack rate for one-row-four-columns seemed uncharacteristically low (lower than five columns away) and it would have artificially inflated our estimate of the protection factor from greater distance. We find that the further distance among this pair is associated with a **2.9x (0.9x to 10x)** reduction in risk.
 * Averaging the estimate from Chu with the average of the estimates from Hu, we get a **3.0x (1.9x to 4.9x, approximately lognormal)** reduction in risk when going from one meter to two meters.
 
-### Outdoors
-
-This and everything below are in the main model, not the "masks and distance" sub-model, because we're departing the realm of simply copying confidence intervals from our sources. Our sources for the reduction in risk from being outdoors hint at a 100x improvement, but without error bars, so we defer to our own reasoning.
-
-We think being outdoors reduces two kinds of transmission by two different amounts:
-* Transmission due to breathing and speaking might be reduced by 10x to 100x, lognormal (median 31x, mean 40x).
-* Transmission due to coughing and sneezing (which happen even in people who would describe themselves as healthy) is probably only reduced 1x to 3x, lognormal (median and mean about 2x).
-
-If outdoor transmission is 90% due to breathing and speaking, and only 10% due to coughing and sneezing — which seems likely to us since most people with obvious COVID symptoms should be staying home — then we get **28x (9x to 95x)** as our overall distribution of outdoor risk reduction.
-
 ### Remaining parameters
 
-We don't have legible justifications for the confidence intervals of these; they're derived from our intuitions based on thinking about this problem for a few months. If you want to see the impact of more uncertainty, you can edit the Guesstimate model. (Don't worry, it won't change what anyone else sees.)
+These are in the main model, not the "masks and distance" sub-model, because we're departing the realm of basing our distributions on the confidence intervals from our sources. The remaining parameters come from sources without obviously usable confidence intervals. We don't have fully legible justifications for the intervals that we've chosen; they're derived from our intuitions based on thinking about this problem for a few months. If you want to see the impact of different choices, you can edit the Guesstimate model. (Don't worry, it won't change what anyone else sees.)
 
+* Reduction in risk from being outdoors: 28x (9x to 95x), computed by combining the following guesses:
+  * Transmission due to breathing and speaking might be reduced by 10x to 100x, lognormal (implies a median of 31x, mean 40x).
+  * Transmission due to coughing and sneezing (which happen even in people who would describe themselves as healthy) is probably only reduced 1x to 3x, lognormal (median and mean about 2x).
+  * Overall transmission from people who don't know they're sick might be 90% due to breathing and speaking, and only 10% from sneezing and coughing, because even though sneezing and coughing are much more effective at transmitting the virus, people who feel well usually don't sneeze and cough very much.
 * Baseline transmission risk (indoor unmasked 1-hour conversation at typical socializing distance, point estimate 6%): 2% to 13%, lognormal (median 5%, mean 6%).
 * Underreporting factor in San Francisco (point estimate 6x): 3x to 10x, lognormal (median 5.5x, mean 5.9x).
 
