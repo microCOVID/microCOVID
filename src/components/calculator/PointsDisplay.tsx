@@ -60,10 +60,12 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       >
         <optgroup label=""></optgroup>
         <option value="1000">
-          0.1% per year (suggested if at high risk or interacting with people at high risk)
+          0.1% per year (suggested if at high risk or interacting with people at
+          high risk)
         </option>
         <option value="10000">
-          1% per year (suggested if not at high risk nor interacting with people at high risk)
+          1% per year (suggested if not at high risk nor interacting with people
+          at high risk)
         </option>
       </select>
       <p className="readout">
