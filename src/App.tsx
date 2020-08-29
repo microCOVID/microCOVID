@@ -38,7 +38,7 @@ export const App = (): React.ReactElement => {
         <ScrollToTop />
 
         <Container>
-          <Navbar expand="sm">
+          <Navbar expand="md">
             <Navbar.Brand href="/">microCOVID Project</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

@@ -52,6 +52,12 @@ a {
   padding-left: 0;
   padding-right: 0;
 
+  .navbar-brand {
+      @media (max-width: 900px) {
+        font-size: 20px;
+       }
+    
+  }
   a {
     text-decoration: none;
   }
@@ -63,14 +69,26 @@ a {
 }
 
 .nav-link {
-  padding: 0.5rem 0 !important;
-  margin: 0 0.5rem;
+  padding: 0.5rem !important;
+  margin: 0;
+
   border-bottom: 2px solid transparent;
-  letter-spacing: 1px;
+  letter-spacing: 1px; 
 
   &.active {
-    border-bottom: 2px solid $primary;
+    border-left: 2px solid $primary;
   }
+
+  @media (min-width: 768px) {
+    padding: 0.5rem 0 !important;
+    margin: 0 0.5rem;
+
+    &.active {
+      border-left: none;
+      border-bottom: 2px solid $primary;
+    }
+  }
+
 }
 
 // Home page

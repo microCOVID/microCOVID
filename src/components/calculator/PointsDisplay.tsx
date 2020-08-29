@@ -29,7 +29,6 @@ function pointsPerWeekToAnnual(points: number): string {
     : '-%'
 }
 
-
 export function ExplanationCard(props: { points: number }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(1000)
 
@@ -40,14 +39,11 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
   return (
     <Card>
       <p className="readout">
-        In total, we guess you have somewhere between a{' '}
-		{maybeGreater}
+        In total, we guess you have somewhere between a {maybeGreater}
         {displayPoints(points / ERROR_FACTOR)}
         -in-a-million ({maybeGreater}
-        {displayPercent(points / ERROR_FACTOR)}) and a{' '}
-		{maybeGreater}
-        {displayPoints(points * ERROR_FACTOR)}-in-a-million (
-		{maybeGreater}
+        {displayPercent(points / ERROR_FACTOR)}) and a {maybeGreater}
+        {displayPoints(points * ERROR_FACTOR)}-in-a-million ({maybeGreater}
         {displayPercent(points * ERROR_FACTOR)}) chance of getting COVID from
         this activity with these people.
         <b>
