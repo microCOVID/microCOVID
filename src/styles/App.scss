@@ -167,6 +167,17 @@ a {
     font-size: 1em;
   }
 
+  // Risk emphasis
+  .low-risk {
+    font-size: 2em;
+    color: $indigo;
+  }
+
+  .medium-risk {
+    font-size: 2em;
+    color: $cyan;
+  }
+
   // Tooltip button/badge styles
   .form-group {
     .label-wrapper {
@@ -183,7 +194,15 @@ a {
   }
 
   .warning {
-    color: red;
+    color: $primary;
+  }
+
+  .medium-risk {
+    color: $indigo;
+  }
+
+  .low-risk {
+    color: $cyan;
   }
 
   .sticky {
