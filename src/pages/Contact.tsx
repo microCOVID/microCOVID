@@ -95,7 +95,8 @@ export const Contact = (): React.ReactElement => {
       <p>
         We also welcome donations and tips, if you feel so moved. No pressure,
         truly. We're all volunteers and we don't currently have any funding to
-        work on this project. Thank you in advance!
+        work on this project. Thank you in advance! (If you don't want to use
+        PayPal, you can also send to Venmo user <code>@Catherine-Olsson</code>.)
       </p>
       <Donation />
     </div>
