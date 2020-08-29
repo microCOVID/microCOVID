@@ -112,19 +112,19 @@ export const Distance: { [key: string]: FormValue } = {
   tenFt: { label: '10+ feet apart most of the time', multiplier: 0.25 },
 }
 export const TheirMask: { [key: string]: FormValue } = {
-  none: { label: 'No mask, or poorly-worn mask', multiplier: 1 },
+  none: { label: 'No mask or poorly-worn mask', multiplier: 1 },
   masked: {
-    label: 'Masked (surgical, cotton, etc.,)',
+    label: 'High-quality mask (surgical or similar)',
     multiplier: 0.25,
   },
 }
 export const YourMask: { [key: string]: FormValue } = {
   none: {
-    label: 'No mask, or mask without filter (bandana, cotton, etc.)',
+    label: 'No mask or poorly-worn mask"
     multiplier: 1,
   },
   masked: {
-    label: 'High-quality mask (surgical, filter insert, etc)',
+    label: 'High-quality mask (surgical or similar)',
     multiplier: 0.5,
   },
 }
