@@ -1,6 +1,10 @@
 import React, { useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 
+import {
+  recordCalculatorChanged,
+  recordSavedCustom,
+} from 'components/Analytics'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import {
@@ -42,11 +46,16 @@ export const Calculator = (): React.ReactElement => {
     saveCalculation(saveName, calculatorData)
     setShowSaveForm(false)
     setSaveName('')
+    recordSavedCustom(points)
   }
 
   const points = useMemo(() => {
     // Risk calculation
     const computedValue = calculate(calculatorData)
+
+    if (computedValue) {
+      recordCalculatorChanged(computedValue)
+    }
 
     // Store data for refresh
     localStorage.setItem(
