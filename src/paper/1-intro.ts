@@ -25,7 +25,7 @@ Footnotes[^demo] usually contain nerdy details for detail-loving readers, and of
 
 <div class="warning">
 <h2>Disclaimer</h2>
-<p>We have based our numbers in this writeup on published scientific research. However, unlike a medical or scientific standard of evidence, we state our best guess based on available evidence, even when that evidence is far from conclusive. Our goal in doing so is to enable ordinary people to do back-of-the-envelope calculations to make personal decisions. For scientific data, please see the <a href="paper/14-research-sources">Research Sources</a> that we have used in forming our guesses.</p>
+<p>We have based our numbers in this writeup on published scientific research. However, unlike a medical or scientific standard of evidence, we state our best guess based on available evidence, even when that evidence is far from conclusive. Our goal in doing so is to enable ordinary people to do back-of-the-envelope calculations to make personal decisions. For scientific data, please see the <a href="14-research-sources">Research Sources</a> that we have used in forming our guesses.</p>
 
 
 <p>We have read a lot of experts' research, but we are not ourselves experts in this topic. This is not a primary source of new information about COVID. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance.</p>

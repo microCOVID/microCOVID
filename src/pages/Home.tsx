@@ -6,7 +6,6 @@ import Donation from '../components/Donation'
 export const Home = (): React.ReactElement => {
   return (
     <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
-      <h2>NOTE: Please wait until Saturday 8/29 to share this widely</h2>
       <h2>What is the microCOVID project?</h2>
       <p>
         This is a project to quantitatively estimate the COVID risk to you from
@@ -59,8 +58,8 @@ export const Home = (): React.ReactElement => {
         We also welcome donations and tips, if you feel so moved. No pressure,
         truly. We're all volunteers and we don't currently have any funding to
         work on this project. Thank you in advance!
-        <Donation />
       </p>
+      <Donation />
     </div>
   )
 }
