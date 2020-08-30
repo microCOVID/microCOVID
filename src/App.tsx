@@ -1,15 +1,14 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import ReactGA from 'react-ga'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
   Route,
   BrowserRouter as Router,
   Switch,
-  useLocation,
 } from 'react-router-dom'
 
+import { PageViews } from 'components/Analytics'
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
 import { Calculator } from 'pages/Calculator'
@@ -19,8 +18,6 @@ import { Paper, PaperTOC } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
-
-ReactGA.initialize('UA-176544991-1')
 
 export const App = (): React.ReactElement => {
   return (
@@ -118,10 +115,4 @@ export const App = (): React.ReactElement => {
       </Router>
     </HelmetProvider>
   )
-}
-
-const PageViews = (): null => {
-  const location = useLocation()
-  ReactGA.pageview(location.pathname)
-  return null
 }
