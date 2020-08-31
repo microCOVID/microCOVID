@@ -3,6 +3,10 @@ export interface FormValue {
   multiplier: number
 }
 
+const formValue = function (label: string, multiplier: number): FormValue {
+  return { label, multiplier }
+}
+
 export const RiskProfile: { [key: string]: FormValue } = {
   average: {
     label: 'An average person in your area',
@@ -111,22 +115,19 @@ export const Distance: { [key: string]: FormValue } = {
   sixFt: { label: '6+ feet apart', multiplier: 0.5 },
   tenFt: { label: '10+ feet apart', multiplier: 0.25 },
 }
+
+const noneLabel = 'No mask or poorly-worn mask'
+const basicLabel = 'Cotton mask, bandana, or buff'
+const filteredLabel = 'Surgical mask or mask with PM2.5 filter insert'
 export const TheirMask: { [key: string]: FormValue } = {
-  none: { label: 'No mask or poorly-worn mask', multiplier: 1 },
-  masked: {
-    label: 'High-quality mask (surgical or similar)',
-    multiplier: 0.25,
-  },
+  none: formValue(noneLabel, 1.0),
+  basic: formValue(basicLabel, 0.25),
+  filtered: formValue(filteredLabel, 0.25),
 }
 export const YourMask: { [key: string]: FormValue } = {
-  none: {
-    label: 'No mask or poorly-worn mask',
-    multiplier: 1,
-  },
-  masked: {
-    label: 'High-quality mask (surgical or similar)',
-    multiplier: 0.5,
-  },
+  none: formValue(noneLabel, 1.0),
+  basic: formValue(basicLabel, 1.0),
+  filtered: formValue(filteredLabel, 0.5),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
