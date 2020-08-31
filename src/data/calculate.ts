@@ -66,8 +66,8 @@ export const migrateDataToCurrent = (
     table: { [key: string]: FormValue },
     prop: keyof CalculatorData,
   ) => {
-    let current = data[prop]
-    if (typeof current !== "string" || !(current in table)) {
+    const current = data[prop]
+    if (typeof current !== 'string' || !(current in table)) {
       delete data[prop]
     }
   }
@@ -78,7 +78,7 @@ export const migrateDataToCurrent = (
   fixOne(TheirMask, 'theirMask')
   fixOne(YourMask, 'yourMask')
   fixOne(Voice, 'voice')
-  return {...defaultValues, ...data}
+  return { ...defaultValues, ...data }
 }
 
 const ONE_MILLION = 1e6 // One 'full' COVID

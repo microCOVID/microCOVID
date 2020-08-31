@@ -11,7 +11,7 @@ const _getSavedForms = (): { [key: string]: CalculatorData } => {
     return {}
   }
 
-  for (let key in saved) {
+  for (const key in saved) {
     saved[key] = migrateDataToCurrent(saved[key])
   }
 
