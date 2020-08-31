@@ -1,4 +1,6 @@
 import React from 'react'
+import { Popover } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import { SelectControl } from './SelectControl'
 import {
@@ -92,6 +94,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <SelectControl
         id="theirMask"
         label="Their mask"
+        popover={maskPopover}
         data={data}
         setter={setter}
         source={TheirMask}
@@ -99,6 +102,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <SelectControl
         id="yourMask"
         label="Your mask"
+        popover={maskPopover}
         data={data}
         setter={setter}
         source={YourMask}
@@ -131,3 +135,15 @@ export const ActivityRiskControls: React.FunctionComponent<{
     </React.Fragment>
   )
 }
+
+const maskPopover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">Masks</Popover.Title>
+    <Popover.Content>
+      For more details on masks, see{" "}
+      <Link to="/paper/14-research-sources#masks" target="_blank">
+        research sources
+      </Link>
+    </Popover.Content>
+  </Popover>
+)

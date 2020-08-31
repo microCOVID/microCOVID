@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 
 import {
@@ -26,6 +26,17 @@ const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
+  // Mount / unmount
+  useEffect(() => {
+    scrollListener()
+    window.addEventListener('scroll', scrollListener, true)
+    window.addEventListener('resize', scrollListener, true)
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+      window.removeEventListener('resize', scrollListener)
+    }
+  }, [])
+
   const previousData = JSON.parse(
     localStorage.getItem(FORM_STATE_KEY) || 'null',
   )
@@ -67,8 +78,11 @@ export const Calculator = (): React.ReactElement => {
     )
 
     if (computedValue === null) {
+      document.getElementById('points-row')?.classList.remove('has-points')
       return -1
     }
+
+    document.getElementById('points-row')?.classList.add('has-points')
 
     return computedValue
   }, [calculatorData])
@@ -207,16 +221,38 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </Col>
       </Row>
-      <Row className="sticky">
+      <Row className="sticky" id="points-row">
         <Col lg={{ span: 8, offset: 4 }}>
           <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
-      <Row className="explanation">
+      <Row className="explanation" id="explanation-row">
         <Col lg={{ span: 8, offset: 4 }}>
           <ExplanationCard points={points} />
         </Col>
       </Row>
     </div>
   )
+}
+
+// Sets #pointsRow to position: fixed if it would not be on the screen.
+const scrollListener = (): void => {
+  const pointsRow = document.getElementById('points-row')
+  const calculatorRow = document.getElementById('calculator-fields')
+  if (!pointsRow || !calculatorRow) {
+    return
+  }
+
+  const calculatorBounds = calculatorRow.getBoundingClientRect()
+  const calculatorWidth = calculatorBounds.width
+  const pointsRowHeight = pointsRow.getBoundingClientRect().height
+
+  if (calculatorBounds.bottom + pointsRowHeight <= window.innerHeight) {
+    // Bottom of calculator is on the screen
+    pointsRow.classList.remove('scrolled-past')
+    pointsRow.style.width = 'auto'
+  } else {
+    pointsRow.classList.add('scrolled-past')
+    pointsRow.style.width = calculatorWidth + 'px'
+  }
 }

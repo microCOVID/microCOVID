@@ -230,11 +230,14 @@ a {
   }
 
   .sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
     z-index: 1;
     padding-bottom: 0;
+  }
+
+  .scrolled-past.has-points {
+    position: fixed;
+    bottom: 0;
+    margin-right: auto;
   }
 
   .top-half-card {
