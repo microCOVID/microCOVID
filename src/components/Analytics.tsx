@@ -10,7 +10,7 @@ export function PageViews(): null {
 }
 
 let lastPoints = 0
-export function recordCalculatorChanged(points: number) {
+export function recordCalculatorChanged(points: number): void {
   if (points === lastPoints) return
   ReactGA.event({
     category: 'Calculator',
@@ -20,7 +20,7 @@ export function recordCalculatorChanged(points: number) {
   lastPoints = points // Don't record an event if nothing actually changed.
 }
 
-export function recordSavedCustom(points: number) {
+export function recordSavedCustom(points: number): void {
   ReactGA.event({
     category: 'Calculator',
     action: 'Saved custom scenario',
