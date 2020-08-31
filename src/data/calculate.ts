@@ -55,6 +55,32 @@ export const defaultValues: CalculatorData = {
   voice: '',
 }
 
+// Replace any values that no longer exist with empty string (nothing selected).
+// This is used when restoring a previous saved scenario, in case we changed
+// the model in the meantime.
+export const migrateDataToCurrent = (
+  incomingData: Record<string, unknown>,
+): CalculatorData => {
+  const data: Partial<CalculatorData> = { ...incomingData }
+  const fixOne = (
+    table: { [key: string]: FormValue },
+    prop: keyof CalculatorData,
+  ) => {
+    let current = data[prop]
+    if (typeof current !== "string" || !(current in table)) {
+      delete data[prop]
+    }
+  }
+  fixOne(RiskProfile, 'riskProfile')
+  fixOne(Interaction, 'interaction')
+  fixOne(Setting, 'setting')
+  fixOne(Distance, 'distance')
+  fixOne(TheirMask, 'theirMask')
+  fixOne(YourMask, 'yourMask')
+  fixOne(Voice, 'voice')
+  return {...defaultValues, ...data}
+}
+
 const ONE_MILLION = 1e6 // One 'full' COVID
 
 export const MAX_ACTIVITY_RISK = 0.48
@@ -179,7 +205,9 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       return null
     }
 
-    const repeatedInteraction = ['repeated', 'partner'].includes(data.interaction)
+    const repeatedInteraction = ['repeated', 'partner'].includes(
+      data.interaction,
+    )
 
     let multiplier = 1
     multiplier *= Interaction[data.interaction].multiplier
