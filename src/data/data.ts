@@ -118,7 +118,7 @@ export const Distance: { [key: string]: FormValue } = {
 
 const noneLabel = 'No mask or poorly-worn mask'
 const basicLabel = 'Cotton mask, bandana, or buff'
-const filteredLabel = 'Surgical mask, PM2.5, or N95'
+const filteredLabel = 'Surgical mask, mask with filter insert, or N95'
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   basic: formValue(basicLabel, 0.25),
