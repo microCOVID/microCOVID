@@ -54,6 +54,7 @@ We combine these numbers to estimate approximately a 4x reduction. Again, this i
 
 We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
 
+Additionally, [Bhaskar et al.](https://jamanetwork.com/journals/jama/fullarticle/2769693) found that, in healthcare providers working with families of confirmed covid patients, face shields worn in combination with surgical masks reduced infections by a factor of at least 50x. Since this was not a controlled experiment (the workers were all given face masks), we conservatively place the improvement from face shields at 10x.
 #### Outdoor
 
 This is one of the tougher numbers to estimate, but we currently feel good estimating that being outdoors reduces your risk by more than 20x (unless you’re super close together, in which case we’re really not sure).
