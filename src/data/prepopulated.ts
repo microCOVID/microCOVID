@@ -21,8 +21,8 @@ export const prepopulated: {
     setting: 'outdoor',
     distance: 'normal',
     duration: 60,
-    theirMask: 'masked',
-    yourMask: 'masked',
+    theirMask: 'basic',
+    yourMask: 'basic',
     voice: 'normal',
   },
 
@@ -74,7 +74,7 @@ export const prepopulated: {
     distance: 'sixFt',
     duration: 60,
     theirMask: 'none',
-    yourMask: 'masked',
+    yourMask: 'basic',
     voice: 'silent',
   },
 
@@ -86,8 +86,8 @@ export const prepopulated: {
     setting: 'indoor',
     distance: 'sixFt',
     duration: 360,
-    theirMask: 'masked',
-    yourMask: 'masked',
+    theirMask: 'basic',
+    yourMask: 'basic',
     voice: 'silent',
   },
 
@@ -138,8 +138,8 @@ export const prepopulated: {
     setting: 'outdoor',
     distance: 'normal',
     duration: 180,
-    theirMask: 'masked',
-    yourMask: 'masked',
+    theirMask: 'basic',
+    yourMask: 'basic',
     voice: 'normal',
   },
 
@@ -164,8 +164,8 @@ export const prepopulated: {
     setting: 'outdoor',
     distance: 'normal',
     duration: 60,
-    theirMask: 'masked',
-    yourMask: 'masked',
+    theirMask: 'basic',
+    yourMask: 'basic',
     voice: 'normal',
   },
 
