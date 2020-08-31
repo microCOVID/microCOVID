@@ -65,7 +65,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="setting"
-        label="Setting"
+        label="Ventilation"
         data={data}
         setter={setter}
         source={Setting}
