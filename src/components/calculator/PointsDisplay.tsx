@@ -29,7 +29,7 @@ function tooManyPoints(points: number): boolean {
 function pointsPerWeekToAnnual(points: number): string {
   return showPoints(points)
     ? fixedPointPrecisionPercent(1 - (1 - points * 1e-6) ** 52)
-    : '—%'
+    : '—'
 }
 
 function maybeGreater(points: number): string {
@@ -87,9 +87,10 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         with these people.
       </p>
       <p>
-        If you did this once per week, you would have an additional{' '}
-        {pointsPerWeekToAnnual(points)}-or-so chance of getting COVID this year
-        (<i>not</i> including your risk from everything else you do!)
+        If you did this once per week, you would have
+        {' '}{pointsPerWeekToAnnual(points)}-or-so more chance (percentage points)
+        of getting COVID this year (<i>not</i> including your risk from everything
+        else you do!)
       </p>
     </Card>
   )
