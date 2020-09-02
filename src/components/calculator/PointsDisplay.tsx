@@ -121,8 +121,8 @@ const budgetConsumption = (points: number, budget: number) => {
   return (
     <p>
       Doing this activity once would use up{' '}
-      {fixedPointPrecision((points / weekBudget) * 100)}% of one week's risk
-      allocation.
+      {fixedPointPrecision((points / weekBudget) * 100)}% of your risk
+      allocation for one week.
     </p>
   )
 }
