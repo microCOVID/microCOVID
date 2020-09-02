@@ -30,7 +30,7 @@ describe('calculate', () => {
     ${'Indoor unmasked hangout with 2 people'}              | ${720}
     ${'Car ride with 1 person for 15 mins'}                 | ${90}
     ${'Physically intimate with person'}                    | ${2880}
-    ${'Grocery store for 60 minutes'}                       | ${180}
+    ${'Grocery store for 60 minutes'}                       | ${45}
     ${'Plane ride'}                                         | ${1080}
     ${'Eating in restaurant, outdoors'}                     | ${202.5}
     ${'Eating in restaurant, indoors'}                      | ${4050}
