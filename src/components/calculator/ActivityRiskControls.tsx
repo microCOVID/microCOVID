@@ -140,7 +140,7 @@ const maskPopover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">Masks</Popover.Title>
     <Popover.Content>
-      For more details on masks, see{" "}
+      For more details on masks, see{' '}
       <Link to="/paper/14-research-sources#masks" target="_blank">
         research sources
       </Link>

@@ -179,7 +179,9 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       return null
     }
 
-    const repeatedInteraction = ['repeated', 'partner'].includes(data.interaction)
+    const repeatedInteraction = ['repeated', 'partner'].includes(
+      data.interaction,
+    )
 
     let multiplier = 1
     multiplier *= Interaction[data.interaction].multiplier
