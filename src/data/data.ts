@@ -64,12 +64,12 @@ export const Voice: { [key: string]: FormValue } = {
  */
 const livingAloneMult =
   10 *
-  Voice['silent']['multiplier'] *
-  Distance['sixFt']['multiplier'] *
-  TheirMask['basic']['multiplier'] *
-  YourMask['basic']['multiplier'] *
-  Interaction['oneTime']['multiplier'] *
-  Setting['indoor']['multiplier']
+  Voice.silent.multiplier *
+  Distance.sixFt.multiplier *
+  TheirMask.basic.multiplier *
+  YourMask.basic.multiplier *
+  Interaction.oneTime.multiplier *
+  Setting.indoor.multiplier
 
 export const RiskProfile: { [key: string]: FormValue } = {
   average: {
@@ -144,9 +144,9 @@ export const RiskProfile: { [key: string]: FormValue } = {
      */
     multiplier:
       6 *
-      Interaction['oneTime']['multiplier'] *
-      (2 + 10 * Distance['sixFt']['multiplier']) *
-      Voice['loud']['multiplier'],
+      Interaction.oneTime.multiplier *
+      (2 + 10 * Distance.sixFt.multiplier *
+      Voice.loud.multiplier)
   },
   hasCovid: {
     label: 'Has COVID',
