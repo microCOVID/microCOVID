@@ -60,14 +60,14 @@ export const Voice: { [key: string]: FormValue } = {
 
 /*
  * Exposed to ten (silent distanced masked) average people indoors,
- * one-time, for one hour per week.
+ * while wearing a surgical mask, one-time, for one hour per week.
  */
 const livingAloneMult =
   10 *
   Voice.silent.multiplier *
   Distance.sixFt.multiplier *
   TheirMask.basic.multiplier *
-  YourMask.basic.multiplier *
+  YourMask.filtered.multiplier *
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
 

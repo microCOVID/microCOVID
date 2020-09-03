@@ -77,7 +77,7 @@ describe('calculate', () => {
       distance: 'sixFt',
       duration: 60,
       theirMask: 'basic',
-      yourMask: 'basic',
+      yourMask: 'filtered',
       voice: 'silent',
     }
 
