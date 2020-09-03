@@ -1,20 +1,38 @@
-import { CalculatorData, calculate } from 'data/calculate'
+import {
+  CalculatorData,
+  calculate,
+  calculateLocationPersonAverage,
+  defaultValues,
+} from 'data/calculate'
+import { RiskProfile } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
 describe('calculate', () => {
-  // Prevailance is .1% with 4x underreporting factor
+  // Prevailance is .1% with 6x underreporting factor
   const exampleLocation = {
+    subLocation: 'mock city',
+    topLocation: 'mock state',
     label: 'mock city',
     population: '1,000,000',
     casesPastWeek: 999, // will add 1 in pseudocount
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 1,
   }
+  const expectedPrevalance = 0.006
+
+  it('compensates for underreporting', () => {
+    const data: CalculatorData = {
+      ...defaultValues,
+      ...exampleLocation,
+    }
+    expect(calculateLocationPersonAverage(data)).toBeCloseTo(
+      expectedPrevalance * 1e6,
+    )
+  })
+
   it('produces same results as by hand', () => {
     const scenario = 'Outdoor masked hangout with 2 people'
     const data: CalculatorData = {
-      subLocation: 'sf',
-      topLocation: 'California',
       ...exampleLocation,
       ...prepopulated[scenario],
     }
@@ -41,12 +59,30 @@ describe('calculate', () => {
     ${'Indoor, unmasked hangout with person who has COVID'} | ${60000}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = {
-      subLocation: 'mock city',
-      topLocation: 'imaginary country',
       ...exampleLocation,
       ...prepopulated[scenario],
     }
 
     expect(calculate(data)).toBeCloseTo(result)
+  })
+
+  it('should produce a self-consistent living alone risk profile', () => {
+    const data: CalculatorData = {
+      ...exampleLocation,
+      riskProfile: 'average',
+      interaction: 'oneTime',
+      personCount: 10,
+
+      setting: 'indoor',
+      distance: 'sixFt',
+      duration: 60,
+      theirMask: 'basic',
+      yourMask: 'filtered',
+      voice: 'silent',
+    }
+
+    expect(calculate(data)).toBeCloseTo(
+      expectedPrevalance * RiskProfile['livingAlone']['multiplier'] * 1e6,
+    )
   })
 })
