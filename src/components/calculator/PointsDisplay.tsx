@@ -26,12 +26,6 @@ function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
 }
 
-function pointsPerWeekToAnnual(points: number): string {
-  return showPoints(points)
-    ? fixedPointPrecisionPercent(1 - (1 - points * 1e-6) ** 52)
-    : '—%'
-}
-
 function maybeGreater(points: number): string {
   return tooManyPoints(points) ? '>' : ''
 }
@@ -86,11 +80,7 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
         {displayPercent(points)}) chance of getting COVID from this activity
         with these people.
       </p>
-      <p>
-        If you did this once per week, you would have an additional{' '}
-        {pointsPerWeekToAnnual(points)}-or-so chance of getting COVID this year
-        (<i>not</i> including your risk from everything else you do!)
-      </p>
+      {budgetConsumption(points, riskBudget)}
     </Card>
   )
 }
@@ -115,6 +105,26 @@ function howRisky(points: number, budget: number): string[] {
   } else {
     return ['dangerously high', riskyStyles[STYLE_HIGH]]
   }
+}
+
+const budgetConsumption = (points: number, budget: number) => {
+  const weekBudget = budget / 50 // Numbers look cleaner than 52.
+  if (points > weekBudget) {
+    const weeksConsumed = fixedPointPrecision(points / weekBudget)
+    return (
+      <p>
+        Doing this activity once would use up your entire risk allocation for{' '}
+        {weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.
+      </p>
+    )
+  }
+  return (
+    <p>
+      Doing this activity once would use up{' '}
+      {fixedPointPrecision((points / weekBudget) * 100)}% of your risk
+      allocation for one week.
+    </p>
+  )
 }
 
 export function PointsDisplay(props: {
