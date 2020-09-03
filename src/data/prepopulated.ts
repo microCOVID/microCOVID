@@ -73,7 +73,7 @@ export const prepopulated: {
     setting: 'indoor',
     distance: 'sixFt',
     duration: 60,
-    theirMask: 'none',
+    theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
   },
