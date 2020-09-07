@@ -178,8 +178,8 @@ export const PaperTOC = (): React.ReactElement => {
       <p>
         We know "white paper" might sound intimidating! Don't be too afraid. We
         have made it as readable as possible. It's possible to skim and skip
-        around. It shows every step clearly. The goal of the document is
-        to <i>teach you</i> how the model works.
+        around. It shows every step clearly. The goal of the document is to{' '}
+        <i>teach you</i> how the model works.
       </p>
       <p>
         (Or if overly detailed analyses are what you're here for, you can skip
