@@ -621,12 +621,39 @@ def main() -> None:
                 if (
                     place.population == 0
                     and place.name not in ("Unassigned", "Unknown")
+                    and place.name != "New York City"  # Hack: see below
                 ):
                     raise ValueError(
                         f"JHU data has cases but no population for {place!r}"
                     )
                 place.cumulative_cases[current] = line.Confirmed
             current -= timedelta(days=1)
+
+        # Hack: On 2020-09-01, JHU switched from reporting all NYC cases
+        # under a virtual county called "New York City" to reporting them
+        # under the counties for individual boroughs. Until 2020-09-14, we'll
+        # support mixing the pre- and post-transition data by merging the
+        # five borough counties (New York, Kings, Queens, Richmond, Bronx)
+        # into "New York City".
+        if effective_date > date(2020, 9, 14):
+            sys.exit(
+                "Remove the NYC merging hack now that we have broken-down "
+                "county data for the past two weeks"
+            )
+        nyc_county_names = ("New York", "Kings", "Queens", "Richmond", "Bronx")
+        ny_state = data.countries["US"].states["New York"]
+        nyc_indv = [ny_state.counties.pop(cname) for cname in nyc_county_names]
+        nyc_combined = ny_state.counties["New York City"]
+        if not nyc_combined.population:
+            # The population data is from a continually-updated file,
+            # which post 9/1 includes only the individual counties, not
+            # merged NYC.
+            nyc_combined.population = sum(c.population for c in nyc_indv)
+        for county in nyc_indv:
+            # The case data is from daily historical files, so until 9/14
+            # we'll have some cases in the individual counties and
+            # some cases in merged NYC.
+            nyc_combined.cumulative_cases += county.cumulative_cases
 
         # Test positivity per US county and state
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
@@ -643,8 +670,8 @@ def main() -> None:
         # Hack: covidactnow isn't reporting WA state positive test data,
         # even though it's available on their website. Copy in the website
         # field.
-        if effective_date == date(2020, 8, 28):
-            data.countries["US"].states["Washington"].test_positivity_rate = 0.034
+        if effective_date == date(2020, 9, 6):
+            data.countries["US"].states["Washington"].test_positivity_rate = 0.028
 
         # Test positivity per non-US country
         for line in parse_csv(cache, OWIDTestingData, OWIDTestingData.SOURCE):
@@ -718,7 +745,7 @@ def main() -> None:
             skipping = False
         if "// update_prevalence date" in line:
             output.append(
-                "export const PrevalenceDataDate = '{}'  // update_prevalence date\n"
+                "export const PrevalenceDataDate = '{}' // update_prevalence date\n"
                 .format(effective_date.strftime("%B %d, %Y"))
             )
             missing_markers.remove("date")
