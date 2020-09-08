@@ -145,8 +145,7 @@ export const RiskProfile: { [key: string]: FormValue } = {
     multiplier:
       6 *
       Interaction.oneTime.multiplier *
-      (2 + 10 * Distance.sixFt.multiplier *
-      Voice.loud.multiplier)
+      (2 + 10 * Distance.sixFt.multiplier * Voice.loud.multiplier),
   },
   hasCovid: {
     label: 'Has COVID',
