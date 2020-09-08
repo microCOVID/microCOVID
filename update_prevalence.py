@@ -635,13 +635,24 @@ def main() -> None:
         # support mixing the pre- and post-transition data by merging the
         # five borough counties (New York, Kings, Queens, Richmond, Bronx)
         # into "New York City".
+        if effective_date > date(2020, 9, 14):
+            sys.exit(
+                "Remove the NYC merging hack now that we have broken-down "
+                "county data for the past two weeks"
+            )
         nyc_county_names = ("New York", "Kings", "Queens", "Richmond", "Bronx")
         ny_state = data.countries["US"].states["New York"]
         nyc_indv = [ny_state.counties.pop(cname) for cname in nyc_county_names]
         nyc_combined = ny_state.counties["New York City"]
         if not nyc_combined.population:
+            # The population data is from a continually-updated file,
+            # which post 9/1 includes only the individual counties, not
+            # merged NYC.
             nyc_combined.population = sum(c.population for c in nyc_indv)
         for county in nyc_indv:
+            # The case data is from daily historical files, so until 9/14
+            # we'll have some cases in the individual counties and
+            # some cases in merged NYC.
             nyc_combined.cumulative_cases += county.cumulative_cases
 
         # Test positivity per US county and state
