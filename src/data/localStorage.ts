@@ -1,4 +1,4 @@
-import { CalculatorData } from 'data/calculate'
+import { CalculatorData, migrateDataToCurrent } from 'data/calculate'
 
 const SAVED_DATA_KEY = 'savedEntries'
 
@@ -9,6 +9,10 @@ const _getSavedForms = (): { [key: string]: CalculatorData } => {
   if (Array.isArray(saved)) {
     localStorage.setItem(SAVED_DATA_KEY, JSON.stringify({}))
     return {}
+  }
+
+  for (const key in saved) {
+    saved[key] = migrateDataToCurrent(saved[key])
   }
 
   return saved
