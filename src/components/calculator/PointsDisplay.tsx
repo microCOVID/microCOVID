@@ -113,15 +113,15 @@ const budgetConsumption = (points: number, budget: number) => {
     const weeksConsumed = fixedPointPrecision(points / weekBudget)
     return (
       <p>
-        Doing this activity once would use up your entire risk allocation for{' '}
-        ~{weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.
+        Doing this activity once would use up your entire risk allocation for ~
+        {weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.
       </p>
     )
   }
   return (
     <p>
-      Doing this activity once would use up{' '}
-      ~{fixedPointPrecision((points / weekBudget) * 100)}% of your risk
+      Doing this activity once would use up ~
+      {fixedPointPrecision((points / weekBudget) * 100)}% of your risk
       allocation for one week.
     </p>
   )
