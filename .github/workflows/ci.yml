@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
-    - run: yarn lint
+    - run: yarn lint --max-warnings 0
   typecheck:
     runs-on: ubuntu-latest
 
