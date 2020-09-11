@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Donation from '../components/Donation'
 
-export const Home = (): React.ReactElement => {
+export const About = (): React.ReactElement => {
   return (
     <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
       <h2>What is the microCOVID project?</h2>
