@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
+  Redirect,
   Route,
   BrowserRouter as Router,
   Switch,
@@ -11,9 +12,9 @@ import {
 import { PageViews } from 'components/Analytics'
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
+import { About } from 'pages/About'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
-import { Home } from 'pages/Home'
 import { Paper, PaperTOC } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
 
@@ -46,17 +47,17 @@ export const App = (): React.ReactElement => {
                     exact
                     activeClassName="active"
                   >
-                    Home
+                    Calculator
                   </NavLink>
                 </Nav.Item>
 
                 <Nav.Item>
                   <NavLink
-                    to="/calculator"
+                    to="/about"
                     className="nav-link"
                     activeClassName="active"
                   >
-                    Calculator
+                    About
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
@@ -91,7 +92,10 @@ export const App = (): React.ReactElement => {
           </Navbar>
           <Switch>
             <Route path="/calculator">
-              <Calculator />
+              <Redirect to={{ pathname: '/' }} />
+            </Route>
+            <Route path="/about">
+              <About />
             </Route>
             <Route path="/paper/:id">
               <Paper />
@@ -106,7 +110,7 @@ export const App = (): React.ReactElement => {
               <Contact />
             </Route>
             <Route path="/">
-              <Home />
+              <Calculator />
             </Route>
           </Switch>
         </Container>
