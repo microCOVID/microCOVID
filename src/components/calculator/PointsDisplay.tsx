@@ -80,7 +80,7 @@ export function ExplanationCard(props: {
       <p>
         This is a roughly {maybeGreater(points)}
         {displayPoints(points)}-in-a-million ({maybeGreater(points)}
-        {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}{' '}
+        {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
         chance of getting COVID from this activity with these people.
       </p>
       {budgetConsumption(points, riskBudget, props.repeatedEvent)}
