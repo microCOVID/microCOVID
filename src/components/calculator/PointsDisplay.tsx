@@ -83,7 +83,7 @@ export function ExplanationCard(props: {
         {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
         chance of getting COVID from this activity with these people.
       </p>
-      {budgetConsumption(points, riskBudget, props.repeatedEvent)}
+      <p>{budgetConsumption(points, riskBudget, props.repeatedEvent)}</p>
     </Card>
   )
 }
@@ -116,31 +116,19 @@ const budgetConsumption = (
   repeatedEvent: boolean,
 ) => {
   if (repeatedEvent) {
-    return (
-      <p>
-        Having this interraction regularly would use up ~
-        {fixedPointPrecision((points * 52) / budget)}% of your annual risk
-        allocation.
-      </p>
-    )
+    return `Having this interraction regularly would use up ~
+        ${fixedPointPrecision((points * 52) / budget)}% of your annual risk
+        allocation.`
   }
   const weekBudget = budget / 50 // Numbers look cleaner than 52.
   if (points > weekBudget) {
     const weeksConsumed = fixedPointPrecision(points / weekBudget)
-    return (
-      <p>
-        Doing this activity once would use up your entire risk allocation for ~
-        {weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.
-      </p>
-    )
+    return `Doing this activity once would use up your entire risk allocation for ~
+        ${weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.`
   }
-  return (
-    <p>
-      Doing this activity once would use up ~
-      {fixedPointPrecision((points / weekBudget) * 100)}% of your risk
-      allocation for one week.
-    </p>
-  )
+  return `Doing this activity once would use up ~
+      ${fixedPointPrecision((points / weekBudget) * 100)}% of your risk
+      allocation for one week.`
 }
 
 export function PointsDisplay(props: {
