@@ -25,12 +25,10 @@ export const Setting: { [key: string]: FormValue } = {
   outdoor: { label: 'Outdoor', multiplier: 0.05 },
 }
 export const Distance: { [key: string]: FormValue } = {
-  normal: {
-    label: 'Normal socializing (~3 feet apart)',
-    multiplier: 1,
-  },
-  sixFt: { label: '6+ feet apart', multiplier: 0.5 },
-  tenFt: { label: '10+ feet apart', multiplier: 0.25 },
+  intimate: formValue('Cuddling / intimate', 2),
+  normal: formValue('Normal socializing (~3 feet apart)', 1),
+  sixFt: formValue('6+ feet apart', 0.5),
+  tenFt: formValue('10+ feet apart', 0.25),
 }
 
 const noneLabel = 'No mask or poorly-worn mask'
