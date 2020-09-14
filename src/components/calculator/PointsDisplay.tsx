@@ -30,7 +30,10 @@ function maybeGreater(points: number): string {
   return tooManyPoints(points) ? '>' : ''
 }
 
-export function ExplanationCard(props: { points: number }): React.ReactElement {
+export function ExplanationCard(props: {
+  points: number
+  repeatedEvent: boolean
+}): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(10000)
 
   const points = props.points
@@ -77,10 +80,10 @@ export function ExplanationCard(props: { points: number }): React.ReactElement {
       <p>
         This is a roughly {maybeGreater(points)}
         {displayPoints(points)}-in-a-million ({maybeGreater(points)}
-        {displayPercent(points)}) chance of getting COVID from this activity
-        with these people.
+        {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
+        chance of getting COVID from this activity with these people.
       </p>
-      {budgetConsumption(points, riskBudget)}
+      <p>{budgetConsumption(points, riskBudget, props.repeatedEvent)}</p>
     </Card>
   )
 }
@@ -107,24 +110,25 @@ function howRisky(points: number, budget: number): string[] {
   }
 }
 
-const budgetConsumption = (points: number, budget: number) => {
+const budgetConsumption = (
+  points: number,
+  budget: number,
+  repeatedEvent: boolean,
+) => {
+  if (repeatedEvent) {
+    return `Having this interraction regularly would use up ~
+        ${fixedPointPrecision((points * 52) / budget)}% of your annual risk
+        allocation.`
+  }
   const weekBudget = budget / 50 // Numbers look cleaner than 52.
   if (points > weekBudget) {
     const weeksConsumed = fixedPointPrecision(points / weekBudget)
-    return (
-      <p>
-        Doing this activity once would use up your entire risk allocation for ~
-        {weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.
-      </p>
-    )
+    return `Doing this activity once would use up your entire risk allocation for ~
+        ${weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.`
   }
-  return (
-    <p>
-      Doing this activity once would use up ~
-      {fixedPointPrecision((points / weekBudget) * 100)}% of your risk
-      allocation for one week.
-    </p>
-  )
+  return `Doing this activity once would use up ~
+      ${fixedPointPrecision((points / weekBudget) * 100)}% of your risk
+      allocation for one week.`
 }
 
 export function PointsDisplay(props: {
@@ -142,6 +146,7 @@ export function PointsDisplay(props: {
           {displayPoints(props.points / ERROR_FACTOR)} to{' '}
           {maybeGreater(props.points)}
           {displayPoints(props.points * ERROR_FACTOR)})
+          {props.repeatedEvent ? ' per week' : ''}
         </h1>
       ) : (
         <h1>fill in calculator to see</h1>

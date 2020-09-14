@@ -228,7 +228,7 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row className="explanation" id="explanation-row">
         <Col lg={{ span: 8, offset: 4 }}>
-          <ExplanationCard points={points} />
+          <ExplanationCard points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
     </div>
