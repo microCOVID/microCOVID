@@ -117,7 +117,7 @@ const budgetConsumption = (
 ) => {
   if (repeatedEvent) {
     return `Having this interraction regularly would use up ~
-        ${fixedPointPrecision((points * 52) / budget)}% of your annual risk
+        ${fixedPointPrecision((points * 52) / budget * 100)}% of your annual risk
         allocation.`
   }
   const weekBudget = budget / 50 // Numbers look cleaner than 52.
