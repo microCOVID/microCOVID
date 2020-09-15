@@ -116,18 +116,22 @@ const budgetConsumption = (
   repeatedEvent: boolean,
 ) => {
   if (repeatedEvent) {
-    return `Having this interraction regularly would use up ~
-        ${fixedPointPrecision((points * 52) / budget)}% of your annual risk
+    return `Having this interraction regularly would use up
+        ~${fixedPointPrecision(
+          ((points * 52) / budget) * 100,
+        )}% of your annual risk
         allocation.`
   }
   const weekBudget = budget / 50 // Numbers look cleaner than 52.
   if (points > weekBudget) {
     const weeksConsumed = fixedPointPrecision(points / weekBudget)
-    return `Doing this activity once would use up your entire risk allocation for ~
-        ${weeksConsumed} {Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'}.`
+    return `Doing this activity once would use up your entire risk allocation for
+        ~${weeksConsumed} ${
+      Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'
+    }.`
   }
-  return `Doing this activity once would use up ~
-      ${fixedPointPrecision((points / weekBudget) * 100)}% of your risk
+  return `Doing this activity once would use up
+      ~${fixedPointPrecision((points / weekBudget) * 100)}% of your risk
       allocation for one week.`
 }
 
