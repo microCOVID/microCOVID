@@ -24,8 +24,8 @@
     "react-scripts": "^4.0.0-next.64"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_DEPLOY_URL=$DEPLOY_URL react-scripts start",
+    "build": "REACT_APP_DEPLOY_URL=$DEPLOY_URL react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint src",
     "fix": "eslint src --fix",
