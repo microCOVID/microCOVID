@@ -52,14 +52,27 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Physically intimate with person': {
+  'One-night stand with a random person': {
     riskProfile: 'average',
+    interaction: 'oneTime',
+    personCount: 1,
+
+    setting: 'indoor',
+    distance: 'intimate',
+    duration: 600,
+    theirMask: 'none',
+    yourMask: 'none',
+    voice: 'normal',
+  },
+
+  'Live-in partner who has no indoor interactions besides you': {
+    riskProfile: 'livingAlone',
     interaction: 'partner',
     personCount: 1,
 
     setting: 'indoor',
-    distance: 'normal',
-    duration: 60,
+    distance: 'intimate',
+    duration: 600,
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',

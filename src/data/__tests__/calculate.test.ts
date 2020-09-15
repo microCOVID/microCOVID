@@ -43,20 +43,21 @@ describe('calculate', () => {
   })
 
   it.each`
-    scenario                                                | result
-    ${'Outdoor masked hangout with 2 people'}               | ${9}
-    ${'Indoor unmasked hangout with 2 people'}              | ${720}
-    ${'Car ride with 1 person for 15 mins'}                 | ${90}
-    ${'Physically intimate with person'}                    | ${2880}
-    ${'Grocery store for 60 minutes'}                       | ${45}
-    ${'Plane ride'}                                         | ${1080}
-    ${'Eating in restaurant, outdoors'}                     | ${202.5}
-    ${'Eating in restaurant, indoors'}                      | ${4050}
-    ${'Going to bar'}                                       | ${27000}
-    ${'Large outdoor party: masked with 250 people'}        | ${3375}
-    ${'Small indoor party: unmasked with 25 people'}        | ${27000}
-    ${'Outdoor, masked hangout with person who has COVID'}  | ${750}
-    ${'Indoor, unmasked hangout with person who has COVID'} | ${60000}
+    scenario                                                        | result
+    ${'Outdoor masked hangout with 2 people'}                       | ${9}
+    ${'Indoor unmasked hangout with 2 people'}                      | ${720}
+    ${'Car ride with 1 person for 15 mins'}                         | ${90}
+    ${'One-night stand with a random person'}                       | ${2880}
+    ${'Live-in partner who has no indoor interactions besides you'} | ${21.6}
+    ${'Grocery store for 60 minutes'}                               | ${45}
+    ${'Plane ride'}                                                 | ${1080}
+    ${'Eating in restaurant, outdoors'}                             | ${202.5}
+    ${'Eating in restaurant, indoors'}                              | ${4050}
+    ${'Going to bar'}                                               | ${27000}
+    ${'Large outdoor party: masked with 250 people'}                | ${3375}
+    ${'Small indoor party: unmasked with 25 people'}                | ${27000}
+    ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
+    ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = {
       ...exampleLocation,
