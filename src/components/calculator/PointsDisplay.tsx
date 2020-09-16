@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Popover } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
@@ -31,10 +32,8 @@ export function ExplanationCard(props: {
   repeatedEvent: boolean
 }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(10000)
-
   const points = props.points
-
-  const [risky, riskyStyle] = howRisky(points, riskBudget)
+  const { t } = useTranslation()
 
   return (
     <Card>
@@ -42,92 +41,141 @@ export function ExplanationCard(props: {
         <b>
           {' '}
           {showPoints && tooManyPoints(points)
-            ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
+            ? t('calculator.too_many_points_note')
             : ''}
         </b>
       </p>
-      <h2>How risky is this?</h2>
+      <h2>
+        <Trans>calculator.risk_points_header</Trans>
+      </h2>
       <GenericSelectControl
         id="budget-selector"
-        label="If your risk tolerance is..."
+        label={t('calculator.risk_tolerance_rating_start')}
         popover={riskTolerancePopover}
         setter={(e: string) => setRiskBudget(Number.parseInt(e))}
         value={riskBudget}
         source={{
           '10000': {
-            label: '1% per year (suggested if not at increased risk)',
+            label: t('calculator.risk_tolerance_1_percent_label'),
             multiplier: 1,
           },
           '1000': {
-            label:
-              '0.1% per year (suggest if at increased risk or regularly interacting with people at increased risk)',
+            label: t('calculator.risk_tolerance_point1_percent_label'),
             multiplier: 0.1,
           },
         }}
       />
       <p className="readout">
-        ... then for you this is a{' '}
-        <span className={riskyStyle}>
-          <b>{showPoints(points) ? risky : '——'}</b>
-        </span>{' '}
-        risk activity.
+        <Trans>calculator.risk_tolerance_rating_middle</Trans>{' '}
+        <HowRiskyLabel points={points} budget={riskBudget} />{' '}
+        <Trans>calculator.risk_tolerance_rating_end</Trans>
       </p>
-      <h2>What does this mean numerically?</h2>
+      <h2>
+        <Trans>calculator.score_explain_header</Trans>
+      </h2>
       <p>
-        This is a roughly ~{displayPoints(points)}-in-a-million (
-        {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
-        chance of getting COVID from this activity with these people.
+        <Trans
+          values={{
+            points: displayPoints(points),
+            percentage: displayPercent(points),
+            repeated_label: props.repeatedEvent
+              ? ' ' + t('per week') + ' '
+              : ' ',
+          }}
+        >
+          calculator.score_explanation
+        </Trans>
       </p>
-      <p>{budgetConsumption(points, riskBudget, props.repeatedEvent)}</p>
+      <p>
+        <BudgetConsumption
+          points={points}
+          budget={riskBudget}
+          repeatedEvent={props.repeatedEvent}
+        />
+      </p>
     </Card>
   )
 }
 
-const riskyStyles = ['low-risk', 'medium-risk', 'high-risk']
-const STYLE_LOW = 0
-const STYLE_MEDIUM = 1
-const STYLE_HIGH = 2
-
-function howRisky(points: number, budget: number): string[] {
-  const normalizedPoints = points / (budget / 10000)
-  if (normalizedPoints < 3) {
-    return ['very low', riskyStyles[STYLE_LOW]]
-  } else if (normalizedPoints < 25) {
-    return ['low', riskyStyles[STYLE_LOW]]
-  } else if (normalizedPoints < 100) {
-    return ['moderate', riskyStyles[STYLE_MEDIUM]]
-  } else if (normalizedPoints < 300) {
-    return ['high', riskyStyles[STYLE_HIGH]]
-  } else if (normalizedPoints < 1000) {
-    return ['very high', riskyStyles[STYLE_HIGH]]
-  } else {
-    return ['dangerously high', riskyStyles[STYLE_HIGH]]
+export function HowRiskyLabel(props: {
+  points: number
+  budget: number
+}): React.ReactElement {
+  const { t } = useTranslation()
+  const riskyStyles = ['low-risk', 'medium-risk', 'high-risk']
+  const STYLE_LOW = 0
+  const STYLE_MEDIUM = 1
+  const STYLE_HIGH = 2
+  function howRisky(points: number, budget: number): string[] {
+    const normalizedPoints = points / (budget / 10000)
+    if (normalizedPoints < 3) {
+      return [t('calculator.category_very_low'), riskyStyles[STYLE_LOW]]
+    } else if (normalizedPoints < 25) {
+      return [t('calculator.category_low'), riskyStyles[STYLE_LOW]]
+    } else if (normalizedPoints < 100) {
+      return [t('calculator.category_moderate'), riskyStyles[STYLE_MEDIUM]]
+    } else if (normalizedPoints < 300) {
+      return [t('calculator.category_high'), riskyStyles[STYLE_HIGH]]
+    } else if (normalizedPoints < 1000) {
+      return [t('calculator.category_very_high'), riskyStyles[STYLE_HIGH]]
+    } else {
+      return [
+        t('calculator.category_dangerously_high'),
+        riskyStyles[STYLE_HIGH],
+      ]
+    }
   }
+
+  const [risky, riskyStyle] = howRisky(props.points, props.budget)
+
+  return (
+    <span className={riskyStyle}>
+      <b>{showPoints(props.points) ? risky : '——'}</b>
+    </span>
+  )
 }
 
-const budgetConsumption = (
-  points: number,
-  budget: number,
-  repeatedEvent: boolean,
-) => {
-  if (repeatedEvent) {
-    return `Having this interaction regularly would use up
-        ~${fixedPointPrecision(
-          ((points * 52) / budget) * 100,
-        )}% of your annual risk
-        allocation.`
+export function BudgetConsumption(props: {
+  points: number
+  budget: number
+  repeatedEvent: boolean
+}): React.ReactElement {
+  if (props.repeatedEvent) {
+    return (
+      <Trans
+        values={{
+          risk_percentage: fixedPointPrecision(
+            ((props.points * 52) / props.budget) * 100,
+          ),
+        }}
+      >
+        calculator.budget_consumption_regular_event
+      </Trans>
+    )
   }
-  const weekBudget = budget / 50 // Numbers look cleaner than 52.
-  if (points > weekBudget) {
-    const weeksConsumed = fixedPointPrecision(points / weekBudget)
-    return `Doing this activity once would use up your entire risk allocation for
-        ~${weeksConsumed} ${
-      Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'
-    }.`
+  const weekBudget = props.budget / 50 // Numbers look cleaner than 52.
+  if (props.points > weekBudget) {
+    const weeksConsumed = props.points / weekBudget
+    return (
+      <Trans
+        count={Math.round(weeksConsumed)}
+        values={{
+          weeks: fixedPointPrecision(weeksConsumed),
+        }}
+      >
+        calculator.budget_consumption_one_off_event_over_weekly_budget
+      </Trans>
+    )
   }
-  return `Doing this activity once would use up
-      ~${fixedPointPrecision((points / weekBudget) * 100)}% of your risk
-      allocation for one week.`
+  return (
+    <Trans
+      values={{
+        risk_percentage: fixedPointPrecision((props.points / weekBudget) * 100),
+      }}
+    >
+      calculator.budget_consumption_one_off_event_under_weekly_budget
+    </Trans>
+  )
 }
 
 export function PointsDisplay(props: {
@@ -138,10 +186,12 @@ export function PointsDisplay(props: {
 }): React.ReactElement {
   return (
     <div className="top-half-card">
-      <strong>Results:</strong>
+      <strong>
+        <Trans>calculator.points_display_header</Trans>:
+      </strong>
       {showPoints(props.points) ? (
         <h1>
-          {displayPoints(props.points)} microCOVIDs (
+          {displayPoints(props.points)} <Trans>calculator.microCOVIDs</Trans> (
           {displayPoints(props.lowerBound)} to {displayPoints(props.upperBound)}
           ){props.repeatedEvent ? ' per week' : ' each time'}
         </h1>

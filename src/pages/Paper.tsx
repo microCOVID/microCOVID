@@ -1,5 +1,6 @@
 import { pages } from 'posts/paper/index'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 
 import {
@@ -63,9 +64,10 @@ export const PaperTOC = (): React.ReactElement => {
 }
 
 export const PaperNavDropdown = (): React.ReactElement => {
+  const { t } = useTranslation()
   return (
     <MarkdownNavDropdown
-      title="White Paper"
+      title={t('menu.whitepaper')}
       baseNavPath="/paper"
       posts={pages}
       enableAll={true}

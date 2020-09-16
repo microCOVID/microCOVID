@@ -1,3 +1,5 @@
+import i18n from '../i18n'
+
 import { CalculatorData } from './calculate'
 
 export type PartialData = Omit<
@@ -13,7 +15,7 @@ export type PartialData = Omit<
 export const prepopulated: {
   [key: string]: PartialData
 } = {
-  'Outdoor masked hangout with 2 people': {
+  [i18n.t('scenario.outdoorMasked2')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
@@ -26,7 +28,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Indoor unmasked hangout with 2 people': {
+  [i18n.t('scenario.indoorUnmasked2')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
@@ -39,7 +41,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Car ride with 1 person for 15 mins': {
+  [i18n.t('scenario.1person_15minCarRide')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 1,
@@ -52,7 +54,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'One-night stand with a random person': {
+  [i18n.t('scenario.oneNightStand')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 1,
@@ -65,7 +67,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Live-in partner who has no indoor interactions besides you': {
+  [i18n.t('scenario.liveInPartner_noContacts')]: {
     riskProfile: 'livingAlone',
     interaction: 'partner',
     personCount: 1,
@@ -78,7 +80,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Grocery store for 60 minutes': {
+  [i18n.t('scenario.60minShopping')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 5,
@@ -91,7 +93,7 @@ export const prepopulated: {
     voice: 'silent',
   },
 
-  'Plane ride': {
+  [i18n.t('scenario.planeRide')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 20,
@@ -104,7 +106,7 @@ export const prepopulated: {
     voice: 'silent',
   },
 
-  'Eating in restaurant, outdoors': {
+  [i18n.t('scenario.restaurantOutdoors')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
@@ -117,7 +119,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Eating in restaurant, indoors': {
+  [i18n.t('scenario.restaurantIndoors')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
@@ -130,7 +132,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Going to bar': {
+  [i18n.t('scenario.bar')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
@@ -143,7 +145,7 @@ export const prepopulated: {
     voice: 'loud',
   },
 
-  'Large outdoor party: masked with 250 people': {
+  [i18n.t('scenario.largeOutdoorParty250')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 250,
@@ -156,7 +158,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Small indoor party: unmasked with 25 people': {
+  [i18n.t('scenario.smallIndoorParty25')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 25,
@@ -169,7 +171,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Outdoor, masked hangout with person who has COVID': {
+  [i18n.t('scenario.outdoorMaskedWithCovidPositive')]: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
     personCount: 1,
@@ -182,7 +184,7 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  'Voting in-person': {
+  [i18n.t('scenario.votingInPerson')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
@@ -195,7 +197,7 @@ export const prepopulated: {
     voice: 'silent',
   },
 
-  'Indoor, unmasked hangout with person who has COVID': {
+  [i18n.t('scenario.indoorUnmaskedWithCovidPositive')]: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
     personCount: 1,

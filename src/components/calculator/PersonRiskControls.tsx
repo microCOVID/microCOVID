@@ -1,5 +1,6 @@
 import React from 'react'
 import { Popover } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 
 import { SelectControl } from './SelectControl'
 import {
@@ -43,11 +44,17 @@ export const PersonRiskControls: React.FunctionComponent<{
     calculatePersonRiskEach(data, locationRisk) || 0,
   )
 
+  const { t } = useTranslation()
+
   return (
     <React.Fragment>
-      <header id="person-risk">Step 2 - Person Risk</header>
+      <header id="person-risk">
+        <Trans>calculator.risk_step_label</Trans>
+      </header>
       <div className="form-group">
-        <label htmlFor="personCount">Number of people near you</label>
+        <label htmlFor="personCount">
+          <Trans>calculator.number_of_people_near_you</Trans>
+        </label>
         <input
           className="form-control form-control-lg"
           type="number"
@@ -63,7 +70,7 @@ export const PersonRiskControls: React.FunctionComponent<{
       </div>
       <SelectControl
         id="riskProfile"
-        label="Person(s) Risk Profile"
+        label={t('calculator.person_risk_profile')}
         popover={personRiskPopover}
         data={data}
         setter={setter}
@@ -72,9 +79,9 @@ export const PersonRiskControls: React.FunctionComponent<{
       />
       <br />
       <p className="readout">
-        The <i>first</i> part of the calculation is Person Risk: Each other
-        person has a <b>{personRiskEach.toLocaleString()}</b>
-        -in-a-million chance of currently having COVID.
+        <Trans values={{ calc_results: personRiskEach.toLocaleString() }}>
+          calculator.risk_calculation_results
+        </Trans>
       </p>
     </React.Fragment>
   )
@@ -84,16 +91,14 @@ function GroupSizeWarning(props: { people: number }): React.ReactElement {
   if (props.people >= 100) {
     return (
       <div className="warning">
-        Warning: This is a VERY large group of people; getting them together is
-        a high risk of a dangerous superspreading event.
+        <Trans>calculator.verylarge_warning</Trans>
       </div>
     )
   }
   if (props.people >= 25) {
     return (
       <div className="warning">
-        Warning: This is a large group of people; getting them together puts
-        everyone at risk.{' '}
+        <Trans>calculator.large_warning</Trans>
       </div>
     )
   }

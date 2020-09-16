@@ -1,5 +1,6 @@
 import React from 'react'
 import { Popover } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { SelectControl } from './SelectControl'
@@ -24,9 +25,14 @@ export const ActivityRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
-  const header = <header id="activity-risk">Step 3 - Activity Risk</header>
+  const header = (
+    <header id="activity-risk">
+      <Trans>calculator.activity_risk_header</Trans>
+    </header>
+  )
 
   const activityRisk = calculateActivityRisk(data)
+  const { t } = useTranslation()
 
   if (repeatedEvent) {
     return (
@@ -34,22 +40,23 @@ export const ActivityRiskControls: React.FunctionComponent<{
         {header}
         <SelectControl
           id="interaction"
-          label="Type of Interaction"
+          label={t('calculator.type_of_interaction')}
           data={data}
           setter={setter}
           source={Interaction}
           hideRisk={true}
         />
         <span className="readout">
-          The <i>second</i> part of the calculation is Activity Risk: assuming 1
-          such person has COVID, then you would have a{' '}
-          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
-          COVID.
+          <Trans
+            values={{
+              risk_percentage: fixedPointPrecisionPercent(activityRisk),
+            }}
+          >
+            calculator.your_risk_readout
+          </Trans>
         </span>
         <div className="empty">
-          When estimating your risk of infection from a household member or
-          partner/spouse we assume these interactions are indoors, unmasked, and
-          undistanced.
+          <Trans>calculator.risk_note_about_household_members</Trans>
         </div>
       </React.Fragment>
     )
@@ -60,7 +67,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       {header}
       <SelectControl
         id="interaction"
-        label="Type of interaction"
+        label={t('calculator.type_of_interaction')}
         data={data}
         setter={setter}
         source={Interaction}
@@ -68,14 +75,14 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="distance"
-        label="Distance (most of the time)"
+        label={t('calculator.distance')}
         data={data}
         setter={setter}
         source={Distance}
       />
       <SelectControl
         id="setting"
-        label="Ventilation"
+        label={t('calculator.ventilation')}
         data={data}
         setter={setter}
         source={Setting}
@@ -89,7 +96,9 @@ export const ActivityRiskControls: React.FunctionComponent<{
         </div>
       ) : null}
       <div className="form-group">
-        <label htmlFor="duration">Duration (in minutes)</label>
+        <label htmlFor="duration">
+          <Trans>calculator.duration</Trans>
+        </label>
         <input
           className="form-control form-control-lg"
           type="number"
@@ -104,7 +113,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       </div>
       <SelectControl
         id="theirMask"
-        label="Their mask"
+        label={t('calculator.their_mask')}
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -112,7 +121,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="yourMask"
-        label="Your mask"
+        label={t('calculator.your_mask')}
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -120,7 +129,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="voice"
-        label="Volume of conversation"
+        label={t('calculator.volume')}
         data={data}
         setter={setter}
         source={Voice}
@@ -128,13 +137,16 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
       <span className="readout">
         <p>
-          The <i>second</i> part of the calculation is Activity Risk: assuming 1
-          person at this activity has COVID, then you would have a{' '}
-          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
-          COVID.
+          <Trans
+            values={{
+              risk_percentage: fixedPointPrecisionPercent(activityRisk),
+            }}
+          >
+            calculator.your_risk_readout
+          </Trans>
           <b>
             {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
-              ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+              ? ' ' + t('calculator.activity_risk_capped_note')
               : ''}
             {data.distance === 'intimate' &&
             data.duration < intimateDurationFloor
@@ -143,8 +155,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
           </b>
         </p>
         <p>
-          Finally, we multiply Person Risk and Activity Risk to get the total
-          result.
+          <Trans>calculator.risk_multiply_step</Trans>
         </p>
       </span>
     </React.Fragment>

@@ -1,5 +1,6 @@
 import { map, size } from 'lodash'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { CalculatorData } from 'data/calculate'
 import { savedItems } from 'data/localStorage'
@@ -9,6 +10,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = (props): React.ReactElement => {
+  const { t } = useTranslation()
   const hasSavedItems = size(savedItems()) > 0
 
   let userSavedData: JSX.Element | null = null
@@ -24,10 +26,12 @@ export const SavedDataSelector: React.FunctionComponent<{
 
   if (hasSavedItems) {
     prepopulatedOptions = (
-      <optgroup label="Example Calculations">{prepopulatedOptions}</optgroup>
+      <optgroup label={t('calculator.example_calculations')}>
+        {prepopulatedOptions}
+      </optgroup>
     )
     userSavedData = (
-      <optgroup label="Your Saved Items">
+      <optgroup label={t('calculator.your_saved_items')}>
         {map(savedItems(), (_value, key) => (
           <option key={key} value={`user:${key}`}>
             {key}
@@ -68,7 +72,7 @@ export const SavedDataSelector: React.FunctionComponent<{
       onChange={(e) => setSavedData(e.target.value)}
     >
       <optgroup label=""></optgroup>
-      <option value="">Select a scenario or saved item...</option>
+      <option value="">{t('calculator.select_scenario')}</option>
       {userSavedData}
       {prepopulatedOptions}
     </select>

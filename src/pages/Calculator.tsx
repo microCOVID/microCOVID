@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 import { useQueryParams } from 'use-query-params'
 
 import {
@@ -135,38 +136,31 @@ export const Calculator = (): React.ReactElement => {
         className="btn btn-primary"
         onClick={() => setShowSaveForm(true)}
       >
-        Save as custom scenario
+        <Trans>button.save_as_custom</Trans>
       </button>
     </span>
   )
+
+  const { t } = useTranslation()
 
   return (
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            We reviewed published research about COVID, and used it to make
-            rough estimates about the risk level of various activities in
-            microCOVIDs. 1&nbsp;microCOVID is a one-in-a-million chance of
-            getting COVID.
+            <Trans>calculator.intro.whats_this</Trans>
           </p>
           <p>
-            We hope you’ll use this tool to build your intuition about the
-            comparative risk of different activities and as a harm-reduction
-            tool to make safer choices.
+            <Trans>calculator.intro.build_intuition</Trans>
           </p>
           <p>
-            Play around with the calculator! Change the variables and see how
-            they affect the total.
+            <Trans>calculator.intro.play_around</Trans>
           </p>
           <p className="warning">
-            <b>Important:</b> In this tool we state our best estimate based on
-            available evidence, even when that evidence is not conclusive. We
-            have read a lot of experts' research, but we are not ourselves
-            experts in this topic. This work has not been scientifically
-            peer-reviewed. There is still a lot of uncertainty about COVID. Do
-            not rely on this tool for medical advice. Please continue to follow
-            government guidance.
+            <b>
+              <Trans>calculator.warning.important</Trans>:{' '}
+            </b>
+            <Trans>calculator.warning</Trans>
           </p>
           <button
             id="reset-form-button"
@@ -174,7 +168,7 @@ export const Calculator = (): React.ReactElement => {
             className="btn btn-secondary"
             onClick={resetForm}
           >
-            Reset form
+            <Trans>button.reset_form</Trans>
           </button>{' '}
           {points > 0 && (showSaveForm ? saveForm : saveButton)}
         </Col>
@@ -182,12 +176,10 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
-          <Card id="location" title="Location & Prevalence">
+          <Card id="location" title={t('calculator.location')}>
             <div className="subheading">
-              First, select a location to use in your calculations, or fill in
-              your own values based on data available in your area....
+              <Trans>calculator.initial_instructions</Trans>
             </div>
-
             <PrevalenceControls
               data={calculatorData}
               setter={setCalculatorData}
@@ -196,13 +188,12 @@ export const Calculator = (): React.ReactElement => {
         </Col>
 
         <Col md="12" lg="8">
-          <Card id="person-risk" title="Risk">
+          <Card id="person-risk" title={t('calculator.risk_group_header')}>
             {prevalenceIsFilled ? (
               <React.Fragment>
                 <div className="subheading">
                   <p>
-                    ...then select a scenario from the list below (or make your
-                    own).
+                    <Trans>calculator.risk_group_instructions</Trans>
                   </p>
                   <SavedDataSelector
                     currentData={calculatorData}
@@ -228,7 +219,7 @@ export const Calculator = (): React.ReactElement => {
               </React.Fragment>
             ) : (
               <div className="empty">
-                First, fill out prevalence information.
+                <Trans>calculator.risk_group_empty_warning</Trans>
               </div>
             )}
           </Card>

@@ -2,6 +2,7 @@ import { isNullOrUndefined } from 'util'
 
 import { isNumber } from 'lodash'
 import React, { useEffect } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 import {
   CalculatorData,
@@ -129,9 +130,13 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const locationSet = isTopLocation(data.topLocation)
 
+  const { t } = useTranslation()
+
   return (
     <React.Fragment>
-      <header id="location">Step 1 - Choose a location</header>
+      <header id="location">
+        <Trans>calculator.location_selector_header</Trans>
+      </header>
       <div className="form-group">
         <select
           className="form-control form-control-lg"
@@ -175,7 +180,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
       <PrevalenceField
-        label="Reported cases in past week"
+        label={t('calculator.last_week_cases')}
         value={(data.casesPastWeek || 0).toString()}
         setter={(value) =>
           setter({ ...data, casesPastWeek: parseInt(value || '') })
@@ -184,7 +189,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         isEditable={!locationSet}
       />
       <PrevalenceField
-        label="Per how many people?"
+        label={t('calculator.per_people')}
         value={data.population}
         setter={(value) => setter({ ...data, population: value })}
         inputType="text"
@@ -194,7 +199,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         <p>Cases are stable or decreasing.</p>
       ) : (
         <PrevalenceField
-          label="Percent increase in cases from last week to this week"
+          label={t('calculator.percent_increase_in_cases')}
           value={data.casesIncreasingPercentage}
           unit="%"
           setter={(value) => {
@@ -207,7 +212,7 @@ export const PrevalenceControls: React.FunctionComponent<{
       )}
       {data.positiveCasePercentage === null ? (
         <PrevalenceField
-          label="Percent of tests that come back positive"
+          label={t('calculator.positive_case_percentage')}
           value="no data available"
           unit="%"
           setter={(_value) => null}
@@ -216,7 +221,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         />
       ) : (
         <PrevalenceField
-          label="Percent of tests that come back positive"
+          label={t('calculator.positive_case_percentage')}
           value={data.positiveCasePercentage.toString()}
           unit="%"
           setter={(value) => {
@@ -229,31 +234,35 @@ export const PrevalenceControls: React.FunctionComponent<{
         />
       )}
       <p>
-        Reported prevalence:{' '}
+        <Trans>calculator.reported_prevalence</Trans>:{' '}
         {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
         <br />
-        Adjusted prevalence:{' '}
+        <Trans>calculator.adjusted_prevalence</Trans>:{' '}
         {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2)}
         %
       </p>
       {!locationSet ? null : (
         <div>
           <p>
-            Prevalence data consolidated from {}
-            <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
-              Johns Hopkins CSSE
-            </a>{' '}
-            (reported cases), {}
-            <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
-              Covid Act Now
-            </a>{' '}
-            (US positive test rates), and {}
-            <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
-              Our World in Data
-            </a>{' '}
-            (international positive test rates).
+            <Trans i18nKey="calculator.prevalence_info_source_information">
+              Prevalence data consolidated from {}
+              <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
+                Johns Hopkins CSSE
+              </a>{' '}
+              (reported cases), {}
+              <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
+                Covid Act Now
+              </a>{' '}
+              (US positive test rates), and {}
+              <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
+                Our World in Data
+              </a>{' '}
+              (international positive test rates).
+            </Trans>
           </p>
-          <p>Data last updated {PrevalenceDataDate}.</p>
+          <p>
+            <Trans>calculator.data_last_updated</Trans> {PrevalenceDataDate}.
+          </p>
         </div>
       )}
     </React.Fragment>

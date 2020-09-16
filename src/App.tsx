@@ -1,6 +1,13 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import {
+  Container,
+  Dropdown,
+  DropdownButton,
+  Nav,
+  Navbar,
+} from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Trans, useTranslation } from 'react-i18next'
 import {
   NavLink,
   Redirect,
@@ -22,6 +29,7 @@ import { Spreadsheet } from 'pages/Spreadsheet'
 import 'styles/App.scss'
 
 export const App = (): React.ReactElement => {
+  const { t } = useTranslation()
   return (
     <HelmetProvider>
       <Router>
@@ -56,7 +64,6 @@ export const App = (): React.ReactElement => {
           </Helmet>
 
           <ScrollToTop />
-
           <Container>
             <Navbar expand="md">
               <Navbar.Brand href="/">microCOVID Project</Navbar.Brand>
@@ -70,7 +77,7 @@ export const App = (): React.ReactElement => {
                       exact
                       activeClassName="active"
                     >
-                      Calculator
+                      <Trans>menu.calculator</Trans>
                     </NavLink>
                   </Nav.Item>
 
@@ -80,7 +87,7 @@ export const App = (): React.ReactElement => {
                       className="nav-link"
                       activeClassName="active"
                     >
-                      About
+                      <Trans>menu.about</Trans>
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
@@ -92,7 +99,7 @@ export const App = (): React.ReactElement => {
                       className="nav-link"
                       activeClassName="active"
                     >
-                      Spreadsheet
+                      <Trans>menu.spreadsheet</Trans>
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
@@ -101,9 +108,18 @@ export const App = (): React.ReactElement => {
                       className="nav-link"
                       activeClassName="active"
                     >
-                      Contact Us
+                      <Trans>menu.contactus</Trans>
                     </NavLink>
                   </Nav.Item>
+                </Nav>
+                <Nav className="ml-auto">
+                  <DropdownButton
+                    variant="Info"
+                    title={'🌐 ' + t('current_lang_two_letter_code')}
+                  >
+                    <Dropdown.Item href="?lng=en">English</Dropdown.Item>
+                    <Dropdown.Item href="?lng=hu">Magyar</Dropdown.Item>
+                  </DropdownButton>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
@@ -131,7 +147,6 @@ export const App = (): React.ReactElement => {
               </Route>
             </Switch>
           </Container>
-
           <Footer />
         </QueryParamProvider>
       </Router>
