@@ -8,7 +8,7 @@ Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person R
 ### If there’s a precaution I don’t see a multiplier for here, should I still do it?
 
 Yes, definitely! The most important such precaution, in our opinion, is communication around symptoms:
-- Ask people _directly and clearly_ if they have any symptoms, _right before_ hanging out with them. Even if they only have “mild” symptoms that seem like “nothing to worry about,” consider if you can take a rain check, or at least MODify your hangout.
+- Ask people _directly and clearly_ if they have any symptoms, _right before_ hanging out with them. Even if they only have “mild” symptoms that seem like “nothing to worry about,” consider if you can take a rain check, or at least [MODify](3-covid-transmission#mod-hangouts-masked-outdoors-distance) your hangout.
 - If you have any more concerning symptoms[^1] then _immediately_ notify anyone you saw in the past 10 days, and contact your doctor for medical advice.
 - If a household member develops more concerning symptoms, follow [CDC best practices for home isolation](https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/isolation.html) straight away while you contact a doctor for medical advice.
 
@@ -39,7 +39,7 @@ Here’s why isolating helps reduce this source of error:
 
 As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
 
-Of note here: while full isolation is the gold standard for reducing infection risk, it’s useful to also have some lighter-weight tools that you can deploy if you’re uneasy about infection risk for some reason but not uneasy enough to find hard isolation to be worth the (admittedly considerable) social and practical costs. Extrapolating from the MOD factors, we think wearing a mask around the house for several days probably reduces your risk of infecting your housemates by about 4x, which is a lot of protection to get from a relatively simple intervention. In the authors’ household we deploy this one if we’re feeling at all unusual, even if the symptoms (such as a scratchy throat) aren’t suggestive of COVID; or if we’ve recently done something moderately higher-risk than usual.
+Of note here: while full isolation is the gold standard for reducing infection risk, it’s useful to also have some lighter-weight tools that you can deploy if you’re uneasy about infection risk for some reason but not uneasy enough to find hard isolation to be worth the (admittedly considerable) social and practical costs. Extrapolating from the [MOD factors](3-covid-transmission#mod-hangouts-masked-outdoors-distance), we think wearing a mask around the house for several days probably reduces your risk of infecting your housemates by about 4x, which is a lot of protection to get from a relatively simple intervention. In the authors’ household we deploy this one if we’re feeling at all unusual, even if the symptoms (such as a scratchy throat) aren’t suggestive of COVID; or if we’ve recently done something moderately higher-risk than usual.
 
 ### Why do I need to account for my household members? I thought it was “free” to hang out with people as often as I want, so long as they’re all in the same “bubble”?
 
