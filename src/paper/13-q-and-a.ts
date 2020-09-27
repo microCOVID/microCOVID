@@ -22,7 +22,7 @@ In the case of a long indoor hangout, we suggest just to cap the total Activity 
 
 ### If you live with multiple people, do you account for the additional risk of a longer infection chain?
 
-No. We’ll explain what this means and why we don’t account for longer infections _with housemates_. _(Note: Longer infection chains are still important to account for when interacting with anyone who is not a housemate.)_
+No. We’ll explain what this means and why we don’t account for it in the specific case of a single household.
 
 Imagine I live with Alice and Bob. Alice gets sick. There are two things that could happen next that could get me sick:
 
