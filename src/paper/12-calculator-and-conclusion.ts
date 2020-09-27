@@ -1,5 +1,5 @@
 const title = 'Calculator and Conclusion'
-
+const shortTitle = title
 const content = `
 
 ### Calculator
@@ -26,6 +26,6 @@ work on this project. Thank you in advance!
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 
 export default post
