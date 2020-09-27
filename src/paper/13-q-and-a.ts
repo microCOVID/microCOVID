@@ -22,7 +22,7 @@ In the case of a long indoor hangout, we suggest just to cap the total Activity 
 
 ### If you live with multiple people, do you account for the additional risk of a longer infection chain?
 
-No. We’ll explain what this means and why we don’t account for it.
+No. We’ll explain what this means and why we don’t account for longer infections _with housemates_. _(Note: Longer infection chains are still important to account for when interacting with anyone who is not a housemate.)_
 
 Imagine I live with Alice and Bob. Alice gets sick. There are two things that could happen next that could get me sick:
 
@@ -32,6 +32,8 @@ Imagine I live with Alice and Bob. Alice gets sick. There are two things that co
 There’s a \`30%\` chance that I get sick directly from Alice. There’s a \`70% * 30% * 30% = 6%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 36% than 30%.
 
 We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.
+
+
 
 Here’s why isolating helps reduce this source of error:
 * Prompt isolation means it’s less likely[^isolation] I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
