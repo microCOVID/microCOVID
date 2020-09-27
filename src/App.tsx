@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
@@ -63,9 +63,16 @@ export const App = (): React.ReactElement => {
                 </Nav.Item>
                 <Nav.Item>
                   <NavDropdown title="White Paper" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/paper">Table of Contents</NavDropdown.Item>
+                    <NavDropdown.Item href="/paper">
+                      Table of Contents
+                    </NavDropdown.Item>
                     {Object.keys(pages).map((pageId, pageIndex) => (
-                      <NavDropdown.Item href={`/paper/${pageId}`}>{pages[pageId].shortTitle}</NavDropdown.Item>
+                      <NavDropdown.Item
+                        href={`/paper/${pageId}`}
+                        key={pageIndex}
+                      >
+                        {pages[pageId].shortTitle}
+                      </NavDropdown.Item>
                     ))}
                   </NavDropdown>
                 </Nav.Item>
