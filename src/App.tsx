@@ -6,7 +6,7 @@ import {
   Redirect,
   Route,
   BrowserRouter as Router,
-  Switch
+  Switch,
 } from 'react-router-dom'
 
 import { PageViews } from 'components/Analytics'
@@ -62,15 +62,15 @@ export const App = (): React.ReactElement => {
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                  <NavDropdown 
-                      title="White Paper" 
-                      id="basic-nav-dropdown" 
-                      active={window.location.pathname.includes("/paper")}
-                    >
-                    <NavDropdown.Item 
+                  <NavDropdown
+                    title="White Paper"
+                    id="basic-nav-dropdown"
+                    active={window.location.pathname.includes('/paper')}
+                  >
+                    <NavDropdown.Item
                       href="/paper"
                       key="0"
-                      active={window.location.pathname === "/paper"}
+                      active={window.location.pathname === '/paper'}
                     >
                       Table of Contents
                     </NavDropdown.Item>
@@ -80,7 +80,7 @@ export const App = (): React.ReactElement => {
                         key={pageIndex}
                         active={window.location.pathname === `/paper/${pageId}`}
                       >
-                        {pageIndex+1}. {pages[pageId].shortTitle}
+                        {pageIndex + 1}. {pages[pageId].shortTitle}
                       </NavDropdown.Item>
                     ))}
                   </NavDropdown>
