@@ -28,6 +28,10 @@ For socializing, just estimate each social activity in microCOVIDs (using “Cos
 
 Errands include grocery shopping, transit, and other public settings. These can be harder to estimate individually; we have some guidelines in the [Q&A](13-q-and-a).
 
+Work is modeled just like the above socializing and errands, and you would ask similar kinds of questions: how many people is this person sharing indoor air space with? For how many hours per week? What is their risk profile like?
+
+The best way to understand how to apply the Advanced Method is through an example. See the [next section](10-example-person-risk) for a detailed example.
+
 
 [^12]:
      The reason we care most about their activities between 2–9 days ago is because that is the most likely range of time intervals between infections. ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph; [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) “generation time”). See [Research Sources](14-research-sources) for graphs and more about the infectious period.
