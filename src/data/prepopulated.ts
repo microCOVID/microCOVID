@@ -182,6 +182,19 @@ export const prepopulated: {
     voice: 'normal',
   },
 
+  'Voting in-person': {
+    riskProfile: 'average',
+    interaction: 'oneTime',
+    personCount: 2,
+
+    setting: 'indoor',
+    distance: 'sixFt',
+    duration: 10,
+    theirMask: 'basic',
+    yourMask: 'filtered',
+    voice: 'silent',
+  },
+
   'Indoor, unmasked hangout with person who has COVID': {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
