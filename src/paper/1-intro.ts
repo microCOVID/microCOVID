@@ -1,5 +1,5 @@
 const title = 'Introduction'
-
+const shortTitle = title
 const content = `
 
 You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
@@ -51,5 +51,5 @@ _Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Da
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 export default post

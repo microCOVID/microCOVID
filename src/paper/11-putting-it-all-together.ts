@@ -1,5 +1,5 @@
 const title = 'Putting it all together'
-
+const shortTitle = title
 const content = `
 
 We can now multiply Activity Risk by Person Risk to get the microCOVID cost of a given interaction.
@@ -43,5 +43,5 @@ Remember that Reasonable Rosie is a specific example person, from a specific exa
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 export default post
