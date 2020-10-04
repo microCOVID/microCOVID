@@ -1,5 +1,5 @@
 const title = 'Q&A'
-
+const shortTitle = title
 const content = `
 
 Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
@@ -222,6 +222,6 @@ In terms of qualitative scales, we like the following:
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 
 export default post

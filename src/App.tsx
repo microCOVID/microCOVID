@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
@@ -17,6 +17,7 @@ import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperTOC } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
+import { pages } from 'paper/index'
 
 import 'styles/App.scss'
 
@@ -61,13 +62,19 @@ export const App = (): React.ReactElement => {
                   </NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                  <NavLink
-                    to="/paper"
-                    className="nav-link"
-                    activeClassName="active"
-                  >
-                    White Paper
-                  </NavLink>
+                  <NavDropdown title="White Paper" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/paper">
+                      Table of Contents
+                    </NavDropdown.Item>
+                    {Object.keys(pages).map((pageId, pageIndex) => (
+                      <NavDropdown.Item
+                        href={`/paper/${pageId}`}
+                        key={pageIndex}
+                      >
+                        {pageIndex + 1}. {pages[pageId].shortTitle}
+                      </NavDropdown.Item>
+                    ))}
+                  </NavDropdown>
                 </Nav.Item>
                 <Nav.Item>
                   <NavLink
