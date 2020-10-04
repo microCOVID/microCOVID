@@ -20,9 +20,9 @@ Other important precautions include washing & sanitizing your hands, covering yo
 
 In the case of a long indoor hangout, we suggest just to cap the total Activity Risk at the household member number (30%). Or if you’re cuddling or being intimate, cap the total Activity Risk at 48% as mentioned above for spouse/partner. These are not particularly principled answers. As we’ve mentioned in footnotes before, the ability to just add microCOVIDs (rather than multiplying probabilities) starts to break down as probabilities get larger. Additionally, the data we’re basing our guesses off is more relevant to the smaller risks that we more commonly see with typical activities. Certainly don’t use an Activity Risk larger than 100% for anything.
 
-### If you live with multiple people, do you account for the additional risk of a longer infection chain?
+### If you live with multiple people, do you account for the additional risk of a longer infection chain within the household?
 
-No. We’ll explain what this means and why we don’t account for it.
+No. We’ll explain what this means and why we don’t account for it in the specific case of a single household.
 
 Imagine I live with Alice and Bob. Alice gets sick. There are two things that could happen next that could get me sick:
 
@@ -31,7 +31,9 @@ Imagine I live with Alice and Bob. Alice gets sick. There are two things that co
 
 There’s a \`30%\` chance that I get sick directly from Alice. There’s a \`70% * 30% * 30% = 6%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 36% than 30%.
 
-We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.
+We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.[^unwell]
+
+
 
 Here’s why isolating helps reduce this source of error:
 * Prompt isolation means it’s less likely[^isolation] I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
@@ -215,6 +217,7 @@ In terms of qualitative scales, we like the following:
 
 
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
+[^unwell]: You probably can't do this anywhere near as reliably with someone you don't live with, which is why the discussion here is specific to housemates.
 [^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
