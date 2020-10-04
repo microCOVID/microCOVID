@@ -29,6 +29,8 @@
     "test": "react-scripts test",
     "lint": "eslint src",
     "fix": "eslint src --fix",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "prettier": "prettier --write .",
     "typecheck": "tsc"
   },
   "browserslist": {
