@@ -4,7 +4,7 @@ import heExtended from './img/he-extended-fig-1.png'
 import positiveTestRate from './img/positive-test-rate.png'
 
 const title = 'Research Sources'
-
+const shortTitle = title
 const content = `
 
 Read this section if you are interested in the epistemic nitty-gritty behind our estimates of Activity Risk and Person Risk.
@@ -239,6 +239,6 @@ We note the following:
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 
 export default post

@@ -1,5 +1,5 @@
 const title = 'Computing microCOVIDs'
-
+const shortTitle = title
 const content = `
 
 In order to calculate the actual risk of an activity in microCOVIDs, we need to combine two numbers:
@@ -37,5 +37,5 @@ Let’s explore how you can estimate these two numbers (Activity Risk and Person
 
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 export default post
