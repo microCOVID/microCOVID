@@ -1,13 +1,11 @@
-import { QueryParamConfig } from 'serialize-query-params'
+import { QueryParamConfigMap } from 'serialize-query-params'
 import { NumberParam, StringParam, useQueryParams } from 'use-query-params'
 
 import { CalculatorData, defaultValues } from './calculate'
 
 export type QueryData = Partial<CalculatorData>
 
-const queryConfig: {
-  [key: string]: QueryParamConfig<any, any>
-} = {
+const queryConfig: QueryParamConfigMap = {
   topLocation: StringParam,
   subLocation: StringParam,
 
@@ -34,6 +32,6 @@ export const filterParams = (data: CalculatorData): QueryData => {
   return filterData
 }
 
-export const QueryParams = () => {
+export const QueryParams = (): ReturnType<typeof useQueryParams> => {
   return useQueryParams(queryConfig)
 }
