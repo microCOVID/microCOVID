@@ -10,7 +10,6 @@ import {
 } from 'react-router-dom'
 import { QueryParamProvider } from 'use-query-params'
 
-
 import { PageViews } from 'components/Analytics'
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
