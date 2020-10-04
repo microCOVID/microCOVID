@@ -71,7 +71,7 @@ export const App = (): React.ReactElement => {
                         href={`/paper/${pageId}`}
                         key={pageIndex}
                       >
-                        {pageIndex+1}. {pages[pageId].shortTitle}
+                        {pageIndex + 1}. {pages[pageId].shortTitle}
                       </NavDropdown.Item>
                     ))}
                   </NavDropdown>
