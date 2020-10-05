@@ -1844,6 +1844,11 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
+"@types/num2fraction@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/num2fraction/-/num2fraction-1.2.0.tgz#1c9a73209c8af023c8291cf69914b0d6e814e5e9"
+  integrity sha512-qPXtIa8KGnhpQhhG6AgUo11gpJUTZjhFp1UKsgUe1kIkPj0B/7kewJfD2wj3VQ7byyTbqmlvE/juN63QdR4ZaQ==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -5317,11 +5322,6 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
-
-fracty@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/fracty/-/fracty-1.0.9.tgz#0fd16864508afbd7c3248dd1b18a1f5824a66c7c"
-  integrity sha512-QPdUU/jsRDLwNvatHqVv6ksvein9JxBzQs1Yv/thrd+7woUbJ4y4K+yVVrqIl9IVOBjNqNRqRthdi72PswnINw==
 
 fragment-cache@^0.2.1:
   version "0.2.1"

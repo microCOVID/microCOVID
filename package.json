@@ -5,7 +5,6 @@
   "dependencies": {
     "@testing-library/dom": ">=5",
     "bootstrap": "^4.5.0",
-    "fracty": "^1.0.9",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "markdown-it": "^11.0.0",
@@ -13,6 +12,7 @@
     "markdown-it-github-headings": "^2.0.0",
     "markdown-it-link-attributes": "^3.0.0",
     "node-sass": "^4.14.1",
+    "num2fraction": "^1.2.2",
     "popper.js": "^1.16.1",
     "prop-types": "^15.6.0",
     "react": "^16.13.1",
@@ -52,6 +52,7 @@
     "@types/lodash": "^4.14.159",
     "@types/markdown-it": "^10.0.2",
     "@types/node": "^12.12.53",
+    "@types/num2fraction": "^1.2.0",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",

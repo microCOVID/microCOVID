@@ -1,9 +1,9 @@
+import num2fraction from 'num2fraction'
 import React from 'react'
 import { Badge, OverlayTrigger } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
-const fracty = require('fracty');
 
 function showRiskMultiplier(multiplier: number): string {
   // console.log(multiplier)
@@ -12,7 +12,7 @@ function showRiskMultiplier(multiplier: number): string {
   if (multiplier === 1) {
     return '(default risk)'
   } else if (multiplier > 0 && multiplier < 1) {
-    return `(${fracty(multiplier)}th the risk)`
+    return `(${num2fraction(multiplier)}th the risk)`
   } else {
     return `(${multiplier}x the risk)`
   }
