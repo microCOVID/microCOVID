@@ -167,6 +167,11 @@ export const Calculator = (): React.ReactElement => {
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
+      <Row>
+        <Col>
+          <h2>Calculate the approximate COVID risk of any activity</h2>
+        </Col>
+      </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
           <Card id="location">
