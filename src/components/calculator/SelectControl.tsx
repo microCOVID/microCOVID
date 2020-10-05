@@ -3,6 +3,20 @@ import { Badge, OverlayTrigger } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
+const fracty = require('fracty');
+
+function showRiskMultiplier(multiplier: number): string {
+  // console.log(multiplier)
+  // console.log(multiplier < 0)
+  // debugger
+  if (multiplier === 1) {
+    return '(default risk)'
+  } else if (multiplier > 0 && multiplier < 1) {
+    return `(${fracty(multiplier)}th the risk)`
+  } else {
+    return `(${multiplier}x the risk)`
+  }
+}
 
 export const GenericSelectControl: React.FunctionComponent<{
   id: string
@@ -39,9 +53,7 @@ export const GenericSelectControl: React.FunctionComponent<{
         <option key={index} value={value}>
           {props.source[value].label}{' '}
           {!props.hiderisk &&
-            (props.source[value].multiplier === 1
-              ? '(default risk)'
-              : `(${props.source[value].multiplier}x risk)`)}
+            showRiskMultiplier(props.source[value].multiplier)}
         </option>
       ))}
       <optgroup></optgroup>

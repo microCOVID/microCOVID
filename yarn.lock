@@ -5318,6 +5318,11 @@ forwarded@~0.1.2:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
+fracty@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/fracty/-/fracty-1.0.9.tgz#0fd16864508afbd7c3248dd1b18a1f5824a66c7c"
+  integrity sha512-QPdUU/jsRDLwNvatHqVv6ksvein9JxBzQs1Yv/thrd+7woUbJ4y4K+yVVrqIl9IVOBjNqNRqRthdi72PswnINw==
+
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
