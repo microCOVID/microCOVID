@@ -187,6 +187,12 @@ a {
     }
   }
 
+  #prevelance-details {
+    input.form-control[readonly] {
+      color: $gray-500 !important;
+    }
+  }
+
   .empty {
     flex: 1;
     display: flex;
