@@ -37,6 +37,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
           data={data}
           setter={setter}
           source={Interaction}
+          hideRisk={true}
         />
         <span className="readout">
           The <i>second</i> part of the calculation is Activity Risk: assuming 1
