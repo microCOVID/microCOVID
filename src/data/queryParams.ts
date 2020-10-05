@@ -1,5 +1,4 @@
-import { pickBy, isEmpty } from 'lodash'
-
+import { isEmpty, pickBy } from 'lodash'
 import { QueryParamConfigMap } from 'serialize-query-params'
 import { NumberParam, StringParam, useQueryParams } from 'use-query-params'
 
@@ -32,10 +31,13 @@ export const filterParams = (data: CalculatorData): QueryData => {
   return filterData
 }
 
-// This method chooses between existing calulator data (either defaults or from a 
+// This method chooses between existing calulator data (either defaults or from a
 // saved model) or the ones specified through query parameters.
-export const useParams = (queryData: QueryData, calcData: CalculatorData): CalculatorData => {
-  const queryDataFiltered = pickBy(queryData, v => v !== undefined)
+export const useParams = (
+  queryData: QueryData,
+  calcData: CalculatorData,
+): CalculatorData => {
+  const queryDataFiltered = pickBy(queryData, (v) => v !== undefined)
   if (isEmpty(queryDataFiltered)) {
     return calcData
   } else {
