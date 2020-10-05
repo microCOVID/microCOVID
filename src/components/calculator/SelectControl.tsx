@@ -10,11 +10,11 @@ function showRiskMultiplier(multiplier: number): string {
   // console.log(multiplier < 0)
   // debugger
   if (multiplier === 1) {
-    return '(default risk)'
+    return 'default risk'
   } else if (multiplier > 0 && multiplier < 1) {
-    return `(${num2fraction(multiplier)}th the risk)`
+    return `${num2fraction(multiplier)}th the risk`
   } else {
-    return `(${multiplier}x the risk)`
+    return `${multiplier}x the risk`
   }
 }
 
@@ -53,7 +53,7 @@ export const GenericSelectControl: React.FunctionComponent<{
         <option key={index} value={value}>
           {props.source[value].label}{' '}
           {!props.hiderisk &&
-            showRiskMultiplier(props.source[value].multiplier)}
+            `[${showRiskMultiplier(props.source[value].multiplier)}]`}
         </option>
       ))}
       <optgroup></optgroup>
