@@ -7,7 +7,7 @@ import { FormValue } from 'data/data'
 
 function showRiskMultiplier(multiplier: number): string {
   if (multiplier === 1) {
-    return 'default risk'
+    return 'baseline risk'
   } else if (multiplier > 0 && multiplier < 1) {
     return `${num2fraction(multiplier)}th the risk`
   } else {
