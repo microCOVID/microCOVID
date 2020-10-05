@@ -1,10 +1,10 @@
 import { isEmpty, pickBy } from 'lodash'
 import { QueryParamConfigMap } from 'serialize-query-params'
-import { NumberParam, StringParam, useQueryParams } from 'use-query-params'
+import { NumberParam, StringParam } from 'use-query-params'
 
 import { CalculatorData, QueryData, defaultValues } from './calculate'
 
-const queryConfig: QueryParamConfigMap = {
+export const queryConfig: QueryParamConfigMap = {
   topLocation: StringParam,
   subLocation: StringParam,
 
@@ -20,20 +20,18 @@ const queryConfig: QueryParamConfigMap = {
   voice: StringParam,
 }
 
+//
 export const filterParams = (data: CalculatorData): QueryData => {
   const filterData = { ...data }
-  let key: keyof CalculatorData
-  for (key in filterData) {
-    if (!(key in queryConfig) || data[key] === defaultValues[key]) {
-      delete filterData[key]
-    }
-  }
-  return filterData
+  return pickBy(filterData, (v, k) => {
+    const fk = k as keyof CalculatorData
+    return k in queryConfig && v !== defaultValues[fk]
+  })
 }
 
-// This method chooses between existing calulator data (either defaults or from a
-// saved model) or the ones specified through query parameters.
-export const useParams = (
+// Choose between data from the query params or localstorage.
+// This method returns queryData if any valid key exists, otherwise, it returns calcData
+export const useQueryDataIfPresent = (
   queryData: QueryData,
   calcData: CalculatorData,
 ): CalculatorData => {
@@ -43,8 +41,4 @@ export const useParams = (
   } else {
     return { ...defaultValues, ...queryData }
   }
-}
-
-export const QueryParams = (): ReturnType<typeof useQueryParams> => {
-  return useQueryParams(queryConfig)
 }

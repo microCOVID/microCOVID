@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { useQueryParams } from 'use-query-params'
 
 import {
   recordCalculatorChanged,
@@ -22,13 +23,17 @@ import {
   parsePopulation,
 } from 'data/calculate'
 import { saveCalculation } from 'data/localStorage'
-import { QueryParams, filterParams, useParams } from 'data/queryParams'
+import {
+  filterParams,
+  queryConfig,
+  useQueryDataIfPresent,
+} from 'data/queryParams'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
-  const [query, setQuery] = QueryParams()
+  const [query, setQuery] = useQueryParams(queryConfig)
 
   // Mount / unmount
   useEffect(() => {
@@ -45,12 +50,12 @@ export const Calculator = (): React.ReactElement => {
     localStorage.getItem(FORM_STATE_KEY) || 'null',
   )
 
-  const currentData = migrateDataToCurrent(previousData)
+  const migratedPreviousData = migrateDataToCurrent(previousData)
 
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
-    useParams(query, currentData),
+    useQueryDataIfPresent(query, migratedPreviousData),
   )
 
   const resetForm = () => {
