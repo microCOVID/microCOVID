@@ -66,6 +66,9 @@ export const App = (): React.ReactElement => {
                     <NavDropdown.Item href="/paper">
                       Table of Contents
                     </NavDropdown.Item>
+                    <NavDropdown.Item href="/paper/all">
+                      All In One Page
+                    </NavDropdown.Item>
                     {Object.keys(pages).map((pageId, pageIndex) => (
                       <NavDropdown.Item
                         href={`/paper/${pageId}`}
