@@ -184,7 +184,7 @@ export const PrevalenceControls: React.FunctionComponent<{
       </p>
 
       <Button
-        variant="secondary"
+        variant="outline-secondary"
         onClick={() => setOpen(!detailsOpen)}
         aria-controls="prevelance-details"
         aria-expanded={detailsOpen}
