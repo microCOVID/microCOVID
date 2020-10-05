@@ -169,12 +169,7 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
-          <Card id="location" title="Location & Prevalence">
-            <div className="subheading">
-              First, select a location to use in your calculations, or fill in
-              your own values based on data available in your area....
-            </div>
-
+          <Card id="location">
             <PrevalenceControls
               data={calculatorData}
               setter={setCalculatorData}
