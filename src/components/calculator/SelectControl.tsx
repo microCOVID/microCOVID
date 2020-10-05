@@ -11,6 +11,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   value: string | number
   label?: string
   popover?: JSX.Element
+  hiderisk?: boolean
 }> = (props) => (
   <div className="form-group">
     {props.label && (
@@ -36,7 +37,10 @@ export const GenericSelectControl: React.FunctionComponent<{
       <option value="">Select one...</option>
       {Object.keys(props.source).map((value, index) => (
         <option key={index} value={value}>
-          {props.source[value].label}
+          {props.source[value].label}{" "}
+          {!props.hiderisk && (
+            props.source[value].multiplier===1 ? "(default risk)" : `(${props.source[value].multiplier}x risk)`
+          )}
         </option>
       ))}
       <optgroup></optgroup>
@@ -51,6 +55,7 @@ export const SelectControl: React.FunctionComponent<{
   source: { [key: string]: FormValue }
   label?: string
   popover?: JSX.Element
+  hiderisk?: boolean
 }> = (props) => (
   <GenericSelectControl
     id={props.id}
@@ -59,6 +64,7 @@ export const SelectControl: React.FunctionComponent<{
     value={props.data[props.id] || ''}
     label={props.label}
     popover={props.popover}
+    hiderisk={props.hiderisk}
   />
 )
 

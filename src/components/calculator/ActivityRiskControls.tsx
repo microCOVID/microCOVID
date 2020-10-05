@@ -62,6 +62,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         data={data}
         setter={setter}
         source={Interaction}
+        hiderisk={true}
       />
       <SelectControl
         id="setting"
