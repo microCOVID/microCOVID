@@ -1,5 +1,5 @@
 const title = 'Activity Risk'
-
+const shortTitle = title
 const content = `
 
 **Activity Risk** is the chance that an activity will transmit COVID to you, _assuming_ the other person currently has COVID.
@@ -128,5 +128,5 @@ Now we understand Activity Risk, or how your chance of getting the virus changes
     Another possibility we considered, which is much more speculative, is that this has to do with some people naturally producing more respiratory droplets when they talk and breathe ([Meselson](https://www.nejm.org/doi/full/10.1056/nejmc2009324)). These people are called superspreaders. Therefore it might be the case that if you live with a superspreader, you are almost certain to get it, but most people are not that highly infectious.
 `
 
-const post = { title, content }
+const post = { title, shortTitle, content }
 export default post
