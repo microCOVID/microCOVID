@@ -1,9 +1,9 @@
+import { pickBy, isEmpty } from 'lodash'
+
 import { QueryParamConfigMap } from 'serialize-query-params'
 import { NumberParam, StringParam, useQueryParams } from 'use-query-params'
 
-import { CalculatorData, defaultValues } from './calculate'
-
-export type QueryData = Partial<CalculatorData>
+import { CalculatorData, QueryData, defaultValues } from './calculate'
 
 const queryConfig: QueryParamConfigMap = {
   topLocation: StringParam,
@@ -30,6 +30,17 @@ export const filterParams = (data: CalculatorData): QueryData => {
     }
   }
   return filterData
+}
+
+// This method chooses between existing calulator data (either defaults or from a 
+// saved model) or the ones specified through query parameters.
+export const useParams = (queryData: QueryData, calcData: CalculatorData): CalculatorData => {
+  const queryDataFiltered = pickBy(queryData, v => v !== undefined)
+  if (isEmpty(queryDataFiltered)) {
+    return calcData
+  } else {
+    return { ...defaultValues, ...queryData }
+  }
 }
 
 export const QueryParams = (): ReturnType<typeof useQueryParams> => {

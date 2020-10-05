@@ -22,7 +22,11 @@ import {
   parsePopulation,
 } from 'data/calculate'
 import { saveCalculation } from 'data/localStorage'
-import { QueryParams, filterParams } from 'data/queryParams'
+import {
+  QueryParams,
+  filterParams,
+  useParams
+} from 'data/queryParams'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
@@ -45,12 +49,12 @@ export const Calculator = (): React.ReactElement => {
     localStorage.getItem(FORM_STATE_KEY) || 'null',
   )
 
-  const previousDataMerged = { ...previousData, ...query }
+  const currentData = migrateDataToCurrent(previousData)
 
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
-    migrateDataToCurrent(previousDataMerged),
+    useParams(query, currentData)
   )
 
   const resetForm = () => {
