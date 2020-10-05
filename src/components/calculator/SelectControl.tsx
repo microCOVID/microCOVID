@@ -37,10 +37,11 @@ export const GenericSelectControl: React.FunctionComponent<{
       <option value="">Select one...</option>
       {Object.keys(props.source).map((value, index) => (
         <option key={index} value={value}>
-          {props.source[value].label}{" "}
-          {!props.hiderisk && (
-            props.source[value].multiplier===1 ? "(default risk)" : `(${props.source[value].multiplier}x risk)`
-          )}
+          {props.source[value].label}{' '}
+          {!props.hiderisk &&
+            (props.source[value].multiplier === 1
+              ? '(default risk)'
+              : `(${props.source[value].multiplier}x risk)`)}
         </option>
       ))}
       <optgroup></optgroup>
