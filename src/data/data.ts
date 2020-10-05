@@ -9,13 +9,16 @@ const formValue = function (label: string, multiplier: number): FormValue {
 
 const housemateMult = 0.3
 export const Interaction: { [key: string]: FormValue } = {
-  oneTime: { label: 'One-time interaction', multiplier: 0.06 },
+  oneTime: {
+    label: 'One-time interaction [6% chance of transmission per hour]',
+    multiplier: 0.06,
+  },
   repeated: {
-    label: 'Household member',
+    label: 'Household member [30% chance of transmission per week]',
     multiplier: housemateMult,
   },
   partner: {
-    label: 'Partner / spouse',
+    label: 'Partner / spouse [48% chance of transmission per week]',
     multiplier: 0.48,
   },
 }

@@ -6,9 +6,6 @@ import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
 
 function showRiskMultiplier(multiplier: number): string {
-  // console.log(multiplier)
-  // console.log(multiplier < 0)
-  // debugger
   if (multiplier === 1) {
     return 'default risk'
   } else if (multiplier > 0 && multiplier < 1) {
