@@ -205,7 +205,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       return null
     }
 
-    const repeatedInteraction = data.interaction == 'repeated'
+    const repeatedInteraction = data.interaction === 'repeated'
 
     let multiplier = 1
     multiplier *= Interaction[data.interaction].multiplier
@@ -223,7 +223,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
 
       let effectiveDuration = data.duration
       multiplier *= mulFor(Distance, data.distance)
-      if (data.distance == 'intimate') {
+      if (data.distance === 'intimate') {
         // Even a brief kiss probably has a non-trivial chance of transmission.
         effectiveDuration = Math.max(effectiveDuration, 60)
       } else {
