@@ -7,6 +7,7 @@ import {
   TheirMask,
   Voice,
   YourMask,
+  intimateDurationFloor,
 } from 'data/data'
 
 export interface CalculatorData {
@@ -225,8 +226,9 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       multiplier *= mulFor(Distance, data.distance)
       if (data.distance === 'intimate') {
         // Even a brief kiss probably has a non-trivial chance of transmission.
-        effectiveDuration = Math.max(effectiveDuration, 60)
-      } else {
+        effectiveDuration = Math.max(effectiveDuration, intimateDurationFloor)
+      }
+      if (data.distance !== 'intimate' && data.distance !== 'close') {
         // Being outdoors only helps if you're not literally breathing each others' exhalation.
         multiplier *= mulFor(Setting, data.setting)
       }

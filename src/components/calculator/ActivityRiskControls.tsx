@@ -15,6 +15,7 @@ import {
   TheirMask,
   Voice,
   YourMask,
+  intimateDurationFloor,
 } from 'data/data'
 import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
@@ -77,7 +78,8 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Setting}
       />
-      {data.setting === 'outdoor' && data.distance === 'intimate' ? (
+      {data.setting === 'outdoor' &&
+      ['close', 'intimate'].includes(data.distance) ? (
         <div className="warning">
           Due to the very close distances and exchange of bodily fluid, we are
           not confident that being outdoors reduces the risk in a substantial
@@ -132,6 +134,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
           <b>
             {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
               ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+              : ''}
+            {data.distance === 'intimate' &&
+            data.duration < intimateDurationFloor
+              ? ' (NOTE: We have applied a minimum Activity Risk for fluid transfer.)'
               : ''}
           </b>
         </p>
