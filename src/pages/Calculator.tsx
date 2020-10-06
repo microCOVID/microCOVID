@@ -13,6 +13,7 @@ import {
 } from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { SelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
@@ -21,6 +22,7 @@ import {
   migrateDataToCurrent,
   parsePopulation,
 } from 'data/calculate'
+import { Interaction } from 'data/data'
 import { saveCalculation } from 'data/localStorage'
 
 const localStorage = window.localStorage
@@ -183,10 +185,11 @@ export const Calculator = (): React.ReactElement => {
         </Col>
 
         <Col md="12" lg="8">
-          <Card id="person-risk" title="Risk">
+          <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
-                <div className="subheading">
+                <header id="person-risk">Step 2: Describe the activity</header>
+                <div>
                   <p>
                     ...then select a scenario from the list below (or make your
                     own).
@@ -194,6 +197,14 @@ export const Calculator = (): React.ReactElement => {
                   <SavedDataSelector
                     currentData={calculatorData}
                     setter={setCalculatorData}
+                  />
+
+                  <SelectControl
+                    id="interaction"
+                    label="Is this a single activity or an ongoing relationship?"
+                    data={calculatorData}
+                    setter={setCalculatorData}
+                    source={Interaction}
                   />
                 </div>
 

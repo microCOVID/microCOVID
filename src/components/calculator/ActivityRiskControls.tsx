@@ -8,14 +8,7 @@ import {
   MAX_ACTIVITY_RISK,
   calculateActivityRisk,
 } from 'data/calculate'
-import {
-  Distance,
-  Interaction,
-  Setting,
-  TheirMask,
-  Voice,
-  YourMask,
-} from 'data/data'
+import { Setting, TheirMask, Voice, YourMask } from 'data/data'
 import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
 export const ActivityRiskControls: React.FunctionComponent<{
@@ -23,21 +16,11 @@ export const ActivityRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
-  const header = <header id="activity-risk">Step 3 - Activity Risk</header>
-
   const activityRisk = calculateActivityRisk(data)
 
   if (repeatedEvent) {
     return (
       <React.Fragment>
-        {header}
-        <SelectControl
-          id="interaction"
-          label="Type of Interaction"
-          data={data}
-          setter={setter}
-          source={Interaction}
-        />
         <span className="readout">
           The <i>second</i> part of the calculation is Activity Risk: assuming 1
           such person has COVID, then you would have a{' '}
@@ -55,61 +38,32 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
-      {header}
-      <SelectControl
-        id="interaction"
-        label="Type of interaction"
-        data={data}
-        setter={setter}
-        source={Interaction}
-      />
       <SelectControl
         id="setting"
-        label="Ventilation"
+        label="Are you indoors or outdoors?"
         data={data}
         setter={setter}
         source={Setting}
       />
       <SelectControl
-        id="distance"
-        label="Distance (most of the time)"
-        data={data}
-        setter={setter}
-        source={Distance}
-      />
-      <div className="form-group">
-        <label htmlFor="duration">Duration (in minutes)</label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.duration}
-          onChange={(e) =>
-            setter({
-              ...data,
-              duration: Math.max(0, parseInt(e.target.value)),
-            })
-          }
-        />
-      </div>
-      <SelectControl
-        id="theirMask"
-        label="Their mask"
-        popover={maskPopover}
-        data={data}
-        setter={setter}
-        source={TheirMask}
-      />
-      <SelectControl
         id="yourMask"
-        label="Your mask"
+        label="What mask are YOU wearing? (if you’re eating or drinking, say “no mask”)"
         popover={maskPopover}
         data={data}
         setter={setter}
         source={YourMask}
       />
       <SelectControl
+        id="theirMask"
+        label="What mask are THEY wearing? (if you’re eating or drinking, say “no mask”)"
+        popover={maskPopover}
+        data={data}
+        setter={setter}
+        source={TheirMask}
+      />
+      <SelectControl
         id="voice"
-        label="Volume of conversation"
+        label="How much is everyone talking?"
         data={data}
         setter={setter}
         source={Voice}

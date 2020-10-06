@@ -7,7 +7,7 @@ import {
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
-import { RiskProfile } from 'data/data'
+import { Distance, RiskProfile } from 'data/data'
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -45,9 +45,11 @@ export const PersonRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
-      <header id="person-risk">Step 2 - Person Risk</header>
       <div className="form-group">
-        <label htmlFor="personCount">Number of people near you</label>
+        <label htmlFor="personCount">
+          How many people get near you? <br />
+          (within 10ft or less)
+        </label>
         <input
           className="form-control form-control-lg"
           type="number"
@@ -61,9 +63,32 @@ export const PersonRiskControls: React.FunctionComponent<{
         />
         <GroupSizeWarning people={data.personCount} />
       </div>
+      <div className="form-group">
+        <label htmlFor="duration">
+          How long are each of these people typically near you, in minutes?
+        </label>
+        <input
+          className="form-control form-control-lg"
+          type="number"
+          value={data.duration}
+          onChange={(e) =>
+            setter({
+              ...data,
+              duration: Math.max(0, parseInt(e.target.value)),
+            })
+          }
+        />
+      </div>
+      <SelectControl
+        id="distance"
+        label="How close are they, on average?"
+        data={data}
+        setter={setter}
+        source={Distance}
+      />
       <SelectControl
         id="riskProfile"
-        label="Person(s) Risk Profile"
+        label="What is their risk profile?"
         popover={personRiskPopover}
         data={data}
         setter={setter}
