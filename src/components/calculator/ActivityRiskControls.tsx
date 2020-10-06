@@ -81,10 +81,9 @@ export const ActivityRiskControls: React.FunctionComponent<{
       {data.setting === 'outdoor' &&
       ['close', 'intimate'].includes(data.distance) ? (
         <div className="warning">
-          Due to the very close distances and exchange of bodily fluid, we are
-          not confident that being outdoors reduces the risk in a substantial
-          way. Thus, we are not providing any bonus for being outdoors when
-          intimate.
+          Due to very close distances, we are not confident that being outdoors
+          reduces the risk in a substantial way. Thus, we are not providing any
+          bonus for being outdoors when intimate.
         </div>
       ) : null}
       <div className="form-group">
