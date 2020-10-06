@@ -64,24 +64,27 @@ export const ActivityRiskControls: React.FunctionComponent<{
         source={Interaction}
       />
       <SelectControl
-        id="setting"
-        label="Ventilation"
-        data={data}
-        setter={setter}
-        source={Setting}
-      />
-      {data.setting === "outdoor" && data.distance === "intimate" ? (
-      <div className="warning">
-        Due to the very close distances and exchange of bodily fluid, we are not confident that being outdoors reduces the risk in a substantial way. Thus, we are not providing any bonus for being outdoors when intimate.
-      </div>
-      ) : null}
-      <SelectControl
         id="distance"
         label="Distance (most of the time)"
         data={data}
         setter={setter}
         source={Distance}
       />
+      <SelectControl
+        id="setting"
+        label="Ventilation"
+        data={data}
+        setter={setter}
+        source={Setting}
+      />
+      {data.setting === 'outdoor' && data.distance === 'intimate' ? (
+        <div className="warning">
+          Due to the very close distances and exchange of bodily fluid, we are
+          not confident that being outdoors reduces the risk in a substantial
+          way. Thus, we are not providing any bonus for being outdoors when
+          intimate.
+        </div>
+      ) : null}
       <div className="form-group">
         <label htmlFor="duration">Duration (in minutes)</label>
         <input
