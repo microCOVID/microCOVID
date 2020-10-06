@@ -15,6 +15,7 @@ import {
   TheirMask,
   Voice,
   YourMask,
+  intimateDurationFloor,
 } from 'data/data'
 import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
@@ -64,19 +65,27 @@ export const ActivityRiskControls: React.FunctionComponent<{
         source={Interaction}
       />
       <SelectControl
-        id="setting"
-        label="Ventilation"
-        data={data}
-        setter={setter}
-        source={Setting}
-      />
-      <SelectControl
         id="distance"
         label="Distance (most of the time)"
         data={data}
         setter={setter}
         source={Distance}
       />
+      <SelectControl
+        id="setting"
+        label="Ventilation"
+        data={data}
+        setter={setter}
+        source={Setting}
+      />
+      {data.setting === 'outdoor' &&
+      ['close', 'intimate'].includes(data.distance) ? (
+        <div className="warning">
+          Due to very close distances, we are not confident that being outdoors
+          reduces the risk in a substantial way. Thus, we are not providing any
+          bonus for being outdoors when intimate.
+        </div>
+      ) : null}
       <div className="form-group">
         <label htmlFor="duration">Duration (in minutes)</label>
         <input
@@ -124,6 +133,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
           <b>
             {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
               ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+              : ''}
+            {data.distance === 'intimate' &&
+            data.duration < intimateDurationFloor
+              ? ' (NOTE: We have applied a minimum Activity Risk for fluid transfer.)'
               : ''}
           </b>
         </p>

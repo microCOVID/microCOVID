@@ -87,4 +87,64 @@ describe('calculate', () => {
       expectedPrevalance * RiskProfile['livingAlone']['multiplier'] * 1e6,
     )
   })
+
+  describe('Distance: intimate', () => {
+    it('should not give a bonus for outdoors', () => {
+      const indoorIntimate: CalculatorData = {
+        ...exampleLocation,
+        ...prepopulated['One-night stand with a random person'],
+      }
+      const outdoorIntimate: CalculatorData = {
+        ...indoorIntimate,
+        setting: 'outdoor',
+      }
+
+      expect(calculate(outdoorIntimate)).toEqual(calculate(indoorIntimate))
+    })
+
+    it('should be at least 12% (1 hr) transfer risk.', () => {
+      const oneHourIntimate: CalculatorData = {
+        ...exampleLocation,
+        ...prepopulated['One-night stand with a random person'],
+        duration: 60,
+      }
+      const oneMinuteIntimate: CalculatorData = {
+        ...oneHourIntimate,
+        duration: 1,
+      }
+      const twoHourIntimate: CalculatorData = {
+        ...oneHourIntimate,
+        duration: 120,
+      }
+
+      expect(calculate(oneMinuteIntimate)).toEqual(calculate(oneHourIntimate))
+      expect(calculate(twoHourIntimate)).toEqual(
+        calculate(oneHourIntimate)! * 2,
+      )
+    })
+  })
+
+  describe('Distance: close', () => {
+    it.each`
+      duration | setting      | result        | scenario
+      ${120}   | ${'indoor'}  | ${1440}       | ${'should be 12% per hour'}
+      ${1}     | ${'indoor'}  | ${1440 / 120} | ${'should not have a minimum risk'}
+      ${240}   | ${'outdoor'} | ${2880}       | ${'should not give an outdoors bonus'}
+    `(' $scenario', ({ duration, setting, result }) => {
+      const data: CalculatorData = {
+        ...exampleLocation,
+        personCount: 1,
+        interaction: 'oneTime',
+        riskProfile: 'average',
+        distance: 'close',
+        theirMask: 'none',
+        yourMask: 'none',
+        voice: 'normal',
+        setting,
+        duration,
+      }
+
+      expect(calculate(data)).toEqual(result)
+    })
+  })
 })

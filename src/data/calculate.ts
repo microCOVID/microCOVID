@@ -7,6 +7,7 @@ import {
   TheirMask,
   Voice,
   YourMask,
+  intimateDurationFloor,
 } from 'data/data'
 
 export interface CalculatorData {
@@ -205,30 +206,37 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       return null
     }
 
-    const repeatedInteraction = ['repeated', 'partner'].includes(
-      data.interaction,
-    )
+    const repeatedInteraction = data.interaction === 'repeated'
 
     let multiplier = 1
     multiplier *= Interaction[data.interaction].multiplier
 
     if (!repeatedInteraction) {
+      if (data.duration === 0) {
+        return null
+      }
       // If something isn't selected, use the "baseline" value (indoor, unmasked,
       // undistanced, regular conversation)
       const mulFor = (
         table: { [key: string]: FormValue },
         given: string,
       ): number => (given === '' ? 1 : table[given].multiplier)
-      multiplier *= mulFor(Setting, data.setting)
+
+      let effectiveDuration = data.duration
       multiplier *= mulFor(Distance, data.distance)
+      if (data.distance === 'intimate') {
+        // Even a brief kiss probably has a non-trivial chance of transmission.
+        effectiveDuration = Math.max(effectiveDuration, intimateDurationFloor)
+      }
+      if (data.distance !== 'intimate' && data.distance !== 'close') {
+        // Being outdoors only helps if you're not literally breathing each others' exhalation.
+        multiplier *= mulFor(Setting, data.setting)
+      }
       multiplier *= mulFor(TheirMask, data.theirMask)
       multiplier *= mulFor(YourMask, data.yourMask)
       multiplier *= mulFor(Voice, data.voice)
 
-      if (data.duration === 0) {
-        return null
-      }
-      multiplier *= data.duration / 60.0
+      multiplier *= effectiveDuration / 60.0
     }
     if (multiplier > MAX_ACTIVITY_RISK) {
       multiplier = MAX_ACTIVITY_RISK

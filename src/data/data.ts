@@ -24,8 +24,12 @@ export const Setting: { [key: string]: FormValue } = {
   indoor: { label: 'Indoor', multiplier: 1 },
   outdoor: { label: 'Outdoor', multiplier: 0.05 },
 }
+
+export const intimateDurationFloor = 60
+
 export const Distance: { [key: string]: FormValue } = {
-  intimate: formValue('Cuddling / intimate', 2),
+  intimate: formValue('Kissing', 2),
+  close: formValue('Close (<1ft / 0.3m apart)', 2),
   normal: formValue('Normal socializing (~3ft/ ~1m apart)', 1),
   sixFt: formValue('>6ft / 2m apart', 0.5),
   tenFt: formValue('>10ft / 3m apart', 0.25),
