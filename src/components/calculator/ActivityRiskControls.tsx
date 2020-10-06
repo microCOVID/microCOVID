@@ -70,6 +70,11 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Setting}
       />
+      {data.setting === "outdoor" && data.distance === "intimate" ? (
+      <div className="warning">
+        Due to the very close distances and exchange of bodily fluid, we are not confident that being outdoors reduces the risk in a substantial way. Thus, we are not providing any bonus for being outdoors when intimate.
+      </div>
+      ) : null}
       <SelectControl
         id="distance"
         label="Distance (most of the time)"
