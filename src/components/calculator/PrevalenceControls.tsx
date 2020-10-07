@@ -1,5 +1,6 @@
-import { isNumber } from 'lodash'
+import { isNumber, isUndefined } from 'lodash'
 import React, { useEffect } from 'react'
+import { Collapse } from 'react-bootstrap'
 
 import {
   CalculatorData,
@@ -7,6 +8,10 @@ import {
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
+
+const isFilled = (val: string): boolean => {
+  return !isUndefined(val) && val !== ''
+}
 
 const PrevalenceField: React.FunctionComponent<{
   label: string
@@ -27,6 +32,14 @@ const PrevalenceField: React.FunctionComponent<{
   max,
   min,
 }): React.ReactElement => {
+  if (!isEditable) {
+    return (
+      <div>
+        {label}: {value}
+        {unit}
+      </div>
+    )
+  }
   let body: React.ReactElement = (
     <input
       className="form-control form-control-lg"
@@ -70,7 +83,16 @@ const PrevalenceField: React.FunctionComponent<{
 export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
-}> = ({ data, setter }): React.ReactElement => {
+  showPrevalance: boolean
+  onHeaderClicked: () => void
+  onLocationSpecified: () => void
+}> = ({
+  data,
+  setter,
+  showPrevalance,
+  onHeaderClicked,
+  onLocationSpecified,
+}): React.ReactElement => {
   const locationGroups: { [key: string]: Array<string> } = {}
   for (const key in Locations) {
     const location = Locations[key]
@@ -84,7 +106,22 @@ export const PrevalenceControls: React.FunctionComponent<{
     }
   }
 
+  const showSubLocation = (topLocation: string): boolean => {
+    return (
+      topLocation !== '' &&
+      Locations[topLocation] &&
+      Locations[topLocation].subdivisions.length > 1
+    )
+  }
+  const locationSet = isFilled(data.topLocation)
+
   const setLocationData = (topLocation: string, subLocation: string) => {
+    const locationFullySpecified =
+      isFilled(subLocation) ||
+      (isFilled(topLocation) && !showSubLocation(topLocation))
+    if (locationFullySpecified) {
+      onLocationSpecified()
+    }
     setter({
       ...data,
       ...dataForLocation(subLocation || topLocation),
@@ -95,7 +132,7 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   // If a stored location exists, load latest data for that location.
   useEffect(() => {
-    if (data.subLocation !== '' || data.topLocation !== '') {
+    if (isFilled(data.subLocation) || isFilled(data.topLocation)) {
       setLocationData(data.topLocation, data.subLocation)
     }
     // Intentionally not depending on data so that this runs once on mount.
@@ -115,140 +152,159 @@ export const PrevalenceControls: React.FunctionComponent<{
     subPrompt = 'Entire country, or select region...'
   }
 
-  const showSubLocation =
-    data.topLocation !== '' &&
-    Locations[data.topLocation] &&
-    Locations[data.topLocation].subdivisions.length > 1
+  const adjustedPrevalance = () => {
+    return (
+      'Adjusted prevalence: ' +
+      (((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2) +
+      '%'
+    )
+  }
 
-  const locationSet = data.topLocation !== ''
+  const displayLocation = (): string => {
+    if (showPrevalance || !locationSet) {
+      return 'Step 1 - Choose a location'
+    }
+    if (isFilled(data.subLocation)) {
+      return Locations[data.subLocation].label + ' - ' + adjustedPrevalance()
+    }
+    return Locations[data.topLocation].label + ' - ' + adjustedPrevalance()
+  }
 
   return (
     <React.Fragment>
-      <header id="location">Step 1 - Choose a location</header>
-      <div className="form-group">
-        <select
-          className="form-control form-control-lg"
-          value={data.topLocation}
-          onChange={(e) => {
-            setLocationData(e.target.value, '')
-          }}
-        >
-          <option value="">Select location or enter data...</option>
-          {Object.keys(locationGroups).map((groupName, groupInd) => (
-            <optgroup key={groupInd} label={groupName}>
-              {locationGroups[groupName].map((locKey, locInd) => (
-                <option key={locInd} value={locKey}>
-                  {Locations[locKey].label}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-      </div>
-      {!showSubLocation ? null : (
-        <div className="form-group">
-          <select
-            className="form-control form-control-lg"
-            value={data.subLocation}
-            onChange={(e) => {
-              if (e.target.value === '') {
-                setLocationData(data.topLocation, '')
-              } else {
-                setLocationData(data.topLocation, e.target.value)
-              }
-            }}
-          >
-            <option value="">{subPrompt}</option>
-            {Locations[data.topLocation].subdivisions.map((key, index) => (
-              <option key={index} value={key}>
-                {Locations[key].label}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-      <PrevalenceField
-        label="Reported cases in past week"
-        value={(data.casesPastWeek || 0).toString()}
-        setter={(value) =>
-          setter({ ...data, casesPastWeek: parseInt(value || '') })
-        }
-        inputType="number"
-        isEditable={!locationSet}
-      />
-      <PrevalenceField
-        label="Per how many people?"
-        value={data.population}
-        setter={(value) => setter({ ...data, population: value })}
-        inputType="text"
-        isEditable={!locationSet}
-      />
-      {locationSet && data.casesIncreasingPercentage === 0 ? (
-        <p>Cases are stable or decreasing.</p>
-      ) : (
-        <PrevalenceField
-          label="Percent increase in cases from last week to this week"
-          value={data.casesIncreasingPercentage}
-          unit="%"
-          setter={(value) => {
-            setter({ ...data, casesIncreasingPercentage: Number(value) })
-          }}
-          inputType="number"
-          min={0}
-          isEditable={!locationSet}
-        />
-      )}
-      {data.positiveCasePercentage === null ? (
-        <PrevalenceField
-          label="Percent of tests that come back positive"
-          value="no data available"
-          unit="%"
-          setter={(_value) => null}
-          inputType="text"
-          isEditable={false}
-        />
-      ) : (
-        <PrevalenceField
-          label="Percent of tests that come back positive"
-          value={data.positiveCasePercentage.toString()}
-          unit="%"
-          setter={(value) => {
-            setter({ ...data, positiveCasePercentage: Number(value) })
-          }}
-          inputType="number"
-          max={100}
-          min={0}
-          isEditable={!locationSet}
-        />
-      )}
-      <p>
-        Reported prevalence:{' '}
-        {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
-        <br />
-        Adjusted prevalence:{' '}
-        {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2)}
-        %
-      </p>
-      {!locationSet ? null : (
+      <header id="location" onClick={onHeaderClicked}>
+        {displayLocation()}
+      </header>
+      <Collapse in={showPrevalance}>
         <div>
+          <div className="form-group">
+            <select
+              className="form-control form-control-lg"
+              value={data.topLocation}
+              onChange={(e) => {
+                setLocationData(e.target.value, '')
+              }}
+            >
+              <option value="">Select location or enter data...</option>
+              {Object.keys(locationGroups).map((groupName, groupInd) => (
+                <optgroup key={groupInd} label={groupName}>
+                  {locationGroups[groupName].map((locKey, locInd) => (
+                    <option key={locInd} value={locKey}>
+                      {Locations[locKey].label}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+          </div>
+          {!showSubLocation(data.topLocation) ? null : (
+            <div className="form-group">
+              <select
+                className="form-control form-control-lg"
+                value={data.subLocation}
+                onChange={(e) => {
+                  if (e.target.value === '') {
+                    setLocationData(data.topLocation, '')
+                  } else {
+                    setLocationData(data.topLocation, e.target.value)
+                  }
+                }}
+              >
+                <option value="">{subPrompt}</option>
+                {Locations[data.topLocation].subdivisions.map((key, index) => (
+                  <option key={index} value={key}>
+                    {Locations[key].label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+          <PrevalenceField
+            label="Reported cases in past week"
+            value={(data.casesPastWeek || 0).toString()}
+            setter={(value) =>
+              setter({ ...data, casesPastWeek: parseInt(value || '') })
+            }
+            inputType="number"
+            isEditable={!locationSet}
+          />
+          <PrevalenceField
+            label="Per how many people?"
+            value={data.population}
+            setter={(value) => setter({ ...data, population: value })}
+            inputType="text"
+            isEditable={!locationSet}
+          />
+          {locationSet && data.casesIncreasingPercentage === 0 ? (
+            <p>Cases are stable or decreasing.</p>
+          ) : (
+            <PrevalenceField
+              label="Percent increase in cases from last week to this week"
+              value={data.casesIncreasingPercentage}
+              unit="%"
+              setter={(value) => {
+                setter({ ...data, casesIncreasingPercentage: Number(value) })
+              }}
+              inputType="number"
+              min={0}
+              isEditable={!locationSet}
+            />
+          )}
+          {data.positiveCasePercentage === null ? (
+            <PrevalenceField
+              label="Percent of tests that come back positive"
+              value="no data available"
+              unit="%"
+              setter={(_value) => null}
+              inputType="text"
+              isEditable={false}
+            />
+          ) : (
+            <PrevalenceField
+              label="Percent of tests that come back positive"
+              value={data.positiveCasePercentage.toString()}
+              unit="%"
+              setter={(value) => {
+                setter({ ...data, positiveCasePercentage: Number(value) })
+              }}
+              inputType="number"
+              max={100}
+              min={0}
+              isEditable={!locationSet}
+            />
+          )}
+
           <p>
-            Prevalence data consolidated from {}
-            <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
-              Johns Hopkins CSSE
-            </a>{' '}
-            (reported cases), {}
-            <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
-              Covid Act Now
-            </a>{' '}
-            (US positive test rates), and {}
-            <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
-              Our World in Data
-            </a>{' '}
-            (international positive test rates).
+            Reported prevalence:{' '}
+            {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(
+              2,
+            )}
+            %
+            <br />
+            {adjustedPrevalance()}
           </p>
-          <p>Data last updated {PrevalenceDataDate}.</p>
+          {!locationSet ? null : (
+            <div>
+              <p>
+                Prevalence data consolidated from {}
+                <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
+                  Johns Hopkins CSSE
+                </a>{' '}
+                (reported cases), {}
+                <a href="https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md">
+                  Covid Act Now
+                </a>{' '}
+                (US positive test rates), and {}
+                <a href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset">
+                  Our World in Data
+                </a>{' '}
+                (international positive test rates).
+              </p>
+              <p>Data last updated {PrevalenceDataDate}.</p>
+            </div>
+          )}
         </div>
-      )}
+      </Collapse>
     </React.Fragment>
   )
 }
@@ -261,7 +317,6 @@ interface PrevalanceData {
 }
 
 function dataForLocation(location: string): PrevalanceData {
-  console.log('get data for ' + location)
   const locationData = Locations[location]
 
   if (locationData) {

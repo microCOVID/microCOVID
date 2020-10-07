@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Collapse, Row } from 'react-bootstrap'
 import { useQueryParams } from 'use-query-params'
 
 import {
@@ -34,6 +34,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
+  const [showPrevalance, setShowPrevalance] = useState(true)
 
   // Mount / unmount
   useEffect(() => {
@@ -182,14 +183,18 @@ export const Calculator = (): React.ReactElement => {
       <Row id="calculator-fields">
         <Col md="12" lg="4">
           <Card id="location" title="Location & Prevalence">
-            <div className="subheading">
-              First, select a location to use in your calculations, or fill in
-              your own values based on data available in your area....
-            </div>
-
+            <Collapse in={showPrevalance}>
+              <div className="subheading">
+                First, select a location to use in your calculations, or fill in
+                your own values based on data available in your area....
+              </div>
+            </Collapse>
             <PrevalenceControls
               data={calculatorData}
               setter={setCalculatorData}
+              showPrevalance={showPrevalance}
+              onHeaderClicked={() => setShowPrevalance(!showPrevalance)}
+              onLocationSpecified={() => setShowPrevalance(false)}
             />
           </Card>
         </Col>
