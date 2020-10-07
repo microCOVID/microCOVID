@@ -146,28 +146,26 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            We reviewed published research about COVID, and used it to make
-            rough estimates about the risk level of various activities in
-            microCOVIDs. 1&nbsp;microCOVID is a one-in-a-million chance of
-            getting COVID.
+            We’ve constructed a calculator that lets you estimate the risk of
+            getting COVID from a wide range of activities, using the{' '}
+            <a href="/paper">best research available</a>. We hope this tool will
+            help hone your intuition, lower your stress levels, and figure out
+            good harm-reduction strategies. To read about some high level
+            conclusions we’ve come to about what is and isn’t risky,{' '}
+            <a href="/paper">click here</a>.
           </p>
           <p>
-            We hope you’ll use this tool to build your intuition about the
-            comparative risk of different activities and as a harm-reduction
-            tool to make safer choices.
-          </p>
-          <p>
-            Play around with the calculator! Change the variables and see how
-            they affect the total.
-          </p>
-          <p className="warning">
-            <b>Important:</b> In this tool we state our best estimate based on
-            available evidence, even when that evidence is not conclusive. We
-            have read a lot of experts' research, but we are not ourselves
-            experts in this topic. This work has not been scientifically
-            peer-reviewed. There is still a lot of uncertainty about COVID. Do
-            not rely on this tool for medical advice. Please continue to follow
-            government guidance.
+            [Text exposed by drop-down:] The calculator introduces a new
+            concept, the microCOVID. One microCOVID is a one-in-a-million chance
+            of getting COVID. An activity that’s 20,000 microCOVIDs is very
+            unsafe, as you have a 2% risk of catching COVID *every time you do
+            it*. An activity that’s 20 microCOVIDs is relatively safe, as you
+            could do it every week for a year and still have only about a 0.1%
+            chance of getting COVID. If you want to keep your chance of getting
+            COVID down below 1% a year, you’ll want your weekly budget of
+            activities to sum to less than 192 microCOVIDs each week. We’ve
+            created a handy spreadsheet [link] that lets you keep track of your
+            activities over time.
           </p>
           <button
             id="reset-form-button"
@@ -245,13 +243,26 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col lg={{ span: 8, offset: 4 }}>
+        <Col>
           <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
-        <Col lg={{ span: 8, offset: 4 }}>
+        <Col md="12">
           <ExplanationCard points={points} repeatedEvent={repeatedEvent} />
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={{ span: 8 }}>
+          <p className="warning">
+            <b>Important:</b> In this tool we state our best estimate based on
+            available evidence, even when that evidence is not conclusive. We
+            have read a lot of experts' research, but we are not ourselves
+            experts in this topic. This work has not been scientifically
+            peer-reviewed. There is still a lot of uncertainty about COVID. Do
+            not rely on this tool for medical advice. Please continue to follow
+            government guidance.
+          </p>
         </Col>
       </Row>
     </div>
