@@ -45,6 +45,7 @@ export const PersonRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
+      <strong>Nearby people</strong>
       <div className="form-group">
         <label htmlFor="personCount">
           How many people get near you? <br />

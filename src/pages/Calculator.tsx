@@ -198,7 +198,9 @@ export const Calculator = (): React.ReactElement => {
           <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
-                <header id="person-risk">Step 2: Describe the activity</header>
+                <header id="activity-risk">
+                  Step 2: Describe the activity
+                </header>
                 <div>
                   <p>
                     ...then select a scenario from the list below (or make your
@@ -219,13 +221,23 @@ export const Calculator = (): React.ReactElement => {
                 </div>
 
                 <Row>
-                  <Col md="12" lg="6">
+                  <Col
+                    md="12"
+                    lg="6"
+                    id="person-risk"
+                    className="calculator-params"
+                  >
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
                     />
                   </Col>
-                  <Col md="12" lg="6">
+                  <Col
+                    md="12"
+                    lg="6"
+                    id="modifiers"
+                    className="calculator-params"
+                  >
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}

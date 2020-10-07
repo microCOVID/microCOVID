@@ -137,16 +137,8 @@ a {
     background: $primary;
   }
 
-  header#person-risk {
-    background: $indigo;
-  }
-
   header#activity-risk {
-    background: $cyan;
-
-    @include mobile {
-      margin-top: 30px;
-    }
+    background: $indigo;
   }
 
   .card {
@@ -160,6 +152,16 @@ a {
       margin: 10px 0;
       background-color: $warning-fill;
     }
+    .calculator-params {
+      label {
+        @include media-breakpoint-up(lg) {
+          min-height: 3em;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+
   }
 
   // Card subheader

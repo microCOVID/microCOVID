@@ -44,6 +44,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
+      <strong>Modifiers</strong>
       <SelectControl
         id="setting"
         label="Are you indoors or outdoors?"
