@@ -8,7 +8,13 @@ import {
   MAX_ACTIVITY_RISK,
   calculateActivityRisk,
 } from 'data/calculate'
-import { Setting, TheirMask, Voice, YourMask } from 'data/data'
+import {
+  Setting,
+  TheirMask,
+  Voice,
+  YourMask,
+  intimateDurationFloor,
+} from 'data/data'
 import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
 export const ActivityRiskControls: React.FunctionComponent<{
@@ -45,6 +51,14 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Setting}
       />
+      {data.setting === 'outdoor' &&
+      ['close', 'intimate'].includes(data.distance) ? (
+        <div className="warning">
+          Due to very close distances, we are not confident that being outdoors
+          reduces the risk in a substantial way. Thus, we are not providing any
+          bonus for being outdoors when intimate.
+        </div>
+      ) : null}
       <SelectControl
         id="yourMask"
         label="What mask are YOU wearing? (if you’re eating or drinking, say “no mask”)"
@@ -78,6 +92,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
           <b>
             {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
               ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+              : ''}
+            {data.distance === 'intimate' &&
+            data.duration < intimateDurationFloor
+              ? ' (NOTE: We have applied a minimum Activity Risk for fluid transfer.)'
               : ''}
           </b>
         </p>

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { useQueryParams } from 'use-query-params'
 
 import {
   recordCalculatorChanged,
@@ -24,11 +25,18 @@ import {
 } from 'data/calculate'
 import { Interaction } from 'data/data'
 import { saveCalculation } from 'data/localStorage'
+import {
+  filterParams,
+  queryConfig,
+  useQueryDataIfPresent,
+} from 'data/queryParams'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
+  const [query, setQuery] = useQueryParams(queryConfig)
+
   // Mount / unmount
   useEffect(() => {
     scrollListener()
@@ -44,10 +52,12 @@ export const Calculator = (): React.ReactElement => {
     localStorage.getItem(FORM_STATE_KEY) || 'null',
   )
 
+  const migratedPreviousData = migrateDataToCurrent(previousData)
+
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
-    migrateDataToCurrent(previousData),
+    useQueryDataIfPresent(query, migratedPreviousData),
   )
 
   const resetForm = () => {
@@ -79,6 +89,8 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
+    setQuery(filterParams(calculatorData), 'replace')
+
     if (computedValue === null) {
       document.getElementById('points-row')?.classList.remove('has-points')
       return -1
@@ -87,7 +99,7 @@ export const Calculator = (): React.ReactElement => {
     document.getElementById('points-row')?.classList.add('has-points')
 
     return computedValue
-  }, [calculatorData])
+  }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
