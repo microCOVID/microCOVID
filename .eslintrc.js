@@ -62,5 +62,6 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+    eqeqeq: 'error',
   },
 }
