@@ -18,6 +18,7 @@ import { Card } from 'components/Card'
 import {
   CalculatorData,
   calculate,
+  calculateLocationPersonAverage,
   defaultValues,
   migrateDataToCurrent,
   parsePopulation,
@@ -193,7 +194,13 @@ export const Calculator = (): React.ReactElement => {
               data={calculatorData}
               setter={setCalculatorData}
               showPrevalance={showPrevalance}
-              onHeaderClicked={() => setShowPrevalance(!showPrevalance)}
+              onHeaderClicked={() => {
+                if (!calculateLocationPersonAverage(calculatorData)) {
+                  setShowPrevalance(true)
+                } else {
+                  setShowPrevalance(!showPrevalance)
+                }
+              }}
               onLocationSpecified={() => setShowPrevalance(false)}
             />
           </Card>
