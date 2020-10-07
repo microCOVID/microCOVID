@@ -8,7 +8,7 @@ export const ScrollToTop = (): null => {
     if (location.hash === '') {
       window.scrollTo(0, 0)
     }
-  }, [location])
+  }, [location.pathname, location.hash])
 
   return null
 }

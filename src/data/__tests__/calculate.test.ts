@@ -87,4 +87,128 @@ describe('calculate', () => {
       expectedPrevalance * RiskProfile['livingAlone']['multiplier'] * 1e6,
     )
   })
+
+  describe('Interaction: partner', () => {
+    const partner: CalculatorData = {
+      ...exampleLocation,
+      ...prepopulated[
+        'Live-in partner who has no indoor interactions besides you'
+      ],
+    }
+    it('should not be affected by multipliers', () => {
+      const bonuses: CalculatorData = {
+        ...partner,
+        setting: 'outdoor',
+        distance: 'tenFt',
+        duration: 1,
+        theirMask: 'filtered',
+        yourMask: 'filtered',
+        voice: 'silent',
+      }
+
+      expect(calculate(partner)).toEqual(calculate(bonuses))
+    })
+
+    it('should apply 48% risk', () => {
+      expect(calculate(partner)).toEqual(
+        expectedPrevalance * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
+      )
+    })
+  })
+
+  describe('Interaction: housemate', () => {
+    const base = {
+      ...exampleLocation,
+      riskProfile: 'average',
+      interaction: 'repeated',
+      personCount: 1,
+    }
+    const housemate: CalculatorData = {
+      ...base,
+      setting: 'indoor',
+      distance: 'normal',
+      duration: 120,
+      theirMask: 'none',
+      yourMask: 'none',
+      voice: 'normal',
+    }
+    it('should not be affected by multipliers', () => {
+      const bonuses: CalculatorData = {
+        ...base,
+        setting: 'outdoor',
+        distance: 'tenFt',
+        duration: 1,
+        theirMask: 'filtered',
+        yourMask: 'filtered',
+        voice: 'silent',
+      }
+
+      expect(calculate(housemate)).toEqual(calculate(bonuses))
+    })
+
+    it('should apply 30% risk', () => {
+      // average * 0.3
+      expect(calculate(housemate)).toEqual(expectedPrevalance * 0.3 * 1e6)
+    })
+  })
+
+  describe('Distance: intimate', () => {
+    it('should not give a bonus for outdoors', () => {
+      const indoorIntimate: CalculatorData = {
+        ...exampleLocation,
+        ...prepopulated['One-night stand with a random person'],
+      }
+      const outdoorIntimate: CalculatorData = {
+        ...indoorIntimate,
+        setting: 'outdoor',
+      }
+
+      expect(calculate(outdoorIntimate)).toEqual(calculate(indoorIntimate))
+    })
+
+    it('should be at least 12% (1 hr) transfer risk.', () => {
+      const oneHourIntimate: CalculatorData = {
+        ...exampleLocation,
+        ...prepopulated['One-night stand with a random person'],
+        duration: 60,
+      }
+      const oneMinuteIntimate: CalculatorData = {
+        ...oneHourIntimate,
+        duration: 1,
+      }
+      const twoHourIntimate: CalculatorData = {
+        ...oneHourIntimate,
+        duration: 120,
+      }
+
+      expect(calculate(oneMinuteIntimate)).toEqual(calculate(oneHourIntimate))
+      expect(calculate(twoHourIntimate)).toEqual(
+        calculate(oneHourIntimate)! * 2,
+      )
+    })
+  })
+
+  describe('Distance: close', () => {
+    it.each`
+      duration | setting      | result        | scenario
+      ${120}   | ${'indoor'}  | ${1440}       | ${'should be 12% per hour'}
+      ${1}     | ${'indoor'}  | ${1440 / 120} | ${'should not have a minimum risk'}
+      ${240}   | ${'outdoor'} | ${2880}       | ${'should not give an outdoors bonus'}
+    `(' $scenario', ({ duration, setting, result }) => {
+      const data: CalculatorData = {
+        ...exampleLocation,
+        personCount: 1,
+        interaction: 'oneTime',
+        riskProfile: 'average',
+        distance: 'close',
+        theirMask: 'none',
+        yourMask: 'none',
+        voice: 'normal',
+        setting,
+        duration,
+      }
+
+      expect(calculate(data)).toEqual(result)
+    })
+  })
 })
