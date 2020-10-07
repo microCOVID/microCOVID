@@ -88,6 +88,70 @@ describe('calculate', () => {
     )
   })
 
+  describe('Interaction: partner', () => {
+    const partner: CalculatorData = {
+      ...exampleLocation,
+      ...prepopulated[
+        'Live-in partner who has no indoor interactions besides you'
+      ],
+    }
+    it('should not be affected by multipliers', () => {
+      const bonuses: CalculatorData = {
+        ...partner,
+        setting: 'outdoor',
+        distance: 'tenFt',
+        duration: 1,
+        theirMask: 'filtered',
+        yourMask: 'filtered',
+        voice: 'silent',
+      }
+
+      expect(calculate(partner)).toEqual(calculate(bonuses))
+    })
+
+    it('should apply 48% risk', () => {
+      expect(calculate(partner)).toEqual(
+        expectedPrevalance * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
+      )
+    })
+  })
+
+  describe('Interaction: housemate', () => {
+    const base = {
+      ...exampleLocation,
+      riskProfile: 'average',
+      interaction: 'repeated',
+      personCount: 1,
+    }
+    const housemate: CalculatorData = {
+      ...base,
+      setting: 'indoor',
+      distance: 'normal',
+      duration: 120,
+      theirMask: 'none',
+      yourMask: 'none',
+      voice: 'normal',
+    }
+    it('should not be affected by multipliers', () => {
+      const bonuses: CalculatorData = {
+        ...base,
+        setting: 'outdoor',
+        distance: 'tenFt',
+        duration: 1,
+        theirMask: 'filtered',
+        yourMask: 'filtered',
+        voice: 'silent',
+      }
+
+      expect(calculate(housemate)).toEqual(calculate(bonuses))
+    })
+
+    it('should apply 30% risk', () => {
+      // average * 0.3
+      expect(calculate(housemate)).toEqual(expectedPrevalance * 0.3 * 1e6)
+    })
+  })
+
   describe('Distance: intimate', () => {
     it('should not give a bonus for outdoors', () => {
       const indoorIntimate: CalculatorData = {
