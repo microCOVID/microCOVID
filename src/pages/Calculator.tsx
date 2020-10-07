@@ -87,8 +87,6 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
-    setQuery(filterParams(calculatorData), 'replace')
-
     if (computedValue === null) {
       document.getElementById('points-row')?.classList.remove('has-points')
       return -1
@@ -97,7 +95,7 @@ export const Calculator = (): React.ReactElement => {
     document.getElementById('points-row')?.classList.add('has-points')
 
     return computedValue
-  }, [calculatorData, setQuery])
+  }, [calculatorData])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
@@ -127,7 +125,7 @@ export const Calculator = (): React.ReactElement => {
     </div>
   )
 
-  const saveButton = (
+  const actionButtons = (
     <span>
       <button
         type="button"
@@ -135,6 +133,13 @@ export const Calculator = (): React.ReactElement => {
         onClick={() => setShowSaveForm(true)}
       >
         Save as custom scenario
+      </button>{' '}
+      <button
+        type="button"
+        className="btn btn-info"
+        onClick={() => setQuery(filterParams(calculatorData))}
+      >
+        Share scenario
       </button>
     </span>
   )
@@ -175,7 +180,7 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}
+          {points > 0 && (showSaveForm ? saveForm : actionButtons)}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
