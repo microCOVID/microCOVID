@@ -56,6 +56,9 @@ export const defaultValues: CalculatorData = {
   voice: '',
 }
 
+// These are the variables exposed via query parameters
+export type QueryData = Partial<CalculatorData>
+
 // Replace any values that no longer exist with empty string (nothing selected).
 // This is used when restoring a previous saved scenario, in case we changed
 // the model in the meantime.
