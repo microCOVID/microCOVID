@@ -1,3 +1,4 @@
+import copy from 'copy-to-clipboard'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useQueryParams } from 'use-query-params'
@@ -53,6 +54,7 @@ export const Calculator = (): React.ReactElement => {
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
   const [showSaveForm, setShowSaveForm] = useState(false)
+  const [showShareForm, setShowShareForm] = useState(false)
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
     useQueryDataIfPresent(query, migratedPreviousData),
@@ -68,6 +70,16 @@ export const Calculator = (): React.ReactElement => {
     setShowSaveForm(false)
     setSaveName('')
     recordSavedCustom(points)
+  }
+
+  const openShareForm = () => {
+    setQuery(filterParams(calculatorData))
+    setShowShareForm(true)
+  }
+
+  const copyShareURL = () => {
+    copy(window.location.href)
+    setShowShareForm(false)
   }
 
   const points = useMemo(() => {
@@ -121,27 +133,62 @@ export const Calculator = (): React.ReactElement => {
         <button type="button" className="btn btn-info" onClick={persistForm}>
           Save
         </button>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => setShowSaveForm(false)}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   )
 
-  const actionButtons = (
-    <span>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => setShowSaveForm(true)}
-      >
-        Save as custom scenario
-      </button>{' '}
-      <button
-        type="button"
-        className="btn btn-info"
-        onClick={() => setQuery(filterParams(calculatorData))}
-      >
-        Share scenario
-      </button>
-    </span>
+  const shareForm = (
+    <div className="input-group">
+      <input
+        className="form-control"
+        type="text"
+        placeholder="Enter name to save your custom scenario to the scenario list"
+        value={window.location.href}
+      />
+      <div className="input-group-append">
+        <button
+          type="button"
+          className="btn btn-info"
+          onClick={() => copyShareURL()}
+        >
+          Copy
+        </button>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => setShowShareForm(false)}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  )
+
+  const saveButton = (
+    <button
+      type="button"
+      className="btn btn-primary"
+      onClick={() => setShowSaveForm(true)}
+    >
+      Save as custom scenario
+    </button>
+  )
+
+  const shareButton = (
+    <button
+      type="button"
+      className="btn btn-info"
+      onClick={() => openShareForm()}
+    >
+      Share scenario
+    </button>
   )
 
   return (
@@ -180,7 +227,8 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : actionButtons)}
+          {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
+          {points > 0 && (showShareForm ? shareForm : shareButton)}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
