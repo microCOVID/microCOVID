@@ -17,7 +17,6 @@ function showRiskMultiplier(multiplier: number): string {
     return 'baseline risk'
   } else if (multiplier > 0 && multiplier < 1) {
     // Fraction format: "1/5th the risk"
-    console.log(`test: ${num2fraction(0.3)}`)
     const frac = num2fraction(multiplier)
     return `${frac}${getSuffix(frac)} the risk`
   } else {

@@ -39,6 +39,6 @@ export const useQueryDataIfPresent = (
   if (isEmpty(queryDataFiltered)) {
     return calcData
   } else {
-    return { ...defaultValues, ...queryData }
+    return { ...defaultValues, ...queryDataFiltered }
   }
 }
