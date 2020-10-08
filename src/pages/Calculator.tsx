@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Collapse, Row } from 'react-bootstrap'
+import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 import { useQueryParams } from 'use-query-params'
 
 import {
@@ -141,6 +142,37 @@ export const Calculator = (): React.ReactElement => {
     </span>
   )
 
+  function FirstTimeUserIntroduction() {
+    const [open, setOpen] = useState(false)
+
+    return (
+      <>
+        <Button
+          variant="outline-secondary"
+          onClick={() => setOpen(!open)}
+          aria-controls="first-time-user-introduction"
+          aria-expanded={open}
+        >
+          {open ? <BsChevronDown /> : <BsChevronRight />} First time user?
+        </Button>
+        <Collapse in={open}>
+          <div id="first-time-user-introduction" className="collapse">
+            The calculator introduces a new concept, the microCOVID. One
+            microCOVID is a one-in-a-million chance of getting COVID. An
+            activity that’s 20,000 microCOVIDs is very unsafe, as you have a 2%
+            risk of catching COVID *every time you do it*. An activity that’s 20
+            microCOVIDs is relatively safe, as you could do it every week for a
+            year and still have only about a 0.1% chance of getting COVID. If
+            you want to keep your chance of getting COVID down below 1% a year,
+            you’ll want your weekly budget of activities to sum to less than 192
+            microCOVIDs each week. We’ve created a handy spreadsheet [link] that
+            lets you keep track of your activities over time.
+          </div>
+        </Collapse>
+      </>
+    )
+  }
+
   return (
     <div id="calculator">
       <Row>
@@ -154,19 +186,15 @@ export const Calculator = (): React.ReactElement => {
             conclusions we’ve come to about what is and isn’t risky,{' '}
             <a href="/paper">click here</a>.
           </p>
-          <p>
-            [Text exposed by drop-down:] The calculator introduces a new
-            concept, the microCOVID. One microCOVID is a one-in-a-million chance
-            of getting COVID. An activity that’s 20,000 microCOVIDs is very
-            unsafe, as you have a 2% risk of catching COVID *every time you do
-            it*. An activity that’s 20 microCOVIDs is relatively safe, as you
-            could do it every week for a year and still have only about a 0.1%
-            chance of getting COVID. If you want to keep your chance of getting
-            COVID down below 1% a year, you’ll want your weekly budget of
-            activities to sum to less than 192 microCOVIDs each week. We’ve
-            created a handy spreadsheet [link] that lets you keep track of your
-            activities over time.
-          </p>
+          {FirstTimeUserIntroduction()}
+        </Col>
+        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
+      </Row>
+      <Row>
+        <Col>
+          <h2>Calculate the approximate COVID risk of any activity</h2>
+        </Col>
+        <Col>
           <button
             id="reset-form-button"
             type="button"
@@ -176,12 +204,6 @@ export const Calculator = (): React.ReactElement => {
             Reset form
           </button>{' '}
           {points > 0 && (showSaveForm ? saveForm : saveButton)}
-        </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
-      </Row>
-      <Row>
-        <Col>
-          <h2>Calculate the approximate COVID risk of any activity</h2>
         </Col>
       </Row>
       <Row id="calculator-fields">
