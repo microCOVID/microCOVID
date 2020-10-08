@@ -234,7 +234,6 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>{' '}
-
           {points > 0 && actionButtons}
           {showSaveForm && saveForm}
           {showShareForm && shareForm}
