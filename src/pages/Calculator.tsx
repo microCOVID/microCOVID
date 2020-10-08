@@ -64,7 +64,6 @@ export const Calculator = (): React.ReactElement => {
 
   const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
-
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
@@ -236,10 +235,9 @@ export const Calculator = (): React.ReactElement => {
             Reset form
           </button>{' '}
 
-          { points > 0 && actionButtons }
-          { showSaveForm && saveForm }
-          { showShareForm && shareForm }
-
+          {points > 0 && actionButtons}
+          {showSaveForm && saveForm}
+          {showShareForm && shareForm}
           {alerts.map((alert, idx) => (
             <AutoAlert
               key={idx}
