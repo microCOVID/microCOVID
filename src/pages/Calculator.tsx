@@ -252,6 +252,7 @@ export const Calculator = (): React.ReactElement => {
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
+                      repeatedEvent={repeatedEvent}
                     />
                   </Col>
                   <Col

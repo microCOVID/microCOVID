@@ -37,7 +37,8 @@ const personRiskPopover = (
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
-}> = ({ data, setter }): React.ReactElement => {
+  repeatedEvent: boolean
+}> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   const locationRisk = calculateLocationPersonAverage(data) || 0
   const personRiskEach = Math.round(
     calculatePersonRiskEach(data, locationRisk) || 0,
@@ -64,29 +65,6 @@ export const PersonRiskControls: React.FunctionComponent<{
         />
         <GroupSizeWarning people={data.personCount} />
       </div>
-      <div className="form-group">
-        <label htmlFor="duration">
-          How long are each of these people typically near you, in minutes?
-        </label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.duration}
-          onChange={(e) =>
-            setter({
-              ...data,
-              duration: Math.max(0, parseInt(e.target.value)),
-            })
-          }
-        />
-      </div>
-      <SelectControl
-        id="distance"
-        label="How close are they, on average?"
-        data={data}
-        setter={setter}
-        source={Distance}
-      />
       <SelectControl
         id="riskProfile"
         label="What is their risk profile?"
@@ -95,6 +73,33 @@ export const PersonRiskControls: React.FunctionComponent<{
         setter={setter}
         source={RiskProfile}
       />
+      {!repeatedEvent ? (
+        <React.Fragment>
+          <div className="form-group">
+            <label htmlFor="duration">
+              How long are each of these people typically near you, in minutes?
+            </label>
+            <input
+              className="form-control form-control-lg"
+              type="number"
+              value={data.duration}
+              onChange={(e) =>
+                setter({
+                  ...data,
+                  duration: Math.max(0, parseInt(e.target.value)),
+                })
+              }
+            />
+          </div>
+          <SelectControl
+            id="distance"
+            label="How close are they, on average?"
+            data={data}
+            setter={setter}
+            source={Distance}
+          />
+        </React.Fragment>
+      ) : null}
       <br />
       <p className="readout">
         The <i>first</i> part of the calculation is Person Risk: Each other
