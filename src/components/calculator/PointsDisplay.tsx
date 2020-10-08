@@ -150,7 +150,7 @@ export function PointsDisplay(props: {
           {displayPoints(props.points / ERROR_FACTOR)} to{' '}
           {maybeGreater(props.points)}
           {displayPoints(props.points * ERROR_FACTOR)})
-          {props.repeatedEvent ? ' per week' : ''}
+          {props.repeatedEvent ? ' per week' : ' each time'}
         </h1>
       ) : (
         <h1>fill in calculator to see</h1>
