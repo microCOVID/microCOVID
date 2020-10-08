@@ -7,6 +7,7 @@ import {
   recordCalculatorChanged,
   recordSavedCustom,
 } from 'components/Analytics'
+import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import {
@@ -55,10 +56,13 @@ export const Calculator = (): React.ReactElement => {
 
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [showShareForm, setShowShareForm] = useState(false)
+  const [alerts, setAlerts] = useState<string[]>([])
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
     useQueryDataIfPresent(query, migratedPreviousData),
   )
+
+  const addAlert = (alert: string) => setAlerts([alert, ...alerts])
 
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
@@ -70,6 +74,7 @@ export const Calculator = (): React.ReactElement => {
     setShowSaveForm(false)
     setSaveName('')
     recordSavedCustom(points)
+    addAlert('Scenario saved!')
   }
 
   const openShareForm = () => {
@@ -79,6 +84,7 @@ export const Calculator = (): React.ReactElement => {
 
   const copyShareURL = () => {
     copy(window.location.href)
+    addAlert('Link copied to clipboard!')
     setShowShareForm(false)
   }
 
@@ -229,6 +235,14 @@ export const Calculator = (): React.ReactElement => {
           </button>{' '}
           {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
           {points > 0 && (showShareForm ? shareForm : shareButton)}
+          {alerts.map((alert, idx) => (
+            <AutoAlert
+              key={idx}
+              variant="light"
+              message={alert}
+              timeout={3000}
+            />
+          ))}
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
