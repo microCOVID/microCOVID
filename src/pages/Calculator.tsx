@@ -128,7 +128,7 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const saveForm = (
-    <div className="input-group">
+    <div className="input-group actionForm">
       <input
         className="form-control"
         type="text"
@@ -152,7 +152,7 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const shareForm = (
-    <div className="input-group">
+    <div className="input-group actionForm">
       <input
         className="form-control"
         type="text"
@@ -178,24 +178,25 @@ export const Calculator = (): React.ReactElement => {
     </div>
   )
 
-  const saveButton = (
-    <button
-      type="button"
-      className="btn btn-primary"
-      onClick={() => setShowSaveForm(true)}
-    >
-      Save as custom scenario
-    </button>
-  )
-
-  const shareButton = (
-    <button
-      type="button"
-      className="btn btn-info"
-      onClick={() => openShareForm()}
-    >
-      Share scenario
-    </button>
+  const actionButtons = (
+    <span>
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={() => setShowSaveForm(true)}
+        disabled={showSaveForm}
+      >
+        Save as custom scenario
+      </button>{' '}
+      <button
+        type="button"
+        className="btn btn-info"
+        onClick={() => openShareForm()}
+        disabled={showShareForm}
+      >
+        Share scenario
+      </button>
+    </span>
   )
 
   return (
@@ -234,8 +235,11 @@ export const Calculator = (): React.ReactElement => {
           >
             Reset form
           </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
-          {points > 0 && (showShareForm ? shareForm : shareButton)}
+
+          { points > 0 && actionButtons }
+          { showSaveForm && saveForm }
+          { showShareForm && shareForm }
+
           {alerts.map((alert, idx) => (
             <AutoAlert
               key={idx}
