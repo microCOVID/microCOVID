@@ -224,10 +224,6 @@ export const Calculator = (): React.ReactElement => {
                   Step 2: Describe the activity
                 </header>
                 <div>
-                  <p>
-                    ...then select a scenario from the list below (or make your
-                    own).
-                  </p>
                   <SavedDataSelector
                     currentData={calculatorData}
                     setter={setCalculatorData}
