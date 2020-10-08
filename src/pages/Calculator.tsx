@@ -62,7 +62,8 @@ export const Calculator = (): React.ReactElement => {
     useQueryDataIfPresent(query, migratedPreviousData),
   )
 
-  const addAlert = (alert: string) => setAlerts([alert, ...alerts])
+  const addAlert = (alert: string) => setAlerts([...alerts, alert])
+
 
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
