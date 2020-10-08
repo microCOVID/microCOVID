@@ -191,10 +191,11 @@ export const Calculator = (): React.ReactElement => {
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
       <Row>
-        <Col>
+        <Col lg="7" md="12">
           <h2>Calculate the approximate COVID risk of any activity</h2>
         </Col>
-        <Col>
+        <Col lg="5" md="12" className="calculator-buttons">
+          {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
           <button
             id="reset-form-button"
             type="button"
@@ -202,8 +203,7 @@ export const Calculator = (): React.ReactElement => {
             onClick={resetForm}
           >
             Reset form
-          </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}
+          </button>
         </Col>
       </Row>
       <Row id="calculator-fields">

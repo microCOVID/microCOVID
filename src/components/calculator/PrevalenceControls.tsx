@@ -128,10 +128,6 @@ export const PrevalenceControls: React.FunctionComponent<{
   return (
     <React.Fragment>
       <header id="location">Step 1: Enter your location</header>
-      <div className="subheading">
-        First, select a location to use in your calculations, or fill in your
-        own values based on data available in your area...
-      </div>
       <div className="form-group">
         <select
           className="form-control form-control-lg"
