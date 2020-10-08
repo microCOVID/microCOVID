@@ -239,6 +239,7 @@ export const Calculator = (): React.ReactElement => {
                     data={calculatorData}
                     setter={setCalculatorData}
                     source={Interaction}
+                    hideRisk={true}
                   />
                 </div>
 

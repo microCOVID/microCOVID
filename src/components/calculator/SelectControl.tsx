@@ -1,8 +1,29 @@
+import num2fraction from 'num2fraction'
 import React from 'react'
 import { Badge, OverlayTrigger } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
+
+function getSuffix(frac: string): string {
+  const denom = frac.split('/')[1]
+  if (denom === '2') return ''
+  else if (denom === '3') return 'rd'
+  else return 'th'
+}
+
+function showRiskMultiplier(multiplier: number): string {
+  if (multiplier === 1) {
+    return 'baseline risk'
+  } else if (multiplier > 0 && multiplier < 1) {
+    // Fraction format: "1/5th the risk"
+    console.log(`test: ${num2fraction(0.3)}`)
+    const frac = num2fraction(multiplier)
+    return `${frac}${getSuffix(frac)} the risk`
+  } else {
+    return `${multiplier}x the risk`
+  }
+}
 
 export const GenericSelectControl: React.FunctionComponent<{
   id: string
@@ -11,6 +32,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   value: string | number
   label?: string
   popover?: JSX.Element
+  hideRisk?: boolean
 }> = (props) => (
   <div className="form-group">
     {props.label && (
@@ -36,7 +58,9 @@ export const GenericSelectControl: React.FunctionComponent<{
       <option value="">Select one...</option>
       {Object.keys(props.source).map((value, index) => (
         <option key={index} value={value}>
-          {props.source[value].label}
+          {props.source[value].label}{' '}
+          {props.hideRisk !== true &&
+            `[${showRiskMultiplier(props.source[value].multiplier)}]`}
         </option>
       ))}
       <optgroup></optgroup>
@@ -51,6 +75,7 @@ export const SelectControl: React.FunctionComponent<{
   source: { [key: string]: FormValue }
   label?: string
   popover?: JSX.Element
+  hideRisk?: boolean
 }> = (props) => (
   <GenericSelectControl
     id={props.id}
@@ -59,6 +84,7 @@ export const SelectControl: React.FunctionComponent<{
     value={props.data[props.id] || ''}
     label={props.label}
     popover={props.popover}
+    hideRisk={props.hideRisk}
   />
 )
 
