@@ -62,7 +62,13 @@ export const ActivityRiskControls: React.FunctionComponent<{
       ) : null}
       <SelectControl
         id="yourMask"
-        label="What mask are YOU wearing? (if you’re eating or drinking, say “no mask”)"
+        label={
+          <div>
+            What mask are YOU wearing?
+            <br />
+            <em>(if you’re eating or drinking, say “no mask”)</em>
+          </div>
+        }
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -70,7 +76,13 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="theirMask"
-        label="What mask are THEY wearing? (if you’re eating or drinking, say “no mask”)"
+        label={
+          <div>
+            What mask are THEY wearing?
+            <br />
+            <em>(if you’re eating or drinking, say “no mask”)</em>
+          </div>
+        }
         popover={maskPopover}
         data={data}
         setter={setter}

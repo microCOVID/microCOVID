@@ -30,7 +30,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   setter: (value: string) => void
   source: { [key: string]: FormValue }
   value: string | number
-  label?: string
+  label?: string | JSX.Element
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
@@ -73,7 +73,7 @@ export const SelectControl: React.FunctionComponent<{
   setter: (value: CalculatorData) => void
   data: CalculatorData
   source: { [key: string]: FormValue }
-  label?: string
+  label?: string | JSX.Element
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
