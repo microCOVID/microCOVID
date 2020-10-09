@@ -49,9 +49,11 @@ export const PersonRiskControls: React.FunctionComponent<{
       <strong>Nearby people</strong>
       <div className="form-group">
         <label htmlFor="personCount">
-          How many people get near you?
-          <br />
-          <em>(within 10ft or less)</em>
+          <div>
+            How many people get near you?
+            <br />
+            <em>(within 10ft or less)</em>
+          </div>
         </label>
         <input
           className="form-control form-control-lg"

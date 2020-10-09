@@ -2,7 +2,7 @@ import React from 'react'
 import { Popover } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-import { SelectControl } from './SelectControl'
+import { SelectControl, labelMaker } from './SelectControl'
 import {
   CalculatorData,
   MAX_ACTIVITY_RISK,
@@ -47,7 +47,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <strong>Modifiers</strong>
       <SelectControl
         id="setting"
-        label="Are you indoors or outdoors?"
+        label={labelMaker({
+          header: 'Environment',
+          label: 'Are you indoors or outdoors?',
+        })}
         data={data}
         setter={setter}
         source={Setting}
@@ -62,13 +65,11 @@ export const ActivityRiskControls: React.FunctionComponent<{
       ) : null}
       <SelectControl
         id="yourMask"
-        label={
-          <div>
-            What mask are YOU wearing?
-            <br />
-            <em>(if you’re eating or drinking, say “no mask”)</em>
-          </div>
-        }
+        label={labelMaker({
+          header: 'Your mask',
+          label: 'What mask are YOU wearing?',
+          subLabel: 'if you’re eating or drinking, say “no mask”',
+        })}
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -76,13 +77,11 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="theirMask"
-        label={
-          <div>
-            What mask are THEY wearing?
-            <br />
-            <em>(if you’re eating or drinking, say “no mask”)</em>
-          </div>
-        }
+        label={labelMaker({
+          header: 'Their mask',
+          label: 'What mask are THEY wearing?',
+          subLabel: 'if you’re eating or drinking, say “no mask”',
+        })}
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -90,7 +89,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
       />
       <SelectControl
         id="voice"
-        label="How much is everyone talking?"
+        label={labelMaker({
+          header: 'Volume',
+          label: 'How much is everyone talking?',
+        })}
         data={data}
         setter={setter}
         source={Voice}

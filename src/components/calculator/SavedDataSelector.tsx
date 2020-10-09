@@ -66,9 +66,6 @@ export const SavedDataSelector: React.FunctionComponent<{
 
   return (
     <Form.Group controlId="saved-data">
-      <Form.Label>
-        Select a scenario from the list below (or make your own)
-      </Form.Label>
       <Form.Control
         as="select"
         size="lg"

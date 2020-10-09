@@ -25,6 +25,30 @@ function showRiskMultiplier(multiplier: number): string {
   }
 }
 
+interface LabelFormat {
+  label: string
+  header?: string
+  subLabel?: string
+}
+
+export const labelMaker = function ({
+  label,
+  header,
+  subLabel,
+}: LabelFormat): JSX.Element {
+  return (
+    <div>
+      {header && <strong>{header}:</strong>} {label}
+      {subLabel && (
+        <>
+          <br />
+          <em>({subLabel})</em>
+        </>
+      )}
+    </div>
+  )
+}
+
 export const GenericSelectControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
