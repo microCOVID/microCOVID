@@ -1,7 +1,6 @@
 {
   "menu.calculator": "Calculator",
   "menu.about": "About",
-  "menu.whitepaper": "Whitepaper",
   "menu.spreadsheet": "Spreadsheet",
   "menu.contactus": "Contact Us",
   "current_lang_two_letter_code": "en",
@@ -9,8 +8,8 @@
   "calculator.type_of_interaction": "Type of Interaction",
   "calculator.your_risk_readout": "The <i>second</i> part of the calculation is Activity Risk: assuming 1 such person has COVID, then you would have a {{ risk_percentage }} change of getting COVID.",
   "calculator.risk_note_about_household_members": "When estimating your risk of infection from a household member or partner/spouse we assume these interactions are indoors, unmasked, and undistanced.",
-  "calculator.ventilation": "Ventilation",
   "calculator.distance": "Distance (most of the time)",
+  "calculator.ventilation": "Ventilation",
   "calculator.duration": "Duration (in minutes)",
   "calculator.their_mask": "Their mask",
   "calculator.your_mask": "Your mask",
@@ -127,5 +126,6 @@
   "calculator.initial_instructions": " First, select a location to use in your calculations, or fill in your own values based on data available in your area....",
   "calculator.risk_group_header": "Risk",
   "calculator.risk_group_instructions": "...then select a scenario from the list below (or make your own).",
-  "calculator.risk_group_empty_warning": "First, fill out prevalence information."
+  "calculator.risk_group_empty_warning": "First, fill out prevalence information.",
+  "menu.whitepaper": "Whitepaper"
 }
