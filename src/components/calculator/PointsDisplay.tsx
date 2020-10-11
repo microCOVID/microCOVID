@@ -184,6 +184,7 @@ export function PointsDisplay(props: {
   upperBound: number
   lowerBound: number
 }): React.ReactElement {
+  const { t } = useTranslation()
   return (
     <div className="top-half-card">
       <strong>
@@ -191,9 +192,18 @@ export function PointsDisplay(props: {
       </strong>
       {showPoints(props.points) ? (
         <h1>
-          {displayPoints(props.points)} <Trans>calculator.microCOVIDs</Trans> (
-          {displayPoints(props.lowerBound)} to {displayPoints(props.upperBound)}
-          ){props.repeatedEvent ? ' per week' : ' each time'}
+          {displayPoints(props.points)} <Trans>calculator.microCOVIDs</Trans>
+          {' ('}
+          <Trans
+            values={{
+              from: displayPoints(props.lowerBound),
+              to: displayPoints(props.upperBound)
+            }}
+          >
+            calculator.range
+          </Trans>
+          {') '}
+          {props.repeatedEvent ? t('per week') : t('each time')}
         </h1>
       ) : (
         <h1>fill in calculator to see</h1>
