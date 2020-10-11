@@ -82,6 +82,7 @@ export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
+  const { t } = useTranslation()
   const locationGroups: { [key: string]: Array<string> } = {}
   for (const key in Locations) {
     const location = Locations[key]
@@ -113,14 +114,14 @@ export const PrevalenceControls: React.FunctionComponent<{
     // eslint-disable-next-line
   }, [])
 
-  let subPrompt = 'Entire country, or select region...'
+  let subPrompt = t('calculator.location_subprompt_country_or_regions')
   if (isTopLocation(data.topLocation) && data.topLocation.startsWith('US_')) {
     if (Locations[data.topLocation].label === 'Louisiana') {
-      subPrompt = 'Entire state, or select parish...'
+      subPrompt = t('calculator.location_subprompt_US-LA')
     } else if (Locations[data.topLocation].label === 'Alaska') {
-      subPrompt = 'Entire state, or select borough...'
+      subPrompt = t('calculator.location_subprompt_US-AK')
     } else {
-      subPrompt = 'Entire state, or select county...'
+      subPrompt = t('calculator.location_subprompt_US')
     }
   }
 
@@ -129,8 +130,6 @@ export const PrevalenceControls: React.FunctionComponent<{
     Locations[data.topLocation].subdivisions.length > 1
 
   const locationSet = isTopLocation(data.topLocation)
-
-  const { t } = useTranslation()
 
   return (
     <React.Fragment>
@@ -145,7 +144,9 @@ export const PrevalenceControls: React.FunctionComponent<{
             setLocationData(e.target.value, '')
           }}
         >
-          <option value="">Select location or enter data...</option>
+          <option value="">
+            {t('calculator.select_location_placeholder')}
+          </option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
             <optgroup key={groupInd} label={groupName}>
               {locationGroups[groupName].map((locKey, locInd) => (
