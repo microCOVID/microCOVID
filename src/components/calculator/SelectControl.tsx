@@ -25,43 +25,31 @@ function showRiskMultiplier(multiplier: number): string {
   }
 }
 
-interface LabelFormat {
-  label: string
-  header?: string
-  subLabel?: string
-}
-
-export const labelMaker = function ({
-  label,
-  header,
-  subLabel,
-}: LabelFormat): JSX.Element {
-  return (
-    <div>
-      {header && <strong>{header}:</strong>} {label}
-      {subLabel && (
-        <>
-          <br />
-          <em>({subLabel})</em>
-        </>
-      )}
-    </div>
-  )
-}
-
 export const GenericSelectControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
   source: { [key: string]: FormValue }
   value: string | number
-  label?: string | JSX.Element
+  label?: string
+  header?: string
+  subLabel?: string
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
   <div className="form-group">
     {props.label && (
       <div className="label-wrapper">
-        <label htmlFor={props.id}>{props.label}</label>
+        <label htmlFor={props.id}>
+          <div>
+            {props.header && <strong>{props.header}:</strong>} {props.label}
+            {props.subLabel && (
+              <>
+                <br />
+                <em>({props.subLabel})</em>
+              </>
+            )}
+          </div>
+        </label>
         {props.popover && (
           <OverlayTrigger
             trigger="click"
@@ -97,7 +85,9 @@ export const SelectControl: React.FunctionComponent<{
   setter: (value: CalculatorData) => void
   data: CalculatorData
   source: { [key: string]: FormValue }
-  label?: string | JSX.Element
+  label?: string
+  header?: string
+  subLabel?: string
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
@@ -107,6 +97,8 @@ export const SelectControl: React.FunctionComponent<{
     source={props.source}
     value={props.data[props.id] || ''}
     label={props.label}
+    subLabel={props.subLabel}
+    header={props.header}
     popover={props.popover}
     hideRisk={props.hideRisk}
   />
