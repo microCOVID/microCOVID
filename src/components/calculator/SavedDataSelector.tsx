@@ -1,5 +1,6 @@
 import { map, size } from 'lodash'
 import React from 'react'
+import { Form } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
 import { savedItems } from 'data/localStorage'
@@ -8,6 +9,7 @@ import { PartialData, prepopulated } from 'data/prepopulated'
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
+  label?: string
 }> = (props): React.ReactElement => {
   const hasSavedItems = size(savedItems()) > 0
 
@@ -63,14 +65,18 @@ export const SavedDataSelector: React.FunctionComponent<{
   }
 
   return (
-    <select
-      className="form-control"
-      onChange={(e) => setSavedData(e.target.value)}
-    >
-      <optgroup label=""></optgroup>
-      <option value="">Select a scenario or saved item...</option>
-      {userSavedData}
-      {prepopulatedOptions}
-    </select>
+    <Form.Group controlId="saved-data">
+      <Form.Control
+        as="select"
+        size="lg"
+        onChange={(e) => setSavedData(e.target.value)}
+        id="saved-data"
+      >
+        <optgroup label=""></optgroup>
+        <option value="">Select a scenario or saved item...</option>
+        {userSavedData}
+        {prepopulatedOptions}
+      </Form.Control>
+    </Form.Group>
   )
 }

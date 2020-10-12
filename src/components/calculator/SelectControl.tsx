@@ -30,13 +30,25 @@ export const GenericSelectControl: React.FunctionComponent<{
   source: { [key: string]: FormValue }
   value: string | number
   label?: string
+  header?: string
+  subLabel?: string
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
   <div className="form-group">
     {props.label && (
       <div className="label-wrapper">
-        <label htmlFor={props.id}>{props.label}</label>
+        <label htmlFor={props.id}>
+          <div>
+            {props.header && <strong>{props.header}:</strong>} {props.label}
+            {props.subLabel && (
+              <>
+                <br />
+                <em>({props.subLabel})</em>
+              </>
+            )}
+          </div>
+        </label>
         {props.popover && (
           <OverlayTrigger
             trigger="click"
@@ -73,6 +85,8 @@ export const SelectControl: React.FunctionComponent<{
   data: CalculatorData
   source: { [key: string]: FormValue }
   label?: string
+  header?: string
+  subLabel?: string
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
@@ -82,6 +96,8 @@ export const SelectControl: React.FunctionComponent<{
     source={props.source}
     value={props.data[props.id] || ''}
     label={props.label}
+    subLabel={props.subLabel}
+    header={props.header}
     popover={props.popover}
     hideRisk={props.hideRisk}
   />

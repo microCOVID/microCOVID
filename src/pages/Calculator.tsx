@@ -14,7 +14,9 @@ import {
 } from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { SelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
+import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
   CalculatorData,
   calculate,
@@ -22,6 +24,7 @@ import {
   migrateDataToCurrent,
   parsePopulation,
 } from 'data/calculate'
+import { Interaction } from 'data/data'
 import { saveCalculation } from 'data/localStorage'
 import {
   filterParams,
@@ -144,29 +147,24 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            We reviewed published research about COVID, and used it to make
-            rough estimates about the risk level of various activities in
-            microCOVIDs. 1&nbsp;microCOVID is a one-in-a-million chance of
-            getting COVID.
+            We’ve constructed a calculator that lets you estimate the risk of
+            getting COVID from a wide range of activities, using the{' '}
+            <a href="/paper">best research available</a>. We hope this tool will
+            help hone your intuition, lower your stress levels, and figure out
+            good harm-reduction strategies. To read about some high level
+            conclusions we’ve come to about what is and isn’t risky,{' '}
+            <a href="/paper">click here</a>.
           </p>
-          <p>
-            We hope you’ll use this tool to build your intuition about the
-            comparative risk of different activities and as a harm-reduction
-            tool to make safer choices.
-          </p>
-          <p>
-            Play around with the calculator! Change the variables and see how
-            they affect the total.
-          </p>
-          <p className="warning">
-            <b>Important:</b> In this tool we state our best estimate based on
-            available evidence, even when that evidence is not conclusive. We
-            have read a lot of experts' research, but we are not ourselves
-            experts in this topic. This work has not been scientifically
-            peer-reviewed. There is still a lot of uncertainty about COVID. Do
-            not rely on this tool for medical advice. Please continue to follow
-            government guidance.
-          </p>
+          <FirstTimeUserIntroduction />
+        </Col>
+        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
+      </Row>
+      <Row>
+        <Col lg="7" md="12">
+          <h2>Calculate the approximate COVID risk of any activity</h2>
+        </Col>
+        <Col lg="5" md="12" className="calculator-buttons">
+          {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
           <button
             id="reset-form-button"
             type="button"
@@ -174,19 +172,12 @@ export const Calculator = (): React.ReactElement => {
             onClick={resetForm}
           >
             Reset form
-          </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}
+          </button>
         </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
-          <Card id="location" title="Location & Prevalence">
-            <div className="subheading">
-              First, select a location to use in your calculations, or fill in
-              your own values based on data available in your area....
-            </div>
-
+          <Card id="location">
             <PrevalenceControls
               data={calculatorData}
               setter={setCalculatorData}
@@ -195,28 +186,47 @@ export const Calculator = (): React.ReactElement => {
         </Col>
 
         <Col md="12" lg="8">
-          <Card id="person-risk" title="Risk">
+          <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
-                <div className="subheading">
-                  <p>
-                    ...then select a scenario from the list below (or make your
-                    own).
-                  </p>
+                <header id="activity-risk">
+                  Step 2: Describe the activity
+                </header>
+                <div>
                   <SavedDataSelector
                     currentData={calculatorData}
                     setter={setCalculatorData}
                   />
+
+                  <SelectControl
+                    id="interaction"
+                    label="Is this a single activity or an ongoing relationship?"
+                    data={calculatorData}
+                    setter={setCalculatorData}
+                    source={Interaction}
+                    hideRisk={true}
+                  />
                 </div>
 
                 <Row>
-                  <Col md="12" lg="6">
+                  <Col
+                    md="12"
+                    lg="6"
+                    id="person-risk"
+                    className="calculator-params"
+                  >
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
+                      repeatedEvent={repeatedEvent}
                     />
                   </Col>
-                  <Col md="12" lg="6">
+                  <Col
+                    md="12"
+                    lg="6"
+                    id="modifiers"
+                    className="calculator-params"
+                  >
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
@@ -234,13 +244,26 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col lg={{ span: 8, offset: 4 }}>
+        <Col>
           <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
-        <Col lg={{ span: 8, offset: 4 }}>
+        <Col md="12">
           <ExplanationCard points={points} repeatedEvent={repeatedEvent} />
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={{ span: 8 }}>
+          <p className="warning">
+            <b>Important:</b> In this tool we state our best estimate based on
+            available evidence, even when that evidence is not conclusive. We
+            have read a lot of experts' research, but we are not ourselves
+            experts in this topic. This work has not been scientifically
+            peer-reviewed. There is still a lot of uncertainty about COVID. Do
+            not rely on this tool for medical advice. Please continue to follow
+            government guidance.
+          </p>
         </Col>
       </Row>
     </div>

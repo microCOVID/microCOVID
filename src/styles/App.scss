@@ -100,6 +100,10 @@ a {
 
 // Home page
 
+#first-time-user-introduction {
+  padding-top: 1em;
+}
+
 // Calculator
 #calculator {
   #calculator-introduction {
@@ -117,10 +121,12 @@ a {
     }
   }
 
-  #calculator-fields {
-    .col-md-12 {
-      margin-bottom: 30px;
-    }
+  .col-md-12 {
+    margin-bottom: 30px;
+  }
+
+  .calculator-buttons {
+    text-align: right;
   }
 
   a {
@@ -139,16 +145,8 @@ a {
     background: $primary;
   }
 
-  header#person-risk {
-    background: $indigo;
-  }
-
   header#activity-risk {
-    background: $cyan;
-
-    @include mobile {
-      margin-top: 30px;
-    }
+    background: $indigo;
   }
 
   .card {
@@ -162,6 +160,16 @@ a {
       margin: 10px 0;
       background-color: $warning-fill;
     }
+    .calculator-params {
+      label {
+        @include media-breakpoint-up(lg) {
+          min-height: 3em;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+
   }
 
   // Card subheader
@@ -184,6 +192,12 @@ a {
     @include desktop {
       display: flex;
       flex-direction: column;
+    }
+  }
+
+  #prevelance-details {
+    input.form-control[readonly] {
+      color: $gray-500 !important;
     }
   }
 
