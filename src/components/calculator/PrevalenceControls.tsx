@@ -1,3 +1,5 @@
+import { isNullOrUndefined } from 'util'
+
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Button, Collapse } from 'react-bootstrap'
@@ -8,6 +10,14 @@ import {
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
+
+const isFilled = (val: string): boolean => {
+  return !isNullOrUndefined(val) && val !== ''
+}
+
+const isTopLocation = (val: string): boolean => {
+  return isFilled(val) && !!Locations[val]
+}
 
 const PrevalenceField: React.FunctionComponent<{
   label: string
@@ -96,15 +106,15 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   // If a stored location exists, load latest data for that location.
   useEffect(() => {
-    if (data.subLocation !== '' || data.topLocation !== '') {
+    if (isFilled(data.subLocation) || isTopLocation(data.topLocation)) {
       setLocationData(data.topLocation, data.subLocation)
     }
     // Intentionally not depending on data so that this runs once on mount.
     // eslint-disable-next-line
   }, [])
 
-  let subPrompt: string
-  if (data.topLocation.startsWith('US_')) {
+  let subPrompt = 'Entire country, or select region...'
+  if (isTopLocation(data.subLocation) && data.topLocation.startsWith('US_')) {
     if (Locations[data.topLocation].label === 'Louisiana') {
       subPrompt = 'Entire state, or select parish...'
     } else if (Locations[data.topLocation].label === 'Alaska') {
@@ -112,16 +122,13 @@ export const PrevalenceControls: React.FunctionComponent<{
     } else {
       subPrompt = 'Entire state, or select county...'
     }
-  } else {
-    subPrompt = 'Entire country, or select region...'
   }
 
   const showSubLocation =
-    data.topLocation !== '' &&
-    Locations[data.topLocation] &&
+    isTopLocation(data.topLocation) &&
     Locations[data.topLocation].subdivisions.length > 1
 
-  const locationSet = data.topLocation !== ''
+  const locationSet = isTopLocation(data.topLocation)
 
   const [detailsOpen, setOpen] = useState(false)
 
@@ -277,7 +284,6 @@ interface PrevalanceData {
 }
 
 function dataForLocation(location: string): PrevalanceData {
-  console.log('get data for ' + location)
   const locationData = Locations[location]
 
   if (locationData) {
