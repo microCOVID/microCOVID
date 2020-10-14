@@ -26,10 +26,6 @@ function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
 }
 
-function maybeGreater(points: number): string {
-  return tooManyPoints(points) ? '>' : ''
-}
-
 export function ExplanationCard(props: {
   points: number
   repeatedEvent: boolean
@@ -78,8 +74,7 @@ export function ExplanationCard(props: {
       </p>
       <h2>What does this mean numerically?</h2>
       <p>
-        This is a roughly {maybeGreater(points)}
-        {displayPoints(points)}-in-a-million ({maybeGreater(points)}
+        This is a roughly ~{displayPoints(points)}-in-a-million (
         {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
         chance of getting COVID from this activity with these people.
       </p>
@@ -144,11 +139,8 @@ export function PointsDisplay(props: {
       <strong>Results:</strong>
       {showPoints(props.points) ? (
         <h1>
-          {tooManyPoints(props.points) ? '>' : '~'}
-          {displayPoints(props.points)} microCOVIDs (
-          {maybeGreater(props.points)}
+          ~{displayPoints(props.points)} microCOVIDs (
           {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-          {maybeGreater(props.points)}
           {displayPoints(props.points * ERROR_FACTOR)})
           {props.repeatedEvent ? ' per week' : ' each time'}
         </h1>

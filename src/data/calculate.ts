@@ -187,22 +187,6 @@ export const calculatePersonRiskEach = (
   }
 }
 
-export const calculatePersonRisk = (
-  data: CalculatorData,
-  averagePersonRisk: number,
-): number | null => {
-  try {
-    let risk = calculatePersonRiskEach(data, averagePersonRisk)
-    if (risk === null || data.personCount === 0) {
-      return null
-    }
-    risk *= data.personCount
-    return risk
-  } catch (e) {
-    return null
-  }
-}
-
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
   try {
     if (data.interaction === '') {
@@ -251,16 +235,14 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
 
 export const calculate = (data: CalculatorData): number | null => {
   try {
-    let points
-
     const averagePersonRisk = calculateLocationPersonAverage(data)
     if (averagePersonRisk === null) {
       return null
     }
 
     // Person risk
-    points = calculatePersonRisk(data, averagePersonRisk)
-    if (points === null) {
+    const personRiskEach = calculatePersonRiskEach(data, averagePersonRisk)
+    if (personRiskEach === null) {
       return null
     }
 
@@ -269,13 +251,16 @@ export const calculate = (data: CalculatorData): number | null => {
     if (activityRisk === null) {
       return null
     }
-    points *= activityRisk
 
-    if (points > MAX_POINTS) {
-      points = MAX_POINTS
+    const pointsNaive = personRiskEach * data.personCount * activityRisk
+    if (pointsNaive < MAX_POINTS) {
+      return pointsNaive
     }
 
-    return points
+    return (
+      (1 - (1 - (personRiskEach * activityRisk) / 1e6) ** data.personCount) *
+      1e6
+    )
   } catch (e) {
     return null
   }
