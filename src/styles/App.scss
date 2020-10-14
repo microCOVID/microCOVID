@@ -260,6 +260,49 @@ a {
     border-top-right-radius: 8px;
     padding: 1.25rem;
     box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15)
+
+  }
+
+  // Thermometer Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
+  
+
+
+  $legend-width: 30px;
+  $legend-border: 4px;
+  $legend-corners: 10px;
+  
+  .legend-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $legend-width; 
+    
+    :first-child {
+      border-radius: $legend-corners $legend-corners 0px 0px;
+    }
+
+    :last-child {
+      border-radius: 0px 0px $legend-corners $legend-corners ;
+    }
+
+    .legend-piece {
+      display: flex;
+      flex-direction: row;
+      height: 25px;
+      width: $legend-width;
+      align-self: center;
+    }
+
+    .legend-piece.current-level {
+      width: $legend-width + $legend-border;
+      border: $legend-border solid black;
+    }
+
+    .legend-very-high { background-color: $legend-red; }
+    .legend-high { background-color: $legend-orange; }
+    .legend-moderate { background-color: $legend-yellow; }
+    .legend-low { background-color: $legend-light-green; }
+    .legend-very-low { background-color: $legend-green; }
   }
 
   .explanation .card {

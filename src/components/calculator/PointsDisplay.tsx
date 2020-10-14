@@ -88,6 +88,18 @@ export function ExplanationCard(props: {
   )
 }
 
+// Risk levels and max "normalized points" for each
+const riskLevels = {
+  'very-low': 3,
+  low: 25,
+  moderate: 100,
+  high: 300,
+  'very-high': 1000,
+}
+
+// TODO: Change this to a function
+const currentLevel = 'low'
+
 const riskyStyles = ['low-risk', 'medium-risk', 'high-risk']
 const STYLE_LOW = 0
 const STYLE_MEDIUM = 1
@@ -141,6 +153,26 @@ export function PointsDisplay(props: {
 }): React.ReactElement {
   return (
     <div className="top-half-card">
+      <div className="legend-container">
+        {Object.keys(riskLevels)
+          .slice(0) // Makes a shallow copy of the array so we can reverse it
+          .reverse()
+          .map((level) => (
+            <>
+              <div
+                className={
+                  `legend-piece legend-${level}` +
+                  (level !== currentLevel ? '' : ' current-level')
+                }
+              ></div>
+            </>
+          ))}
+
+        {/* <div className="legend-piece legend-orange"></div>
+        <div className="legend-piece legend-yellow"></div>
+        <div className="legend-piece legend-light-green"></div>
+        <div className="legend-piece legend-green current-level"></div> */}
+      </div>
       <strong>Results:</strong>
       {showPoints(props.points) ? (
         <h1>
