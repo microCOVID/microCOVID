@@ -263,14 +263,17 @@ a {
 
   }
 
-  // Thermometer Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
-  
-
-
+  // Legend Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
   $legend-width: 30px;
   $legend-border: 4px;
   $legend-corners: 10px;
-  
+
+  .risk-very-high { background-color: $legend-red; }
+  .risk-high { background-color: $legend-orange; }
+  .risk-moderate { background-color: $legend-yellow; }
+  .risk-low { background-color: $legend-light-green; }
+  .risk-very-low { background-color: $legend-green; }
+
   .legend-container {
     display: flex;
     flex-direction: column;
@@ -297,12 +300,6 @@ a {
       width: $legend-width + $legend-border;
       border: $legend-border solid black;
     }
-
-    .legend-very-high { background-color: $legend-red; }
-    .legend-high { background-color: $legend-orange; }
-    .legend-moderate { background-color: $legend-yellow; }
-    .legend-low { background-color: $legend-light-green; }
-    .legend-very-low { background-color: $legend-green; }
   }
 
   .explanation .card {
@@ -310,7 +307,19 @@ a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
+  .risk-level {
+    display: inline-block;
+    padding: 2px 1em;
+    border-radius: 8px;
+    text-transform: uppercase;
+    h1 {
+      margin: 0;
+    }
+  }
 }
+
+
 
 // Whitepaper
 
