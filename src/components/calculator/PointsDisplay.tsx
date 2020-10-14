@@ -167,11 +167,6 @@ export function PointsDisplay(props: {
               ></div>
             </>
           ))}
-
-        {/* <div className="legend-piece legend-orange"></div>
-        <div className="legend-piece legend-yellow"></div>
-        <div className="legend-piece legend-light-green"></div>
-        <div className="legend-piece legend-green current-level"></div> */}
       </div>
       <strong>Results:</strong>
       {showPoints(props.points) ? (
