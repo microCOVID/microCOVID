@@ -56,6 +56,12 @@ export const defaultValues: CalculatorData = {
   voice: '',
 }
 
+interface CalculatorResult {
+  expectedValue: number
+  lowerBound: number
+  upperBound: number
+}
+
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
 
@@ -233,7 +239,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
   }
 }
 
-export const calculate = (data: CalculatorData): number | null => {
+export const calculate = (data: CalculatorData): CalculatorResult | null => {
   try {
     const averagePersonRisk = calculateLocationPersonAverage(data)
     if (averagePersonRisk === null) {
@@ -254,14 +260,38 @@ export const calculate = (data: CalculatorData): number | null => {
 
     const pointsNaive = personRiskEach * data.personCount * activityRisk
     if (pointsNaive < MAX_POINTS) {
-      return pointsNaive
+      return {
+        expectedValue: pointsNaive,
+        lowerBound: pointsNaive / ERROR_FACTOR,
+        upperBound: pointsNaive * ERROR_FACTOR,
+      }
     }
 
-    return (
-      (1 - (1 - (personRiskEach * activityRisk) / 1e6) ** data.personCount) *
-      1e6
-    )
+    const riskEach = personRiskEach * activityRisk * 1e-6
+    const expectedValue =
+      probabilityEventHappensAtLeastOnce(riskEach, data.personCount) * 1e6
+    const lowerBound =
+      probabilityEventHappensAtLeastOnce(
+        riskEach / ERROR_FACTOR,
+        data.personCount,
+      ) * 1e6
+    const upperBound =
+      probabilityEventHappensAtLeastOnce(
+        Math.min(1, riskEach * ERROR_FACTOR),
+        data.personCount,
+      ) * 1e6
+    return { expectedValue, lowerBound, upperBound }
   } catch (e) {
     return null
   }
+}
+
+// Given an event that happens with probability |probabilityOfOnce| that is repeated |numberOfTimes|,
+// return the probability that it happens at least once
+// (e.g. an event has |probabilityOfOnce| chance of giving you covid and you do it |numberOfTimes|, how likely are you to get covid?)
+const probabilityEventHappensAtLeastOnce = (
+  probabilityOfOnce: number,
+  numberOfTimes: number,
+): number => {
+  return 1 - (1 - probabilityOfOnce) ** numberOfTimes
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
-import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
+import { MAX_POINTS } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -133,16 +133,17 @@ const budgetConsumption = (
 export function PointsDisplay(props: {
   points: number
   repeatedEvent: boolean
+  upperBound: number
+  lowerBound: number
 }): React.ReactElement {
   return (
     <div className="top-half-card">
       <strong>Results:</strong>
       {showPoints(props.points) ? (
         <h1>
-          ~{displayPoints(props.points)} microCOVIDs (
-          {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-          {displayPoints(props.points * ERROR_FACTOR)})
-          {props.repeatedEvent ? ' per week' : ' each time'}
+          {displayPoints(props.points)} microCOVIDs (
+          {displayPoints(props.lowerBound)} to {displayPoints(props.upperBound)}
+          ){props.repeatedEvent ? ' per week' : ' each time'}
         </h1>
       ) : (
         <h1>fill in calculator to see</h1>

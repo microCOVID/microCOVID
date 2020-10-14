@@ -51,6 +51,5 @@ export function fixedPointPrecisionPercent(val: number | null): string {
   if (!val) {
     return '0%'
   }
-  console.log(fixedPointNumber(999620))
   return Number.parseFloat(fixedPointNumber(val * 1e6)) * 1e-4 + '%'
 }
