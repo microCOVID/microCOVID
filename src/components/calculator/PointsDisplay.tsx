@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Popover } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -33,12 +33,12 @@ function maybeGreater(points: number): string {
 export function ExplanationCard(props: {
   points: number
   repeatedEvent: boolean
+  riskBudget: number
+  riskBudgetSetter: (newValue: number) => void
 }): React.ReactElement {
-  const [riskBudget, setRiskBudget] = useState(10000)
-
   const points = props.points
 
-  const [risky, riskyStyle] = howRisky(points, riskBudget)
+  const [risky, riskyStyle] = howRisky(points, props.riskBudget)
 
   return (
     <Card>
@@ -55,8 +55,8 @@ export function ExplanationCard(props: {
         id="budget-selector"
         label="If your risk tolerance is..."
         popover={riskTolerancePopover}
-        setter={(e: string) => setRiskBudget(Number.parseInt(e))}
-        value={riskBudget}
+        setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
+        value={props.riskBudget}
         source={{
           '10000': {
             label: '1% per year (suggested if not at increased risk)',
@@ -83,7 +83,7 @@ export function ExplanationCard(props: {
         {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
         chance of getting COVID from this activity with these people.
       </p>
-      <p>{budgetConsumption(points, riskBudget, props.repeatedEvent)}</p>
+      <p>{budgetConsumption(points, props.riskBudget, props.repeatedEvent)}</p>
     </Card>
   )
 }
@@ -150,6 +150,8 @@ const budgetConsumption = (
 export function PointsDisplay(props: {
   points: number
   repeatedEvent: boolean
+  riskBudget: number
+  riskBudgetSetter: (newValue: number) => void
 }): React.ReactElement {
   return (
     <div className="top-half-card">
@@ -158,30 +160,35 @@ export function PointsDisplay(props: {
           .slice(0) // Makes a shallow copy of the array so we can reverse it
           .reverse()
           .map((level) => (
-            <>
-              <div
-                className={
-                  `legend-piece legend-${level}` +
-                  (level !== currentLevel ? '' : ' current-level')
-                }
-              ></div>
-            </>
+            <div
+              key={level}
+              className={
+                `legend-piece legend-${level}` +
+                (level !== currentLevel ? '' : ' current-level')
+              }
+            ></div>
           ))}
       </div>
-      <strong>Results:</strong>
-      {showPoints(props.points) ? (
-        <h1>
-          {tooManyPoints(props.points) ? '>' : '~'}
-          {displayPoints(props.points)} microCOVIDs (
-          {maybeGreater(props.points)}
-          {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-          {maybeGreater(props.points)}
-          {displayPoints(props.points * ERROR_FACTOR)})
-          {props.repeatedEvent ? ' per week' : ' each time'}
-        </h1>
-      ) : (
-        <h1>fill in calculator to see</h1>
-      )}
+      <div className="risk-level"></div>
+      <div className="weekly-budget">
+        {budgetConsumption(props.points, props.riskBudget, props.repeatedEvent)}
+      </div>
+      <div className="points">
+        <strong>Results:</strong>
+        {showPoints(props.points) ? (
+          <h1>
+            {tooManyPoints(props.points) ? '>' : '~'}
+            {displayPoints(props.points)} microCOVIDs (
+            {maybeGreater(props.points)}
+            {displayPoints(props.points / ERROR_FACTOR)} to{' '}
+            {maybeGreater(props.points)}
+            {displayPoints(props.points * ERROR_FACTOR)})
+            {props.repeatedEvent ? ' per week' : ' each time'}
+          </h1>
+        ) : (
+          <h1>fill in calculator to see</h1>
+        )}
+      </div>
     </div>
   )
 }
