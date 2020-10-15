@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Popover, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+import stopSign from './img/stop-sign.png'
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
 import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
@@ -34,6 +35,7 @@ export interface RiskLevel {
   style: string
   title: string
   max: number
+  special?: string
 }
 
 // Risk levels and max points for each (assuming a 1% budget)
@@ -43,8 +45,18 @@ const riskLevels: RiskLevel[] = [
   { style: 'moderate', title: 'Moderate', max: 100 },
   { style: 'high', title: 'High', max: 300 },
   { style: 'very-high', title: 'Very High', max: 1000 },
-  { style: 'dangerously-high', title: 'Dangerously High', max: 100000 },
-  { style: 'murderously-high', title: 'Murderously High', max: 99999999999 },
+  {
+    style: 'very-high',
+    title: 'Dangerously High',
+    max: 100000,
+    special: stopSign,
+  },
+  {
+    style: 'very-high',
+    title: 'Murderously High',
+    max: 99999999999,
+    special: stopSign,
+  },
 ]
 
 const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5
@@ -141,21 +153,29 @@ export function PointsDisplay(props: {
   return (
     <Row className="top-half-card no-gutters">
       <Col md="1" sm="2" className="legend-container">
-        {riskLevels
-          .map((level) => level.style)
-          .slice(0, RISK_LEVELS_TO_SHOW_ON_LEGEND) // Makes a shallow copy of the displayable risk levels
-          .reverse() // Reverse the sort so the lowest items are at the bottom
-          .map((level) => (
-            <div
-              key={level}
-              className={
-                `legend-piece risk-${level}` +
-                (!doShowPoints || level !== currentRiskLevel.style
-                  ? ''
-                  : ' current-level')
-              }
-            ></div>
-          ))}
+        {currentRiskLevel.special ? (
+          <img
+            src={currentRiskLevel.special}
+            alt="Stop sign"
+            className="special-image"
+          />
+        ) : (
+          riskLevels
+            .map((level) => level.style)
+            .slice(0, RISK_LEVELS_TO_SHOW_ON_LEGEND) // Makes a shallow copy of the displayable risk levels
+            .reverse() // Reverse the sort so the lowest items are at the bottom
+            .map((level) => (
+              <div
+                key={level}
+                className={
+                  `legend-piece risk-${level}` +
+                  (!doShowPoints || level !== currentRiskLevel.style
+                    ? ''
+                    : ' current-level')
+                }
+              ></div>
+            ))
+        )}
       </Col>
       <Col md="11" sm="10" className="points-container">
         {!doShowPoints ? (
