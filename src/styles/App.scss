@@ -1,5 +1,6 @@
 // Override default variables before the import
 @import './variables.scss';
+@import "~rfs/scss";
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
@@ -53,8 +54,8 @@ a {
   padding-right: 0;
 
   .navbar-brand {
-      @media (max-width: 900px) {
-        font-size: 20px;
+      @include media-breakpoint-down(md) {
+        font-size: 25px;
        }
 
   }
@@ -303,6 +304,7 @@ a {
   }
 
   .risk-level {
+    // @include font-size(1.4rem);
     display: inline-block;
     padding: 2px 10px;
     border-radius: 8px;
@@ -314,23 +316,19 @@ a {
   }
 
   .budget-consumption {
-    font-size: 1.5em;
+    @include font-size(1.4rem);
     margin-left: 15px;
   }
   .points {
-    font-size: 1.5em;
+    @include font-size(1.4rem);
     margin-left: 15px;
     font-weight: bold;
-    margin-top: 3px;
+    margin-top: 8px;
     line-height: 1;
-  }
-  .budget-display {
-    color: $secondary;
-    font-size: 1.1em;
   }
   .points-range {
     color: $secondary;
-    font-size: 0.8em;
+    @include font-size(1.1rem);
     font-weight: normal;
   }
 }
