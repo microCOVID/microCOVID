@@ -246,7 +246,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col>
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
           <PointsDisplay
             points={points}
             repeatedEvent={repeatedEvent}
@@ -256,7 +256,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
-        <Col md="12">
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
           <ExplanationCard
             points={points}
             repeatedEvent={repeatedEvent}

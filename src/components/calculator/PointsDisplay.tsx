@@ -140,8 +140,8 @@ export function PointsDisplay(props: {
 }): React.ReactElement {
   const currentRiskLevel = howRisky(props.points, props.riskBudget)
   return (
-    <Row className="top-half-card">
-      <Col className="legend-container" xs="1">
+    <Row className="top-half-card no-gutters">
+      <Col md="1" sm="2" className="legend-container">
         {riskLevels
           .map((level) => level.style)
           .slice(0, RISK_LEVELS_TO_SHOW_ON_LEGEND) // Makes a shallow copy of the displayable risk levels
@@ -156,46 +156,30 @@ export function PointsDisplay(props: {
             ></div>
           ))}
       </Col>
-      <Col xs="7">
+      <Col md="11" sm="10" className="points-container">
         <div className={'risk-level risk-' + currentRiskLevel.style}>
           <h1>{currentRiskLevel.title} Risk</h1>
         </div>
-        <div className="weekly-budget">
-          {budgetConsumption(props.points, props.riskBudget)}
-        </div>
         <div className="points">
           {showPoints(props.points) ? (
-            <h1>
+            <>
               {tooManyPoints(props.points) ? '>' : '~'}
               {displayPoints(props.points)} microCOVIDs
-              {props.repeatedEvent ? ' per week' : ' each time'}
-            </h1>
+              {props.repeatedEvent ? ' per week' : ' each time'}{' '}
+              <span className="points-range">
+                (range: {maybeGreater(props.points)}
+                {displayPoints(props.points / ERROR_FACTOR)} to{' '}
+                {maybeGreater(props.points)}
+                {displayPoints(props.points * ERROR_FACTOR)})
+              </span>
+            </>
           ) : (
-            <h1>fill in calculator to see</h1>
+            <>fill in calculator to see</>
           )}
         </div>
-      </Col>
-      <Col xs="4">
-        <Row>
-          <Col>
-            <div className="budget-display float-right">
-              Using {fixedPointPrecisionPercent(props.riskBudget / 1000000)}
-              /year risk budget
-            </div>
-          </Col>
-        </Row>
-        <Row className="align-self-end">
-          <Col>
-            <div className="points-rannge float-right">
-              Range of risk estimate:
-              <br />
-              {maybeGreater(props.points)}
-              {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-              {maybeGreater(props.points)}
-              {displayPoints(props.points * ERROR_FACTOR)}
-            </div>
-          </Col>
-        </Row>
+        <div className="budget-consumption">
+          {budgetConsumption(props.points, props.riskBudget)}
+        </div>
       </Col>
     </Row>
   )
