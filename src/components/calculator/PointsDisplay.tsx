@@ -120,16 +120,14 @@ function howRisky(points: number, budget: number): RiskLevel {
 
 const budgetConsumption = (points: number, budget: number) => {
   const weekBudget = budget / 50 // Numbers look cleaner than 52.
-  if (points > weekBudget) {
-    const weeksConsumed = fixedPointPrecision(points / weekBudget)
-    return `Doing this activity once would use up your entire risk allocation for
-        ~${weeksConsumed} ${
-      Number.parseInt(weeksConsumed) > 1 ? 'weeks' : 'week'
-    }.`
+  const weeksConsumed = points / weekBudget
+  if (weeksConsumed >= 1.5) {
+    return `
+        ${fixedPointPrecision(weeksConsumed)}x  your weekly risk budget`
   }
   return `${fixedPointPrecision(
     (points / weekBudget) * 100,
-  )}% of weekly risk budget`
+  )}% of your weekly risk budget`
 }
 
 export function PointsDisplay(props: {
@@ -139,6 +137,7 @@ export function PointsDisplay(props: {
   riskBudgetSetter: (newValue: number) => void
 }): React.ReactElement {
   const currentRiskLevel = howRisky(props.points, props.riskBudget)
+  const doShowPoints = showPoints(props.points)
   return (
     <Row className="top-half-card no-gutters">
       <Col md="1" sm="2" className="legend-container">
@@ -151,17 +150,23 @@ export function PointsDisplay(props: {
               key={level}
               className={
                 `legend-piece risk-${level}` +
-                (level !== currentRiskLevel.style ? '' : ' current-level')
+                (!doShowPoints || level !== currentRiskLevel.style
+                  ? ''
+                  : ' current-level')
               }
             ></div>
           ))}
       </Col>
       <Col md="11" sm="10" className="points-container">
-        <div className={'risk-level risk-' + currentRiskLevel.style}>
-          <h1>{currentRiskLevel.title} Risk</h1>
-        </div>
+        {!doShowPoints ? (
+          <div className="risk-level"></div>
+        ) : (
+          <div className={'risk-level risk-' + currentRiskLevel.style}>
+            <h1>{currentRiskLevel.title} Risk</h1>
+          </div>
+        )}
         <div className="points">
-          {showPoints(props.points) ? (
+          {doShowPoints ? (
             <>
               {tooManyPoints(props.points) ? '>' : '~'}
               {displayPoints(props.points)} microCOVIDs
@@ -174,11 +179,11 @@ export function PointsDisplay(props: {
               </span>
             </>
           ) : (
-            <>fill in calculator to see</>
+            <>Fill in calculator to see risk level</>
           )}
         </div>
         <div className="budget-consumption">
-          {budgetConsumption(props.points, props.riskBudget)}
+          {doShowPoints && budgetConsumption(props.points, props.riskBudget)}
         </div>
       </Col>
     </Row>
