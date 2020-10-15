@@ -153,7 +153,7 @@ export function PointsDisplay(props: {
   return (
     <Row className="top-half-card no-gutters">
       <Col md="1" sm="2" className="legend-container">
-        {currentRiskLevel.special ? (
+        {doShowPoints && currentRiskLevel.special ? (
           <img
             src={currentRiskLevel.special}
             alt="Stop sign"
