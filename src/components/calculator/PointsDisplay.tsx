@@ -137,8 +137,12 @@ function howRisky(points: number, budget: number): RiskLevel {
   )
 }
 
+const getWeekBudget = (budget: number) => {
+  return budget / 50 // Numbers look cleaner than 52.
+}
+
 const budgetConsumption = (points: number, budget: number) => {
-  const weekBudget = budget / 50 // Numbers look cleaner than 52.
+  const weekBudget = getWeekBudget(budget)
   const weeksConsumed = points / weekBudget
   if (weeksConsumed >= 1.5) {
     return `
@@ -200,7 +204,7 @@ export function PointsDisplay(props: {
               {tooManyPoints(props.points) ? '>' : '~'}
               {displayPoints(props.points)} microCOVIDs
               {props.repeatedEvent ? ' per week' : ' each time'}{' '}
-              <span className="points-range">
+              <span className="points-range d-md-inline d-sm-block d-block">
                 {props.upperBound >= ONE_MILLION ? null : (
                   <>
                     (range: {displayPoints(props.lowerBound)} to{' '}
@@ -214,7 +218,15 @@ export function PointsDisplay(props: {
           )}
         </div>
         <div className="budget-consumption">
-          {doShowPoints && budgetConsumption(props.points, props.riskBudget)}
+          {doShowPoints && (
+            <>
+              {budgetConsumption(props.points, props.riskBudget)}{' '}
+              <span className="points-range d-md-inline d-sm-none d-none">
+                ({displayPoints(getWeekBudget(props.riskBudget))}{' '}
+                microCOVIDs/week)
+              </span>
+            </>
+          )}
         </div>
       </Col>
     </Row>
