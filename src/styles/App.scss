@@ -259,6 +259,7 @@ a {
   $legend-border: 4px;
   $legend-corners: 10px;
 
+  .risk-dangerous { background-color: $legend-dark-red; color: #fff; }
   .risk-very-high { background-color: $legend-red; }
   .risk-high { background-color: $legend-orange; }
   .risk-moderate { background-color: $legend-yellow; }
@@ -267,6 +268,7 @@ a {
 
 
 
+  .text-risk-dangerous { color: $legend-dark-red; }
   .text-risk-very-high { color: $legend-red; }
   .text-risk-high { color: $legend-orange; }
   .text-risk-moderate { color: $legend-yellow; }
@@ -303,7 +305,7 @@ a {
     .risk-icon {
       width: 40px;
       height: 40px;
-      margin: 3px 0 0 0;
+      margin: 1px 0 0 0;
     }
   }
 
@@ -327,6 +329,10 @@ a {
     h1 {
       margin: 0;
       color: black;
+    }
+    
+    &.risk-dangerous h1 {
+      color: #fff
     }
   }
 

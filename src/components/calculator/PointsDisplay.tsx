@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
-import { MAX_POINTS } from 'data/calculate'
+import { MAX_POINTS, ONE_MILLION } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -46,13 +46,13 @@ const riskLevels: RiskLevel[] = [
   { style: 'high', title: 'High', max: 300 },
   { style: 'very-high', title: 'Very High', max: 1000 },
   {
-    style: 'very-high',
+    style: 'dangerous',
     title: 'Dangerously High',
     max: 100000,
     icon: BsExclamationTriangleFill,
   },
   {
-    style: 'very-high',
+    style: 'dangerous',
     title: 'Life-Threatening',
     max: 99999999999,
     icon: BsExclamationOctagonFill,
@@ -194,8 +194,12 @@ export function PointsDisplay(props: {
               {displayPoints(props.points)} microCOVIDs
               {props.repeatedEvent ? ' per week' : ' each time'}{' '}
               <span className="points-range">
-                (range: {displayPoints(props.lowerBound)} to{' '}
-                {displayPoints(props.upperBound)})
+                {props.upperBound >= ONE_MILLION ? null : (
+                  <>
+                    (range: {displayPoints(props.lowerBound)} to{' '}
+                    {displayPoints(props.upperBound)})
+                  </>
+                )}
               </span>
             </>
           ) : (

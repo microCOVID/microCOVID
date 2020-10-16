@@ -91,7 +91,7 @@ export const migrateDataToCurrent = (
   return { ...defaultValues, ...data }
 }
 
-const ONE_MILLION = 1e6 // One 'full' COVID
+export const ONE_MILLION = 1e6 // One 'full' COVID
 
 export const MAX_ACTIVITY_RISK = 0.48
 export const MAX_POINTS = 100000
