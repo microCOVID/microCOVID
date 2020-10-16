@@ -232,9 +232,7 @@ export const Calculator = (): React.ReactElement => {
                 </Row>
               </React.Fragment>
             ) : (
-              <div className="empty">
-                First, fill out prevalence information.
-              </div>
+              <div className="empty">First, enter your location</div>
             )}
           </Card>
         </Col>
