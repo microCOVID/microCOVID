@@ -70,12 +70,18 @@ export const Calculator = (): React.ReactElement => {
     recordSavedCustom(points)
   }
 
-  const points = useMemo(() => {
+  const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
-    const computedValue = calculate(calculatorData)
+    const result = calculate(calculatorData)
+    if (result === null) {
+      document.getElementById('points-row')?.classList.remove('has-points')
+      return { points: -1, lowerBound: -1, upperBound: -1 }
+    }
 
-    if (computedValue) {
-      recordCalculatorChanged(computedValue)
+    const { expectedValue, lowerBound, upperBound } = result
+
+    if (expectedValue) {
+      recordCalculatorChanged(expectedValue)
     }
 
     // Store data for refresh
@@ -89,14 +95,9 @@ export const Calculator = (): React.ReactElement => {
 
     setQuery(filterParams(calculatorData), 'replace')
 
-    if (computedValue === null) {
-      document.getElementById('points-row')?.classList.remove('has-points')
-      return -1
-    }
-
     document.getElementById('points-row')?.classList.add('has-points')
 
-    return computedValue
+    return { points: expectedValue, lowerBound, upperBound }
   }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
@@ -235,7 +236,12 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row className="sticky" id="points-row">
         <Col lg={{ span: 8, offset: 4 }}>
-          <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
+          <PointsDisplay
+            points={points}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
+            repeatedEvent={repeatedEvent}
+          />
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
