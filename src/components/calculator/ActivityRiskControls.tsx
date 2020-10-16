@@ -65,7 +65,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         id="yourMask"
         header="Your mask"
         label="What mask are YOU wearing?"
-        subLabel="if you’re eating or drinking, say “no mask”"
+        helpText="if you’re eating or drinking, choose “no mask”"
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -75,7 +75,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         id="theirMask"
         header="Their mask"
         label="What mask are THEY wearing?"
-        subLabel="if you’re eating or drinking, say “no mask”"
+        helpText="if you’re eating or drinking, choose “no mask”"
         popover={maskPopover}
         data={data}
         setter={setter}

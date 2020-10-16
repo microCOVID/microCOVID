@@ -165,12 +165,8 @@ h1,h2,h3,h4,h5,h6 {
       background-color: $warning-fill;
     }
     .calculator-params {
-      label {
-        @include media-breakpoint-up(lg) {
-          min-height: 3em;
-          display: flex;
-          align-items: flex-end;
-        }
+      .form-group {
+        margin-bottom: 2em;
       }
     }
 
@@ -245,10 +241,20 @@ h1,h2,h3,h4,h5,h6 {
       align-items: center;
     }
 
+    label {
+      @include font-size($input-font-size-lg);
+    }
+
     .badge {
       cursor: pointer;
       border-radius: 12px;
       width: 20px;
+    }
+  }
+
+  .form-group {
+    .text-muted {
+      font-size: 1em;
     }
   }
 

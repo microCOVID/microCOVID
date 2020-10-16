@@ -51,7 +51,6 @@ export const PersonRiskControls: React.FunctionComponent<{
         <label htmlFor="personCount">
           <div>
             How many people get near you?
-            <br />
             <em>(within 10ft or less)</em>
           </div>
         </label>
@@ -81,7 +80,7 @@ export const PersonRiskControls: React.FunctionComponent<{
         <React.Fragment>
           <div className="form-group">
             <label htmlFor="duration">
-              How long are each of these people typically near you, in minutes?
+              <strong>Duration:</strong> How long are each of these people typically near you, in minutes?
             </label>
             <input
               className="form-control form-control-lg"
@@ -98,6 +97,7 @@ export const PersonRiskControls: React.FunctionComponent<{
           <SelectControl
             id="distance"
             label="How close are they, on average?"
+            header="Distance"
             data={data}
             setter={setter}
             source={Distance}

@@ -1,6 +1,6 @@
 import num2fraction from 'num2fraction'
 import React from 'react'
-import { Badge, OverlayTrigger } from 'react-bootstrap'
+import { Badge, Form, OverlayTrigger } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
@@ -31,7 +31,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   value: string | number
   label?: string
   header?: string
-  subLabel?: string
+  helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
@@ -41,12 +41,6 @@ export const GenericSelectControl: React.FunctionComponent<{
         <label htmlFor={props.id}>
           <div>
             {props.header && <strong>{props.header}:</strong>} {props.label}
-            {props.subLabel && (
-              <>
-                <br />
-                <em>({props.subLabel})</em>
-              </>
-            )}
           </div>
         </label>
         {props.popover && (
@@ -76,6 +70,11 @@ export const GenericSelectControl: React.FunctionComponent<{
       ))}
       <optgroup></optgroup>
     </select>
+    {props.helpText && (
+      <Form.Text id={props.id + 'HelpText'} muted>
+        {props.helpText}
+      </Form.Text>
+    )}
   </div>
 )
 
@@ -86,7 +85,7 @@ export const SelectControl: React.FunctionComponent<{
   source: { [key: string]: FormValue }
   label?: string
   header?: string
-  subLabel?: string
+  helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
 }> = (props) => (
@@ -96,7 +95,7 @@ export const SelectControl: React.FunctionComponent<{
     source={props.source}
     value={props.data[props.id] || ''}
     label={props.label}
-    subLabel={props.subLabel}
+    helpText={props.helpText}
     header={props.header}
     popover={props.popover}
     hideRisk={props.hideRisk}
