@@ -265,6 +265,14 @@ a {
   .risk-low { background-color: $legend-light-green; }
   .risk-very-low { background-color: $legend-green; }
 
+
+
+  .text-risk-very-high { color: $legend-red; }
+  .text-risk-high { color: $legend-orange; }
+  .text-risk-moderate { color: $legend-yellow; }
+  .text-risk-low { color: $legend-light-green; }
+  .text-risk-very-low { color: $legend-green; }
+
   .legend-container {
     display: flex;
     flex-direction: column;
@@ -292,9 +300,9 @@ a {
       border: $legend-border solid black;
     }
 
-    .special-image {
-      width: 35px;
-      height: 35px;
+    .risk-icon {
+      width: 40px;
+      height: 40px;
       margin: 3px 0 0 0;
     }
   }

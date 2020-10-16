@@ -1,8 +1,12 @@
 import React from 'react'
 import { Col, Popover, Row } from 'react-bootstrap'
+import { IconType } from 'react-icons'
+import {
+  BsExclamationOctagonFill,
+  BsExclamationTriangleFill,
+} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
-import stopSign from './img/stop-sign.png'
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
 import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
@@ -35,7 +39,7 @@ export interface RiskLevel {
   style: string
   title: string
   max: number
-  special?: string
+  icon?: IconType
 }
 
 // Risk levels and max points for each (assuming a 1% budget)
@@ -49,13 +53,13 @@ const riskLevels: RiskLevel[] = [
     style: 'very-high',
     title: 'Dangerously High',
     max: 100000,
-    special: stopSign,
+    icon: BsExclamationTriangleFill,
   },
   {
     style: 'very-high',
     title: 'Life-Threatening',
     max: 99999999999,
-    special: stopSign,
+    icon: BsExclamationOctagonFill,
   },
 ]
 
@@ -154,12 +158,12 @@ export function PointsDisplay(props: {
   return (
     <Row className="top-half-card no-gutters">
       <Col className="legend-container">
-        {doShowPoints && currentRiskLevel.special ? (
-          <img
-            src={currentRiskLevel.special}
-            alt="Stop sign"
-            className="special-image"
-          />
+        {doShowPoints && currentRiskLevel.icon ? (
+          <>
+            <currentRiskLevel.icon
+              className={'risk-icon text-risk-' + currentRiskLevel.style}
+            />
+          </>
         ) : (
           riskLevels
             .map((level) => level.style)
