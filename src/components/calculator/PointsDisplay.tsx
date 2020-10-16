@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
-import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
+import { MAX_POINTS } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -29,10 +29,6 @@ function displayPercent(points: number): string {
 
 function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
-}
-
-function maybeGreater(points: number): string {
-  return tooManyPoints(points) ? '>' : ''
 }
 
 export interface RiskLevel {
@@ -115,8 +111,7 @@ export function ExplanationCard(props: {
       </p>
       <h2>What does this mean numerically?</h2>
       <p>
-        This is a roughly {maybeGreater(points)}
-        {displayPoints(points)}-in-a-million ({maybeGreater(points)}
+        This is a roughly ~{displayPoints(points)}-in-a-million (
         {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
         chance of getting COVID from this activity with these people.
       </p>
@@ -152,6 +147,8 @@ export function PointsDisplay(props: {
   repeatedEvent: boolean
   riskBudget: number
   riskBudgetSetter: (newValue: number) => void
+  upperBound: number
+  lowerBound: number
 }): React.ReactElement {
   const currentRiskLevel = howRisky(props.points, props.riskBudget)
   const doShowPoints = showPoints(props.points)
@@ -197,10 +194,8 @@ export function PointsDisplay(props: {
               {displayPoints(props.points)} microCOVIDs
               {props.repeatedEvent ? ' per week' : ' each time'}{' '}
               <span className="points-range">
-                (range: {maybeGreater(props.points)}
-                {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-                {maybeGreater(props.points)}
-                {displayPoints(props.points * ERROR_FACTOR)})
+                (range: {displayPoints(props.lowerBound)} to{' '}
+                {displayPoints(props.upperBound)})
               </span>
             </>
           ) : (

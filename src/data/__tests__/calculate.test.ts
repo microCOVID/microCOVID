@@ -7,6 +7,15 @@ import {
 import { RiskProfile } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
+// Wrapper for calculate that just returns expectedValue
+const calcValue = (data: CalculatorData) => {
+  const result = calculate(data)
+  if (!result) {
+    return null
+  }
+  return result.expectedValue
+}
+
 describe('calculate', () => {
   // Prevailance is .1% with 6x underreporting factor
   const exampleLocation = {
@@ -37,7 +46,7 @@ describe('calculate', () => {
       ...prepopulated[scenario],
     }
 
-    const response = calculate(data)
+    const response = calcValue(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
     expect(response).toBe(((((0.006 * 2) / 20) * 0.06) / 4 / 1) * 1e6)
   })
@@ -65,7 +74,7 @@ describe('calculate', () => {
       ...prepopulated[scenario],
     }
 
-    expect(calculate(data)).toBeCloseTo(result)
+    expect(calcValue(data)).toBeCloseTo(result)
   })
 
   it('should produce a self-consistent living alone risk profile', () => {
@@ -83,9 +92,35 @@ describe('calculate', () => {
       voice: 'silent',
     }
 
-    expect(calculate(data)).toBeCloseTo(
+    expect(calcValue(data)).toBeCloseTo(
       expectedPrevalance * RiskProfile['livingAlone']['multiplier'] * 1e6,
     )
+  })
+
+  it('should handle large risks', () => {
+    const data: CalculatorData = {
+      ...exampleLocation,
+      riskProfile: 'hasCovid',
+      interaction: 'repeated',
+      personCount: 1,
+
+      setting: 'indoor',
+      distance: 'sixFt',
+      duration: 60,
+      theirMask: 'basic',
+      yourMask: 'filtered',
+      voice: 'silent',
+    }
+
+    const oneTime = calculate(data)
+    expect(oneTime?.expectedValue).toBeCloseTo(0.3e6)
+    expect(oneTime?.lowerBound).toBeCloseTo(0.1e6)
+    expect(oneTime?.upperBound).toBeCloseTo(0.9e6)
+
+    const twoTimes = calculate({ ...data, personCount: 2 })
+    expect(twoTimes?.expectedValue).toBeCloseTo(0.51e6)
+    expect(twoTimes?.lowerBound).toBeCloseTo(0.19e6)
+    expect(twoTimes?.upperBound).toBeCloseTo(0.99e6)
   })
 
   describe('Interaction: partner', () => {
@@ -106,11 +141,11 @@ describe('calculate', () => {
         voice: 'silent',
       }
 
-      expect(calculate(partner)).toEqual(calculate(bonuses))
+      expect(calcValue(partner)).toEqual(calcValue(bonuses))
     })
 
     it('should apply 48% risk', () => {
-      expect(calculate(partner)).toEqual(
+      expect(calcValue(partner)).toEqual(
         expectedPrevalance * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
       )
     })
@@ -143,12 +178,12 @@ describe('calculate', () => {
         voice: 'silent',
       }
 
-      expect(calculate(housemate)).toEqual(calculate(bonuses))
+      expect(calcValue(housemate)).toEqual(calcValue(bonuses))
     })
 
     it('should apply 30% risk', () => {
       // average * 0.3
-      expect(calculate(housemate)).toEqual(expectedPrevalance * 0.3 * 1e6)
+      expect(calcValue(housemate)).toEqual(expectedPrevalance * 0.3 * 1e6)
     })
   })
 
@@ -163,7 +198,7 @@ describe('calculate', () => {
         setting: 'outdoor',
       }
 
-      expect(calculate(outdoorIntimate)).toEqual(calculate(indoorIntimate))
+      expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
     it('should be at least 12% (1 hr) transfer risk.', () => {
@@ -181,9 +216,9 @@ describe('calculate', () => {
         duration: 120,
       }
 
-      expect(calculate(oneMinuteIntimate)).toEqual(calculate(oneHourIntimate))
-      expect(calculate(twoHourIntimate)).toEqual(
-        calculate(oneHourIntimate)! * 2,
+      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(oneHourIntimate))
+      expect(calcValue(twoHourIntimate)).toEqual(
+        calcValue(oneHourIntimate)! * 2,
       )
     })
   })
@@ -208,7 +243,7 @@ describe('calculate', () => {
         duration,
       }
 
-      expect(calculate(data)).toEqual(result)
+      expect(calcValue(data)).toEqual(result)
     })
   })
 })

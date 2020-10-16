@@ -75,12 +75,18 @@ export const Calculator = (): React.ReactElement => {
 
   const [riskBudget, setRiskBudget] = useState(10000)
 
-  const points = useMemo(() => {
+  const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
-    const computedValue = calculate(calculatorData)
+    const result = calculate(calculatorData)
+    if (result === null) {
+      document.getElementById('points-row')?.classList.remove('has-points')
+      return { points: -1, lowerBound: -1, upperBound: -1 }
+    }
 
-    if (computedValue) {
-      recordCalculatorChanged(computedValue)
+    const { expectedValue, lowerBound, upperBound } = result
+
+    if (expectedValue) {
+      recordCalculatorChanged(expectedValue)
     }
 
     // Store data for refresh
@@ -94,14 +100,9 @@ export const Calculator = (): React.ReactElement => {
 
     setQuery(filterParams(calculatorData), 'replace')
 
-    if (computedValue === null) {
-      document.getElementById('points-row')?.classList.remove('has-points')
-      return -1
-    }
-
     document.getElementById('points-row')?.classList.add('has-points')
 
-    return computedValue
+    return { points: expectedValue, lowerBound, upperBound }
   }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
@@ -252,6 +253,8 @@ export const Calculator = (): React.ReactElement => {
             repeatedEvent={repeatedEvent}
             riskBudget={riskBudget}
             riskBudgetSetter={setRiskBudget}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
           />
         </Col>
       </Row>
