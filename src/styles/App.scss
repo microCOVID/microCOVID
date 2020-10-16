@@ -33,6 +33,10 @@ a {
   text-decoration: underline;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
 .footer {
   width: 100%;
   line-height: 1.2;
@@ -226,6 +230,11 @@ a {
   }
   .high-risk {
     color: $red
+  }
+
+  .save-form {
+    display: inline-flex;
+    width: 50%;
   }
 
   // Tooltip button/badge styles

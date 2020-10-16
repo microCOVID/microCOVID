@@ -46,7 +46,7 @@ export const PersonRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
-      <strong>Nearby people</strong>
+      <h3>Nearby people</h3>
       <div className="form-group">
         <label htmlFor="personCount">
           <div>

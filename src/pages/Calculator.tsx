@@ -115,7 +115,7 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const saveForm = (
-    <div className="input-group">
+    <div className="input-group save-form">
       <input
         className="form-control"
         type="text"
@@ -161,19 +161,16 @@ export const Calculator = (): React.ReactElement => {
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
       <Row>
-        <Col lg="7" md="12">
+        <Col>
           <h2>Calculate the approximate COVID risk of any activity</h2>
         </Col>
-        <Col lg="5" md="12" className="calculator-buttons">
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
-          <button
-            id="reset-form-button"
-            type="button"
-            className="btn btn-secondary"
-            onClick={resetForm}
-          >
-            Reset form
-          </button>
+      </Row>
+      <Row>
+        <Col className="calculator-buttons">
+          <SavedDataSelector
+            currentData={calculatorData}
+            setter={setCalculatorData}
+          />
         </Col>
       </Row>
       <Row id="calculator-fields">
@@ -194,11 +191,6 @@ export const Calculator = (): React.ReactElement => {
                   Step 2: Describe the activity
                 </header>
                 <div>
-                  <SavedDataSelector
-                    currentData={calculatorData}
-                    setter={setCalculatorData}
-                  />
-
                   <SelectControl
                     id="interaction"
                     label="Is this a single activity or an ongoing relationship?"
@@ -210,29 +202,32 @@ export const Calculator = (): React.ReactElement => {
                 </div>
 
                 <Row>
-                  <Col
-                    md="12"
-                    lg="6"
-                    id="person-risk"
-                    className="calculator-params"
-                  >
+                  <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
                       repeatedEvent={repeatedEvent}
                     />
                   </Col>
-                  <Col
-                    md="12"
-                    lg="6"
-                    id="modifiers"
-                    className="calculator-params"
-                  >
+                  <Col xs="12" id="modifiers" className="calculator-params">
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
                       repeatedEvent={repeatedEvent}
                     />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="float-right">
+                    {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
+                    <button
+                      id="reset-form-button"
+                      type="button"
+                      className="btn btn-secondary"
+                      onClick={resetForm}
+                    >
+                      Reset form
+                    </button>
                   </Col>
                 </Row>
               </React.Fragment>

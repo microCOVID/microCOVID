@@ -44,7 +44,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
-      <strong>Modifiers</strong>
+      <h3>Modifiers</h3>
       <SelectControl
         id="setting"
         header="Environment"
