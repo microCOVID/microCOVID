@@ -3,6 +3,7 @@ import { isNullOrUndefined } from 'util'
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Button, Collapse } from 'react-bootstrap'
+import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
 import {
   CalculatorData,
@@ -130,7 +131,7 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const locationSet = isTopLocation(data.topLocation)
 
-  const [detailsOpen, setOpen] = useState(false)
+  const [detailsOpen, setDetailsOpen] = useState(false)
 
   return (
     <React.Fragment>
@@ -178,9 +179,6 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
       <p>
-        Reported prevalence:{' '}
-        {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
-        <br />
         Adjusted prevalence:{' '}
         {(((calculateLocationPersonAverage(data) || 0) * 100) / 1e6).toFixed(2)}
         %
@@ -188,14 +186,17 @@ export const PrevalenceControls: React.FunctionComponent<{
 
       <Button
         variant="outline-secondary"
-        onClick={() => setOpen(!detailsOpen)}
+        onClick={() => setDetailsOpen(!detailsOpen)}
+        className="d"
         aria-controls="prevelance-details"
         aria-expanded={detailsOpen}
       >
-        Learn more
+        {detailsOpen ? <BsChevronDown /> : <BsChevronRight />} Details
       </Button>
       <Collapse in={detailsOpen}>
         <div id="prevelance-details" style={{ marginTop: '1rem' }}>
+          Reported prevalence:{' '}
+          {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
           <PrevalenceField
             label="Reported cases in past week"
             value={(data.casesPastWeek || 0).toString()}
