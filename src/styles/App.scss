@@ -307,6 +307,7 @@ a {
 
   .points-container {
     margin-left: 14px;
+    line-height: 1;
   }
 
   .risk-level {
@@ -330,7 +331,7 @@ a {
     margin-left: 15px;
     font-weight: bold;
     margin-top: 8px;
-    line-height: 1;
+    margin-bottom: 8px;
   }
   .points-range {
     color: $secondary;

@@ -53,13 +53,15 @@ const riskLevels: RiskLevel[] = [
   },
   {
     style: 'very-high',
-    title: 'Murderously High',
+    title: 'Life-Threatening',
     max: 99999999999,
     special: stopSign,
   },
 ]
 
-const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5
+const UNDEFINED_RISK: RiskLevel = { style: '', title: '', max: 0 }
+
+const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5 // Shows up through 'Very High'
 
 export function ExplanationCard(props: {
   points: number
@@ -123,8 +125,7 @@ function howRisky(points: number, budget: number): RiskLevel {
   const normalizedPoints = points / (budget / 10000)
   const curLevel = riskLevels.find((level) => normalizedPoints < level.max)
   if (curLevel === undefined) {
-    const HIGHEST_RISK_LEVEL = riskLevels[riskLevels.length - 1]
-    return HIGHEST_RISK_LEVEL
+    return UNDEFINED_RISK
   } else {
     return curLevel
   }
@@ -152,7 +153,7 @@ export function PointsDisplay(props: {
   const doShowPoints = showPoints(props.points)
   return (
     <Row className="top-half-card no-gutters">
-      <Col md="1" sm="2" className="legend-container">
+      <Col className="legend-container">
         {doShowPoints && currentRiskLevel.special ? (
           <img
             src={currentRiskLevel.special}
@@ -177,7 +178,7 @@ export function PointsDisplay(props: {
             ))
         )}
       </Col>
-      <Col md="11" sm="10" className="points-container">
+      <Col md="11" sm="10" xs="10" className="points-container">
         {!doShowPoints ? (
           <div className="risk-level"></div>
         ) : (
