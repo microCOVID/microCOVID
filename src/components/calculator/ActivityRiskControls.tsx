@@ -3,18 +3,8 @@ import { Popover } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import { SelectControl } from './SelectControl'
-import {
-  CalculatorData,
-  MAX_ACTIVITY_RISK,
-  calculateActivityRisk,
-} from 'data/calculate'
-import {
-  Setting,
-  TheirMask,
-  Voice,
-  YourMask,
-  intimateDurationFloor,
-} from 'data/data'
+import { CalculatorData, calculateActivityRisk } from 'data/calculate'
+import { Setting, TheirMask, Voice, YourMask } from 'data/data'
 import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
 export const ActivityRiskControls: React.FunctionComponent<{
@@ -66,7 +56,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         id="yourMask"
         header="Your mask"
         label="What mask are YOU wearing?"
-        helpText="if you’re eating or drinking, choose “no mask”"
+        helpText="if you’re eating or drinking, select “no mask”"
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -76,7 +66,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         id="theirMask"
         header="Their mask"
         label="What mask are THEY wearing?"
-        helpText="if you’re eating or drinking, choose “no mask”"
+        helpText="if you’re eating or drinking, select “no mask”"
         popover={maskPopover}
         data={data}
         setter={setter}
@@ -90,28 +80,6 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Voice}
       />
-
-      <span className="readout">
-        <p>
-          The <i>second</i> part of the calculation is Activity Risk: assuming 1
-          person at this activity has COVID, then you would have a{' '}
-          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
-          COVID.
-          <b>
-            {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
-              ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
-              : ''}
-            {data.distance === 'intimate' &&
-            data.duration < intimateDurationFloor
-              ? ' (NOTE: We have applied a minimum Activity Risk for fluid transfer.)'
-              : ''}
-          </b>
-        </p>
-        <p>
-          Finally, we multiply Person Risk and Activity Risk to get the total
-          result.
-        </p>
-      </span>
     </React.Fragment>
   )
 }

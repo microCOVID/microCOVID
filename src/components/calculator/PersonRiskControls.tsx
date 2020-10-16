@@ -2,11 +2,7 @@ import React from 'react'
 import { Popover } from 'react-bootstrap'
 
 import { SelectControl } from './SelectControl'
-import {
-  CalculatorData,
-  calculateLocationPersonAverage,
-  calculatePersonRiskEach,
-} from 'data/calculate'
+import { CalculatorData } from 'data/calculate'
 import { Distance, RiskProfile } from 'data/data'
 
 const personRiskPopover = (
@@ -39,11 +35,6 @@ export const PersonRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
-  const locationRisk = calculateLocationPersonAverage(data) || 0
-  const personRiskEach = Math.round(
-    calculatePersonRiskEach(data, locationRisk) || 0,
-  )
-
   return (
     <React.Fragment>
       <h3>Nearby people</h3>
@@ -107,11 +98,6 @@ export const PersonRiskControls: React.FunctionComponent<{
         </React.Fragment>
       ) : null}
       <br />
-      <p className="readout">
-        The <i>first</i> part of the calculation is Person Risk: Each other
-        person has a <b>{personRiskEach.toLocaleString()}</b>
-        -in-a-million chance of currently having COVID.
-      </p>
     </React.Fragment>
   )
 }
