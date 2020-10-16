@@ -30,39 +30,6 @@ function displayPercent(points: number): string {
 function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
 }
-
-export interface RiskLevel {
-  style: string
-  title: string
-  max: number
-  icon?: IconType
-}
-
-// Risk levels and max points for each (assuming a 1% budget)
-const riskLevels: RiskLevel[] = [
-  { style: 'very-low', title: 'Very Low', max: 3 },
-  { style: 'low', title: 'Low', max: 25 },
-  { style: 'moderate', title: 'Moderate', max: 100 },
-  { style: 'high', title: 'High', max: 300 },
-  { style: 'very-high', title: 'Very High', max: 1000 },
-  {
-    style: 'dangerous',
-    title: 'Dangerously High',
-    max: 100000,
-    icon: BsExclamationTriangleFill,
-  },
-  {
-    style: 'dangerous',
-    title: 'Life-Threatening',
-    max: 99999999999,
-    icon: BsExclamationOctagonFill,
-  },
-]
-
-const UNDEFINED_RISK: RiskLevel = { style: '', title: '', max: 0 }
-
-const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5 // Shows up through 'Very High'
-
 export function ExplanationCard(props: {
   points: number
   repeatedEvent: boolean
@@ -120,14 +87,54 @@ export function ExplanationCard(props: {
   )
 }
 
+export interface RiskLevel {
+  style: string
+  title: string
+  max: number
+  icon?: IconType
+}
+
+// Risk levels and max points for each (assuming a 1% budget)
+const riskLevels: RiskLevel[] = [
+  { style: 'very-low', title: 'Very Low', max: 3 },
+  { style: 'low', title: 'Low', max: 25 },
+  { style: 'moderate', title: 'Moderate', max: 100 },
+  { style: 'high', title: 'High', max: 300 },
+  { style: 'very-high', title: 'Very High', max: 1000 },
+]
+
+const dangerousRiskLevels: RiskLevel[] = [
+  {
+    style: 'dangerous',
+    title: 'Dangerously High',
+    max: 100000,
+    icon: BsExclamationTriangleFill,
+  },
+  {
+    style: 'dangerous',
+    title: 'Life-Threatening',
+    max: 99999999999,
+    icon: BsExclamationOctagonFill,
+  },
+]
+
+const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5 // Shows up through 'Very High'
+
 function howRisky(points: number, budget: number): RiskLevel {
+  // First check against dangerous risk levels. Don't normalize points here because we primarily want to indicate the risk to others, not the risk to you others at these "dangerous" levels
+  if (points >= dangerousRiskLevels[0].max) {
+    return (
+      dangerousRiskLevels.find((level) => points < level.max) ||
+      dangerousRiskLevels[riskLevels.length - 1] // Default to the highest risk level
+    )
+  }
+
+  // Then check against normalized points
   const normalizedPoints = points / (budget / 10000)
   const curLevel = riskLevels.find((level) => normalizedPoints < level.max)
-  if (curLevel === undefined) {
-    return UNDEFINED_RISK
-  } else {
-    return curLevel
-  }
+  return (
+    curLevel || riskLevels[riskLevels.length - 1] // Default to the highest risk level
+  )
 }
 
 const budgetConsumption = (points: number, budget: number) => {
