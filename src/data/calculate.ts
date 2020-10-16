@@ -56,6 +56,12 @@ export const defaultValues: CalculatorData = {
   voice: '',
 }
 
+interface CalculatorResult {
+  expectedValue: number
+  lowerBound: number
+  upperBound: number
+}
+
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
 
@@ -187,22 +193,6 @@ export const calculatePersonRiskEach = (
   }
 }
 
-export const calculatePersonRisk = (
-  data: CalculatorData,
-  averagePersonRisk: number,
-): number | null => {
-  try {
-    let risk = calculatePersonRiskEach(data, averagePersonRisk)
-    if (risk === null || data.personCount === 0) {
-      return null
-    }
-    risk *= data.personCount
-    return risk
-  } catch (e) {
-    return null
-  }
-}
-
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
   try {
     if (data.interaction === '') {
@@ -249,18 +239,16 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
   }
 }
 
-export const calculate = (data: CalculatorData): number | null => {
+export const calculate = (data: CalculatorData): CalculatorResult | null => {
   try {
-    let points
-
     const averagePersonRisk = calculateLocationPersonAverage(data)
     if (averagePersonRisk === null) {
       return null
     }
 
     // Person risk
-    points = calculatePersonRisk(data, averagePersonRisk)
-    if (points === null) {
+    const personRiskEach = calculatePersonRiskEach(data, averagePersonRisk)
+    if (personRiskEach === null) {
       return null
     }
 
@@ -269,14 +257,41 @@ export const calculate = (data: CalculatorData): number | null => {
     if (activityRisk === null) {
       return null
     }
-    points *= activityRisk
 
-    if (points > MAX_POINTS) {
-      points = MAX_POINTS
+    const pointsNaive = personRiskEach * data.personCount * activityRisk
+    if (pointsNaive < MAX_POINTS) {
+      return {
+        expectedValue: pointsNaive,
+        lowerBound: pointsNaive / ERROR_FACTOR,
+        upperBound: pointsNaive * ERROR_FACTOR,
+      }
     }
 
-    return points
+    const riskEach = personRiskEach * activityRisk * 1e-6
+    const expectedValue =
+      probabilityEventHappensAtLeastOnce(riskEach, data.personCount) * 1e6
+    const lowerBound =
+      probabilityEventHappensAtLeastOnce(
+        riskEach / ERROR_FACTOR,
+        data.personCount,
+      ) * 1e6
+    const upperBound =
+      probabilityEventHappensAtLeastOnce(
+        Math.min(1, riskEach * ERROR_FACTOR),
+        data.personCount,
+      ) * 1e6
+    return { expectedValue, lowerBound, upperBound }
   } catch (e) {
     return null
   }
+}
+
+// Given an event that happens with probability |probabilityOfOnce| that is repeated |numberOfTimes|,
+// return the probability that it happens at least once
+// (e.g. an event has |probabilityOfOnce| chance of giving you covid and you do it |numberOfTimes|, how likely are you to get covid?)
+const probabilityEventHappensAtLeastOnce = (
+  probabilityOfOnce: number,
+  numberOfTimes: number,
+): number => {
+  return 1 - (1 - probabilityOfOnce) ** numberOfTimes
 }
