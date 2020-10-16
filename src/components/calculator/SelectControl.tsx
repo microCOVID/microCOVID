@@ -34,6 +34,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
+  className?: string
 }> = (props) => (
   <div className="form-group">
     {props.label && (
@@ -56,7 +57,7 @@ export const GenericSelectControl: React.FunctionComponent<{
     )}
     <select
       id={props.id}
-      className="form-control form-control-lg"
+      className={'form-control form-control-lg ' + props.className}
       onChange={(e) => props.setter(e.target.value)}
       value={props.value}
     >
@@ -88,6 +89,7 @@ export const SelectControl: React.FunctionComponent<{
   helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
+  className?: string
 }> = (props) => (
   <GenericSelectControl
     id={props.id}
@@ -99,6 +101,7 @@ export const SelectControl: React.FunctionComponent<{
     header={props.header}
     popover={props.popover}
     hideRisk={props.hideRisk}
+    className={props.className}
   />
 )
 

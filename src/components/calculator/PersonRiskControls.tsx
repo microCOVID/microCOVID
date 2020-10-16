@@ -50,12 +50,12 @@ export const PersonRiskControls: React.FunctionComponent<{
       <div className="form-group">
         <label htmlFor="personCount">
           <div>
-            How many people get near you?
+            <strong>People:</strong> How many people get near you?{' '}
             <em>(within 10ft or less)</em>
           </div>
         </label>
         <input
-          className="form-control form-control-lg"
+          className="form-control form-control-lg col-md-3"
           type="number"
           value={data.personCount}
           onChange={(e) =>
@@ -70,6 +70,7 @@ export const PersonRiskControls: React.FunctionComponent<{
       <SelectControl
         id="riskProfile"
         label="What is their risk profile?"
+        header="Risk Profile"
         popover={personRiskPopover}
         data={data}
         setter={setter}
@@ -78,12 +79,21 @@ export const PersonRiskControls: React.FunctionComponent<{
       />
       {!repeatedEvent ? (
         <React.Fragment>
+          <SelectControl
+            id="distance"
+            label="How close are they, on average?"
+            header="Distance"
+            data={data}
+            setter={setter}
+            source={Distance}
+          />
           <div className="form-group">
             <label htmlFor="duration">
-              <strong>Duration:</strong> How long are each of these people typically near you, in minutes?
+              <strong>Duration:</strong> How long are each of these people
+              typically near you, in minutes?
             </label>
             <input
-              className="form-control form-control-lg"
+              className="form-control form-control-lg col-md-3"
               type="number"
               value={data.duration}
               onChange={(e) =>
@@ -94,14 +104,6 @@ export const PersonRiskControls: React.FunctionComponent<{
               }
             />
           </div>
-          <SelectControl
-            id="distance"
-            label="How close are they, on average?"
-            header="Distance"
-            data={data}
-            setter={setter}
-            source={Distance}
-          />
         </React.Fragment>
       ) : null}
       <br />

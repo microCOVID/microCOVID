@@ -52,6 +52,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
         data={data}
         setter={setter}
         source={Setting}
+        className="col-md-6"
       />
       {data.setting === 'outdoor' &&
       ['close', 'intimate'].includes(data.distance) ? (
