@@ -47,8 +47,7 @@ export function ExplanationCard(props: {
         </b>
       </p>
 
-      
-  {/* const locationRisk = calculateLocationPersonAverage(data) || 0
+      {/* const locationRisk = calculateLocationPersonAverage(data) || 0
   const personRiskEach = Math.round(
     calculatePersonRiskEach(data, locationRisk) || 0,
   ) */}
