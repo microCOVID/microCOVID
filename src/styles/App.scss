@@ -157,10 +157,6 @@ h1,h2,h3,h4,h5,h6 {
     text-align: right;
   }
 
-  a {
-    color: $body-color;
-  }
-
   // Colorful section headers
   .card header {
     color: white;
@@ -192,6 +188,10 @@ h1,h2,h3,h4,h5,h6 {
     .calculator-params {
       .form-group {
         margin-bottom: 2em;
+      }
+
+      h3 {
+        margin: 0 0 0.6em 0;
       }
     }
 
