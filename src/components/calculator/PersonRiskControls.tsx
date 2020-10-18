@@ -37,7 +37,9 @@ export const PersonRiskControls: React.FunctionComponent<{
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   return (
     <React.Fragment>
-      <h3>Nearby people</h3>
+      <h3 className="h2 accent">
+        <span>Nearby people</span>
+      </h3>
       <div className="form-group">
         <label htmlFor="personCount">
           <div>

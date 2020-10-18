@@ -108,6 +108,30 @@ h1,h2,h3,h4,h5,h6 {
   padding-top: 1em;
 }
 
+
+
+.accent {
+  line-height: 1em;
+  overflow: hidden;
+  font-weight: bold;
+}
+.accent span {
+  display: inline-block;
+  position: relative;  
+}
+.accent span:after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  border-bottom: 1px solid #aaa;
+  top: 0;
+  width: 9999px;
+}
+.accent span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
 // Calculator
 #calculator {
   #calculator-introduction {
@@ -144,6 +168,7 @@ h1,h2,h3,h4,h5,h6 {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
+    @include font-size(1.2rem);
   }
   header#location {
     background: $primary;

@@ -12,7 +12,7 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         aria-controls="first-time-user-introduction"
         aria-expanded={open}
       >
-        {open ? <BsChevronDown /> : <BsChevronRight />} First time user?
+        {open ? <BsChevronDown /> : <BsChevronRight />} What is a microCOVID?
       </Button>
       <Collapse in={open}>
         <div id="first-time-user-introduction" className="">
