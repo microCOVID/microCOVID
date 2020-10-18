@@ -97,6 +97,9 @@ export const PrevalenceControls: React.FunctionComponent<{
   }
 
   const setLocationData = (topLocation: string, subLocation: string) => {
+    if (topLocation === MANUAL_DATA_KEY) {
+      setDetailsOpen(true)
+    }
     setter({
       ...data,
       ...dataForLocation(subLocation || topLocation),
@@ -133,6 +136,8 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const [detailsOpen, setDetailsOpen] = useState(false)
 
+  const MANUAL_DATA_KEY = 'MANUAL_DATA'
+
   return (
     <React.Fragment>
       <header id="location">Step 1: Enter your location</header>
@@ -145,6 +150,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           }}
         >
           <option value="">Select location...</option>
+          <option value={MANUAL_DATA_KEY}>Enter data manually...</option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
             <optgroup key={groupInd} label={groupName}>
               {locationGroups[groupName].map((locKey, locInd) => (
