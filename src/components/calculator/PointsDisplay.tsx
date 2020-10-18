@@ -195,7 +195,7 @@ export function PointsDisplay(props: {
           <div className="risk-level"></div>
         ) : (
           <div className={'risk-level risk-' + currentRiskLevel.style}>
-            <h1>{currentRiskLevel.title} Risk</h1>
+            <span>{currentRiskLevel.title} Risk</span>
           </div>
         )}
         <div className="points">
@@ -204,7 +204,7 @@ export function PointsDisplay(props: {
               {tooManyPoints(props.points) ? '>' : '~'}
               {displayPoints(props.points)} microCOVIDs
               {props.repeatedEvent ? ' per week' : ' each time'}{' '}
-              <span className="points-range d-md-inline d-sm-block d-block">
+              <span className="points-range d-md-inline d-none">
                 {props.upperBound >= ONE_MILLION ? null : (
                   <>
                     (range: {displayPoints(props.lowerBound)} to{' '}
@@ -221,7 +221,7 @@ export function PointsDisplay(props: {
           {doShowPoints && (
             <>
               {budgetConsumption(props.points, props.riskBudget)}{' '}
-              <span className="points-range d-md-inline d-sm-none d-none">
+              <span className="points-range d-md-inline d-none">
                 ({displayPoints(getWeekBudget(props.riskBudget))}{' '}
                 microCOVIDs/week)
               </span>
