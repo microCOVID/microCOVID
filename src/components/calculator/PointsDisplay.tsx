@@ -218,7 +218,7 @@ export function PointsDisplay(props: {
             <>
               {budgetConsumption(props.points, props.riskBudget)}{' '}
               <span className="points-range d-md-inline d-none">
-                ({displayPoints(getWeekBudget(props.riskBudget))}{' '}
+                (of {displayPoints(getWeekBudget(props.riskBudget))}{' '}
                 microCOVIDs/week)
               </span>
             </>
