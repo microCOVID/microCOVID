@@ -183,7 +183,7 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </Col>
 
-        <Col md="12" lg="8">
+        <Col md="12" lg="8" id="activity-section">
           <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
