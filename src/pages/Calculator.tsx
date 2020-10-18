@@ -115,11 +115,11 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const saveForm = (
-    <div className="input-group save-form">
+    <div className="input-group save-form float-right col-lg-6 col-md-8">
       <input
         className="form-control"
         type="text"
-        placeholder="Enter name to save your custom scenario to the scenario list"
+        placeholder="Name of your custom scenario"
         value={saveName}
         onChange={(e) => setSaveName(e.target.value)}
       />
@@ -132,15 +132,13 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const saveButton = (
-    <span>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => setShowSaveForm(true)}
-      >
-        Save as custom scenario
-      </button>
-    </span>
+    <button
+      type="button"
+      className="btn btn-secondary float-right"
+      onClick={() => setShowSaveForm(true)}
+    >
+      Save as custom scenario
+    </button>
   )
 
   return (
@@ -218,16 +216,16 @@ export const Calculator = (): React.ReactElement => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col className="float-right">
-                    {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
+                  <Col className="form-buttons">
                     <button
                       id="reset-form-button"
                       type="button"
-                      className="btn btn-secondary"
+                      className="btn btn-secondary float-right"
                       onClick={resetForm}
                     >
                       Reset form
                     </button>
+                    {points > 0 && (showSaveForm ? saveForm : saveButton)}
                   </Col>
                 </Row>
               </React.Fragment>
