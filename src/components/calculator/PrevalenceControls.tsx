@@ -2,7 +2,7 @@ import { isNullOrUndefined } from 'util'
 
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
-import { Button, Collapse } from 'react-bootstrap'
+import { Collapse } from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
 import {
@@ -185,15 +185,14 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
 
-      <Button
-        variant="outline-secondary"
+      <span
+        className="expandable-header"
         onClick={() => setDetailsOpen(!detailsOpen)}
-        className="d"
         aria-controls="prevelance-details"
         aria-expanded={detailsOpen}
       >
         {detailsOpen ? <BsChevronDown /> : <BsChevronRight />} Details
-      </Button>
+      </span>
       <Collapse in={detailsOpen}>
         <div id="prevelance-details" style={{ marginTop: '1rem' }}>
           <p>

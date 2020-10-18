@@ -132,12 +132,18 @@ h1,h2,h3,h4,h5,h6 {
   margin-left: 15px;
 }
 
+.expandable-header {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 // Calculator
 #calculator {
   #calculator-introduction {
     padding: 20px;
     font-size: $h4-font-size;
     position: relative;
+
   }
 
   .col-md-12 {

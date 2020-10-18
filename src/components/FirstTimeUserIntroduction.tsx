@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
-import { Button, Collapse } from 'react-bootstrap'
+import { Collapse } from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
 export function FirstTimeUserIntroduction(): React.ReactElement {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Button
-        variant="outline-secondary"
+      <span
+        className="first-time-user-header expandable-header"
         onClick={() => setOpen(!open)}
         aria-controls="first-time-user-introduction"
         aria-expanded={open}
       >
         {open ? <BsChevronDown /> : <BsChevronRight />} What is a microCOVID?
-      </Button>
+      </span>
       <Collapse in={open}>
         <div id="first-time-user-introduction" className="">
           The calculator introduces a new concept, the microCOVID. One
