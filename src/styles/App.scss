@@ -286,9 +286,17 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0;
   }
 
+  $sticky-z-index: 100;
+
   .sticky {
-    z-index: 1000;
+    z-index: $sticky-z-index;
     padding-bottom: 0;
+  }
+  // Make sure to put the location sidebar above the floating points display
+  #location {
+    @include media-breakpoint-up(lg) {
+      z-index: $sticky-z-index + 1;
+    }
   }
 
   .scrolled-past.has-points {
