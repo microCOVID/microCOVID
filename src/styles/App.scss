@@ -233,9 +233,17 @@ a {
     margin-bottom: 0;
   }
 
+  $sticky-z-index: 100;
+
   .sticky {
-    z-index: 1;
+    z-index: $sticky-z-index;
     padding-bottom: 0;
+  }
+  // Make sure to put the location sidebar above the floating points display
+  #location {
+    @include media-breakpoint-up(lg) {
+      z-index: $sticky-z-index + 1;
+    }
   }
 
   .scrolled-past.has-points {
