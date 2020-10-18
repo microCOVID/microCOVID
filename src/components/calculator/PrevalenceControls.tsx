@@ -2,7 +2,7 @@ import { isNullOrUndefined } from 'util'
 
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
-import { Collapse } from 'react-bootstrap'
+import { Card, Collapse, Form, InputGroup } from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
 import {
@@ -21,6 +21,7 @@ const isTopLocation = (val: string): boolean => {
 }
 
 const PrevalenceField: React.FunctionComponent<{
+  id: string
   label: string
   value: string | number
   unit?: string
@@ -29,7 +30,9 @@ const PrevalenceField: React.FunctionComponent<{
   isEditable: boolean
   max?: number
   min?: number
+  helpText?: string
 }> = ({
+  id,
   label,
   value,
   setter,
@@ -38,10 +41,19 @@ const PrevalenceField: React.FunctionComponent<{
   isEditable,
   max,
   min,
+  helpText,
 }): React.ReactElement => {
+  if (!isEditable) {
+    return (
+      <div>
+        {label}: {value}
+        {unit}
+      </div>
+    )
+  }
   let body: React.ReactElement = (
-    <input
-      className="form-control form-control-lg"
+    <Form.Control
+      className="form-control form-control-lg col-md-3 col-lg-6"
       type={inputType}
       value={value}
       readOnly={!isEditable}
@@ -61,21 +73,24 @@ const PrevalenceField: React.FunctionComponent<{
   )
   if (unit) {
     body = (
-      <div className="input-group mb-3">
+      <InputGroup className="mb-3">
         {body}
-        <div className="input-group-append">
-          <span className="input-group-text" id="basic-addon2">
-            %
-          </span>
-        </div>
-      </div>
+        <InputGroup.Append>
+          <InputGroup.Text>%</InputGroup.Text>
+        </InputGroup.Append>
+      </InputGroup>
     )
   }
   return (
-    <div className="form-group">
-      <label htmlFor="duration">{label}</label>
+    <Form.Group controlId={id} className="mb-3">
+      <Form.Label>{label}</Form.Label>
       {body}
-    </div>
+      {helpText && (
+        <Form.Text id={id + 'HelpText'} muted>
+          {helpText}
+        </Form.Text>
+      )}
+    </Form.Group>
   )
 }
 
@@ -194,22 +209,31 @@ export const PrevalenceControls: React.FunctionComponent<{
         {detailsOpen ? <BsChevronDown /> : <BsChevronRight />} Details
       </span>
       <Collapse in={detailsOpen}>
-        <div id="prevelance-details" style={{ marginTop: '1rem' }}>
-          <p>
-            Reported prevalence:{' '}
-            {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(
-              2,
-            )}
-            %<br />
-            Adjusted prevalence:{' '}
-            {(
-              ((calculateLocationPersonAverage(data) || 0) * 100) /
-              1e6
-            ).toFixed(2)}
-            %
-          </p>
+        <div id="prevelance-details">
+          <Card className="prevelance-result">
+            <Card.Body>
+              <div>
+                Reported prevalence:{' '}
+                {(
+                  (calculateLocationReportedPrevalence(data) || 0) * 100
+                ).toFixed(2)}
+                %
+              </div>
+              <div>
+                Adjusted prevalence:{' '}
+                <strong>
+                  {(
+                    ((calculateLocationPersonAverage(data) || 0) * 100) /
+                    1e6
+                  ).toFixed(2)}
+                  %
+                </strong>
+              </div>
+            </Card.Body>
+          </Card>
 
           <PrevalenceField
+            id="reported-cases"
             label="Reported cases in past week"
             value={(data.casesPastWeek || 0).toString()}
             setter={(value) =>
@@ -219,16 +243,19 @@ export const PrevalenceControls: React.FunctionComponent<{
             isEditable={!locationSet}
           />
           <PrevalenceField
-            label="Per how many people?"
+            id="population"
+            label="Per how many people"
+            helpText="Either total population or 100k if the value above is 'per 100k'"
             value={data.population}
             setter={(value) => setter({ ...data, population: value })}
             inputType="text"
             isEditable={!locationSet}
           />
           {locationSet && data.casesIncreasingPercentage === 0 ? (
-            <p>Cases are stable or decreasing.</p>
+            <div>Cases are stable or decreasing.</div>
           ) : (
             <PrevalenceField
+              id="precent-increase"
               label="Percent increase in cases from last week to this week"
               value={data.casesIncreasingPercentage}
               unit="%"
@@ -242,6 +269,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           )}
           {data.positiveCasePercentage === null ? (
             <PrevalenceField
+              id="positive-test-rate"
               label="Percent of tests that come back positive"
               value="no data available"
               unit="%"
@@ -251,6 +279,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             />
           ) : (
             <PrevalenceField
+              id="positive-test-rate"
               label="Percent of tests that come back positive"
               value={data.positiveCasePercentage.toString()}
               unit="%"
@@ -265,7 +294,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           )}
           {!locationSet ? null : (
             <div>
-              <p>
+              <p className="mt-3">
                 Prevalence data consolidated from {}
                 <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">
                   Johns Hopkins CSSE

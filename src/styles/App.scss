@@ -218,6 +218,17 @@ h1,h2,h3,h4,h5,h6 {
     input.form-control[readonly] {
       color: $gray-500 !important;
     }
+
+    .prevelance-result.card {
+      height: auto;
+      // background-color: $secondary;
+      // color: white;
+      border: 1px solid $secondary;
+      margin: 0.5rem;
+      .card-body {
+        padding: 0.8rem;
+      }
+    }
   }
 
   .empty {
