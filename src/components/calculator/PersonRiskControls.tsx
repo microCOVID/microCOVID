@@ -60,26 +60,8 @@ export const PersonRiskControls: React.FunctionComponent<{
         />
         <GroupSizeWarning people={data.personCount} />
       </div>
-      <SelectControl
-        id="riskProfile"
-        label="What is their risk profile?"
-        header="Risk Profile"
-        popover={personRiskPopover}
-        data={data}
-        setter={setter}
-        source={RiskProfile}
-        hideRisk={true}
-      />
       {!repeatedEvent ? (
         <React.Fragment>
-          <SelectControl
-            id="distance"
-            label="How close are they, on average?"
-            header="Distance"
-            data={data}
-            setter={setter}
-            source={Distance}
-          />
           <div className="form-group">
             <label htmlFor="duration">
               <strong>Duration:</strong> How long are each of these people
@@ -97,8 +79,26 @@ export const PersonRiskControls: React.FunctionComponent<{
               }
             />
           </div>
+          <SelectControl
+            id="distance"
+            label="How close are they, on average?"
+            header="Distance"
+            data={data}
+            setter={setter}
+            source={Distance}
+          />
         </React.Fragment>
       ) : null}
+      <SelectControl
+        id="riskProfile"
+        label="What is their risk profile?"
+        header="Risk Profile"
+        popover={personRiskPopover}
+        data={data}
+        setter={setter}
+        source={RiskProfile}
+        hideRisk={true}
+      />
       <br />
     </React.Fragment>
   )
