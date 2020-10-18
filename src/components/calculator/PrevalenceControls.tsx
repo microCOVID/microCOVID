@@ -191,7 +191,11 @@ export const PrevalenceControls: React.FunctionComponent<{
       <Collapse in={detailsOpen}>
         <div id="prevelance-details" style={{ marginTop: '1rem' }}>
           <p>
-            Reported prevalence: <br />
+            Reported prevalence:{' '}
+            {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(
+              2,
+            )}
+            %<br />
             Adjusted prevalence:{' '}
             {(
               ((calculateLocationPersonAverage(data) || 0) * 100) /
@@ -199,7 +203,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             ).toFixed(2)}
             %
           </p>
-          {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
+
           <PrevalenceField
             label="Reported cases in past week"
             value={(data.casesPastWeek || 0).toString()}

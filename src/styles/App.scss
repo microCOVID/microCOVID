@@ -177,9 +177,6 @@ h1,h2,h3,h4,h5,h6 {
       background-color: $warning-fill;
     }
     .calculator-params {
-      .form-group {
-        margin-bottom: 2em;
-      }
 
       h3 {
         margin: 0 0 0.6em 0;
@@ -228,6 +225,10 @@ h1,h2,h3,h4,h5,h6 {
 
   #activity-section {
     min-height: 1000px;
+
+    .form-group {
+      margin-bottom: 2em;
+    }
   }
 
   // Intermediate value readouts
