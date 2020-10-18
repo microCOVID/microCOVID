@@ -54,10 +54,9 @@ a {
   padding-right: 0;
 
   .navbar-brand {
-      @include media-breakpoint-down(md) {
-        font-size: 25px;
-       }
-
+    @include media-breakpoint-down(md) {
+      font-size: 25px;
+    }
   }
   a {
     text-decoration: none;
@@ -328,9 +327,12 @@ a {
 
       .risk-icon {
         width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 130%;
+        }
         height: auto;
         vertical-align: top;
-        margin: 1px 0 0 0;
+        margin: 3px 0 0 0;
         border-radius: 0;
       }
     }

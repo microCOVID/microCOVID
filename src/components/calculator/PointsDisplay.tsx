@@ -101,32 +101,28 @@ const riskLevels: RiskLevel[] = [
   { style: 'moderate', title: 'Moderate', max: 100 },
   { style: 'high', title: 'High', max: 300 },
   { style: 'very-high', title: 'Very High', max: 1000 },
-]
-
-const dangerousRiskLevels: RiskLevel[] = [
   {
     style: 'dangerous',
     title: 'Dangerously High',
     max: 100000,
     icon: BsExclamationTriangleFill,
   },
-  {
-    style: 'dangerous',
-    title: 'Life-Threatening',
-    max: 99999999999,
-    icon: BsExclamationOctagonFill,
-  },
 ]
+
+const lifeThreateningRisk = {
+  style: 'dangerous',
+  title: 'Life-Threatening',
+  max: 1e15, // Very large number
+  icon: BsExclamationOctagonFill,
+}
 
 const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5 // Shows up through 'Very High'
 
 function howRisky(points: number, budget: number): RiskLevel {
   // First check against dangerous risk levels. Don't normalize points here because we primarily want to indicate the risk to others, not the risk to you others at these "dangerous" levels
-  if (points >= dangerousRiskLevels[0].max) {
-    return (
-      dangerousRiskLevels.find((level) => points < level.max) ||
-      dangerousRiskLevels[riskLevels.length - 1] // Default to the highest risk level
-    )
+  const highestNormalRisklevel = riskLevels[riskLevels.length - 1]
+  if (points >= highestNormalRisklevel.max) {
+    return lifeThreateningRisk
   }
 
   // Then check against normalized points
