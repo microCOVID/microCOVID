@@ -65,7 +65,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   }
 
   return (
-    <Form.Group controlId="saved-data">
+    <Form.Group>
       <Form.Control
         as="select"
         size="lg"
