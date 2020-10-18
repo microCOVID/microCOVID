@@ -3,30 +3,28 @@ import { Popover } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import { SelectControl } from './SelectControl'
-import { CalculatorData, calculateActivityRisk } from 'data/calculate'
+import { CalculatorData } from 'data/calculate'
 import { Setting, TheirMask, Voice, YourMask } from 'data/data'
-import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
 
 export const ActivityRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
-  const activityRisk = calculateActivityRisk(data)
+  const header = (
+    <h3 className="h2 accent">
+      <span>Precautions</span>
+    </h3>
+  )
 
   if (repeatedEvent) {
     return (
       <React.Fragment>
-        <span className="readout">
-          The <i>second</i> part of the calculation is Activity Risk: assuming 1
-          such person has COVID, then you would have a{' '}
-          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
-          COVID.
-        </span>
-        <div className="empty">
+        {header}
+        <div className="readout mb-4">
           When estimating your risk of infection from a household member or
-          partner/spouse we assume these interactions are indoors, unmasked, and
-          undistanced.
+          partner/spouse, we assume these interactions are indoors, unmasked,
+          and undistanced.
         </div>
       </React.Fragment>
     )
@@ -34,9 +32,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
 
   return (
     <React.Fragment>
-      <h3 className="h2 accent">
-        <span>Precautions</span>
-      </h3>
+      {header}
       <SelectControl
         id="setting"
         header="Environment"
