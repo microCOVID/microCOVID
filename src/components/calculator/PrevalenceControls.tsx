@@ -292,6 +292,11 @@ export const PrevalenceControls: React.FunctionComponent<{
               isEditable={!locationSet}
             />
           )}
+
+          <div>
+            <em>Data last updated: {PrevalenceDataDate}</em>
+          </div>
+
           {!locationSet ? null : (
             <div>
               <p className="mt-3">
@@ -309,7 +314,6 @@ export const PrevalenceControls: React.FunctionComponent<{
                 </a>{' '}
                 (international positive test rates).
               </p>
-              <p>Data last updated {PrevalenceDataDate}.</p>
             </div>
           )}
         </div>
