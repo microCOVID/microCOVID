@@ -43,8 +43,14 @@ export const PersonRiskControls: React.FunctionComponent<{
       <div className="form-group">
         <label htmlFor="personCount">
           <div>
-            <strong>People:</strong> How many people get near you?{' '}
-            <em>(within 10ft or less)</em>
+            <strong>People:</strong>{' '}
+            {!repeatedEvent ? (
+              <>
+                How many people get near you? <em>(within 10ft or less)</em>
+              </>
+            ) : (
+              <>How many people do you have this type of realtionship with?</>
+            )}
           </div>
         </label>
         <input
@@ -60,6 +66,7 @@ export const PersonRiskControls: React.FunctionComponent<{
         />
         <GroupSizeWarning people={data.personCount} />
       </div>
+
       {!repeatedEvent ? (
         <React.Fragment>
           <div className="form-group">

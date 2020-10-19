@@ -150,9 +150,7 @@ export const Calculator = (): React.ReactElement => {
             getting COVID from a wide range of activities, using the{' '}
             <a href="/paper">best research available</a>. We hope this tool will
             help hone your intuition, lower your stress levels, and figure out
-            good harm-reduction strategies. To read about some high level
-            conclusions we’ve come to about what is and isn’t risky,{' '}
-            <a href="/paper">click here</a>.
+            good harm-reduction strategies.
           </p>
           <FirstTimeUserIntroduction />
         </Col>
