@@ -14,7 +14,7 @@ import {
 } from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
-import { SelectControl } from 'components/calculator/SelectControl'
+import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
 import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
@@ -187,11 +187,18 @@ export const Calculator = (): React.ReactElement => {
                   Step 2: Describe the activity
                 </header>
                 <div>
-                  <SelectControl
+                  <GenericSelectControl
                     id="interaction"
                     label="Is this a single activity or an ongoing relationship?"
-                    data={calculatorData}
-                    setter={setCalculatorData}
+                    setter={(value) =>
+                      setCalculatorData({
+                        ...calculatorData,
+                        interaction: value,
+                        personCount:
+                          value === 'partner' ? 1 : calculatorData.personCount,
+                      })
+                    }
+                    value={calculatorData.interaction}
                     source={Interaction}
                     hideRisk={true}
                   />
