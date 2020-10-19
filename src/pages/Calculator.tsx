@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { useQueryParams } from 'use-query-params'
 
 import {
   recordCalculatorChanged,
@@ -22,11 +23,18 @@ import {
   parsePopulation,
 } from 'data/calculate'
 import { saveCalculation } from 'data/localStorage'
+import {
+  filterParams,
+  queryConfig,
+  useQueryDataIfPresent,
+} from 'data/queryParams'
 
 const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
+  const [query, setQuery] = useQueryParams(queryConfig)
+
   // Mount / unmount
   useEffect(() => {
     scrollListener()
@@ -42,10 +50,12 @@ export const Calculator = (): React.ReactElement => {
     localStorage.getItem(FORM_STATE_KEY) || 'null',
   )
 
+  const migratedPreviousData = migrateDataToCurrent(previousData)
+
   const [showSaveForm, setShowSaveForm] = useState(false)
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
-    migrateDataToCurrent(previousData),
+    useQueryDataIfPresent(query, migratedPreviousData),
   )
 
   const resetForm = () => {
@@ -60,12 +70,18 @@ export const Calculator = (): React.ReactElement => {
     recordSavedCustom(points)
   }
 
-  const points = useMemo(() => {
+  const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
-    const computedValue = calculate(calculatorData)
+    const result = calculate(calculatorData)
+    if (result === null) {
+      document.getElementById('points-row')?.classList.remove('has-points')
+      return { points: -1, lowerBound: -1, upperBound: -1 }
+    }
 
-    if (computedValue) {
-      recordCalculatorChanged(computedValue)
+    const { expectedValue, lowerBound, upperBound } = result
+
+    if (expectedValue) {
+      recordCalculatorChanged(expectedValue)
     }
 
     // Store data for refresh
@@ -77,15 +93,12 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
-    if (computedValue === null) {
-      document.getElementById('points-row')?.classList.remove('has-points')
-      return -1
-    }
+    setQuery(filterParams(calculatorData), 'replace')
 
     document.getElementById('points-row')?.classList.add('has-points')
 
-    return computedValue
-  }, [calculatorData])
+    return { points: expectedValue, lowerBound, upperBound }
+  }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
@@ -223,7 +236,12 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row className="sticky" id="points-row">
         <Col lg={{ span: 8, offset: 4 }}>
-          <PointsDisplay points={points} repeatedEvent={repeatedEvent} />
+          <PointsDisplay
+            points={points}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
+            repeatedEvent={repeatedEvent}
+          />
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">

@@ -1,3 +1,5 @@
+import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
+
 export interface FormValue {
   label: string
   multiplier: number
@@ -7,16 +9,27 @@ const formValue = function (label: string, multiplier: number): FormValue {
   return { label, multiplier }
 }
 
+const oneTimeMult = 0.06
 const housemateMult = 0.3
+const partnerMult = 0.48
 export const Interaction: { [key: string]: FormValue } = {
-  oneTime: { label: 'One-time interaction', multiplier: 0.06 },
+  oneTime: {
+    label: `One-time interaction [${fixedPointPrecisionPercent(
+      oneTimeMult,
+    )} chance of transmission per hour]`,
+    multiplier: oneTimeMult,
+  },
   repeated: {
-    label: 'Household member',
+    label: `Household member [${fixedPointPrecisionPercent(
+      housemateMult,
+    )} chance of transmission per week]`,
     multiplier: housemateMult,
   },
   partner: {
-    label: 'Partner / spouse',
-    multiplier: 0.48,
+    label: `Partner / spouse [${fixedPointPrecisionPercent(
+      partnerMult,
+    )} chance of transmission per week]`,
+    multiplier: partnerMult,
   },
 }
 
@@ -24,11 +37,15 @@ export const Setting: { [key: string]: FormValue } = {
   indoor: { label: 'Indoor', multiplier: 1 },
   outdoor: { label: 'Outdoor', multiplier: 0.05 },
 }
+
+export const intimateDurationFloor = 60
+
 export const Distance: { [key: string]: FormValue } = {
-  intimate: formValue('Cuddling / intimate', 2),
-  normal: formValue('Normal socializing (~3 feet apart)', 1),
-  sixFt: formValue('6+ feet apart', 0.5),
-  tenFt: formValue('10+ feet apart', 0.25),
+  intimate: formValue('Kissing', 2),
+  close: formValue('Close (<1ft / 0.3m apart)', 2),
+  normal: formValue('Normal socializing (~3ft/ ~1m apart)', 1),
+  sixFt: formValue('>6ft / 2m apart', 0.5),
+  tenFt: formValue('>10ft / 3m apart', 0.25),
 }
 
 const noneLabel = 'No mask or poorly-worn mask'
