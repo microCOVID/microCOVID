@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
-import { Popover } from 'react-bootstrap'
+import { Collapse, Form, Popover } from 'react-bootstrap'
+import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
-import { MAX_POINTS } from 'data/calculate'
+import {
+  CalculatorData,
+  calculateActivityRisk,
+  calculateLocationPersonAverage,
+  calculatePersonRiskEach,
+} from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -22,87 +28,212 @@ function displayPercent(points: number): string {
   return showPoints(points) ? fixedPointPrecisionPercent(points * 1e-6) : '—%'
 }
 
-function tooManyPoints(points: number): boolean {
-  return points >= MAX_POINTS
-}
-
 export function ExplanationCard(props: {
   points: number
+  lowerBound: number
+  upperBound: number
   repeatedEvent: boolean
+  data: CalculatorData
 }): React.ReactElement {
   const [riskBudget, setRiskBudget] = useState(10000)
 
   const points = props.points
 
-  const [risky, riskyStyle] = howRisky(points, riskBudget)
+  const [displayCalculationExplanation, setCalculationExplanation] = useState(
+    false,
+  )
+
+  const locationRisk = calculateLocationPersonAverage(props.data) || 0
+  const personRiskEach = Math.round(
+    calculatePersonRiskEach(props.data, locationRisk) || 0,
+  )
+  const activityRisk = calculateActivityRisk(props.data)
+
+  const personRiskEachFormatted = personRiskEach.toLocaleString()
+  const pointsFormatted = displayPoints(points)
+  const pointsPercentFormatted = displayPercent(points)
+  const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)
+  const frequencyFormatted = props.repeatedEvent
+    ? 'per week'
+    : 'each time you do it'
+  const lowerBoundFormatted = displayPoints(props.lowerBound)
+  const upperBoundFormatted = displayPoints(props.upperBound)
+  const budgetFormatted = displayPoints(riskBudget)
+  const budgetAnnualPercentFormatted = fixedPointPrecisionPercent(
+    riskBudget / 1000000,
+  )
+  const weekBudgetFormatted = getWeekBudget(riskBudget)
+  const budgetConsumptionFormatted = budgetConsumption(
+    props.points,
+    riskBudget,
+    props.repeatedEvent,
+  )
 
   return (
     <Card>
-      <p className="readout">
-        <b>
-          {' '}
-          {showPoints && tooManyPoints(points)
-            ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
-            : ''}
-        </b>
-      </p>
-      <h2>How risky is this?</h2>
-      <GenericSelectControl
-        id="budget-selector"
-        label="If your risk tolerance is..."
-        popover={riskTolerancePopover}
-        setter={(e: string) => setRiskBudget(Number.parseInt(e))}
-        value={riskBudget}
-        source={{
-          '10000': {
-            label: '1% per year (suggested if not at increased risk)',
-            multiplier: 1,
-          },
-          '1000': {
-            label:
-              '0.1% per year (suggest if at increased risk or regularly interacting with people at increased risk)',
-            multiplier: 0.1,
-          },
-        }}
-      />
-      <p className="readout">
-        ... then for you this is a{' '}
-        <span className={riskyStyle}>
-          <b>{showPoints(points) ? risky : '——'}</b>
-        </span>{' '}
-        risk activity.
-      </p>
-      <h2>What does this mean numerically?</h2>
-      <p>
-        This is a roughly ~{displayPoints(points)}-in-a-million (
-        {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
-        chance of getting COVID from this activity with these people.
-      </p>
-      <p>{budgetConsumption(points, riskBudget, props.repeatedEvent)}</p>
+      <span
+        className="expandable-header"
+        onClick={() =>
+          setCalculationExplanation(!displayCalculationExplanation)
+        }
+        aria-controls="calculation-explanation"
+        aria-expanded={displayCalculationExplanation}
+      >
+        {displayCalculationExplanation ? (
+          <>
+            <BsChevronDown /> How this was calculated
+          </>
+        ) : (
+          <>
+            <BsChevronRight /> Learn how this was calculated
+          </>
+        )}
+      </span>
+      <Collapse in={displayCalculationExplanation}>
+        <div id="calculation-explanation">
+          <div>
+            <h4>Calculation:</h4>
+            <div id="calculation-breakdown">
+              <code>
+                ({personRiskEachFormatted} Person Risk) x (
+                {activityRiskFormatted} Activity Risk) x (
+                {props.data.personCount}{' '}
+                {props.data.personCount === 1 ? 'person' : 'people'})<br />
+                <strong>
+                  = ~{pointsFormatted} microCOVIDs {frequencyFormatted}
+                </strong>{' '}
+                (range: {lowerBoundFormatted} to {upperBoundFormatted})
+              </code>{' '}
+            </div>
+          </div>
+          <h4>Calculation Steps:</h4>
+          <ol>
+            <li>
+              <strong>
+                Person Risk:{' '}
+                <code>{personRiskEachFormatted}-in-a-million chance</code>
+              </strong>{' '}
+              <br />
+              First, we calculate that each other person in this area has a{' '}
+              <strong>{personRiskEachFormatted}-in-a-million chance</strong>
+              {'  '} of currently having COVID.
+            </li>
+            <li>
+              <strong>
+                Activity Risk: <code>{activityRiskFormatted} chance</code>
+              </strong>
+              <br /> Next, we calcualte the risk of the activity. Assuming 1
+              person at this activity has COVID, then you would have a{' '}
+              <strong>{activityRiskFormatted} chance</strong> of getting COVID.
+              [Optional message if triggered: (NOTE: We have capped this number
+              at the maximum Activity Risk.)]
+            </li>
+            <li>
+              <strong>
+                Total risk:{' '}
+                <code>
+                  ~{pointsFormatted}-in-a-million ({pointsPercentFormatted})
+                </code>
+              </strong>
+              <br />
+              Finally, we multiply Person Risk, Activity Risk, and the number of
+              people to get the total result of roughly{' '}
+              <strong>
+                {pointsFormatted}-in-a-million ({pointsPercentFormatted})
+              </strong>{' '}
+              chance of getting COVID from this activity with these people{' '}
+              <strong>{frequencyFormatted}</strong>.
+            </li>
+            <li>
+              <strong>
+                Frequency: <code>microCOVIDs {frequencyFormatted}</code>
+              </strong>
+              <br />
+              {props.repeatedEvent ? (
+                <>
+                  Since you are seeing these people many times per week, the
+                  result you see is{' '}
+                  <strong>
+                    microCOVIDs <u>per week</u>
+                  </strong>
+                  . (As opposed to one-time interactions show a total that you
+                  count <em>each time</em> you have that interaction.)
+                </>
+              ) : (
+                <>
+                  Since this is a one-time interaction, the results is shown as{' '}
+                  <strong>
+                    microCOVIDs <u>each time</u> you have this interaction
+                  </strong>
+                  . If you do this activity many times in a week, each time you
+                  do it, it will count against your weekly budget.
+                </>
+              )}
+            </li>
+            <li>
+              <strong>
+                Margin of error:{' '}
+                <code>
+                  {lowerBoundFormatted} to {upperBoundFormatted} microCOVIDs
+                </code>
+              </strong>
+              <br />
+              (some explanation text here)
+            </li>
+          </ol>
+          <h4>How much of this can I do given my risk budget?</h4>
+          <ul>
+            <li>
+              <strong>
+                Budget used:{' '}
+                <code>
+                  {budgetConsumptionFormatted}% of your {weekBudgetFormatted}{' '}
+                  microCOVIDs per week budget
+                </code>
+              </strong>{' '}
+              <br />
+              You select an annual budget is {budgetAnnualPercentFormatted}{' '}
+              chance of getting COVID per year ({budgetFormatted} microCOVIDs).
+              That equates to a weekly budget of{' '}
+              <strong>{weekBudgetFormatted} microCOVIDs per week</strong>. This
+              ineraction takes up{' '}
+              <code>
+                {budgetConsumptionFormatted}% of your weekly budget{' '}
+                {frequencyFormatted}
+              </code>{' '}
+              .
+            </li>
+          </ul>
+        </div>
+      </Collapse>
+
+      <Form.Group>
+        <GenericSelectControl
+          id="budget-selector"
+          label=" "
+          header="Adjust your risk tolerance"
+          popover={riskTolerancePopover}
+          setter={(e: string) => setRiskBudget(Number.parseInt(e))}
+          value={riskBudget}
+          source={{
+            '10000': {
+              label: '1% per year (suggested if not at increased risk)',
+              multiplier: 1,
+            },
+            '1000': {
+              label:
+                '0.1% per year (suggest if at increased risk or regularly interacting with people at increased risk)',
+              multiplier: 0.1,
+            },
+          }}
+        />
+      </Form.Group>
     </Card>
   )
 }
 
-const riskyStyles = ['low-risk', 'medium-risk', 'high-risk']
-const STYLE_LOW = 0
-const STYLE_MEDIUM = 1
-const STYLE_HIGH = 2
-
-function howRisky(points: number, budget: number): string[] {
-  const normalizedPoints = points / (budget / 10000)
-  if (normalizedPoints < 3) {
-    return ['very low', riskyStyles[STYLE_LOW]]
-  } else if (normalizedPoints < 25) {
-    return ['low', riskyStyles[STYLE_LOW]]
-  } else if (normalizedPoints < 100) {
-    return ['moderate', riskyStyles[STYLE_MEDIUM]]
-  } else if (normalizedPoints < 300) {
-    return ['high', riskyStyles[STYLE_HIGH]]
-  } else if (normalizedPoints < 1000) {
-    return ['very high', riskyStyles[STYLE_HIGH]]
-  } else {
-    return ['dangerously high', riskyStyles[STYLE_HIGH]]
-  }
+const getWeekBudget = (budget: number) => {
+  return budget / 50 // Numbers look cleaner than 52.
 }
 
 const budgetConsumption = (

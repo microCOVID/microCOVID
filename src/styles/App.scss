@@ -243,6 +243,10 @@ a {
     }
   }
 
+  #points-row .col-md-12 {
+    margin-bottom: 0;
+  }
+
   .sticky {
     z-index: 1;
     padding-bottom: 0;
@@ -264,8 +268,20 @@ a {
 
   .explanation .card {
     border: 1px solid $border-color;
+    border-top: 0px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+
+    #calculation-explanation {
+      border: 1px solid $border-color;
+      padding: 1em;
+      margin: 1em 0;
+      background-color: $gray-100;
+
+      #calculation-breakdown {
+        margin-left: 2em;
+      }
+    }
   }
 }
 
