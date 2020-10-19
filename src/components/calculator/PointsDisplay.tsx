@@ -46,6 +46,8 @@ export function ExplanationCard(props: {
   riskBudget: number
   riskBudgetSetter: (newValue: number) => void
 }): React.ReactElement {
+  const [riskBudget, setRiskBudget] = useState(10000)
+
   const points = props.points
 
   const [displayCalculationExplanation, setCalculationExplanation] = useState(
