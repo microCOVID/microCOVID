@@ -33,6 +33,13 @@ a {
   text-decoration: underline;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  margin-top: 2.4rem;
+  margin-bottom: 1.3rem;
+}
+
 .footer {
   width: 100%;
   line-height: 1.2;
@@ -96,6 +103,8 @@ a {
   padding: 10px;
   margin: 0 -12px 1.5rem -12px;
   background-color: $warning-fill;
+
+  h2 { margin: 0; }
 }
 
 // Home page
@@ -265,11 +274,6 @@ a {
   h1 { color: $primary}
 
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Roboto Slab';
-    font-weight: 700;
-    margin-top: 2.4rem;
-    margin-bottom: 1.3rem;
-
     // Flip text and anchor links left-to-right
     display: flex;
     justify-content: flex-end;
@@ -297,7 +301,7 @@ a {
     padding: 10px;
     margin: 2.4rem -12px 1.6rem -12px;
     background-color: $warning-fill;
-    h2:first-child { margin-top: 0; }
+    h2:first-child { margin: 0; }
     p:last-child { margin-bottom: 0; }
   }
 
