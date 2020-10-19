@@ -2,11 +2,7 @@ import React from 'react'
 import { Popover } from 'react-bootstrap'
 
 import { SelectControl } from './SelectControl'
-import {
-  CalculatorData,
-  calculateLocationPersonAverage,
-  calculatePersonRiskEach,
-} from 'data/calculate'
+import { CalculatorData } from 'data/calculate'
 import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
 
 const personRiskPopover = (

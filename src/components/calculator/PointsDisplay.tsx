@@ -1,8 +1,7 @@
-import { Col, Popover, Row } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Col, Collapse, Form, Popover, Row } from 'react-bootstrap'
 import { IconType } from 'react-icons'
 import { BsExclamationTriangleFill } from 'react-icons/bs'
-import React, { useState } from 'react'
-import { Collapse, Form, Popover } from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
@@ -10,17 +9,17 @@ import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
 import {
   CalculatorData,
+  MAX_ACTIVITY_RISK,
+  ONE_MILLION,
   calculateActivityRisk,
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
-  ONE_MILLION
-  MAX_ACTIVITY_RISK,
 } from 'data/calculate'
+import { intimateDurationFloor } from 'data/data'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
 } from 'data/FormatPrecision'
-import { intimateDurationFloor } from 'data/data'
 
 function showPoints(points: number): boolean {
   return points >= 0
@@ -64,15 +63,14 @@ export function ExplanationCard(props: {
     : 'each time you do it'
   const lowerBoundFormatted = displayPoints(props.lowerBound)
   const upperBoundFormatted = displayPoints(props.upperBound)
-  const budgetFormatted = displayPoints(riskBudget)
+  const budgetFormatted = displayPoints(props.riskBudget)
   const budgetAnnualPercentFormatted = fixedPointPrecisionPercent(
-    riskBudget / 1000000,
+    props.riskBudget / 1000000,
   )
-  const weekBudgetFormatted = getWeekBudget(riskBudget)
+  const weekBudgetFormatted = getWeekBudget(props.riskBudget)
   const budgetConsumptionFormatted = budgetConsumption(
     props.points,
-    riskBudget,
-    props.repeatedEvent,
+    props.riskBudget,
   )
 
   return (
@@ -278,8 +276,8 @@ export function ExplanationCard(props: {
           label=" "
           header="Adjust your risk tolerance"
           popover={riskTolerancePopover}
-          setter={(e: string) => setRiskBudget(Number.parseInt(e))}
-          value={riskBudget}
+          setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
+          value={props.riskBudget}
           source={{
             '10000': {
               label: '1% per year (suggested if not at increased risk)',
