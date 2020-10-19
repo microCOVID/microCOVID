@@ -316,6 +316,15 @@ const riskLevels: RiskLevel[] = [
   },
 ]
 
+const RISK_LEVELS_TO_SHOW_ON_THERMOMETER = 5 // Shows up through 'Very High'
+
+/**
+ * Pick the top X risk levels for display and use reverse the order (so they display correctly)
+ */
+const riskLevelsForThermometer = riskLevels
+  .slice(0, RISK_LEVELS_TO_SHOW_ON_THERMOMETER)
+  .reverse()
+
 const lifeThreateningRisk = {
   style: 'dangerous',
   title: 'Life-Threatening',
@@ -323,9 +332,7 @@ const lifeThreateningRisk = {
   icon: BsExclamationOctagonFill,
 }
 
-const RISK_LEVELS_TO_SHOW_ON_LEGEND = 5 // Shows up through 'Very High'
-
-function howRisky(points: number, budget: number): RiskLevel {
+const howRisky = (points: number, budget: number): RiskLevel => {
   // First check against dangerous risk levels. Don't normalize points here because we primarily want to indicate the risk to others, not the risk to you others at these "dangerous" levels
   const highestNormalRisklevel = riskLevels[riskLevels.length - 1]
   if (points >= highestNormalRisklevel.max) {
@@ -336,7 +343,7 @@ function howRisky(points: number, budget: number): RiskLevel {
   const normalizedPoints = points / (budget / 10000)
   const curLevel = riskLevels.find((level) => normalizedPoints < level.max)
   return (
-    curLevel || riskLevels[riskLevels.length - 1] // Default to the highest risk level
+    curLevel || lifeThreateningRisk // Default to the highest risk level
   )
 }
 
@@ -356,6 +363,55 @@ const budgetConsumption = (points: number, budget: number) => {
   )}% of your weekly risk budget`
 }
 
+function Thermometer(props: {
+  doShowPoints: boolean
+  activeRiskLevel: RiskLevel
+}): React.ReactElement {
+  const onActiveLevel = (
+    activeRiskLevel: RiskLevel,
+    comparisonRiskLevel: RiskLevel,
+  ) => {
+    return activeRiskLevel.title === comparisonRiskLevel.title
+  }
+
+  const addActiveLevelClass = (
+    doShowPoints: boolean,
+    activeRiskLevel: RiskLevel,
+    comparisonRiskLevel: RiskLevel,
+  ) => {
+    return doShowPoints && onActiveLevel(activeRiskLevel, comparisonRiskLevel)
+      ? ' current-level'
+      : ''
+  }
+
+  return (
+    <>
+      {props.doShowPoints && props.activeRiskLevel.icon ? (
+        <>
+          <props.activeRiskLevel.icon
+            className={'risk-icon text-risk-' + props.activeRiskLevel.style}
+          />
+        </>
+      ) : (
+        // Iterate on the risk levels to build each pieces of the thermometer, and set the active level.
+        riskLevelsForThermometer.map((level) => (
+          <div
+            key={level.style}
+            className={
+              `thermometer-piece risk-${level.style}` +
+              addActiveLevelClass(
+                props.doShowPoints,
+                props.activeRiskLevel,
+                level,
+              )
+            }
+          ></div>
+        ))
+      )}
+    </>
+  )
+}
+
 export function PointsDisplay(props: {
   points: number
   repeatedEvent: boolean
@@ -364,41 +420,22 @@ export function PointsDisplay(props: {
   upperBound: number
   lowerBound: number
 }): React.ReactElement {
-  const currentRiskLevel = howRisky(props.points, props.riskBudget)
+  const activeRiskLevel = howRisky(props.points, props.riskBudget)
   const doShowPoints = showPoints(props.points)
   return (
     <Row className="top-half-card no-gutters">
-      <Col className="legend-container">
-        {doShowPoints && currentRiskLevel.icon ? (
-          <>
-            <currentRiskLevel.icon
-              className={'risk-icon text-risk-' + currentRiskLevel.style}
-            />
-          </>
-        ) : (
-          riskLevels
-            .map((level) => level.style)
-            .slice(0, RISK_LEVELS_TO_SHOW_ON_LEGEND) // Makes a shallow copy of the displayable risk levels
-            .reverse() // Reverse the sort so the lowest items are at the bottom
-            .map((level) => (
-              <div
-                key={level}
-                className={
-                  `legend-piece risk-${level}` +
-                  (!doShowPoints || level !== currentRiskLevel.style
-                    ? ''
-                    : ' current-level')
-                }
-              ></div>
-            ))
-        )}
+      <Col className="thermometer-container">
+        <Thermometer
+          doShowPoints={doShowPoints}
+          activeRiskLevel={activeRiskLevel}
+        />
       </Col>
       <Col md="11" sm="10" xs="10" className="points-container">
         {!doShowPoints ? (
           <div className="risk-level"></div>
         ) : (
-          <div className={'risk-level risk-' + currentRiskLevel.style}>
-            <span>{currentRiskLevel.title} Risk</span>
+          <div className={'risk-level risk-' + activeRiskLevel.style}>
+            <span>{activeRiskLevel.title} Risk</span>
           </div>
         )}
         <div className="budget-consumption">
@@ -421,7 +458,7 @@ export function PointsDisplay(props: {
               <span className="points-range d-md-inline d-none">
                 {props.upperBound >= ONE_MILLION ? null : (
                   <>
-                    (range: {displayPoints(props.lowerBound)} to{' '}
+                    (probably between: {displayPoints(props.lowerBound)} to{' '}
                     {displayPoints(props.upperBound)})
                   </>
                 )}
