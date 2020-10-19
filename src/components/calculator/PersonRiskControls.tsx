@@ -40,26 +40,35 @@ export const PersonRiskControls: React.FunctionComponent<{
       <h3 className="h2 accent">
         <span>Nearby people</span>
       </h3>
-      <div className="form-group">
-        <label htmlFor="personCount">
-          <div>
-            <strong>People:</strong> How many people get near you?{' '}
-            <em>(within 10ft or less)</em>
-          </div>
-        </label>
-        <input
-          className="form-control form-control-lg col-md-3"
-          type="number"
-          value={data.personCount}
-          onChange={(e) =>
-            setter({
-              ...data,
-              personCount: Math.max(0, parseInt(e.target.value)),
-            })
-          }
-        />
-        <GroupSizeWarning people={data.personCount} />
-      </div>
+      {data.interaction === 'partner' ? null : (
+        <div className="form-group">
+          <label htmlFor="personCount">
+            <div>
+              <strong>People:</strong>{' '}
+              {repeatedEvent ? (
+                <>How many people do you live with?</>
+              ) : (
+                <>
+                  How many people get near you? <em>(within 15ft or less)</em>
+                </>
+              )}
+            </div>
+          </label>
+          <input
+            className="form-control form-control-lg col-md-3"
+            type="number"
+            value={data.personCount}
+            onChange={(e) =>
+              setter({
+                ...data,
+                personCount: Math.max(0, parseInt(e.target.value)),
+              })
+            }
+          />
+          <GroupSizeWarning people={data.personCount} />
+        </div>
+      )}
+
       {!repeatedEvent ? (
         <React.Fragment>
           <div className="form-group">

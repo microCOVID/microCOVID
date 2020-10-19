@@ -14,7 +14,7 @@ import {
 } from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
-import { SelectControl } from 'components/calculator/SelectControl'
+import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
 import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
@@ -152,9 +152,7 @@ export const Calculator = (): React.ReactElement => {
             getting COVID from a wide range of activities, using the{' '}
             <a href="/paper">best research available</a>. We hope this tool will
             help hone your intuition, lower your stress levels, and figure out
-            good harm-reduction strategies. To read about some high level
-            conclusions we’ve come to about what is and isn’t risky,{' '}
-            <a href="/paper">click here</a>.
+            good harm-reduction strategies.
           </p>
           <FirstTimeUserIntroduction />
         </Col>
@@ -191,11 +189,18 @@ export const Calculator = (): React.ReactElement => {
                   Step 2: Describe the activity
                 </header>
                 <div>
-                  <SelectControl
+                  <GenericSelectControl
                     id="interaction"
                     label="Is this a single activity or an ongoing relationship?"
-                    data={calculatorData}
-                    setter={setCalculatorData}
+                    setter={(value) =>
+                      setCalculatorData({
+                        ...calculatorData,
+                        interaction: value,
+                        personCount:
+                          value === 'partner' ? 1 : calculatorData.personCount,
+                      })
+                    }
+                    value={calculatorData.interaction}
                     source={Interaction}
                     hideRisk={true}
                   />
