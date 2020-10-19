@@ -156,8 +156,7 @@ export function ExplanationCard(props: {
                   <strong>
                     microCOVIDs <u>per week</u>
                   </strong>
-                  . (As opposed to one-time interactions show a total that you
-                  count <em>each time</em> you have that interaction.)
+                  .
                 </>
               ) : (
                 <>
@@ -206,6 +205,59 @@ export function ExplanationCard(props: {
           </ul>
         </div>
       </Collapse>
+
+      <div className="mt-2" id="additional-precautions">
+        {props.repeatedEvent ? (
+          <>
+            <h4>Here are some ways of reducing the risk of this activity:</h4>
+            <em>These may or may not apply to your activity.</em>
+            <ol className="mt-2">
+              <li>
+                MODify your activities (make them Masked, Outdoors, Distanced)
+              </li>
+              <li>
+                Wear the best mask you can get! [link “learn more about masks”]
+              </li>
+              <li>Visit public places during less crowded hours</li>
+              <li>Use delivery services to replace shopping trips</li>
+            </ol>
+          </>
+        ) : (
+          <>
+            <h4>
+              Here are some ways you can work with close contacts to reduce
+              their risk:
+            </h4>
+            <ol className="mt-2">
+              <li>
+                Talk to them about how their choices affect your risk, as well
+                as theirs
+              </li>
+              <li>
+                Ask them to MODify their activities (Masked, Outdoors,
+                Distanced)
+              </li>
+              <li>
+                Essential workers can wear a top quality mask N95 (or KN95) to
+                work
+              </li>
+              <li>
+                Encourage them to limit their socializing to as few people as
+                possible
+              </li>
+              <li>
+                Encrouage them to be in a closed pod with you and a small group
+                of others
+              </li>
+              <li>
+                If they are very risky and you must be inside with them, you can
+                wear masks inside or isolate within the house by staying in
+                different rooms.
+              </li>
+            </ol>
+          </>
+        )}
+      </div>
 
       <Form.Group>
         <GenericSelectControl

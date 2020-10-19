@@ -272,14 +272,29 @@ a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 
+    h4 {
+      margin-top: 0.5em;
+    }
+
     #calculation-explanation {
       border: 1px solid $border-color;
       padding: 1em;
       margin: 1em 0;
       background-color: $gray-100;
 
+
       #calculation-breakdown {
         margin-left: 2em;
+      }
+
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    #additional-precautions {
+      li {
+        margin-bottom: 0.2em;
       }
     }
   }
