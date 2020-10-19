@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Popover, Row } from 'react-bootstrap'
 import { IconType } from 'react-icons'
 import {
-  BsExclamationOctagonFill,
+  // BsExclamationOctagonFill,
   BsExclamationTriangleFill,
 } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
@@ -107,25 +107,26 @@ const riskLevelsForThermometer = riskLevels
   .slice(0, RISK_LEVELS_TO_SHOW_ON_THERMOMETER)
   .reverse()
 
-const lifeThreateningRisk = {
-  style: 'dangerous',
-  title: 'Life-Threatening',
-  max: 1e15, // Very large number
-  icon: BsExclamationOctagonFill,
-}
+// const lifeThreateningRisk = {
+//   style: 'dangerous',
+//   title: 'Life-Threatening',
+//   max: 1e15, // Very large number
+//   icon: BsExclamationOctagonFill,
+// }
 
 const howRisky = (points: number, budget: number): RiskLevel => {
   // First check against dangerous risk levels. Don't normalize points here because we primarily want to indicate the risk to others, not the risk to you others at these "dangerous" levels
+  // TODO: Decide if we want to re-integrate this level later
   const highestNormalRisklevel = riskLevels[riskLevels.length - 1]
-  if (points >= highestNormalRisklevel.max) {
-    return lifeThreateningRisk
-  }
+  // if (points >= highestNormalRisklevel.max) {
+  //   return lifeThreateningRisk
+  // }
 
   // Then check against normalized points
   const normalizedPoints = points / (budget / 10000)
   const curLevel = riskLevels.find((level) => normalizedPoints < level.max)
   return (
-    curLevel || lifeThreateningRisk // Default to the highest risk level
+    curLevel || highestNormalRisklevel // Default to the highest risk level
   )
 }
 
