@@ -190,6 +190,7 @@ export const Calculator = (): React.ReactElement => {
                   <GenericSelectControl
                     id="interaction"
                     label="Is this a single activity or an ongoing relationship?"
+                    // This setter defaults to a personCount of 1 if the interaction type is "partner"
                     setter={(value) =>
                       setCalculatorData({
                         ...calculatorData,
