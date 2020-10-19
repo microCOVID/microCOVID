@@ -14,7 +14,7 @@ import {
 } from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
-import { SelectControl } from 'components/calculator/SelectControl'
+import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
 import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
@@ -115,11 +115,11 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const saveForm = (
-    <div className="input-group">
+    <div className="input-group save-form float-right col-lg-6 col-md-8">
       <input
         className="form-control"
         type="text"
-        placeholder="Enter name to save your custom scenario to the scenario list"
+        placeholder="Name of your custom scenario"
         value={saveName}
         onChange={(e) => setSaveName(e.target.value)}
       />
@@ -132,15 +132,13 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const saveButton = (
-    <span>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => setShowSaveForm(true)}
-      >
-        Save as custom scenario
-      </button>
-    </span>
+    <button
+      type="button"
+      className="btn btn-secondary float-right"
+      onClick={() => setShowSaveForm(true)}
+    >
+      Save as custom scenario
+    </button>
   )
 
   return (
@@ -152,28 +150,23 @@ export const Calculator = (): React.ReactElement => {
             getting COVID from a wide range of activities, using the{' '}
             <a href="/paper">best research available</a>. We hope this tool will
             help hone your intuition, lower your stress levels, and figure out
-            good harm-reduction strategies. To read about some high level
-            conclusions we’ve come to about what is and isn’t risky,{' '}
-            <a href="/paper">click here</a>.
+            good harm-reduction strategies.
           </p>
           <FirstTimeUserIntroduction />
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
       <Row>
-        <Col lg="7" md="12">
+        <Col>
           <h2>Calculate the approximate COVID risk of any activity</h2>
         </Col>
-        <Col lg="5" md="12" className="calculator-buttons">
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}{' '}
-          <button
-            id="reset-form-button"
-            type="button"
-            className="btn btn-secondary"
-            onClick={resetForm}
-          >
-            Reset form
-          </button>
+      </Row>
+      <Row>
+        <Col className="calculator-buttons">
+          <SavedDataSelector
+            currentData={calculatorData}
+            setter={setCalculatorData}
+          />
         </Col>
       </Row>
       <Row id="calculator-fields">
@@ -186,7 +179,7 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </Col>
 
-        <Col md="12" lg="8">
+        <Col md="12" lg="8" id="activity-section">
           <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
@@ -194,40 +187,32 @@ export const Calculator = (): React.ReactElement => {
                   Step 2: Describe the activity
                 </header>
                 <div>
-                  <SavedDataSelector
-                    currentData={calculatorData}
-                    setter={setCalculatorData}
-                  />
-
-                  <SelectControl
+                  <GenericSelectControl
                     id="interaction"
                     label="Is this a single activity or an ongoing relationship?"
-                    data={calculatorData}
-                    setter={setCalculatorData}
+                    setter={(value) =>
+                      setCalculatorData({
+                        ...calculatorData,
+                        interaction: value,
+                        personCount:
+                          value === 'partner' ? 1 : calculatorData.personCount,
+                      })
+                    }
+                    value={calculatorData.interaction}
                     source={Interaction}
                     hideRisk={true}
                   />
                 </div>
 
                 <Row>
-                  <Col
-                    md="12"
-                    lg="6"
-                    id="person-risk"
-                    className="calculator-params"
-                  >
+                  <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
                       repeatedEvent={repeatedEvent}
                     />
                   </Col>
-                  <Col
-                    md="12"
-                    lg="6"
-                    id="modifiers"
-                    className="calculator-params"
-                  >
+                  <Col xs="12" id="modifiers" className="calculator-params">
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
@@ -235,11 +220,22 @@ export const Calculator = (): React.ReactElement => {
                     />
                   </Col>
                 </Row>
+                <Row>
+                  <Col className="form-buttons">
+                    <button
+                      id="reset-form-button"
+                      type="button"
+                      className="btn btn-secondary float-right"
+                      onClick={resetForm}
+                    >
+                      Reset form
+                    </button>
+                    {points > 0 && (showSaveForm ? saveForm : saveButton)}
+                  </Col>
+                </Row>
               </React.Fragment>
             ) : (
-              <div className="empty">
-                First, fill out prevalence information.
-              </div>
+              <div className="empty">First, enter your location</div>
             )}
           </Card>
         </Col>

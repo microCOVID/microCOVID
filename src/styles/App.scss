@@ -33,6 +33,10 @@ a {
   text-decoration: underline;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
 .footer {
   width: 100%;
   line-height: 1.2;
@@ -104,6 +108,48 @@ a {
   padding-top: 1em;
 }
 
+
+
+.accent {
+  line-height: 1em;
+  overflow: hidden;
+  font-weight: bold;
+}
+.accent span {
+  display: inline-block;
+  position: relative;  
+}
+.accent span:after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  border-bottom: 1px solid #aaa;
+  top: 0;
+  width: 9999px;
+}
+.accent span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.expandable-header {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+ -moz-appearance: textfield;
+}
+
 // Calculator
 #calculator {
   #calculator-introduction {
@@ -111,14 +157,6 @@ a {
     font-size: $h4-font-size;
     position: relative;
 
-    #button-wrapper {
-      margin-top: 30px;
-
-      #reset-form-button {
-        position: absolute;
-        bottom: 0;
-      }
-    }
   }
 
   .col-md-12 {
@@ -129,10 +167,6 @@ a {
     text-align: right;
   }
 
-  a {
-    color: $body-color;
-  }
-
   // Colorful section headers
   .card header {
     color: white;
@@ -140,6 +174,7 @@ a {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
+    @include font-size(1.2rem);
   }
   header#location {
     background: $primary;
@@ -161,12 +196,9 @@ a {
       background-color: $warning-fill;
     }
     .calculator-params {
-      label {
-        @include media-breakpoint-up(lg) {
-          min-height: 3em;
-          display: flex;
-          align-items: flex-end;
-        }
+
+      h3 {
+        margin: 0 0 0.6em 0;
       }
     }
 
@@ -199,14 +231,34 @@ a {
     input.form-control[readonly] {
       color: $gray-500 !important;
     }
+
+    .prevelance-result.card {
+      height: auto;
+      // background-color: $secondary;
+      // color: white;
+      border: 1px solid $secondary;
+      margin: 0.5rem;
+      .card-body {
+        padding: 0.8rem;
+      }
+    }
   }
 
   .empty {
     flex: 1;
     display: flex;
     height: 50%;
-    align-items: center;
+    padding-top: 3em;
+    font-style: italic;
     justify-content: center;
+  }
+
+  #activity-section {
+    min-height: 500px;
+
+    .form-group {
+      margin-bottom: 1.5em;
+    }
   }
 
   // Intermediate value readouts
@@ -228,6 +280,15 @@ a {
     color: $red
   }
 
+  .save-form {
+    display: inline-flex;
+    padding: 0;
+    @include media-breakpoint-down(sm) {
+      margin-top: 6px;
+    }
+  }
+
+
   // Tooltip button/badge styles
   .form-group {
     .label-wrapper {
@@ -236,10 +297,26 @@ a {
       align-items: center;
     }
 
+    label {
+      @include font-size($input-font-size-lg);
+    }
+
     .badge {
       cursor: pointer;
       border-radius: 12px;
       width: 20px;
+    }
+  }
+
+  .form-group {
+    .text-muted {
+      font-size: 1em;
+    }
+  }
+
+  .form-buttons {
+    > .btn {
+      margin: 0 5px;
     }
   }
 

@@ -46,6 +46,40 @@ export function ExplanationCard(props: {
             : ''}
         </b>
       </p>
+
+      {/* const locationRisk = calculateLocationPersonAverage(data) || 0
+  const personRiskEach = Math.round(
+    calculatePersonRiskEach(data, locationRisk) || 0,
+  ) */}
+
+      {/* <p className="readout">
+        The <i>first</i> part of the calculation is Person Risk: Each other
+        person has a <b>{personRiskEach.toLocaleString()}</b>
+        -in-a-million chance of currently having COVID.
+      </p> */}
+
+      {/* <span className="readout">
+        <p>
+          The <i>second</i> part of the calculation is Activity Risk: assuming 1
+          person at this activity has COVID, then you would have a{' '}
+          <b>{fixedPointPrecisionPercent(activityRisk)}</b> chance of getting
+          COVID.
+          <b>
+            {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
+              ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+              : ''}
+            {data.distance === 'intimate' &&
+            data.duration < intimateDurationFloor
+              ? ' (NOTE: We have applied a minimum Activity Risk for fluid transfer.)'
+              : ''}
+          </b>
+        </p>
+        <p>
+          Finally, we multiply Person Risk and Activity Risk to get the total
+          result.
+        </p>
+      </span> */}
+
       <h2>How risky is this?</h2>
       <GenericSelectControl
         id="budget-selector"
