@@ -46,7 +46,7 @@ export const PersonRiskControls: React.FunctionComponent<{
             <strong>People:</strong>{' '}
             {!repeatedEvent ? (
               <>
-                How many people get near you? <em>(within 10ft or less)</em>
+                How many people get near you? <em>(within 15ft or less)</em>
               </>
             ) : (
               <>How many people do you have this type of realtionship with?</>
