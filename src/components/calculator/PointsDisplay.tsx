@@ -14,11 +14,13 @@ import {
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
   ONE_MILLION
+  MAX_ACTIVITY_RISK,
 } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
 } from 'data/FormatPrecision'
+import { intimateDurationFloor } from 'data/data'
 
 function showPoints(points: number): boolean {
   return points >= 0
@@ -129,8 +131,15 @@ export function ExplanationCard(props: {
               <br /> Next, we calcualte the risk of the activity. Assuming 1
               person at this activity has COVID, then you would have a{' '}
               <strong>{activityRiskFormatted} chance</strong> of getting COVID.
-              [Optional message if triggered: (NOTE: We have capped this number
-              at the maximum Activity Risk.)]
+              <b>
+                {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
+                  ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
+                  : ''}
+                {props.data.distance === 'intimate' &&
+                props.data.duration < intimateDurationFloor
+                  ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
+                  : ''}
+              </b>
             </li>
             <li>
               <strong>
