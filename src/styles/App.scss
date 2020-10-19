@@ -425,26 +425,28 @@ h1,h2,h3,h4,h5,h6 {
       margin-left: 5px;
       color: black;
       font-weight: bold;
+      margin-bottom: 0.2em;
       @include font-size(1.2em);
       line-height: 1.5;
       &.risk-dangerous {
         color: #fff
       }
     }
-
     .budget-consumption {
       margin-left: 15px;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      font-weight: bold;
     }
     .points {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
       margin-left: 15px;
-      font-weight: bold;
-      margin-top: 8px;
-      margin-bottom: 8px;
+      font-size: 0.8em;
     }
     .points-range {
       color: $secondary;
       font-weight: normal;
-      font-size: 0.75em;
     }
 
   }

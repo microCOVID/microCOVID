@@ -228,6 +228,17 @@ export function PointsDisplay(props: {
             <span>{currentRiskLevel.title} Risk</span>
           </div>
         )}
+        <div className="budget-consumption">
+          {doShowPoints && (
+            <>
+              {budgetConsumption(props.points, props.riskBudget)}{' '}
+              <span className="points-range d-md-inline d-none">
+                (of {displayPoints(getWeekBudget(props.riskBudget))}{' '}
+                microCOVIDs/week)
+              </span>
+            </>
+          )}
+        </div>
         <div className="points">
           {doShowPoints ? (
             <>
@@ -245,17 +256,6 @@ export function PointsDisplay(props: {
             </>
           ) : (
             <>Fill in calculator to see risk level</>
-          )}
-        </div>
-        <div className="budget-consumption">
-          {doShowPoints && (
-            <>
-              {budgetConsumption(props.points, props.riskBudget)}{' '}
-              <span className="points-range d-md-inline d-none">
-                (of {displayPoints(getWeekBudget(props.riskBudget))}{' '}
-                microCOVIDs/week)
-              </span>
-            </>
           )}
         </div>
       </Col>
