@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
-import { MAX_POINTS, ONE_MILLION } from 'data/calculate'
+import { ONE_MILLION } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -27,9 +27,6 @@ function displayPercent(points: number): string {
   return showPoints(points) ? fixedPointPrecisionPercent(points * 1e-6) : '—%'
 }
 
-function tooManyPoints(points: number): boolean {
-  return points >= MAX_POINTS
-}
 export function ExplanationCard(props: {
   points: number
   repeatedEvent: boolean
@@ -42,14 +39,6 @@ export function ExplanationCard(props: {
 
   return (
     <Card>
-      <p className="readout">
-        <b>
-          {' '}
-          {showPoints && tooManyPoints(points)
-            ? "NOTE: We don't display results higher than this, because our estimation method is only accurate for small probabilities."
-            : ''}
-        </b>
-      </p>
       <h2>How risky is this?</h2>
       <GenericSelectControl
         id="budget-selector"
@@ -245,8 +234,7 @@ export function PointsDisplay(props: {
         <div className="points">
           {doShowPoints ? (
             <>
-              {tooManyPoints(props.points) ? '>' : '~'}
-              {displayPoints(props.points)} microCOVIDs
+              ~{displayPoints(props.points)} microCOVIDs
               {props.repeatedEvent ? ' per week' : ' each time'}{' '}
               <span className="points-range d-md-inline d-none">
                 {props.upperBound >= ONE_MILLION ? null : (
