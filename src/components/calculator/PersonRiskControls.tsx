@@ -2,11 +2,7 @@ import React from 'react'
 import { Popover } from 'react-bootstrap'
 
 import { SelectControl } from './SelectControl'
-import {
-  CalculatorData,
-  calculateLocationPersonAverage,
-  calculatePersonRiskEach,
-} from 'data/calculate'
+import { CalculatorData } from 'data/calculate'
 import { Distance, RiskProfile } from 'data/data'
 
 const personRiskPopover = (
@@ -39,52 +35,49 @@ export const PersonRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
-  const locationRisk = calculateLocationPersonAverage(data) || 0
-  const personRiskEach = Math.round(
-    calculatePersonRiskEach(data, locationRisk) || 0,
-  )
-
   return (
     <React.Fragment>
-      <strong>Nearby people</strong>
-      <div className="form-group">
-        <label htmlFor="personCount">
-          <div>
-            How many people get near you?
-            <br />
-            <em>(within 10ft or less)</em>
-          </div>
-        </label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.personCount}
-          onChange={(e) =>
-            setter({
-              ...data,
-              personCount: Math.max(0, parseInt(e.target.value)),
-            })
-          }
-        />
-        <GroupSizeWarning people={data.personCount} />
-      </div>
-      <SelectControl
-        id="riskProfile"
-        label="What is their risk profile?"
-        popover={personRiskPopover}
-        data={data}
-        setter={setter}
-        source={RiskProfile}
-        hideRisk={true}
-      />
+      <h3 className="h2 accent">
+        <span>Nearby people</span>
+      </h3>
+      {data.interaction === 'partner' ? null : (
+        <div className="form-group">
+          <label htmlFor="personCount">
+            <div>
+              <strong>People:</strong>{' '}
+              {repeatedEvent ? (
+                <>How many people do you live with?</>
+              ) : (
+                <>
+                  How many people are usually near you?{' '}
+                  <em>(within 15ft or less)</em>
+                </>
+              )}
+            </div>
+          </label>
+          <input
+            className="form-control form-control-lg col-md-3"
+            type="number"
+            value={data.personCount}
+            onChange={(e) =>
+              setter({
+                ...data,
+                personCount: Math.max(0, parseInt(e.target.value)),
+              })
+            }
+          />
+          <GroupSizeWarning people={data.personCount} />
+        </div>
+      )}
+
       {!repeatedEvent ? (
         <React.Fragment>
           <div className="form-group">
             <label htmlFor="duration">
-              How long are each of these people typically near you, in minutes?
+              <strong>Duration:</strong> How long is the activity, in minutes?
             </label>
             <input
-              className="form-control form-control-lg"
+              className="form-control form-control-lg col-md-3"
               type="number"
               value={data.duration}
               onChange={(e) =>
@@ -97,19 +90,25 @@ export const PersonRiskControls: React.FunctionComponent<{
           </div>
           <SelectControl
             id="distance"
-            label="How close are they, on average?"
+            label="How close are these nearby people, on average?"
+            header="Distance"
             data={data}
             setter={setter}
             source={Distance}
           />
         </React.Fragment>
       ) : null}
+      <SelectControl
+        id="riskProfile"
+        label="What is their risk profile?"
+        header="Risk Profile"
+        popover={personRiskPopover}
+        data={data}
+        setter={setter}
+        source={RiskProfile}
+        hideRisk={true}
+      />
       <br />
-      <p className="readout">
-        The <i>first</i> part of the calculation is Person Risk: Each other
-        person has a <b>{personRiskEach.toLocaleString()}</b>
-        -in-a-million chance of currently having COVID.
-      </p>
     </React.Fragment>
   )
 }

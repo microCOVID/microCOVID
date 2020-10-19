@@ -65,7 +65,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   }
 
   return (
-    <Form.Group controlId="saved-data">
+    <Form.Group>
       <Form.Control
         as="select"
         size="lg"
@@ -73,7 +73,9 @@ export const SavedDataSelector: React.FunctionComponent<{
         id="saved-data"
       >
         <optgroup label=""></optgroup>
-        <option value="">Select a scenario or saved item...</option>
+        <option value="">
+          Optional: Start with a predefined common activity or saved scenario
+        </option>
         {userSavedData}
         {prepopulatedOptions}
       </Form.Control>
