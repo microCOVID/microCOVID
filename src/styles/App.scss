@@ -253,21 +253,21 @@ a {
   }
   
 
-  .risk-dangerous { background-color: $legend-dark-red; color: #fff; }
-  .risk-very-high { background-color: $legend-red; }
-  .risk-high { background-color: $legend-orange; }
-  .risk-moderate { background-color: $legend-yellow; }
-  .risk-low { background-color: $legend-light-green; }
-  .risk-very-low { background-color: $legend-green; }
+  .risk-dangerous { background-color: $thermometer-dark-red; color: #fff; }
+  .risk-very-high { background-color: $thermometer-red; }
+  .risk-high { background-color: $thermometer-orange; }
+  .risk-moderate { background-color: $thermometer-yellow; }
+  .risk-low { background-color: $thermometer-light-green; }
+  .risk-very-low { background-color: $thermometer-green; }
 
 
 
-  .text-risk-dangerous { color: $legend-dark-red; }
-  .text-risk-very-high { color: $legend-red; }
-  .text-risk-high { color: $legend-orange; }
-  .text-risk-moderate { color: $legend-yellow; }
-  .text-risk-low { color: $legend-light-green; }
-  .text-risk-very-low { color: $legend-green; }
+  .text-risk-dangerous { color: $thermometer-dark-red; }
+  .text-risk-very-high { color: $thermometer-red; }
+  .text-risk-high { color: $thermometer-orange; }
+  .text-risk-moderate { color: $thermometer-yellow; }
+  .text-risk-low { color: $thermometer-light-green; }
+  .text-risk-very-low { color: $thermometer-green; }
 
   .top-half-card {
     background: white;
@@ -280,12 +280,12 @@ a {
       padding: 0.8rem;
     }
 
-    // Legend Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
+    // Thermometer Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
 
-    $legend-width: 30px;
-    $legend-border: 4px;
-    $legend-corners: 10px;
-    $legend-mobile-width-reduction: 10px;
+    $thermometer-width: 30px;
+    $thermometer-border: 4px;
+    $thermometer-corners: 10px;
+    $thermometer-mobile-width-reduction: 10px;
 
 
     @include font-size(1.3rem);
@@ -298,38 +298,38 @@ a {
     }
 
 
-    .legend-container {
+    .thermometer-container {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: $legend-width; 
+      max-width: $thermometer-width; 
       
       :first-child {
-        border-radius: $legend-corners $legend-corners 0px 0px;
+        border-radius: $thermometer-corners $thermometer-corners 0px 0px;
       }
 
       :last-child {
-        border-radius: 0px 0px $legend-corners $legend-corners ;
+        border-radius: 0px 0px $thermometer-corners $thermometer-corners ;
       }
 
-      .legend-piece {
+      .thermometer-piece {
         display: flex;
         flex-direction: row;
         height: 20px;
-        width: $legend-width;
+        width: $thermometer-width;
         align-self: center;
         @include media-breakpoint-down(sm) {
-          width: $legend-width - $legend-mobile-width-reduction;
+          width: $thermometer-width - $thermometer-mobile-width-reduction;
           height: 20px - 3;
         }
       }
 
-      .legend-piece.current-level {
-        width: $legend-width + $legend-border;
-        border: $legend-border solid black;
+      .thermometer-piece.current-level {
+        width: $thermometer-width + $thermometer-border;
+        border: $thermometer-border solid black;
         @include media-breakpoint-down(sm) {
-          width: $legend-width + $legend-border - $legend-mobile-width-reduction;
-          border-width: $legend-border - 1;
+          width: $thermometer-width + $thermometer-border - $thermometer-mobile-width-reduction;
+          border-width: $thermometer-border - 1;
         }
       }
 
