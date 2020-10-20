@@ -124,12 +124,13 @@ const PaperContents: React.FunctionComponent<{
 
   // Hack to allow inserting a donation component from markdown.
   const includeDonation = processed.indexOf('<!-- Donation -->') >= 0
+  const textWithoutHtml = stripHtml(body)
 
   return (
     <div className="paperPage">
       <Helmet>
-        <meta name="description" content={stripHtml(body)} />
-        <meta property="og:description" content={stripHtml(body)} />
+        <meta name="description" content={textWithoutHtml} />
+        <meta property="og:description" content={textWithoutHtml} />
       </Helmet>
       <span id={id}></span>
       <div className="sectionIndicator">
