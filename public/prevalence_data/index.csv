@@ -1,0 +1,243 @@
+Location,Slug
+Alabama,US_01
+Alaska,US_02
+Arizona,US_04
+Arkansas,US_05
+California,US_06
+Colorado,US_08
+Connecticut,US_09
+Delaware,US_10
+District of Columbia,US_11
+Florida,US_12
+Georgia,US_13
+Hawaii,US_15
+Idaho,US_16
+Illinois,US_17
+Indiana,US_18
+Iowa,US_19
+Kansas,US_20
+Kentucky,US_21
+Louisiana,US_22
+Maine,US_23
+Maryland,US_24
+Massachusetts,US_25
+Michigan,US_26
+Minnesota,US_27
+Mississippi,US_28
+Missouri,US_29
+Montana,US_30
+Nebraska,US_31
+Nevada,US_32
+New Hampshire,US_33
+New Jersey,US_34
+New Mexico,US_35
+New York,US_36
+North Carolina,US_37
+North Dakota,US_38
+Ohio,US_39
+Oklahoma,US_40
+Oregon,US_41
+Pennsylvania,US_42
+Rhode Island,US_44
+South Carolina,US_45
+South Dakota,US_46
+Tennessee,US_47
+Texas,US_48
+Utah,US_49
+Vermont,US_50
+Virginia,US_51
+Washington,US_53
+West Virginia,US_54
+Wisconsin,US_55
+Wyoming,US_56
+Guam,US_66
+Northern Mariana Islands,US_69
+Puerto Rico,US_72
+Virgin Islands,US_78
+Afghanistan,Afghanistan
+Albania,Albania
+Algeria,Algeria
+Andorra,Andorra
+Angola,Angola
+Antigua and Barbuda,Antigua_and_Barbuda
+Argentina,Argentina
+Armenia,Armenia
+Australia,Australia
+Austria,Austria
+Azerbaijan,Azerbaijan
+Bahamas,Bahamas
+Bahrain,Bahrain
+Bangladesh,Bangladesh
+Barbados,Barbados
+Belarus,Belarus
+Belgium,Belgium
+Belize,Belize
+Benin,Benin
+Bhutan,Bhutan
+Bolivia,Bolivia
+Bosnia and Herzegovina,Bosnia_and_Herzegovina
+Botswana,Botswana
+Brazil,Brazil
+Brunei,Brunei
+Bulgaria,Bulgaria
+Burkina Faso,Burkina_Faso
+Burma,Burma
+Burundi,Burundi
+Cabo Verde,Cabo_Verde
+Cambodia,Cambodia
+Cameroon,Cameroon
+Canada,Canada
+Central African Republic,Central_African_Republic
+Chad,Chad
+Chile,Chile
+China,China
+Colombia,Colombia
+Comoros,Comoros
+Congo (Brazzaville),Congo__Brazzaville_
+Congo (Kinshasa),Congo__Kinshasa_
+Costa Rica,Costa_Rica
+Cote d'Ivoire,Cote_d_Ivoire
+Croatia,Croatia
+Cuba,Cuba
+Cyprus,Cyprus
+Czechia,Czechia
+Denmark,Denmark
+Djibouti,Djibouti
+Dominica,Dominica
+Dominican Republic,Dominican_Republic
+Ecuador,Ecuador
+Egypt,Egypt
+El Salvador,El_Salvador
+Equatorial Guinea,Equatorial_Guinea
+Eritrea,Eritrea
+Estonia,Estonia
+Eswatini,Eswatini
+Ethiopia,Ethiopia
+Fiji,Fiji
+Finland,Finland
+France,France
+Gabon,Gabon
+Gambia,Gambia
+Georgia,Georgia
+Germany,Germany
+Ghana,Ghana
+Greece,Greece
+Grenada,Grenada
+Guatemala,Guatemala
+Guinea,Guinea
+Guinea-Bissau,Guinea_Bissau
+Guyana,Guyana
+Haiti,Haiti
+Holy See,Holy_See
+Honduras,Honduras
+Hungary,Hungary
+Iceland,Iceland
+India,India
+Indonesia,Indonesia
+Iran,Iran
+Iraq,Iraq
+Ireland,Ireland
+Israel,Israel
+Italy,Italy
+Jamaica,Jamaica
+Japan,Japan
+Jordan,Jordan
+Kazakhstan,Kazakhstan
+Kenya,Kenya
+Korea, South,Korea__South
+Kosovo,Kosovo
+Kuwait,Kuwait
+Kyrgyzstan,Kyrgyzstan
+Laos,Laos
+Latvia,Latvia
+Lebanon,Lebanon
+Lesotho,Lesotho
+Liberia,Liberia
+Libya,Libya
+Liechtenstein,Liechtenstein
+Lithuania,Lithuania
+Luxembourg,Luxembourg
+Madagascar,Madagascar
+Malawi,Malawi
+Malaysia,Malaysia
+Maldives,Maldives
+Mali,Mali
+Malta,Malta
+Mauritania,Mauritania
+Mauritius,Mauritius
+Mexico,Mexico
+Moldova,Moldova
+Monaco,Monaco
+Mongolia,Mongolia
+Montenegro,Montenegro
+Morocco,Morocco
+Mozambique,Mozambique
+Namibia,Namibia
+Nepal,Nepal
+Netherlands,Netherlands
+New Zealand,New_Zealand
+Nicaragua,Nicaragua
+Niger,Niger
+Nigeria,Nigeria
+North Macedonia,North_Macedonia
+Norway,Norway
+Oman,Oman
+Pakistan,Pakistan
+Panama,Panama
+Papua New Guinea,Papua_New_Guinea
+Paraguay,Paraguay
+Peru,Peru
+Philippines,Philippines
+Poland,Poland
+Portugal,Portugal
+Qatar,Qatar
+Romania,Romania
+Russia,Russia
+Rwanda,Rwanda
+Saint Kitts and Nevis,Saint_Kitts_and_Nevis
+Saint Lucia,Saint_Lucia
+Saint Vincent and the Grenadines,Saint_Vincent_and_the_Grenadines
+San Marino,San_Marino
+Sao Tome and Principe,Sao_Tome_and_Principe
+Saudi Arabia,Saudi_Arabia
+Senegal,Senegal
+Serbia,Serbia
+Seychelles,Seychelles
+Sierra Leone,Sierra_Leone
+Singapore,Singapore
+Slovakia,Slovakia
+Slovenia,Slovenia
+Solomon Islands,Solomon_Islands
+Somalia,Somalia
+South Africa,South_Africa
+South Sudan,South_Sudan
+Spain,Spain
+Sri Lanka,Sri_Lanka
+Sudan,Sudan
+Suriname,Suriname
+Sweden,Sweden
+Switzerland,Switzerland
+Syria,Syria
+Taiwan*,Taiwan_
+Tajikistan,Tajikistan
+Tanzania,Tanzania
+Thailand,Thailand
+Timor-Leste,Timor_Leste
+Togo,Togo
+Trinidad and Tobago,Trinidad_and_Tobago
+Tunisia,Tunisia
+Turkey,Turkey
+United States (all),US
+Uganda,Uganda
+Ukraine,Ukraine
+United Arab Emirates,United_Arab_Emirates
+United Kingdom,United_Kingdom
+Uruguay,Uruguay
+Uzbekistan,Uzbekistan
+Venezuela,Venezuela
+Vietnam,Vietnam
+West Bank and Gaza,West_Bank_and_Gaza
+Western Sahara,Western_Sahara
+Yemen,Yemen
+Zambia,Zambia
+Zimbabwe,Zimbabwe

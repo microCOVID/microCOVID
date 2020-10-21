@@ -10,8 +10,10 @@ import csv
 import json
 import re
 import os
+import shutil
 from datetime import date, datetime, timedelta
 from operator import attrgetter
+from pathlib import Path
 from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any
 
 try:
@@ -122,10 +124,10 @@ class OWIDTestingData(pydantic.BaseModel):
 class CANActuals(pydantic.BaseModel):
     population: int
     intervention: str
-    cumulativeConfirmedCases: int
-    cumulativePositiveTests: int
+    cumulativeConfirmedCases: Optional[int]
+    cumulativePositiveTests: Optional[int]
     cumulativeNegativeTests: Optional[int]
-    cumulativeDeaths: int
+    cumulativeDeaths: Optional[int]
     # hospitalBeds: ignored
     # ICUBeds: ignored
     contactTracers: Optional[int]
@@ -278,6 +280,7 @@ class Country(Place):
         else:
             result.subdivisions = [
                 state.app_key for state in self.states.values()
+                if state.name != "Unknown"
             ]
         return result
 
@@ -290,6 +293,26 @@ class AppLocation(pydantic.BaseModel):
     positiveCasePercentage: Optional[float]
     topLevelGroup: Optional[str] = None
     subdivisions: List[str] = []
+
+    def as_csv_data(self) -> Dict[str, str]:
+        population = int(self.population.replace(",", ""))
+        reported = (self.casesPastWeek + 1) / population
+        underreporting = (
+            10 if self.positiveCasePercentage is None
+            else 6 if self.positiveCasePercentage < 5
+            else 8 if self.positiveCasePercentage < 15
+            else 10
+        )
+        delay = 1.0 + (self.casesIncreasingPercentage / 100)
+        return {
+            "Name": self.label,
+            "Population": str(population),
+            "Cases in past week": str(self.casesPastWeek),
+            "Reported prevalence": str(reported),
+            "Underreporting factor": str(underreporting),
+            "Delay factor": str(delay),
+            "Estimated prevalence": str(reported * underreporting * delay),
+        }
 
 
 class AppLocations(pydantic.BaseModel):
@@ -532,6 +555,8 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
                     kw[field] = ""
             elif val.endswith(".0") and val[:-2].isdigit():
                 kw[field] = val[:-2]
+            elif info.type_ is int and "e+" in val:
+                kw[field] = int(float(val))
             else:
                 kw[field] = val
         result.append(model(**kw))
@@ -630,6 +655,9 @@ def main() -> None:
 
         # Test positivity per US county and state
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
+            if item.fips not in data.fips_to_county:
+                # Ignore e.g. Northern Mariana Islands
+                continue
             county = data.fips_to_county[str(item.fips)]
             assert item.stateName == county.state
             if item.metrics is not None:
@@ -733,6 +761,34 @@ def main() -> None:
     with open(locations_path, "w") as fp:
         fp.writelines(output)
 
+    # Also write CSVs containing the data, for the spreadsheet to import.
+    csvdir = Path("public/prevalence_data")
+    if csvdir.exists():
+        shutil.rmtree(csvdir)
+    csvdir.mkdir()
+    (csvdir / "date.csv").write_text(
+        "Date\n{}".format(effective_date.strftime("%Y-%m-%d"))
+    )
+    with (csvdir / "index.csv").open("w") as topfile:
+        topfile.write("Location,Slug\n")
+        for slug, data in app_locations.items():
+            if not data.topLevelGroup:
+                continue
+
+            topfile.write(f"{data.label},{slug}\n")
+            with (csvdir / slug).with_suffix(".csv").open("w") as subfile:
+                top_row = data.as_csv_data()
+                subfile.write(",".join(top_row.keys()) + "\n")
+                if "states" in data.topLevelGroup.lower():
+                    top_row["Name"] = "Entire state"
+                else:
+                    top_row["Name"] = "Entire country"
+                subfile.write(",".join(top_row.values()) + "\n")
+
+                for subkey in data.subdivisions:
+                    subfile.write(
+                        ",".join(app_locations[subkey].as_csv_data().values()) + "\n"
+                    )
 
 if __name__ == "__main__":
     main()
