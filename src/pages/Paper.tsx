@@ -3,12 +3,19 @@ import markdownItFootnote from 'markdown-it-footnote'
 import markdownItHeadings from 'markdown-it-github-headings'
 import markdownItLinkAttributes from 'markdown-it-link-attributes'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link, useParams } from 'react-router-dom'
 
 import Donation from '../components/Donation'
 import { pages } from '../paper/index'
 
 const slugs = Object.keys(pages)
+
+function stripHtml(html: string): string {
+  const tmp = document.createElement('DIV')
+  tmp.innerHTML = html
+  return tmp.textContent || tmp.innerText || ''
+}
 
 const processor = new MarkdownIt({
   html: true,
@@ -117,9 +124,14 @@ const PaperContents: React.FunctionComponent<{
 
   // Hack to allow inserting a donation component from markdown.
   const includeDonation = processed.indexOf('<!-- Donation -->') >= 0
+  const textWithoutHtml = stripHtml(body)
 
   return (
     <div className="paperPage">
+      <Helmet>
+        <meta name="description" content={textWithoutHtml} />
+        <meta property="og:description" content={textWithoutHtml} />
+      </Helmet>
       <span id={id}></span>
       <div className="sectionIndicator">
         Section {Object.keys(pages).indexOf(id) + 1}
