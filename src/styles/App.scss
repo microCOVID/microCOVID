@@ -563,6 +563,18 @@ input[type=number] {
     margin-bottom: 0;
   }
 
+  .blogInfo {
+    margin-top: 10px;
+  }
+  
+  .pageAuthor {
+    font-weight: bold;
+  }
+
+  .pageDate {
+    color: $gray-500;
+  }
+
   .sectionIndicator {
     margin-bottom: 0;
     color: $gray-500;

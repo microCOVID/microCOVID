@@ -137,6 +137,12 @@ export const MarkdownContents: React.FunctionComponent<{
       <span id={id}></span>
       <div className="sectionIndicator">Section {slugs.indexOf(id) + 1}</div>
       <h1 className="pageTitle">{page.title}</h1>
+      {(page.author || page.date) && (
+        <div className="blogInfo">
+          {page.author && <div className="pageAuthor">{page.author}</div>}
+          {page.date && <div className="pageDate">{page.date}</div>}
+        </div>
+      )}
 
       <Navigation />
 
@@ -174,7 +180,7 @@ export const TableOfContents: React.FunctionComponent<{
       </div>
       {children}
       <ol className="toc">
-        {slugs.map((pageId, pageIndex) => (
+        {[...slugs].reverse().map((pageId, pageIndex) => (
           <li key={pageIndex}>
             <Link to={`${baseNavPath}/${pageId}`}>{posts[pageId].title}</Link>
           </li>
