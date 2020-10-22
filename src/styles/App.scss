@@ -1,5 +1,6 @@
 // Override default variables before the import
 @import './variables.scss';
+@import "~rfs/scss";
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
@@ -57,10 +58,9 @@ h1,h2,h3,h4,h5,h6 {
   padding-right: 0;
 
   .navbar-brand {
-      @media (max-width: 900px) {
-        font-size: 20px;
-       }
-
+    @include media-breakpoint-down(md) {
+      font-size: 25px;
+    }
   }
   a {
     text-decoration: none;
@@ -266,20 +266,6 @@ input[type=number] {
     font-size: 1em;
   }
 
-  // Risk emphasis
-  .low-risk, .medium-risk, .high-risk {
-    font-size: 2em;
-  }
-  .low-risk {
-    color: $indigo;
-  }
-  .medium-risk {
-    color: $cyan;
-  }
-  .high-risk {
-    color: $red
-  }
-
   .save-form {
     display: inline-flex;
     padding: 0;
@@ -287,7 +273,6 @@ input[type=number] {
       margin-top: 6px;
     }
   }
-
 
   // Tooltip button/badge styles
   .form-group {
@@ -308,6 +293,10 @@ input[type=number] {
     }
   }
 
+  #points-row .col-md-12 {
+    margin-bottom: 0;
+  }
+  
   .form-group {
     .text-muted {
       font-size: 1em;
@@ -320,9 +309,17 @@ input[type=number] {
     }
   }
 
+  $sticky-z-index: 100;
+
   .sticky {
-    z-index: 1;
+    z-index: $sticky-z-index;
     padding-bottom: 0;
+  }
+  // Make sure to put the location sidebar above the floating points display
+  #location {
+    @include media-breakpoint-up(lg) {
+      z-index: $sticky-z-index + 1;
+    }
   }
 
   .scrolled-past.has-points {
@@ -330,21 +327,153 @@ input[type=number] {
     bottom: 0;
     margin-right: auto;
   }
+  
+
+  .risk-dangerous { background-color: $thermometer-dark-red; color: #fff; }
+  .risk-very-high { background-color: $thermometer-red; }
+  .risk-high { background-color: $thermometer-orange; }
+  .risk-moderate { background-color: $thermometer-yellow; }
+  .risk-low { background-color: $thermometer-light-green; }
+  .risk-very-low { background-color: $thermometer-green; }
+
+
+
+  .text-risk-dangerous { color: $thermometer-dark-red; }
+  .text-risk-very-high { color: $thermometer-red; }
+  .text-risk-high { color: $thermometer-orange; }
+  .text-risk-moderate { color: $thermometer-yellow; }
+  .text-risk-low { color: $thermometer-light-green; }
+  .text-risk-very-low { color: $thermometer-green; }
 
   .top-half-card {
     background: white;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 1.25rem;
-    box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15)
+    box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15);
+
+    @include media-breakpoint-down(sm) {
+      padding: 0.8rem;
+    }
+
+    // Thermometer Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
+
+    $thermometer-width: 30px;
+    $thermometer-border: 4px;
+    $thermometer-corners: 10px;
+    $thermometer-mobile-width-reduction: 10px;
+
+
+    @include font-size(1.3rem);
+    @include media-breakpoint-down(sm) {
+      @include font-size(1rem);
+    }
+    @media (max-width: 321px) {
+      // iPhone size
+      @include font-size(0.9rem); 
+    }
+
+
+    .thermometer-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: $thermometer-width; 
+      
+      :first-child {
+        border-radius: $thermometer-corners $thermometer-corners 0px 0px;
+      }
+
+      :last-child {
+        border-radius: 0px 0px $thermometer-corners $thermometer-corners ;
+      }
+
+      .thermometer-piece {
+        display: flex;
+        flex-direction: row;
+        height: 20px;
+        width: $thermometer-width;
+        align-self: center;
+        @include media-breakpoint-down(sm) {
+          width: $thermometer-width - $thermometer-mobile-width-reduction;
+          height: 20px - 3;
+        }
+      }
+
+      .thermometer-piece.current-level {
+        width: $thermometer-width + $thermometer-border;
+        border: $thermometer-border solid black;
+        @include media-breakpoint-down(sm) {
+          width: $thermometer-width + $thermometer-border - $thermometer-mobile-width-reduction;
+          border-width: $thermometer-border - 1;
+        }
+      }
+
+      .risk-icon {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 130%;
+        }
+        height: auto;
+        vertical-align: top;
+        margin: 3px 0 0 0;
+        border-radius: 0;
+      }
+    }
+
+
+    .points-container {
+      margin-left: 0.5em;
+      line-height: 1;
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+    }
+
+    .risk-level {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 8px;
+      margin-left: 5px;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 0.2em;
+      @include font-size(1.2em);
+      line-height: 1.5;
+      &.risk-dangerous {
+        color: #fff
+      }
+    }
+    .budget-consumption {
+      margin-left: 15px;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      font-weight: bold;
+    }
+    .points {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin-left: 15px;
+      font-size: 0.8em;
+    }
+    .points-range {
+      color: $secondary;
+      font-weight: normal;
+    }
+
   }
+
+  
 
   .explanation .card {
     border: 1px solid $border-color;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
 }
+
+
 
 // Whitepaper
 

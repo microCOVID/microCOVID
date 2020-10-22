@@ -73,6 +73,8 @@ export const Calculator = (): React.ReactElement => {
     recordSavedCustom(points)
   }
 
+  const [riskBudget, setRiskBudget] = useState(10000)
+
   const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
     const result = calculate(calculatorData)
@@ -242,18 +244,25 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col>
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
           <PointsDisplay
             points={points}
+            repeatedEvent={repeatedEvent}
+            riskBudget={riskBudget}
+            riskBudgetSetter={setRiskBudget}
             lowerBound={lowerBound}
             upperBound={upperBound}
-            repeatedEvent={repeatedEvent}
           />
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
-        <Col md="12">
-          <ExplanationCard points={points} repeatedEvent={repeatedEvent} />
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
+          <ExplanationCard
+            points={points}
+            repeatedEvent={repeatedEvent}
+            riskBudget={riskBudget}
+            riskBudgetSetter={setRiskBudget}
+          />
         </Col>
       </Row>
       <Row>

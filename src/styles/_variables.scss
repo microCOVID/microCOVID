@@ -40,6 +40,14 @@ $green: #18bc9c !default;
 $teal: #20c997 !default;
 $cyan: #18ACD0 !default;
 
+
+$thermometer-dark-red: #c7022a;
+$thermometer-red: #ff0034;
+$thermometer-orange: #ff9600;
+$thermometer-yellow: #ffc900;
+$thermometer-light-green: #aacd27;
+$thermometer-green: #00d474;
+
 $microcov-brand: #D018A1;
 
 
@@ -59,6 +67,8 @@ $yiq-contrasted-threshold: 175 !default;
 
 $body-color: #444;
 
+$enable-responsive-font-sizes: 1;
+
 // Links
 
 $link-color: $success !default;
@@ -75,6 +85,8 @@ $h1-font-size: 2rem !default;
 $h2-font-size: 1.5rem !default;
 $h3-font-size: 1.25rem !default;
 $h4-font-size: 1.15rem !default;
+
+$headings-font-weight: 700;
 
 // Tables
 
