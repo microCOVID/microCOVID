@@ -90,7 +90,7 @@ export const MarkdownContents: React.FunctionComponent<{
               ← Previous: {posts[prev].shortTitle || posts[prev].title}
             </PageLink>
           ) : (
-            <Link to="../">← Table of Contents</Link>
+            <Link to="./">← Table of Contents</Link>
           )}
         </span>
 
@@ -157,17 +157,18 @@ export const MarkdownContents: React.FunctionComponent<{
 export const TableOfContents: React.FunctionComponent<{
   posts: PostMap
   title: string
+  baseNavPath: string
   children?: React.ReactNode
-}> = ({ posts, title, children }) => {
+}> = ({ posts, title, baseNavPath, children }) => {
   const slugs = Object.keys(posts)
 
   return (
     <div className="paperPage">
       <div className="sectionIndicator">Table of Contents</div>
-      <h1 className="pageTitle">{title}r</h1>
+      <h1 className="pageTitle">{title}</h1>
       <div className="navigation">
         &nbsp;
-        <Link to={`${slugs[0]}`} className="next">
+        <Link to={`${baseNavPath}/${slugs[0]}`} className="next">
           Next: {posts[slugs[0]].shortTitle || posts[slugs[0]].title} →
         </Link>
       </div>
@@ -175,7 +176,7 @@ export const TableOfContents: React.FunctionComponent<{
       <ol className="toc">
         {slugs.map((pageId, pageIndex) => (
           <li key={pageIndex}>
-            <Link to={`${pageId}`}>{posts[pageId].title}</Link>
+            <Link to={`${baseNavPath}/${pageId}`}>{posts[pageId].title}</Link>
           </li>
         ))}
       </ol>
