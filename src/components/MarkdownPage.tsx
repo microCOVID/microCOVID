@@ -133,16 +133,14 @@ export const MarkdownContents: React.FunctionComponent<{
       <Helmet>
         <meta name="description" content={textWithoutHtml} />
         <meta property="og:description" content={textWithoutHtml} />
+        <meta property="og:title" content={page.title} />
       </Helmet>
       <span id={id}></span>
-      <div className="sectionIndicator">Section {slugs.indexOf(id) + 1}</div>
+      <div className="sectionIndicator">
+        {page.date ? page.date : `Section ${slugs.indexOf(id) + 1}`}
+      </div>
       <h1 className="pageTitle">{page.title}</h1>
-      {(page.author || page.date) && (
-        <div className="blogInfo">
-          {page.author && <div className="pageAuthor">{page.author}</div>}
-          {page.date && <div className="pageDate">{page.date}</div>}
-        </div>
-      )}
+      {page.author && <div className="pageAuthor">{page.author}</div>}
 
       <Navigation />
 
