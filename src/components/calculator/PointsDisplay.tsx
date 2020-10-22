@@ -107,20 +107,8 @@ const riskLevelsForThermometer = riskLevels
   .slice(0, RISK_LEVELS_TO_SHOW_ON_THERMOMETER)
   .reverse()
 
-// const lifeThreateningRisk = {
-//   style: 'dangerous',
-//   title: 'Life-Threatening',
-//   max: 1e15, // Very large number
-//   icon: BsExclamationOctagonFill,
-// }
-
 const howRisky = (points: number, budget: number): RiskLevel => {
-  // First check against dangerous risk levels. Don't normalize points here because we primarily want to indicate the risk to others, not the risk to you others at these "dangerous" levels
-  // TODO: Decide if we want to re-integrate this level later
   const highestNormalRisklevel = riskLevels[riskLevels.length - 1]
-  // if (points >= highestNormalRisklevel.max) {
-  //   return lifeThreateningRisk
-  // }
 
   // Then check against normalized points
   const normalizedPoints = points / (budget / 10000)
@@ -150,19 +138,12 @@ function Thermometer(props: {
   doShowPoints: boolean
   activeRiskLevel: RiskLevel
 }): React.ReactElement {
-  const onActiveLevel = (
-    activeRiskLevel: RiskLevel,
-    comparisonRiskLevel: RiskLevel,
-  ) => {
-    return activeRiskLevel.title === comparisonRiskLevel.title
-  }
-
-  const addActiveLevelClass = (
+  const getActiveLevelClass = (
     doShowPoints: boolean,
     activeRiskLevel: RiskLevel,
     comparisonRiskLevel: RiskLevel,
   ) => {
-    return doShowPoints && onActiveLevel(activeRiskLevel, comparisonRiskLevel)
+    return doShowPoints && activeRiskLevel === comparisonRiskLevel
       ? ' current-level'
       : ''
   }
@@ -182,7 +163,7 @@ function Thermometer(props: {
             key={level.style}
             className={
               `thermometer-piece risk-${level.style}` +
-              addActiveLevelClass(
+              getActiveLevelClass(
                 props.doShowPoints,
                 props.activeRiskLevel,
                 level,
