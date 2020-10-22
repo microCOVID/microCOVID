@@ -33,6 +33,27 @@ export const App = (): React.ReactElement => {
               href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@500&display=swap"
               rel="stylesheet"
             />
+            <meta
+              name="description"
+              content="A calculator for building intuition about COVID risk. We used published research to estimate the risk level of various activities in microCOVIDs. 1 microCOVID is a one-in-a-million chance of getting COVID. We hope you'll use this tool to make safer choices."
+            />
+            <meta property="og:title" content="microCOVID Project" />
+            <meta
+              property="og:description"
+              content="A calculator for building intuition about COVID risk. We used published research to estimate the risk level of various activities in microCOVIDs. 1 microCOVID is a one-in-a-million chance of getting COVID. We hope you'll use this tool to make safer choices."
+            />
+            <meta
+              property="og:image"
+              content={process.env.REACT_APP_PUBLIC_URL + '/logo400.png'}
+            />
+            <meta property="og:image:width" content="400" />
+            <meta property="og:image:height" content="400" />
+            <meta
+              property="og:url"
+              content={process.env.REACT_APP_PUBLIC_URL}
+            />
+            <meta property="fb:app_id" content="1117003835468995" />
+            <meta property="og:type" content="website" />
           </Helmet>
 
           <ScrollToTop />
