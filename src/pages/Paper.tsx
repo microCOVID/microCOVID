@@ -33,7 +33,7 @@ export const Paper = (): React.ReactElement => {
 
 export const PaperTOC = (): React.ReactElement => {
   return (
-    <TableOfContents posts={pages} title="White Paper">
+    <TableOfContents posts={pages} title="White Paper" baseNavPath="/paper">
       <hr />
       <p>
         This writeup explains the numbers and calculations used in the{' '}
