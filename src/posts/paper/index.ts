@@ -14,6 +14,7 @@ import post8 from 'posts/paper/8-intermediate-method'
 import post9 from 'posts/paper/9-advanced-method'
 import { PostMap } from 'posts/post'
 
+// Note: the keys in this map are the public URL for the post. Changing them will break links.
 export const pages: PostMap = {
   '1-intro': post1,
   '2-riskiness': post2,

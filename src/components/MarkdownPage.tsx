@@ -131,6 +131,7 @@ export const MarkdownContents: React.FunctionComponent<{
   return (
     <div className="paperPage">
       <Helmet>
+        <title>{`${page.title} - microCOVID Project`}</title>
         <meta name="description" content={textWithoutHtml} />
         <meta property="og:description" content={textWithoutHtml} />
         <meta property="og:title" content={page.title} />
@@ -178,7 +179,7 @@ export const TableOfContents: React.FunctionComponent<{
       </div>
       {children}
       <ol className="toc">
-        {[...slugs].reverse().map((pageId, pageIndex) => (
+        {slugs.map((pageId, pageIndex) => (
           <li key={pageIndex}>
             <Link to={`${baseNavPath}/${pageId}`}>{posts[pageId].title}</Link>
           </li>
