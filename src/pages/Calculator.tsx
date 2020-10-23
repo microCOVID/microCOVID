@@ -7,11 +7,9 @@ import {
   recordSavedCustom,
 } from 'components/Analytics'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
+import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
-import {
-  ExplanationCard,
-  PointsDisplay,
-} from 'components/calculator/PointsDisplay'
+import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { GenericSelectControl } from 'components/calculator/SelectControl'
