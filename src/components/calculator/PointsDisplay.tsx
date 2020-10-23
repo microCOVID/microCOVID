@@ -58,6 +58,8 @@ export function ExplanationCard(props: {
   const pointsFormatted = displayPoints(points)
   const pointsPercentFormatted = displayPercent(points)
   const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)
+  const personCountSuffixFormatted =
+    props.data.personCount === 1 ? 'person' : 'people'
   const frequencyFormatted = props.repeatedEvent
     ? 'per week'
     : 'each time you do it'
@@ -101,12 +103,13 @@ export function ExplanationCard(props: {
               <code>
                 ({personRiskEachFormatted} Person Risk) x (
                 {activityRiskFormatted} Activity Risk) x (
-                {props.data.personCount}{' '}
-                {props.data.personCount === 1 ? 'person' : 'people'})<br />
-                <strong>
+                {props.data.personCount} {personCountSuffixFormatted})<br />
+                <strong style={{ fontSize: '1.5em' }}>
                   = ~{pointsFormatted} microCOVIDs {frequencyFormatted}
                 </strong>{' '}
-                (range: {lowerBoundFormatted} to {upperBoundFormatted})
+                <br />
+                (margin of error: {lowerBoundFormatted} to {upperBoundFormatted}
+                )
               </code>{' '}
             </div>
           </div>
@@ -141,6 +144,14 @@ export function ExplanationCard(props: {
             </li>
             <li>
               <strong>
+                Number of people:{' '}
+                <code>
+                  {props.data.personCount} {personCountSuffixFormatted}
+                </code>
+              </strong>
+            </li>
+            <li>
+              <strong>
                 Total risk:{' '}
                 <code>
                   ~{pointsFormatted}-in-a-million ({pointsPercentFormatted})
@@ -157,7 +168,7 @@ export function ExplanationCard(props: {
             </li>
             <li>
               <strong>
-                Frequency: <code>microCOVIDs {frequencyFormatted}</code>
+                Frequency: <code>{frequencyFormatted}</code>
               </strong>
               <br />
               {props.repeatedEvent ? (
@@ -195,23 +206,26 @@ export function ExplanationCard(props: {
           <ul>
             <li>
               <strong>
-                Budget used:{' '}
-                <code>
-                  {budgetConsumptionFormatted}% of your {weekBudgetFormatted}{' '}
-                  microCOVIDs per week budget
-                </code>
-              </strong>{' '}
+                Budget avaialble:{' '}
+                <code>{weekBudgetFormatted} microCOVIDs per week</code>
+              </strong>
               <br />
               You select an annual budget is {budgetAnnualPercentFormatted}{' '}
               chance of getting COVID per year ({budgetFormatted} microCOVIDs).
               That equates to a weekly budget of{' '}
-              <strong>{weekBudgetFormatted} microCOVIDs per week</strong>. This
-              ineraction takes up{' '}
-              <code>
-                {budgetConsumptionFormatted}% of your weekly budget{' '}
-                {frequencyFormatted}
-              </code>{' '}
-              .
+              <strong>{weekBudgetFormatted} microCOVIDs per week</strong>.
+            </li>
+            <li>
+              <strong>
+                Budget used:{' '}
+                <code>
+                  {budgetConsumptionFormatted} {frequencyFormatted}{' '}
+                </code>
+              </strong>
+              <br />
+              This ineraction uses <strong>{budgetConsumptionFormatted}</strong>
+              . This amount of your budget will be used{' '}
+              <strong>{frequencyFormatted}</strong> .
             </li>
           </ul>
         </div>
