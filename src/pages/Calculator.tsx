@@ -267,8 +267,8 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row>
-        <Col lg={{ span: 8 }}>
-          <p className="warning">
+        <Col lg={{ span: 8, offset: 4 }}>
+          <p className="warning" style={{ margin: '0' }}>
             <b>Important:</b> In this tool we state our best estimate based on
             available evidence, even when that evidence is not conclusive. We
             have read a lot of experts' research, but we are not ourselves
