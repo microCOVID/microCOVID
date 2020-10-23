@@ -320,6 +320,7 @@ input[type=number] {
     z-index: $sticky-z-index;
     padding-bottom: 0;
   }
+
   // Make sure to put the location sidebar above the floating points display
   #location {
     @include media-breakpoint-up(lg) {
@@ -472,8 +473,39 @@ input[type=number] {
 
   .explanation .card {
     border: 1px solid $border-color;
+    border-top: 0px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+
+    h4 {
+      margin-top: 0.5em;
+    }
+
+    code {
+      margin-left: 0.2em;
+    }
+
+    #calculation-explanation {
+      border: 1px solid $border-color;
+      padding: 1em;
+      margin: 1em 0;
+      background-color: $gray-100;
+
+
+      #calculation-breakdown {
+        margin-left: 2em;
+      }
+
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    #additional-precautions {
+      li {
+        margin-bottom: 0.2em;
+      }
+    }
   }
 
 }

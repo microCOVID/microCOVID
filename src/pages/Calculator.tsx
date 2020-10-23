@@ -262,6 +262,9 @@ export const Calculator = (): React.ReactElement => {
             repeatedEvent={repeatedEvent}
             riskBudget={riskBudget}
             riskBudgetSetter={setRiskBudget}
+            data={calculatorData}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
           />
         </Col>
       </Row>

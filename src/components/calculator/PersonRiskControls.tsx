@@ -3,7 +3,7 @@ import { Popover } from 'react-bootstrap'
 
 import { SelectControl } from './SelectControl'
 import { CalculatorData } from 'data/calculate'
-import { Distance, RiskProfile } from 'data/data'
+import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -88,6 +88,13 @@ export const PersonRiskControls: React.FunctionComponent<{
               }
             />
           </div>
+          {data.distance === 'intimate' &&
+          data.duration < intimateDurationFloor ? (
+            <div className="warning">
+              We have applied a minimum Activity Risk for kissing due to the
+              risk involved in exchanging fluids.
+            </div>
+          ) : null}
           <SelectControl
             id="distance"
             label="How close are these nearby people, on average?"

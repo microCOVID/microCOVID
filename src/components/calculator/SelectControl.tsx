@@ -37,7 +37,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   className?: string
 }> = (props) => (
   <div className="form-group">
-    {props.label && (
+    {(props.label || props.header) && (
       <div className="label-wrapper">
         <label htmlFor={props.id}>
           <div>
