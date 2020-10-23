@@ -110,6 +110,11 @@ export const PersonRiskControls: React.FunctionComponent<{
         id="riskProfile"
         label="What is their risk profile?"
         header="Risk Profile"
+        helpText={
+          !repeatedEvent
+            ? ''
+            : 'If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting'
+        }
         popover={personRiskPopover}
         data={data}
         setter={setter}
