@@ -7,6 +7,7 @@ import {
   TheirMask,
   Voice,
   YourMask,
+  intimateDurationFloor,
 } from 'data/data'
 
 export interface CalculatorData {
@@ -54,6 +55,15 @@ export const defaultValues: CalculatorData = {
   yourMask: '',
   voice: '',
 }
+
+interface CalculatorResult {
+  expectedValue: number
+  lowerBound: number
+  upperBound: number
+}
+
+// These are the variables exposed via query parameters
+export type QueryData = Partial<CalculatorData>
 
 // Replace any values that no longer exist with empty string (nothing selected).
 // This is used when restoring a previous saved scenario, in case we changed
@@ -183,53 +193,43 @@ export const calculatePersonRiskEach = (
   }
 }
 
-export const calculatePersonRisk = (
-  data: CalculatorData,
-  averagePersonRisk: number,
-): number | null => {
-  try {
-    let risk = calculatePersonRiskEach(data, averagePersonRisk)
-    if (risk === null || data.personCount === 0) {
-      return null
-    }
-    risk *= data.personCount
-    return risk
-  } catch (e) {
-    return null
-  }
-}
-
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
   try {
     if (data.interaction === '') {
       return null
     }
 
-    const repeatedInteraction = ['repeated', 'partner'].includes(
-      data.interaction,
-    )
-
-    let multiplier = 1
-    multiplier *= Interaction[data.interaction].multiplier
-
-    if (!repeatedInteraction) {
-      // If something isn't selected, use the "baseline" value (indoor, unmasked,
-      // undistanced, regular conversation)
-      const mulFor = (
-        table: { [key: string]: FormValue },
-        given: string,
-      ): number => (given === '' ? 1 : table[given].multiplier)
-      multiplier *= mulFor(Setting, data.setting)
-      multiplier *= mulFor(Distance, data.distance)
-      multiplier *= mulFor(TheirMask, data.theirMask)
-      multiplier *= mulFor(YourMask, data.yourMask)
-      multiplier *= mulFor(Voice, data.voice)
-
-      if (data.duration === 0) {
-        return null
-      }
-      multiplier *= data.duration / 60.0
+    if (data.interaction !== 'oneTime') {
+      return Interaction[data.interaction].multiplier
     }
+
+    let multiplier = Interaction[data.interaction].multiplier
+
+    if (data.duration === 0) {
+      return null
+    }
+    // If something isn't selected, use the "baseline" value (indoor, unmasked,
+    // undistanced, regular conversation)
+    const mulFor = (
+      table: { [key: string]: FormValue },
+      given: string,
+    ): number => (given === '' ? 1 : table[given].multiplier)
+
+    let effectiveDuration = data.duration
+    multiplier *= mulFor(Distance, data.distance)
+    if (data.distance === 'intimate') {
+      // Even a brief kiss probably has a non-trivial chance of transmission.
+      effectiveDuration = Math.max(effectiveDuration, intimateDurationFloor)
+    }
+    if (data.distance !== 'intimate' && data.distance !== 'close') {
+      // Being outdoors only helps if you're not literally breathing each others' exhalation.
+      multiplier *= mulFor(Setting, data.setting)
+    }
+    multiplier *= mulFor(TheirMask, data.theirMask)
+    multiplier *= mulFor(YourMask, data.yourMask)
+    multiplier *= mulFor(Voice, data.voice)
+
+    multiplier *= effectiveDuration / 60.0
     if (multiplier > MAX_ACTIVITY_RISK) {
       multiplier = MAX_ACTIVITY_RISK
     }
@@ -239,18 +239,16 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
   }
 }
 
-export const calculate = (data: CalculatorData): number | null => {
+export const calculate = (data: CalculatorData): CalculatorResult | null => {
   try {
-    let points
-
     const averagePersonRisk = calculateLocationPersonAverage(data)
     if (averagePersonRisk === null) {
       return null
     }
 
     // Person risk
-    points = calculatePersonRisk(data, averagePersonRisk)
-    if (points === null) {
+    const personRiskEach = calculatePersonRiskEach(data, averagePersonRisk)
+    if (personRiskEach === null) {
       return null
     }
 
@@ -259,14 +257,41 @@ export const calculate = (data: CalculatorData): number | null => {
     if (activityRisk === null) {
       return null
     }
-    points *= activityRisk
 
-    if (points > MAX_POINTS) {
-      points = MAX_POINTS
+    const pointsNaive = personRiskEach * data.personCount * activityRisk
+    if (pointsNaive < MAX_POINTS) {
+      return {
+        expectedValue: pointsNaive,
+        lowerBound: pointsNaive / ERROR_FACTOR,
+        upperBound: pointsNaive * ERROR_FACTOR,
+      }
     }
 
-    return points
+    const riskEach = personRiskEach * activityRisk * 1e-6
+    const expectedValue =
+      probabilityEventHappensAtLeastOnce(riskEach, data.personCount) * 1e6
+    const lowerBound =
+      probabilityEventHappensAtLeastOnce(
+        riskEach / ERROR_FACTOR,
+        data.personCount,
+      ) * 1e6
+    const upperBound =
+      probabilityEventHappensAtLeastOnce(
+        Math.min(1, riskEach * ERROR_FACTOR),
+        data.personCount,
+      ) * 1e6
+    return { expectedValue, lowerBound, upperBound }
   } catch (e) {
     return null
   }
+}
+
+// Given an event that happens with probability |probabilityOfOnce| that is repeated |numberOfTimes|,
+// return the probability that it happens at least once
+// (e.g. an event has |probabilityOfOnce| chance of giving you covid and you do it |numberOfTimes|, how likely are you to get covid?)
+const probabilityEventHappensAtLeastOnce = (
+  probabilityOfOnce: number,
+  numberOfTimes: number,
+): number => {
+  return 1 - (1 - probabilityOfOnce) ** numberOfTimes
 }

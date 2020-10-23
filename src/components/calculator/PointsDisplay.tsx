@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { GenericSelectControl } from './SelectControl'
 import Card from 'components/Card'
-import { ERROR_FACTOR, MAX_POINTS } from 'data/calculate'
+import { MAX_POINTS } from 'data/calculate'
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
@@ -24,10 +24,6 @@ function displayPercent(points: number): string {
 
 function tooManyPoints(points: number): boolean {
   return points >= MAX_POINTS
-}
-
-function maybeGreater(points: number): string {
-  return tooManyPoints(points) ? '>' : ''
 }
 
 export function ExplanationCard(props: {
@@ -64,7 +60,7 @@ export function ExplanationCard(props: {
           },
           '1000': {
             label:
-              '0.1% per year (suggest if at increased risk or regularly interracting with people at increased risk)',
+              '0.1% per year (suggest if at increased risk or regularly interacting with people at increased risk)',
             multiplier: 0.1,
           },
         }}
@@ -78,8 +74,7 @@ export function ExplanationCard(props: {
       </p>
       <h2>What does this mean numerically?</h2>
       <p>
-        This is a roughly {maybeGreater(points)}
-        {displayPoints(points)}-in-a-million ({maybeGreater(points)}
+        This is a roughly ~{displayPoints(points)}-in-a-million (
         {displayPercent(points)}){props.repeatedEvent ? ' per week ' : ' '}
         chance of getting COVID from this activity with these people.
       </p>
@@ -116,7 +111,7 @@ const budgetConsumption = (
   repeatedEvent: boolean,
 ) => {
   if (repeatedEvent) {
-    return `Having this interraction regularly would use up
+    return `Having this interaction regularly would use up
         ~${fixedPointPrecision(
           ((points * 52) / budget) * 100,
         )}% of your annual risk
@@ -138,19 +133,17 @@ const budgetConsumption = (
 export function PointsDisplay(props: {
   points: number
   repeatedEvent: boolean
+  upperBound: number
+  lowerBound: number
 }): React.ReactElement {
   return (
     <div className="top-half-card">
       <strong>Results:</strong>
       {showPoints(props.points) ? (
         <h1>
-          {tooManyPoints(props.points) ? '>' : '~'}
           {displayPoints(props.points)} microCOVIDs (
-          {maybeGreater(props.points)}
-          {displayPoints(props.points / ERROR_FACTOR)} to{' '}
-          {maybeGreater(props.points)}
-          {displayPoints(props.points * ERROR_FACTOR)})
-          {props.repeatedEvent ? ' per week' : ''}
+          {displayPoints(props.lowerBound)} to {displayPoints(props.upperBound)}
+          ){props.repeatedEvent ? ' per week' : ' each time'}
         </h1>
       ) : (
         <h1>fill in calculator to see</h1>

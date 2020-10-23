@@ -68,6 +68,7 @@ export const PersonRiskControls: React.FunctionComponent<{
         data={data}
         setter={setter}
         source={RiskProfile}
+        hideRisk={true}
       />
       <br />
       <p className="readout">
