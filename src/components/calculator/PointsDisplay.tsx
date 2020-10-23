@@ -44,7 +44,7 @@ export function ExplanationCard(props: {
 }): React.ReactElement {
   const points = props.points
 
-  const [displayCalculationExplanation, setCalculationExplanation] = useState(
+  const [showCalculatorExplanation, setShowCalculatorExplanation] = useState(
     false,
   )
 
@@ -79,13 +79,11 @@ export function ExplanationCard(props: {
     <>
       <span
         className="expandable-header"
-        onClick={() =>
-          setCalculationExplanation(!displayCalculationExplanation)
-        }
+        onClick={() => setShowCalculatorExplanation(!showCalculatorExplanation)}
         aria-controls="calculation-explanation"
-        aria-expanded={displayCalculationExplanation}
+        aria-expanded={showCalculatorExplanation}
       >
-        {displayCalculationExplanation ? (
+        {showCalculatorExplanation ? (
           <>
             <BsChevronDown /> How this was calculated
           </>
@@ -95,7 +93,7 @@ export function ExplanationCard(props: {
           </>
         )}
       </span>
-      <Collapse in={displayCalculationExplanation}>
+      <Collapse in={showCalculatorExplanation}>
         <div id="calculation-explanation">
           <div>
             <h4>Calculation:</h4>
@@ -187,7 +185,13 @@ export function ExplanationCard(props: {
                     microCOVIDs <u>each time</u> you have this interaction
                   </strong>
                   . If you do this activity many times in a week, each time you
-                  do it, it will count against your weekly budget.
+                  do it, it will count against your weekly budget. If you do
+                  this activity many times with the same people each week, enter
+                  it as{' '}
+                  {props.data.distance
+                    ? '"household member"'
+                    : '"partner / spouse"'}{' '}
+                  to see what the maximum transmission rate is per week.
                 </>
               )}
             </li>
@@ -223,9 +227,9 @@ export function ExplanationCard(props: {
                 </code>
               </strong>
               <br />
-              This ineraction uses <strong>{budgetConsumptionFormatted}</strong>
-              . This amount of your budget will be used{' '}
-              <strong>{frequencyFormatted}</strong> .
+              This interaction uses{' '}
+              <strong>{budgetConsumptionFormatted}</strong>. This amount of your
+              budget will be used <strong>{frequencyFormatted}</strong> .
             </li>
           </ul>
         </div>
@@ -305,7 +309,6 @@ export function ExplanationCard(props: {
       <Form.Group>
         <GenericSelectControl
           id="budget-selector"
-          label=" "
           header="Adjust your risk tolerance"
           popover={riskTolerancePopover}
           setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}

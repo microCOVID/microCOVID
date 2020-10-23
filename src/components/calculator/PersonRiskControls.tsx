@@ -88,7 +88,6 @@ export const PersonRiskControls: React.FunctionComponent<{
               }
             />
           </div>
-          {console.log(data.interaction)}
           {data.distance === 'intimate' &&
           data.duration < intimateDurationFloor ? (
             <div className="warning">
