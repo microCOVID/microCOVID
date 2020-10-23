@@ -1,7 +1,7 @@
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
-} from 'data/FormatPrecision'
+} from 'components/calculator/util/FormatPrecision'
 
 describe('fixedPointPrecision', () => {
   it('rounds numbers greater than 1', () => {

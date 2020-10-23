@@ -1,4 +1,4 @@
-import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
+import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface FormValue {
   label: string
