@@ -559,8 +559,8 @@ const maskDetails = (
           over the outflow valve.
         </li>
         <li>
-          P100s come with a range of possible filter cartridges. You want the
-          basic particle filters, not the VOC filters, which are harder to
+          P100s come with a range of possible filter cartridges. We recommend
+          the basic particle filters, not the VOC filters, which are harder to
           breathe through and do not provide additional protection.
         </li>
         <li>
