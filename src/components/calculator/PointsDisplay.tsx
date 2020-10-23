@@ -75,8 +75,8 @@ export function ExplanationCard(props: {
     props.riskBudget,
   )
 
-  return (
-    <Card>
+  const calculationBreakdown = (
+    <>
       <span
         className="expandable-header"
         onClick={() =>
@@ -283,6 +283,12 @@ export function ExplanationCard(props: {
           </>
         )}
       </div>
+    </>
+  )
+
+  return (
+    <Card>
+      {showPoints(props.points) ? calculationBreakdown : ''}
 
       <Form.Group>
         <GenericSelectControl
