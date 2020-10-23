@@ -228,7 +228,9 @@ export default function ExplanationCard(props: {
                 value={`${weekBudgetFormatted} microCOVIDs per week`}
               />
               <br />
-              You select an annual budget is {budgetAnnualPercentFormatted}{' '}
+              You selected an annual budget of a {
+                budgetAnnualPercentFormatted
+              }{' '}
               chance of getting COVID per year ({budgetFormatted} microCOVIDs).
               That equates to a weekly budget of{' '}
               <strong>{weekBudgetFormatted} microCOVIDs per week</strong>.
