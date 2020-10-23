@@ -72,6 +72,14 @@ export const PersonRiskControls: React.FunctionComponent<{
 
       {!repeatedEvent ? (
         <React.Fragment>
+          <SelectControl
+            id="distance"
+            label="How close are these nearby people, on average?"
+            header="Distance"
+            data={data}
+            setter={setter}
+            source={Distance}
+          />
           <div className="form-group">
             <label htmlFor="duration">
               <strong>Duration:</strong> How long is the activity, in minutes?
@@ -95,14 +103,6 @@ export const PersonRiskControls: React.FunctionComponent<{
               risk involved in exchanging fluids.
             </div>
           ) : null}
-          <SelectControl
-            id="distance"
-            label="How close are these nearby people, on average?"
-            header="Distance"
-            data={data}
-            setter={setter}
-            source={Distance}
-          />
         </React.Fragment>
       ) : null}
       <SelectControl
