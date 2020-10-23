@@ -271,10 +271,6 @@ export function ExplanationCard(props: {
                 possible
               </li>
               <li>
-                Encrouage them to be in a closed pod with you and a small group
-                of others
-              </li>
-              <li>
                 If they are very risky and you must be inside with them, you can
                 wear masks inside or isolate within the house by staying in
                 different rooms.
@@ -298,14 +294,16 @@ export function ExplanationCard(props: {
           popover={riskTolerancePopover}
           setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
           value={props.riskBudget}
+          hideRisk={true}
           source={{
             '10000': {
-              label: '1% per year (suggested if not at increased risk)',
+              label:
+                '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
               multiplier: 1,
             },
             '1000': {
               label:
-                '0.1% per year (suggest if at increased risk or regularly interacting with people at increased risk)',
+                '0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
               multiplier: 0.1,
             },
           }}
@@ -484,8 +482,9 @@ const riskTolerancePopover = (
         <Link to="/paper/2-riskiness">1% risk of getting COVID per year. </Link>
       </p>
       <p>
-        We suggest more caution (0.1% risk per year) for people at increased
-        risk of severe illness (or in contact with people at increased risk).
+        We suggest more caution (0.1% risk per year) for people who are more
+        vulnerable to severe illness from COVID (or in contact with more
+        vulnerable people)
       </p>
       <p>
         <p>
@@ -494,9 +493,10 @@ const riskTolerancePopover = (
             target="_blank"
             rel="noreferrer"
           >
-            Risk increases with age.
+            Vulnerability increases with age.
           </a>{' '}
-          We think age over 60 confers substantial increased risk.
+          We think age over 60 confers substantial increased vulnerability to
+          severe illness from COVID.
         </p>
         <p>
           <a
@@ -506,11 +506,12 @@ const riskTolerancePopover = (
           >
             Certain underlying medical conditions
           </a>{' '}
-          also confer increased risk:
+          also confer increased vulnerability:
         </p>
         <ul>
           <li>BMI of 30 or higher</li>
           <li>Type 2 diabetes mellitus</li>
+          <li>Smoking</li>
           <li>COPD or other heart conditions</li>
           <li>Cancer</li>
           <li>Chronic kidney disease</li>
