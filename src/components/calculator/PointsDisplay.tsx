@@ -106,8 +106,8 @@ export function ExplanationCard(props: {
                   = ~{pointsFormatted} microCOVIDs {frequencyFormatted}
                 </strong>{' '}
                 <br />
-                (margin of error: {lowerBoundFormatted} to {upperBoundFormatted}
-                )
+                (probably between: {lowerBoundFormatted} to{' '}
+                {upperBoundFormatted})
               </code>{' '}
             </div>
           </div>
@@ -127,13 +127,22 @@ export function ExplanationCard(props: {
               <strong>
                 Activity Risk: <code>{activityRiskFormatted} chance</code>
               </strong>
-              <br /> Next, we calcualte the risk of the activity. Assuming 1
-              person at this activity has COVID, then you would have a{' '}
-              <strong>{activityRiskFormatted} chance</strong> of getting COVID.
+              <br /> Next, we calculate the risk of the activity. A person at
+              this activity with COVID would have a{' '}
+              <strong>{activityRiskFormatted} chance</strong> of transmitting it
+              to you.{' '}
               <b>
-                {activityRisk && activityRisk >= MAX_ACTIVITY_RISK
-                  ? ' (NOTE: We have capped this number at the maximum Activity Risk.)'
-                  : ''}
+                {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
+                  <>
+                    (NOTE: We have{' '}
+                    <a href="/paper/13-q-and-a#what-if-i-hang-out-with-someone-indoors-for-a-long-time-if-we-hang-out-for-5-hours-thats-an-activity-risk-of-6-⨉-5--30-which-is-the-same-risk-as-for-a-household-member">
+                      capped this number at the maximum Activity Risk
+                    </a>
+                    .)
+                  </>
+                ) : (
+                  ''
+                )}
                 {props.data.distance === 'intimate' &&
                 props.data.duration < intimateDurationFloor
                   ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
@@ -197,9 +206,9 @@ export function ExplanationCard(props: {
             </li>
             <li>
               <strong>
-                Margin of error:{' '}
+                Probably between:{' '}
                 <code>
-                  {lowerBoundFormatted} to {upperBoundFormatted} microCOVIDs
+                  {lowerBoundFormatted} and {upperBoundFormatted} microCOVIDs
                 </code>
               </strong>
               <br />
