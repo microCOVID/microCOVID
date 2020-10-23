@@ -26,6 +26,17 @@ import {
 } from 'data/calculate'
 import { intimateDurationFloor } from 'data/data'
 
+export function CalculationStepHeader(props: {
+  header: string
+  value: string
+}): React.ReactElement {
+  return (
+    <strong>
+      {props.header}: <code>{props.value}</code>
+    </strong>
+  )
+}
+
 export default function ExplanationCard(props: {
   points: number
   lowerBound: number
@@ -107,19 +118,20 @@ export default function ExplanationCard(props: {
           <h4>Calculation Steps:</h4>
           <ol>
             <li>
-              <strong>
-                Person Risk:{' '}
-                <code>{personRiskEachFormatted}-in-a-million chance</code>
-              </strong>{' '}
+              <CalculationStepHeader
+                header="Person Risk"
+                value={`${personRiskEachFormatted}-in-a-million chance`}
+              />
               <br />
               First, we calculate that each other person in this area has a{' '}
               <strong>{personRiskEachFormatted}-in-a-million chance</strong>
               {'  '} of currently having COVID.
             </li>
             <li>
-              <strong>
-                Activity Risk: <code>{activityRiskFormatted} chance</code>
-              </strong>
+              <CalculationStepHeader
+                header="Activity Risk"
+                value={`${activityRiskFormatted} chance`}
+              />
               <br /> Next, we calculate the risk of the activity. A person at
               this activity with COVID would have a{' '}
               <strong>{activityRiskFormatted} chance</strong> of transmitting it
@@ -143,20 +155,16 @@ export default function ExplanationCard(props: {
               </b>
             </li>
             <li>
-              <strong>
-                Number of people:{' '}
-                <code>
-                  {props.data.personCount} {personCountSuffixFormatted}
-                </code>
-              </strong>
+              <CalculationStepHeader
+                header="Number of people"
+                value={`${props.data.personCount} ${personCountSuffixFormatted}`}
+              />
             </li>
             <li>
-              <strong>
-                Total risk:{' '}
-                <code>
-                  ~{pointsFormatted}-in-a-million ({pointsPercentFormatted})
-                </code>
-              </strong>
+              <CalculationStepHeader
+                header="Total risk"
+                value={`~${pointsFormatted}-in-a-million (${pointsPercentFormatted})`}
+              />
               <br />
               Finally, we multiply Person Risk, Activity Risk, and the number of
               people to get the total result of roughly{' '}
@@ -167,9 +175,10 @@ export default function ExplanationCard(props: {
               <strong>{frequencyFormatted}</strong>.
             </li>
             <li>
-              <strong>
-                Frequency: <code>{frequencyFormatted}</code>
-              </strong>
+              <CalculationStepHeader
+                header="Frequency"
+                value={`${frequencyFormatted}`}
+              />
               <br />
               {props.repeatedEvent ? (
                 <>
@@ -198,12 +207,10 @@ export default function ExplanationCard(props: {
               )}
             </li>
             <li>
-              <strong>
-                Probably between:{' '}
-                <code>
-                  {lowerBoundFormatted} and {upperBoundFormatted} microCOVIDs
-                </code>
-              </strong>
+              <CalculationStepHeader
+                header="Probably between"
+                value={`${lowerBoundFormatted} and ${upperBoundFormatted} microCOVIDs`}
+              />
               <br />
               We believe with roughly 90% confidence that the actual risk falls
               between these two values. See our{' '}
@@ -216,10 +223,10 @@ export default function ExplanationCard(props: {
           <h4>How much of this can I do given my risk budget?</h4>
           <ul>
             <li>
-              <strong>
-                Budget avaialble:{' '}
-                <code>{weekBudgetFormatted} microCOVIDs per week</code>
-              </strong>
+              <CalculationStepHeader
+                header="Budget available"
+                value={`${weekBudgetFormatted} microCOVIDs per week`}
+              />
               <br />
               You select an annual budget is {budgetAnnualPercentFormatted}{' '}
               chance of getting COVID per year ({budgetFormatted} microCOVIDs).
@@ -227,12 +234,10 @@ export default function ExplanationCard(props: {
               <strong>{weekBudgetFormatted} microCOVIDs per week</strong>.
             </li>
             <li>
-              <strong>
-                Budget used:{' '}
-                <code>
-                  {budgetConsumptionFormatted} {frequencyFormatted}{' '}
-                </code>
-              </strong>
+              <CalculationStepHeader
+                header="Budget used"
+                value={`${budgetConsumptionFormatted} ${frequencyFormatted}`}
+              />
               <br />
               This interaction uses{' '}
               <strong>{budgetConsumptionFormatted}</strong>. This amount of your
