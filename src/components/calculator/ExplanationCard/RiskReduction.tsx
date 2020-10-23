@@ -93,6 +93,10 @@ const oneTimeAdvice = (
           Reduce shopping trips by doing one trip for multiple people, using
           delivery services, or shopping online
         </li>
+        <li>
+          If this activity is with friends, encourage them to not come if they
+          or any of their close contacts are feeling unwell
+        </li>
       </ol>
     </>
   )
