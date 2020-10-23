@@ -36,7 +36,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <SelectControl
         id="setting"
         header="Environment"
-        label="Are you indoors or outdoors?"
+        label="Is it indoor or outdoor?"
         data={data}
         setter={setter}
         source={Setting}
