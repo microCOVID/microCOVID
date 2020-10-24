@@ -37,7 +37,6 @@ a {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto Slab';
   font-weight: 700;
-  margin-top: 2.4rem;
   margin-bottom: 1.3rem;
 }
 
@@ -159,6 +158,7 @@ input[type=number] {
 #calculator {
   #calculator-introduction {
     padding: 20px;
+    padding-bottom: 0px;
     font-size: $h4-font-size;
     position: relative;
 
