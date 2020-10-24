@@ -1,11 +1,15 @@
+import copy from 'copy-to-clipboard'
+import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { useQueryParams } from 'use-query-params'
+import { BsLink45Deg } from 'react-icons/bs'
+import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
 import {
   recordCalculatorChanged,
   recordSavedCustom,
 } from 'components/Analytics'
+import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
@@ -34,7 +38,7 @@ const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
-  const [query, setQuery] = useQueryParams(queryConfig)
+  const [query] = useQueryParams(queryConfig)
 
   // Mount / unmount
   useEffect(() => {
@@ -54,10 +58,13 @@ export const Calculator = (): React.ReactElement => {
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
   const [showSaveForm, setShowSaveForm] = useState(false)
+  const [alerts, setAlerts] = useState<string[]>([])
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
     useQueryDataIfPresent(query, migratedPreviousData),
   )
+
+  const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
@@ -69,6 +76,23 @@ export const Calculator = (): React.ReactElement => {
     setShowSaveForm(false)
     setSaveName('')
     recordSavedCustom(points)
+    addAlert('Scenario saved!')
+  }
+
+  const getShareURL = (calculatorData: CalculatorData) => {
+    const encodedQuery = encodeQueryParams(
+      queryConfig,
+      filterParams(calculatorData),
+    )
+    const link = `${window.location.protocol}//${
+      window.location.host
+    }/?${stringify(encodedQuery)}`
+    return link
+  }
+
+  const copyShareURL = (calculatorData: CalculatorData) => {
+    copy(getShareURL(calculatorData))
+    addAlert('Link copied to clipboard!')
   }
 
   const [riskBudget, setRiskBudget] = useState(10000)
@@ -96,12 +120,10 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
-    setQuery(filterParams(calculatorData), 'replace')
-
     document.getElementById('points-row')?.classList.add('has-points')
 
     return { points: expectedValue, lowerBound, upperBound }
-  }, [calculatorData, setQuery])
+  }, [calculatorData])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
@@ -127,6 +149,13 @@ export const Calculator = (): React.ReactElement => {
         <button type="button" className="btn btn-info" onClick={persistForm}>
           Save
         </button>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => setShowSaveForm(false)}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   )
@@ -138,6 +167,15 @@ export const Calculator = (): React.ReactElement => {
       onClick={() => setShowSaveForm(true)}
     >
       Save as custom scenario
+    </button>
+  )
+  const shareButton= (
+    <button
+      type="button"
+      className="btn btn-info"
+      onClick={() => copyShareURL(calculatorData)}
+    >
+      <BsLink45Deg /> Copy link to this scenario
     </button>
   )
 
@@ -231,6 +269,15 @@ export const Calculator = (): React.ReactElement => {
                     >
                       Reset form
                     </button>
+                    {shareButton}
+                    {alerts.map((alert, idx) => (
+                      <AutoAlert
+                        key={idx}
+                        variant="info"
+                        message={alert}
+                        timeout={3000}
+                      />
+                    ))}
                     {points > 0 && (showSaveForm ? saveForm : saveButton)}
                   </Col>
                 </Row>
