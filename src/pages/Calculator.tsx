@@ -1,7 +1,8 @@
 import copy from 'copy-to-clipboard'
+import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { useQueryParams } from 'use-query-params'
+import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
 import {
   recordCalculatorChanged,
@@ -78,12 +79,22 @@ export const Calculator = (): React.ReactElement => {
   }
 
   const openShareForm = () => {
-    setQuery(filterParams(calculatorData))
     setShowShareForm(true)
   }
 
-  const copyShareURL = () => {
-    copy(window.location.href)
+  const getShareURL = (calculatorData: CalculatorData) => {
+    const encodedQuery = encodeQueryParams(
+      queryConfig,
+      filterParams(calculatorData),
+    )
+    const link = `${window.location.protocol}//${
+      window.location.host
+    }/?${stringify(encodedQuery)}`
+    return link
+  }
+
+  const copyShareURL = (calculatorData: CalculatorData) => {
+    copy(getShareURL(calculatorData))
     addAlert('Link copied to clipboard!')
     setShowShareForm(false)
   }
@@ -159,13 +170,13 @@ export const Calculator = (): React.ReactElement => {
         className="form-control"
         type="text"
         placeholder="Enter name to save your custom scenario to the scenario list"
-        value={window.location.href}
+        value=""
       />
       <div className="input-group-append">
         <button
           type="button"
           className="btn btn-info"
-          onClick={() => copyShareURL()}
+          onClick={() => copyShareURL(calculatorData)}
         >
           Copy
         </button>
