@@ -37,8 +37,7 @@ const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
-  // eslint-disable-next-line
-  const [query, setQuery] = useQueryParams(queryConfig)
+  const [query] = useQueryParams(queryConfig)
 
   // Mount / unmount
   useEffect(() => {
