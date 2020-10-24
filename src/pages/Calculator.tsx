@@ -222,7 +222,7 @@ export const Calculator = (): React.ReactElement => {
           {alerts.map((alert, idx) => (
             <AutoAlert
               key={idx}
-              variant="light"
+              variant="info"
               message={alert}
               timeout={3000}
             />
