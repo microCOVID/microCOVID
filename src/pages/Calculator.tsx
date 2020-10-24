@@ -169,7 +169,7 @@ export const Calculator = (): React.ReactElement => {
       Save as custom scenario
     </button>
   )
-  const shareButton= (
+  const shareButton = (
     <button
       type="button"
       className="btn btn-info"
