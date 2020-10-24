@@ -2,6 +2,7 @@ import copy from 'copy-to-clipboard'
 import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { BsLink45Deg } from 'react-icons/bs'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
 import {
@@ -57,7 +58,6 @@ export const Calculator = (): React.ReactElement => {
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
   const [showSaveForm, setShowSaveForm] = useState(false)
-  const [showShareForm, setShowShareForm] = useState(false)
   const [alerts, setAlerts] = useState<string[]>([])
   const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
@@ -79,10 +79,6 @@ export const Calculator = (): React.ReactElement => {
     addAlert('Scenario saved!')
   }
 
-  const openShareForm = () => {
-    setShowShareForm(true)
-  }
-
   const getShareURL = (calculatorData: CalculatorData) => {
     const encodedQuery = encodeQueryParams(
       queryConfig,
@@ -97,7 +93,6 @@ export const Calculator = (): React.ReactElement => {
   const copyShareURL = (calculatorData: CalculatorData) => {
     copy(getShareURL(calculatorData))
     addAlert('Link copied to clipboard!')
-    setShowShareForm(false)
   }
 
   const { points, lowerBound, upperBound } = useMemo(() => {
@@ -164,30 +159,13 @@ export const Calculator = (): React.ReactElement => {
   )
 
   const shareForm = (
-    <div className="input-group actionForm">
-      <input
-        className="form-control"
-        type="text"
-        placeholder="Enter name to save your custom scenario to the scenario list"
-        value=""
-      />
-      <div className="input-group-append">
-        <button
-          type="button"
-          className="btn btn-info"
-          onClick={() => copyShareURL(calculatorData)}
-        >
-          Copy
-        </button>
-        <button
-          type="button"
-          className="btn btn-secondary"
-          onClick={() => setShowShareForm(false)}
-        >
-          Close
-        </button>
-      </div>
-    </div>
+    <button
+      type="button"
+      className="btn btn-info"
+      onClick={() => copyShareURL(calculatorData)}
+    >
+      <BsLink45Deg /> Copy link to this scenario
+    </button>
   )
 
   const actionButtons = (
@@ -199,14 +177,6 @@ export const Calculator = (): React.ReactElement => {
         disabled={showSaveForm}
       >
         Save as custom scenario
-      </button>{' '}
-      <button
-        type="button"
-        className="btn btn-info"
-        onClick={() => openShareForm()}
-        disabled={showShareForm}
-      >
-        Share scenario
       </button>
     </span>
   )
@@ -249,7 +219,7 @@ export const Calculator = (): React.ReactElement => {
           </button>{' '}
           {points > 0 && actionButtons}
           {showSaveForm && saveForm}
-          {showShareForm && shareForm}
+          {shareForm}
           {alerts.map((alert, idx) => (
             <AutoAlert
               key={idx}
