@@ -36,6 +36,7 @@ const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
+  // eslint-disable-next-line
   const [query, setQuery] = useQueryParams(queryConfig)
 
   // Mount / unmount
@@ -122,12 +123,10 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
-    setQuery(filterParams(calculatorData), 'replace')
-
     document.getElementById('points-row')?.classList.add('has-points')
 
     return { points: expectedValue, lowerBound, upperBound }
-  }, [calculatorData, setQuery])
+  }, [calculatorData])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
