@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
@@ -16,9 +16,8 @@ import { ScrollToTop } from 'components/ScrollToTop'
 import { About } from 'pages/About'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
-import { Paper, PaperTOC } from 'pages/Paper'
+import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
-import { pages } from 'paper/index'
 
 import 'styles/App.scss'
 
@@ -33,6 +32,27 @@ export const App = (): React.ReactElement => {
               href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@500&display=swap"
               rel="stylesheet"
             />
+            <meta
+              name="description"
+              content="A calculator for building intuition about COVID risk. We used published research to estimate the risk level of various activities in microCOVIDs. 1 microCOVID is a one-in-a-million chance of getting COVID. We hope you'll use this tool to make safer choices."
+            />
+            <meta property="og:title" content="microCOVID Project" />
+            <meta
+              property="og:description"
+              content="A calculator for building intuition about COVID risk. We used published research to estimate the risk level of various activities in microCOVIDs. 1 microCOVID is a one-in-a-million chance of getting COVID. We hope you'll use this tool to make safer choices."
+            />
+            <meta
+              property="og:image"
+              content={process.env.REACT_APP_PUBLIC_URL + '/logo400.png'}
+            />
+            <meta property="og:image:width" content="400" />
+            <meta property="og:image:height" content="400" />
+            <meta
+              property="og:url"
+              content={process.env.REACT_APP_PUBLIC_URL}
+            />
+            <meta property="fb:app_id" content="1117003835468995" />
+            <meta property="og:type" content="website" />
           </Helmet>
 
           <ScrollToTop />
@@ -64,22 +84,7 @@ export const App = (): React.ReactElement => {
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
-                    <NavDropdown title="White Paper" id="basic-nav-dropdown">
-                      <NavDropdown.Item href="/paper">
-                        Table of Contents
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="/paper/all">
-                        All In One Page
-                      </NavDropdown.Item>
-                      {Object.keys(pages).map((pageId, pageIndex) => (
-                        <NavDropdown.Item
-                          href={`/paper/${pageId}`}
-                          key={pageIndex}
-                        >
-                          {pageIndex + 1}. {pages[pageId].shortTitle}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
+                    <PaperNavDropdown />
                   </Nav.Item>
                   <Nav.Item>
                     <NavLink
