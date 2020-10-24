@@ -172,7 +172,7 @@ export const Calculator = (): React.ReactElement => {
   const shareButton = (
     <button
       type="button"
-      className="btn btn-info"
+      className="btn btn-info float-right"
       onClick={() => copyShareURL(calculatorData)}
     >
       <BsLink45Deg /> Copy link to this scenario
@@ -261,6 +261,14 @@ export const Calculator = (): React.ReactElement => {
                 </Row>
                 <Row>
                   <Col className="form-buttons">
+                    {alerts.map((alert, idx) => (
+                      <AutoAlert
+                        key={idx}
+                        variant="info"
+                        message={alert}
+                        timeout={3000}
+                      />
+                    ))}
                     <button
                       id="reset-form-button"
                       type="button"
@@ -270,14 +278,6 @@ export const Calculator = (): React.ReactElement => {
                       Reset form
                     </button>
                     {shareButton}
-                    {alerts.map((alert, idx) => (
-                      <AutoAlert
-                        key={idx}
-                        variant="info"
-                        message={alert}
-                        timeout={3000}
-                      />
-                    ))}
                     {points > 0 && (showSaveForm ? saveForm : saveButton)}
                   </Col>
                 </Row>
