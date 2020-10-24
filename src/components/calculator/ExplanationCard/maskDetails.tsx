@@ -1,6 +1,30 @@
 import React from 'react'
+import { Collapse } from 'react-bootstrap'
+import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
-export const maskDetails = (
+export const MaskDetails: React.FunctionComponent<{
+  showMaskDetails: boolean
+  setShowMaskDetails: (val: boolean) => void
+}> = ({ showMaskDetails, setShowMaskDetails }) => {
+  return (
+    <>
+      <span
+        className="expandable-header"
+        onClick={() => setShowMaskDetails(!showMaskDetails)}
+        aria-controls="mask-details"
+        aria-expanded={showMaskDetails}
+      >
+        {showMaskDetails ? <BsChevronDown /> : <BsChevronRight />}
+        Learn more about masks
+      </span>
+      <Collapse in={showMaskDetails}>
+        <div id="mask-details">{maskDetailContents}</div>
+      </Collapse>
+    </>
+  )
+}
+
+const maskDetailContents = (
   <>
     <ul>
       <li>
@@ -101,4 +125,4 @@ export const maskDetails = (
   </>
 )
 
-export default maskDetails
+export default MaskDetails
