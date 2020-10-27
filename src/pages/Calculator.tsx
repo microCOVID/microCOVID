@@ -5,8 +5,8 @@ import { Col, Row } from 'react-bootstrap'
 import { BsLink45Deg } from 'react-icons/bs'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
-import { AutoAlert } from 'components/AutoAlert'
 import { recordCalculatorChanged } from 'components/Analytics'
+import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
@@ -70,9 +70,9 @@ export const Calculator = (): React.ReactElement => {
       queryConfig,
       filterParams(calculatorData),
     )
-    const link = `${window.location.protocol}//${
-      window.location.host
-    }/?${stringify(encodedQuery)}`
+    const location = window.location
+    const link = `${location.protocol}//${location.host}${location.pathname}
+    ?${stringify(encodedQuery)}`
     return link
   }
 
