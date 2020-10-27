@@ -2,10 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useQueryParams } from 'use-query-params'
 
-import {
-  recordCalculatorChanged,
-  recordSavedCustom,
-} from 'components/Analytics'
+import { recordCalculatorChanged } from 'components/Analytics'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
@@ -23,7 +20,6 @@ import {
   parsePopulation,
 } from 'data/calculate'
 import { Interaction } from 'data/data'
-import { saveCalculation } from 'data/localStorage'
 import {
   filterParams,
   queryConfig,
@@ -53,8 +49,6 @@ export const Calculator = (): React.ReactElement => {
 
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
-  const [showSaveForm, setShowSaveForm] = useState(false)
-  const [saveName, setSaveName] = useState('')
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
     useQueryDataIfPresent(query, migratedPreviousData),
   )
@@ -62,13 +56,6 @@ export const Calculator = (): React.ReactElement => {
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
-  }
-
-  const persistForm = () => {
-    saveCalculation(saveName, calculatorData)
-    setShowSaveForm(false)
-    setSaveName('')
-    recordSavedCustom(points)
   }
 
   const [riskBudget, setRiskBudget] = useState(10000)
@@ -112,33 +99,6 @@ export const Calculator = (): React.ReactElement => {
       calculatorData.positiveCasePercentage > 0)
   const repeatedEvent = ['repeated', 'partner'].includes(
     calculatorData.interaction,
-  )
-
-  const saveForm = (
-    <div className="input-group save-form float-right col-lg-6 col-md-8">
-      <input
-        className="form-control"
-        type="text"
-        placeholder="Name of your custom scenario"
-        value={saveName}
-        onChange={(e) => setSaveName(e.target.value)}
-      />
-      <div className="input-group-append">
-        <button type="button" className="btn btn-info" onClick={persistForm}>
-          Save
-        </button>
-      </div>
-    </div>
-  )
-
-  const saveButton = (
-    <button
-      type="button"
-      className="btn btn-secondary float-right"
-      onClick={() => setShowSaveForm(true)}
-    >
-      Save as custom scenario
-    </button>
   )
 
   return (
@@ -231,7 +191,6 @@ export const Calculator = (): React.ReactElement => {
                     >
                       Reset form
                     </button>
-                    {points > 0 && (showSaveForm ? saveForm : saveButton)}
                   </Col>
                 </Row>
               </React.Fragment>

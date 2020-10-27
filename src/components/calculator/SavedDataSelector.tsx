@@ -1,9 +1,8 @@
-import { map, size } from 'lodash'
+import { map } from 'lodash'
 import React from 'react'
 import { Form } from 'react-bootstrap'
 
 import { CalculatorData } from 'data/calculate'
-import { savedItems } from 'data/localStorage'
 import { PartialData, prepopulated } from 'data/prepopulated'
 
 export const SavedDataSelector: React.FunctionComponent<{
@@ -11,10 +10,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   label?: string
 }> = (props): React.ReactElement => {
-  const hasSavedItems = size(savedItems()) > 0
-
-  let userSavedData: JSX.Element | null = null
-  let prepopulatedOptions = (
+  const prepopulatedOptions = (
     <React.Fragment>
       {map(prepopulated, (_value, key) => (
         <option key={key} value={`system:${key}`}>
@@ -23,21 +19,6 @@ export const SavedDataSelector: React.FunctionComponent<{
       ))}
     </React.Fragment>
   )
-
-  if (hasSavedItems) {
-    prepopulatedOptions = (
-      <optgroup label="Example Calculations">{prepopulatedOptions}</optgroup>
-    )
-    userSavedData = (
-      <optgroup label="Your Saved Items">
-        {map(savedItems(), (_value, key) => (
-          <option key={key} value={`user:${key}`}>
-            {key}
-          </option>
-        ))}
-      </optgroup>
-    )
-  }
 
   const setSavedData = (key: string): void => {
     const splitAt = key.indexOf(':')
@@ -48,9 +29,6 @@ export const SavedDataSelector: React.FunctionComponent<{
     switch (type) {
       case 'system':
         foundData = prepopulated[value]
-        break
-      case 'user':
-        foundData = savedItems()[value]
         break
       default:
         break
@@ -74,9 +52,8 @@ export const SavedDataSelector: React.FunctionComponent<{
       >
         <optgroup label=""></optgroup>
         <option value="">
-          Optional: Start with a predefined common activity or saved scenario
+          Optional: Start with a predefined common activity
         </option>
-        {userSavedData}
         {prepopulatedOptions}
       </Form.Control>
     </Form.Group>
