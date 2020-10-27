@@ -197,7 +197,7 @@ export function PointsDisplay(props: {
           <Trans
             values={{
               from: displayPoints(props.lowerBound),
-              to: displayPoints(props.upperBound)
+              to: displayPoints(props.upperBound),
             }}
           >
             calculator.range
