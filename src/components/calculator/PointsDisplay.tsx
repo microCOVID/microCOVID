@@ -1,7 +1,10 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { IconType } from 'react-icons'
-import { BsExclamationTriangleFill } from 'react-icons/bs'
+import {
+  BsExclamationOctagonFill,
+  BsExclamationTriangleFill,
+} from 'react-icons/bs'
 
 import {
   budgetConsumption,
@@ -32,6 +35,12 @@ const riskLevels: RiskLevel[] = [
     title: 'Dangerously High',
     max: 100000,
     icon: BsExclamationTriangleFill,
+  },
+  {
+    style: 'dangerous',
+    title: 'Extreme',
+    max: Infinity,
+    icon: BsExclamationOctagonFill,
   },
 ]
 
