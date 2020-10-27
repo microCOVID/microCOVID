@@ -39,7 +39,7 @@ const riskLevels: RiskLevel[] = [
   {
     style: 'dangerous',
     title: 'Extreme',
-    max: 1e15,
+    max: Infinity,
     icon: BsExclamationOctagonFill,
   },
 ]
