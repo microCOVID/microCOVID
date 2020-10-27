@@ -155,7 +155,9 @@ const maskPopover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">Masks</Popover.Title>
     <Popover.Content>
-      For more details on masks, see{' '}
+      These values only apply if the masks are worn properly. Choose a mask one
+      or more categories lower if there are fit issues due to size, facial hair
+      or other problems. For more details on masks, see{' '}
       <Link to="/paper/14-research-sources#masks" target="_blank">
         research sources
       </Link>

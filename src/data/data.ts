@@ -51,15 +51,18 @@ export const Distance: { [key: string]: FormValue } = {
 const noneLabel = 'No mask or poorly-worn mask'
 const basicLabel = 'Cotton mask, bandana, or buff'
 const filteredLabel = 'Surgical mask or mask with PM2.5 filter insert'
+const n95Label = 'Well-fitting, well-sealed N95 respirator'
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   basic: formValue(basicLabel, 0.25),
   filtered: formValue(filteredLabel, 0.25),
+  n95: formValue(n95Label, 0.1),
 }
 export const YourMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   basic: formValue(basicLabel, 1.0),
   filtered: formValue(filteredLabel, 0.5),
+  n95: formValue(n95Label, 0.1),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
