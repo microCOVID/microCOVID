@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   NavLink,
@@ -16,9 +16,8 @@ import { ScrollToTop } from 'components/ScrollToTop'
 import { About } from 'pages/About'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
-import { Paper, PaperTOC } from 'pages/Paper'
+import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
 import { Spreadsheet } from 'pages/Spreadsheet'
-import { pages } from 'paper/index'
 
 import 'styles/App.scss'
 
@@ -85,22 +84,7 @@ export const App = (): React.ReactElement => {
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
-                    <NavDropdown title="White Paper" id="basic-nav-dropdown">
-                      <NavDropdown.Item href="/paper">
-                        Table of Contents
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="/paper/all">
-                        All In One Page
-                      </NavDropdown.Item>
-                      {Object.keys(pages).map((pageId, pageIndex) => (
-                        <NavDropdown.Item
-                          href={`/paper/${pageId}`}
-                          key={pageIndex}
-                        >
-                          {pageIndex + 1}. {pages[pageId].shortTitle}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
+                    <PaperNavDropdown />
                   </Nav.Item>
                   <Nav.Item>
                     <NavLink
