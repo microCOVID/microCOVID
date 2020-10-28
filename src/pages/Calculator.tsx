@@ -1,21 +1,22 @@
+import copy from 'copy-to-clipboard'
+import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { useQueryParams } from 'use-query-params'
+import { BsLink45Deg } from 'react-icons/bs'
+import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
-import {
-  recordCalculatorChanged,
-  recordSavedCustom,
-} from 'components/Analytics'
+import { recordCalculatorChanged } from 'components/Analytics'
+import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
+import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
-import {
-  ExplanationCard,
-  PointsDisplay,
-} from 'components/calculator/PointsDisplay'
+import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
+import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
   CalculatorData,
   calculate,
@@ -23,7 +24,7 @@ import {
   migrateDataToCurrent,
   parsePopulation,
 } from 'data/calculate'
-import { saveCalculation } from 'data/localStorage'
+import { Interaction } from 'data/data'
 import {
   filterParams,
   queryConfig,
@@ -34,7 +35,7 @@ const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
-  const [query, setQuery] = useQueryParams(queryConfig)
+  const [query] = useQueryParams(queryConfig)
 
   // Mount / unmount
   useEffect(() => {
@@ -53,23 +54,35 @@ export const Calculator = (): React.ReactElement => {
 
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
-  const [showSaveForm, setShowSaveForm] = useState(false)
-  const [saveName, setSaveName] = useState('')
+  const [alerts, setAlerts] = useState<string[]>([])
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
     useQueryDataIfPresent(query, migratedPreviousData),
   )
+
+  const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
   }
 
-  const persistForm = () => {
-    saveCalculation(saveName, calculatorData)
-    setShowSaveForm(false)
-    setSaveName('')
-    recordSavedCustom(points)
+  const getShareURL = (calculatorData: CalculatorData) => {
+    const encodedQuery = encodeQueryParams(
+      queryConfig,
+      filterParams(calculatorData),
+    )
+    const location = window.location
+    const link = `${location.protocol}//${location.host}${location.pathname}
+    ?${stringify(encodedQuery)}`
+    return link
   }
+
+  const copyShareURL = (calculatorData: CalculatorData) => {
+    copy(getShareURL(calculatorData))
+    addAlert('Link copied to clipboard!')
+  }
+
+  const [riskBudget, setRiskBudget] = useState(10000)
 
   const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
@@ -94,12 +107,10 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
-    setQuery(filterParams(calculatorData), 'replace')
-
     document.getElementById('points-row')?.classList.add('has-points')
 
     return { points: expectedValue, lowerBound, upperBound }
-  }, [calculatorData, setQuery])
+  }, [calculatorData])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
@@ -112,33 +123,14 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.interaction,
   )
 
-  const saveForm = (
-    <div className="input-group">
-      <input
-        className="form-control"
-        type="text"
-        placeholder="Enter name to save your custom scenario to the scenario list"
-        value={saveName}
-        onChange={(e) => setSaveName(e.target.value)}
-      />
-      <div className="input-group-append">
-        <button type="button" className="btn btn-info" onClick={persistForm}>
-          Save
-        </button>
-      </div>
-    </div>
-  )
-
-  const saveButton = (
-    <span>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => setShowSaveForm(true)}
-      >
-        <Trans>button.save_as_custom</Trans>
-      </button>
-    </span>
+  const shareButton = (
+    <button
+      type="button"
+      className="btn btn-info float-right"
+      onClick={() => copyShareURL(calculatorData)}
+    >
+      <BsLink45Deg /> <Trans>button.copy_link</Trans>
+    </button>
   )
 
   const { t } = useTranslation()
@@ -148,38 +140,32 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            <Trans>calculator.intro.whats_this</Trans>
+            <Trans i18nKey="calculator.intro.whats_this">
+              Lorem ipsum <a href="/paper">whitepaper</a> dolor sic amet...
+            </Trans>
           </p>
-          <p>
-            <Trans>calculator.intro.build_intuition</Trans>
-          </p>
-          <p>
-            <Trans>calculator.intro.play_around</Trans>
-          </p>
-          <p className="warning">
-            <b>
-              <Trans>calculator.warning.important</Trans>:{' '}
-            </b>
-            <Trans>calculator.warning</Trans>
-          </p>
-          <button
-            id="reset-form-button"
-            type="button"
-            className="btn btn-secondary"
-            onClick={resetForm}
-          >
-            <Trans>button.reset_form</Trans>
-          </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}
+          <FirstTimeUserIntroduction />
         </Col>
         <Col lg="4" md="12" className="d-none d-lg-block"></Col>
       </Row>
+      <Row>
+        <Col>
+          <h2>
+            <Trans>calculator.intro.call_to_action</Trans>
+          </h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="calculator-buttons">
+          <SavedDataSelector
+            currentData={calculatorData}
+            setter={setCalculatorData}
+          />
+        </Col>
+      </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
-          <Card id="location" title={t('calculator.location')}>
-            <div className="subheading">
-              <Trans>calculator.initial_instructions</Trans>
-            </div>
+          <Card id="location">
             <PrevalenceControls
               data={calculatorData}
               setter={setCalculatorData}
@@ -187,33 +173,67 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </Col>
 
-        <Col md="12" lg="8">
-          <Card id="person-risk" title={t('calculator.risk_group_header')}>
+        <Col md="12" lg="8" id="activity-section">
+          <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
-                <div className="subheading">
-                  <p>
-                    <Trans>calculator.risk_group_instructions</Trans>
-                  </p>
-                  <SavedDataSelector
-                    currentData={calculatorData}
-                    setter={setCalculatorData}
+                <header id="activity-risk">
+                  <Trans>calculator.risk_step_label</Trans>
+                </header>
+                <div>
+                  <GenericSelectControl
+                    id="interaction"
+                    label={t('calculator.type_of_interaction')}
+                    // This setter defaults to a personCount of 1 if the interaction type is "partner"
+                    setter={(value) =>
+                      setCalculatorData({
+                        ...calculatorData,
+                        interaction: value,
+                        personCount:
+                          value === 'partner' ? 1 : calculatorData.personCount,
+                      })
+                    }
+                    value={calculatorData.interaction}
+                    source={Interaction}
+                    hideRisk={true}
                   />
                 </div>
 
                 <Row>
-                  <Col md="12" lg="6">
+                  <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
+                      repeatedEvent={repeatedEvent}
                     />
                   </Col>
-                  <Col md="12" lg="6">
+                  <Col xs="12" id="modifiers" className="calculator-params">
                     <ActivityRiskControls
                       data={calculatorData}
                       setter={setCalculatorData}
                       repeatedEvent={repeatedEvent}
                     />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="form-buttons">
+                    {alerts.map((alert, idx) => (
+                      <AutoAlert
+                        key={idx}
+                        variant="info"
+                        message={alert}
+                        timeout={3000}
+                      />
+                    ))}
+                    <button
+                      id="reset-form-button"
+                      type="button"
+                      className="btn btn-secondary float-right"
+                      onClick={resetForm}
+                    >
+                      Reset form
+                    </button>
+                    {shareButton}
                   </Col>
                 </Row>
               </React.Fragment>
@@ -226,18 +246,38 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col lg={{ span: 8, offset: 4 }}>
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
           <PointsDisplay
             points={points}
+            repeatedEvent={repeatedEvent}
+            riskBudget={riskBudget}
+            riskBudgetSetter={setRiskBudget}
             lowerBound={lowerBound}
             upperBound={upperBound}
-            repeatedEvent={repeatedEvent}
           />
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
+          <ExplanationCard
+            points={points}
+            repeatedEvent={repeatedEvent}
+            riskBudget={riskBudget}
+            riskBudgetSetter={setRiskBudget}
+            data={calculatorData}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
+          />
+        </Col>
+      </Row>
+      <Row>
         <Col lg={{ span: 8, offset: 4 }}>
-          <ExplanationCard points={points} repeatedEvent={repeatedEvent} />
+          <p className="warning" style={{ margin: '0' }}>
+            <b>
+              <Trans>calculator.warning.important</Trans>:
+            </b>
+            <Trans>calculator.warning</Trans>
+          </p>
         </Col>
       </Row>
     </div>

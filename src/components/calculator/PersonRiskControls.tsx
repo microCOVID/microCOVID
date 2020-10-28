@@ -3,12 +3,8 @@ import { Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
 import { SelectControl } from './SelectControl'
-import {
-  CalculatorData,
-  calculateLocationPersonAverage,
-  calculatePersonRiskEach,
-} from 'data/calculate'
-import { RiskProfile } from 'data/data'
+import { CalculatorData } from 'data/calculate'
+import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -38,39 +34,87 @@ const personRiskPopover = (
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
-}> = ({ data, setter }): React.ReactElement => {
-  const locationRisk = calculateLocationPersonAverage(data) || 0
-  const personRiskEach = Math.round(
-    calculatePersonRiskEach(data, locationRisk) || 0,
-  )
-
+  repeatedEvent: boolean
+}> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   const { t } = useTranslation()
-
   return (
     <React.Fragment>
-      <header id="person-risk">
-        <Trans>calculator.risk_step_label</Trans>
-      </header>
-      <div className="form-group">
-        <label htmlFor="personCount">
-          <Trans>calculator.number_of_people_near_you</Trans>
-        </label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.personCount}
-          onChange={(e) =>
-            setter({
-              ...data,
-              personCount: Math.max(0, parseInt(e.target.value)),
-            })
-          }
-        />
-        <GroupSizeWarning people={data.personCount} />
-      </div>
+      <h3 className="h2 accent">
+        <span>
+          <Trans>calculator.nearby_people_label</Trans>
+        </span>
+      </h3>
+      {data.interaction === 'partner' ? null : (
+        <div className="form-group">
+          <label htmlFor="personCount">
+            <div>
+              <strong>
+                <Trans>calculator.people_count</Trans>:
+              </strong>{' '}
+              {repeatedEvent ? (
+                <Trans>calculator.number_of_people_near_you_partner</Trans>
+              ) : (
+                <Trans>calculator.number_of_people_near_you_onetime</Trans>
+              )}
+            </div>
+          </label>
+          <input
+            className="form-control form-control-lg col-md-3"
+            type="number"
+            value={data.personCount}
+            onChange={(e) =>
+              setter({
+                ...data,
+                personCount: Math.max(0, parseInt(e.target.value)),
+              })
+            }
+          />
+          <GroupSizeWarning people={data.personCount} />
+        </div>
+      )}
+
+      {!repeatedEvent ? (
+        <React.Fragment>
+          <SelectControl
+            id="distance"
+            label={t('calculator.distance_question')}
+            header={t('calculator.distance_header')}
+            data={data}
+            setter={setter}
+            source={Distance}
+          />
+          <div className="form-group">
+            <label htmlFor="duration">
+              <strong>
+                <Trans>calculator.duration_header</Trans>:
+              </strong>
+              <Trans>calculator.duration_question</Trans>
+            </label>
+            <input
+              className="form-control form-control-lg col-md-3"
+              type="number"
+              value={data.duration}
+              onChange={(e) =>
+                setter({
+                  ...data,
+                  duration: Math.max(0, parseInt(e.target.value)),
+                })
+              }
+            />
+          </div>
+          {data.distance === 'intimate' &&
+          data.duration < intimateDurationFloor ? (
+            <div className="warning">
+              <Trans>calculator.intimate_risk_warning</Trans>
+            </div>
+          ) : null}
+        </React.Fragment>
+      ) : null}
       <SelectControl
         id="riskProfile"
-        label={t('calculator.person_risk_profile')}
+        label={t('calculator.risk_profile_question')}
+        header={t('calculator.risk_profile_header')}
+        helpText={!repeatedEvent ? '' : t('calculator.household_members_note')}
         popover={personRiskPopover}
         data={data}
         setter={setter}
@@ -78,11 +122,6 @@ export const PersonRiskControls: React.FunctionComponent<{
         hideRisk={true}
       />
       <br />
-      <p className="readout">
-        <Trans values={{ calc_results: personRiskEach.toLocaleString() }}>
-          calculator.risk_calculation_results
-        </Trans>
-      </p>
     </React.Fragment>
   )
 }
