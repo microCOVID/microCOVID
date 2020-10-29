@@ -5,16 +5,26 @@ import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 export const Expandable: React.FunctionComponent<{
   id: string
   header: string
+  defaultState?: boolean
+  setter?: (value: boolean) => void
   headerExpanded?: string
+  headerClassName?: string
   className?: string
 }> = (props): React.ReactElement => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(props.defaultState || false)
+
+  function setterHelper(isOpen: boolean) {
+    setOpen(isOpen)
+    if (typeof props.setter !== 'undefined') {
+      props.setter(isOpen)
+    }
+  }
 
   return (
-    <div className={`expandable-section ${props.className}`}>
+    <div className={`expandable-section ${props.className || ''}`}>
       <span
-        className="expandable-header"
-        onClick={() => setOpen(!open)}
+        className={`expandable-header ${props.headerClassName || ''}`}
+        onClick={() => setterHelper(!open)}
         aria-controls={props.id}
         aria-expanded={open}
       >
