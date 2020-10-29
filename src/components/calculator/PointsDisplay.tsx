@@ -131,7 +131,7 @@ export default function PointsDisplay(props: {
         )}
         <div className="budget-consumption">
           {doShowPoints && (
-            <>{budgetConsumption(props.points, props.riskBudget)} </>
+            <>{budgetConsumption(props.points, props.riskBudget)}</>
           )}
         </div>
         <div className="points">
