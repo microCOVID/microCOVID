@@ -248,14 +248,14 @@ export default function ExplanationCard(props: {
 
   const budgetOptions = [
     {
-      label: 'Average Vulnerability',
+      label: 'Standard Caution Budget',
       sublabel:
         'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
       multiplier: 1,
       value: '10000',
     },
     {
-      label: 'High Vulnerability',
+      label: 'High Caution Budget',
       sublabel:
         'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
       multiplier: 0.1,
