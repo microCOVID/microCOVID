@@ -246,6 +246,21 @@ export default function ExplanationCard(props: {
     </>
   )
 
+  // On it's own line because it doesn't display properly on the <select> if prettier forces it onto two lines
+  const onePercentLabel =
+    '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)'
+  const budgetOptions = {
+    '10000': {
+      label: onePercentLabel,
+      multiplier: 1,
+    },
+    '1000': {
+      label:
+        '0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+      multiplier: 0.1,
+    },
+  }
+
   return (
     <Card>
       {showPoints(props.points) ? calculationBreakdown : ''}
@@ -258,18 +273,7 @@ export default function ExplanationCard(props: {
           setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
           value={props.riskBudget}
           hideRisk={true}
-          source={{
-            '10000': {
-              label:
-                '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
-              multiplier: 1,
-            },
-            '1000': {
-              label:
-                '0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
-              multiplier: 0.1,
-            },
-          }}
+          source={budgetOptions}
         />
       </Form.Group>
     </Card>
