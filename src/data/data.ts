@@ -3,6 +3,7 @@ import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPre
 export interface FormValue {
   label: string
   multiplier: number
+  sublabel?: string
 }
 
 const formValue = function (label: string, multiplier: number): FormValue {

@@ -248,13 +248,15 @@ export default function ExplanationCard(props: {
 
   const budgetOptions = {
     '10000': {
-      label:
-        '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
+      label: '1% chance of COVID per year',
+      sublabel:
+        '(suggested for healthy people NOT in close contact with more vulnerable people)',
       multiplier: 1,
     },
     '1000': {
-      label:
-        '0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+      label: '0.1% chance of COVID per year ',
+      sublabel:
+        '(suggested if you or your close contacts are more vulnerable to COVID)',
       multiplier: 0.1,
     },
   }

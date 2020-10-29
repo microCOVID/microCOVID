@@ -34,15 +34,26 @@ export const RadioControl: React.FunctionComponent<{
       </div>
     )}
     {Object.keys(props.source).map((value, index) => (
-      <Form.Check
-        key={index}
-        type="radio"
-        label={props.source[value].label}
-        name={props.id}
-        id={props.id + index}
-        value={value}
-        onChange={() => props.setter(value)}
-      />
+      <Form.Check key={index} id={props.id + index}>
+        <Form.Check.Input
+          type="radio"
+          name={props.id}
+          value={value}
+          onChange={() => props.setter(value)}
+        />
+        <Form.Check.Label>
+          {props.source[value].sublabel ? (
+            <>
+              <strong>{props.source[value].label}</strong>
+              <br />
+              {props.source[value].sublabel}
+            </>
+          ) : (
+            props.source[value].label
+          )}
+        </Form.Check.Label>
+        <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
+      </Form.Check>
     ))}
     {props.helpText && (
       <Form.Text id={props.id + 'HelpText'} muted>
