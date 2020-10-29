@@ -4,7 +4,7 @@ import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
 
-import Expandable from 'components/Expandable'
+import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
   calculateLocationPersonAverage,
@@ -231,11 +231,11 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
 
-      <Expandable
+      <ControlledExpandable
         id="prevelance-details"
         header="Details"
         headerClassName={isManualEntryCurrently ? 'd-none' : ''}
-        defaultState={detailsOpen}
+        open={detailsOpen}
         setter={setDetailsOpen}
       >
         {!isManualEntryCurrently && prevalenceResult}
@@ -342,7 +342,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             </div>
           </>
         )}
-      </Expandable>
+      </ControlledExpandable>
     </React.Fragment>
   )
 }
