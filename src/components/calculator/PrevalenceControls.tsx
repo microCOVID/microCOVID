@@ -103,6 +103,34 @@ const PrevalenceField: React.FunctionComponent<{
   )
 }
 
+export const PrevalenceResult = (props: {
+  data: CalculatorData
+}): React.ReactElement => {
+  return (
+    <Card className="prevelance-result">
+      <Card.Body>
+        <div>
+          <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
+          {(
+            (calculateLocationReportedPrevalence(props.data) || 0) * 100
+          ).toFixed(2)}
+          %
+        </div>
+        <div>
+          <strong>
+            <Trans>calculator.prevalence.adjusted_prevalence</Trans>:{' '}
+            {(
+              ((calculateLocationPersonAverage(props.data) || 0) * 100) /
+              1e6
+            ).toFixed(2)}
+            %
+          </strong>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+}
+
 export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
@@ -165,27 +193,6 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const isManualEntryCurrently = isManualEntry(data.topLocation)
 
-  const prevalenceResult = (
-    <Card className="prevelance-result">
-      <Card.Body>
-        <div>
-          Reported prevalence:{' '}
-          {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
-        </div>
-        <div>
-          <strong>
-            Adjusted prevalence:{' '}
-            {(
-              ((calculateLocationPersonAverage(data) || 0) * 100) /
-              1e6
-            ).toFixed(2)}
-            %
-          </strong>
-        </div>
-      </Card.Body>
-    </Card>
-  )
-
   return (
     <React.Fragment>
       <header id="location">
@@ -247,12 +254,12 @@ export const PrevalenceControls: React.FunctionComponent<{
         aria-controls="prevelance-details"
         aria-expanded={detailsOpen}
       >
-        {detailsOpen ? <BsChevronDown /> : <BsChevronRight />} Details
+        {detailsOpen ? <BsChevronDown /> : <BsChevronRight />}{' '}
+        <Trans>calculator.prevalence.details_header</Trans>
       </span>
       <Collapse in={detailsOpen}>
         <div id="prevelance-details">
-          {!isManualEntryCurrently && prevalenceResult}
-
+          {!isManualEntryCurrently && <PrevalenceResult data={data} />}
           <PrevalenceField
             id="reported-cases"
             label={t('calculator.prevalence.last_week_cases')}
@@ -317,7 +324,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             />
           )}
 
-          {isManualEntryCurrently && prevalenceResult}
+          {isManualEntryCurrently && <PrevalenceResult data={data} />}
 
           {!locationSet ? null : (
             <>
