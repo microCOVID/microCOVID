@@ -456,12 +456,16 @@ input[type=number] {
       padding-top: 0.2em;
       padding-bottom: 0.2em;
       font-weight: bold;
+      .points-range {
+        font-size: 0.8em;
+      }
     }
     .points {
       padding-top: 0.2em;
       padding-bottom: 0.2em;
       margin-left: 15px;
       font-size: 0.8em;
+      font-weight: bold;
     }
     .points-range {
       color: $secondary;

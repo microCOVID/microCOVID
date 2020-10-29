@@ -146,7 +146,7 @@ export default function PointsDisplay(props: {
         <div className="points">
           {doShowPoints ? (
             <>
-              ~{displayPoints(props.points)} microCOVIDs
+              Total Cost: ~{displayPoints(props.points)} microCOVIDs
               {props.repeatedEvent ? ' per week' : ' each time'}{' '}
               <span className="points-range d-md-inline d-none">
                 {props.upperBound >= ONE_MILLION ? null : (
