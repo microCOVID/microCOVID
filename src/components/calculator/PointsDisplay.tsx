@@ -82,9 +82,12 @@ function Thermometer(props: {
     <>
       {props.doShowPoints && props.activeRiskLevel.icon ? (
         <>
-          <props.activeRiskLevel.icon
-            className={'risk-icon text-risk-' + props.activeRiskLevel.style}
-          />
+          {riskLevelsForThermometer.map((level) => (
+            <div
+              key={level.style}
+              className={`thermometer-piece risk-${props.activeRiskLevel.style}`}
+            ></div>
+          ))}
         </>
       ) : (
         // Iterate on the risk levels to build each pieces of the thermometer, and set the active level.
@@ -129,6 +132,9 @@ export default function PointsDisplay(props: {
           <div className="risk-level"></div>
         ) : (
           <div className={'risk-level risk-' + activeRiskLevel.style}>
+            {!activeRiskLevel.icon ? null : (
+              <activeRiskLevel.icon className="risk-icon" />
+            )}
             <span>{activeRiskLevel.title} Risk</span>
           </div>
         )}
