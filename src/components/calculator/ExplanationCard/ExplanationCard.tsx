@@ -276,4 +276,3 @@ export default function ExplanationCard(props: {
     </Card>
   )
 }
-
