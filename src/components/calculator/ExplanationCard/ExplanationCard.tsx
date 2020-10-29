@@ -246,12 +246,10 @@ export default function ExplanationCard(props: {
     </>
   )
 
-  // On it's own line because it doesn't display properly on the <select> if prettier forces it onto two lines
-  const onePercentLabel =
-    '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)'
   const budgetOptions = {
     '10000': {
-      label: onePercentLabel,
+      label:
+        '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
       multiplier: 1,
     },
     '1000': {
