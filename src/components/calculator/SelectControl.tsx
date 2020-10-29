@@ -69,7 +69,6 @@ export const GenericSelectControl: React.FunctionComponent<{
             `[${showRiskMultiplier(props.source[value].multiplier)}]`}
         </option>
       ))}
-      <optgroup></optgroup>
     </select>
     {props.helpText && (
       <Form.Text id={props.id + 'HelpText'} muted>

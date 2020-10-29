@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Form } from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
-import { GenericSelectControl } from '../SelectControl'
+import { RadioControl } from '../RadioControl'
 
 import RiskReduction from './RiskReduction'
 import riskTolerancePopover from './riskTolerancePopover'
@@ -264,16 +264,16 @@ export default function ExplanationCard(props: {
       {showPoints(props.points) ? calculationBreakdown : ''}
 
       <Form.Group>
-        <GenericSelectControl
+        <RadioControl
           id="budget-selector"
           header="Adjust your risk tolerance"
           popover={riskTolerancePopover}
           setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
           value={props.riskBudget}
-          hideRisk={true}
           source={budgetOptions}
         />
       </Form.Group>
     </Card>
   )
 }
+
