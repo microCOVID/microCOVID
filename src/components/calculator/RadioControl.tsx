@@ -1,12 +1,12 @@
 import React from 'react'
 import { Badge, Form, OverlayTrigger } from 'react-bootstrap'
 
-import { FormValue } from 'data/data'
+import { CheckBoxFormValue } from 'data/data'
 
 export const RadioControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
-  source: { [key: string]: FormValue }
+  source: Array<CheckBoxFormValue>
   value: string | number
   label?: string
   header?: string
@@ -33,24 +33,24 @@ export const RadioControl: React.FunctionComponent<{
         )}
       </div>
     )}
-    {Object.keys(props.source).map((value, index) => (
+    {props.source.map((current, index) => (
       <Form.Check key={index} id={props.id + index}>
         <Form.Check.Input
           type="radio"
           name={props.id}
-          value={value}
-          onChange={() => props.setter(value)}
-          defaultChecked={value === props.value.toString()}
+          value={current.value}
+          onChange={() => props.setter(current.value)}
+          defaultChecked={current.value === props.value.toString()}
         />
         <Form.Check.Label>
-          {props.source[value].sublabel ? (
+          {current.sublabel ? (
             <>
-              <strong>{props.source[value].label}</strong>
+              <strong>{current.label}</strong>
               <br />
-              {props.source[value].sublabel}
+              {current.sublabel}
             </>
           ) : (
-            props.source[value].label
+            current.label
           )}
         </Form.Check.Label>
       </Form.Check>
