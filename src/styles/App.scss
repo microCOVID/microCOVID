@@ -416,16 +416,16 @@ input[type=number] {
         }
       }
 
-      .risk-icon {
-        width: 100%;
-        @include media-breakpoint-up(md) {
-          width: 130%;
-        }
-        height: auto;
-        vertical-align: top;
-        margin: 3px 0 0 0;
-        border-radius: 0;
+      .thermometer-piece.risk-dangerous {
+        border-bottom: 1px solid white;
       }
+    }
+
+
+    .risk-icon {
+      color: white;
+      margin: 2px 8px -2px 0;
+      vertical-align: baseline;
     }
 
 
