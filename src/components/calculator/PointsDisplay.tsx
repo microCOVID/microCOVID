@@ -6,10 +6,7 @@ import {
   BsExclamationTriangleFill,
 } from 'react-icons/bs'
 
-import {
-  budgetConsumption,
-  getWeekBudget,
-} from 'components/calculator/util/budgetUtil'
+import { budgetConsumption } from 'components/calculator/util/budgetUtil'
 import {
   displayPoints,
   showPoints,
@@ -140,13 +137,7 @@ export default function PointsDisplay(props: {
         )}
         <div className="budget-consumption">
           {doShowPoints && (
-            <>
-              {budgetConsumption(props.points, props.riskBudget)}{' '}
-              <span className="points-range d-md-inline d-none">
-                (of {displayPoints(getWeekBudget(props.riskBudget))}{' '}
-                microCOVIDs/week)
-              </span>
-            </>
+            <>{budgetConsumption(props.points, props.riskBudget)}</>
           )}
         </div>
         <div className="points">
