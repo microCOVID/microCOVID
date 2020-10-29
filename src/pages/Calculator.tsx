@@ -34,7 +34,7 @@ const localStorage = window.localStorage
 const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
-  const [query] = useQueryParams(queryConfig)
+  const [query, setQuery] = useQueryParams(queryConfig)
 
   // Mount / unmount
   useEffect(() => {
@@ -106,10 +106,12 @@ export const Calculator = (): React.ReactElement => {
       }),
     )
 
+    setQuery(filterParams(calculatorData), 'replace')
+
     document.getElementById('points-row')?.classList.add('has-points')
 
     return { points: expectedValue, lowerBound, upperBound }
-  }, [calculatorData])
+  }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
     calculatorData.topLocation !== '' ||
