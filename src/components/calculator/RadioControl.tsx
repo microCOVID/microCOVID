@@ -40,6 +40,7 @@ export const RadioControl: React.FunctionComponent<{
           name={props.id}
           value={value}
           onChange={() => props.setter(value)}
+          defaultChecked={value === props.value.toString()}
         />
         <Form.Check.Label>
           {props.source[value].sublabel ? (
@@ -52,7 +53,6 @@ export const RadioControl: React.FunctionComponent<{
             props.source[value].label
           )}
         </Form.Check.Label>
-        <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
       </Form.Check>
     ))}
     {props.helpText && (
