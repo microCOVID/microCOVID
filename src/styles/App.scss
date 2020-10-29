@@ -415,6 +415,10 @@ input[type=number] {
           border-width: $thermometer-border - 1;
         }
       }
+
+      .thermometer-piece.risk-dangerous {
+        border-bottom: 1px solid white;
+      }
     }
 
 
