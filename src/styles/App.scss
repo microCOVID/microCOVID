@@ -360,6 +360,7 @@ input[type=number] {
 
     // Thermometer Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
 
+    $thermometer-levels: 6;
     $thermometer-width: 30px;
     $thermometer-border: 4px;
     $thermometer-corners: 10px;
@@ -379,8 +380,12 @@ input[type=number] {
     .thermometer-container {
       display: flex;
       flex-direction: column;
+      height: 100px;
       width: 100%;
       max-width: $thermometer-width; 
+      @include media-breakpoint-down(sm) {
+        height: 85px;
+      }
       
       :first-child {
         border-radius: $thermometer-corners $thermometer-corners 0px 0px;
@@ -393,12 +398,11 @@ input[type=number] {
       .thermometer-piece {
         display: flex;
         flex-direction: row;
-        height: 20px;
+        height: (100% / $thermometer-levels);
         width: $thermometer-width;
         align-self: center;
         @include media-breakpoint-down(sm) {
           width: $thermometer-width - $thermometer-mobile-width-reduction;
-          height: 20px - 3;
         }
       }
 
@@ -411,7 +415,7 @@ input[type=number] {
         }
       }
 
-      .thermometer-piece.risk-dangerous {
+      .thermometer-piece.risk-override {
         border-bottom: 1px solid white;
       }
     }
