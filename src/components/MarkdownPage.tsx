@@ -185,7 +185,6 @@ export const TableOfContents: React.FunctionComponent<{
 
   return (
     <div className="paperPage">
-      <div className="sectionIndicator">Table of Contents</div>
       <h1 className="pageTitle">{title}</h1>
       <div className="navigation">
         &nbsp;
