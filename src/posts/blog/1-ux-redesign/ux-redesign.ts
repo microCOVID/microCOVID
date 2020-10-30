@@ -1,6 +1,7 @@
 import { ImageMeta } from 'posts/post'
 
-import thermomenter from './thermometer.png'
+import thermometer_social from './thermometer-social.png'
+import thermometer from './thermometer.png'
 
 const shortTitle = 'Microcovid UX and functional update'
 const title = shortTitle
@@ -8,16 +9,16 @@ const title = shortTitle
 const author = 'Team microCOVID'
 const date = 'October 30, 2020'
 const image: ImageMeta = {
-  url: thermomenter,
-  width: 1558,
-  height: 308,
+  url: thermometer_social,
+  width: 1290,
+  height: 675,
 }
 
 const content = `Hi everyone!
 
 We’ve been hard at work improving the microCOVID calculator to make it better and easier to use.  Today we’re announcing Version 2 of our calculator.  Much of the interface will feel familiar, but there have been some changes to reduce confusion and improve the user flow.  
 
-![Picture of the new result display](${thermomenter})
+![Picture of the new result display](${thermometer})
 
 Some notable UX updates:
 - We’ve changed how results are reported.  We already talked about the idea of a weekly risk budget, in which you decide what yearly chance of catching COVID you’re comfortable with, and that dictates how many microCOVIDs you’re able to spend in a week.  The new UX puts the “% of your weekly risk budget” number front and center for every activity so it’s easy to budget your risk allocation for the week.
