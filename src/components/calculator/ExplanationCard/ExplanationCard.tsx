@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
 
-import { GenericSelectControl } from '../SelectControl'
+import { RadioControl } from '../RadioControl'
 
 import RiskReduction from './RiskReduction'
 import riskTolerancePopover from './riskTolerancePopover'
@@ -226,30 +226,35 @@ export default function ExplanationCard(props: {
     </>
   )
 
+  const budgetOptions = [
+    {
+      label: 'Standard Caution Budget',
+      sublabel:
+        'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
+      multiplier: 1,
+      value: '10000',
+    },
+    {
+      label: 'High Caution Budget',
+      sublabel:
+        'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+      multiplier: 0.1,
+      value: '1000',
+    },
+  ]
+
   return (
     <Card>
       {showPoints(props.points) ? calculationBreakdown : ''}
 
       <Form.Group>
-        <GenericSelectControl
+        <RadioControl
           id="budget-selector"
           header="Adjust your risk tolerance"
           popover={riskTolerancePopover}
           setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
           value={props.riskBudget}
-          hideRisk={true}
-          source={{
-            '10000': {
-              label:
-                '1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
-              multiplier: 1,
-            },
-            '1000': {
-              label:
-                '0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
-              multiplier: 0.1,
-            },
-          }}
+          source={budgetOptions}
         />
       </Form.Group>
     </Card>

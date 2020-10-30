@@ -1,5 +1,10 @@
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
+export interface CheckBoxFormValue extends FormValue {
+  value: string
+  sublabel?: string
+}
+
 export interface FormValue {
   label: string
   multiplier: number

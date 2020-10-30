@@ -1,7 +1,8 @@
 import num2fraction from 'num2fraction'
 import React from 'react'
-import { Badge, Form, OverlayTrigger } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 
+import ControlLabel from './ControlLabel'
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
 
@@ -37,24 +38,12 @@ export const GenericSelectControl: React.FunctionComponent<{
   className?: string
 }> = (props) => (
   <div className="form-group">
-    {(props.label || props.header) && (
-      <div className="label-wrapper">
-        <label htmlFor={props.id}>
-          <div>
-            {props.header && <strong>{props.header}:</strong>} {props.label}
-          </div>
-        </label>
-        {props.popover && (
-          <OverlayTrigger
-            trigger="click"
-            overlay={props.popover}
-            rootClose={true}
-          >
-            <Badge variant="secondary">?</Badge>
-          </OverlayTrigger>
-        )}
-      </div>
-    )}
+    <ControlLabel
+      id={props.id}
+      label={props.label}
+      header={props.header}
+      popover={props.popover}
+    />
     <select
       id={props.id}
       className={'form-control form-control-lg ' + props.className}
@@ -69,7 +58,6 @@ export const GenericSelectControl: React.FunctionComponent<{
             `[${showRiskMultiplier(props.source[value].multiplier)}]`}
         </option>
       ))}
-      <optgroup></optgroup>
     </select>
     {props.helpText && (
       <Form.Text id={props.id + 'HelpText'} muted>
