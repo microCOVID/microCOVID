@@ -1,9 +1,17 @@
+import { ImageMeta } from 'posts/post'
+
 import thermomenter from './thermometer.png'
+
 const shortTitle = 'Microcovid UX and functional update'
 const title = shortTitle
 
 const author = 'Team microCOVID'
 const date = 'October 30, 2020'
+const image: ImageMeta = {
+  url: thermomenter,
+  width: 1558,
+  height: 308,
+}
 
 const content = `Hi everyone!
 
@@ -25,5 +33,5 @@ We’ve also introduced some functional changes in the modeling:
 We have more changes on the way that we’ll be excited to share with you!  Feedback on the new version is welcome at [info@microcovid.org](mailto:info@microcovid.org).
 `
 
-const post = { title, shortTitle, content, author, date }
+const post = { title, shortTitle, content, author, date, image }
 export default post

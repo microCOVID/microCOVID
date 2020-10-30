@@ -135,6 +135,22 @@ export const MarkdownContents: React.FunctionComponent<{
         <meta name="description" content={textWithoutHtml} />
         <meta property="og:description" content={textWithoutHtml} />
         <meta property="og:title" content={page.title} />
+        {page.image && (
+          <>
+            <meta
+              property="og:image"
+              content={process.env.REACT_APP_PUBLIC_URL + page.image.url}
+            />
+            <meta
+              property="og:image:width"
+              content={page.image.width.toString()}
+            />
+            <meta
+              property="og:image:height"
+              content={page.image.height.toString()}
+            />
+          </>
+        )}
       </Helmet>
       <span id={id}></span>
       <div className="sectionIndicator">
