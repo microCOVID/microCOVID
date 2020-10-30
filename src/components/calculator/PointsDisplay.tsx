@@ -153,10 +153,24 @@ export default function PointsDisplay(props: {
         <div className="budget-consumption">
           {doShowPoints && (
             <>
-              {budgetConsumption(props.points, props.riskBudget)}{' '}
+              {budgetConsumption(
+                props.points,
+                props.riskBudget,
+                t('calculator.explanationcard.multiple_suffix'),
+                t('calculator.explanationcard.percentage_suffix'),
+              )}{' '}
               <span className="points-range d-md-inline d-none">
-                (of {displayPoints(getWeekBudget(props.riskBudget))}{' '}
-                microCOVIDs/week)
+                (
+                <Trans
+                  values={{
+                    weekly_budget: displayPoints(
+                      getWeekBudget(props.riskBudget),
+                    ),
+                  }}
+                >
+                  calculator.pointsdisplay.weekly_budget
+                </Trans>
+                )
               </span>
             </>
           )}
@@ -165,18 +179,19 @@ export default function PointsDisplay(props: {
           {doShowPoints ? (
             <>
               ~{displayPoints(props.points)}{' '}
-              <Trans>calculator.microCOVIDS</Trans>{' '}
+              <Trans>calculator.pointsdisplay.microCOVIDs</Trans>{' '}
               {props.repeatedEvent ? t('per week') : t('each time')}{' '}
               <span className="points-range d-md-inline d-none">
                 {props.upperBound >= ONE_MILLION ? null : (
                   <>
+                    (
                     <Trans
                       values={{
                         from: displayPoints(props.lowerBound),
                         to: displayPoints(props.upperBound),
                       }}
                     >
-                      calculator.range
+                      calculator.pointsdisplay.range
                     </Trans>
                     )
                   </>

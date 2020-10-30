@@ -112,8 +112,8 @@ export const PersonRiskControls: React.FunctionComponent<{
       ) : null}
       <SelectControl
         id="riskProfile"
-        label={t('calculator.risk_profile_question')}
-        header={t('calculator.risk_profile_header')}
+        label={t('calculator.person_risk_profile_question')}
+        header={t('calculator.person_risk_profile_header')}
         helpText={!repeatedEvent ? '' : t('calculator.household_members_note')}
         popover={personRiskPopover}
         data={data}

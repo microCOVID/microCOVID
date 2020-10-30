@@ -24,6 +24,7 @@ i18n
     },
     react: {
       useSuspense: true,
+      transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'p', 'u'],
     },
     debug: true,
   })

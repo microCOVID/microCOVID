@@ -231,7 +231,7 @@ export const Calculator = (): React.ReactElement => {
                       className="btn btn-secondary float-right"
                       onClick={resetForm}
                     >
-                      Reset form
+                      <Trans>button.reset_form</Trans>
                     </button>
                     {shareButton}
                   </Col>
