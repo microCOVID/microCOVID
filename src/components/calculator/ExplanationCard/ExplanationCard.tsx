@@ -18,15 +18,13 @@ import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPre
 import Card from 'components/Card'
 import Expandable from 'components/Expandable'
 import {
-  BUDGET_CAUTIOUS,
-  BUDGET_STANDARD,
   CalculatorData,
   MAX_ACTIVITY_RISK,
   calculateActivityRisk,
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
-import { intimateDurationFloor } from 'data/data'
+import { budgetOptions, intimateDurationFloor } from 'data/data'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (
@@ -226,23 +224,6 @@ export default function ExplanationCard(props: {
       <RiskReduction repeatedEvent={props.repeatedEvent} />
     </>
   )
-
-  const budgetOptions = [
-    {
-      label: 'Standard Caution Budget',
-      sublabel:
-        'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
-      multiplier: 1,
-      value: BUDGET_STANDARD.toString(),
-    },
-    {
-      label: 'High Caution Budget',
-      sublabel:
-        'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
-      multiplier: 0.1,
-      value: BUDGET_CAUTIOUS.toString(),
-    },
-  ]
 
   return (
     <Card>

@@ -1,5 +1,5 @@
 import {
-  BUDGET_STANDARD,
+  BUDGET_ONE_PERCENT,
   CalculatorData,
   calculate,
   calculateLocationPersonAverage,
@@ -19,7 +19,8 @@ const calcValue = (data: CalculatorData) => {
 
 describe('calculate', () => {
   // Prevailance is .1% with 6x underreporting factor
-  const exampleLocation = {
+  const baseTestData = {
+    riskBudget: BUDGET_ONE_PERCENT,
     subLocation: 'mock city',
     topLocation: 'mock state',
     label: 'mock city',
@@ -28,15 +29,12 @@ describe('calculate', () => {
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 1,
   }
-  const standardRiskBudget = {
-    riskBudget: BUDGET_STANDARD,
-  }
   const expectedPrevalance = 0.006
 
   it('compensates for underreporting', () => {
     const data: CalculatorData = {
       ...defaultValues,
-      ...exampleLocation,
+      ...baseTestData,
     }
     expect(calculateLocationPersonAverage(data)).toBeCloseTo(
       expectedPrevalance * 1e6,
@@ -46,8 +44,7 @@ describe('calculate', () => {
   it('produces same results as by hand', () => {
     const scenario = 'Outdoor masked hangout with 2 people'
     const data: CalculatorData = {
-      ...exampleLocation,
-      ...standardRiskBudget,
+      ...baseTestData,
       ...prepopulated[scenario],
     }
 
@@ -75,8 +72,7 @@ describe('calculate', () => {
     ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = {
-      ...exampleLocation,
-      ...standardRiskBudget,
+      ...baseTestData,
       ...prepopulated[scenario],
     }
 
@@ -85,8 +81,7 @@ describe('calculate', () => {
 
   it('should produce a self-consistent living alone risk profile', () => {
     const data: CalculatorData = {
-      ...exampleLocation,
-      ...standardRiskBudget,
+      ...baseTestData,
       riskProfile: 'average',
       interaction: 'oneTime',
       personCount: 10,
@@ -106,8 +101,7 @@ describe('calculate', () => {
 
   it('should handle large risks', () => {
     const data: CalculatorData = {
-      ...exampleLocation,
-      ...standardRiskBudget,
+      ...baseTestData,
       riskProfile: 'hasCovid',
       interaction: 'repeated',
       personCount: 1,
@@ -133,8 +127,7 @@ describe('calculate', () => {
 
   describe('Interaction: partner', () => {
     const partner: CalculatorData = {
-      ...exampleLocation,
-      ...standardRiskBudget,
+      ...baseTestData,
       ...prepopulated[
         'Live-in partner who has no indoor interactions besides you'
       ],
@@ -162,8 +155,7 @@ describe('calculate', () => {
 
   describe('Interaction: housemate', () => {
     const base = {
-      ...standardRiskBudget,
-      ...exampleLocation,
+      ...baseTestData,
       riskProfile: 'average',
       interaction: 'repeated',
       personCount: 1,
@@ -200,8 +192,7 @@ describe('calculate', () => {
   describe('Distance: intimate', () => {
     it('should not give a bonus for outdoors', () => {
       const indoorIntimate: CalculatorData = {
-        ...exampleLocation,
-        ...standardRiskBudget,
+        ...baseTestData,
         ...prepopulated['One-night stand with a random person'],
       }
       const outdoorIntimate: CalculatorData = {
@@ -214,8 +205,7 @@ describe('calculate', () => {
 
     it('should be at least 12% (1 hr) transfer risk.', () => {
       const oneHourIntimate: CalculatorData = {
-        ...exampleLocation,
-        ...standardRiskBudget,
+        ...baseTestData,
         ...prepopulated['One-night stand with a random person'],
         duration: 60,
       }
@@ -243,8 +233,7 @@ describe('calculate', () => {
       ${240}   | ${'outdoor'} | ${2880}       | ${'should not give an outdoors bonus'}
     `(' $scenario', ({ duration, setting, result }) => {
       const data: CalculatorData = {
-        ...exampleLocation,
-        ...standardRiskBudget,
+        ...baseTestData,
         personCount: 1,
         interaction: 'oneTime',
         riskProfile: 'average',

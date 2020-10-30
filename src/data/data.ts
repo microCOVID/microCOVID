@@ -1,3 +1,4 @@
+import { BUDGET_ONE_PERCENT, BUDGET_ONE_TENTH_PERCENT } from './calculate'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
@@ -80,6 +81,23 @@ export const Voice: { [key: string]: FormValue } = {
     multiplier: 5,
   },
 }
+
+export const budgetOptions = [
+  {
+    label: 'Standard Caution Budget',
+    sublabel:
+      'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
+    multiplier: 1,
+    value: BUDGET_ONE_PERCENT.toString(),
+  },
+  {
+    label: 'High Caution Budget',
+    sublabel:
+      'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+    multiplier: 0.1,
+    value: BUDGET_ONE_TENTH_PERCENT.toString(),
+  },
+]
 
 /*
  * Exposed to ten (silent distanced masked) average people indoors,
