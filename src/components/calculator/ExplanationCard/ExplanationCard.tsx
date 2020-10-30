@@ -88,7 +88,7 @@ export default function ExplanationCard(props: {
           <h4>{t('calculator.explanationcard.details_overview_header')}:</h4>
           <div id="calculation-breakdown">
             <code>
-                ({personRiskEachFormatted}{' '}
+              ({personRiskEachFormatted}{' '}
               <Trans>calculator.explanationcard.details_person_risk</Trans>
               {') x ('}
               {activityRiskFormatted}{' '}
@@ -97,7 +97,7 @@ export default function ExplanationCard(props: {
               {props.data.personCount} {personCountSuffixFormatted})
               <br />
               <strong style={{ fontSize: '1.5em' }}>
-                  = ~{pointsFormatted}{' '}
+                = ~{pointsFormatted}{' '}
                 <Trans>calculator.pointsdisplay.microCOVIDs</Trans>{' '}
                 {frequencyFormatted}
               </strong>{' '}
@@ -108,9 +108,9 @@ export default function ExplanationCard(props: {
                   to: upperBoundFormatted,
                 }}
               >
-                                calculator.pointsdisplay.range
+                calculator.pointsdisplay.range
               </Trans>
-            )
+              )
             </code>{' '}
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function ExplanationCard(props: {
               t('calculator.explanationcard.details_person_risk'),
               t('calculator.explanationcard.details_person_risk_number', {
                 person_risk: personRiskEachFormatted,
-              })
+              }),
             )}
             <br />
             <Trans values={{ person_risk: personRiskEachFormatted }}>
@@ -132,8 +132,8 @@ export default function ExplanationCard(props: {
             {calculationStepHeader(
               t('calculator.explanationcard.details_activity_risk'),
               `${activityRiskFormatted} ${t(
-                'calculator.explanationcard.chance'
-              )}`
+                'calculator.explanationcard.chance',
+              )}`,
             )}
             <br />
             <Trans values={{ activity_risk: activityRiskFormatted }}>
@@ -143,17 +143,17 @@ export default function ExplanationCard(props: {
             <b>
               {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
                 <>
-                    (NOTE: We have{' '}
+                  (NOTE: We have{' '}
                   <a href="/paper/13-q-and-a#what-if-i-hang-out-with-someone-indoors-for-a-long-time-if-we-hang-out-for-5-hours-thats-an-activity-risk-of-6-⨉-5--30-which-is-the-same-risk-as-for-a-household-member">
                     capped this number at the maximum Activity Risk
                   </a>
                   .)
                 </>
               ) : (
-                  ''
-                )}
+                ''
+              )}
               {props.data.distance === 'intimate' &&
-                props.data.duration < intimateDurationFloor
+              props.data.duration < intimateDurationFloor
                 ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
                 : ''}
             </b>
@@ -161,7 +161,7 @@ export default function ExplanationCard(props: {
           <li>
             {calculationStepHeader(
               t('calculator.explanationcard.details_number_of_people'),
-              `${props.data.personCount} ${personCountSuffixFormatted}`
+              `${props.data.personCount} ${personCountSuffixFormatted}`,
             )}
           </li>
           <li>
@@ -170,7 +170,7 @@ export default function ExplanationCard(props: {
               t('calculator.explanationcard.details_total_risk_number', {
                 points: pointsFormatted,
                 percentage: pointsPercentFormatted,
-              })
+              }),
             )}
             <br />
             <Trans
@@ -186,18 +186,18 @@ export default function ExplanationCard(props: {
           <li>
             {calculationStepHeader(
               t('calculator.explanationcard.details_frequency'),
-              frequencyFormatted
+              frequencyFormatted,
             )}
             <br />
             {props.repeatedEvent ? (
               <Trans>
-                  calculator.explanationcard.frequency_explanation_repeated
+                calculator.explanationcard.frequency_explanation_repeated
               </Trans>
             ) : (
-                <Trans>
-                                  calculator.explanationcard.frequency_explanation_oneoff
-                </Trans>
-              )}
+              <Trans>
+                calculator.explanationcard.frequency_explanation_oneoff
+              </Trans>
+            )}
           </li>
           <li>
             {calculationStepHeader(
@@ -205,13 +205,13 @@ export default function ExplanationCard(props: {
               t('calculator.explanationcard.details_range_number', {
                 from: lowerBoundFormatted,
                 to: upperBoundFormatted,
-              })
+              }),
             )}
             <br />
             <Trans i18nKey="calculator.explanationcard.details_range_explanation">
-                Lorem ipsum{' '}
+              Lorem ipsum{' '}
               <a href="paper/14-research-sources#uncertainty-estimation">
-                               uncertainty link
+                uncertainty link
               </a>{' '}
               dolor sic amet
             </Trans>
@@ -223,8 +223,8 @@ export default function ExplanationCard(props: {
             {calculationStepHeader(
               t('calculator.explanationcard.risk_budget_available'),
               `${weekBudgetFormatted} ${t(
-                'calculator.pointsdisplay.microCOVIDs'
-              )} ${t('per week')}`
+                'calculator.pointsdisplay.microCOVIDs',
+              )} ${t('per week')}`,
             )}
             <br />
             <Trans
@@ -240,7 +240,7 @@ export default function ExplanationCard(props: {
           <li>
             {calculationStepHeader(
               t('calculator.explanationcard.risk_budget_used'),
-              `${budgetConsumptionFormatted} ${frequencyFormatted}`
+              `${budgetConsumptionFormatted} ${frequencyFormatted}`,
             )}
             <br />
             <Trans
@@ -267,7 +267,7 @@ export default function ExplanationCard(props: {
     },
     {
       label: t('calculator.risk_tolerance_point1_percent_label'),
-      sublabel:t('calculator.risk_tolerance_point1_percent_explanation'),
+      sublabel: t('calculator.risk_tolerance_point1_percent_explanation'),
       multiplier: 0.1,
       value: '1000',
     },
