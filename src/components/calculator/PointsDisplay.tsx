@@ -18,7 +18,7 @@ export interface RiskLevel {
   title: string
   max: number
   icon?: IconType
-  override?: boolean
+  overrideThermometerStyle?: boolean
 }
 
 // Risk levels and max points for each (assuming a 1% budget)
@@ -39,7 +39,7 @@ const riskLevels: RiskLevel[] = [
     title: 'Extreme',
     max: Infinity,
     icon: BsExclamationOctagonFill,
-    override: true,
+    overrideThermometerStyle: true,
   },
 ]
 
@@ -77,33 +77,35 @@ function Thermometer(props: {
       : ''
   }
 
-  return (
-    <>
-      {props.doShowPoints && props.activeRiskLevel.override ? (
-        <>
-          {riskLevelsForThermometer.map((level) => (
-            <div
-              key={level.style}
-              className={`thermometer-piece risk-override risk-${props.activeRiskLevel.style}`}
-            ></div>
-          ))}
-        </>
-      ) : (
-        // Iterate on the risk levels to build each pieces of the thermometer, and set the active level.
-        riskLevelsForThermometer.map((level) => (
+  if (props.doShowPoints && props.activeRiskLevel.overrideThermometerStyle) {
+    return (
+      <>
+        {riskLevelsForThermometer.map((level) => (
           <div
             key={level.style}
-            className={
-              `thermometer-piece risk-${level.style}` +
-              getActiveLevelClass(
-                props.doShowPoints,
-                props.activeRiskLevel,
-                level,
-              )
-            }
+            className={`thermometer-piece risk-override risk-${props.activeRiskLevel.style}`}
           ></div>
-        ))
-      )}
+        ))}
+      </>
+    )
+  }
+
+  return (
+    <>
+      {/* Iterate on the risk levels to build each pieces of the thermometer, and set the active level. */}
+      {riskLevelsForThermometer.map((level) => (
+        <div
+          key={level.style}
+          className={
+            `thermometer-piece risk-${level.style}` +
+            getActiveLevelClass(
+              props.doShowPoints,
+              props.activeRiskLevel,
+              level,
+            )
+          }
+        ></div>
+      ))}
     </>
   )
 }
