@@ -29,8 +29,8 @@
     "use-query-params": "^1.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts start",
+    "build": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint src",
     "fix": "eslint src --fix",
