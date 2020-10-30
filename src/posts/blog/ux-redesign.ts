@@ -5,8 +5,7 @@ const author = 'Team microCOVID'
 const date = 'October 30, 2020'
 
 const content =
-  '
-Hi everyone!
+'Hi everyone!
 
 We’ve been hard at work improving the microCOVID calculator to make it better and easier to use.  Today we’re announcing Version 2 of our calculator.  Much of the interface will feel familiar, but there have been some changes to reduce confusion and improve the user flow.  
 
@@ -23,8 +22,7 @@ We’ve also introduced some functional changes in the modeling:
 - Now that N95 masks are commonly available to the general public, we’ve added them as an option in the calculator.  A properly fitting N95 can do a lot to reduce your COVID risk during unavoidable activities.  
 - We’ve changed the assessment of certain settings to make them better conform to reality.  Being outdoors no longer reduces your COVID risk from close contact or kissing.  Separately, kissing now carries a minimum activity risk regardless of length, as we cannot reliably say that only a minute or two of exposure in this manner would be significantly less risky than a longer exposure.  
 
-
-- We have more changes on the way that we’ll be excited to share with you!  Feedback on the new version is welcome at [info@microcovid.org](mailto:info@microcovid.org).'
+We have more changes on the way that we’ll be excited to share with you!  Feedback on the new version is welcome at [info@microcovid.org](mailto:info@microcovid.org).'
 
 const post = { title, shortTitle, content, author, date }
 export default post
