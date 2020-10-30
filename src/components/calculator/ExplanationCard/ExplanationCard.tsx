@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { Collapse, Form } from 'react-bootstrap'
+import React from 'react'
+import { Form } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
-import { GenericSelectControl } from '../SelectControl'
+import { RadioControl } from '../RadioControl'
 
 import RiskReduction from './RiskReduction'
 import riskTolerancePopover from './riskTolerancePopover'
@@ -18,6 +17,7 @@ import {
 } from 'components/calculator/util/displayUtil'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import Card from 'components/Card'
+import Expandable from 'components/Expandable'
 import {
   CalculatorData,
   MAX_ACTIVITY_RISK,
@@ -46,10 +46,6 @@ export default function ExplanationCard(props: {
 }): React.ReactElement {
   const points = props.points
   const { t } = useTranslation()
-
-  const [showCalculatorExplanation, setShowCalculatorExplanation] = useState(
-    false,
-  )
 
   const locationRisk = calculateLocationPersonAverage(props.data) || 0
   const personRiskEach = Math.round(
@@ -83,207 +79,206 @@ export default function ExplanationCard(props: {
 
   const calculationBreakdown = (
     <>
-      <span
-        className="expandable-header"
-        onClick={() => setShowCalculatorExplanation(!showCalculatorExplanation)}
-        aria-controls="calculation-explanation"
-        aria-expanded={showCalculatorExplanation}
+      <Expandable
+        id="calculation-explanation"
+        header={t('calculator.explanationcard.details_header_closed')}
+        headerExpanded={t('calculator.explanationcard.details_header_open')}
       >
-        {showCalculatorExplanation ? (
-          <>
-            <BsChevronDown />{' '}
-            {t('calculator.explanationcard.details_header_open')}
-          </>
-        ) : (
-          <>
-            <BsChevronRight />{' '}
-            {t('calculator.explanationcard.details_header_closed')}
-          </>
-        )}
-      </span>
-      <Collapse in={showCalculatorExplanation}>
-        <div id="calculation-explanation">
-          <div>
-            <h4>{t('calculator.explanationcard.details_overview_header')}:</h4>
-            <div id="calculation-breakdown">
-              <code>
+        <div>
+          <h4>{t('calculator.explanationcard.details_overview_header')}:</h4>
+          <div id="calculation-breakdown">
+            <code>
                 ({personRiskEachFormatted}{' '}
-                <Trans>calculator.explanationcard.details_person_risk</Trans>
-                {') x ('}
-                {activityRiskFormatted}{' '}
-                <Trans>calculator.explanationcard.details_activity_risk</Trans>
-                {') x ('}
-                {props.data.personCount} {personCountSuffixFormatted})
-                <br />
-                <strong style={{ fontSize: '1.5em' }}>
+              <Trans>calculator.explanationcard.details_person_risk</Trans>
+              {') x ('}
+              {activityRiskFormatted}{' '}
+              <Trans>calculator.explanationcard.details_activity_risk</Trans>
+              {') x ('}
+              {props.data.personCount} {personCountSuffixFormatted})
+              <br />
+              <strong style={{ fontSize: '1.5em' }}>
                   = ~{pointsFormatted}{' '}
-                  <Trans>calculator.pointsdisplay.microCOVIDs</Trans>{' '}
-                  {frequencyFormatted}
-                </strong>{' '}
-                <br />(
-                <Trans
-                  values={{
-                    from: lowerBoundFormatted,
-                    to: upperBoundFormatted,
-                  }}
-                >
-                  calculator.pointsdisplay.range
-                </Trans>
-                )
-              </code>{' '}
-            </div>
-          </div>
-          <h4>{t('calculator.explanationcard.details_steps_header')}:</h4>
-          <ol>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.details_person_risk'),
-                t('calculator.explanationcard.details_person_risk_number', {
-                  person_risk: personRiskEachFormatted,
-                }),
-              )}
-              <br />
-              <Trans values={{ person_risk: personRiskEachFormatted }}>
-                calculator.explanationcard.details_person_risk_explanation
-              </Trans>
-            </li>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.details_activity_risk'),
-                `${activityRiskFormatted} ${t(
-                  'calculator.explanationcard.chance',
-                )}`,
-              )}
-              <br />
-              <Trans values={{ activity_risk: activityRiskFormatted }}>
-                calculator.explanationcard.details_activity_risk_explanation
-              </Trans>
-
-              <b>
-                {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
-                  <>
-                    (NOTE: We have{' '}
-                    <a href="/paper/13-q-and-a#what-if-i-hang-out-with-someone-indoors-for-a-long-time-if-we-hang-out-for-5-hours-thats-an-activity-risk-of-6-⨉-5--30-which-is-the-same-risk-as-for-a-household-member">
-                      capped this number at the maximum Activity Risk
-                    </a>
-                    .)
-                  </>
-                ) : (
-                  ''
-                )}
-                {props.data.distance === 'intimate' &&
-                props.data.duration < intimateDurationFloor
-                  ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
-                  : ''}
-              </b>
-            </li>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.details_number_of_people'),
-                `${props.data.personCount} ${personCountSuffixFormatted}`,
-              )}
-            </li>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.details_total_risk'),
-                t('calculator.explanationcard.details_total_risk_number', {
-                  points: pointsFormatted,
-                  percentage: pointsPercentFormatted,
-                }),
-              )}
-              <br />
+                <Trans>calculator.pointsdisplay.microCOVIDs</Trans>{' '}
+                {frequencyFormatted}
+              </strong>{' '}
+              <br />(
               <Trans
                 values={{
-                  points: pointsFormatted,
-                  percentage: pointsPercentFormatted,
-                  frequency: frequencyFormatted,
-                }}
-              >
-                calculator.explanationcard.details_total_risk_explanation
-              </Trans>
-            </li>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.details_frequency'),
-                frequencyFormatted,
-              )}
-              <br />
-              {props.repeatedEvent ? (
-                <Trans>
-                  calculator.explanationcard.frequency_explanation_repeated
-                </Trans>
-              ) : (
-                <Trans>
-                  calculator.explanationcard.frequency_explanation_oneoff
-                </Trans>
-              )}
-            </li>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.details_range'),
-                t('calculator.explanationcard.details_range_number', {
                   from: lowerBoundFormatted,
                   to: upperBoundFormatted,
-                }),
-              )}
-              <br />
-              <Trans i18nKey="calculator.explanationcard.details_range_explanation">
-                Lorem ipsum{' '}
-                <a href="paper/14-research-sources#uncertainty-estimation">
-                  uncertainty link
-                </a>{' '}
-                dolor sic amet
-              </Trans>
-            </li>
-          </ol>
-          <h4>{t('calculator.explanationcard.risk_budget_header')}</h4>
-          <ul>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.risk_budget_available'),
-                `${weekBudgetFormatted} ${t(
-                  'calculator.pointsdisplay.microCOVIDs',
-                )} ${t('per week')}`,
-              )}
-              <br />
-              <Trans
-                values={{
-                  budget_percent: budgetAnnualPercentFormatted,
-                  budget_points: budgetFormatted,
-                  budget_weekly: weekBudgetFormatted,
                 }}
               >
-                calculator.explanationcard.risk_budget_explanation
+                                calculator.pointsdisplay.range
               </Trans>
-            </li>
-            <li>
-              {calculationStepHeader(
-                t('calculator.explanationcard.risk_budget_used'),
-                `${budgetConsumptionFormatted} ${frequencyFormatted}`,
-              )}
-              <br />
-              <Trans
-                values={{
-                  usage: budgetConsumptionFormatted,
-                  frequency: frequencyFormatted,
-                }}
-              >
-                calculator.explanationcard.risk_budget_usage_explanation
-              </Trans>
-            </li>
-          </ul>
+            )
+            </code>{' '}
+          </div>
         </div>
-      </Collapse>
+        <h4>{t('calculator.explanationcard.details_steps_header')}:</h4>
+        <ol>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_person_risk'),
+              t('calculator.explanationcard.details_person_risk_number', {
+                person_risk: personRiskEachFormatted,
+              })
+            )}
+            <br />
+            <Trans values={{ person_risk: personRiskEachFormatted }}>
+              calculator.explanationcard.details_person_risk_explanation
+            </Trans>
+          </li>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_activity_risk'),
+              `${activityRiskFormatted} ${t(
+                'calculator.explanationcard.chance'
+              )}`
+            )}
+            <br />
+            <Trans values={{ activity_risk: activityRiskFormatted }}>
+              calculator.explanationcard.details_activity_risk_explanation
+            </Trans>
+
+            <b>
+              {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
+                <>
+                    (NOTE: We have{' '}
+                  <a href="/paper/13-q-and-a#what-if-i-hang-out-with-someone-indoors-for-a-long-time-if-we-hang-out-for-5-hours-thats-an-activity-risk-of-6-⨉-5--30-which-is-the-same-risk-as-for-a-household-member">
+                    capped this number at the maximum Activity Risk
+                  </a>
+                  .)
+                </>
+              ) : (
+                  ''
+                )}
+              {props.data.distance === 'intimate' &&
+                props.data.duration < intimateDurationFloor
+                ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
+                : ''}
+            </b>
+          </li>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_number_of_people'),
+              `${props.data.personCount} ${personCountSuffixFormatted}`
+            )}
+          </li>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_total_risk'),
+              t('calculator.explanationcard.details_total_risk_number', {
+                points: pointsFormatted,
+                percentage: pointsPercentFormatted,
+              })
+            )}
+            <br />
+            <Trans
+              values={{
+                points: pointsFormatted,
+                percentage: pointsPercentFormatted,
+                frequency: frequencyFormatted,
+              }}
+            >
+              calculator.explanationcard.details_total_risk_explanation
+            </Trans>
+          </li>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_frequency'),
+              frequencyFormatted
+            )}
+            <br />
+            {props.repeatedEvent ? (
+              <Trans>
+                  calculator.explanationcard.frequency_explanation_repeated
+              </Trans>
+            ) : (
+                <Trans>
+                                  calculator.explanationcard.frequency_explanation_oneoff
+                </Trans>
+              )}
+          </li>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_range'),
+              t('calculator.explanationcard.details_range_number', {
+                from: lowerBoundFormatted,
+                to: upperBoundFormatted,
+              })
+            )}
+            <br />
+            <Trans i18nKey="calculator.explanationcard.details_range_explanation">
+                Lorem ipsum{' '}
+              <a href="paper/14-research-sources#uncertainty-estimation">
+                               uncertainty link
+              </a>{' '}
+              dolor sic amet
+            </Trans>
+          </li>
+        </ol>
+        <h4>{t('calculator.explanationcard.risk_budget_header')}</h4>
+        <ul>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.risk_budget_available'),
+              `${weekBudgetFormatted} ${t(
+                'calculator.pointsdisplay.microCOVIDs'
+              )} ${t('per week')}`
+            )}
+            <br />
+            <Trans
+              values={{
+                budget_percent: budgetAnnualPercentFormatted,
+                budget_points: budgetFormatted,
+                budget_weekly: weekBudgetFormatted,
+              }}
+            >
+              calculator.explanationcard.risk_budget_explanation
+            </Trans>
+          </li>
+          <li>
+            {calculationStepHeader(
+              t('calculator.explanationcard.risk_budget_used'),
+              `${budgetConsumptionFormatted} ${frequencyFormatted}`
+            )}
+            <br />
+            <Trans
+              values={{
+                usage: budgetConsumptionFormatted,
+                frequency: frequencyFormatted,
+              }}
+            >
+              calculator.explanationcard.risk_budget_usage_explanation
+            </Trans>
+          </li>
+        </ul>
+      </Expandable>
       <RiskReduction repeatedEvent={props.repeatedEvent} />
     </>
   )
+
+  const budgetOptions = [
+    {
+      label: t('calculator.risk_tolerance_1_percent_label'),
+      sublabel: t('calculator.risk_tolerance_1_percent_explanation'),
+      multiplier: 1,
+      value: '10000',
+    },
+    {
+      label: t('calculator.risk_tolerance_point1_percent_label'),
+      sublabel:t('calculator.risk_tolerance_point1_percent_explanation'),
+      multiplier: 0.1,
+      value: '1000',
+    },
+  ]
 
   return (
     <Card>
       {showPoints(props.points) ? calculationBreakdown : ''}
 
       <Form.Group>
-        <GenericSelectControl
+        <RadioControl
           id="budget-selector"
           header={t(
             'calculator.explanationcard.risk_tolerance_selector_header',
@@ -291,17 +286,7 @@ export default function ExplanationCard(props: {
           popover={riskTolerancePopover}
           setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
           value={props.riskBudget}
-          hideRisk={true}
-          source={{
-            '10000': {
-              label: t('calculator.risk_tolerance_1_percent_label'),
-              multiplier: 1,
-            },
-            '1000': {
-              label: t('calculator.risk_tolerance_point1_percent_label'),
-              multiplier: 0.1,
-            },
-          }}
+          source={budgetOptions}
         />
       </Form.Group>
     </Card>

@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import { Collapse } from 'react-bootstrap'
-import { Trans } from 'react-i18next'
-import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
+import React from 'react'
+import { Trans, useTranslation } from 'react-i18next'
+
+import { Expandable } from 'components/Expandable'
 
 export function FirstTimeUserIntroduction(): React.ReactElement {
-  const [open, setOpen] = useState(false)
+  const { t } = useTranslation()
   return (
     <>
-      <span
-        className="first-time-user-header expandable-header"
-        onClick={() => setOpen(!open)}
-        aria-controls="first-time-user-introduction"
-        aria-expanded={open}
+      <Expandable
+        id="first-time-user-introduction"
+        header={t('calculator.firsttime.microcovid_header')}
       >
-        {open ? <BsChevronDown /> : <BsChevronRight />}{' '}
-        <Trans>calculator.firsttime.header</Trans>
-      </span>
-      <Collapse in={open}>
-        <div id="first-time-user-introduction" className="">
-          <Trans i18nKey="calculator.firsttime.explanation">
+        <Trans>calculator.firsttime.microcovid_explanation</Trans>
+      </Expandable>
+      <Expandable
+        id="budget-intro"
+        header={t('calculator.firsttime.budget_header')}
+      >
+        <p>
+          <Trans i18nKey="calculator.firsttime.budget_explanation">
             Lorem ipsum <a href="/paper/2-riskiness">riskyness link</a>
             dolor sic <a href="/spreadsheet">spreadsheet link</a>
           </Trans>
-        </div>
-      </Collapse>
+        </p>
+      </Expandable>
     </>
   )
 }

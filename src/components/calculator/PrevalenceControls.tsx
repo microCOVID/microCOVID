@@ -2,10 +2,10 @@ import { isNullOrUndefined } from 'util'
 
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
-import { Card, Collapse, Form, InputGroup } from 'react-bootstrap'
+import { Card, Form, InputGroup } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
+import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
   calculateLocationPersonAverage,
@@ -246,129 +246,120 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
 
-      <span
-        className={
-          'expandable-header ' + (isManualEntryCurrently ? 'd-none' : '')
-        }
-        onClick={() => setDetailsOpen(!detailsOpen)}
-        aria-controls="prevelance-details"
-        aria-expanded={detailsOpen}
+      <ControlledExpandable
+        id="prevelance-details"
+        header={t('calculator.prevalence.details_header')}
+        headerClassName={isManualEntryCurrently ? 'd-none' : ''}
+        open={detailsOpen}
+        setter={setDetailsOpen}
       >
-        {detailsOpen ? <BsChevronDown /> : <BsChevronRight />}{' '}
-        <Trans>calculator.prevalence.details_header</Trans>
-      </span>
-      <Collapse in={detailsOpen}>
-        <div id="prevelance-details">
-          {!isManualEntryCurrently && <PrevalenceResult data={data} />}
+        {!isManualEntryCurrently && <PrevalenceResult data={data} />}
+
+        <PrevalenceField
+          id="reported-cases"
+          label={t('calculator.prevalence.last_week_cases')}
+          value={(data.casesPastWeek || 0).toString()}
+          setter={(value) =>
+            setter({ ...data, casesPastWeek: parseInt(value || '') })
+          }
+          inputType="number"
+          isEditable={!locationSet}
+          className="hide-number-buttons"
+        />
+        <PrevalenceField
+          id="population"
+          label={t('calculator.prevalence.population')}
+          value={data.population}
+          setter={(value) => setter({ ...data, population: value })}
+          inputType="text"
+          isEditable={!locationSet}
+          className="hide-number-buttons"
+        />
+        {locationSet && data.casesIncreasingPercentage === 0 ? (
+          <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
+        ) : (
           <PrevalenceField
-            id="reported-cases"
-            label={t('calculator.prevalence.last_week_cases')}
-            value={(data.casesPastWeek || 0).toString()}
-            setter={(value) =>
-              setter({ ...data, casesPastWeek: parseInt(value || '') })
-            }
+            id="precent-increase"
+            label={t('calculator.prevalence.percent_increase_in_cases')}
+            value={data.casesIncreasingPercentage}
+            unit="%"
+            setter={(value) => {
+              setter({ ...data, casesIncreasingPercentage: Number(value) })
+            }}
             inputType="number"
+            min={0}
             isEditable={!locationSet}
             className="hide-number-buttons"
           />
+        )}
+        {data.positiveCasePercentage === null ? (
           <PrevalenceField
-            id="population"
-            label={t('calculator.prevalence.population')}
-            value={data.population}
-            setter={(value) => setter({ ...data, population: value })}
+            id="positive-test-rate"
+            label={t('calculator.prevalence.positive_case_percentage')}
+            value="no data available"
+            unit="%"
+            setter={(_value) => null}
             inputType="text"
+            isEditable={false}
+          />
+        ) : (
+          <PrevalenceField
+            id="positive-test-rate"
+            label={t('calculator.prevalence.positive_case_percentage')}
+            value={data.positiveCasePercentage.toString()}
+            unit="%"
+            setter={(value) => {
+              setter({ ...data, positiveCasePercentage: Number(value) })
+            }}
+            inputType="number"
+            max={100}
+            min={0}
             isEditable={!locationSet}
             className="hide-number-buttons"
           />
-          {locationSet && data.casesIncreasingPercentage === 0 ? (
-            <div>Cases are stable or decreasing.</div>
-          ) : (
-            <PrevalenceField
-              id="precent-increase"
-              label={t('calculator.prevalence.percent_increase_in_cases')}
-              value={data.casesIncreasingPercentage}
-              unit="%"
-              setter={(value) => {
-                setter({ ...data, casesIncreasingPercentage: Number(value) })
-              }}
-              inputType="number"
-              min={0}
-              isEditable={!locationSet}
-              className="hide-number-buttons"
-            />
-          )}
-          {data.positiveCasePercentage === null ? (
-            <PrevalenceField
-              id="positive-test-rate"
-              label={t('calculator.prevalence.positive_case_percentage')}
-              value="no data available"
-              unit="%"
-              setter={(_value) => null}
-              inputType="text"
-              isEditable={false}
-            />
-          ) : (
-            <PrevalenceField
-              id="positive-test-rate"
-              label={t('calculator.prevalence.positive_case_percentage')}
-              value={data.positiveCasePercentage.toString()}
-              unit="%"
-              setter={(value) => {
-                setter({ ...data, positiveCasePercentage: Number(value) })
-              }}
-              inputType="number"
-              max={100}
-              min={0}
-              isEditable={!locationSet}
-              className="hide-number-buttons"
-            />
-          )}
-
-          {isManualEntryCurrently && <PrevalenceResult data={data} />}
-
-          {!locationSet ? null : (
-            <>
-              <div>
-                <em>
-                  <Trans>calculator.prevalence.data_last_updated</Trans>:{' '}
-                  {PrevalenceDataDate}
-                </em>
-              </div>
-              <div>
-                <p className="mt-3">
-                  <Trans i18nKey="calculator.prevalence_info_source_information">
-                    Prevalence data consolidated from {}
-                    <a
-                      href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Johns Hopkins CSSE
-                    </a>{' '}
-                    (reported cases), {}
-                    <a
-                      href="https://apidocs.covidactnow.org/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Covid Act Now
-                    </a>{' '}
-                    (US positive test rates), and {}
-                    <a
-                      href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Our World in Data
-                    </a>{' '}
-                    (international positive test rates).
-                  </Trans>
-                </p>
-              </div>
-            </>
-          )}
-        </div>
-      </Collapse>
+        )}
+        {!locationSet ? null : (
+          <>
+            <div>
+              <em>
+                <Trans>calculator.prevalence.data_last_updated</Trans>:{' '}
+                {PrevalenceDataDate}
+              </em>
+            </div>
+            <div>
+              <p className="mt-3">
+                <Trans i18nKey="calculator.prevalence_info_source_information">
+                  Prevalence data consolidated from {}
+                  <a
+                    href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Johns Hopkins CSSE
+                  </a>{' '}
+                  (reported cases), {}
+                  <a
+                    href="https://apidocs.covidactnow.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Covid Act Now
+                  </a>{' '}
+                  (US positive test rates), and {}
+                  <a
+                    href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Our World in Data
+                  </a>{' '}
+                  (international positive test rates).
+                </Trans>
+              </p>
+            </div>
+          </>
+        )}
+      </ControlledExpandable>
     </React.Fragment>
   )
 }

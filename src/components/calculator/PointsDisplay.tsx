@@ -7,10 +7,7 @@ import {
   BsExclamationTriangleFill,
 } from 'react-icons/bs'
 
-import {
-  budgetConsumption,
-  getWeekBudget,
-} from 'components/calculator/util/budgetUtil'
+import { budgetConsumption } from 'components/calculator/util/budgetUtil'
 import {
   displayPoints,
   showPoints,
@@ -83,9 +80,12 @@ function Thermometer(props: {
     <>
       {props.doShowPoints && props.activeRiskLevel.icon ? (
         <>
-          <props.activeRiskLevel.icon
-            className={'risk-icon text-risk-' + props.activeRiskLevel.style}
-          />
+          {riskLevelsForThermometer.map((level) => (
+            <div
+              key={level.style}
+              className={`thermometer-piece risk-${props.activeRiskLevel.style}`}
+            ></div>
+          ))}
         </>
       ) : (
         // Iterate on the risk levels to build each pieces of the thermometer, and set the active level.
@@ -144,9 +144,12 @@ export default function PointsDisplay(props: {
           <div className="risk-level"></div>
         ) : (
           <div className={'risk-level risk-' + activeRiskLevel.style}>
+            {!activeRiskLevel.icon ? null : (
+              <activeRiskLevel.icon className="risk-icon" />
+            )}
             <span>
               {riskLabel(activeRiskLevel.name)}{' '}
-              <Trans>calculator.category_postfix</Trans>
+              {t('calculator.category_postfix')}
             </span>
           </div>
         )}
@@ -158,20 +161,7 @@ export default function PointsDisplay(props: {
                 props.riskBudget,
                 t('calculator.explanationcard.multiple_suffix'),
                 t('calculator.explanationcard.percentage_suffix'),
-              )}{' '}
-              <span className="points-range d-md-inline d-none">
-                (
-                <Trans
-                  values={{
-                    weekly_budget: displayPoints(
-                      getWeekBudget(props.riskBudget),
-                    ),
-                  }}
-                >
-                  calculator.pointsdisplay.weekly_budget
-                </Trans>
-                )
-              </span>
+              )}
             </>
           )}
         </div>

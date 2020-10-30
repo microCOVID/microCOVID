@@ -108,12 +108,6 @@ h1,h2,h3,h4,h5,h6 {
 
 // Home page
 
-#first-time-user-introduction {
-  padding-top: 1em;
-}
-
-
-
 .accent {
   line-height: 1em;
   overflow: hidden;
@@ -137,10 +131,11 @@ h1,h2,h3,h4,h5,h6 {
   margin-left: 15px;
 }
 
-.expandable-header {
+.expandable-section .expandable-header {
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 0.5em;
+  display: block;
+  padding-bottom: 0.5em;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -416,16 +411,16 @@ input[type=number] {
         }
       }
 
-      .risk-icon {
-        width: 100%;
-        @include media-breakpoint-up(md) {
-          width: 130%;
-        }
-        height: auto;
-        vertical-align: top;
-        margin: 3px 0 0 0;
-        border-radius: 0;
+      .thermometer-piece.risk-dangerous {
+        border-bottom: 1px solid white;
       }
+    }
+
+
+    .risk-icon {
+      color: white;
+      margin: 2px 8px -2px 0;
+      vertical-align: baseline;
     }
 
 
@@ -456,12 +451,16 @@ input[type=number] {
       padding-top: 0.2em;
       padding-bottom: 0.2em;
       font-weight: bold;
+      .points-range {
+        font-size: 0.8em;
+      }
     }
     .points {
       padding-top: 0.2em;
       padding-bottom: 0.2em;
       margin-left: 15px;
       font-size: 0.8em;
+      font-weight: bold;
     }
     .points-range {
       color: $secondary;
@@ -561,6 +560,11 @@ input[type=number] {
   .pageTitle {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  
+  .pageAuthor {
+    margin-top: 10px;
+    font-weight: bold;
   }
 
   .sectionIndicator {
