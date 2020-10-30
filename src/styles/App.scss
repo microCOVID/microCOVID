@@ -108,12 +108,6 @@ h1,h2,h3,h4,h5,h6 {
 
 // Home page
 
-#first-time-user-introduction {
-  padding-top: 1em;
-}
-
-
-
 .accent {
   line-height: 1em;
   overflow: hidden;
@@ -137,10 +131,11 @@ h1,h2,h3,h4,h5,h6 {
   margin-left: 15px;
 }
 
-.expandable-header {
+.expandable-section .expandable-header {
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 0.5em;
+  display: block;
+  padding-bottom: 0.5em;
 }
 
 /* Chrome, Safari, Edge, Opera */
