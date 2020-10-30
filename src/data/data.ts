@@ -1,4 +1,3 @@
-import { BUDGET_ONE_PERCENT, BUDGET_ONE_TENTH_PERCENT } from './calculate'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
@@ -81,6 +80,9 @@ export const Voice: { [key: string]: FormValue } = {
     multiplier: 5,
   },
 }
+
+export const BUDGET_ONE_PERCENT = 10000
+export const BUDGET_ONE_TENTH_PERCENT = 1000
 
 export const budgetOptions = [
   {

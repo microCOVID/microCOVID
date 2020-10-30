@@ -1,4 +1,5 @@
 import {
+  BUDGET_ONE_PERCENT,
   Distance,
   FormValue,
   Interaction,
@@ -38,9 +39,6 @@ export interface CalculatorData {
   yourMask: string
   voice: string
 }
-
-export const BUDGET_ONE_PERCENT = 10000
-export const BUDGET_ONE_TENTH_PERCENT = 1000
 
 export const defaultValues: CalculatorData = {
   riskBudget: BUDGET_ONE_PERCENT,

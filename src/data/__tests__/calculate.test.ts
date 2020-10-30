@@ -1,11 +1,10 @@
 import {
-  BUDGET_ONE_PERCENT,
   CalculatorData,
   calculate,
   calculateLocationPersonAverage,
   defaultValues,
 } from 'data/calculate'
-import { RiskProfile } from 'data/data'
+import { BUDGET_ONE_PERCENT, RiskProfile } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
 // Wrapper for calculate that just returns expectedValue
