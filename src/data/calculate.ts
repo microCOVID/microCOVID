@@ -34,6 +34,9 @@ export interface CalculatorData {
   theirMask: string
   yourMask: string
   voice: string
+
+  // Scenario
+  scenarioName?: string
 }
 
 export const defaultValues: CalculatorData = {
@@ -54,6 +57,8 @@ export const defaultValues: CalculatorData = {
   theirMask: '',
   yourMask: '',
   voice: '',
+
+  scenarioName: '',
 }
 
 interface CalculatorResult {

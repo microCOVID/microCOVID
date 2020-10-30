@@ -38,6 +38,7 @@ export const SavedDataSelector: React.FunctionComponent<{
       props.setter({
         ...props.currentData,
         ...foundData,
+        scenarioName: value,
       })
     }
   }
