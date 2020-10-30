@@ -1,46 +1,80 @@
-const SIGFIGS = 1
-
-// Internal helper for rounding a number without inserting commas.
-function fixedPointNumber(val: number): string {
-  const orderOfMagnitude = Math.floor(Math.log10(val))
-  let sigfigs = SIGFIGS
-  if (val > 9e5 && val < 1e6) {
-    // Try to avoid rounding to 1 million uCoV; show up to 6 sigfigs to accomplish this.
-    sigfigs = Math.min(6, 6 - Math.floor(Math.log10(1e6 - val)))
-  }
-  const orderOfMangitudeToDisplay = orderOfMagnitude - sigfigs + 1
-  const decimalsToDisplay =
-    orderOfMangitudeToDisplay > 0 ? 0 : -orderOfMangitudeToDisplay
-  const roundedValue = Number.parseFloat(val.toPrecision(sigfigs))
-  const withoutCommas = roundedValue.toFixed(decimalsToDisplay)
-  return withoutCommas
+// Emits a comma if the digit at `orderOfMagnitude` should be proceeded by one.
+function commaIfNeeded(orderOfMagnitude: number): string {
+  return orderOfMagnitude > 0 && orderOfMagnitude % 3 === 0 ? ',' : ''
 }
 
 /**
  * Format points for display - fixed point with a set precision.
  * This is necessary because float.toPrecision will use exponential notation for large or small numbers.
  */
-export function fixedPointPrecision(val: number | null): string {
+export function fixedPointPrecision(
+  val: number | null,
+  maxNumber = 1e6,
+  decimalsNearMax = false,
+): string {
   if (!val) {
     return '0'
   }
-  const withoutCommas = fixedPointNumber(val)
-  if (withoutCommas.indexOf('.') !== -1 || withoutCommas.length <= 3) {
-    return withoutCommas
-  }
-  // This is a super clumsy way to do this, but it's late and it worrrks
-  let withCommas = ''
-  const firstChunkLen = withoutCommas.length % 3
-  if (firstChunkLen !== 0) {
-    withCommas = withoutCommas.slice(0, firstChunkLen) + ','
-  }
-  for (let i = firstChunkLen; i < withoutCommas.length; i += 3) {
-    withCommas += withoutCommas.slice(i, i + 3)
-    if (i + 3 < withoutCommas.length) {
-      withCommas += ','
+  let output = ''
+  const orderOfMagnitude = Math.floor(Math.log10(val))
+
+  if (val > 0.9 * maxNumber) {
+    // Show digits until we reach one that isn't a 9.
+    // For probabilities close to 1, the sigfig we want to show is (1 - P)
+    // This is supposed to be equivalent to `max - fixedPointPrecision(max-val)`, but floating point math doesn't play well with decimals.
+
+    // Helper for finding the digit at a given 10^n's place.
+    const digitAtPosition = (shift: number) => {
+      // If the digit is a '9', we will continue to output values, so floor
+      const digit = Math.floor((val * 10 ** -shift) % 10)
+      if (digit === 9) {
+        return digit
+      }
+      return Math.round((val * 10 ** -shift) % 10)
+    }
+
+    let keepShowingDigits = true
+    let shift = orderOfMagnitude
+    for (; shift >= 0; --shift) {
+      if (keepShowingDigits) {
+        const nextDigit = digitAtPosition(shift)
+        output += keepShowingDigits ? nextDigit : 0
+        keepShowingDigits = nextDigit === 9
+      } else {
+        output += '0'
+      }
+      output += commaIfNeeded(shift)
+    }
+    if (!keepShowingDigits || !decimalsNearMax) {
+      return output
+    }
+    output += '.'
+    while (true) {
+      const nextDigit = digitAtPosition(shift)
+      output += nextDigit
+      if (nextDigit !== 9) {
+        return output
+      }
+      --shift
     }
   }
-  return withCommas
+
+  // First digit
+  output += Math.round(val * 10 ** -orderOfMagnitude)
+
+  if (orderOfMagnitude >= 0) {
+    if (orderOfMagnitude % 3 === 0) {
+      output += commaIfNeeded(orderOfMagnitude)
+    }
+    for (let shift = orderOfMagnitude - 1; shift >= 0; --shift) {
+      output += '0'
+      output += commaIfNeeded(shift)
+    }
+    return output
+  }
+
+  // orderOfMagnitude < 0
+  return '0.' + '0'.repeat(-orderOfMagnitude - 1) + output
 }
 
 /**
@@ -51,5 +85,14 @@ export function fixedPointPrecisionPercent(val: number | null): string {
   if (!val) {
     return '0%'
   }
-  return Number.parseFloat(fixedPointNumber(val * 1e6)) * 1e-4 + '%'
+  if (val > 0.9999999) {
+    return '100%'
+  }
+  return (
+    fixedPointPrecision(
+      val * 100,
+      /*maxNumber=*/ 100,
+      /*decimalsNearMax=*/ true,
+    ) + '%'
+  )
 }
