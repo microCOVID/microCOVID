@@ -1,6 +1,7 @@
 import React from 'react'
-import { Badge, Form, OverlayTrigger } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 
+import ControlLabel from './ControlLabel'
 import { CheckBoxFormValue } from 'data/data'
 
 export const RadioControl: React.FunctionComponent<{
@@ -15,24 +16,12 @@ export const RadioControl: React.FunctionComponent<{
   className?: string
 }> = (props) => (
   <Form.Group controlId={props.id}>
-    {(props.label || props.header) && (
-      <div className="label-wrapper">
-        <Form.Label>
-          <div>
-            {props.header && <strong>{props.header}:</strong>} {props.label}
-          </div>
-        </Form.Label>
-        {props.popover && (
-          <OverlayTrigger
-            trigger="click"
-            overlay={props.popover}
-            rootClose={true}
-          >
-            <Badge variant="secondary">?</Badge>
-          </OverlayTrigger>
-        )}
-      </div>
-    )}
+    <ControlLabel
+      id={props.id}
+      label={props.label}
+      header={props.header}
+      popover={props.popover}
+    />
     {props.source.map((current, index) => (
       <Form.Check key={index} id={props.id + index}>
         <Form.Check.Input
