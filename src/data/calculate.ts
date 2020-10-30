@@ -14,6 +14,9 @@ export interface CalculatorData {
   // Persistence
   persistedAt?: number
 
+  // Budget (in microCOVIDs/year)
+  riskBudget: number
+
   // Prevalence
   topLocation: string
   subLocation: string
@@ -36,7 +39,12 @@ export interface CalculatorData {
   voice: string
 }
 
+export const BUDGET_STANDARD = 10000
+export const BUDGET_CAUTIOUS = 1000
+
 export const defaultValues: CalculatorData = {
+  riskBudget: 10000,
+
   topLocation: '',
   subLocation: '',
   population: '',

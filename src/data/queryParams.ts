@@ -5,6 +5,8 @@ import { NumberParam, StringParam } from 'use-query-params'
 import { CalculatorData, QueryData, defaultValues } from './calculate'
 
 export const queryConfig: QueryParamConfigMap = {
+  riskBudget: NumberParam,
+
   topLocation: StringParam,
   subLocation: StringParam,
 
