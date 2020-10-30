@@ -18,6 +18,7 @@ const content = `Hi everyone!
 We’ve been hard at work improving the microCOVID calculator to make it better and easier to use.  Today we’re announcing Version 2 of our calculator.  Much of the interface will feel familiar, but there have been some changes to reduce confusion and improve the user flow.  
 
 ![Picture of the new result display](${thermomenter})
+
 Some notable UX updates:
 - We’ve changed how results are reported.  We already talked about the idea of a weekly risk budget, in which you decide what yearly chance of catching COVID you’re comfortable with, and that dictates how many microCOVIDs you’re able to spend in a week.  The new UX puts the “% of your weekly risk budget” number front and center for every activity so it’s easy to budget your risk allocation for the week.
 - We’ve reordered and reworded the questions we ask about the activity you’re trying to model to clarify how you should answer them.  For example, users were confused about whether “number of people” referred to the number of people at the activity, the number of people who are near you at any given time, or the number of people who get near you over the course of the activity.  The new ordering and wording makes this and other questions clear.  
