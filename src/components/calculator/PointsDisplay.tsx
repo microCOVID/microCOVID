@@ -18,6 +18,7 @@ export interface RiskLevel {
   title: string
   max: number
   icon?: IconType
+  overrideThermometerStyle?: boolean
 }
 
 // Risk levels and max points for each (assuming a 1% budget)
@@ -38,10 +39,11 @@ const riskLevels: RiskLevel[] = [
     title: 'Extreme',
     max: Infinity,
     icon: BsExclamationOctagonFill,
+    overrideThermometerStyle: true,
   },
 ]
 
-const RISK_LEVELS_TO_SHOW_ON_THERMOMETER = 5 // Shows up through 'Very High'
+const RISK_LEVELS_TO_SHOW_ON_THERMOMETER = 6 // Shows up through 'Dangerously High'
 
 /**
  * Pick the top X risk levels for display and use reverse the order (so they display correctly)
@@ -75,33 +77,35 @@ function Thermometer(props: {
       : ''
   }
 
-  return (
-    <>
-      {props.doShowPoints && props.activeRiskLevel.icon ? (
-        <>
-          {riskLevelsForThermometer.map((level) => (
-            <div
-              key={level.style}
-              className={`thermometer-piece risk-${props.activeRiskLevel.style}`}
-            ></div>
-          ))}
-        </>
-      ) : (
-        // Iterate on the risk levels to build each pieces of the thermometer, and set the active level.
-        riskLevelsForThermometer.map((level) => (
+  if (props.doShowPoints && props.activeRiskLevel.overrideThermometerStyle) {
+    return (
+      <>
+        {riskLevelsForThermometer.map((level) => (
           <div
             key={level.style}
-            className={
-              `thermometer-piece risk-${level.style}` +
-              getActiveLevelClass(
-                props.doShowPoints,
-                props.activeRiskLevel,
-                level,
-              )
-            }
+            className={`thermometer-piece risk-override risk-${props.activeRiskLevel.style}`}
           ></div>
-        ))
-      )}
+        ))}
+      </>
+    )
+  }
+
+  return (
+    <>
+      {/* Iterate on the risk levels to build each pieces of the thermometer, and set the active level. */}
+      {riskLevelsForThermometer.map((level) => (
+        <div
+          key={level.style}
+          className={
+            `thermometer-piece risk-${level.style}` +
+            getActiveLevelClass(
+              props.doShowPoints,
+              props.activeRiskLevel,
+              level,
+            )
+          }
+        ></div>
+      ))}
     </>
   )
 }
