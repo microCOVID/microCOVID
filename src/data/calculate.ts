@@ -39,11 +39,11 @@ export interface CalculatorData {
   voice: string
 }
 
-export const BUDGET_STANDARD = 10000
-export const BUDGET_CAUTIOUS = 1000
+export const BUDGET_ONE_PERCENT = 10000
+export const BUDGET_ONE_TENTH_PERCENT = 1000
 
 export const defaultValues: CalculatorData = {
-  riskBudget: BUDGET_STANDARD,
+  riskBudget: BUDGET_ONE_PERCENT,
 
   topLocation: '',
   subLocation: '',
