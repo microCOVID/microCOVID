@@ -43,7 +43,7 @@ export const BUDGET_STANDARD = 10000
 export const BUDGET_CAUTIOUS = 1000
 
 export const defaultValues: CalculatorData = {
-  riskBudget: 10000,
+  riskBudget: BUDGET_STANDARD,
 
   topLocation: '',
   subLocation: '',
