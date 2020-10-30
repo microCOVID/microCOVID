@@ -181,12 +181,12 @@ export const Calculator = (): React.ReactElement => {
                 </header>
                 {!calculatorData.scenarioName ? null : (
                   <div className="mb-3">
-                  <em>
-                    You selected this scenario:{' '}
-                    <strong>{calculatorData.scenarioName}</strong>. Do the
-                    points below look like the activity you have in mind? If
-                    not, adjust it until it looks right.
-                  </em>
+                    <em>
+                      You selected this scenario:{' '}
+                      <strong>{calculatorData.scenarioName}</strong>. Do the
+                      points below look like the activity you have in mind? If
+                      not, adjust it until it looks right.
+                    </em>
                   </div>
                 )}
                 <div>
