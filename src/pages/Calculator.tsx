@@ -61,10 +61,15 @@ export const Calculator = (): React.ReactElement => {
 
   const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
+  const removeQueryParams = () => {
+    window.history.replaceState(null, '', window.location.href.split('?')[0])
+  }
+
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
     setScenarioName('')
+    removeQueryParams()
   }
 
   const getShareURL = (calculatorData: CalculatorData) => {
@@ -82,8 +87,6 @@ export const Calculator = (): React.ReactElement => {
     copy(getShareURL(calculatorData))
     addAlert('Link copied to clipboard!')
   }
-
-  const [riskBudget, setRiskBudget] = useState(10000)
 
   const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
@@ -258,8 +261,7 @@ export const Calculator = (): React.ReactElement => {
           <PointsDisplay
             points={points}
             repeatedEvent={repeatedEvent}
-            riskBudget={riskBudget}
-            riskBudgetSetter={setRiskBudget}
+            riskBudget={calculatorData.riskBudget}
             lowerBound={lowerBound}
             upperBound={upperBound}
           />
