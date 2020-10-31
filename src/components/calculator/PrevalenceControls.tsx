@@ -11,6 +11,7 @@ import {
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
+import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 
 const isFilled = (val: string): boolean => {
   return !isNullOrUndefined(val) && val !== ''
@@ -311,6 +312,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             <div>
               <em>Data last updated: {PrevalenceDataDate}</em>
             </div>
+            <CopyToSpreadsheetButton data={data} />
             <div>
               <p className="mt-3">
                 Prevalence data consolidated from {}
