@@ -87,7 +87,7 @@ export const PersonRiskControls: React.FunctionComponent<{
             <label htmlFor="duration">
               <strong>
                 <Trans>calculator.duration_header</Trans>:
-              </strong>
+              </strong>{' '}
               <Trans>calculator.duration_question</Trans>
             </label>
             <input

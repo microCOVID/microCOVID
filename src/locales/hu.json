@@ -174,7 +174,7 @@
   "button.copy_link": "Megosztható link ehhez a tevékenységhez",
   "calculator.intro.whats_this": "Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen egy jó intuíciót és a megfelelő ártalomcsökkentési stratégiákat kialakítani és csökkenteni a vírussal kapcsolatos stresszt.",
   "calculator.intro.call_to_action": "Számold ki egy tevékenység COVID-kockázatát!",
-  "calculator.risk_step_label": "2. lépés - A téged körülvevők fertőzöttsége",
+  "calculator.risk_step_label": "2. lépés: Mit csinálsz?",
   "calculator.type_of_interaction": "Egyszeri tevékenység vagy folyamatos kapcsolat?",
   "button.reset_form": "Alaphelyzet",
   "calculator.risk_group_empty_warning": "Először válaszd ki, hogy hol vagy",
