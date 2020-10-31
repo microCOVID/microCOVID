@@ -114,7 +114,6 @@ export default function PointsDisplay(props: {
   points: number
   repeatedEvent: boolean
   riskBudget: number
-  riskBudgetSetter: (newValue: number) => void
   upperBound: number
   lowerBound: number
 }): React.ReactElement {

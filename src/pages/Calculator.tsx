@@ -86,8 +86,6 @@ export const Calculator = (): React.ReactElement => {
     addAlert('Link copied to clipboard!')
   }
 
-  const [riskBudget, setRiskBudget] = useState(10000)
-
   const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
     const result = calculate(calculatorData)
@@ -252,8 +250,7 @@ export const Calculator = (): React.ReactElement => {
           <PointsDisplay
             points={points}
             repeatedEvent={repeatedEvent}
-            riskBudget={riskBudget}
-            riskBudgetSetter={setRiskBudget}
+            riskBudget={calculatorData.riskBudget}
             lowerBound={lowerBound}
             upperBound={upperBound}
           />
