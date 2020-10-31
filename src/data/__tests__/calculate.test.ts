@@ -64,7 +64,7 @@ describe('calculate', () => {
     ${'Eating in restaurant, outdoors'}                             | ${202.5}
     ${'Eating in restaurant, indoors'}                              | ${4050}
     ${'Going to bar'}                                               | ${27000}
-    ${'Large outdoor party: masked with 250 people'}                | ${3375}
+    ${'Large outdoor party: masked with 3 feet between people'}     | ${1080}
     ${'Small indoor party: unmasked with 25 people'}                | ${27000}
     ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
     ${'Voting in-person'}                                           | ${1.5}
