@@ -131,7 +131,8 @@ function GroupSizeWarning(props: { people: number }): React.ReactElement {
       <div className="warning">
         Warning: This is a VERY large number of people. You only need to include
         the number of people who are usually within 15 feet of you (not everyone
-        present in the area).
+        present in the area). If you are gathering with a large number of
+        people, it creates a high risk of a superspread event.
       </div>
     )
   }
@@ -140,7 +141,8 @@ function GroupSizeWarning(props: { people: number }): React.ReactElement {
       <div className="warning">
         Warning: This is a large group of people; getting them together puts
         everyone at risk. Remember, you only need to include the number of
-        people who are usually within 15 feet of you.
+        people who are usually within 15 feet of you (not everyone present in
+        the area).
       </div>
     )
   }
