@@ -23,7 +23,6 @@ export const SavedDataSelector: React.FunctionComponent<{
   )
 
   const setSavedData = (key: string): void => {
-
     let foundData: PartialData | CalculatorData | null = null
     foundData = prepopulated[key]
 
