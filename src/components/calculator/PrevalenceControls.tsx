@@ -4,6 +4,7 @@ import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
 
+import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
@@ -311,6 +312,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             <div>
               <em>Data last updated: {PrevalenceDataDate}</em>
             </div>
+            <CopyToSpreadsheetButton data={data} />
             <div>
               <p className="mt-3">
                 Prevalence data consolidated from {}
