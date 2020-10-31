@@ -60,9 +60,14 @@ export const Calculator = (): React.ReactElement => {
 
   const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
+  const removeQueryParams = () => {
+    window.history.replaceState(null, '', window.location.href.split('?')[0])
+  }
+
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
+    removeQueryParams()
   }
 
   const getShareURL = (calculatorData: CalculatorData) => {
