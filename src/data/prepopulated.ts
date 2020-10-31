@@ -144,10 +144,10 @@ export const prepopulated: {
     voice: 'loud',
   },
 
-  'Large outdoor party: masked with 250 people': {
+  'Large outdoor party: masked with 3 feet between people': {
     riskProfile: 'average',
     interaction: 'oneTime',
-    personCount: 250,
+    personCount: 80,
 
     setting: 'outdoor',
     distance: 'normal',

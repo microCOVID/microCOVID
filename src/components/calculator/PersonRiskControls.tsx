@@ -1,9 +1,34 @@
 import React from 'react'
-import { Popover } from 'react-bootstrap'
+import { Form, Popover } from 'react-bootstrap'
 
+import ControlLabel from './ControlLabel'
 import { SelectControl } from './SelectControl'
 import { CalculatorData } from 'data/calculate'
 import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
+
+const personCountPopover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">About "Number of People"</Popover.Title>
+    <Popover.Content>
+      <p>
+        You only need to include the number of people within 15 feet. For a
+        dense crowd, you can use the following maximums:
+        <ul>
+          <li>
+            <strong>1 ft spacing</strong> (mosh pit): 700
+          </li>
+          <li>
+            <strong>3 ft spacing</strong> (crowded party/bar): 80
+          </li>
+          <li>
+            <strong>6 ft spacing</strong> (properly distanced dining, outdoor
+            gatherings): 20
+          </li>
+        </ul>
+      </p>
+    </Popover.Content>
+  </Popover>
+)
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -42,19 +67,16 @@ export const PersonRiskControls: React.FunctionComponent<{
       </h3>
       {data.interaction === 'partner' ? null : (
         <div className="form-group">
-          <label htmlFor="personCount">
-            <div>
-              <strong>People:</strong>{' '}
-              {repeatedEvent ? (
-                <>How many people do you live with?</>
-              ) : (
-                <>
-                  How many people are usually near you?{' '}
-                  <em>(within 15ft or less)</em>
-                </>
-              )}
-            </div>
-          </label>
+          <ControlLabel
+            id="personCount"
+            label={
+              repeatedEvent
+                ? 'How many people do you live with?'
+                : 'How many people are usually near you?'
+            }
+            header="People"
+            popover={personCountPopover}
+          />
           <input
             className="form-control form-control-lg col-md-3"
             type="number"
@@ -66,6 +88,9 @@ export const PersonRiskControls: React.FunctionComponent<{
               })
             }
           />
+          <Form.Text id={'personCount HelpText'} muted>
+            Within 15 feet
+          </Form.Text>
           <GroupSizeWarning people={data.personCount} />
         </div>
       )}
