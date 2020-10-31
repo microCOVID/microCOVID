@@ -8,7 +8,7 @@ export const RadioControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
   source: Array<CheckBoxFormValue>
-  value: string | number
+  value: string
   label?: string
   header?: string
   helpText?: string

@@ -264,9 +264,8 @@ export const Calculator = (): React.ReactElement => {
           <ExplanationCard
             points={points}
             repeatedEvent={repeatedEvent}
-            riskBudget={riskBudget}
-            riskBudgetSetter={setRiskBudget}
             data={calculatorData}
+            setter={setCalculatorData}
             lowerBound={lowerBound}
             upperBound={upperBound}
           />
