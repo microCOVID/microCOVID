@@ -77,7 +77,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn fix",
-      "pre-push": "yarn typecheck"
+      "pre-push": "yarn test --watchAll=false && yarn typecheck"
     }
   }
 }
