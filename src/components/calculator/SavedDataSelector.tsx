@@ -2,6 +2,7 @@ import { map } from 'lodash'
 import React from 'react'
 import { Form } from 'react-bootstrap'
 
+import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
 import { PartialData, prepopulated } from 'data/prepopulated'
 
@@ -47,6 +48,7 @@ export const SavedDataSelector: React.FunctionComponent<{
           Optional: Start with a predefined common activity...
         </option>
         {prepopulatedOptions}
+        <IosOptgroup />
       </Form.Control>
     </Form.Group>
   )
