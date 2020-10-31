@@ -47,6 +47,7 @@ export const SavedDataSelector: React.FunctionComponent<{
           Optional: Start with a predefined common activity...
         </option>
         {prepopulatedOptions}
+        <optgroup label=""></optgroup>
       </Form.Control>
     </Form.Group>
   )
