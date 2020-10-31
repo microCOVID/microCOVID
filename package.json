@@ -73,11 +73,5 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.0.5",
     "typescript": "^3.8.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn fix",
-      "pre-push": "yarn typecheck"
-    }
   }
 }
