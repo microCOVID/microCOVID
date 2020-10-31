@@ -126,19 +126,14 @@ export const PersonRiskControls: React.FunctionComponent<{
 }
 
 function GroupSizeWarning(props: { people: number }): React.ReactElement {
-  if (props.people >= 100) {
-    return (
-      <div className="warning">
-        Warning: This is a VERY large group of people; getting them together is
-        a high risk of a dangerous superspreading event.
-      </div>
-    )
-  }
   if (props.people >= 25) {
     return (
       <div className="warning">
-        Warning: This is a large group of people; getting them together puts
-        everyone at risk.{' '}
+        Warning: This is a large number of people. Remember, you only need to
+        include the number of people who are within 15 feet of you (not everyone
+        present in the area). However, gathering a large number of people could
+        put everyone at risk and creates the possibility of a superspreader
+        event.
       </div>
     )
   }
