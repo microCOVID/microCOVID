@@ -1,7 +1,7 @@
 import copy from 'copy-to-clipboard'
 import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Alert, Col, Row } from 'react-bootstrap'
 import { BsLink45Deg } from 'react-icons/bs'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
@@ -35,6 +35,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
+  const [scenarioName, setScenarioName] = useState('')
 
   // Mount / unmount
   useEffect(() => {
@@ -67,6 +68,7 @@ export const Calculator = (): React.ReactElement => {
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
+    setScenarioName('')
     removeQueryParams()
   }
 
@@ -162,6 +164,8 @@ export const Calculator = (): React.ReactElement => {
           <SavedDataSelector
             currentData={calculatorData}
             setter={setCalculatorData}
+            scenarioName={scenarioName}
+            scenarioNameSetter={setScenarioName}
           />
         </Col>
       </Row>
@@ -182,6 +186,13 @@ export const Calculator = (): React.ReactElement => {
                 <header id="activity-risk">
                   Step 2: Describe the activity
                 </header>
+                {!scenarioName ? null : (
+                  <Alert variant="info">
+                    You selected this scenario: <strong>{scenarioName}</strong>.
+                    Do the points below look like the activity you have in mind?
+                    If not, adjust it until it looks right.
+                  </Alert>
+                )}
                 <div>
                   <GenericSelectControl
                     id="interaction"

@@ -8,12 +8,14 @@ import { PartialData, prepopulated } from 'data/prepopulated'
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
+  scenarioName: string
+  scenarioNameSetter: (newScenario: string) => void
   label?: string
 }> = (props): React.ReactElement => {
   const prepopulatedOptions = (
     <React.Fragment>
       {map(prepopulated, (_value, key) => (
-        <option key={key} value={`system:${key}`}>
+        <option key={key} value={key} selected={props.scenarioName === key}>
           {key}
         </option>
       ))}
@@ -21,18 +23,8 @@ export const SavedDataSelector: React.FunctionComponent<{
   )
 
   const setSavedData = (key: string): void => {
-    const splitAt = key.indexOf(':')
-    const type = key.substr(0, splitAt)
-    const value = key.substr(splitAt + 1)
-
     let foundData: PartialData | CalculatorData | null = null
-    switch (type) {
-      case 'system':
-        foundData = prepopulated[value]
-        break
-      default:
-        break
-    }
+    foundData = prepopulated[key]
 
     if (foundData) {
       props.setter({
@@ -40,6 +32,7 @@ export const SavedDataSelector: React.FunctionComponent<{
         ...foundData,
       })
     }
+    props.scenarioNameSetter(key)
   }
 
   return (
@@ -50,9 +43,8 @@ export const SavedDataSelector: React.FunctionComponent<{
         onChange={(e) => setSavedData(e.target.value)}
         id="saved-data"
       >
-        <optgroup label=""></optgroup>
-        <option value="">
-          Optional: Start with a predefined common activity
+        <option value="" selected={props.scenarioName === ''}>
+          Optional: Start with a predefined common activity...
         </option>
         {prepopulatedOptions}
       </Form.Control>
