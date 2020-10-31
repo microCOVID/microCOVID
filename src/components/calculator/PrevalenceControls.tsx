@@ -4,6 +4,7 @@ import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
 
+import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
@@ -11,7 +12,6 @@ import {
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
-import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 
 const isFilled = (val: string): boolean => {
   return !isNullOrUndefined(val) && val !== ''
