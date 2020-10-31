@@ -131,7 +131,7 @@ export const MarkdownContents: React.FunctionComponent<{
   const imageMeta = page.image && (
     <meta
       property="og:image"
-      content={process.env.REACT_APP_PUBLIC_URL + page.image.url}
+      content={process.env.REACT_APP_DEPLOY_PRIME_URL + page.image.url}
     />
   )
   const imageWidth = page.image && (
