@@ -24,7 +24,7 @@ import {
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
-import { intimateDurationFloor } from 'data/data'
+import { budgetOptions, intimateDurationFloor } from 'data/data'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (
@@ -39,9 +39,8 @@ export default function ExplanationCard(props: {
   lowerBound: number
   upperBound: number
   repeatedEvent: boolean
-  riskBudget: number
-  riskBudgetSetter: (newValue: number) => void
   data: CalculatorData
+  setter: (newData: CalculatorData) => void
 }): React.ReactElement {
   const points = props.points
 
@@ -62,14 +61,14 @@ export default function ExplanationCard(props: {
     : 'each time you do it'
   const lowerBoundFormatted = displayPoints(props.lowerBound)
   const upperBoundFormatted = displayPoints(props.upperBound)
-  const budgetFormatted = displayPoints(props.riskBudget)
+  const budgetFormatted = displayPoints(props.data.riskBudget)
   const budgetAnnualPercentFormatted = fixedPointPrecisionPercent(
-    props.riskBudget / 1000000,
+    props.data.riskBudget / 1000000,
   )
-  const weekBudgetFormatted = getWeekBudget(props.riskBudget)
+  const weekBudgetFormatted = getWeekBudget(props.data.riskBudget)
   const budgetConsumptionFormatted = budgetConsumption(
     props.points,
-    props.riskBudget,
+    props.data.riskBudget,
   )
 
   const calculationBreakdown = (
@@ -226,23 +225,6 @@ export default function ExplanationCard(props: {
     </>
   )
 
-  const budgetOptions = [
-    {
-      label: 'Standard Caution Budget',
-      sublabel:
-        'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
-      multiplier: 1,
-      value: '10000',
-    },
-    {
-      label: 'High Caution Budget',
-      sublabel:
-        'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
-      multiplier: 0.1,
-      value: '1000',
-    },
-  ]
-
   return (
     <Card>
       {showPoints(props.points) ? calculationBreakdown : ''}
@@ -252,8 +234,10 @@ export default function ExplanationCard(props: {
           id="budget-selector"
           header="Adjust your risk tolerance"
           popover={riskTolerancePopover}
-          setter={(e: string) => props.riskBudgetSetter(Number.parseInt(e))}
-          value={props.riskBudget}
+          setter={(value) => {
+            props.setter({ ...props.data, riskBudget: Number.parseInt(value) })
+          }}
+          value={props.data.riskBudget.toString()}
           source={budgetOptions}
         />
       </Form.Group>

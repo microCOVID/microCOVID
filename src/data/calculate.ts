@@ -1,4 +1,5 @@
 import {
+  BUDGET_ONE_PERCENT,
   Distance,
   FormValue,
   Interaction,
@@ -13,6 +14,9 @@ import {
 export interface CalculatorData {
   // Persistence
   persistedAt?: number
+
+  // Budget (in microCOVIDs/year)
+  riskBudget: number
 
   // Prevalence
   topLocation: string
@@ -37,6 +41,8 @@ export interface CalculatorData {
 }
 
 export const defaultValues: CalculatorData = {
+  riskBudget: BUDGET_ONE_PERCENT,
+
   topLocation: '',
   subLocation: '',
   population: '',
