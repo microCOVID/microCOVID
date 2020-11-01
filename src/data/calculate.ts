@@ -235,8 +235,11 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       // Being outdoors only helps if you're not literally breathing each others' exhalation.
       multiplier *= mulFor(Setting, data.setting)
     }
-    multiplier *= mulFor(TheirMask, data.theirMask)
-    multiplier *= mulFor(YourMask, data.yourMask)
+    if (data.distance !== 'intimate') {
+      // You can't wear a mask if you're kissing!
+      multiplier *= mulFor(TheirMask, data.theirMask)
+      multiplier *= mulFor(YourMask, data.yourMask)
+    }
     multiplier *= mulFor(Voice, data.voice)
 
     multiplier *= effectiveDuration / 60.0

@@ -240,6 +240,21 @@ describe('calculate', () => {
       expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
+    it('should not give a bonus for masks', () => {
+      const unmaskedIntimate: CalculatorData = {
+        ...baseTestData,
+        ...prepopulated['One-night stand with a random person'],
+        yourMask: 'none',
+        theirMask: 'none',
+      }
+      const maskedIntimate: CalculatorData = {
+        ...unmaskedIntimate,
+        yourMask: 'n95',
+        theirMask: 'filtered',
+      }
+
+      expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
+    })
     it('should be at least 12% (1 hr) transfer risk.', () => {
       const oneHourIntimate: CalculatorData = {
         ...baseTestData,
