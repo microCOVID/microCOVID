@@ -48,6 +48,11 @@ export const App = (): React.ReactElement => {
             />
             <meta property="og:image:width" content="400" />
             <meta property="og:image:height" content="400" />
+            <meta
+              property="og:url"
+              // Keep the query params so that we can generate preview images for calculator results.
+              content={window.location.href}
+            />
             <meta property="fb:app_id" content="1117003835468995" />
             <meta property="og:type" content="website" />
             <title>microCOVID Project</title>
