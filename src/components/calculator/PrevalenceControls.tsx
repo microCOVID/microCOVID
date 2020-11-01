@@ -11,6 +11,7 @@ import {
   calculateLocationPersonAverage,
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
+import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
 import { Locations, PrevalenceDataDate } from 'data/location'
 
 const isFilled = (val: string): boolean => {
@@ -21,10 +22,8 @@ const isTopLocation = (val: string): boolean => {
   return isFilled(val) && !!Locations[val]
 }
 
-const MANUAL_DATA_KEY = 'MANUAL_DATA'
-
 const isManualEntry = (val: string): boolean => {
-  return val === MANUAL_DATA_KEY
+  return val === TOP_LOCATION_MANUAL_ENTRY
 }
 
 const PrevalenceField: React.FunctionComponent<{
@@ -197,7 +196,9 @@ export const PrevalenceControls: React.FunctionComponent<{
           }}
         >
           <option value="">Select location...</option>
-          <option value={MANUAL_DATA_KEY}>Enter data manually...</option>
+          <option value={TOP_LOCATION_MANUAL_ENTRY}>
+            Enter data manually...
+          </option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
             <optgroup key={groupInd} label={groupName}>
               {locationGroups[groupName].map((locKey, locInd) => (
