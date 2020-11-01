@@ -5,6 +5,8 @@ import { NumberParam, StringParam } from 'use-query-params'
 import { CalculatorData, QueryData, defaultValues } from './calculate'
 
 export const queryConfig: QueryParamConfigMap = {
+  riskBudget: NumberParam,
+
   topLocation: StringParam,
   subLocation: StringParam,
 
@@ -22,8 +24,7 @@ export const queryConfig: QueryParamConfigMap = {
 
 //
 export const filterParams = (data: CalculatorData): QueryData => {
-  const filterData = { ...data }
-  return pickBy(filterData, (v, k) => {
+  return pickBy(data, (v, k) => {
     const fk = k as keyof CalculatorData
     return k in queryConfig && v !== defaultValues[fk]
   })

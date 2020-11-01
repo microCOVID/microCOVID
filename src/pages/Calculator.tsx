@@ -1,20 +1,21 @@
+import copy from 'copy-to-clipboard'
+import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
-import { useQueryParams } from 'use-query-params'
+import { Alert, Col, Row } from 'react-bootstrap'
+import { BsLink45Deg } from 'react-icons/bs'
+import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
-import {
-  recordCalculatorChanged,
-  recordSavedCustom,
-} from 'components/Analytics'
+import { recordCalculatorChanged } from 'components/Analytics'
+import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
+import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
-import {
-  ExplanationCard,
-  PointsDisplay,
-} from 'components/calculator/PointsDisplay'
+import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
+import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
   CalculatorData,
   calculate,
@@ -22,7 +23,7 @@ import {
   migrateDataToCurrent,
   parsePopulation,
 } from 'data/calculate'
-import { saveCalculation } from 'data/localStorage'
+import { Interaction } from 'data/data'
 import {
   filterParams,
   queryConfig,
@@ -34,6 +35,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
+  const [scenarioName, setScenarioName] = useState('')
 
   // Mount / unmount
   useEffect(() => {
@@ -52,22 +54,38 @@ export const Calculator = (): React.ReactElement => {
 
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
-  const [showSaveForm, setShowSaveForm] = useState(false)
-  const [saveName, setSaveName] = useState('')
+  const [alerts, setAlerts] = useState<string[]>([])
   const [calculatorData, setCalculatorData] = useState<CalculatorData>(
     useQueryDataIfPresent(query, migratedPreviousData),
   )
 
+  const addAlert = (alert: string) => setAlerts([...alerts, alert])
+
+  const removeQueryParams = () => {
+    window.history.replaceState(null, '', window.location.href.split('?')[0])
+  }
+
   const resetForm = () => {
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
+    setScenarioName('')
+    removeQueryParams()
   }
 
-  const persistForm = () => {
-    saveCalculation(saveName, calculatorData)
-    setShowSaveForm(false)
-    setSaveName('')
-    recordSavedCustom(points)
+  const getShareURL = (calculatorData: CalculatorData) => {
+    const encodedQuery = encodeQueryParams(
+      queryConfig,
+      filterParams(calculatorData),
+    )
+    const location = window.location
+    const link = `${location.protocol}//${location.host}${location.pathname}
+    ?${stringify(encodedQuery)}`
+    return link
+  }
+
+  const copyShareURL = (calculatorData: CalculatorData) => {
+    copy(getShareURL(calculatorData))
+    addAlert('Link copied to clipboard!')
   }
 
   const { points, lowerBound, upperBound } = useMemo(() => {
@@ -111,33 +129,14 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.interaction,
   )
 
-  const saveForm = (
-    <div className="input-group">
-      <input
-        className="form-control"
-        type="text"
-        placeholder="Enter name to save your custom scenario to the scenario list"
-        value={saveName}
-        onChange={(e) => setSaveName(e.target.value)}
-      />
-      <div className="input-group-append">
-        <button type="button" className="btn btn-info" onClick={persistForm}>
-          Save
-        </button>
-      </div>
-    </div>
-  )
-
-  const saveButton = (
-    <span>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => setShowSaveForm(true)}
-      >
-        Save as custom scenario
-      </button>
-    </span>
+  const shareButton = (
+    <button
+      type="button"
+      className="btn btn-info float-right"
+      onClick={() => copyShareURL(calculatorData)}
+    >
+      <BsLink45Deg /> Copy link to this scenario
+    </button>
   )
 
   return (
@@ -145,21 +144,144 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            We reviewed published research about COVID, and used it to make
-            rough estimates about the risk level of various activities in
-            microCOVIDs. 1&nbsp;microCOVID is a one-in-a-million chance of
-            getting COVID.
+            We’ve constructed a calculator that lets you estimate the risk of
+            getting COVID from a wide range of activities, using the{' '}
+            <a href="/paper">best research available</a>. We hope this tool will
+            help hone your intuition, lower your stress levels, and figure out
+            good harm-reduction strategies.
           </p>
-          <p>
-            We hope you’ll use this tool to build your intuition about the
-            comparative risk of different activities and as a harm-reduction
-            tool to make safer choices.
-          </p>
-          <p>
-            Play around with the calculator! Change the variables and see how
-            they affect the total.
-          </p>
-          <p className="warning">
+          <FirstTimeUserIntroduction />
+        </Col>
+        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
+      </Row>
+      <Row>
+        <Col>
+          <h2>Calculate the approximate COVID risk of any activity</h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="calculator-buttons">
+          <SavedDataSelector
+            currentData={calculatorData}
+            setter={setCalculatorData}
+            scenarioName={scenarioName}
+            scenarioNameSetter={setScenarioName}
+          />
+        </Col>
+      </Row>
+      <Row id="calculator-fields">
+        <Col md="12" lg="4">
+          <Card id="location">
+            <PrevalenceControls
+              data={calculatorData}
+              setter={setCalculatorData}
+            />
+          </Card>
+        </Col>
+
+        <Col md="12" lg="8" id="activity-section">
+          <Card id="person-risk">
+            {prevalenceIsFilled ? (
+              <React.Fragment>
+                <header id="activity-risk">
+                  Step 2: Describe the activity
+                </header>
+                {!scenarioName ? null : (
+                  <Alert variant="info">
+                    You selected this scenario: <strong>{scenarioName}</strong>.
+                    Do the points below look like the activity you have in mind?
+                    If not, adjust it until it looks right.
+                  </Alert>
+                )}
+                <div>
+                  <GenericSelectControl
+                    id="interaction"
+                    label="Is this a single activity or an ongoing relationship?"
+                    // This setter defaults to a personCount of 1 if the interaction type is "partner"
+                    setter={(value) =>
+                      setCalculatorData({
+                        ...calculatorData,
+                        interaction: value,
+                        personCount:
+                          value === 'partner' ? 1 : calculatorData.personCount,
+                      })
+                    }
+                    value={calculatorData.interaction}
+                    source={Interaction}
+                    hideRisk={true}
+                  />
+                </div>
+
+                <Row>
+                  <Col xs="12" id="person-risk" className="calculator-params">
+                    <PersonRiskControls
+                      data={calculatorData}
+                      setter={setCalculatorData}
+                      repeatedEvent={repeatedEvent}
+                    />
+                  </Col>
+                  <Col xs="12" id="modifiers" className="calculator-params">
+                    <ActivityRiskControls
+                      data={calculatorData}
+                      setter={setCalculatorData}
+                      repeatedEvent={repeatedEvent}
+                    />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="form-buttons">
+                    {alerts.map((alert, idx) => (
+                      <AutoAlert
+                        key={idx}
+                        variant="info"
+                        message={alert}
+                        timeout={3000}
+                      />
+                    ))}
+                    <button
+                      id="reset-form-button"
+                      type="button"
+                      className="btn btn-secondary float-right"
+                      onClick={resetForm}
+                    >
+                      Reset form
+                    </button>
+                    {shareButton}
+                  </Col>
+                </Row>
+              </React.Fragment>
+            ) : (
+              <div className="empty">First, enter your location</div>
+            )}
+          </Card>
+        </Col>
+      </Row>
+      <Row className="sticky" id="points-row">
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
+          <PointsDisplay
+            points={points}
+            repeatedEvent={repeatedEvent}
+            riskBudget={calculatorData.riskBudget}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
+          />
+        </Col>
+      </Row>
+      <Row className="explanation" id="explanation-row">
+        <Col md="12" lg={{ span: 8, offset: 4 }}>
+          <ExplanationCard
+            points={points}
+            repeatedEvent={repeatedEvent}
+            data={calculatorData}
+            setter={setCalculatorData}
+            lowerBound={lowerBound}
+            upperBound={upperBound}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={{ span: 8, offset: 4 }}>
+          <p className="warning" style={{ margin: '0' }}>
             <b>Important:</b> In this tool we state our best estimate based on
             available evidence, even when that evidence is not conclusive. We
             have read a lot of experts' research, but we are not ourselves
@@ -168,85 +290,6 @@ export const Calculator = (): React.ReactElement => {
             not rely on this tool for medical advice. Please continue to follow
             government guidance.
           </p>
-          <button
-            id="reset-form-button"
-            type="button"
-            className="btn btn-secondary"
-            onClick={resetForm}
-          >
-            Reset form
-          </button>{' '}
-          {points > 0 && (showSaveForm ? saveForm : saveButton)}
-        </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
-      </Row>
-      <Row id="calculator-fields">
-        <Col md="12" lg="4">
-          <Card id="location" title="Location & Prevalence">
-            <div className="subheading">
-              First, select a location to use in your calculations, or fill in
-              your own values based on data available in your area....
-            </div>
-
-            <PrevalenceControls
-              data={calculatorData}
-              setter={setCalculatorData}
-            />
-          </Card>
-        </Col>
-
-        <Col md="12" lg="8">
-          <Card id="person-risk" title="Risk">
-            {prevalenceIsFilled ? (
-              <React.Fragment>
-                <div className="subheading">
-                  <p>
-                    ...then select a scenario from the list below (or make your
-                    own).
-                  </p>
-                  <SavedDataSelector
-                    currentData={calculatorData}
-                    setter={setCalculatorData}
-                  />
-                </div>
-
-                <Row>
-                  <Col md="12" lg="6">
-                    <PersonRiskControls
-                      data={calculatorData}
-                      setter={setCalculatorData}
-                    />
-                  </Col>
-                  <Col md="12" lg="6">
-                    <ActivityRiskControls
-                      data={calculatorData}
-                      setter={setCalculatorData}
-                      repeatedEvent={repeatedEvent}
-                    />
-                  </Col>
-                </Row>
-              </React.Fragment>
-            ) : (
-              <div className="empty">
-                First, fill out prevalence information.
-              </div>
-            )}
-          </Card>
-        </Col>
-      </Row>
-      <Row className="sticky" id="points-row">
-        <Col lg={{ span: 8, offset: 4 }}>
-          <PointsDisplay
-            points={points}
-            lowerBound={lowerBound}
-            upperBound={upperBound}
-            repeatedEvent={repeatedEvent}
-          />
-        </Col>
-      </Row>
-      <Row className="explanation" id="explanation-row">
-        <Col lg={{ span: 8, offset: 4 }}>
-          <ExplanationCard points={points} repeatedEvent={repeatedEvent} />
         </Col>
       </Row>
     </div>

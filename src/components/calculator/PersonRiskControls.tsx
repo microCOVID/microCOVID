@@ -1,13 +1,34 @@
 import React from 'react'
-import { Popover } from 'react-bootstrap'
+import { Form, Popover } from 'react-bootstrap'
 
+import ControlLabel from './ControlLabel'
 import { SelectControl } from './SelectControl'
-import {
-  CalculatorData,
-  calculateLocationPersonAverage,
-  calculatePersonRiskEach,
-} from 'data/calculate'
-import { RiskProfile } from 'data/data'
+import { CalculatorData } from 'data/calculate'
+import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
+
+const personCountPopover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">About "Number of People"</Popover.Title>
+    <Popover.Content>
+      <p>
+        You only need to include the number of people within 15 feet. For a
+        dense crowd, you can use the following maximums:
+        <ul>
+          <li>
+            <strong>1 ft spacing</strong> (mosh pit): 700
+          </li>
+          <li>
+            <strong>3 ft spacing</strong> (crowded party/bar): 80
+          </li>
+          <li>
+            <strong>6 ft spacing</strong> (properly distanced dining, outdoor
+            gatherings): 20
+          </li>
+        </ul>
+      </p>
+    </Popover.Content>
+  </Popover>
+)
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -37,33 +58,93 @@ const personRiskPopover = (
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
-}> = ({ data, setter }): React.ReactElement => {
-  const locationRisk = calculateLocationPersonAverage(data) || 0
-  const personRiskEach = Math.round(
-    calculatePersonRiskEach(data, locationRisk) || 0,
-  )
-
+  repeatedEvent: boolean
+}> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   return (
     <React.Fragment>
-      <header id="person-risk">Step 2 - Person Risk</header>
-      <div className="form-group">
-        <label htmlFor="personCount">Number of people near you</label>
-        <input
-          className="form-control form-control-lg"
-          type="number"
-          value={data.personCount}
-          onChange={(e) =>
-            setter({
-              ...data,
-              personCount: Math.max(0, parseInt(e.target.value)),
-            })
-          }
-        />
-        <GroupSizeWarning people={data.personCount} />
-      </div>
+      <h3 className="h2 accent">
+        <span>Nearby people</span>
+      </h3>
+      {data.interaction === 'partner' ? null : (
+        <div className="form-group">
+          <ControlLabel
+            id="personCount"
+            label={
+              repeatedEvent
+                ? 'How many people do you live with?'
+                : 'How many people are usually near you?'
+            }
+            header="People"
+            popover={personCountPopover}
+          />
+          <input
+            className="form-control form-control-lg col-md-3"
+            type="number"
+            value={data.personCount}
+            onChange={(e) =>
+              setter({
+                ...data,
+                personCount: Math.max(0, parseInt(e.target.value)),
+              })
+            }
+          />
+          <Form.Text id={'personCount HelpText'} muted>
+            Within 15 feet
+          </Form.Text>
+          <GroupSizeWarning people={data.personCount} />
+        </div>
+      )}
+
+      {!repeatedEvent ? (
+        <React.Fragment>
+          <SelectControl
+            id="distance"
+            label="How close are these nearby people, on average?"
+            header="Distance"
+            data={data}
+            setter={(value: CalculatorData) => {
+              const yourMask =
+                value.distance === 'intimate' ? 'none' : value.yourMask
+              const theirMask =
+                value.distance === 'intimate' ? 'none' : value.theirMask
+              setter({ ...value, yourMask, theirMask })
+            }}
+            source={Distance}
+          />
+          <div className="form-group">
+            <label htmlFor="duration">
+              <strong>Duration:</strong> How long is the activity, in minutes?
+            </label>
+            <input
+              className="form-control form-control-lg col-md-3"
+              type="number"
+              value={data.duration}
+              onChange={(e) =>
+                setter({
+                  ...data,
+                  duration: Math.max(0, parseInt(e.target.value)),
+                })
+              }
+            />
+          </div>
+          {data.distance === 'intimate' &&
+          data.duration < intimateDurationFloor ? (
+            <div className="warning">
+              We have applied a minimum Activity Risk for kissing due to the
+              risk involved in exchanging fluids.
+            </div>
+          ) : null}
+        </React.Fragment>
+      ) : null}
       <SelectControl
         id="riskProfile"
-        label="Person(s) Risk Profile"
+        label="What is their risk profile?"
+        header="Risk Profile"
+        helpText={
+          !repeatedEvent
+            ? ''
+            : 'If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting'
+        }
         popover={personRiskPopover}
         data={data}
         setter={setter}
@@ -71,29 +152,19 @@ export const PersonRiskControls: React.FunctionComponent<{
         hideRisk={true}
       />
       <br />
-      <p className="readout">
-        The <i>first</i> part of the calculation is Person Risk: Each other
-        person has a <b>{personRiskEach.toLocaleString()}</b>
-        -in-a-million chance of currently having COVID.
-      </p>
     </React.Fragment>
   )
 }
 
 function GroupSizeWarning(props: { people: number }): React.ReactElement {
-  if (props.people >= 100) {
-    return (
-      <div className="warning">
-        Warning: This is a VERY large group of people; getting them together is
-        a high risk of a dangerous superspreading event.
-      </div>
-    )
-  }
   if (props.people >= 25) {
     return (
       <div className="warning">
-        Warning: This is a large group of people; getting them together puts
-        everyone at risk.{' '}
+        Warning: This is a large number of people. Remember, you only need to
+        include the number of people who are within 15 feet of you (not everyone
+        present in the area). However, gathering a large number of people could
+        put everyone at risk and creates the possibility of a superspreader
+        event.
       </div>
     )
   }

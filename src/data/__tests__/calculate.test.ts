@@ -4,7 +4,7 @@ import {
   calculateLocationPersonAverage,
   defaultValues,
 } from 'data/calculate'
-import { RiskProfile } from 'data/data'
+import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
 // Wrapper for calculate that just returns expectedValue
@@ -18,7 +18,8 @@ const calcValue = (data: CalculatorData) => {
 
 describe('calculate', () => {
   // Prevailance is .1% with 6x underreporting factor
-  const exampleLocation = {
+  const baseTestData = {
+    riskBudget: BUDGET_ONE_PERCENT,
     subLocation: 'mock city',
     topLocation: 'mock state',
     label: 'mock city',
@@ -27,12 +28,23 @@ describe('calculate', () => {
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 1,
   }
+
+  // Variables that should be ignored for repeated/partner interactions.
+  const repeatedDontCare = {
+    setting: 'indoor',
+    distance: 'sixFt',
+    duration: 60,
+    theirMask: 'none',
+    yourMask: 'none',
+    voice: 'normal',
+  }
+
   const expectedPrevalance = 0.006
 
   it('compensates for underreporting', () => {
     const data: CalculatorData = {
       ...defaultValues,
-      ...exampleLocation,
+      ...baseTestData,
     }
     expect(calculateLocationPersonAverage(data)).toBeCloseTo(
       expectedPrevalance * 1e6,
@@ -42,7 +54,7 @@ describe('calculate', () => {
   it('produces same results as by hand', () => {
     const scenario = 'Outdoor masked hangout with 2 people'
     const data: CalculatorData = {
-      ...exampleLocation,
+      ...baseTestData,
       ...prepopulated[scenario],
     }
 
@@ -63,14 +75,14 @@ describe('calculate', () => {
     ${'Eating in restaurant, outdoors'}                             | ${202.5}
     ${'Eating in restaurant, indoors'}                              | ${4050}
     ${'Going to bar'}                                               | ${27000}
-    ${'Large outdoor party: masked with 250 people'}                | ${3375}
+    ${'Large outdoor party: masked with 3 feet between people'}     | ${1080}
     ${'Small indoor party: unmasked with 25 people'}                | ${27000}
     ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
     ${'Voting in-person'}                                           | ${1.5}
     ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = {
-      ...exampleLocation,
+      ...baseTestData,
       ...prepopulated[scenario],
     }
 
@@ -79,7 +91,7 @@ describe('calculate', () => {
 
   it('should produce a self-consistent living alone risk profile', () => {
     const data: CalculatorData = {
-      ...exampleLocation,
+      ...baseTestData,
       riskProfile: 'average',
       interaction: 'oneTime',
       personCount: 10,
@@ -99,7 +111,7 @@ describe('calculate', () => {
 
   it('should handle large risks', () => {
     const data: CalculatorData = {
-      ...exampleLocation,
+      ...baseTestData,
       riskProfile: 'hasCovid',
       interaction: 'repeated',
       personCount: 1,
@@ -123,9 +135,36 @@ describe('calculate', () => {
     expect(twoTimes?.upperBound).toBeCloseTo(0.99e6)
   })
 
+  it.each`
+    profile                         | points
+    ${RiskProfileEnum.DECI_PERCENT} | ${1e6 / 1000 / 50}
+    ${RiskProfileEnum.ONE_PERCENT}  | ${1e6 / 100 / 50}
+    ${RiskProfileEnum.HAS_COVID}    | ${1e6}
+  `(
+    'should treat $profile as independent of prevalance',
+    ({ profile, points }) => {
+      const data: CalculatorData = {
+        ...baseTestData,
+        ...repeatedDontCare,
+        riskProfile: profile,
+        interaction: 'repeated',
+        personCount: 1,
+      }
+
+      const expected = points * 0.3
+      expect(calcValue(data)).toBeCloseTo(expected)
+      expect(
+        calcValue({
+          ...data,
+          positiveCasePercentage: baseTestData.positiveCasePercentage * 10,
+        }),
+      ).toBeCloseTo(expected)
+    },
+  )
+
   describe('Interaction: partner', () => {
     const partner: CalculatorData = {
-      ...exampleLocation,
+      ...baseTestData,
       ...prepopulated[
         'Live-in partner who has no indoor interactions besides you'
       ],
@@ -153,7 +192,7 @@ describe('calculate', () => {
 
   describe('Interaction: housemate', () => {
     const base = {
-      ...exampleLocation,
+      ...baseTestData,
       riskProfile: 'average',
       interaction: 'repeated',
       personCount: 1,
@@ -190,7 +229,7 @@ describe('calculate', () => {
   describe('Distance: intimate', () => {
     it('should not give a bonus for outdoors', () => {
       const indoorIntimate: CalculatorData = {
-        ...exampleLocation,
+        ...baseTestData,
         ...prepopulated['One-night stand with a random person'],
       }
       const outdoorIntimate: CalculatorData = {
@@ -201,9 +240,24 @@ describe('calculate', () => {
       expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
+    it('should not give a bonus for masks', () => {
+      const unmaskedIntimate: CalculatorData = {
+        ...baseTestData,
+        ...prepopulated['One-night stand with a random person'],
+        yourMask: 'none',
+        theirMask: 'none',
+      }
+      const maskedIntimate: CalculatorData = {
+        ...unmaskedIntimate,
+        yourMask: 'n95',
+        theirMask: 'filtered',
+      }
+
+      expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
+    })
     it('should be at least 12% (1 hr) transfer risk.', () => {
       const oneHourIntimate: CalculatorData = {
-        ...exampleLocation,
+        ...baseTestData,
         ...prepopulated['One-night stand with a random person'],
         duration: 60,
       }
@@ -231,7 +285,7 @@ describe('calculate', () => {
       ${240}   | ${'outdoor'} | ${2880}       | ${'should not give an outdoors bonus'}
     `(' $scenario', ({ duration, setting, result }) => {
       const data: CalculatorData = {
-        ...exampleLocation,
+        ...baseTestData,
         personCount: 1,
         interaction: 'oneTime',
         riskProfile: 'average',

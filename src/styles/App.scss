@@ -1,5 +1,6 @@
 // Override default variables before the import
 @import './variables.scss';
+@import "~rfs/scss";
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
@@ -36,7 +37,6 @@ a {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto Slab';
   font-weight: 700;
-  margin-top: 2.4rem;
   margin-bottom: 1.3rem;
 }
 
@@ -60,10 +60,9 @@ h1,h2,h3,h4,h5,h6 {
   padding-right: 0;
 
   .navbar-brand {
-      @media (max-width: 900px) {
-        font-size: 20px;
-       }
-
+    @include media-breakpoint-down(md) {
+      font-size: 25px;
+    }
   }
   a {
     text-decoration: none;
@@ -109,31 +108,64 @@ h1,h2,h3,h4,h5,h6 {
 
 // Home page
 
+.accent {
+  line-height: 1em;
+  overflow: hidden;
+  font-weight: bold;
+}
+.accent span {
+  display: inline-block;
+  position: relative;  
+  padding-bottom: .3em;
+}
+.accent span:after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  border-bottom: 1px solid #aaa;
+  top: 0;
+  width: 9999px;
+}
+.accent span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.expandable-section .expandable-header {
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+ -moz-appearance: textfield;
+}
+
 // Calculator
 #calculator {
   #calculator-introduction {
     padding: 20px;
+    padding-bottom: 0px;
     font-size: $h4-font-size;
     position: relative;
 
-    #button-wrapper {
-      margin-top: 30px;
-
-      #reset-form-button {
-        position: absolute;
-        bottom: 0;
-      }
-    }
   }
 
-  #calculator-fields {
-    .col-md-12 {
-      margin-bottom: 30px;
-    }
+  .col-md-12 {
+    margin-bottom: 30px;
   }
 
-  a {
-    color: $body-color;
+  .calculator-buttons {
+    text-align: right;
   }
 
   // Colorful section headers
@@ -143,21 +175,14 @@ h1,h2,h3,h4,h5,h6 {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
+    @include font-size(1.2rem);
   }
   header#location {
     background: $primary;
   }
 
-  header#person-risk {
-    background: $indigo;
-  }
-
   header#activity-risk {
-    background: $cyan;
-
-    @include mobile {
-      margin-top: 30px;
-    }
+    background: $indigo;
   }
 
   .card {
@@ -171,6 +196,13 @@ h1,h2,h3,h4,h5,h6 {
       margin: 10px 0;
       background-color: $warning-fill;
     }
+    .calculator-params {
+
+      h3 {
+        margin: 0 0 0.6em 0;
+      }
+    }
+
   }
 
   // Card subheader
@@ -196,12 +228,38 @@ h1,h2,h3,h4,h5,h6 {
     }
   }
 
+  #prevelance-details {
+    input.form-control[readonly] {
+      color: $gray-500 !important;
+    }
+
+    .prevelance-result.card {
+      height: auto;
+      // background-color: $secondary;
+      // color: white;
+      border: 1px solid $secondary;
+      margin: 0.5rem;
+      .card-body {
+        padding: 0.8rem;
+      }
+    }
+  }
+
   .empty {
     flex: 1;
     display: flex;
     height: 50%;
-    align-items: center;
+    padding-top: 3em;
+    font-style: italic;
     justify-content: center;
+  }
+
+  #activity-section {
+    min-height: 500px;
+
+    .form-group {
+      margin-bottom: 1.5em;
+    }
   }
 
   // Intermediate value readouts
@@ -209,18 +267,12 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1em;
   }
 
-  // Risk emphasis
-  .low-risk, .medium-risk, .high-risk {
-    font-size: 2em;
-  }
-  .low-risk {
-    color: $indigo;
-  }
-  .medium-risk {
-    color: $cyan;
-  }
-  .high-risk {
-    color: $red
+  .save-form {
+    display: inline-flex;
+    padding: 0;
+    @include media-breakpoint-down(sm) {
+      margin-top: 6px;
+    }
   }
 
   // Tooltip button/badge styles
@@ -231,6 +283,10 @@ h1,h2,h3,h4,h5,h6 {
       align-items: center;
     }
 
+    label {
+      @include font-size($input-font-size-lg);
+    }
+
     .badge {
       cursor: pointer;
       border-radius: 12px;
@@ -238,9 +294,34 @@ h1,h2,h3,h4,h5,h6 {
     }
   }
 
+  #points-row .col-md-12 {
+    margin-bottom: 0;
+  }
+  
+  .form-group {
+    .text-muted {
+      font-size: 1em;
+    }
+  }
+
+  .form-buttons {
+    > .btn {
+      margin: 0 5px;
+    }
+  }
+
+  $sticky-z-index: 100;
+
   .sticky {
-    z-index: 1;
+    z-index: $sticky-z-index;
     padding-bottom: 0;
+  }
+
+  // Make sure to put the location sidebar above the floating points display
+  #location {
+    @include media-breakpoint-up(lg) {
+      z-index: $sticky-z-index + 1;
+    }
   }
 
   .scrolled-past.has-points {
@@ -248,21 +329,192 @@ h1,h2,h3,h4,h5,h6 {
     bottom: 0;
     margin-right: auto;
   }
+  
+
+  .risk-dangerous { background-color: $thermometer-dark-red; color: #fff; }
+  .risk-very-high { background-color: $thermometer-red; }
+  .risk-high { background-color: $thermometer-orange; }
+  .risk-moderate { background-color: $thermometer-yellow; }
+  .risk-low { background-color: $thermometer-light-green; }
+  .risk-very-low { background-color: $thermometer-green; }
+
+
+
+  .text-risk-dangerous { color: $thermometer-dark-red; }
+  .text-risk-very-high { color: $thermometer-red; }
+  .text-risk-high { color: $thermometer-orange; }
+  .text-risk-moderate { color: $thermometer-yellow; }
+  .text-risk-low { color: $thermometer-light-green; }
+  .text-risk-very-low { color: $thermometer-green; }
 
   .top-half-card {
     background: white;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 1.25rem;
-    box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15)
+    box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15);
+
+    @include media-breakpoint-down(sm) {
+      padding: 0.8rem;
+    }
+
+    // Thermometer Credit. Adapted from: Copyright (c) 2020 COVID-19 Projections. https://github.com/covid-projections/covid-projections/
+
+    $thermometer-levels: 6;
+    $thermometer-width: 30px;
+    $thermometer-border: 4px;
+    $thermometer-corners: 10px;
+    $thermometer-mobile-width-reduction: 10px;
+
+
+    @include font-size(1.3rem);
+    @include media-breakpoint-down(sm) {
+      @include font-size(1rem);
+    }
+    @media (max-width: 321px) {
+      // iPhone size
+      @include font-size(0.9rem); 
+    }
+
+
+    .thermometer-container {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      width: 100%;
+      max-width: $thermometer-width; 
+      @include media-breakpoint-down(sm) {
+        height: 85px;
+      }
+      
+      :first-child {
+        border-radius: $thermometer-corners $thermometer-corners 0px 0px;
+      }
+
+      :last-child {
+        border-radius: 0px 0px $thermometer-corners $thermometer-corners ;
+      }
+
+      .thermometer-piece {
+        display: flex;
+        flex-direction: row;
+        height: (100% / $thermometer-levels);
+        width: $thermometer-width;
+        align-self: center;
+        @include media-breakpoint-down(sm) {
+          width: $thermometer-width - $thermometer-mobile-width-reduction;
+        }
+      }
+
+      .thermometer-piece.current-level {
+        width: $thermometer-width + $thermometer-border;
+        border: $thermometer-border solid black;
+        @include media-breakpoint-down(sm) {
+          width: $thermometer-width + $thermometer-border - $thermometer-mobile-width-reduction;
+          border-width: $thermometer-border - 1;
+        }
+      }
+
+      .thermometer-piece.risk-override {
+        border-bottom: 1px solid white;
+      }
+    }
+
+
+    .risk-icon {
+      color: white;
+      margin: 2px 8px -2px 0;
+      vertical-align: baseline;
+    }
+
+
+    .points-container {
+      margin-left: 0.5em;
+      line-height: 1;
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+    }
+
+    .risk-level {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 8px;
+      margin-left: 5px;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 0.2em;
+      @include font-size(1.2em);
+      line-height: 1.5;
+      &.risk-dangerous {
+        color: #fff
+      }
+    }
+    .budget-consumption {
+      margin-left: 15px;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      font-weight: bold;
+      .points-range {
+        font-size: 0.8em;
+      }
+    }
+    .points {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin-left: 15px;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+    .points-range {
+      color: $secondary;
+      font-weight: normal;
+    }
+
   }
+
+  
 
   .explanation .card {
     border: 1px solid $border-color;
+    border-top: 0px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+
+    h4 {
+      margin-top: 0.5em;
+    }
+
+    code {
+      margin-left: 0.2em;
+    }
+
+    #calculation-explanation {
+      border: 1px solid $border-color;
+      padding: 1em;
+      margin: 1em 0;
+      background-color: $gray-100;
+
+
+      #calculation-breakdown {
+        margin-left: 2em;
+      }
+
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    #additional-precautions {
+      li {
+        margin-bottom: 0.2em;
+      }
+    }
   }
+
 }
+
+
 
 // Whitepaper
 
@@ -312,6 +564,11 @@ h1,h2,h3,h4,h5,h6 {
   .pageTitle {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  
+  .pageAuthor {
+    margin-top: 10px;
+    font-weight: bold;
   }
 
   .sectionIndicator {
@@ -392,5 +649,9 @@ h1,h2,h3,h4,h5,h6 {
   section.footnotes {
     font-size: 14px;
     max-width: 600px;
+  }
+
+  img {
+    max-width: 100%;
   }
 }

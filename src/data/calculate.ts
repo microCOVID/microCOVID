@@ -1,8 +1,10 @@
 import {
+  BUDGET_ONE_PERCENT,
   Distance,
   FormValue,
   Interaction,
   RiskProfile,
+  RiskProfileEnum,
   Setting,
   TheirMask,
   Voice,
@@ -13,6 +15,9 @@ import {
 export interface CalculatorData {
   // Persistence
   persistedAt?: number
+
+  // Budget (in microCOVIDs/year)
+  riskBudget: number
 
   // Prevalence
   topLocation: string
@@ -37,6 +42,8 @@ export interface CalculatorData {
 }
 
 export const defaultValues: CalculatorData = {
+  riskBudget: BUDGET_ONE_PERCENT,
+
   topLocation: '',
   subLocation: '',
   population: '',
@@ -91,7 +98,7 @@ export const migrateDataToCurrent = (
   return { ...defaultValues, ...data }
 }
 
-const ONE_MILLION = 1e6 // One 'full' COVID
+export const ONE_MILLION = 1e6 // One 'full' COVID
 
 export const MAX_ACTIVITY_RISK = 0.48
 export const MAX_POINTS = 100000
@@ -177,9 +184,12 @@ export const calculatePersonRiskEach = (
 ): number | null => {
   try {
     let risk
-    if (data.riskProfile === 'hasCovid') {
-      // Special case COVID: they have a 100% chance of having it
+    if (data.riskProfile === RiskProfileEnum.HAS_COVID) {
       risk = ONE_MILLION
+    } else if (data.riskProfile === RiskProfileEnum.ONE_PERCENT) {
+      risk = (ONE_MILLION * 0.01) / 50
+    } else if (data.riskProfile === RiskProfileEnum.DECI_PERCENT) {
+      risk = (ONE_MILLION * 0.001) / 50
     } else if (data.riskProfile === '') {
       // If risk profile isn't selected, call it incomplete
       return null
@@ -225,8 +235,11 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       // Being outdoors only helps if you're not literally breathing each others' exhalation.
       multiplier *= mulFor(Setting, data.setting)
     }
-    multiplier *= mulFor(TheirMask, data.theirMask)
-    multiplier *= mulFor(YourMask, data.yourMask)
+    if (data.distance !== 'intimate') {
+      // You can't wear a mask if you're kissing!
+      multiplier *= mulFor(TheirMask, data.theirMask)
+      multiplier *= mulFor(YourMask, data.yourMask)
+    }
     multiplier *= mulFor(Voice, data.voice)
 
     multiplier *= effectiveDuration / 60.0

@@ -1,4 +1,9 @@
-import { fixedPointPrecisionPercent } from 'data/FormatPrecision'
+import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
+
+export interface CheckBoxFormValue extends FormValue {
+  value: string
+  sublabel?: string
+}
 
 export interface FormValue {
   label: string
@@ -43,7 +48,7 @@ export const intimateDurationFloor = 60
 export const Distance: { [key: string]: FormValue } = {
   intimate: formValue('Kissing', 2),
   close: formValue('Close (<1ft / 0.3m apart)', 2),
-  normal: formValue('Normal socializing (~3ft/ ~1m apart)', 1),
+  normal: formValue('Normal socializing (~3ft / ~1m apart)', 1),
   sixFt: formValue('>6ft / 2m apart', 0.5),
   tenFt: formValue('>10ft / 3m apart', 0.25),
 }
@@ -75,6 +80,26 @@ export const Voice: { [key: string]: FormValue } = {
     multiplier: 5,
   },
 }
+
+export const BUDGET_ONE_PERCENT = 10000
+export const BUDGET_ONE_TENTH_PERCENT = 1000
+
+export const budgetOptions = [
+  {
+    label: 'Standard Caution Budget',
+    sublabel:
+      'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
+    multiplier: 1,
+    value: BUDGET_ONE_PERCENT.toString(),
+  },
+  {
+    label: 'High Caution Budget',
+    sublabel:
+      'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+    multiplier: 0.1,
+    value: BUDGET_ONE_TENTH_PERCENT.toString(),
+  },
+]
 
 /*
  * Exposed to ten (silent distanced masked) average people indoors,
@@ -165,8 +190,26 @@ export const RiskProfile: { [key: string]: FormValue } = {
       Interaction.oneTime.multiplier *
       (2 + 10 * Distance.sixFt.multiplier * Voice.loud.multiplier),
   },
-  hasCovid: {
-    label: 'Has COVID',
-    multiplier: -1,
-  },
+}
+
+// Special keys for RiskProfile that need to be checked elsewhere.
+export const RiskProfileEnum = {
+  ONE_PERCENT: 'onePercent',
+  DECI_PERCENT: 'deciPercent',
+  HAS_COVID: 'hasCovid',
+}
+
+RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
+  label: 'Uses microcvoid to maintain a risk of 1%/year (200 microcovid/week)',
+  multiplier: NaN,
+}
+
+RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
+  label: 'Uses microcvoid to maintain a risk of 0.1%/year (20 microcovid/week)',
+  multiplier: NaN,
+}
+
+RiskProfile[RiskProfileEnum.HAS_COVID] = {
+  label: 'Has COVID',
+  multiplier: -1,
 }

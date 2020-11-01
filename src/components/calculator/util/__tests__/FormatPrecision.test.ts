@@ -1,7 +1,7 @@
 import {
   fixedPointPrecision,
   fixedPointPrecisionPercent,
-} from 'data/FormatPrecision'
+} from 'components/calculator/util/FormatPrecision'
 
 describe('fixedPointPrecision', () => {
   it('rounds numbers greater than 1', () => {
@@ -30,6 +30,7 @@ describe('fixedPointPrecisionPercent', () => {
     expect(fixedPointPrecisionPercent(1)).toEqual('100%')
     expect(fixedPointPrecisionPercent(0.16)).toEqual('20%')
     expect(fixedPointPrecisionPercent(0.0022)).toEqual('0.2%')
+    expect(fixedPointPrecisionPercent(0.00030000000000000002)).toEqual('0.03%')
   })
 
   it('shows precision for percentages close to 1', () => {

@@ -1,58 +1,31 @@
-import { map, size } from 'lodash'
+import { map } from 'lodash'
 import React from 'react'
+import { Form } from 'react-bootstrap'
 
+import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
-import { savedItems } from 'data/localStorage'
 import { PartialData, prepopulated } from 'data/prepopulated'
 
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
+  scenarioName: string
+  scenarioNameSetter: (newScenario: string) => void
+  label?: string
 }> = (props): React.ReactElement => {
-  const hasSavedItems = size(savedItems()) > 0
-
-  let userSavedData: JSX.Element | null = null
-  let prepopulatedOptions = (
+  const prepopulatedOptions = (
     <React.Fragment>
       {map(prepopulated, (_value, key) => (
-        <option key={key} value={`system:${key}`}>
+        <option key={key} value={key} selected={props.scenarioName === key}>
           {key}
         </option>
       ))}
     </React.Fragment>
   )
 
-  if (hasSavedItems) {
-    prepopulatedOptions = (
-      <optgroup label="Example Calculations">{prepopulatedOptions}</optgroup>
-    )
-    userSavedData = (
-      <optgroup label="Your Saved Items">
-        {map(savedItems(), (_value, key) => (
-          <option key={key} value={`user:${key}`}>
-            {key}
-          </option>
-        ))}
-      </optgroup>
-    )
-  }
-
   const setSavedData = (key: string): void => {
-    const splitAt = key.indexOf(':')
-    const type = key.substr(0, splitAt)
-    const value = key.substr(splitAt + 1)
-
     let foundData: PartialData | CalculatorData | null = null
-    switch (type) {
-      case 'system':
-        foundData = prepopulated[value]
-        break
-      case 'user':
-        foundData = savedItems()[value]
-        break
-      default:
-        break
-    }
+    foundData = prepopulated[key]
 
     if (foundData) {
       props.setter({
@@ -60,17 +33,23 @@ export const SavedDataSelector: React.FunctionComponent<{
         ...foundData,
       })
     }
+    props.scenarioNameSetter(key)
   }
 
   return (
-    <select
-      className="form-control"
-      onChange={(e) => setSavedData(e.target.value)}
-    >
-      <optgroup label=""></optgroup>
-      <option value="">Select a scenario or saved item...</option>
-      {userSavedData}
-      {prepopulatedOptions}
-    </select>
+    <Form.Group>
+      <Form.Control
+        as="select"
+        size="lg"
+        onChange={(e) => setSavedData(e.target.value)}
+        id="saved-data"
+      >
+        <option value="" selected={props.scenarioName === ''}>
+          Optional: Start with a predefined common activity...
+        </option>
+        {prepopulatedOptions}
+        <IosOptgroup />
+      </Form.Control>
+    </Form.Group>
   )
 }

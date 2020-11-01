@@ -128,15 +128,36 @@ export const MarkdownContents: React.FunctionComponent<{
   const includeDonation = processed.indexOf('<!-- Donation -->') >= 0
   const textWithoutHtml = stripHtml(body)
 
+  const imageMeta = page.image && (
+    <meta
+      property="og:image"
+      content={process.env.REACT_APP_DEPLOY_PRIME_URL + page.image.url}
+    />
+  )
+  const imageWidth = page.image && (
+    <meta property="og:image:width" content={page.image.width.toString()} />
+  )
+  const imageHeight = page.image && (
+    <meta property="og:image:height" content={page.image.height.toString()} />
+  )
+
   return (
     <div className="paperPage">
       <Helmet>
+        <title>{`${page.title} - microCOVID Project`}</title>
         <meta name="description" content={textWithoutHtml} />
         <meta property="og:description" content={textWithoutHtml} />
+        <meta property="og:title" content={page.title} />
+        {imageMeta}
+        {imageWidth}
+        {imageHeight}
       </Helmet>
       <span id={id}></span>
-      <div className="sectionIndicator">Section {slugs.indexOf(id) + 1}</div>
+      <div className="sectionIndicator">
+        {page.date ? page.date : `Section ${slugs.indexOf(id) + 1}`}
+      </div>
       <h1 className="pageTitle">{page.title}</h1>
+      {page.author && <div className="pageAuthor">{page.author}</div>}
 
       <Navigation />
 
@@ -164,7 +185,6 @@ export const TableOfContents: React.FunctionComponent<{
 
   return (
     <div className="paperPage">
-      <div className="sectionIndicator">Table of Contents</div>
       <h1 className="pageTitle">{title}</h1>
       <div className="navigation">
         &nbsp;

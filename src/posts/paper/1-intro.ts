@@ -40,7 +40,7 @@ This article (and corresponding calculator) was collaboratively written by the m
 
 **White paper:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Anna Tsykalova, Stephanie Bachar, Sarah Dobro, Matt Bell
 
-**Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon
+**Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon, Jeremy Blanchard
 
 _Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Danny Hernandez, David Mears, Derek Foster, Elliot Olds, Eugene Shvarts, Jacob Falkovich, Jeremy Howard, Jessica Watson Miller, Ivan Gayton, Katja Grace, Matt Bell, Peter Favaloro, Peter Hurford, Zvi Mowshowitz, and other friends who chose to remain anonymous. (Giving feedback does not imply endorsement of, or agreement with, this writeup.)_
 

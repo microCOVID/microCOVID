@@ -1,7 +1,9 @@
 import num2fraction from 'num2fraction'
 import React from 'react'
-import { Badge, OverlayTrigger } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 
+import ControlLabel from './ControlLabel'
+import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
 
@@ -30,27 +32,22 @@ export const GenericSelectControl: React.FunctionComponent<{
   source: { [key: string]: FormValue }
   value: string | number
   label?: string
+  header?: string
+  helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
+  className?: string
 }> = (props) => (
   <div className="form-group">
-    {props.label && (
-      <div className="label-wrapper">
-        <label htmlFor={props.id}>{props.label}</label>
-        {props.popover && (
-          <OverlayTrigger
-            trigger="click"
-            overlay={props.popover}
-            rootClose={true}
-          >
-            <Badge variant="secondary">?</Badge>
-          </OverlayTrigger>
-        )}
-      </div>
-    )}
+    <ControlLabel
+      id={props.id}
+      label={props.label}
+      header={props.header}
+      popover={props.popover}
+    />
     <select
       id={props.id}
-      className="form-control form-control-lg"
+      className={'form-control form-control-lg ' + props.className}
       onChange={(e) => props.setter(e.target.value)}
       value={props.value}
     >
@@ -62,8 +59,13 @@ export const GenericSelectControl: React.FunctionComponent<{
             `[${showRiskMultiplier(props.source[value].multiplier)}]`}
         </option>
       ))}
-      <optgroup></optgroup>
+      <IosOptgroup />
     </select>
+    {props.helpText && (
+      <Form.Text id={props.id + 'HelpText'} muted>
+        {props.helpText}
+      </Form.Text>
+    )}
   </div>
 )
 
@@ -73,8 +75,11 @@ export const SelectControl: React.FunctionComponent<{
   data: CalculatorData
   source: { [key: string]: FormValue }
   label?: string
+  header?: string
+  helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
+  className?: string
 }> = (props) => (
   <GenericSelectControl
     id={props.id}
@@ -82,8 +87,11 @@ export const SelectControl: React.FunctionComponent<{
     source={props.source}
     value={props.data[props.id] || ''}
     label={props.label}
+    helpText={props.helpText}
+    header={props.header}
     popover={props.popover}
     hideRisk={props.hideRisk}
+    className={props.className}
   />
 )
 
