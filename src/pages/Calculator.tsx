@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { BsLink45Deg } from 'react-icons/bs'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
+import './Calculator.scss'
 
 import { recordCalculatorChanged } from 'components/Analytics'
 import { AutoAlert } from 'components/AutoAlert'
