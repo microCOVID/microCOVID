@@ -190,8 +190,26 @@ export const RiskProfile: { [key: string]: FormValue } = {
       Interaction.oneTime.multiplier *
       (2 + 10 * Distance.sixFt.multiplier * Voice.loud.multiplier),
   },
-  hasCovid: {
-    label: 'Has COVID',
-    multiplier: -1,
-  },
+}
+
+// Special keys for RiskProfile that need to be checked elsewhere.
+export const RiskProfileEnum = {
+  ONE_PERCENT: 'onePercent',
+  DECI_PERCENT: 'deciPercent',
+  HAS_COVID: 'hasCovid',
+}
+
+RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
+  label: 'Uses microcvoid to maintain a risk of 1%/year (200 microcovid/week)',
+  multiplier: NaN,
+}
+
+RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
+  label: 'Uses microcvoid to maintain a risk of 0.1%/year (20 microcovid/week)',
+  multiplier: NaN,
+}
+
+RiskProfile[RiskProfileEnum.HAS_COVID] = {
+  label: 'Has COVID',
+  multiplier: -1,
 }
