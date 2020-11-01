@@ -24,7 +24,7 @@ import {
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
-import { budgetOptions, intimateDurationFloor } from 'data/data'
+import { Interaction, budgetOptions, intimateDurationFloor } from 'data/data'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (
@@ -173,9 +173,9 @@ export default function ExplanationCard(props: {
                 . If you do this activity many times in a week, each time you do
                 it, it will count against your weekly budget. If you do this
                 activity many times with the same people each week, enter it as{' '}
-                {props.data.distance
-                  ? '"household member"'
-                  : '"partner / spouse"'}{' '}
+                {props.data.distance === 'intimate'
+                  ? `"${Interaction.partner.label.split(' [')[0]}"`
+                  : `"${Interaction.repeated.label.split(' [')[0]}"`}{' '}
                 to see what the maximum transmission rate is per week.
               </>
             )}
