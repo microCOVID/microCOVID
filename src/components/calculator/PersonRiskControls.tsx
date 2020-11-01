@@ -102,7 +102,13 @@ export const PersonRiskControls: React.FunctionComponent<{
             label="How close are these nearby people, on average?"
             header="Distance"
             data={data}
-            setter={setter}
+            setter={(value: CalculatorData) => {
+              const yourMask =
+                value.distance === 'intimate' ? 'none' : value.yourMask
+              const theirMask =
+                value.distance === 'intimate' ? 'none' : value.theirMask
+              setter({ ...value, yourMask, theirMask })
+            }}
             source={Distance}
           />
           <div className="form-group">

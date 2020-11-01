@@ -50,26 +50,30 @@ export const ActivityRiskControls: React.FunctionComponent<{
           bonus for being outdoors when intimate.
         </div>
       ) : null}
-      <SelectControl
-        id="yourMask"
-        header="Your mask"
-        label="What mask are YOU wearing?"
-        helpText="If you’re eating or drinking, select “no mask”"
-        popover={maskPopover}
-        data={data}
-        setter={setter}
-        source={YourMask}
-      />
-      <SelectControl
-        id="theirMask"
-        header="Their mask"
-        label="What mask are THEY wearing?"
-        helpText="If you’re eating or drinking, select “no mask”"
-        popover={maskPopover}
-        data={data}
-        setter={setter}
-        source={TheirMask}
-      />
+      {data.distance !== 'intimate' && (
+        <>
+          <SelectControl
+            id="yourMask"
+            header="Your mask"
+            label="What mask are YOU wearing?"
+            helpText="If you’re eating or drinking, select “no mask”"
+            popover={maskPopover}
+            data={data}
+            setter={setter}
+            source={YourMask}
+          />
+          <SelectControl
+            id="theirMask"
+            header="Their mask"
+            label="What mask are THEY wearing?"
+            helpText="If you’re eating or drinking, select “no mask”"
+            popover={maskPopover}
+            data={data}
+            setter={setter}
+            source={TheirMask}
+          />
+        </>
+      )}
       <SelectControl
         id="voice"
         header="Volume"
