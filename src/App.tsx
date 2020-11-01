@@ -48,10 +48,6 @@ export const App = (): React.ReactElement => {
             />
             <meta property="og:image:width" content="400" />
             <meta property="og:image:height" content="400" />
-            <meta
-              property="og:url"
-              content={process.env.REACT_APP_PUBLIC_URL}
-            />
             <meta property="fb:app_id" content="1117003835468995" />
             <meta property="og:type" content="website" />
             <title>microCOVID Project</title>
