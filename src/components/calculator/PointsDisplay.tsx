@@ -12,6 +12,7 @@ import {
   showPoints,
 } from 'components/calculator/util/displayUtil'
 import { ONE_MILLION } from 'data/calculate'
+import './PointsDisplay.scss'
 
 export interface RiskLevel {
   style: string

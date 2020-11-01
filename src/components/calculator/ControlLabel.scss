@@ -1,0 +1,22 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/breakpoints.scss';
+@import "~rfs/scss";
+
+// Tooltip button/badge styles
+.form-group {
+  .label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    @include font-size($input-font-size-lg);
+  }
+
+  .badge {
+    cursor: pointer;
+    border-radius: 12px;
+    width: 20px;
+  }
+}

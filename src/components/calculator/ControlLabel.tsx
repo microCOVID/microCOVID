@@ -1,5 +1,6 @@
 import React from 'react'
 import { Badge, OverlayTrigger } from 'react-bootstrap'
+import './ControlLabel.scss'
 
 export const ControlLabel: React.FunctionComponent<{
   id: string

@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 600px) { @content; }
+}
