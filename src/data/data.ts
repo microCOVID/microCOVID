@@ -14,6 +14,8 @@ const formValue = function (label: string, multiplier: number): FormValue {
   return { label, multiplier }
 }
 
+export const TOP_LOCATION_MANUAL_ENTRY = 'MANUAL_DATA'
+
 const oneTimeMult = 0.06
 const housemateMult = 0.3
 const partnerMult = 0.48
