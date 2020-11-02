@@ -180,7 +180,8 @@ class Place(pydantic.BaseModel):
         daily_cases = []
         current = effective_date
         if current not in self.cumulative_cases:
-            raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
+            raise ValueError(
+                f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
         while len(daily_cases) < 14:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
@@ -433,7 +434,8 @@ class AllData:
             for state in country.states.values():
                 for county in state.counties.values():
                     if county.population == 0 and county.name not in fake_names:
-                        raise ValueError(f"Missing population data for {county!r}")
+                        raise ValueError(
+                            f"Missing population data for {county!r}")
                 rollup_population(state, "counties")
             rollup_population(country, "states")
 
@@ -445,6 +447,7 @@ class AllData:
                             # These just don't have any reported cases
                             "Hoonah-Angoon, Alaska, US",
                             "Lake and Peninsula, Alaska, US",
+                            "Yakutat, Alaska, US",
                             "Skagway, Alaska, US",
                             "Unassigned, District of Columbia, US",
                             "Kalawao, Hawaii, US",
@@ -787,8 +790,10 @@ def main() -> None:
 
                 for subkey in data.subdivisions:
                     subfile.write(
-                        ",".join(app_locations[subkey].as_csv_data().values()) + "\n"
+                        ",".join(
+                            app_locations[subkey].as_csv_data().values()) + "\n"
                     )
+
 
 if __name__ == "__main__":
     main()
