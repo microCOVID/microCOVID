@@ -8,7 +8,9 @@ export interface AllProviderProps {
   children: React.ReactElement
 }
 
-const AllProviders = ({ children }: AllProviderProps): React.ReactElement => {
+export const AllProviders = ({
+  children,
+}: AllProviderProps): React.ReactElement => {
   return (
     <HelmetProvider>
       <Router>

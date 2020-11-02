@@ -1,12 +1,14 @@
-import { screen } from '@testing-library/react'
-import React from 'react'
-import { customRender } from 'test-utils'
+import { render, screen } from '@testing-library/react'
+import React, { ComponentType } from 'react'
+import { AllProviders } from 'test-utils'
 
 import { Calculator } from 'pages/Calculator'
 
 describe('calculator page', () => {
   it('renders at all', () => {
-    customRender(<Calculator />)
+    render(<Calculator />, {
+      wrapper: AllProviders as ComponentType,
+    })
 
     expect(
       screen.getByText(/constructed a calculator that lets/i),
