@@ -90,14 +90,14 @@ export const budgetOptions = [
   {
     label: 'Standard Caution Budget',
     sublabel:
-      'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
+      'Budget: 1% chance of COVID per year (200 microCOVIDs per week) (suggested for healthy people NOT in close contact with more vulnerable people)',
     multiplier: 1,
     value: BUDGET_ONE_PERCENT.toString(),
   },
   {
     label: 'High Caution Budget',
     sublabel:
-      'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+      'Budget: 0.1% chance of COVID per year (20 microCOVIDs per week) (suggested if you or your close contacts are more vulnerable to COVID)',
     multiplier: 0.1,
     value: BUDGET_ONE_TENTH_PERCENT.toString(),
   },
