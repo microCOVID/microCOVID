@@ -31,6 +31,7 @@
     "start": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts start",
     "build": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint src",
     "fix": "eslint src --fix",
     "typecheck": "tsc"
@@ -72,5 +73,11 @@
   },
   "peerDependencies": {
     "prop-types": "^15.6.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**"
+    ]
   }
 }
