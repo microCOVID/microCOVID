@@ -20,7 +20,7 @@ const AllProviders = ({ children }: AllProviderProps): React.ReactElement => {
   )
 }
 
-const customRender = (
+export const customRender = (
   ui: React.ReactElement,
   options?: RenderOptions,
 ): void => {
@@ -38,9 +38,3 @@ export const renderWithRouter = (
 
   return render(ui, { wrapper: Router })
 }
-
-// re-export everything
-export * from '@testing-library/react'
-
-// override render method
-export { customRender as render }
