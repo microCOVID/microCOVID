@@ -38,7 +38,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   hideRisk?: boolean
   className?: string
 }> = (props) => (
-  <div className="form-group ">
+  <div className="form-group">
     <ControlLabel
       id={props.id}
       label={props.label}
