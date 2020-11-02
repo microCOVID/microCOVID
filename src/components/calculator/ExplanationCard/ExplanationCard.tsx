@@ -25,7 +25,7 @@ import {
   calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
-import { budgetOptions, intimateDurationFloor } from 'data/data'
+import { Interaction, budgetOptions, intimateDurationFloor } from 'data/data'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (
@@ -75,7 +75,10 @@ export default function ExplanationCard(props: {
     t('calculator.explanationcard.multiple_suffix'),
     t('calculator.explanationcard.percentage_suffix'),
   )
-
+  const repeatedTypeSuggestion =
+    props.data.distance === 'intimate'
+      ? Interaction.partner.label.split(' [')[0]
+      : Interaction.repeated.label.split(' [')[0]
   const calculationBreakdown = (
     <>
       <Expandable
@@ -193,7 +196,11 @@ export default function ExplanationCard(props: {
                 calculator.explanationcard.frequency_explanation_repeated
               </Trans>
             ) : (
-              <Trans>
+              <Trans
+                values={{
+                  repeated_type_suggestion: repeatedTypeSuggestion,
+                }}
+              >
                 calculator.explanationcard.frequency_explanation_oneoff
               </Trans>
             )}
