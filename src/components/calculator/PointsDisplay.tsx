@@ -105,6 +105,7 @@ function Thermometer(props: {
               level,
             )
           }
+          aria-label={`Thermometer Section Risk Level ${level.name}`}
         ></div>
       ))}
     </>

@@ -16,7 +16,7 @@ const image: ImageMeta = {
 
 const content = `Hi everyone!
 
-We’ve been hard at work improving the microCOVID calculator to make it better and easier to use.  Today we’re announcing Version 2 of our calculator.  Much of the interface will feel familiar, but there have been some changes to reduce confusion and improve the user flow.  
+We’ve been hard at work improving the microCOVID [calculator](/) to make it better and easier to use.  Today we’re announcing Version 2 of our calculator.  Much of the interface will feel familiar, but there have been some changes to reduce confusion and improve the user flow.  
 
 ![Picture of the new result display](${thermometer})
 
