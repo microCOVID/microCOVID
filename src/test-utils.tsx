@@ -4,13 +4,13 @@ import { HelmetProvider } from 'react-helmet-async'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import { QueryParamProvider } from 'use-query-params'
 
-export interface AllProviderProps {
+type AllProviderProps = {
   children: React.ReactElement
 }
 
-export const AllProviders = ({
+export const AllProviders: React.ComponentType<AllProviderProps> = ({
   children,
-}: AllProviderProps): React.ReactElement => {
+}): React.ReactElement => {
   return (
     <HelmetProvider>
       <Router>

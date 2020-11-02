@@ -7,7 +7,7 @@ import { Calculator } from 'pages/Calculator'
 describe('calculator page', () => {
   it('renders at all', () => {
     render(<Calculator />, {
-      wrapper: AllProviders as ComponentType,
+      wrapper: AllProviders,
     })
 
     expect(
