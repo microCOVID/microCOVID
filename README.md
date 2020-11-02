@@ -33,7 +33,7 @@ $ yarn lint
 If you see warnings, you can attempt to auto-correct them with:
 
 ```sh
-$ yarn lint --fix
+$ yarn fix
 ```
 
 If there are errors it can't fix, please fix them manually before committing.
