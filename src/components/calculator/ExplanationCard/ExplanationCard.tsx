@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 
 import { RadioControl } from '../RadioControl'
 
@@ -43,6 +44,7 @@ export default function ExplanationCard(props: {
   setter: (newData: CalculatorData) => void
 }): React.ReactElement {
   const points = props.points
+  const { t } = useTranslation()
 
   const locationRisk = calculateLocationPersonAverage(props.data) || 0
   const personRiskEach = Math.round(
@@ -54,11 +56,12 @@ export default function ExplanationCard(props: {
   const pointsFormatted = displayPoints(points)
   const pointsPercentFormatted = displayPercent(points)
   const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)
-  const personCountSuffixFormatted =
-    props.data.personCount === 1 ? 'person' : 'people'
+  const personCountSuffixFormatted = t('calculator.explanationcard.person', {
+    count: props.data.personCount,
+  })
   const frequencyFormatted = props.repeatedEvent
-    ? 'per week'
-    : 'each time you do it'
+    ? t('per week')
+    : t('each time you do it')
   const lowerBoundFormatted = displayPoints(props.lowerBound)
   const upperBoundFormatted = displayPoints(props.upperBound)
   const budgetFormatted = displayPoints(props.data.riskBudget)
@@ -69,51 +72,76 @@ export default function ExplanationCard(props: {
   const budgetConsumptionFormatted = budgetConsumption(
     props.points,
     props.data.riskBudget,
+    t('calculator.explanationcard.multiple_suffix'),
+    t('calculator.explanationcard.percentage_suffix'),
   )
-
+  const repeatedTypeSuggestion =
+    props.data.distance === 'intimate'
+      ? Interaction.partner.label.split(' [')[0]
+      : Interaction.repeated.label.split(' [')[0]
   const calculationBreakdown = (
     <>
       <Expandable
         id="calculation-explanation"
-        header="Learn how this was calculated"
-        headerExpanded="How this was calculated"
+        header={t('calculator.explanationcard.details_header_closed')}
+        headerExpanded={t('calculator.explanationcard.details_header_open')}
       >
         <div>
-          <h4>Calculation:</h4>
+          <h4>{t('calculator.explanationcard.details_overview_header')}:</h4>
           <div id="calculation-breakdown">
             <code>
-              ({personRiskEachFormatted} Person Risk) x ({activityRiskFormatted}{' '}
-              Activity Risk) x ({props.data.personCount}{' '}
-              {personCountSuffixFormatted})<br />
-              <strong style={{ fontSize: '1.5em' }}>
-                = ~{pointsFormatted} microCOVIDs {frequencyFormatted}
-              </strong>{' '}
+              ({personRiskEachFormatted}{' '}
+              <Trans>calculator.explanationcard.details_person_risk</Trans>
+              {') x ('}
+              {activityRiskFormatted}{' '}
+              <Trans>calculator.explanationcard.details_activity_risk</Trans>
+              {') x ('}
+              {props.data.personCount} {personCountSuffixFormatted})
               <br />
-              (probably between: {lowerBoundFormatted} to {upperBoundFormatted})
+              <strong style={{ fontSize: '1.5em' }}>
+                = ~{pointsFormatted}{' '}
+                <Trans>calculator.pointsdisplay.microCOVIDs</Trans>{' '}
+                {frequencyFormatted}
+              </strong>{' '}
+              <br />(
+              <Trans
+                values={{
+                  from: lowerBoundFormatted,
+                  to: upperBoundFormatted,
+                }}
+              >
+                calculator.pointsdisplay.range
+              </Trans>
+              )
             </code>{' '}
           </div>
         </div>
-        <h4>Calculation Steps:</h4>
+        <h4>{t('calculator.explanationcard.details_steps_header')}:</h4>
         <ol>
           <li>
             {calculationStepHeader(
-              'Person Risk',
-              `${personRiskEachFormatted}-in-a-million chance`,
+              t('calculator.explanationcard.details_person_risk'),
+              t('calculator.explanationcard.details_person_risk_number', {
+                person_risk: personRiskEachFormatted,
+              }),
             )}
             <br />
-            First, we calculate that each other person in this area has a{' '}
-            <strong>{personRiskEachFormatted}-in-a-million chance</strong>
-            {'  '} of currently having COVID.
+            <Trans values={{ person_risk: personRiskEachFormatted }}>
+              calculator.explanationcard.details_person_risk_explanation
+            </Trans>
           </li>
           <li>
             {calculationStepHeader(
-              'Activity Risk',
-              `${activityRiskFormatted} chance`,
+              t('calculator.explanationcard.details_activity_risk'),
+              `${activityRiskFormatted} ${t(
+                'calculator.explanationcard.chance',
+              )}`,
             )}
-            <br /> Next, we calculate the risk of the activity. A person at this
-            activity with COVID would have a{' '}
-            <strong>{activityRiskFormatted} chance</strong> of transmitting it
-            to you.{' '}
+            <br />
+            <Trans values={{ activity_risk: activityRiskFormatted }}>
+              calculator.explanationcard.details_activity_risk_explanation
+            </Trans>
+
             <b>
               {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
                 <>
@@ -128,96 +156,107 @@ export default function ExplanationCard(props: {
               )}
               {props.data.distance === 'intimate' &&
               props.data.duration < intimateDurationFloor
-                ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
+                ? t('calculator.intimate_risk_warning')
                 : ''}
             </b>
           </li>
           <li>
             {calculationStepHeader(
-              'Number of people',
+              t('calculator.explanationcard.details_number_of_people'),
               `${props.data.personCount} ${personCountSuffixFormatted}`,
             )}
           </li>
           <li>
             {calculationStepHeader(
-              'Total risk',
-              `~${pointsFormatted}-in-a-million (${pointsPercentFormatted})`,
+              t('calculator.explanationcard.details_total_risk'),
+              t('calculator.explanationcard.details_total_risk_number', {
+                points: pointsFormatted,
+                percentage: pointsPercentFormatted,
+              }),
             )}
             <br />
-            Finally, we multiply Person Risk, Activity Risk, and the number of
-            people to get the total result of roughly{' '}
-            <strong>
-              {pointsFormatted}-in-a-million ({pointsPercentFormatted})
-            </strong>{' '}
-            chance of getting COVID from this activity with these people{' '}
-            <strong>{frequencyFormatted}</strong>.
+            <Trans
+              values={{
+                points: pointsFormatted,
+                percentage: pointsPercentFormatted,
+                frequency: frequencyFormatted,
+              }}
+            >
+              calculator.explanationcard.details_total_risk_explanation
+            </Trans>
           </li>
           <li>
-            {calculationStepHeader('Frequency', frequencyFormatted)}
+            {calculationStepHeader(
+              t('calculator.explanationcard.details_frequency'),
+              frequencyFormatted,
+            )}
             <br />
             {props.repeatedEvent ? (
-              <>
-                Since you are seeing these people many times per week, the
-                result you see is{' '}
-                <strong>
-                  microCOVIDs <u>per week</u>
-                </strong>
-                .
-              </>
+              <Trans>
+                calculator.explanationcard.frequency_explanation_repeated
+              </Trans>
             ) : (
-              <>
-                Since this is a one-time interaction, the results is shown as{' '}
-                <strong>
-                  microCOVIDs <u>each time</u> you have this interaction
-                </strong>
-                . If you do this activity many times in a week, each time you do
-                it, it will count against your weekly budget. If you do this
-                activity many times with the same people each week, enter it as{' '}
-                {props.data.distance === 'intimate'
-                  ? `"${Interaction.partner.label.split(' [')[0]}"`
-                  : `"${Interaction.repeated.label.split(' [')[0]}"`}{' '}
-                to see what the maximum transmission rate is per week.
-              </>
+              <Trans
+                values={{
+                  repeated_type_suggestion: repeatedTypeSuggestion,
+                }}
+              >
+                calculator.explanationcard.frequency_explanation_oneoff
+              </Trans>
             )}
           </li>
           <li>
             {calculationStepHeader(
-              'Probably between',
-              `${lowerBoundFormatted} and ${upperBoundFormatted} microCOVIDs`,
+              t('calculator.explanationcard.details_range'),
+              t('calculator.explanationcard.details_range_number', {
+                from: lowerBoundFormatted,
+                to: upperBoundFormatted,
+              }),
             )}
             <br />
-            We believe with roughly 90% confidence that the actual risk falls
-            between these two values. See our{' '}
-            <a href="paper/14-research-sources#uncertainty-estimation">
-              uncertainty estimation
-            </a>
-            .
+            <Trans i18nKey="calculator.explanationcard.details_range_explanation">
+              Lorem ipsum{' '}
+              <a href="paper/14-research-sources#uncertainty-estimation">
+                uncertainty link
+              </a>{' '}
+              dolor sic amet
+            </Trans>
           </li>
         </ol>
-        <h4>How much of this can I do given my risk budget?</h4>
+        <h4>{t('calculator.explanationcard.risk_budget_header')}</h4>
         <ul>
           <li>
             {calculationStepHeader(
-              'Budget available',
-              `${weekBudgetFormatted} microCOVIDs per week`,
+              t('calculator.explanationcard.risk_budget_available'),
+              `${weekBudgetFormatted} ${t(
+                'calculator.pointsdisplay.microCOVIDs',
+              )} ${t('per week')}`,
             )}
             <br />
-            You selected an annual budget of a {
-              budgetAnnualPercentFormatted
-            }{' '}
-            chance of getting COVID per year ({budgetFormatted} microCOVIDs).
-            That equates to a weekly budget of{' '}
-            <strong>{weekBudgetFormatted} microCOVIDs per week</strong>.
+            <Trans
+              values={{
+                budget_percent: budgetAnnualPercentFormatted,
+                budget_points: budgetFormatted,
+                budget_weekly: weekBudgetFormatted,
+              }}
+            >
+              calculator.explanationcard.risk_budget_explanation
+            </Trans>
           </li>
           <li>
             {calculationStepHeader(
-              'Budget used',
+              t('calculator.explanationcard.risk_budget_used'),
               `${budgetConsumptionFormatted} ${frequencyFormatted}`,
             )}
             <br />
-            This interaction uses <strong>{budgetConsumptionFormatted}</strong>.
-            This amount of your budget will be used{' '}
-            <strong>{frequencyFormatted}</strong> .
+            <Trans
+              values={{
+                usage: budgetConsumptionFormatted,
+                frequency: frequencyFormatted,
+              }}
+            >
+              calculator.explanationcard.risk_budget_usage_explanation
+            </Trans>
           </li>
         </ul>
       </Expandable>
@@ -232,7 +271,9 @@ export default function ExplanationCard(props: {
       <Form.Group>
         <RadioControl
           id="budget-selector"
-          header="Adjust your risk tolerance"
+          header={t(
+            'calculator.explanationcard.risk_tolerance_selector_header',
+          )}
           popover={riskTolerancePopover}
           setter={(value) => {
             props.setter({ ...props.data, riskBudget: Number.parseInt(value) })

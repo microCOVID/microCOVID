@@ -1,3 +1,5 @@
+import i18n from '../i18n'
+
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
@@ -21,44 +23,44 @@ const housemateMult = 0.3
 const partnerMult = 0.48
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: {
-    label: `One-time interaction [${fixedPointPrecisionPercent(
-      oneTimeMult,
-    )} chance of transmission per hour]`,
+    label: i18n.t('data.oneTime', {
+      percentage: fixedPointPrecisionPercent(oneTimeMult),
+    }),
     multiplier: oneTimeMult,
   },
   repeated: {
-    label: `Household member [${fixedPointPrecisionPercent(
-      housemateMult,
-    )} chance of transmission per week]`,
+    label: i18n.t('data.repeated', {
+      percentage: fixedPointPrecisionPercent(housemateMult),
+    }),
     multiplier: housemateMult,
   },
   partner: {
-    label: `Partner / spouse [${fixedPointPrecisionPercent(
-      partnerMult,
-    )} chance of transmission per week]`,
+    label: i18n.t('data.partner', {
+      percentage: fixedPointPrecisionPercent(partnerMult),
+    }),
     multiplier: partnerMult,
   },
 }
 
 export const Setting: { [key: string]: FormValue } = {
-  indoor: { label: 'Indoor', multiplier: 1 },
-  outdoor: { label: 'Outdoor', multiplier: 0.05 },
+  indoor: { label: i18n.t('data.indoor'), multiplier: 1 },
+  outdoor: { label: i18n.t('data.outdoor'), multiplier: 0.05 },
 }
 
 export const intimateDurationFloor = 60
 
 export const Distance: { [key: string]: FormValue } = {
-  intimate: formValue('Kissing', 2),
-  close: formValue('Close (<1ft / 0.3m apart)', 2),
-  normal: formValue('Normal socializing (~3ft / ~1m apart)', 1),
-  sixFt: formValue('>6ft / 2m apart', 0.5),
-  tenFt: formValue('>10ft / 3m apart', 0.25),
+  intimate: formValue(i18n.t('data.intimate_distance'), 2),
+  close: formValue(i18n.t('data.close_distance'), 2),
+  normal: formValue(i18n.t('data.normal_distance'), 1),
+  sixFt: formValue(i18n.t('data.sixft_distance'), 0.5),
+  tenFt: formValue(i18n.t('data.tenft_distance'), 0.25),
 }
 
-const noneLabel = 'No mask or poorly-worn mask'
-const basicLabel = 'Cotton mask, bandana, or buff'
-const filteredLabel = 'Surgical mask or mask with PM2.5 filter insert'
-const n95Label = 'Well-fitting, well-sealed N95 respirator'
+const noneLabel = i18n.t('data.no_mask')
+const basicLabel = i18n.t('data.basic_mask')
+const filteredLabel = i18n.t('data.filtered_mask')
+const n95Label = i18n.t('data.n95_mask')
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   basic: formValue(basicLabel, 0.25),
@@ -73,12 +75,12 @@ export const YourMask: { [key: string]: FormValue } = {
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
-    label: 'Not talking (such as quietly riding the train)',
+    label: i18n.t('data.silent_voice'),
     multiplier: 0.2,
   },
-  normal: { label: 'Normal conversation', multiplier: 1 },
+  normal: { label: i18n.t('data.normal_voice'), multiplier: 1 },
   loud: {
-    label: 'Loud talking (shouting, talking over music, singing)',
+    label: i18n.t('data.loud_voice'),
     multiplier: 5,
   },
 }
@@ -88,16 +90,14 @@ export const BUDGET_ONE_TENTH_PERCENT = 1000
 
 export const budgetOptions = [
   {
-    label: 'Standard Caution Budget',
-    sublabel:
-      'Budget: 1% chance of COVID per year (200 microCOVIDs per week) (suggested for healthy people NOT in close contact with more vulnerable people)',
+    label: i18n.t('calculator.risk_tolerance_1_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
     multiplier: 1,
     value: BUDGET_ONE_PERCENT.toString(),
   },
   {
-    label: 'High Caution Budget',
-    sublabel:
-      'Budget: 0.1% chance of COVID per year (20 microCOVIDs per week) (suggested if you or your close contacts are more vulnerable to COVID)',
+    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
     multiplier: 0.1,
     value: BUDGET_ONE_TENTH_PERCENT.toString(),
   },
@@ -118,71 +118,67 @@ const livingAloneMult =
 
 export const RiskProfile: { [key: string]: FormValue } = {
   average: {
-    label: 'An average person in your area',
+    label: i18n.t('data.person.average'),
     multiplier: 1,
   },
 
   frontline: {
-    label: 'An essential or front-line worker in your area',
+    label: i18n.t('data.person.frontline'),
     multiplier: 3,
   },
 
   nonFrontline: {
-    label: 'Someone in your area who is NOT an essential or front-line worker',
+    label: i18n.t('data.person.nonFrontline'),
     multiplier: 0.5,
   },
 
   livingAlone: {
-    label: 'Lives alone and only grocery shops',
+    label: i18n.t('data.person.livingAlone'),
     multiplier: livingAloneMult,
   },
 
   livingWithPartner: {
-    label: 'Lives with partner, both people only grocery shop',
+    label: i18n.t('data.person.livingWithPartner'),
     multiplier: (1 + 0.48) * livingAloneMult,
   },
 
   closedPod4: {
-    label: 'In a closed pod of 4 people (who do not go to work or socialize)',
+    label: i18n.t('data.person.closedPod4'),
     multiplier: (1 + 4 * housemateMult) * livingAloneMult,
   },
 
   closedPod10: {
-    label: 'In a closed pod of 10 people (who do not go to work or socialize)',
+    label: i18n.t('data.person.closedPod10'),
     multiplier: (1 + 10 * housemateMult) * livingAloneMult,
   },
 
   closedPod20: {
-    label: 'In a closed pod of 20 people (who do not go to work or socialize)',
+    label: i18n.t('data.person.closedPod20'),
     multiplier: (1 + 20 * housemateMult) * livingAloneMult,
   },
 
   contact1: {
-    label:
-      'Has 1 close contact (incl. roommates) who socializes but does not work. No other work or socializing.',
+    label: i18n.t('data.person.contact1'),
     multiplier: housemateMult * 0.5 + livingAloneMult, // Housemate + grocery exposure
   },
 
   contact4: {
-    label:
-      'Has 4 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.',
+    label: i18n.t('data.person.contact4'),
     multiplier: 4 * housemateMult * 0.5 + livingAloneMult, // Housemate + grocery exposure
   },
 
   contact10: {
-    label:
-      'Has 10 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.',
+    label: i18n.t('data.person.contact10'),
     multiplier: 10 * housemateMult * 0.5 + livingAloneMult, // Housemate + grocery exposure
   },
 
   contactWorks: {
-    label:
-      'Has 1 close contact (incl. roommates) who is an essential worker. No other work or socializing.',
+    label: i18n.t('data.person.contactWorks'),
     multiplier: housemateMult * 3 + livingAloneMult, // Housemate + grocery exposure
   },
 
   bars: {
-    label: 'Goes to bars regularly',
+    label: i18n.t('data.person.bars'),
     /*
      * Six hours of indoor exposure to a dozen people (2 near you, 10 six feet away)
      * who are not wearing masks and are talking loudly.
@@ -202,17 +198,16 @@ export const RiskProfileEnum = {
 }
 
 RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
-  label: 'Uses microCOVID to maintain a risk of 1%/year (200 microCOVIDs/week)',
+  label: i18n.t('data.person.microcovid_budget_one_percent'),
   multiplier: NaN,
 }
 
 RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
-  label:
-    'Uses microCOVID to maintain a risk of 0.1%/year (20 microCOVIDs/week)',
+  label: i18n.t('data.person.microcovid_budget_deci_percent'),
   multiplier: NaN,
 }
 
 RiskProfile[RiskProfileEnum.HAS_COVID] = {
-  label: 'Has COVID',
+  label: i18n.t('data.person.hasCovid'),
   multiplier: -1,
 }

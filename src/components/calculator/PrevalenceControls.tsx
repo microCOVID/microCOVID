@@ -3,6 +3,7 @@ import { isNullOrUndefined } from 'util'
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 
 import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
@@ -102,10 +103,39 @@ const PrevalenceField: React.FunctionComponent<{
   )
 }
 
+export const PrevalenceResult = (props: {
+  data: CalculatorData
+}): React.ReactElement => {
+  return (
+    <Card className="prevelance-result">
+      <Card.Body>
+        <div>
+          <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
+          {(
+            (calculateLocationReportedPrevalence(props.data) || 0) * 100
+          ).toFixed(2)}
+          %
+        </div>
+        <div>
+          <strong>
+            <Trans>calculator.prevalence.adjusted_prevalence</Trans>:{' '}
+            {(
+              ((calculateLocationPersonAverage(props.data) || 0) * 100) /
+              1e6
+            ).toFixed(2)}
+            %
+          </strong>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+}
+
 export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
+  const { t } = useTranslation()
   const locationGroups: { [key: string]: Array<string> } = {}
   for (const key in Locations) {
     const location = Locations[key]
@@ -140,14 +170,14 @@ export const PrevalenceControls: React.FunctionComponent<{
     // eslint-disable-next-line
   }, [])
 
-  let subPrompt = 'Entire country, or select region...'
+  let subPrompt = t('calculator.location_subprompt_country_or_regions')
   if (isTopLocation(data.topLocation) && data.topLocation.startsWith('US_')) {
     if (Locations[data.topLocation].label === 'Louisiana') {
-      subPrompt = 'Entire state, or select parish...'
+      subPrompt = t('calculator.location_subprompt_US-LA')
     } else if (Locations[data.topLocation].label === 'Alaska') {
-      subPrompt = 'Entire state, or select borough...'
+      subPrompt = t('calculator.location_subprompt_US-AK')
     } else {
-      subPrompt = 'Entire state, or select county...'
+      subPrompt = t('calculator.location_subprompt_US')
     }
   }
 
@@ -163,30 +193,11 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const isManualEntryCurrently = isManualEntry(data.topLocation)
 
-  const prevalenceResult = (
-    <Card className="prevelance-result">
-      <Card.Body>
-        <div>
-          Reported prevalence:{' '}
-          {((calculateLocationReportedPrevalence(data) || 0) * 100).toFixed(2)}%
-        </div>
-        <div>
-          <strong>
-            Adjusted prevalence:{' '}
-            {(
-              ((calculateLocationPersonAverage(data) || 0) * 100) /
-              1e6
-            ).toFixed(2)}
-            %
-          </strong>
-        </div>
-      </Card.Body>
-    </Card>
-  )
-
   return (
     <React.Fragment>
-      <header id="location">Step 1: Enter your location</header>
+      <header id="location">
+        <Trans>calculator.location_selector_header</Trans>
+      </header>
       <div className="form-group">
         <select
           className="form-control form-control-lg"
@@ -195,9 +206,11 @@ export const PrevalenceControls: React.FunctionComponent<{
             setLocationData(e.target.value, '')
           }}
         >
-          <option value="">Select location...</option>
+          <option value="">
+            {t('calculator.select_location_placeholder')}
+          </option>
           <option value={TOP_LOCATION_MANUAL_ENTRY}>
-            Enter data manually...
+            {t('calculator.select_location_enter_manually')}
           </option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
             <optgroup key={groupInd} label={groupName}>
@@ -235,16 +248,16 @@ export const PrevalenceControls: React.FunctionComponent<{
 
       <ControlledExpandable
         id="prevelance-details"
-        header="Details"
+        header={t('calculator.prevalence.details_header')}
         headerClassName={isManualEntryCurrently ? 'd-none' : ''}
         open={detailsOpen}
         setter={setDetailsOpen}
       >
-        {!isManualEntryCurrently && prevalenceResult}
+        {!isManualEntryCurrently && <PrevalenceResult data={data} />}
 
         <PrevalenceField
           id="reported-cases"
-          label="Reported cases in past week"
+          label={t('calculator.prevalence.last_week_cases')}
           value={(data.casesPastWeek || 0).toString()}
           setter={(value) =>
             setter({ ...data, casesPastWeek: parseInt(value || '') })
@@ -255,7 +268,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         />
         <PrevalenceField
           id="population"
-          label="Total population"
+          label={t('calculator.prevalence.population')}
           value={data.population}
           setter={(value) => setter({ ...data, population: value })}
           inputType="text"
@@ -263,11 +276,11 @@ export const PrevalenceControls: React.FunctionComponent<{
           className="hide-number-buttons"
         />
         {locationSet && data.casesIncreasingPercentage === 0 ? (
-          <div>Cases are stable or decreasing.</div>
+          <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
         ) : (
           <PrevalenceField
             id="precent-increase"
-            label="Percent increase in cases from last week to this week"
+            label={t('calculator.prevalence.percent_increase_in_cases')}
             value={data.casesIncreasingPercentage}
             unit="%"
             setter={(value) => {
@@ -282,7 +295,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         {data.positiveCasePercentage === null ? (
           <PrevalenceField
             id="positive-test-rate"
-            label="Percent of tests that come back positive"
+            label={t('calculator.prevalence.positive_case_percentage')}
             value="no data available"
             unit="%"
             setter={(_value) => null}
@@ -292,7 +305,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         ) : (
           <PrevalenceField
             id="positive-test-rate"
-            label="Percent of tests that come back positive"
+            label={t('calculator.prevalence.positive_case_percentage')}
             value={data.positiveCasePercentage.toString()}
             unit="%"
             setter={(value) => {
@@ -305,42 +318,44 @@ export const PrevalenceControls: React.FunctionComponent<{
             className="hide-number-buttons"
           />
         )}
-
-        {isManualEntryCurrently && prevalenceResult}
-
         {!locationSet ? null : (
           <>
             <div>
-              <em>Data last updated: {PrevalenceDataDate}</em>
+              <em>
+                <Trans>calculator.prevalence.data_last_updated</Trans>:{' '}
+                {PrevalenceDataDate}
+              </em>
             </div>
             <CopyToSpreadsheetButton data={data} />
             <div>
               <p className="mt-3">
-                Prevalence data consolidated from {}
-                <a
-                  href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Johns Hopkins CSSE
-                </a>{' '}
-                (reported cases), {}
-                <a
-                  href="https://apidocs.covidactnow.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Covid Act Now
-                </a>{' '}
-                (US positive test rates), and {}
-                <a
-                  href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Our World in Data
-                </a>{' '}
-                (international positive test rates).
+                <Trans i18nKey="calculator.prevalence_info_source_information">
+                  Prevalence data consolidated from {}
+                  <a
+                    href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Johns Hopkins CSSE
+                  </a>{' '}
+                  (reported cases), {}
+                  <a
+                    href="https://apidocs.covidactnow.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Covid Act Now
+                  </a>{' '}
+                  (US positive test rates), and {}
+                  <a
+                    href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Our World in Data
+                  </a>{' '}
+                  (international positive test rates).
+                </Trans>
               </p>
             </div>
           </>
