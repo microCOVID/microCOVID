@@ -1,10 +1,35 @@
 import React from 'react'
-import { Popover } from 'react-bootstrap'
+import { Form, Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
+import ControlLabel from './ControlLabel'
 import { SelectControl } from './SelectControl'
 import { CalculatorData } from 'data/calculate'
 import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
+
+const personCountPopover = (
+  <Popover id="popover-basic">
+    <Popover.Title as="h3">About "Number of People"</Popover.Title>
+    <Popover.Content>
+      <p>
+        You only need to include the number of people within 15 feet. For a
+        dense crowd, you can use the following maximums:
+        <ul>
+          <li>
+            <strong>1 ft spacing</strong> (mosh pit): 700
+          </li>
+          <li>
+            <strong>3 ft spacing</strong> (crowded party/bar): 80
+          </li>
+          <li>
+            <strong>6 ft spacing</strong> (properly distanced dining, outdoor
+            gatherings): 20
+          </li>
+        </ul>
+      </p>
+    </Popover.Content>
+  </Popover>
+)
 
 const personRiskPopover = (
   <Popover id="popover-basic">
@@ -46,18 +71,16 @@ export const PersonRiskControls: React.FunctionComponent<{
       </h3>
       {data.interaction === 'partner' ? null : (
         <div className="form-group">
-          <label htmlFor="personCount">
-            <div>
-              <strong>
-                <Trans>calculator.people_count</Trans>:
-              </strong>{' '}
-              {repeatedEvent ? (
-                <Trans>calculator.number_of_people_near_you_partner</Trans>
-              ) : (
-                <Trans>calculator.number_of_people_near_you_onetime</Trans>
-              )}
-            </div>
-          </label>
+          <ControlLabel
+            id="personCount"
+            label={
+              repeatedEvent
+                ? t('calculator.number_of_people_near_you_partner')
+                : t('calculator.number_of_people_near_you_onetime')
+            }
+            header={t('calculator.people_count')}
+            popover={personCountPopover}
+          />
           <input
             className="form-control form-control-lg col-md-3"
             type="number"
@@ -69,6 +92,9 @@ export const PersonRiskControls: React.FunctionComponent<{
               })
             }
           />
+          <Form.Text id={'personCount HelpText'} muted>
+            Within 15 feet
+          </Form.Text>
           <GroupSizeWarning people={data.personCount} />
         </div>
       )}
@@ -80,7 +106,13 @@ export const PersonRiskControls: React.FunctionComponent<{
             label={t('calculator.distance_question')}
             header={t('calculator.distance_header')}
             data={data}
-            setter={setter}
+            setter={(value: CalculatorData) => {
+              const yourMask =
+                value.distance === 'intimate' ? 'none' : value.yourMask
+              const theirMask =
+                value.distance === 'intimate' ? 'none' : value.theirMask
+              setter({ ...value, yourMask, theirMask })
+            }}
             source={Distance}
           />
           <div className="form-group">
@@ -127,17 +159,10 @@ export const PersonRiskControls: React.FunctionComponent<{
 }
 
 function GroupSizeWarning(props: { people: number }): React.ReactElement {
-  if (props.people >= 100) {
-    return (
-      <div className="warning">
-        <Trans>calculator.verylarge_warning</Trans>
-      </div>
-    )
-  }
   if (props.people >= 25) {
     return (
       <div className="warning">
-        <Trans>calculator.large_warning</Trans>
+        <Trans>calculator.large_group_warning'</Trans>
       </div>
     )
   }

@@ -148,6 +148,7 @@ export const MarkdownContents: React.FunctionComponent<{
         <meta name="description" content={textWithoutHtml} />
         <meta property="og:description" content={textWithoutHtml} />
         <meta property="og:title" content={page.title} />
+        <meta property="og:type" content="article" />
         {imageMeta}
         {imageWidth}
         {imageHeight}

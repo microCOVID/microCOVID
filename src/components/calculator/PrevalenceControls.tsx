@@ -5,12 +5,14 @@ import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
+import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
   calculateLocationPersonAverage,
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
+import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
 import { Locations, PrevalenceDataDate } from 'data/location'
 
 const isFilled = (val: string): boolean => {
@@ -21,10 +23,8 @@ const isTopLocation = (val: string): boolean => {
   return isFilled(val) && !!Locations[val]
 }
 
-const MANUAL_DATA_KEY = 'MANUAL_DATA'
-
 const isManualEntry = (val: string): boolean => {
-  return val === MANUAL_DATA_KEY
+  return val === TOP_LOCATION_MANUAL_ENTRY
 }
 
 const PrevalenceField: React.FunctionComponent<{
@@ -209,7 +209,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           <option value="">
             {t('calculator.select_location_placeholder')}
           </option>
-          <option value={MANUAL_DATA_KEY}>
+          <option value={TOP_LOCATION_MANUAL_ENTRY}>
             {t('calculator.select_location_enter_manually')}
           </option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
@@ -326,6 +326,7 @@ export const PrevalenceControls: React.FunctionComponent<{
                 {PrevalenceDataDate}
               </em>
             </div>
+            <CopyToSpreadsheetButton data={data} />
             <div>
               <p className="mt-3">
                 <Trans i18nKey="calculator.prevalence_info_source_information">

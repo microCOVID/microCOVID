@@ -153,7 +153,7 @@ export default function ExplanationCard(props: {
               )}
               {props.data.distance === 'intimate' &&
               props.data.duration < intimateDurationFloor
-                ? ' (NOTE: We have applied a minimum Activity Risk for kissing.)'
+                ? t('calculator.intimate_risk_warning')
                 : ''}
             </b>
           </li>

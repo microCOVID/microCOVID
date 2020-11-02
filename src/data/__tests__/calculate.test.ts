@@ -4,7 +4,7 @@ import {
   calculateLocationPersonAverage,
   defaultValues,
 } from 'data/calculate'
-import { BUDGET_ONE_PERCENT, RiskProfile } from 'data/data'
+import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
 // Wrapper for calculate that just returns expectedValue
@@ -28,6 +28,17 @@ describe('calculate', () => {
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 1,
   }
+
+  // Variables that should be ignored for repeated/partner interactions.
+  const repeatedDontCare = {
+    setting: 'indoor',
+    distance: 'sixFt',
+    duration: 60,
+    theirMask: 'none',
+    yourMask: 'none',
+    voice: 'normal',
+  }
+
   const expectedPrevalance = 0.006
 
   it('compensates for underreporting', () => {
@@ -64,7 +75,7 @@ describe('calculate', () => {
     ${'Eating in restaurant, outdoors'}                             | ${202.5}
     ${'Eating in restaurant, indoors'}                              | ${4050}
     ${'Going to bar'}                                               | ${27000}
-    ${'Large outdoor party: masked with 250 people'}                | ${3375}
+    ${'Large outdoor party: masked with 3 feet between people'}     | ${1080}
     ${'Small indoor party: unmasked with 25 people'}                | ${27000}
     ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
     ${'Voting in-person'}                                           | ${1.5}
@@ -123,6 +134,33 @@ describe('calculate', () => {
     expect(twoTimes?.lowerBound).toBeCloseTo(0.19e6)
     expect(twoTimes?.upperBound).toBeCloseTo(0.99e6)
   })
+
+  it.each`
+    profile                         | points
+    ${RiskProfileEnum.DECI_PERCENT} | ${1e6 / 1000 / 50}
+    ${RiskProfileEnum.ONE_PERCENT}  | ${1e6 / 100 / 50}
+    ${RiskProfileEnum.HAS_COVID}    | ${1e6}
+  `(
+    'should treat $profile as independent of prevalance',
+    ({ profile, points }) => {
+      const data: CalculatorData = {
+        ...baseTestData,
+        ...repeatedDontCare,
+        riskProfile: profile,
+        interaction: 'repeated',
+        personCount: 1,
+      }
+
+      const expected = points * 0.3
+      expect(calcValue(data)).toBeCloseTo(expected)
+      expect(
+        calcValue({
+          ...data,
+          positiveCasePercentage: baseTestData.positiveCasePercentage * 10,
+        }),
+      ).toBeCloseTo(expected)
+    },
+  )
 
   describe('Interaction: partner', () => {
     const partner: CalculatorData = {
@@ -202,6 +240,21 @@ describe('calculate', () => {
       expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
+    it('should not give a bonus for masks', () => {
+      const unmaskedIntimate: CalculatorData = {
+        ...baseTestData,
+        ...prepopulated['One-night stand with a random person'],
+        yourMask: 'none',
+        theirMask: 'none',
+      }
+      const maskedIntimate: CalculatorData = {
+        ...unmaskedIntimate,
+        yourMask: 'n95',
+        theirMask: 'filtered',
+      }
+
+      expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
+    })
     it('should be at least 12% (1 hr) transfer risk.', () => {
       const oneHourIntimate: CalculatorData = {
         ...baseTestData,

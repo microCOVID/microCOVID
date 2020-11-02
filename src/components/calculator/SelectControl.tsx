@@ -4,6 +4,7 @@ import { Form } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
+import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
 
@@ -58,6 +59,7 @@ export const GenericSelectControl: React.FunctionComponent<{
               `[${showRiskMultiplier(props.source[value].multiplier)}]`}
           </option>
         ))}
+        <IosOptgroup />
       </select>
       {props.helpText && (
         <Form.Text id={props.id + 'HelpText'} muted>

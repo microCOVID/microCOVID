@@ -146,10 +146,10 @@ export const prepopulated: {
     voice: 'loud',
   },
 
-  [i18n.t('scenario.largeOutdoorParty250')]: {
+  [i18n.t('scenario.largeOutdoorParty')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
-    personCount: 250,
+    personCount: 80,
 
     setting: 'outdoor',
     distance: 'normal',

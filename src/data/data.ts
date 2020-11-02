@@ -16,6 +16,8 @@ const formValue = function (label: string, multiplier: number): FormValue {
   return { label, multiplier }
 }
 
+export const TOP_LOCATION_MANUAL_ENTRY = 'MANUAL_DATA'
+
 const oneTimeMult = 0.06
 const housemateMult = 0.3
 const partnerMult = 0.48
@@ -186,8 +188,26 @@ export const RiskProfile: { [key: string]: FormValue } = {
       Interaction.oneTime.multiplier *
       (2 + 10 * Distance.sixFt.multiplier * Voice.loud.multiplier),
   },
-  hasCovid: {
-    label: i18n.t('data.person.hasCovid'),
-    multiplier: -1,
-  },
+}
+
+// Special keys for RiskProfile that need to be checked elsewhere.
+export const RiskProfileEnum = {
+  ONE_PERCENT: 'onePercent',
+  DECI_PERCENT: 'deciPercent',
+  HAS_COVID: 'hasCovid',
+}
+
+RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
+  label: i18n.t('data.person.microcovid_budget_one_percent'),
+  multiplier: NaN,
+}
+
+RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
+  label: i18n.t('data.person.microcovid_budget_deci_percent'),
+  multiplier: NaN,
+}
+
+RiskProfile[RiskProfileEnum.HAS_COVID] = {
+  label: i18n.t('data.person.hasCovid'),
+  multiplier: -1,
 }
