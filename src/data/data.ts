@@ -202,12 +202,14 @@ export const RiskProfileEnum = {
 }
 
 RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
-  label: 'Uses microCOVID to maintain a risk of 1%/year (200 microCOVIDs/week)',
+  label:
+    'Uses microCOVID to maintain a risk of 1%/year (200 microCOVIDs/week)',
   multiplier: NaN,
 }
 
 RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
-  label: 'Uses microCOVID to maintain a risk of 0.1%/year (20 microCOVIDs/week)',
+  label:
+    'Uses microCOVID to maintain a risk of 0.1%/year (20 microCOVIDs/week)',
   multiplier: NaN,
 }
 
