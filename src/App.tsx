@@ -50,7 +50,8 @@ export const App = (): React.ReactElement => {
             <meta property="og:image:height" content="400" />
             <meta
               property="og:url"
-              content={process.env.REACT_APP_PUBLIC_URL}
+              // Keep the query params so that we can generate preview images for calculator results.
+              content={window.location.href}
             />
             <meta property="fb:app_id" content="1117003835468995" />
             <meta property="og:type" content="website" />
