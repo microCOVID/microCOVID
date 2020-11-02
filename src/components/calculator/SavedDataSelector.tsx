@@ -16,7 +16,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   const prepopulatedOptions = (
     <React.Fragment>
       {map(prepopulated, (_value, key) => (
-        <option key={key} value={key} selected={props.scenarioName === key}>
+        <option key={key} value={key}>
           {key}
         </option>
       ))}
@@ -43,8 +43,9 @@ export const SavedDataSelector: React.FunctionComponent<{
         size="lg"
         onChange={(e) => setSavedData(e.target.value)}
         id="saved-data"
+        value={props.scenarioName}
       >
-        <option value="" selected={props.scenarioName === ''}>
+        <option value="">
           Optional: Start with a predefined common activity...
         </option>
         {prepopulatedOptions}
