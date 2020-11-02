@@ -5,7 +5,7 @@ import Donation from 'components/Donation'
 
 export const Contact = (): React.ReactElement => {
   return (
-    <div id="paperPage">
+    <div className="paperPage">
       <h1>Contact Us</h1>
       <h3>Sign up for updates</h3>
       <p>
