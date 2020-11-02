@@ -12,7 +12,7 @@ import {
   calculateLocationReportedPrevalence,
 } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
-import './styles/PrevalenceControls.scss'
+import 'components/calculator/styles/PrevalenceControls.scss'
 
 const isFilled = (val: string): boolean => {
   return !isNullOrUndefined(val) && val !== ''

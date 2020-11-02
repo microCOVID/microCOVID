@@ -25,7 +25,7 @@ import {
   calculatePersonRiskEach,
 } from 'data/calculate'
 import { Interaction, budgetOptions, intimateDurationFloor } from 'data/data'
-import './ExplanationCard.scss'
+import 'components/calculator/ExplanationCard/ExplanationCard.scss'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (

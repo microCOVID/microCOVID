@@ -1,7 +1,7 @@
 import { pages } from 'posts/paper/index'
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import './styles/Paper.scss'
+import 'pages/styles/Paper.scss'
 
 import {
   MarkdownContents,
