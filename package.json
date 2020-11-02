@@ -15,7 +15,6 @@
     "node-sass": "^4.14.1",
     "num2fraction": "^1.2.2",
     "popper.js": "^1.16.1",
-    "prop-types": "^15.6.0",
     "query-string": "^6.13.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
@@ -32,10 +31,9 @@
     "start": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts start",
     "build": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint src",
     "fix": "eslint src --fix",
-    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "prettier": "prettier --write .",
     "typecheck": "tsc"
   },
   "browserslist": {
@@ -62,6 +60,7 @@
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
+    "@types/testing-library__jest-dom": "^5.9.5",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
     "eslint": "^7.7.0",
@@ -71,5 +70,14 @@
     "eslint-plugin-react": "^7.20.0",
     "prettier": "^2.0.5",
     "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**"
+    ]
   }
 }
