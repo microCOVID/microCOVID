@@ -14,6 +14,8 @@ const formValue = function (label: string, multiplier: number): FormValue {
   return { label, multiplier }
 }
 
+export const TOP_LOCATION_MANUAL_ENTRY = 'MANUAL_DATA'
+
 const oneTimeMult = 0.06
 const housemateMult = 0.3
 const partnerMult = 0.48
@@ -88,14 +90,14 @@ export const budgetOptions = [
   {
     label: 'Standard Caution Budget',
     sublabel:
-      'Budget: 1% chance of COVID per year (suggested for healthy people NOT in close contact with more vulnerable people)',
+      'Budget: 1% chance of COVID per year (200 microCOVIDs per week) (suggested for healthy people NOT in close contact with more vulnerable people)',
     multiplier: 1,
     value: BUDGET_ONE_PERCENT.toString(),
   },
   {
     label: 'High Caution Budget',
     sublabel:
-      'Budget: 0.1% chance of COVID per year (suggested if you or your close contacts are more vulnerable to COVID)',
+      'Budget: 0.1% chance of COVID per year (20 microCOVIDs per week) (suggested if you or your close contacts are more vulnerable to COVID)',
     multiplier: 0.1,
     value: BUDGET_ONE_TENTH_PERCENT.toString(),
   },
@@ -200,12 +202,13 @@ export const RiskProfileEnum = {
 }
 
 RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
-  label: 'Uses microcvoid to maintain a risk of 1%/year (200 microcovid/week)',
+  label: 'Uses microCOVID to maintain a risk of 1%/year (200 microCOVIDs/week)',
   multiplier: NaN,
 }
 
 RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
-  label: 'Uses microcvoid to maintain a risk of 0.1%/year (20 microcovid/week)',
+  label:
+    'Uses microCOVID to maintain a risk of 0.1%/year (20 microCOVIDs/week)',
   multiplier: NaN,
 }
 

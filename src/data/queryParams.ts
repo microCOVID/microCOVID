@@ -3,12 +3,17 @@ import { QueryParamConfigMap } from 'serialize-query-params'
 import { NumberParam, StringParam } from 'use-query-params'
 
 import { CalculatorData, QueryData, defaultValues } from './calculate'
+import { TOP_LOCATION_MANUAL_ENTRY } from './data'
 
 export const queryConfig: QueryParamConfigMap = {
   riskBudget: NumberParam,
 
   topLocation: StringParam,
   subLocation: StringParam,
+  population: StringParam,
+  casesPastWeek: NumberParam,
+  casesIncreasingPercentage: NumberParam,
+  positiveCasePercentage: NumberParam,
 
   riskProfile: StringParam,
   interaction: StringParam,
@@ -22,12 +27,21 @@ export const queryConfig: QueryParamConfigMap = {
   voice: StringParam,
 }
 
-//
 export const filterParams = (data: CalculatorData): QueryData => {
-  return pickBy(data, (v, k) => {
+  const filtered = pickBy(data, (v, k) => {
     const fk = k as keyof CalculatorData
     return k in queryConfig && v !== defaultValues[fk]
   })
+
+  if (filtered.topLocation !== TOP_LOCATION_MANUAL_ENTRY) {
+    // Remove data that will be fetched if location is set.
+    delete filtered.population
+    delete filtered.casesPastWeek
+    delete filtered.casesIncreasingPercentage
+    delete filtered.positiveCasePercentage
+  }
+
+  return filtered
 }
 
 // Choose between data from the query params or localstorage.
