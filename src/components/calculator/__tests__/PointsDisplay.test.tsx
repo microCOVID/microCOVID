@@ -15,9 +15,12 @@ const standardPointsDisplay = (
 
 describe('points display', () => {
   it('renders standard results', () => {
-    const { getByText } = render(standardPointsDisplay)
+    const { getByText, getByLabelText } = render(standardPointsDisplay)
 
     expect(getByText('Low Risk')).toBeInTheDocument()
+    expect(getByLabelText('Thermometer Section Risk Level Low')).toHaveClass(
+      'current-level',
+    )
     expect(getByText(/of your weekly risk budget/i)).toHaveTextContent('5%')
     expect(getByText(/microCOVIDs each time/i)).toHaveTextContent('~10')
   })
