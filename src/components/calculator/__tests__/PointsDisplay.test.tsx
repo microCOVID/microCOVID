@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 
@@ -16,10 +16,13 @@ const standardPointsDisplay = (
 
 describe('points display', () => {
   it('renders standard results', () => {
-    render(standardPointsDisplay)
+    const { getByText, getByLabelText } = render(standardPointsDisplay)
 
-    expect(screen.getByText(/of your weekly risk budget/i)).toHaveTextContent(
-      '5%',
+    expect(getByText('Low Risk')).toBeInTheDocument()
+    expect(getByLabelText('Thermometer Section Risk Level Low')).toHaveClass(
+      'current-level',
     )
+    expect(getByText(/of your weekly risk budget/i)).toHaveTextContent('5%')
+    expect(getByText(/microCOVIDs each time/i)).toHaveTextContent('~10')
   })
 })
