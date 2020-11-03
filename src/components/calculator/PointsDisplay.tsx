@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 import { IconType } from 'react-icons'
 import {
   BsExclamationOctagonFill,
@@ -14,8 +15,8 @@ import {
 import { ONE_MILLION } from 'data/calculate'
 
 export interface RiskLevel {
+  name: string
   style: string
-  title: string
   max: number
   icon?: IconType
   overrideThermometerStyle?: boolean
@@ -23,20 +24,20 @@ export interface RiskLevel {
 
 // Risk levels and max points for each (assuming a 1% budget)
 const riskLevels: RiskLevel[] = [
-  { style: 'very-low', title: 'Very Low', max: 3 },
-  { style: 'low', title: 'Low', max: 25 },
-  { style: 'moderate', title: 'Moderate', max: 100 },
-  { style: 'high', title: 'High', max: 300 },
-  { style: 'very-high', title: 'Very High', max: 1000 },
+  { name: 'very-low', style: 'very-low', max: 3 },
+  { name: 'low', style: 'low', max: 25 },
+  { name: 'moderate', style: 'moderate', max: 100 },
+  { name: 'high', style: 'high', max: 300 },
+  { name: 'very-high', style: 'very-high', max: 1000 },
   {
+    name: 'dangerously-high',
     style: 'dangerous',
-    title: 'Dangerously High',
     max: 100000,
     icon: BsExclamationTriangleFill,
   },
   {
+    name: 'extreme',
     style: 'dangerous',
-    title: 'Extreme',
     max: Infinity,
     icon: BsExclamationOctagonFill,
     overrideThermometerStyle: true,
@@ -104,7 +105,7 @@ function Thermometer(props: {
               level,
             )
           }
-          aria-label={`Thermometer Section Risk Level ${level.title}`}
+          aria-label={`Thermometer Section Risk Level ${level.name}`}
         ></div>
       ))}
     </>
@@ -120,6 +121,20 @@ export default function PointsDisplay(props: {
 }): React.ReactElement {
   const activeRiskLevel = howRisky(props.points, props.riskBudget)
   const doShowPoints = showPoints(props.points)
+  const { t } = useTranslation()
+  const riskLabel = (name: string): string => {
+    // we call these out here explicitly so that i18next can pick this up and
+    // generate entries in locales automatically
+    if (name === 'very-low') return t('calculator.category_very_low')
+    if (name === 'low') return t('calculator.category_low')
+    if (name === 'moderate') return t('calculator.category_moderate')
+    if (name === 'high') return t('calculator.category_high')
+    if (name === 'very-high') return t('calculator.category_very_high')
+    if (name === 'dangerously-high')
+      return t('calculator.category_dangerously_high')
+    if (name === 'extreme') return t('calculator.category_extreme')
+    return 'Undefined'
+  }
   return (
     <Row className="top-half-card no-gutters">
       <Col className="thermometer-container">
@@ -136,30 +151,49 @@ export default function PointsDisplay(props: {
             {!activeRiskLevel.icon ? null : (
               <activeRiskLevel.icon className="risk-icon" />
             )}
-            <span>{activeRiskLevel.title} Risk</span>
+            <span>
+              {riskLabel(activeRiskLevel.name)}{' '}
+              {t('calculator.category_postfix')}
+            </span>
           </div>
         )}
         <div className="budget-consumption">
           {doShowPoints && (
-            <>{budgetConsumption(props.points, props.riskBudget)}</>
+            <>
+              {budgetConsumption(
+                props.points,
+                props.riskBudget,
+                t('calculator.explanationcard.multiple_suffix'),
+                t('calculator.explanationcard.percentage_suffix'),
+              )}
+            </>
           )}
         </div>
         <div className="points">
           {doShowPoints ? (
             <>
-              ~{displayPoints(props.points)} microCOVIDs
-              {props.repeatedEvent ? ' per week' : ' each time'}{' '}
+              ~{displayPoints(props.points)}{' '}
+              <Trans>calculator.pointsdisplay.microCOVIDs</Trans>{' '}
+              {props.repeatedEvent ? t('per week') : t('each time')}{' '}
               <span className="points-range d-md-inline d-none">
                 {props.upperBound >= ONE_MILLION ? null : (
                   <>
-                    (probably between: {displayPoints(props.lowerBound)} to{' '}
-                    {displayPoints(props.upperBound)})
+                    (
+                    <Trans
+                      values={{
+                        from: displayPoints(props.lowerBound),
+                        to: displayPoints(props.upperBound),
+                      }}
+                    >
+                      calculator.pointsdisplay.range
+                    </Trans>
+                    )
                   </>
                 )}
               </span>
             </>
           ) : (
-            <>Fill in calculator to see risk level</>
+            <Trans>calculator.pointsdisplay.empty_warning</Trans>
           )}
         </div>
       </Col>

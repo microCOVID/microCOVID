@@ -1,30 +1,12 @@
 import num2fraction from 'num2fraction'
 import React from 'react'
 import { Form } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
 import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
 import { FormValue } from 'data/data'
-
-function getSuffix(frac: string): string {
-  const denom = frac.split('/')[1]
-  if (denom === '2') return ''
-  else if (denom === '3') return 'rd'
-  else return 'th'
-}
-
-function showRiskMultiplier(multiplier: number): string {
-  if (multiplier === 1) {
-    return 'baseline risk'
-  } else if (multiplier > 0 && multiplier < 1) {
-    // Fraction format: "1/5th the risk"
-    const frac = num2fraction(multiplier)
-    return `${frac}${getSuffix(frac)} the risk`
-  } else {
-    return `${multiplier}x the risk`
-  }
-}
 
 export const GenericSelectControl: React.FunctionComponent<{
   id: string
@@ -37,37 +19,56 @@ export const GenericSelectControl: React.FunctionComponent<{
   popover?: JSX.Element
   hideRisk?: boolean
   className?: string
-}> = (props) => (
-  <div className="form-group">
-    <ControlLabel
-      id={props.id}
-      label={props.label}
-      header={props.header}
-      popover={props.popover}
-    />
-    <select
-      id={props.id}
-      className={'form-control form-control-lg ' + props.className}
-      onChange={(e) => props.setter(e.target.value)}
-      value={props.value}
-    >
-      <option value="">Select one...</option>
-      {Object.keys(props.source).map((value, index) => (
-        <option key={index} value={value}>
-          {props.source[value].label}{' '}
-          {props.hideRisk !== true &&
-            `[${showRiskMultiplier(props.source[value].multiplier)}]`}
-        </option>
-      ))}
-      <IosOptgroup />
-    </select>
-    {props.helpText && (
-      <Form.Text id={props.id + 'HelpText'} muted>
-        {props.helpText}
-      </Form.Text>
-    )}
-  </div>
-)
+}> = (props) => {
+  const { t } = useTranslation()
+  function showRiskMultiplier(multiplier: number): string {
+    if (multiplier === 1) {
+      return t('calculator.baseline_risk')
+    } else if (multiplier > 0 && multiplier < 1) {
+      const frac = num2fraction(multiplier)
+      const denom = frac.split('/')[1]
+      // range handling in i18next is a hot buggy mess, this manual approach will have to do for the time being
+      if (denom === '2')
+        return t('calculator.risk_modifier_frac_2nd', { frac: frac })
+      else if (denom === '3')
+        return t('calculator.risk_modifier_frac_3rd', { frac: frac })
+      else return t('calculator.risk_modifier_frac_plural', { frac: frac })
+    } else {
+      return t('calculator.risk_modifier_multiple', { multiplier: multiplier })
+    }
+  }
+  return (
+    <div className="form-group">
+      <ControlLabel
+        id={props.id}
+        label={props.label}
+        header={props.header}
+        popover={props.popover}
+      />
+      <select
+        id={props.id}
+        className={'form-control form-control-lg ' + props.className}
+        onChange={(e) => props.setter(e.target.value)}
+        value={props.value}
+      >
+        <option value="">{t('buttons.select_default_action')}</option>
+        {Object.keys(props.source).map((value, index) => (
+          <option key={index} value={value}>
+            {props.source[value].label}{' '}
+            {props.hideRisk !== true &&
+              `[${showRiskMultiplier(props.source[value].multiplier)}]`}
+          </option>
+        ))}
+        <IosOptgroup />
+      </select>
+      {props.helpText && (
+        <Form.Text id={props.id + 'HelpText'} muted>
+          {props.helpText}
+        </Form.Text>
+      )}
+    </div>
+  )
+}
 
 export const SelectControl: React.FunctionComponent<{
   id: keyof CalculatorData
