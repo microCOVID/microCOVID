@@ -10,6 +10,7 @@ export interface CheckBoxFormValue extends FormValue {
 export interface FormValue {
   label: string
   multiplier: number
+  housemateMultiplier?: number // Different multiplier to apply if the contact is a housemate.
 }
 
 const formValue = function (label: string, multiplier: number): FormValue {
@@ -140,21 +141,25 @@ export const RiskProfile: { [key: string]: FormValue } = {
   livingWithPartner: {
     label: i18n.t('data.person.livingWithPartner'),
     multiplier: (1 + 0.48) * livingAloneMult,
+    housemateMultiplier: livingAloneMult,
   },
 
   closedPod4: {
     label: i18n.t('data.person.closedPod4'),
     multiplier: (1 + 4 * housemateMult) * livingAloneMult,
+    housemateMultiplier: (1 + 3 * housemateMult) * livingAloneMult,
   },
 
   closedPod10: {
     label: i18n.t('data.person.closedPod10'),
     multiplier: (1 + 10 * housemateMult) * livingAloneMult,
+    housemateMultiplier: (1 + 9 * housemateMult) * livingAloneMult,
   },
 
   closedPod20: {
     label: i18n.t('data.person.closedPod20'),
     multiplier: (1 + 20 * housemateMult) * livingAloneMult,
+    housemateMultiplier: (1 + 19 * housemateMult) * livingAloneMult,
   },
 
   contact1: {

@@ -162,7 +162,7 @@ function GroupSizeWarning(props: { people: number }): React.ReactElement {
   if (props.people >= 25) {
     return (
       <div className="warning">
-        <Trans>calculator.large_group_warning'</Trans>
+        <Trans>calculator.large_group_warning</Trans>
       </div>
     )
   }
