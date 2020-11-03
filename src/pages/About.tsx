@@ -6,7 +6,7 @@ import Donation from '../components/Donation'
 
 export const About = (): React.ReactElement => {
   return (
-    <div id="paperPage" style={{ fontSize: '16px', lineHeight: '30px' }}>
+    <div className="paperPage">
       <h2>
         <Trans>about.intro_header</Trans>
       </h2>
