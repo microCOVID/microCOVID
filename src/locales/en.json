@@ -69,7 +69,7 @@
   "calculator.person_risk_profile_question": "What is their risk profile?",
   "calculator.person_risk_profile_header": "Risk Profile",
   "calculator.household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
-  "calculator.large_group_warning'": "calculator.large_group_warning'",
+  "calculator.large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
   "calculator.category_very_low": "Very Low",
   "calculator.category_low": "Low",
   "calculator.category_moderate": "Moderate",

@@ -69,7 +69,7 @@
   "calculator.person_risk_profile_question": "A többiek mekkora kockázatnak vannak kitéve a mindennapokban?",
   "calculator.person_risk_profile_header": "Fertőzöttségi kockázat",
   "calculator.household_members_note": "A háztartás tagjait magukat ne számold a kapcsolatok közé",
-  "calculator.large_group_warning'": "calculator.large_group_warning'",
+  "calculator.large_group_warning": "Figyelem: ez egy nagy csoportnak tűnik. Csak azokat vedd számításba itt, akik 5 méteren belül vannak hozzád képest, ne mindenkit, aki az eseményen résztvesz. Ettől függetlenül is egy ilyen nagy csoportot összehozni minden résztvevő számára kockázatos, és könnyen szuperterjesztő eseménnyé válhat.",
   "calculator.category_very_low": "Nagyon alacsony",
   "calculator.category_low": "Alacsony",
   "calculator.category_moderate": "Közepes",
