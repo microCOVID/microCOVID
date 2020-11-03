@@ -2,7 +2,7 @@ import React from 'react'
 import { Trans } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import Donation from '../components/Donation'
+import { Donation } from 'components/Donation'
 
 export const About = (): React.ReactElement => {
   return (
