@@ -1,5 +1,5 @@
 @import '~styles/_variables.scss';
-@import '~styles/breakpoints.scss';
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
 @import "~rfs/scss";
 @import '~bootstrap/scss/bootstrap.scss';
 
@@ -75,7 +75,7 @@
     padding-bottom: 15px;
     border-bottom: 1px solid $gray-300;
     margin-bottom: 15px;
-    @include desktop {
+    @include media-breakpoint-up(md) {
       height: 100px;
     }
   }
@@ -87,7 +87,7 @@
 
   // Empty state
   .card-body {
-    @include desktop {
+    @include media-breakpoint-up(md) {
       display: flex;
       flex-direction: column;
     }

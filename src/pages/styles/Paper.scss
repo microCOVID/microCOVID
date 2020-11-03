@@ -1,5 +1,5 @@
 @import '~styles/_variables.scss';
-@import '~styles/breakpoints.scss';
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
 
 .paperPage {
   font-size: 18px;
@@ -94,7 +94,7 @@
   td, th {
     border-right: 1px solid $gray-500;
     padding: 10px;
-    @include desktop {
+    @include media-breakpoint-up(md) {
       min-width: 200px;
     }
 
