@@ -1,5 +1,6 @@
 import React from 'react'
 import { Popover } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { SelectControl } from './SelectControl'
@@ -11,9 +12,13 @@ export const ActivityRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
+  const { t } = useTranslation()
+
   const header = (
     <h3 className="h2 accent">
-      <span>Precautions</span>
+      <span>
+        <Trans>calculator.precautions.label</Trans>
+      </span>
     </h3>
   )
 
@@ -22,9 +27,7 @@ export const ActivityRiskControls: React.FunctionComponent<{
       <React.Fragment>
         {header}
         <div className="readout mb-4">
-          When estimating your risk of infection from a household member or
-          partner/spouse, we assume these interactions are indoors, unmasked,
-          and undistanced.
+          <Trans>calculator.risk_note_about_household_members</Trans>
         </div>
       </React.Fragment>
     )
@@ -35,8 +38,8 @@ export const ActivityRiskControls: React.FunctionComponent<{
       {header}
       <SelectControl
         id="setting"
-        header="Environment"
-        label="Is it indoor or outdoor?"
+        header={t('calculator.precautions.environment_header')}
+        label={t('calculator.precautions.environment_question')}
         data={data}
         setter={setter}
         source={Setting}
@@ -45,18 +48,16 @@ export const ActivityRiskControls: React.FunctionComponent<{
       {data.setting === 'outdoor' &&
       ['close', 'intimate'].includes(data.distance) ? (
         <div className="warning">
-          Due to very close distances, we are not confident that being outdoors
-          reduces the risk in a substantial way. Thus, we are not providing any
-          bonus for being outdoors when intimate.
+          <Trans>calculator.precautions.no_intimate_bonus_outdoors</Trans>
         </div>
       ) : null}
       {data.distance !== 'intimate' && (
         <>
           <SelectControl
             id="yourMask"
-            header="Your mask"
-            label="What mask are YOU wearing?"
-            helpText="If you’re eating or drinking, select “no mask”"
+            header={t('calculator.precautions.your_mask_header')}
+            label={t('calculator.precautions.your_mask_question')}
+            helpText={t('calculator.precautions.your_mask_note')}
             popover={maskPopover}
             data={data}
             setter={setter}
@@ -64,9 +65,9 @@ export const ActivityRiskControls: React.FunctionComponent<{
           />
           <SelectControl
             id="theirMask"
-            header="Their mask"
-            label="What mask are THEY wearing?"
-            helpText="If you’re eating or drinking, select “no mask”"
+            header={t('calculator.precautions.their_mask_header')}
+            label={t('calculator.precautions.their_mask_question')}
+            helpText={t('calculator.precautions.their_mask_note')}
             popover={maskPopover}
             data={data}
             setter={setter}
@@ -76,8 +77,8 @@ export const ActivityRiskControls: React.FunctionComponent<{
       )}
       <SelectControl
         id="voice"
-        header="Volume"
-        label="How much is everyone talking?"
+        header={t('calculator.precautions.volume_header')}
+        label={t('calculator.precautions.volume_question')}
         data={data}
         setter={setter}
         source={Voice}

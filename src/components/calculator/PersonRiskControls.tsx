@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Popover } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
 import { SelectControl } from './SelectControl'
@@ -60,10 +61,13 @@ export const PersonRiskControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
+  const { t } = useTranslation()
   return (
     <React.Fragment>
       <h3 className="h2 accent">
-        <span>Nearby people</span>
+        <span>
+          <Trans>calculator.nearby_people_label</Trans>
+        </span>
       </h3>
       {data.interaction === 'partner' ? null : (
         <div className="form-group">
@@ -71,10 +75,10 @@ export const PersonRiskControls: React.FunctionComponent<{
             id="personCount"
             label={
               repeatedEvent
-                ? 'How many people do you live with?'
-                : 'How many people are usually near you?'
+                ? t('calculator.number_of_people_near_you_partner')
+                : t('calculator.number_of_people_near_you_onetime')
             }
-            header="People"
+            header={t('calculator.people_count')}
             popover={personCountPopover}
           />
           <input
@@ -99,8 +103,8 @@ export const PersonRiskControls: React.FunctionComponent<{
         <React.Fragment>
           <SelectControl
             id="distance"
-            label="How close are these nearby people, on average?"
-            header="Distance"
+            label={t('calculator.distance_question')}
+            header={t('calculator.distance_header')}
             data={data}
             setter={(value: CalculatorData) => {
               const yourMask =
@@ -113,7 +117,10 @@ export const PersonRiskControls: React.FunctionComponent<{
           />
           <div className="form-group">
             <label htmlFor="duration">
-              <strong>Duration:</strong> How long is the activity, in minutes?
+              <strong>
+                <Trans>calculator.duration_header</Trans>:
+              </strong>{' '}
+              <Trans>calculator.duration_question</Trans>
             </label>
             <input
               className="form-control form-control-lg col-md-3"
@@ -130,21 +137,16 @@ export const PersonRiskControls: React.FunctionComponent<{
           {data.distance === 'intimate' &&
           data.duration < intimateDurationFloor ? (
             <div className="warning">
-              We have applied a minimum Activity Risk for kissing due to the
-              risk involved in exchanging fluids.
+              <Trans>calculator.intimate_risk_warning</Trans>
             </div>
           ) : null}
         </React.Fragment>
       ) : null}
       <SelectControl
         id="riskProfile"
-        label="What is their risk profile?"
-        header="Risk Profile"
-        helpText={
-          !repeatedEvent
-            ? ''
-            : 'If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting'
-        }
+        label={t('calculator.person_risk_profile_question')}
+        header={t('calculator.person_risk_profile_header')}
+        helpText={!repeatedEvent ? '' : t('calculator.household_members_note')}
         popover={personRiskPopover}
         data={data}
         setter={setter}
@@ -160,11 +162,7 @@ function GroupSizeWarning(props: { people: number }): React.ReactElement {
   if (props.people >= 25) {
     return (
       <div className="warning">
-        Warning: This is a large number of people. Remember, you only need to
-        include the number of people who are within 15 feet of you (not everyone
-        present in the area). However, gathering a large number of people could
-        put everyone at risk and creates the possibility of a superspreader
-        event.
+        <Trans>calculator.large_group_warning'</Trans>
       </div>
     )
   }

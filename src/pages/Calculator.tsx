@@ -2,6 +2,7 @@ import copy from 'copy-to-clipboard'
 import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
 import { BsLink45Deg } from 'react-icons/bs'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 
@@ -135,20 +136,20 @@ export const Calculator = (): React.ReactElement => {
       className="btn btn-info float-right"
       onClick={() => copyShareURL(calculatorData)}
     >
-      <BsLink45Deg /> Copy link to this scenario
+      <BsLink45Deg /> <Trans>button.copy_link</Trans>
     </button>
   )
+
+  const { t } = useTranslation()
 
   return (
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            We’ve constructed a calculator that lets you estimate the risk of
-            getting COVID from a wide range of activities, using the{' '}
-            <a href="/paper">best research available</a>. We hope this tool will
-            help hone your intuition, lower your stress levels, and figure out
-            good harm-reduction strategies.
+            <Trans i18nKey="calculator.intro.whats_this">
+              Lorem ipsum <a href="/paper">whitepaper</a> dolor sic amet...
+            </Trans>
           </p>
           <FirstTimeUserIntroduction />
         </Col>
@@ -156,7 +157,9 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row>
         <Col>
-          <h2>Calculate the approximate COVID risk of any activity</h2>
+          <h2>
+            <Trans>calculator.intro.call_to_action</Trans>
+          </h2>
         </Col>
       </Row>
       <Row>
@@ -184,7 +187,7 @@ export const Calculator = (): React.ReactElement => {
             {prevalenceIsFilled ? (
               <React.Fragment>
                 <header id="activity-risk">
-                  Step 2: Describe the activity
+                  <Trans>calculator.risk_step_label</Trans>
                 </header>
                 {!scenarioName ? null : (
                   <Alert variant="info">
@@ -196,7 +199,7 @@ export const Calculator = (): React.ReactElement => {
                 <div>
                   <GenericSelectControl
                     id="interaction"
-                    label="Is this a single activity or an ongoing relationship?"
+                    label={t('calculator.type_of_interaction')}
                     // This setter defaults to a personCount of 1 if the interaction type is "partner"
                     setter={(value) =>
                       setCalculatorData({
@@ -244,14 +247,16 @@ export const Calculator = (): React.ReactElement => {
                       className="btn btn-secondary float-right"
                       onClick={resetForm}
                     >
-                      Reset form
+                      <Trans>button.reset_form</Trans>
                     </button>
                     {shareButton}
                   </Col>
                 </Row>
               </React.Fragment>
             ) : (
-              <div className="empty">First, enter your location</div>
+              <div className="empty">
+                <Trans>calculator.risk_group_empty_warning</Trans>
+              </div>
             )}
           </Card>
         </Col>
@@ -282,13 +287,10 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col lg={{ span: 8, offset: 4 }}>
           <p className="warning" style={{ margin: '0' }}>
-            <b>Important:</b> In this tool we state our best estimate based on
-            available evidence, even when that evidence is not conclusive. We
-            have read a lot of experts' research, but we are not ourselves
-            experts in this topic. This work has not been scientifically
-            peer-reviewed. There is still a lot of uncertainty about COVID. Do
-            not rely on this tool for medical advice. Please continue to follow
-            government guidance.
+            <b>
+              <Trans>calculator.warning.important</Trans>:
+            </b>
+            <Trans>calculator.warning</Trans>
           </p>
         </Col>
       </Row>
