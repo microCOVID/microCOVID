@@ -1,7 +1,7 @@
 {
   "menu.calculator": "Kalkulátor",
   "menu.about": "A projektről",
-  "menu.spreadsheet": "Táblázat (csak angulul)",
+  "menu.spreadsheet": "Táblázat (csak angolul)",
   "menu.contactus": "Kapcsolat",
   "current_lang_two_letter_code": "hu",
   "calculator.precautions.label": "Elővigyázatossági lépések",
@@ -182,5 +182,5 @@
   "calculator.risk_group_empty_warning": "Először válaszd ki, hogy hol vagy",
   "calculator.warning.important": "Fontos figyelmeztetés",
   "calculator.warning": "Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és ezt az eszköz nem is ment át tudományos szintű felülvizsgálaton. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat.",
-  "menu.whitepaper": "Tanulmány (csak angulul)"
+  "menu.whitepaper": "Tanulmány (csak angolul)"
 }
