@@ -67,6 +67,7 @@ export const Calculator = (): React.ReactElement => {
   }
 
   const resetForm = () => {
+    window.scrollTo(0, 0)
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
     setScenarioName('')
