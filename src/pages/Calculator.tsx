@@ -5,6 +5,7 @@ import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsLink45Deg } from 'react-icons/bs'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
+import 'pages/styles/Calculator.scss'
 
 import { recordCalculatorChanged } from 'components/Analytics'
 import { AutoAlert } from 'components/AutoAlert'

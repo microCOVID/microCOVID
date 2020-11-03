@@ -2,6 +2,7 @@ import { pages } from 'posts/paper/index'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
+import 'pages/styles/Paper.scss'
 
 import {
   MarkdownContents,

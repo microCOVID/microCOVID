@@ -1,0 +1,142 @@
+@import '~styles/_variables.scss';
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "~rfs/scss";
+@import '~bootstrap/scss/bootstrap.scss';
+
+#calculator {
+  #calculator-introduction {
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: $h4-font-size;
+    position: relative;
+
+  }
+
+  .col-md-12 {
+    margin-bottom: 30px;
+  }
+
+  .calculator-buttons {
+    text-align: right;
+  }
+
+  // Colorful section headers
+  .card header {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    @include font-size(1.2rem);
+  }
+  header#location {
+    background: $primary;
+  }
+
+  header#activity-risk {
+    background: $indigo;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+   -moz-appearance: textfield;
+  }
+
+
+  .card {
+    border: none;
+    background: lighten($gray-200, 1.5);
+    border-radius: 8px;
+
+    .warning {
+      border: 2px solid $warning-border;
+      padding: 8px;
+      margin: 10px 0;
+      background-color: $warning-fill;
+    }
+    .calculator-params {
+
+      h3 {
+        margin: 0 0 0.6em 0;
+      }
+    }
+
+  }
+
+  // Card subheader
+  .subheading {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray-300;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      height: 100px;
+    }
+  }
+
+  // Equal height columns
+  .card {
+    height: 100%;
+  }
+
+  // Empty state
+  .card-body {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .empty {
+    flex: 1;
+    display: flex;
+    height: 50%;
+    padding-top: 3em;
+    font-style: italic;
+    justify-content: center;
+  }
+
+  #activity-section {
+    min-height: 500px;
+
+    .form-group {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  // Intermediate value readouts
+  .readout {
+    font-size: 1em;
+  }
+
+  .save-form {
+    display: inline-flex;
+    padding: 0;
+    @include media-breakpoint-down(sm) {
+      margin-top: 6px;
+    }
+  }
+
+  #points-row .col-md-12 {
+    margin-bottom: 0;
+  }
+  
+  .form-group {
+    .text-muted {
+      font-size: 1em;
+    }
+  }
+
+  .form-buttons {
+    > .btn {
+      margin: 0 5px;
+    }
+  }
+
+}
