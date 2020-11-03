@@ -1,7 +1,9 @@
 import ReactGA from 'react-ga'
 import { useLocation } from 'react-router-dom'
 
-ReactGA.initialize('UA-176544991-1')
+ReactGA.initialize('UA-176544991-1', {
+  testMode: process.env.NODE_ENV === 'test',
+})
 
 export function PageViews(): null {
   const location = useLocation()

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 import MaskDetails from './maskDetails'
 
@@ -9,94 +10,59 @@ export const RiskReduction: React.FunctionComponent<{
 
   return (
     <div className="mt-2" id="additional-precautions">
-      {repeatedEvent
-        ? housematesAdvice(showMaskDetails, setShowMaskDetails)
-        : oneTimeAdvice(showMaskDetails, setShowMaskDetails)}
+      {repeatedEvent ? (
+        <HousematesAdvice
+          showMaskDetails={showMaskDetails}
+          setShowMaskDetails={setShowMaskDetails}
+        />
+      ) : (
+        <OnetimeAdvice
+          showMaskDetails={showMaskDetails}
+          setShowMaskDetails={setShowMaskDetails}
+        />
+      )}
     </div>
   )
 }
 
-const housematesAdvice = (
-  showMaskDetails: boolean,
-  setShowMaskDetails: (val: boolean) => void,
-) => {
+export const HousematesAdvice: React.FunctionComponent<{
+  showMaskDetails: boolean
+  setShowMaskDetails: (val: boolean) => void
+}> = (props) => {
+  const { t } = useTranslation()
   return (
     <>
-      <h4>
-        Here are some ways you can work with close contacts to reduce their
-        risk:
-      </h4>
+      <h4>{t('calculator.riskreduction.housemates_header')}:</h4>
       <ol className="mt-2">
-        <li>
-          Talk to them about how their choices affect your risk, as well as
-          theirs
-        </li>
-        <li>
-          Ask them to <abbr title="Masked, Ourdoors, Distanced">MOD</abbr>
-          ify their activities (Masked, Outdoors, Distanced)
-        </li>
-        <li>
-          Essential workers can wear a top quality mask (e.g., N95 or KN95) to
-          work
-          <br />
+        <Trans i18nKey="calculator.riskreduction.housemates_tips">
+          Lorem ipsum
           <MaskDetails
-            showMaskDetails={showMaskDetails}
-            setShowMaskDetails={setShowMaskDetails}
+            showMaskDetails={props.showMaskDetails}
+            setShowMaskDetails={props.setShowMaskDetails}
           />
-        </li>
-        <li>
-          Ask them to limit undistanced socializing to as few people as possible
-        </li>
-        <li>
-          Encourage close contacts to isolate and get tested at the first sign
-          of COVID symptoms
-        </li>
-        <li>
-          If they have high COVID risk and you must be inside with them:
-          <ul>
-            <li>Wear masks inside</li>
-            <li>
-              Maximize ventilation using open windows, fans blowing in outside
-              air, and HEPA filters
-            </li>
-            <li>Isolate within the house by staying in different rooms.</li>
-          </ul>
-        </li>
+        </Trans>
       </ol>
     </>
   )
 }
 
-const oneTimeAdvice = (
-  showMaskDetails: boolean,
-  setShowMaskDetails: (val: boolean) => void,
-) => {
+export const OnetimeAdvice: React.FunctionComponent<{
+  showMaskDetails: boolean
+  setShowMaskDetails: (val: boolean) => void
+}> = (props) => {
+  const { t } = useTranslation()
   return (
     <>
-      <h4>Here are some ways of reducing the risk of this activity:</h4>
-      <em>These may or may not apply to your activity.</em>
+      <h4>{t('calculator.riskreduction.onetime_header')}:</h4>
+      <em>{t('calculator.riskreduction.onetime_warning')}</em>
       <ol className="mt-2">
-        <li>
-          <abbr title="Masked, Ourdoors, Distanced">MOD</abbr>ify your
-          activities (make them Masked, Outdoors, Distanced)
-        </li>
-        <li>
-          Wear the best mask you can get!
-          <br />
+        <Trans i18nKey="calculator.riskreduction.onetime_tips">
+          Lorem ipsum
           <MaskDetails
-            showMaskDetails={showMaskDetails}
-            setShowMaskDetails={setShowMaskDetails}
+            showMaskDetails={props.showMaskDetails}
+            setShowMaskDetails={props.setShowMaskDetails}
           />
-        </li>
-        <li>Visit public places during less crowded hours</li>
-        <li>
-          Reduce shopping trips by doing one trip for multiple people, using
-          delivery services, or shopping online
-        </li>
-        <li>
-          If this activity is with friends, encourage them to not come if they
-          or any of their close contacts are feeling unwell
-        </li>
+        </Trans>
       </ol>
     </>
   )
