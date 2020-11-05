@@ -19,10 +19,10 @@ describe('calculator page', () => {
     const interactionTypeLabelQuery = /Is this a single activity or an ongoing relationship/i
     expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
     const topLocationBox = getByRole('combobox', { name: /Select location/i })
-    fireEvent.change(topLocationBox, {
-      target: { value: 'US_06' }, // California
-    })
     const californiaOption = getByText(/California/i) as HTMLOptionElement
+    fireEvent.change(topLocationBox, {
+      target: { value: californiaOption.value },
+    })
     expect(californiaOption.selected).toBeTruthy()
     expect(getByText(interactionTypeLabelQuery)).toBeInTheDocument()
   })
