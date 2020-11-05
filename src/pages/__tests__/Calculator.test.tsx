@@ -16,7 +16,6 @@ describe('calculator page', () => {
       wrapper: AllProviders,
     })
 
-    expect(getByText(/constructed a calculator that lets/i)).toBeInTheDocument()
     const interactionTypeLabelQuery = /Is this a single activity or an ongoing relationship/i
     expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
     const topLocationBox = getByRole('combobox', { name: /Select location/i })
