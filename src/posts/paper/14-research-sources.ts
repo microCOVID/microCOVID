@@ -44,8 +44,6 @@ We get our wearer protection figure of 2x from [Chu et al](https://www.thelancet
 
 As for protection to the other party by wearing a mask (also known as “source control”), we estimate a source control factor of 4x. We base this on several sources:
 
-
-
 *   [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza estimated around 5x protection for homemade cloth masks and around 7x for surgical masks (see Figure 4).
 *   [Milton et al](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) provided a somewhat lower estimate of a 3.6x reduction in the number of exhaled influenza viruses if the infected person wore a surgical mask.
 *   [Fischer et al](https://advances.sciencemag.org/content/early/2020/08/07/sciadv.abd3083) counted respiratory droplets produced during normal speech through a variety of mask types. We averaged the droplet counts for the four cotton masks in their study (which were among the less effective masks tested) and found a 5.4x reduction in emitted droplets relative to no mask.
@@ -53,6 +51,10 @@ As for protection to the other party by wearing a mask (also known as “source 
 We combine these numbers to estimate approximately a 4x reduction. Again, this is a case where we have seen other analyses (especially those estimating _population-wide_ efficacy of mask-wearing) knock these numbers down somewhat. We keep the higher numbers here because we believe that if _you personally_ are hanging out with someone and they are _not actually wearing_ their mask (for example, it is hanging off their chin) you will notice that they aren’t wearing a mask, and not count this as giving you any extra protection factor. These types of “imperfect use” considerations need to be factored in more strongly than we do here when analyzing mask efficacy at the societal level.
 
 We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
+
+For n95 masks, we get our figure from [Jimenez et al.](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277&range=C190:J190) who suggest that, while a perfect fit with an n95 is 99% efficient at filtering out aerosols, average use causes them to discount this to 90%.
+
+In the spreadsheet, we speculatively add professionally fit-tested n95 masks and P100 respirators (the latter because the soft silicone is more likely to have a good seal) at the full 99% filteration efficiency listed above.
 
 #### Outdoor
 
