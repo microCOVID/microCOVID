@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse } from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
+import 'components/styles/Expandable.scss'
 
 export const ControlledExpandable: React.FunctionComponent<{
   id: string
