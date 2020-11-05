@@ -31,6 +31,7 @@ import {
   budgetOptions,
   intimateDurationFloor,
 } from 'data/data'
+import 'components/calculator/ExplanationCard/ExplanationCard.scss'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (

@@ -59,7 +59,7 @@
   "calculator.riskreduction.onetime_tips": "<li>MODify your activities (make them Masked, Outdoors, Distanced)</li> <li>Wear the best mask you can get! <br/><1/></li> <li>Visit public places during less crowded hours</li> <li> Reduce shopping trips by doing one trip for multiple people, using delivery services, or shopping online</li> <li>If this activity is with friends, encourage them to not come if they or any of their close contacts are feeling unwell</li>",
   "calculator.nearby_people_label": "Nearby people",
   "calculator.number_of_people_near_you_partner": "How many people do you live with?",
-  "calculator.number_of_people_near_you_onetime": "How many people are usually near you?",
+  "calculator.number_of_people_near_you_onetime": "How many people are usually near you during this activity?",
   "calculator.people_count": "People",
   "calculator.distance_question": "How close are these nearby people, on average?",
   "calculator.distance_header": "Distance",

@@ -14,6 +14,7 @@ import {
 } from 'data/calculate'
 import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
 import { Locations, PrevalenceDataDate } from 'data/location'
+import 'components/calculator/styles/PrevalenceControls.scss'
 
 const isFilled = (val: string): boolean => {
   return !isNullOrUndefined(val) && val !== ''
