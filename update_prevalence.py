@@ -576,6 +576,8 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
 
 
 def ignore_jhu_place(line: JHUCommonFields) -> bool:
+    if line.Combined_Key == "":
+        return True
     if line.Province_State in (
         "Diamond Princess",
         "Grand Princess",
@@ -654,7 +656,7 @@ def main() -> None:
                     and place.name not in ("Unassigned", "Unknown")
                 ):
                     raise ValueError(
-                        f"JHU data has cases but no population for {place!r}"
+                        f"JHU data has cases but no population for {place!r} with line data: {line!r}"
                     )
                 place.cumulative_cases[current] = line.Confirmed
             current -= timedelta(days=1)
