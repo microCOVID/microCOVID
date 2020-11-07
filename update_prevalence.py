@@ -180,8 +180,7 @@ class Place(pydantic.BaseModel):
         daily_cases = []
         current = effective_date
         if current not in self.cumulative_cases:
-            raise ValueError(
-                f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
+            raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
         while len(daily_cases) < 14:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
@@ -434,8 +433,7 @@ class AllData:
             for state in country.states.values():
                 for county in state.counties.values():
                     if county.population == 0 and county.name not in fake_names:
-                        raise ValueError(
-                            f"Missing population data for {county!r}")
+                        raise ValueError(f"Missing population data for {county!r}")
                 rollup_population(state, "counties")
             rollup_population(country, "states")
 
@@ -447,7 +445,6 @@ class AllData:
                             # These just don't have any reported cases
                             "Hoonah-Angoon, Alaska, US",
                             "Lake and Peninsula, Alaska, US",
-                            "Yakutat plus Hoonah-Angoon, Alaska, US",
                             "Skagway, Alaska, US",
                             "Unassigned, District of Columbia, US",
                             "Kalawao, Hawaii, US",
@@ -576,8 +573,6 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
 
 
 def ignore_jhu_place(line: JHUCommonFields) -> bool:
-    if line.Combined_Key == "":
-        return True
     if line.Province_State in (
         "Diamond Princess",
         "Grand Princess",
@@ -600,8 +595,6 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             "Federal Correctional Institution (FCI)",
             "Michigan Department of Corrections (MDOC)",
         ):
-            return True
-        if line.Combined_Key == "Yakutat, Alaska, US":
             return True
     return False
 
@@ -655,7 +648,7 @@ def main() -> None:
                     and place.name not in ("Unassigned", "Unknown")
                 ):
                     raise ValueError(
-                        f"JHU data has cases but no population for {place!r} with line data: {line!r}"
+                        f"JHU data has cases but no population for {place!r}"
                     )
                 place.cumulative_cases[current] = line.Confirmed
             current -= timedelta(days=1)
@@ -794,10 +787,8 @@ def main() -> None:
 
                 for subkey in data.subdivisions:
                     subfile.write(
-                        ",".join(
-                            app_locations[subkey].as_csv_data().values()) + "\n"
+                        ",".join(app_locations[subkey].as_csv_data().values()) + "\n"
                     )
-
 
 if __name__ == "__main__":
     main()
