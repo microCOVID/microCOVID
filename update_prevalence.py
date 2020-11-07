@@ -187,9 +187,7 @@ class Place(pydantic.BaseModel):
             if prev not in self.cumulative_cases:
                 if prev > min(self.cumulative_cases.keys()):
                     # Gaps in the data shouldn't happen
-                    raise ValueError(
-                        f"Missing case count for {self.fullname} on {prev:%Y-%m-%d}"
-                    )
+                    raise ValueError(f"Missing case count for {self.fullname} on {prev:%Y-%m-%d}")
                 # But missing data at the beginning is normal -- counties
                 # typically only show up when they have any cases.
                 self.cumulative_cases[prev] = self.cumulative_cases[current]
@@ -434,8 +432,7 @@ class AllData:
             for state in country.states.values():
                 for county in state.counties.values():
                     if county.population == 0 and county.name not in fake_names:
-                        raise ValueError(
-                            f"Missing population data for {county!r}")
+                        raise ValueError(f"Missing population data for {county!r}")
                 rollup_population(state, "counties")
             rollup_population(country, "states")
 
