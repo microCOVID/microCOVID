@@ -603,7 +603,6 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             return True
         if line.Combined_Key == "Yakutat, Alaska, US":
             return True
-        print(line)
     return False
 
 
