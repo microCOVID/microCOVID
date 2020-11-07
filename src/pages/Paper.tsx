@@ -1,35 +1,21 @@
-import { pages } from 'posts/paper/index'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
+
+import { DropdownNav } from 'components/DropdownNav'
+import { MarkdownCombinedPage } from 'components/markdown/MarkdownCombinedPage'
+import { MarkdownContents } from 'components/markdown/PaperPage'
+import { TableOfContents } from 'components/TableOfContents'
+import { pages } from 'posts/paper/index'
 import 'pages/styles/Paper.scss'
-
-import {
-  MarkdownContents,
-  MarkdownNavDropdown,
-  TableOfContents,
-} from 'components/MarkdownPage'
-
-const slugs = Object.keys(pages)
 
 export const Paper = (): React.ReactElement => {
   const { id } = useParams()
 
   if (id === 'all') {
-    return (
-      <div>
-        {slugs.map((pageId, pageIndex) => (
-          <MarkdownContents
-            posts={pages}
-            id={pageId}
-            key={pageIndex}
-            allInOnePage={true}
-          />
-        ))}
-      </div>
-    )
+    return <MarkdownCombinedPage posts={pages} />
   } else {
-    return <MarkdownContents posts={pages} id={id} allInOnePage={false} />
+    return <MarkdownContents posts={pages} id={id} />
   }
 }
 
@@ -67,7 +53,7 @@ export const PaperTOC = (): React.ReactElement => {
 export const PaperNavDropdown = (): React.ReactElement => {
   const { t } = useTranslation()
   return (
-    <MarkdownNavDropdown
+    <DropdownNav
       title={t('menu.whitepaper')}
       baseNavPath="/paper"
       posts={pages}
