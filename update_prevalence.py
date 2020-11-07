@@ -379,7 +379,7 @@ class AllData:
                         self.fips_to_county[county.fips] = county
 
     def rollup_totals(self) -> None:
-        fake_names = ("Unknown", "Unassigned", "Recovered")
+        fake_names = ("Unknown", "Unassigned", "Recovered", "")
 
         def rollup_population(parent: Place, child_attr: str) -> None:
             children: Dict[str, Place] = getattr(parent, child_attr)
@@ -392,6 +392,9 @@ class AllData:
 
         def rollup_cases(parent: Place, child_attr: str) -> None:
             children: Dict[str, Place] = getattr(parent, child_attr)
+
+            # if not parent.name in fake_names:
+            #     return True
 
             if not parent.cumulative_cases:
                 for child in children.values():
@@ -447,7 +450,7 @@ class AllData:
                             # These just don't have any reported cases
                             "Hoonah-Angoon, Alaska, US",
                             "Lake and Peninsula, Alaska, US",
-                            "Yakutat, Alaska, US",
+                            "Yakutat plus Hoonah-Angoon, Alaska, US",
                             "Skagway, Alaska, US",
                             "Unassigned, District of Columbia, US",
                             "Kalawao, Hawaii, US",
@@ -459,7 +462,7 @@ class AllData:
                             "Queens, New York, US",
                             "Richmond, New York, US",
                             # Utah reports by region, not county
-                        ) or county.state == "Utah":
+                        ) or county.state == "Utah" or county.population == 0:
                             pass  # don't warn
                         else:
                             print(f"Discarding {county!r} with no case data")
@@ -599,6 +602,9 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             "Michigan Department of Corrections (MDOC)",
         ):
             return True
+        if line.Combined_Key == "Yakutat, Alaska, US":
+            return True
+        print(line)
     return False
 
 
@@ -648,7 +654,7 @@ def main() -> None:
                 place = data.get_jhu_place(line)
                 if (
                     place.population == 0
-                    and place.name not in ("Unassigned", "Unknown")
+                    and place.name not in ("Unassigned", "Unknown", "")
                 ):
                     raise ValueError(
                         f"JHU data has cases but no population for {place!r}"
