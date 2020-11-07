@@ -44,7 +44,7 @@ module.exports = {
             group: 'sibling',
           },
           {
-            pattern: 'paper/**',
+            pattern: 'posts/**',
             group: 'sibling',
           },
         ],

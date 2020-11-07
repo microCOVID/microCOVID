@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Donation(): React.ReactElement {
+export const Donation: React.FunctionComponent = () => {
   return (
     <div>
       <form
@@ -29,5 +29,3 @@ export function Donation(): React.ReactElement {
     </div>
   )
 }
-
-export default Donation

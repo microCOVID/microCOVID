@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Donation from 'components/Donation'
+import { Donation } from 'components/Donation'
 
 export const Contact = (): React.ReactElement => {
   return (

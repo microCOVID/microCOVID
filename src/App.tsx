@@ -21,7 +21,7 @@ import { PageViews } from 'components/Analytics'
 import { Footer } from 'components/Footer'
 import { ScrollToTop } from 'components/ScrollToTop'
 import { About } from 'pages/About'
-import { Blog, BlogNavDropdown, BlogTOC } from 'pages/Blog'
+import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
@@ -97,7 +97,13 @@ export const App = (): React.ReactElement => {
                     <PaperNavDropdown />
                   </Nav.Item>
                   <Nav.Item>
-                    <BlogNavDropdown />
+                    <NavLink
+                      to="/blog"
+                      className="nav-link"
+                      activeClassName="active"
+                    >
+                      Blog
+                    </NavLink>
                   </Nav.Item>
                   <Nav.Item>
                     <NavLink

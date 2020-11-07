@@ -1,35 +1,17 @@
-import { pages } from 'posts/blog/index'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-import {
-  MarkdownContents,
-  MarkdownNavDropdown,
-  TableOfContents,
-} from 'components/MarkdownPage'
-
-const navPath = '/blog'
+import { BlogPostPage } from 'components/markdown/BlogPostPage'
+import { BlogPosts } from 'posts/blog/BlogPosts'
+import { pages } from 'posts/blog/index'
 
 export const Blog = (): React.ReactElement => {
   const { id } = useParams()
-  return <MarkdownContents posts={pages} id={id} allInOnePage={false} />
+  return <BlogPostPage posts={pages} id={id} />
 }
 
 export const BlogTOC = (): React.ReactElement => {
-  return (
-    <TableOfContents posts={pages} title="Blog" baseNavPath={navPath}>
-      All blog posts:
-    </TableOfContents>
-  )
-}
+  // const { page } = useParams()
 
-export const BlogNavDropdown = (): React.ReactElement => {
-  return (
-    <MarkdownNavDropdown
-      title="Blog"
-      baseNavPath={navPath}
-      posts={pages}
-      enableAll={false}
-    />
-  )
+  return <BlogPosts posts={pages} />
 }

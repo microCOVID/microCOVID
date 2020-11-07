@@ -8,11 +8,25 @@ export interface ImageMeta {
 
 export interface PostContent {
   title: string
-  shortTitle?: string
   content: string
+
+  summary?: string
+  shortTitle?: string
   author?: string
   date?: string
   image?: ImageMeta
+  donation?: boolean
+}
+
+export interface BlogPostContent {
+  title: string
+  content: string
+  author: string
+  date: string
+  image: ImageMeta
+
+  summary?: string
 }
 
 export type PostMap = { [key: string]: PostContent }
+export type BlogPostMap = { [key: string]: BlogPostContent }
