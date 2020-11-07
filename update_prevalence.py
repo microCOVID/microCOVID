@@ -180,8 +180,7 @@ class Place(pydantic.BaseModel):
         daily_cases = []
         current = effective_date
         if current not in self.cumulative_cases:
-            raise ValueError(
-                f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
+            raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
         while len(daily_cases) < 14:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
