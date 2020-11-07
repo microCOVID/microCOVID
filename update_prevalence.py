@@ -468,7 +468,6 @@ class AllData:
                                 # These just don't have any reported cases
                                 "Hoonah-Angoon, Alaska, US",
                                 "Lake and Peninsula, Alaska, US",
-                                "Yakutat plus Hoonah-Angoon, Alaska, US",
                                 "Skagway, Alaska, US",
                                 "Unassigned, District of Columbia, US",
                                 "Kalawao, Hawaii, US",
@@ -622,8 +621,6 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             "Michigan Department of Corrections (MDOC)",
         ):
             return True
-        if line.Combined_Key == "Yakutat, Alaska, US":
-            return True
     return False
 
 
@@ -649,6 +646,14 @@ def main() -> None:
                 # has its own entry so turn the combo into just Bristol Bay
                 line.Admin2 = "Bristol Bay"
                 line.Population = 877  # from Google
+            if (
+                line.Province_State == "Alaska"
+                and line.Admin2 == "Yakutat plus Hoonah-Angoon"
+            ):
+                # These are strangely combined; Lake and Peninsula already
+                # has its own entry so turn the combo into just Bristol Bay
+                line.Admin2 = "Yakutat"
+                line.Population = 604  # from Google
             place = data.get_jhu_place(line)
             if place.population != 0:
                 raise ValueError(
