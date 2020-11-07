@@ -1,0 +1,140 @@
+@import '~styles/_variables.scss';
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+.paperPage {
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 850px;
+
+  h1 { color: $primary}
+
+  h1,h2,h3,h4,h5,h6 {
+    // Flip text and anchor links left-to-right
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+
+    a {
+      opacity: 0;
+    }
+
+    &:hover {
+      a {
+        display: initial;
+        opacity: 1;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  p, ul {
+    margin-bottom: 1.6rem;
+  }
+
+  .warning {
+    border: 2px solid $warning-border;
+    padding: 10px;
+    margin: 2.4rem -12px 1.6rem -12px;
+    background-color: $warning-fill;
+    h2:first-child { margin: 0; }
+    p:last-child { margin-bottom: 0; }
+  }
+
+  code {
+    color: $cyan;
+  }
+
+  .pageTitle {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .pageAuthor {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .sectionIndicator {
+    margin-bottom: 0;
+    color: $gray-500;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-family-sans-serif;
+  }
+
+  .navigation {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $gray-800;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+
+    .next {
+      text-align: right;
+    }
+  }
+
+  table {
+    margin: 40px 0;
+    table-layout: fixed;
+  }
+
+  th {
+    border-bottom: 1px solid $gray-500;
+  }
+
+  td, th {
+    border-right: 1px solid $gray-500;
+    padding: 10px;
+    @include media-breakpoint-up(md) {
+      min-width: 200px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr:nth-child(2n) {
+    background: $gray-200;
+  }
+
+  .calloutText {
+    text-align:center;
+    font-size:1.5em;
+    line-height: 1.5em;
+    margin: 30px 50px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #eee;
+  }
+
+  ol.toc {
+    margin: 20px 0;
+
+    a {
+      padding-left: 3px;
+      text-decoration: none;
+    }
+  }
+
+  hr.footnotes-sep {
+    margin: 40px 0;
+  }
+  section.footnotes {
+    font-size: 14px;
+    max-width: 600px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

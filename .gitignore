@@ -26,3 +26,6 @@ yarn-error.log*
 
 # vscode
 *.code-workspace
+
+# i18next backup files
+src/locales/*_old.json

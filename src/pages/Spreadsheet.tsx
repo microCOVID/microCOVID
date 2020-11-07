@@ -17,7 +17,7 @@ function spreadsheet(text = 'spreadsheet') {
 
 export const Spreadsheet = (): React.ReactElement => {
   return (
-    <div id="paperPage">
+    <div className="paperPage">
       <h1>Spreadsheet</h1>
       <p>
         The {spreadsheet()} is a tool to help you with two things that the{' '}
