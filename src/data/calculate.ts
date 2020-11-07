@@ -183,21 +183,23 @@ export const calculatePersonRiskEach = (
   averagePersonRisk: number,
 ): number | null => {
   try {
-    let risk
     if (data.riskProfile === RiskProfileEnum.HAS_COVID) {
-      risk = ONE_MILLION
+      return ONE_MILLION
     } else if (data.riskProfile === RiskProfileEnum.ONE_PERCENT) {
-      risk = (ONE_MILLION * 0.01) / 50
+      return (ONE_MILLION * 0.01) / 50
     } else if (data.riskProfile === RiskProfileEnum.DECI_PERCENT) {
-      risk = (ONE_MILLION * 0.001) / 50
+      return (ONE_MILLION * 0.001) / 50
     } else if (data.riskProfile === '') {
       // If risk profile isn't selected, call it incomplete
       return null
-    } else {
-      risk = averagePersonRisk
-      risk *= RiskProfile[data.riskProfile].multiplier
     }
-    return risk
+    const risk = averagePersonRisk
+    const riskProfile = RiskProfile[data.riskProfile]
+    if (data.interaction !== 'oneTime' && riskProfile.housemateMultiplier) {
+      // Assumes that the person is one of the housemates and subtracts out their reflected risk.
+      return risk * riskProfile.housemateMultiplier
+    }
+    return risk * riskProfile.multiplier
   } catch (e) {
     return null
   }

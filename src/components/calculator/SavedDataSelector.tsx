@@ -1,6 +1,7 @@
 import { map } from 'lodash'
 import React from 'react'
 import { Form } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 
 import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
@@ -13,10 +14,11 @@ export const SavedDataSelector: React.FunctionComponent<{
   scenarioNameSetter: (newScenario: string) => void
   label?: string
 }> = (props): React.ReactElement => {
+  const { t } = useTranslation()
   const prepopulatedOptions = (
     <React.Fragment>
       {map(prepopulated, (_value, key) => (
-        <option key={key} value={key} selected={props.scenarioName === key}>
+        <option key={key} value={key}>
           {key}
         </option>
       ))}
@@ -43,10 +45,9 @@ export const SavedDataSelector: React.FunctionComponent<{
         size="lg"
         onChange={(e) => setSavedData(e.target.value)}
         id="saved-data"
+        value={props.scenarioName}
       >
-        <option value="" selected={props.scenarioName === ''}>
-          Optional: Start with a predefined common activity...
-        </option>
+        <option value="">{t('calculator.select_scenario')}</option>
         {prepopulatedOptions}
         <IosOptgroup />
       </Form.Control>
