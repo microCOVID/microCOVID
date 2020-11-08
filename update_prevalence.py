@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+
 if sys.version_info < (3, 6):
     sys.exit("This script requires Python 3.6 or later.")
 
@@ -45,6 +46,7 @@ effective_date = calc_effective_date()
 
 # Johns Hopkins dataset
 
+
 class JHUCommonFields(pydantic.BaseModel):
     FIPS: Optional[int]
     Admin2: Optional[str]
@@ -56,7 +58,9 @@ class JHUCommonFields(pydantic.BaseModel):
 
 
 class JHUPlaceFacts(JHUCommonFields):
-    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv"
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv"
 
     UID: int
     iso2: str
@@ -66,7 +70,9 @@ class JHUPlaceFacts(JHUCommonFields):
 
 
 class JHUDailyReport(JHUCommonFields):
-    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/%m-%d-%Y.csv"
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/%m-%d-%Y.csv"
 
     # Last_Update: datetime, but not always in consistent format - we ignore
     Confirmed: int
@@ -78,7 +84,9 @@ class JHUDailyReport(JHUCommonFields):
 
 
 class JHUCasesTimeseriesUS(JHUCommonFields):
-    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv"
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv"
 
     UID: int
     iso2: str
@@ -88,7 +96,9 @@ class JHUCasesTimeseriesUS(JHUCommonFields):
 
 
 class JHUCasesTimeseriesGlobal(pydantic.BaseModel):
-    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
 
     Province_State: Optional[str]
     Country_Region: str
@@ -99,9 +109,12 @@ class JHUCasesTimeseriesGlobal(pydantic.BaseModel):
 
 # Our World in Data dataset:
 
+
 class OWIDTestingData(pydantic.BaseModel):
     # https://ourworldindata.org/coronavirus-testing#download-the-data
-    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv"
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv"
 
     Entity: str
     Date: date
@@ -120,6 +133,7 @@ class OWIDTestingData(pydantic.BaseModel):
 
 
 # CovidActNow dataset:
+
 
 class CANActuals(pydantic.BaseModel):
     population: int
@@ -140,8 +154,12 @@ class CANMetrics(pydantic.BaseModel):
 
 class CANRegionSummary(pydantic.BaseModel):
     # https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md#RegionSummary
-    COUNTY_SOURCE: ClassVar[str] = "https://data.covidactnow.org/latest/us/counties.NO_INTERVENTION.json"
-    STATE_SOURCE: ClassVar[str] = "https://data.covidactnow.org/latest/us/states.NO_INTERVENTION.json"
+    COUNTY_SOURCE: ClassVar[
+        str
+    ] = "https://data.covidactnow.org/latest/us/counties.NO_INTERVENTION.json"
+    STATE_SOURCE: ClassVar[
+        str
+    ] = "https://data.covidactnow.org/latest/us/states.NO_INTERVENTION.json"
 
     countryName: str
     fips: int
@@ -158,11 +176,12 @@ class CANRegionSummary(pydantic.BaseModel):
 
 # Our unified representation:
 
+
 class Place(pydantic.BaseModel):
-    fullname: str                                 # "San Francisco, California, US"
-    name: str                                     # "San Francisco"
-    population: int = 0                           # 881549
-    test_positivity_rate: Optional[float]         # 0.05
+    fullname: str  # "San Francisco, California, US"
+    name: str  # "San Francisco"
+    population: int = 0  # 881549
+    test_positivity_rate: Optional[float]  # 0.05
     cumulative_cases: Dict[date, int] = collections.Counter()
 
     # For some international data we don't get the positivity rate,
@@ -259,9 +278,7 @@ class State(Place):
         result = super().as_app_data()
         if self.country == "US":
             result.topLevelGroup = "US states"
-            result.subdivisions = [
-                county.app_key for county in self.counties.values()
-            ]
+            result.subdivisions = [county.app_key for county in self.counties.values()]
         return result
 
 
@@ -279,7 +296,8 @@ class Country(Place):
             result.label = "United States (all)"
         else:
             result.subdivisions = [
-                state.app_key for state in self.states.values()
+                state.app_key
+                for state in self.states.values()
                 if state.name != "Unknown"
             ]
         return result
@@ -298,9 +316,12 @@ class AppLocation(pydantic.BaseModel):
         population = int(self.population.replace(",", ""))
         reported = (self.casesPastWeek + 1) / population
         underreporting = (
-            10 if self.positiveCasePercentage is None
-            else 6 if self.positiveCasePercentage < 5
-            else 8 if self.positiveCasePercentage < 15
+            10
+            if self.positiveCasePercentage is None
+            else 6
+            if self.positiveCasePercentage < 5
+            else 8
+            if self.positiveCasePercentage < 15
             else 10
         )
         delay = 1.0 + (self.casesIncreasingPercentage / 100)
@@ -441,22 +462,26 @@ class AllData:
             for state in list(country.states.values()):
                 for county in list(state.counties.values()):
                     if not county.cumulative_cases:
-                        if county.fullname in (
-                            # These just don't have any reported cases
-                            "Hoonah-Angoon, Alaska, US",
-                            "Lake and Peninsula, Alaska, US",
-                            "Skagway, Alaska, US",
-                            "Unassigned, District of Columbia, US",
-                            "Kalawao, Hawaii, US",
-                            # These are reported under a combined name
-                            "Dukes, Massachusetts, US",
-                            "Nantucket, Massachusetts, US",
-                            "Bronx, New York, US",
-                            "Kings, New York, US",
-                            "Queens, New York, US",
-                            "Richmond, New York, US",
-                            # Utah reports by region, not county
-                        ) or county.state == "Utah":
+                        if (
+                            county.fullname
+                            in (
+                                # These just don't have any reported cases
+                                "Hoonah-Angoon, Alaska, US",
+                                "Lake and Peninsula, Alaska, US",
+                                "Skagway, Alaska, US",
+                                "Unassigned, District of Columbia, US",
+                                "Kalawao, Hawaii, US",
+                                # These are reported under a combined name
+                                "Dukes, Massachusetts, US",
+                                "Nantucket, Massachusetts, US",
+                                "Bronx, New York, US",
+                                "Kings, New York, US",
+                                "Queens, New York, US",
+                                "Richmond, New York, US",
+                                # Utah reports by region, not county
+                            )
+                            or county.state == "Utah"
+                        ):
                             pass  # don't warn
                         else:
                             print(f"Discarding {county!r} with no case data")
@@ -573,6 +598,8 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
 
 
 def ignore_jhu_place(line: JHUCommonFields) -> bool:
+    if line.Combined_Key == "":
+        return True
     if line.Province_State in (
         "Diamond Princess",
         "Grand Princess",
@@ -582,9 +609,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Veteran Hospitals",
     ):
         return True
-    if line.Country_Region in (
-        "Diamond Princess", "Grand Princess", "MS Zaandam"
-    ):
+    if line.Country_Region in ("Diamond Princess", "Grand Princess", "MS Zaandam"):
         return True
     if line.Country_Region == "US":
         if line.Province_State == "Recovered":
@@ -621,6 +646,14 @@ def main() -> None:
                 # has its own entry so turn the combo into just Bristol Bay
                 line.Admin2 = "Bristol Bay"
                 line.Population = 877  # from Google
+            if (
+                line.Province_State == "Alaska"
+                and line.Admin2 == "Yakutat plus Hoonah-Angoon"
+            ):
+                # These are strangely combined; Lake and Peninsula already
+                # has its own entry so turn the combo into just Bristol Bay
+                line.Admin2 = "Yakutat"
+                line.Population = 604  # from Google
             place = data.get_jhu_place(line)
             if place.population != 0:
                 raise ValueError(
@@ -643,12 +676,12 @@ def main() -> None:
                 if ignore_jhu_place(line):
                     continue
                 place = data.get_jhu_place(line)
-                if (
-                    place.population == 0
-                    and place.name not in ("Unassigned", "Unknown")
+                if place.population == 0 and place.name not in (
+                    "Unassigned",
+                    "Unknown",
                 ):
                     raise ValueError(
-                        f"JHU data has cases but no population for {place!r}"
+                        f"JHU data has cases but no population for {place!r} with line data: {line!r}"
                     )
                 place.cumulative_cases[current] = line.Confirmed
             current -= timedelta(days=1)
@@ -677,7 +710,9 @@ def main() -> None:
                 if line.Short_term_positive_rate is not None:
                     country.test_positivity_rate = line.Short_term_positive_rate
                 elif line.Seven_day_smoothed_daily_change:
-                    country.tests_in_past_week = line.Seven_day_smoothed_daily_change * 7
+                    country.tests_in_past_week = (
+                        line.Seven_day_smoothed_daily_change * 7
+                    )
 
     finally:
         cache.save()
@@ -740,8 +775,9 @@ def main() -> None:
             skipping = False
         if "// update_prevalence date" in line:
             output.append(
-                "export const PrevalenceDataDate = '{}' // update_prevalence date\n"
-                .format(effective_date.strftime("%B %d, %Y"))
+                "export const PrevalenceDataDate = '{}' // update_prevalence date\n".format(
+                    effective_date.strftime("%B %d, %Y")
+                )
             )
             missing_markers.remove("date")
             continue
@@ -789,6 +825,7 @@ def main() -> None:
                     subfile.write(
                         ",".join(app_locations[subkey].as_csv_data().values()) + "\n"
                     )
+
 
 if __name__ == "__main__":
     main()
