@@ -1,1 +1,141 @@
-{}
+{
+    "calculator": {
+        "riskreduction": {
+            "housemates_header": "Her har du noen måter du kan fungere sammen med dine nærkontakter for å redusere deres risiko"
+        },
+        "type_of_interaction": "Er dette en enkeltstående aktivitet, eller noe gjentagende?",
+        "risk_step_label": "Steg 2: Beskriv aktiviteten",
+        "prevalence": {
+            "reported_prevalence": "Rapportert hyppighet",
+            "positive_case_percentage": "Prosent av tester med påvist smitteformodning",
+            "percent_increase_in_cases": "Prosentvis økning i smittetilfeller siste uke",
+            "cases_stable_or_decreasing": "Stabilt eller synkende antall smittetilfeller.",
+            "adjusted_prevalence": "Justert hyppighet",
+            "data_last_updated": "Data sist oppdatert",
+            "population": "Total befolkning",
+            "last_week_cases": "Innrapportere tilfeller siste uke",
+            "details_header": "Detaljer"
+        },
+        "location_subprompt_US-AK": "Hele fylke, eller velg bydel …",
+        "explanationcard": {
+            "risk_budget_header": "Hvor mye av dette kan jeg foreta meg, gitt mitt risikobudsjett?",
+            "details_range_number": "{{ from }} og {{ to }} mikroCOVID-er",
+            "details_range": "Antagelig mellom",
+            "risk_tolerance_selector_header": "Juster din risikotoleranse",
+            "risk_budget_used": "Budsjett brukt",
+            "risk_budget_available": "Budsjett tilgjengelig",
+            "details_frequency": "Hyppighet",
+            "details_total_risk": "Total risiko",
+            "details_number_of_people": "Antall folk",
+            "chance": "sjanse",
+            "details_person_risk_number": "{{ person_risk }}-per-million-sjanse",
+            "details_steps_header": "Kalkuleringssteg",
+            "details_activity_risk": "Aktivitetsrisiko",
+            "details_person_risk": "Personrisiko",
+            "details_overview_header": "Kalkulasjon",
+            "details_header_open": "Skjul kalkulatordetaljer",
+            "details_header_closed": "Vis kalkulatordetaljer",
+            "percentage_suffix": "% av ditt ukentlige riskobudsjett",
+            "multiple_suffix": "x ditt ukentlige risiko-budsjett",
+            "person": "person",
+            "person_plural": "personer"
+        },
+        "precautions": {
+            "their_mask_header": "Deres maske",
+            "volume_question": "Hvor mye snakkes det?",
+            "volume_header": "Lydstyrke",
+            "their_mask_note": "Hvis de spiser eller drikker, velg «Ingen maske»",
+            "their_mask_question": "Hvilken maske bruker ANDRE?",
+            "your_mask_note": "Hvis du spiser eller drikker, velg «Ingen maske»",
+            "your_mask_question": "Hvilken maske bruker DU?",
+            "your_mask_header": "Din maske",
+            "environment_question": "Er det inne eller utendørs?",
+            "environment_header": "Miljø",
+            "label": "Forhåndsregler"
+        },
+        "warning": {
+            "important": "Viktig"
+        },
+        "risk_group_empty_warning": "Først, skriv inn din plassering",
+        "firsttime": {
+            "budget_header": "Hvordan kan jeg håndtere min risiko med et risikobudsjett?",
+            "microcovid_header": "Hva er mikroCOVID?"
+        },
+        "select_location_enter_manually": "Skriv inn data manuelt …",
+        "select_location_placeholder": "Velg sted …",
+        "location_selector_header": "Steg 1: Skriv inn din plassering",
+        "location_subprompt_US": "Hele fylket, eller velg land …",
+        "location_subprompt_US-LA": "Hele fylket, eller velg by …",
+        "location_subprompt_country_or_regions": "Hele landet, eller velg region …",
+        "category_postfix": "Risiko",
+        "category_extreme": "Ekstrem",
+        "category_dangerously_high": "Farlig høy",
+        "category_very_high": "Veldig høy",
+        "category_high": "Høy",
+        "category_moderate": "Moderat",
+        "category_low": "Lav",
+        "category_very_low": "Veldig lav",
+        "person_risk_profile_header": "Risikoprofil",
+        "person_risk_profile_question": "Hva er deres risikoprofil?",
+        "duration_question": "Hvor lenge pågår aktiviteten, i minutter?",
+        "duration_header": "Varighet",
+        "distance_header": "Avstand",
+        "distance_question": "Hvor nær er disse folkene, gjennomsnittlig?",
+        "people_count": "Folk",
+        "number_of_people_near_you_onetime": "Hvor mange folk er vanligvis nær deg i løpet av denne aktiviteten?",
+        "number_of_people_near_you_partner": "Hvor mange folk bor du sammen med?",
+        "nearby_people_label": "Folk i nærheten",
+        "pointsdisplay": {
+            "empty_warning": "Fyll inn kalkulator for å se risikonivå",
+            "range": "antagelig mellom: {{ from }} til {{ to }}",
+            "microCOVIDs": "mikroCOVID-er"
+        }
+    },
+    "data": {
+        "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
+        "normal_voice": "Normal samtale",
+        "person": {
+            "hasCovid": "Har COVID-19",
+            "bars": "Går ofte på byen",
+            "livingWithPartner": "Bor med partner, begge handler kun i matbutikk",
+            "livingAlone": "Bor alene og handler kun i matbutikk",
+            "average": "En gjennomsnittlig person i ditt område"
+        },
+        "basic_mask": "Bomullsmakse, bandana, eller buff",
+        "filtered_mask": "Kirurgisk maske, eller maske med PM2.5-filter isatt",
+        "no_mask": "Ingen maske eller dårlig ikledd maske",
+        "intimate_distance": "Kyssing",
+        "outdoor": "Utendørs",
+        "indoor": "Innendørs",
+        "repeated": "Husstandsmedlem [{{ percentage }} sjanse for smitte per uke]",
+        "oneTime": "Engangsmøte [{{ percentage }} sjanse for smitte per time]"
+    },
+    "button": {
+        "reset_form": "Tilbakestill skjema.",
+        "copy_link": "Kopier lenke til dette scenariet"
+    },
+    "about": {
+        "donations_header": "Donasjoner",
+        "contact_us_header": "Kontakt oss",
+        "data_inputs_calculator": "en <1>kalkulator</1> du kan bruke for å regne ut din risiko for COVID-19",
+        "data_inputs_lead": "Denne nettsiden inneholder gir utløp for tre utforskningstilnærminger"
+    },
+    "scenario": {
+        "1person_15minCarRide": "Biltur med én person i ett kvarter",
+        "indoorUnmasked2": "Innendørs umaskert møte mellom to personer",
+        "outdoorMasked2": "Utendørs maskert møte mellom to personer"
+    },
+    "buttons": {
+        "select_default_action": "Velg én …"
+    },
+    "each time": "hver gang",
+    "each time you do it": "hver gang du gjør det",
+    "per week": "per uke",
+    "current_lang_two_letter_code": "nb",
+    "menu": {
+        "contactus": "Kontakt oss",
+        "spreadsheet": "Regneark",
+        "about": "Om",
+        "calculator": "Kalkulator"
+    }
+}
