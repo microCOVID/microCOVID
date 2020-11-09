@@ -131,7 +131,10 @@
     "risk_step_label": "2. lépés: Mit csinálsz?",
     "type_of_interaction": "Egyszeri tevékenység vagy folyamatos kapcsolat?",
     "risk_group_empty_warning": "Először válaszd ki, hogy hol vagy",
-    "warning": "Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és ezt az eszköz nem is ment át tudományos szintű felülvizsgálaton. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat."
+    "warning": {
+      "important": "Fontos figyelmeztetés",
+      "body": "Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és ezt az eszköz nem is ment át tudományos szintű felülvizsgálaton. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat."
+    }
   },
   "per week": " hetente",
   "each time you do it": "minden egyes alkalommal",
