@@ -98,7 +98,7 @@ Let’s now explore how to quantify the risk of various activities in terms of m
      * Among people over 60, this rises to 2-3% and doubles with every 10 years over 70.
      * A 0.1% chance of death is equivalent to...
        * Driving 100,000 miles ([IIHS](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state))
-       * Base jumping for 16 years ([Wikipedia](https://en.wikipedia.org/wiki/BASE_jumping#Safety))
+       * Base jumping 3 times ([Wikipedia](https://en.wikipedia.org/wiki/BASE_jumping#Safety))
        * 167 skydiving jumps ([Skydive California](https://skydivecalifornia.com/blog/skydiving-statistics))
     
     Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolearnce.
