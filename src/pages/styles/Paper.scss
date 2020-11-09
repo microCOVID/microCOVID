@@ -49,9 +49,14 @@
     margin-bottom: 0;
   }
   
-  .pageAuthor {
-    margin-top: 10px;
+  .postAuthor {
     font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .postDate {
+    color: $gray-500;
+    margin-bottom: 10px;
   }
 
   .sectionIndicator {
