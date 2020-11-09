@@ -292,7 +292,7 @@ export const Calculator = (): React.ReactElement => {
             <b>
               <Trans>calculator.warning.important</Trans>:{' '}
             </b>
-            <Trans>calculator.warning</Trans>
+            <Trans>calculator.warning.body</Trans>
           </p>
         </Col>
       </Row>
