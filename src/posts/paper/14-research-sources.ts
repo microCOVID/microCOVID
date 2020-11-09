@@ -52,9 +52,7 @@ We combine these numbers to estimate approximately a 4x reduction. Again, this i
 
 We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
 
-For n95 masks, we get our figure from [Jimenez et al.](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277&range=C190:J190) who suggest that, while a perfect fit with an n95 is 99% efficient at filtering out aerosols, average use causes them to discount this to 90%.
-
-In the spreadsheet, we speculatively add professionally fit-tested n95 masks and P100 respirators (the latter because the soft silicone is more likely to have a good seal) at the full 99% filteration efficiency listed above.
+For N95 masks, we get our figure from [Jimenez et al.](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277&range=C190:J190) who suggest that, while a perfect fit with an n95 is 99% efficient at filtering out aerosols, average use causes them to discount this to 90%.
 
 #### Outdoor
 
