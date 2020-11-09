@@ -206,6 +206,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           onChange={(e) => {
             setLocationData(e.target.value, '')
           }}
+          aria-label={t('calculator.select_location_placeholder')}
         >
           <option value="">
             {t('calculator.select_location_placeholder')}
@@ -236,6 +237,8 @@ export const PrevalenceControls: React.FunctionComponent<{
                 setLocationData(data.topLocation, e.target.value)
               }
             }}
+            aria-label={subPrompt}
+            data-testid="sublocation"
           >
             <option value="">{subPrompt}</option>
             {Locations[data.topLocation].subdivisions.map((key, index) => (

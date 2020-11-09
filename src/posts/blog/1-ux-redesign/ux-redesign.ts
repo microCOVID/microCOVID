@@ -1,10 +1,8 @@
-import { ImageMeta } from 'posts/post'
-
 import thermometer_social from './thermometer-social.png'
 import thermometer from './thermometer.png'
+import { ImageMeta } from 'posts/post'
 
-const shortTitle = 'Microcovid UX and functional update'
-const title = shortTitle
+const title = 'Microcovid UX and functional update'
 
 const author = 'Team microCOVID'
 const date = 'October 30, 2020'
@@ -13,6 +11,9 @@ const image: ImageMeta = {
   width: 1290,
   height: 675,
 }
+
+const summary =
+  'We’ve been hard at work improving the microCOVID calculator to make it better and easier to use.  Today we’re announcing Version 2 of our calculator.  Much of the interface will feel familiar, but there have been some changes to reduce confusion and improve the user flow.'
 
 const content = `Hi everyone!
 
@@ -35,5 +36,4 @@ We’ve also introduced some functional changes in the modeling:
 We have more changes on the way that we’ll be excited to share with you!  Feedback on the new version is welcome at [info@microcovid.org](mailto:info@microcovid.org).
 `
 
-const post = { title, shortTitle, content, author, date, image }
-export default post
+export const post = { title, summary, content, author, date, image }

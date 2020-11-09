@@ -11,13 +11,13 @@ import { recordCalculatorChanged } from 'components/Analytics'
 import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
 import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
+import { FirstTimeUserIntroduction } from 'components/calculator/FirstTimeUserIntroduction'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
 import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
-import { FirstTimeUserIntroduction } from 'components/FirstTimeUserIntroduction'
 import {
   CalculatorData,
   calculate,
@@ -290,9 +290,9 @@ export const Calculator = (): React.ReactElement => {
         <Col lg={{ span: 8, offset: 4 }}>
           <p className="warning" style={{ margin: '0' }}>
             <b>
-              <Trans>calculator.warning.important</Trans>:
+              <Trans>calculator.warning.important</Trans>:{' '}
             </b>
-            <Trans>calculator.warning</Trans>
+            <Trans>calculator.warning.body</Trans>
           </p>
         </Col>
       </Row>

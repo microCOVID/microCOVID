@@ -14,7 +14,7 @@ i18n
       hu: { translation: hu },
     },
     fallbackLng: 'en',
-    keySeparator: false,
+    keySeparator: '.',
     nsSeparator: false,
     detection: {
       caches: ['localStorage', 'cookie'],
@@ -35,7 +35,7 @@ i18n
         'ul',
       ],
     },
-    debug: true,
+    debug: false,
   })
 
 export default i18n
