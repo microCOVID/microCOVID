@@ -290,9 +290,9 @@ export const Calculator = (): React.ReactElement => {
         <Col lg={{ span: 8, offset: 4 }}>
           <p className="warning" style={{ margin: '0' }}>
             <b>
-              <Trans>calculator.warning.important</Trans>:
+              <Trans>calculator.warning.important</Trans>:{' '}
             </b>
-            <Trans>calculator.warning</Trans>
+            <Trans>calculator.warning.body</Trans>
           </p>
         </Col>
       </Row>

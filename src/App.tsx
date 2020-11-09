@@ -124,7 +124,7 @@ export const App = (): React.ReactElement => {
                     </NavLink>
                   </Nav.Item>
                 </Nav>
-                <Nav className="ml-auto">
+                <Nav>
                   <DropdownButton
                     variant="Info"
                     title={'🌐 ' + t('current_lang_two_letter_code')}
