@@ -53,11 +53,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
       ) : null}
       {data.setting === 'filtered' && (
         <div className="warning">
-          <Trans>calculator.precautions.filtered_ensure_airflow</Trans>{' '}
-          <Link to="/paper/14-research-sources#ventilation">
-            <Trans>calculator.precautions.filtered_ensure_airflow_link</Trans>
-          </Link>
-          .
+          <Trans i18nKey="calculator.precautions.filtered_ensure_airflow">
+            Ensure airflow, see
+            <Link to="/paper/14-research-sources#ventilation">here</Link>
+          </Trans>
         </div>
       )}
       {data.distance !== 'intimate' && (

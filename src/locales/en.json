@@ -19,8 +19,7 @@
       "their_mask_header": "Their mask",
       "their_mask_question": "What mask are THEY wearing?",
       "their_mask_note": "If they’re eating or drinking, select “no mask”",
-      "filtered_ensure_airflow": "Ensure sufficient flow through the filter for your room. For help on how to do this, see",
-      "filtered_ensure_airflow_link": "here",
+      "filtered_ensure_airflow": "Ensure sufficient flow through the filter for your room. For help on how to do this, see <1>here</1>.",
       "volume_header": "Volume",
       "volume_question": "How much is everyone talking?"
     },
