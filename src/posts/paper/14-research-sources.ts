@@ -36,7 +36,7 @@ Their other two estimation methods use independent datasets. Although these two 
 This is a highly speculative number. [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) found a 1.6x higher infection rate among spouses than among other adult household members. This is just one datapoint, but it’s the best we have right now. We use this to adjust the 30% figure from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) up by 1.6x, to get 48% for spouses.
 
 
-### Modifiers to Activity Risk: Masked, Outdoors, Distanced
+### Modifiers to Activity Risk: Masked, Outdoors/Ventilation, Distanced
 
 #### Masks
 
@@ -54,8 +54,9 @@ We combine these numbers to estimate approximately a 4x reduction. Again, this i
 
 We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
 
-#### Outdoor
+#### Outdoor / Ventilation
 
+##### Outdoor
 This is one of the tougher numbers to estimate, but we currently feel good estimating that being outdoors reduces your risk by more than 20x (unless you’re super close together, in which case we’re really not sure).
 
 Almost every news article about outdoor transmission cites the same two sources: [Nishiura et al.](https://www.medrxiv.org/content/10.1101/2020.02.28.20029272v2) and [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) Nishiura et al. is the source of the “18.7x” figure that we see all over the place, but we don’t put much stock in this specific paper for two reasons. For one, many summaries seem to miss that this is an _odds ratio_ and not a relative risk ratio (that is, it tells us that 18.7x as many of the transmissions came from indoors, but if people in general usually had 18.7x as much indoor contact as outdoor contact, this would not imply any difference in risk!).[^1] For another, Nishiura et al. also uses a very small sample size, it’s only six scant pages with very little explanation, and we can’t make heads or tails of the bar chart at the end.
@@ -73,8 +74,29 @@ Finally, there have been zero outdoor outbreaks of any kind in the US, whereas i
 
 The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hurford assumes a 5x benefit from being outdoors. We feel good about calling it “more than 20x” for now and waiting for more evidence, with a warning about not trusting this number if you’re very close to one another because we have no data about outdoor cuddling.
 
-#### Distance
+##### Ventilation
+We draw our figure for room with HEPA filters from [Curtius & Schrod](https://www.medrxiv.org/content/10.1101/2020.10.02.20205633v2), who found that running HEPA filters in a class room with total hourly flow rate equal to 5x the volume of the room to decrease the concentration of aerosols in the room by 90%. They further project that this would decrease the liklihood of COVID transmission by 3x for a 1-hour interaction and 6x for a 2-hour interaction. We split the difference apply 4x in the calculator (but note that the longer your interaction lasts, the greater an impact air purifiers will have). We note that simply circulating air is insufficient - the air must either be exchanged with the outside or passed through a high quality filter (HEPA is equivalent to P100; HVAC filters rated on the MERV scale do not meet this critieria.)
 
+It's important that your filter is actually circulating sufficient air. 
+* Look up the model of your air purifier online; it should have a rating in CFM, which will be for running at maximum. 
+* Measure the length and width of your room in feet. 
+* For a normal room height (8ft), ensure \`CFM > 2/3 * length * width\`
+
+The derivation of this rule is as follows:
+\`\`\`
+Refreshes/hr = 60 min/hr * CFM ft^3/min / (length ft * width ft * height ft) = 5
+60 * CFM / (length * width * height) = 5
+CFM = 5 * (length * width * height) / 60
+CFM = 1/12 * (length * width * height)
+if height = 8ft,
+CFM = 2/3 * (square footage)
+\`\`\`
+
+From this, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down and partially enclosed spaces (i.e. at least one wall is open to outside air).
+
+Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's (BART)[https://www.bart.gov/news/articles/2020/news20200813] claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. [American Airlines](https://news.aa.com/news/news-details/2020/How-HEPA-Filters-Have-Been-Purifying-Cabin-Air-Since-the-1990s-FLT-06/) states that their airplanes filter a cabin's worth of air every 2-4 minutes, or 15-30 times per hour.
+
+#### Distance
 This is another [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) estimate. Each meter of distance was associated with about a 2x reduction in infection risk; specifically they find that being one meter apart is 2x better than baseline, and two meters 2x better than one meter. They speculate, and we agree, that three meters is thus likely at least 2x better than two meters. Although these data come from a healthcare setting in which “0m” means direct physical contact with the patient, we instead conservatively take “baseline” as “normal socializing” ≈ one meter. When doing our own personal risk calculations, we estimate “cuddling” = zero meters as twice as risky as baseline.
 
 We get some corroboration for this number from the study of train passengers, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) Looking for example at Figure 3, for passengers that were 1 row apart, moving an additional 2 columns away (seats 0.5m wide, so about 1m away) decreased the risk from what we eyeball as 0.2ish to 0.1ish, and then from 0.1ish to 0.05ish for an additional 2 columns. It’s worth noting that they report a steeper drop from sitting _right next to_ the index patient to sitting 1m away, which could be relevant to hangouts at closer than a normal social distance from someone.
