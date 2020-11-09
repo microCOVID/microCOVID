@@ -1,1 +1,66 @@
-{}
+{
+    "calculator": {
+        "riskreduction": {
+            "housemates_header": "Voici quelques manières de travailler avec des contacts étroits pour réduire le risque"
+        },
+        "pointsdisplay": {
+            "microCOVIDs": "microCOVIDs",
+            "empty_warning": "Complétez les champs du calculateur pour voir le niveau de risque",
+            "range": "probablement entre : {{ from }} et {{ to }}"
+        },
+        "explanationcard": {
+            "risk_tolerance_selector_header": "Ajustez votre tolérance au risque",
+            "risk_budget_usage_explanation": "Cette interaction utilise <strong> {{ usage }} </strong>. Ce montant de votre budget sera utilisé <strong> {{ frequency }} </strong>.",
+            "risk_budget_used": "Budget utilisé",
+            "risk_budget_explanation": "Vous avez sélectionné un budget annuel de {{ budget_percent }} chances d’être contaminé par la COVID-19 par an ({{ budget_points }} microCOVID). Cela équivaut à un budget hebdomadaire de <strong> {{ budget_weekly }} microCOVID par semaine </strong>.",
+            "frequency_explanation_oneoff": "Puisqu’il s’agit d’une interaction unique, le résultat est affiché sous la forme <strong> microCOVID <u>chaque fois</u> que vous avez cette interaction</strong>. Si vous pratiquer cette activité plusieurs fois par semaine, chaque fois que vous la pratiquer, elle sera comptabilisée dans votre budget hebdomadaire. Si vous faites cette activité plusieurs fois avec les mêmes personnes chaque semaine, entrez-les sous la forme « {{ repeated_type_suggestion }} » pour voir quel est le taux de transmission maximal par semaine.",
+            "risk_budget_available": "Budget disponible",
+            "risk_budget_header": "À quel point puis-je faire ceci étant donné mon risque hebdomadaire ?",
+            "details_range_explanation": "Nous croyons avec une certitude d’environ 90 % que le risque réel se situe entre ces deux valeurs. Consultez notre <2>estimation de l’incertitude</2>.",
+            "details_range_number": "{{ from }} et {{ to }} microCOVIDs",
+            "details_range": "Probablement entre",
+            "frequency_explanation_repeated": "Puisque vous voyez ces personnes plusieurs fois par semaine, le résultat que vous voyez est de <strong>microCOVID <u>par semaine</u></strong>.",
+            "details_frequency": "Fréquence",
+            "details_total_risk_explanation": "Enfin, nous multiplions le risque personnel, le risque de l’activité et le nombre de personnes pour obtenir le résultat total d’environ <strong>{{ points }} chances sur un million ({{ percentage }})</strong> d’être contaminé par la COVID-19 en faisant cette activité avec ces personnes <strong>{{ frequency }}</strong>.",
+            "details_total_risk_number": "{{ points }} sur un million ({{ percentage }})",
+            "details_total_risk": "Risque total",
+            "details_number_of_people": "Nombre de personnes",
+            "details_activity_risk_explanation": "Ensuite, nous calculons le risque de l’activité. Une personne pendant cette activité avec la COVID-19 aurait une <strong>{{ activity_risk }} chance</strong> de vous la transmettre.",
+            "details_person_risk_explanation": "D’abord, nous calculons que chaque autre personne dans cette zone a une <strong>{{ person_risk }} chance sur un million</strong> d’avoir actuellement la COVID-19.",
+            "chance": "chance",
+            "details_person_risk_explanation_housemate": "D’abord, nous calculons que chaque autre personne dans cette zone a une <strong>{{ person_risk }} chance sur un million</strong> d’avoir actuellement la COVID-19, sans compter le risque du fait de vivre avec vous.",
+            "details_person_risk_number": "{{ person_risk }} chance(s) sur un million",
+            "details_steps_header": "Étapes de calcul",
+            "details_overview_header": "Calcul",
+            "details_header_open": "Masquer les détails de calcul",
+            "details_header_closed": "Afficher les détails de calcul",
+            "percentage_suffix": "% de votre budget de risque hebdomadaire",
+            "multiple_suffix": "x votre budget de risque hebdomadaire",
+            "person": "personne",
+            "person_plural": "personnes"
+        },
+        "risk_note_about_household_members": "Lors de l’estimation du risque d’infection d’un membre du ménage ou d’un partenaire/conjoint, nous supposons que ces interactions sont à l’intérieur, non masquées et non éloignées.",
+        "precautions": {
+            "volume_question": "À quel point les gens parlent-ils ?",
+            "volume_header": "Volume",
+            "their_mask_note": "S’ils mangent ou boivent, sélectionnez « pas de masque »",
+            "their_mask_question": "Quel masque portent-ils ?",
+            "their_mask_header": "Leur masque",
+            "your_mask_note": "Si vous mangez ou buvez, sélectionnez « pas de masque »",
+            "your_mask_question": "Quel masque portez-vous ?",
+            "your_mask_header": "Votre masque",
+            "no_intimate_bonus_outdoors": "En raison des distances très proches, nous ne sommes pas convaincus qu’être à l’extérieur réduit le risque de manière substantielle. Ainsi, nous n’offrons aucun bonus pour être à l’extérieur quand le contexte est intime.",
+            "environment_question": "Est-ce à l’intérieur ou à l’extérieur ?",
+            "environment_header": "Environnement",
+            "label": "Précautions"
+        }
+    },
+    "current_lang_two_letter_code": "fr",
+    "menu": {
+        "whitepaper": "Livre blanc",
+        "contactus": "Nous contacter",
+        "spreadsheet": "Feuille de calcul",
+        "about": "À propos",
+        "calculator": "Calculateur"
+    }
+}
