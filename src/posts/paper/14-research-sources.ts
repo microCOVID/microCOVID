@@ -77,6 +77,21 @@ The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hu
 ##### Ventilation
 We draw our figure for room with HEPA filters from [Curtius & Schrod](https://www.medrxiv.org/content/10.1101/2020.10.02.20205633v2), who found that running HEPA filters in a class room with total hourly flow rate equal to 5x the volume of the room to decrease the concentration of aerosols in the room by 90%. They further project that this would decrease the liklihood of COVID transmission by 3x for a 1-hour interaction and 6x for a 2-hour interaction. We split the difference apply 4x in the calculator (but note that the longer your interaction lasts, the greater an impact air purifiers will have). We note that simply circulating air is insufficient - the air must either be exchanged with the outside or passed through a high quality filter (HEPA is equivalent to P100; HVAC filters rated on the MERV scale do not meet this critieria.)
 
+It's important that your filter is actually circulating sufficient air. 
+* Look up the model of your air purifier online; it should have a rating in CFM, which will be for running at maximum. 
+* Measure the length and width of your room in feet. 
+* For a normal room height (8ft), ensure \`CFM > 2/3 * length * width\`
+
+The derivation of this rule is as follows:
+\`\`\`
+Refreshes/hr = 60 min/hr * CFM ft^3/min / (length ft * width ft * height ft) = 5
+60 * CFM / (length * width * height) = 5
+CFM = 5 * (length * width * height) / 60
+CFM = 1/12 * (length * width * height)
+if height = 8ft,
+CFM = 2/3 * (square footage)
+\`\`\`
+
 From this, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down and partially enclosed spaces (i.e. at least one wall is open to outside air).
 
 Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's (BART)[https://www.bart.gov/news/articles/2020/news20200813] claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. [American Airlines](https://news.aa.com/news/news-details/2020/How-HEPA-Filters-Have-Been-Purifying-Cabin-Air-Since-the-1990s-FLT-06/) states that their airplanes filter a cabin's worth of air every 2-4 minutes, or 15-30 times per hour.

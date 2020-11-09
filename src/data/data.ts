@@ -48,9 +48,9 @@ export const Setting: { [key: string]: FormValue } = {
   outdoor: { label: i18n.t('data.outdoor'), multiplier: 0.05 },
   filtered: { label: i18n.t('data.filtered'), multiplier: 0.25 },
   transit: { label: i18n.t('data.transit'), multiplier: 0.25 },
-  carWindowsDown: { label: i18n.t('data.carWindowsDown'), multiplier: 0.25 },
+  carWindowsDown: { label: i18n.t('data.car_windows_down'), multiplier: 0.25 },
   partiallyEnclosed: {
-    label: i18n.t('data.partiallyEnclosed'),
+    label: i18n.t('data.partially_enclosed'),
     multiplier: 0.25,
   },
 }

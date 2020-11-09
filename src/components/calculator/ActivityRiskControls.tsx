@@ -51,6 +51,15 @@ export const ActivityRiskControls: React.FunctionComponent<{
           <Trans>calculator.precautions.no_intimate_bonus_outdoors</Trans>
         </div>
       ) : null}
+      {data.setting === 'filtered' && (
+        <div className="warning">
+          <Trans>calculator.precautions.filtered_ensure_airflow</Trans>{' '}
+          <Link to="/paper/14-research-sources#ventilation">
+            <Trans>calculator.precautions.filtered_ensure_airflow_link</Trans>
+          </Link>
+          .
+        </div>
+      )}
       {data.distance !== 'intimate' && (
         <>
           <SelectControl
