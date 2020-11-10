@@ -1,7 +1,9 @@
 {
     "calculator": {
         "riskreduction": {
-            "housemates_header": "Her har du noen måter du kan fungere sammen med dine nærkontakter for å redusere deres risiko"
+            "housemates_header": "Her har du noen måter du kan fungere sammen med dine nærkontakter for å redusere deres risiko",
+            "onetime_warning": "Disse kan eller kan ikke ha innvirkning på din aktivitet.",
+            "onetime_header": "Her har du noen måter å redusere risikoen for denne aktiviteten"
         },
         "type_of_interaction": "Er dette en enkeltstående aktivitet, eller noe gjentagende?",
         "risk_step_label": "Steg 2: Beskriv aktiviteten",
@@ -38,7 +40,9 @@
             "percentage_suffix": "% av ditt ukentlige riskobudsjett",
             "multiple_suffix": "x ditt ukentlige risiko-budsjett",
             "person": "person",
-            "person_plural": "personer"
+            "person_plural": "personer",
+            "risk_budget_usage_explanation": "Denne interaksjonen bruker <strong>{{ usage }}</strong>. Denne mengden av budsjettet ditt vil bli brukt <strong>{{ frequency }}</strong>.",
+            "frequency_explanation_repeated": "Siden du møter disse folkene flere ganger i uken, er resultatet du ser <strong>mikroCOVID-er <u>per uke</u></strong>."
         },
         "precautions": {
             "their_mask_header": "Deres maske",
@@ -51,7 +55,8 @@
             "your_mask_header": "Din maske",
             "environment_question": "Er det inne eller utendørs?",
             "environment_header": "Miljø",
-            "label": "Forhåndsregler"
+            "label": "Forhåndsregler",
+            "no_intimate_bonus_outdoors": "Som følge av nærheten til andre, antas det at å være utendørs ikke minsker risikoen i særlig grad. Det gis altså ingen bonus for å være utendørs ved intimitet."
         },
         "warning": {
             "important": "Viktig"
@@ -59,7 +64,8 @@
         "risk_group_empty_warning": "Først, skriv inn din plassering",
         "firsttime": {
             "budget_header": "Hvordan kan jeg håndtere min risiko med et risikobudsjett?",
-            "microcovid_header": "Hva er mikroCOVID?"
+            "microcovid_header": "Hva er mikroCOVID?",
+            "microcovid_explanation": "<p>Kalkulatoren introduserer et nytt konsept, altså mikroCOVID. Én mikroCOVID er en én av en milliontedels sjanse for å bli smittet med COVID-19.</p> <p>En aktivitet som beløper seg til 20000 mikroCOVID-er er veldig utrygt, siden du har 2% risiko for å få COVID-19 <em>hver gang du foretar deg den</em>. En aktivitet som er 20 mikroCOVID-er er relativt trygg, siden du kan gjøre det hver uke i ett år, og fremdeles bare ha omtrent 0.1% sjanse for å få COVID-19.</p>"
         },
         "select_location_enter_manually": "Skriv inn data manuelt …",
         "select_location_placeholder": "Velg sted …",
@@ -89,7 +95,9 @@
             "empty_warning": "Fyll inn kalkulator for å se risikonivå",
             "range": "antagelig mellom: {{ from }} til {{ to }}",
             "microCOVIDs": "mikroCOVID-er"
-        }
+        },
+        "select_scenario": "Valgfritt: Start med en forhåndsdefinert vanlig aktivitet",
+        "risk_tolerance_1_percent_explanation": "Budsjett: 1% sjanse for COVID-19 per år (200 mikroCOVID-er per uke) (anbefalt for sunne mennesker som IKKE er i kontakt med sårbare folk)"
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
@@ -99,7 +107,13 @@
             "bars": "Går ofte på byen",
             "livingWithPartner": "Bor med partner, begge handler kun i matbutikk",
             "livingAlone": "Bor alene og handler kun i matbutikk",
-            "average": "En gjennomsnittlig person i ditt område"
+            "average": "En gjennomsnittlig person i ditt område",
+            "microcovid_budget_deci_percent": "Bruker microCOVID for å overholde en risiko på 0.1%/år (20 mikroCOVID/uke)",
+            "contactWorks": "Har én nærkontakt (inkl. husholdsmedlemmer) som er en essensiell arbeider. Ingen annen jobb eller sosialisering.",
+            "contact10": "Har 10 nærkontakter (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
+            "contact4": "Har 4 nærkontakter (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
+            "contact1": "Har én nærkontakt (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
+            "microcovid_budget_one_percent": "Bruker mikroCOVID for å overholde en risiko på 1%/år (200 mikroCOVID/uke)"
         },
         "basic_mask": "Bomullsmakse, bandana, eller buff",
         "filtered_mask": "Kirurgisk maske, eller maske med PM2.5-filter isatt",
@@ -118,12 +132,26 @@
         "donations_header": "Donasjoner",
         "contact_us_header": "Kontakt oss",
         "data_inputs_calculator": "en <1>kalkulator</1> du kan bruke for å regne ut din risiko for COVID-19",
-        "data_inputs_lead": "Denne nettsiden inneholder gir utløp for tre utforskningstilnærminger"
+        "data_inputs_lead": "Denne nettsiden inneholder gir utløp for tre utforskningstilnærminger",
+        "data_inputs_spreadsheet": "og et <1>regneark</1> for å beregne din risiko for COVID-19 i mer detalj og for å spore din risiko over tid.",
+        "feedback": "Hvis du har tilbakemeldinger, spørsmål, eller ønsker å hjelpe oss, kontakt oss <1>her</1>.",
+        "donations_details": "Donasjoner og tips ønskes, hvis du føler for det. Vi er alle frivillige og vi har ingen midler til arbeid på dette prosjektet. På forhånd takk.",
+        "where_to_start_header": "Hvordan begynner jeg?",
+        "intro_header": "Hva er mikroCOVID-prosjektet?"
     },
     "scenario": {
         "1person_15minCarRide": "Biltur med én person i ett kvarter",
         "indoorUnmasked2": "Innendørs umaskert møte mellom to personer",
-        "outdoorMasked2": "Utendørs maskert møte mellom to personer"
+        "outdoorMasked2": "Utendørs maskert møte mellom to personer",
+        "indoorUnmaskedWithCovidPositive": "Innendørs, umaskert sammenkomst med person som har COVID-19",
+        "restaurantOutdoors": "Bespisning på restaurant, utendørs",
+        "planeRide": "Flytur",
+        "60minShopping": "Matbutikkhandling i én time",
+        "outdoorMaskedWithCovidPositive": "Utendørs, maskert sammenkomst med person som har COVID-19",
+        "smallIndoorParty25": "Liten innenførsfest: umaskert med 25 folk",
+        "largeOutdoorParty": "Stor utendørsfest: maskert med meters mellomrom",
+        "bar": "Bar-besøk",
+        "restaurantIndoors": "Bespisning på restaurant, innendørs"
     },
     "buttons": {
         "select_default_action": "Velg én …"
