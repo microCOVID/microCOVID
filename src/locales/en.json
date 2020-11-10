@@ -174,8 +174,8 @@
             "contact10": "Has 10 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.",
             "contactWorks": "Has 1 close contact (incl. roommates) who is an essential worker. No other work or socializing.",
             "bars": "Goes to bars regularly",
-            "microcovid_budget_one_percent": "Uses microCOVID to maintain a risk of 1%/year (200 microcovid/week)",
-            "microcovid_budget_deci_percent": "Uses microCOVID to maintain a risk of 0.1%/year (20 microcovid/week)",
+            "microcovid_budget_one_percent": "Uses microCOVID to maintain a risk of 1%/year (200 microCOVID/week)",
+            "microcovid_budget_deci_percent": "Uses microCOVID to maintain a risk of 0.1%/year (20 microCOVID/week)",
             "hasCovid": "Has COVID"
         }
     },
