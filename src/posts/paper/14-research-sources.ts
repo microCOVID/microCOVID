@@ -52,8 +52,7 @@ We combine these numbers to estimate approximately a 4x reduction. Again, this i
 
 We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
 
-For N95 masks, we get our figure from [Jimenez et al.](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277&range=C190:J190) who suggest that, while a perfect fit with an n95 is 99% efficient at filtering out aerosols, average use causes them to discount this to 90%.
-
+For N95 masks, [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) found that N95 masks reduced infection rates by 10x compared to surgical masks. This would be a 20x reduction in risk compared to no mask, but we have discounted this to 10x to account for the difficulty of getting a medical-grade fit test.
 #### Outdoor / Ventilation
 
 ##### Outdoor
