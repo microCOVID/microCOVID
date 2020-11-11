@@ -45,7 +45,11 @@
             "frequency_explanation_repeated": "Siden du møter disse folkene flere ganger i uken, er resultatet du ser <strong>mikroCOVID-er <u>per uke</u></strong>.",
             "details_person_risk_explanation_housemate": "Først regner man ut at hver andre person i dette området har en <strong>{{ person_risk }}-milliontedels sjanse</strong> for å ha COVID-19, ikke inkludert deres risiko som skriver seg fra å bo sammen med deg.",
             "details_person_risk_explanation": "Først regner man ut at hver andre person i dette området har en <strong>{{ person_risk }}-milliontedels sjanse</strong> for å ha COVID-19.",
-            "details_total_risk_number": "{{ points }}-milliontedels ({{ percentage }})"
+            "details_total_risk_number": "{{ points }}-milliontedels ({{ percentage }})",
+            "risk_budget_explanation": "Du har valgt et årvist budsjett på {{ budget_percent }} sjanse for å få COVID-19 per år ({{ budget_points }}) mikroCOVID-er). Det betyr et ukentlig budsjett på <strong>{{ budget_weekly }} mikroCOVID-er per uke</strong>.",
+            "details_total_risk_explanation": "Til slutt multipliseres personrisikoen, aktivitetsrisikoen, og antallet folk som havner på et resultat på omtrent <strong>{{ points }}-milliontedels ({{ percentage }})</strong> sjanse for å bli smittet av COVID-19 fra denne aktiviteten, med disse folkene <strong>{{ frequency }}</strong>.",
+            "details_activity_risk_explanation": "Så regnes aktivitetsrisikoen ut. En person som utfører denne aktiviteten med COVID-19 har <strong>{{ activity_risk }} sjanse</strong> for å smitte deg.",
+            "details_range_explanation": "Det antas av oss med omtrent 90% sikkerhet at den faktiske risikoen er et sted mellom disse to verdiene. Se vår <2>usikkerhetsvurdering</2>."
         },
         "precautions": {
             "their_mask_header": "Deres maske",
@@ -124,7 +128,10 @@
             "contact1": "Har én nærkontakt (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
             "microcovid_budget_one_percent": "Bruker mikroCOVID for å overholde en risiko på 1%/år (200 mikroCOVID/uke)",
             "nonFrontline": "Noen i ditt område som IKKE er en essensiell- eller frontlinje-arbeider",
-            "frontline": "En essensiell- eller frontlinje-arbeider i ditt område"
+            "frontline": "En essensiell- eller frontlinje-arbeider i ditt område",
+            "closedPod20": "I en lukket krets av 20 folk",
+            "closedPod10": "I en lukket krets av 10 folk",
+            "closedPod4": "I en lukket krets av 4 folk"
         },
         "basic_mask": "Bomullsmakse, bandana, eller buff",
         "filtered_mask": "Kirurgisk maske, eller maske med PM2.5-filter isatt",
