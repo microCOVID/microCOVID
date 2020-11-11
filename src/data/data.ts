@@ -46,6 +46,13 @@ export const Interaction: { [key: string]: FormValue } = {
 export const Setting: { [key: string]: FormValue } = {
   indoor: { label: i18n.t('data.indoor'), multiplier: 1 },
   outdoor: { label: i18n.t('data.outdoor'), multiplier: 0.05 },
+  filtered: { label: i18n.t('data.filtered'), multiplier: 0.25 },
+  transit: { label: i18n.t('data.transit'), multiplier: 0.25 },
+  carWindowsDown: { label: i18n.t('data.car_windows_down'), multiplier: 0.25 },
+  partiallyEnclosed: {
+    label: i18n.t('data.partially_enclosed'),
+    multiplier: 0.25,
+  },
 }
 
 export const intimateDurationFloor = 60
