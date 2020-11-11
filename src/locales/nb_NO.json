@@ -42,7 +42,10 @@
             "person": "person",
             "person_plural": "personer",
             "risk_budget_usage_explanation": "Denne interaksjonen bruker <strong>{{ usage }}</strong>. Denne mengden av budsjettet ditt vil bli brukt <strong>{{ frequency }}</strong>.",
-            "frequency_explanation_repeated": "Siden du møter disse folkene flere ganger i uken, er resultatet du ser <strong>mikroCOVID-er <u>per uke</u></strong>."
+            "frequency_explanation_repeated": "Siden du møter disse folkene flere ganger i uken, er resultatet du ser <strong>mikroCOVID-er <u>per uke</u></strong>.",
+            "details_person_risk_explanation_housemate": "Først regner man ut at hver andre person i dette området har en <strong>{{ person_risk }}-milliontedels sjanse</strong> for å ha COVID-19, ikke inkludert deres risiko som skriver seg fra å bo sammen med deg.",
+            "details_person_risk_explanation": "Først regner man ut at hver andre person i dette området har en <strong>{{ person_risk }}-milliontedels sjanse</strong> for å ha COVID-19.",
+            "details_total_risk_number": "{{ points }}-milliontedels ({{ percentage }})"
         },
         "precautions": {
             "their_mask_header": "Deres maske",
@@ -97,7 +100,13 @@
             "microCOVIDs": "mikroCOVID-er"
         },
         "select_scenario": "Valgfritt: Start med en forhåndsdefinert vanlig aktivitet",
-        "risk_tolerance_1_percent_explanation": "Budsjett: 1% sjanse for COVID-19 per år (200 mikroCOVID-er per uke) (anbefalt for sunne mennesker som IKKE er i kontakt med sårbare folk)"
+        "risk_tolerance_1_percent_explanation": "Budsjett: 1% sjanse for COVID-19 per år (200 mikroCOVID-er per uke) (anbefalt for sunne mennesker som IKKE er i kontakt med sårbare folk)",
+        "risk_note_about_household_members": "Når du estimerer din risiko for smitte fra et hustandsmedlem, eller partner, antas det at disse sammenkomstene er innendørs, umaskert, og udistansert.",
+        "risk_modifier_frac_plural": "{{frac}} av risikoen",
+        "risk_tolerance_1_percent_label": "",
+        "risk_modifier_frac_3rd": "{{frac}} av risikoen",
+        "risk_modifier_frac_2nd": "{{frac}} av risikoen",
+        "risk_modifier_multiple": "{{multiplier}}x risikoen"
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
@@ -113,7 +122,9 @@
             "contact10": "Har 10 nærkontakter (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
             "contact4": "Har 4 nærkontakter (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
             "contact1": "Har én nærkontakt (inkl. husholdsmedlemmer) som omgås folk, men ikke jobber. Ingen annen jobb eller sosialisering.",
-            "microcovid_budget_one_percent": "Bruker mikroCOVID for å overholde en risiko på 1%/år (200 mikroCOVID/uke)"
+            "microcovid_budget_one_percent": "Bruker mikroCOVID for å overholde en risiko på 1%/år (200 mikroCOVID/uke)",
+            "nonFrontline": "Noen i ditt område som IKKE er en essensiell- eller frontlinje-arbeider",
+            "frontline": "En essensiell- eller frontlinje-arbeider i ditt område"
         },
         "basic_mask": "Bomullsmakse, bandana, eller buff",
         "filtered_mask": "Kirurgisk maske, eller maske med PM2.5-filter isatt",
@@ -122,7 +133,9 @@
         "outdoor": "Utendørs",
         "indoor": "Innendørs",
         "repeated": "Husstandsmedlem [{{ percentage }} sjanse for smitte per uke]",
-        "oneTime": "Engangsmøte [{{ percentage }} sjanse for smitte per time]"
+        "oneTime": "Engangsmøte [{{ percentage }} sjanse for smitte per time]",
+        "silent_voice": "Uten snakking (som f.eks. stille togtur)",
+        "n95_mask": "Godt tilpasset, N95-respirator med god lukking"
     },
     "button": {
         "reset_form": "Tilbakestill skjema.",
@@ -151,7 +164,8 @@
         "smallIndoorParty25": "Liten innenførsfest: umaskert med 25 folk",
         "largeOutdoorParty": "Stor utendørsfest: maskert med meters mellomrom",
         "bar": "Bar-besøk",
-        "restaurantIndoors": "Bespisning på restaurant, innendørs"
+        "restaurantIndoors": "Bespisning på restaurant, innendørs",
+        "votingInPerson": "Stemmegivning med oppmøte"
     },
     "buttons": {
         "select_default_action": "Velg én …"
@@ -164,6 +178,7 @@
         "contactus": "Kontakt oss",
         "spreadsheet": "Regneark",
         "about": "Om",
-        "calculator": "Kalkulator"
+        "calculator": "Kalkulator",
+        "whitepaper": "Whitepaper"
     }
 }
