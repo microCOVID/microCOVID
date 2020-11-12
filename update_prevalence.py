@@ -79,7 +79,7 @@ class JHUDailyReport(JHUCommonFields):
     Deaths: int
     Recovered: int
     Active: int
-    Incidence_Rate: float
+    # Incident_Rate: float, was renamed from Incidence_Rate in early November
     Case_Fatality_Ratio: float
 
 
