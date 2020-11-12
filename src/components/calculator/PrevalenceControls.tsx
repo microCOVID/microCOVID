@@ -70,10 +70,8 @@ const PrevalenceField: React.FunctionComponent<{
       onChange={(e) => {
         if (isNumber(max) || isNumber(min)) {
           let newValue = Number.parseFloat(e.target.value)
-          console.log(newValue)
           newValue = isNumber(max) && newValue > max ? max : newValue
           newValue = isNumber(min) && newValue < min ? min : newValue
-          console.log(newValue)
           setter(newValue.toString())
         } else {
           setter(e.target.value)
