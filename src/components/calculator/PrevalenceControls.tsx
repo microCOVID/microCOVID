@@ -108,7 +108,7 @@ export const PrevalenceResult = (props: {
   data: CalculatorData
 }): React.ReactElement => {
   return (
-    <Card className="prevelance-result">
+    <Card className="prevalence-result">
       <Card.Body>
         <div>
           <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
@@ -251,7 +251,7 @@ export const PrevalenceControls: React.FunctionComponent<{
       )}
 
       <ControlledExpandable
-        id="prevelance-details"
+        id="prevalence-details"
         header={t('calculator.prevalence.details_header')}
         headerClassName={isManualEntryCurrently ? 'd-none' : ''}
         open={detailsOpen}
