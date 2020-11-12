@@ -148,10 +148,6 @@ export const PrevalenceControls: React.FunctionComponent<{
     }
   }
 
-  const handleEnterDataButtonOnClick = () => {
-    setLocationData(TOP_LOCATION_MANUAL_ENTRY, '')
-  }
-
   const setLocationData = (topLocation: string, subLocation: string) => {
     if (isManualEntry(topLocation)) {
       setDetailsOpen(true)
@@ -162,6 +158,14 @@ export const PrevalenceControls: React.FunctionComponent<{
       topLocation,
       subLocation,
     })
+  }
+
+  const handleEnterDataButtonOnClick = () => {
+    setLocationData(TOP_LOCATION_MANUAL_ENTRY, '')
+  }
+
+  const handleSelectLocationButtonOnClick = () => {
+    setLocationData('', '')
   }
 
   // If a stored location exists, load latest data for that location.
@@ -189,6 +193,11 @@ export const PrevalenceControls: React.FunctionComponent<{
     Locations[data.topLocation].subdivisions.length > 1
 
   const locationSet = isTopLocation(data.topLocation)
+
+  const showEnterDataButton =
+    locationSet ||
+    !isFilled(data.topLocation) ||
+    data.topLocation !== TOP_LOCATION_MANUAL_ENTRY
 
   const [detailsOpen, setDetailsOpen] = useState(
     false || isManualEntry(data.topLocation),
@@ -226,15 +235,6 @@ export const PrevalenceControls: React.FunctionComponent<{
             </optgroup>
           ))}
         </select>
-        {!locationSet ? null : (
-          <button
-            id="enterData"
-            className="btn btn-secondary"
-            onClick={handleEnterDataButtonOnClick}
-          >
-            {t('calculator.select_location_enter_manually')}
-          </button>
-        )}
       </div>
       {!showSubLocation ? null : (
         <div className="form-group">
@@ -260,7 +260,23 @@ export const PrevalenceControls: React.FunctionComponent<{
           </select>
         </div>
       )}
-
+      {!showEnterDataButton ? (
+        <button
+          id="switchBetweenManualDataAndLocationSelection"
+          className="btn btn-secondary"
+          onClick={handleSelectLocationButtonOnClick}
+        >
+          {t('calculator.switch_button.select_location')}
+        </button>
+      ) : (
+        <button
+          id="switchBetweenManualDataAndLocationSelection"
+          className="btn btn-secondary"
+          onClick={handleEnterDataButtonOnClick}
+        >
+          {t('calculator.switch_button.enter_data_manually')}
+        </button>
+      )}
       <ControlledExpandable
         id="prevalence-details"
         header={t('calculator.prevalence.details_header')}
