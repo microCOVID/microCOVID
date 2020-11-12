@@ -148,6 +148,10 @@ export const PrevalenceControls: React.FunctionComponent<{
     }
   }
 
+  const handleEnterDataButtonOnClick = () => {
+    setLocationData(TOP_LOCATION_MANUAL_ENTRY, '')
+  }
+
   const setLocationData = (topLocation: string, subLocation: string) => {
     if (isManualEntry(topLocation)) {
       setDetailsOpen(true)
@@ -222,6 +226,15 @@ export const PrevalenceControls: React.FunctionComponent<{
             </optgroup>
           ))}
         </select>
+        {!locationSet ? null : (
+          <button
+            id="enterData"
+            className="btn btn-secondary"
+            onClick={handleEnterDataButtonOnClick}
+          >
+            {t('calculator.select_location_enter_manually')}
+          </button>
+        )}
       </div>
       {!showSubLocation ? null : (
         <div className="form-group">
