@@ -44,8 +44,6 @@ We get our wearer protection figure of 2x from [Chu et al](https://www.thelancet
 
 As for protection to the other party by wearing a mask (also known as “source control”), we estimate a source control factor of 4x. We base this on several sources:
 
-
-
 *   [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza estimated around 5x protection for homemade cloth masks and around 7x for surgical masks (see Figure 4).
 *   [Milton et al](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) provided a somewhat lower estimate of a 3.6x reduction in the number of exhaled influenza viruses if the infected person wore a surgical mask.
 *   [Fischer et al](https://advances.sciencemag.org/content/early/2020/08/07/sciadv.abd3083) counted respiratory droplets produced during normal speech through a variety of mask types. We averaged the droplet counts for the four cotton masks in their study (which were among the less effective masks tested) and found a 5.4x reduction in emitted droplets relative to no mask.
@@ -54,6 +52,7 @@ We combine these numbers to estimate approximately a 4x reduction. Again, this i
 
 We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
 
+For N95 masks, [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) found that N95 masks reduced infection rates by 10x compared to surgical masks. This would be a 20x reduction in risk compared to no mask, but we have discounted this to 10x to account for the difficulty of getting a medical-grade fit test.
 #### Outdoor / Ventilation
 
 ##### Outdoor
