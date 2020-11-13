@@ -110,7 +110,8 @@
         "risk_tolerance_1_percent_label": "",
         "risk_modifier_frac_3rd": "{{frac}} av risikoen",
         "risk_modifier_frac_2nd": "{{frac}} av risikoen",
-        "risk_modifier_multiple": "{{multiplier}}x risikoen"
+        "risk_modifier_multiple": "{{multiplier}}x risikoen",
+        "intimate_risk_warning": "En minimal aktivitetsrisiko har blitt anført for kyssing som følge av risiko for å utveksle kroppsvesker."
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
@@ -142,7 +143,11 @@
         "repeated": "Husstandsmedlem [{{ percentage }} sjanse for smitte per uke]",
         "oneTime": "Engangsmøte [{{ percentage }} sjanse for smitte per time]",
         "silent_voice": "Uten snakking (som f.eks. stille togtur)",
-        "n95_mask": "Godt tilpasset, N95-respirator med god lukking"
+        "n95_mask": "Godt tilpasset, N95-respirator med god lukking",
+        "normal_distance": "Normal sosialisering (1 meter unna)",
+        "sixft_distance": ">2m unna",
+        "tenft_distance": ">3m unna",
+        "close_distance": "Nær (<30cm unna)"
     },
     "button": {
         "reset_form": "Tilbakestill skjema.",
