@@ -111,7 +111,11 @@
         "risk_modifier_frac_3rd": "{{frac}} av risikoen",
         "risk_modifier_frac_2nd": "{{frac}} av risikoen",
         "risk_modifier_multiple": "{{multiplier}}x risikoen",
-        "intimate_risk_warning": "En minimal aktivitetsrisiko har blitt anført for kyssing som følge av risiko for å utveksle kroppsvesker."
+        "intimate_risk_warning": "En minimal aktivitetsrisiko har blitt anført for kyssing som følge av risiko for å utveksle kroppsvesker.",
+        "intro": {
+            "call_to_action": "Regn ut omtrentlig risiko for COVID-19 for hvilken som helst aktivitet"
+        },
+        "baseline_risk": "grunnrisiko"
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
