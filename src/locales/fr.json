@@ -8,7 +8,7 @@
             "onetime_header": "Voici quelques manières de réduire le risque de cette activité"
         },
         "pointsdisplay": {
-            "microCOVIDs": "microCOVIDs",
+            "microCOVIDs": "microCOVID",
             "empty_warning": "Complétez les champs du calculateur pour voir le niveau de risque",
             "range": "probablement entre : {{ from }} et {{ to }}"
         },
@@ -124,7 +124,9 @@
         "people_count": "Personnes",
         "number_of_people_near_you_onetime": "Combien de personnes sont généralement près de vous durant cette activité ?",
         "number_of_people_near_you_partner": "Avec combien de personnes vivez-vous ?",
-        "nearby_people_label": "Personnes à proximité"
+        "nearby_people_label": "Personnes à proximité",
+        "risk_modifier_frac_plural": "{{frac}} du risque",
+        "risk_modifier_frac_3rd": "{{frac}} du risque"
     },
     "current_lang_two_letter_code": "fr",
     "menu": {
@@ -148,7 +150,10 @@
             "livingAlone": "Vit seul(e) et fait seulement les courses",
             "nonFrontline": "Quelqu’un de votre région qui n’est PAS un travailleur essentiel ou de première ligne",
             "frontline": "Un travailleur essentiel ou de première ligne dans votre région",
-            "average": "Une personne lambda dans votre région"
+            "average": "Une personne lambda dans votre région",
+            "closedPod20": "Dans un groupe fermé de 20 personnes",
+            "closedPod10": "Dans un groupe fermé de 10 personnes",
+            "closedPod4": "Dans un groupe fermé de 4 personnes"
         },
         "loud_voice": "En parlant fort (cri, chant, parler par-dessus la musique)",
         "normal_voice": "Conversation normale",
