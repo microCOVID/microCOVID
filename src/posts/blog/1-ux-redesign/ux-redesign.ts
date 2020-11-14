@@ -37,3 +37,4 @@ We have more changes on the way that we’ll be excited to share with you!  Feed
 `
 
 export const post = { title, summary, content, author, date, image }
+export default post

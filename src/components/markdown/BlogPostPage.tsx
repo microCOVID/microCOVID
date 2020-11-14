@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
-import { metaContent, processor } from 'components/markdown/markdownProcessor'
+import { processor } from 'components/markdown/markdownProcessor'
 import { BlogPostMap } from 'posts/post'
 import 'pages/styles/Paper.scss'
 
@@ -18,14 +18,13 @@ export const BlogPostPage: React.FunctionComponent<{
 
   const page = posts[id]
   const body = processor.render(page.content)
-  const metaDescription = metaContent(body)
 
   return (
     <div className="paperPage">
       <Helmet>
         <title>{`${page.title} - microCOVID Project`}</title>
-        <meta name="description" content={metaDescription} />
-        <meta property="og:description" content={metaDescription} />
+        <meta name="description" content={page.summary} />
+        <meta property="og:description" content={page.summary} />
         <meta property="og:title" content={page.title} />
         <meta property="og:type" content="article" />
         <meta
