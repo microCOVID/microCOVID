@@ -107,7 +107,7 @@
         "risk_tolerance_1_percent_explanation": "Budsjett: 1% sjanse for COVID-19 per år (200 mikroCOVID-er per uke) (anbefalt for sunne mennesker som IKKE er i kontakt med sårbare folk)",
         "risk_note_about_household_members": "Når du estimerer din risiko for smitte fra et hustandsmedlem, eller partner, antas det at disse sammenkomstene er innendørs, umaskert, og udistansert.",
         "risk_modifier_frac_plural": "{{frac}} av risikoen",
-        "risk_tolerance_1_percent_label": "",
+        "risk_tolerance_1_percent_label": "Forvalgt forhåndsregelbudsjett",
         "risk_modifier_frac_3rd": "{{frac}} av risikoen",
         "risk_modifier_frac_2nd": "{{frac}} av risikoen",
         "risk_modifier_multiple": "{{multiplier}}x risikoen",
@@ -115,7 +115,9 @@
         "intro": {
             "call_to_action": "Regn ut omtrentlig risiko for COVID-19 for hvilken som helst aktivitet"
         },
-        "baseline_risk": "grunnrisiko"
+        "baseline_risk": "grunnrisiko",
+        "risk_tolerance_point1_percent_explanation": "Budsjett: 0.1% sjanse for å få COVID-19 per år (20 mikroCOVID per uke) (anbefalt hvis du eller dine nærkontakter er mer sårbare for COVID-19)",
+        "risk_tolerance_point1_percent_label": "Strengt forhåndsregelbudsjett"
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
