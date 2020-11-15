@@ -53,15 +53,18 @@ Your family's risk tolerance may be different than mine - if you decide the risk
 
 Here’s the steps I took to assess what the risk level of my family gathering would be. The general precautions I outlined are great practice and should work for you, even if you don’t want to dive into the numbers. If calculating out your exact risk and optimizing for your situation is something that excites you, read on!
 
-Note that location matters! How many people in your area have the disease changes how likely a random person is to give it to you.
+Note: The microCOVID values reported here are a snapshot from November 14, 2020. Following the links on a different day may give different results if prevalence changes.
+
+Note 2: Location matters! If you want to apply these to your own plans, be sure to change the location to where you are travelling from and to.
+
 
 ## The Plane Ride
 ****
-A 3 hour plane from Denver while wearing a N95 mask costs [100 microCOVIDs](https://www.microcovid.org/?distance=normal&duration=180&interaction=oneTime&personCount=20&riskProfile=average&setting=transit&subLocation=US_08013&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95).
+A 3 hour plane from Denver while wearing a N95 mask costs [200 microCOVIDs](/?distance=normal&duration=180&interaction=oneTime&personCount=20&riskProfile=average&setting=transit&subLocation=US_08013&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95).
 
 ## Transit to and from the Airport
 ****
-A taxi to the airport in Denver costs [10 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=oneTime&personCount=1&riskProfile=average&setting=carWindowsDown&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=basic). The taxi from the airport in Maryland costs [3 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=oneTime&personCount=1&riskProfile=average&setting=carWindowsDown&subLocation=US_24031&theirMask=basic&topLocation=US_24&voice=silent&yourMask=basic). I included rolling down the windows for the ride.
+A taxi to the airport in Denver costs [20 microCOVIDs](/?distance=sixFt&duration=60&interaction=oneTime&personCount=1&riskProfile=average&setting=carWindowsDown&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=basic). The taxi from the airport in Maryland costs [4 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=oneTime&personCount=1&riskProfile=average&setting=carWindowsDown&subLocation=US_24031&theirMask=basic&topLocation=US_24&voice=silent&yourMask=basic). I included rolling down the windows for the ride.
 
 If public transit is an option for you, we note that many trains/subways are relatively safe, due to great air circulation. Busses do not have these filtration systems and are riskier than cars.
 
@@ -69,13 +72,13 @@ Either way, transit to the airport is relatively safe!
 
 ## Behavior Before Travel
 
-My normal routines include grocery shopping with an N95 mask ([40 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=oneTime&personCount=5&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)) and seeing my partner who used microCOVID to manage her risk ([100 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=partner&personCount=1&riskProfile=onePercent&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)).
+My normal routines include grocery shopping with an N95 mask ([40 microCOVIDs](/?distance=sixFt&duration=60&interaction=oneTime&personCount=5&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)) and seeing my partner who used microCOVID to manage her risk ([100 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=partner&personCount=1&riskProfile=onePercent&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)).
 
-My brother also grocery shops (40 microCOVIDs), and his partner is a schoolteacher, and schools have been in-person ([100,000 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=2400&interaction=oneTime&personCount=10&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=normal&yourMask=basic))
+My brother also grocery shops (40 microCOVIDs), and his partner is a schoolteacher, and schools have been in-person ([200,000 microCOVIDs](/?distance=sixFt&duration=2400&interaction=oneTime&personCount=10&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=normal&yourMask=basic))
 
 ## Quarantining
 
-If we were to fly home today to see our parents, we have a total of over 100,400 microCOVIDs. Our parents would get 30% of this, or 30,000 microCOVIDs. As people over the age of 60, their weekly microCOVID budget is 20, so coming home would be 1500x their weekly budget or 30x their annual budget. That’s no good!
+If we were to fly home today to see our parents, we have a total of over 200,600 microCOVIDs. Our parents would get 30% of this, or 60,000 microCOVIDs. As people over the age of 60, their weekly microCOVID budget is 20, so coming home would be 3000x their weekly budget or 60x their annual budget. That’s no good!
 
 We need to reduce the chance of bringing home the virus. This is where quarantining comes in. We can avoid risky behavior for 14 days prior to seeing our parents, which gives us a chance to see if we actually got COVID (and not come in contact with our parents if we did).
 
@@ -86,7 +89,7 @@ There are a couple of durations of  quarantine that get thrown around - the two 
 
 Or in the context of microCOVID, a 10 day quarantine reduces your risk by 95%. A 14 day quarantine reduced your risk by 99.9%.
 
-My brother’s partner, who currently has 100,000 microCOVIDs, needs to sit out the full 14 day quarantine (as a 10 day quarantine would bring her to 5,000). My brother and I only need a 10 day quarantine, as this will bring me from 140 to 7 and him from 40 to 2.
+My brother’s partner, who currently has 200,000 microCOVIDs, needs to sit out the full 14 day quarantine (as a 10 day quarantine would bring her to 10,000). My brother and I only need a 10 day quarantine, as this will bring me from 140 to 7 and him from 40 to 2.
 
 Of course, quarantining from a job is not always easy. For those who don’t have the option of working remotely or taking time off, there’s no easy answer. Consider what your options are and how much risk you’re willing to bring home.
 
@@ -94,15 +97,15 @@ There is also a choice of quarantining at home or at your destination; if we qua
 
 ## Putting it Together
 
-With a quarantine at home and N95 masks on the plane, we still come home with about 400microCOVIDs. Our parents would record a “housemate” interaction with us, which gives them 120 microCOVIDs. Assuming they are otherwise being maximally safe, that is 6x their weekly budget of 20 microCOVIDs. There’s a few ways to deal with this:
+With a quarantine at home and N95 masks on the plane, we still come home with about 800microCOVIDs. Our parents would record a “housemate” interaction with us, which gives them 240 microCOVIDs. Assuming they are otherwise being maximally safe, that is 12x their weekly budget of 20 microCOVIDs. There’s a few ways to deal with this:
 
-- They could “save up” for this risk by using only 10 microCOVIDs a week for 12 weeks.
-- We could find a way to quarantine in Maryland after the flight, reducing our risk to 20, at which point they would get only 6 microCOVIDs from us
-- They could decide that having the family together is worth going over their annual risk budget (1000 microCOVID) by 10%.
-- We could delay our family holiday until COVID rates go down - states are starting to react to the current surge, so there’s a decent change that things will get better in 6-12 weeks.
+- They could “save up” for this risk by using only 10 microCOVIDs a week for 24 weeks.
+- We could find a way to quarantine in Maryland after the flight, reducing our risk to 40, at which point they would get only 12 microCOVIDs from us
+- They could decide that having the family together is worth going over their annual risk budget (1000 microCOVID) by 20%.
+- We could delay our family holiday until COVID rates go down - states are starting to react to the current surge, so there’s a decent change that things will get better in 3-12 weeks.
 - We could drive instead of flying, avoiding the large risk that the plane poses.
 
-None of these options feel worthwhile to our family, so we're taking a year off from gathering. I don't presume that right decision for everyone, but it's worth evaluating what risk your family is willing to take.
+None of these options feel right to our family, so we're taking a year off from gathering. I don't presume that right decision for everyone, but it's worth evaluating what risk your family is willing to take.
 `
 
 export const post = { title, summary, content, author, date, image }
