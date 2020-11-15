@@ -3,7 +3,9 @@
         "riskreduction": {
             "housemates_header": "Her har du noen måter du kan fungere sammen med dine nærkontakter for å redusere deres risiko",
             "onetime_warning": "Disse kan eller kan ikke ha innvirkning på din aktivitet.",
-            "onetime_header": "Her har du noen måter å redusere risikoen for denne aktiviteten"
+            "onetime_header": "Her har du noen måter å redusere risikoen for denne aktiviteten",
+            "housemates_tips": "<li>Snakk til dem om hvordan deres valg påvirker din risiko, såvel som deres</li> <li>Spør dem om å forholde seg maskert, utendørs og på avstand når det er mulig</li>Essensielle arbeidere kan ikle seg en maske med høy kvalitet (f.eks., N95 eller KN95) på jobb <1/></li> <li>Spør dem om de kan begrense samkvem i umiddelbar nærhet til så få som mulig</li> <li>Oppfordre nærkontakter til å isolere og teste seg når de får første symptom på COVID-19</li> <li>Hvis de har høy COVID-19 risiko, må du være innendørs med dem: <ul> <li>Bruk masker utendørs</li> <li>Maksimer ventilasjon ved bruk av åpne vinduer, vifter som blåser inn luft med HEPA-filter</li> <li>Isoler deg innendørs ved å bruke forskjellige rom.</li> </ul></li>",
+            "onetime_tips": "<li>Bruk maske, foretrekk samliv utendørs og på avstand når det er mulig</li> <li>Bruk den beste masken du får tak i. <br/><1/></li> <li>Besøk offentlig sted når det ikke er så folksomt</li> <li> Reduser handleturer ved å handle for andre, bruke leveringstjenester, eller å handle på nett</li> <li>Hvis denne aktiviteten er med venner, kan du oppfordre dem til å ikke komme hvis de eller noen i deres nære krets føler seg dårlige</li>"
         },
         "type_of_interaction": "Er dette en enkeltstående aktivitet, eller noe gjentagende?",
         "risk_step_label": "Steg 2: Beskriv aktiviteten",
@@ -49,7 +51,8 @@
             "risk_budget_explanation": "Du har valgt et årvist budsjett på {{ budget_percent }} sjanse for å få COVID-19 per år ({{ budget_points }}) mikroCOVID-er). Det betyr et ukentlig budsjett på <strong>{{ budget_weekly }} mikroCOVID-er per uke</strong>.",
             "details_total_risk_explanation": "Til slutt multipliseres personrisikoen, aktivitetsrisikoen, og antallet folk som havner på et resultat på omtrent <strong>{{ points }}-milliontedels ({{ percentage }})</strong> sjanse for å bli smittet av COVID-19 fra denne aktiviteten, med disse folkene <strong>{{ frequency }}</strong>.",
             "details_activity_risk_explanation": "Så regnes aktivitetsrisikoen ut. En person som utfører denne aktiviteten med COVID-19 har <strong>{{ activity_risk }} sjanse</strong> for å smitte deg.",
-            "details_range_explanation": "Det antas av oss med omtrent 90% sikkerhet at den faktiske risikoen er et sted mellom disse to verdiene. Se vår <2>usikkerhetsvurdering</2>."
+            "details_range_explanation": "Det antas av oss med omtrent 90% sikkerhet at den faktiske risikoen er et sted mellom disse to verdiene. Se vår <2>usikkerhetsvurdering</2>.",
+            "frequency_explanation_oneoff": "Siden dette er et engangstilfelle, vises resultatet som <strong>mikroCOVID-enheter <u>hver gang</u>denne interaksjonen finner sted</strong>. Hvis du utfører denne aktiviteten mange ganger i uken, vil det bekostet diss ukentlige budsjett. Hvis du utfører aktiviteten gjentagende med samme folk hver uke, før dem opp som \"{{ repeated_type_suggestion }}\" for å se hva maksimal overføringsrate er per uke."
         },
         "precautions": {
             "their_mask_header": "Deres maske",
@@ -66,13 +69,15 @@
             "no_intimate_bonus_outdoors": "Som følge av nærheten til andre, antas det at å være utendørs ikke minsker risikoen i særlig grad. Det gis altså ingen bonus for å være utendørs ved intimitet."
         },
         "warning": {
-            "important": "Viktig"
+            "important": "Viktig",
+            "body": "I dette verktøyet finner du vår beste estimat basert på tilgjengelig bevis, selv når det ikke har noen entydig konklusjon. Utviklerne er ikke eksperter på området. Dette arbeidet har ikke gjennomgått noen fagfellevurdering. Det er fremdeles mye usikkerhet om COVID-19. Ikke bruk verktøyet som medisinske råd. Fortsett å følge anvisning fra dine myndigheter."
         },
         "risk_group_empty_warning": "Først, skriv inn din plassering",
         "firsttime": {
             "budget_header": "Hvordan kan jeg håndtere min risiko med et risikobudsjett?",
             "microcovid_header": "Hva er mikroCOVID?",
-            "microcovid_explanation": "<p>Kalkulatoren introduserer et nytt konsept, altså mikroCOVID. Én mikroCOVID er en én av en milliontedels sjanse for å bli smittet med COVID-19.</p> <p>En aktivitet som beløper seg til 20000 mikroCOVID-er er veldig utrygt, siden du har 2% risiko for å få COVID-19 <em>hver gang du foretar deg den</em>. En aktivitet som er 20 mikroCOVID-er er relativt trygg, siden du kan gjøre det hver uke i ett år, og fremdeles bare ha omtrent 0.1% sjanse for å få COVID-19.</p>"
+            "microcovid_explanation": "<p>Kalkulatoren introduserer et nytt konsept, altså mikroCOVID. Én mikroCOVID er en én av en milliontedels sjanse for å bli smittet med COVID-19.</p> <p>En aktivitet som beløper seg til 20000 mikroCOVID-er er veldig utrygt, siden du har 2% risiko for å få COVID-19 <em>hver gang du foretar deg den</em>. En aktivitet som er 20 mikroCOVID-er er relativt trygg, siden du kan gjøre det hver uke i ett år, og fremdeles bare ha omtrent 0.1% sjanse for å få COVID-19.</p>",
+            "budget_explanation": "Vi bestemte oss for at en årvis risiko på %1 for å få COVID-19 per år er fornuftig for de fleste sunne mennesker som ikke er i kontakt med sårbare grupper. Du kan se mer om framgangsmåten <1>her<1/>. Hvis du ønsker å følge dette 1%-risiko-per-år -budsjettet, må ditt ukentlige budsjett ikke overstige 200 mikroCOVID. Her har du et <3>regneark</3> der du kan holde oversikten over dine aktiviteter over tid."
         },
         "select_location_enter_manually": "Skriv inn data manuelt …",
         "select_location_placeholder": "Velg sted …",
@@ -113,11 +118,15 @@
         "risk_modifier_multiple": "{{multiplier}}x risikoen",
         "intimate_risk_warning": "En minimal aktivitetsrisiko har blitt anført for kyssing som følge av risiko for å utveksle kroppsvesker.",
         "intro": {
-            "call_to_action": "Regn ut omtrentlig risiko for COVID-19 for hvilken som helst aktivitet"
+            "call_to_action": "Regn ut omtrentlig risiko for COVID-19 for hvilken som helst aktivitet",
+            "whats_this": "Vi har laget en kalkulator der du kan anslå din risiko for å få COVID-19 fra en mengde aktiviteter, der <1>beste tilgjengelige forskning</1> ligger til grunn. Vi håper dette hjelper deg å fatte bedre beslutninger, senke stressnivået, og planlegge gode skadevirkningsstrategier."
         },
         "baseline_risk": "grunnrisiko",
         "risk_tolerance_point1_percent_explanation": "Budsjett: 0.1% sjanse for å få COVID-19 per år (20 mikroCOVID per uke) (anbefalt hvis du eller dine nærkontakter er mer sårbare for COVID-19)",
-        "risk_tolerance_point1_percent_label": "Strengt forhåndsregelbudsjett"
+        "risk_tolerance_point1_percent_label": "Strengt forhåndsregelbudsjett",
+        "household_members_note": "Hvis du modellerer påvirkning fra husstandsmedlemmer må du kun telle deres kontakt utenfor husholdet, for å unngå å telle dobbelt.",
+        "prevalence_info_source_information": "Tilfelledata sammenfattet av <1>Johns Hopkins CSSE</1> (rapporterte tilfeller), <4>Covid Act Now</4> (US positive test rates), and <7>Our World in Data</7> (internasjonale positive testresultater).",
+        "large_group_warning": "Advarsel: Dette er mange folk. Husk at du kun trenger å ta med dem som er innen 5 meter av deg (ikke alle som befinner seg på området). Dog er det i store folkemengder muligheter for superspreding."
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
@@ -153,10 +162,11 @@
         "normal_distance": "Normal sosialisering (1 meter unna)",
         "sixft_distance": ">2m unna",
         "tenft_distance": ">3m unna",
-        "close_distance": "Nær (<30cm unna)"
+        "close_distance": "Nær (<30cm unna)",
+        "partner": "Partner/ektefelle [{{ percentage }}] sjanse for smitteoverføring per uke]"
     },
     "button": {
-        "reset_form": "Tilbakestill skjema.",
+        "reset_form": "Tilbakestill skjema",
         "copy_link": "Kopier lenke til dette scenariet"
     },
     "about": {
@@ -168,7 +178,11 @@
         "feedback": "Hvis du har tilbakemeldinger, spørsmål, eller ønsker å hjelpe oss, kontakt oss <1>her</1>.",
         "donations_details": "Donasjoner og tips ønskes, hvis du føler for det. Vi er alle frivillige og vi har ingen midler til arbeid på dette prosjektet. På forhånd takk.",
         "where_to_start_header": "Hvordan begynner jeg?",
-        "intro_header": "Hva er mikroCOVID-prosjektet?"
+        "intro_header": "Hva er mikroCOVID-prosjektet?",
+        "disclaimer": "<0>Ansvarsfraskrivelse</0>I dette verktøyet finner du vår beste estimat basert på tilgjengelig bevis, selv når det ikke har noen entydig konklusjon. Utviklerne er ikke eksperter på området. Dette arbeidet har ikke gjennomgått noen fagfellevurdering. Det er fremdeles mye usikkerhet om COVID-19. Ikke bruk verktøyet som medisinske råd. Fortsett å følge anvisning fra dine myndigheter.",
+        "basic_description": "Dette er et prosjekt for anslåelse av mengdepåvirkning av COVID-19 risiko fra vanlige gjøremål. Det baserer seg på sjansen for å få COVID-19 i forskjellige situasjoner, basert på forskningslitteraturen, i en kombinert datamodell folk kan bruke. Det anslås her en COVID-19 risiko i mikroCOVID-enheter, der 1 mC = én-milliontedels sjanse for å få COVID-19.",
+        "data_inputs_whitepaper": "et <1>intensjonsskriv</1> forklarer vår anslagsmetode",
+        "data_inputs_recommendation": "Du bør starte med <2>kalkulatoren</2> eller <5>intensjonsskrivet</5>."
     },
     "scenario": {
         "1person_15minCarRide": "Biltur med én person i ett kvarter",
@@ -183,7 +197,9 @@
         "largeOutdoorParty": "Stor utendørsfest: maskert med meters mellomrom",
         "bar": "Bar-besøk",
         "restaurantIndoors": "Bespisning på restaurant, innendørs",
-        "votingInPerson": "Stemmegivning med oppmøte"
+        "votingInPerson": "Stemmegivning med oppmøte",
+        "liveInPartner_noContacts": "Samboer som ikke har noe innendørssamkvem annet enn deg",
+        "oneNightStand": "Tilfeldig sex én gang"
     },
     "buttons": {
         "select_default_action": "Velg én …"
