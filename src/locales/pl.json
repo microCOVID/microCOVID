@@ -1,0 +1,17 @@
+{
+    "calculator": {
+        "precautions": {
+            "your_mask_header": "Twoja maska",
+            "no_intimate_bonus_outdoors": "Ze względu na bardzo bliskie odległości nie mamy pewności, że przebywanie na świeżym powietrzu znacznie zmniejsza ryzyko. Dlatego nie zapewniamy żadnej premii za przebywanie na świeżym powietrzu w intymności.",
+            "environment_question": "Czy to jest wewnątrz czy na zewnątrz?",
+            "environment_header": "Środowisko",
+            "label": "Środki ostrożności"
+        }
+    },
+    "menu": {
+        "contactus": "Kontakt z nami",
+        "spreadsheet": "Arkusz",
+        "about": "O nas",
+        "calculator": "Kalkulator"
+    }
+}

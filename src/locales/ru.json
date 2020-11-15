@@ -1,0 +1,54 @@
+{
+    "calculator": {
+        "prevalence": {
+            "cases_stable_or_decreasing": "Случаи заболевания стабильны или уменьшаются.",
+            "population": "Общая численность населения",
+            "details_header": "Подробности"
+        },
+        "category_postfix": "Риск",
+        "category_extreme": "Экстремальный",
+        "category_dangerously_high": "Опасно высокий",
+        "category_very_high": "Очень высокий",
+        "category_high": "Высокий",
+        "category_moderate": "Умеренный",
+        "category_low": "Низкий",
+        "category_very_low": "Очень низкий",
+        "duration_header": "Продолжительность",
+        "distance_header": "Расстояние",
+        "people_count": "Люди",
+        "pointsdisplay": {
+            "empty_warning": "Заполните калькулятор, чтобы увидеть уровень риска"
+        },
+        "explanationcard": {
+            "risk_budget_used": "Используемый бюджет",
+            "risk_budget_available": "Доступный бюджет",
+            "details_range": "Вероятно, между",
+            "details_frequency": "Частота",
+            "details_total_risk": "Общий риск",
+            "details_number_of_people": "Количество человек",
+            "chance": "шанс",
+            "details_steps_header": "Шаги расчёта",
+            "details_overview_header": "Вычисление",
+            "details_header_open": "Скрыть подробности расчета",
+            "details_header_closed": "Показать подробности расчета",
+            "person_0": "человек",
+            "person_1": "человека",
+            "person_2": "человек"
+        },
+        "precautions": {
+            "volume_header": "Объём",
+            "their_mask_note": "Если они едят или пьют, выберите «без маски»",
+            "their_mask_question": "Какую маску носят ОНИ?",
+            "your_mask_note": "Если вы едите или пьете, выберите «без маски»",
+            "your_mask_question": "Какую маску вы носите?",
+            "your_mask_header": "Ваша маска",
+            "label": "Меры предосторожности"
+        }
+    },
+    "current_lang_two_letter_code": "ru",
+    "menu": {
+        "contactus": "Обратная связь",
+        "spreadsheet": "Таблица",
+        "calculator": "Калькулятор"
+    }
+}
