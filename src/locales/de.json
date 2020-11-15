@@ -138,7 +138,7 @@
             "risk_budget_available": "Verfügbares Budget",
             "risk_budget_header": "Wieviel davon kann ich mit gegebenem Risikobudget machen?",
             "details_range_explanation": "Wir glauben mit ca. 90-prozentiger Sicherheit, dass das tatsächliche Risiko zwischen diesen beiden Werten liegt. Siehe unsere <2>Unsicherheits-Schätzung</2>.",
-            "frequency_explanation_oneoff": "Weil dies eine einmalige Begegnung ist, wird das Ergebnis als <strong>microCOVIDs <u>jedes Mal angezeigt</u>, wenn du diese Begegnung hast</strong>. Wenn du diese Aktivität mehrfach pro Woche tust, wird jedes Mal auf dein wöchentliches Budget angerechnet. Wenn du diese Aktivität mehrfach pro Woche mit denselben Leuten machst, gib dies als \"{{ repeated_type_suggestion }}\" an, um die maximale Übertragungsrate pro Woche zu sehen.",
+            "frequency_explanation_oneoff": "Weil dies eine einmalige Begegnung ist, wird das Ergebnis als <strong>microCOVIDs <u>jedes Mal angezeigt</u>, wenn du diese Begegnung hast</strong>. Wenn du diese Aktivität mehrfach pro Woche tust, wird jedes Mal auf dein wöchentliches Budget angerechnet. Wenn du diese Aktivität mehrfach pro Woche mit denselben Leuten machst, gib dies als „{{ repeated_type_suggestion }}“ an, um die maximale Übertragungsrate pro Woche zu sehen.",
             "details_range_number": "{{ from }} und {{ to }} microCOVIDs",
             "details_range": "Wahrscheinlich zwischen",
             "frequency_explanation_repeated": "Weil du dich mit diesen Leuten mehrfach pro Woche triffst, werden dir als Ergebnis <strong> microCOVIDs <u>pro Woche</u></strong> anzeigt.",
