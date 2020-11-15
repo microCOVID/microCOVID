@@ -19,3 +19,7 @@ Here are a few ground rules you should follow to make sure the translations rema
 - If you plan to make large, sweeping changes in the interface that would add, remove or change a large number of texts, please coordinate with the team to minimize conflicts with ongoing translation efforts and ensure that a reasonable subset of translations are ready before the change goes live.
 
 If you use VS Code [i18n-ally](https://github.com/antfu/i18n-ally) is a fantastic tool to make working with translations painless.
+
+# Current status
+
+[![Weblate status](https://hosted.weblate.org/widgets/microcovid/-/microcovid/multi-auto.svg)](https://hosted.weblate.org/engage/microcovid/)
