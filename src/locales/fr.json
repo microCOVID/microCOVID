@@ -31,7 +31,7 @@
             "details_number_of_people": "Nombre de personnes",
             "details_activity_risk_explanation": "Ensuite, nous calculons le risque de l’activité. Une personne pendant cette activité avec la COVID-19 aurait une <strong>{{ activity_risk }} chance</strong> de vous la transmettre.",
             "details_person_risk_explanation": "D’abord, nous calculons que chaque autre personne dans cette zone a une <strong>{{ person_risk }} chance sur un million</strong> d’avoir actuellement la COVID-19.",
-            "chance": "chance",
+            "chance": "probabilité",
             "details_person_risk_explanation_housemate": "D’abord, nous calculons que chaque autre personne dans cette zone a une <strong>{{ person_risk }} chance sur un million</strong> d’avoir actuellement la COVID-19, sans compter le risque du fait de vivre avec vous.",
             "details_person_risk_number": "{{ person_risk }} chance(s) sur un million",
             "details_steps_header": "Étapes de calcul",
