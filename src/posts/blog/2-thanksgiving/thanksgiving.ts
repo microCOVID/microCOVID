@@ -12,11 +12,11 @@ const image: ImageMeta = {
 }
 
 const summary =
-  'Thanksgiving is fast approaching! I examined the risks of coming home for Thanksgiving and suggest some precautions to make it 1000x safer for my family.'
+  "Thanksgiving is approaching as Coronavirus is spiking. I used microCOVID to examine the risks of flying home for Thanksgiving (spoilers: it's really quite dangerous)."
 
 const content = `<figure><img src=${gatherSafely}><figcaption>Illustration by Melody Chang</figcaption></figure>
 
-Thanksgiving is my family’s favorite holiday. My brother and I live far from home, and it’s the one weekend a year, our family reliably gets together. This year, traveling is a lot less palatable - I really don’t want to bring home a deadly virus to my parents. I used the microCOVID calculator to figure out how risky my trip was and how I could reduce that risk by 1000x. 
+Thanksgiving is my family’s favorite holiday. My brother and I live far from home, and it’s the one weekend a year our family reliably gets together. This year, traveling is a lot less palatable - I really don’t want to bring home a deadly virus to my parents. I used the microCOVID calculator to figure out how risky my trip was and how we could reduce that risk by 1000x, but that's __still__ too dangerous for us.
 
 **These are the key takeaways:**
 
@@ -44,9 +44,9 @@ Thanksgiving is my family’s favorite holiday. My brother and I live far from h
 - Taking a test before seeing my parents isn’t the same as taking the above precautions - COVID tests give a snapshot of whether or not a person contracted the virus 5-8 days ago.
 - Even if a test comes back negative, I might have contracted the virus after I took the test, so it only works if I’m careful starting 5 days before the test.
 
-Again, following the above precautions, even without the extra ones, reduce the chance of my parents getting COVID by **1000x**. But even with all that, I would be exposing my parents to a full 6 weeks of their risk budget. In the end, our family decided to give this year a pass. Hopefully we'll have a vaccine by next year and life can go back to normal.
+Again, following the above precautions, even without the extra ones, reduce the chance of my parents getting COVID by **1000x**. But even with all that, I would be exposing my parents to a full 12 weeks of their risk budget. In the end, our family decided to give this year a pass. Hopefully we'll have a vaccine by next year and life can go back to normal.
 
-Your family's risk tolerance may be different than mine - if you decide the risk is worthwhile I highly recommend working some or all of these precautions into your plans!
+If you're determined to travel, please, please, please consider adding the above precautions. If you're on the fence about flying this Thanksgiving, I strongly suggest sitting tight. The end of the pandemic is in sight, we just have to survive until then.
 
 ----------
 # Behind the Scenes: How I used microCOVID to Plan My Trip
@@ -74,7 +74,7 @@ Either way, transit to the airport is relatively safe!
 
 My normal routines include grocery shopping with an N95 mask ([40 microCOVIDs](/?distance=sixFt&duration=60&interaction=oneTime&personCount=5&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)) and seeing my partner who used microCOVID to manage her risk ([100 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=partner&personCount=1&riskProfile=onePercent&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)).
 
-My brother also grocery shops (40 microCOVIDs), and his partner is a schoolteacher, and schools have been in-person ([200,000 microCOVIDs](/?distance=sixFt&duration=2400&interaction=oneTime&personCount=10&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=normal&yourMask=basic))
+My brother also grocery shops (40 microCOVIDs), and his partner is a schoolteacher, and schools have been in-person ([200,000 microCOVIDs](/?distance=sixFt&duration=2400&interaction=oneTime&personCount=10&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=normal&yourMask=basic)) (there's some data that suggests her acutal risk is maybe 1/4 this, since she teachers young children, and young children are less likely to spread COVID - we don't have this research added to the calculator yet).
 
 ## Quarantining
 
@@ -97,15 +97,17 @@ There is also a choice of quarantining at home or at your destination; if we qua
 
 ## Putting it Together
 
-With a quarantine at home and N95 masks on the plane, we still come home with about 800microCOVIDs. Our parents would record a “housemate” interaction with us, which gives them 240 microCOVIDs. Assuming they are otherwise being maximally safe, that is 12x their weekly budget of 20 microCOVIDs. There’s a few ways to deal with this:
+With a quarantine at home and N95 masks on the plane, we still come home with about 800microCOVIDs. Our parents would record a “housemate” interaction with us, which gives them 240 microCOVIDs. Assuming they are otherwise being maximally safe, that is 12x their weekly budget of 20 microCOVIDs.
 
-- They could “save up” for this risk by using only 10 microCOVIDs a week for 24 weeks.
-- We could find a way to quarantine in Maryland after the flight, reducing our risk to 40, at which point they would get only 12 microCOVIDs from us
-- They could decide that having the family together is worth going over their annual risk budget (1000 microCOVID) by 20%.
-- We could delay our family holiday until COVID rates go down - states are starting to react to the current surge, so there’s a decent change that things will get better in 3-12 weeks.
-- We could drive instead of flying, avoiding the large risk that the plane poses.
+Our family considers this risk too dangerous, so we've opted not to get together.
 
-None of these options feel right to our family, so we're taking a year off from gathering. I don't presume that right decision for everyone, but it's worth evaluating what risk your family is willing to take.
+Finally, here's some things that might make it safe enough if your situation is different from mine:
+- Avoiding fying entirely - driving would sidestep the risk of flying.
+- Wear a better mask on the plane. It's plausible that a P100 will provide [10x better protection than a N95](/paper/13-q-and-a#what-about-masks-that-provide-more-protection-like-an-n95-or-p100-respirator). We don't have solid research that backs this, however. So it's up to you if you want to take bets on it.
+- Find a way to quarantine near home after the flight for 10 days, reducing the chance of exposing parents to the risk of the flight by 95% (you still run the risk of getting COVID yourself, though).
+- If you're lucky enough to be in a part of the country that's still warm, have dinner outside, which reduces the exposure by 20x.
+
+If one of those three works for your family, I'd say go for it. Otherwise, let's wait this out.
 `
 
 export const post = { title, summary, content, author, date, image }
