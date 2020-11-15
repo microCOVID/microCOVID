@@ -8,15 +8,16 @@ function commaIfNeeded(orderOfMagnitude: number): string {
  * This is necessary because float.toPrecision will use exponential notation for large or small numbers.
  */
 export function fixedPointPrecision(
-  val: number | null,
+  valOrNull: number | null,
   maxNumber = 1e6,
   decimalsNearMax = false,
 ): string {
-  if (!val) {
+  if (!valOrNull) {
     return '0'
   }
+  let val: number = valOrNull
   let output = ''
-  const orderOfMagnitude = Math.floor(Math.log10(val))
+  let orderOfMagnitude = Math.floor(Math.log10(val))
 
   if (val > 0.9 * maxNumber) {
     // Show digits until we reach one that isn't a 9.
@@ -58,6 +59,10 @@ export function fixedPointPrecision(
       --shift
     }
   }
+
+  // Round now. Values like 95 will change order of magnitude as a result of rounding.
+  val = Math.round(val * 10 ** -orderOfMagnitude) * 10 ** orderOfMagnitude
+  orderOfMagnitude = Math.floor(Math.log10(val))
 
   // First digit
   output += Math.round(val * 10 ** -orderOfMagnitude)
