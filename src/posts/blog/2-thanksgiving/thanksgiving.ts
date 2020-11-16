@@ -16,9 +16,11 @@ const summary =
 
 const content = `<figure><img src=${gatherSafely}><figcaption>Illustration by Melody Chang</figcaption></figure>
 
-Thanksgiving is my family’s favorite holiday. My brother and I live far from home, and it’s the one weekend a year our family reliably gets together. This year, traveling is a lot less palatable - I really don’t want to bring home a deadly virus to my parents. I used the microCOVID calculator to figure out how risky my trip was and how we could reduce that risk by 1000x, but that's __still__ too dangerous for us.
+Thanksgiving is my family’s favorite holiday. My brother and I live far from home, and it’s the one weekend a year our family reliably gets together. However, this year there is a pandemic, and __right now__ COVID prevalance is spiking all over the country. I really don’t want to bring home a deadly virus to my parents. I used the microCOVID calculator to figure out how risky my trip was, and was able to reduce my risk by 1000x. Even with these precautions, traveling right now is too risky for my family. We'll wait until prevalance dies down a bit.
 
-**These are the key takeaways:**
+If you have decided to travel anyway, here's what I found for making the holiday safer.
+
+**Key takeaways:**
 
 1. Travel safer, avoid flying if possible
 2. Avoid indoor contact with others starting 10 days before the gathering
@@ -31,11 +33,11 @@ Thanksgiving is my family’s favorite holiday. My brother and I live far from h
 ## Avoid Indoor Contact
 - COVID spreads via exhaled particles; whenever someone is breathing in the same room as you, they could be transmitting the virus.
 - Starting 14 days before my gathering:
-    - I will avoid working in an indoor space with others. I note that I’m fortunate to have a job that allows this. If I were working a job that made me come in, I’d wear a KN95 mask during this period.
+    - I would avoid working in an indoor space with others. I note that I’m fortunate to have a job that allows this. If I were working a job that made me come in, I’d wear a KN95 mask during this period.
 - Starting 10 days before my gathering:
-    - I won’t share air space with others - no indoor dining or in person shopping. I’ll shop ahead of time or use curbside pickup for essentials.
+    - I won't share air space with others - no indoor dining or in person shopping. I’ll shop ahead of time or use curbside pickup for essentials.
     - If I must go into a store, I’ll wear our KN95 mask.
-    - I won’t spend time indoors with friends - but I can still hang out with them outside.
+    - I won't spend time indoors with friends - but I can still hang out with them outside.
     - I don’t have housemates, but if I did, I would try to avoid sharing air with them - I’ll use the kitchen at different times and run a HEPA Air Purifier in common spaces.
 ## Encourage Family/Guests to do the Same
 - Since my brother would also be coming, I’d need to talk to him about taking the same precautions as me. Keeping our parents safe is on both of us!
@@ -103,10 +105,11 @@ With a quarantine at home and N95 masks on the plane, we still come home with ab
 Our family considers this risk too dangerous, so we've opted not to get together.
 
 Finally, here's some things that might make it safe enough if your situation is different from mine:
-- Avoiding fying entirely - driving would sidestep the risk of flying.
+- Avoiding flying entirely - driving would sidestep the risk of flying.
 - Wear a better mask on the plane. It's plausible that a P100 will provide [10x better protection than a N95](/paper/13-q-and-a#what-about-masks-that-provide-more-protection-like-an-n95-or-p100-respirator). We don't have solid research that backs this, however. So it's up to you if you want to take bets on it.
 - Find a way to quarantine near home after the flight for 10 days, reducing the chance of exposing parents to the risk of the flight by 95% (you still run the risk of getting COVID yourself, though).
 - If you're lucky enough to be in a part of the country that's still warm, have dinner outside, which reduces the exposure by 20x.
+- Wait. COVID prevalance was 100x lower for the summer. The risk of getting COVID from these activiites is directly proportional to how much of the population has COVID. If you wait for rates to go back down again, you can have a safer Thanksgiving in the spring.
 
 If one of those three works for your family, I'd say go for it. Otherwise, let's wait this out.
 `
