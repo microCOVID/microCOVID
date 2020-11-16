@@ -56,7 +56,7 @@
             "your_mask_question": "Quel masque portez-vous ?",
             "your_mask_header": "Votre masque",
             "no_intimate_bonus_outdoors": "En raison des distances très proches, nous ne sommes pas convaincus qu’être à l’extérieur réduit le risque de manière substantielle. Ainsi, nous n’offrons aucun bonus pour être à l’extérieur quand le contexte est intime.",
-            "environment_question": "Est-ce à l’intérieur ou à l’extérieur ?",
+            "environment_question": "Est-ce à l’intérieur ou à l’extérieur ? L’espace est-il ventilé ou l’air est-il filtré ?",
             "environment_header": "Environnement",
             "label": "Précautions",
             "filtered_ensure_airflow": "Assurez un débit suffisant à travers le filtre pour votre pièce. Pour obtenir de l’aide sur la manière de procéder, cliquez <1>ici</1>."
@@ -175,8 +175,9 @@
         "oneTime": "Interaction unique [{{ percentage }} de chance de transmission par heure]",
         "partially_enclosed": "Un espace avec un ou plusieurs côtés ouverts sur l’extérieur",
         "car_windows_down": "Une voiture en mouvement avec les vitres baissées",
-        "transit": "Un avion ou un train avec filtration de l’air",
-        "filtered": "À l’intérieur avec un filtre HEPA (débit 5× la taille de la pièce)"
+        "transit": "Un train avec filtration de l’air",
+        "filtered": "À l’intérieur avec un filtre HEPA (débit 5× la taille de la pièce)",
+        "plane": "Un avion"
     },
     "about": {
         "donations_details": "Nous acceptons également les dons et les pourboires, si ça vous dit. Pas d’obligation, vraiment. Nous sommes tous des bénévoles et nous n’avons actuellement aucun financement pour travailler sur ce projet. Merci d’avance !",
