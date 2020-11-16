@@ -18,7 +18,7 @@
             "your_mask_question": "Welche Maske trägst du?",
             "your_mask_header": "Deine Maske",
             "no_intimate_bonus_outdoors": "Wegen der geringen Abstände gehen wir nicht davon aus, dass der Aufenthalt im Freien das Risiko substantiell senkt. Daher gibt es keinen Bonus für den Aufenthalt im Freien mit geringen Abständen.",
-            "environment_question": "Drinnen oder draußen?",
+            "environment_question": "Ist es drinnen oder draußen? Ist der Raum belüftet oder wird die Luft gefiltert?",
             "label": "Vorsichtsmaßnahmen",
             "environment_header": "Umgebung",
             "filtered_ensure_airflow": "Stellen Sie sicher, dass der Filter für Ihren Raum ausreichend durchströmt ist. Hilfe dazu finden Sie unter <1>hier</ 1>."
