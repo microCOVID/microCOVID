@@ -76,7 +76,7 @@
     "distance_question": "How close are these nearby people, on average?",
     "distance_header": "Distance",
     "duration_header": "Duration",
-    "duration_question": "How long is the activity, in minutes?",
+    "duration_question": "How long is the activity, in minutes? (For a repeated activity: minutes per week?)",
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "person_risk_profile_question": "What is their risk profile?",
     "person_risk_profile_header": "Risk Profile",
@@ -126,11 +126,11 @@
     "risk_tolerance_point1_percent_label": "High Caution Budget",
     "risk_tolerance_point1_percent_explanation": "Budget: 0.1% chance of COVID per year (20 microCOVIDs per week) (suggested if you or your close contacts are more vulnerable to COVID)",
     "intro": {
-      "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from a wide range of activities, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.",
-      "call_to_action": "Calculate the approximate COVID risk of any activity"
+      "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from a specific activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.",
+      "call_to_action": "Calculate the COVID risk to you from a specific activity or relationship"
     },
-    "risk_step_label": "Step 2: Describe the activity",
-    "type_of_interaction": "Is this a single activity or an ongoing relationship?",
+    "risk_step_label": "Step 2: Describe the activity or relationship",
+    "type_of_interaction": "Is this a specific activity or an ongoing relationship?",
     "risk_group_empty_warning": "First, enter your location",
     "warning": {
       "important": "Important",
@@ -144,9 +144,9 @@
     "select_default_action": "Select one..."
   },
   "data": {
-    "oneTime": "One-time interaction [{{ percentage }} chance of transmission per hour]",
-    "repeated": "Household member [{{ percentage }} chance of transmission per week]",
-    "partner": "Partner / spouse [{{ percentage }} chance of transmission per week]",
+    "oneTime": "One-time interaction or repeated activity [{{ percentage }} chance of transmission per hour]",
+    "repeated": "Household member relationship [{{ percentage }} chance of transmission per week]",
+    "partner": "Partner / spouse relationship [{{ percentage }} chance of transmission per week]",
     "indoor": "Indoor",
     "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
     "transit": "A train with air filtration",
