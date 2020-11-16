@@ -66,7 +66,8 @@
             "environment_question": "Er det inne eller utendørs?",
             "environment_header": "Miljø",
             "label": "Forhåndsregler",
-            "no_intimate_bonus_outdoors": "Som følge av nærheten til andre, antas det at å være utendørs ikke minsker risikoen i særlig grad. Det gis altså ingen bonus for å være utendørs ved intimitet."
+            "no_intimate_bonus_outdoors": "Som følge av nærheten til andre, antas det at å være utendørs ikke minsker risikoen i særlig grad. Det gis altså ingen bonus for å være utendørs ved intimitet.",
+            "filtered_ensure_airflow": "Forsikre nok luftflyt gjennom filteret for ditt rom, og lær mer <1>her</1>."
         },
         "warning": {
             "important": "Viktig",
@@ -163,7 +164,12 @@
         "sixft_distance": ">2m unna",
         "tenft_distance": ">3m unna",
         "close_distance": "Nær (<30cm unna)",
-        "partner": "Partner/ektefelle [{{ percentage }}] sjanse for smitteoverføring per uke]"
+        "partner": "Partner/ektefelle [{{ percentage }}] sjanse for smitteoverføring per uke]",
+        "filtered": "Innendørs med HEPA-filter (luftflyt 5x romstørrelse)",
+        "partially_enclosed": "Et rom med ett eller flere åpne sider",
+        "car_windows_down": "En bil i bevegelse med vinduene nedrullet",
+        "plane": "Et fly",
+        "transit": "Et tog med luftfiltrering"
     },
     "button": {
         "reset_form": "Tilbakestill skjema",
