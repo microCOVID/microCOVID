@@ -96,7 +96,7 @@ My brother’s partner, who currently has 200,000 microCOVIDs, needs to sit out 
 
 Of course, quarantining from a job is not always easy. For those who don’t have the option of working remotely or taking time off, there’s no easy answer. Consider what your options are and how much risk you’re willing to bring home.
 
-There is also a choice of quarantining at home or at your destination; if we quarantine at home in Denver, all three of us still incur 100 microCOVIDs from the plane ride, which we’d bring home to our parents. To be maximally safe, we would instead quarantine in Maryland, *after* flying. However, doing this would require getting a hotel or other place to stay in Maryland where we wouldn’t be sharing air with our parents. It would probably be less comfortable than staying at either our homes or our parents’, but it would reduce our microCOVIDs by 95 a piece.
+There is also a choice of quarantining at home or at your destination; if we quarantine at home in Denver, all three of us still incur 200 microCOVIDs from the plane ride, which we’d bring home to our parents. To be maximally safe, we would instead quarantine in Maryland, *after* flying. However, doing this would require getting a hotel or other place to stay in Maryland where we wouldn’t be sharing air with our parents. It would probably be less comfortable than staying at either our homes or our parents’, but it would reduce our microCOVIDs by 190 a piece.
 
 ## Putting it Together
 
