@@ -2,8 +2,8 @@
     "menu": {
         "spreadsheet": "Arbeitsmappe",
         "whitepaper": "White Paper",
-        "contactus": "Nimm Kontakt mit uns auf",
-        "about": "Über",
+        "contactus": "Kontakt",
+        "about": "Über das Projekt",
         "calculator": "Rechner"
     },
     "current_lang_two_letter_code": "de",
@@ -12,14 +12,14 @@
             "volume_question": "Wie laut wird gesprochen?",
             "volume_header": "Lautstärke",
             "their_mask_note": "Falls die anderen Personen essen oder trinken, wähle „keine Maske“",
-            "their_mask_question": "Welche Masken tragen DIE ANDEREN?",
+            "their_mask_question": "Welche Masken tragen die anderen?",
             "their_mask_header": "Die Masken der anderen Personen",
             "your_mask_note": "Falls du isst oder trinkst, wähle „keine Maske“",
-            "your_mask_question": "Welche Maske trägst DU?",
+            "your_mask_question": "Welche Maske trägst du?",
             "your_mask_header": "Deine Maske",
             "no_intimate_bonus_outdoors": "Wegen der geringen Abstände gehen wir nicht davon aus, dass der Aufenthalt im Freien das Risiko substantiell senkt. Daher gibt es keinen Bonus für den Aufenthalt im Freien mit geringen Abständen.",
             "environment_question": "Drinnen oder draußen?",
-            "label": "Schutzvorkehrungen",
+            "label": "Vorsichtsmaßnahmen",
             "environment_header": "Umgebung",
             "filtered_ensure_airflow": "Stellen Sie sicher, dass der Filter für Ihren Raum ausreichend durchströmt ist. Hilfe dazu finden Sie unter <1>hier</ 1>."
         },
@@ -175,8 +175,9 @@
         "oneTime": "Einmalige Begegnung [{{ percentage }}-Chance einer Infektion je Stunde]",
         "partially_enclosed": "Ein Raum mit einer oder mehreren nach außen offenen Seiten",
         "car_windows_down": "Ein fahrendes Auto mit heruntergeklappten Fenstern",
-        "transit": "Ein Flugzeug oder Zug mit Luftfilterung",
-        "filtered": "Innen mit einem HEPA-Filter (Durchflussrate 5× Raumgröße)"
+        "transit": "Ein Zug mit Luftfilterung",
+        "filtered": "Innen mit einem HEPA-Filter (Durchflussrate 5× Raumgröße)",
+        "plane": "Ein Flugzeug"
     },
     "scenario": {
         "votingInPerson": "Stimmabgabe im Wahllokal",
