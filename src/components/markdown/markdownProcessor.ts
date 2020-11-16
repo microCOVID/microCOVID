@@ -18,6 +18,9 @@ export const processor = new MarkdownIt({
     },
   })
 
+/**
+ * Strips the html tags from an html string, returning plain text.
+ */
 export const metaContent = (htmlContent: string): string => {
   const tmp = document.createElement('DIV')
   tmp.innerHTML = htmlContent
