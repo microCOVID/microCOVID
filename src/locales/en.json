@@ -70,7 +70,7 @@
       "onetime_tips": "<li>MODify your activities (make them Masked, Outdoors, Distanced)</li> <li>Wear the best mask you can get! <br/><1/></li> <li>Visit public places during less crowded hours</li> <li> Reduce shopping trips by doing one trip for multiple people, using delivery services, or shopping online</li> <li>If this activity is with friends, encourage them to not come if they or any of their close contacts are feeling unwell</li>"
     },
     "nearby_people_label": "Nearby people",
-    "number_of_people_near_you_partner": "How many people do you live with?",
+    "number_of_people_near_you_partner": "How many people are you living or staying with?",
     "number_of_people_near_you_onetime": "How many people are usually near you during this activity?",
     "people_count": "People",
     "distance_question": "How close are these nearby people, on average?",
@@ -145,8 +145,8 @@
   },
   "data": {
     "oneTime": "One-time interaction or repeated activity [{{ percentage }} chance of transmission per hour]",
-    "repeated": "Household member relationship [{{ percentage }} chance of transmission per week]",
-    "partner": "Partner / spouse relationship [{{ percentage }} chance of transmission per week]",
+    "repeated": "Household member, or visitor staying at your home [{{ percentage }} chance of transmission per week]",
+    "partner": "Partner / spouse [{{ percentage }} chance of transmission per week]",
     "indoor": "Indoor",
     "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
     "transit": "A train with air filtration",
