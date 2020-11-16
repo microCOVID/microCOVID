@@ -30,9 +30,9 @@ Thanksgiving is my family’s favorite holiday. My brother and I live far from h
 - Likewise, it would have been ideal for me to quarantine for 10 days after getting off the plane (to ensure I don’t pass on the virus if I get it on the plane). I don’t have a good place near my parents to do so.
 ## Avoid Indoor Contact
 - COVID spreads via exhaled particles; whenever someone is breathing in the same room as you, they could be transmitting the virus.
-- Starting 14 days before your gathering:
+- Starting 14 days before my gathering:
     - I will avoid working in an indoor space with others. I note that I’m fortunate to have a job that allows this. If I were working a job that made me come in, I’d wear a KN95 mask during this period.
-- Starting 10 days before your gathering:
+- Starting 10 days before my gathering:
     - I won’t share air space with others - no indoor dining or in person shopping. I’ll shop ahead of time or use curbside pickup for essentials.
     - If I must go into a store, I’ll wear our KN95 mask.
     - I won’t spend time indoors with friends - but I can still hang out with them outside.
@@ -51,7 +51,7 @@ If you're determined to travel, please, please, please consider adding the above
 ----------
 # Behind the Scenes: How I used microCOVID to Plan My Trip
 
-Here’s the steps I took to assess what the risk level of my family gathering would be. The general precautions I outlined are great practice and should work for you, even if you don’t want to dive into the numbers. If calculating out your exact risk and optimizing for your situation is something that excites you, read on!
+Here’s the steps I took to assess what the risk level of my family gathering would be. The general precautions I outlined are great practice and should work for you, even if you don’t want to dive into the numbers. If calculating your exact risk and optimizing for your situation is something that excites you, read on!
 
 Note: The microCOVID values reported here are a snapshot from November 14, 2020. Following the links on a different day may give different results if prevalence changes.
 
@@ -62,6 +62,7 @@ Note 2: Location matters! If you want to apply these to your own plans, be sure 
 ****
 A 3 hour plane from Denver while wearing a N95 mask costs [200 microCOVIDs](/?distance=normal&duration=180&interaction=oneTime&personCount=20&riskProfile=average&setting=transit&subLocation=US_08013&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95).
 
+Also, if risk to yourself and/or your housemates are something that you are concerned about, be sure to check the reverse flight; you might need to quarantine from your housemates to protect them when you return!
 ## Transit to and from the Airport
 ****
 A taxi to the airport in Denver costs [20 microCOVIDs](/?distance=sixFt&duration=60&interaction=oneTime&personCount=1&riskProfile=average&setting=carWindowsDown&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=basic). The taxi from the airport in Maryland costs [4 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=oneTime&personCount=1&riskProfile=average&setting=carWindowsDown&subLocation=US_24031&theirMask=basic&topLocation=US_24&voice=silent&yourMask=basic). I included rolling down the windows for the ride.
