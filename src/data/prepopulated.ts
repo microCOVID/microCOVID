@@ -99,7 +99,7 @@ export const prepopulated: {
     interaction: 'oneTime',
     personCount: 20,
 
-    setting: 'transit',
+    setting: 'plane',
     distance: 'normal',
     duration: 360,
     theirMask: 'basic',

@@ -62,7 +62,7 @@ Note 2: Location matters! If you want to apply these to your own plans, be sure 
 
 ## The Plane Ride
 ****
-A 3 hour plane from Denver while wearing a N95 mask costs [200 microCOVIDs](/?distance=normal&duration=180&interaction=oneTime&personCount=20&riskProfile=average&setting=transit&subLocation=US_08013&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95).
+A 3 hour plane from Denver while wearing a N95 mask costs [200 microCOVIDs](/?distance=normal&duration=180&interaction=oneTime&personCount=20&riskProfile=average&setting=plane&subLocation=US_08013&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95).
 
 Also, if risk to yourself and/or your housemates are something that you are concerned about, be sure to check the reverse flight; you might need to quarantine from your housemates to protect them when you return!
 ## Transit to and from the Airport
