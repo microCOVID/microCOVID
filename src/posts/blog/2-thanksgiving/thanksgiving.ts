@@ -25,7 +25,7 @@ Thanksgiving is my family’s favorite holiday. My brother and I live far from h
 3. Encourage all guests to do the same
 4. Do 1-3, even if you are also getting tested
 ## Travel Safer
-- Given that I’d be on a crowded plane, I’ve opted to buy the best protection - N95/KN95 masks provide the best protection - 10x better than a cloth mask. I bought mine at [Honest PPE Supply](https://honestppe.supply/) for about $3 a mask.
+- Given that I’d be on a crowded plane, I’ve opted to buy better protection - N95/KN95 masks are 10x better than a cloth mask. I bought mine at [Honest PPE Supply](https://honestppe.supply/) for about $3 a mask.
 - If I could avoid flying I really should - a plane ride is about as risky as 12 weeks of grocery shopping (which is already one of the more dangerous activities!).
 - Likewise, it would have been ideal for me to quarantine for 10 days after getting off the plane (to ensure I don’t pass on the virus if I get it on the plane). I don’t have a good place near my parents to do so.
 ## Avoid Indoor Contact
@@ -75,7 +75,7 @@ Either way, transit to the airport is relatively safe!
 
 My normal routines include grocery shopping with an N95 mask ([40 microCOVIDs](/?distance=sixFt&duration=60&interaction=oneTime&personCount=5&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)) and seeing my partner who used microCOVID to manage her risk ([100 microCOVIDs](https://www.microcovid.org/?distance=sixFt&duration=60&interaction=partner&personCount=1&riskProfile=onePercent&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=silent&yourMask=n95)).
 
-My brother also grocery shops (40 microCOVIDs), and his partner is a schoolteacher, and schools have been in-person ([200,000 microCOVIDs](/?distance=sixFt&duration=2400&interaction=oneTime&personCount=10&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=normal&yourMask=basic)) (there's some data that suggests her acutal risk is maybe 1/4 this, since she teachers young children, and young children are less likely to spread COVID - we don't have this research added to the calculator yet).
+My brother also grocery shops (40 microCOVIDs), and his partner is a schoolteacher, and schools have been in-person ([200,000 microCOVIDs](/?distance=sixFt&duration=2400&interaction=oneTime&personCount=10&riskProfile=average&setting=indoor&subLocation=US_08031&theirMask=basic&topLocation=US_08&voice=normal&yourMask=basic)) (there's some data that suggests her acutal risk is maybe 1/4 this, since she teachers young children, and young children are [less likely to spread COVID](https://www.cdc.gov/mmwr/volumes/69/wr/mm6937e3.htm) - we don't have this research added to the calculator yet).
 
 ## Quarantining
 
