@@ -3971,6 +3971,15 @@ export const Locations: { [key: string]: Location } = {
     topLevelGroup: 'Countries',
     subdivisions: [],
   },
+  Belgium: {
+    label: 'Belgium',
+    population: '11,589,616',
+    casesPastWeek: 35150,
+    casesIncreasingPercentage: 0.0,
+    positiveCasePercentage: 17.299999999999997,
+    topLevelGroup: 'Countries',
+    subdivisions: [],
+  },
   Belize: {
     label: 'Belize',
     population: '397,621',
