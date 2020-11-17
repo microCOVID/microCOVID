@@ -76,6 +76,15 @@ export const Contact = (): React.ReactElement => {
           our project and implement larger changes yourself, be our guest!
         </p>
       </p>
+      <h3>Translations</h3>
+      <p>
+        You don't need to be a programmer or a scientist to contribute! We
+        manage our translations on a user-friendly translation platform called
+        Weblate.{' '}
+        <a href="https://hosted.weblate.org/engage/microcovid/">Sign up here</a>{' '}
+        to suggest improvements or to translate the site to more languages,
+        making it accessible to more people around the world.
+      </p>
       <h3>Questions</h3>
       <p>
         If you have a question or something is confusing, and it's not in the
