@@ -27,6 +27,12 @@ const personCountPopover = (
           </li>
         </ul>
       </p>
+      <p>
+        If some people are circulating, you don't need to inflate this number to
+        account for that. For example, if you are at a backyard party where you
+        are usually talking to 5 people, but the specific people change as you
+        mingle, that is still just 5 nearby people on average.
+      </p>
     </Popover.Content>
   </Popover>
 )
