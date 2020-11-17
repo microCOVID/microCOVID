@@ -11,7 +11,7 @@
         "precautions": {
             "label": "Óvintézkedések",
             "environment_header": "Környezet",
-            "environment_question": "Beltéren vagy a szabadban vagytok?",
+            "environment_question": "Beltéren vagy a szabadban vagytok? Milyen a szellőzés? Van szűrőberendezés?",
             "no_intimate_bonus_outdoors": "Ha kifejezetten közel vagytok egymáshoz, valószínűleg nem számít, hogy bent vagy a szabadban vagytok, úgyhogy ebben az esetben nem csökkentjük a kockázati szintet a szabadban.",
             "your_mask_header": "A te maszkod",
             "your_mask_question": "Milyen maszkot viselsz?",
@@ -181,8 +181,9 @@
         },
         "partially_enclosed": "Egy vagy több oldalon nyitott tér",
         "car_windows_down": "Mozgó autó leengedett ablakkal",
-        "transit": "Replő vagy vonat légszűrő berendezéssel",
-        "filtered": "Beltér HEPA légszűrővel (óránként ötszöri légcserével)"
+        "transit": "Vonat légszűrő berendezéssel",
+        "filtered": "Beltér HEPA légszűrővel (óránként ötszöri légcserével)",
+        "plane": "Repülő"
     },
     "scenario": {
         "outdoorMasked2": "Találkozás a szabadban, maszkban, ketten",
