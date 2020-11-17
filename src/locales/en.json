@@ -23,7 +23,7 @@
       "volume_header": "Volume",
       "volume_question": "How much is everyone talking?"
     },
-    "risk_note_about_household_members": "Your estimated risk of infection from a household member or partner/spouse assumes these interactions are indoors, unmasked, and undistanced.",
+    "risk_note_about_household_members": "Estimated risk of infection from any household member assumes you interact with them indoors, without a mask and don't distance yourself.",
     "explanationcard": {
       "person": "person",
       "person_plural": "people",
