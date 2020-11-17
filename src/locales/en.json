@@ -203,7 +203,7 @@
   },
   "about": {
     "intro_header": "What is the microCOVID project?",
-    "basic_description": "A calculator of your COVID-19 risk from ordinary daily activities, estimated in microCOVID units (1 mC being a one-in-a-million chance of contracting COVID-19, based on the scientific literature on it.",
+    "basic_description": "Calculate your COVID-19 risk from daily activities, estimated in microCOVID units (1 mC being a one-in-a-million chance of contracting COVID-19, based on the scientific literature on it).",
     "where_to_start_header": "Where do I start?",
     "data_inputs_lead": "This website contains three outputs of our investigation",
     "data_inputs_calculator": "the <1>calculator</1> used to calculate your COVID-19 risk",
