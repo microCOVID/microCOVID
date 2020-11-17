@@ -609,7 +609,12 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Veteran Hospitals",
     ):
         return True
-    if line.Country_Region in ("Diamond Princess", "Grand Princess", "MS Zaandam"):
+    if line.Country_Region in (
+        "Diamond Princess",
+        "Grand Princess",
+        "MS Zaandam",
+        "Belgium",
+    ):
         return True
     if line.Country_Region == "US":
         if line.Province_State == "Recovered":
