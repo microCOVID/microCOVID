@@ -719,13 +719,13 @@ def main() -> None:
         hack_combined = hack_country
         if not hack_combined.population:
             # The population data is from a continually-updated file,
-            # which post 9/1 includes only the individual counties, not
-            # merged NYC.
+            # which post Nov 11 includes only the individual counties, not
+            # merged country data
             hack_combined.population = sum(c.population for c in hack_indv)
         for county in hack_indv:
             # The case data is from daily historical files, so until
-            # we'll have some cases in the individual counties and
-            # some cases in merged NYC.
+            # we'll have some cases in the individual regions and
+            # some cases in merged country data.
             hack_combined.cumulative_cases += county.cumulative_cases
 
         # END HACK
