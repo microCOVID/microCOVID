@@ -27,10 +27,10 @@
         "explanationcard": {
             "person": "Person",
             "person_plural": "Personen",
-            "risk_budget_usage_explanation": "Diese Begegnung nutzt <strong>{{ usage }}</strong>. Diese Menge deines Budgets wird genutzt <strong>{{ frequency }}</strong>.",
-            "risk_tolerance_selector_header": "Passe deine Risikotoleranz an",
-            "risk_budget_used": "Verbrauchtes Budget",
-            "risk_budget_available": "Verfügbares Budget",
+            "risk_budget_usage_explanation": "Diese Begegnung nutzt <strong>{{ usage }}</strong>. Diese Menge deines Risikobudgets wird genutzt <strong>{{ frequency }}</strong>.",
+            "risk_tolerance_selector_header": "Wie viel Risiko nimmst du an?",
+            "risk_budget_used": "Verbrauchtes Risikobudget",
+            "risk_budget_available": "Verfügbares Risikobudget",
             "risk_budget_header": "Wieviel und wie oft kann ich dies mit meinem gegebenem Risikobudget machen?",
             "details_range_explanation": "Wir glauben mit ca. 90-prozentiger Sicherheit, dass das tatsächliche Risiko zwischen diesen beiden Werten liegt. Siehe unsere <2>Schätzung zur Unsicherheit</2>.",
             "frequency_explanation_oneoff": "Weil dies eine einmalige Begegnung ist, wird das Ergebnis als <strong>microCOVIDs <u>jedes Mal angezeigt</u>, wenn du diese Begegnung hast</strong>. Wenn du diese Aktivität mehrfach pro Woche tust, wird jedes Mal auf dein wöchentliches Budget angerechnet. Wenn du diese Aktivität mehrfach pro Woche mit denselben Leuten machst, gib dies als „{{ repeated_type_suggestion }}“ an, um die maximale Übertragungsrate pro Woche zu sehen.",
@@ -55,7 +55,7 @@
             "details_header_open": "Berechnungsdetails ausblenden",
             "percentage_suffix": "% deines wöchentlichen Risikobudgets",
             "multiple_suffix": "x dein wöchentliches Risikobudget",
-            "risk_budget_explanation": "Du hast ein jährliches Budget einer {{ budget_percent }}-Chance einer COVID-Infektion pro Jahr ausgewählt ({{ budget_points }} microCOVIDs). Das entspricht einem wöchentlichen Budget von <strong>{{ budget_weekly }} microCOVIDs pro Woche</strong>."
+            "risk_budget_explanation": "Du hast ein jährliches Risikobudget einer {{ budget_percent }}-Chance einer COVID-Infektion pro Jahr ausgewählt ({{ budget_points }} microCOVIDs). Das entspricht einem wöchentlichen Budget von <strong>{{ budget_weekly }} microCOVIDs pro Woche</strong>."
         },
         "pointsdisplay": {
             "empty_warning": "Rechner ausfüllen, um Risikolevel einzusehen",
@@ -79,7 +79,7 @@
         "category_very_low": "Sehr niedrig",
         "large_group_warning": "Achtung: Das ist eine große Anzahl an Leuten. Beachte, dass du nur die Anzahl der Leute erfassen sollst, die sich innerhalb von ca. 4,5 Metern aufhalten (also nicht jeden, der sich in dem Gebiet aufhält). Allerdings stellen große Personengruppen für jeden ein Risiko dar und können zu einem Superausbreitung-Ereignis führen.",
         "household_members_note": "Wenn du das potentielle Risiko duch Haushaltsmitglieder simulieren möchtest, zähle nur deren Kontakte außerhalb des Hauses, um eine Doppelzählung zu vermeiden",
-        "person_risk_profile_header": "Risikoprofil",
+        "person_risk_profile_header": "Infektionsrisiko",
         "person_risk_profile_question": "Was ist deren Risikoprofil?",
         "intimate_risk_warning": "Ein minimales Aktivitätsrisiko für Küssen, wegen des Risikos beim Austausch von Körperflüssigkeiten, wurde hinzugefügt.",
         "duration_question": "Wie lange dauert diese Aktivität (in Minuten)?",
