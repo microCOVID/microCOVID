@@ -49,7 +49,7 @@
       "frequency_explanation_oneoff": "Since this is a one-time interaction, the result is shown as <strong>mCs <u>each time</u> you have this interaction</strong>. If you do this activity many times in a week, each time you do it, it will take away from your weekly budget. If you repeat this activity with the same people each week, enter them as \"{{ repeated_type_suggestion }}\" to see what the maximum transmission rate is per week.",
       "details_range": "Probably between",
       "details_range_number": "{{ from }} and {{ to }} microCOVIDs",
-      "details_range_explanation": "With ~90% confidence, the microCOVID assumption is the actual risk falls between these two values. See our <2>uncertainty estimation</2>.",
+      "details_range_explanation": "With ~90% confidence, the microCOVID assumption is the actual risk falls between these two values, as per our <2>uncertainty estimation</2>.",
       "risk_budget_header": "How much of this can I do given my risk budget?",
       "risk_budget_available": "Budget available",
       "risk_budget_explanation": "You selected an annual budget of a {{ budget_percent }} chance of getting COVID-19 per year ({{ budget_points }} microCOVIDs). That equates to a weekly budget of <strong>{{ budget_weekly }} mCs</strong>.",
