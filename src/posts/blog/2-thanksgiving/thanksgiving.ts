@@ -109,7 +109,7 @@ Finally, here's some things that might make it safe enough if your situation is 
 - Wear a better mask on the plane. It's plausible that a P100 will provide [10x better protection than a N95](/paper/13-q-and-a#what-about-masks-that-provide-more-protection-like-an-n95-or-p100-respirator). We don't have solid research that backs this, however. So it's up to you if you want to take bets on it.
 - Find a way to quarantine near home after the flight for 10 days, reducing the chance of exposing parents to the risk of the flight by 95% (you still run the risk of getting COVID yourself, though).
 - If you're lucky enough to be in a part of the country that's still warm, have dinner outside, which reduces the exposure by 20x.
-- Wait. COVID prevalance was 100x lower for the summer. The risk of getting COVID from these activiites is directly proportional to how much of the population has COVID. If you wait for rates to go back down again, you can have a safer Thanksgiving in the spring.
+- Wait. COVID prevalance was 100x lower for the summer. The risk of getting COVID from these activities is directly proportional to how much of the population has COVID. If you wait for rates to go back down again, you can have a safer Thanksgiving in the spring.
 
 If one of those three works for your family, I'd say go for it. Otherwise, let's wait this out.
 `
