@@ -609,11 +609,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Veteran Hospitals",
     ):
         return True
-    if line.Country_Region in (
-        "Diamond Princess",
-        "Grand Princess",
-        "MS Zaandam",
-    ):
+    if line.Country_Region in ("Diamond Princess", "Grand Princess", "MS Zaandam"):
         return True
     if line.Country_Region == "US":
         if line.Province_State == "Recovered":
@@ -689,46 +685,6 @@ def main() -> None:
                     )
                 place.cumulative_cases[current] = line.Confirmed
             current -= timedelta(days=1)
-
-        # HACK: On 2020-11-12, JHU switched from reporting all Blegium cases
-        # as one country to reporting individual regions. Until 2020-11-26 we'll
-        # support mixing the pre- and post-transition data by merging the
-        # regions into "Belgium".
-        if effective_date > date(2020, 11, 26):
-            sys.exit(
-                "REMINDER: Remove the Belgium merging hack now that we have broken-down "
-                "county data for the past two weeks"
-            )
-
-        nyc_county_names = (
-            "Antwerp",
-            "Brussels",
-            "East Flanders",
-            "Flemish Brabant",
-            "Hainaut",
-            "Liege",
-            "Limburg",
-            "Luxembourg",
-            "Namur",
-            "Unknown",
-            "Walloon Brabant",
-            "West Flanders",
-        )
-        ny_state = data.countries["Belgium"]
-        nyc_indv = [ny_state.states.pop(cname) for cname in nyc_county_names]
-        nyc_combined = ny_state
-        if not nyc_combined.population:
-            # The population data is from a continually-updated file,
-            # which post 9/1 includes only the individual counties, not
-            # merged NYC.
-            nyc_combined.population = sum(c.population for c in nyc_indv)
-        for county in nyc_indv:
-            # The case data is from daily historical files, so until
-            # we'll have some cases in the individual counties and
-            # some cases in merged NYC.
-            nyc_combined.cumulative_cases += county.cumulative_cases
-
-        # END HACK
 
         # Test positivity per US county and state
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
