@@ -81,8 +81,9 @@ export const Calculator = (): React.ReactElement => {
       filterParams(calculatorData),
     )
     const location = window.location
-    // eslint-disable-next-line prettier/prettier
-    const link = `${location.protocol}//${location.host}${location.pathname}?${stringify(encodedQuery)}`
+
+    let link = `${location.protocol}//${location.host}${location.pathname}`
+    link += `${link}?${stringify(encodedQuery)}`
     return link
   }
 
