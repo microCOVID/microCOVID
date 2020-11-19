@@ -126,7 +126,7 @@
     "risk_tolerance_point1_percent_label": "High Caution Budget",
     "risk_tolerance_point1_percent_explanation": "Budget: 0.1% chance of COVID per year (20 mCs per week) (suggested if you or your close contacts are more vulnerable to COVID-19)",
     "intro": {
-      "whats_this": "The calculator sums up the risk of getting COVID-19 from a wide range of activities, using the <1>best available research</1>. This in the hopes of helping you hone your intuition, figuring out good harm-reduction strategies, and lowering your stress levels.",
+            "whats_this": "<p>The calculator sums up the risk of getting COVID-19 from a wide range of activities, using the <1>best research available</1>. This in the hopes of helping you hone your intuition, figuring out good harm-reduction strategies, and lowering your stress levels.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.</p>",
       "call_to_action": "Calculate the approximate COVID risk of any activity"
     },
     "risk_step_label": "Step 2: Describe the activity",
@@ -149,7 +149,8 @@
     "partner": "Partner / spouse [{{ percentage }} chance of transmission per week]",
     "indoor": "Indoor",
     "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
-    "transit": "An airplane or train with air filtration",
+    "transit": "A train with air filtration",
+    "plane": "An airplane",
     "car_windows_down": "A moving car with the windows rolled down",
     "partially_enclosed": "A space with one or more sides open to the outdoors",
     "outdoor": "Outdoor",

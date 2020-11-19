@@ -13,6 +13,13 @@ describe('fixedPointPrecision', () => {
   it('rounds numbers less than 1', () => {
     expect(fixedPointPrecision(0.11)).toEqual('0.1')
     expect(fixedPointPrecision(0.046)).toEqual('0.05')
+    expect(fixedPointPrecision(0.09539241516791933)).toEqual('0.1')
+  })
+
+  it('rounds numbers that will increase their order of mangitude', () => {
+    expect(fixedPointPrecision(0.09539241516791933)).toEqual('0.1')
+    expect(fixedPointPrecision(0.99)).toEqual('1')
+    expect(fixedPointPrecision(99)).toEqual('100')
   })
 
   it('adds commas', () => {
@@ -22,6 +29,9 @@ describe('fixedPointPrecision', () => {
   it('shows precision for numbers close to 1e6', () => {
     expect(fixedPointPrecision(996700)).toEqual('997,000')
     expect(fixedPointPrecision(999920)).toEqual('999,920')
+    // This isn't super right, but it also seems odd to report 100% when it's not?
+    expect(fixedPointPrecision(1e6 - 0.1)).toEqual('999,999')
+    expect(fixedPointPrecision(1e6)).toEqual('1,000,000')
   })
 })
 

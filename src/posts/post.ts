@@ -24,8 +24,7 @@ export interface BlogPostContent {
   author: string
   date: string
   image: ImageMeta
-
-  summary?: string
+  summary: string
 }
 
 export type PostMap = { [key: string]: PostContent }
