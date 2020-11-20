@@ -14,7 +14,7 @@ const image: ImageMeta = {
 const summary =
   "Thanksgiving is approaching as Coronavirus is spiking. I used microCOVID to examine the risks of flying home for Thanksgiving (spoilers: it's really quite dangerous)."
 
-const content = `<figure><img src=${gatherSafely}><figcaption>Illustration by Melody Chang</figcaption></figure>
+const content = `<figure><img src=${gatherSafely}><figcaption>Illustration by Melody Chang. Photo by Annie Spratt on Unsplash</figcaption></figure>
 
 Thanksgiving is my family’s favorite holiday. My brother and I live far from home, and it’s the one weekend a year our family reliably gets together. However, this year there is a pandemic, and __right now__ COVID prevalance is spiking all over the country. I really don’t want to bring home a deadly virus to my parents. I used the microCOVID calculator to figure out how risky my trip was, and was able to reduce my risk by 1000x. Even with these precautions, traveling right now is too risky for my family. We'll wait until prevalance dies down a bit.
 
