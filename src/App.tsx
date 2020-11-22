@@ -130,6 +130,7 @@ export const App = (): React.ReactElement => {
                     title={'🌐 ' + t('current_lang_two_letter_code')}
                   >
                     <Dropdown.Item href="?lng=en">English</Dropdown.Item>
+                    <Dropdown.Item href="?lng=fr">Français</Dropdown.Item>
                     <Dropdown.Item href="?lng=de">Deutsch</Dropdown.Item>
                     <Dropdown.Item href="?lng=hu">Magyar</Dropdown.Item>
                   </DropdownButton>

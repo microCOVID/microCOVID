@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next'
 
 import de from './locales/de.json'
 import en from './locales/en.json'
+import fr from './locales/fr.json'
 import hu from './locales/hu.json'
 
 i18n
@@ -12,6 +13,7 @@ i18n
   .init({
     resources: {
       en: { translation: en },
+      fr: { translation: fr },
       de: { translation: de },
       hu: { translation: hu },
     },
