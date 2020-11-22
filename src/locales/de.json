@@ -28,7 +28,7 @@
             "person": "Person",
             "person_plural": "Personen",
             "risk_budget_usage_explanation": "Diese Begegnung nutzt <strong>{{ usage }}</strong>. Diese Menge deines Risikobudgets wird genutzt <strong>{{ frequency }}</strong>.",
-            "risk_tolerance_selector_header": "Wie viel Risiko nimmst du an?",
+            "risk_tolerance_selector_header": "Passe deine Risikotoleranz an",
             "risk_budget_used": "Verbrauchtes Risikobudget",
             "risk_budget_available": "Verfügbares Risikobudget",
             "risk_budget_header": "Wieviel und wie oft kann ich dies mit meinem gegebenem Risikobudget machen?",
@@ -106,7 +106,7 @@
         "risk_tolerance_1_percent_label": "Durchschnittlich vorsichtiges Budget",
         "risk_modifier_frac_plural": "{{frac}} des Risikos",
         "risk_modifier_frac_3rd": "{{frac}} des Risikos",
-        "risk_modifier_frac_2nd": "{{frac}} das Risiko",
+        "risk_modifier_frac_2nd": "{{frac}} des Risikos",
         "prevalence_info_source_information": "Die Prävalenzdaten setzen sich zusammen aus denen des <1>Johns Hopkins CSSE</1> (gemeldete Fälle), von <4>Covid Act Now</4> (Positivtest-Raten der USA) und von <7>Our World in Data</7> (internationale Positivtest-Raten).",
         "risk_tolerance_1_percent_explanation": "Budget: 1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) (empfohlen für gesunde Menschen, die NICHT in engem Kontakt mit stärker gefährdeten Personen stehen)",
         "risk_modifier_multiple": "{{multiplier}}x das Risiko",
@@ -116,15 +116,15 @@
             "budget_header": "Wie kann ich mein Risiko durch Verwendung eines Risikobudgets steuern?",
             "microcovid_header": "Was ist ein micoCOVID?",
             "microcovid_explanation": "<p>Der Modellrechner stellt ein neues Konzept vor, das des microCOVIDs. Ein microCOVID entspricht einer Wahrscheinlichkiet von eins-zu-eine-Million, sich mit COVID zu infizieren.</p> <p>Eine Aktivität, die 20.000 microCOVIDs entspricht, ist ziemlich unsicher, da hier eine Wahrscheinlichkeit von 2 % besteht, dass du dich mit COVID ansteckst - <em>jedes Mal, wenn du sie ausführst</em>. Eine Aktivität, die 20 micoCOVIDs entspricht, ist vergleichsweise sicher, weil du sie ein Jahr lang jede Woche ausführen kannst und du dich dabei mit einer Wahrscheinlichkeit von nur 0,1 % mit COVID infizierst.</p>",
-            "budget_explanation": "Wir halten ein jährliches Risikobudget einer 1 %-Chance einer COVID-Infektion für die meisten gesunden Menschen vernünftig, die nicht in Kontakt mit gefährdeteren Gruppen stehen. Wie wir zu dieser Einschätzung gekommen sind, kannst du <1>hier</1> erfahren. Falls du dieses Budget einer jährlichen 1 %-Infektionswahrscheinlichkeit einhalten willst, sollte das wöchentliche Budget deiner Aktivitäten insgesamt ca. 200 microCOVIDs pro Woche nicht überschreiten. Wir haben eine nützliche <3>Arbeitsmappe</3> entworfen, mit der du deine Aktivitäten im Zeitverlauf mitverfolgen kannst."
+            "budget_explanation": "Wir halten ein jährliches Risikobudget einer 1 %-Chance einer COVID-Infektion für die meisten gesunden Menschen für vernünftig, die nicht in Kontakt mit gefährdeteren Gruppen stehen. Wie wir zu dieser Einschätzung gekommen sind, kannst du <1>hier</1> erfahren. Falls du dieses Budget einer jährlichen 1 %-Infektionswahrscheinlichkeit einhalten willst, sollte das wöchentliche Budget deiner Aktivitäten insgesamt ca. 200 microCOVIDs pro Woche nicht überschreiten. Wir haben eine nützliche <3>Arbeitsmappe</3> entworfen, mit der du deine Aktivitäten im Zeitverlauf mitverfolgen kannst."
         },
         "intro": {
             "call_to_action": "Berechne das COVID-Risiko bei einer beliebigen Aktivität näherungsweise",
-            "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Vielzahl an Aktivitäten einschätzen soll und der sich auf <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Tool dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminderung finden lässt."
+            "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Vielzahl an Aktivitäten einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt."
         },
         "warning": {
             "important": "Wichtig",
-            "body": "Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
+            "body": "Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen Ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
         },
         "risk_group_empty_warning": "Gib zunächst deinen Ort ein",
         "type_of_interaction": "Ist dies eine einmalige oder regelmäßige Aktivität?",
@@ -174,7 +174,7 @@
         "repeated": "Haushaltsmitglied [{{ percentage }}-Chance einer Infektion je Woche]",
         "oneTime": "Einmalige Begegnung [{{ percentage }}-Chance einer Infektion je Stunde]",
         "partially_enclosed": "Ein Raum mit einer oder mehreren nach außen offenen Seiten",
-        "car_windows_down": "Ein fahrendes Auto mit heruntergeklappten Fenstern",
+        "car_windows_down": "Ein fahrendes Auto mit heruntergefahrenen Fensterscheiben",
         "transit": "Ein Zug mit Luftfilterung",
         "filtered": "Innen mit einem HEPA-Filter (Durchflussrate 5× Raumgröße)",
         "plane": "Ein Flugzeug"
@@ -206,10 +206,10 @@
         "feedback": "Falls du Feedback oder Fragen hast oder mithelfen möchtest, nimmer mit uns <1>hier</1> Kontakt auf.",
         "contact_us_header": "Nimm Kontakt mit uns auf",
         "data_inputs_recommendation": "Du solltest entweder mit dem <2>Rechner</2> oder dem <5>White Paper</5> anfangen.",
-        "data_inputs_lead": "Die Webseite enthält drei Ergebnisse unserer Recherchen",
+        "data_inputs_lead": "Diese Website enthält drei Ergebnisse unserer Recherchen",
         "where_to_start_header": "Wo fange ich an?",
         "intro_header": "Was ist das micoCOVID-Projekt?",
-        "disclaimer": "<0>Haftungsausschluss</0> Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
+        "disclaimer": "<0>Haftungsausschluss</0> Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen Ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
     },
     "button": {
         "copy_link": "Link zu diesem Szenario kopieren",
