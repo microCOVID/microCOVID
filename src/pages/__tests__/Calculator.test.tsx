@@ -16,7 +16,7 @@ describe('calculator page', () => {
       wrapper: AllProviders,
     })
 
-    const interactionTypeLabelQuery = /Is this a single activity or an ongoing relationship/i
+    const interactionTypeLabelQuery = /Is this a specific activity or an ongoing relationship/i
     expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
     const topLocationBox = getByRole('combobox', { name: /Select location/i })
     const californiaOption = getByText(/California/i) as HTMLOptionElement
