@@ -20,6 +20,7 @@ import { GenericSelectControl } from 'components/calculator/SelectControl'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
+  InteractionType,
   calculate,
   defaultValues,
   migrateDataToCurrent,
@@ -207,7 +208,7 @@ export const Calculator = (): React.ReactElement => {
                     setter={(value) =>
                       setCalculatorData({
                         ...calculatorData,
-                        interaction: value,
+                        interaction: value as InteractionType,
                         personCount:
                           value === 'partner' ? 1 : calculatorData.personCount,
                       })

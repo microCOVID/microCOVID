@@ -12,33 +12,65 @@ import {
   intimateDurationFloor,
 } from 'data/data'
 
+type RiskProfileType =
+  | 'average'
+  | 'frontline'
+  | 'nonFrontline'
+  | 'livingAlone'
+  | 'livingWithPartner'
+  | 'closedPod4'
+  | 'closedPod10'
+  | 'closedPod20'
+  | 'contact1'
+  | 'contact4'
+  | 'contact10'
+  | 'contactWorks'
+  | 'bars'
+  | 'onePercent'
+  | 'deciPercent'
+  | 'hasCovid'
+  | ''
+export type InteractionType = 'oneTime' | 'repeated' | 'partner' | ''
+type SettingType =
+  | 'indoor'
+  | 'outdoor'
+  | 'filtered'
+  | 'transit'
+  | 'plane'
+  | 'carWindowsDown'
+  | 'partiallyEnclosed'
+  | ''
+type DistanceType = 'intimate' | 'close' | 'normal' | 'sixFt' | 'tenFt' | ''
+type MaskType = 'none' | 'basic' | 'filtered' | 'n95' | ''
+type VoiceType = 'silent' | 'normal' | 'loud' | ''
+
 export interface CalculatorData {
   // Persistence
-  persistedAt?: number
+  persistedAt?: number // epoch ms, last time calc data persisted in localstorage
 
-  // Budget (in microCOVIDs/year)
-  riskBudget: number
+  // Budget
+  riskBudget: number // microCOVIDs/year
 
   // Prevalence
-  topLocation: string
-  subLocation: string
+  topLocation: string // e.g. 'California'
+  subLocation: string // e.g. 'San Francisco'
   population: string
   casesPastWeek: number
-  casesIncreasingPercentage: number
-  positiveCasePercentage: number | null
+  casesIncreasingPercentage: number // e.g. 30.3
+  positiveCasePercentage: number | null // e.g. 3.1
 
   // Person risk
-  riskProfile: string
-  interaction: string
+  riskProfile: RiskProfileType
+  interaction: InteractionType
   personCount: number
 
   // Activity risk
-  setting: string
-  distance: string
+  setting: SettingType
+  distance: DistanceType
   duration: number
-  theirMask: string
-  yourMask: string
-  voice: string
+  theirMask: MaskType
+  yourMask: MaskType
+  voice: VoiceType
 }
 
 export const defaultValues: CalculatorData = {
