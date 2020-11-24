@@ -40,7 +40,13 @@ export type SettingType =
   | 'carWindowsDown'
   | 'partiallyEnclosed'
   | ''
-export type DistanceType = 'intimate' | 'close' | 'normal' | 'sixFt' | 'tenFt' | ''
+export type DistanceType =
+  | 'intimate'
+  | 'close'
+  | 'normal'
+  | 'sixFt'
+  | 'tenFt'
+  | ''
 export type MaskType = 'none' | 'basic' | 'filtered' | 'n95' | ''
 export type VoiceType = 'silent' | 'normal' | 'loud' | ''
 

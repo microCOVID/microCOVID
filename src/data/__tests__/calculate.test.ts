@@ -1,8 +1,14 @@
 import {
   CalculatorData,
+  DistanceType,
+  InteractionType,
+  MaskType,
+  RiskProfileType,
+  SettingType,
+  VoiceType,
   calculate,
   calculateLocationPersonAverage,
-  defaultValues, SettingType, DistanceType, MaskType, VoiceType, RiskProfileType, InteractionType,
+  defaultValues,
 } from 'data/calculate'
 import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
