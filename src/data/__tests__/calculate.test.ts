@@ -2,7 +2,7 @@ import {
   CalculatorData,
   calculate,
   calculateLocationPersonAverage,
-  defaultValues,
+  defaultValues, SettingType, DistanceType, MaskType, VoiceType, RiskProfileType, InteractionType,
 } from 'data/calculate'
 import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
@@ -31,12 +31,12 @@ describe('calculate', () => {
 
   // Variables that should be ignored for repeated/partner interactions.
   const repeatedDontCare = {
-    setting: 'indoor',
-    distance: 'sixFt',
+    setting: 'indoor' as SettingType,
+    distance: 'sixFt' as DistanceType,
     duration: 60,
-    theirMask: 'none',
-    yourMask: 'none',
-    voice: 'normal',
+    theirMask: 'none' as MaskType,
+    yourMask: 'none' as MaskType,
+    voice: 'normal' as VoiceType,
   }
 
   const expectedPrevalance = 0.006
@@ -92,16 +92,16 @@ describe('calculate', () => {
   it('should produce a self-consistent living alone risk profile', () => {
     const data: CalculatorData = {
       ...baseTestData,
-      riskProfile: 'average',
-      interaction: 'oneTime',
+      riskProfile: 'average' as RiskProfileType,
+      interaction: 'oneTime' as InteractionType,
       personCount: 10,
 
-      setting: 'indoor',
-      distance: 'sixFt',
+      setting: 'indoor' as SettingType,
+      distance: 'sixFt' as DistanceType,
       duration: 60,
-      theirMask: 'basic',
-      yourMask: 'filtered',
-      voice: 'silent',
+      theirMask: 'basic' as MaskType,
+      yourMask: 'filtered' as MaskType,
+      voice: 'silent' as VoiceType,
     }
 
     expect(calcValue(data)).toBeCloseTo(
@@ -112,16 +112,16 @@ describe('calculate', () => {
   it('should handle large risks', () => {
     const data: CalculatorData = {
       ...baseTestData,
-      riskProfile: 'hasCovid',
-      interaction: 'repeated',
+      riskProfile: 'hasCovid' as RiskProfileType,
+      interaction: 'repeated' as InteractionType,
       personCount: 1,
 
-      setting: 'indoor',
-      distance: 'sixFt',
+      setting: 'indoor' as SettingType,
+      distance: 'sixFt' as DistanceType,
       duration: 60,
-      theirMask: 'basic',
-      yourMask: 'filtered',
-      voice: 'silent',
+      theirMask: 'basic' as MaskType,
+      yourMask: 'filtered' as MaskType,
+      voice: 'silent' as VoiceType,
     }
 
     const oneTime = calculate(data)
@@ -146,8 +146,8 @@ describe('calculate', () => {
       const data: CalculatorData = {
         ...baseTestData,
         ...repeatedDontCare,
-        riskProfile: profile,
-        interaction: 'repeated',
+        riskProfile: profile as RiskProfileType,
+        interaction: 'repeated' as InteractionType,
         personCount: 1,
       }
 
@@ -193,8 +193,8 @@ describe('calculate', () => {
   describe('Interaction: housemate', () => {
     const base = {
       ...baseTestData,
-      riskProfile: 'average',
-      interaction: 'repeated',
+      riskProfile: 'average' as RiskProfileType,
+      interaction: 'repeated' as InteractionType,
       personCount: 1,
     }
     const housemate: CalculatorData = {

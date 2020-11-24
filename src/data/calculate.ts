@@ -12,7 +12,7 @@ import {
   intimateDurationFloor,
 } from 'data/data'
 
-type RiskProfileType =
+export type RiskProfileType =
   | 'average'
   | 'frontline'
   | 'nonFrontline'
@@ -31,7 +31,7 @@ type RiskProfileType =
   | 'hasCovid'
   | ''
 export type InteractionType = 'oneTime' | 'repeated' | 'partner' | ''
-type SettingType =
+export type SettingType =
   | 'indoor'
   | 'outdoor'
   | 'filtered'
@@ -40,9 +40,9 @@ type SettingType =
   | 'carWindowsDown'
   | 'partiallyEnclosed'
   | ''
-type DistanceType = 'intimate' | 'close' | 'normal' | 'sixFt' | 'tenFt' | ''
-type MaskType = 'none' | 'basic' | 'filtered' | 'n95' | ''
-type VoiceType = 'silent' | 'normal' | 'loud' | ''
+export type DistanceType = 'intimate' | 'close' | 'normal' | 'sixFt' | 'tenFt' | ''
+export type MaskType = 'none' | 'basic' | 'filtered' | 'n95' | ''
+export type VoiceType = 'silent' | 'normal' | 'loud' | ''
 
 export interface CalculatorData {
   // Persistence
