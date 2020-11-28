@@ -21,17 +21,19 @@ const summary =
 const content: React.FunctionComponent = () => {
   return (
     <>
-      <img
-        src={hepaFilters}
-        alt="A graphic depicting an air purifier taking in air with COVID virus particles and emitting only air."
-      ></img>
+      <figure>
+        <img
+          src={hepaFilters}
+          alt="A graphic depicting an air purifier taking in air with COVID virus particles and emitting only air."
+        ></img>
+        <figcaption>Artwork by Melody Chang</figcaption>
+      </figure>
       <p>
         Brrr. It’s getting cold outside. As the northern hemisphere heads into
         winter, we are seeing a huge uptick in COVID cases from people moving
         their activities indoors. The United States is seeing more than 2x the
         daily rates of the last peak in August.
       </p>
-
       <iframe
         src="https://ourworldindata.org/grapher/daily-covid-cases-deaths?time=2020-01-01..2020-11-22&country=~USA"
         loading="lazy"
