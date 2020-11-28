@@ -17,7 +17,6 @@ export const BlogPostPage: React.FunctionComponent<{
   }
 
   const page = posts[id]
-  const body = processor.render(page.content)
 
   return (
     <div className="paperPage">
@@ -42,8 +41,13 @@ export const BlogPostPage: React.FunctionComponent<{
 
       <div className="postAuthor">{page.author}</div>
       <div className="postDate">{page.date}</div>
-
-      <div dangerouslySetInnerHTML={{ __html: body }} />
+      {typeof page.content === 'string' ? (
+        <div
+          dangerouslySetInnerHTML={{ __html: processor.render(page.content) }}
+        />
+      ) : (
+        page.content({})
+      )}
     </div>
   )
 }
