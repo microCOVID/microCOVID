@@ -45,10 +45,10 @@ export const HepaCalculator: React.FunctionComponent = () => {
     let multiplier
     if (dimensions.unit === 'ft') {
       unit = 'm'
-      multiplier = FEET_PER_METER
+      multiplier = 1 / FEET_PER_METER
     } else {
       unit = 'ft'
-      multiplier = 1 / FEET_PER_METER
+      multiplier = FEET_PER_METER
     }
     setDimensions({
       unit,
