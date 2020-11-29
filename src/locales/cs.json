@@ -1,1 +1,16 @@
-{}
+{
+    "calculator": {
+        "precautions": {
+            "no_intimate_bonus_outdoors": "Při blízkém kontaktu není jasné, že by venkovní prostředí nějak výrazněji snižovalo riziko. U bližších nebo intimních setkání tedy už nesnižujeme riziko za pobyt venku.",
+            "environment_question": "Uvnitř či venku? Jak je prostor ventilován? Filtrace vzduchu?",
+            "environment_header": "Prostředí",
+            "label": "Opatření"
+        }
+    },
+    "current_lang_two_letter_code": "cs",
+    "menu": {
+        "contactus": "Kontakt",
+        "about": "O projektu",
+        "calculator": "Kalkulačka"
+    }
+}
