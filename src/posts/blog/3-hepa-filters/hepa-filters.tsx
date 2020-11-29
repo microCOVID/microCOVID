@@ -43,16 +43,17 @@ const content: React.FunctionComponent = () => {
       <p>
         We’ve long known that the key to having safe social interactions is to
         have them Masked, Outside, and Distanced (MODified), but Outside is by
-        far the biggest factor - 20x compared to 4-8x for masked and 2-4x for
-        Distanced. In freezing temperatures, though, walks and picnics are a
-        hard sell. So how are we going to make it through the winter?
+        far the biggest factor - 20x reduction of transmission risk compared to
+        4-8x reduction for Masked and 2-4x reduction for Distanced. In freezing
+        temperatures, though, walks and picnics are a hard sell. So how are we
+        going to make it through the winter?
       </p>
 
       <p>
         Enter{' '}
-        <Link to="https://www.medrxiv.org/content/10.1101/2020.10.02.20205633v2">
+        <a href="https://www.medrxiv.org/content/10.1101/2020.10.02.20205633v2">
           this study on air purifiers
-        </Link>
+        </a>
         . Researchers found that running air purifiers in a classroom decreased
         the aerosol density in the room by 90%, which they predict would reduce
         the transmission of COVID by <strong>4-6x</strong>. It’s not as good as
@@ -62,7 +63,7 @@ const content: React.FunctionComponent = () => {
 
       <p>
         We’ve added air purifiers as an option in the “Environment” question on
-        the calculator.
+        the <Link to="/">calculator</Link>.
       </p>
 
       <p>
@@ -101,9 +102,9 @@ const content: React.FunctionComponent = () => {
             22ft x 12ft = 264 ft<sup>3</sup>
           </code>{' '}
           . So I need <code>2/3 * 264 = 176CFM</code>.{' '}
-          <Link to="https://www.amazon.com/LEVOIT-Filtration-Eliminators-Core-P350/dp/B08131HFSG/">
+          <a href="https://www.amazon.com/LEVOIT-Filtration-Eliminators-Core-P350/dp/B08131HFSG/">
             This purifier
-          </Link>{' '}
+          </a>{' '}
           advertises a flow rate of 141 CFM, so I would need more than one for
           my space.
         </li>
@@ -131,7 +132,7 @@ const content: React.FunctionComponent = () => {
           them to wear a mask and minimize their number of contacts.
         </li>
         <li>
-          If someone you’ve been in contact with starts to have covid-like
+          If someone you’ve been in contact with starts to have COVID-like
           symptoms, isolate yourself until you can get tested.
         </li>
       </ul>

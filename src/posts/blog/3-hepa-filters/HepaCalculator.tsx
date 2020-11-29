@@ -17,7 +17,10 @@ const DimensionControl: React.FunctionComponent<{
   return (
     <>
       <label>
-        {label}({unit}):
+        <strong>
+          {label} ({unit})
+        </strong>
+        :
         <input
           className="form-control form-control-lg col-md-6"
           type="number"
@@ -74,6 +77,11 @@ export const HepaCalculator: React.FunctionComponent = () => {
 
   return (
     <div className="card">
+      <header id="filter-calculator">HEPA Filter Calculator</header>
+      <div className="subheading">
+        Enter your room's dimensions to see the minimum flow rate needed to
+        reduce the risk of indoor activities by 4x.
+      </div>
       <Row>
         <Col>
           <DimensionControl
@@ -106,7 +114,7 @@ export const HepaCalculator: React.FunctionComponent = () => {
           />
         </Col>
         <Col>
-          <strong>Minimum CADR</strong>:
+          <strong>Minimum Flow Rate</strong>:
           <div className="hepa-result">
             {cfm} CFM
             <br />
@@ -117,9 +125,7 @@ export const HepaCalculator: React.FunctionComponent = () => {
       <Row>
         <Col>
           <button onClick={toggleUnits}>
-            {dimensions.unit === 'ft'
-              ? 'Change to metric'
-              : 'Change to imperial'}
+            {dimensions.unit === 'ft' ? 'Change to meters' : 'Change to feet'}
           </button>
         </Col>
       </Row>
