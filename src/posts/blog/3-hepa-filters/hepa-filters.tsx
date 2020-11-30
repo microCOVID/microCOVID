@@ -5,7 +5,7 @@ import hepaFilters from './hepa_filters.png'
 import HepaCalculator from './HepaCalculator'
 import { ImageMeta } from 'posts/post'
 
-const title = 'Air Purifiers, Winter, and Covid-19'
+const title = 'Air Purifiers, Winter, and COIVD-19'
 
 const author = 'Ben Shaya'
 const date = 'November 27, 2020'
