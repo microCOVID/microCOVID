@@ -1,3 +1,5 @@
+import React from 'react'
+
 // Common structs for posts (whitepaper, blog)
 
 export interface ImageMeta {
@@ -20,7 +22,7 @@ export interface PostContent {
 
 export interface BlogPostContent {
   title: string
-  content: string
+  content: string | React.FunctionComponent
   author: string
   date: string
   image: ImageMeta
