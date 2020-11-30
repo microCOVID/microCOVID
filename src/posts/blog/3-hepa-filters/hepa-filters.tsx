@@ -129,8 +129,8 @@ const content: React.FunctionComponent = () => {
         </li>
         <li>
           If you are going to spend time indoors with someone, talk to them
-          first about what their COVID practices are — encourage them to wear a mask
-          and minimize their number of contacts in the 10 days before the event.
+          first about what their COVID practices are — encourage them to wear a
+          mask and minimize their number of contacts in the 10 days before the event.
         </li>
         <li>
           If someone you’ve been in contact with starts to have COVID-like
