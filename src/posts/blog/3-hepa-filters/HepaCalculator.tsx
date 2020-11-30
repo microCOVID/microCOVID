@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 
 interface Dimensions {
   length: number
@@ -80,7 +80,9 @@ export const HepaCalculator: React.FunctionComponent = () => {
       <header id="filter-calculator">HEPA Filter Calculator</header>
       <div className="subheading">
         Enter your room's dimensions to see the minimum flow rate needed to
-        reduce the risk of indoor activities by 4x.
+        reduce the risk of indoor activities by 4x. Look on the product
+        description page for "CADR" and ensure you are buying a purifier with at
+        least this rate.
       </div>
       <Row>
         <Col>
@@ -124,9 +126,9 @@ export const HepaCalculator: React.FunctionComponent = () => {
       </Row>
       <Row>
         <Col>
-          <button onClick={toggleUnits}>
+          <Button onClick={toggleUnits}>
             {dimensions.unit === 'ft' ? 'Change to meters' : 'Change to feet'}
-          </button>
+          </Button>
         </Col>
       </Row>
     </div>
