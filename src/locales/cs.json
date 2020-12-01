@@ -4,8 +4,25 @@
             "no_intimate_bonus_outdoors": "Při blízkém kontaktu není jasné, že by venkovní prostředí nějak výrazněji snižovalo riziko. U bližších nebo intimních setkání tedy už nesnižujeme riziko za pobyt venku.",
             "environment_question": "Uvnitř či venku? Jak je prostor ventilován? Filtrace vzduchu?",
             "environment_header": "Prostředí",
-            "label": "Opatření"
-        }
+            "label": "Opatření",
+            "volume_question": "Jak moc se mluví?",
+            "volume_header": "Hlasitost",
+            "filtered_ensure_airflow": "Zajistěte, aby dostatečné množství vzduchu v místnosti proudilo přes filtr. Více o tom, jak toho dosáhnout, naleznete  <1>zde</1>."
+        },
+        "explanationcard": {
+            "details_total_risk_number": "{{ points }} ku jednomu milionu ({{ percentage }})",
+            "details_total_risk": "Celkové riziko",
+            "details_number_of_people": "Počet osob",
+            "chance": "šance",
+            "details_steps_header": "Kroky výpočtu",
+            "details_overview_header": "Výpočet",
+            "details_header_open": "Skrýt detaily výpočtu",
+            "details_header_closed": "Ukázat detaily výpočtu",
+            "person_0": "osoba",
+            "person_1": "osoby",
+            "person_2": "osoby"
+        },
+        "risk_note_about_household_members": "Při odhadování rizika nakažení od člena domácnosti nebo partnera/ky předpokládáme, že kontakt probíhá uvnitř, bez roušek a bez dodržování vzdáleností."
     },
     "current_lang_two_letter_code": "cs",
     "menu": {
