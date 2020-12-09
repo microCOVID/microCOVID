@@ -129,11 +129,44 @@ So what if someone get tested every week? Let’s say they work outside the hous
 
 (For ease of math, we’ll say that they work 7 days a week, but we hope this doesn’t describe anyone!)
 
-
-|                                      | Sun                  | Mon                   | Tues                  | Wed                           | Thurs                | Fri                  | Sat                  |
-| ------------------------------------ | -------------------- | --------------------- | --------------------- | ----------------------------- | -------------------- | -------------------- | -------------------- |
-| Dosage<br>Test FNR<br>Effective Risk | 100µC<br>.25<br>25µC | 100µC<br>.2<br>20µC   | 100µC<br>.2<br>20µC   | 100µC<br>.2<br>20µC           | 100µC<br>.25<br>25µC | 100µC<br>.35<br>35µC | 100µC<br>.65<br>65µC |
-| Dosage<br>Test FNR<br>Effective Risk | 100µC<br>.95<br>95µC | 100µC<br>1.0<br>100µC | 100µC<br>1.0<br>100µC | 100µC, Tested<br>1.0<br>100µC | 100µC                | 100µC, Test Returned |                      |
+<div class="calendar">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tues</th>
+<th>Wed</th>
+<th>Thurs</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dosage<br>Test FNR<br>Effective Risk</td>
+<td>100µC<br>.25<br>25µC</td>
+<td>100µC<br>.2<br>20µC</td>
+<td>100µC<br>.2<br>20µC</td>
+<td>100µC<br>.2<br>20µC</td>
+<td>100µC<br>.25<br>25µC</td>
+<td>100µC<br>.35<br>35µC</td>
+<td>100µC<br>.65<br>65µC</td>
+</tr>
+<tr>
+<td>Dosage<br>Test FNR<br>Effective Risk</td>
+<td>100µC<br>.95<br>95µC</td>
+<td>100µC<br>1.0<br>100µC</td>
+<td>100µC<br>1.0<br>100µC</td>
+<td>100µC, Tested<br>1.0<br>100µC</td>
+<td>100µC<br>-<br>-</td>
+<td>100µC,<br>Test Returned<br>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 In the above calendar, our hypothetical person got tested on the second Wednesday and got the test back negative on Friday
 
