@@ -24,7 +24,7 @@ describe('calculate', () => {
     topLocation: 'mock state',
     label: 'mock city',
     population: '1,000,000',
-    casesPastWeek: 999, // will add 1 in pseudocount
+    casesPastWeek: 1999, // will add 1 in pseudocount
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 1,
   }
@@ -41,7 +41,54 @@ describe('calculate', () => {
 
   const expectedPrevalance = 0.006
 
-  it('compensates for underreporting', () => {
+  describe('calculateLocationPersonAverage', () => {
+    const testData: (partial: Partial<CalculatorData>) => CalculatorData = (
+      partial,
+    ) => {
+      return {
+        ...defaultValues,
+        ...baseTestData,
+        ...partial,
+      }
+    }
+
+    it.each`
+      positiveCasePercentage | result
+      ${0}                   | ${0.006}
+      ${4}                   | ${0.006}
+      ${6}                   | ${0.008}
+      ${16}                  | ${0.01}
+      ${null}                | ${0.01}
+    `(
+      'should compensate for underreporting',
+      ({ positiveCasePercentage, result }) => {
+        expect(
+          calculateLocationPersonAverage(testData({ positiveCasePercentage })),
+        ).toBeCloseTo(result * 1e6)
+      },
+    )
+
+    it.each`
+      casesIncreasingPercentage | result
+      ${0}                      | ${0.006}
+      ${-20}                    | ${0.006}
+      ${10}                     | ${0.006 * 1.1}
+      ${50}                     | ${0.006 * 1.5}
+      ${100}                    | ${0.006 * 2.0}
+      ${200}                    | ${0.006 * 2.0}
+    `(
+      'should compensate for time delay',
+      ({ casesIncreasingPercentage, result }) => {
+        expect(
+          calculateLocationPersonAverage(
+            testData({ casesIncreasingPercentage }),
+          ),
+        ).toBeCloseTo(result * 1e6)
+      },
+    )
+  })
+
+  it(' for underreporting', () => {
     const data: CalculatorData = {
       ...defaultValues,
       ...baseTestData,
@@ -60,7 +107,9 @@ describe('calculate', () => {
 
     const response = calcValue(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
-    expect(response).toBe(((((0.006 * 2) / 20) * 0.06) / 4 / 1) * 1e6)
+    expect(response).toBe(
+      ((((expectedPrevalance * 2) / 20) * 0.06) / 4 / 1) * 1e6,
+    )
   })
 
   it.each`

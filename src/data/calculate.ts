@@ -69,6 +69,19 @@ interface CalculatorResult {
   upperBound: number
 }
 
+const MAX_DELAY_FACTOR = 2
+
+interface UnderreportingFactor {
+  maxPositiveCasePercentage: number
+  underreportingFactor: number
+}
+
+const UNDERREPORTING_FACTORS: UnderreportingFactor[] = [
+  { maxPositiveCasePercentage: 5, underreportingFactor: 3 },
+  { maxPositiveCasePercentage: 15, underreportingFactor: 4 },
+  { maxPositiveCasePercentage: 100, underreportingFactor: 5 },
+]
+
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
 
@@ -152,21 +165,25 @@ export const calculateLocationPersonAverage = (
   }
 
   try {
-    let underreportingFactor
+    let underreportingFactor =
+      UNDERREPORTING_FACTORS[UNDERREPORTING_FACTORS.length - 1]
+        .underreportingFactor
 
     // Under-reporting factor
-    if (data.positiveCasePercentage === null) {
-      // No positive test rate data available => assume the worst
-      underreportingFactor = 10
-    } else if (data.positiveCasePercentage < 5) {
-      underreportingFactor = 6
-    } else if (data.positiveCasePercentage < 15) {
-      underreportingFactor = 8
-    } else {
-      underreportingFactor = 10
+    const positiveCasePercentage = data.positiveCasePercentage
+    if (positiveCasePercentage !== null) {
+      const factorToUse = UNDERREPORTING_FACTORS.find(
+        (level) => positiveCasePercentage <= level.maxPositiveCasePercentage,
+      )
+      if (factorToUse) {
+        underreportingFactor = factorToUse.underreportingFactor
+      }
     }
 
-    const delayFactor = 1 + Math.max(0, data.casesIncreasingPercentage / 100)
+    const delayFactor = Math.min(
+      1 + Math.max(0, data.casesIncreasingPercentage / 100),
+      MAX_DELAY_FACTOR,
+    )
 
     // --------
     // Points for "random person from X location"
