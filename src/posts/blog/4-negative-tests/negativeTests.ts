@@ -104,7 +104,7 @@ Here’s the average false negative rates in chart form:
 
 If you did something risky N days before taking a test that came back negative, you can look up the chances that the test will catch that. Multiply the microCOVIDs from the event by the False Negative Rate for that day and you get a revised microCOVID risk*.
 
-*Note - this is accurate for risks of 300,000 microCOVID and below. See below for the formula for higher risk events.
+*Note - this is accurate for risks of ~100,000 microCOVID and below. If a person is carrying a higher risk, you may need to use [Bayes Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) for accuracy. 
 
 **Example 1 - optimal test**
 *You took a masked outdoor walk with someone who tested positive for COVID a few days later (*[*800 microCOVID*](https://www.microcovid.org/?distance=normal&duration=60&interaction=oneTime&personCount=1&riskProfile=hasCovid&setting=outdoor&subLocation=US_06001&theirMask=basic&topLocation=US_06&voice=normal&yourMask=basic)*). You got a test on day 7, and it came back negative.* 
@@ -112,7 +112,7 @@ Your new risk is 800 * 0.2 = 160microCOVID.
 
 **Example 2 - mistimed test**
 *You did the same walk, but got tested the 4 days later.* 
-The false negative rate is 1.0, so your risk is 800 * 0.65 =  520 microCOVID.
+The false negative rate is 0.65, so your risk is 800 * 0.65 =  520 microCOVID.
 
 **Example 3 - test + quarantine**
 *You did the same walk 10 days ago. You took a test on day 7 and it came back negative. You have not developed any symptoms.*
