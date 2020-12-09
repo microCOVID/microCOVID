@@ -6,7 +6,7 @@ const title =
   "Ask microCOVID: Why doesn't a negative test mean someone is safe?"
 
 const author = 'Ben Shaya'
-const date = 'December 18, 2020'
+const date = 'December 8, 2020'
 const image: ImageMeta = {
   url: testTiming,
   width: 3820,
