@@ -168,6 +168,12 @@
     }
   }
 
+  .calendar {
+    td, th {
+        min-width: 20px;
+    }
+  }
+  
   .card {
     border: none;
     background: lighten($gray-200, 1.5);
