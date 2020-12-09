@@ -34,7 +34,7 @@ We use microCOVIDs rather than some other scale factor (milliCOVIDs? nanoCOVIDs?
 
 We—the authors—are a group of 30-something-year-olds in San Francisco who live together in a communal house and mostly work from home. After much discussion (which we hope to explain later in a future post), we agreed that we would aim to keep each of our individual risks of getting COVID below **1% per year**[^4] (i.e., about **10,000 microCOVIDs per year**). We don’t regularly interact with anyone who is at high risk of severe illness from COVID, but we also care a lot about doing our part to reduce the spread of the pandemic.
 
-Once we take into account how many miroCOVIDs are used up by living with each other, we each have 3,000 microCOVIDs to spend per year[^5]. With this budget:
+Once we take into account how many microCOVIDs are used up by living with each other, we each have 3,000 microCOVIDs to spend per year[^5]. With this budget:
 
 | An activity that measures this many microCOVIDs... | feels this risky… | … and we could do the activity this often, if we were not doing much else |
 |----------------------------------------------|---------------------|---------------------------------------------------------------------------|
