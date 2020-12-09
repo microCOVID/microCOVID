@@ -104,7 +104,7 @@ Here’s the average false negative rates in chart form:
 
 If you did something risky N days before taking a test that came back negative, you can look up the chances that the test will catch that. Multiply the microCOVIDs from the event by the False Negative Rate for that day and you get a revised microCOVID risk*.
 
-*Note - this is accurate for risks of 300,000 microCOVID and below. See below for the formula for higher risk events.
+*Note - this is accurate for risks of ~100,000 microCOVID and below. If a person is carrying a higher risk, you may need to use [Bayes Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) for accuracy. 
 
 **Example 1 - optimal test**
 *You took a masked outdoor walk with someone who tested positive for COVID a few days later (*[*800 microCOVID*](https://www.microcovid.org/?distance=normal&duration=60&interaction=oneTime&personCount=1&riskProfile=hasCovid&setting=outdoor&subLocation=US_06001&theirMask=basic&topLocation=US_06&voice=normal&yourMask=basic)*). You got a test on day 7, and it came back negative.* 
@@ -112,7 +112,7 @@ Your new risk is 800 * 0.2 = 160microCOVID.
 
 **Example 2 - mistimed test**
 *You did the same walk, but got tested the 4 days later.* 
-The false negative rate is 1.0, so your risk is 800 * 0.65 =  520 microCOVID.
+The false negative rate is 0.65, so your risk is 800 * 0.65 =  520 microCOVID.
 
 **Example 3 - test + quarantine**
 *You did the same walk 10 days ago. You took a test on day 7 and it came back negative. You have not developed any symptoms.*
@@ -129,11 +129,44 @@ So what if someone get tested every week? Let’s say they work outside the hous
 
 (For ease of math, we’ll say that they work 7 days a week, but we hope this doesn’t describe anyone!)
 
-
-|                                      | Sun                  | Mon                   | Tues                  | Wed                           | Thurs                | Fri                  | Sat                  |
-| ------------------------------------ | -------------------- | --------------------- | --------------------- | ----------------------------- | -------------------- | -------------------- | -------------------- |
-| Dosage<br>Test FNR<br>Effective Risk | 100µC<br>.25<br>25µC | 100µC<br>.2<br>20µC   | 100µC<br>.2<br>20µC   | 100µC<br>.2<br>20µC           | 100µC<br>.25<br>25µC | 100µC<br>.35<br>35µC | 100µC<br>.65<br>65µC |
-| Dosage<br>Test FNR<br>Effective Risk | 100µC<br>.95<br>95µC | 100µC<br>1.0<br>100µC | 100µC<br>1.0<br>100µC | 100µC, Tested<br>1.0<br>100µC | 100µC                | 100µC, Test Returned |                      |
+<div class="calendar">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tues</th>
+<th>Wed</th>
+<th>Thurs</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dosage<br>Test FNR<br>Effective Risk</td>
+<td>100µC<br>.25<br>25µC</td>
+<td>100µC<br>.2<br>20µC</td>
+<td>100µC<br>.2<br>20µC</td>
+<td>100µC<br>.2<br>20µC</td>
+<td>100µC<br>.25<br>25µC</td>
+<td>100µC<br>.35<br>35µC</td>
+<td>100µC<br>.65<br>65µC</td>
+</tr>
+<tr>
+<td>Dosage<br>Test FNR<br>Effective Risk</td>
+<td>100µC<br>.95<br>95µC</td>
+<td>100µC<br>1.0<br>100µC</td>
+<td>100µC<br>1.0<br>100µC</td>
+<td>100µC, Tested<br>1.0<br>100µC</td>
+<td>100µC<br>-<br>-</td>
+<td>100µC,<br>Test Returned<br>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 In the above calendar, our hypothetical person got tested on the second Wednesday and got the test back negative on Friday
 
