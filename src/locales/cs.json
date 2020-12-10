@@ -45,7 +45,7 @@
             "details_range_explanation": "S 90% jistotou věříme, že skutečné riziko leží mezi těmito dvěma hodnotami. Více v sekci o <2>odhadování nejistoty</2>.",
             "details_range_number": "{{ from }} a {{ to }} microCOVIDy",
             "details_range": "Pravděpodobně mezi",
-            "frequency_explanation_repeated": "Jelikož tyto osoby vídáte několikrát týdně, výsledek je v jednotkách <strong> microCOVIDy <u> za týden </u></strong>.",
+            "frequency_explanation_repeated": "Jelikož tyto osoby vídáte několikrát týdně, výsledek je v jednotkách <strong> microCOVIDy <u>za týden</u></strong>.",
             "risk_budget_explanation": "Zvolili jste roční rozpočet šanci {{ budget_percent }} chytit COVID za rok ({{ budget_points }} microCOVIDů). To odpovídá týdennímu rozpočtu <strong> {{ budget_weekly }} microCOVIDů za týden</strong>.",
             "risk_budget_header": "Jak často můžu toto vzhledem k mému zorpočtu rizika dělat?"
         },
