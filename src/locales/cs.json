@@ -58,8 +58,8 @@
         },
         "riskreduction": {
             "housemates_header": "Několik rad pro komunikaci s blízkými kontakty ohledně snížení rizika",
-            "onetime_warning": "Tyto se mohou, ale také nemusí týkat vaší aktivity.",
-            "onetime_tips": "<li>Upravte své aktivity (VOR: Venku, Odstup, Rouška)</li> <li>Noste nejlepší masku, kterou seženete (roušku či respirátor) <br/><1/></li> <li>Navštěvujte veřejná místa v méně rušné hodiny</li> <li>Omezte cesty do obchodu nákupováním pro více lidí najednou, využitím doručovacích služeb či nákupů online</li> <li>Pokud je aktivita s přáteli, požádejte je, aby nepřišli, necítí-li se oni či jejich blízké kontakty dobře</li>",
+            "onetime_warning": "Tyto se mohou ale také nemusí týkat Vaší aktivity.",
+            "onetime_tips": "<li>Upravte své aktivity (VOR: Venku, Odstup, Rouška)</li> <li>Noste nejlepší masku, kterou seženete (roušku či respirátor) <br/><1/></li> <li>Navštěvujte veřejná místa v méně rušné hodiny</li> <li>Omezte cesty do obchodu nákupováním pro více lidí najednou, využitím doručovacích služeb či nákupů online</li> <li>Pokud je aktivita s přáteli, požádejte je, aby nepřišli necítí-li se oni či jejich blízké kontakty dobře</li>",
             "housemates_tips": "<li>Promluvte si s nimi o tom, jak jejich volby ovlivňují vaše i jejich riziko</li> <li>Požádejte je, aby upravili své aktivity (VOR: Venku, Odstup, Rouška)</li> <li>Pracovníci v první linii můžou v práci nosit respirátor. <1/></li> <li>Požádejte je, aby omezili blízká setkání na minimum</li> <li>Nábadejte je, aby se při prvních příznacích COVIDu izolovali a nechali se otestovat</li> <li>Pokud mají vysoké riziko COVIDu a vy s nimi musíte pobývat uvnitř: <ul> <li>Noste roušku</li> <li>Maximalizujte ventilaci otevřenými okny, větráky přivádějícími vzduch z vnějšku a HEPA filtry </li> <li>Izolujte se v domě v různých místnostech.</li> </ul></li>",
             "onetime_header": "Zde je několik způsobů snížení rizika této aktivity"
         },
@@ -101,9 +101,9 @@
             "population": "Celková populace",
             "last_week_cases": "Nahlášené případy za poslední týden"
         },
-        "household_members_note": "Pokud modelujete riziko od členů vaší domácnosti, počítejte pouze jejich kontakty mimo domácnost (kontakty mezi členy domácnosti jsou započteny jinde)",
-        "duration_question": "Jak dlouho aktivita trvá, v minutách? (Pro opakované aktivity: v minutách týdně)",
-        "number_of_people_near_you_onetime": "Kolik lidí je při této aktivitě běžně ve vaší blízkosti?",
+        "household_members_note": "Pokud modelujete riziko od členů Vaší domácnosti, počítejte pouze jejich kontakty mimo domácnost (kontakty mezi členy domácnosti jsou započteny jinde).",
+        "duration_question": "Jak dlouho aktivita trvá, v minutách? (Při opakované aktivitě: v minutách týdně)",
+        "number_of_people_near_you_onetime": "Kolik lidí je při této aktivitě běžně ve Vaší blízkosti?",
         "risk_tolerance_1_percent_explanation": "Rizikový rozpočet: 1% pravděpodobnost nákazy COVIDem za rok (200 mikroCOVID týdně) (doporučeno pro zdravé lidi kteří NEJSOU v kontaktu s více ohroženými skupinami)",
         "risk_tolerance_1_percent_label": "Běžný rizikový rozpočet",
         "risk_modifier_multiple": "{{multiplier}}x riziko",
@@ -126,7 +126,7 @@
         "person_risk_profile_question": "Jaký je jejich rizikový profil?",
         "duration_header": "Trvání",
         "distance_header": "Vzdálenost",
-        "people_count": "Lidé",
+        "people_count": "Lidí",
         "number_of_people_near_you_partner": "S kolika lidmi žijete či bydlíte?",
         "nearby_people_label": "Lidé poblíž"
     },
