@@ -76,7 +76,7 @@
         "distance_question": "Átlagban milyen messze vannak tőled?",
         "distance_header": "Távolság",
         "duration_header": "Időtartam",
-        "duration_question": "Hány percig tart ez?",
+        "duration_question": "Hány percig tart ez? (Ha rendszeres, hetente hány pericg?)",
         "intimate_risk_warning": "Mivel a csókolózás során különösen magas a fertőzési veszéllyel jár, a többi beállítástól függetlenül egy fix alsó érték alá nem tud csökkenni a kockázat.",
         "person_risk_profile_question": "A többiek mekkora kockázatnak vannak kitéve a mindennapokban?",
         "person_risk_profile_header": "Fertőzöttségi kockázat",
@@ -127,10 +127,10 @@
         "risk_tolerance_point1_percent_explanation": "Keret: évi 0.1% esély a fertőzésre, avagy 20 microCOVID hetente (javasolt érték, ha veszélyeztetett vagy, vagy gyakran találkozol veszélyeztetettel)",
         "intro": {
             "whats_this": "<p>Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen használható intuíciót és megfelelő ártalomcsökkentési stratégiákat kialakítani, és csökkenteni a vírussal kapcsolatos stresszt.</p><p>A legfontosabb lépés a családod és a környezeted megóvására, ha te magad nem kapod el a koronavírust.</p>",
-            "call_to_action": "Számold ki egy tevékenység COVID-kockázatát!"
+            "call_to_action": "Számold ki egy tevékenység vagy kapcsolat COVID-kockázatát!"
         },
-        "risk_step_label": "2. lépés: Mit csinálsz?",
-        "type_of_interaction": "Egyszeri tevékenység vagy folyamatos kapcsolat?",
+        "risk_step_label": "2. lépés: Mit csinálsz, kivel találkozol?",
+        "type_of_interaction": "Konkrét tevékenység vagy folyamatos kapcsolat?",
         "risk_group_empty_warning": "Először válaszd ki, hogy hol vagy",
         "warning": {
             "important": "Fontos figyelmeztetés",
@@ -144,7 +144,7 @@
         "select_default_action": "Válassz egyet..."
     },
     "data": {
-        "oneTime": "Egyszeri találkozás [{{ percentage }} fertőzési esély óránként]",
+        "oneTime": "Egyszeri vagy rendszeres találkozás [{{ percentage }} fertőzési esély óránként]",
         "repeated": "Egy háztartásban éltek [{{ percentage }} fertőzési esély hetente]",
         "partner": "Partner/élettárs [{{ percentage }} fertőzési esély hetente]",
         "indoor": "Beltér",
