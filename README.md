@@ -9,7 +9,7 @@
 
 Requirements:
 
-- Node.JS 12
+- Node.js 12
 - Yarn
 
 (See `.tool-versions` for specific and up-to-date versions).
@@ -26,7 +26,7 @@ Requirements:
 
 ## Linting
 
-We use `eslint` to standardize our style across files. To check your files with the linter run:
+We use `eslint` to standardize our style across files. To check your files with the linter, run:
 
 ```sh
 $ yarn lint
