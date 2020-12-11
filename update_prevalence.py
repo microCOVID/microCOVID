@@ -316,15 +316,15 @@ class AppLocation(pydantic.BaseModel):
         population = int(self.population.replace(",", ""))
         reported = (self.casesPastWeek + 1) / population
         underreporting = (
-            10
+            5
             if self.positiveCasePercentage is None
-            else 6
+            else 3
             if self.positiveCasePercentage < 5
-            else 8
+            else 4
             if self.positiveCasePercentage < 15
-            else 10
+            else 5
         )
-        delay = 1.0 + (self.casesIncreasingPercentage / 100)
+        delay = max(2.0, 1.0 + (self.casesIncreasingPercentage / 100))
         return {
             "Name": self.label,
             "Population": str(population),
