@@ -324,7 +324,7 @@ class AppLocation(pydantic.BaseModel):
             if self.positiveCasePercentage < 15
             else 5
         )
-        delay = max(2.0, 1.0 + (self.casesIncreasingPercentage / 100))
+        delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
         return {
             "Name": self.label,
             "Population": str(population),
