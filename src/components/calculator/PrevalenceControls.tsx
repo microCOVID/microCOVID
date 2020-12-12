@@ -9,10 +9,10 @@ import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
+  calculateDelayFactor,
   calculateLocationPersonAverage,
   calculateLocationReportedPrevalence,
   prevalanceRatio,
-  calculateDelayFactor,
 } from 'data/calculate'
 import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
 import { Locations, PrevalenceDataDate } from 'data/location'
