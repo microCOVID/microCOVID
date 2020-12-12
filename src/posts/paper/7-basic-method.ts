@@ -60,14 +60,14 @@ You can use the _positive test rate_ (the percentage of tests that come back COV
 
 If you live in the US, you can look up the positive test rate in your state at [CovidActNow](https://covidactnow.org).
 
-We use these multipliers:
-  *   If the percentage of positive tests is 5% or lower, we suggest a 3x underreporting factor.[^7]
+We use the correction factor proposed by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/):
+\`\`\`
+prevalance_ratio = 1250 / (day_i + 25) * positive_test_rate ** 0.5 + 2
+true_infections = prevalance_ratio * reported_infections
+where day_i = number of days since 2020-02-12
+\`\`\`
 
-  *   If the percentage of positive tests is between 5% and 15%, we suggest a 4x factor.
-
-  *   If the percentage of positive tests is greater than 15%, we suggest _at least_ a 5x factor. This indicates dangerously little testing in your area compared to the number of infected people.
-
-The rationale behind these multipliers is explained in the [Research Sources](14-research-sources#basic-method-underreporting-factor).
+More details are available in [Research Sources](14-research-sources#basic-method-underreporting-factor) or on COVID-19 Projection's website.
 
 ### Step three: Delay factor
 Since test results take about one week to come back on average, the number of _new reported cases_ in your region last week really represents the number of _new positive test results_ in your region _the week before that_. The results are **delayed**.

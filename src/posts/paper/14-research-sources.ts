@@ -106,9 +106,13 @@ We get some corroboration for this number from the study of train passengers, [H
 
 ### Basic Method: Underreporting factor
 
-Previously we rolled out own estimation of underreporting factor based on raw caseloads. We now aim to have our cases numbers roughly follow those estimated by [covidestim](https://covidestim.org/) - a collaboration between Yale School of Public Health  and Harvard School of Public health. At the moment we have chosen underreporting factors that approximate their numbers, but are in the process of changing our injest process to use their numbers directly.
+Previously we rolled out own estimation of underreporting factor based on raw caseloads. We now follow the model buit by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/). Their team fit a model to seroprevalance data from various points in the pandemic.
 
-For historical purposes, here is the original methodology we used:
+The model they use is:
+![Prevalance model](https://covid19-projections.com/assets/images/etir_equation.png)
+This model works on the assumption that testing availability has steadily improved over the course of the pandemic, such that the impact of the positive test rate decreases as the pandemic continues. Our original model was based on a snapshot of testing availability early in the pandemic, which is now overly pessimistic.
+
+For historical purposes, here is the original model that we used:
 > In order to make suggestions about underreporting factor, we threw together a quick comparison of two data sources.
 >
 > * The first data source is state-by-state historical Positive Test Rates from [Covid Act Now](https://covidactnow.org/).

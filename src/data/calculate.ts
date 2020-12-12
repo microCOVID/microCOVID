@@ -26,6 +26,7 @@ export interface CalculatorData {
   casesPastWeek: number
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
+  prevalanceDataDate: Date
 
   // Person risk
   riskProfile: string
@@ -50,6 +51,7 @@ export const defaultValues: CalculatorData = {
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
+  prevalanceDataDate: new Date(),
 
   riskProfile: '',
   interaction: '',
@@ -71,16 +73,18 @@ interface CalculatorResult {
 
 const MAX_DELAY_FACTOR = 2
 
-interface UnderreportingFactor {
-  maxPositiveCasePercentage: number
-  underreportingFactor: number
-}
+export const DAY_0 = new Date(2020, 1, 12)
+const MS_PER_DAY = 1000 * 60 * 60 * 24
 
-const UNDERREPORTING_FACTORS: UnderreportingFactor[] = [
-  { maxPositiveCasePercentage: 5, underreportingFactor: 3 },
-  { maxPositiveCasePercentage: 15, underreportingFactor: 4 },
-  { maxPositiveCasePercentage: 100, underreportingFactor: 5 },
-]
+// From https://covid19-projections.com/estimating-true-infections-revisited/
+const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
+  const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
+  if (positivityPercent === null || positivityPercent > 100) {
+    positivityPercent = 100
+  }
+  const positivityRate = positivityPercent / 100
+  return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
+}
 
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
@@ -165,20 +169,10 @@ export const calculateLocationPersonAverage = (
   }
 
   try {
-    let underreportingFactor =
-      UNDERREPORTING_FACTORS[UNDERREPORTING_FACTORS.length - 1]
-        .underreportingFactor
-
-    // Under-reporting factor
-    const positiveCasePercentage = data.positiveCasePercentage
-    if (positiveCasePercentage !== null) {
-      const factorToUse = UNDERREPORTING_FACTORS.find(
-        (level) => positiveCasePercentage <= level.maxPositiveCasePercentage,
-      )
-      if (factorToUse) {
-        underreportingFactor = factorToUse.underreportingFactor
-      }
-    }
+    const underreportingFactor = prevalanceRatio(
+      data.positiveCasePercentage,
+      data.prevalanceDataDate,
+    )
 
     const delayFactor = Math.min(
       1 + Math.max(0, data.casesIncreasingPercentage / 100),
