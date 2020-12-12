@@ -312,6 +312,13 @@ class AppLocation(pydantic.BaseModel):
     topLevelGroup: Optional[str] = None
     subdivisions: List[str] = []
 
+    def prevalanceRatio(self, date) -> float:
+        DAY_0 = datetime.datetime(2020, 2, 12)
+        day_i = (datetime.datetime.now() - DAY_0).days
+        positivityRate = positivityPercent / 100
+        final = (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
+        return final
+
     def as_csv_data(self) -> Dict[str, str]:
         population = int(self.population.replace(",", ""))
         reported = (self.casesPastWeek + 1) / population
@@ -324,7 +331,7 @@ class AppLocation(pydantic.BaseModel):
             if self.positiveCasePercentage < 15
             else 10
         )
-        delay = 1.0 + (self.casesIncreasingPercentage / 100)
+        delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
         return {
             "Name": self.label,
             "Population": str(population),
@@ -614,6 +621,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Diamond Princess",
         "Grand Princess",
         "MS Zaandam",
+        "Western Sahara",
     ):
         return True
     if line.Country_Region == "US":
