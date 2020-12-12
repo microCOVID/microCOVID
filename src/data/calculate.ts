@@ -73,16 +73,24 @@ interface CalculatorResult {
 
 const MAX_DELAY_FACTOR = 2
 
-export const DAY_0 = new Date(2020, 1, 12)
+export const DAY_0 = new Date(2020, 1, 12) // Feb 12, 2020
 const MS_PER_DAY = 1000 * 60 * 60 * 24
 
 // From https://covid19-projections.com/estimating-true-infections-revisited/
-const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
+export const prevalanceRatio = (
+  positivityPercent: number | null,
+  date: Date,
+): number => {
   const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
   if (positivityPercent === null || positivityPercent > 100) {
     positivityPercent = 100
   }
   const positivityRate = positivityPercent / 100
+  console.log(
+    `${day_i} ${positivityPercent} ${positivityRate} ${
+      (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
+    }`,
+  )
   return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
 }
 
@@ -158,6 +166,15 @@ export const calculateLocationReportedPrevalence = (
   }
 }
 
+export const calculateDelayFactor = (
+  casesIncreasingPercentage: number,
+): number => {
+  return Math.min(
+    1 + Math.max(0, casesIncreasingPercentage / 100),
+    MAX_DELAY_FACTOR,
+  )
+}
+
 export const calculateLocationPersonAverage = (
   data: CalculatorData,
 ): number | null => {
@@ -174,10 +191,8 @@ export const calculateLocationPersonAverage = (
       data.prevalanceDataDate,
     )
 
-    const delayFactor = Math.min(
-      1 + Math.max(0, data.casesIncreasingPercentage / 100),
-      MAX_DELAY_FACTOR,
-    )
+    const delayFactor = calculateDelayFactor(data.casesIncreasingPercentage)
+    console.log(delayFactor)
 
     // --------
     // Points for "random person from X location"

@@ -96,6 +96,8 @@
       "details_header": "Details",
       "last_week_cases": "Reported cases in past week",
       "population": "Total population",
+      "underreporting_factor": "Underreporting factor (prevalence ratio)",
+      "delay_factor": "Delay factor",
       "cases_stable_or_decreasing": "Cases are stable or decreasing.",
       "percent_increase_in_cases": "Percent increase in cases from last week to this week",
       "positive_case_percentage": "Percent of tests that come back positive",
