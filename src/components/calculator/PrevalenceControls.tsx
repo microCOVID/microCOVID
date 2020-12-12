@@ -11,6 +11,7 @@ import {
   CalculatorData,
   calculateLocationPersonAverage,
   calculateLocationReportedPrevalence,
+  prevalanceRatio,
 } from 'data/calculate'
 import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
 import { Locations, PrevalenceDataDate } from 'data/location'
@@ -279,6 +280,15 @@ export const PrevalenceControls: React.FunctionComponent<{
           isEditable={!locationSet}
           className="hide-number-buttons"
         />
+        {locationSet && (
+          <div>
+            Underreporting factor calcualted:{' '}
+            {prevalanceRatio(
+              data.positiveCasePercentage,
+              data.prevalanceDataDate,
+            ).toFixed(2)}
+          </div>
+        )}
         {locationSet && data.casesIncreasingPercentage === 0 ? (
           <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
         ) : (
