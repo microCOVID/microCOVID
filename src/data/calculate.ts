@@ -77,10 +77,7 @@ export const DAY_0 = new Date(2020, 1, 12)
 const MS_PER_DAY = 1000 * 60 * 60 * 24
 
 // From https://covid19-projections.com/estimating-true-infections-revisited/
-export const prevalanceRatio = (
-  positivityPercent: number | null,
-  date: Date,
-): number => {
+const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
   const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
   if (positivityPercent === null || positivityPercent > 100) {
     positivityPercent = 100
