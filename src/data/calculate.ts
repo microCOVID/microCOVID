@@ -86,11 +86,6 @@ export const prevalanceRatio = (
     positivityPercent = 100
   }
   const positivityRate = positivityPercent / 100
-  console.log(
-    `${day_i} ${positivityPercent} ${positivityRate} ${
-      (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
-    }`,
-  )
   return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
 }
 
@@ -192,7 +187,6 @@ export const calculateLocationPersonAverage = (
     )
 
     const delayFactor = calculateDelayFactor(data.casesIncreasingPercentage)
-    console.log(delayFactor)
 
     // --------
     // Points for "random person from X location"
