@@ -80,6 +80,7 @@ const MS_PER_DAY = 1000 * 60 * 60 * 24
 const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
   const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
   if (positivityPercent === null || positivityPercent > 100) {
+    // No positivity data, assume the worst.
     positivityPercent = 100
   }
   const positivityRate = positivityPercent / 100
