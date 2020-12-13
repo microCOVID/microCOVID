@@ -34,7 +34,7 @@ export interface CalculatorData {
   riskProfile: keyof typeof RiskProfile
   interaction: string
   personCount: number
-  symptomFreeAndWillReportSymptoms: number // Treated as boolean
+  symptomsChecked: string
 
   // Activity risk
   setting: string
@@ -59,7 +59,7 @@ export const defaultValues: CalculatorData = {
   riskProfile: '',
   interaction: '',
   personCount: 0,
-  symptomFreeAndWillReportSymptoms: 0,
+  symptomsChecked: 'no',
 
   setting: '',
   distance: '',
@@ -209,15 +209,13 @@ export const calculatePersonRiskEach = (
       // If risk profile isn't selected, call it incomplete
       return null
     }
-    const riskProfile = RiskProfile[data.riskProfile]
     const isHousemate = data.interaction !== 'oneTime'
     return (
       averagePersonRisk *
       personRiskMultiplier({
-        riskProfile,
+        riskProfile: RiskProfile[data.riskProfile],
         isHousemate,
-        allSymptomFree: data.symptomFreeAndWillReportSymptoms === 1,
-        willReport: data.symptomFreeAndWillReportSymptoms === 1,
+        symptomsChecked: data.symptomsChecked,
       })
     )
   } catch (e) {

@@ -129,7 +129,7 @@ export const budgetOptions = [
  * Exposed to ten (silent distanced masked) average people indoors,
  * while wearing a surgical mask, one-time, for one hour per week.
  */
-const livingAloneMult =
+export const livingAloneMult =
   10 *
   Voice.silent.multiplier *
   Distance.sixFt.multiplier *
@@ -138,36 +138,45 @@ const livingAloneMult =
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
 
-const SYMPTOM_FREE_MULT = 0.5
-const WILL_REPORT_MULT = 0.5
+const SYMPTOM_FREE_LAST_SEEN_TODAY_MULT = 0.5
+const SYMPTOM_FREE_LAST_SEEN_MORE_THAN_THREE_DAYS_AGO = 1 / 7
 
 export const personRiskMultiplier: (arg: {
   riskProfile: PersonRiskValue
   isHousemate: boolean
-  allSymptomFree: boolean
-  willReport: boolean
-}) => number = ({ riskProfile, isHousemate, allSymptomFree, willReport }) => {
-  const symptomFreeMult = allSymptomFree ? SYMPTOM_FREE_MULT : 1
-  const willReportMult = willReport ? WILL_REPORT_MULT : 1
+  symptomsChecked: string
+}) => number = ({ riskProfile, isHousemate, symptomsChecked }) => {
+  const symptomFreeMult =
+    symptomsChecked !== 'no' ? SYMPTOM_FREE_LAST_SEEN_TODAY_MULT : 1
+  const housemateSymptomFreeMult = symptomFreeMult
+  const contactSymptomFreeMult =
+    symptomsChecked === 'yesThreeDays'
+      ? SYMPTOM_FREE_LAST_SEEN_MORE_THAN_THREE_DAYS_AGO
+      : symptomFreeMult
 
   // Remove the person doing the calculation from the number of contacts if applicable.
   const housematesNotIncludingUser = Math.max(
     0,
     riskProfile.numHousemates - (isHousemate ? 1 : 0),
   )
-  const totalContacts =
-    housematesNotIncludingUser + riskProfile.numOtherTraceableContacts
+  const housematesRisk =
+    housemateSymptomFreeMult *
+    housematesNotIncludingUser *
+    riskProfile.contactsMultiplier
+  const otherContactsRisk =
+    contactSymptomFreeMult *
+    riskProfile.numOtherTraceableContacts *
+    riskProfile.contactsMultiplier
 
-  const allContactsRisk =
-    riskProfile.contactsMultiplier *
-    totalContacts *
-    housemateMult *
-    symptomFreeMult *
-    willReportMult
-  return (riskProfile.personalMultiplier + allContactsRisk) * symptomFreeMult
+  const riskFromAllContacts =
+    (housematesRisk + otherContactsRisk) * housemateMult
+
+  return (
+    (riskProfile.personalMultiplier + riskFromAllContacts) * symptomFreeMult
+  )
 }
 
-// Shorthands for filling in RiskProfiles with no contacts
+// Shorthand for filling in RiskProfiles with no contacts
 const noContacts = {
   numHousemates: 0,
   numOtherTraceableContacts: 0,
