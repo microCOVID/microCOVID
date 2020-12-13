@@ -374,6 +374,7 @@ interface PrevalanceData {
   casesPastWeek: number
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
+  prevalanceDataDate: Date
 }
 
 function dataForLocation(location: string): PrevalanceData {
@@ -389,6 +390,7 @@ function dataForLocation(location: string): PrevalanceData {
         locationData.positiveCasePercentage === null
           ? null
           : Math.round(locationData.positiveCasePercentage * 10) / 10,
+      prevalanceDataDate: new Date(PrevalenceDataDate),
     }
   }
 
@@ -397,5 +399,6 @@ function dataForLocation(location: string): PrevalanceData {
     casesPastWeek: 0,
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 0,
+    prevalanceDataDate: new Date(),
   }
 }

@@ -1,11 +1,48 @@
 import {
   CalculatorData,
+  DAY_0,
   calculate,
   calculateLocationPersonAverage,
   defaultValues,
 } from 'data/calculate'
 import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
+
+const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24
+
+// The reported prevalence in |baseTestData|
+const BASE_RATE = 0.003
+
+// The expected adjusted prevalence in |baseTestData|
+const RATE = 0.006
+
+const dateAfterDay0 = (daysAfterDay0: number) => {
+  const date = new Date()
+  date.setTime(DAY_0.getTime() + daysAfterDay0 * MILLISECONDS_PER_DAY)
+  return date
+}
+
+// Prevailance is RATE (2x prevalance ratio)
+const baseTestData = {
+  riskBudget: BUDGET_ONE_PERCENT,
+  subLocation: 'mock city',
+  topLocation: 'mock state',
+  population: '1,000,000',
+  casesPastWeek: 2999, // will add 1 in pseudocount
+  casesIncreasingPercentage: 0,
+  positiveCasePercentage: 0,
+  prevalanceDataDate: dateAfterDay0(25), // prevalance ratio = 25 * positivity_rate ** 0.5 + 2
+}
+
+// Variables that should be ignored for repeated/partner interactions.
+const repeatedDontCare = {
+  setting: 'indoor',
+  distance: 'sixFt',
+  duration: 60,
+  theirMask: 'none',
+  yourMask: 'none',
+  voice: 'normal',
+}
 
 // Wrapper for calculate that just returns expectedValue
 const calcValue = (data: CalculatorData) => {
@@ -16,51 +53,80 @@ const calcValue = (data: CalculatorData) => {
   return result.expectedValue
 }
 
+const testData: (partial: Partial<CalculatorData>) => CalculatorData = (
+  partial,
+) => {
+  return {
+    ...defaultValues,
+    ...baseTestData,
+    ...partial,
+  }
+}
+
+describe('calculateLocationPersonAverage', () => {
+  it.each`
+    positiveCasePercentage | result
+    ${0}                   | ${RATE}
+    ${4}                   | ${BASE_RATE * (0.04 ** 0.5 * 25 + 2)}
+    ${6}                   | ${BASE_RATE * (0.06 ** 0.5 * 25 + 2)}
+    ${16}                  | ${BASE_RATE * (0.16 ** 0.5 * 25 + 2)}
+    ${100}                 | ${BASE_RATE * (25 + 2)}
+    ${null}                | ${BASE_RATE * (25 + 2)}
+  `(
+    'should compensate for underreporting, positiveCasePercentage = $positiveCasePercentage',
+    ({ positiveCasePercentage, result }) => {
+      expect(
+        calculateLocationPersonAverage(testData({ positiveCasePercentage })),
+      ).toBeCloseTo(result * 1e6)
+    },
+  )
+
+  it.each`
+    day    | result
+    ${0}   | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 25 + 2)}
+    ${25}  | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 50 + 2)}
+    ${50}  | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 75 + 2)}
+    ${300} | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 325 + 2)}
+  `(
+    'should reduce the effect of positiveCasePercentage as 1250 / (days + 25), days = $day',
+    ({ day, result }) => {
+      expect(
+        calculateLocationPersonAverage(
+          testData({
+            positiveCasePercentage: 25,
+            prevalanceDataDate: dateAfterDay0(day),
+          }),
+        ),
+      ).toBeCloseTo(result * 1e6)
+    },
+  )
+
+  it.each`
+    casesIncreasingPercentage | result
+    ${0}                      | ${RATE}
+    ${-20}                    | ${RATE}
+    ${10}                     | ${RATE * 1.1}
+    ${50}                     | ${RATE * 1.5}
+    ${100}                    | ${RATE * 2.0}
+    ${200}                    | ${RATE * 2.0}
+  `(
+    'should compensate for time delay',
+    ({ casesIncreasingPercentage, result }) => {
+      expect(
+        calculateLocationPersonAverage(testData({ casesIncreasingPercentage })),
+      ).toBeCloseTo(result * 1e6)
+    },
+  )
+})
+
 describe('calculate', () => {
-  // Prevailance is .1% with 6x underreporting factor
-  const baseTestData = {
-    riskBudget: BUDGET_ONE_PERCENT,
-    subLocation: 'mock city',
-    topLocation: 'mock state',
-    label: 'mock city',
-    population: '1,000,000',
-    casesPastWeek: 999, // will add 1 in pseudocount
-    casesIncreasingPercentage: 0,
-    positiveCasePercentage: 1,
-  }
-
-  // Variables that should be ignored for repeated/partner interactions.
-  const repeatedDontCare = {
-    setting: 'indoor',
-    distance: 'sixFt',
-    duration: 60,
-    theirMask: 'none',
-    yourMask: 'none',
-    voice: 'normal',
-  }
-
-  const expectedPrevalance = 0.006
-
-  it('compensates for underreporting', () => {
-    const data: CalculatorData = {
-      ...defaultValues,
-      ...baseTestData,
-    }
-    expect(calculateLocationPersonAverage(data)).toBeCloseTo(
-      expectedPrevalance * 1e6,
-    )
-  })
-
   it('produces same results as by hand', () => {
     const scenario = 'Outdoor masked hangout with 2 people'
-    const data: CalculatorData = {
-      ...baseTestData,
-      ...prepopulated[scenario],
-    }
+    const data: CalculatorData = testData(prepopulated[scenario])
 
     const response = calcValue(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
-    expect(response).toBe(((((0.006 * 2) / 20) * 0.06) / 4 / 1) * 1e6)
+    expect(response).toBe(((((RATE * 2) / 20) * 0.06) / 4 / 1) * 1e6)
   })
 
   it.each`
@@ -81,16 +147,13 @@ describe('calculate', () => {
     ${'Voting in-person'}                                           | ${1.5}
     ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
   `('should return $result for $scenario', ({ scenario, result }) => {
-    const data: CalculatorData = {
-      ...baseTestData,
-      ...prepopulated[scenario],
-    }
+    const data: CalculatorData = testData(prepopulated[scenario])
 
     expect(calcValue(data)).toBeCloseTo(result)
   })
 
   it('should produce a self-consistent living alone risk profile', () => {
-    const data: CalculatorData = {
+    const data = testData({
       ...baseTestData,
       riskProfile: 'average',
       interaction: 'oneTime',
@@ -102,16 +165,15 @@ describe('calculate', () => {
       theirMask: 'basic',
       yourMask: 'filtered',
       voice: 'silent',
-    }
+    })
 
     expect(calcValue(data)).toBeCloseTo(
-      expectedPrevalance * RiskProfile['livingAlone']['multiplier'] * 1e6,
+      RATE * RiskProfile['livingAlone']['multiplier'] * 1e6,
     )
   })
 
   it('should handle large risks', () => {
-    const data: CalculatorData = {
-      ...baseTestData,
+    const data = testData({
       riskProfile: 'hasCovid',
       interaction: 'repeated',
       personCount: 1,
@@ -122,7 +184,7 @@ describe('calculate', () => {
       theirMask: 'basic',
       yourMask: 'filtered',
       voice: 'silent',
-    }
+    })
 
     const oneTime = calculate(data)
     expect(oneTime?.expectedValue).toBeCloseTo(0.3e6)
@@ -143,13 +205,13 @@ describe('calculate', () => {
   `(
     'should treat $profile as independent of prevalance',
     ({ profile, points }) => {
-      const data: CalculatorData = {
+      const data = testData({
         ...baseTestData,
         ...repeatedDontCare,
         riskProfile: profile,
         interaction: 'repeated',
         personCount: 1,
-      }
+      })
 
       const expected = points * 0.3
       expect(calcValue(data)).toBeCloseTo(expected)
@@ -163,12 +225,11 @@ describe('calculate', () => {
   )
 
   describe('Interaction: partner', () => {
-    const partner: CalculatorData = {
-      ...baseTestData,
-      ...prepopulated[
+    const partner = testData(
+      prepopulated[
         'Live-in partner who has no indoor interactions besides you'
       ],
-    }
+    )
     it('should not be affected by multipliers', () => {
       const bonuses: CalculatorData = {
         ...partner,
@@ -185,7 +246,7 @@ describe('calculate', () => {
 
     it('should apply 48% risk', () => {
       expect(calcValue(partner)).toEqual(
-        expectedPrevalance * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
+        RATE * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
       )
     })
   })
@@ -222,7 +283,7 @@ describe('calculate', () => {
 
     it('should apply 30% risk', () => {
       // average * 0.3
-      expect(calcValue(housemate)).toEqual(expectedPrevalance * 0.3 * 1e6)
+      expect(calcValue(housemate)).toEqual(RATE * 0.3 * 1e6)
     })
   })
 

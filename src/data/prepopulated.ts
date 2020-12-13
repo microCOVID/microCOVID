@@ -11,6 +11,7 @@ export type PartialData = Omit<
   | 'casesPastWeek'
   | 'casesIncreasingPercentage'
   | 'positiveCasePercentage'
+  | 'prevalanceDataDate'
 >
 
 export const prepopulated: {
