@@ -8,22 +8,17 @@ import {
 import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
-const MS_PER_DAY = 1000 * 60 * 60 * 24
-const BASE_RATE = 0.003
-const RATE = 0.006
+const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24
 
-// Wrapper for calculate that just returns expectedValue
-const calcValue = (data: CalculatorData) => {
-  const result = calculate(data)
-  if (!result) {
-    return null
-  }
-  return result.expectedValue
-}
+// The reported prevalence in |baseTestData|
+const BASE_RATE = 0.003
+
+// The expected adjusted prevalence in |baseTestData|
+const RATE = 0.006
 
 const dateAfterDay0 = (daysAfterDay0: number) => {
   const date = new Date()
-  date.setTime(DAY_0.getTime() + daysAfterDay0 * MS_PER_DAY)
+  date.setTime(DAY_0.getTime() + daysAfterDay0 * MILLISECONDS_PER_DAY)
   return date
 }
 
@@ -47,6 +42,15 @@ const repeatedDontCare = {
   theirMask: 'none',
   yourMask: 'none',
   voice: 'normal',
+}
+
+// Wrapper for calculate that just returns expectedValue
+const calcValue = (data: CalculatorData) => {
+  const result = calculate(data)
+  if (!result) {
+    return null
+  }
+  return result.expectedValue
 }
 
 const testData: (partial: Partial<CalculatorData>) => CalculatorData = (
