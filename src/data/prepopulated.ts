@@ -11,7 +11,11 @@ export type PartialData = Omit<
   | 'casesPastWeek'
   | 'casesIncreasingPercentage'
   | 'positiveCasePercentage'
+<<<<<<< HEAD
   | 'prevalanceDataDate'
+=======
+  | 'symptomFreeAndWillReportSymptoms'
+>>>>>>> Refactor RiskProfile to explicitly calculate risk from basics
 >
 
 export const prepopulated: {

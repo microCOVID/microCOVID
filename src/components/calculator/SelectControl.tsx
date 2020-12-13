@@ -6,12 +6,12 @@ import { useTranslation } from 'react-i18next'
 import ControlLabel from './ControlLabel'
 import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
-import { FormValue } from 'data/data'
+import { BaseFormValue } from 'data/data'
 
 export const GenericSelectControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
-  source: { [key: string]: FormValue }
+  source: { [key: string]: BaseFormValue }
   value: string | number | Date
   label?: string
   header?: string
@@ -21,7 +21,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   className?: string
 }> = (props) => {
   const { t } = useTranslation()
-  function showRiskMultiplier(multiplier: number): string {
+  function formatRiskMultiplierInternal(multiplier: number): string {
     if (multiplier === 1) {
       return t('calculator.baseline_risk')
     } else if (multiplier > 0 && multiplier < 1) {
@@ -36,6 +36,12 @@ export const GenericSelectControl: React.FunctionComponent<{
     } else {
       return t('calculator.risk_modifier_multiple', { multiplier: multiplier })
     }
+  }
+  const formatRiskMultiplier = (multiplier?: number) => {
+    if (multiplier === undefined) {
+      return ''
+    }
+    return ` [${formatRiskMultiplierInternal(multiplier)}]`
   }
   return (
     <div className="form-group">
@@ -59,8 +65,8 @@ export const GenericSelectControl: React.FunctionComponent<{
         {Object.keys(props.source).map((value, index) => (
           <option key={index} value={value}>
             {props.source[value].label}{' '}
-            {props.hideRisk !== true &&
-              `[${showRiskMultiplier(props.source[value].multiplier)}]`}
+            {!props.hideRisk &&
+              formatRiskMultiplier(props.source[value].multiplier)}
           </option>
         ))}
         <IosOptgroup />
@@ -78,7 +84,7 @@ export const SelectControl: React.FunctionComponent<{
   id: keyof CalculatorData
   setter: (value: CalculatorData) => void
   data: CalculatorData
-  source: { [key: string]: FormValue }
+  source: { [key: string]: BaseFormValue }
   label?: string
   header?: string
   helpText?: string

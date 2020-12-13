@@ -5,7 +5,12 @@ import {
   calculateLocationPersonAverage,
   defaultValues,
 } from 'data/calculate'
-import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
+import {
+  BUDGET_ONE_PERCENT,
+  RiskProfile,
+  RiskProfileEnum,
+  personRiskMultiplier,
+} from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
 const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24
@@ -32,6 +37,7 @@ const baseTestData = {
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
   prevalanceDataDate: dateAfterDay0(25), // prevalance ratio = 25 * positivity_rate ** 0.5 + 2
+  symptomFreeAndWillReportSymptoms: 0,
 }
 
 // Variables that should be ignored for repeated/partner interactions.
@@ -168,7 +174,14 @@ describe('calculate', () => {
     })
 
     expect(calcValue(data)).toBeCloseTo(
-      RATE * RiskProfile['livingAlone']['multiplier'] * 1e6,
+      RATE *
+        1e6 *
+        personRiskMultiplier({
+          riskProfile: RiskProfile['livingAlone'],
+          isHousemate: false,
+          allSymptomFree: false,
+          willReport: false,
+        }),
     )
   })
 
@@ -245,8 +258,16 @@ describe('calculate', () => {
     })
 
     it('should apply 48% risk', () => {
-      expect(calcValue(partner)).toEqual(
-        RATE * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
+      expect(calcValue(partner)).toBeCloseTo(
+        RATE *
+          0.48 *
+          1e6 *
+          personRiskMultiplier({
+            riskProfile: RiskProfile['livingAlone'],
+            isHousemate: false,
+            allSymptomFree: false,
+            willReport: false,
+          }),
       )
     })
   })
@@ -278,7 +299,7 @@ describe('calculate', () => {
         voice: 'silent',
       }
 
-      expect(calcValue(housemate)).toEqual(calcValue(bonuses))
+      expect(calcValue(housemate)).toBeCloseTo(calcValue(bonuses)!)
     })
 
     it('should apply 30% risk', () => {
