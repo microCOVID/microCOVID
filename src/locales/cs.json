@@ -7,13 +7,13 @@
             "label": "Opatření",
             "volume_question": "Jak moc se mluví?",
             "volume_header": "Hlasitost",
-            "filtered_ensure_airflow": "Zajistěte, aby dostatečné množství vzduchu v místnosti proudilo přes filtr. Více o tom, jak toho dosáhnout, naleznete  <1>zde</1>.",
+            "filtered_ensure_airflow": "Zajistěte, aby dostatečné množství vzduchu v místnosti proudilo přes filtr. Více o tom, jak toho dosáhnout, naleznete <1>zde</1>.",
             "their_mask_question": "Jakou masku nosí ostatní?",
             "their_mask_header": "Jejich maska",
             "your_mask_note": "Pokud jíte či pijete, zvolte \"Žádná maska\"",
             "your_mask_question": "Jakou masku máte nasazenou Vy?",
             "your_mask_header": "Vaše rouška",
-            "their_mask_note": "Pokud jí či pijí, zvolte \"žádná maska\"."
+            "their_mask_note": "Pokud jí či pijí, zvolte \"žádná maska\""
         },
         "explanationcard": {
             "details_total_risk_number": "{{ points }} ku jednomu milionu ({{ percentage }})",
@@ -101,7 +101,7 @@
             "population": "Celková populace",
             "last_week_cases": "Nahlášené případy za poslední týden"
         },
-        "household_members_note": "Pokud modelujete riziko od členů Vaší domácnosti, počítejte pouze jejich kontakty mimo domácnost (kontakty mezi členy domácnosti jsou započteny jinde).",
+        "household_members_note": "Pokud modelujete riziko od členů Vaší domácnosti, počítejte pouze jejich kontakty mimo domácnost (kontakty mezi členy domácnosti jsou započteny jinde)",
         "duration_question": "Jak dlouho aktivita trvá, v minutách? (Při opakované aktivitě: v minutách týdně)",
         "number_of_people_near_you_onetime": "Kolik lidí je při této aktivitě běžně ve Vaší blízkosti?",
         "risk_tolerance_1_percent_explanation": "Rizikový rozpočet: 1% pravděpodobnost nákazy COVIDem za rok (200 mikroCOVID týdně) (doporučeno pro zdravé lidi kteří NEJSOU v kontaktu s více ohroženými skupinami)",
@@ -187,11 +187,11 @@
     "about": {
         "donations_details": "Vítáme také sponzorské dary v jakékoli výši. Je to pouze na vás. Jsme dobrovolníky a tento projekt aktuálně nemá žádné financování. Děkujeme předem!",
         "donations_header": "Sponzorský dar",
-        "feedback": "Pokud máte jakoukoli zpětnou vazbu, dotaz nebo byste rádi pomohli, kontaktujte nás  <1>zde</1>.",
+        "feedback": "Pokud máte jakoukoli zpětnou vazbu, dotaz nebo byste rádi pomohli, kontaktujte nás <1>zde</1>.",
         "contact_us_header": "Kontaktujte nás",
-        "disclaimer": "<0>Varování</0> Tímto nástrojem činíme odhady na základě dostupných důkazy, i když nejsou vždy průkazné. Četli jsme mnoho odborného výzkumu, ale my sami odborníky nejsme. Tato práce  neprošla recenzním řízením (peer review). Ohledně COVIDu panuje stále mnoho nejistot. Nespoléhejte na tento nástroj v lékařských otázkách. Žádáme vás, abyste nadále dodržovali vládní nařízení.",
+        "disclaimer": "<0>Varování</0> Tímto nástrojem činíme odhady na základě dostupných důkazy, i když nejsou vždy průkazné. Četli jsme mnoho odborného výzkumu, ale my sami odborníky nejsme. Tato práce neprošla recenzním řízením (peer review). Ohledně COVIDu panuje stále mnoho nejistot. Nespoléhejte na tento nástroj v lékařských otázkách. Žádáme vás, abyste nadále dodržovali vládní nařízení.",
         "data_inputs_recommendation": "Měli byste začít <2>kalkulačkou</2> nebo <5>white paperem</5>.",
-        "data_inputs_spreadsheet": "a <1>spreadsheet</1>, kde si můžete spočíst vaše COVID riziko podrobněji a zaznamenávat ho v čase",
+        "data_inputs_spreadsheet": "a <1>spreadsheet</1>, kde si můžete spočíst vaše COVID riziko podrobněji a zaznamenávat ho v čase.",
         "data_inputs_whitepaper": "<1>white paper</1> , který vysvětluje naši metodiku",
         "data_inputs_lead": "Tato stránka obsahuje tři výstupy našeho průzkumu",
         "where_to_start_header": "Kde mám začít?",
