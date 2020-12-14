@@ -312,27 +312,29 @@ class AppLocation(pydantic.BaseModel):
     topLevelGroup: Optional[str] = None
     subdivisions: List[str] = []
 
+    # https://covid19-projections.com/estimating-true-infections-revisited/
+    def prevalanceRatio(self) -> float:
+        DAY_0 = datetime(2020, 2, 12)
+        day_i = (datetime.now() - DAY_0).days
+        positivityRate = self.positiveCasePercentage
+        if positivityRate is None or positivityRate > 100:
+            positivityRate = 100
+        final = (1250 / (day_i + 25)) * (positivityRate / 100) ** 0.5 + 2
+        return final
+
     def as_csv_data(self) -> Dict[str, str]:
         population = int(self.population.replace(",", ""))
         reported = (self.casesPastWeek + 1) / population
-        underreporting = (
-            10
-            if self.positiveCasePercentage is None
-            else 6
-            if self.positiveCasePercentage < 5
-            else 8
-            if self.positiveCasePercentage < 15
-            else 10
-        )
-        delay = 1.0 + (self.casesIncreasingPercentage / 100)
+        underreporting = self.prevalanceRatio()
+        delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
         return {
             "Name": self.label,
             "Population": str(population),
             "Cases in past week": str(self.casesPastWeek),
-            "Reported prevalence": str(reported),
-            "Underreporting factor": str(underreporting),
-            "Delay factor": str(delay),
-            "Estimated prevalence": str(reported * underreporting * delay),
+            "Reported prevalence": str(round(reported, 6)),
+            "Underreporting factor": str(round(underreporting, 4)),
+            "Delay factor": str(round(delay, 4)),
+            "Estimated prevalence": str(round(reported * underreporting * delay, 6)),
         }
 
 
@@ -614,6 +616,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Diamond Princess",
         "Grand Princess",
         "MS Zaandam",
+        "Western Sahara",
     ):
         return True
     if line.Country_Region == "US":
