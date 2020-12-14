@@ -46,7 +46,7 @@
             "details_range_number": "{{ from }} a {{ to }} microCOVIDy",
             "details_range": "Pravděpodobně mezi",
             "frequency_explanation_repeated": "Jelikož tyto osoby vídáte několikrát týdně, výsledek je v jednotkách <strong> microCOVIDy <u>za týden</u></strong>.",
-            "risk_budget_explanation": "Zvolili jste roční rozpočet šanci {{ budget_percent }} chytit COVID za rok ({{ budget_points }} microCOVIDů). To odpovídá týdennímu rozpočtu <strong> {{ budget_weekly }} microCOVIDů za týden</strong>.",
+            "risk_budget_explanation": "Zvolili jste jako roční rozpočet šanci {{ budget_percent }} chytit COVID za rok ({{ budget_points }} microCOVIDů). To odpovídá týdennímu rozpočtu <strong> {{ budget_weekly }} microCOVIDů za týden</strong>.",
             "risk_budget_header": "Jak často můžu toto vzhledem k mému zorpočtu rizika dělat?"
         },
         "risk_note_about_household_members": "Při odhadování rizika nakažení od člena domácnosti nebo partnera/ky předpokládáme, že kontakt probíhá uvnitř, bez roušek a bez dodržování vzdáleností.",
@@ -69,7 +69,7 @@
             "microcovid_header": "Co je microCOVID?",
             "budget_header": "Jak můžu rozvrhovat své riziko pomocí rizikového rozpočtu?"
         },
-        "distance_question": "Jak daleko od vás jsou v průměru tito lidé?",
+        "distance_question": "Jak daleko od vás jsou v průměru lidé započítaní výše?",
         "warning": {
             "body": "V tomto nástroji předkládáme své nejlepší odhady založené na dostupných vědeckých materiálech, a to i pokud nejsou jejich závěry jednoznačné či definitivní. Přečetli jsme velké množství výzkumu odborníků v této oblasti, ale sami v ní odborníky nejsme. Naše práce nebyla vědecky recenzována. Okolo vlastností COVIDu je stále velké množství nejistoty a neznámých. Nepovažujte výstupy z tohoto nástroje za lékařská doporučení. I nadále se, prosím, řiďte nařízeními své vlády.",
             "important": "Důležité"
@@ -93,7 +93,7 @@
         "prevalence": {
             "percent_increase_in_cases": "Procentuální nárůst případů z minulého na tento týden",
             "details_header": "Detaily",
-            "adjusted_prevalence": "Odhad skutečné prevalence",
+            "adjusted_prevalence": "Odhadovaná prevalence",
             "reported_prevalence": "Nahlášená prevalence",
             "data_last_updated": "Poslední aktualizace dat",
             "positive_case_percentage": "Procento testů s pozitivním výsledkem",
