@@ -79,7 +79,7 @@
         "risk_step_label": "Étape 2 : décrivez l’activité ou la relation",
         "intro": {
             "call_to_action": "Calculez le risque COVID-19 approximatif d’une activité ou d’une relation",
-            "whats_this": "<p>Nous avons conçu un calculateur qui vous permet d’estimer le risque de contracter la COVID-19 à partir d’une activité ou d’une relation dans votre vie quotidienne, en utilisant les <1>meilleures recherches disponibles</1>. Nous espérons que cet outil vous aidera à affiner votre intuition, à réduire votre niveau de stress et à trouver de bonnes stratégies de réduction des risques.</p><p>La première étape pour protéger votre famille et votre communauté est d’éviter d’attraper la COVID-19 vous-même.</p>"
+            "whats_this": "Nous avons conçu un calculateur qui vous permet d’estimer le risque de contracter la COVID-19 à partir d’une activité ou d’une relation dans votre vie quotidienne, en utilisant les <1>meilleures recherches disponibles</1>. Nous espérons que cet outil vous aidera à affiner votre intuition, à réduire votre niveau de stress et à trouver de bonnes stratégies de réduction des risques.</p><p>La première étape pour protéger votre famille et votre communauté est d’éviter d’attraper la COVID-19 vous-même."
         },
         "risk_tolerance_point1_percent_explanation": "Budget : 0,1 % de chance de COVID-19 par an (20 microCOVIDs par semaine) (suggéré si vous ou vos proches êtes plus vulnérables à la COVID-19)",
         "risk_modifier_multiple": "{{multiplier}}× le risque",
