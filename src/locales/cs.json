@@ -12,7 +12,7 @@
             "their_mask_header": "Jejich maska",
             "your_mask_note": "Pokud jíte či pijete, zvolte \"Žádná maska\"",
             "your_mask_question": "Jakou masku máte nasazenou Vy?",
-            "your_mask_header": "Vaše maska",
+            "your_mask_header": "Vaše rouška",
             "their_mask_note": "Pokud jí či pijí, zvolte \"žádná maska\"."
         },
         "explanationcard": {
@@ -140,9 +140,9 @@
     },
     "data": {
         "person": {
-            "contact10": "Má 10 blízkých kontaktů (včetně spolubydlících), kteří potkávají lidi, ale nepracují. Jiné kontakty nemá a nepracuje.",
-            "contact4": "Má 4 blízké kontakty (včetně spolubydlících), kteří potkávají lidi, ale nepracují. Jiné kontakty nemá a nepracuje.",
-            "contact1": "Má 1 blízký kontakt (včetně spolubydlících), který potkává lidi, ale nepracuje. Jiné kontakty nemá a nepracuje.",
+            "contact10": "Má 10 blízkých kontaktů (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jinak kontakty nemá a nepracuje.",
+            "contact4": "Má 4 blízké kontakty (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jinak kontakty nemá a nepracuje.",
+            "contact1": "Má 1 blízký kontakt (všetně spolubydlících), který potkává lidi, ale nepracuje. Jinak kontakty nemá a nepracuje.",
             "hasCovid": "Má COVID",
             "bars": "Chodí pravidelně do barů",
             "closedPod20": "V uzavřené bublině 20 lidí",
@@ -191,30 +191,30 @@
         "contact_us_header": "Kontaktujte nás",
         "disclaimer": "<0>Varování</0> Tímto nástrojem činíme odhady na základě dostupných důkazy, i když nejsou vždy průkazné. Četli jsme mnoho odborného výzkumu, ale my sami odborníky nejsme. Tato práce  neprošla recenzním řízením (peer review). Ohledně COVIDu panuje stále mnoho nejistot. Nespoléhejte na tento nástroj v lékařských otázkách. Žádáme vás, abyste nadále dodržovali vládní nařízení.",
         "data_inputs_recommendation": "Měli byste začít <2>kalkulačkou</2> nebo <5>white paperem</5>.",
-        "data_inputs_spreadsheet": "a <1>tabulku</1>, kde si můžete spočíst vaše COVID riziko podrobněji a zaznamenávat ho v čase",
+        "data_inputs_spreadsheet": "a <1>spreadsheet</1>, kde si můžete spočíst vaše COVID riziko podrobněji a zaznamenávat ho v čase",
         "data_inputs_whitepaper": "<1>white paper</1> , který vysvětluje naši metodiku",
         "data_inputs_lead": "Tato stránka obsahuje tři výstupy našeho průzkumu",
         "where_to_start_header": "Kde mám začít?",
         "intro_header": "Co je projekt microCOVID?",
-        "data_inputs_calculator": "<1>kalkulačku</1>, kterou můžete použít k výpočtu rizika nakažení COVIDem",
-        "basic_description": "Cílem projektu je odhadnout riziko nakažení COVIDem během každodenních činností. Pro získání dat o pravděpodobnosti chycení COVIDu jsme prošli vědeckou literaturu a zkombinovali tato data do modelu, který může používat každý. Riziko COVIDu odhadujeme v jednotkách mikroCOVID, kde 1 mikroCOVID = šance jedna ku milionu chytit COVID."
+        "data_inputs_calculator": "<1>kalkulačku</1>, kterou můžete použít k výpočtu rizika COVIDu",
+        "basic_description": "Cílem projektu je odhadnout riziko chytit COVID během každodenních činností. Pro získání dat o pravděpodobnosti chycení COVIDu jsem prošli vědeckou literaturu a zkombinovali tato data do modelu, který může používat každý. Riziko COVIDu odhadujeme v jednotkách microCOVIDy, kde 1 microCOVID = šance jedna ku jednomu milionu chytit COVID."
     },
     "scenario": {
-        "indoorUnmaskedWithCovidPositive": "Setkání s osobou mající COVID, uvnitř a bez roušky",
+        "indoorUnmaskedWithCovidPositive": "Setkání s osobou mající COVID, uvnitř a bez masky",
         "votingInPerson": "Návštěva volební místnosti",
-        "outdoorMaskedWithCovidPositive": "Setkání s osobou mající COVID, venku a s rouškou",
-        "smallIndoorParty25": "Malá vnitřní oslava: 25 lidí bez roušek",
-        "largeOutdoorParty": "Velká venkovní oslava: s rouškami a metrovými rozestupy",
+        "outdoorMaskedWithCovidPositive": "Setkání s osobou mající COVID, venku a s maskou",
+        "smallIndoorParty25": "Malá vnitřní oslava: 25 lidí bez masek",
+        "largeOutdoorParty": "Velká venkovní oslava: s maskami a metrovými rozestupy",
         "bar": "Návštěva baru",
         "planeRide": "Let letadlem",
         "60minShopping": "Nákup v supermarketu trvající 60 minut",
         "liveInPartner_noContacts": "Partner/ka, který/á s vámi bydlí a nemá kromě vás žádné interakce",
         "1person_15minCarRide": "Jízda autem s jednou osobou trvající 15 minut",
-        "indoorUnmasked2": "Setkání s dvěma lidmi bez roušek, uvnitř",
+        "indoorUnmasked2": "Setkání s dvěma lidmi bez masek, uvnitř",
         "outdoorMasked2": "Setkání s dvěma lidmi v maskách, venku",
-        "restaurantIndoors": "Jídlo v restauraci, venku",
-        "restaurantOutdoors": "Jídlo v restauraci, uvnitř",
-        "oneNightStand": "Známost na jednu noc s náhodnou osobou"
+        "restaurantIndoors": "Jídlo v restaurace, venku",
+        "restaurantOutdoors": "Jídlo v restaurace, uvnitř",
+        "oneNightStand": "Známost na jednu noc s náhodnout osobou"
     },
     "buttons": {
         "select_default_action": "Zvolte jednu možnost ..."
