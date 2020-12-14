@@ -71,11 +71,11 @@
         },
         "distance_question": "Jak daleko od vás jsou v průměru lidé započítaní výše?",
         "warning": {
-            "body": "V tomto nástroji předkládáme své nejlepší odhady založené na dostupných vědeckých materiálech, a to i pokud nejsou jejich závěry jednoznačné či definitivní. Přečetli jsme velké množství výzkumu odborníků v této oblasti, ale sami v ní odborníky nejsme. Naše práce nebyla vědecky recenzována. Okolo vlastností COVIDu je stále velké množství nejistoty a neznámých. Nepovažujte výstupy z tohoto nástroje za lékařská doporučení. I nadále se, prosím, řiďte nařízeními své vlády.",
+            "body": "V tomto nástroji předkládáme své nejlepší odhady založené na dostupných vědeckých materiálech, a to i pokud nejsou jejich závěry jednoznačné či definitivní. Přečetli jsme velké množství výzkumu odborníků v této oblasti, ale sami v ní odborníky nejsme. Naše práce nebyla vědecky recenzována. Okolo vlastností COVIDu je stále velké množství nejistoty a neznámých. Nepoužívejte tento nástroj pro lékařská rozhodnutí. I nadále se, prosím, řiďte nařízeními své vlády.",
             "important": "Důležité"
         },
-        "risk_group_empty_warning": "Nejdřív zvolte svou lokalitu",
-        "type_of_interaction": "Jde o jednu konkrétní aktivitu, nebo o dlouhodobý vztah?",
+        "risk_group_empty_warning": "Za prvé, zadejte svou lokaci",
+        "type_of_interaction": "Jde o specifickou aktivitu nebo o dlouhodobý vztah?",
         "intro": {
             "whats_this": "Vytvořili jsme kalkulačku, která Vám pomůže odhadnout riziko nákazy COVIDem z aktivit či kontaktů ve vašem každodenním životě s pomocí <1>nejlepšího dostupného výzkumu</1>. Doufáme, že vám tento nástroj pomůže zlepšit si intuici, snížit úroveň stresu a přijít na efektivní strategie pro redukci rizika.</p><p>Prvním krokem k ochraně vašich blízkých je sami se chránit před nákzou COVIDem.",
             "call_to_action": "Spočítat přibližné riziko nákazy pro kontakt či aktivitu"
@@ -88,7 +88,7 @@
         "location_selector_header": "Krok 1: Vyberte Vaši lokaci",
         "location_subprompt_US": "Celý federální stát nebo jeho region ...",
         "location_subprompt_US-AK": "Celý stát, případně zvolte oblast...",
-        "location_subprompt_US-LA": "Celý federální stát nebo jeho region ...",
+        "location_subprompt_US-LA": "Celý stát/region nebo subregion ...",
         "location_subprompt_country_or_regions": "Celý stát či jeho region ...",
         "prevalence": {
             "percent_increase_in_cases": "Procentuální nárůst případů z minulého na tento týden",
@@ -149,16 +149,16 @@
             "closedPod10": "V uzavřené bublině 10 lidí",
             "closedPod4": "V uzavřené bublině 4 lidí",
             "livingWithPartner": "Žije pouze s partnerem/kou, oba chodí pouze nakupovat",
-            "nonFrontline": "Osoba ve vaší oblasti, která nepracuje v první linii",
-            "frontline": "Pracovník v první linii ve vaší oblasti (zdravotník, prodavač/ka apod.)",
-            "average": "Průměrný člověk ve vaší oblasti",
+            "nonFrontline": "Člověk ze stejné oblasti, který NENÍ zdravotnický či exponovaný pracovník",
+            "frontline": "Zdravotnický či jinak exponovaný pracovník ze stejné oblasti",
+            "average": "Průměrný člověk ze stejné oblasti",
             "microcovid_budget_deci_percent": "Používá microCOVID pro udržení rizika pod 0.1% za rok (200 microcovidů za týden)",
             "microcovid_budget_one_percent": "Používá microCOVID pro udržení rizika pod 1% za rok (200 microcovidů za týden)",
             "contactWorks": "Má 1 blízký kontakt (včetně spolubydlících), který pracuje v první linii. Jinak kontakty nemá a nepracuje.",
             "livingAlone": "Žije sám/a a pouze chodí nakupovat"
         },
-        "filtered_mask": "Chirurgická rouška nebo rouška s PM2,5 filtrační vložkou",
-        "repeated": "Člen domácnosti nebo návštěva žijící u vás doma [{{ percentage }} pravděpodobnost přenosu týdně]",
+        "filtered_mask": "Chirurgická maska nebo maska/rouška s PM2,5 filtrační vložkou",
+        "repeated": "Člen domácnosti nebo návštěva žijící u Vás doma [{{ percentage }} pravděpodobnost přenosu týdně]",
         "loud_voice": "Hlasitý hovor (křik, překřikování hudby, zpěv)",
         "normal_voice": "Běžná konverzace",
         "silent_voice": "Žádný hovor (např. tichá jízda vlakem)",
