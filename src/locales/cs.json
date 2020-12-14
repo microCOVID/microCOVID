@@ -69,7 +69,7 @@
             "microcovid_header": "Co je microCOVID?",
             "budget_header": "Jak můžu rozvrhovat své riziko pomocí rizikového rozpočtu?"
         },
-        "distance_question": "Jaké daleko jsou od vás okolní lidé?",
+        "distance_question": "Jak daleko jsou běžně tito lidé v okolí?",
         "warning": {
             "body": "V tomto nástroji předkládáme své nejlepší odhady založené na dostupných vědeckých materiálech, a to i pokud nejsou jejich závěry jednoznačné či definitivní. Přečetli jsme velké množství výzkumu odborníků v této oblasti, ale sami v ní odborníky nejsme. Naše práce nebyla vědecky recenzována. Okolo vlastností COVIDu je stále velké množství nejistoty a neznámých. Nepoužívejte tento nástroj pro lékařská rozhodnutí. I nadále se, prosím, řiďte nařízeními své vlády.",
             "important": "Důležité"
