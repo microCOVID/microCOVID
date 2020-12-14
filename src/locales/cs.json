@@ -150,7 +150,7 @@
             "closedPod4": "V uzavřené bublině 4 lidí",
             "livingWithPartner": "Žije pouze s partnerem/kou, oba chodí pouze nakupovat",
             "nonFrontline": "Člověk ze stejné oblasti, který NENÍ zdravotnický či exponovaný pracovník",
-            "frontline": "Zdravotnický či jinak exponovaný pracovník ze stejné oblasti",
+            "frontline": "Zdravotnický či jinak více vystavený pracovník ze stejné oblasti",
             "average": "Průměrný člověk ze stejné oblasti",
             "microcovid_budget_deci_percent": "Používá microCOVID pro udržení rizika pod 0.1% za rok (200 microcovidů za týden)",
             "microcovid_budget_one_percent": "Používá microCOVID pro udržení rizika pod 1% za rok (200 microcovidů za týden)",
