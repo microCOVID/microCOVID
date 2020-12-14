@@ -26,6 +26,7 @@ export interface CalculatorData {
   casesPastWeek: number
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
+  prevalanceDataDate: Date
 
   // Person risk
   riskProfile: string
@@ -50,6 +51,7 @@ export const defaultValues: CalculatorData = {
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
+  prevalanceDataDate: new Date(),
 
   riskProfile: '',
   interaction: '',
@@ -67,6 +69,22 @@ interface CalculatorResult {
   expectedValue: number
   lowerBound: number
   upperBound: number
+}
+
+const MAX_DELAY_FACTOR = 2
+
+export const DAY_0 = new Date(2020, 1, 12)
+const MS_PER_DAY = 1000 * 60 * 60 * 24
+
+// From https://covid19-projections.com/estimating-true-infections-revisited/
+const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
+  const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
+  if (positivityPercent === null || positivityPercent > 100) {
+    // No positivity data, assume the worst.
+    positivityPercent = 100
+  }
+  const positivityRate = positivityPercent / 100
+  return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
 }
 
 // These are the variables exposed via query parameters
@@ -152,21 +170,15 @@ export const calculateLocationPersonAverage = (
   }
 
   try {
-    let underreportingFactor
+    const underreportingFactor = prevalanceRatio(
+      data.positiveCasePercentage,
+      data.prevalanceDataDate,
+    )
 
-    // Under-reporting factor
-    if (data.positiveCasePercentage === null) {
-      // No positive test rate data available => assume the worst
-      underreportingFactor = 10
-    } else if (data.positiveCasePercentage < 5) {
-      underreportingFactor = 6
-    } else if (data.positiveCasePercentage < 15) {
-      underreportingFactor = 8
-    } else {
-      underreportingFactor = 10
-    }
-
-    const delayFactor = 1 + Math.max(0, data.casesIncreasingPercentage / 100)
+    const delayFactor = Math.min(
+      1 + Math.max(0, data.casesIncreasingPercentage / 100),
+      MAX_DELAY_FACTOR,
+    )
 
     // --------
     // Points for "random person from X location"

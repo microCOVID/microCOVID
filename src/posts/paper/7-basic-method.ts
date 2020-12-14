@@ -49,7 +49,7 @@ To estimate the prevalence of COVID where you live, start by looking up the numb
 
 You decide how to define your region. This might be based on the county where you live, or you might want to include multiple counties if you live in a major metropolitan area. If data is limited, you might have to use your entire state.
 
-If you live in the US, you can use the [CovidActNow](https://covidactnow.org/us) website. This gives _daily_ new reported cases per _100,000_ people. To get a week’s worth of cases, you’ll need to calculate: \`daily new reported cases per 100,000 people * 7 days\`.[^cansmooth] You will then use 100,000 as the population.
+If you live in the US, you can use the [CovidEstim](https://covidestim.org/) website. This gives _daily_ new reported cases per _100,000_ people. To get a week’s worth of cases, you’ll need to calculate: \`daily new reported cases per 100,000 people * 7 days\`.[^cansmooth] You will then use 100,000 as the population.
 
 
 ### Step two: Underreporting factor
@@ -60,21 +60,21 @@ You can use the _positive test rate_ (the percentage of tests that come back COV
 
 If you live in the US, you can look up the positive test rate in your state at [CovidActNow](https://covidactnow.org).
 
-We use these multipliers:
-  *   If the percentage of positive tests is 5% or lower, we suggest a 6x underreporting factor.[^7]
+We use the correction factor proposed by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/):
+\`\`\`
+prevalance_ratio = 1250 / (day_i + 25) * positive_test_rate ** 0.5 + 2
+true_infections = prevalance_ratio * reported_infections
+where day_i = number of days since 2020-02-12
+\`\`\`
 
-  *   If the percentage of positive tests is between 5% and 15%, we suggest a 8x factor.
-
-  *   If the percentage of positive tests is greater than 15%, we suggest _at least_ a 10x factor. This indicates dangerously little testing in your area compared to the number of infected people.
-
-The rationale behind these multipliers is explained in the [Research Sources](14-research-sources#basic-method-underreporting-factor).
+More details are available in [Research Sources](14-research-sources#basic-method-underreporting-factor) or on COVID-19 Projection's website.
 
 ### Step three: Delay factor
 Since test results take about one week to come back on average, the number of _new reported cases_ in your region last week really represents the number of _new positive test results_ in your region _the week before that_. The results are **delayed**.
 
 If cases are flat or falling, it’s fine to use this number as is.
 
-If cases are rising, then we need to estimate the increase by comparing last week’s reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor.
+If cases are rising, then we need to estimate the increase by comparing last week’s reported case numbers to the week before that. For example, if last week there were 120 reported cases, and the previous week there were 80 reported cases, then the weekly increase is \`120 / 80 = 1.5\`. We would use 1.5x as our delay factor. To avoid over-extrapolating from a single superspreader event in an otherwise low-prevalance area, we have capped the delay factor at 2x
 
 * In the [calculator](/calculator) this would be displayed as a 50% increase in cases from last week to this week
 

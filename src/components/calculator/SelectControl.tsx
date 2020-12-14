@@ -12,7 +12,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
   source: { [key: string]: FormValue }
-  value: string | number
+  value: string | number | Date
   label?: string
   header?: string
   helpText?: string
@@ -49,7 +49,11 @@ export const GenericSelectControl: React.FunctionComponent<{
         id={props.id}
         className={'form-control form-control-lg ' + props.className}
         onChange={(e) => props.setter(e.target.value)}
-        value={props.value}
+        value={
+          typeof props.value === 'object'
+            ? props.value.toDateString()
+            : props.value
+        }
       >
         <option value="">{t('buttons.select_default_action')}</option>
         {Object.keys(props.source).map((value, index) => (

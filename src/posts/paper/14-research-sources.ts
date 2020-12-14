@@ -106,15 +106,22 @@ We get some corroboration for this number from the study of train passengers, [H
 
 ### Basic Method: Underreporting factor
 
-In order to make suggestions about underreporting factor, we threw together a quick comparison of two data sources.
+Previously we rolled out own estimation of underreporting factor based on raw caseloads. We now follow the model buit by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/). Their team fit a model to seroprevalance data from various points in the pandemic.
 
-* The first data source is state-by-state historical Positive Test Rates from [Covid Act Now](https://covidactnow.org/).
-* The second is the CAR (case ascertainment ratio) columns of [this table](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239078/bin/NIHPP2020.04.29.20083485-supplement-1.pdf) from the NIH, as explained in [Chow et al.](https://www.medrxiv.org/content/10.1101/2020.04.29.20083485v1) (which used a computational model to estimate these numbers).
-  * We typed these in by hand hastily. We excluded the NY and NJ numbers as the two that did not have a specified Positive Test Rate, being listed just as "over 20%", in the relevant timeframe. If you would like to check our work, this [code snippet](https://gist.github.com/catherio/8d95858c0f69023a9d5427fc5ef02671) shows what we did.
+The model they use is:
+![Prevalance model](https://covid19-projections.com/assets/images/etir_equation.png)
+This model works on the assumption that testing availability has steadily improved over the course of the pandemic, such that the impact of the positive test rate decreases as the pandemic continues. Our original model was based on a snapshot of testing availability early in the pandemic, which is now overly pessimistic.
 
-There was a visible correlation, so we eyeballed some approximate ranges. Here's the data we see, with a simple linear regression line drawn on top. We eyeball this as being roughly "1 in 6" on the left-hand side; "1 in 8" in the middle; and "1 in 10" on the right-hand side.
-
-![Positive test rate](${positiveTestRate})
+For historical purposes, here is the original model that we used:
+> In order to make suggestions about underreporting factor, we threw together a quick comparison of two data sources.
+>
+> * The first data source is state-by-state historical Positive Test Rates from [Covid Act Now](https://covidactnow.org/).
+> * The second is the CAR (case ascertainment ratio) columns of [this table](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239078/bin/NIHPP2020.04.29.20083485-supplement-1.pdf) from the NIH, as explained in [Chow et al.](https://www.medrxiv.org/content/10.1101/2020.04.29.20083485v1) (which used a computational model to estimate these numbers).
+> * We typed these in by hand hastily. We excluded the NY and NJ numbers as the two that did not have a specified Positive Test Rate, being listed just as "over 20%", in the relevant timeframe. If you would like to check our work, this [code snippet](https://gist.github.com/catherio/8d95858c0f69023a9d5427fc5ef02671) shows what we did.
+>
+>There was a visible correlation, so we eyeballed some approximate ranges. Here's the data we see, with a simple linear regression line drawn on top. We eyeball this as being roughly "1 in 6" on the left-hand side; "1 in 8" in the middle; and "1 in 10" on the right-hand side.
+>
+>![Positive test rate](${positiveTestRate})
 
 #### Contagiousness adjustment
 
