@@ -126,7 +126,7 @@
         "risk_tolerance_point1_percent_label": "Kockázatkerülő keret",
         "risk_tolerance_point1_percent_explanation": "Keret: évi 0.1% esély a fertőzésre, avagy 20 microCOVID hetente (javasolt érték, ha veszélyeztetett vagy, vagy gyakran találkozol veszélyeztetettel)",
         "intro": {
-            "whats_this": "<p>Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen használható intuíciót és megfelelő ártalomcsökkentési stratégiákat kialakítani, és csökkenteni a vírussal kapcsolatos stresszt.</p><p>A legfontosabb lépés a családod és a környezeted megóvására, ha te magad nem kapod el a koronavírust.</p>",
+            "whats_this": "Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen használható intuíciót és megfelelő ártalomcsökkentési stratégiákat kialakítani, és csökkenteni a vírussal kapcsolatos stresszt.</p><p>A legfontosabb lépés a családod és a környezeted megóvására, ha te magad nem kapod el a koronavírust.",
             "call_to_action": "Számold ki egy tevékenység vagy kapcsolat COVID-kockázatát!"
         },
         "risk_step_label": "2. lépés: Mit csinálsz, kivel találkozol?",
