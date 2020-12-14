@@ -140,9 +140,9 @@
     },
     "data": {
         "person": {
-            "contact10": "Má 10 blízkých kontaktů (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jinak kontakty nemá a nepracuje.",
-            "contact4": "Má 4 blízké kontakty (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jinak kontakty nemá a nepracuje.",
-            "contact1": "Má 1 blízký kontakt (všetně spolubydlících), který potkává lidi, ale nepracuje. Jinak kontakty nemá a nepracuje.",
+            "contact10": "Má 10 blízkých kontaktů (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jiné kontakty nemá a nepracuje.",
+            "contact4": "Má 4 blízké kontakty (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jiné kontakty nemá a nepracuje.",
+            "contact1": "Má 1 blízký kontakt (všetně spolubydlících), který potkává lidi, ale nepracuje. Jiné kontakty nemá a nepracuje.",
             "hasCovid": "Má COVID",
             "bars": "Chodí pravidelně do barů",
             "closedPod20": "V uzavřené bublině 20 lidí",
