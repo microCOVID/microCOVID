@@ -77,7 +77,7 @@
         "risk_group_empty_warning": "Nejdřív zvolte svou lokalitu",
         "type_of_interaction": "Jde o jednu konkrétní aktivitu, nebo o dlouhodobý vztah?",
         "intro": {
-            "whats_this": "<p>Vytvořili jsme kalkulačku, která Vám pomůže odhadnout riziko nákazy COVIDem z aktivit či kontaktů ve vašem každodenním životě s pomocí <1>nejlepšího dostupného výzkumu</1>. Doufáme, že vám tento nástroj pomůže zlepšit si intuici, snížit úroveň stresu a přijít na efektivní strategie pro redukci rizika.</p><p>Prvním krokem k ochraně vašich blízkých je sami se chránit před nákzou COVIDem.</p>",
+            "whats_this": "Vytvořili jsme kalkulačku, která Vám pomůže odhadnout riziko nákazy COVIDem z aktivit či kontaktů ve vašem každodenním životě s pomocí <1>nejlepšího dostupného výzkumu</1>. Doufáme, že vám tento nástroj pomůže zlepšit si intuici, snížit úroveň stresu a přijít na efektivní strategie pro redukci rizika.</p><p>Prvním krokem k ochraně vašich blízkých je sami se chránit před nákzou COVIDem.",
             "call_to_action": "Spočítat přibližné riziko nákazy pro kontakt či aktivitu"
         },
         "risk_tolerance_point1_percent_explanation": "Rizikový rozpočet: 0,1% pravděpodobnost nákazy COVIDem za rok (20 mikroCOVID týdně) (doporučeno, pokud Vy nebo Vaši blízí patříte do více ohrožené skupiny)",
