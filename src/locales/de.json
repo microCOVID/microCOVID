@@ -82,7 +82,7 @@
         "person_risk_profile_header": "Infektionsrisiko",
         "person_risk_profile_question": "Was ist deren Risikoprofil?",
         "intimate_risk_warning": "Ein minimales Aktivitätsrisiko für Küssen, wegen des Risikos beim Austausch von Körperflüssigkeiten, wurde hinzugefügt.",
-        "duration_question": "Wie lange dauert diese Aktivität (in Minuten)?",
+        "duration_question": "Wie lange dauert diese Aktivität (in Minuten)? (Für eine wiederholte Aktivität: Minuten pro Woche?)",
         "duration_header": "Dauer",
         "distance_header": "Abstand",
         "distance_question": "Wie nah sind diese Leute im Schnitt?",
