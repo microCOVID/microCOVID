@@ -1,4 +1,5 @@
 import React from 'react'
+import { Alert } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const calculator = <Link to="/calculator">calculator</Link>
@@ -63,6 +64,18 @@ export const Spreadsheet = (): React.ReactElement => {
       </p>
 
       <p>{spreadsheet('Use the spreadsheet here')}</p>
+
+      <Alert variant="info">
+        <strong>Spreadsheet version 2.0 coming soon:</strong> We are looking for
+        beta testers for a new version of the spreadsheet. If you are interested
+        in using the microCOVID spreadsheet with your household/pod to track
+        your collective COVID risk and are willing in giving us feedback on this
+        updated version, please email Jeremy at{' '}
+        <a href="mailto:blanchard.jeremy@gmail.com">
+          blanchard.jeremy@gmail.com
+        </a>
+        .
+      </Alert>
     </div>
   )
 }
