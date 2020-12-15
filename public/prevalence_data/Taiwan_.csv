@@ -1,2 +1,2 @@
 Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,23816775,65,2.77115604442667e-06,6,1.911764705882353,3.178678992136475e-05
+Entire country,23816775,20,1e-06,2.316,1.0,2e-06
