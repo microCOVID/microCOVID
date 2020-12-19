@@ -345,7 +345,7 @@ class AppLocations(pydantic.BaseModel):
 class AllData:
     def __init__(self) -> None:
         self.countries: Dict[str, Country] = {}
-        self.fips_to_county: Dict[str, County] = {}
+        self.fips_to_county: Dict[int, County] = {}
 
     def get_country(self, name: str) -> Country:
         if name not in self.countries:
@@ -392,13 +392,14 @@ class AllData:
             for state in country.states.values():
                 for county in state.counties.values():
                     if county.fips is not None:
-                        if county.fips in self.fips_to_county:
+                        fips = int(county.fips)
+                        if fips in self.fips_to_county:
                             raise ValueError(
-                                f"FIPS code {county.fips} refers to both "
-                                f"{self.fips_to_county[county.fips]!r} and "
+                                f"FIPS code {fips} refers to both "
+                                f"{self.fips_to_county[fips]!r} and "
                                 f"{county!r}"
                             )
-                        self.fips_to_county[county.fips] = county
+                        self.fips_to_county[fips] = county
 
     def rollup_totals(self) -> None:
         fake_names = ("Unknown", "Unassigned", "Recovered")
@@ -696,10 +697,12 @@ def main() -> None:
 
         # Test positivity per US county and state
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
+            assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
             if item.fips not in data.fips_to_county:
                 # Ignore e.g. Northern Mariana Islands
+                print(f"ignoring unknown county fips {item.fips}")
                 continue
-            county = data.fips_to_county[str(item.fips)]
+            county = data.fips_to_county[item.fips]
             assert item.stateName == county.state
             if item.metrics is not None:
                 county.test_positivity_rate = item.metrics.testPositivityRatio
