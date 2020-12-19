@@ -16,6 +16,7 @@ from datetime import date, datetime, timedelta
 from operator import attrgetter
 from pathlib import Path
 from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any
+from us_state_abbrev import us_state_name_by_abbrev
 
 try:
     import pydantic
@@ -29,6 +30,8 @@ except ImportError:
     print("and then try running this script again.")
     print()
     sys.exit(1)
+
+CAN_API_KEY = os.environ.get("CAN_API_KEY")
 
 Model = TypeVar("Model", bound=pydantic.BaseModel)
 
@@ -134,19 +137,6 @@ class OWIDTestingData(pydantic.BaseModel):
 
 # CovidActNow dataset:
 
-
-class CANActuals(pydantic.BaseModel):
-    population: int
-    intervention: str
-    cumulativeConfirmedCases: Optional[int]
-    cumulativePositiveTests: Optional[int]
-    cumulativeNegativeTests: Optional[int]
-    cumulativeDeaths: Optional[int]
-    # hospitalBeds: ignored
-    # ICUBeds: ignored
-    contactTracers: Optional[int]
-
-
 class CANMetrics(pydantic.BaseModel):
     testPositivityRatio: Optional[float]  # 7-day rolling average
     caseDensity: Optional[float]  # cases per 100k pop, 7-day rolling average
@@ -156,20 +146,20 @@ class CANRegionSummary(pydantic.BaseModel):
     # https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md#RegionSummary
     COUNTY_SOURCE: ClassVar[
         str
-    ] = "https://data.covidactnow.org/latest/us/counties.NO_INTERVENTION.json"
+    ] = f"https://api.covidactnow.org/v2/counties.json?apiKey={CAN_API_KEY}"
     STATE_SOURCE: ClassVar[
         str
-    ] = "https://data.covidactnow.org/latest/us/states.NO_INTERVENTION.json"
+    ] = f"https://api.covidactnow.org/v2/states.json?apiKey={CAN_API_KEY}"
 
-    countryName: str
+    country: str
     fips: int
     lat: Optional[float]
     long_: Optional[float] = pydantic.Field(alias="long")
-    stateName: str
-    countyName: Optional[str]
+    state: str
+    county: Optional[str]
     # lastUpdatedDate: datetime in nonstandard format, ignored for now
     # projections: ignored
-    actuals: CANActuals
+    # actuals: ignored
     metrics: Optional[CANMetrics]
     population: int
 
@@ -634,6 +624,9 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
 
 
 def main() -> None:
+    if not CAN_API_KEY:
+        print("Usage: CAN_API_KEY=${COVID_ACT_NOW_API_KEY} python3 %s" % sys.argv[0])
+        sys.exit(1)
     cache = DataCache.load()
     try:
         data = AllData()
@@ -703,12 +696,13 @@ def main() -> None:
                 print(f"ignoring unknown county fips {item.fips}")
                 continue
             county = data.fips_to_county[item.fips]
-            assert item.stateName == county.state
+            assert us_state_name_by_abbrev[item.state] == county.state, f"expected {item.state} to be {county.state}"
             if item.metrics is not None:
                 county.test_positivity_rate = item.metrics.testPositivityRatio
 
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
-            state = data.countries["US"].states[item.stateName]
+            state_name = us_state_name_by_abbrev[item.state]
+            state = data.countries["US"].states[state_name]
             if item.metrics is not None:
                 state.test_positivity_rate = item.metrics.testPositivityRatio
 
