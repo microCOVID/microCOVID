@@ -5,16 +5,21 @@ import {
   calculateLocationPersonAverage,
   defaultValues,
 } from 'data/calculate'
-import { BUDGET_ONE_PERCENT, RiskProfile, RiskProfileEnum } from 'data/data'
+import {
+  BUDGET_ONE_PERCENT,
+  RiskProfile,
+  RiskProfileEnum,
+  personRiskMultiplier,
+} from 'data/data'
 import { prepopulated } from 'data/prepopulated'
 
 const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24
 
 // The reported prevalence in |baseTestData|
-const BASE_RATE = 0.003
+const REPORTED_PREVALENCE = 0.003
 
 // The expected adjusted prevalence in |baseTestData|
-const RATE = 0.006
+const PREVALENCE = 0.006
 
 const dateAfterDay0 = (daysAfterDay0: number) => {
   const date = new Date()
@@ -22,7 +27,7 @@ const dateAfterDay0 = (daysAfterDay0: number) => {
   return date
 }
 
-// Prevailance is RATE (2x prevalance ratio)
+// Prevailance is PREVALENCE (2x prevalance ratio)
 const baseTestData = {
   riskBudget: BUDGET_ONE_PERCENT,
   subLocation: 'mock city',
@@ -32,6 +37,7 @@ const baseTestData = {
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
   prevalanceDataDate: dateAfterDay0(25), // prevalance ratio = 25 * positivity_rate ** 0.5 + 2
+  symptomsChecked: 'no',
 }
 
 // Variables that should be ignored for repeated/partner interactions.
@@ -66,12 +72,12 @@ const testData: (partial: Partial<CalculatorData>) => CalculatorData = (
 describe('calculateLocationPersonAverage', () => {
   it.each`
     positiveCasePercentage | result
-    ${0}                   | ${RATE}
-    ${4}                   | ${BASE_RATE * (0.04 ** 0.5 * 25 + 2)}
-    ${6}                   | ${BASE_RATE * (0.06 ** 0.5 * 25 + 2)}
-    ${16}                  | ${BASE_RATE * (0.16 ** 0.5 * 25 + 2)}
-    ${100}                 | ${BASE_RATE * (25 + 2)}
-    ${null}                | ${BASE_RATE * (25 + 2)}
+    ${0}                   | ${PREVALENCE}
+    ${4}                   | ${REPORTED_PREVALENCE * (0.04 ** 0.5 * 25 + 2)}
+    ${6}                   | ${REPORTED_PREVALENCE * (0.06 ** 0.5 * 25 + 2)}
+    ${16}                  | ${REPORTED_PREVALENCE * (0.16 ** 0.5 * 25 + 2)}
+    ${100}                 | ${REPORTED_PREVALENCE * (25 + 2)}
+    ${null}                | ${REPORTED_PREVALENCE * (25 + 2)}
   `(
     'should compensate for underreporting, positiveCasePercentage = $positiveCasePercentage',
     ({ positiveCasePercentage, result }) => {
@@ -83,10 +89,10 @@ describe('calculateLocationPersonAverage', () => {
 
   it.each`
     day    | result
-    ${0}   | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 25 + 2)}
-    ${25}  | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 50 + 2)}
-    ${50}  | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 75 + 2)}
-    ${300} | ${BASE_RATE * ((0.25 ** 0.5 * 1250) / 325 + 2)}
+    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 25 + 2)}
+    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 50 + 2)}
+    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 75 + 2)}
+    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 325 + 2)}
   `(
     'should reduce the effect of positiveCasePercentage as 1250 / (days + 25), days = $day',
     ({ day, result }) => {
@@ -103,12 +109,12 @@ describe('calculateLocationPersonAverage', () => {
 
   it.each`
     casesIncreasingPercentage | result
-    ${0}                      | ${RATE}
-    ${-20}                    | ${RATE}
-    ${10}                     | ${RATE * 1.1}
-    ${50}                     | ${RATE * 1.5}
-    ${100}                    | ${RATE * 2.0}
-    ${200}                    | ${RATE * 2.0}
+    ${0}                      | ${PREVALENCE}
+    ${-20}                    | ${PREVALENCE}
+    ${10}                     | ${PREVALENCE * 1.1}
+    ${50}                     | ${PREVALENCE * 1.5}
+    ${100}                    | ${PREVALENCE * 2.0}
+    ${200}                    | ${PREVALENCE * 2.0}
   `(
     'should compensate for time delay',
     ({ casesIncreasingPercentage, result }) => {
@@ -126,7 +132,7 @@ describe('calculate', () => {
 
     const response = calcValue(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
-    expect(response).toBe(((((RATE * 2) / 20) * 0.06) / 4 / 1) * 1e6)
+    expect(response).toBe(((((PREVALENCE * 2) / 20) * 0.06) / 4 / 1) * 1e6)
   })
 
   it.each`
@@ -168,7 +174,13 @@ describe('calculate', () => {
     })
 
     expect(calcValue(data)).toBeCloseTo(
-      RATE * RiskProfile['livingAlone']['multiplier'] * 1e6,
+      PREVALENCE *
+        1e6 *
+        personRiskMultiplier({
+          riskProfile: RiskProfile['livingAlone'],
+          isHousemate: false,
+          symptomsChecked: 'no',
+        }),
     )
   })
 
@@ -245,8 +257,15 @@ describe('calculate', () => {
     })
 
     it('should apply 48% risk', () => {
-      expect(calcValue(partner)).toEqual(
-        RATE * RiskProfile.livingAlone.multiplier * 0.48 * 1e6,
+      expect(calcValue(partner)).toBeCloseTo(
+        PREVALENCE *
+          0.48 *
+          1e6 *
+          personRiskMultiplier({
+            riskProfile: RiskProfile['livingAlone'],
+            isHousemate: false,
+            symptomsChecked: 'no',
+          }),
       )
     })
   })
@@ -278,12 +297,27 @@ describe('calculate', () => {
         voice: 'silent',
       }
 
-      expect(calcValue(housemate)).toEqual(calcValue(bonuses))
+      expect(calcValue(housemate)).toBeCloseTo(calcValue(bonuses)!)
     })
 
     it('should apply 30% risk', () => {
       // average * 0.3
-      expect(calcValue(housemate)).toEqual(RATE * 0.3 * 1e6)
+      expect(calcValue(housemate)).toEqual(PREVALENCE * 0.3 * 1e6)
+    })
+
+    it('should remove the risk from the user for risk profiles including housemates', () => {
+      const housemateData = testData({
+        riskProfile: 'closedPod4',
+        interaction: 'repeated',
+      })
+      const equivalentOneTime = testData({
+        riskProfile: 'closdedPod4',
+        interaction: 'oneTime',
+        duration: 60 * 5,
+      })
+      expect(calcValue(housemateData)).toBeCloseTo(
+        (calcValue(equivalentOneTime)! * (1 + 0.3 * 2)) / (1 + 0.3 / 3),
+      )
     })
   })
 

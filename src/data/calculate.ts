@@ -3,6 +3,7 @@ import {
   Distance,
   FormValue,
   Interaction,
+  PersonRiskValue,
   RiskProfile,
   RiskProfileEnum,
   Setting,
@@ -10,6 +11,7 @@ import {
   Voice,
   YourMask,
   intimateDurationFloor,
+  personRiskMultiplier,
 } from 'data/data'
 
 export interface CalculatorData {
@@ -29,9 +31,10 @@ export interface CalculatorData {
   prevalanceDataDate: Date
 
   // Person risk
-  riskProfile: string
+  riskProfile: keyof typeof RiskProfile
   interaction: string
   personCount: number
+  symptomsChecked: string
 
   // Activity risk
   setting: string
@@ -56,6 +59,7 @@ export const defaultValues: CalculatorData = {
   riskProfile: '',
   interaction: '',
   personCount: 0,
+  symptomsChecked: 'no',
 
   setting: '',
   distance: '',
@@ -98,7 +102,7 @@ export const migrateDataToCurrent = (
 ): CalculatorData => {
   const data: Partial<CalculatorData> = { ...incomingData }
   const fixOne = (
-    table: { [key: string]: FormValue },
+    table: { [key: string]: FormValue | PersonRiskValue },
     prop: keyof CalculatorData,
   ) => {
     const current = data[prop]
@@ -205,13 +209,15 @@ export const calculatePersonRiskEach = (
       // If risk profile isn't selected, call it incomplete
       return null
     }
-    const risk = averagePersonRisk
-    const riskProfile = RiskProfile[data.riskProfile]
-    if (data.interaction !== 'oneTime' && riskProfile.housemateMultiplier) {
-      // Assumes that the person is one of the housemates and subtracts out their reflected risk.
-      return risk * riskProfile.housemateMultiplier
-    }
-    return risk * riskProfile.multiplier
+    const isHousemate = data.interaction !== 'oneTime'
+    return (
+      averagePersonRisk *
+      personRiskMultiplier({
+        riskProfile: RiskProfile[data.riskProfile],
+        isHousemate,
+        symptomsChecked: data.symptomsChecked,
+      })
+    )
   } catch (e) {
     return null
   }

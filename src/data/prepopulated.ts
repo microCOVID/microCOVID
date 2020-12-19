@@ -21,6 +21,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
+    symptomsChecked: 'no',
 
     setting: 'outdoor',
     distance: 'normal',
@@ -34,6 +35,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'normal',
@@ -47,6 +49,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 1,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'normal',
@@ -60,6 +63,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 1,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'intimate',
@@ -73,6 +77,7 @@ export const prepopulated: {
     riskProfile: 'livingAlone',
     interaction: 'partner',
     personCount: 1,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'intimate',
@@ -86,6 +91,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 5,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'sixFt',
@@ -99,6 +105,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 20,
+    symptomsChecked: 'no',
 
     setting: 'plane',
     distance: 'normal',
@@ -112,6 +119,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
+    symptomsChecked: 'no',
 
     setting: 'outdoor',
     distance: 'sixFt',
@@ -125,6 +133,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'sixFt',
@@ -138,6 +147,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'sixFt',
@@ -151,6 +161,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 80,
+    symptomsChecked: 'no',
 
     setting: 'outdoor',
     distance: 'normal',
@@ -164,6 +175,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 25,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'normal',
@@ -177,6 +189,7 @@ export const prepopulated: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
     personCount: 1,
+    symptomsChecked: 'no',
 
     setting: 'outdoor',
     distance: 'normal',
@@ -190,6 +203,7 @@ export const prepopulated: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'sixFt',
@@ -203,6 +217,7 @@ export const prepopulated: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
     personCount: 1,
+    symptomsChecked: 'no',
 
     setting: 'indoor',
     distance: 'normal',
