@@ -30,3 +30,6 @@ yarn-error.log*
 
 # i18next backup files
 src/locales/*_old.json
+
+# python
+__pycache__/
