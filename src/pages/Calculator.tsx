@@ -194,9 +194,9 @@ export const Calculator = (): React.ReactElement => {
                 </header>
                 {!scenarioName ? null : (
                   <Alert variant="info">
-                    You selected this scenario: <strong>{scenarioName}</strong>.
-                    Do the points below look like the activity you have in mind?
-                    If not, adjust it until it looks right.
+                    <Trans values={{ scenarioName: scenarioName }}>
+                      calculator.saved_scenario_loaded_message
+                    </Trans>
                   </Alert>
                 )}
                 <div>
