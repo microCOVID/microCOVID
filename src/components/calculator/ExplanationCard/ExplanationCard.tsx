@@ -22,7 +22,6 @@ import {
   CalculatorData,
   MAX_ACTIVITY_RISK,
   calculateActivityRisk,
-  calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
 import {
@@ -52,10 +51,7 @@ export default function ExplanationCard(props: {
   const points = props.points
   const { t } = useTranslation()
 
-  const locationRisk = calculateLocationPersonAverage(props.data) || 0
-  const personRiskEach = Math.round(
-    calculatePersonRiskEach(props.data, locationRisk) || 0,
-  )
+  const personRiskEach = Math.round(calculatePersonRiskEach(props.data) || 0)
   const activityRisk = calculateActivityRisk(props.data)
 
   const personRiskEachFormatted = personRiskEach.toLocaleString()

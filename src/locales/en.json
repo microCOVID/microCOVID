@@ -83,6 +83,7 @@
     "person_risk_profile_header": "Risk Profile",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
+    "frontline_worker_acknowledgement": "We deeply appreciate the sacrifices that essential workers are making during the pandemic. We encourage you to find safe ways of supporting these people, keeping them socially included and cared for. They should be significantly safer once vaccinated.",
     "category_very_low": "Very Low",
     "category_low": "Low",
     "category_moderate": "Moderate",
@@ -170,10 +171,10 @@
     "loud_voice": "Loud talking (shouting, talking over music, singing)",
     "person": {
       "average": "An average person in your area",
-      "frontline": "An essential or front-line worker in your area",
+      "frontline": "A healthcare or social worker",
       "nonFrontline": "Someone in your area who is NOT an essential or front-line worker",
       "livingAlone": "Lives alone and only grocery shops",
-      "livingWithPartner": "Lives with partner, both people only grocery shop",
+      "livingWithPartner": "Lives with one other person, both people only grocery shop",
       "closedPod4": "In a closed pod of 4 people",
       "closedPod10": "In a closed pod of 10 people",
       "closedPod20": "In a closed pod of 20 people",
@@ -181,9 +182,9 @@
       "contact4": "Has 4 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.",
       "contact10": "Has 10 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.",
       "contactWorks": "Has 1 close contact (incl. roommates) who is an essential worker. No other work or socializing.",
-      "bars": "Goes to bars regularly",
-      "microcovid_budget_one_percent": "Uses microCOVID to maintain a risk of 1%/year (200 microcovid/week)",
-      "microcovid_budget_deci_percent": "Uses microCOVID to maintain a risk of 0.1%/year (20 microcovid/week)",
+      "bars": "Went to a bar in the last 10 days",
+      "microcovid_budget_one_percent": "Uses microCOVID to maintain a Standard Caution Budget",
+      "microcovid_budget_deci_percent": "Uses microCOVID to maintain a High Caution Budget",
       "hasCovid": "Has COVID"
     }
   },
