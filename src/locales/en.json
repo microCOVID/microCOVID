@@ -135,7 +135,8 @@
     "warning": {
       "important": "Important",
       "body": "In this tool we state our best estimate based on available evidence, even when that evidence is not conclusive. We have read a lot of experts' research, but we are not ourselves experts in this topic. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance."
-    }
+    },
+    "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right."
   },
   "per week": "per week",
   "each time you do it": "each time you do it",
