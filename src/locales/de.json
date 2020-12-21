@@ -127,7 +127,7 @@
             "body": "Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen Ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
         },
         "risk_group_empty_warning": "Gib zunächst deinen Ort ein",
-        "type_of_interaction": "Ist dies eine einmalige oder regelmäßige Aktivität?",
+        "type_of_interaction": "Ist dies eine bestimmte Aktivität oder eine laufende Beziehung?",
         "risk_step_label": "Schritt 2: Beschreibe die Aktivität oder Beziehung",
         "select_location_enter_manually": "Daten manuell eingeben …",
         "select_location_placeholder": "Wähle einen Ort aus …",
