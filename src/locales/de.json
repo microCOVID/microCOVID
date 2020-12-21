@@ -163,7 +163,7 @@
         "filtered_mask": "Chirurgische Maske oder Maske mit einem PM2,5-Einsatzfilter",
         "basic_mask": "Stoffmaske oder Stoffhalstuch",
         "no_mask": "Keine oder nur unzweckmäßig getragene Maske",
-        "tenft_distance": "> 3 m entfernt",
+        "tenft_distance": "3+ m entfernt",
         "sixft_distance": "2+ m entfernt",
         "normal_distance": "Normaler sozialer Umgang (ca. 1 Meter entfernt)",
         "close_distance": "Nahe (weniger als 0,3 m voneinander entfernt)",
