@@ -119,7 +119,7 @@
             "budget_explanation": "Wir halten ein jährliches Risikobudget einer 1 %-Chance einer COVID-Infektion für die meisten gesunden Menschen für vernünftig, die nicht in Kontakt mit gefährdeteren Gruppen stehen. Wie wir zu dieser Einschätzung gekommen sind, kannst du <1>hier</1> erfahren. Falls du dieses Budget einer jährlichen 1 %-Infektionswahrscheinlichkeit einhalten willst, sollte das wöchentliche Budget deiner Aktivitäten insgesamt ca. 200 microCOVIDs pro Woche nicht überschreiten. Wir haben eine nützliche <3>Arbeitsmappe</3> entworfen, mit der du deine Aktivitäten im Zeitverlauf mitverfolgen kannst."
         },
         "intro": {
-            "call_to_action": "Berechne das COVID-Risiko bei einer beliebigen Aktivität näherungsweise",
+            "call_to_action": "Berechne das ungefähre COVID-Risiko einer Aktivität oder Beziehung",
             "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Vielzahl an Aktivitäten einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt."
         },
         "warning": {
@@ -128,7 +128,7 @@
         },
         "risk_group_empty_warning": "Gib zunächst deinen Ort ein",
         "type_of_interaction": "Ist dies eine einmalige oder regelmäßige Aktivität?",
-        "risk_step_label": "Schritt 2: Beschreibe die Aktivität",
+        "risk_step_label": "Schritt 2: Beschreibe die Aktivität oder Beziehung",
         "select_location_enter_manually": "Daten manuell eingeben …",
         "select_location_placeholder": "Wähle einen Ort aus …",
         "location_selector_header": "Schritt 1: Gib deinen Aufenthaltsort ein",
@@ -164,15 +164,15 @@
         "basic_mask": "Stoffmaske oder Stoffhalstuch",
         "no_mask": "Keine oder nur unzweckmäßig getragene Maske",
         "tenft_distance": "> 3 m entfernt",
-        "sixft_distance": "> 2 m entfernt",
+        "sixft_distance": "2+ m entfernt",
         "normal_distance": "Normaler sozialer Umgang (ca. 1 Meter entfernt)",
-        "close_distance": "Nahe (< 0,3 m voneinander entfernt)",
+        "close_distance": "Nahe (weniger als 0,3 m voneinander entfernt)",
         "intimate_distance": "Küssen",
         "outdoor": "Draußen",
         "indoor": "Drinnen",
         "partner": "Partner / Ehepartner [{{ percentage }}-Chance einer Infektion je Woche]",
-        "repeated": "Haushaltsmitglied [{{ percentage }}-Chance einer Infektion je Woche]",
-        "oneTime": "Einmalige Begegnung [{{ percentage }}-Chance einer Infektion je Stunde]",
+        "repeated": "Haushaltsmitglied, oder übernachtender Besucher [{{ percentage }}-Chance einer Infektion je Woche]",
+        "oneTime": "Einmalige Begegnung oder wiederholte Aktivität [{{ percentage }}-Chance einer Infektion je Stunde]",
         "partially_enclosed": "Ein Raum mit einer oder mehreren nach außen offenen Seiten",
         "car_windows_down": "Ein fahrendes Auto mit heruntergefahrenen Fensterscheiben",
         "transit": "Ein Zug mit Luftfilterung",
