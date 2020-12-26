@@ -135,7 +135,8 @@
         "location_subprompt_US": "Gesamtes Bundesland oder County auswählen …",
         "location_subprompt_US-AK": "Gesamtes Bundesland oder Borough auswählen …",
         "location_subprompt_US-LA": "Gesamtes Bundesland oder Parish auswählen …",
-        "location_subprompt_country_or_regions": "Gesamtes Land oder Region auswählen …"
+        "location_subprompt_country_or_regions": "Gesamtes Land oder Region auswählen …",
+        "saved_scenario_loaded_message": "Sie haben dieses Szenario ausgewählt: <strong>{{ scenarioName }}</strong>. Sehen die folgenden Punkte wie die Aktivität aus, an die Sie denken? Wenn nicht, passen Sie es an, bis es richtig aussieht."
     },
     "data": {
         "person": {
