@@ -120,7 +120,7 @@
         },
         "intro": {
             "call_to_action": "Berechne das ungefähre COVID-Risiko einer Aktivität oder Beziehung",
-            "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Vielzahl an Aktivitäten einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt."
+            "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Aktivitäte oder einer Beziehung in deinem Alltag einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt.</p><p>Der erste Schritt um deine Familie und deine Umgebung zu schützen ist zu verhindern, dass du selbst COVID bekommst."
         },
         "warning": {
             "important": "Wichtig",
