@@ -127,7 +127,8 @@
         "number_of_people_near_you_partner": "Avec combien de personnes vivez-vous ?",
         "nearby_people_label": "Personnes à proximité",
         "risk_modifier_frac_plural": "{{frac}} du risque",
-        "risk_modifier_frac_3rd": "{{frac}} du risque"
+        "risk_modifier_frac_3rd": "{{frac}} du risque",
+        "saved_scenario_loaded_message": "Vous avez sélectionné ce scénario : <strong> {{ scenarioName }} </strong>. Les points ci-dessous ressemblent-ils à l'activité que vous avez en tête ? Sinon, ajustez-le jusqu'à ce qu'il semble correct."
     },
     "current_lang_two_letter_code": "fr",
     "menu": {
