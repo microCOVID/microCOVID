@@ -128,7 +128,7 @@
         },
         "risk_group_empty_warning": "Gib zunächst deinen Ort ein",
         "type_of_interaction": "Ist dies eine bestimmte Aktivität oder eine laufende Beziehung?",
-        "risk_step_label": "Schritt 2: Beschreibe die Aktivität oder Beziehung",
+        "risk_step_label": "Schritt 2: Beschreibe die Aktivität oder die Beziehung",
         "select_location_enter_manually": "Daten manuell eingeben …",
         "select_location_placeholder": "Wähle einen Ort aus …",
         "location_selector_header": "Schritt 1: Gib deinen Aufenthaltsort ein",
