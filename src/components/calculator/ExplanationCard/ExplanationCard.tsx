@@ -152,10 +152,11 @@ export default function ExplanationCard(props: {
                 calculator.explanationcard.details_activity_risk_explanation
               </Trans>
 
-              <b>{' '}
+              <b>
+                {' '}
                 {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
                   <Trans i18nKey="calculator.explanationcard.activity_risk_capped_note">
-                    (NOTE: {' '}
+                    (NOTE:{' '}
                     <a href="/paper/13-q-and-a#what-if-i-hang-out-with-someone-indoors-for-a-long-time-if-we-hang-out-for-5-hours-thats-an-activity-risk-of-6-⨉-5--30-which-is-the-same-risk-as-for-a-household-member">
                       capped this number
                     </a>
