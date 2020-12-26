@@ -163,7 +163,9 @@ Another important thing to know about the infectious period is that only about 9
 
 ![He et al](${heExtended})
 
-(If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).)
+*(If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).)*
+
+One insight we can gain is that since 50% of transmission occurrs after symptoms onset, if you confirm with the person you are seeing that they don't have symptoms right before you interact, you are reducing your risk by 50%.
 
 Additionally, only about 6% of transmissions come from people who won't ever show symptoms ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936)):[^ferretti]
 
