@@ -126,7 +126,7 @@
     "risk_tolerance_point1_percent_label": "High Caution Budget",
     "risk_tolerance_point1_percent_explanation": "Budget: 0.1% chance of COVID per year (20 microCOVIDs per week) (suggested if you or your close contacts are more vulnerable to COVID)",
     "intro": {
-      "whats_this": "<p>We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.</p>",
+      "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
       "call_to_action": "Calculate the approximate COVID risk of an activity or relationship"
     },
     "risk_step_label": "Step 2: Describe the activity or relationship",
@@ -135,7 +135,8 @@
     "warning": {
       "important": "Important",
       "body": "In this tool we state our best estimate based on available evidence, even when that evidence is not conclusive. We have read a lot of experts' research, but we are not ourselves experts in this topic. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance."
-    }
+    },
+    "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right."
   },
   "per week": "per week",
   "each time you do it": "each time you do it",
@@ -155,10 +156,10 @@
     "partially_enclosed": "A space with one or more sides open to the outdoors",
     "outdoor": "Outdoor",
     "intimate_distance": "Kissing",
-    "close_distance": "Close (<1ft / 0.3m apart)",
-    "normal_distance": "Normal socializing (~3 feet apart)",
-    "sixft_distance": ">6ft / 2m apart",
-    "tenft_distance": ">10ft / 3m apart",
+    "close_distance": "Close (less than 1 foot / 0.3 meters apart)",
+    "normal_distance": "Normal socializing (~3 feet / ~1 meter apart)",
+    "sixft_distance": "6+ feet / 2+ meters apart",
+    "tenft_distance": "10+ feet / 3+ meters apart",
     "no_mask": "No mask or poorly-worn mask",
     "basic_mask": "Cotton mask, bandana, or buff",
     "filtered_mask": "Surgical mask or mask with PM2.5 filter insert",

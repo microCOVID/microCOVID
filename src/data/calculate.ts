@@ -3,6 +3,7 @@ import {
   Distance,
   FormValue,
   Interaction,
+  PersonRiskValue,
   RiskProfile,
   RiskProfileEnum,
   Setting,
@@ -10,6 +11,7 @@ import {
   Voice,
   YourMask,
   intimateDurationFloor,
+  personRiskMultiplier,
 } from 'data/data'
 
 export interface CalculatorData {
@@ -26,11 +28,13 @@ export interface CalculatorData {
   casesPastWeek: number
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
+  prevalanceDataDate: Date
 
   // Person risk
-  riskProfile: string
+  riskProfile: keyof typeof RiskProfile
   interaction: string
   personCount: number
+  symptomsChecked: string
 
   // Activity risk
   setting: string
@@ -50,10 +54,12 @@ export const defaultValues: CalculatorData = {
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
+  prevalanceDataDate: new Date(),
 
   riskProfile: '',
   interaction: '',
   personCount: 0,
+  symptomsChecked: 'no',
 
   setting: '',
   distance: '',
@@ -69,6 +75,22 @@ interface CalculatorResult {
   upperBound: number
 }
 
+const MAX_DELAY_FACTOR = 2
+
+export const DAY_0 = new Date(2020, 1, 12)
+const MS_PER_DAY = 1000 * 60 * 60 * 24
+
+// From https://covid19-projections.com/estimating-true-infections-revisited/
+const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
+  const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
+  if (positivityPercent === null || positivityPercent > 100) {
+    // No positivity data, assume the worst.
+    positivityPercent = 100
+  }
+  const positivityRate = positivityPercent / 100
+  return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
+}
+
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
 
@@ -80,7 +102,7 @@ export const migrateDataToCurrent = (
 ): CalculatorData => {
   const data: Partial<CalculatorData> = { ...incomingData }
   const fixOne = (
-    table: { [key: string]: FormValue },
+    table: { [key: string]: FormValue | PersonRiskValue },
     prop: keyof CalculatorData,
   ) => {
     const current = data[prop]
@@ -152,21 +174,15 @@ export const calculateLocationPersonAverage = (
   }
 
   try {
-    let underreportingFactor
+    const underreportingFactor = prevalanceRatio(
+      data.positiveCasePercentage,
+      data.prevalanceDataDate,
+    )
 
-    // Under-reporting factor
-    if (data.positiveCasePercentage === null) {
-      // No positive test rate data available => assume the worst
-      underreportingFactor = 10
-    } else if (data.positiveCasePercentage < 5) {
-      underreportingFactor = 6
-    } else if (data.positiveCasePercentage < 15) {
-      underreportingFactor = 8
-    } else {
-      underreportingFactor = 10
-    }
-
-    const delayFactor = 1 + Math.max(0, data.casesIncreasingPercentage / 100)
+    const delayFactor = Math.min(
+      1 + Math.max(0, data.casesIncreasingPercentage / 100),
+      MAX_DELAY_FACTOR,
+    )
 
     // --------
     // Points for "random person from X location"
@@ -193,13 +209,15 @@ export const calculatePersonRiskEach = (
       // If risk profile isn't selected, call it incomplete
       return null
     }
-    const risk = averagePersonRisk
-    const riskProfile = RiskProfile[data.riskProfile]
-    if (data.interaction !== 'oneTime' && riskProfile.housemateMultiplier) {
-      // Assumes that the person is one of the housemates and subtracts out their reflected risk.
-      return risk * riskProfile.housemateMultiplier
-    }
-    return risk * riskProfile.multiplier
+    const isHousemate = data.interaction !== 'oneTime'
+    return (
+      averagePersonRisk *
+      personRiskMultiplier({
+        riskProfile: RiskProfile[data.riskProfile],
+        isHousemate,
+        symptomsChecked: data.symptomsChecked,
+      })
+    )
   } catch (e) {
     return null
   }

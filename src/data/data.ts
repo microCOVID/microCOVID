@@ -7,10 +7,22 @@ export interface CheckBoxFormValue extends FormValue {
   sublabel?: string
 }
 
-export interface FormValue {
+export interface BaseFormValue {
   label: string
+  multiplier?: number
+}
+
+export interface FormValue extends BaseFormValue {
   multiplier: number
   housemateMultiplier?: number // Different multiplier to apply if the contact is a housemate.
+}
+
+export interface PersonRiskValue extends BaseFormValue {
+  label: string
+  personalMultiplier: number
+  numHousemates: number
+  numOtherTraceableContacts: number // Not including housemates
+  contactsMultiplier: number
 }
 
 const formValue = function (label: string, multiplier: number): FormValue {
@@ -112,11 +124,12 @@ export const budgetOptions = [
   },
 ]
 
+// TODO(beshaya): Move RiskProfile to it's own file.
 /*
  * Exposed to ten (silent distanced masked) average people indoors,
  * while wearing a surgical mask, one-time, for one hour per week.
  */
-const livingAloneMult =
+export const livingAloneMult =
   10 *
   Voice.silent.multiplier *
   Distance.sixFt.multiplier *
@@ -125,69 +138,138 @@ const livingAloneMult =
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
 
-export const RiskProfile: { [key: string]: FormValue } = {
+const SYMPTOM_FREE_LAST_SEEN_TODAY_MULT = 0.5
+const SYMPTOM_FREE_LAST_SEEN_MORE_THAN_THREE_DAYS_AGO = 1 / 7
+
+export const personRiskMultiplier: (arg: {
+  riskProfile: PersonRiskValue
+  isHousemate: boolean
+  symptomsChecked: string
+}) => number = ({ riskProfile, isHousemate, symptomsChecked }) => {
+  const symptomFreeMult =
+    symptomsChecked !== 'no' ? SYMPTOM_FREE_LAST_SEEN_TODAY_MULT : 1
+  const housemateSymptomFreeMult = symptomFreeMult
+  const contactSymptomFreeMult =
+    symptomsChecked === 'yesThreeDays'
+      ? SYMPTOM_FREE_LAST_SEEN_MORE_THAN_THREE_DAYS_AGO
+      : symptomFreeMult
+
+  // Remove the person doing the calculation from the number of contacts if applicable.
+  const housematesNotIncludingUser = Math.max(
+    0,
+    riskProfile.numHousemates - (isHousemate ? 1 : 0),
+  )
+  const housematesRisk =
+    housemateSymptomFreeMult *
+    housematesNotIncludingUser *
+    riskProfile.contactsMultiplier
+  const otherContactsRisk =
+    contactSymptomFreeMult *
+    riskProfile.numOtherTraceableContacts *
+    riskProfile.contactsMultiplier
+
+  const riskFromAllContacts =
+    (housematesRisk + otherContactsRisk) * housemateMult
+
+  return (
+    (riskProfile.personalMultiplier + riskFromAllContacts) * symptomFreeMult
+  )
+}
+
+// Shorthand for filling in RiskProfiles with no contacts
+const noContacts = {
+  numHousemates: 0,
+  numOtherTraceableContacts: 0,
+  contactsMultiplier: 0,
+}
+
+export const RiskProfile: { [key: string]: PersonRiskValue } = {
   average: {
     label: i18n.t('data.person.average'),
-    multiplier: 1,
+    personalMultiplier: 1.0,
+    ...noContacts,
   },
 
   frontline: {
     label: i18n.t('data.person.frontline'),
-    multiplier: 3,
+    personalMultiplier: 3.0,
+    ...noContacts,
   },
 
   nonFrontline: {
     label: i18n.t('data.person.nonFrontline'),
-    multiplier: 0.5,
+    personalMultiplier: 0.5,
+    ...noContacts,
   },
 
   livingAlone: {
     label: i18n.t('data.person.livingAlone'),
-    multiplier: livingAloneMult,
+    personalMultiplier: livingAloneMult,
+    ...noContacts,
   },
 
   livingWithPartner: {
     label: i18n.t('data.person.livingWithPartner'),
-    multiplier: (1 + 0.48) * livingAloneMult,
-    housemateMultiplier: livingAloneMult,
+    personalMultiplier: livingAloneMult,
+    numHousemates: 1,
+    numOtherTraceableContacts: 0,
+    contactsMultiplier: livingAloneMult,
   },
 
   closedPod4: {
     label: i18n.t('data.person.closedPod4'),
-    multiplier: (1 + 4 * housemateMult) * livingAloneMult,
-    housemateMultiplier: (1 + 3 * housemateMult) * livingAloneMult,
+    personalMultiplier: livingAloneMult,
+    numHousemates: 3,
+    numOtherTraceableContacts: 0,
+    contactsMultiplier: livingAloneMult,
   },
 
   closedPod10: {
     label: i18n.t('data.person.closedPod10'),
-    multiplier: (1 + 10 * housemateMult) * livingAloneMult,
-    housemateMultiplier: (1 + 9 * housemateMult) * livingAloneMult,
+    personalMultiplier: livingAloneMult,
+    numHousemates: 9,
+    numOtherTraceableContacts: 0,
+    contactsMultiplier: livingAloneMult,
   },
 
   closedPod20: {
     label: i18n.t('data.person.closedPod20'),
-    multiplier: (1 + 20 * housemateMult) * livingAloneMult,
-    housemateMultiplier: (1 + 19 * housemateMult) * livingAloneMult,
+    personalMultiplier: livingAloneMult,
+    numHousemates: 19,
+    numOtherTraceableContacts: 0,
+    contactsMultiplier: livingAloneMult,
   },
 
   contact1: {
     label: i18n.t('data.person.contact1'),
-    multiplier: housemateMult * 0.5 + livingAloneMult, // Housemate + grocery exposure
+    personalMultiplier: livingAloneMult,
+    numHousemates: 0,
+    numOtherTraceableContacts: 1,
+    contactsMultiplier: 1,
   },
 
   contact4: {
     label: i18n.t('data.person.contact4'),
-    multiplier: 4 * housemateMult * 0.5 + livingAloneMult, // Housemate + grocery exposure
+    personalMultiplier: livingAloneMult,
+    numHousemates: 0,
+    numOtherTraceableContacts: 3,
+    contactsMultiplier: 1,
   },
 
   contact10: {
     label: i18n.t('data.person.contact10'),
-    multiplier: 10 * housemateMult * 0.5 + livingAloneMult, // Housemate + grocery exposure
+    personalMultiplier: livingAloneMult,
+    numHousemates: 0,
+    numOtherTraceableContacts: 9,
+    contactsMultiplier: 1,
   },
 
   contactWorks: {
     label: i18n.t('data.person.contactWorks'),
-    multiplier: housemateMult * 3 + livingAloneMult, // Housemate + grocery exposure
+    personalMultiplier: livingAloneMult,
+    numHousemates: 0,
+    numOtherTraceableContacts: 3,
+    contactsMultiplier: 1.0,
   },
 
   bars: {
@@ -196,10 +278,11 @@ export const RiskProfile: { [key: string]: FormValue } = {
      * Six hours of indoor exposure to a dozen people (2 near you, 10 six feet away)
      * who are not wearing masks and are talking loudly.
      */
-    multiplier:
+    personalMultiplier:
       6 *
       Interaction.oneTime.multiplier *
       (2 + 10 * Distance.sixFt.multiplier * Voice.loud.multiplier),
+    ...noContacts,
   },
 }
 
@@ -212,15 +295,24 @@ export const RiskProfileEnum = {
 
 RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
   label: i18n.t('data.person.microcovid_budget_one_percent'),
-  multiplier: NaN,
+  personalMultiplier: NaN,
+  numHousemates: NaN,
+  numOtherTraceableContacts: NaN,
+  contactsMultiplier: NaN,
 }
 
 RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
   label: i18n.t('data.person.microcovid_budget_deci_percent'),
-  multiplier: NaN,
+  personalMultiplier: NaN,
+  numHousemates: NaN,
+  numOtherTraceableContacts: NaN,
+  contactsMultiplier: NaN,
 }
 
 RiskProfile[RiskProfileEnum.HAS_COVID] = {
   label: i18n.t('data.person.hasCovid'),
-  multiplier: -1,
+  personalMultiplier: NaN,
+  numHousemates: NaN,
+  numOtherTraceableContacts: NaN,
+  contactsMultiplier: NaN,
 }
