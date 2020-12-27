@@ -43,6 +43,10 @@ export const SubscribeForm: React.FunctionComponent = () => {
   return (
     <>
       <h2>Subscribe for spreadsheet updates</h2>
+      <p>
+        We will send email updates when we make feature upgrades and bugfixes to
+        the spreadsheet.
+      </p>
       <div
         className="mailchimp-form"
         dangerouslySetInnerHTML={{ __html: mailchimpCode }}
