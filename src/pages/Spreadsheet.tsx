@@ -42,7 +42,7 @@ export const SubscribeForm: React.FunctionComponent = () => {
 
   return (
     <>
-      <h2>Subscribe for spreadsheet updates</h2>
+      <h2>Subscribe for updates</h2>
       <p>
         We will send email updates when we make feature upgrades and bug fixes
         to the spreadsheet.
