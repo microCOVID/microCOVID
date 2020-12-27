@@ -16,6 +16,41 @@ function spreadsheet(text = 'spreadsheet') {
   )
 }
 
+export const SubscribeForm: React.FunctionComponent = () => {
+  const mailchimpCode = `
+  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  <div id="mc_embed_signup" style="background-color: transparent;">
+  <form action="https://microcovid.us7.list-manage.com/subscribe/post?u=f006d55c4b00443a062279a8f&amp;id=d877d78606" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <div class="mc-field-group input-group" style="display: none;">
+    <ul><li><input type="checkbox" value="1" name="group[78969][1]" id="mce-group[78969]-78969-0" checked><label for="mce-group[78969]-78969-0">Spreadsheet</label></li>
+    </ul>
+    </div>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f006d55c4b00443a062279a8f_d877d78606" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+  </form>
+  </div>
+  `
+
+  return (
+    <>
+      <h2>Subscribe for spreadsheet updates</h2>
+      <div
+        className="mailchimp-form"
+        dangerouslySetInnerHTML={{ __html: mailchimpCode }}
+      />
+    </>
+  )
+}
+
 export const Spreadsheet = (): React.ReactElement => {
   return (
     <div className="paperPage">
@@ -63,7 +98,11 @@ export const Spreadsheet = (): React.ReactElement => {
         same thing as the {calculator}.
       </p>
 
-      <p>{spreadsheet('Use the spreadsheet here')}</p>
+      <p>
+        <strong>{spreadsheet('Use the spreadsheet here →')}</strong>
+      </p>
+
+      <SubscribeForm />
 
       <Alert variant="info">
         <strong>Spreadsheet version 2.0 coming soon:</strong> We are looking for
