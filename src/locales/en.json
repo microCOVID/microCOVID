@@ -172,7 +172,7 @@
     "person": {
       "average": "An average person in your area",
       "frontline": "A healthcare or social worker",
-      "nonFrontline": "Someone in your area who is NOT an essential or front-line worker",
+      "nonFrontline": "A person who works from home / hasn't been in a workplace for the last 10 days",
       "livingAlone": "Lives alone and only grocery shops",
       "livingWithPartner": "Lives with one other person, both people only grocery shop",
       "closedPod4": "In a closed pod of 4 people",
