@@ -4,7 +4,7 @@
     "about": "About",
     "spreadsheet": "Spreadsheet",
     "contactus": "Contact Us",
-    "whitepaper": "Whitepaper"
+    "whitepaper": "White Paper"
   },
   "current_lang_two_letter_code": "en",
   "calculator": {
@@ -40,6 +40,7 @@
       "details_person_risk_explanation_housemate": "First, we calculate that each other person in this area has a <strong>{{ person_risk }}-in-a-million chance</strong> of currently having COVID, not including their risk from living with you.",
       "chance": "chance",
       "details_activity_risk_explanation": "Next, we calculate the risk of the activity. A person at this activity with COVID would have a <strong>{{ activity_risk }} chance</strong> of transmitting it to you.",
+      "activity_risk_capped_note": "(NOTE: We have <2>capped this number at the maximum Activity Risk</2>.)",
       "details_number_of_people": "Number of people",
       "details_total_risk": "Total risk",
       "details_total_risk_number": "{{ points }}-in-a-million ({{ percentage }})",

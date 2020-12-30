@@ -262,7 +262,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         <PrevalenceField
           id="reported-cases"
           label={t('calculator.prevalence.last_week_cases')}
-          value={(data.casesPastWeek || 0).toString()}
+          value={(data.casesPastWeek || 0).toLocaleString()}
           setter={(value) =>
             setter({ ...data, casesPastWeek: parseInt(value || '') })
           }
