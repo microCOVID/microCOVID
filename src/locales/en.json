@@ -183,8 +183,8 @@
       "contact10": "Has 10 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.",
       "contactWorks": "Has 1 close contact (incl. roommates) who is an essential worker. No other work or socializing.",
       "bars": "Went to a bar in the last 10 days",
-      "microcovid_budget_one_percent": "Uses microCOVID to maintain a Standard Caution Budget",
-      "microcovid_budget_deci_percent": "Uses microCOVID to maintain a High Caution Budget",
+      "microcovid_budget_one_percent": "Keeps to a budget of 200 microCOVID per week (\"Standard Caution Budget\")",
+      "microcovid_budget_deci_percent": "Keeps to a budget of 20 microCOVID per week (\"High Caution Budget\")",
       "hasCovid": "Has COVID"
     }
   },
