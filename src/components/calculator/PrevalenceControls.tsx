@@ -56,7 +56,7 @@ const PrevalenceField: React.FunctionComponent<{
   if (!isEditable) {
     return (
       <div>
-        {label}: {value.toLocaleString()}
+        {label}: {typeof value === 'number' ? value.toLocaleString() : value}
         {unit}
       </div>
     )
