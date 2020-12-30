@@ -143,7 +143,8 @@ describe('calculate', () => {
     ${'One-night stand with a random person'}                       | ${2880}
     ${'Live-in partner who has no indoor interactions besides you'} | ${21.6}
     ${'Grocery store for 60 minutes'}                               | ${45}
-    ${'Plane ride'}                                                 | ${360}
+    ${'Plane ride (full flight)'}                                   | ${369}
+    ${'Plane ride (middle seat empty)'}                             | ${180}
     ${'Eating in restaurant, outdoors'}                             | ${202.5}
     ${'Eating in restaurant, indoors'}                              | ${4050}
     ${'Going to bar'}                                               | ${27000}
