@@ -127,7 +127,8 @@
         "risk_tolerance_point1_percent_label": "Strengt forhåndsregelbudsjett",
         "household_members_note": "Hvis du modellerer påvirkning fra husstandsmedlemmer må du kun telle deres kontakt utenfor husholdet, for å unngå å telle dobbelt.",
         "prevalence_info_source_information": "Tilfelledata sammenfattet av <1>Johns Hopkins CSSE</1> (rapporterte tilfeller), <4>Covid Act Now</4> (US positive test rates), and <7>Our World in Data</7> (internasjonale positive testresultater).",
-        "large_group_warning": "Advarsel: Dette er mange folk. Husk at du kun trenger å ta med dem som er innen 5 meter av deg (ikke alle som befinner seg på området). Dog er det i store folkemengder muligheter for superspreding."
+        "large_group_warning": "Advarsel: Dette er mange folk. Husk at du kun trenger å ta med dem som er innen 5 meter av deg (ikke alle som befinner seg på området). Dog er det i store folkemengder muligheter for superspreding.",
+        "saved_scenario_loaded_message": "Du valgte dette begivenhetsforløpet: <strong>{{ scenarioName }}</strong>. Ser punktene nedenfor ut som aktivitetene du har satt deg fore? Hvis ikke kan du justere til det ser rett ut."
     },
     "data": {
         "loud_voice": "Høy snakking (roping, snakking over musikk, synging)",
