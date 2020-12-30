@@ -56,7 +56,7 @@ const PrevalenceField: React.FunctionComponent<{
   if (!isEditable) {
     return (
       <div>
-        {label}: {value}
+        {label}: {typeof value === 'number' ? value.toLocaleString() : value}
         {unit}
       </div>
     )
@@ -262,7 +262,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         <PrevalenceField
           id="reported-cases"
           label={t('calculator.prevalence.last_week_cases')}
-          value={(data.casesPastWeek || 0).toLocaleString()}
+          value={data.casesPastWeek || 0}
           setter={(value) =>
             setter({ ...data, casesPastWeek: parseInt(value || '') })
           }
