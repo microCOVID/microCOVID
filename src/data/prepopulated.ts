@@ -104,11 +104,25 @@ export const prepopulated: {
   [i18n.t('scenario.planeRide')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
+    personCount: 41,
+    symptomsChecked: 'no',
+
+    setting: 'plane',
+    distance: 'sixFt',
+    duration: 360,
+    theirMask: 'basic',
+    yourMask: 'basic',
+    voice: 'silent',
+  },
+
+  [i18n.t('scenario.planeRideMiddleSeatEmpty')]: {
+    riskProfile: 'average',
+    interaction: 'oneTime',
     personCount: 20,
     symptomsChecked: 'no',
 
     setting: 'plane',
-    distance: 'normal',
+    distance: 'sixFt',
     duration: 360,
     theirMask: 'basic',
     yourMask: 'basic',
