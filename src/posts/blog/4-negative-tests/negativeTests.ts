@@ -17,7 +17,7 @@ const summary =
   'Since the beginning of the pandemic, people have wanted to use negative COVID-19 tests to tell them they were safe and COVID free. While tests are far from perfect, negative tests do give us some information. We explain how to update your risk assessment from getting a negative test.'
 
 const content = `
-# Ask microCOVID: Negative COVID Tests
+## Ask microCOVID: Negative COVID Tests
 We get a lot of questions about how to use COVID Test results. Some of these include:
 
 
@@ -33,7 +33,7 @@ Today I’m here to answer these questions using research, microCOVID, and some 
 **Key Takeaways:**
 If you’d rather be spared the math, the short answer is no, getting a one-off test (or even weekly tests) is **not effective** at preventing COVID spread. Limiting your risk and quarantining is the only foolproof way to ensure you don’t pass on COVID.
 
-# Testing isn’t useful on it’s own
+## Testing isn’t useful on it’s own
 
 Getting a negative PCR test* (while otherwise going about life as normal) tells us that a person is 25% less likely to have COVID today than we thought before. This is because the test doesn’t work for COVID contracted in the 4 days leading up to the test. Add that to the delay in getting the test back, and there are now 6 days of potentially risky behavior in which the person could have gotten COVID that the test wouldn’t show.
 <figure>
@@ -49,19 +49,19 @@ Getting a test every week doesn’t help this; you never know whether you are in
 
 *assuming a 2 day turnaround time for the test. Beyond 4 days the negative test is essentially meaningless.
 
-# Rapid Tests are slightly better
+## Rapid Tests are slightly better
 
 Getting a negative rapid test back **the same day** they took tells us that a person is about 50% less likely to have COVID today than we thought before. Going by our weather analogy, that’s a 25% chance of rain instead of 50%. Maybe you’re willing to risk it, but I’d still bring an umbrella.
 
 Like the PCR test, the usefulness of the rapid test drops rapidly after the test - after 2 days it is 25% effective, and after 4 days it doesn’t tell you anything.
 
-# Testing with Quarantining IS Effective
+## Testing with Quarantining IS Effective
 
 Since the biggest problem with tests is that they don’t tell you if you got exposed to COVID starting 4 days before the test, the easiest way around this is to *not expose yourself to any risk starting 5 days before the test*.
 
 If someone quarantines for 10 days and take a test on day 6, then the test is 75% effective! On top of that, completing the 10 day quarantine without symptoms reduces the likelihood they have COVID by 95%. These effects stack and together are 99% effective. That 50% chance of rain is now 0.5%. Go ahead and go outside without an umbrella.
 
-# Caveat - Sometimes 99% isn’t good enough
+## Caveat - Sometimes 99% isn’t good enough
 
 Getting rained on isn’t so bad; I’ll be a little cold but I’ll dry off. COVID is significantly worse - between the risk of death, long term heart damage, long term neurological effects, and risk of giving any of those to someone I love, it’s not a good time. So 0.5% for a single event is still too high for my tolerances.
 
@@ -69,11 +69,11 @@ Fortunately most people don’t start out with a 50% chance of having COVID. A l
 
 However! If a person has done something riskier, like come into contact with someone who tested positive for COVID, gone to a crowded bar, or is showing symptoms, their risk could be high enough that I want better than a 99% reduction in the chance they have COVID. In this case, a 14 day quarantine with a test on day 6 should suffice.
 
-# Conclusion
+## Conclusion
 
 To sum up, simply having a negative test result tells us very little about a person’s risk. A negative test with a 10 day quarantine is sufficient to feel safe around most people. A negative test with a 14 day quarantine is necessary for someone who has had a known exposure to Covid-19 or is showing symptoms.
 
-# Nitty-Gritty: How we calculate Test Characteristics
+## Nitty-Gritty: How we calculate Test Characteristics
 
 The current PCR COVID tests (the ones where someone sticks a Q-tip in your nose) are reported as having a best-case false negative rate of 20%. On top of that, the false negative rate increases as you get away from the optimal day:
 
@@ -100,7 +100,7 @@ Here’s the average false negative rates in chart form:
 | 9                    | 0.2                 |
 | 10                   | 0.25                |
 
-# One-off tests
+## One-off tests
 
 If you did something risky N days before taking a test that came back negative, you can look up the chances that the test will catch that. Multiply the microCOVIDs from the event by the False Negative Rate for that day and you get a revised microCOVID risk*.
 
@@ -123,7 +123,7 @@ Quarantining alone would have brought your risk to 800 * 0.05 = 40.
 As you can see, **quarantining is more effective than testing at reducing the risk you pose to others, but it can be used in conjunction to stack the effects.**
 
 
-## Periodic Testing
+### Periodic Testing
 
 So what if someone get tested every week? Let’s say they work outside the house in an office with masks and reduced capacity. You calculate their risk to be 100microCOVIDs a day.  
 
@@ -178,7 +178,7 @@ If you want to play games with your risk to get the most out of the test, you co
 
 What if you get tested more often? You’d be more likely to catch an infection if you got it, but you would never be able to use testing to reduce your current-day risk level below 520 (assuming a 2 day turnaround). Based on these false negative rates, if you wanted to be maximally likely to spot an infection via testing, you’d want to get tested about every 5 days, so that the next test would cover the blind spots of the previous one.
 
-# Rapid Tests
+## Rapid Tests
 
 Here is how I adapted this data for rapid tests:
 
@@ -189,7 +189,7 @@ Here is how I adapted this data for rapid tests:
 - The very next day, that goes up to 440, so the window of usefulness is short.
 
 
-# FAQ
+## FAQ
 
 **Does getting a negative test mean a person wasn’t infectious at the time of the test? If someone tested negative the day I saw them, but tested positive a few days later, am I safe?**
 We think there is strong evidence that discredits this. The primary reason for thinking this is not the case is that tests seem to be most effective after symptoms start, while [Byambasuren et al](https://www.medrxiv.org/content/10.1101/2020.05.10.20097543v2.full.pdf) found that infectiousness seems to peak 1-2 days before symptoms start, hence it would appear that most people are most infectious before tests turn up positive.
