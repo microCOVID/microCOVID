@@ -237,7 +237,7 @@ export const prepopulated: {
     distance: 'sixFt',
     duration: 10,
     theirMask: 'basic',
-    yourMask: 'filtered',
+    yourMask: 'basic',
     voice: 'silent',
   },
 
