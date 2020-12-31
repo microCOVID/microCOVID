@@ -227,20 +227,6 @@ export const prepopulated: {
     voice: 'normal',
   },
 
-  [i18n.t('scenario.votingInPerson')]: {
-    riskProfile: 'average',
-    interaction: 'oneTime',
-    personCount: 2,
-    symptomsChecked: 'no',
-
-    setting: 'indoor',
-    distance: 'sixFt',
-    duration: 10,
-    theirMask: 'basic',
-    yourMask: 'basic',
-    voice: 'silent',
-  },
-
   [i18n.t('scenario.indoorUnmaskedWithCovidPositive')]: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
@@ -253,5 +239,19 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+  },
+
+  [i18n.t('scenario.votingInPerson')]: {
+    riskProfile: 'average',
+    interaction: 'oneTime',
+    personCount: 2,
+    symptomsChecked: 'no',
+
+    setting: 'indoor',
+    distance: 'sixFt',
+    duration: 10,
+    theirMask: 'basic',
+    yourMask: 'basic',
+    voice: 'silent',
   },
 }

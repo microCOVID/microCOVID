@@ -203,8 +203,8 @@
     "largeOutdoorParty": "Large outdoor party: masked with 3 feet between people",
     "smallIndoorParty25": "Small indoor party: unmasked with 25 people",
     "outdoorMaskedWithCovidPositive": "Outdoor, masked hangout with person who has COVID",
-    "votingInPerson": "Voting in-person",
-    "indoorUnmaskedWithCovidPositive": "Indoor, unmasked hangout with person who has COVID"
+    "indoorUnmaskedWithCovidPositive": "Indoor, unmasked hangout with person who has COVID",
+    "votingInPerson": "Voting in-person"
   },
   "about": {
     "intro_header": "What is the microCOVID project?",

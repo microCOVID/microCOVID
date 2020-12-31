@@ -152,8 +152,8 @@ describe('calculate', () => {
     ${'Large outdoor party: masked with 3 feet between people'}     | ${1080}
     ${'Small indoor party: unmasked with 25 people'}                | ${27000}
     ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
-    ${'Voting in-person'}                                           | ${3}
     ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
+    ${'Voting in-person'}                                           | ${3}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = testData(prepopulated[scenario])
 
