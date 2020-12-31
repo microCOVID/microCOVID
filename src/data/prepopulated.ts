@@ -90,6 +90,20 @@ export const prepopulated: {
   [i18n.t('scenario.60minShopping')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
+    personCount: 10,
+    symptomsChecked: 'no',
+
+    setting: 'indoor',
+    distance: 'sixFt',
+    duration: 60,
+    theirMask: 'basic',
+    yourMask: 'basic',
+    voice: 'silent',
+  },
+
+  [i18n.t('scenario.60minShoppingFew')]: {
+    riskProfile: 'average',
+    interaction: 'oneTime',
     personCount: 5,
     symptomsChecked: 'no',
 
