@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 import { RadioControl } from '../RadioControl'
 
@@ -31,6 +32,7 @@ import {
   intimateDurationFloor,
 } from 'data/data'
 import 'components/calculator/ExplanationCard/ExplanationCard.scss'
+import { lastUpdated } from 'posts/paper/99-changelog'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (
@@ -84,6 +86,15 @@ export default function ExplanationCard(props: {
   const calculationBreakdown = () => {
     return (
       <>
+        <div id="changelog">
+          <Trans
+            i18nKey="calculator.explanationcard.last_updated"
+            values={{ date: lastUpdated.toLocaleDateString() }}
+          >
+            Model last updated on (date).{' '}
+            <Link to="/paper/changelog">(Change log)</Link>
+          </Trans>
+        </div>
         <Expandable
           id="calculation-explanation"
           header={t('calculator.explanationcard.details_header_closed')}
