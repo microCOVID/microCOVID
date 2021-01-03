@@ -8,7 +8,7 @@ The **Intermediate Method** is a quick adjustment for the risk a person's job ex
 
 ## Intermediate method: Adjust for job exposure.
 
-We found evidence suggesting that healthcare and social services workers tend to get infected at 2x the average rate, while people in jobs that could work from home were infected at 1/2x the average rate [11]. 
+We found evidence suggesting that healthcare and social services workers tend to get infected at 2x the average rate, while people in jobs that could work from home were infected at 1/2x the average rate [^11]. 
 
 We can use the following equation to adjust our estimate of Person Risk:
 
