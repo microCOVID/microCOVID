@@ -56,7 +56,8 @@
       "risk_budget_explanation": "You selected an annual budget of a {{ budget_percent }} chance of getting COVID per year ({{ budget_points }} microCOVIDs). That equates to a weekly budget of <strong>{{ budget_weekly }} microCOVIDs per week</strong>.",
       "risk_budget_used": "Budget used",
       "risk_budget_usage_explanation": "This interaction uses <strong>{{ usage }}</strong>. This amount of your budget will be used <strong>{{ frequency }}</strong>.",
-      "risk_tolerance_selector_header": "Adjust your risk tolerance"
+      "risk_tolerance_selector_header": "Adjust your risk tolerance",
+      "last_updated": "Model last updated on {{ date }}. (<2>See changelog</2>)"
     },
     "pointsdisplay": {
       "microCOVIDs": "microCOVIDs",
@@ -83,6 +84,7 @@
     "person_risk_profile_header": "Risk Profile",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
+    "frontline_worker_acknowledgement": "We deeply appreciate the sacrifices that frontline workers are making during the pandemic. We encourage you to find safe ways of supporting these people, keeping them socially included and cared for. We expect that most of these workers will be vaccinated in the next few months, which should substantially reduce their risk of infection/transmission.",
     "category_very_low": "Very Low",
     "category_low": "Low",
     "category_moderate": "Moderate",
@@ -170,20 +172,20 @@
     "loud_voice": "Loud talking (shouting, talking over music, singing)",
     "person": {
       "average": "An average person in your area",
-      "frontline": "An essential or front-line worker in your area",
-      "nonFrontline": "Someone in your area who is NOT an essential or front-line worker",
+      "frontline": "A healthcare or social worker",
+      "nonFrontline": "An average person in your area who works from home",
       "livingAlone": "Lives alone and only grocery shops",
-      "livingWithPartner": "Lives with partner, both people only grocery shop",
+      "livingWithPartner": "Lives with one other person, both people only grocery shop",
       "closedPod4": "In a closed pod of 4 people",
       "closedPod10": "In a closed pod of 10 people",
       "closedPod20": "In a closed pod of 20 people",
-      "contact1": "Has 1 close contact (incl. roommates) who socializes but does not work. No other work or socializing.",
-      "contact4": "Has 4 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.",
-      "contact10": "Has 10 close contacts (incl. roommates) who socialize but do not work. No other work or socializing.",
-      "contactWorks": "Has 1 close contact (incl. roommates) who is an essential worker. No other work or socializing.",
-      "bars": "Goes to bars regularly",
-      "microcovid_budget_one_percent": "Uses microCOVID to maintain a risk of 1%/year (200 microcovid/week)",
-      "microcovid_budget_deci_percent": "Uses microCOVID to maintain a risk of 0.1%/year (20 microcovid/week)",
+      "contact1": "Has 1 close contact whose risk profile you don't know. In an otherwise closed pod.",
+      "contact4": "Has 4 close contacts whose risk profile you don't know, In an otherwise closed pod.",
+      "contact10": "Has 10 close contacts whose risk profile you don't know. In an otherwise closed pod.",
+      "contactWorks": "Has 1 close contact who is a healthcare or social services worker. In an otherwise closed pod.",
+      "bars": "Went to a bar in the last 10 days",
+      "microcovid_budget_one_percent": "Keeps to a budget of 200 microCOVID per week (\"Standard Caution Budget\")",
+      "microcovid_budget_deci_percent": "Keeps to a budget of 20 microCOVID per week (\"High Caution Budget\")",
       "hasCovid": "Has COVID"
     }
   },
