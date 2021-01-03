@@ -19,6 +19,7 @@ export const GenericSelectControl: React.FunctionComponent<{
   popover?: JSX.Element
   hideRisk?: boolean
   className?: string
+  labelFactory?: (value: string) => string
 }> = (props) => {
   const { t } = useTranslation()
   function formatRiskMultiplierInternal(multiplier: number): string {
@@ -64,9 +65,12 @@ export const GenericSelectControl: React.FunctionComponent<{
         <option value="">{t('buttons.select_default_action')}</option>
         {Object.keys(props.source).map((value, index) => (
           <option key={index} value={value}>
-            {props.source[value].label}{' '}
-            {!props.hideRisk &&
-              formatRiskMultiplier(props.source[value].multiplier)}
+            {props.labelFactory
+              ? props.labelFactory(value)
+              : props.source[value].label +
+                ' ' +
+                (!props.hideRisk &&
+                  formatRiskMultiplier(props.source[value].multiplier))}
           </option>
         ))}
         <IosOptgroup />
@@ -91,6 +95,7 @@ export const SelectControl: React.FunctionComponent<{
   popover?: JSX.Element
   hideRisk?: boolean
   className?: string
+  labelFactory?: (value: string) => string
 }> = (props) => (
   <GenericSelectControl
     id={props.id}
@@ -103,6 +108,7 @@ export const SelectControl: React.FunctionComponent<{
     popover={props.popover}
     hideRisk={props.hideRisk}
     className={props.className}
+    labelFactory={props.labelFactory}
   />
 )
 
