@@ -91,8 +91,8 @@ export default function ExplanationCard(props: {
             i18nKey="calculator.explanationcard.last_updated"
             values={{ date: lastUpdated.toLocaleDateString() }}
           >
-            Model last updated on (date).{' '}
-            <Link to="/paper/changelog">(Changelog)</Link>
+            Model last updated on (date). (
+            <Link to="/paper/changelog">Changelog</Link>)
           </Trans>
         </div>
         <Expandable
