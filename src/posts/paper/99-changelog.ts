@@ -1,5 +1,5 @@
-const title = 'Calculator Change Log'
-const shortTitle = 'Change Log'
+const title = 'Calculator Changelog'
+const shortTitle = 'Changelog'
 
 interface Change {
   date: Date
