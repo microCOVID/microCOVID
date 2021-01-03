@@ -16,7 +16,7 @@ We can use the following equation to adjust our estimate of Person Risk:
 
 In the example above, if all you know about someone is that they live in San Francisco, their Person Risk is 5,000 (for the week ending July 26, 2020).
 
-* If you also know that they work in healtcare or social services, then \`5,000 * 2 = 10,000\` so their Person Risk increases to 15,000.
+* If you also know that they work in healtcare or social services, then \`5,000 * 2 = 10,000\` so their Person Risk increases to 10,000.
 * If instead you know that they work from home, then \`5,000 * 0.5 = 2,500\` so their Person Risk goes down to 2,500.
 * If they work outside the home but not in healtcare or social services, or you don't know anything about them, don’t make any adjustment.
 
