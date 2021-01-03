@@ -10,9 +10,10 @@ const changes: Change[] = [
   {
     date: new Date(2021, 0, 2), // Month is 0 indexed
     content: `
- * Reduced risk of healthcare + social workers to 2x average (previously 3x) and re-labeled (previously "frontline worker").
+ * Re-labeled "frontline worker" to "healthcare + social worker".
+ * Reduced risk of healthcare + social workers to 2x average (previously 3x).
  * Re-labeled "Not an essential or front-line worker" to "a person who works from home."
- * Note This recategorizes people who work outside the home but not in healtcare/social settings as "Average."
+ * Note This recategorizes people who work outside the home but not in healtcare/social settings as "An average person in your area."
  * See revised [Intermediate Method](/paper/8-intermediate-method) for rationale.
     `,
   },
@@ -26,7 +27,7 @@ const changes: Change[] = [
   {
     date: new Date(2020, 11, 13),
     content: `
-* Replaced logic for under-reporting factor, resulting in significantly lower prevalence estimations.
+  * Replaced logic for under-reporting factor, resulting in significantly lower prevalence estimations.
   * Previous logic: 6x for positive test rate under 5%, 8x for 5%-15%, 10x for above 15%.
   * New logic from (COVID 19 Projections)[https://covid19-projections.com/estimating-true-infections-revisited/]
   * See (Research Sources)[/paper/14-research-sources#basic-method-underreporting-factor] for more details.
