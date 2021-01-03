@@ -93,7 +93,7 @@ CFM = 2/3 * (square footage)
 
 From this, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down and partially enclosed spaces (i.e. at least one wall is open to outside air).
 
-Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's (BART)[https://www.bart.gov/news/articles/2020/news20200813] claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. 
+Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's [BART](https://www.bart.gov/news/articles/2020/news20200813) claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. 
 
 On planes, [Silcott et al](https://www.ustranscom.mil/cmd/docs/TRANSCOM%20Report%20Final.pdf) directly measured aerosol concentrations on a plane and found that the plane's filtration system resulted in 90% less exposure than a house. Since this is the same reduction as Curtis & Schrod found, we reason that the same reduction should apply. However, plane rides tend to be 2+ hours, so we use the 6x reduction that Curtis & Schrod calculated.
 
@@ -159,11 +159,11 @@ We have found the following graph useful for thinking about this. [Ferretti et a
 
 ### Note on Infectious Period: Contacts' symptoms
 
-Another important thing to know about the infectious period is that only about 9% of transmissions from people who eventually show symptoms occur more than 3 days before those symptoms appear, and only 1% occur more than 5 days before symptoms appear. We get this data from [He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph:
+Another important thing to know about the infectious period is that only about 9% of transmissions from people who eventually show symptoms occur more than 3 days before those symptoms appear, and only 1% occur more than 5 days before symptoms appear. We get this data from [He et al](https://www.nature.com/articles/s41591-020-0869-5), Figure 1c middle graph:[^heupdate]
 
 ![He et al](${heExtended})
 
-(If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).)
+One insight we can gain is that since 50% of transmission occurrs after symptoms onset, if you confirm with the person you are seeing that they don't have symptoms right before you interact, you are reducing your risk by 50%.
 
 Additionally, only about 6% of transmissions come from people who won't ever show symptoms ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936)):[^ferretti]
 
@@ -265,6 +265,8 @@ We note the following:
 
 [^2]:
      We understand there’s currently somewhat of a [debate or discussion](https://slate.com/technology/2020/07/droplets-aerosols-coronavirus-covid-19.html) around whether COVID is best thought of as being transmitted by smaller droplets that can linger in the air, or mostly by larger droplets that fall down quickly due to gravity. We already thought the evidence was pointing towards lingering droplets, and [Prof. Jimenez’s writeup](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) on the topic summarizes this perspective far better than we could.
+
+[^heupdate]: If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).
 
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
 `
