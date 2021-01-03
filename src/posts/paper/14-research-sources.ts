@@ -93,7 +93,7 @@ CFM = 2/3 * (square footage)
 
 From this, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down and partially enclosed spaces (i.e. at least one wall is open to outside air).
 
-Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's (BART)[https://www.bart.gov/news/articles/2020/news20200813] claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. 
+Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's [BART](https://www.bart.gov/news/articles/2020/news20200813) claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. 
 
 On planes, [Silcott et al](https://www.ustranscom.mil/cmd/docs/TRANSCOM%20Report%20Final.pdf) directly measured aerosol concentrations on a plane and found that the plane's filtration system resulted in 90% less exposure than a house. Since this is the same reduction as Curtis & Schrod found, we reason that the same reduction should apply. However, plane rides tend to be 2+ hours, so we use the 6x reduction that Curtis & Schrod calculated.
 
