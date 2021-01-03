@@ -29,8 +29,8 @@ const changes: Change[] = [
     content: `
 * Replaced logic for under-reporting factor, resulting in significantly lower prevalence estimations.
   * Previous logic: 6x for positive test rate under 5%, 8x for 5%-15%, 10x for above 15%.
-  * New logic from (COVID 19 Projections)[https://covid19-projections.com/estimating-true-infections-revisited/]
-  * See (Research Sources)[/paper/14-research-sources#basic-method-underreporting-factor] for more details.
+  * New logic from [COVID 19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/)
+  * See [Research Sources](/paper/14-research-sources#basic-method-underreporting-factor) for more details.
 `,
   },
 ]
