@@ -142,7 +142,8 @@ describe('calculate', () => {
     ${'Car ride with 1 person for 15 mins'}                         | ${90}
     ${'One-night stand with a random person'}                       | ${2880}
     ${'Live-in partner who has no indoor interactions besides you'} | ${21.6}
-    ${'Grocery store for 60 minutes'}                               | ${45}
+    ${'Grocery store for 60 minutes (average # of shoppers)'}       | ${90}
+    ${'Grocery store for 60 minutes (few other shoppers)'}          | ${45}
     ${'Plane ride (full flight)'}                                   | ${369}
     ${'Plane ride (middle seat empty)'}                             | ${180}
     ${'Eating in restaurant, outdoors'}                             | ${202.5}
@@ -151,8 +152,8 @@ describe('calculate', () => {
     ${'Large outdoor party: masked with 3 feet between people'}     | ${1080}
     ${'Small indoor party: unmasked with 25 people'}                | ${27000}
     ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
-    ${'Voting in-person'}                                           | ${1.5}
     ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
+    ${'Voting in-person'}                                           | ${3}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = testData(prepopulated[scenario])
 

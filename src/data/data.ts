@@ -138,6 +138,7 @@ export const livingAloneMult =
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
 
+const HEALTHCARE_MULT = 2.0
 const SYMPTOM_FREE_LAST_SEEN_TODAY_MULT = 0.5
 const SYMPTOM_FREE_LAST_SEEN_MORE_THAN_THREE_DAYS_AGO = 1 / 7
 
@@ -192,13 +193,7 @@ export const RiskProfile: { [key: string]: PersonRiskValue } = {
 
   frontline: {
     label: i18n.t('data.person.frontline'),
-    personalMultiplier: 3.0,
-    ...noContacts,
-  },
-
-  nonFrontline: {
-    label: i18n.t('data.person.nonFrontline'),
-    personalMultiplier: 0.5,
+    personalMultiplier: HEALTHCARE_MULT,
     ...noContacts,
   },
 
@@ -268,8 +263,8 @@ export const RiskProfile: { [key: string]: PersonRiskValue } = {
     label: i18n.t('data.person.contactWorks'),
     personalMultiplier: livingAloneMult,
     numHousemates: 0,
-    numOtherTraceableContacts: 3,
-    contactsMultiplier: 1.0,
+    numOtherTraceableContacts: 1,
+    contactsMultiplier: HEALTHCARE_MULT,
   },
 
   bars: {
