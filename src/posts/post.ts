@@ -25,7 +25,7 @@ export interface BlogPostContent {
   content: string | React.FunctionComponent
   author: string
   date: string
-  image: ImageMeta
+  image?: ImageMeta
   summary: string
 }
 

@@ -6,9 +6,11 @@ import {
   defaultValues,
 } from 'data/calculate'
 import {
+  B117_CONTAGIOUSNESS_ADJUSTMENT,
   BUDGET_ONE_PERCENT,
   RiskProfile,
   RiskProfileEnum,
+  housemateMult,
   personRiskMultiplier,
 } from 'data/data'
 import { prepopulated } from 'data/prepopulated'
@@ -132,28 +134,33 @@ describe('calculate', () => {
 
     const response = calcValue(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
-    expect(response).toBe(((((PREVALENCE * 2) / 20) * 0.06) / 4 / 1) * 1e6)
+    expect(response).toBeCloseTo(
+      ((((PREVALENCE * 2) / 20) * 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT) /
+        4 /
+        1) *
+        1e6,
+    )
   })
 
   it.each`
     scenario                                                        | result
-    ${'Outdoor masked hangout with 2 people'}                       | ${9}
-    ${'Indoor unmasked hangout with 2 people'}                      | ${720}
-    ${'Car ride with 1 person for 15 mins'}                         | ${90}
-    ${'One-night stand with a random person'}                       | ${2880}
-    ${'Live-in partner who has no indoor interactions besides you'} | ${21.6}
-    ${'Grocery store for 60 minutes (average # of shoppers)'}       | ${90}
-    ${'Grocery store for 60 minutes (few other shoppers)'}          | ${45}
-    ${'Plane ride (full flight)'}                                   | ${369}
-    ${'Plane ride (middle seat empty)'}                             | ${180}
-    ${'Eating in restaurant, outdoors'}                             | ${202.5}
-    ${'Eating in restaurant, indoors'}                              | ${4050}
-    ${'Going to bar'}                                               | ${27000}
-    ${'Large outdoor party: masked with 3 feet between people'}     | ${1080}
-    ${'Small indoor party: unmasked with 25 people'}                | ${27000}
-    ${'Outdoor, masked hangout with person who has COVID'}          | ${750}
-    ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000}
-    ${'Voting in-person'}                                           | ${3}
+    ${'Outdoor masked hangout with 2 people'}                       | ${9 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Indoor unmasked hangout with 2 people'}                      | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Car ride with 1 person for 15 mins'}                         | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'One-night stand with a random person'}                       | ${2880 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Live-in partner who has no indoor interactions besides you'} | ${21.6 * B117_CONTAGIOUSNESS_ADJUSTMENT ** 2}
+    ${'Grocery store for 60 minutes (average # of shoppers)'}       | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Grocery store for 60 minutes (few other shoppers)'}          | ${45 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Plane ride (full flight)'}                                   | ${369 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Plane ride (middle seat empty)'}                             | ${180 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Eating in restaurant, outdoors'}                             | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Eating in restaurant, indoors'}                              | ${4050 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Going to bar'}                                               | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Large outdoor party: masked with 3 feet between people'}     | ${1080 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Small indoor party: unmasked with 25 people'}                | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Outdoor, masked hangout with person who has COVID'}          | ${750 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Indoor, unmasked hangout with person who has COVID'}         | ${60000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Voting in-person'}                                           | ${3 * B117_CONTAGIOUSNESS_ADJUSTMENT}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = testData(prepopulated[scenario])
 
@@ -191,24 +198,19 @@ describe('calculate', () => {
       riskProfile: 'hasCovid',
       interaction: 'repeated',
       personCount: 1,
-
-      setting: 'indoor',
-      distance: 'sixFt',
-      duration: 60,
-      theirMask: 'basic',
-      yourMask: 'filtered',
-      voice: 'silent',
+      ...repeatedDontCare,
     })
 
     const oneTime = calculate(data)
-    expect(oneTime?.expectedValue).toBeCloseTo(0.3e6)
-    expect(oneTime?.lowerBound).toBeCloseTo(0.1e6)
-    expect(oneTime?.upperBound).toBeCloseTo(0.9e6)
+    expect(oneTime?.expectedValue).toBeCloseTo(0.45e6)
+    expect(oneTime?.lowerBound).toBeCloseTo(0.15e6)
+    expect(oneTime?.upperBound).toBeCloseTo(1.0e6)
 
     const twoTimes = calculate({ ...data, personCount: 2 })
-    expect(twoTimes?.expectedValue).toBeCloseTo(0.51e6)
-    expect(twoTimes?.lowerBound).toBeCloseTo(0.19e6)
-    expect(twoTimes?.upperBound).toBeCloseTo(0.99e6)
+    // Should apply 1 - (1-p)^2 rather than multiplying by 2
+    expect(twoTimes?.expectedValue).toBeCloseTo(0.6975e6)
+    expect(twoTimes?.lowerBound).toBeCloseTo(0.2775e6)
+    expect(twoTimes?.upperBound).toBeCloseTo(1e6)
   })
 
   it.each`
@@ -227,7 +229,7 @@ describe('calculate', () => {
         personCount: 1,
       })
 
-      const expected = points * 0.3
+      const expected = points * housemateMult
       expect(calcValue(data)).toBeCloseTo(expected)
       expect(
         calcValue({
@@ -258,10 +260,11 @@ describe('calculate', () => {
       expect(calcValue(partner)).toEqual(calcValue(bonuses))
     })
 
-    it('should apply 48% risk', () => {
+    it('should apply 75% risk', () => {
       expect(calcValue(partner)).toBeCloseTo(
         PREVALENCE *
           0.48 *
+          B117_CONTAGIOUSNESS_ADJUSTMENT *
           1e6 *
           personRiskMultiplier({
             riskProfile: RiskProfile['livingAlone'],
@@ -302,9 +305,11 @@ describe('calculate', () => {
       expect(calcValue(housemate)).toBeCloseTo(calcValue(bonuses)!)
     })
 
-    it('should apply 30% risk', () => {
-      // average * 0.3
-      expect(calcValue(housemate)).toEqual(PREVALENCE * 0.3 * 1e6)
+    it('should apply 45% risk', () => {
+      // average * 0.45
+      expect(calcValue(housemate)).toBeCloseTo(
+        PREVALENCE * 0.3 * B117_CONTAGIOUSNESS_ADJUSTMENT * 1e6,
+      )
     })
 
     it('should remove the risk from the user for risk profiles including housemates', () => {
@@ -318,7 +323,7 @@ describe('calculate', () => {
         duration: 60 * 5,
       })
       expect(calcValue(housemateData)).toBeCloseTo(
-        (calcValue(equivalentOneTime)! * (1 + 0.3 * 2)) / (1 + 0.3 / 3),
+        (calcValue(equivalentOneTime)! * (1 + 0.45 * 2)) / (1 + 0.45 / 3),
       )
     })
   })
@@ -377,7 +382,7 @@ describe('calculate', () => {
   describe('Distance: close', () => {
     it.each`
       duration | setting      | result        | scenario
-      ${120}   | ${'indoor'}  | ${1440}       | ${'should be 12% per hour'}
+      ${120}   | ${'indoor'}  | ${1440}       | ${'should be 18% per hour'}
       ${1}     | ${'indoor'}  | ${1440 / 120} | ${'should not have a minimum risk'}
       ${240}   | ${'outdoor'} | ${2880}       | ${'should not give an outdoors bonus'}
     `(' $scenario', ({ duration, setting, result }) => {
@@ -394,7 +399,7 @@ describe('calculate', () => {
         duration,
       }
 
-      expect(calcValue(data)).toEqual(result)
+      expect(calcValue(data)).toEqual(result * B117_CONTAGIOUSNESS_ADJUSTMENT)
     })
   })
 })
