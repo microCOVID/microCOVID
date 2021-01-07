@@ -30,6 +30,7 @@ export const SubscribeForm: React.FunctionComponent = () => {
           target="_blank"
           rel="noreferrer"
           className="btn btn-secondary"
+          role="button"
         >
           Sign up for spreadsheet updates →
         </a>
