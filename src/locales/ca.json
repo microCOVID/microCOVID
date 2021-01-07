@@ -42,7 +42,7 @@
         "person_risk_profile_header": "Perfil de risc",
         "person_risk_profile_question": "Quin és el seu perfil de risc?",
         "intimate_risk_warning": "Hem aplicat un risc d'activitat mínim per besar a causa del risc que comporta l'intercanvi de fluids.",
-        "duration_question": "Quant dura l'activitat, en minuts?",
+        "duration_question": "Quant dura l'activitat, en minuts? (Si és una activitat repetida, quants minuts a la setmana?)",
         "duration_header": "Durada",
         "distance_header": "Distància",
         "distance_question": "A quina distància estan aquestes persones properes, de mitjana?",
