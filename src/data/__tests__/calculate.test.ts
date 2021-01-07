@@ -147,8 +147,8 @@ describe('calculate', () => {
     ${'Outdoor masked hangout with 2 people'}                       | ${9 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Indoor unmasked hangout with 2 people'}                      | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Car ride with 1 person for 15 mins'}                         | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'One-night stand with a random person'}                       | ${2880 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Live-in partner who has no indoor interactions besides you'} | ${21.6 * B117_CONTAGIOUSNESS_ADJUSTMENT ** 2}
+    ${'One-night stand with a random person'}                       | ${2880}
+    ${'Live-in partner who has no indoor interactions besides you'} | ${21.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Grocery store for 60 minutes (average # of shoppers)'}       | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Grocery store for 60 minutes (few other shoppers)'}          | ${45 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Plane ride (full flight)'}                                   | ${369 * B117_CONTAGIOUSNESS_ADJUSTMENT}
@@ -202,15 +202,15 @@ describe('calculate', () => {
     })
 
     const oneTime = calculate(data)
-    expect(oneTime?.expectedValue).toBeCloseTo(0.45e6)
-    expect(oneTime?.lowerBound).toBeCloseTo(0.15e6)
-    expect(oneTime?.upperBound).toBeCloseTo(1.0e6)
+    expect(oneTime?.expectedValue).toBeCloseTo(0.3e6)
+    expect(oneTime?.lowerBound).toBeCloseTo(0.1e6)
+    expect(oneTime?.upperBound).toBeCloseTo(0.9e6)
 
     const twoTimes = calculate({ ...data, personCount: 2 })
     // Should apply 1 - (1-p)^2 rather than multiplying by 2
-    expect(twoTimes?.expectedValue).toBeCloseTo(0.6975e6)
-    expect(twoTimes?.lowerBound).toBeCloseTo(0.2775e6)
-    expect(twoTimes?.upperBound).toBeCloseTo(1e6)
+    expect(twoTimes?.expectedValue).toBeCloseTo(0.51e6)
+    expect(twoTimes?.lowerBound).toBeCloseTo(0.19e6)
+    expect(twoTimes?.upperBound).toBeCloseTo(0.99e6)
   })
 
   it.each`
@@ -260,10 +260,10 @@ describe('calculate', () => {
       expect(calcValue(partner)).toEqual(calcValue(bonuses))
     })
 
-    it('should apply 72% risk', () => {
+    it('should apply 48% risk', () => {
       expect(calcValue(partner)).toBeCloseTo(
         PREVALENCE *
-          0.72 *
+          0.48 *
           1e6 *
           personRiskMultiplier({
             riskProfile: RiskProfile['livingAlone'],
@@ -304,9 +304,9 @@ describe('calculate', () => {
       expect(calcValue(housemate)).toBeCloseTo(calcValue(bonuses)!)
     })
 
-    it('should apply 45% risk', () => {
-      // average * 0.45
-      expect(calcValue(housemate)).toBeCloseTo(PREVALENCE * 0.45 * 1e6)
+    it('should apply 30% risk', () => {
+      // average * 0.3
+      expect(calcValue(housemate)).toBeCloseTo(PREVALENCE * 0.3 * 1e6)
     })
 
     it('should remove the risk from the user for risk profiles including housemates', () => {
@@ -381,7 +381,7 @@ describe('calculate', () => {
       duration | setting      | result        | scenario
       ${120}   | ${'indoor'}  | ${1440}       | ${'should be 18% per hour'}
       ${1}     | ${'indoor'}  | ${1440 / 120} | ${'should not have a minimum risk'}
-      ${240}   | ${'outdoor'} | ${2880}       | ${'should not give an outdoors bonus'}
+      ${120}   | ${'outdoor'} | ${1440}       | ${'should not give an outdoors bonus'}
     `(' $scenario', ({ duration, setting, result }) => {
       const data: CalculatorData = {
         ...baseTestData,

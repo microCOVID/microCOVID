@@ -34,8 +34,8 @@ export const TOP_LOCATION_MANUAL_ENTRY = 'MANUAL_DATA'
 export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
 
 export const oneTimeMult = 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT
-export const housemateMult = 0.3 * B117_CONTAGIOUSNESS_ADJUSTMENT
-export const partnerMult = 0.48 * B117_CONTAGIOUSNESS_ADJUSTMENT
+export const housemateMult = 0.3
+export const partnerMult = 0.48
 
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: {

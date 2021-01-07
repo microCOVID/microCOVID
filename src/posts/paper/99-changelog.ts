@@ -10,7 +10,7 @@ const changes: Change[] = [
   {
     date: new Date(20201, 0, 5),
     content: `
-* Increased all transmission factors by 1.5x to account for more contagious COVID variant B117. See [blog post](/blog/b117) for details.`,
+* Increased One-time interraction transmission rate from 6% to 9% to account for more contagious COVID variant B117. See [blog post](/blog/b117) for details.`,
   },
   {
     date: new Date(2021, 0, 2), // Month is 0 indexed

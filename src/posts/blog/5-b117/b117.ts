@@ -22,7 +22,7 @@ Here’s what we cover below:
 
 ## What’s changing?
 
-As of today, all Activity Risks have been increased by 50%. That includes the hourly risk rate (6% → 9%), the housemate transmission risk (30% → 45%) and the partner transmission risk (48% → 72%).
+As of today, Activity Risks for one-time interractions have been increased 50% from 6% to 9%. The Housemate and Partner Activity Risks are unchanged, but we expect to tweak them in the near future.
 
 ## Why is this happening?
 
@@ -47,7 +47,9 @@ When B117 becomes the dominant variant in California, we expect R to be 1.5x hig
 
 We stand by microCOVID as the best tool for adapting to changing conditions, as microCOVID tracks and updates the prevalence of COVID-19 in your region. B117’s impact on you will be dominated by the effects on regional prevalence.  The more contagious variant means that Activity Risk increases by just 1.5x for all activities, but the longer term effect on R means Person Risk could end up increasing by 10x or more over time.
 
-We are also updating all Activity Risks to assume that B117 is the dominant variant. This is an aggressive change, as we expect it will take 2-4 months for B117 to completely spread everywhere. However, we have no data on the proportion of the virus that is B117, so it could be true for any given region at any given time. Making this change now means you’ll be ahead of the curve in adapting to changing conditions. If you have data on the proportion of cases in your region that are B117, you may multiply activity risk by a factor of \`%B117 + (1-%B117) / 1.5\`
+We are also updating Activity Risks for "One-time interactions" to assume that B117 is the dominant variant. This is an aggressive change, as we expect it will take 2-4 months for B117 to completely spread everywhere. However, we have no data on the proportion of the virus that is B117, so it could be true for any given region at any given time. Making this change now means you’ll be ahead of the curve in adapting to changing conditions. If you have data on the proportion of cases in your region that are B117, you may multiply activity risk by a factor of \`%B117 + (1-%B117) / 1.5\`
+
+We are not changing the multipliers for Partner or Housemate Activity Risks right now; there is additional research that we are currently analyzing for household transmission that we expect will mostly counterract the net effect of B117 on these numbers. Expect a small change in the next few weeks.
 
 ## Impact on Calculator users
 
@@ -62,8 +64,6 @@ See the [latest version of the template spreadsheet](/spreadsheet) or update you
 ## Should I reduce my risk budget?
 
 Our budget is based on how bad the outcome getting COVID-19 is. Given that the new variant seems to cause similar hospitalization, ICU, and death rates as the old variant, our budget recommendations are unchanged.
-
-However, since there is a higher chance of household transmission, pods or households maintaining an overall risk of 200 microCOVIDs/week will need to reduce their individual budget to account for the increased risk of transmission from a housemate. For example, a pod of 4 should reduce their individual budgets from 105 microCOVIDs to 85 microCOVIDs.[^housemate_risk] We are launching a new version of the spreadsheet that will handle this.
 
 ## What changes are we making to our lifestyles?
 
@@ -92,11 +92,6 @@ The good news is it should be over soon - between vaccinations ramping up and la
 It’s possible that a government response or people choosing to be more vigilant will drive cases down sooner. We would absolutely love to be wrong about the trajectory of the virus. If that happens, microCOVID will reflect conditions as they change.
 
 [^1]: [https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf)
-[^housemate_risk]: Assuming each person in a household of N people have the same risk budget, R, the total chance of getting COVID for each of them is 
-\`R * (1 + Housemate Transmission Risk * (N-1))\`
-To compute the budget for each person, we set this equal to the risk tolerance, or 200 microCOVID for a standard budget: 
-\`R = 200 / (1 + Housemate Transmission Risk * (N-1))\`.
-Since Housemate Transmission Risk is increasing, the individual budgets available to household members is decreasing.
 `
 
 export const post = { title, summary, content, author, date }
