@@ -4,7 +4,8 @@ import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
 import { SelectControl } from './SelectControl'
-import { CalculatorData } from 'data/calculate'
+import { fixedPointPrecision } from './util/FormatPrecision'
+import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
 import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
 
 const personCountPopover = (
@@ -158,7 +159,25 @@ export const PersonRiskControls: React.FunctionComponent<{
         setter={setter}
         source={RiskProfile}
         hideRisk={true}
+        labelFactory={(riskProfileKey: string) => {
+          const riskProfile = RiskProfile[riskProfileKey]
+          const personRisk = calculatePersonRiskEach({
+            ...data,
+            riskProfile: riskProfileKey,
+          })
+          return (
+            riskProfile.label +
+            (personRisk === null
+              ? ''
+              : ` [${fixedPointPrecision(personRisk)} microCOVIDs]`)
+          )
+        }}
       />
+      {data.riskProfile === 'frontline' ? (
+        <div className="warning">
+          <Trans>calculator.frontline_worker_acknowledgement</Trans>
+        </div>
+      ) : null}
       <br />
     </React.Fragment>
   )

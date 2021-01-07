@@ -196,9 +196,13 @@ export const calculateLocationPersonAverage = (
 
 export const calculatePersonRiskEach = (
   data: CalculatorData,
-  averagePersonRisk: number,
 ): number | null => {
   try {
+    const averagePersonRisk = calculateLocationPersonAverage(data)
+    if (averagePersonRisk === null) {
+      return null
+    }
+
     if (data.riskProfile === RiskProfileEnum.HAS_COVID) {
       return ONE_MILLION
     } else if (data.riskProfile === RiskProfileEnum.ONE_PERCENT) {
@@ -274,13 +278,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
 
 export const calculate = (data: CalculatorData): CalculatorResult | null => {
   try {
-    const averagePersonRisk = calculateLocationPersonAverage(data)
-    if (averagePersonRisk === null) {
-      return null
-    }
-
-    // Person risk
-    const personRiskEach = calculatePersonRiskEach(data, averagePersonRisk)
+    const personRiskEach = calculatePersonRiskEach(data)
     if (personRiskEach === null) {
       return null
     }

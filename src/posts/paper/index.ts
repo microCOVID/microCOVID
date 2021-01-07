@@ -12,6 +12,7 @@ import post6 from 'posts/paper/6-person-risk'
 import post7 from 'posts/paper/7-basic-method'
 import post8 from 'posts/paper/8-intermediate-method'
 import post9 from 'posts/paper/9-advanced-method'
+import changelog from 'posts/paper/99-changelog'
 import { PostMap } from 'posts/post'
 
 // Note: the keys in this map are the public URL for the post. Changing them will break links.
@@ -30,4 +31,5 @@ export const pages: PostMap = {
   '12-calculator-and-conclusion': post12,
   '13-q-and-a': post13,
   '14-research-sources': post14,
+  changelog, // Keep this as the last entry.
 }

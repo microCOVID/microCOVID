@@ -35,7 +35,9 @@ export const CopyToSpreadsheetButton: React.FunctionComponent<{
 
   const copySpreadsheetLocationData = () => {
     copy(generateLocationSpreadsheetRow(data), { format: 'text/plain' })
-    addAlert('Copied! Paste it into a row of the the "Locations" sheet.')
+    addAlert(
+      'Copied! Paste it into a row of the the "Locations" sheet. IMPORTANT: This feature will be removed on January 15, 2020. Please update to the latest version of the spreadsheet with automatic location prevalence data imports.',
+    )
   }
 
   return (

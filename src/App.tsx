@@ -83,14 +83,13 @@ export const App = (): React.ReactElement => {
                       <Trans>menu.calculator</Trans>
                     </NavLink>
                   </Nav.Item>
-
                   <Nav.Item>
                     <NavLink
-                      to="/about"
+                      to="/spreadsheet"
                       className="nav-link"
                       activeClassName="active"
                     >
-                      <Trans>menu.about</Trans>
+                      <Trans>menu.spreadsheet</Trans>
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
@@ -102,16 +101,7 @@ export const App = (): React.ReactElement => {
                       className="nav-link"
                       activeClassName="active"
                     >
-                      Blog
-                    </NavLink>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <NavLink
-                      to="/spreadsheet"
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      <Trans>menu.spreadsheet</Trans>
+                      <Trans>menu.blog</Trans>
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
@@ -121,6 +111,15 @@ export const App = (): React.ReactElement => {
                       activeClassName="active"
                     >
                       <Trans>menu.contactus</Trans>
+                    </NavLink>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <NavLink
+                      to="/about"
+                      className="nav-link"
+                      activeClassName="active"
+                    >
+                      <Trans>menu.about</Trans>
                     </NavLink>
                   </Nav.Item>
                 </Nav>

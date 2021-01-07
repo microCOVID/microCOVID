@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 import { RadioControl } from '../RadioControl'
 
@@ -22,7 +23,6 @@ import {
   CalculatorData,
   MAX_ACTIVITY_RISK,
   calculateActivityRisk,
-  calculateLocationPersonAverage,
   calculatePersonRiskEach,
 } from 'data/calculate'
 import {
@@ -32,6 +32,7 @@ import {
   intimateDurationFloor,
 } from 'data/data'
 import 'components/calculator/ExplanationCard/ExplanationCard.scss'
+import { lastUpdated } from 'posts/paper/99-changelog'
 
 const calculationStepHeader = (header: string, value: string): JSX.Element => {
   return (
@@ -52,10 +53,7 @@ export default function ExplanationCard(props: {
   const points = props.points
   const { t } = useTranslation()
 
-  const locationRisk = calculateLocationPersonAverage(props.data) || 0
-  const personRiskEach = Math.round(
-    calculatePersonRiskEach(props.data, locationRisk) || 0,
-  )
+  const personRiskEach = Math.round(calculatePersonRiskEach(props.data) || 0)
   const activityRisk = calculateActivityRisk(props.data)
 
   const personRiskEachFormatted = personRiskEach.toLocaleString()
@@ -88,6 +86,15 @@ export default function ExplanationCard(props: {
   const calculationBreakdown = () => {
     return (
       <>
+        <div id="changelog">
+          <Trans
+            i18nKey="calculator.explanationcard.last_updated"
+            values={{ date: lastUpdated.toLocaleDateString() }}
+          >
+            Model last updated on (date). (
+            <Link to="/paper/changelog">Changelog</Link>)
+          </Trans>
+        </div>
         <Expandable
           id="calculation-explanation"
           header={t('calculator.explanationcard.details_header_closed')}
@@ -153,14 +160,15 @@ export default function ExplanationCard(props: {
               </Trans>
 
               <b>
+                {' '}
                 {activityRisk && activityRisk >= MAX_ACTIVITY_RISK ? (
-                  <>
-                    (NOTE: We have{' '}
+                  <Trans i18nKey="calculator.explanationcard.activity_risk_capped_note">
+                    (NOTE:{' '}
                     <a href="/paper/13-q-and-a#what-if-i-hang-out-with-someone-indoors-for-a-long-time-if-we-hang-out-for-5-hours-thats-an-activity-risk-of-6-⨉-5--30-which-is-the-same-risk-as-for-a-household-member">
-                      capped this number at the maximum Activity Risk
+                      capped this number
                     </a>
                     .)
-                  </>
+                  </Trans>
                 ) : (
                   ''
                 )}
