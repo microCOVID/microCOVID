@@ -260,11 +260,10 @@ describe('calculate', () => {
       expect(calcValue(partner)).toEqual(calcValue(bonuses))
     })
 
-    it('should apply 75% risk', () => {
+    it('should apply 72% risk', () => {
       expect(calcValue(partner)).toBeCloseTo(
         PREVALENCE *
-          0.48 *
-          B117_CONTAGIOUSNESS_ADJUSTMENT *
+          0.72 *
           1e6 *
           personRiskMultiplier({
             riskProfile: RiskProfile['livingAlone'],
@@ -307,9 +306,7 @@ describe('calculate', () => {
 
     it('should apply 45% risk', () => {
       // average * 0.45
-      expect(calcValue(housemate)).toBeCloseTo(
-        PREVALENCE * 0.3 * B117_CONTAGIOUSNESS_ADJUSTMENT * 1e6,
-      )
+      expect(calcValue(housemate)).toBeCloseTo(PREVALENCE * 0.45 * 1e6)
     })
 
     it('should remove the risk from the user for risk profiles including housemates', () => {
