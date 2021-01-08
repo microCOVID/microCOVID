@@ -8,7 +8,7 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(20201, 0, 5),
+    date: new Date(2021, 0, 5),
     content: `
 * Increased One-time interraction transmission rate from 6% to 9% to account for more contagious COVID variant B117. See [blog post](/blog/b117) for details.`,
   },
