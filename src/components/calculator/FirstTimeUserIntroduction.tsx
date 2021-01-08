@@ -33,9 +33,9 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         </strong>{' '}
         We want your help to make the microCOVID calculator as helpful as
         possible!{' '}
-        <Link to="https://forms.gle/WzFWcmyXwQMNRqGa7">
+        <a href="https://forms.gle/WzFWcmyXwQMNRqGa7">
           Please fill out our user survey
-        </Link>{' '}
+        </a>{' '}
         to help us prioritize new features.
       </Alert>
     </>
