@@ -4,7 +4,8 @@
         "about": "A projektről",
         "spreadsheet": "Táblázat (csak angolul)",
         "contactus": "Kapcsolat",
-        "whitepaper": "Tanulmány (csak angolul)"
+        "whitepaper": "Tanulmány (csak angolul)",
+        "blog": "Blog"
     },
     "current_lang_two_letter_code": "hu",
     "calculator": {
@@ -55,7 +56,9 @@
             "risk_budget_explanation": "Azt állítottad be, hogy számodra az elfogadható kockázat {{ budget_percent }} eséllyel elkapni a koronavírust. Ez egy évente {{ budget_points }} microCOVID-os, <strong>hetente {{ budget_weekly }} microCOVID-os</strong> kockázati keretet jelent.",
             "risk_budget_used": "Elhasznált kockázat",
             "risk_budget_usage_explanation": "Ennek a tevékenységnek az \"ára\" <strong>{{ usage }}</strong>. Ezt elhasználod <strong>{{ frequency }}</strong>.",
-            "risk_tolerance_selector_header": "Mekkora kockázatot vállalsz be"
+            "risk_tolerance_selector_header": "Mekkora kockázatot vállalsz be",
+            "last_updated": "A modell utoljára frissítve: {{ date }}. (<1>A változások listája elérhető itt.</1>)",
+            "activity_risk_capped_note": "(FIGYELEM: Ezt az értéket <2>limitáltuk a maximális Tevékenységkockázat értékével</2>.)"
         },
         "pointsdisplay": {
             "microCOVIDs": "microCOVID",
@@ -135,7 +138,9 @@
         "warning": {
             "important": "Fontos figyelmeztetés",
             "body": "Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és ezt az eszköz nem is ment át tudományos szintű felülvizsgálaton. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat."
-        }
+        },
+        "frontline_worker_acknowledgement": "Tudjuk, hogy mekkora kockázatot és áldozatot vállalnak az egészségügyi és szociális ágazatok dolgozói. Hálásak vagyunk a munkájukért, és arra kérünk mindenkit, hogy találjuk meg a módját, hogy segítsük őket, és ne vágjuk el őket a társas kapcsolatainkból, még ha valamivel magasabb kockázatot is jelent velük találkozni. Egy jelentős részük az elkövetkező hónapokban várhatóan megkapja a védőoltást, és így jelentősen lecsökken ez a kockázat.",
+        "saved_scenario_loaded_message": "Ezt a kész példát választottad ki: <strong>{{ scenarioName }}</strong>. Az alábbi beállítások megfelelnek a tevékenységnek, amire gondoltál? Ha nem, nyugodtan állítsd át őket."
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
@@ -163,18 +168,18 @@
         "loud_voice": "Hangos (kiabálás, éneklés)",
         "person": {
             "average": "Egy átlagember a te környékeden",
-            "frontline": "Egy átlagember, aki bejár a munkahelyére dolgozni",
-            "nonFrontline": "Egy átlagember, aki NEM jár be a munkahelyére dolgozni",
+            "frontline": "Egészségügyi vagy szociális ágazatban dolgozó",
+            "nonFrontline": "Egy átlagember, aki otthonról dolgozik",
             "livingAlone": "Egyedül lakik és csak vásárolni hagyja el a lakást",
-            "livingWithPartner": "A párjával él, mindketten csak vásárolni hagyják el a lakást",
+            "livingWithPartner": "Egyetlen másik emberrel él, mindketten csak vásárolni hagyják el a lakást",
             "closedPod4": "Négyfős buborékban élnek",
             "closedPod10": "Tízfős buborékban élnek",
             "closedPod20": "Húszfős buborékban élnek",
-            "contact1": "Van egy közeli kapcsolata vagy lakótársa, akik járnak társaságba, de nem járnak dolgozni. Más társaságba nem jár, és dolgozni sem jár.",
-            "contact4": "Van 4 közeli kapcsolata vagy lakótársa, akik járnak társaságba, de nem járnak dolgozni. Más társaságba nem jár, és dolgozni sem jár.",
-            "contact10": "Van 10 közeli kapcsolata vagy lakótársa, akik járnak társaságba, de nem járnak dolgozni. Más társaságba nem jár, és dolgozni sem jár.",
-            "contactWorks": "Van egy közeli kapcsolata vagy lakótársa, aki eljár dolgozni. Ezen kívül nem jár társaságba vagy dolgozni.",
-            "bars": "Rendszeresen jár kocsmázni",
+            "contact1": "Van egy közeli kapcsolata vagy lakótársa, akiről semmit nem tudni kockázati szempontból. Más társaságba nem jár, és dolgozni sem jár.",
+            "contact4": "Van 4 közeli kapcsolata vagy lakótársa, akikről semmit nem tudni kockázati szempontból. Más társaságba nem jár, és dolgozni sem jár.",
+            "contact10": "Van 10 közeli kapcsolata vagy lakótársa, akikről semmit nem tudni kockázati szempontból. Más társaságba nem jár, és dolgozni sem jár.",
+            "contactWorks": "Van egy közeli kapcsolata vagy lakótársa, aki az egészségügyben vagy a szociális ágazatban dolgozik. Ezen kívül nem jár társaságba vagy dolgozni.",
+            "bars": "Volt kocsmázni az elmúlt 10 napban",
             "microcovid_budget_one_percent": "Ezen oldal segítségével egy évi 1%-os (heti 200 microCOVID-os) kockázati keretet tart",
             "microcovid_budget_deci_percent": "Ezen oldal segítségével egy évi 0.1%-os (heti 20 microCOVID-os) kockázati keretet tart",
             "hasCovid": "Koronavírusos"
@@ -191,8 +196,8 @@
         "1person_15minCarRide": "Negyedórás autóút egy másik emberrel",
         "oneNightStand": "Egyéjszakás kaland egy ismeretlennel",
         "liveInPartner_noContacts": "Egy háztartásban élő élettárs, aki mással nem találkozik beltéren",
-        "60minShopping": "Egyórás bevásárlás",
-        "planeRide": "Repülőút",
+        "60minShopping": "Egyórás bevásárlás (átlagos forgalom a boltban)",
+        "planeRide": "Repülőút (teli repülő)",
         "restaurantOutdoors": "Éttermi étkezés a szabadban",
         "restaurantIndoors": "Éttermi étkezés, beltéren",
         "bar": "Kocsmázás",
@@ -200,7 +205,9 @@
         "smallIndoorParty25": "Kis beltéri rendezvény: 25 ember, maszk nélkül",
         "outdoorMaskedWithCovidPositive": "Találkozó a szabadban maszkban egy koronavírusossal",
         "votingInPerson": "Személyesen szavazni",
-        "indoorUnmaskedWithCovidPositive": "Találkozó beltéren, maszk nélkül egy koronavírusossal"
+        "indoorUnmaskedWithCovidPositive": "Találkozó beltéren, maszk nélkül egy koronavírusossal",
+        "planeRideMiddleSeatEmpty": "Repülőút (üresen hagyott középső ülések)",
+        "60minShoppingFew": "Egyórás bevásárlás (közel üres boltban)"
     },
     "about": {
         "intro_header": "Miről szól a microCOVID projekt?",
