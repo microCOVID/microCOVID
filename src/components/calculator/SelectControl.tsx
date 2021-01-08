@@ -38,12 +38,13 @@ export const GenericSelectControl: React.FunctionComponent<{
       return t('calculator.risk_modifier_multiple', { multiplier: multiplier })
     }
   }
-  const formatRiskMultiplier = (multiplier?: number) => {
-    if (multiplier === undefined) {
+  const formatRiskMultiplier = (hideRisk?: boolean, multiplier?: number) => {
+    if (hideRisk || multiplier === undefined) {
       return ''
     }
     return ` [${formatRiskMultiplierInternal(multiplier)}]`
   }
+
   return (
     <div className="form-group">
       <ControlLabel
@@ -68,9 +69,10 @@ export const GenericSelectControl: React.FunctionComponent<{
             {props.labelFactory
               ? props.labelFactory(value)
               : props.source[value].label +
-                ' ' +
-                (!props.hideRisk &&
-                  formatRiskMultiplier(props.source[value].multiplier))}
+                formatRiskMultiplier(
+                  props.hideRisk,
+                  props.source[value].multiplier,
+                )}
           </option>
         ))}
         <IosOptgroup />

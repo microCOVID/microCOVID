@@ -58,7 +58,7 @@
       "risk_budget_used": "Budget used",
       "risk_budget_usage_explanation": "This interaction uses <strong>{{ usage }}</strong>. This amount of your budget will be used <strong>{{ frequency }}</strong>.",
       "risk_tolerance_selector_header": "Adjust your risk tolerance",
-      "last_updated": "Model last updated on {{ date }}. (<2>See changelog</2>)"
+      "last_updated": "Model last updated on {{ date }}. (<1>See changelog</1>)"
     },
     "pointsdisplay": {
       "microCOVIDs": "microCOVIDs",
