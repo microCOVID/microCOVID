@@ -2,7 +2,8 @@
     "calculator": {
         "firsttime": {
             "microcovid_header": "Què és un microCOVID?",
-            "budget_explanation": "Hem decidit que un pressupost de risc d'un 1% de probabilitat d'agafar la COVID per any és raonable per la majoria de persones sanes que no estan en contacte amb grups vulnerables. Per saber com vam arribar a aquest nombre, <1>feu click aquí</1>. Si voleu seguir aquest pressupost d'un 1% a l'any, el vostre pressupost d'activitats ha de sumar menys de 200 microCOVIDs cada setmana. Hem creat un <3>full de càlcul</3> que us permet tenir un registre de les activitats al llarg del temps."
+            "budget_explanation": "Hem decidit que un pressupost de risc d'un 1% de probabilitat d'agafar la COVID per any és raonable per la majoria de persones sanes que no estan en contacte amb grups vulnerables. Per saber com vam arribar a aquest nombre, <1>feu click aquí</1>. Si voleu seguir aquest pressupost d'un 1% a l'any, el vostre pressupost d'activitats ha de sumar menys de 200 microCOVIDs cada setmana. Hem creat un <3>full de càlcul</3> que us permet tenir un registre de les activitats al llarg del temps.",
+            "budget_header": "Com puc gestionar el meu risc amb un pressupost de risc?"
         },
         "risk_modifier_multiple": "{{multiplier}}× el risc",
         "risk_modifier_frac_plural": "{{frac}} del risc",
