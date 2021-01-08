@@ -32,7 +32,11 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         </strong>{' '}
         We want your help to make the microCOVID calculator as helpful as
         possible!{' '}
-        <a href="https://forms.gle/WzFWcmyXwQMNRqGa7">
+        <a
+          href="https://forms.gle/WzFWcmyXwQMNRqGa7"
+          target="_blank"
+          rel="noreferrer"
+        >
           Please fill out our user survey
         </a>{' '}
         to help us prioritize new features.
