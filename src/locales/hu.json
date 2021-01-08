@@ -57,7 +57,7 @@
             "risk_budget_used": "Elhasznált kockázat",
             "risk_budget_usage_explanation": "Ennek a tevékenységnek az \"ára\" <strong>{{ usage }}</strong>. Ezt elhasználod <strong>{{ frequency }}</strong>.",
             "risk_tolerance_selector_header": "Mekkora kockázatot vállalsz be",
-            "last_updated": "A modell utoljára frissítve: {{ date }}. (<2>A változások listája elérhető itt.</2>)",
+            "last_updated": "A modell utoljára frissítve: {{ date }}. (<1>A változások listája elérhető itt.</1>)",
             "activity_risk_capped_note": "(FIGYELEM: Ezt az értéket <2>limitáltuk a maximális Tevékenységkockázat értékével</2>.)"
         },
         "pointsdisplay": {
