@@ -194,23 +194,18 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const locationSet = isTopLocation(data.topLocation)
 
-  const showEnterDataButton =
-    locationSet ||
-    !isFilled(data.topLocation) ||
-    data.topLocation !== TOP_LOCATION_MANUAL_ENTRY
+  const isManualEntryCurrently = isManualEntry(data.topLocation)
 
   const [detailsOpen, setDetailsOpen] = useState(
-    false || isManualEntry(data.topLocation),
+    false || isManualEntryCurrently,
   )
-
-  const isManualEntryCurrently = isManualEntry(data.topLocation)
 
   return (
     <React.Fragment>
       <header id="location">
         <Trans>calculator.location_selector_header</Trans>
       </header>
-      <div className="form-group">
+      <div className="form-group" hidden={isManualEntryCurrently}>
         <select
           className="form-control form-control-lg"
           value={data.topLocation}
@@ -221,9 +216,6 @@ export const PrevalenceControls: React.FunctionComponent<{
         >
           <option value="">
             {t('calculator.select_location_placeholder')}
-          </option>
-          <option value={TOP_LOCATION_MANUAL_ENTRY}>
-            {t('calculator.select_location_enter_manually')}
           </option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
             <optgroup key={groupInd} label={groupName}>
@@ -260,7 +252,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           </select>
         </div>
       )}
-      {!showEnterDataButton ? (
+      {isManualEntryCurrently ? (
         <button
           id="switchBetweenManualDataAndLocationSelection"
           className="btn btn-secondary"
@@ -310,7 +302,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
         ) : (
           <PrevalenceField
-            id="precent-increase"
+            id="percent-increase"
             label={t('calculator.prevalence.percent_increase_in_cases')}
             value={data.casesIncreasingPercentage}
             unit="%"
