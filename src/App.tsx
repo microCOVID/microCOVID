@@ -25,7 +25,7 @@ import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
-import { Spreadsheet } from 'pages/Spreadsheet'
+import { Spreadsheet, SpreadsheetTOC } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
 
@@ -143,6 +143,12 @@ export const App = (): React.ReactElement => {
               <Route path="/calculator">
                 <Redirect to={{ pathname: '/' }} />
               </Route>
+              <Route path="/spreadsheet/:id">
+                <Spreadsheet />
+              </Route>
+              <Route exact path="/spreadsheet">
+                <SpreadsheetTOC />
+              </Route>
               <Route path="/about">
                 <About />
               </Route>
@@ -157,9 +163,6 @@ export const App = (): React.ReactElement => {
               </Route>
               <Route exact path="/blog">
                 <BlogTOC />
-              </Route>
-              <Route path="/spreadsheet">
-                <Spreadsheet />
               </Route>
               <Route path="/contact">
                 <Contact />

@@ -1,12 +1,20 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+
+import { MarkdownContents } from 'components/markdown/PaperPage'
+import { pages } from 'posts/spreadsheet/index'
 
 const calculator = <Link to="/calculator">Calculator</Link>
 export const spreadsheetUrl =
   'https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ'
 
 export const Spreadsheet = (): React.ReactElement => {
+  const { id } = useParams()
+  return <MarkdownContents posts={pages} id={id} />
+}
+
+export const SpreadsheetTOC = (): React.ReactElement => {
   return (
     <div className="paperPage">
       <h1>Spreadsheet</h1>
