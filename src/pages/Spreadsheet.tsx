@@ -71,10 +71,27 @@ export const SpreadsheetTOC = (): React.ReactElement => {
           </li>
         </ol>
       </p>
-
-      <h2>Spreadsheet Documentation</h2>
+      <h2>Subscribe for updates</h2>
+      <p>
+        Subscribe for updates We will send email updates when we make feature
+        upgrades and bug fixes to the spreadsheet. _INTERNAL NOTE: (Link to
+        Mailchimp opt-in page)_
+      </p>
+      <h2>Spreadsheet changelog</h2>
+      <p>
+        Each time we update the spreadsheet, we create an entry in the changelog
+        (below) with instructions for how you can migrate your copy of the
+        spreadsheet to have the latest upgrades and bug fixes.
+      </p>
+      <p>**Current version:** 2</p>
+      <p>**Released on:** 2020-12-28</p>
+      <p>[INTERNAL NOTE: Update these on release]</p>
+      <p>
+        🕑 [View the Spreadsheet Changelog
+        →](https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#)
+      </p>
+      <h2>Spreadsheet documentation</h2>
       <p>TO DO: fill in spreadsheet doc links</p>
-      <p>TO DO: add mailchimp notification blurb from other PR here.</p>
     </div>
   )
 }
