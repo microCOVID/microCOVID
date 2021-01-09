@@ -65,6 +65,7 @@ export const PaperNavDropdown = (): React.ReactElement => {
       baseNavPath="/paper"
       posts={pages}
       enableAll={true}
+      enableIndexNumbers={true}
     />
   )
 }

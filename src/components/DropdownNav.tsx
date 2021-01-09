@@ -9,12 +9,14 @@ export const DropdownNav: React.FunctionComponent<{
   posts: PostMap
   enableAll: boolean
   rootTitle?: string
+  enableIndexNumbers?: boolean
 }> = ({
   title,
   baseNavPath,
   posts,
   enableAll,
   rootTitle = 'Table of Contents',
+  enableIndexNumbers = false,
 }) => {
   return (
     <NavDropdown title={title} id="basic-nav-dropdown">
@@ -26,7 +28,8 @@ export const DropdownNav: React.FunctionComponent<{
       ) : null}
       {Object.keys(posts).map((pageId, pageIndex) => (
         <NavDropdown.Item href={`${baseNavPath}/${pageId}`} key={pageIndex}>
-          {pageIndex + 1}. {posts[pageId].shortTitle}
+          {enableIndexNumbers && `${pageIndex + 1}. `}
+          {posts[pageId].shortTitle}
         </NavDropdown.Item>
       ))}
     </NavDropdown>
