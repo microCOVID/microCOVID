@@ -25,7 +25,7 @@ import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
-import { Spreadsheet, SpreadsheetTOC } from 'pages/Spreadsheet'
+import { Spreadsheet, SpreadsheetNavDropdown, SpreadsheetTOC } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
 
@@ -84,13 +84,7 @@ export const App = (): React.ReactElement => {
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
-                    <NavLink
-                      to="/spreadsheet"
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      <Trans>menu.spreadsheet</Trans>
-                    </NavLink>
+                    <SpreadsheetNavDropdown />
                   </Nav.Item>
                   <Nav.Item>
                     <PaperNavDropdown />

@@ -1,4 +1,4 @@
-const title = 'Spreadsheet Quickstart Guide'
+const title = 'Quickstart Guide'
 const shortTitle = title
 const content = `
 Follow these steps to set up a copy of the spreadsheet for yourself or your household/pod. Before you begin using the spreadsheet, we recommend you play around with the [microCOVID website calculator](https://www.microcovid.org/) to get a sense of how the model works.

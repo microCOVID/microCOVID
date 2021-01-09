@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 
+import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
 import { pages } from 'posts/spreadsheet/index'
 
@@ -11,7 +13,15 @@ export const spreadsheetUrl =
 
 export const Spreadsheet = (): React.ReactElement => {
   const { id } = useParams()
-  return <MarkdownContents posts={pages} id={id} />
+  const { t } = useTranslation()
+  return (
+    <MarkdownContents
+      posts={pages}
+      id={id}
+      rootTitle={t('menu.spreadsheet.introduction')}
+      sectionTitle="Spreadsheet"
+    />
+  )
 }
 
 export const SpreadsheetTOC = (): React.ReactElement => {
@@ -66,5 +76,18 @@ export const SpreadsheetTOC = (): React.ReactElement => {
       <p>TO DO: fill in spreadsheet doc links</p>
       <p>TO DO: add mailchimp notification blurb from other PR here.</p>
     </div>
+  )
+}
+
+export const SpreadsheetNavDropdown = (): React.ReactElement => {
+  const { t } = useTranslation()
+  return (
+    <DropdownNav
+      title={t('menu.spreadsheet.header')}
+      baseNavPath="/spreadsheet"
+      posts={pages}
+      enableAll={false}
+      rootTitle={t('menu.spreadsheet.introduction')}
+    />
   )
 }
