@@ -4,7 +4,8 @@
     "about": "About",
     "spreadsheet": "Spreadsheet",
     "contactus": "Contact Us",
-    "whitepaper": "White Paper"
+    "whitepaper": "White Paper",
+    "blog": "Blog"
   },
   "current_lang_two_letter_code": "en",
   "calculator": {
@@ -57,7 +58,7 @@
       "risk_budget_used": "Budget used",
       "risk_budget_usage_explanation": "This interaction uses <strong>{{ usage }}</strong>. This amount of your budget will be used <strong>{{ frequency }}</strong>.",
       "risk_tolerance_selector_header": "Adjust your risk tolerance",
-      "last_updated": "Model last updated on {{ date }}. (<2>See changelog</2>)"
+      "last_updated": "Model last updated on {{ date }}. (<1>See changelog</1>)"
     },
     "pointsdisplay": {
       "microCOVIDs": "microCOVIDs",
@@ -195,7 +196,8 @@
     "1person_15minCarRide": "Car ride with 1 person for 15 mins",
     "oneNightStand": "One-night stand with a random person",
     "liveInPartner_noContacts": "Live-in partner who has no indoor interactions besides you",
-    "60minShopping": "Grocery store for 60 minutes",
+    "60minShopping": "Grocery store for 60 minutes (average # of shoppers)",
+    "60minShoppingFew": "Grocery store for 60 minutes (few other shoppers)",
     "planeRide": "Plane ride (full flight)",
     "planeRideMiddleSeatEmpty": "Plane ride (middle seat empty)",
     "restaurantOutdoors": "Eating in restaurant, outdoors",
@@ -204,8 +206,8 @@
     "largeOutdoorParty": "Large outdoor party: masked with 3 feet between people",
     "smallIndoorParty25": "Small indoor party: unmasked with 25 people",
     "outdoorMaskedWithCovidPositive": "Outdoor, masked hangout with person who has COVID",
-    "votingInPerson": "Voting in-person",
-    "indoorUnmaskedWithCovidPositive": "Indoor, unmasked hangout with person who has COVID"
+    "indoorUnmaskedWithCovidPositive": "Indoor, unmasked hangout with person who has COVID",
+    "votingInPerson": "Voting in-person"
   },
   "about": {
     "intro_header": "What is the microCOVID project?",

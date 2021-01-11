@@ -43,7 +43,9 @@
             "person": "personne",
             "person_plural": "personnes",
             "details_activity_risk": "Risque de l’activité",
-            "details_person_risk": "Risque personnel"
+            "details_person_risk": "Risque personnel",
+            "last_updated": "Modèle mis à jour pour la dernière fois le {{ date }}. (<1>Voir le journal des modifications</1>)",
+            "activity_risk_capped_note": "(REMARQUE : nous avons <2>plafonné ce nombre au risque d'activité maximal</2>.)"
         },
         "risk_note_about_household_members": "Lors de l’estimation du risque d’infection d’un membre du ménage ou d’un partenaire/conjoint, nous supposons que ces interactions sont à l’intérieur, non masquées et non éloignées.",
         "precautions": {
@@ -127,7 +129,9 @@
         "number_of_people_near_you_partner": "Avec combien de personnes vivez-vous ?",
         "nearby_people_label": "Personnes à proximité",
         "risk_modifier_frac_plural": "{{frac}} du risque",
-        "risk_modifier_frac_3rd": "{{frac}} du risque"
+        "risk_modifier_frac_3rd": "{{frac}} du risque",
+        "saved_scenario_loaded_message": "Vous avez sélectionné ce scénario : <strong> {{ scenarioName }} </strong>. Les points ci-dessous ressemblent-ils à l'activité que vous avez en tête ? Sinon, ajustez-le jusqu'à ce qu'il semble correct.",
+        "frontline_worker_acknowledgement": "Nous apprécions énormément les sacrifices que les travailleurs de première ligne font pendant la pandémie. Nous vous encourageons à trouver des moyens sûrs de soutenir ces personnes, en les gardant socialement intégrées et prises en charge. Nous prévoyons que la plupart de ces travailleurs seront vaccinés dans les prochains mois, ce qui devrait réduire considérablement leur risque d'infection/transmission."
     },
     "current_lang_two_letter_code": "fr",
     "menu": {
@@ -135,22 +139,23 @@
         "contactus": "Nous contacter",
         "spreadsheet": "Feuille de calcul",
         "about": "À propos",
-        "calculator": "Calculateur"
+        "calculator": "Calculateur",
+        "blog": "Blog"
     },
     "data": {
         "person": {
-            "microcovid_budget_deci_percent": "Utilise microCOVID pour maintenir un risque de 0,1 %/an (20 microcovids/semaine)",
-            "microcovid_budget_one_percent": "Utilise microCOVID pour maintenir les risques à 1 %/an (200 microcovids/semaine)",
-            "contact10": "A 10 contacts proches (y compris les colocataires) qui socialisent mais ne travaillent pas. Aucun autre travail ou socialisation.",
-            "livingWithPartner": "Vit en couple, les deux font seulement les courses",
-            "contact4": "A 4 contacts proches (y compris les colocataires) qui socialisent mais ne travaillent pas. Aucun autre travail ou socialisation.",
-            "contact1": "A 1 contact proche (y compris les colocataires) qui socialise mais ne travaille pas. Aucun autre travail ou socialisation.",
-            "contactWorks": "A 1 contact proche (y compris les colocataires) qui est un travailleur essentiel. Pas d’autre travail ou de socialisation.",
+            "microcovid_budget_deci_percent": "Respecte un budget de 20 microCOVID par semaine (« Budget à haute précaution »)",
+            "microcovid_budget_one_percent": "Respecte un budget de 200 microCOVID par semaine (Budget de précaution standard)",
+            "contact10": "A 10 contacts proches dont vous ne connaissez pas le profil de risque. Dans un groupe autrement fermé.",
+            "livingWithPartner": "Vit avec une autre personne, les deux personnes seulement en épicerie",
+            "contact4": "Dispose de 4 contacts proches dont vous ne connaissez pas le profil de risque, dans un groupe autrement fermé.",
+            "contact1": "A 1 contact étroit dont vous ne connaissez pas le profil de risque. Dans un groupe autrement fermé.",
+            "contactWorks": "A 1 contact étroit qui est un travailleur de santé ou des services sociaux. Dans un groupe autrement fermé.",
             "hasCovid": "A la COVID-19",
-            "bars": "Va régulièrement dans des bars",
+            "bars": "Est allé·e dans un bar au cours des 10 derniers jours",
             "livingAlone": "Vit seul(e) et fait seulement les courses",
-            "nonFrontline": "Quelqu’un de votre région qui n’est PAS un travailleur essentiel ou de première ligne",
-            "frontline": "Un travailleur essentiel ou de première ligne dans votre région",
+            "nonFrontline": "Une personne lambda de votre région qui travaille à domicile",
+            "frontline": "Un travailleur social ou de santé",
             "average": "Une personne lambda dans votre région",
             "closedPod20": "Dans un groupe fermé de 20 personnes",
             "closedPod10": "Dans un groupe fermé de 10 personnes",
@@ -163,9 +168,9 @@
         "filtered_mask": "Masque chirurgical ou masque avec insert filtrant PM2,5",
         "basic_mask": "Masque en coton, bandana",
         "no_mask": "Pas de masque ou masque mal porté",
-        "tenft_distance": "> 3 m de distance",
-        "sixft_distance": "> 2 m de distance",
-        "normal_distance": "Interaction normale (≈ 1,5 m de distance)",
+        "tenft_distance": "> 3 mètres de distance",
+        "sixft_distance": "> 2 mètres de distance",
+        "normal_distance": "Interaction normale (≈ 1 mètre de distance)",
         "close_distance": "Proche (<0,3 m de distance)",
         "intimate_distance": "Baisers",
         "outdoor": "À l’extérieur",
@@ -207,13 +212,15 @@
         "bar": "Aller au bar",
         "restaurantIndoors": "Manger au restaurant, à l’intérieur",
         "restaurantOutdoors": "Manger au restaurant, à l’extérieur",
-        "planeRide": "Trajet en avion",
-        "60minShopping": "Supermarché durant 60 min",
+        "planeRide": "Trajet en avion (vol complet)",
+        "60minShopping": "Épicerie pendant 60 minutes (nombre moyen d'acheteurs)",
         "liveInPartner_noContacts": "Partenaire qui n’a aucune interaction à l’intérieur à part vous",
         "oneNightStand": "Coup d’un soir avec une personne au hasard",
         "1person_15minCarRide": "Trajet en voiture avec 1 personne durant 15 min",
         "indoorUnmasked2": "Réunion à l’intérieur non masqué avec 2 personnes",
-        "outdoorMasked2": "Sortie masquée en plein air avec 2 personnes"
+        "outdoorMasked2": "Sortie masquée en plein air avec 2 personnes",
+        "planeRideMiddleSeatEmpty": "Trajet en avion (siège du milieu vide)",
+        "60minShoppingFew": "Épicerie pendant 60 minutes (quelques autres acheteurs)"
     },
     "buttons": {
         "select_default_action": "Sélectionnez…"

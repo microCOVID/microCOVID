@@ -2,8 +2,24 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import { processor } from 'components/markdown/markdownProcessor'
-import { BlogPostMap } from 'posts/post'
+import { BlogPostMap, ImageMeta } from 'posts/post'
 import 'pages/styles/Paper.scss'
+
+const ImageMetaIfPresent = (image?: ImageMeta) => {
+  if (image === undefined) {
+    return null
+  }
+  return (
+    <>
+      <meta
+        property="og:image"
+        content={process.env.REACT_APP_DEPLOY_PRIME_URL + image.url}
+      />
+      <meta property="og:image:height" content={image.height.toString()} />
+      <meta property="og:image:width" content={image.width.toString()} />
+    </>
+  )
+}
 
 export const BlogPostPage: React.FunctionComponent<{
   posts: BlogPostMap
@@ -26,15 +42,7 @@ export const BlogPostPage: React.FunctionComponent<{
         <meta property="og:description" content={page.summary} />
         <meta property="og:title" content={page.title} />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content={process.env.REACT_APP_DEPLOY_PRIME_URL + page.image.url}
-        />
-        <meta
-          property="og:image:height"
-          content={page.image.height.toString()}
-        />
-        <meta property="og:image:width" content={page.image.width.toString()} />
+        {ImageMetaIfPresent(page.image)}
       </Helmet>
 
       <h1 className="pageTitle">{page.title}</h1>

@@ -3,7 +3,8 @@ import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsLink45Deg } from 'react-icons/bs'
+import { BsFillInfoCircleFill, BsLink45Deg } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 import 'pages/styles/Calculator.scss'
 
@@ -147,6 +148,11 @@ export const Calculator = (): React.ReactElement => {
 
   return (
     <div id="calculator">
+      <Alert className="alert-info">
+        <BsFillInfoCircleFill /> <strong>Model update:</strong> We've adjusted
+        parameters for the new COVID-19 variant, B117. Read more{' '}
+        <Link to="/blog/b117">here.</Link>
+      </Alert>
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>

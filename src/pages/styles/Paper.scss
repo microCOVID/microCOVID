@@ -28,8 +28,12 @@
     }
   }
 
-  p, ul {
+  p, ul, ol {
     margin-bottom: 1.6rem;
+    ul, ol {
+      // Don't add margin for nested lists
+      margin-bottom: 0rem
+    }
   }
 
   .warning {
