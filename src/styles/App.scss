@@ -37,6 +37,18 @@ a {
 a.btn  {
   text-decoration: none;
 }
+  
+.alert a {
+  font-weight: 700;
+}
+
+.alert-info a {
+  color: #0c596c;
+}
+
+.alert-secondary a {
+  color: #404848;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto Slab';

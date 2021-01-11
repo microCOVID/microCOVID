@@ -1,7 +1,9 @@
 {
     "calculator": {
         "firsttime": {
-            "microcovid_header": "Què és un microCOVID?"
+            "microcovid_header": "Què és un microCOVID?",
+            "budget_explanation": "Hem decidit que un pressupost de risc d'un 1% de probabilitat d'agafar la COVID per any és raonable per la majoria de persones sanes que no estan en contacte amb grups vulnerables. Per saber com vam arribar a aquest nombre, <1>feu click aquí</1>. Si voleu seguir aquest pressupost d'un 1% a l'any, el vostre pressupost d'activitats ha de sumar menys de 200 microCOVIDs cada setmana. Hem creat un <3>full de càlcul</3> que us permet tenir un registre de les activitats al llarg del temps.",
+            "budget_header": "Com puc gestionar el meu risc amb un pressupost de risc?"
         },
         "risk_modifier_multiple": "{{multiplier}}× el risc",
         "risk_modifier_frac_plural": "{{frac}} del risc",
@@ -41,13 +43,13 @@
         "person_risk_profile_header": "Perfil de risc",
         "person_risk_profile_question": "Quin és el seu perfil de risc?",
         "intimate_risk_warning": "Hem aplicat un risc d'activitat mínim per besar a causa del risc que comporta l'intercanvi de fluids.",
-        "duration_question": "Quant dura l'activitat, en minuts?",
+        "duration_question": "Quant dura l'activitat, en minuts? (Si és una activitat repetida, quants minuts a la setmana?)",
         "duration_header": "Durada",
         "distance_header": "Distància",
         "distance_question": "A quina distància estan aquestes persones properes, de mitjana?",
         "people_count": "Persones",
         "number_of_people_near_you_onetime": "Quanta gent sol estar a prop vostre durant aquesta activitat?",
-        "number_of_people_near_you_partner": "Amb quanta gent vius?",
+        "number_of_people_near_you_partner": "Amb quanta gent estàs vivint?",
         "nearby_people_label": "Persones a prop",
         "riskreduction": {
             "onetime_warning": "Això pot ser aplicable o no ser-ho a cada activitat.",
@@ -108,7 +110,20 @@
             "environment_question": "És interior o a l'aire lliure? És un espai ventilat o amb filtratge d'aire?",
             "environment_header": "Entorn",
             "label": "Precaucions"
-        }
+        },
+        "warning": {
+            "important": "Important"
+        },
+        "risk_group_empty_warning": "Primer introduïu la vostra ubicació",
+        "type_of_interaction": "És una activitat específica o una relació de convivència?",
+        "risk_step_label": "Pas 2: Descrigueu l'activitat o relació",
+        "intro": {
+            "call_to_action": "Calcula el risc de COVID aproximat d'una activitat o relació"
+        },
+        "risk_tolerance_point1_percent_explanation": "Pressupost: 0,1% de probabilitat de COVID a l'any (20 microCOVIDs a la setmana) (suggerit si sou vulnerable a la COVID o els vostres contactes ho són)",
+        "risk_tolerance_point1_percent_label": "Pressupost amb alta precaució",
+        "risk_tolerance_1_percent_explanation": "Pressupost: 1% de probabilitat de COVID a l'any (200 microCOVIDs a la setmana) (suggerit per a persones sanes que NO tenen contacte amb persones vulnerables)",
+        "risk_tolerance_1_percent_label": "Pressupost de risc estàndard"
     },
     "current_lang_two_letter_code": "ca",
     "menu": {
@@ -117,5 +132,16 @@
         "spreadsheet": "Full de càlcul",
         "about": "Quant a",
         "calculator": "Calculadora"
-    }
+    },
+    "data": {
+        "partner": "Parella / cònjuge [{{ percentage }} de probabilitat de transmissió per setmana]",
+        "repeated": "Membre de la llar, o visitant que es queda a casa vostra [{{ percentage }} de probabilitat de transmissió a la setmana]",
+        "oneTime": "Interacció puntual o activitat repetida [{{ percentage }} de probabilitat de contagi per hora]"
+    },
+    "buttons": {
+        "select_default_action": "Trieu-ne una…"
+    },
+    "each time": "cada vegada",
+    "each time you do it": "cada vegada que ho fas",
+    "per week": "per setmana"
 }
