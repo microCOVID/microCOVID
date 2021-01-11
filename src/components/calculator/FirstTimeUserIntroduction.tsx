@@ -28,7 +28,7 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
       </Expandable>
       <Alert variant="secondary">
         <BsCheckBox />
-        <Trans i18nKey="calculator.alerts.survey">
+        <Trans i18nKey="calculator.alerts.survey_request">
           <strong>We would love your feedback:</strong> lipsum
           <a
             href="https://forms.gle/WzFWcmyXwQMNRqGa7"
