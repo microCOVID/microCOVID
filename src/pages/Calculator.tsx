@@ -84,7 +84,7 @@ export const Calculator = (): React.ReactElement => {
     const location = window.location
 
     let link = `${location.protocol}//${location.host}${location.pathname}`
-    link += `${link}?${stringify(encodedQuery)}`
+    link += `?${stringify(encodedQuery)}`
     return link
   }
 
