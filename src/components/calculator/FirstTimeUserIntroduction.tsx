@@ -27,7 +27,7 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         </p>
       </Expandable>
       <Alert variant="secondary">
-        <BsCheckBox />
+        <BsCheckBox />{' '}
         <Trans i18nKey="calculator.alerts.survey_request">
           <strong>We would love your feedback:</strong> lipsum
           <a
