@@ -140,7 +140,11 @@
       "important": "Important",
       "body": "In this tool we state our best estimate based on available evidence, even when that evidence is not conclusive. We have read a lot of experts' research, but we are not ourselves experts in this topic. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance."
     },
-    "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right."
+    "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
+    "alerts": {
+      "b117": "<0>Model update:</0> We've adjusted parameters for the new COVID-19 variant, B117. Read more <3>here.</3>",
+      "survey_request": "<0>We would love your feedback:</0> We want your help to make the microCOVID calculator as helpful as possible! <2>Please fill out our user survey</2> to help us prioritize new features."
+    }
   },
   "per week": "per week",
   "each time you do it": "each time you do it",

@@ -27,19 +27,18 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         </p>
       </Expandable>
       <Alert variant="secondary">
-        <strong>
-          <BsCheckBox /> We would love your feedback:
-        </strong>{' '}
-        We want your help to make the microCOVID calculator as helpful as
-        possible!{' '}
-        <a
-          href="https://forms.gle/WzFWcmyXwQMNRqGa7"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Please fill out our user survey
-        </a>{' '}
-        to help us prioritize new features.
+        <BsCheckBox />{' '}
+        <Trans i18nKey="calculator.alerts.survey_request">
+          <strong>We would love your feedback:</strong> lipsum
+          <a
+            href="https://forms.gle/WzFWcmyXwQMNRqGa7"
+            target="_blank"
+            rel="noreferrer"
+          >
+            survey
+          </a>{' '}
+          lipsum
+        </Trans>
       </Alert>
     </>
   )
