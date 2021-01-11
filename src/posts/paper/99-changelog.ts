@@ -18,7 +18,7 @@ const changes: Change[] = [
  * Re-labeled "frontline worker" to "healthcare + social worker".
  * Reduced risk of healthcare + social workers to 2x average (previously 3x).
  * Re-labeled "Not an essential or front-line worker" to "a person who works from home."
- * Note This recategorizes people who work outside the home but *not* in healtcare/social work settings as "An average person in your area."
+ * Note This recategorizes people who work outside the home but *not* in healthcare/social work settings as "An average person in your area."
  * See revised [Intermediate Method](/paper/8-intermediate-method) for rationale.`,
   },
   {
