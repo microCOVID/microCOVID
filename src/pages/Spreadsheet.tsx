@@ -1,5 +1,5 @@
 import React from 'react'
-import { Alert } from 'react-bootstrap'
+import { Alert, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const calculator = <Link to="/calculator">calculator</Link>
@@ -25,15 +25,13 @@ export const SubscribeForm: React.FunctionComponent = () => {
         to the spreadsheet.
       </p>
       <p>
-        <a
+        <Button
           href="http://eepurl.com/hb6y4T"
           target="_blank"
-          rel="noreferrer"
           className="btn btn-secondary"
-          role="button"
         >
           Sign up for spreadsheet updates
-        </a>
+        </Button>
       </p>
     </>
   )
