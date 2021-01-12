@@ -212,8 +212,8 @@
         "1person_15minCarRide": "Jízda autem s jednou osobou trvající 15 minut",
         "indoorUnmasked2": "Setkání s dvěma lidmi bez masek, uvnitř",
         "outdoorMasked2": "Setkání s dvěma lidmi v maskách, venku",
-        "restaurantIndoors": "Jídlo v restaurace, venku",
-        "restaurantOutdoors": "Jídlo v restaurace, uvnitř",
+        "restaurantIndoors": "Jídlo v restauraci, uvnitř",
+        "restaurantOutdoors": "Jídlo v restauraci, venku",
         "oneNightStand": "Známost na jednu noc s náhodnout osobou"
     },
     "buttons": {

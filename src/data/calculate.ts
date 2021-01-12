@@ -11,6 +11,7 @@ import {
   Voice,
   YourMask,
   intimateDurationFloor,
+  partnerMult,
   personRiskMultiplier,
 } from 'data/data'
 
@@ -122,7 +123,7 @@ export const migrateDataToCurrent = (
 
 export const ONE_MILLION = 1e6 // One 'full' COVID
 
-export const MAX_ACTIVITY_RISK = 0.48
+export const MAX_ACTIVITY_RISK = partnerMult
 export const MAX_POINTS = 100000
 
 // --------

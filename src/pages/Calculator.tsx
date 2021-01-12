@@ -3,7 +3,8 @@ import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsLink45Deg } from 'react-icons/bs'
+import { BsFillInfoCircleFill, BsLink45Deg } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 import 'pages/styles/Calculator.scss'
 
@@ -83,7 +84,7 @@ export const Calculator = (): React.ReactElement => {
     const location = window.location
 
     let link = `${location.protocol}//${location.host}${location.pathname}`
-    link += `${link}?${stringify(encodedQuery)}`
+    link += `?${stringify(encodedQuery)}`
     return link
   }
 
@@ -147,6 +148,13 @@ export const Calculator = (): React.ReactElement => {
 
   return (
     <div id="calculator">
+      <Alert className="alert-info">
+        <BsFillInfoCircleFill />{' '}
+        <Trans i18nKey="calculator.alerts.b117">
+          <strong>Model update:</strong> Lipsum{' '}
+          <Link to="/blog/b117">here.</Link>
+        </Trans>
+      </Alert>
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
