@@ -3,11 +3,11 @@ import budgetSetting from './img/budget-setting.png'
 const title = 'Spreadsheet FAQ'
 const shortTitle = 'FAQ'
 const content = `
-Jump to: [General](#general-spreadsheet-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling-faq) | [Budget FAQ](#budget)
+Jump to: [General](#general-spreadsheet-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling) | [Budget FAQ](#budget)
 
 # General Spreadsheet FAQ
 
-## The points for an activity I entered recently just changed? What happened? (Automatic Location Data Imports)
+## The points for an activity I entered recently just changed... What happened? (Automatic Location Data Imports)
 
 By default, the spreadsheet automatically imports the latest data for each of the locations you’ve selected in the _Locations_ sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points. 
 
@@ -60,6 +60,7 @@ By default, the spreadsheet automatically imports the latest data for each of th
 
 For the purposes of calculating the microCOVID risk score for an activity, we assume a default activity is **indoors, no mask, 3 feet apart, normal talking volume**. Any variation from that decreases/increases the risk. You can read the [explanation behind each of these modifiers here](/paper/5-activity-risk#modifiers-duration-masks-location-distance-volume) and the [in-depth research here](/paper/14-research-sources#activity-risk).
 
+### Risk modifiers to me
 
 <table>
   <tr>
@@ -67,7 +68,7 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
    </th>
    <th><strong>Baseline</strong>
    </th>
-   <th><strong>Risk modifier amount</strong>
+   <th><strong>Risk modifier TO ME</strong>
    </th>
   </tr>
   <tr>
@@ -128,6 +129,7 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
 </table>
 
 
+### Risk modifiers to podmates
 
 <table>
   <tr>
@@ -135,7 +137,7 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
    </th>
    <th><strong>Baseline</strong>
    </th>
-   <th colspan="2" ><strong>Less risk to OUR POD</strong>
+   <th colspan="2" ><strong>Less risk TO PODMATES</strong>
    </th>
   </tr>
   <tr>
