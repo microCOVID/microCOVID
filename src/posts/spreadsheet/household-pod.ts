@@ -87,7 +87,7 @@ Ask friends about these symptoms **_<span style="text-decoration:underline;">rig
 You can use this [symptoms page](#) to help guide you through asking some questions. Or you can text the link to the person you’re seeing.
 
 
-#### If symptoms show up...
+**If symptoms show up...**
 *   **If they have symptoms <span style="text-decoration:underline;">BEFORE</span> you see each other:** You can use the _Has prominent COVID symptoms (high fever, drive cough, lost of taste/smell) _Person Type if you want to model a way to adjust this interaction that keeps it within your budget.
 *   **If they have symptoms within 7 days <span style="text-decoration:underline;">AFTER</span> you see each other:** If possible, the safest option is to quarantine within your house, and reduce your exposure to others as much as possible until you can confirm/deny whether they have COVID.
 
@@ -105,13 +105,12 @@ When multiple people in your pod see the same person on the same day, you all ne
 
 Let’s use an example where in a pod of 4 people, 2 of the podmates have dinner with someone outside the pod.
 
-**Option A: Easy to use, costs more than it needs to**
-
 The simplest option is to have everyone log that interaction as though it happened independently. This is very easy, because it’s just like any other interaction you would have.
 
 If the activity is 10 points, each podmate would just log it as 10 points.
 
 The downside is that, for a large pod, this overcalculates  the risk quite a bit. (See Option B for an explanation). If you aren’t too concerned about saving every last point in your budget, then this option might be a good choice because it’s simple. 
+
 
 ### If an outside-of-pod person interacts with one person in our pod, does that mean we can all see them and it’s the same thing?
 
