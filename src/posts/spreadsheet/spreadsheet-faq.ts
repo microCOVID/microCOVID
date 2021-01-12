@@ -36,7 +36,7 @@ By default, the spreadsheet automatically imports the latest data for each of th
   <tr>
    <td><strong><del>Gray text, gray background, strikethrough</del></strong>
    </td>
-   <td>An activity row that is older than the max days (7 or 9) and is no longer counting toward your score.
+   <td>An activity row that is older than the max days (7 or 9) and is no longer counting toward your total.
    </td>
   </tr>
   <tr>

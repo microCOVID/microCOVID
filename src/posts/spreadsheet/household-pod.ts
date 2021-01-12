@@ -7,8 +7,6 @@ const content = `
 
 **Who is in my pod? **
 
-
-
 *   The main criteria for being in a pod together is that they are willing to follow a shared set of agreements, and track their interactions to stay within an agreed upon risk budget.
 *   **Examples of people who might in your pod: **
     *   **Housemates**
@@ -22,14 +20,10 @@ const content = `
 
 **What if I live alone? **
 
-
-
 *   If you live alone and are using the spreadsheet, you can think of yourself as a “pod of 1.”
 *   If you live alone and are seeing someone regularly and don’t want to log every interaction with them, you might choose to include them in your pod.
 
 **Example pod: **
-
-
 
 *   Let’s say 4 people live in your house (you plus 3 other people). 
 *   Let’s say Alice comes over to our house for dinner many nights each week. You  don’t want every person in your house to log the points for seeing Alice every time, so you choose to include her as a part of your pod.
@@ -37,8 +31,6 @@ const content = `
 
 
 ## Getting started with the spreadsheet for pods
-
-
 
 1. **Find your spreadsheet wizard: **Each house needs a local “spreadsheet wizard” who has taken a deep dive into how this system works. As your resident microCOVID expert, you might want to read the <span style="text-decoration:underline;">white paper</span> so you’re prepared to help answer questions about why certain things work the way they do.
 2. **Follow the steps in the [Spreadsheet Quickstart Guide](#)**

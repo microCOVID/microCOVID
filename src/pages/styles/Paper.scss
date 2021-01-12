@@ -36,12 +36,7 @@
     }
   }
 
-  li {
-    margin-top: 1rem;
-    li:first-child {
-      margin-top: 0;
-    }
-  }
+  
 
   .warning {
     border: 2px solid $warning-border;
@@ -153,6 +148,7 @@
 
   img {
     max-width: 100%;
+    margin-bottom: 1.6rem;
   }
 
   figcaption {

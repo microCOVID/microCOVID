@@ -55,20 +55,6 @@ export const SpreadsheetTOC = (): React.ReactElement => {
           <Link to="/paper/9-advanced-method">Advanced Method</Link>.
         </p>
         <p>
-          <Button href={spreadsheetUrl} variant="primary" target="_blank">
-            Open the microCOVID spreadsheet <BsBoxArrowUpRight />
-          </Button>
-        </p>
-        <p>
-          <Button
-            href={spreadsheetUrl + '/copy'}
-            variant="secondary"
-            target="_blank"
-          >
-            Make a copy of the microCOVID spreadsheet <BsBoxArrowUpRight />
-          </Button>
-        </p>
-        <p>
           <strong>This spreadsheet might be a good fit for you if:</strong>
           <ol>
             <li>
@@ -83,8 +69,10 @@ export const SpreadsheetTOC = (): React.ReactElement => {
               <strong>Household/pod risk budgeting:</strong> You live with
               others or have other people you are seeing on a regular basis and
               want to keep track of your budget. (The{' '}
-              <Link to="#">households and pods page</Link> introduces this
-              approach in detail.)
+              <Link to="/spreadsheet/household-pod">
+                households and pods page
+              </Link>{' '}
+              introduces this approach in detail.)
             </li>
             <li>
               <strong>You want to have more space in your budget:</strong>{' '}
@@ -93,6 +81,25 @@ export const SpreadsheetTOC = (): React.ReactElement => {
               you can do more things.
             </li>
           </ol>
+        </p>
+      </div>
+      <div>
+        <h2>Get started with the spreadsheet</h2>
+        <p>
+          Use the buttons below to copy the spreadsheet. You can than read the{' '}
+          <a href="/spreadsheet/quickstart">Quickstart Guide</a>.
+        </p>
+        <p>
+          <Button href={spreadsheetUrl} variant="primary" target="_blank">
+            Open the microCOVID spreadsheet <BsBoxArrowUpRight />
+          </Button>{' '}
+          <Button
+            href={spreadsheetUrl + '/copy'}
+            variant="secondary"
+            target="_blank"
+          >
+            Make a copy of the microCOVID spreadsheet <BsBoxArrowUpRight />
+          </Button>
         </p>
       </div>
       <SubscribeForm />
@@ -112,6 +119,26 @@ export const SpreadsheetTOC = (): React.ReactElement => {
         </a>
         .
       </Alert>
+      <div>
+        <h2>Have a question? Need support? Have feedback?</h2>
+        <p>We welcome questions, feedback, and feature requests.</p>
+        <p>
+          If you’re familiar with GitHub, please{' '}
+          <a href="https://github.com/microcovid/microcovid/issues/new">
+            open an issue there
+          </a>
+          .
+        </p>
+        <p>
+          If you’re not familiar with GitHub, you can email Jeremy Blanchard,
+          our spreadsheet maintainer, at{' '}
+          <a href="mailto:blanchard.jeremy@gmail.com">
+            blanchard.jeremy@gmail.com
+          </a>{' '}
+          or email the team at{' '}
+          <a href="mailto:info@microcovid.org">info@microcovid.org</a>
+        </p>
+      </div>
       <div>
         <h2>Spreadsheet changelog</h2>
         <p>
