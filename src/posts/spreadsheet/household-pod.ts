@@ -122,11 +122,12 @@ Numerically, if the outside-of-pod person interacts with one person in your pod 
 
 ### What about activities that one person does on behalf of the whole house?
 
-<img src="${sharedBudgetReductions}" alt="Screenshot of shared buget reductions section of spreadsheet">
-
 If someone does something for the whole house (like grocery shopping) and you want to count it against everyone’s, you can enter it on the settings page and everyone’s budget will be reduced proportionally.
 
-_Example:_ If you each had a budget of 115 points/week in a pod of 4 people, and one person did grocery shopping every week that cost them 16 points, if you add it here, and everyone’s budget will go down by 9 points. The result is that each person’s budget is now 106 points/week. (You can dig into the spreadsheet formulas if you want to get into the math underlying this.)
+_Example:_ If you each had a budget of 115 points/week in a pod of 4 people, and one person did grocery shopping every week that cost them 20 points, if you add it here, and everyone’s budget will go down by 11 points. The result is that each person’s budget is now 104 points/week. (You can dig into the spreadsheet formulas if you want to get into the math underlying this.)
+
+<img src="${sharedBudgetReductions}" alt="Screenshot of shared buget reductions section of spreadsheet">
+
 
 [^poddefinition]: Definition adapted from [Hackensack Meridian Health article](https://www.hackensackmeridianhealth.org/HealthU/2020/08/26/how-to-create-a-covid-bubble-and-why-you-should-consider-one/).
 
