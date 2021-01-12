@@ -34,6 +34,10 @@ a {
   text-decoration: underline;
 }
 
+a.btn  {
+  text-decoration: none;
+}
+  
 .alert a {
   font-weight: 700;
 }
@@ -41,7 +45,6 @@ a {
 .alert-info a {
   color: #0c596c;
 }
-
 
 .alert-secondary a {
   color: #404848;

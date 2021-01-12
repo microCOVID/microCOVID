@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Alert, Button } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 
@@ -21,6 +21,23 @@ export const Spreadsheet = (): React.ReactElement => {
       rootTitle={t('menu.spreadsheet.introduction')}
       sectionTitle="Spreadsheet"
     />
+  )
+}
+
+export const SubscribeForm: React.FunctionComponent = () => {
+  return (
+    <>
+      <h2>Subscribe for updates</h2>
+      <p>
+        We will send email updates when we make feature upgrades and bug fixes
+        to the spreadsheet.
+      </p>
+      <p>
+        <a href="http://eepurl.com/hb6y4T" target="_blank" rel="noreferrer">
+          Sign up for spreadsheet updates
+        </a>
+      </p>
+    </>
   )
 }
 
@@ -71,25 +88,42 @@ export const SpreadsheetTOC = (): React.ReactElement => {
           </li>
         </ol>
       </p>
-      <h2>Subscribe for updates</h2>
-      <p>
-        Subscribe for updates We will send email updates when we make feature
-        upgrades and bug fixes to the spreadsheet. _INTERNAL NOTE: (Link to
-        Mailchimp opt-in page)_
-      </p>
+      <SubscribeForm />
       <h2>Spreadsheet changelog</h2>
       <p>
         Each time we update the spreadsheet, we create an entry in the changelog
         (below) with instructions for how you can migrate your copy of the
         spreadsheet to have the latest upgrades and bug fixes.
       </p>
-      <p>**Current version:** 2</p>
-      <p>**Released on:** 2020-12-28</p>
-      <p>[INTERNAL NOTE: Update these on release]</p>
       <p>
-        🕑 [View the Spreadsheet Changelog
-        →](https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#)
+        <strong>Current version:</strong> 2.0
       </p>
+      <p>
+        <strong>Released on:</strong> 2021-01-11
+      </p>
+      <p>
+        🕑{' '}
+        <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#">
+          View the Spreadsheet Changelog
+        </a>
+      </p>
+
+      <Alert variant="info">
+        <strong>Looking for testers:</strong> We are looking for beta testers
+        for this new version of the spreadsheet. If you are using the microCOVID
+        spreadsheet with your household/pod to track your collective COVID risk
+        and are intereted in giving us feedback on your experience, please email
+        Jeremy at{' '}
+        <a
+          href="mailto:blanchard.jeremy@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          blanchard.jeremy@gmail.com
+        </a>
+        .
+      </Alert>
+
       <h2>Spreadsheet documentation</h2>
       <p>TO DO: fill in spreadsheet doc links</p>
     </div>
