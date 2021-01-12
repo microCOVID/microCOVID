@@ -25,7 +25,11 @@ import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
-import { Spreadsheet, SpreadsheetNavDropdown, SpreadsheetTOC } from 'pages/Spreadsheet'
+import {
+  Spreadsheet,
+  SpreadsheetNavDropdown,
+  SpreadsheetTOC,
+} from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
 

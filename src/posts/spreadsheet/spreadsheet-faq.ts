@@ -6,7 +6,7 @@ const content = `
 
 ### The points for an activity I entered recently just changed? What happened? (Automatic Location Data Imports)
 
-By default, the spreadsheet automatically imports the latest data for each of the locations you’ve selected in the _Locations _sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points. 
+By default, the spreadsheet automatically imports the latest data for each of the locations you’ve selected in the _Locations_ sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points. 
 
 **Note:** We adjust activities before the date of the last import to match the prevalence that has been observed, and activities after the date of the last import to account for a ”delay factor” if COVID prevalence is increasing in your area. Because of this, it’s possible to enter the exact same activity on two different dates and see slightly different microCOVID scores.
 
@@ -42,10 +42,6 @@ By default, the spreadsheet automatically imports the latest data for each of th
   <tr>
    <td>Gray sections like so:
 <p>
-
-
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 <img src="images/image6.png" width="" alt="alt_text" title="image_tooltip">
 
