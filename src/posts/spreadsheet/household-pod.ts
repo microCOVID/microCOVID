@@ -1,3 +1,5 @@
+import sharedBudgetReductions from './img/shared-budget-reductions.png'
+
 const title = 'Using the spreadsheet with your household/pod'
 const shortTitle = 'For Your Household/Pod'
 const content = `
@@ -78,7 +80,7 @@ The main thing most group houses are concerned about is the question: how do we 
 
 ## How to track & report your risk to people outside your pod / house
 
-Asking someone if they have symptoms before you see them cuts your risk in half (see [Research Sources](https://www.microcovid.org/paper/all#note-on-infectious-period-contacts-symptoms) for details).
+Asking someone if they have symptoms before you see them cuts your risk in half (see [Research Sources](/paper/all#note-on-infectious-period-contacts-symptoms) for details).
 
 Ask friends about these symptoms **_<span style="text-decoration:underline;">right before</span>_** seeing them:
 
@@ -86,15 +88,11 @@ You can use this [symptoms page](#) to help guide you through asking some questi
 
 
 #### If symptoms show up...
-
-
-
 *   **If they have symptoms <span style="text-decoration:underline;">BEFORE</span> you see each other:** You can use the _Has prominent COVID symptoms (high fever, drive cough, lost of taste/smell) _Person Type if you want to model a way to adjust this interaction that keeps it within your budget.
 *   **If they have symptoms within 7 days <span style="text-decoration:underline;">AFTER</span> you see each other:** If possible, the safest option is to quarantine within your house, and reduce your exposure to others as much as possible until you can confirm/deny whether they have COVID.
 
 
 ## FAQ for households & pods
-
 
 ### When should I add someone to our “pod” vs track each time they interact with us?
 
@@ -115,63 +113,16 @@ If the activity is 10 points, each podmate would just log it as 10 points.
 
 The downside is that, for a large pod, this overcalculates  the risk quite a bit. (See Option B for an explanation). If you aren’t too concerned about saving every last point in your budget, then this option might be a good choice because it’s simple. 
 
-**Option B: More complex, saves points**
-
-The more accurate approach will save points, but is more involved (both in terms of coordination and the math involved).
-
-_Here’s the formula involved: _
-
-
-\`\`\`
-    Adjusted Points Per Person = 1 / (1 + 30% * 50% * (P - 1))
-\`\`\`
-
-
-Explanation: P is the number of podmates who were present for the activity. The 30% number is for housemate transmission, the 50% number is for “will report symptoms” within the pod.)
-
-Let’s use an example where in a pod of 6 people, 4 of the podmates have dinner with someone outside the pod. If the activity was normally 20 points, each person would instead log an activity of: 
-
-
-\`\`\`
-    20 * 1 / (1 + 30% * 50% * (3 - 1)) = 5 points
-\`\`\`
-
-
-_Note:_ We haven’t yet implemented Option B this feature in the spreadsheet, though we hope to in the future.
-
-_Why does it work this way?_ 
-
-The primary factor in “will a person get infected during an interaction” is whether or not the infected person is shedding virus. The amount of virus a person sheds varies by several orders of magnitude day-to-day (from viral load)  and based on physiology (based on how much aerosols the person generates). Thus, the chances of each person getting infected are highly correlated, so the risk of secondary infection from an interaction is low (you can’t get COVID from your housemate if you already got it from the original interaction).
-
-Thus, for an activity that costs C points, your risk to others should go up by C.
-
-Since every person in your pod is recording R points for the interaction, your risk to others goes up by
-
-
-\`\`\`
-C = R + (P - 1) * 30% * 50% * R
-\`\`\`
-
-
-Solving this for R yields:
-
-
-\`\`\`
-R = C / (1 + 15% * (P - 1) )
-\`\`\`
-
-
-
 ### If an outside-of-pod person interacts with one person in our pod, does that mean we can all see them and it’s the same thing?
 
-Just because another pod is “connected” to your pod through one person doesn’t mean that all those people are now “in your pod.” For example, having a whole other house over for dinner is much more risky than having just one member of that house over for dinner. See this explanation in the [Q&A](https://www.microcovid.org/paper/13-q-and-a#so-if-my-housemate-really-wants-to-see-a-partner-in-another-house-you-believe-it-is-sometimes-better-from-a-risk-standpoint-not-to-negotiate-for-the-partners-entire-house-to-get-added-to-a-closed-bubble-with-us).  This is because each person in the transmission chain acts as a “buffer” of sorts, because there is only a 30% chance of transmission. There is a time delay in transmission, and if everyone agrees to report symptoms, that one person can isolate if anyone else in their pod gets symptoms. But if you see everyone in their pod, you’re all getting exposed to all of those people at once.
+Just because another pod is “connected” to your pod through one person doesn’t mean that all those people are now “in your pod.” For example, having a whole other house over for dinner is much more risky than having just one member of that house over for dinner. See this explanation in the [Q&A](/paper/13-q-and-a#so-if-my-housemate-really-wants-to-see-a-partner-in-another-house-you-believe-it-is-sometimes-better-from-a-risk-standpoint-not-to-negotiate-for-the-partners-entire-house-to-get-added-to-a-closed-bubble-with-us).  This is because each person in the transmission chain acts as a “buffer” of sorts, because there is only a 30% chance of transmission. There is a time delay in transmission, and if everyone agrees to report symptoms, that one person can isolate if anyone else in their pod gets symptoms. But if you see everyone in their pod, you’re all getting exposed to all of those people at once.
 
 Numerically, if the outside-of-pod person interacts with one person in your pod and that interaction costs C points, the podmate interacting will incur a cost of C points and the other podmates will incur 0.3 * C (or 0.15 * C if the outside-of-pod person agrees to report symptoms and the podmate will isolate if the outside-of-pod person develops symptoms). If the entire pod sees the person, they will each incur C.
 
 
 ### What about activities that one person does on behalf of the whole house?
 
-_(INTERNAL NOTE: update this image when launching →)_
+<img src="${sharedBudgetReductions}" alt="Screenshot of shared buget reductions section of spreadsheet">
 
 If someone does something for the whole house (like grocery shopping) and you want to count it against everyone’s, you can enter it on the settings page and everyone’s budget will be reduced proportionally.
 

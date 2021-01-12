@@ -1,6 +1,6 @@
-import budgetSetting from './img/budgetsetting.png'
-import helpText from './img/helptext.png'
-import podOverview from './img/podoverview.png'
+import budgetSetting from './img/budget-setting.png'
+import helpText from './img/help-text.png'
+import podOverview from './img/pod-overview.png'
 import {
   mailchimpSubscribeUrl,
   spreadsheetUrl,

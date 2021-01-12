@@ -1,4 +1,4 @@
-import budgetSetting from './img/budgetsetting.png'
+import budgetSetting from './img/budget-setting.png'
 
 const title = 'Spreadsheet FAQ'
 const shortTitle = 'FAQ'
