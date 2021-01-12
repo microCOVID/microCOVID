@@ -3,27 +3,27 @@ const shortTitle = 'For Your Household/Pod'
 const content = `
 ## Pods in the context of the spreadsheet
 
-**Pod:** A small network of trusted friends or relatives who are following a shared set of agreements to try to keep everyone safe from COVID.[^2]
+**Pod:** A small network of trusted friends or relatives who are following a shared set of agreements to try to keep everyone safe from COVID. [^poddefinition]
 
-**Who is in my pod? **
+**Who is in my pod?**
 
 *   The main criteria for being in a pod together is that they are willing to follow a shared set of agreements, and track their interactions to stay within an agreed upon risk budget.
-*   **Examples of people who might in your pod: **
+*   **Examples of people who might in your pod:**
     *   **Housemates**
     *   **Partner** who you see many times per week
     *   **A friend** who comes over for dinner with everyone in your house many nights every week.
     *   Anyone else you are seeing more than 5 hours per week (indoors, unmasked, undistanced), who you don’t want to have to log each interaction with, and who is willing to follow a shared set of agreements with you.
 *   **Your pod might not include**
     *   **Co-workers:** In most work situations, it’s unlikely for everyone to agree to follow a shared set of agreements to stay within a specified risk budget. Instead, you would model what you know about their risk in the Custom Person sheet and count it as an activity in your Activity Log.
-    *   **Some friends: **A friend/partner that does not interact with the pod frequently. 
+    *   **Some friends:** A friend/partner that does not interact with the pod frequently. 
     *   **Regular low risk activities:** A friend you see regularly, but the activity doesn’t ever much risk (ex: an outdoor, distanced, weekly picnic)
 
-**What if I live alone? **
+**What if I live alone?**
 
 *   If you live alone and are using the spreadsheet, you can think of yourself as a “pod of 1.”
 *   If you live alone and are seeing someone regularly and don’t want to log every interaction with them, you might choose to include them in your pod.
 
-**Example pod: **
+**Example pod:**
 
 *   Let’s say 4 people live in your house (you plus 3 other people). 
 *   Let’s say Alice comes over to our house for dinner many nights each week. You  don’t want every person in your house to log the points for seeing Alice every time, so you choose to include her as a part of your pod.
@@ -32,138 +32,36 @@ const content = `
 
 ## Getting started with the spreadsheet for pods
 
-1. **Find your spreadsheet wizard: **Each house needs a local “spreadsheet wizard” who has taken a deep dive into how this system works. As your resident microCOVID expert, you might want to read the <span style="text-decoration:underline;">white paper</span> so you’re prepared to help answer questions about why certain things work the way they do.
-2. **Follow the steps in the [Spreadsheet Quickstart Guide](#)**
+1. **Find your spreadsheet wizard:** Each house needs a local “spreadsheet wizard” who has taken a deep dive into how this system works. As your resident microCOVID expert, you might want to read the [white paper](/paper) so you’re prepared to help answer questions about why certain things work the way they do.
+2. **Follow the steps in the [Spreadsheet Quickstart Guide](./quickstart)**.
 
 
 ## How the number of people in your household affects your budget
 
-If you lived alone and were choosing a 1% budget for yourself, then we’d have a budget of 10,000 micoCOVIDs per person per year (= 192/person/week). If you have others in your pod you have a [30% chance of transmitting COVID to each other](https://www.microcovid.org/paper/14-research-sources#household-member) person. That means living with others reduces your “outside of the pod” budget. Each additional person you add to your pod reduces your budget.
+If you lived alone and were choosing a 1% budget for yourself, then we’d have a budget of 10,000 micoCOVIDs per person per year (= 192/person/week). If you have others in your pod you have a [30% chance of transmitting COVID to each other](/paper/14-research-sources#household-member) person. That means living with others reduces your “outside of the pod” budget. Each additional person you add to your pod reduces your budget.
 
 Under the hood. Here’s the formula we use:
 
 
 \`\`\`
-"Outside of pod" annual risk per housemate = [ANNUAL RISK BUDGET IN MICROCOVIDS]/(1+([NUMBER OF PODMATES]-1) * 30% housemate transmission rate)
+"Outside of pod" budget per housemate
+=R/(1 + (N-1)*30%)
 \`\`\`
 
-[^3]
+Where \`R\` = risk budget in microCOVIDs, \`N\` = number of housemates in the pod, and the \`30%\` number is the housemate transmission rate. [^partnernote]
 
-**Some examples**
-
-_(using a 1% annual risk budget)_
+**Some examples _(using a 1% annual risk budget):_**
 
 
-<table>
-  <tr>
-   <td><strong>Number of podmates</strong>
-   </td>
-   <td><strong><span style="text-decoration:underline;">Annual</span> “out of house” budget per person </strong>
-<p>
-<em>(microCOVIDs)</em>
-   </td>
-   <td><strong><span style="text-decoration:underline;">Weekly</span> “out of house” budget per person <em>(microCOVIDs)</em></strong>
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-1</p>
-
-   </td>
-   <td><p style="text-align: right">
-10,000</p>
-
-   </td>
-   <td><p style="text-align: right">
-192</p>
-
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-2</p>
-
-   </td>
-   <td><p style="text-align: right">
-7,692</p>
-
-   </td>
-   <td><p style="text-align: right">
-147</p>
-
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-3</p>
-
-   </td>
-   <td><p style="text-align: right">
-6,250</p>
-
-   </td>
-   <td><p style="text-align: right">
-120</p>
-
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-4</p>
-
-   </td>
-   <td><p style="text-align: right">
-5,263</p>
-
-   </td>
-   <td><p style="text-align: right">
-101</p>
-
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-5</p>
-
-   </td>
-   <td><p style="text-align: right">
-4,545</p>
-
-   </td>
-   <td><p style="text-align: right">
-87</p>
-
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-6</p>
-
-   </td>
-   <td><p style="text-align: right">
-4,000</p>
-
-   </td>
-   <td><p style="text-align: right">
-76</p>
-
-   </td>
-  </tr>
-  <tr>
-   <td><p style="text-align: right">
-7</p>
-
-   </td>
-   <td><p style="text-align: right">
-3,571</p>
-
-   </td>
-   <td><p style="text-align: right">
-68</p>
-
-   </td>
-  </tr>
-</table>
+| Number of podmates  | Annual “out of house” budget per person   (microCOVIDs)  | Weekly “out of house” budget per person (microCOVIDs)  |
+| --- | ---      | ---   |
+|  1  |  10,000  |  192  |
+|  2  |  7,692   |  147  |
+|  3  |  6,250   |  120  |
+|  4  |  5,263   |  101  |
+|  5  |  4,545   |  87   |
+|  6  |  4,000   |  76   |
+|  7  |  3,571   |  68   |
 
 
 _Note:_ You don’t need to fill anything from this table into the spreadsheet. It will calculate this for you based on your current pod size.
@@ -278,6 +176,10 @@ _(INTERNAL NOTE: update this image when launching →)_
 If someone does something for the whole house (like grocery shopping) and you want to count it against everyone’s, you can enter it on the settings page and everyone’s budget will be reduced proportionally.
 
 _Example:_ If you each had a budget of 115 points/week in a pod of 4 people, and one person did grocery shopping every week that cost them 16 points, if you add it here, and everyone’s budget will go down by 9 points. The result is that each person’s budget is now 106 points/week. (You can dig into the spreadsheet formulas if you want to get into the math underlying this.)
+
+[^poddefinition]: Definition adapted from [Hackensack Meridian Health article](https://www.hackensackmeridianhealth.org/HealthU/2020/08/26/how-to-create-a-covid-bubble-and-why-you-should-consider-one/).
+
+[^partnernote]: We are intentionally using the housemate transmission rate of 30% here. There is a slight difference if there are partners in the house, but we decided it wasn’t a significant enough difference to include in the formula.
 
 `
 

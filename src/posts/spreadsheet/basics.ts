@@ -166,9 +166,6 @@ Note that after the initial modeling of this group of people, Bob will want to k
 
 To see how you might model this situation, go to the [_Custom People_ sheet](${spreadsheetUrl}/edit#gid=311635422), then scroll to the **Example: Sam (Bob's partner)** section.
 
-
-[^1]:  See [Activity Risk](/paper/5-activity-risk#masked-outdoor-distanced-interactions-are-much-lower-risk) for details on why we say anything over 20 feet poses very little risk.
-
 `
 
 const post = { title, shortTitle, content }
