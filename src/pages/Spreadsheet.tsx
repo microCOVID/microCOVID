@@ -1,6 +1,7 @@
 import React from 'react'
 import { Alert, Button } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { Link, useParams } from 'react-router-dom'
 
 import { DropdownNav } from 'components/DropdownNav'
@@ -9,7 +10,7 @@ import { pages } from 'posts/spreadsheet/index'
 
 const calculator = <Link to="/calculator">Calculator</Link>
 export const spreadsheetUrl =
-  'https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ'
+  'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA'
 
 export const Spreadsheet = (): React.ReactElement => {
   const { id } = useParams()
@@ -53,13 +54,17 @@ export const SpreadsheetTOC = (): React.ReactElement => {
         <Link to="/paper/9-advanced-method">Advanced Method</Link>.
       </p>
       <p>
-        <Button href={spreadsheetUrl} variant="primary">
-          Open the microCOVID spreadsheet →
+        <Button href={spreadsheetUrl} variant="primary" target="_blank">
+          Open the microCOVID spreadsheet <BsBoxArrowUpRight />
         </Button>
       </p>
       <p>
-        <Button href={spreadsheetUrl + '/copy'} variant="secondary">
-          Make a copy of the microCOVID spreadsheet →
+        <Button
+          href={spreadsheetUrl + '/copy'}
+          variant="secondary"
+          target="_blank"
+        >
+          Make a copy of the microCOVID spreadsheet <BsBoxArrowUpRight />
         </Button>
       </p>
       <p>
