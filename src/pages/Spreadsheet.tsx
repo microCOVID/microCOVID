@@ -32,7 +32,7 @@ export const SubscribeForm: React.FunctionComponent = () => {
           className="btn btn-secondary"
           role="button"
         >
-          Sign up for spreadsheet updates →
+          Sign up for spreadsheet updates
         </a>
       </p>
     </>
@@ -87,7 +87,7 @@ export const Spreadsheet = (): React.ReactElement => {
       </p>
 
       <p>
-        <strong>{spreadsheet('Use the spreadsheet here →')}</strong>
+        <strong>{spreadsheet('Use the spreadsheet here')}</strong>
       </p>
 
       <SubscribeForm />
