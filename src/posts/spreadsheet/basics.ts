@@ -1,4 +1,3 @@
-import exampleErin from './img/exampleerin.png'
 import { spreadsheetUrl } from 'components/SpreadsheetUtil'
 
 const title = 'Basic Spreadsheet Usage'
@@ -29,7 +28,7 @@ const content = `
 
 See the _Example Activities_ sheet for examples that can help you understand how to fill in an activity row.
 
-See also, [Activity Modeling FAQ](./faq#activity-modeling)
+See also, [Activity Modeling FAQ](./faq#activity-modeling).
 
 
 ## Using the built-in Person Risk types
@@ -151,8 +150,6 @@ Erin shared that she wears a cotton mask without a filter.
 To see how you might model this situation, go to the [_Custom People_ sheet](${spreadsheetUrl}/edit#gid=311635422), then scroll to the **Example: Erin (Alice's friend)** section.
 
 Once this is modeled, Alice can select Erin as an option on the “Person Risk Profile” column when she models having dinner together.
-
-<img src="${exampleErin}" alt="Help text when hovering on spreadsheet columns" style="max-width: 600px;">
 
 #### Example 2: Multiple degrees of separation away
 
