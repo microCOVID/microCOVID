@@ -6,12 +6,11 @@ import { Link, useParams } from 'react-router-dom'
 
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
+import { mailchimpLink, spreadsheetUrl } from 'components/SpreadsheetUtil'
 import { TableOfContents } from 'components/TableOfContents'
 import { pages } from 'posts/spreadsheet/index'
 
 const calculator = <Link to="/calculator">Calculator</Link>
-export const spreadsheetUrl =
-  'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA'
 
 export const Spreadsheet = (): React.ReactElement => {
   const { id } = useParams()
@@ -34,11 +33,7 @@ export const SubscribeForm: React.FunctionComponent = () => {
         We will send email updates when we make feature upgrades and bug fixes
         to the spreadsheet.
       </p>
-      <p>
-        <a href="http://eepurl.com/hb6y4T" target="_blank" rel="noreferrer">
-          Sign up for spreadsheet updates
-        </a>
-      </p>
+      <p>{mailchimpLink()}</p>
     </>
   )
 }
