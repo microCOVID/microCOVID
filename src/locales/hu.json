@@ -140,7 +140,11 @@
             "body": "Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és ezt az eszköz nem is ment át tudományos szintű felülvizsgálaton. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat."
         },
         "frontline_worker_acknowledgement": "Tudjuk, hogy mekkora kockázatot és áldozatot vállalnak az egészségügyi és szociális ágazatok dolgozói. Hálásak vagyunk a munkájukért, és arra kérünk mindenkit, hogy találjuk meg a módját, hogy segítsük őket, és ne vágjuk el őket a társas kapcsolatainkból, még ha valamivel magasabb kockázatot is jelent velük találkozni. Egy jelentős részük az elkövetkező hónapokban várhatóan megkapja a védőoltást, és így jelentősen lecsökken ez a kockázat.",
-        "saved_scenario_loaded_message": "Ezt a kész példát választottad ki: <strong>{{ scenarioName }}</strong>. Az alábbi beállítások megfelelnek a tevékenységnek, amire gondoltál? Ha nem, nyugodtan állítsd át őket."
+        "saved_scenario_loaded_message": "Ezt a kész példát választottad ki: <strong>{{ scenarioName }}</strong>. Az alábbi beállítások megfelelnek a tevékenységnek, amire gondoltál? Ha nem, nyugodtan állítsd át őket.",
+        "alerts": {
+            "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> Szükségünk van rád ahhoz, hogy ez az oldal minél szélesebb kör számára legyen hasznos. <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
+            "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul."
+        }
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
