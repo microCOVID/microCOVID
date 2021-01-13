@@ -135,6 +135,7 @@ export const App = (): React.ReactElement => {
                     <Dropdown.Item href="?lng=de">Deutsch</Dropdown.Item>
                     <Dropdown.Item href="?lng=fr">Français</Dropdown.Item>
                     <Dropdown.Item href="?lng=hu">Magyar</Dropdown.Item>
+                    <Dropdown.Item href="?lng=nb">Norsk</Dropdown.Item>
                   </DropdownButton>
                 </Nav>
               </Navbar.Collapse>
