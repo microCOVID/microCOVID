@@ -13,7 +13,7 @@
       "label": "Precautions",
       "environment_header": "Environment",
       "environment_question": "Is it indoor or outdoor? Is the space ventilated, or is the air filtered?",
-      "no_intimate_bonus_outdoors": "Due to very close distances, we are not confident that being outdoors reduces the risk in a substantial way. Thus, we are not providing any bonus for being outdoors when intimate.",
+      "no_intimate_bonus_outdoors": "We are ignoring environment choice in this calculation. We are not confident that good ventilation or being outdoors substantially reduces the risk when people are this close to each other.",
       "your_mask_header": "Your mask",
       "your_mask_question": "What mask are YOU wearing?",
       "your_mask_note": "If you’re eating or drinking, select “no mask”",
