@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import { RadioControl } from '../RadioControl'
+import { RadioControl } from '../controls/RadioControl'
 
 import RiskReduction from './RiskReduction'
 import riskTolerancePopover from './riskTolerancePopover'

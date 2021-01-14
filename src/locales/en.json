@@ -105,12 +105,21 @@
       "positive_case_percentage": "Percent of tests that come back positive",
       "data_last_updated": "Data last updated"
     },
-    "location_subprompt_country_or_regions": "Entire country, or select region...",
-    "location_subprompt_US-LA": "Entire state, or select parish...",
-    "location_subprompt_US-AK": "Entire state, or select borough...",
-    "location_subprompt_US": "Entire state, or select county...",
     "location_selector_header": "Step 1: Enter your location",
-    "select_location_placeholder": "Select location...",
+    "location_subprompt": {
+      "country_or_regions": "Entire country, or select region...",
+      "US-LA": "Entire state, or select parish...",
+      "US-AK": "Entire state, or select borough...",
+      "US": "Entire state, or select county..."
+    },
+    "location_sublabel": {
+      "country_or_regions": "Region",
+      "US-LA": "Parish",
+      "US-AK": "Borough",
+      "US": "County"
+    },
+    "select_location_label": "Country or US State",
+    "select_location_placeholder": "Select Country or US State...",
     "switch_button": {
       "select_location": "Switch to pre-populated location data",
       "enter_data_manually": "Switch to manual data entry mode"
