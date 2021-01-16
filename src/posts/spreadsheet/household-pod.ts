@@ -80,11 +80,11 @@ The main thing most group houses are concerned about is the question: how do we 
 
 ## How to track & report your risk to people outside your pod / house
 
-Asking someone if they have symptoms before you see them cuts your risk in half (see [Research Sources](/paper/all#note-on-infectious-period-contacts-symptoms) for details).
+Asking someone [if they have symptoms](/symptoms) before you see them cuts your risk in half (see [Research Sources](/paper/all#note-on-infectious-period-contacts-symptoms) for details).
 
 Ask friends about these symptoms **_<span style="text-decoration:underline;">right before</span>_** seeing them:
 
-You can use this [symptoms page](#) to help guide you through asking some questions. Or you can text the link to the person you’re seeing.
+You can use this [symptoms page](/symptoms) to help guide you through asking some questions. Or you can text the link to the person you’re seeing.
 
 
 **If symptoms show up...**
@@ -114,7 +114,7 @@ The downside is that, for a large pod, this overcalculates  the risk quite a bit
 
 ### If an outside-of-pod person interacts with one person in our pod, does that mean we can all see them and it’s the same thing?
 
-Just because another pod is “connected” to your pod through one person doesn’t mean that all those people are now “in your pod.” For example, having a whole other house over for dinner is much more risky than having just one member of that house over for dinner. See this explanation in the [Q&A](/paper/13-q-and-a#so-if-my-housemate-really-wants-to-see-a-partner-in-another-house-you-believe-it-is-sometimes-better-from-a-risk-standpoint-not-to-negotiate-for-the-partners-entire-house-to-get-added-to-a-closed-bubble-with-us).  This is because each person in the transmission chain acts as a “buffer” of sorts, because there is only a 30% chance of transmission. There is a time delay in transmission, and if everyone agrees to report symptoms, that one person can isolate if anyone else in their pod gets symptoms. But if you see everyone in their pod, you’re all getting exposed to all of those people at once.
+Just because another pod is “connected” to your pod through one person doesn’t mean that all those people are now “in your pod.” For example, having a whole other house over for dinner is much more risky than having just one member of that house over for dinner. See this explanation in the [Q&A](/paper/13-q-and-a#so-if-my-housemate-really-wants-to-see-a-partner-in-another-house-you-believe-it-is-sometimes-better-from-a-risk-standpoint-not-to-negotiate-for-the-partners-entire-house-to-get-added-to-a-closed-bubble-with-us).  This is because each person in the transmission chain acts as a “buffer” of sorts, because there is only a 30% chance of transmission. There is a time delay in transmission, and if everyone agrees to [report symptoms](/symptoms), that one person can isolate if anyone else in their pod gets symptoms. But if you see everyone in their pod, you’re all getting exposed to all of those people at once.
 
 Numerically, if the outside-of-pod person interacts with one person in your pod and that interaction costs C points, the podmate interacting will incur a cost of C points and the other podmates will incur 0.3 * C (or 0.15 * C if the outside-of-pod person agrees to report symptoms and the podmate will isolate if the outside-of-pod person develops symptoms). If the entire pod sees the person, they will each incur C.
 
