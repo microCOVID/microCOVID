@@ -5,6 +5,58 @@ const content = `
 Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
 
 # General Q&A
+
+### How should I choose my annual risk budget?
+
+We currently have two main risk budget options. You are, of course, welcome to choose any risk budget for yourself. 
+
+| Title                   | Risk of getting COVID per year                                     | Weekly microCOVID budget   | Suggested for..                                                       |
+|-------------------------|--------------------------------------------------------------------|----------------------------|-----------------------------------------------------------------------|
+| Standard Caution Budget | 1% chance of getting COVID per year <br /> = 10,000 microCOVIDs per year  | = 192 microCOVIDs per week | Healthy people NOT in close contact with more vulnerable people       |
+| High Caution Budget     | 0.1% chance of getting COVID per year <br /> = 1,000 microCOVIDs per year | = 19 microCOVIDs per week  | Suggested if you or your close contacts are more vulnerable to COVID. |
+
+[Vulnerability increases with age.](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html) We think age over 60 confers substantial increased vulnerability to severe illness from COVID. [Certain underlying medical conditions](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html) also confer increased vulnerability:
+
+*   BMI of 30 or higher
+*   Type 2 diabetes mellitus
+*   Smoking
+*   COPD or other heart conditions
+*   Cancer
+*   Chronic kidney disease
+*   Immunocompromised from solid organ transplant
+*   Sickle cell disease
+
+
+
+**Risk to you & risk to others**
+
+When choosing your budget, you want to factor in  two important aspects: risk to _you_, and risk to _others_.
+
+*   **Risk to you:** If you are in the under-40 age bracket and do not have other risk factors, then a 1% chance of COVID per year puts your risk of disability due to COVID at about the same level as your risk of disability due to driving a car. See below for how we arrived at the [1% annual risk budget](#how-did-you-arrive-at-a-1-annual-risk-budget).
+
+
+*   **Risk to others**: Even if you are personally comfortable with risk-taking, it’s important to choose a lower risk tolerance in order to protect vulnerable members of your community. Here are a few ways to think about that:
+    *   If you get COVID, on average you will pass it to at least one other person, who in turn will pass it to others. Eventually it will reach someone who is at very high risk of death. By avoiding getting infected yourself, you are protecting these vulnerable members of your community.
+    *   A useful ethical rule-of-thumb is to behave in a way that would be good if _everyone_ behaved that way. So, we can ask: what risk tolerance would keep the pandemic at manageable levels if everyone followed it? In most places in the US right now, a 1% yearly risk of COVID would keep the pandemic at manageable levels. For public health reasons, we wouldn’t recommend voluntarily choosing a risk tolerance higher than 3%.[^risktolerance]
+
+
+    *   Some people (such as essential workers) have no choice but to run a high risk of getting COVID. Containing the pandemic across society only works if those of us who _do_ have a choice choose to take fewer risks.
+
+### How did you arrive at a 1% annual risk budget
+
+We think as many as 1 in 10 COVID cases could potentially lead to long-term negative health consequences for the infected person; we don't think the ratio is likely to be higher than that, due to sources like the app-based [COVID Symptom Study](https://covid.joinzoe.com/post/covid-long-term) that found one in ten cases weren't fully recovered after 3 weeks. That would mean that a 1% chance of COVID is the same as up to a 0.1% chance of ongoing negative health consequences from COVID. The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018 [there were](https://cdan.nhtsa.gov/tsftables/National%20Statistics.pdf) 2,491,000 car-crash-related injuries (of any severity) spread across 3,240,327,000,000 vehicle miles travelled (see the [NHTSA website](https://cdan.nhtsa.gov/tsftables/tsfar.htm) for more detailed breakdowns). [A study of Swedish car crash injuries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3256772/) found that 11.4% of them met the criteria for at least “1% permanent medical impairment” five years later. (“Permanent medical impairment” is a [legally-relevant concept](https://www.disabilitysecrets.com/resources/understanding-permanent-disability-rating-system.htm) that attempts to quantify disability, and the 1% level was the lowest level of disability that was discussed in the Swedish car crash study.) Multiplying this out, we get a 0.11% chance of ongoing negative health consequences from driving for one year.
+
+You may choose to follow a different risk budget. Here is some information that might be helpful in deciding what is right for you:
+  * Among people under 40, the chance of death from COVID is about 0.1-0.2% ([Our World in Data](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age))
+  * Among people over 60, this rises to 2-3% and doubles with every 10 years over 70.
+  * A 0.1% chance of death is equivalent to...
+    * Driving 100,000 miles ([IIHS](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state))
+    * Base jumping 3 times ([Wikipedia](https://en.wikipedia.org/wiki/BASE_jumping#Safety))
+    * 167 skydiving jumps ([Skydive California](https://skydivecalifornia.com/blog/skydiving-statistics))
+
+Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolearnce.
+
+
 ### If there’s a precaution I don’t see a multiplier for here, should I still do it?
 
 Yes, definitely! The most important such precaution, in our opinion, is communication around symptoms:
@@ -216,6 +268,8 @@ In terms of qualitative scales, we like the following:
 
 
 
+[^risktolerance]:
+     You can check the annual rate of COVID infection for your region by looking up the number of cases in the past _day_; for states in the US, try [covidactnow.org](http://covidactnow.org). Divide by your region’s population (or by 100,000 if the figure you got was “cases per 100,000 population”) and multiply by 365 (days per year) to get the proportion of your region that will have a reported case of COVID this year at current rates. You probably want to aim to stay below that percentage. For the San Francisco Bay Area in August 2020, it’s about 3.5%. There’s no correction for potential underreporting here, since we want to err on the _low_ side (not take too many risks).
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
 [^unwell]: You probably can't do this anywhere near as reliably with someone you don't live with, which is why the discussion here is specific to housemates.
 [^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
