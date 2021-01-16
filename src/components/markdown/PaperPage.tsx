@@ -14,6 +14,7 @@ export const MarkdownContents: React.FunctionComponent<{
   rootTitle?: string
   sectionTitle?: string
   showSectionNumbers?: boolean
+  simpleLayout?: boolean
 }> = ({
   posts,
   id,
@@ -21,6 +22,7 @@ export const MarkdownContents: React.FunctionComponent<{
   rootTitle = 'Table of Contents',
   sectionTitle = '',
   showSectionNumbers = false,
+  simpleLayout = false,
 }) => {
   // Return 404 for unknown pages
   const slugs = Object.keys(posts)
@@ -110,14 +112,14 @@ export const MarkdownContents: React.FunctionComponent<{
 
       <h1 className="pageTitle">{page.title}</h1>
 
-      <Navigation />
+      {simpleLayout && <Navigation />}
       <hr />
 
       <div dangerouslySetInnerHTML={{ __html: body }} />
 
       {page.donation ? <Donation /> : null}
 
-      <Navigation />
+      {simpleLayout && <Navigation />}
 
       {footnotes && (
         <div dangerouslySetInnerHTML={{ __html: footnotes }} key="footnotes" />

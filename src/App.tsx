@@ -32,6 +32,7 @@ import {
 } from 'pages/Spreadsheet'
 
 import 'styles/App.scss'
+import { Symptoms } from 'pages/Symptoms'
 
 export const App = (): React.ReactElement => {
   const { t } = useTranslation()
@@ -146,6 +147,9 @@ export const App = (): React.ReactElement => {
               </Route>
               <Route exact path="/spreadsheet">
                 <SpreadsheetTOC />
+              </Route>
+              <Route path="/symptoms">
+                <Symptoms />
               </Route>
               <Route path="/about">
                 <About />
