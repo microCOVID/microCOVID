@@ -25,7 +25,8 @@
             "percentage_suffix": "% de tu presupuesto de riesgo semanal",
             "multiple_suffix": "x tu presupuesto de riesgo semanal",
             "person": "persona",
-            "person_plural": "personas"
+            "person_plural": "personas",
+            "last_updated": "Última actualización del modelo el día {{ date }}. (<1>Vea bitácora de cambios</1>)"
         },
         "risk_note_about_household_members": "Al estimar tu riesgo de infección a través de un miembro del hogar o pareja/cónyuge, asumimos que sus interacciones son al interior, sin mascarilla y sin distancia.",
         "precautions": {
@@ -40,6 +41,35 @@
             "environment_question": "¿Es adentro o al exterior? ¿Hay circulación de aire en el espacio o se filtra el aire?",
             "environment_header": "Ambiente",
             "label": "Precauciones"
+        },
+        "prevalence": {
+            "percent_increase_in_cases": "Incremento porcentual en casos desde la semana pasada a la actual",
+            "cases_stable_or_decreasing": "Los casos se mantienen estables o a la baja",
+            "population": "Población total",
+            "last_week_cases": "Casos reportados la semana pasada",
+            "details_header": "Detalles",
+            "adjusted_prevalence": "Prevalencia ajustada",
+            "reported_prevalence": "Prevalencia reportada",
+            "positive_case_percentage": "Porcentaje de pruebas con resultados positivos",
+            "data_last_updated": "Datos actualizados"
+        },
+        "category_postfix": "Riesgo",
+        "category_extreme": "Extremo",
+        "category_dangerously_high": "Peligrosamente alto",
+        "category_very_high": "Muy alto",
+        "category_high": "Alto",
+        "category_moderate": "Medio",
+        "category_low": "Bajo",
+        "category_very_low": "Muy bajo",
+        "person_risk_profile_header": "Perfil de riesgo",
+        "duration_question": "¿Qué tanto tiempo toma realizar la actividad, en minutos? (Para una actividad frecuente, minutos a la semana)",
+        "duration_header": "Duración",
+        "distance_question": "¿Qué tan cerca están las personas a su alrededor, en promedio?",
+        "people_count": "Gente",
+        "number_of_people_near_you_onetime": "¿Cuántas personas lo rodean normalmente durante esta actividad?",
+        "pointsdisplay": {
+            "range": "probablemente entre: {{ from }} hasta {{ to }}",
+            "microCOVIDs": "microCOVIDs"
         }
     },
     "current_lang_two_letter_code": "es",
@@ -47,6 +77,7 @@
         "calculator": "Estimador",
         "blog": "Blog",
         "spreadsheet": "Hoja de cálculo",
-        "about": "Acerca de"
+        "about": "Acerca de",
+        "whitepaper": "Publicación"
     }
 }
