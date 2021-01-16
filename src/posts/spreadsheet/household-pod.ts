@@ -92,7 +92,7 @@ You can use this [symptoms page](#) to help guide you through asking some questi
 *   **If they have symptoms within 7 days <span style="text-decoration:underline;">AFTER</span> you see each other:** If possible, the safest option is to quarantine within your house, and reduce your exposure to others as much as possible until you can confirm/deny whether they have COVID.
 
 
-## FAQ for households & pods
+# FAQ for households & pods
 
 ### When should I add someone to our “pod” vs track each time they interact with us?
 

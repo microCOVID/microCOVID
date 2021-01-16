@@ -30,9 +30,9 @@ import {
   SpreadsheetNavDropdown,
   SpreadsheetTOC,
 } from 'pages/Spreadsheet'
+import { Symptoms } from 'pages/Symptoms'
 
 import 'styles/App.scss'
-import { Symptoms } from 'pages/Symptoms'
 
 export const App = (): React.ReactElement => {
   const { t } = useTranslation()
