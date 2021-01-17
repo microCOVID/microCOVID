@@ -14,7 +14,7 @@ Are they <em><span style="text-decoration:underline;">new</span></em>, <em><span
   <tr>
    <td colspan="2" style="font-size:1.3em; line-height:1.5em;">
 <ul>
-<li>🌡️ Fever (<a href="https://www.washingtonpost.com/business/2020/05/15/fever-screening-coronavirus/">99.5 or above</a>)</li>
+<li>🌡️ Temperature of <a href="https://www.washingtonpost.com/business/2020/05/15/fever-screening-coronavirus/">99.5 or above</a></li>
 <li>🥵 Subjective “feverish feeling”</li>
 <li>🥶 Chills</li>
 <li>💨 Cough (especially a dry cough)</li>
@@ -32,11 +32,11 @@ Are they <em><span style="text-decoration:underline;">new</span></em>, <em><span
 </table>
 
 
-**🌡️ If you do have symptoms now…**
+### 🌡️ If you do have symptoms now…
 
 *   Let the person you’re seeing know beforehand. You are much more likely to have COVID if you currently have symptoms, and they will want to factor this increased risk into their risk budget.
 
-**📞 Are you willing to report any symptoms you develop over the next 10 days?**
+### 📞 Are you willing to report any symptoms you develop over the next 10 days?
 
 *   Doing so will allow the person you’re seeing to quarantine earlier while they are likely less contagious, thereby reducing the spread of COVID.
 *   If you agree to report symptoms, let the person you’re seeing know so they can account for that in their budget.
