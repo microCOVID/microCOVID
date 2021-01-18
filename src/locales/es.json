@@ -9,7 +9,7 @@
             "details_range_explanation": "Creemos con aproximadamente un 90% de confianza que el riesgo real se encuentra entre estos dos valores. Consulta nuestra <2>estimación de incertidumbre</2>.",
             "details_range_number": "{{ from }} y {{ to }} microCOVIDs",
             "details_range": "Probablemente entre",
-            "frequency_explanation_oneoff": "Dado que esta es una interacción única, el resultado se muestra como <strong>microCOVIDs <u> cada vez que </u> tienes esta interacción</strong>. Si realizas esta actividad muchas veces a la semana, cada vez que la realices, se contabilizará en tu presupuesto semanal. Si realizas esta actividad varias veces con las mismas personas cada semana, regístralas como \"{{Repeat_type_suggestion}}\" para ver cuál es la tasa máxima de transmisión por semana.",
+            "frequency_explanation_oneoff": "Dado que esta es una interacción única, el resultado se muestra como <strong>microCOVIDs <u> cada vez que </u> tienes esta interacción</strong>. Si realizas esta actividad muchas veces a la semana, cada vez que la realices, se contabilizará en tu presupuesto semanal. Si realizas esta actividad varias veces con las mismas personas cada semana, regístralas como \"{{repeated_type_suggestion}}\" para ver cuál es la tasa máxima de transmisión por semana.",
             "frequency_explanation_repeated": "Dado que ves a estas personas muchas veces a la semana, el resultado que ves es <strong> microCOVIDs <u> por semana </u> </strong>.",
             "details_frequency": "Frecuencia",
             "details_total_risk_number": "{{ points }} en un millón ({{ percentage }})",
@@ -30,7 +30,10 @@
             "risk_tolerance_selector_header": "Ajusta tu tolerancia al riesgo",
             "risk_budget_usage_explanation": "Esta interacción usa <strong>{{ usage }}</strong>. Esta cantidad de tu presupuesto será usada <strong>{{ frequency }}</strong>.",
             "details_person_risk_explanation_housemate": "Primero, calculamos que cada una de las demás personas en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener COVID-19 al momento, sin incluir su riesgo por vivir contigo.",
-            "details_person_risk_explanation": "Primero, calculamos que cada una de las demás personas en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener COVID-19 al momento."
+            "details_person_risk_explanation": "Primero, calculamos que cada una de las demás personas en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener COVID-19 al momento.",
+            "details_total_risk_explanation": "Por último, multiplicamos el Riesgo Personal, el Riesgo de Actividad y la cantidad de personas para obtener el resultado total de una probabilidad aproximada de <strong> {{points}} en un millón ({{porcentage}}) </strong> de adquirir COVID-19 durante esta actividad con estas personas <strong> {{frequency}} </strong>.",
+            "activity_risk_capped_note": "(NOTA: Hemos <2>limitado este número al Riesgo de Actividad máximo</2>.)",
+            "details_header_open": "Ocultar los detalles del cálculo"
         },
         "risk_note_about_household_members": "Al estimar tu riesgo de infección a través de un miembro del hogar o pareja/cónyuge, asumimos que sus interacciones son al interior, sin mascarilla y sin distancia.",
         "precautions": {
@@ -45,7 +48,8 @@
             "environment_question": "¿Es adentro o al exterior? ¿Hay circulación de aire en el espacio o se filtra el aire?",
             "environment_header": "Ambiente",
             "label": "Precauciones",
-            "no_intimate_bonus_outdoors": "Con distancias muy cortas, no estamos seguros de que estar al aire libre reduzca el riesgo de manera sustancial. Por lo tanto, no mejora la puntuación por estar al aire libre cuando la distancia es muy corta."
+            "no_intimate_bonus_outdoors": "Con distancias muy cortas, no estamos seguros de que estar al aire libre reduzca el riesgo de manera sustancial. Por lo tanto, no mejora la puntuación por estar al aire libre cuando la distancia es muy corta.",
+            "their_mask_header": "La mascarilla de los demas"
         },
         "prevalence": {
             "percent_increase_in_cases": "Incremento porcentual en casos desde la semana pasada a la actual",
@@ -98,7 +102,10 @@
         "large_group_warning": "Advertencia: Este es un número alto de personas. Recuerda que solamente necesitas contar a las personas a menos de 4 metros y medio tuyos (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos.",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluidos.",
-        "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás alojado actualmente?"
+        "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás alojado actualmente?",
+        "person_risk_profile_question": "¿Cuál es el perfil de riesgo de los demás?",
+        "distance_header": "Distancia",
+        "nearby_people_label": "Gente cercana"
     },
     "current_lang_two_letter_code": "es",
     "menu": {
