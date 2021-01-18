@@ -127,8 +127,12 @@
         "risk_tolerance_point1_percent_label": "Presupuesto de Precaución Alta",
         "risk_tolerance_1_percent_explanation": "Presupuesto: 1% de probabilidad de contraer COVID-19 por año (200 microCOVIDs por semana) (sugerido para personas sanas que NO están en contacto cercano con personas más vulnerables)",
         "firsttime": {
-            "microcovid_header": "¿Qué es un microCOVID?"
-        }
+            "microcovid_header": "¿Qué es un microCOVID?",
+            "budget_header": "¿Cómo puedo administrar mi riesgo personal utilizando un presupuesto de riesgo?",
+            "microcovid_explanation": "<p>El estimador presenta un nuevo concepto, el microCOVID. Un microCOVID es una probabilidad de una en un millón de contraer COVID-19.</p> <p>Una actividad de 20,000 microCOVIDs es muy insegura, ya que tiene un 2% de riesgo de contraer COVID-19<em>cada vez que la haces</em>.Una actividad de 20 microCOVIDs es relativamente segura, ya que podrías realizarla todas las semanas durante un año y aún así tener solo un 0.1% de probabilidad de contraer COVID-19.</p>"
+        },
+        "risk_modifier_frac_3rd": "{{frac}}ª parte del riesgo",
+        "baseline_risk": "riesgo base"
     },
     "current_lang_two_letter_code": "es",
     "menu": {
@@ -213,7 +217,9 @@
         "indoor": "Al interior",
         "partner": "Pareja / cónyuge [{{ percentage }} de probabilidad de transmisión por semana]",
         "repeated": "Miembro del hogar o visitante que se queda en tu hogar [probabilidad de {{ percentage }} de transmisión por semana]",
-        "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]"
+        "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
+        "sixft_distance": "2 metros o más de distancia",
+        "transit": "Un vagón de tren con filtración de aire"
     },
     "buttons": {
         "select_default_action": "Elige uno..."
