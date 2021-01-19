@@ -92,14 +92,14 @@
         "select_scenario": "Opcional: comienza con una actividad común predefinida",
         "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) y <7>Our World in Data</7> (tasas de prueba positivas internacionales).",
         "select_location_enter_manually": "Ingresa los datos manualmente...",
-        "select_location_placeholder": "Selecciona una localidad...",
-        "location_selector_header": "Paso 1: Selecciona tu localidad",
-        "location_subprompt_US": "Estado completo o selecciona tu condado...",
-        "location_subprompt_US-AK": "Estado completo o selecciona tu área...",
-        "location_subprompt_US-LA": "Total del estado/provincia, o selecciona tu municipio...",
-        "location_subprompt_country_or_regions": "Total por país o selecciona una región...",
-        "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Te invitamos a que encuentres formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
-        "large_group_warning": "Advertencia: Este es un número alto de personas. Recuerda que solamente necesitas contar a las personas a menos de 4 metros y medio tuyos (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
+        "select_location_placeholder": "Seleccione una localidad...",
+        "location_selector_header": "Paso 1: Seleccione su localidad",
+        "location_subprompt_US": "Estado completo o seleccione su condado...",
+        "location_subprompt_US-AK": "Estado completo o seleccione su barrio",
+        "location_subprompt_US-LA": "Total del estado o provincia, o seleccione su municipio...",
+        "location_subprompt_country_or_regions": "Total por país o elija una región...",
+        "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Lo invitamos a que encuentre formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
+        "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento super dispersador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluídos.",
         "number_of_people_near_you_partner": "¿Con cuántas personas vive o está alojado actualmente?",
@@ -110,7 +110,7 @@
             "whats_this": "Hemos construido un estimador que te permite calcular el riesgo de contraer COVID-19 de una actividad o persona en tu vida diaria, utilizando la <1>mejor investigación disponible</1>. Esperamos que esta herramienta te ayude a mejorar tu intuición, a reducir tus niveles de estrés y a descubrir buenas estrategias de reducción de daños. </p> <p>El primer paso para proteger a tu familia y comunidad es evitar contraer COVID-19.",
             "call_to_action": "Calcula el riesgo aproximado de contraer COVID-19 de una actividad o persona"
         },
-        "risk_tolerance_1_percent_label": "Presupuesto Estándar de Precaución",
+        "risk_tolerance_1_percent_label": "Presupuesto estándar de seguridad",
         "alerts": {
             "survey_request": "<0>Nos encantaría recibir tus comentarios:</0> ¡Queremos tu ayuda para que el estimador de microCOVIDs sea lo más útil posible! <2>Por favor, participa en nuestra encuesta de usuarios</2> para ayudarnos a priorizar nuevas funciones.",
             "b117": "<0>Actualización del modelo:</0> Hemos ajustado los parámetros para la nueva variante del COVID-19, B117. Lee más <3>aquí</3>"
@@ -133,7 +133,9 @@
             "budget_explanation": "Decidimos que un presupuesto anual de riesgo de 1% de probabilidad de contraer COVID-19 por año era razonable para la mayoría de las personas sanas que no están en contacto con grupos vulnerables. Para saber cómo llegamos a ese número, <1>haz clic aquí</1>. Si quieres usar este presupuesto de 1% de riesgo por año, vas a requerir que tu presupuesto semanal de actividades sume menos de unos 200 microCOVIDs por semana. Hemos creado una útil <3>hoja de cálculo</3> que te permite hacer un seguimiento de tus actividades a lo largo del tiempo."
         },
         "risk_modifier_frac_3rd": "{{frac}} del riesgo",
-        "baseline_risk": "riesgo base"
+        "baseline_risk": "riesgo base",
+        "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
+        "risk_modifier_frac_plural": "{{frac}}ª parte del riesgo"
     },
     "current_lang_two_letter_code": "es",
     "menu": {
@@ -191,7 +193,7 @@
             "contactWorks": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona que es trabajadora social o de salud.",
             "contact10": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 10 personas cuyo perfil de riesgo no conoces.",
             "contact4": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 4 personas cuyo perfil de riesgo no conoces.",
-            "contact1": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona cuyo perfil de riesgo no conoces.",
+            "contact1": "Tiene(n) contacto cercano con 1 persona cuyo perfil de riesgo no conoces, dentro de una burbuja cerrada respecto a los demás casos,",
             "closedPod20": "En una burbuja exclusiva de 20 personas",
             "closedPod10": "En una burbuja exclusiva de 10 personas",
             "closedPod4": "En una burbuja exclusiva de 4 personas",
@@ -201,18 +203,18 @@
             "frontline": "Un trabajador social o de salud",
             "average": "Una persona promedio en tu área"
         },
-        "loud_voice": "Hablando en voz alta (gritando, cantando, teniendo que gritar sobre la música ambiental para que se escuche)",
+        "loud_voice": "Hablando en voz alta (gritando, cantando, teniendo que gritar más alto que la música ambiental para que se te escuche)",
         "normal_voice": "Conversación normal",
         "silent_voice": "Sin hablar (por ej.: viajar en tren en silencio)",
-        "n95_mask": "Mascarilla N95 bien ajustada y bien sellada",
+        "n95_mask": "Mascarilla N95 o KN95 bien ajustada y bien sellada",
         "filtered_mask": "Mascarilla quirúrgica o mascarilla con filtro PM2.5",
-        "basic_mask": "Mascarilla de algodón, bandana o bufanda elástica (\"buff\")",
+        "basic_mask": "Mascarilla de algodón, pañuelo embozado (bandana paliacate) o bufanda elástica (\"buff\")",
         "no_mask": "Sin mascarilla o mascarilla mal puesta",
         "tenft_distance": "3 metros o más de distancia",
         "normal_distance": "Socialización normal (~1 metro de distancia)",
         "close_distance": "Cercana (menos de 30 cm de distancia)",
         "outdoor": "Al aire libre",
-        "partially_enclosed": "Un espacio con aperturas en uno o más lados al exterior",
+        "partially_enclosed": "Un espacio con aberturas en uno o más lados hacia el exterior",
         "car_windows_down": "Un auto en movimiento con las ventanas abiertas",
         "plane": "Un avión",
         "filtered": "Al interior con un filtro HEPA (tasa de flujo de 5 veces el tamaño de la habitación)",
@@ -221,11 +223,11 @@
         "repeated": "Miembro del hogar o visitante que se queda en tu hogar [probabilidad de {{ percentage }} de transmisión por semana]",
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
         "sixft_distance": "2 metros  o más de distancia",
-        "transit": "Un vagón de tren con filtración de aire",
-        "intimate_distance": "Besar"
+        "transit": "Un vagón de tren con filtro para aire",
+        "intimate_distance": "Besarse"
     },
     "buttons": {
-        "select_default_action": "Elige uno..."
+        "select_default_action": "Elije uno..."
     },
     "each time": "cada vez",
     "each time you do it": "cada vez que lo haces",
