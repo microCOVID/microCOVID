@@ -25,6 +25,7 @@ import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
+import { RiskQuestions } from 'pages/RiskQuestions'
 import {
   Spreadsheet,
   SpreadsheetNavDropdown,
@@ -33,7 +34,6 @@ import {
 import { Symptoms } from 'pages/Symptoms'
 
 import 'styles/App.scss'
-import { RiskQuestions } from 'pages/RiskQuestions'
 
 export const App = (): React.ReactElement => {
   const { t } = useTranslation()
