@@ -255,17 +255,19 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
     if (data.distance === 'intimate') {
       // Even a brief kiss probably has a non-trivial chance of transmission.
       effectiveDuration = Math.max(effectiveDuration, intimateDurationFloor)
-    }
-    if (data.distance !== 'intimate' && data.distance !== 'close') {
-      // Being outdoors only helps if you're not literally breathing each others' exhalation.
-      multiplier *= mulFor(Setting, data.setting)
-    }
-    if (data.distance !== 'intimate') {
+    } else {
+      if (data.distance !== 'close') {
+        // Being outdoors only helps if you're not literally breathing each
+        // others' exhalation.
+        multiplier *= mulFor(Setting, data.setting)
+      }
+      // Talking modifiers not allowed when kissing.
+      multiplier *= mulFor(Voice, data.voice)
+
       // You can't wear a mask if you're kissing!
       multiplier *= mulFor(TheirMask, data.theirMask)
       multiplier *= mulFor(YourMask, data.yourMask)
     }
-    multiplier *= mulFor(Voice, data.voice)
 
     multiplier *= effectiveDuration / 60.0
     if (multiplier > MAX_ACTIVITY_RISK) {

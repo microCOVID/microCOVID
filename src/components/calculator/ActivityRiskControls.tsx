@@ -33,6 +33,10 @@ export const ActivityRiskControls: React.FunctionComponent<{
     )
   }
 
+  if (data.distance === 'intimate') {
+    return <div />
+  }
+
   return (
     <React.Fragment>
       {header}
@@ -44,13 +48,12 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Setting}
       />
-      {data.setting === 'outdoor' &&
-      ['close', 'intimate'].includes(data.distance) ? (
+      {data.distance === 'close' && (
         <div className="warning">
           <Trans>calculator.precautions.no_intimate_bonus_outdoors</Trans>
         </div>
-      ) : null}
-      {data.setting === 'filtered' && (
+      )}
+      {data.setting === 'filtered' && data.distance !== 'close' && (
         <div className="warning">
           <Trans i18nKey="calculator.precautions.filtered_ensure_airflow">
             Ensure airflow, see
@@ -58,30 +61,26 @@ export const ActivityRiskControls: React.FunctionComponent<{
           </Trans>
         </div>
       )}
-      {data.distance !== 'intimate' && (
-        <>
-          <SelectControl
-            id="yourMask"
-            header={t('calculator.precautions.your_mask_header')}
-            label={t('calculator.precautions.your_mask_question')}
-            helpText={t('calculator.precautions.your_mask_note')}
-            popover={maskPopover}
-            data={data}
-            setter={setter}
-            source={YourMask}
-          />
-          <SelectControl
-            id="theirMask"
-            header={t('calculator.precautions.their_mask_header')}
-            label={t('calculator.precautions.their_mask_question')}
-            helpText={t('calculator.precautions.their_mask_note')}
-            popover={maskPopover}
-            data={data}
-            setter={setter}
-            source={TheirMask}
-          />
-        </>
-      )}
+      <SelectControl
+        id="yourMask"
+        header={t('calculator.precautions.your_mask_header')}
+        label={t('calculator.precautions.your_mask_question')}
+        helpText={t('calculator.precautions.your_mask_note')}
+        popover={maskPopover}
+        data={data}
+        setter={setter}
+        source={YourMask}
+      />
+      <SelectControl
+        id="theirMask"
+        header={t('calculator.precautions.their_mask_header')}
+        label={t('calculator.precautions.their_mask_question')}
+        helpText={t('calculator.precautions.their_mask_note')}
+        popover={maskPopover}
+        data={data}
+        setter={setter}
+        source={TheirMask}
+      />
       <SelectControl
         id="voice"
         header={t('calculator.precautions.volume_header')}
