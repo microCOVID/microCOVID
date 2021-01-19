@@ -22,8 +22,6 @@ const content = `
 3. **Check the result:** Go to the _Pod Overview_ sheet to see how this activity fits relative to your budget.
 4. **Adjust as-needed:** If you are modeling an activity in advance and the risk is using more of your budget than you would like, see if there are additional precautions you can take to lower the risk.
 
-**NOTE:** You can’t have any blank rows in between activities in your section, otherwise the totals will not add up correctly.
-
 **NOTE: **If you run out of rows in your section, [follow these steps](#) to insert new rows in a way where the formulas still work.
 
 See the _Example Activities_ sheet for examples that can help you understand how to fill in an activity row.
@@ -129,7 +127,6 @@ The good news is that modeling a custom person is almost exactly the same as mod
 2. **Create a row for the person**
     *   Type their name in any blank row in the “Person Name” column and that row will automatically turn into a “total” row for that person’s points.  All the activities you enter below this row will be a part of that person’s total. 
 3. **Activities:** Enter any activities they have done in the last 10 days the same way you would [enter your own activities](#logging-an-activity). When in doubt, err on the side of overestimating.
-    *   **Note:** You cannot have any blank rows in the middle of the list of the activities, otherwise they won’t be added to the total for that person.
 4. **Use the person while logging an activity:** After you create a _Custom Person_, their name will automatically be available in the “Person Risk Profile” column for any activity you are entering on your own log. Just select their name from the dropdown.
 
 See [Custom Person Modeling FAQ](/faq#custom-person-modeling-faq) for more details.

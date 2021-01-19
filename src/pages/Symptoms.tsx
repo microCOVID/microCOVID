@@ -10,7 +10,5 @@ const symptomPostMap: PostMap = {
 }
 
 export const Symptoms = (): React.ReactElement => {
-  return (
-    <MarkdownContents posts={symptomPostMap} id="symptoms" sectionTitle="" />
-  )
+  return <MarkdownContents posts={symptomPostMap} id="symptoms" />
 }

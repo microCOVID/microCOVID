@@ -33,6 +33,7 @@ import {
 import { Symptoms } from 'pages/Symptoms'
 
 import 'styles/App.scss'
+import { RiskQuestions } from 'pages/RiskQuestions'
 
 export const App = (): React.ReactElement => {
   const { t } = useTranslation()
@@ -151,6 +152,9 @@ export const App = (): React.ReactElement => {
               </Route>
               <Route path="/symptoms">
                 <Symptoms />
+              </Route>
+              <Route path="/questions">
+                <RiskQuestions />
               </Route>
               <Route path="/about">
                 <About />
