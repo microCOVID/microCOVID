@@ -148,15 +148,15 @@ export const Calculator = (): React.ReactElement => {
 
   return (
     <div id="calculator">
-      <Alert className="alert-info">
-        <BsFillInfoCircleFill />{' '}
-        <Trans i18nKey="calculator.alerts.b117">
-          <strong>Model update:</strong> Lipsum{' '}
-          <Link to="/blog/b117">here.</Link>
-        </Trans>
-      </Alert>
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
+          <Alert className="alert-info">
+            <BsFillInfoCircleFill />{' '}
+            <Trans i18nKey="calculator.alerts.b117">
+              <strong>Model update:</strong> Lipsum{' '}
+              <Link to="/blog/b117">here.</Link>
+            </Trans>
+          </Alert>
           <p>
             <Trans i18nKey="calculator.intro.whats_this">
               Lorem ipsum <a href="/paper">whitepaper</a> dolor sic amet...
