@@ -100,7 +100,7 @@
         "location_subprompt_country_or_regions": "Total por país o selecciona una región...",
         "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Te invitamos a que encuentres formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
         "large_group_warning": "Advertencia: Este es un número alto de personas. Recuerda que solamente necesitas contar a las personas a menos de 4 metros y medio tuyos (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
-        "household_members_note": "Si estás modelando la exposición al riesgo de los miembros de tu hogar, cuente sólo los contactos con gente que no pertenece a éste para evitar duplicar conteos.",
+        "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluídos.",
         "number_of_people_near_you_partner": "¿Con cuántas personas vive o está alojado actualmente?",
         "person_risk_profile_question": "¿Cuál es su perfil de riesgo?",
