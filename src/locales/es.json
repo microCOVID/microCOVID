@@ -48,7 +48,7 @@
             "environment_question": "¿Es adentro o al exterior? ¿Hay circulación de aire en el espacio o se filtra el aire?",
             "environment_header": "Ambiente",
             "label": "Precauciones",
-            "no_intimate_bonus_outdoors": "Con distancias muy cortas, no estamos seguros de que estar al aire libre reduzca el riesgo de manera sustancial. Por lo tanto, no mejora la puntuación por estar al aire libre cuando la distancia es muy corta.",
+            "no_intimate_bonus_outdoors": "Estamos ignorando la elección del entorno en este cálculo. No estamos seguros de que una buena ventilación o estar al aire libre reduzca sustancialmente el riesgo cuando hay tanta cercanía física entre personas.",
             "their_mask_header": "La mascarilla de los demas"
         },
         "prevalence": {
@@ -220,7 +220,8 @@
         "repeated": "Miembro del hogar o visitante que se queda en tu hogar [probabilidad de {{ percentage }} de transmisión por semana]",
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
         "sixft_distance": "2 metros o más de distancia",
-        "transit": "Un vagón de tren con filtración de aire"
+        "transit": "Un vagón de tren con filtración de aire",
+        "intimate_distance": "Besar"
     },
     "buttons": {
         "select_default_action": "Elige uno..."
