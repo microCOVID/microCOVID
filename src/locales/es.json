@@ -60,7 +60,7 @@
             "adjusted_prevalence": "Prevalencia ajustada",
             "reported_prevalence": "Prevalencia reportada",
             "positive_case_percentage": "Porcentaje de pruebas con resultados positivos",
-            "data_last_updated": "Última actualización de datos:"
+            "data_last_updated": "Última actualización de datos"
         },
         "category_postfix": "Riesgo",
         "category_extreme": "Extremo",
@@ -95,7 +95,7 @@
         "select_location_placeholder": "Seleccione una localidad...",
         "location_selector_header": "Paso 1: Seleccione su localidad",
         "location_subprompt_US": "Estado completo o seleccione su condado...",
-        "location_subprompt_US-AK": "Estado completo o seleccione su barrio",
+        "location_subprompt_US-AK": "Estado completo o seleccione su barrio...",
         "location_subprompt_US-LA": "Total del estado o provincia, o seleccione su municipio...",
         "location_subprompt_country_or_regions": "Total por país o elija una región...",
         "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Lo invitamos a que encuentre formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
@@ -193,7 +193,7 @@
             "contactWorks": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona que es trabajadora social o de salud.",
             "contact10": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 10 personas cuyo perfil de riesgo no conoces.",
             "contact4": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 4 personas cuyo perfil de riesgo no conoces.",
-            "contact1": "Tiene(n) contacto cercano con 1 persona cuyo perfil de riesgo no conoces, dentro de una burbuja cerrada respecto a los demás casos,",
+            "contact1": "Tiene(n) contacto cercano con 1 persona cuyo perfil de riesgo no conoces, dentro de una burbuja cerrada respecto a los demás casos.",
             "closedPod20": "En una burbuja exclusiva de 20 personas",
             "closedPod10": "En una burbuja exclusiva de 10 personas",
             "closedPod4": "En una burbuja exclusiva de 4 personas",
@@ -222,7 +222,7 @@
         "partner": "Pareja / cónyuge [{{ percentage }} de probabilidad de transmisión por semana]",
         "repeated": "Miembro del hogar o visitante que se queda en tu hogar [probabilidad de {{ percentage }} de transmisión por semana]",
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
-        "sixft_distance": "2 metros  o más de distancia",
+        "sixft_distance": "2 metros o más de distancia",
         "transit": "Un vagón de tren con filtro para aire",
         "intimate_distance": "Besarse"
     },
