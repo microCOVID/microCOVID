@@ -52,15 +52,15 @@
             "their_mask_header": "La mascarilla de los demas"
         },
         "prevalence": {
-            "percent_increase_in_cases": "Incremento porcentual en casos desde la semana pasada a la actual",
-            "cases_stable_or_decreasing": "Los casos se mantienen estables o a la baja",
+            "percent_increase_in_cases": "Incremento porcentual en casos desde la semana anterior a esta semana",
+            "cases_stable_or_decreasing": "Los casos se mantienen estables o a la baja.",
             "population": "Población total",
-            "last_week_cases": "Casos reportados la semana pasada",
+            "last_week_cases": "Casos reportados la semana anterior",
             "details_header": "Detalles",
             "adjusted_prevalence": "Prevalencia ajustada",
             "reported_prevalence": "Prevalencia reportada",
             "positive_case_percentage": "Porcentaje de pruebas con resultados positivos",
-            "data_last_updated": "Datos actualizados"
+            "data_last_updated": "Última actualización de datos:"
         },
         "category_postfix": "Riesgo",
         "category_extreme": "Extremo",
@@ -107,7 +107,7 @@
         "distance_header": "Distancias",
         "nearby_people_label": "Gente cercana",
         "intro": {
-            "whats_this": "Hemos construido un estimador que te permite calcular el riesgo de contraer COVID-19 de una actividad o persona en tu vida diaria, utilizando la <1>mejor investigación disponible</1>. Esperamos que esta herramienta te ayude a afinar tu intuición, a reducir tus niveles de estrés y a descubrir buenas estrategias de reducción de daños. </p> <p>El primer paso para proteger a tu familia y comunidad es evitar contraer COVID-19.",
+            "whats_this": "Hemos construido un estimador que te permite calcular el riesgo de contraer COVID-19 de una actividad o persona en tu vida diaria, utilizando la <1>mejor investigación disponible</1>. Esperamos que esta herramienta te ayude a mejorar tu intuición, a reducir tus niveles de estrés y a descubrir buenas estrategias de reducción de daños. </p> <p>El primer paso para proteger a tu familia y comunidad es evitar contraer COVID-19.",
             "call_to_action": "Calcula el riesgo aproximado de contraer COVID-19 de una actividad o persona"
         },
         "risk_tolerance_1_percent_label": "Presupuesto Estándar de Precaución",
@@ -128,11 +128,11 @@
         "risk_tolerance_1_percent_explanation": "Presupuesto: 1% de probabilidad de contraer COVID-19 por año (200 microCOVIDs por semana) (sugerido para personas sanas que NO están en contacto cercano con personas más vulnerables)",
         "firsttime": {
             "microcovid_header": "¿Qué es un microCOVID?",
-            "budget_header": "¿Cómo puedo administrar mi riesgo personal utilizando un presupuesto de riesgo?",
-            "microcovid_explanation": "<p>El estimador presenta un nuevo concepto, el microCOVID. Un microCOVID es una probabilidad de una en un millón de contraer COVID-19.</p> <p>Una actividad de 20,000 microCOVIDs es muy insegura, ya que tiene un 2% de riesgo de contraer COVID-19<em>cada vez que la haces</em>.Una actividad de 20 microCOVIDs es relativamente segura, ya que podrías realizarla todas las semanas durante un año y aún así tener solo un 0.1% de probabilidad de contraer COVID-19.</p>",
-            "budget_explanation": "Decidimos que un presupuesto anual de riesgo de 1% de probabilidad de contraer COVID-19 por año era razonable para la mayoría de las personas sanas que no están en contacto con grupos vulnerables. Para saber cómo llegamos a ese número, <1>haz clic aquí</1>. Si quieres alcanzar este presupuesto de 1% de riesgo por año, vas a requerir que tu presupuesto semanal de actividades sume menos de unos 200 microCOVIDs por semana. Hemos creado una útil <3>hoja de cálculo</3> que te permite hacer un seguimiento de tus actividades a lo largo del tiempo."
+            "budget_header": "¿Cómo puedo administrar mi riesgo utilizando un presupuesto de riesgo?",
+            "microcovid_explanation": "<p>El estimador presenta un nuevo concepto, el microCOVID. Un microCOVID es una probabilidad de una en un millón de contraer COVID-19.</p> <p>Una actividad de 20,000 microCOVIDS es muy insegura, ya que tiene un 2% de riesgo de contraer COVID-19<em>cada vez que la haces</em>.Una actividad de 20 microCOVIDs es relativamente segura, ya que podrías realizarla todas las semanas durante un año y aún tener solo un 0.1% de probabilidad de contraer COVID-19.</p>",
+            "budget_explanation": "Decidimos que un presupuesto anual de riesgo de 1% de probabilidad de contraer COVID-19 por año era razonable para la mayoría de las personas sanas que no están en contacto con grupos vulnerables. Para saber cómo llegamos a ese número, <1>haz clic aquí</1>. Si quieres usar este presupuesto de 1% de riesgo por año, vas a requerir que tu presupuesto semanal de actividades sume menos de unos 200 microCOVIDs por semana. Hemos creado una útil <3>hoja de cálculo</3> que te permite hacer un seguimiento de tus actividades a lo largo del tiempo."
         },
-        "risk_modifier_frac_3rd": "{{frac}}ª parte del riesgo",
+        "risk_modifier_frac_3rd": "{{frac}} del riesgo",
         "baseline_risk": "riesgo base"
     },
     "current_lang_two_letter_code": "es",
@@ -152,7 +152,7 @@
         "donations_details": "También agradecemos donaciones y propinas, si gustas. Sin presión, de verdad. Todos somos voluntarios y actualmente no tenemos ningún financiamiento para trabajar en este proyecto. ¡Gracias de antemano!",
         "donations_header": "Donaciones",
         "feedback": "Si tienes algún comentario, pregunta o te gustaría ayudar, comunícate con nosotros <1>aquí</1>.",
-        "contact_us_header": "Contáctanos",
+        "contact_us_header": "Contacto",
         "disclaimer": "<0>Descargo de responsabilidad</0> En esta herramienta indicamos nuestra mejor estimación basada en la evidencia disponible, incluso cuando esa evidencia no es concluyente. Hemos leído muchas investigaciones de expertos, pero nosotros mismos no somos expertos en este tema. Este trabajo no ha sido revisado científicamente por pares. Todavía hay mucha incertidumbre sobre el COVID-19. No uses esta herramienta como consejo médico. Sigue acatando las indicaciones del gobierno.",
         "data_inputs_recommendation": "Te sugerimos empezar con el <2>estimador</2> o la <5>publicación</5>.",
         "data_inputs_spreadsheet": "y una <1>hoja de cálculo</1> para calcular tu riesgo de contraer COVID-19 con más detalle y para realizar un seguimiento de tu riesgo a lo largo del tiempo.",
@@ -179,7 +179,8 @@
         "liveInPartner_noContacts": "Pareja cohabitante que no tiene interacciones en interiores aparte de contigo",
         "1person_15minCarRide": "Viaje en coche con 1 persona durante 15 minutos",
         "indoorUnmasked2": "Actividad relajada al interior con mascarillas con 2 personas",
-        "outdoorMasked2": "Actividad o salida relajada al aire libre con mascarillas con 2 personas"
+        "outdoorMasked2": "Actividad o salida relajada al aire libre con mascarillas con 2 personas",
+        "oneNightStand": "Sexo casual una única vez con una persona desconocida"
     },
     "data": {
         "person": {
@@ -219,7 +220,7 @@
         "partner": "Pareja / cónyuge [{{ percentage }} de probabilidad de transmisión por semana]",
         "repeated": "Miembro del hogar o visitante que se queda en tu hogar [probabilidad de {{ percentage }} de transmisión por semana]",
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
-        "sixft_distance": "2 metros o más de distancia",
+        "sixft_distance": "2 metros  o más de distancia",
         "transit": "Un vagón de tren con filtración de aire",
         "intimate_distance": "Besar"
     },
