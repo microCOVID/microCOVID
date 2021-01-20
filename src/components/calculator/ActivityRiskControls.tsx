@@ -3,7 +3,7 @@ import { Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import { SelectControl } from './SelectControl'
+import { SelectControl } from './controls/SelectControl'
 import { CalculatorData } from 'data/calculate'
 import { Setting, TheirMask, Voice, YourMask } from 'data/data'
 
