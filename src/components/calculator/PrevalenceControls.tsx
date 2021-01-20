@@ -70,10 +70,8 @@ const PrevalenceField: React.FunctionComponent<{
       onChange={(e) => {
         if (isNumber(max) || isNumber(min)) {
           let newValue = Number.parseFloat(e.target.value)
-          console.log(newValue)
           newValue = isNumber(max) && newValue > max ? max : newValue
           newValue = isNumber(min) && newValue < min ? min : newValue
-          console.log(newValue)
           setter(newValue.toString())
         } else {
           setter(e.target.value)
@@ -108,7 +106,7 @@ export const PrevalenceResult = (props: {
   data: CalculatorData
 }): React.ReactElement => {
   return (
-    <Card className="prevelance-result">
+    <Card className="prevalence-result">
       <Card.Body>
         <div>
           <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
@@ -162,6 +160,14 @@ export const PrevalenceControls: React.FunctionComponent<{
     })
   }
 
+  const handleEnterDataButtonOnClick = () => {
+    setLocationData(TOP_LOCATION_MANUAL_ENTRY, '')
+  }
+
+  const handleSelectLocationButtonOnClick = () => {
+    setLocationData('', '')
+  }
+
   // If a stored location exists, load latest data for that location.
   useEffect(() => {
     if (isFilled(data.subLocation) || isTopLocation(data.topLocation)) {
@@ -188,18 +194,18 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const locationSet = isTopLocation(data.topLocation)
 
-  const [detailsOpen, setDetailsOpen] = useState(
-    false || isManualEntry(data.topLocation),
-  )
-
   const isManualEntryCurrently = isManualEntry(data.topLocation)
+
+  const [detailsOpen, setDetailsOpen] = useState(
+    false || isManualEntryCurrently,
+  )
 
   return (
     <React.Fragment>
       <header id="location">
         <Trans>calculator.location_selector_header</Trans>
       </header>
-      <div className="form-group">
+      <div className="form-group" hidden={isManualEntryCurrently}>
         <select
           className="form-control form-control-lg"
           value={data.topLocation}
@@ -210,9 +216,6 @@ export const PrevalenceControls: React.FunctionComponent<{
         >
           <option value="">
             {t('calculator.select_location_placeholder')}
-          </option>
-          <option value={TOP_LOCATION_MANUAL_ENTRY}>
-            {t('calculator.select_location_enter_manually')}
           </option>
           {Object.keys(locationGroups).map((groupName, groupInd) => (
             <optgroup key={groupInd} label={groupName}>
@@ -249,9 +252,25 @@ export const PrevalenceControls: React.FunctionComponent<{
           </select>
         </div>
       )}
-
+      {isManualEntryCurrently ? (
+        <button
+          id="switchBetweenManualDataAndLocationSelection"
+          className="btn btn-secondary"
+          onClick={handleSelectLocationButtonOnClick}
+        >
+          {t('calculator.switch_button.select_location')}
+        </button>
+      ) : (
+        <button
+          id="switchBetweenManualDataAndLocationSelection"
+          className="btn btn-secondary"
+          onClick={handleEnterDataButtonOnClick}
+        >
+          {t('calculator.switch_button.enter_data_manually')}
+        </button>
+      )}
       <ControlledExpandable
-        id="prevelance-details"
+        id="prevalence-details"
         header={t('calculator.prevalence.details_header')}
         headerClassName={isManualEntryCurrently ? 'd-none' : ''}
         open={detailsOpen}
@@ -283,7 +302,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
         ) : (
           <PrevalenceField
-            id="precent-increase"
+            id="percent-increase"
             label={t('calculator.prevalence.percent_increase_in_cases')}
             value={data.casesIncreasingPercentage}
             unit="%"
