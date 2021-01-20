@@ -131,7 +131,11 @@
         "risk_modifier_frac_plural": "{{frac}} du risque",
         "risk_modifier_frac_3rd": "{{frac}} du risque",
         "saved_scenario_loaded_message": "Vous avez sélectionné ce scénario : <strong> {{ scenarioName }} </strong>. Les points ci-dessous ressemblent-ils à l'activité que vous avez en tête ? Sinon, ajustez-le jusqu'à ce qu'il semble correct.",
-        "frontline_worker_acknowledgement": "Nous apprécions énormément les sacrifices que les travailleurs de première ligne font pendant la pandémie. Nous vous encourageons à trouver des moyens sûrs de soutenir ces personnes, en les gardant socialement intégrées et prises en charge. Nous prévoyons que la plupart de ces travailleurs seront vaccinés dans les prochains mois, ce qui devrait réduire considérablement leur risque d'infection/transmission."
+        "frontline_worker_acknowledgement": "Nous apprécions énormément les sacrifices que les travailleurs de première ligne font pendant la pandémie. Nous vous encourageons à trouver des moyens sûrs de soutenir ces personnes, en les gardant socialement intégrées et prises en charge. Nous prévoyons que la plupart de ces travailleurs seront vaccinés dans les prochains mois, ce qui devrait réduire considérablement leur risque d'infection/transmission.",
+        "alerts": {
+            "survey_request": "<0>Nous aimerions recevoir vos remarques :</0> Nous voulons votre aide pour rendre le calculateur microCOVID aussi utile que possible !<2> Veuillez répondre à notre enquête auprès des utilisateurs</2> pour nous aider à prioriser les nouvelles fonctionnalités.",
+            "b117": "<0>Mise à jour du modèle :</0> Nous avons ajusté les paramètres du nouveau variant COVID-19, B117. En savoir plus <3> ici</3>."
+        }
     },
     "current_lang_two_letter_code": "fr",
     "menu": {

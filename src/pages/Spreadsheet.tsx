@@ -16,6 +16,23 @@ function spreadsheet(text = 'spreadsheet') {
   )
 }
 
+export const SubscribeForm: React.FunctionComponent = () => {
+  return (
+    <>
+      <h2>Subscribe for updates</h2>
+      <p>
+        We will send email updates when we make feature upgrades and bug fixes
+        to the spreadsheet.
+      </p>
+      <p>
+        <a href="http://eepurl.com/hb6y4T" target="_blank" rel="noreferrer">
+          Sign up for spreadsheet updates
+        </a>
+      </p>
+    </>
+  )
+}
+
 export const Spreadsheet = (): React.ReactElement => {
   return (
     <div className="paperPage">
@@ -63,7 +80,11 @@ export const Spreadsheet = (): React.ReactElement => {
         same thing as the {calculator}.
       </p>
 
-      <p>{spreadsheet('Use the spreadsheet here')}</p>
+      <p>
+        <strong>{spreadsheet('Use the spreadsheet here')}</strong>
+      </p>
+
+      <SubscribeForm />
 
       <Alert variant="info">
         <strong>Spreadsheet version 2.0 coming soon:</strong> We are looking for
