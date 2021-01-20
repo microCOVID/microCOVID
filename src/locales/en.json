@@ -109,7 +109,7 @@
     "location_subprompt_US-LA": "Entire state, or select parish...",
     "location_subprompt_US-AK": "Entire state, or select borough...",
     "location_subprompt_US": "Entire state, or select county...",
-    "location_selector_header": "Step 1: Location Risk",
+    "location_selector_header": "Step 1: Enter your location",
     "select_location_placeholder": "Select location...",
     "switch_button": {
       "select_location": "Switch to pre-populated location data",
