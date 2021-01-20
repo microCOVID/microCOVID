@@ -214,7 +214,7 @@
         "normal_distance": "Socialización normal (~1 metro de distancia)",
         "close_distance": "Cercana (menos de 30 cm de distancia)",
         "outdoor": "Al aire libre",
-        "partially_enclosed": "Un espacio con aberturas en uno o más lados hacia el exterior",
+        "partially_enclosed": "Un espacio con aperturas en uno o más lados hacia el exterior",
         "car_windows_down": "Un auto en movimiento con las ventanas abiertas",
         "plane": "Un avión",
         "filtered": "Al interior con un filtro HEPA (tasa de flujo de 5 veces el tamaño de la habitación)",
