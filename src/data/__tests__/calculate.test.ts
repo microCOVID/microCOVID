@@ -374,6 +374,23 @@ describe('calculate', () => {
         calcValue(oneHourIntimate)! * 2,
       )
     })
+    it('should not apply talking multiplier', () => {
+      const kissingTalking: CalculatorData = {
+        ...baseTestData,
+        ...prepopulated['One-night stand with a random person'],
+        voice: 'normal',
+      }
+      const kissingSilent: CalculatorData = {
+        ...kissingTalking,
+        voice: 'silent',
+      }
+      const kissingLoudTalking: CalculatorData = {
+        ...kissingTalking,
+        voice: 'loud',
+      }
+      expect(calcValue(kissingTalking)).toEqual(calcValue(kissingSilent))
+      expect(calcValue(kissingTalking)).toEqual(calcValue(kissingLoudTalking))
+    })
   })
 
   describe('Distance: close', () => {

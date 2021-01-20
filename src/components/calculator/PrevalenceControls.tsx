@@ -1,10 +1,10 @@
-import { isNullOrUndefined } from 'util'
-
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
+import { Typeahead } from 'react-bootstrap-typeahead'
 import { Trans, useTranslation } from 'react-i18next'
 
+import ControlLabel from './controls/ControlLabel'
 import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
@@ -16,8 +16,13 @@ import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
 import { Locations, PrevalenceDataDate } from 'data/location'
 import 'components/calculator/styles/PrevalenceControls.scss'
 
+interface Option {
+  label: string
+  value: string
+}
+
 const isFilled = (val: string): boolean => {
-  return !isNullOrUndefined(val) && val !== ''
+  return val !== null && val !== undefined && val !== ''
 }
 
 const isTopLocation = (val: string): boolean => {
@@ -70,10 +75,8 @@ const PrevalenceField: React.FunctionComponent<{
       onChange={(e) => {
         if (isNumber(max) || isNumber(min)) {
           let newValue = Number.parseFloat(e.target.value)
-          console.log(newValue)
           newValue = isNumber(max) && newValue > max ? max : newValue
           newValue = isNumber(min) && newValue < min ? min : newValue
-          console.log(newValue)
           setter(newValue.toString())
         } else {
           setter(e.target.value)
@@ -108,7 +111,7 @@ export const PrevalenceResult = (props: {
   data: CalculatorData
 }): React.ReactElement => {
   return (
-    <Card className="prevelance-result">
+    <Card className="prevalence-result">
       <Card.Body>
         <div>
           <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
@@ -162,6 +165,14 @@ export const PrevalenceControls: React.FunctionComponent<{
     })
   }
 
+  const handleEnterDataButtonOnClick = () => {
+    setLocationData(TOP_LOCATION_MANUAL_ENTRY, '')
+  }
+
+  const handleSelectLocationButtonOnClick = () => {
+    setLocationData('', '')
+  }
+
   // If a stored location exists, load latest data for that location.
   useEffect(() => {
     if (isFilled(data.subLocation) || isTopLocation(data.topLocation)) {
@@ -171,14 +182,14 @@ export const PrevalenceControls: React.FunctionComponent<{
     // eslint-disable-next-line
   }, [])
 
-  let subPrompt = t('calculator.location_subprompt_country_or_regions')
+  let subPromptType = 'country_or_regions'
   if (isTopLocation(data.topLocation) && data.topLocation.startsWith('US_')) {
     if (Locations[data.topLocation].label === 'Louisiana') {
-      subPrompt = t('calculator.location_subprompt_US-LA')
+      subPromptType = 'US-LA'
     } else if (Locations[data.topLocation].label === 'Alaska') {
-      subPrompt = t('calculator.location_subprompt_US-AK')
+      subPromptType = 'US-AK'
     } else {
-      subPrompt = t('calculator.location_subprompt_US')
+      subPromptType = 'US'
     }
   }
 
@@ -188,70 +199,103 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const locationSet = isTopLocation(data.topLocation)
 
+  const isManualEntryCurrently = isManualEntry(data.topLocation)
+
   const [detailsOpen, setDetailsOpen] = useState(
-    false || isManualEntry(data.topLocation),
+    false || isManualEntryCurrently,
   )
 
-  const isManualEntryCurrently = isManualEntry(data.topLocation)
+  const topLocationOptions = Object.keys(locationGroups).flatMap(
+    (groupName) => {
+      return locationGroups[groupName].map((locKey) => {
+        return { label: Locations[locKey].label, value: locKey }
+      })
+    },
+  )
+
+  const selectedTopLocation = topLocationOptions.find(
+    (option) => option.value === data.topLocation,
+  )
+
+  const subLocationOptions = !showSubLocation
+    ? []
+    : Locations[data.topLocation].subdivisions.map((locKey) => {
+        return { label: Locations[locKey].label, value: locKey }
+      })
+  const selectedSubLocation = subLocationOptions.find(
+    (option) => option.value === data.subLocation,
+  )
 
   return (
     <React.Fragment>
       <header id="location">
         <Trans>calculator.location_selector_header</Trans>
       </header>
-      <div className="form-group">
-        <select
-          className="form-control form-control-lg"
-          value={data.topLocation}
-          onChange={(e) => {
-            setLocationData(e.target.value, '')
+      <div className="form-group" hidden={isManualEntryCurrently}>
+        <ControlLabel
+          id="top-location-typeahead"
+          header={t('calculator.select_location_label')}
+        />
+        <Typeahead
+          clearButton={true}
+          id="top-location-typeahead"
+          onChange={(e: Option[]) => {
+            if (e.length !== 1) {
+              setLocationData('', '')
+              return
+            }
+            setLocationData(e[0].value, '')
           }}
-          aria-label={t('calculator.select_location_placeholder')}
-        >
-          <option value="">
-            {t('calculator.select_location_placeholder')}
-          </option>
-          <option value={TOP_LOCATION_MANUAL_ENTRY}>
-            {t('calculator.select_location_enter_manually')}
-          </option>
-          {Object.keys(locationGroups).map((groupName, groupInd) => (
-            <optgroup key={groupInd} label={groupName}>
-              {locationGroups[groupName].map((locKey, locInd) => (
-                <option key={locInd} value={locKey}>
-                  {Locations[locKey].label}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
+          options={topLocationOptions}
+          placeholder={t('calculator.select_location_placeholder')}
+          selected={
+            selectedTopLocation === undefined ? [] : [selectedTopLocation]
+          }
+        />
       </div>
       {!showSubLocation ? null : (
         <div className="form-group">
-          <select
-            className="form-control form-control-lg"
-            value={data.subLocation}
-            onChange={(e) => {
-              if (e.target.value === '') {
+          <ControlLabel
+            id="sub-location-typeahead"
+            header={t(`calculator.location_sublabel.${subPromptType}`)}
+          />
+          <Typeahead
+            clearButton={true}
+            id="sub-location-typeahead"
+            onChange={(e: Option[]) => {
+              if (e.length !== 1) {
                 setLocationData(data.topLocation, '')
-              } else {
-                setLocationData(data.topLocation, e.target.value)
+                return
               }
+              setLocationData(data.topLocation, e[0].value)
             }}
-            aria-label={subPrompt}
-            data-testid="sublocation"
-          >
-            <option value="">{subPrompt}</option>
-            {Locations[data.topLocation].subdivisions.map((key, index) => (
-              <option key={index} value={key}>
-                {Locations[key].label}
-              </option>
-            ))}
-          </select>
+            options={subLocationOptions}
+            placeholder={t(`calculator.location_subprompt.${subPromptType}`)}
+            selected={
+              selectedSubLocation === undefined ? [] : [selectedSubLocation]
+            }
+          />
         </div>
       )}
-
+      {isManualEntryCurrently ? (
+        <button
+          id="switchBetweenManualDataAndLocationSelection"
+          className="btn btn-secondary"
+          onClick={handleSelectLocationButtonOnClick}
+        >
+          {t('calculator.switch_button.select_location')}
+        </button>
+      ) : (
+        <button
+          id="switchBetweenManualDataAndLocationSelection"
+          className="btn btn-secondary"
+          onClick={handleEnterDataButtonOnClick}
+        >
+          {t('calculator.switch_button.enter_data_manually')}
+        </button>
+      )}
       <ControlledExpandable
-        id="prevelance-details"
+        id="prevalence-details"
         header={t('calculator.prevalence.details_header')}
         headerClassName={isManualEntryCurrently ? 'd-none' : ''}
         open={detailsOpen}
@@ -283,7 +327,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
         ) : (
           <PrevalenceField
-            id="precent-increase"
+            id="percent-increase"
             label={t('calculator.prevalence.percent_increase_in_cases')}
             value={data.casesIncreasingPercentage}
             unit="%"

@@ -4,7 +4,8 @@
         "whitepaper": "White Paper",
         "contactus": "Kontakt",
         "about": "Über das Projekt",
-        "calculator": "Rechner"
+        "calculator": "Rechner",
+        "blog": "Blog"
     },
     "current_lang_two_letter_code": "de",
     "calculator": {
@@ -55,7 +56,9 @@
             "details_header_open": "Berechnungsdetails ausblenden",
             "percentage_suffix": "% deines wöchentlichen Risikobudgets",
             "multiple_suffix": "x dein wöchentliches Risikobudget",
-            "risk_budget_explanation": "Du hast ein jährliches Risikobudget einer {{ budget_percent }}-Chance einer COVID-Infektion pro Jahr ausgewählt ({{ budget_points }} microCOVIDs). Das entspricht einem wöchentlichen Budget von <strong>{{ budget_weekly }} microCOVIDs pro Woche</strong>."
+            "risk_budget_explanation": "Du hast ein jährliches Risikobudget einer {{ budget_percent }}-Chance einer COVID-Infektion pro Jahr ausgewählt ({{ budget_points }} microCOVIDs). Das entspricht einem wöchentlichen Budget von <strong>{{ budget_weekly }} microCOVIDs pro Woche</strong>.",
+            "last_updated": "Das Modell wurde zuletzt am {{ date }} aktualisiert. (<1>Siehe das Änderungsprotokoll</1>)",
+            "activity_risk_capped_note": "(Hinweis: Wir haben diese Zahl <2> auf das maximale Aktivitätsrisiko begrenzt</2>.)"
         },
         "pointsdisplay": {
             "empty_warning": "Rechner ausfüllen, um Risikolevel einzusehen",
@@ -136,25 +139,30 @@
         "location_subprompt_US-AK": "Gesamtes Bundesland oder Borough auswählen …",
         "location_subprompt_US-LA": "Gesamtes Bundesland oder Parish auswählen …",
         "location_subprompt_country_or_regions": "Gesamtes Land oder Region auswählen …",
-        "saved_scenario_loaded_message": "Sie haben dieses Szenario ausgewählt: <strong>{{ scenarioName }}</strong>. Sehen die folgenden Punkte wie die Aktivität aus, an die Sie denken? Wenn nicht, passen Sie es an, bis es richtig aussieht."
+        "saved_scenario_loaded_message": "Sie haben dieses Szenario ausgewählt: <strong>{{ scenarioName }}</strong>. Sehen die folgenden Punkte wie die Aktivität aus, an die Sie denken? Wenn nicht, passen Sie es an, bis es richtig aussieht.",
+        "alerts": {
+            "survey_request": "<0>Wir hätten gerne deine Rückmeldung:</0> Wir hätten gerne deine Hilfe, um den microCOVID-Rechner so nützlich wie möglich zu machen! <2>Bitte füll unseren Nutzerfragebogen aus</2>, um neue Funktionen priorisieren zu können.",
+            "b117": "<0>Modell-Aktualisierung:</0> Wir haben die Parameter an die neue COVID-19-Variante, B117, angepasst. Lies mehr darüber <3>hier.</3>"
+        },
+        "frontline_worker_acknowledgement": "Wir schätzen die Opfer, die die Frontarbeiter während der Pandemie bringen, sehr. Wir ermutigen dich, sichere Wege zu finden, diese Menschen zu unterstützen, sie sozial einzubeziehen und zu pflegen. Wir gehen davon aus, dass die meisten dieser Arbeitnehmer in den nächsten Monaten geimpft werden, was ihr Infektionsrisiko/die Übertragung erheblich verringern dürfte."
     },
     "data": {
         "person": {
             "closedPod20": "In einer geschlossener Gruppe mit 20 Leuten",
             "closedPod10": "In einer geschlossenen Gruppe von 10 Leuten",
             "closedPod4": "In einer geschlossenen Gruppe von 4 Leuten",
-            "contactWorks": "Hat 1 engen Kontakt (inkl. Mitbewohnern), der ein systemrelevanter Mitarbeiter ist. Keine andere Arbeit oder gesellschaftlicher Umgang.",
-            "bars": "Geht regelmäßig in Bars",
+            "contactWorks": "Hat 1 engen Kontakt, der im Gesundheits- oder Sozialwesen arbeitet. Ansonsten geschlossenes Umfeld.",
+            "bars": "Ist in den letzten 10 Tagen in einer Bar gewesen",
             "hasCovid": "Hat COVID-19",
-            "livingWithPartner": "Lebt mit Partner, beide gehen nur einkaufen",
+            "livingWithPartner": "Lebt mit einer weiteren Person zusammen, beide gehen nur einkaufen",
             "livingAlone": "Lebt alleine und geht nur einkaufen",
-            "contact10": "Hat 10 enge Kontakte (inkl. Mitbewohnern), die gesellschaftlichen Umgang pflegen, aber nicht arbeiten. Keine andere Arbeit oder sonstigen gesellschaftlichen Umgang.",
-            "contact4": "Hat 4 enge Kontakte (inkl. Mitbewohnern), die gesellschaftlichen Umgang pflegen, aber nicht arbeiten. Keine andere Arbeit oder sonstigen gesellschaftlichen Umgang.",
-            "contact1": "Hat 1 engen Kontakt (inkl. Mitbewohnern), der gesellschaftlichen Umgang pflegt, aber nicht arbeitet. Keine andere Arbeit oder sonstigen gesellschaftlichen Umgang.",
-            "nonFrontline": "Jemand in deiner Umgebung, der kein systemrelevanter oder Arbeitnehmer mit Kundenkontakt ist",
-            "frontline": "Ein systemrelevanter Arbeitnehmer oder Arbeitnehmer mit Kundenkontakt in deiner Umgebung",
-            "microcovid_budget_deci_percent": "Nutzt microCOVID um ein Risiko von 0,1 % / Jahr (200 microcovid/Woche) einzuhalten",
-            "microcovid_budget_one_percent": "Nutzt microCOVID um ein Risiko von 1 % / Jahr (200 microcovid/Woche) einzuhalten",
+            "contact10": "Hat 10 enge Kontakte, deren Risikoprofil du nicht kennst. Ansonsten geschlossenes Umfeld.",
+            "contact4": "Hat 4 enge Kontakte, deren Risikoprofil du nicht kennst, in einem sonst geschlossenen Umfeld.",
+            "contact1": "Hat 1 engen Kontakt, dessen Risikoprofil du nicht kennst. Ansonsten geschlossenes Umfeld.",
+            "nonFrontline": "Jemand in deiner Umgebung, der von zuhause aus arbeitet",
+            "frontline": "Ein Beschäftigter im Gesundheits- oder Sozialwesen",
+            "microcovid_budget_deci_percent": "Hält ein Budget von 20 microCOVID pro Woche ein („sehr vorsichtiges Budget“)",
+            "microcovid_budget_one_percent": "Hält ein Budget von 200 microCOVID pro Woche einzuhalten („durchschnittlich vorsichtiges Budget“)",
             "average": "Eine durchschnittliche Person in deiner Umgebung"
         },
         "loud_voice": "Laute Unterhaltung (rufen, Musik übertönen, singen)",
@@ -189,13 +197,15 @@
         "bar": "Bar-Besuch",
         "restaurantIndoors": "Essengehen (Restaurant), drinnen",
         "restaurantOutdoors": "Essengehen (Restaurant), draußen",
-        "planeRide": "Flug",
-        "60minShopping": "Supermarkt (60 Minuten)",
+        "planeRide": "Flug (voll belegt)",
+        "60minShopping": "60 Minuten im Supermarkt (durchschnittliche Nr von Kunden)",
         "liveInPartner_noContacts": "Lebenspartner, der sich außer mit dir mit niemandem im Inneren trifft",
         "oneNightStand": "One-Night-Stand mit einer zufälligen Person",
         "1person_15minCarRide": "15-minütige Autofahrt mit einer Person",
         "indoorUnmasked2": "Treffen mit zwei Leuten im Inneren, wobei keine Masken getragen werden",
-        "outdoorMasked2": "Treffen mit zwei Leuten im Freien, wobei Masken getragen werden"
+        "outdoorMasked2": "Treffen mit zwei Leuten im Freien, wobei Masken getragen werden",
+        "planeRideMiddleSeatEmpty": "Flug (mittlere Sitzpläne freigehalten)",
+        "60minShoppingFew": "60 Minuten im Supermarkt (nur wenige andere Kunden)"
     },
     "about": {
         "basic_description": "Dies ist ein Projekt, um das COVID-Risiko aus deinen täglichen Aktivitäten abzuschätzen. Wir haben die Wissenschaftsliteratur nach Daten über die Wahrscheinlichkeit einer COVID-Infektion in verschiedenen Situationen durchkämmt und haben diese Daten in ein nutzbares Modell zusammengefasst. Wir schätzen das COVID-Risiko in der Einheit „microCOVIDs“, wobei 1 microCOVID ein eins-zu-eine-Million-Chance einer COVID-Infektion darstellt.",

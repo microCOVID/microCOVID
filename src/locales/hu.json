@@ -13,7 +13,7 @@
             "label": "Óvintézkedések",
             "environment_header": "Környezet",
             "environment_question": "Beltéren vagy a szabadban vagytok? Milyen a szellőzés? Van szűrőberendezés?",
-            "no_intimate_bonus_outdoors": "Ha kifejezetten közel vagytok egymáshoz, valószínűleg nem számít, hogy bent vagy a szabadban vagytok, úgyhogy ebben az esetben nem csökkentjük a kockázati szintet a szabadban.",
+            "no_intimate_bonus_outdoors": "Ha kifejezetten közel vagytok egymáshoz, valószínűleg nem számít, hogy bent vagy a szabadban vagytok, úgyhogy ebben az esetben nem csökkentjük a kockázati szintet.",
             "your_mask_header": "A te maszkod",
             "your_mask_question": "Milyen maszkot viselsz?",
             "your_mask_note": "Ha eszel vagy iszol, vedd úgy, hogy nincs rajtad maszk",

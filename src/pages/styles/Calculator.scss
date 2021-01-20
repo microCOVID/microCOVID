@@ -2,6 +2,7 @@
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
 @import "~rfs/scss";
 @import '~bootstrap/scss/bootstrap.scss';
+@import '~react-bootstrap-typeahead/css/Typeahead.css';
 
 #calculator {
   #calculator-introduction {
@@ -138,5 +139,21 @@
       margin: 0 5px;
     }
   }
+  
+  // Typeahead from react-bootstrap-typeahead
+  .rbt {
+    .rbt-input-main {
+      font-size: $input-font-size-lg;
+    }
 
+    .rbt-close {
+      color: #444
+    }
+
+    .dropdown-item {
+      font-size: $input-font-size-lg;
+      white-space: normal;  // Wrap lines
+      text-decoration: initial;
+    }
+  }
 }

@@ -47,7 +47,9 @@
             "details_range": "Pravděpodobně mezi",
             "frequency_explanation_repeated": "Jelikož tyto osoby vídáte několikrát týdně, výsledek je v jednotkách <strong> microCOVIDy <u>za týden</u></strong>.",
             "risk_budget_explanation": "Zvolili jste jako roční rozpočet šanci {{ budget_percent }} chytit COVID za rok ({{ budget_points }} microCOVIDů). To odpovídá týdennímu rozpočtu <strong> {{ budget_weekly }} microCOVIDů za týden</strong>.",
-            "risk_budget_header": "Jak často můžu toto vzhledem k mému zorpočtu rizika dělat?"
+            "risk_budget_header": "Jak často můžu toto vzhledem k mému zorpočtu rizika dělat?",
+            "last_updated": "Model naposledy aktualizován {{ date }}. (<1>Zobrazit seznam změn</1>)",
+            "activity_risk_capped_note": "(Poznámka: <2>toto číslo jsme omezili na maximální rizikovost aktivity</2>.)"
         },
         "risk_note_about_household_members": "Při odhadování rizika nakažení od člena domácnosti nebo partnera/ky předpokládáme, že kontakt probíhá uvnitř, bez roušek a bez dodržování vzdáleností.",
         "risk_modifier_frac_plural": "{{frac}} rizika",
@@ -128,7 +130,13 @@
         "distance_header": "Vzdálenost",
         "people_count": "Lidí",
         "number_of_people_near_you_partner": "S kolika lidmi žijete či bydlíte?",
-        "nearby_people_label": "Lidé poblíž"
+        "nearby_people_label": "Lidé poblíž",
+        "alerts": {
+            "survey_request": "<0>Budeme rádi za vaši zpětnou vazbu:</0> Oceníme vaši pomoc, abychom udělali microCOVID kalkulačku co nejužitečnější! <2>Prosím vyplňte náš dotazník pro uživatele</2>, abyste nám pomohli určit priority pro další vývoj tohoto nástroje.",
+            "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde.</3>"
+        },
+        "saved_scenario_loaded_message": "Zvolili jste scénář: <strong>{{ scenarioName }}</strong>. Zkontrolujte volby níže, zda odpovídají tomu, co máte na mysli. Pokud ne, upravte je tak, aby odpovídaly.",
+        "frontline_worker_acknowledgement": "Hluboce oceňujeme oběti, které dělají během pandemie pracovníci v první linii. Doporučujeme najít bezpečný způsob, jak těmto lidem poskytnout podporu a péči a předejít tomu, že se budou cítit izolovaní. Přepdpokládáme, že většina z nich bude očkována v nejbližších měsících, což výrazně sníží riziko, že se nakazí nebo někoho nakazí."
     },
     "current_lang_two_letter_code": "cs",
     "menu": {
@@ -136,25 +144,26 @@
         "about": "O projektu",
         "calculator": "Kalkulačka",
         "whitepaper": "Metodika",
-        "spreadsheet": "Spreadsheet"
+        "spreadsheet": "Spreadsheet",
+        "blog": "Blog"
     },
     "data": {
         "person": {
-            "contact10": "Má 10 blízkých kontaktů (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jiné kontakty nemá a nepracuje.",
-            "contact4": "Má 4 blízké kontakty (všetně spolubydlících), kteří potkávají lidi, ale nepracují. Jiné kontakty nemá a nepracuje.",
-            "contact1": "Má 1 blízký kontakt (všetně spolubydlících), který potkává lidi, ale nepracuje. Jiné kontakty nemá a nepracuje.",
+            "contact10": "Má 10 blízkých kontaktů, jejichž rizikové profily neznáte. Jinak je v uzavřené bublině.",
+            "contact4": "Má 4 blízké kontakty, jejichž rizikové profily neznáte. Jinak je v uzavřené bublině.",
+            "contact1": "Má 1 blízký kontakt, jehož rizikový profil neznáte. Jinak je v uzavřené bublině.",
             "hasCovid": "Má COVID",
-            "bars": "Chodí pravidelně do barů",
+            "bars": "Navštívil(a) bar v posledních 10 dnech",
             "closedPod20": "V uzavřené bublině 20 lidí",
             "closedPod10": "V uzavřené bublině 10 lidí",
             "closedPod4": "V uzavřené bublině 4 lidí",
-            "livingWithPartner": "Žije pouze s partnerem/kou, oba chodí pouze nakupovat",
-            "nonFrontline": "Člověk ze stejné oblasti, který NENÍ zdravotnický či exponovaný pracovník",
-            "frontline": "Zdravotnický či jinak více vystavený pracovník ze stejné oblasti",
+            "livingWithPartner": "Žije s jedním dalším člověkem, oba chodí pouze nakupovat",
+            "nonFrontline": "Průměrný člověk ze stejné oblasti, který pracuje z domova",
+            "frontline": "Zdravotnický nebo sociální pracovník",
             "average": "Průměrný člověk ze stejné oblasti",
             "microcovid_budget_deci_percent": "Používá microCOVID pro udržení rizika pod 0.1% za rok (200 microcovidů za týden)",
             "microcovid_budget_one_percent": "Používá microCOVID pro udržení rizika pod 1% za rok (200 microcovidů za týden)",
-            "contactWorks": "Má 1 blízký kontakt (včetně spolubydlících), který pracuje v první linii. Jinak kontakty nemá a nepracuje.",
+            "contactWorks": "Má 1 blízký kontakt, který je zdravotnický nebo sociální pracovník. Jinak je v uzavřené bublině.",
             "livingAlone": "Žije sám/a a pouze chodí nakupovat"
         },
         "filtered_mask": "Chirurgická maska nebo maska/rouška s PM2,5 filtrační vložkou",
@@ -168,7 +177,7 @@
         "tenft_distance": "Alespoň 3 m od sebe",
         "sixft_distance": "Alespoň 2 m od sebe",
         "normal_distance": "Běžná socializace (cca 1 m od sebe)",
-        "close_distance": "Blízko (<0,3 m od sebe)",
+        "close_distance": "Blízko (méně než 0,3 m od sebe)",
         "intimate_distance": "Líbání",
         "outdoor": "Venku",
         "partially_enclosed": "Prostor s alespoň jednou stranou zcela otevřenou ven",
@@ -207,14 +216,16 @@
         "largeOutdoorParty": "Velká venkovní oslava: s maskami a metrovými rozestupy",
         "bar": "Návštěva baru",
         "planeRide": "Let letadlem",
-        "60minShopping": "Nákup v supermarketu trvající 60 minut",
+        "60minShopping": "Nákup v supermarketu trvající 60 minut (běžný počet dalších nakupujících)",
         "liveInPartner_noContacts": "Partner/ka, který/á s vámi bydlí a nemá kromě vás žádné interakce",
         "1person_15minCarRide": "Jízda autem s jednou osobou trvající 15 minut",
         "indoorUnmasked2": "Setkání s dvěma lidmi bez masek, uvnitř",
         "outdoorMasked2": "Setkání s dvěma lidmi v maskách, venku",
         "restaurantIndoors": "Jídlo v restauraci, uvnitř",
         "restaurantOutdoors": "Jídlo v restauraci, venku",
-        "oneNightStand": "Známost na jednu noc s náhodnout osobou"
+        "oneNightStand": "Známost na jednu noc s náhodnout osobou",
+        "planeRideMiddleSeatEmpty": "Cesta letadlem (prostřední sedadlo ponecháno prázdné)",
+        "60minShoppingFew": "60-minutový nákup v samoobsluze (malý počet dalších nakupujících)"
     },
     "buttons": {
         "select_default_action": "Zvolte jednu možnost ..."

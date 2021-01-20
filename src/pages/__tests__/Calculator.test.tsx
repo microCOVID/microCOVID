@@ -12,18 +12,19 @@ describe('calculator page', () => {
   })
 
   it('activity details section reveals after location is selected', () => {
-    const { getByText, queryByText, getByRole } = render(<Calculator />, {
-      wrapper: AllProviders,
-    })
+    const { getByText, queryByText, getByPlaceholderText } = render(
+      <Calculator />,
+      {
+        wrapper: AllProviders,
+      },
+    )
 
     const interactionTypeLabelQuery = /Is this a specific activity or an ongoing relationship/i
     expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
-    const topLocationBox = getByRole('combobox', { name: /Select location/i })
-    const californiaOption = getByText(/California/i) as HTMLOptionElement
-    fireEvent.change(topLocationBox, {
-      target: { value: californiaOption.value },
-    })
-    expect(californiaOption.selected).toBeTruthy()
+    const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
+    fireEvent.click(topLocationBox)
+    const californiaOption = getByText(/California/i)
+    fireEvent.click(californiaOption)
     expect(getByText(interactionTypeLabelQuery)).toBeInTheDocument()
   })
 })
