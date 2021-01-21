@@ -83,7 +83,7 @@ class JHUDailyReport(JHUCommonFields):
     Recovered: int
     Active: int
     # Incident_Rate: float, was renamed from Incidence_Rate in early November
-    Case_Fatality_Ratio: float
+    # Case_Fatality_Ratio: float
 
 
 class JHUCasesTimeseriesUS(JHUCommonFields):
@@ -136,6 +136,7 @@ class OWIDTestingData(pydantic.BaseModel):
 
 
 # CovidActNow dataset:
+
 
 class CANMetrics(pydantic.BaseModel):
     testPositivityRatio: Optional[float]  # 7-day rolling average
@@ -608,6 +609,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Grand Princess",
         "MS Zaandam",
         "Western Sahara",
+        "Micronesia",
     ):
         return True
     if line.Country_Region == "US":
@@ -690,13 +692,17 @@ def main() -> None:
 
         # Test positivity per US county and state
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
-            assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
+            assert (
+                type(item.fips) is int
+            ), "Expected item.fips to be int but got {}".format(type(item.fips))
             if item.fips not in data.fips_to_county:
                 # Ignore e.g. Northern Mariana Islands
                 print(f"ignoring unknown county fips {item.fips}")
                 continue
             county = data.fips_to_county[item.fips]
-            assert us_state_name_by_abbrev[item.state] == county.state, f"expected {item.state} to be {county.state}"
+            assert (
+                us_state_name_by_abbrev[item.state] == county.state
+            ), f"expected {item.state} to be {county.state}"
             if item.metrics is not None:
                 county.test_positivity_rate = item.metrics.testPositivityRatio
 
