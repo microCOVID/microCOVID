@@ -137,17 +137,22 @@
         "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
         "risk_modifier_frac_plural": "{{frac}}ª parte del riesgo",
         "switch_button": {
-            "enter_data_manually": "Cambia a ingreso manual de datos"
+            "enter_data_manually": "Cambia a ingreso manual de datos",
+            "select_location": "Cambia a datos precargados de ubicación"
         },
         "location_sublabel": {
-            "country_or_regions": "Provincia, región o estado"
+            "country_or_regions": "Provincia, región o estado",
+            "US": "Condado o municipalidad",
+            "US-AK": "Población",
+            "US-LA": "Municipio o población"
         },
         "location_subprompt": {
             "US": "Total a nivel provincia/región/estado o elige tu condado o municipio...",
             "US-AK": "Total a nivel provincia/región/estado o elige una población...",
             "US-LA": "Total a nivel provincia/región/estado, o elige un municipio...",
             "country_or_regions": "Total a nivel país, o elige una provincia, región o estado..."
-        }
+        },
+        "select_location_label": "País o estado de EUA"
     },
     "current_lang_two_letter_code": "es",
     "menu": {
