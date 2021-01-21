@@ -310,7 +310,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             setter({ ...data, casesPastWeek: parseInt(value || '') })
           }
           inputType="number"
-          isEditable={!locationSet}
+          isEditable={isManualEntryCurrently}
           className="hide-number-buttons"
         />
         <PrevalenceField
@@ -319,7 +319,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           value={data.population}
           setter={(value) => setter({ ...data, population: value })}
           inputType="text"
-          isEditable={!locationSet}
+          isEditable={isManualEntryCurrently}
           className="hide-number-buttons"
         />
         {locationSet && data.casesIncreasingPercentage === 0 ? (
@@ -335,7 +335,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             }}
             inputType="number"
             min={0}
-            isEditable={!locationSet}
+            isEditable={isManualEntryCurrently}
             className="hide-number-buttons"
           />
         )}
@@ -361,7 +361,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             inputType="number"
             max={100}
             min={0}
-            isEditable={!locationSet}
+            isEditable={isManualEntryCurrently}
             className="hide-number-buttons"
           />
         )}
