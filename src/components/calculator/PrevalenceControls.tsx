@@ -5,7 +5,6 @@ import { Typeahead } from 'react-bootstrap-typeahead'
 import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './controls/ControlLabel'
-import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
@@ -374,7 +373,6 @@ export const PrevalenceControls: React.FunctionComponent<{
                 {PrevalenceDataDate}
               </em>
             </div>
-            <CopyToSpreadsheetButton data={data} />
             <div>
               <p className="mt-3">
                 <Trans i18nKey="calculator.prevalence_info_source_information">
