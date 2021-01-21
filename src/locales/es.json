@@ -29,7 +29,7 @@
             "last_updated": "Última actualización del modelo el día {{ date }}. (<1>Vea bitácora de cambios</1>)",
             "risk_tolerance_selector_header": "Ajuste su tolerancia al riesgo",
             "risk_budget_usage_explanation": "Esta interacción usa <strong>{{ usage }}</strong>. Esta cantidad de su presupuesto será usada <strong>{{ frequency }}</strong>.",
-            "details_person_risk_explanation_housemate": "Primero, calculamos que cada uno de los otros individuos en esta área tiene <strong>un riesgo de {{ person_risk }} en un millón</strong> de tener covid en este momento, sin incluir su riesgo por vivir contigo.",
+            "details_person_risk_explanation_housemate": "Primero, calculamos que cada uno de los otros individuos en esta área tiene <strong>un riesgo de {{ person_risk }} en un millón</strong> de tener COVID-19 en este momento, sin incluir su riesgo por vivir contigo.",
             "details_person_risk_explanation": "Primero, calculamos que cada persona individual en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener COVID-19 en este momento.",
             "details_total_risk_explanation": "Por último, multiplicamos el Riesgo Personal, el Riesgo de Actividad y la cantidad de personas para obtener el resultado total de una probabilidad aproximada de <strong> {{points}} por millón ({{percentage}}) </strong> de adquirir COVID-19 durante esta actividad con estas personas <strong> {{frequency}} </strong>.",
             "activity_risk_capped_note": "(NOTA: Hemos <2>limitado este número al Riesgo de Actividad máximo</2>.)",
@@ -79,7 +79,7 @@
         "pointsdisplay": {
             "range": "probablemente entre: {{ from }} hasta {{ to }}",
             "microCOVIDs": "microCOVIDs",
-            "empty_warning": "Llene sus datos en la calculadora para ver el nivel de riesgo"
+            "empty_warning": "Ingresa tus datos en el estimador para ver el nivel de riesgo"
         },
         "riskreduction": {
             "onetime_warning": "Éstos pueden ser pertinentes o no a tu actividad.",
@@ -92,7 +92,7 @@
         "select_scenario": "Opcional: comienza con una actividad común predefinida",
         "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) y <7>Our World in Data</7> (tasas de prueba positivas internacionales).",
         "select_location_enter_manually": "Ingresa los datos manualmente...",
-        "select_location_placeholder": "Seleccione una localidad...",
+        "select_location_placeholder": "Elige tu país o un estado de EUA...",
         "location_selector_header": "Paso 1: Seleccione su localidad",
         "location_subprompt_US": "Estado completo o seleccione su condado...",
         "location_subprompt_US-AK": "Estado completo o seleccione su barrio...",
@@ -102,7 +102,7 @@
         "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento super dispersador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluídos.",
-        "number_of_people_near_you_partner": "¿Con cuántas personas vive o está alojado actualmente?",
+        "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás alojado actualmente?",
         "person_risk_profile_question": "¿Cuál es su perfil de riesgo?",
         "distance_header": "Distancias",
         "nearby_people_label": "Gente cercana",
@@ -135,7 +135,19 @@
         "risk_modifier_frac_3rd": "{{frac}} del riesgo",
         "baseline_risk": "riesgo base",
         "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
-        "risk_modifier_frac_plural": "{{frac}}ª parte del riesgo"
+        "risk_modifier_frac_plural": "{{frac}}ª parte del riesgo",
+        "switch_button": {
+            "enter_data_manually": "Cambia a ingreso manual de datos"
+        },
+        "location_sublabel": {
+            "country_or_regions": "Provincia, región o estado"
+        },
+        "location_subprompt": {
+            "US": "Total a nivel provincia/región/estado o elige tu condado o municipio...",
+            "US-AK": "Total a nivel provincia/región/estado o elige una población...",
+            "US-LA": "Total a nivel provincia/región/estado, o elige un municipio...",
+            "country_or_regions": "Total a nivel país, o elige una provincia, región o estado..."
+        }
     },
     "current_lang_two_letter_code": "es",
     "menu": {
@@ -227,7 +239,7 @@
         "intimate_distance": "Besarse"
     },
     "buttons": {
-        "select_default_action": "Elije uno..."
+        "select_default_action": "Elige uno..."
     },
     "each time": "cada vez",
     "each time you do it": "cada vez que lo haces",
