@@ -300,7 +300,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         open={detailsOpen}
         setter={setDetailsOpen}
       >
-        {!isManualEntryCurrently && <PrevalenceResult data={data} />}
+        <PrevalenceResult data={data} />
 
         <PrevalenceField
           id="reported-cases"
