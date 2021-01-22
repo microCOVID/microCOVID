@@ -74,7 +74,7 @@
     },
     "nearby_people_label": "Nearby people",
     "number_of_people_near_you_partner": "How many people are you living or staying with?",
-    "number_of_people_near_you_onetime": "How many people are usually near you during this activity?",
+    "number_of_people_near_you_onetime": "How many people are usually within 15 feet of you, at any given time?",
     "people_count": "People",
     "distance_question": "How close are these nearby people, on average?",
     "distance_header": "Distance",
@@ -207,9 +207,9 @@
     }
   },
   "scenario": {
-    "outdoorMasked2": "Outdoor masked hangout with 2 people",
-    "indoorUnmasked2": "Indoor unmasked hangout with 2 people",
-    "1person_15minCarRide": "Car ride with 1 person for 15 mins",
+    "outdoorMasked2": "Outdoor masked hangout with 2 other people",
+    "indoorUnmasked2": "Indoor unmasked hangout with 2 other people",
+    "1person_15minCarRide": "Car ride with 1 other person for 15 mins",
     "oneNightStand": "One-night stand with a random person",
     "liveInPartner_noContacts": "Live-in partner who has no indoor interactions besides you",
     "60minShopping": "Grocery store for 60 minutes (average # of shoppers)",
@@ -219,8 +219,8 @@
     "restaurantOutdoors": "Eating in restaurant, outdoors",
     "restaurantIndoors": "Eating in restaurant, indoors",
     "bar": "Going to bar",
-    "largeOutdoorParty": "Large outdoor party: masked with 3 feet between people",
-    "smallIndoorParty25": "Small indoor party: unmasked with 25 people",
+    "largeOutdoorParty": "Outdoor party: 80 people, masked, with 3 feet between people",
+    "smallIndoorParty25": "Indoor party: 25 people, unmasked",
     "outdoorMaskedWithCovidPositive": "Outdoor, masked hangout with person who has COVID",
     "indoorUnmaskedWithCovidPositive": "Indoor, unmasked hangout with person who has COVID",
     "votingInPerson": "Voting in-person"
