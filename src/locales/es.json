@@ -82,7 +82,7 @@
             "empty_warning": "Ingresa tus datos en el estimador para ver el nivel de riesgo"
         },
         "riskreduction": {
-            "onetime_warning": "Éstos pueden ser pertinentes o no a tu actividad.",
+            "onetime_warning": "Estos pueden ser pertinentes o no a tu actividad.",
             "onetime_tips": "<li>MoDifiquE sus actividades (hágalas con Mascarilla, con Distancia sana y en Exteriores)</li> <li>!Use la mejor mascarilla facial que pueda! <br/><1/></li> <li>Visite lugares públicos durante las horas de menor aforo</li> <li> Reduzca las idas a tiendas haciendo un solo viaje para comprar para varias personas, pidiendo que le entreguen a domicilio o comprando en línea</li> <li>Si esta actividad es con amigos, pídales que no asistan si ellos o cualquiera de sus conocidos se sienten mal</li>",
             "onetime_header": "Estas son algunas formas de reducir el riesgo de esta actividad",
             "housemates_tips": "<li>Hable con ellos acerca de cómo sus acciones afectan su propio riesgo, tanto como el de usted</li> <li>Solicíteles que MoDifiquEn sus actividades (Mascarillas, Distancia sana y ambientes al Exterior) </li> <li>Los trabajadores esenciales pueden usar una mascarilla de alta calidad (ej. N95/FFP2) para trabajar <1/></li> <li>Pídales que reduzcan las actividades sociales sin sana distancia al mínimo número de personas posibles</li> <li>Fomente que sus conocidos se aislen y se realicen pruebas de diagnóstico a la primera señal de síntomas de Covid</li> <li>Si tienen alto riesgo ante Covid y debe estar en interiores con ellos:<ul> <li>Usen mascarillas en espacios cerrados</li> <li>Maximicen la ventilación abriendo ventanas, encendiendo ventiladores que introduzcan aire desde el exterior y con filtros de aire HEPA </li> <li>Aíslense dentro de la casa manteniéndose cada uno en cuartos distintos</li> </ul></li>",
@@ -102,7 +102,7 @@
         "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento super dispersador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluídos.",
-        "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás alojado actualmente?",
+        "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás quedándote actualmente?",
         "person_risk_profile_question": "¿Cuál es su perfil de riesgo?",
         "distance_header": "Distancias",
         "nearby_people_label": "Gente cercana",
@@ -135,7 +135,7 @@
         "risk_modifier_frac_3rd": "{{frac}} del riesgo",
         "baseline_risk": "riesgo base",
         "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
-        "risk_modifier_frac_plural": "{{frac}}ª parte del riesgo",
+        "risk_modifier_frac_plural": "{{frac}} parte del riesgo",
         "switch_button": {
             "enter_data_manually": "Cambia a ingreso manual de datos",
             "select_location": "Cambia a datos precargados de ubicación"
