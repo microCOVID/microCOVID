@@ -90,7 +90,7 @@
         "select_scenario": "Optionnel : commencez par une activité commune prédéfinie",
         "prevalence_info_source_information": "Données de prévalence consolidées de <1>Johns Hopkins CSSE</1> (cas signalés), <4>Covid Act Now</4> (taux de tests positifs aux États-Unis) et <7>Our World in Data</7> (taux internationaux de tests positifs).",
         "select_location_enter_manually": "Entrez les données manuellement…",
-        "select_location_placeholder": "Sélectionnez un lieu…",
+        "select_location_placeholder": "Sélectionnez le pays ou l'État américain...",
         "location_selector_header": "Étape 1 : Entrez votre localisation",
         "location_subprompt_US": "État entier ou sélectionnez un comté…",
         "location_subprompt_US-AK": "État entier ou sélectionnez un arrondissement…",
@@ -135,6 +135,23 @@
         "alerts": {
             "survey_request": "<0>Nous aimerions recevoir vos remarques :</0> Nous voulons votre aide pour rendre le calculateur microCOVID aussi utile que possible !<2> Veuillez répondre à notre enquête auprès des utilisateurs</2> pour nous aider à prioriser les nouvelles fonctionnalités.",
             "b117": "<0>Mise à jour du modèle :</0> Nous avons ajusté les paramètres du nouveau variant COVID-19, B117. En savoir plus <3> ici</3>."
+        },
+        "switch_button": {
+            "enter_data_manually": "Passer au mode de saisie manuelle des données",
+            "select_location": "Passer aux données de localisation préremplies"
+        },
+        "select_location_label": "Pays ou État américain",
+        "location_sublabel": {
+            "US": "Comté",
+            "US-AK": "Arrondissement",
+            "US-LA": "Paroisse",
+            "country_or_regions": "Région"
+        },
+        "location_subprompt": {
+            "US": "État entier ou sélectionnez un comté…",
+            "US-AK": "État entier ou sélectionnez un arrondissement…",
+            "US-LA": "État entier, ou sélectionnez une paroisse…",
+            "country_or_regions": "Pays entier ou sélectionnez une région ..."
         }
     },
     "current_lang_two_letter_code": "fr",
