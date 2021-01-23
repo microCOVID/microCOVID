@@ -237,6 +237,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         />
         <Typeahead
           clearButton={true}
+          highlightOnlyResult={true}
           id="top-location-typeahead"
           onChange={(e: Option[]) => {
             if (e.length !== 1) {
@@ -260,6 +261,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           />
           <Typeahead
             clearButton={true}
+            highlightOnlyResult={true}
             id="sub-location-typeahead"
             onChange={(e: Option[]) => {
               if (e.length !== 1) {

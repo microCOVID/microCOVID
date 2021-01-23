@@ -125,7 +125,7 @@
       "enter_data_manually": "Switch to manual data entry mode"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), and <7>Our World in Data</7> (international positive test rates).",
-    "select_scenario": "Optional: Start with a predefined common activity",
+    "select_scenario": "Search for an activity or build your own below...",
     "baseline_risk": "baseline risk",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
     "risk_modifier_frac_3rd": "{{frac}}rd the risk",
