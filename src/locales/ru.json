@@ -33,7 +33,9 @@
             "details_header_closed": "Показать подробности расчета",
             "person_0": "человек",
             "person_1": "человека",
-            "person_2": "человек"
+            "person_2": "человек",
+            "details_total_risk_number": "{{ points }} на миллион ({{ percentage }})",
+            "details_person_risk_number": "шанс {{ person_risk }} на миллион"
         },
         "precautions": {
             "volume_header": "Объём",
@@ -42,13 +44,22 @@
             "your_mask_note": "Если вы едите или пьете, выберите «без маски»",
             "your_mask_question": "Какую маску вы носите?",
             "your_mask_header": "Ваша маска",
-            "label": "Меры предосторожности"
+            "label": "Меры предосторожности",
+            "volume_question": "Как много вы (и те кто с вами) говорите?",
+            "their_mask_header": "Их маски"
         }
     },
     "current_lang_two_letter_code": "ru",
     "menu": {
         "contactus": "Обратная связь",
         "spreadsheet": "Таблица",
-        "calculator": "Калькулятор"
+        "calculator": "Калькулятор",
+        "blog": "Блог",
+        "about": "О проекте"
+    },
+    "scenario": {
+        "restaurantOutdoors": "Приём пищи в ресторане, вне помещения",
+        "planeRideMiddleSeatEmpty": "Полёт на самолёте (средняя наполненность салона)",
+        "planeRide": "Полёт на самолёте (все места заняты)"
     }
 }
