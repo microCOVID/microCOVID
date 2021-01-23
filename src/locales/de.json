@@ -144,7 +144,24 @@
             "survey_request": "<0>Wir hätten gerne deine Rückmeldung:</0> Wir hätten gerne deine Hilfe, um den microCOVID-Rechner so nützlich wie möglich zu machen! <2>Bitte füll unseren Nutzerfragebogen aus</2>, um neue Funktionen priorisieren zu können.",
             "b117": "<0>Modell-Aktualisierung:</0> Wir haben die Parameter an die neue COVID-19-Variante, B117, angepasst. Lies mehr darüber <3>hier.</3>"
         },
-        "frontline_worker_acknowledgement": "Wir schätzen die Opfer, die die Frontarbeiter während der Pandemie bringen, sehr. Wir ermutigen dich, sichere Wege zu finden, diese Menschen zu unterstützen, sie sozial einzubeziehen und zu pflegen. Wir gehen davon aus, dass die meisten dieser Arbeitnehmer in den nächsten Monaten geimpft werden, was ihr Infektionsrisiko/die Übertragung erheblich verringern dürfte."
+        "frontline_worker_acknowledgement": "Wir schätzen die Opfer, die die Frontarbeiter während der Pandemie bringen, sehr. Wir ermutigen dich, sichere Wege zu finden, diese Menschen zu unterstützen, sie sozial einzubeziehen und zu pflegen. Wir gehen davon aus, dass die meisten dieser Arbeitnehmer in den nächsten Monaten geimpft werden, was ihr Infektionsrisiko/die Übertragung erheblich verringern dürfte.",
+        "switch_button": {
+            "enter_data_manually": "Wechseln in den manuellen Dateneingabemodus",
+            "select_location": "Wechseln zu vorab aufgefüllten Standortdaten"
+        },
+        "select_location_label": "Land oder US-Bundesstaat",
+        "location_sublabel": {
+            "US": "Landkreis",
+            "US-AK": "Stadtbezirk",
+            "US-LA": "Kommune",
+            "country_or_regions": "Bundesland"
+        },
+        "location_subprompt": {
+            "US": "Gesamtes Bundesland, oder Landkreis auswählen…",
+            "US-AK": "Gesamtes Bundesland, oder Bezirk auswählen…",
+            "US-LA": "Gesamtes Bundesland, oder Kommune auswählen…",
+            "country_or_regions": "Gesamtes Land oder Region auswählen …"
+        }
     },
     "data": {
         "person": {

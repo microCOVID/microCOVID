@@ -74,7 +74,7 @@
         },
         "nearby_people_label": "Emberek körülötted",
         "number_of_people_near_you_partner": "Hány emberrel élsz együtt?",
-        "number_of_people_near_you_onetime": "Hányan vannak körülötted általában?",
+        "number_of_people_near_you_onetime": "Hányan vannak körülötted 3 méteren belül általában?",
         "people_count": "Résztvevők száma",
         "distance_question": "Átlagban milyen messze vannak tőled?",
         "distance_header": "Távolság",
@@ -109,7 +109,7 @@
         "location_subprompt_US-AK": "Az egész terület (vagy válassz megyét)",
         "location_subprompt_US": "Az egész terület (vagy válassz megyét)",
         "location_selector_header": "1. lépés: Hol vagy?",
-        "select_location_placeholder": "Válaszd ki a listából...",
+        "select_location_placeholder": "Válassz országot vagy államot...",
         "select_location_enter_manually": "Add meg kézzel...",
         "prevalence_info_source_information": "A jelentett esetek számát a <1>Johns Hopkins CSSE adatbázisból</1>, a pozitív tesztek arányát a USA-ban a <4>Covid Act Now-ról</4>, a világ többi részén pedig az <7>Our World in Data-ról</7> gyűjtjük le.",
         "select_scenario": "Opcionális: válassz a kész példák közül",
@@ -144,6 +144,23 @@
         "alerts": {
             "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> Szükségünk van rád ahhoz, hogy ez az oldal minél szélesebb kör számára legyen hasznos. <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
             "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul."
+        },
+        "switch_button": {
+            "select_location": "Kész fertőzési adatok használata",
+            "enter_data_manually": "Fertőzési adatok megadássa kézzel"
+        },
+        "select_location_label": "Ország vagy állam",
+        "location_sublabel": {
+            "US": "Megye",
+            "US-AK": "Megye",
+            "US-LA": "Megye",
+            "country_or_regions": "Régió"
+        },
+        "location_subprompt": {
+            "US": "Az egész terület (vagy válassz megyét)",
+            "US-AK": "Az egész terület (vagy válassz megyét)",
+            "US-LA": "Az egész terület (vagy válassz megyét)",
+            "country_or_regions": "Az egész terület (vagy válassz régiót)"
         }
     },
     "per week": "hetente",
@@ -195,8 +212,8 @@
         "plane": "Repülő"
     },
     "scenario": {
-        "outdoorMasked2": "Találkozás a szabadban, maszkban, ketten",
-        "indoorUnmasked2": "Találkozás beltéren, maszk nélkül, ketten",
+        "outdoorMasked2": "Találkozás két másik emberrel szabadban, maszkban",
+        "indoorUnmasked2": "Találkozás két másik emberrel beltéren, maszk nélkül",
         "1person_15minCarRide": "Negyedórás autóút egy másik emberrel",
         "oneNightStand": "Egyéjszakás kaland egy ismeretlennel",
         "liveInPartner_noContacts": "Egy háztartásban élő élettárs, aki mással nem találkozik beltéren",
@@ -205,8 +222,8 @@
         "restaurantOutdoors": "Éttermi étkezés a szabadban",
         "restaurantIndoors": "Éttermi étkezés, beltéren",
         "bar": "Kocsmázás",
-        "largeOutdoorParty": "Nagy szabadtéri rendezvény maszkban, egyméteres távolságtartással",
-        "smallIndoorParty25": "Kis beltéri rendezvény: 25 ember, maszk nélkül",
+        "largeOutdoorParty": "Szabadtéri 80 fős rendezvény maszkban, egyméteres távolságtartással",
+        "smallIndoorParty25": "Beltéri rendezvény 25 emberrel, maszk nélkül",
         "outdoorMaskedWithCovidPositive": "Találkozó a szabadban maszkban egy koronavírusossal",
         "votingInPerson": "Személyesen szavazni",
         "indoorUnmaskedWithCovidPositive": "Találkozó beltéren, maszk nélkül egy koronavírusossal",
