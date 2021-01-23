@@ -31,7 +31,7 @@
             "risk_budget_usage_explanation": "Esta interacción usa <strong>{{ usage }}</strong>. Esta cantidad de tu presupuesto será usada <strong>{{ frequency }}</strong>.",
             "details_person_risk_explanation_housemate": "Primero, calculamos que cada uno de los otros individuos en esta área tiene <strong>un riesgo de {{ person_risk }} en un millón</strong> de tener COVID-19 en este momento, sin incluir su riesgo por vivir contigo.",
             "details_person_risk_explanation": "Primero, calculamos que cada persona individual en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener COVID-19 en este momento.",
-            "details_total_risk_explanation": "Por último, multiplicamos el Riesgo Personal, el Riesgo de Actividad y la cantidad de personas para obtener el resultado total de una probabilidad aproximada de <strong> {{points}} en un millón ({{percentage}}) </strong> de adquirir COVID-19 durante esta actividad con estas personas <strong> {{frequency}} </strong>.",
+            "details_total_risk_explanation": "Por último, multiplicamos el Riesgo Personal, el Riesgo de Actividad y la cantidad de personas para obtener el resultado total de una probabilidad aproximada de <strong> {{points}} por millón ({{percentage}}) </strong> de adquirir COVID-19 durante esta actividad con estas personas <strong>{{frequency}}</strong>.",
             "activity_risk_capped_note": "(NOTA: Hemos <2>limitado este número al Riesgo de Actividad máximo</2>.)",
             "details_header_open": "Ocultar los detalles del cálculo"
         },
