@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Popover } from 'react-bootstrap'
+import { Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './controls/ControlLabel'
@@ -99,9 +99,6 @@ export const PersonRiskControls: React.FunctionComponent<{
               })
             }
           />
-          <Form.Text id={'personCount HelpText'} muted>
-            Within 15 feet
-          </Form.Text>
           <GroupSizeWarning people={data.personCount} />
         </div>
       )}
