@@ -67,6 +67,8 @@ Where \`R\` = risk budget in microCOVIDs, \`N\` = number of housemates in the po
 
 _Note:_ You don’t need to fill anything from this table into the spreadsheet. It will calculate this for you based on your current pod size.
 
+Important: The 30% chance of transmission to housemates number is based on the fact that, on average, people tend to quarantine within their home, isolating from other housemates once they begin developing symptoms. We highly recommend you self-isolate as much as possible as soon as you notice any [symptoms](/symptoms).
+
 
 ## Understanding risk to me & risk to pod
 

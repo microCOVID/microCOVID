@@ -137,6 +137,9 @@ The good news is that modeling a custom person is almost exactly the same as mod
     *   **Tip:** If you wish, you can send them our [recent activity questions](/questions) as a way to make the process clearer and smoother.
 2. **Create a row for the person**
     *   Type their name in any blank row in the “Person Name” column and that row will automatically turn into a “total” row for that person’s points.  All the activities you enter below this row will be a part of that person’s total. 
+    *   If this profile is something that could be used "generically" regardless of location, check the "Is this a generic person profile that should be adjustable by location?" box to the left of "Person Name". Checking this box means that when you use this profile later in an activity entry you should be to adjust the score based on the location by location. Examples: A generic bodyworker, a generic hair stylist, a generic person who just gets groceries. 
+
+    You would not check this box for a profile who represents a specific person. Example: My friend Lee lives in one specific place, so I shouldn't be adjust their score for various different locations.
 3. **Activities:** Enter any activities they have done in the last 10 days the same way you would [enter your own activities](#logging-an-activity). When in doubt, it is better to overestimate. 
     *  **Note:** You do not need to include activities they have done with you, because that would lead to double counting your risk.
 4. **Select this Person Risk Profile when logging an activity:** After you create a _Custom Person_, their name will automatically be available in the “Person Risk Profile” column for any activity you are entering on your own log. Just select their name from the dropdown.
