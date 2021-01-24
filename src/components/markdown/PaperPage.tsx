@@ -106,20 +106,20 @@ export const MarkdownContents: React.FunctionComponent<{
       <span id={id}></span>
       <div className="sectionIndicator">
         {sectionTitle && <>{sectionTitle}</>}
-        {sectionTitle && showSectionNumbers && <>&raquo;</>}
+        {sectionTitle && showSectionNumbers && <> &raquo; </>}
         {showSectionNumbers && <>Section {slugs.indexOf(id) + 1}</>}
       </div>
 
       <h1 className="pageTitle">{page.title}</h1>
 
-      {simpleLayout && <Navigation />}
+      {!simpleLayout && <Navigation />}
       <hr />
 
       <div dangerouslySetInnerHTML={{ __html: body }} />
 
       {page.donation ? <Donation /> : null}
 
-      {simpleLayout && <Navigation />}
+      {!simpleLayout && <Navigation />}
 
       {footnotes && (
         <div dangerouslySetInnerHTML={{ __html: footnotes }} key="footnotes" />

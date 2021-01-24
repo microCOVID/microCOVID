@@ -3,7 +3,7 @@ import budgetSetting from './img/budget-setting.png'
 const title = 'Spreadsheet FAQ'
 const shortTitle = 'FAQ'
 const content = `
-Jump to: [General](#general-spreadsheet-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling) | [Budget FAQ](#budget)
+Jump to: [General](#general-spreadsheet-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling) | [Risk Budget](#risk-budget)
 
 # General Spreadsheet FAQ
 
@@ -202,7 +202,7 @@ If you’d rather overestimate your points and not need to do as much up-keep on
 2. Enter their name and their score on your spreadsheet in the _INTERNAL_PERSON_ sheet under the “Manual Entries” section.
 
 
-# Budget
+# Risk Budget
 
 ## What’s the difference between “risk to me” and “risk to pod”?
 

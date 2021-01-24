@@ -1,7 +1,7 @@
 const title = 'Symptoms Checklist'
 const shortTitle = 'Symptoms Checklist'
 const content = `
-You can use this page as a reminder for which COVID symptoms to be mindful of. _(This page is designed for microCOVID spreadsheet users to send to a contact they are interacting with.)_
+You can use this page as a reminder for which COVID symptoms to be mindful of.[^temp] _(This page is designed for microCOVID spreadsheet users to send to a contact they are interacting with.)_
 
 <div class="alert alert-warning"><strong>Disclaimer:</strong> This page is for informational purposes only, not for a medical diagnosis.</div>
 
@@ -14,7 +14,7 @@ Are they <em><span style="text-decoration:underline;">new</span></em>, <em><span
   <tr>
    <td colspan="2" style="font-size:1.3em; line-height:1.5em;">
 <ul>
-<li>🌡️ Temperature of <a href="https://www.washingtonpost.com/business/2020/05/15/fever-screening-coronavirus/">99.5 or above</a></li>
+<li>🌡️ Temperature of 99.5 or above</li>
 <li>🥵 Subjective “feverish feeling”</li>
 <li>🥶 Chills</li>
 <li>💨 Cough (especially a dry cough)</li>
@@ -31,7 +31,6 @@ Are they <em><span style="text-decoration:underline;">new</span></em>, <em><span
   </tr>
 </table>
 
-
 ### 🌡️ If you do have symptoms now…
 
 *   Let the person you’re seeing know beforehand. You are much more likely to have COVID if you currently have symptoms, and they will want to factor this increased risk into their risk budget.
@@ -42,7 +41,10 @@ Are they <em><span style="text-decoration:underline;">new</span></em>, <em><span
 *   If you agree to report symptoms, let the person you’re seeing know so they can account for that in their budget.
 *   Please report symptoms within 24 hours of when they begin, so the person you interacted with can begin to quarantine.
 
-**Other resources:** You can do a more detailed [self-assessment survey](https://landing.google.com/screener/covid19) here. You can read more about [COVID symptoms](https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html) here.
+**Other resources:** You can do a more detailed [self-assessment survey](https://landing.google.com/screener/covid19) here. You can read more about [COVID symptoms](https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html) here. 
+
+
+[^temp]: Though 100 or 100.4 is typically used as a temperature to indicate a fever, we use 99.5 in order to be as conservative as possible. See [this article](https://www.washingtonpost.com/business/2020/05/15/fever-screening-coronavirus/).
 
 
 `

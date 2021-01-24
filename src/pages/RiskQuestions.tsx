@@ -10,5 +10,11 @@ const riskQuestionsPostMap: PostMap = {
 }
 
 export const RiskQuestions = (): React.ReactElement => {
-  return <MarkdownContents posts={riskQuestionsPostMap} id="questions" />
+  return (
+    <MarkdownContents
+      posts={riskQuestionsPostMap}
+      id="questions"
+      simpleLayout={true}
+    />
+  )
 }

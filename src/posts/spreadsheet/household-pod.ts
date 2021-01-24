@@ -40,7 +40,7 @@ const content = `
 
 ## How the number of people in your household affects your budget
 
-If you lived alone and were choosing a 1% budget for yourself, then we’d have a budget of 10,000 micoCOVIDs per person per year (= 192/person/week). If you have others in your pod you have a [30% chance of transmitting COVID to each other](/paper/14-research-sources#household-member) person. That means living with others reduces your “outside of the pod” budget. Each additional person you add to your pod reduces your budget.
+If you lived alone and were choosing a 1% budget for yourself, then we’d have a budget of 10,000 micoCOVIDs per person per year (= 192/person/week). If you have others in your pod, you automatically have a [30% chance of transmitting COVID to each other](/paper/14-research-sources#household-member) person. That means living with others reduces your “outside of the pod” budget. Each additional person you add to your pod reduces your budget.
 
 Under the hood. Here’s the formula we use:
 

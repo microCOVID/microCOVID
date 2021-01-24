@@ -51,7 +51,7 @@ You can read more about [logging activities](./basics), [custom modeling the ris
 
 ## Get the latest updates
 
-[Subscribe to receives updates about the spreadsheet as we upgrade it](${mailchimpSubscribeUrl})
+[Subscribe to receives updates about the spreadsheet as we upgrade it](${mailchimpSubscribeUrl}).
 `
 
 const post = { title, shortTitle, content }
