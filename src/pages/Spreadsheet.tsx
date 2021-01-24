@@ -10,8 +10,6 @@ import { mailchimpLink, spreadsheetUrl } from 'components/SpreadsheetUtil'
 import { TableOfContents } from 'components/TableOfContents'
 import { pages } from 'posts/spreadsheet/index'
 
-const calculator = <Link to="/calculator">Calculator</Link>
-
 export const Spreadsheet = (): React.ReactElement => {
   const { id } = useParams()
   const { t } = useTranslation()
@@ -50,35 +48,30 @@ export const SpreadsheetTOC = (): React.ReactElement => {
         <h2>What is the spreadsheet for?</h2>
         <p>
           The spreadsheet can help you model the risk of activities and people
-          you are seeing more precisely than is possible with the {calculator}.
-          It serves as a tool to help you use the{' '}
-          <Link to="/paper/9-advanced-method">Advanced Method</Link>.
+          you are seeing more precisely than is possible with the{' '}
+          <Link to="/calculator">website calculator</Link>.
         </p>
         <p>
           <strong>This spreadsheet might be a good fit for you if:</strong>
           <ol>
             <li>
-              <strong>Activity logging:</strong> You want to log your activity
-              over time to make sure you’re staying within your intended budget.
+              <strong>Maintaining a personl risk budget:</strong> You want to
+              log your activity over time to make sure you’re staying within
+              your intended budget.
             </li>
             <li>
-              <strong>Custom Person Risk modeling:</strong> You want to model
-              more exactly the risk of a person you are seeing.
+              <strong>Modeling the risk of seeing other people:</strong> You
+              want to know how risky it is to interact with a specific other
+              person. (Whereas the Calculator only has pre-built risk profiles.)
             </li>
             <li>
               <strong>Household/pod risk budgeting:</strong> You live with
               others or have other people you are seeing on a regular basis and
-              want to keep track of your budget. (The{' '}
+              want to keep everyone's risk within a certain budget. (The{' '}
               <Link to="/spreadsheet/household-pod">
                 households and pods page
               </Link>{' '}
               introduces this approach in detail.)
-            </li>
-            <li>
-              <strong>You want to have more space in your budget:</strong>{' '}
-              Accurately modeling the people you’re interacting with often
-              results in you using fewer points for each activity, which means
-              you can do more things.
             </li>
           </ol>
         </p>
@@ -105,11 +98,11 @@ export const SpreadsheetTOC = (): React.ReactElement => {
       <SubscribeForm />
 
       <Alert variant="info">
-        <strong>Looking for testers:</strong> We are looking for beta testers
-        for this new version of the spreadsheet. If you are using the microCOVID
-        spreadsheet with your household/pod to track your collective COVID risk
-        and are intereted in giving us feedback on your experience, please email
-        Jeremy at{' '}
+        <strong>Looking for testers:</strong> We are looking for folks who are
+        willing to offer feedback on this new version of the spreadsheet. If you
+        are using the microCOVID spreadsheet with your household/pod to track
+        your collective COVID risk and are intereted in giving us feedback on
+        your experience, please email Jeremy at{' '}
         <a
           href="mailto:blanchard.jeremy@gmail.com"
           target="_blank"
