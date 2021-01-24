@@ -71,7 +71,7 @@ By default, the spreadsheet automatically imports the latest data for each of th
 # Activity Modeling
 
 
-## How do the different precautions affect the risk risk score?
+## How do the different precautions affect the risk score?
 
 For the purposes of calculating the microCOVID risk score for an activity, we assume a default activity is **indoors, no mask, 3 feet apart, normal talking volume**. Any variation from that decreases/increases the risk. You can read the [explanation behind each of these modifiers here](/paper/5-activity-risk#modifiers-duration-masks-location-distance-volume) and the [in-depth research here](/paper/14-research-sources#activity-risk).
 
@@ -209,7 +209,7 @@ If you’d rather overestimate your points and not need to do as much up-keep on
 
 ## What if I am seeing someone who is using microCOVID to track their risk?
 
-**Option A:** If so, you can either select a built-in category like “1% risk per year adherent (using microCOVID).”
+**Option A:** You can select a built-in category like “1% risk per year adherent (using microCOVID).”
 
 **Option B:** to be even more precise, you can do the following:
 
@@ -221,7 +221,7 @@ If you’d rather overestimate your points and not need to do as much up-keep on
 
 ## What’s the difference between “risk to me” and “risk to pod”?
 
-The spreadsheet is designed to ensure that you are only exposing your podmates to that total amount of risk. Certain features allow you to take on more risk but reduces the risk you pose to your podmates
+The spreadsheet is designed to ensure that you are only exposing your podmates to the budget you have specified. Certain features allow you to take on more risk but reduce the risk you pose to your podmates.
 
 One main place this occurs is with the “contact will report symptoms” checkbox, which reduces the risk to the pod by 50%. 
 
@@ -232,7 +232,7 @@ For example, If you log an activity that is 300 points, and the person you’re 
 
 Though you could track your budget along any time frame you want (weekly budget, monthly budget, etc), the spreadsheet is built to consider a weekly budget timeframe.
 
-If you want to “save up” points and use more in a future week, it’s possible to do so and still maintain the integrity of your risk budget. However, if you have others in your pod, you’ll be temporarily increasing the risk they pose to the people they see beyond the usual amount. For example, if you go 2 months without using any points, you could use them all in one week, which might put you at, say, 1,000 microCOVIDs. Your podmates are being exposed to 30% of that risk, which in this example would be 300 microCOVIDs. If one of them is going to see a loved one for a few days who is more vulnerable to COVID (and only has a budget of 20 microCOVIDs), your activities make it difficult for them to do so safely. It’s important to discuss this situation as a pod and come to agreements about how you’d like to handle situations like this.
+If you want to “save up” points and use more in a future week, it’s possible to do so and still hold true to the "X% risk of getting per year" budget you've chosen. However, if you have others in your pod, you’ll be temporarily increasing the risk they pose to the people they see beyond the usual amount. For example, if you go 2 months without using any points, you could use them all in one week, which might put you at, say, 1,000 microCOVIDs. Your podmates are being exposed to 30% of that risk, which in this example would be 300 microCOVIDs. If one of them is going to see a loved one for a few days who is more vulnerable to COVID (and only has a budget of 20 microCOVIDs), your activities make it difficult for them to do so safely. It’s important to discuss this situation as a pod and come to agreements about how you’d like to handle situations like this.
 
 One way some pods have addressed this is by allowing you to “save up” your points over time, and set a max on how many you can use in a given week (for example, your pod might agree that any person can use up to 2x your weekly budget in a given week as long as it still fits within their overall annual total.)
 

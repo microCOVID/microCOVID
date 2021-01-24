@@ -5,7 +5,7 @@ const shortTitle = 'For Your Household/Pod'
 const content = `
 ## Pods in the context of the spreadsheet
 
-**Pod:** A small network of trusted friends or relatives who are following a shared set of agreements to try to keep everyone safe from COVID. [^poddefinition]
+A **pod** is small network of trusted friends or relatives who are in regular contact with one another (many times per week) and are following a shared set of agreements to try to keep everyone safe from COVID. [^poddefinition]
 
 **Who is in my pod?**
 
@@ -13,12 +13,12 @@ const content = `
 *   **Examples of people who might in your pod:**
     *   **Housemates**
     *   **Partner** who you see many times per week
-    *   **A friend** who comes over for dinner with everyone in your house many nights every week.
+    *   **A friend** who comes over for dinner with everyone in your house several nights every week.
     *   Anyone else you are seeing more than 5 hours per week (indoors, unmasked, undistanced), who you don’t want to have to log each interaction with, and who is willing to follow a shared set of agreements with you.
 *   **Your pod might not include**
     *   **Co-workers:** In most work situations, it’s unlikely for everyone to agree to follow a shared set of agreements to stay within a specified risk budget. Instead, you would model what you know about their risk in the Custom Person sheet and count it as an activity in your Activity Log.
     *   **Some friends:** A friend/partner that does not interact with the pod frequently. 
-    *   **Regular low risk activities:** A friend you see regularly, but the activity doesn’t ever much risk (ex: an outdoor, distanced, weekly picnic)
+    *   **Regular low risk activities:** A friend you see regularly, but the activity doesn’t ever pose much risk (ex: an outdoor, distanced, weekly picnic)
 
 **What if I live alone?**
 
@@ -28,7 +28,7 @@ const content = `
 **Example pod:**
 
 *   Let’s say 4 people live in your house (you plus 3 other people). 
-*   Let’s say Alice comes over to our house for dinner many nights each week. You  don’t want every person in your house to log the points for seeing Alice every time, so you choose to include her as a part of your pod.
+*   Let’s say Alice comes over to your house for dinner several nights each week. You  don’t want every person in your house to log the points for seeing Alice every time, so you choose to include her as a part of your pod.
 *   Total pod size = 5
 
 
@@ -81,7 +81,7 @@ The main thing most group houses are concerned about is the question: how do we 
 
 Asking someone [if they have symptoms](/symptoms) before you see them cuts your risk in half (see [Research Sources](/paper/all#note-on-infectious-period-contacts-symptoms) for details).
 
-Ask friends about these symptoms **_<span style="text-decoration:underline;">right before</span>_** seeing them:
+Ask friends about symptoms **_<span style="text-decoration:underline;">right before</span>_** seeing them:
 
 You can use this [symptoms page](/symptoms) to help guide you through asking some questions. Or you can text the link to the person you’re seeing.
 
@@ -122,7 +122,7 @@ Numerically, if the outside-of-pod person interacts with one person in your pod 
 
 If someone does something for the whole house (like grocery shopping) and you want to count it against everyone’s, you can enter it on the settings page and everyone’s budget will be reduced proportionally.
 
-_Example:_ If you each had a budget of 115 points/week in a pod of 4 people, and one person did grocery shopping every week that cost them 25 points, if you add it here, and everyone’s budget will go down by 13 points. The result is that each person’s budget is now 102 points/week. (You can dig into the spreadsheet formulas if you want to get into the math underlying this.)
+_Example:_ Let's say each member of your 4-person pod has a budget of 115 points/week. One person goes grocery shopping every week and it costs them 25 points. If you add that activity here, and everyone’s budget will go down by 13 points. The result is that each person’s budget is now 102 points/week. (You can dig into the spreadsheet formulas if you want to get into the math underlying this.)
 
 <img src="${sharedBudgetReductions}" alt="Screenshot of shared buget reductions section of spreadsheet">
 
