@@ -241,7 +241,7 @@
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
         "sixft_distance": "2 metros o más de distancia",
         "transit": "Un vagón de tren con filtro para aire",
-        "intimate_distance": "Besarse"
+        "intimate_distance": "Besar"
     },
     "buttons": {
         "select_default_action": "Elige uno..."
