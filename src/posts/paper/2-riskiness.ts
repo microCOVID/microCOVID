@@ -75,13 +75,7 @@ Let’s now explore how to quantify the risk of various activities in terms of m
      Technically, what we mean when we say “1% per year” is a 1% _annualized_ risk. That is, if we go 6 months without getting sick, we aren’t going to double our chances and bump up to a 2% chance in the following 6 months to even it out. We’ll continue at the same 1% annualized risk level.
 
 [^5]:
-     Since we live in a household of 8 people, we also have to account for the substantial risk of getting COVID _from each other_, not just outside the house. To keep each person’s annualized risk below 1% (10,000 microCOVIDs), each person only gets a budget of about 3,000 “out-of-house” microCOVIDs to “spend” on their personal activities:
-     \`\`\`
-     individual budget * (1 + 7 * housemate transmission risk) = 10,000
-     individual budget * (1 + 7 * 0.3) = 10,000
-     individual budget = 3225
-     \`\`\`
-     We hope to discuss these budgeting considerations for communal living in much more detail in a future writeup.
+     We have a detailed write up on [how to adjust your budget given the number of people in your household/pod](/spreadsheet/household-pod#how-the-number-of-people-in-your-household-affects-your-budget).
 
 `
 
