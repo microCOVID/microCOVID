@@ -30,6 +30,10 @@ export const SavedDataSelector: React.FunctionComponent<{
     props.scenarioNameSetter(key)
   }
 
+  const placeholder =
+    props.scenarioName === ''
+      ? t('calculator.select_scenario')
+      : props.scenarioName
   return (
     <Form.Group>
       <InputGroup>
@@ -51,10 +55,8 @@ export const SavedDataSelector: React.FunctionComponent<{
             setSavedData(e[0])
           }}
           options={prepopulatedOptions}
-          placeholder={t('calculator.select_scenario')}
-          defaultSelected={
-            props.scenarioName in prepopulated ? [props.scenarioName] : []
-          }
+          placeholder={placeholder}
+          selected={[]}
         />
       </InputGroup>
     </Form.Group>
