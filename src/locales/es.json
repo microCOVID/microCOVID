@@ -99,7 +99,7 @@
         "location_subprompt_US-LA": "Total del estado o provincia, o seleccione su municipio...",
         "location_subprompt_country_or_regions": "Total por país o elija una región...",
         "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Lo invitamos a que encuentre formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
-        "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento super dispersador.",
+        "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluidos.",
         "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás quedándote actualmente?",
@@ -137,8 +137,8 @@
         "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
         "risk_modifier_frac_plural": "{{frac}} parte del riesgo",
         "switch_button": {
-            "enter_data_manually": "Cambia a ingreso manual de datos",
-            "select_location": "Cambia a datos precargados de ubicación"
+            "enter_data_manually": "Cambiar a ingreso manual de datos",
+            "select_location": "Cambiar a datos precargados de ubicación"
         },
         "location_sublabel": {
             "country_or_regions": "Provincia, región o estado",
@@ -220,7 +220,7 @@
             "frontline": "Un trabajador social o de salud",
             "average": "Una persona promedio en tu área"
         },
-        "loud_voice": "Hablando en voz alta (gritando, cantando, teniendo que gritar más alto que la música ambiental para que se te escuche)",
+        "loud_voice": "Hablando en voz alta (gritando, cantando, conversando con música ambiental)",
         "normal_voice": "Conversación normal",
         "silent_voice": "Sin hablar (por ej.: viajar en tren en silencio)",
         "n95_mask": "Mascarilla N95 o KN95 bien ajustada y bien sellada",
