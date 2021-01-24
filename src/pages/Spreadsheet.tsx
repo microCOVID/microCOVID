@@ -77,7 +77,7 @@ export const SpreadsheetTOC = (): React.ReactElement => {
             <li>
               <strong>You want to have more space in your budget:</strong>{' '}
               Accurately modeling the people you’re interacting with often
-              results in you using less points for each activity, which means
+              results in you using fewer points for each activity, which means
               you can do more things.
             </li>
           </ol>

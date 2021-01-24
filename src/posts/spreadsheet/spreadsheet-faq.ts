@@ -1,4 +1,8 @@
 import budgetSetting from './img/budget-setting.png'
+import editable from './img/colors-editable.png'
+import expired from './img/colors-expired.png'
+import formula from './img/colors-formula.png'
+import overview from './img/colors-overview.png'
 
 const title = 'Spreadsheet FAQ'
 const shortTitle = 'FAQ'
@@ -16,6 +20,7 @@ By default, the spreadsheet automatically imports the latest data for each of th
 
 ## What do all the colors mean?
 
+
 <table>
   <tr>
    <td><strong>Colors</strong>
@@ -24,29 +29,39 @@ By default, the spreadsheet automatically imports the latest data for each of th
    </td>
   </tr>
   <tr>
-   <td>Black text, white background
+   <td>Black text, white background<br />
+   <img src="${editable}" alt="Editable section" style="max-width: 500px;">
    </td>
    <td>Something you can fill in or edit.
    </td>
   </tr>
   <tr>
-   <td>Gray text, white background
+   <td>Gray text, white background<br />
+   <img src="${formula}" alt="Formula" style="max-width: 300px;">
    </td>
-   <td>Contains a formula. <em>Editing it may break the spreadsheet.</em>
-   </td>
-  </tr>
-  <tr>
-   <td><strong><del>Gray text, gray background, strikethrough</del></strong>
-   </td>
-   <td>An activity row that is older than the max days (7 or 9) and is no longer counting toward your total.
+   <td>Contains a formula. <em>Editing a formula may break the spreadsheet.</em>
    </td>
   </tr>
   <tr>
-   <td>Gray sections like so:<br />
+   <td>Gray text, gray background, strikethrough<br />
+   <img src="${expired}" alt="Expired activity row" style="max-width: 500px;">
+   </td>
+   <td>An activity row that is older than the max days (7 or 9) and is no longer counted toward your total.
+   </td>
+  </tr>
+  <tr>
+   <td>Gray sections<br />
    <img src="${budgetSetting}" alt="Budget setting" style="max-width: 500px;">
 
    </td>
    <td>A spreadsheet setting that you can adjust if you’d like to.
+   </td>
+  </tr>
+  <tr>
+   <td>Teal & purple sections<br />
+   <img src="${overview}" alt="Pod overview section" style="max-width: 500px;">
+   </td>
+   <td>Summary sections that give you an overview of your statistics. Contains formulas. <em>Editing a formula may break the spreadsheet.</em>
    </td>
   </tr>
 </table>

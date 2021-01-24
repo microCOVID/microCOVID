@@ -10,9 +10,20 @@ const content = `
 *   **Pod Overview:** Track your current points total relative to your weekly budget.
 *   **Pod Activity Log:** Where you log the activities for every person in your pod.
 *   **Custom People:** Allows you to precisely model the people you are seeing.
-*   **Locations:** Allows you to set the COVID prevalence in your area (or the areas of the people you are seeing).
-*   **Example Activities:** A “menu”of examples activities  to give you an idea of how to log things.
+*   **Locations:** Allows you to automatically track the COVID prevalence in your area (or the areas of the people you are seeing).
+*   **Example Activities:** A “menu”of examples activities to give you an idea of how to log things.
 *   _All sheets that start with “INTERNAL” are for internal calculations. Editing these may break the spreadsheet._
+
+## What kinds of activities should be logged?
+
+To accurately track your risk against your budget, you will want to log any activity where:
+
+* You are sharing indoor air space with anyone
+* You are outdooors and within 15 feet of someone for more than a passing moment
+
+You do not need to log any activities with people who are in your [microCOVID Pod](./household-pod) if you are all tracking your risk together. If others in your househould/pod are not tracking their risk in a shared system (like the spreadsheet), you will need to log your interactions with them.
+
+Your pod may decide to not log things that are under a certain threshold (for example: anything equal to or less than 3 points).
 
 ## Logging an activity
 
@@ -43,13 +54,13 @@ This table provides a fuller explanation for each of the Built-in Person Risk pr
   <tr>
    <td>Avg local resident
    </td>
-   <td>The unknown person one may encounter at a grocery store, restaurant, or any  other public place.
+   <td>The unknown person one may encounter at a grocery store, restaurant, or any other public place.
    </td>
   </tr>
   <tr>
    <td>Avg local resident who works from home
    </td>
-   <td>The known person one may encounter peripherally, like a co-worker who does not interact with the public and can socially distance in an office. There are more interactions  than someone who solely works at home, but not as many as someone who works with the public.
+   <td>The known person one may encounter peripherally, like a co-worker who does not interact with the public and can socially distance in an office. There are more interactions than someone who solely works at home, but not as many as someone who works with the public.
    </td>
   </tr>
   <tr>
@@ -61,7 +72,7 @@ This table provides a fuller explanation for each of the Built-in Person Risk pr
   <tr>
    <td>Lowest possible risk
    </td>
-   <td>As a safeguard, we assume that no one can ever be more than 100x less risky than the current average person risk your local area.
+   <td>As a safeguard, we assume that no one can ever be more than 100x less risky than the current "average person" your local area.
    </td>
   </tr>
   <tr>
@@ -73,7 +84,7 @@ This table provides a fuller explanation for each of the Built-in Person Risk pr
   <tr>
    <td>Known COVID case
    </td>
-   <td>A person who has a confirmed case of COVID. Use this Person Risk profile if you’ve interacted with the person 10 days before the test was taken or 14 days after.
+   <td>A person who has a confirmed case of COVID. Use this Person Risk profile if you’ve interacted with the person up to 10 days before the test was taken or up to 14 days after.
    </td>
   </tr>
   <tr>
@@ -126,8 +137,9 @@ The good news is that modeling a custom person is almost exactly the same as mod
     *   **Tip:** If you wish, you can send them our [recent activity questions](/questions) as a way to make the process clearer and smoother.
 2. **Create a row for the person**
     *   Type their name in any blank row in the “Person Name” column and that row will automatically turn into a “total” row for that person’s points.  All the activities you enter below this row will be a part of that person’s total. 
-3. **Activities:** Enter any activities they have done in the last 10 days the same way you would [enter your own activities](#logging-an-activity). When in doubt, err on the side of overestimating.
-4. **Use the person while logging an activity:** After you create a _Custom Person_, their name will automatically be available in the “Person Risk Profile” column for any activity you are entering on your own log. Just select their name from the dropdown.
+3. **Activities:** Enter any activities they have done in the last 10 days the same way you would [enter your own activities](#logging-an-activity). When in doubt, it is better to overestimate. 
+    *  **Note:** You do not need to include activities they have done with you, because that would lead to double counting your risk.
+4. **Select this Person Risk Profile when logging an activity:** After you create a _Custom Person_, their name will automatically be available in the “Person Risk Profile” column for any activity you are entering on your own log. Just select their name from the dropdown.
 
 See [Custom Person Modeling FAQ](./faq#custom-person-modeling) for more details.
 
@@ -140,7 +152,7 @@ See [Custom Person Modeling FAQ](./faq#custom-person-modeling) for more details.
 *   Gone grocery shopping (masked)
 *   Went on a 2-hour walk with two friends (masked, not distanced, they both confirmed they don’t have symptoms now, they agreed to report symptoms in the next 10 days)
 *   Rode in the car with these two friends for 15 minutes each way
-*   We in a Lyft ride share for 15 minutes (masked, windows cracked)
+*   Rode in a Lyft ride share for 15 minutes (masked, windows cracked)
 
 Erin shared that she wears a cotton mask without a filter.
 
@@ -151,11 +163,11 @@ Once this is modeled, Alice can select Erin as an option on the “Person Risk P
 #### Example 2: Multiple degrees of separation away
 
 **Situation:** Let’s say that Bob is dating Sam. Bob wants to model Sam’s activities and their housemate’s activities. Here’s what we know:
-*   Sam sees their chiropractor once a week for 15 minutes. We model this person as “average” rather than “health care worker” because we know they are taking really strong screening practices. We model them the “symptoms free now” since they are taking their temperature daily and all staff are doing the same.
+*   Sam sees their chiropractor once a week for 15 minutes. We model this person as “average” rather than “health care worker” because we know they are taking really strong screening practices. We model them the “symptoms free now” since all the staff there are taking their temperature daily. We don’t check “Will notify you if symptoms” because we’re not confident the chiropractor will notify all their patients. 
 *   Sam lives with 3 other people.
-    *   **Housemate 1, Toni:** Does grocery shopping on behalf of the house once a week. Wears a KN95 mask (and has learned to get a proper seal by watching some training videos online).
-    *   **Housemate 2, Uri:** Works in an office where they are around other people 30 hours a week total, Uri is in the room with another person (there are 3 or 4 different people over a  week, but only one other person in the room at a time). Uri wears a surgical mask, but we don’t know about their other people’s masks, so we assume they are cotton masks.  We know these people have minimal contact with people outside of the occasional 1-on-1 interactions, so we will model them with the “works from home” profile (even though they technically do work elsewhere). Everyone screens their symptoms as they come into work, so we check the box for “no symptoms now.”
-    *   **Housemate 3, Veronica:** Works from home and isn’t socializing with anyone outside of the pod. We’ll represent their Risk Profile as “closed pod 4 people” because they are probably occasionally doing at least some risk behaviors (stores or medical appointments), and we want to overestimate, because we can’t easily count on a detailed update of their activities each week. Using the “closed pod of 4 people” Risk Profile is a way to estimate their risk level, even though it doesn’t descriptively match exactly what they are doing.
+    *   **Housemate 1, Toni:** Does grocery shopping on behalf of the house once a week wearing a cotton mask.
+    *   **Housemate 2, Jordan:** Works in an office where they are around other people 30 hours a week total, Jordan is in the room with another person (there are 3 or 4 different people over a  week, but only one other person in the room at a time). Jordan wears a surgical mask, but we don’t know about their other people’s masks, so we assume they are cotton masks.  We know these people have minimal contact with people outside of the occasional 1-on-1 interactions, so we will model them with the “works from home” profile (even though they technically do work elsewhere). Everyone screens their symptoms as they come into work, so we check the box for “no symptoms now.”
+    *   **Housemate 3, Veronica:** Works from home and isn’t socializing with anyone outside of the pod. However, we know she occassionally going to medical appointments. Since we won't likely be getting weekly detailed updates from Veronica, we want to choose a Risk Profile that overestimates her risk. We’ll represent her Risk Profile as _“Has 1 close contact whose risk profile we don't know”_ because that profile represents a lot of interaction with 1 average local person in a week (at housemate levels) and we know this is more than Veronica is doing, so it is a safe overestimate. (If we could find out Veronica's activities in a given week on average, we could instead model her as a Customer Person.)
 *   **Other podmates:** There are 2 other people in Sam’s pod who also work from home and aren’t socializing with anyone outside of the pod. Again, we’ll use a “closed pod of 4 people” profile for them so we’re overestimating.
 *   **Symptoms:** All of the housemates and podmates in this scenario have agreed to [report symptoms](/symptoms) within 24 hours of onset.
 

@@ -18,7 +18,7 @@ The **Option A** questions rae simpler, but don't provide as many prompts to ass
     4. Did they agree to report [symptoms](/symptoms) in the 10 days after the interaction?
     5. How long did it last (hours/minutes)?
     6. How far apart were you?
-    7. What kind of mask were you wearing for each of these activities? (no mask, cotton, cotton with a filter insert, surgical, N95/K95, etc.)
+    7. What kind of mask were you wearing for each of these activities? (no mask, cotton, cotton with a filter insert, surgical, KN95, N95 with a proper seal, etc.)
     8. What kind of mask were the people you were around wearing? 
 
 
