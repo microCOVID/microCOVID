@@ -170,6 +170,7 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const handleSelectLocationButtonOnClick = () => {
     setLocationData('', '')
+    setDetailsOpen(false)
   }
 
   // If a stored location exists, load latest data for that location.
@@ -239,6 +240,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           clearButton={true}
           highlightOnlyResult={true}
           id="top-location-typeahead"
+          inputProps={{ autoComplete: 'off' }}
           onChange={(e: Option[]) => {
             if (e.length !== 1) {
               setLocationData('', '')
@@ -263,6 +265,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             clearButton={true}
             highlightOnlyResult={true}
             id="sub-location-typeahead"
+            inputProps={{ autoComplete: 'chrome-off' }}
             onChange={(e: Option[]) => {
               if (e.length !== 1) {
                 setLocationData(data.topLocation, '')
@@ -279,21 +282,25 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
       {isManualEntryCurrently ? (
-        <button
-          id="switchBetweenManualDataAndLocationSelection"
-          className="btn btn-secondary"
-          onClick={handleSelectLocationButtonOnClick}
-        >
-          {t('calculator.switch_button.select_location')}
-        </button>
+        <span>
+          <button
+            id="switchBetweenManualDataAndLocationSelection"
+            className="btn btn-link text-muted"
+            onClick={handleSelectLocationButtonOnClick}
+          >
+            {t('calculator.switch_button.select_location')}
+          </button>
+        </span>
       ) : (
-        <button
-          id="switchBetweenManualDataAndLocationSelection"
-          className="btn btn-secondary"
-          onClick={handleEnterDataButtonOnClick}
-        >
-          {t('calculator.switch_button.enter_data_manually')}
-        </button>
+        <span>
+          <button
+            id="switchBetweenManualDataAndLocationSelection"
+            className="btn btn-link text-muted"
+            onClick={handleEnterDataButtonOnClick}
+          >
+            {t('calculator.switch_button.enter_data_manually')}
+          </button>
+        </span>
       )}
       <ControlledExpandable
         id="prevalence-details"

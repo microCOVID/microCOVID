@@ -40,8 +40,10 @@ export const SavedDataSelector: React.FunctionComponent<{
         </InputGroup.Prepend>
         <Typeahead
           clearButton={true}
+          emptyLabel={t('calculator.no_prebuilt_scenario_found')}
           highlightOnlyResult={true}
           id="predefined-typeahead"
+          inputProps={{ autoComplete: 'off' }}
           onChange={(e: string[]) => {
             if (e.length !== 1) {
               setSavedData('')
