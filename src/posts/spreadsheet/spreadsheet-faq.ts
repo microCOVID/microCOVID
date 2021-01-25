@@ -108,7 +108,7 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
 😷 Your cotton/surgical mask: <strong><code>x1/4</code></strong><br />
 ⚕️ My surgical mask: <strong><code>x1/2</code></strong> <br />
 ⚕️ Mask w/ filter insert: <strong><code>x1/2</code></strong><br />
-🛡️ Sealed N95: <strong><code>x1/10</code></strong><br />
+🛡️ <a href="https://www.youtube.com/watch?v=p8ay3kTqsuo" target="_blank" " rel="noopener">Sealed</a> N95: <strong><code>x1/10</code></strong><br />
 🛡️ Unsealed N95: <strong><code>x1/4</code></strong><br />
    </td>
   </tr>

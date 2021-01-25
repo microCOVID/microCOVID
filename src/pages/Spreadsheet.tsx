@@ -63,7 +63,7 @@ export const SpreadsheetTOC = (): React.ReactElement => {
           <strong>This spreadsheet might be a good fit for you if:</strong>
           <ol>
             <li>
-              <strong>Maintaining a personl risk budget:</strong> You want to
+              <strong>Maintaining a personal risk budget:</strong> You want to
               log your activity over time to make sure you’re staying within
               your intended budget.
             </li>
