@@ -173,16 +173,6 @@ export const Calculator = (): React.ReactElement => {
           </h2>
         </Col>
       </Row>
-      <Row>
-        <Col className="calculator-buttons">
-          <SavedDataSelector
-            currentData={calculatorData}
-            setter={setCalculatorData}
-            scenarioName={scenarioName}
-            scenarioNameSetter={setScenarioName}
-          />
-        </Col>
-      </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
           <Card id="location">
@@ -200,6 +190,16 @@ export const Calculator = (): React.ReactElement => {
                 <header id="activity-risk">
                   <Trans>calculator.risk_step_label</Trans>
                 </header>
+                <Row>
+                  <Col className="calculator-buttons">
+                    <SavedDataSelector
+                      currentData={calculatorData}
+                      setter={setCalculatorData}
+                      scenarioName={scenarioName}
+                      scenarioNameSetter={setScenarioName}
+                    />
+                  </Col>
+                </Row>
                 {!scenarioName ? null : (
                   <Alert variant="info">
                     <Trans values={{ scenarioName: scenarioName }}>

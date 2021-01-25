@@ -3,7 +3,7 @@
         "explanationcard": {
             "chance": "probabilidad",
             "risk_budget_used": "Presupuesto usado",
-            "risk_budget_explanation": "Seleccionaste un presupuesto anual de un {{budget_percent}} de probabilidad de infectarte de COVID-19 al año ({{budget_points}} microCOVID). Eso equivale a un presupuesto semanal de <strong>{{budget_weekly}} microCOVID por semana</strong>.",
+            "risk_budget_explanation": "Seleccionaste un presupuesto anual de un {{budget_percent}} de probabilidad de infectarte de COVID-19 al año ({{budget_points}} microCOVID). Eso equivale a un presupuesto semanal de <strong>{{budget_weekly}} microCOVIDs por semana</strong>.",
             "risk_budget_available": "Presupuesto disponible",
             "risk_budget_header": "¿Qué tanto puedo hacer esto dado mi presupuesto de riesgo?",
             "details_range_explanation": "Creemos con aproximadamente un 90% de confianza que el riesgo real se encuentra entre estos dos valores. Consulta nuestra <2>estimación de incertidumbre</2>.",
@@ -15,7 +15,7 @@
             "details_total_risk_number": "{{ points }} en un millón ({{ percentage }})",
             "details_total_risk": "Riesgo total",
             "details_number_of_people": "Número de personas",
-            "details_activity_risk_explanation": "A continuación, calculamos el riesgo de la actividad. Una persona haciendo esta actividad con COVID-19 tendría una <strong> {{activity_risk}} probabilidad </strong> de transmitírtelo.",
+            "details_activity_risk_explanation": "A continuación, calculamos el riesgo de la actividad. Una persona haciendo esta actividad con COVID-19 tendría una <strong>{{activity_risk}} probabilidad</strong> de transmitírtelo.",
             "details_person_risk_number": "probabilidad de {{ person_risk }} en un millón",
             "details_steps_header": "Pasos del cálculo",
             "details_activity_risk": "Riesgo de Actividad",
@@ -27,11 +27,11 @@
             "person": "persona",
             "person_plural": "personas",
             "last_updated": "Última actualización del modelo el día {{ date }}. (<1>Vea bitácora de cambios</1>)",
-            "risk_tolerance_selector_header": "Ajuste su tolerancia al riesgo",
-            "risk_budget_usage_explanation": "Esta interacción usa <strong>{{ usage }}</strong>. Esta cantidad de su presupuesto será usada <strong>{{ frequency }}</strong>.",
-            "details_person_risk_explanation_housemate": "Primero, calculamos que cada uno de los otros individuos en esta área tiene <strong>un riesgo de {{ person_risk }} en un millón</strong> de tener covid en este momento, sin incluir su riesgo por vivir contigo.",
-            "details_person_risk_explanation": "Primero, calculamos que cada persona individual en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener covid en este momento.",
-            "details_total_risk_explanation": "Por último, multiplicamos el Riesgo Personal, el Riesgo de Actividad y la cantidad de personas para obtener el resultado total de una probabilidad aproximada de <strong> {{points}} por millón ({{percentage}}) </strong> de adquirir COVID-19 durante esta actividad con estas personas <strong> {{frequency}} </strong>.",
+            "risk_tolerance_selector_header": "Ajusta tu tolerancia al riesgo",
+            "risk_budget_usage_explanation": "Esta interacción usa <strong>{{ usage }}</strong>. Esta cantidad de tu presupuesto será usada <strong>{{ frequency }}</strong>.",
+            "details_person_risk_explanation_housemate": "Primero, calculamos que cada uno de los otros individuos en esta área tiene <strong>un riesgo de {{ person_risk }} en un millón</strong> de tener COVID-19 en este momento, sin incluir su riesgo por vivir contigo.",
+            "details_person_risk_explanation": "Primero, calculamos que cada persona individual en esta área tiene una <strong>probabilidad de {{ person_risk }} en un millón</strong> de tener COVID-19 en este momento.",
+            "details_total_risk_explanation": "Por último, multiplicamos el Riesgo Personal, el Riesgo de Actividad y la cantidad de personas para obtener el resultado total de una probabilidad aproximada de <strong> {{points}} por millón ({{percentage}}) </strong> de adquirir COVID-19 durante esta actividad con estas personas <strong>{{frequency}}</strong>.",
             "activity_risk_capped_note": "(NOTA: Hemos <2>limitado este número al Riesgo de Actividad máximo</2>.)",
             "details_header_open": "Ocultar los detalles del cálculo"
         },
@@ -40,8 +40,8 @@
             "volume_question": "¿Qué tanto están hablando todos?",
             "volume_header": "Volumen",
             "filtered_ensure_airflow": "Asegúrate de que haya suficiente flujo para la habitación a través del filtro. Para ayuda sobre cómo hacer esto, consulta <1>aquí</1>.",
-            "their_mask_note": "Si otros están comiendo o bebiendo, selecciona \"sin mascarilla\"",
-            "their_mask_question": "¿Cuál mascarilla traen ellos?",
+            "their_mask_note": "Si los demás están comiendo o bebiendo, selecciona \"sin mascarilla\"",
+            "their_mask_question": "¿Cuál mascarilla traen ELLOS?",
             "your_mask_note": "Si estás comiendo o bebiendo, selecciona \"sin mascarilla\"",
             "your_mask_question": "¿Cuál mascarilla traes TÚ?",
             "your_mask_header": "Tu mascarilla",
@@ -49,7 +49,7 @@
             "environment_header": "Ambiente",
             "label": "Precauciones",
             "no_intimate_bonus_outdoors": "Estamos ignorando la elección del entorno en este cálculo. No estamos seguros de que una buena ventilación o estar al aire libre reduzca sustancialmente el riesgo cuando hay tanta cercanía física entre personas.",
-            "their_mask_header": "La mascarilla de los demas"
+            "their_mask_header": "La mascarilla de los demás"
         },
         "prevalence": {
             "percent_increase_in_cases": "Incremento porcentual en casos desde la semana anterior a esta semana",
@@ -75,24 +75,24 @@
         "duration_header": "Duración",
         "distance_question": "¿Qué tan cerca están estas personas a tu alrededor, en promedio?",
         "people_count": "Gente",
-        "number_of_people_near_you_onetime": "¿Cuántas personas hay cerca normalmente durante esta actividad?",
+        "number_of_people_near_you_onetime": "¿Cuántas personas hay normalmente en 5 metros alredor de ti en cualquier momento de esta actividad?",
         "pointsdisplay": {
             "range": "probablemente entre: {{ from }} hasta {{ to }}",
             "microCOVIDs": "microCOVIDs",
-            "empty_warning": "Llene sus datos en la calculadora para ver el nivel de riesgo"
+            "empty_warning": "Ingresa tus datos en el estimador para ver el nivel de riesgo"
         },
         "riskreduction": {
-            "onetime_warning": "Éstos pueden ser pertinentes o no a tu actividad.",
+            "onetime_warning": "Estos pueden ser pertinentes o no a tu actividad.",
             "onetime_tips": "<li>MoDifiquE sus actividades (hágalas con Mascarilla, con Distancia sana y en Exteriores)</li> <li>!Use la mejor mascarilla facial que pueda! <br/><1/></li> <li>Visite lugares públicos durante las horas de menor aforo</li> <li> Reduzca las idas a tiendas haciendo un solo viaje para comprar para varias personas, pidiendo que le entreguen a domicilio o comprando en línea</li> <li>Si esta actividad es con amigos, pídales que no asistan si ellos o cualquiera de sus conocidos se sienten mal</li>",
             "onetime_header": "Estas son algunas formas de reducir el riesgo de esta actividad",
             "housemates_tips": "<li>Hable con ellos acerca de cómo sus acciones afectan su propio riesgo, tanto como el de usted</li> <li>Solicíteles que MoDifiquEn sus actividades (Mascarillas, Distancia sana y ambientes al Exterior) </li> <li>Los trabajadores esenciales pueden usar una mascarilla de alta calidad (ej. N95/FFP2) para trabajar <1/></li> <li>Pídales que reduzcan las actividades sociales sin sana distancia al mínimo número de personas posibles</li> <li>Fomente que sus conocidos se aislen y se realicen pruebas de diagnóstico a la primera señal de síntomas de Covid</li> <li>Si tienen alto riesgo ante Covid y debe estar en interiores con ellos:<ul> <li>Usen mascarillas en espacios cerrados</li> <li>Maximicen la ventilación abriendo ventanas, encendiendo ventiladores que introduzcan aire desde el exterior y con filtros de aire HEPA </li> <li>Aíslense dentro de la casa manteniéndose cada uno en cuartos distintos</li> </ul></li>",
-            "housemates_header": "Aquí hay algunas maneras en que puede colaborar con sus conocidos cercanos para reducir su nivel de riesgo"
+            "housemates_header": "Aquí hay algunas maneras en que puedes colaborar con tus conocidos cercanos para reducir tu nivel de riesgo"
         },
         "risk_modifier_frac_2nd": "{{frac}} del riesgo",
         "select_scenario": "Opcional: comienza con una actividad común predefinida",
         "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) y <7>Our World in Data</7> (tasas de prueba positivas internacionales).",
         "select_location_enter_manually": "Ingresa los datos manualmente...",
-        "select_location_placeholder": "Seleccione una localidad...",
+        "select_location_placeholder": "Elige tu país o un estado de EUA...",
         "location_selector_header": "Paso 1: Seleccione su localidad",
         "location_subprompt_US": "Estado completo o seleccione su condado...",
         "location_subprompt_US-AK": "Estado completo o seleccione su barrio...",
@@ -102,7 +102,7 @@
         "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento super dispersador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluídos.",
-        "number_of_people_near_you_partner": "¿Con cuántas personas vive o está alojado actualmente?",
+        "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás quedándote actualmente?",
         "person_risk_profile_question": "¿Cuál es su perfil de riesgo?",
         "distance_header": "Distancias",
         "nearby_people_label": "Gente cercana",
@@ -135,7 +135,24 @@
         "risk_modifier_frac_3rd": "{{frac}} del riesgo",
         "baseline_risk": "riesgo base",
         "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
-        "risk_modifier_frac_plural": "{{frac}}ª parte del riesgo"
+        "risk_modifier_frac_plural": "{{frac}} parte del riesgo",
+        "switch_button": {
+            "enter_data_manually": "Cambia a ingreso manual de datos",
+            "select_location": "Cambia a datos precargados de ubicación"
+        },
+        "location_sublabel": {
+            "country_or_regions": "Provincia, región o estado",
+            "US": "Condado o municipalidad",
+            "US-AK": "Población",
+            "US-LA": "Municipio o población"
+        },
+        "location_subprompt": {
+            "US": "Total a nivel provincia/región/estado o elige tu condado o municipio...",
+            "US-AK": "Total a nivel provincia/región/estado o elige una población...",
+            "US-LA": "Total a nivel provincia/región/estado, o elige un municipio...",
+            "country_or_regions": "Total a nivel país, o elige una provincia, región o estado..."
+        },
+        "select_location_label": "País o estado de EUA"
     },
     "current_lang_two_letter_code": "es",
     "menu": {
@@ -169,8 +186,8 @@
         "votingInPerson": "Votación en persona",
         "indoorUnmaskedWithCovidPositive": "Actividad relajada al interior y sin mascarilla con alguien que tiene COVID-19",
         "outdoorMaskedWithCovidPositive": "Actividad o salida relajada al aire libre con alguien que tiene COVID-19",
-        "smallIndoorParty25": "Fiesta pequeña al interior: sin mascarillas con 25 personas",
-        "largeOutdoorParty": "Fiesta grande al aire libre: con mascarillas y con 1 metro de distancia entre todos",
+        "smallIndoorParty25": "Fiesta al interior: 25 personas, sin mascarillas",
+        "largeOutdoorParty": "Fiesta al aire libre: alrededor de 80 personas, con mascarillas y con 1 metro de distancia entre cada uno",
         "bar": "Salida a un bar",
         "restaurantIndoors": "Comida en un restaurante al interior",
         "restaurantOutdoors": "Comida en un restaurante al aire libre",
@@ -179,9 +196,9 @@
         "60minShoppingFew": "Supermercado durante 60 minutos (poca gente)",
         "60minShopping": "Supermercado durante 60 minutos (cantidad promedio de gente)",
         "liveInPartner_noContacts": "Pareja cohabitante que no tiene interacciones en interiores aparte de contigo",
-        "1person_15minCarRide": "Viaje en coche con 1 persona durante 15 minutos",
-        "indoorUnmasked2": "Actividad relajada al interior con mascarillas con 2 personas",
-        "outdoorMasked2": "Actividad o salida relajada al aire libre con mascarillas con 2 personas",
+        "1person_15minCarRide": "Viaje en coche con otra persona durante 15 minutos",
+        "indoorUnmasked2": "Actividad relajada al interior con mascarillas con otras 2 personas además de ti",
+        "outdoorMasked2": "Actividad o salida relajada al aire libre con mascarillas con otras 2 personas además de ti",
         "oneNightStand": "Sexo casual una única vez con una persona desconocida"
     },
     "data": {
@@ -193,7 +210,7 @@
             "contactWorks": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona que es trabajadora social o de salud.",
             "contact10": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 10 personas cuyo perfil de riesgo no conoces.",
             "contact4": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 4 personas cuyo perfil de riesgo no conoces.",
-            "contact1": "Tiene(n) contacto cercano con 1 persona cuyo perfil de riesgo no conoces, dentro de una burbuja cerrada respecto a los demás casos.",
+            "contact1": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona cuyo perfil de riesgo no conoces.",
             "closedPod20": "En una burbuja exclusiva de 20 personas",
             "closedPod10": "En una burbuja exclusiva de 10 personas",
             "closedPod4": "En una burbuja exclusiva de 4 personas",
@@ -227,7 +244,7 @@
         "intimate_distance": "Besarse"
     },
     "buttons": {
-        "select_default_action": "Elije uno..."
+        "select_default_action": "Elige uno..."
     },
     "each time": "cada vez",
     "each time you do it": "cada vez que lo haces",

@@ -136,7 +136,18 @@
             "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde.</3>"
         },
         "saved_scenario_loaded_message": "Zvolili jste scénář: <strong>{{ scenarioName }}</strong>. Zkontrolujte volby níže, zda odpovídají tomu, co máte na mysli. Pokud ne, upravte je tak, aby odpovídaly.",
-        "frontline_worker_acknowledgement": "Hluboce oceňujeme oběti, které dělají během pandemie pracovníci v první linii. Doporučujeme najít bezpečný způsob, jak těmto lidem poskytnout podporu a péči a předejít tomu, že se budou cítit izolovaní. Přepdpokládáme, že většina z nich bude očkována v nejbližších měsících, což výrazně sníží riziko, že se nakazí nebo někoho nakazí."
+        "frontline_worker_acknowledgement": "Hluboce oceňujeme oběti, které dělají během pandemie pracovníci v první linii. Doporučujeme najít bezpečný způsob, jak těmto lidem poskytnout podporu a péči a předejít tomu, že se budou cítit izolovaní. Přepdpokládáme, že většina z nich bude očkována v nejbližších měsících, což výrazně sníží riziko, že se nakazí nebo někoho nakazí.",
+        "location_sublabel": {
+            "US": "Subregion",
+            "US-AK": "Subregion",
+            "US-LA": "Subregion",
+            "country_or_regions": "Region"
+        },
+        "location_subprompt": {
+            "US": "Celý federální stát nebo jeho region...",
+            "US-LA": "Celý federální stát nebo jeho region...",
+            "US-AK": "Celý stát, případně zvolte oblast..."
+        }
     },
     "current_lang_two_letter_code": "cs",
     "menu": {

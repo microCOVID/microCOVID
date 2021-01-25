@@ -5,7 +5,6 @@ import { Typeahead } from 'react-bootstrap-typeahead'
 import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './controls/ControlLabel'
-import CopyToSpreadsheetButton from './CopyToSpreadsheetButton'
 import { ControlledExpandable } from 'components/Expandable'
 import {
   CalculatorData,
@@ -238,6 +237,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         />
         <Typeahead
           clearButton={true}
+          highlightOnlyResult={true}
           id="top-location-typeahead"
           onChange={(e: Option[]) => {
             if (e.length !== 1) {
@@ -261,6 +261,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           />
           <Typeahead
             clearButton={true}
+            highlightOnlyResult={true}
             id="sub-location-typeahead"
             onChange={(e: Option[]) => {
               if (e.length !== 1) {
@@ -301,7 +302,7 @@ export const PrevalenceControls: React.FunctionComponent<{
         open={detailsOpen}
         setter={setDetailsOpen}
       >
-        {!isManualEntryCurrently && <PrevalenceResult data={data} />}
+        <PrevalenceResult data={data} />
 
         <PrevalenceField
           id="reported-cases"
@@ -374,7 +375,6 @@ export const PrevalenceControls: React.FunctionComponent<{
                 {PrevalenceDataDate}
               </em>
             </div>
-            <CopyToSpreadsheetButton data={data} />
             <div>
               <p className="mt-3">
                 <Trans i18nKey="calculator.prevalence_info_source_information">
