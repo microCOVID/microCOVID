@@ -1,5 +1,6 @@
 export interface Location {
   label: string
+  iso3: string | null
   population: string
   casesPastWeek: number
   casesIncreasingPercentage: number
@@ -16,6 +17,7 @@ export const Locations: { [key: string]: Location } = {
   // update_prevalence locations start
   US_01: {
     label: 'Alabama',
+    iso3: null,
     population: '4,903,185',
     casesPastWeek: 18572,
     casesIncreasingPercentage: 0.0,
@@ -93,6 +95,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02: {
     label: 'Alaska',
+    iso3: null,
     population: '731,545',
     casesPastWeek: 1377,
     casesIncreasingPercentage: 0.0,
@@ -131,6 +134,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04: {
     label: 'Arizona',
+    iso3: null,
     population: '7,278,717',
     casesPastWeek: 48692,
     casesIncreasingPercentage: 0.0,
@@ -156,6 +160,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05: {
     label: 'Arkansas',
+    iso3: null,
     population: '3,017,804',
     casesPastWeek: 12912,
     casesIncreasingPercentage: 0.0,
@@ -241,6 +246,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06: {
     label: 'California',
+    iso3: null,
     population: '39,512,223',
     casesPastWeek: 176797,
     casesIncreasingPercentage: 0.0,
@@ -309,6 +315,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08: {
     label: 'Colorado',
+    iso3: null,
     population: '5,758,736',
     casesPastWeek: 11304,
     casesIncreasingPercentage: 0.0,
@@ -383,6 +390,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09: {
     label: 'Connecticut',
+    iso3: null,
     population: '3,565,287',
     casesPastWeek: 14393,
     casesIncreasingPercentage: 0.0,
@@ -401,6 +409,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_10: {
     label: 'Delaware',
+    iso3: null,
     population: '973,764',
     casesPastWeek: 4281,
     casesIncreasingPercentage: 0.0,
@@ -410,6 +419,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_11: {
     label: 'District of Columbia',
+    iso3: null,
     population: '705,749',
     casesPastWeek: 1450,
     casesIncreasingPercentage: 0.0,
@@ -419,6 +429,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12: {
     label: 'Florida',
+    iso3: null,
     population: '21,477,737',
     casesPastWeek: 78170,
     casesIncreasingPercentage: 0.0,
@@ -496,6 +507,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13: {
     label: 'Georgia',
+    iso3: null,
     population: '10,617,423',
     casesPastWeek: 50904,
     casesIncreasingPercentage: 0.0,
@@ -665,6 +677,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_15: {
     label: 'Hawaii',
+    iso3: null,
     population: '1,415,872',
     casesPastWeek: 784,
     casesIncreasingPercentage: 0.0,
@@ -674,6 +687,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16: {
     label: 'Idaho',
+    iso3: null,
     population: '1,787,065',
     casesPastWeek: 3952,
     casesIncreasingPercentage: 0.0,
@@ -728,6 +742,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17: {
     label: 'Illinois',
+    iso3: null,
     population: '12,671,821',
     casesPastWeek: 32991,
     casesIncreasingPercentage: 0.0,
@@ -840,6 +855,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18: {
     label: 'Indiana',
+    iso3: null,
     population: '6,732,219',
     casesPastWeek: 20828,
     casesIncreasingPercentage: 0.0,
@@ -942,6 +958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19: {
     label: 'Iowa',
+    iso3: null,
     population: '3,155,070',
     casesPastWeek: 7986,
     casesIncreasingPercentage: 0.0,
@@ -1051,6 +1068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20: {
     label: 'Kansas',
+    iso3: null,
     population: '2,913,314',
     casesPastWeek: 10554,
     casesIncreasingPercentage: 0.0,
@@ -1166,6 +1184,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21: {
     label: 'Kentucky',
+    iso3: null,
     population: '4,467,673',
     casesPastWeek: 19464,
     casesIncreasingPercentage: 0.0,
@@ -1296,6 +1315,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22: {
     label: 'Louisiana',
+    iso3: null,
     population: '4,648,794',
     casesPastWeek: 14882,
     casesIncreasingPercentage: 0.0,
@@ -1370,6 +1390,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23: {
     label: 'Maine',
+    iso3: null,
     population: '1,344,212',
     casesPastWeek: 3039,
     casesIncreasingPercentage: 0.0,
@@ -1396,6 +1417,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24: {
     label: 'Maryland',
+    iso3: null,
     population: '6,045,680',
     casesPastWeek: 15007,
     casesIncreasingPercentage: 0.0,
@@ -1430,6 +1452,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25: {
     label: 'Massachusetts',
+    iso3: null,
     population: '6,892,503',
     casesPastWeek: 29897,
     casesIncreasingPercentage: 0.0,
@@ -1453,6 +1476,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26: {
     label: 'Michigan',
+    iso3: null,
     population: '9,986,857',
     casesPastWeek: 15028,
     casesIncreasingPercentage: 0.0,
@@ -1546,6 +1570,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27: {
     label: 'Minnesota',
+    iso3: null,
     population: '5,639,632',
     casesPastWeek: 8609,
     casesIncreasingPercentage: 0.0,
@@ -1643,6 +1668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28: {
     label: 'Mississippi',
+    iso3: null,
     population: '2,976,149',
     casesPastWeek: 11744,
     casesIncreasingPercentage: 0.0,
@@ -1735,6 +1761,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29: {
     label: 'Missouri',
+    iso3: null,
     population: '6,137,428',
     casesPastWeek: 12533,
     casesIncreasingPercentage: 0.0,
@@ -1861,6 +1888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30: {
     label: 'Montana',
+    iso3: null,
     population: '1,068,778',
     casesPastWeek: 2259,
     casesIncreasingPercentage: 0.0,
@@ -1927,6 +1955,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31: {
     label: 'Nebraska',
+    iso3: null,
     population: '1,934,408',
     casesPastWeek: 5169,
     casesIncreasingPercentage: 0.0,
@@ -2030,6 +2059,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32: {
     label: 'Nevada',
+    iso3: null,
     population: '3,080,156',
     casesPastWeek: 9334,
     casesIncreasingPercentage: 0.0,
@@ -2057,6 +2087,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33: {
     label: 'New Hampshire',
+    iso3: null,
     population: '1,359,711',
     casesPastWeek: 5473,
     casesIncreasingPercentage: 3.9703647416413412,
@@ -2077,6 +2108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34: {
     label: 'New Jersey',
+    iso3: null,
     population: '8,882,190',
     casesPastWeek: 35587,
     casesIncreasingPercentage: 0.0,
@@ -2108,6 +2140,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35: {
     label: 'New Mexico',
+    iso3: null,
     population: '2,096,829',
     casesPastWeek: 5568,
     casesIncreasingPercentage: 0.0,
@@ -2151,6 +2184,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36: {
     label: 'New York',
+    iso3: null,
     population: '19,453,561',
     casesPastWeek: 93134,
     casesIncreasingPercentage: 0.0,
@@ -2223,6 +2257,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37: {
     label: 'North Carolina',
+    iso3: null,
     population: '10,488,084',
     casesPastWeek: 44175,
     casesIncreasingPercentage: 0.0,
@@ -2333,6 +2368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38: {
     label: 'North Dakota',
+    iso3: null,
     population: '762,062',
     casesPastWeek: 953,
     casesIncreasingPercentage: 0.0,
@@ -2396,6 +2432,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39: {
     label: 'Ohio',
+    iso3: null,
     population: '11,689,100',
     casesPastWeek: 37568,
     casesIncreasingPercentage: 0.0,
@@ -2494,6 +2531,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40: {
     label: 'Oklahoma',
+    iso3: null,
     population: '3,956,971',
     casesPastWeek: 18111,
     casesIncreasingPercentage: 0.0,
@@ -2581,6 +2619,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41: {
     label: 'Oregon',
+    iso3: null,
     population: '4,217,737',
     casesPastWeek: 4963,
     casesIncreasingPercentage: 0.0,
@@ -2627,6 +2666,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42: {
     label: 'Pennsylvania',
+    iso3: null,
     population: '12,801,989',
     casesPastWeek: 36117,
     casesIncreasingPercentage: 0.0,
@@ -2704,6 +2744,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_44: {
     label: 'Rhode Island',
+    iso3: null,
     population: '1,059,361',
     casesPastWeek: 5292,
     casesIncreasingPercentage: 0.0,
@@ -2713,6 +2754,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45: {
     label: 'South Carolina',
+    iso3: null,
     population: '5,148,714',
     casesPastWeek: 30141,
     casesIncreasingPercentage: 0.0,
@@ -2769,6 +2811,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46: {
     label: 'South Dakota',
+    iso3: null,
     population: '884,659',
     casesPastWeek: 1604,
     casesIncreasingPercentage: 0.0,
@@ -2845,6 +2888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47: {
     label: 'Tennessee',
+    iso3: null,
     population: '6,829,174',
     casesPastWeek: 23126,
     casesIncreasingPercentage: 0.0,
@@ -2950,6 +2994,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48: {
     label: 'Texas',
+    iso3: null,
     population: '28,995,881',
     casesPastWeek: 123310,
     casesIncreasingPercentage: 0.0,
@@ -3214,6 +3259,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49: {
     label: 'Utah',
+    iso3: null,
     population: '3,205,958',
     casesPastWeek: 12568,
     casesIncreasingPercentage: 0.0,
@@ -3237,6 +3283,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50: {
     label: 'Vermont',
+    iso3: null,
     population: '623,989',
     casesPastWeek: 976,
     casesIncreasingPercentage: 0.0,
@@ -3261,6 +3308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51: {
     label: 'Virginia',
+    iso3: null,
     population: '8,535,519',
     casesPastWeek: 33142,
     casesIncreasingPercentage: 0.0,
@@ -3404,6 +3452,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53: {
     label: 'Washington',
+    iso3: null,
     population: '7,614,893',
     casesPastWeek: 10259,
     casesIncreasingPercentage: 0.0,
@@ -3453,6 +3502,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54: {
     label: 'West Virginia',
+    iso3: null,
     population: '1,792,147',
     casesPastWeek: 6486,
     casesIncreasingPercentage: 0.0,
@@ -3518,6 +3568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55: {
     label: 'Wisconsin',
+    iso3: null,
     population: '5,822,434',
     casesPastWeek: 13211,
     casesIncreasingPercentage: 0.0,
@@ -3600,6 +3651,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56: {
     label: 'Wyoming',
+    iso3: null,
     population: '578,759',
     casesPastWeek: 1535,
     casesIncreasingPercentage: 0.0,
@@ -3633,6 +3685,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_66: {
     label: 'Guam',
+    iso3: null,
     population: '164,229',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -3642,6 +3695,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_69: {
     label: 'Northern Mariana Islands',
+    iso3: null,
     population: '55,144',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -3651,6 +3705,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72: {
     label: 'Puerto Rico',
+    iso3: null,
     population: '3,193,694',
     casesPastWeek: 3644,
     casesIncreasingPercentage: 0.0,
@@ -3739,6 +3794,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_78: {
     label: 'Virgin Islands',
+    iso3: null,
     population: '107,268',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -3748,6 +3804,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Afghanistan: {
     label: 'Afghanistan',
+    iso3: 'AFG',
     population: '38,928,341',
     casesPastWeek: 611,
     casesIncreasingPercentage: 23.43434343434343,
@@ -3757,6 +3814,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Albania: {
     label: 'Albania',
+    iso3: 'ALB',
     population: '2,877,800',
     casesPastWeek: 4584,
     casesIncreasingPercentage: 11.941391941391943,
@@ -3766,6 +3824,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Algeria: {
     label: 'Algeria',
+    iso3: 'DZA',
     population: '43,851,043',
     casesPastWeek: 1763,
     casesIncreasingPercentage: 4.3812907045589045,
@@ -3775,6 +3834,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Andorra: {
     label: 'Andorra',
+    iso3: 'AND',
     population: '77,265',
     casesPastWeek: 466,
     casesIncreasingPercentage: 0.0,
@@ -3784,6 +3844,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Angola: {
     label: 'Angola',
+    iso3: 'AGO',
     population: '32,866,268',
     casesPastWeek: 524,
     casesIncreasingPercentage: 0.0,
@@ -3793,6 +3854,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Antigua_and_Barbuda: {
     label: 'Antigua and Barbuda',
+    iso3: 'ATG',
     population: '97,928',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -3802,6 +3864,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Argentina: {
     label: 'Argentina',
+    iso3: 'ARG',
     population: '45,195,777',
     casesPastWeek: 67980,
     casesIncreasingPercentage: 0.0,
@@ -3811,6 +3874,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Armenia: {
     label: 'Armenia',
+    iso3: 'ARM',
     population: '2,963,234',
     casesPastWeek: 1450,
     casesIncreasingPercentage: 0.0,
@@ -3820,6 +3884,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia: {
     label: 'Australia',
+    iso3: 'AUS',
     population: '25,459,700',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -3838,6 +3903,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_Australian_Capital_Territory: {
     label: 'Australian Capital Territory',
+    iso3: null,
     population: '428,100',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -3847,6 +3913,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_New_South_Wales: {
     label: 'New South Wales',
+    iso3: null,
     population: '8,118,000',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -3856,6 +3923,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_Northern_Territory: {
     label: 'Northern Territory',
+    iso3: null,
     population: '245,600',
     casesPastWeek: 5,
     casesIncreasingPercentage: 66.66666666666667,
@@ -3865,6 +3933,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_Queensland: {
     label: 'Queensland',
+    iso3: null,
     population: '5,115,500',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -3874,6 +3943,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_South_Australia: {
     label: 'South Australia',
+    iso3: null,
     population: '1,756,500',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -3883,6 +3953,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_Tasmania: {
     label: 'Tasmania',
+    iso3: null,
     population: '535,500',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -3892,6 +3963,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_Victoria: {
     label: 'Victoria',
+    iso3: null,
     population: '6,629,900',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -3901,6 +3973,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Australia_Western_Australia: {
     label: 'Western Australia',
+    iso3: null,
     population: '2,630,600',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -3910,6 +3983,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Austria: {
     label: 'Austria',
+    iso3: 'AUT',
     population: '9,006,400',
     casesPastWeek: 10936,
     casesIncreasingPercentage: 0.0,
@@ -3919,6 +3993,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Azerbaijan: {
     label: 'Azerbaijan',
+    iso3: 'AZE',
     population: '10,139,175',
     casesPastWeek: 1702,
     casesIncreasingPercentage: 0.0,
@@ -3928,6 +4003,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bahamas: {
     label: 'Bahamas',
+    iso3: 'BHS',
     population: '393,248',
     casesPastWeek: 69,
     casesIncreasingPercentage: 9.523809523809534,
@@ -3937,6 +4013,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bahrain: {
     label: 'Bahrain',
+    iso3: 'BHR',
     population: '1,701,583',
     casesPastWeek: 2210,
     casesIncreasingPercentage: 7.857491459248411,
@@ -3946,6 +4023,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bangladesh: {
     label: 'Bangladesh',
+    iso3: 'BGD',
     population: '164,689,383',
     casesPastWeek: 4167,
     casesIncreasingPercentage: 0.0,
@@ -3955,6 +4033,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Barbados: {
     label: 'Barbados',
+    iso3: 'BRB',
     population: '287,371',
     casesPastWeek: 292,
     casesIncreasingPercentage: 34.56221198156682,
@@ -3964,6 +4043,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belarus: {
     label: 'Belarus',
+    iso3: 'BLR',
     population: '9,449,321',
     casesPastWeek: 12150,
     casesIncreasingPercentage: 0.0,
@@ -3973,6 +4053,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium: {
     label: 'Belgium',
+    iso3: 'BEL',
     population: '11,589,616',
     casesPastWeek: 14827,
     casesIncreasingPercentage: 1.722008781558726,
@@ -3994,6 +4075,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Antwerp: {
     label: 'Antwerp',
+    iso3: null,
     population: '1,857,986',
     casesPastWeek: 2261,
     casesIncreasingPercentage: 10.185185185185187,
@@ -4003,6 +4085,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Brussels: {
     label: 'Brussels',
+    iso3: null,
     population: '1,208,542',
     casesPastWeek: 1422,
     casesIncreasingPercentage: 0.0,
@@ -4012,6 +4095,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_East_Flanders: {
     label: 'East Flanders',
+    iso3: null,
     population: '1,515,064',
     casesPastWeek: 2117,
     casesIncreasingPercentage: 9.067490984028858,
@@ -4021,6 +4105,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Flemish_Brabant: {
     label: 'Flemish Brabant',
+    iso3: null,
     population: '1,146,175',
     casesPastWeek: 1160,
     casesIncreasingPercentage: 6.912442396313367,
@@ -4030,6 +4115,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Hainaut: {
     label: 'Hainaut',
+    iso3: null,
     population: '1,344,241',
     casesPastWeek: 1655,
     casesIncreasingPercentage: 0.0,
@@ -4039,6 +4125,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Liege: {
     label: 'Liege',
+    iso3: null,
     population: '1,106,992',
     casesPastWeek: 1049,
     casesIncreasingPercentage: 1.2548262548262468,
@@ -4048,6 +4135,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Limburg: {
     label: 'Limburg',
+    iso3: null,
     population: '874,048',
     casesPastWeek: 1463,
     casesIncreasingPercentage: 30.276046304541417,
@@ -4057,6 +4145,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Luxembourg: {
     label: 'Luxembourg',
+    iso3: null,
     population: '284,638',
     casesPastWeek: 314,
     casesIncreasingPercentage: 0.0,
@@ -4066,6 +4155,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Namur: {
     label: 'Namur',
+    iso3: null,
     population: '494,325',
     casesPastWeek: 459,
     casesIncreasingPercentage: 0.0,
@@ -4075,6 +4165,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Walloon_Brabant: {
     label: 'Walloon Brabant',
+    iso3: null,
     population: '403,599',
     casesPastWeek: 513,
     casesIncreasingPercentage: 3.8461538461538547,
@@ -4084,6 +4175,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_West_Flanders: {
     label: 'West Flanders',
+    iso3: null,
     population: '1,195,796',
     casesPastWeek: 2018,
     casesIncreasingPercentage: 11.491712707182323,
@@ -4093,6 +4185,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belgium_Unknown: {
     label: 'Unknown',
+    iso3: null,
     population: '0',
     casesPastWeek: 396,
     casesIncreasingPercentage: 0.0,
@@ -4102,6 +4195,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Belize: {
     label: 'Belize',
+    iso3: 'BLZ',
     population: '397,621',
     casesPastWeek: 170,
     casesIncreasingPercentage: 0.0,
@@ -4111,6 +4205,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Benin: {
     label: 'Benin',
+    iso3: 'BEN',
     population: '12,123,198',
     casesPastWeek: 230,
     casesIncreasingPercentage: 111.00917431192659,
@@ -4120,6 +4215,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bhutan: {
     label: 'Bhutan',
+    iso3: 'BTN',
     population: '771,612',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -4129,6 +4225,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bolivia: {
     label: 'Bolivia',
+    iso3: 'BOL',
     population: '11,673,029',
     casesPastWeek: 13854,
     casesIncreasingPercentage: 4.2673289681643745,
@@ -4138,6 +4235,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bosnia_and_Herzegovina: {
     label: 'Bosnia and Herzegovina',
+    iso3: 'BIH',
     population: '3,280,815',
     casesPastWeek: 2409,
     casesIncreasingPercentage: 74.81857764876634,
@@ -4147,6 +4245,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Botswana: {
     label: 'Botswana',
+    iso3: 'BWA',
     population: '2,351,625',
     casesPastWeek: 2289,
     casesIncreasingPercentage: 74.06844106463879,
@@ -4156,6 +4255,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil: {
     label: 'Brazil',
+    iso3: 'BRA',
     population: '212,559,409',
     casesPastWeek: 356478,
     casesIncreasingPercentage: 0.0,
@@ -4193,6 +4293,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Acre: {
     label: 'Acre',
+    iso3: null,
     population: '881,935',
     casesPastWeek: 1662,
     casesIncreasingPercentage: 1.3414634146341475,
@@ -4202,6 +4303,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Alagoas: {
     label: 'Alagoas',
+    iso3: null,
     population: '3,337,357',
     casesPastWeek: 2726,
     casesIncreasingPercentage: 0.0,
@@ -4211,6 +4313,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Amapa: {
     label: 'Amapa',
+    iso3: null,
     population: '845,731',
     casesPastWeek: 1832,
     casesIncreasingPercentage: 0.0,
@@ -4220,6 +4323,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Amazonas: {
     label: 'Amazonas',
+    iso3: null,
     population: '4,144,597',
     casesPastWeek: 19069,
     casesIncreasingPercentage: 14.301984055625482,
@@ -4229,6 +4333,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Bahia: {
     label: 'Bahia',
+    iso3: null,
     population: '14,873,064',
     casesPastWeek: 27548,
     casesIncreasingPercentage: 10.496971641731179,
@@ -4238,6 +4343,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Ceara: {
     label: 'Ceara',
+    iso3: null,
     population: '9,132,078',
     casesPastWeek: 8963,
     casesIncreasingPercentage: 4.524781341107875,
@@ -4247,6 +4353,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Distrito_Federal: {
     label: 'Distrito Federal',
+    iso3: null,
     population: '3,015,268',
     casesPastWeek: 5944,
     casesIncreasingPercentage: 9.74889217134416,
@@ -4256,6 +4363,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Espirito_Santo: {
     label: 'Espirito Santo',
+    iso3: null,
     population: '4,018,650',
     casesPastWeek: 10137,
     casesIncreasingPercentage: 0.0,
@@ -4265,6 +4373,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Goias: {
     label: 'Goias',
+    iso3: null,
     population: '7,018,354',
     casesPastWeek: 9998,
     casesIncreasingPercentage: 0.0,
@@ -4274,6 +4383,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Maranhao: {
     label: 'Maranhao',
+    iso3: null,
     population: '7,075,181',
     casesPastWeek: 2058,
     casesIncreasingPercentage: 39.24221921515561,
@@ -4283,6 +4393,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Mato_Grosso: {
     label: 'Mato Grosso',
+    iso3: null,
     population: '3,484,466',
     casesPastWeek: 9021,
     casesIncreasingPercentage: 0.0,
@@ -4292,6 +4403,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Mato_Grosso_do_Sul: {
     label: 'Mato Grosso do Sul',
+    iso3: null,
     population: '2,778,986',
     casesPastWeek: 5961,
     casesIncreasingPercentage: 0.0,
@@ -4301,6 +4413,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Minas_Gerais: {
     label: 'Minas Gerais',
+    iso3: null,
     population: '21,168,791',
     casesPastWeek: 47244,
     casesIncreasingPercentage: 0.0,
@@ -4310,6 +4423,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Para: {
     label: 'Para',
+    iso3: null,
     population: '8,602,865',
     casesPastWeek: 9251,
     casesIncreasingPercentage: 15.27725856697819,
@@ -4319,6 +4433,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Paraiba: {
     label: 'Paraiba',
+    iso3: null,
     population: '4,018,127',
     casesPastWeek: 6108,
     casesIncreasingPercentage: 26.14622057001239,
@@ -4328,6 +4443,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Parana: {
     label: 'Parana',
+    iso3: null,
     population: '11,433,957',
     casesPastWeek: 21391,
     casesIncreasingPercentage: 0.0,
@@ -4337,6 +4453,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Pernambuco: {
     label: 'Pernambuco',
+    iso3: null,
     population: '9,557,071',
     casesPastWeek: 9615,
     casesIncreasingPercentage: 6.243093922651943,
@@ -4346,6 +4463,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Piaui: {
     label: 'Piaui',
+    iso3: null,
     population: '3,273,227',
     casesPastWeek: 3965,
     casesIncreasingPercentage: 0.0,
@@ -4355,6 +4473,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Rio_de_Janeiro: {
     label: 'Rio de Janeiro',
+    iso3: null,
     population: '17,264,943',
     casesPastWeek: 19144,
     casesIncreasingPercentage: 0.0,
@@ -4364,6 +4483,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Rio_Grande_do_Norte: {
     label: 'Rio Grande do Norte',
+    iso3: null,
     population: '3,506,853',
     casesPastWeek: 5424,
     casesIncreasingPercentage: 0.0,
@@ -4373,6 +4493,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Rio_Grande_do_Sul: {
     label: 'Rio Grande do Sul',
+    iso3: null,
     population: '11,377,239',
     casesPastWeek: 21160,
     casesIncreasingPercentage: 0.0,
@@ -4382,6 +4503,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Rondonia: {
     label: 'Rondonia',
+    iso3: null,
     population: '1,777,225',
     casesPastWeek: 8045,
     casesIncreasingPercentage: 7.7262988752008654,
@@ -4391,6 +4513,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Roraima: {
     label: 'Roraima',
+    iso3: null,
     population: '605,761',
     casesPastWeek: 1365,
     casesIncreasingPercentage: 12.253289473684204,
@@ -4400,6 +4523,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Santa_Catarina: {
     label: 'Santa Catarina',
+    iso3: null,
     population: '7,164,788',
     casesPastWeek: 17230,
     casesIncreasingPercentage: 0.0,
@@ -4409,6 +4533,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Sao_Paulo: {
     label: 'Sao Paulo',
+    iso3: null,
     population: '45,919,049',
     casesPastWeek: 74088,
     casesIncreasingPercentage: 0.0,
@@ -4418,6 +4543,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Sergipe: {
     label: 'Sergipe',
+    iso3: null,
     population: '2,298,696',
     casesPastWeek: 4434,
     casesIncreasingPercentage: 0.0,
@@ -4427,6 +4553,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brazil_Tocantins: {
     label: 'Tocantins',
+    iso3: null,
     population: '1,572,866',
     casesPastWeek: 3095,
     casesIncreasingPercentage: 0.0,
@@ -4436,6 +4563,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Brunei: {
     label: 'Brunei',
+    iso3: 'BRN',
     population: '437,483',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -4445,6 +4573,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Bulgaria: {
     label: 'Bulgaria',
+    iso3: 'BGR',
     population: '6,948,445',
     casesPastWeek: 3004,
     casesIncreasingPercentage: 0.0,
@@ -4454,6 +4583,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Burkina_Faso: {
     label: 'Burkina Faso',
+    iso3: 'BFA',
     population: '20,903,278',
     casesPastWeek: 850,
     casesIncreasingPercentage: 0.0,
@@ -4463,6 +4593,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Burma: {
     label: 'Burma',
+    iso3: 'MMR',
     population: '54,409,794',
     casesPastWeek: 3256,
     casesIncreasingPercentage: 0.0,
@@ -4472,6 +4603,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Burundi: {
     label: 'Burundi',
+    iso3: 'BDI',
     population: '11,890,781',
     casesPastWeek: 236,
     casesIncreasingPercentage: 0.0,
@@ -4481,6 +4613,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Cabo_Verde: {
     label: 'Cabo Verde',
+    iso3: 'CPV',
     population: '555,988',
     casesPastWeek: 496,
     casesIncreasingPercentage: 0.0,
@@ -4490,6 +4623,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Cambodia: {
     label: 'Cambodia',
+    iso3: 'KHM',
     population: '16,718,971',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -4499,6 +4633,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Cameroon: {
     label: 'Cameroon',
+    iso3: 'CMR',
     population: '26,545,864',
     casesPastWeek: 1607,
     casesIncreasingPercentage: 38.2960413080895,
@@ -4508,6 +4643,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada: {
     label: 'Canada',
+    iso3: 'CAN',
     population: '37,855,702',
     casesPastWeek: 38859,
     casesIncreasingPercentage: 0.0,
@@ -4531,6 +4667,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Alberta: {
     label: 'Alberta',
+    iso3: null,
     population: '4,413,146',
     casesPastWeek: 3956,
     casesIncreasingPercentage: 0.0,
@@ -4540,6 +4677,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_British_Columbia: {
     label: 'British Columbia',
+    iso3: null,
     population: '5,110,917',
     casesPastWeek: 3367,
     casesIncreasingPercentage: 0.0,
@@ -4549,6 +4687,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Manitoba: {
     label: 'Manitoba',
+    iso3: null,
     population: '1,377,517',
     casesPastWeek: 1186,
     casesIncreasingPercentage: 0.0,
@@ -4558,6 +4697,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_New_Brunswick: {
     label: 'New Brunswick',
+    iso3: null,
     population: '779,993',
     casesPastWeek: 177,
     casesIncreasingPercentage: 5.35714285714286,
@@ -4567,6 +4707,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Newfoundland_and_Labrador: {
     label: 'Newfoundland and Labrador',
+    iso3: null,
     population: '521,365',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -4576,6 +4717,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Northwest_Territories: {
     label: 'Northwest Territories',
+    iso3: null,
     population: '44,904',
     casesPastWeek: 6,
     casesIncreasingPercentage: 500.0,
@@ -4585,6 +4727,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Nova_Scotia: {
     label: 'Nova Scotia',
+    iso3: null,
     population: '977,457',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -4594,6 +4737,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Ontario: {
     label: 'Ontario',
+    iso3: null,
     population: '14,711,827',
     casesPastWeek: 17308,
     casesIncreasingPercentage: 0.0,
@@ -4603,6 +4747,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Prince_Edward_Island: {
     label: 'Prince Edward Island',
+    iso3: null,
     population: '158,158',
     casesPastWeek: 7,
     casesIncreasingPercentage: 600.0,
@@ -4612,6 +4757,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Quebec: {
     label: 'Quebec',
+    iso3: null,
     population: '8,537,674',
     casesPastWeek: 10919,
     casesIncreasingPercentage: 0.0,
@@ -4621,6 +4767,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Saskatchewan: {
     label: 'Saskatchewan',
+    iso3: null,
     population: '1,181,666',
     casesPastWeek: 1905,
     casesIncreasingPercentage: 0.0,
@@ -4630,6 +4777,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Yukon: {
     label: 'Yukon',
+    iso3: null,
     population: '41,078',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -4639,6 +4787,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Canada_Nunavut: {
     label: 'Nunavut',
+    iso3: null,
     population: '38,780',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -4648,6 +4797,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Central_African_Republic: {
     label: 'Central African Republic',
+    iso3: 'CAF',
     population: '4,829,764',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -4657,6 +4807,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chad: {
     label: 'Chad',
+    iso3: 'TCD',
     population: '16,425,859',
     casesPastWeek: 266,
     casesIncreasingPercentage: 0.0,
@@ -4666,6 +4817,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile: {
     label: 'Chile',
+    iso3: 'CHL',
     population: '19,116,209',
     casesPastWeek: 29278,
     casesIncreasingPercentage: 4.905227704324777,
@@ -4692,6 +4844,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Antofagasta: {
     label: 'Antofagasta',
+    iso3: null,
     population: '607,534',
     casesPastWeek: 2161,
     casesIncreasingPercentage: 9.362348178137658,
@@ -4701,6 +4854,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Araucania: {
     label: 'Araucania',
+    iso3: null,
     population: '957,224',
     casesPastWeek: 2203,
     casesIncreasingPercentage: 8.202357563850683,
@@ -4710,6 +4864,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Arica_y_Parinacota: {
     label: 'Arica y Parinacota',
+    iso3: null,
     population: '226,068',
     casesPastWeek: 559,
     casesIncreasingPercentage: 4.096834264432037,
@@ -4719,6 +4874,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Atacama: {
     label: 'Atacama',
+    iso3: null,
     population: '288,944',
     casesPastWeek: 429,
     casesIncreasingPercentage: 4.634146341463419,
@@ -4728,6 +4884,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Aysen: {
     label: 'Aysen',
+    iso3: null,
     population: '103,158',
     casesPastWeek: 273,
     casesIncreasingPercentage: 18.181818181818187,
@@ -4737,6 +4894,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Biobio: {
     label: 'Biobio',
+    iso3: null,
     population: '1,556,805',
     casesPastWeek: 3316,
     casesIncreasingPercentage: 2.630764469204583,
@@ -4746,6 +4904,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Coquimbo: {
     label: 'Coquimbo',
+    iso3: null,
     population: '757,586',
     casesPastWeek: 717,
     casesIncreasingPercentage: 16.207455429497575,
@@ -4755,6 +4914,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Los_Lagos: {
     label: 'Los Lagos',
+    iso3: null,
     population: '828,708',
     casesPastWeek: 4435,
     casesIncreasingPercentage: 8.56793145654835,
@@ -4764,6 +4924,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Los_Rios: {
     label: 'Los Rios',
+    iso3: null,
     population: '384,837',
     casesPastWeek: 1532,
     casesIncreasingPercentage: 15.88502269288956,
@@ -4773,6 +4934,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Magallanes: {
     label: 'Magallanes',
+    iso3: null,
     population: '166,533',
     casesPastWeek: 701,
     casesIncreasingPercentage: 0.0,
@@ -4782,6 +4944,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Maule: {
     label: 'Maule',
+    iso3: null,
     population: '1,044,950',
     casesPastWeek: 2201,
     casesIncreasingPercentage: 0.0,
@@ -4791,6 +4954,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Metropolitana: {
     label: 'Metropolitana',
+    iso3: null,
     population: '7,112,808',
     casesPastWeek: 5598,
     casesIncreasingPercentage: 2.3400365630712905,
@@ -4800,6 +4964,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Nuble: {
     label: 'Nuble',
+    iso3: null,
     population: '480,609',
     casesPastWeek: 858,
     casesIncreasingPercentage: 33.43701399688959,
@@ -4809,6 +4974,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_OHiggins: {
     label: 'OHiggins',
+    iso3: null,
     population: '914,555',
     casesPastWeek: 1215,
     casesIncreasingPercentage: 27.89473684210526,
@@ -4818,6 +4984,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Tarapaca: {
     label: 'Tarapaca',
+    iso3: null,
     population: '330,558',
     casesPastWeek: 1319,
     casesIncreasingPercentage: 0.0,
@@ -4827,6 +4994,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Valparaiso: {
     label: 'Valparaiso',
+    iso3: null,
     population: '1,815,902',
     casesPastWeek: 1762,
     casesIncreasingPercentage: 0.7432818753573489,
@@ -4836,6 +5004,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Chile_Unknown: {
     label: 'Unknown',
+    iso3: null,
     population: '0',
     casesPastWeek: -1,
     casesIncreasingPercentage: 0.0,
@@ -4845,6 +5014,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China: {
     label: 'China',
+    iso3: 'CHN',
     population: '1,404,676,330',
     casesPastWeek: 1308,
     casesIncreasingPercentage: 17.309417040358753,
@@ -4888,6 +5058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Anhui: {
     label: 'Anhui',
+    iso3: null,
     population: '63,240,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -4897,6 +5068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Beijing: {
     label: 'Beijing',
+    iso3: null,
     population: '21,540,000',
     casesPastWeek: 22,
     casesIncreasingPercentage: 144.44444444444446,
@@ -4906,6 +5078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Chongqing: {
     label: 'Chongqing',
+    iso3: null,
     population: '31,020,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -4915,6 +5088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Fujian: {
     label: 'Fujian',
+    iso3: null,
     population: '39,410,000',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -4924,6 +5098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Gansu: {
     label: 'Gansu',
+    iso3: null,
     population: '26,370,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -4933,6 +5108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Guangdong: {
     label: 'Guangdong',
+    iso3: null,
     population: '113,460,000',
     casesPastWeek: 19,
     casesIncreasingPercentage: 58.33333333333333,
@@ -4942,6 +5118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Guangxi: {
     label: 'Guangxi',
+    iso3: null,
     population: '49,260,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -4951,6 +5128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Guizhou: {
     label: 'Guizhou',
+    iso3: null,
     population: '36,000,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -4960,6 +5138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Hainan: {
     label: 'Hainan',
+    iso3: null,
     population: '9,340,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -4969,6 +5148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Hebei: {
     label: 'Hebei',
+    iso3: null,
     population: '75,560,000',
     casesPastWeek: 137,
     casesIncreasingPercentage: 0.0,
@@ -4978,6 +5158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Heilongjiang: {
     label: 'Heilongjiang',
+    iso3: null,
     population: '37,730,000',
     casesPastWeek: 278,
     casesIncreasingPercentage: 91.72413793103449,
@@ -4987,6 +5168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Henan: {
     label: 'Henan',
+    iso3: null,
     population: '96,050,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -4996,6 +5178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Hubei: {
     label: 'Hubei',
+    iso3: null,
     population: '59,170,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -5005,6 +5188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Hunan: {
     label: 'Hunan',
+    iso3: null,
     population: '68,990,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -5014,6 +5198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Inner_Mongolia: {
     label: 'Inner Mongolia',
+    iso3: null,
     population: '25,340,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5023,6 +5208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Jiangsu: {
     label: 'Jiangsu',
+    iso3: null,
     population: '80,510,000',
     casesPastWeek: 3,
     casesIncreasingPercentage: 200.0,
@@ -5032,6 +5218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Jiangxi: {
     label: 'Jiangxi',
+    iso3: null,
     population: '46,480,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5041,6 +5228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Jilin: {
     label: 'Jilin',
+    iso3: null,
     population: '27,040,000',
     casesPastWeek: 233,
     casesIncreasingPercentage: 482.5,
@@ -5050,6 +5238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Liaoning: {
     label: 'Liaoning',
+    iso3: null,
     population: '43,590,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -5059,6 +5248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Ningxia: {
     label: 'Ningxia',
+    iso3: null,
     population: '6,880,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5068,6 +5258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Qinghai: {
     label: 'Qinghai',
+    iso3: null,
     population: '6,030,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5077,6 +5268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Shaanxi: {
     label: 'Shaanxi',
+    iso3: null,
     population: '38,640,000',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -5086,6 +5278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Shandong: {
     label: 'Shandong',
+    iso3: null,
     population: '100,470,000',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -5095,6 +5288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Shanghai: {
     label: 'Shanghai',
+    iso3: null,
     population: '24,240,000',
     casesPastWeek: 46,
     casesIncreasingPercentage: 35.29411764705883,
@@ -5104,6 +5298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Shanxi: {
     label: 'Shanxi',
+    iso3: null,
     population: '37,180,000',
     casesPastWeek: 10,
     casesIncreasingPercentage: 900.0,
@@ -5113,6 +5308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Sichuan: {
     label: 'Sichuan',
+    iso3: null,
     population: '83,410,000',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -5122,6 +5318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Tianjin: {
     label: 'Tianjin',
+    iso3: null,
     population: '15,600,000',
     casesPastWeek: 9,
     casesIncreasingPercentage: 28.57142857142858,
@@ -5131,6 +5328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Tibet: {
     label: 'Tibet',
+    iso3: null,
     population: '3,440,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5140,6 +5338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Xinjiang: {
     label: 'Xinjiang',
+    iso3: null,
     population: '24,870,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5149,6 +5348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Yunnan: {
     label: 'Yunnan',
+    iso3: null,
     population: '48,300,000',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5158,6 +5358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Zhejiang: {
     label: 'Zhejiang',
+    iso3: null,
     population: '57,370,000',
     casesPastWeek: 5,
     casesIncreasingPercentage: 66.66666666666667,
@@ -5167,6 +5368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Hong_Kong: {
     label: 'Hong Kong',
+    iso3: null,
     population: '7,496,988',
     casesPastWeek: 528,
     casesIncreasingPercentage: 67.61904761904762,
@@ -5176,6 +5378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   China_Macau: {
     label: 'Macau',
+    iso3: null,
     population: '649,342',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -5185,6 +5388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia: {
     label: 'Colombia',
+    iso3: 'COL',
     population: '50,882,884',
     casesPastWeek: 107072,
     casesIncreasingPercentage: 0.0,
@@ -5228,6 +5432,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Amazonas: {
     label: 'Amazonas',
+    iso3: null,
     population: '76,589',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -5237,6 +5442,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Antioquia: {
     label: 'Antioquia',
+    iso3: null,
     population: '6,407,102',
     casesPastWeek: 13747,
     casesIncreasingPercentage: 0.0,
@@ -5246,6 +5452,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Arauca: {
     label: 'Arauca',
+    iso3: null,
     population: '262,174',
     casesPastWeek: 201,
     casesIncreasingPercentage: 0.0,
@@ -5255,6 +5462,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Atlantico: {
     label: 'Atlantico',
+    iso3: null,
     population: '2,535,517',
     casesPastWeek: 5383,
     casesIncreasingPercentage: 0.0,
@@ -5264,6 +5472,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Bolivar: {
     label: 'Bolivar',
+    iso3: null,
     population: '2,070,110',
     casesPastWeek: 2399,
     casesIncreasingPercentage: 0.0,
@@ -5273,6 +5482,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Boyaca: {
     label: 'Boyaca',
+    iso3: null,
     population: '1,217,376',
     casesPastWeek: 3364,
     casesIncreasingPercentage: 3.2535297728667922,
@@ -5282,6 +5492,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Caldas: {
     label: 'Caldas',
+    iso3: null,
     population: '998,255',
     casesPastWeek: 2852,
     casesIncreasingPercentage: 0.0,
@@ -5291,6 +5502,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Capital_District: {
     label: 'Capital District',
+    iso3: null,
     population: '7,412,566',
     casesPastWeek: 35314,
     casesIncreasingPercentage: 0.0,
@@ -5300,6 +5512,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Caqueta: {
     label: 'Caqueta',
+    iso3: null,
     population: '401,489',
     casesPastWeek: 304,
     casesIncreasingPercentage: 0.0,
@@ -5309,6 +5522,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Casanare: {
     label: 'Casanare',
+    iso3: null,
     population: '420,504',
     casesPastWeek: 578,
     casesIncreasingPercentage: 0.0,
@@ -5318,6 +5532,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Cauca: {
     label: 'Cauca',
+    iso3: null,
     population: '1,464,488',
     casesPastWeek: 2121,
     casesIncreasingPercentage: 11.28016789087094,
@@ -5327,6 +5542,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Cesar: {
     label: 'Cesar',
+    iso3: null,
     population: '1,200,574',
     casesPastWeek: 1018,
     casesIncreasingPercentage: 0.0,
@@ -5336,6 +5552,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Choco: {
     label: 'Choco',
+    iso3: null,
     population: '534,826',
     casesPastWeek: 380,
     casesIncreasingPercentage: 11.111111111111116,
@@ -5345,6 +5562,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Cordoba: {
     label: 'Cordoba',
+    iso3: null,
     population: '1,784,783',
     casesPastWeek: 582,
     casesIncreasingPercentage: 0.0,
@@ -5354,6 +5572,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Cundinamarca: {
     label: 'Cundinamarca',
+    iso3: null,
     population: '2,919,060',
     casesPastWeek: 6774,
     casesIncreasingPercentage: 0.0,
@@ -5363,6 +5582,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Guainia: {
     label: 'Guainia',
+    iso3: null,
     population: '48,114',
     casesPastWeek: 22,
     casesIncreasingPercentage: 450.0,
@@ -5372,6 +5592,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Guaviare: {
     label: 'Guaviare',
+    iso3: null,
     population: '82,767',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -5381,6 +5602,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Huila: {
     label: 'Huila',
+    iso3: null,
     population: '1,100,386',
     casesPastWeek: 2928,
     casesIncreasingPercentage: 0.0,
@@ -5390,6 +5612,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_La_Guajira: {
     label: 'La Guajira',
+    iso3: null,
     population: '880,560',
     casesPastWeek: 303,
     casesIncreasingPercentage: 0.0,
@@ -5399,6 +5622,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Magdalena: {
     label: 'Magdalena',
+    iso3: null,
     population: '1,341,746',
     casesPastWeek: 1239,
     casesIncreasingPercentage: 0.0,
@@ -5408,6 +5632,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Meta: {
     label: 'Meta',
+    iso3: null,
     population: '1,039,722',
     casesPastWeek: 1471,
     casesIncreasingPercentage: 0.0,
@@ -5417,6 +5642,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Narino: {
     label: 'Narino',
+    iso3: null,
     population: '1,630,592',
     casesPastWeek: 3521,
     casesIncreasingPercentage: 0.0,
@@ -5426,6 +5652,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Norte_de_Santander: {
     label: 'Norte de Santander',
+    iso3: null,
     population: '1,491,689',
     casesPastWeek: 1728,
     casesIncreasingPercentage: 0.0,
@@ -5435,6 +5662,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Putumayo: {
     label: 'Putumayo',
+    iso3: null,
     population: '348,182',
     casesPastWeek: 329,
     casesIncreasingPercentage: 0.0,
@@ -5444,6 +5672,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Quindio: {
     label: 'Quindio',
+    iso3: null,
     population: '539,904',
     casesPastWeek: 1271,
     casesIncreasingPercentage: 0.0,
@@ -5453,6 +5682,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Risaralda: {
     label: 'Risaralda',
+    iso3: null,
     population: '943,401',
     casesPastWeek: 1827,
     casesIncreasingPercentage: 0.0,
@@ -5462,6 +5692,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_San_Andres_y_Providencia: {
     label: 'San Andres y Providencia',
+    iso3: null,
     population: '61,280',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -5471,6 +5702,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Santander: {
     label: 'Santander',
+    iso3: null,
     population: '2,184,837',
     casesPastWeek: 3626,
     casesIncreasingPercentage: 0.0,
@@ -5480,6 +5712,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Sucre: {
     label: 'Sucre',
+    iso3: null,
     population: '904,863',
     casesPastWeek: 526,
     casesIncreasingPercentage: 33.50253807106598,
@@ -5489,6 +5722,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Tolima: {
     label: 'Tolima',
+    iso3: null,
     population: '1,330,187',
     casesPastWeek: 3773,
     casesIncreasingPercentage: 0.0,
@@ -5498,6 +5732,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Valle_del_Cauca: {
     label: 'Valle del Cauca',
+    iso3: null,
     population: '4,475,886',
     casesPastWeek: 9337,
     casesIncreasingPercentage: 24.377247901958164,
@@ -5507,6 +5742,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Vaupes: {
     label: 'Vaupes',
+    iso3: null,
     population: '40,797',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5516,6 +5752,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Colombia_Vichada: {
     label: 'Vichada',
+    iso3: null,
     population: '107,808',
     casesPastWeek: 18,
     casesIncreasingPercentage: 12.5,
@@ -5525,6 +5762,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Comoros: {
     label: 'Comoros',
+    iso3: 'COM',
     population: '869,595',
     casesPastWeek: 676,
     casesIncreasingPercentage: 52.941176470588225,
@@ -5534,6 +5772,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Congo__Brazzaville_: {
     label: 'Congo (Brazzaville)',
+    iso3: 'COG',
     population: '5,518,092',
     casesPastWeek: 85,
     casesIncreasingPercentage: 0.0,
@@ -5543,6 +5782,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Congo__Kinshasa_: {
     label: 'Congo (Kinshasa)',
+    iso3: 'COD',
     population: '89,561,404',
     casesPastWeek: 961,
     casesIncreasingPercentage: 0.0,
@@ -5552,6 +5792,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Costa_Rica: {
     label: 'Costa Rica',
+    iso3: 'CRI',
     population: '5,094,114',
     casesPastWeek: 5121,
     casesIncreasingPercentage: 0.0,
@@ -5561,6 +5802,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Cote_d_Ivoire: {
     label: "Cote d'Ivoire",
+    iso3: 'CIV',
     population: '26,378,275',
     casesPastWeek: 1609,
     casesIncreasingPercentage: 7.914151576123407,
@@ -5570,6 +5812,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Croatia: {
     label: 'Croatia',
+    iso3: 'HRV',
     population: '4,105,268',
     casesPastWeek: 3966,
     casesIncreasingPercentage: 0.0,
@@ -5579,6 +5822,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Cuba: {
     label: 'Cuba',
+    iso3: 'CUB',
     population: '11,326,616',
     casesPastWeek: 3110,
     casesIncreasingPercentage: 0.0,
@@ -5588,6 +5832,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Cyprus: {
     label: 'Cyprus',
+    iso3: 'CYP',
     population: '1,207,361',
     casesPastWeek: 1049,
     casesIncreasingPercentage: 0.0,
@@ -5597,6 +5842,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Czechia: {
     label: 'Czechia',
+    iso3: 'CZE',
     population: '10,708,982',
     casesPastWeek: 48458,
     casesIncreasingPercentage: 0.0,
@@ -5606,6 +5852,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Denmark: {
     label: 'Denmark',
+    iso3: 'DNK',
     population: '5,792,203',
     casesPastWeek: 5583,
     casesIncreasingPercentage: 0.0,
@@ -5615,6 +5862,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Denmark_Faroe_Islands: {
     label: 'Faroe Islands',
+    iso3: null,
     population: '48,865',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -5624,6 +5872,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Denmark_Greenland: {
     label: 'Greenland',
+    iso3: null,
     population: '56,772',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5633,6 +5882,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Djibouti: {
     label: 'Djibouti',
+    iso3: 'DJI',
     population: '988,002',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -5642,6 +5892,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Dominica: {
     label: 'Dominica',
+    iso3: 'DMA',
     population: '71,991',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -5651,6 +5902,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Dominican_Republic: {
     label: 'Dominican Republic',
+    iso3: 'DOM',
     population: '10,847,904',
     casesPastWeek: 10828,
     casesIncreasingPercentage: 0.0,
@@ -5660,6 +5912,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ecuador: {
     label: 'Ecuador',
+    iso3: 'ECU',
     population: '17,643,060',
     casesPastWeek: 9810,
     casesIncreasingPercentage: 0.0,
@@ -5669,6 +5922,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Egypt: {
     label: 'Egypt',
+    iso3: 'EGY',
     population: '102,334,403',
     casesPastWeek: 5420,
     casesIncreasingPercentage: 0.0,
@@ -5678,6 +5932,7 @@ export const Locations: { [key: string]: Location } = {
   },
   El_Salvador: {
     label: 'El Salvador',
+    iso3: 'SLV',
     population: '6,486,201',
     casesPastWeek: 2434,
     casesIncreasingPercentage: 29.53698775944651,
@@ -5687,6 +5942,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Equatorial_Guinea: {
     label: 'Equatorial Guinea',
+    iso3: 'GNQ',
     population: '1,402,985',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -5696,6 +5952,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Eritrea: {
     label: 'Eritrea',
+    iso3: 'ERI',
     population: '3,546,427',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -5705,6 +5962,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Estonia: {
     label: 'Estonia',
+    iso3: 'EST',
     population: '1,326,539',
     casesPastWeek: 3637,
     casesIncreasingPercentage: 2.0769014875105185,
@@ -5714,6 +5972,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Eswatini: {
     label: 'Eswatini',
+    iso3: 'SWZ',
     population: '1,160,164',
     casesPastWeek: 1540,
     casesIncreasingPercentage: 2.054340622929085,
@@ -5723,6 +5982,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ethiopia: {
     label: 'Ethiopia',
+    iso3: 'ETH',
     population: '114,963,583',
     casesPastWeek: 2572,
     casesIncreasingPercentage: 0.0,
@@ -5732,6 +5992,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Fiji: {
     label: 'Fiji',
+    iso3: 'FJI',
     population: '896,444',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5741,6 +6002,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Finland: {
     label: 'Finland',
+    iso3: 'FIN',
     population: '5,540,718',
     casesPastWeek: 2243,
     casesIncreasingPercentage: 28.39152833428735,
@@ -5750,6 +6012,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France: {
     label: 'France',
+    iso3: 'FRA',
     population: '65,273,512',
     casesPastWeek: 140383,
     casesIncreasingPercentage: 11.36735050057911,
@@ -5771,6 +6034,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_French_Guiana: {
     label: 'French Guiana',
+    iso3: null,
     population: '298,682',
     casesPastWeek: 689,
     casesIncreasingPercentage: 0.0,
@@ -5780,6 +6044,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_French_Polynesia: {
     label: 'French Polynesia',
+    iso3: null,
     population: '280,904',
     casesPastWeek: 217,
     casesIncreasingPercentage: 0.0,
@@ -5789,6 +6054,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Guadeloupe: {
     label: 'Guadeloupe',
+    iso3: null,
     population: '400,127',
     casesPastWeek: 222,
     casesIncreasingPercentage: 68.18181818181819,
@@ -5798,6 +6064,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Martinique: {
     label: 'Martinique',
+    iso3: null,
     population: '375,265',
     casesPastWeek: 143,
     casesIncreasingPercentage: 30.000000000000004,
@@ -5807,6 +6074,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Mayotte: {
     label: 'Mayotte',
+    iso3: null,
     population: '272,813',
     casesPastWeek: 933,
     casesIncreasingPercentage: 146.1741424802111,
@@ -5816,6 +6084,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_New_Caledonia: {
     label: 'New Caledonia',
+    iso3: null,
     population: '285,491',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5825,6 +6094,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Reunion: {
     label: 'Reunion',
+    iso3: null,
     population: '895,308',
     casesPastWeek: 258,
     casesIncreasingPercentage: 31.63265306122449,
@@ -5834,6 +6104,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Saint_Barthelemy: {
     label: 'Saint Barthelemy',
+    iso3: null,
     population: '9,885',
     casesPastWeek: 49,
     casesIncreasingPercentage: 8.888888888888879,
@@ -5843,6 +6114,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Saint_Pierre_and_Miquelon: {
     label: 'Saint Pierre and Miquelon',
+    iso3: null,
     population: '5,795',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5852,6 +6124,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_St_Martin: {
     label: 'St Martin',
+    iso3: null,
     population: '38,659',
     casesPastWeek: 70,
     casesIncreasingPercentage: 37.254901960784316,
@@ -5861,6 +6134,7 @@ export const Locations: { [key: string]: Location } = {
   },
   France_Wallis_and_Futuna: {
     label: 'Wallis and Futuna',
+    iso3: null,
     population: '15,289',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -5870,6 +6144,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Gabon: {
     label: 'Gabon',
+    iso3: 'GAB',
     population: '2,225,728',
     casesPastWeek: 379,
     casesIncreasingPercentage: 84.87804878048782,
@@ -5879,6 +6154,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Gambia: {
     label: 'Gambia',
+    iso3: 'GMB',
     population: '2,416,664',
     casesPastWeek: 62,
     casesIncreasingPercentage: 16.981132075471695,
@@ -5888,6 +6164,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Georgia: {
     label: 'Georgia',
+    iso3: 'GEO',
     population: '3,989,175',
     casesPastWeek: 5713,
     casesIncreasingPercentage: 0.0,
@@ -5897,6 +6174,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany: {
     label: 'Germany',
+    iso3: 'DEU',
     population: '83,783,945',
     casesPastWeek: 97640,
     casesIncreasingPercentage: 0.0,
@@ -5923,6 +6201,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Baden_Wurttemberg: {
     label: 'Baden-Wurttemberg',
+    iso3: null,
     population: '11,069,533',
     casesPastWeek: 10312,
     casesIncreasingPercentage: 0.0,
@@ -5932,6 +6211,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Bayern: {
     label: 'Bayern',
+    iso3: null,
     population: '13,076,721',
     casesPastWeek: 15966,
     casesIncreasingPercentage: 0.0,
@@ -5941,6 +6221,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Berlin: {
     label: 'Berlin',
+    iso3: null,
     population: '3,644,826',
     casesPastWeek: 4239,
     casesIncreasingPercentage: 0.0,
@@ -5950,6 +6231,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Brandenburg: {
     label: 'Brandenburg',
+    iso3: null,
     population: '2,511,917',
     casesPastWeek: 4818,
     casesIncreasingPercentage: 0.0,
@@ -5959,6 +6241,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Bremen: {
     label: 'Bremen',
+    iso3: null,
     population: '682,986',
     casesPastWeek: 492,
     casesIncreasingPercentage: 0.0,
@@ -5968,6 +6251,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Hamburg: {
     label: 'Hamburg',
+    iso3: null,
     population: '1,841,179',
     casesPastWeek: 1846,
     casesIncreasingPercentage: 0.0,
@@ -5977,6 +6261,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Hessen: {
     label: 'Hessen',
+    iso3: null,
     population: '6,265,809',
     casesPastWeek: 7251,
     casesIncreasingPercentage: 0.0,
@@ -5986,6 +6271,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Mecklenburg_Vorpommern: {
     label: 'Mecklenburg-Vorpommern',
+    iso3: null,
     population: '1,609,675',
     casesPastWeek: 1717,
     casesIncreasingPercentage: 0.0,
@@ -5995,6 +6281,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Niedersachsen: {
     label: 'Niedersachsen',
+    iso3: null,
     population: '7,982,448',
     casesPastWeek: 7376,
     casesIncreasingPercentage: 0.0,
@@ -6004,6 +6291,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Nordrhein_Westfalen: {
     label: 'Nordrhein-Westfalen',
+    iso3: null,
     population: '17,932,651',
     casesPastWeek: 19181,
     casesIncreasingPercentage: 0.0,
@@ -6013,6 +6301,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Rheinland_Pfalz: {
     label: 'Rheinland-Pfalz',
+    iso3: null,
     population: '4,084,844',
     casesPastWeek: 4393,
     casesIncreasingPercentage: 0.0,
@@ -6022,6 +6311,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Saarland: {
     label: 'Saarland',
+    iso3: null,
     population: '990,509',
     casesPastWeek: 1093,
     casesIncreasingPercentage: 0.0,
@@ -6031,6 +6321,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Sachsen: {
     label: 'Sachsen',
+    iso3: null,
     population: '4,077,937',
     casesPastWeek: 7532,
     casesIncreasingPercentage: 0.0,
@@ -6040,6 +6331,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Sachsen_Anhalt: {
     label: 'Sachsen-Anhalt',
+    iso3: null,
     population: '2,208,321',
     casesPastWeek: 5181,
     casesIncreasingPercentage: 0.0,
@@ -6049,6 +6341,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Schleswig_Holstein: {
     label: 'Schleswig-Holstein',
+    iso3: null,
     population: '2,896,712',
     casesPastWeek: 2690,
     casesIncreasingPercentage: 5.614448370632119,
@@ -6058,6 +6351,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Thuringen: {
     label: 'Thuringen',
+    iso3: null,
     population: '2,143,145',
     casesPastWeek: 4508,
     casesIncreasingPercentage: 0.0,
@@ -6067,6 +6361,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Germany_Unknown: {
     label: 'Unknown',
+    iso3: null,
     population: '0',
     casesPastWeek: -955,
     casesIncreasingPercentage: 0.0,
@@ -6076,6 +6371,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ghana: {
     label: 'Ghana',
+    iso3: 'GHA',
     population: '31,072,945',
     casesPastWeek: 3080,
     casesIncreasingPercentage: 58.599382080329555,
@@ -6085,6 +6381,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Greece: {
     label: 'Greece',
+    iso3: 'GRC',
     population: '10,423,056',
     casesPastWeek: 3373,
     casesIncreasingPercentage: 0.0,
@@ -6094,6 +6391,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Grenada: {
     label: 'Grenada',
+    iso3: 'GRD',
     population: '112,519',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -6103,6 +6401,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Guatemala: {
     label: 'Guatemala',
+    iso3: 'GTM',
     population: '17,915,567',
     casesPastWeek: 5324,
     casesIncreasingPercentage: 0.0,
@@ -6112,6 +6411,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Guinea: {
     label: 'Guinea',
+    iso3: 'GIN',
     population: '13,132,792',
     casesPastWeek: 205,
     casesIncreasingPercentage: 19.186046511627897,
@@ -6121,6 +6421,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Guinea_Bissau: {
     label: 'Guinea-Bissau',
+    iso3: 'GNB',
     population: '1,967,998',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -6130,6 +6431,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Guyana: {
     label: 'Guyana',
+    iso3: 'GUY',
     population: '786,559',
     casesPastWeek: 390,
     casesIncreasingPercentage: 16.766467065868262,
@@ -6139,6 +6441,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Haiti: {
     label: 'Haiti',
+    iso3: 'HTI',
     population: '11,402,533',
     casesPastWeek: 400,
     casesIncreasingPercentage: 0.0,
@@ -6148,6 +6451,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Holy_See: {
     label: 'Holy See',
+    iso3: 'VAT',
     population: '809',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -6157,6 +6461,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Honduras: {
     label: 'Honduras',
+    iso3: 'HND',
     population: '9,904,608',
     casesPastWeek: 6818,
     casesIncreasingPercentage: 10.574116120661703,
@@ -6166,6 +6471,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Hungary: {
     label: 'Hungary',
+    iso3: 'HUN',
     population: '9,660,350',
     casesPastWeek: 7746,
     casesIncreasingPercentage: 0.0,
@@ -6175,6 +6481,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Iceland: {
     label: 'Iceland',
+    iso3: 'ISL',
     population: '341,250',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -6184,6 +6491,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India: {
     label: 'India',
+    iso3: 'IND',
     population: '1,380,004,385',
     casesPastWeek: 95963,
     casesIncreasingPercentage: 0.0,
@@ -6230,6 +6538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Andaman_and_Nicobar_Islands: {
     label: 'Andaman and Nicobar Islands',
+    iso3: null,
     population: '417,036',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -6239,6 +6548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Andhra_Pradesh: {
     label: 'Andhra Pradesh',
+    iso3: null,
     population: '53,903,393',
     casesPastWeek: 1025,
     casesIncreasingPercentage: 0.0,
@@ -6248,6 +6558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Arunachal_Pradesh: {
     label: 'Arunachal Pradesh',
+    iso3: null,
     population: '1,570,458',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -6257,6 +6568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Assam: {
     label: 'Assam',
+    iso3: null,
     population: '35,607,039',
     casesPastWeek: 161,
     casesIncreasingPercentage: 0.0,
@@ -6266,6 +6578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Bihar: {
     label: 'Bihar',
+    iso3: null,
     population: '124,799,926',
     casesPastWeek: 1177,
     casesIncreasingPercentage: 0.0,
@@ -6275,6 +6588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Chandigarh: {
     label: 'Chandigarh',
+    iso3: null,
     population: '1,158,473',
     casesPastWeek: 181,
     casesIncreasingPercentage: 0.0,
@@ -6284,6 +6598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Chhattisgarh: {
     label: 'Chhattisgarh',
+    iso3: null,
     population: '29,436,231',
     casesPastWeek: 3125,
     casesIncreasingPercentage: 0.0,
@@ -6293,6 +6608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Dadra_and_Nagar_Haveli_and_Daman_and_Diu: {
     label: 'Dadra and Nagar Haveli and Daman and Diu',
+    iso3: null,
     population: '615,724',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -6302,6 +6618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Delhi: {
     label: 'Delhi',
+    iso3: null,
     population: '18,710,922',
     casesPastWeek: 1495,
     casesIncreasingPercentage: 0.0,
@@ -6311,6 +6628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Goa: {
     label: 'Goa',
+    iso3: null,
     population: '1,586,250',
     casesPastWeek: 515,
     casesIncreasingPercentage: 0.0,
@@ -6320,6 +6638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Gujarat: {
     label: 'Gujarat',
+    iso3: null,
     population: '63,872,399',
     casesPastWeek: 3225,
     casesIncreasingPercentage: 0.0,
@@ -6329,6 +6648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Haryana: {
     label: 'Haryana',
+    iso3: null,
     population: '28,204,692',
     casesPastWeek: 894,
     casesIncreasingPercentage: 0.0,
@@ -6338,6 +6658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Himachal_Pradesh: {
     label: 'Himachal Pradesh',
+    iso3: null,
     population: '7,451,955',
     casesPastWeek: 267,
     casesIncreasingPercentage: 0.0,
@@ -6347,6 +6668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Jammu_and_Kashmir: {
     label: 'Jammu and Kashmir',
+    iso3: null,
     population: '13,606,320',
     casesPastWeek: 676,
     casesIncreasingPercentage: 0.0,
@@ -6356,6 +6678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Jharkhand: {
     label: 'Jharkhand',
+    iso3: null,
     population: '38,593,948',
     casesPastWeek: 600,
     casesIncreasingPercentage: 0.0,
@@ -6365,6 +6688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Karnataka: {
     label: 'Karnataka',
+    iso3: null,
     population: '67,562,686',
     casesPastWeek: 4054,
     casesIncreasingPercentage: 0.0,
@@ -6374,6 +6698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Kerala: {
     label: 'Kerala',
+    iso3: null,
     population: '35,699,443',
     casesPastWeek: 42430,
     casesIncreasingPercentage: 15.613079019073561,
@@ -6383,6 +6708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Ladakh: {
     label: 'Ladakh',
+    iso3: null,
     population: '274,289',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -6392,6 +6718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Madhya_Pradesh: {
     label: 'Madhya Pradesh',
+    iso3: null,
     population: '85,358,965',
     casesPastWeek: 2079,
     casesIncreasingPercentage: 0.0,
@@ -6401,6 +6728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Maharashtra: {
     label: 'Maharashtra',
+    iso3: null,
     population: '123,144,223',
     casesPastWeek: 18347,
     casesIncreasingPercentage: 0.0,
@@ -6410,6 +6738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Manipur: {
     label: 'Manipur',
+    iso3: null,
     population: '3,091,545',
     casesPastWeek: 130,
     casesIncreasingPercentage: 0.0,
@@ -6419,6 +6748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Meghalaya: {
     label: 'Meghalaya',
+    iso3: null,
     population: '3,366,710',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -6428,6 +6758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Mizoram: {
     label: 'Mizoram',
+    iso3: null,
     population: '1,239,244',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -6437,6 +6768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Nagaland: {
     label: 'Nagaland',
+    iso3: null,
     population: '2,249,695',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -6446,6 +6778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Odisha: {
     label: 'Odisha',
+    iso3: null,
     population: '46,356,334',
     casesPastWeek: 990,
     casesIncreasingPercentage: 0.0,
@@ -6455,6 +6788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Puducherry: {
     label: 'Puducherry',
+    iso3: null,
     population: '1,413,542',
     casesPastWeek: 214,
     casesIncreasingPercentage: 12.041884816753923,
@@ -6464,6 +6798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Punjab: {
     label: 'Punjab',
+    iso3: null,
     population: '30,141,373',
     casesPastWeek: 1325,
     casesIncreasingPercentage: 0.0,
@@ -6473,6 +6808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Rajasthan: {
     label: 'Rajasthan',
+    iso3: null,
     population: '81,032,689',
     casesPastWeek: 1471,
     casesIncreasingPercentage: 0.0,
@@ -6482,6 +6818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Sikkim: {
     label: 'Sikkim',
+    iso3: null,
     population: '690,251',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -6491,6 +6828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Tamil_Nadu: {
     label: 'Tamil Nadu',
+    iso3: null,
     population: '77,841,267',
     casesPastWeek: 3968,
     casesIncreasingPercentage: 0.0,
@@ -6500,6 +6838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Telangana: {
     label: 'Telangana',
+    iso3: null,
     population: '39,362,732',
     casesPastWeek: 1529,
     casesIncreasingPercentage: 0.0,
@@ -6509,6 +6848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Tripura: {
     label: 'Tripura',
+    iso3: null,
     population: '4,169,794',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -6518,6 +6858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Uttar_Pradesh: {
     label: 'Uttar Pradesh',
+    iso3: null,
     population: '237,882,725',
     casesPastWeek: 2185,
     casesIncreasingPercentage: 0.0,
@@ -6527,6 +6868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Uttarakhand: {
     label: 'Uttarakhand',
+    iso3: null,
     population: '11,250,858',
     casesPastWeek: 837,
     casesIncreasingPercentage: 0.0,
@@ -6536,6 +6878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_West_Bengal: {
     label: 'West Bengal',
+    iso3: null,
     population: '99,609,303',
     casesPastWeek: 2831,
     casesIncreasingPercentage: 0.0,
@@ -6545,6 +6888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   India_Lakshadweep: {
     label: 'Lakshadweep',
+    iso3: null,
     population: '64,429',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -6554,6 +6898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Indonesia: {
     label: 'Indonesia',
+    iso3: 'IDN',
     population: '273,523,621',
     casesPastWeek: 81333,
     casesIncreasingPercentage: 1.78966997484451,
@@ -6563,6 +6908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Iran: {
     label: 'Iran',
+    iso3: 'IRN',
     population: '83,992,953',
     casesPastWeek: 42566,
     casesIncreasingPercentage: 0.0,
@@ -6572,6 +6918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Iraq: {
     label: 'Iraq',
+    iso3: 'IRQ',
     population: '40,222,503',
     casesPastWeek: 5531,
     casesIncreasingPercentage: 4.476766150358902,
@@ -6581,6 +6928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ireland: {
     label: 'Ireland',
+    iso3: 'IRL',
     population: '4,937,796',
     casesPastWeek: 14828,
     casesIncreasingPercentage: 0.0,
@@ -6590,6 +6938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Israel: {
     label: 'Israel',
+    iso3: 'ISR',
     population: '8,655,541',
     casesPastWeek: 45714,
     casesIncreasingPercentage: 0.0,
@@ -6599,6 +6948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy: {
     label: 'Italy',
+    iso3: 'ITA',
     population: '60,461,828',
     casesPastWeek: 85536,
     casesIncreasingPercentage: 0.0,
@@ -6630,6 +6980,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Abruzzo: {
     label: 'Abruzzo',
+    iso3: null,
     population: '1,311,580',
     casesPastWeek: 1574,
     casesIncreasingPercentage: 0.7682458386683688,
@@ -6639,6 +6990,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Basilicata: {
     label: 'Basilicata',
+    iso3: null,
     population: '562,869',
     casesPastWeek: 341,
     casesIncreasingPercentage: 0.0,
@@ -6648,6 +7000,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Calabria: {
     label: 'Calabria',
+    iso3: null,
     population: '1,947,131',
     casesPastWeek: 1999,
     casesIncreasingPercentage: 0.0,
@@ -6657,6 +7010,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Campania: {
     label: 'Campania',
+    iso3: null,
     population: '5,801,692',
     casesPastWeek: 6873,
     casesIncreasingPercentage: 0.0,
@@ -6666,6 +7020,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Emilia_Romagna: {
     label: 'Emilia-Romagna',
+    iso3: null,
     population: '4,459,477',
     casesPastWeek: 8454,
     casesIncreasingPercentage: 0.0,
@@ -6675,6 +7030,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Friuli_Venezia_Giulia: {
     label: 'Friuli Venezia Giulia',
+    iso3: null,
     population: '1,215,220',
     casesPastWeek: 3572,
     casesIncreasingPercentage: 0.0,
@@ -6684,6 +7040,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Lazio: {
     label: 'Lazio',
+    iso3: null,
     population: '5,879,082',
     casesPastWeek: 8050,
     casesIncreasingPercentage: 0.0,
@@ -6693,6 +7050,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Liguria: {
     label: 'Liguria',
+    iso3: null,
     population: '1,550,640',
     casesPastWeek: 1930,
     casesIncreasingPercentage: 0.0,
@@ -6702,6 +7060,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Lombardia: {
     label: 'Lombardia',
+    iso3: null,
     population: '10,060,574',
     casesPastWeek: 11108,
     casesIncreasingPercentage: 0.0,
@@ -6711,6 +7070,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Marche: {
     label: 'Marche',
+    iso3: null,
     population: '1,525,271',
     casesPastWeek: 2792,
     casesIncreasingPercentage: 0.0,
@@ -6720,6 +7080,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Molise: {
     label: 'Molise',
+    iso3: null,
     population: '305,617',
     casesPastWeek: 346,
     casesIncreasingPercentage: 0.0,
@@ -6729,6 +7090,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_P_A__Bolzano: {
     label: 'P.A. Bolzano',
+    iso3: null,
     population: '532,318',
     casesPastWeek: 3082,
     casesIncreasingPercentage: 54.099999999999994,
@@ -6738,6 +7100,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_P_A__Trento: {
     label: 'P.A. Trento',
+    iso3: null,
     population: '541,418',
     casesPastWeek: 1144,
     casesIncreasingPercentage: 0.0,
@@ -6747,6 +7110,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Piemonte: {
     label: 'Piemonte',
+    iso3: null,
     population: '4,356,406',
     casesPastWeek: 4917,
     casesIncreasingPercentage: 0.0,
@@ -6756,6 +7120,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Puglia: {
     label: 'Puglia',
+    iso3: null,
     population: '4,029,053',
     casesPastWeek: 6682,
     casesIncreasingPercentage: 0.0,
@@ -6765,6 +7130,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Sardegna: {
     label: 'Sardegna',
+    iso3: null,
     population: '1,639,591',
     casesPastWeek: 1277,
     casesIncreasingPercentage: 0.0,
@@ -6774,6 +7140,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Sicilia: {
     label: 'Sicilia',
+    iso3: null,
     population: '4,999,891',
     casesPastWeek: 9023,
     casesIncreasingPercentage: 0.0,
@@ -6783,6 +7150,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Toscana: {
     label: 'Toscana',
+    iso3: null,
     population: '3,729,641',
     casesPastWeek: 3007,
     casesIncreasingPercentage: 3.6539124439848303,
@@ -6792,6 +7160,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Umbria: {
     label: 'Umbria',
+    iso3: null,
     population: '882,015',
     casesPastWeek: 1766,
     casesIncreasingPercentage: 26.41374373657839,
@@ -6801,6 +7170,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Valle_d_Aosta: {
     label: "Valle d'Aosta",
+    iso3: null,
     population: '125,666',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -6810,6 +7180,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Italy_Veneto: {
     label: 'Veneto',
+    iso3: null,
     population: '4,905,854',
     casesPastWeek: 7501,
     casesIncreasingPercentage: 0.0,
@@ -6819,6 +7190,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Jamaica: {
     label: 'Jamaica',
+    iso3: 'JAM',
     population: '2,961,161',
     casesPastWeek: 718,
     casesIncreasingPercentage: 17.128874388254477,
@@ -6828,6 +7200,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan: {
     label: 'Japan',
+    iso3: 'JPN',
     population: '126,476,458',
     casesPastWeek: 35133,
     casesIncreasingPercentage: 0.0,
@@ -6885,6 +7258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Aichi: {
     label: 'Aichi',
+    iso3: null,
     population: '7,552,239',
     casesPastWeek: 1569,
     casesIncreasingPercentage: 0.0,
@@ -6894,6 +7268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Akita: {
     label: 'Akita',
+    iso3: null,
     population: '966,490',
     casesPastWeek: 39,
     casesIncreasingPercentage: 11.428571428571432,
@@ -6903,6 +7278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Aomori: {
     label: 'Aomori',
+    iso3: null,
     population: '1,246,371',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -6912,6 +7288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Chiba: {
     label: 'Chiba',
+    iso3: null,
     population: '6,259,382',
     casesPastWeek: 2928,
     casesIncreasingPercentage: 0.0,
@@ -6921,6 +7298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Ehime: {
     label: 'Ehime',
+    iso3: null,
     population: '1,339,215',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -6930,6 +7308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Fukui: {
     label: 'Fukui',
+    iso3: null,
     population: '767,937',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -6939,6 +7318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Fukuoka: {
     label: 'Fukuoka',
+    iso3: null,
     population: '5,103,679',
     casesPastWeek: 1640,
     casesIncreasingPercentage: 0.0,
@@ -6948,6 +7328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Fukushima: {
     label: 'Fukushima',
+    iso3: null,
     population: '1,845,519',
     casesPastWeek: 155,
     casesIncreasingPercentage: 0.0,
@@ -6957,6 +7338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Gifu: {
     label: 'Gifu',
+    iso3: null,
     population: '1,986,587',
     casesPastWeek: 337,
     casesIncreasingPercentage: 0.0,
@@ -6966,6 +7348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Gunma: {
     label: 'Gunma',
+    iso3: null,
     population: '1,942,456',
     casesPastWeek: 314,
     casesIncreasingPercentage: 0.0,
@@ -6975,6 +7358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Hiroshima: {
     label: 'Hiroshima',
+    iso3: null,
     population: '2,804,177',
     casesPastWeek: 227,
     casesIncreasingPercentage: 0.0,
@@ -6984,6 +7368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Hokkaido: {
     label: 'Hokkaido',
+    iso3: null,
     population: '5,250,049',
     casesPastWeek: 854,
     casesIncreasingPercentage: 0.0,
@@ -6993,6 +7378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Hyogo: {
     label: 'Hyogo',
+    iso3: null,
     population: '5,466,190',
     casesPastWeek: 1586,
     casesIncreasingPercentage: 0.0,
@@ -7002,6 +7388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Ibaraki: {
     label: 'Ibaraki',
+    iso3: null,
     population: '2,860,307',
     casesPastWeek: 553,
     casesIncreasingPercentage: 0.0,
@@ -7011,6 +7398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Ishikawa: {
     label: 'Ishikawa',
+    iso3: null,
     population: '1,137,649',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -7020,6 +7408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Iwate: {
     label: 'Iwate',
+    iso3: null,
     population: '1,226,816',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -7029,6 +7418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Kagawa: {
     label: 'Kagawa',
+    iso3: null,
     population: '956,347',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -7038,6 +7428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Kagoshima: {
     label: 'Kagoshima',
+    iso3: null,
     population: '1,602,273',
     casesPastWeek: 158,
     casesIncreasingPercentage: 25.396825396825395,
@@ -7047,6 +7438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Kanagawa: {
     label: 'Kanagawa',
+    iso3: null,
     population: '9,198,268',
     casesPastWeek: 4843,
     casesIncreasingPercentage: 0.0,
@@ -7056,6 +7448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Kochi: {
     label: 'Kochi',
+    iso3: null,
     population: '698,029',
     casesPastWeek: 53,
     casesIncreasingPercentage: 39.47368421052631,
@@ -7065,6 +7458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Kumamoto: {
     label: 'Kumamoto',
+    iso3: null,
     population: '1,747,567',
     casesPastWeek: 285,
     casesIncreasingPercentage: 0.0,
@@ -7074,6 +7468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Kyoto: {
     label: 'Kyoto',
+    iso3: null,
     population: '2,582,957',
     casesPastWeek: 882,
     casesIncreasingPercentage: 0.0,
@@ -7083,6 +7478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Mie: {
     label: 'Mie',
+    iso3: null,
     population: '1,780,882',
     casesPastWeek: 217,
     casesIncreasingPercentage: 0.0,
@@ -7092,6 +7488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Miyagi: {
     label: 'Miyagi',
+    iso3: null,
     population: '2,306,365',
     casesPastWeek: 315,
     casesIncreasingPercentage: 0.0,
@@ -7101,6 +7498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Miyazaki: {
     label: 'Miyazaki',
+    iso3: null,
     population: '1,073,301',
     casesPastWeek: 189,
     casesIncreasingPercentage: 0.0,
@@ -7110,6 +7508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Nagano: {
     label: 'Nagano',
+    iso3: null,
     population: '2,048,790',
     casesPastWeek: 196,
     casesIncreasingPercentage: 0.0,
@@ -7119,6 +7518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Nagasaki: {
     label: 'Nagasaki',
+    iso3: null,
     population: '1,326,524',
     casesPastWeek: 162,
     casesIncreasingPercentage: 0.0,
@@ -7128,6 +7528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Nara: {
     label: 'Nara',
+    iso3: null,
     population: '1,330,123',
     casesPastWeek: 250,
     casesIncreasingPercentage: 5.932203389830515,
@@ -7137,6 +7538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Niigata: {
     label: 'Niigata',
+    iso3: null,
     population: '2,223,106',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -7146,6 +7548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Oita: {
     label: 'Oita',
+    iso3: null,
     population: '1,135,434',
     casesPastWeek: 116,
     casesIncreasingPercentage: 19.58762886597938,
@@ -7155,6 +7558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Okayama: {
     label: 'Okayama',
+    iso3: null,
     population: '1,889,586',
     casesPastWeek: 157,
     casesIncreasingPercentage: 0.0,
@@ -7164,6 +7568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Okinawa: {
     label: 'Okinawa',
+    iso3: null,
     population: '1,453,168',
     casesPastWeek: 617,
     casesIncreasingPercentage: 24.144869215291752,
@@ -7173,6 +7578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Osaka: {
     label: 'Osaka',
+    iso3: null,
     population: '8,809,363',
     casesPastWeek: 3359,
     casesIncreasingPercentage: 0.0,
@@ -7182,6 +7588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Saga: {
     label: 'Saga',
+    iso3: null,
     population: '814,711',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -7191,6 +7598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Saitama: {
     label: 'Saitama',
+    iso3: null,
     population: '7,349,693',
     casesPastWeek: 2565,
     casesIncreasingPercentage: 0.0,
@@ -7200,6 +7608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Shiga: {
     label: 'Shiga',
+    iso3: null,
     population: '1,413,943',
     casesPastWeek: 220,
     casesIncreasingPercentage: 9.45273631840795,
@@ -7209,6 +7618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Shimane: {
     label: 'Shimane',
+    iso3: null,
     population: '674,346',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -7218,6 +7628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Shizuoka: {
     label: 'Shizuoka',
+    iso3: null,
     population: '3,643,528',
     casesPastWeek: 365,
     casesIncreasingPercentage: 0.0,
@@ -7227,6 +7638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Tochigi: {
     label: 'Tochigi',
+    iso3: null,
     population: '1,933,990',
     casesPastWeek: 394,
     casesIncreasingPercentage: 0.0,
@@ -7236,6 +7648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Tokushima: {
     label: 'Tokushima',
+    iso3: null,
     population: '727,977',
     casesPastWeek: 72,
     casesIncreasingPercentage: 16.129032258064523,
@@ -7245,6 +7658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Tokyo: {
     label: 'Tokyo',
+    iso3: null,
     population: '13,920,663',
     casesPastWeek: 8420,
     casesIncreasingPercentage: 0.0,
@@ -7254,6 +7668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Tottori: {
     label: 'Tottori',
+    iso3: null,
     population: '555,558',
     casesPastWeek: 19,
     casesIncreasingPercentage: 58.33333333333333,
@@ -7263,6 +7678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Toyama: {
     label: 'Toyama',
+    iso3: null,
     population: '1,043,502',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -7272,6 +7688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Wakayama: {
     label: 'Wakayama',
+    iso3: null,
     population: '924,933',
     casesPastWeek: 127,
     casesIncreasingPercentage: 24.50980392156863,
@@ -7281,6 +7698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Yamagata: {
     label: 'Yamagata',
+    iso3: null,
     population: '1,077,666',
     casesPastWeek: 15,
     casesIncreasingPercentage: 50.0,
@@ -7290,6 +7708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Yamaguchi: {
     label: 'Yamaguchi',
+    iso3: null,
     population: '1,358,336',
     casesPastWeek: 263,
     casesIncreasingPercentage: 100.76335877862594,
@@ -7299,6 +7718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Japan_Yamanashi: {
     label: 'Yamanashi',
+    iso3: null,
     population: '810,956',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -7308,6 +7728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Jordan: {
     label: 'Jordan',
+    iso3: 'JOR',
     population: '10,203,140',
     casesPastWeek: 5939,
     casesIncreasingPercentage: 0.0,
@@ -7317,6 +7738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Kazakhstan: {
     label: 'Kazakhstan',
+    iso3: 'KAZ',
     population: '18,776,707',
     casesPastWeek: 9944,
     casesIncreasingPercentage: 51.17056856187292,
@@ -7326,6 +7748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Kenya: {
     label: 'Kenya',
+    iso3: 'KEN',
     population: '53,771,300',
     casesPastWeek: 821,
     casesIncreasingPercentage: 0.0,
@@ -7335,6 +7758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Korea__South: {
     label: 'Korea, South',
+    iso3: 'KOR',
     population: '51,269,183',
     casesPastWeek: 2792,
     casesIncreasingPercentage: 0.0,
@@ -7344,6 +7768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Kosovo: {
     label: 'Kosovo',
+    iso3: 'XKS',
     population: '1,810,366',
     casesPastWeek: 1466,
     casesIncreasingPercentage: 0.0,
@@ -7353,6 +7778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Kuwait: {
     label: 'Kuwait',
+    iso3: 'KWT',
     population: '4,270,563',
     casesPastWeek: 3508,
     casesIncreasingPercentage: 1.299451342766389,
@@ -7362,6 +7788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Kyrgyzstan: {
     label: 'Kyrgyzstan',
+    iso3: 'KGZ',
     population: '6,524,191',
     casesPastWeek: 722,
     casesIncreasingPercentage: 0.0,
@@ -7371,6 +7798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Laos: {
     label: 'Laos',
+    iso3: 'LAO',
     population: '7,275,556',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -7380,6 +7808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Latvia: {
     label: 'Latvia',
+    iso3: 'LVA',
     population: '1,886,202',
     casesPastWeek: 5344,
     casesIncreasingPercentage: 0.0,
@@ -7389,6 +7818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Lebanon: {
     label: 'Lebanon',
+    iso3: 'LBN',
     population: '6,825,442',
     casesPastWeek: 26785,
     casesIncreasingPercentage: 0.0,
@@ -7398,6 +7828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Lesotho: {
     label: 'Lesotho',
+    iso3: 'LSO',
     population: '2,142,252',
     casesPastWeek: 1285,
     casesIncreasingPercentage: 196.08294930875573,
@@ -7407,6 +7838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Liberia: {
     label: 'Liberia',
+    iso3: 'LBR',
     population: '5,057,677',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -7416,6 +7848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Libya: {
     label: 'Libya',
+    iso3: 'LBY',
     population: '6,871,287',
     casesPastWeek: 4600,
     casesIncreasingPercentage: 5.917568501036152,
@@ -7425,6 +7858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Liechtenstein: {
     label: 'Liechtenstein',
+    iso3: 'LIE',
     population: '38,137',
     casesPastWeek: 52,
     casesIncreasingPercentage: 6.1224489795918435,
@@ -7434,6 +7868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Lithuania: {
     label: 'Lithuania',
+    iso3: 'LTU',
     population: '2,722,291',
     casesPastWeek: 9108,
     casesIncreasingPercentage: 16.11422743498214,
@@ -7443,6 +7878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Luxembourg: {
     label: 'Luxembourg',
+    iso3: 'LUX',
     population: '625,976',
     casesPastWeek: 808,
     casesIncreasingPercentage: 0.0,
@@ -7452,6 +7888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Madagascar: {
     label: 'Madagascar',
+    iso3: 'MDG',
     population: '27,691,019',
     casesPastWeek: 442,
     casesIncreasingPercentage: 47.333333333333336,
@@ -7461,6 +7898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Malawi: {
     label: 'Malawi',
+    iso3: 'MWI',
     population: '19,129,955',
     casesPastWeek: 6925,
     casesIncreasingPercentage: 77.79204107830553,
@@ -7470,6 +7908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Malaysia: {
     label: 'Malaysia',
+    iso3: 'MYS',
     population: '32,365,998',
     casesPastWeek: 25367,
     casesIncreasingPercentage: 13.033597718563406,
@@ -7479,6 +7918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Maldives: {
     label: 'Maldives',
+    iso3: 'MDV',
     population: '540,542',
     casesPastWeek: 480,
     casesIncreasingPercentage: 18.811881188118807,
@@ -7488,6 +7928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mali: {
     label: 'Mali',
+    iso3: 'MLI',
     population: '20,250,834',
     casesPastWeek: 144,
     casesIncreasingPercentage: 0.0,
@@ -7497,6 +7938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Malta: {
     label: 'Malta',
+    iso3: 'MLT',
     population: '441,539',
     casesPastWeek: 1070,
     casesIncreasingPercentage: 0.0,
@@ -7506,6 +7948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Marshall_Islands: {
     label: 'Marshall Islands',
+    iso3: 'MHL',
     population: '58,413',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -7515,6 +7958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mauritania: {
     label: 'Mauritania',
+    iso3: 'MRT',
     population: '4,649,660',
     casesPastWeek: 358,
     casesIncreasingPercentage: 0.0,
@@ -7524,6 +7968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mauritius: {
     label: 'Mauritius',
+    iso3: 'MUS',
     population: '1,271,767',
     casesPastWeek: 9,
     casesIncreasingPercentage: 12.5,
@@ -7533,6 +7978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico: {
     label: 'Mexico',
+    iso3: 'MEX',
     population: '127,792,286',
     casesPastWeek: 121791,
     casesIncreasingPercentage: 13.411056998389025,
@@ -7575,6 +8021,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Aguascalientes: {
     label: 'Aguascalientes',
+    iso3: null,
     population: '1,434,635',
     casesPastWeek: 1356,
     casesIncreasingPercentage: 72.08121827411166,
@@ -7584,6 +8031,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Baja_California: {
     label: 'Baja California',
+    iso3: null,
     population: '3,634,868',
     casesPastWeek: 2119,
     casesIncreasingPercentage: 28.346456692913378,
@@ -7593,6 +8041,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Baja_California_Sur: {
     label: 'Baja California Sur',
+    iso3: null,
     population: '804,708',
     casesPastWeek: 1449,
     casesIncreasingPercentage: 0.0,
@@ -7602,6 +8051,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Campeche: {
     label: 'Campeche',
+    iso3: null,
     population: '1,000,617',
     casesPastWeek: 221,
     casesIncreasingPercentage: 51.369863013698634,
@@ -7611,6 +8061,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Chiapas: {
     label: 'Chiapas',
+    iso3: null,
     population: '5,730,367',
     casesPastWeek: 361,
     casesIncreasingPercentage: 49.79253112033195,
@@ -7620,6 +8071,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Chihuahua: {
     label: 'Chihuahua',
+    iso3: null,
     population: '3,801,487',
     casesPastWeek: 1410,
     casesIncreasingPercentage: 72.37163814180929,
@@ -7629,6 +8081,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Ciudad_de_Mexico: {
     label: 'Ciudad de Mexico',
+    iso3: null,
     population: '9,018,645',
     casesPastWeek: 41496,
     casesIncreasingPercentage: 4.358323064155112,
@@ -7638,6 +8091,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Coahuila: {
     label: 'Coahuila',
+    iso3: null,
     population: '3,218,720',
     casesPastWeek: 2738,
     casesIncreasingPercentage: 8.349821923229129,
@@ -7647,6 +8101,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Colima: {
     label: 'Colima',
+    iso3: null,
     population: '785,153',
     casesPastWeek: 517,
     casesIncreasingPercentage: 72.33333333333334,
@@ -7656,6 +8111,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Durango: {
     label: 'Durango',
+    iso3: null,
     population: '1,868,996',
     casesPastWeek: 916,
     casesIncreasingPercentage: 4.685714285714293,
@@ -7665,6 +8121,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Guanajuato: {
     label: 'Guanajuato',
+    iso3: null,
     population: '6,228,175',
     casesPastWeek: 7200,
     casesIncreasingPercentage: 14.832535885167463,
@@ -7674,6 +8131,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Guerrero: {
     label: 'Guerrero',
+    iso3: null,
     population: '3,657,048',
     casesPastWeek: 1648,
     casesIncreasingPercentage: 39.54276037256563,
@@ -7683,6 +8141,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Hidalgo: {
     label: 'Hidalgo',
+    iso3: null,
     population: '3,086,414',
     casesPastWeek: 1983,
     casesIncreasingPercentage: 9.196035242290757,
@@ -7692,6 +8151,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Jalisco: {
     label: 'Jalisco',
+    iso3: null,
     population: '8,409,693',
     casesPastWeek: 5421,
     casesIncreasingPercentage: 30.375180375180367,
@@ -7701,6 +8161,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Mexico: {
     label: 'Mexico',
+    iso3: null,
     population: '17,427,790',
     casesPastWeek: 13189,
     casesIncreasingPercentage: 12.726495726495735,
@@ -7710,6 +8171,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Michoacan: {
     label: 'Michoacan',
+    iso3: null,
     population: '4,825,401',
     casesPastWeek: 1785,
     casesIncreasingPercentage: 8.51063829787233,
@@ -7719,6 +8181,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Morelos: {
     label: 'Morelos',
+    iso3: null,
     population: '2,044,058',
     casesPastWeek: 2516,
     casesIncreasingPercentage: 0.0,
@@ -7728,6 +8191,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Nayarit: {
     label: 'Nayarit',
+    iso3: null,
     population: '1,288,571',
     casesPastWeek: 580,
     casesIncreasingPercentage: 16.70020120724347,
@@ -7737,6 +8201,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Nuevo_Leon: {
     label: 'Nuevo Leon',
+    iso3: null,
     population: '5,610,153',
     casesPastWeek: 6699,
     casesIncreasingPercentage: 40.02926421404682,
@@ -7746,6 +8211,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Oaxaca: {
     label: 'Oaxaca',
+    iso3: null,
     population: '4,143,593',
     casesPastWeek: 1798,
     casesIncreasingPercentage: 2.7428571428571358,
@@ -7755,6 +8221,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Puebla: {
     label: 'Puebla',
+    iso3: null,
     population: '6,604,451',
     casesPastWeek: 4096,
     casesIncreasingPercentage: 29.538266919671095,
@@ -7764,6 +8231,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Queretaro: {
     label: 'Queretaro',
+    iso3: null,
     population: '2,279,637',
     casesPastWeek: 4904,
     casesIncreasingPercentage: 70.45533541883906,
@@ -7773,6 +8241,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Quintana_Roo: {
     label: 'Quintana Roo',
+    iso3: null,
     population: '1,723,259',
     casesPastWeek: 1067,
     casesIncreasingPercentage: 94.35336976320583,
@@ -7782,6 +8251,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_San_Luis_Potosi: {
     label: 'San Luis Potosi',
+    iso3: null,
     population: '2,866,142',
     casesPastWeek: 2602,
     casesIncreasingPercentage: 0.0,
@@ -7791,6 +8261,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Sinaloa: {
     label: 'Sinaloa',
+    iso3: null,
     population: '3,156,674',
     casesPastWeek: 1365,
     casesIncreasingPercentage: 28.77358490566038,
@@ -7800,6 +8271,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Sonora: {
     label: 'Sonora',
+    iso3: null,
     population: '3,074,745',
     casesPastWeek: 3058,
     casesIncreasingPercentage: 16.673025562762312,
@@ -7809,6 +8281,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Tabasco: {
     label: 'Tabasco',
+    iso3: null,
     population: '2,572,287',
     casesPastWeek: 1933,
     casesIncreasingPercentage: 0.0,
@@ -7818,6 +8291,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Tamaulipas: {
     label: 'Tamaulipas',
+    iso3: null,
     population: '3,650,602',
     casesPastWeek: 2456,
     casesIncreasingPercentage: 0.0,
@@ -7827,6 +8301,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Tlaxcala: {
     label: 'Tlaxcala',
+    iso3: null,
     population: '1,380,011',
     casesPastWeek: 774,
     casesIncreasingPercentage: 0.0,
@@ -7836,6 +8311,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Veracruz: {
     label: 'Veracruz',
+    iso3: null,
     population: '8,539,862',
     casesPastWeek: 2230,
     casesIncreasingPercentage: 21.857923497267763,
@@ -7845,6 +8321,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Yucatan: {
     label: 'Yucatan',
+    iso3: null,
     population: '2,259,098',
     casesPastWeek: 939,
     casesIncreasingPercentage: 23.066841415465266,
@@ -7854,6 +8331,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mexico_Zacatecas: {
     label: 'Zacatecas',
+    iso3: null,
     population: '1,666,426',
     casesPastWeek: 965,
     casesIncreasingPercentage: 5.6955093099671394,
@@ -7863,6 +8341,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Moldova: {
     label: 'Moldova',
+    iso3: 'MDA',
     population: '4,033,963',
     casesPastWeek: 3348,
     casesIncreasingPercentage: 0.0,
@@ -7872,6 +8351,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Monaco: {
     label: 'Monaco',
+    iso3: 'MCO',
     population: '39,244',
     casesPastWeek: 152,
     casesIncreasingPercentage: 2.7027027027026973,
@@ -7881,6 +8361,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mongolia: {
     label: 'Mongolia',
+    iso3: 'MNG',
     population: '3,278,292',
     casesPastWeek: 117,
     casesIncreasingPercentage: 39.28571428571428,
@@ -7890,6 +8371,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Montenegro: {
     label: 'Montenegro',
+    iso3: 'MNE',
     population: '628,062',
     casesPastWeek: 2823,
     casesIncreasingPercentage: 0.0,
@@ -7899,6 +8381,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Morocco: {
     label: 'Morocco',
+    iso3: 'MAR',
     population: '36,910,558',
     casesPastWeek: 6618,
     casesIncreasingPercentage: 0.0,
@@ -7908,6 +8391,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Mozambique: {
     label: 'Mozambique',
+    iso3: 'MOZ',
     population: '31,255,435',
     casesPastWeek: 5867,
     casesIncreasingPercentage: 27.211621856027747,
@@ -7917,6 +8401,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Namibia: {
     label: 'Namibia',
+    iso3: 'NAM',
     population: '2,540,916',
     casesPastWeek: 2062,
     casesIncreasingPercentage: 0.0,
@@ -7926,6 +8411,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Nepal: {
     label: 'Nepal',
+    iso3: 'NPL',
     population: '29,136,808',
     casesPastWeek: 2128,
     casesIncreasingPercentage: 0.0,
@@ -7935,6 +8421,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands: {
     label: 'Netherlands',
+    iso3: 'NLD',
     population: '17,134,873',
     casesPastWeek: 36798,
     casesIncreasingPercentage: 0.0,
@@ -7961,6 +8448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Drenthe: {
     label: 'Drenthe',
+    iso3: null,
     population: '493,682',
     casesPastWeek: 889,
     casesIncreasingPercentage: 0.0,
@@ -7970,6 +8458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Flevoland: {
     label: 'Flevoland',
+    iso3: null,
     population: '423,021',
     casesPastWeek: 741,
     casesIncreasingPercentage: 0.0,
@@ -7979,6 +8468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Friesland: {
     label: 'Friesland',
+    iso3: null,
     population: '649,957',
     casesPastWeek: 1548,
     casesIncreasingPercentage: 6.685044796691941,
@@ -7988,6 +8478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Gelderland: {
     label: 'Gelderland',
+    iso3: null,
     population: '2,085,952',
     casesPastWeek: 4470,
     casesIncreasingPercentage: 0.0,
@@ -7997,6 +8488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Groningen: {
     label: 'Groningen',
+    iso3: null,
     population: '585,866',
     casesPastWeek: 1308,
     casesIncreasingPercentage: 0.0,
@@ -8006,6 +8498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Limburg: {
     label: 'Limburg',
+    iso3: null,
     population: '1,117,201',
     casesPastWeek: 3348,
     casesIncreasingPercentage: 0.0,
@@ -8015,6 +8508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Noord_Brabant: {
     label: 'Noord-Brabant',
+    iso3: null,
     population: '2,562,955',
     casesPastWeek: 5653,
     casesIncreasingPercentage: 0.0,
@@ -8024,6 +8518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Noord_Holland: {
     label: 'Noord-Holland',
+    iso3: null,
     population: '2,879,527',
     casesPastWeek: 5917,
     casesIncreasingPercentage: 0.0,
@@ -8033,6 +8528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Overijssel: {
     label: 'Overijssel',
+    iso3: null,
     population: '1,162,406',
     casesPastWeek: 3029,
     casesIncreasingPercentage: 0.0,
@@ -8042,6 +8538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Utrecht: {
     label: 'Utrecht',
+    iso3: null,
     population: '1,354,834',
     casesPastWeek: 2288,
     casesIncreasingPercentage: 0.0,
@@ -8051,6 +8548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Zeeland: {
     label: 'Zeeland',
+    iso3: null,
     population: '383,488',
     casesPastWeek: 790,
     casesIncreasingPercentage: 0.0,
@@ -8060,6 +8558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Zuid_Holland: {
     label: 'Zuid-Holland',
+    iso3: null,
     population: '3,708,696',
     casesPastWeek: 6413,
     casesIncreasingPercentage: 0.0,
@@ -8069,6 +8568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Aruba: {
     label: 'Aruba',
+    iso3: null,
     population: '106,766',
     casesPastWeek: 288,
     casesIncreasingPercentage: 0.0,
@@ -8078,6 +8578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Curacao: {
     label: 'Curacao',
+    iso3: null,
     population: '164,100',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -8087,6 +8588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Sint_Maarten: {
     label: 'Sint Maarten',
+    iso3: null,
     population: '42,882',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -8096,6 +8598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Bonaire__Sint_Eustatius_and_Saba: {
     label: 'Bonaire, Sint Eustatius and Saba',
+    iso3: null,
     population: '26,221',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -8105,6 +8608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Netherlands_Unknown: {
     label: 'Unknown',
+    iso3: null,
     population: '0',
     casesPastWeek: -15,
     casesIncreasingPercentage: 0.0,
@@ -8114,6 +8618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   New_Zealand: {
     label: 'New Zealand',
+    iso3: 'NZL',
     population: '4,822,233',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -8123,6 +8628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Nicaragua: {
     label: 'Nicaragua',
+    iso3: 'NIC',
     population: '6,624,554',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -8132,6 +8638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Niger: {
     label: 'Niger',
+    iso3: 'NER',
     population: '24,206,636',
     casesPastWeek: 197,
     casesIncreasingPercentage: 0.0,
@@ -8141,6 +8648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Nigeria: {
     label: 'Nigeria',
+    iso3: 'NGA',
     population: '206,139,587',
     casesPastWeek: 11179,
     casesIncreasingPercentage: 8.533980582524281,
@@ -8150,6 +8658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   North_Macedonia: {
     label: 'North Macedonia',
+    iso3: 'MKD',
     population: '2,083,380',
     casesPastWeek: 1716,
     casesIncreasingPercentage: 0.0,
@@ -8159,6 +8668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Norway: {
     label: 'Norway',
+    iso3: 'NOR',
     population: '5,421,242',
     casesPastWeek: 2431,
     casesIncreasingPercentage: 0.0,
@@ -8168,6 +8678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Oman: {
     label: 'Oman',
+    iso3: 'OMN',
     population: '5,106,622',
     casesPastWeek: 1254,
     casesIncreasingPercentage: 6.091370558375631,
@@ -8177,6 +8688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan: {
     label: 'Pakistan',
+    iso3: 'PAK',
     population: '220,892,331',
     casesPastWeek: 12830,
     casesIncreasingPercentage: 0.0,
@@ -8194,6 +8706,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Azad_Jammu_and_Kashmir: {
     label: 'Azad Jammu and Kashmir',
+    iso3: null,
     population: '4,045,366',
     casesPastWeek: 194,
     casesIncreasingPercentage: 36.61971830985915,
@@ -8203,6 +8716,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Balochistan: {
     label: 'Balochistan',
+    iso3: null,
     population: '12,344,408',
     casesPastWeek: 138,
     casesIncreasingPercentage: 0.0,
@@ -8212,6 +8726,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Gilgit_Baltistan: {
     label: 'Gilgit-Baltistan',
+    iso3: null,
     population: '1,013,584',
     casesPastWeek: 18,
     casesIncreasingPercentage: 350.0,
@@ -8221,6 +8736,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Islamabad: {
     label: 'Islamabad',
+    iso3: null,
     population: '2,006,572',
     casesPastWeek: 704,
     casesIncreasingPercentage: 0.0,
@@ -8230,6 +8746,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Khyber_Pakhtunkhwa: {
     label: 'Khyber Pakhtunkhwa',
+    iso3: null,
     population: '30,523,371',
     casesPastWeek: 1917,
     casesIncreasingPercentage: 0.0,
@@ -8239,6 +8756,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Punjab: {
     label: 'Punjab',
+    iso3: null,
     population: '110,012,442',
     casesPastWeek: 4235,
     casesIncreasingPercentage: 0.0,
@@ -8248,6 +8766,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Pakistan_Sindh: {
     label: 'Sindh',
+    iso3: null,
     population: '47,886,051',
     casesPastWeek: 5624,
     casesIncreasingPercentage: 0.0,
@@ -8257,6 +8776,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Panama: {
     label: 'Panama',
+    iso3: 'PAN',
     population: '4,314,768',
     casesPastWeek: 13225,
     casesIncreasingPercentage: 0.0,
@@ -8266,6 +8786,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Papua_New_Guinea: {
     label: 'Papua New Guinea',
+    iso3: 'PNG',
     population: '8,947,027',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -8275,6 +8796,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Paraguay: {
     label: 'Paraguay',
+    iso3: 'PRY',
     population: '7,132,530',
     casesPastWeek: 5492,
     casesIncreasingPercentage: 0.0,
@@ -8284,6 +8806,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru: {
     label: 'Peru',
+    iso3: 'PER',
     population: '32,971,846',
     casesPastWeek: 33371,
     casesIncreasingPercentage: 0.0,
@@ -8319,6 +8842,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Amazonas: {
     label: 'Amazonas',
+    iso3: null,
     population: '426,800',
     casesPastWeek: 333,
     casesIncreasingPercentage: 0.0,
@@ -8328,6 +8852,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Ancash: {
     label: 'Ancash',
+    iso3: null,
     population: '1,180,600',
     casesPastWeek: 1464,
     casesIncreasingPercentage: 0.0,
@@ -8337,6 +8862,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Apurimac: {
     label: 'Apurimac',
+    iso3: null,
     population: '430,700',
     casesPastWeek: 482,
     casesIncreasingPercentage: 0.0,
@@ -8346,6 +8872,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Arequipa: {
     label: 'Arequipa',
+    iso3: null,
     population: '1,497,400',
     casesPastWeek: 1445,
     casesIncreasingPercentage: 0.0,
@@ -8355,6 +8882,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Ayacucho: {
     label: 'Ayacucho',
+    iso3: null,
     population: '668,200',
     casesPastWeek: 447,
     casesIncreasingPercentage: 0.0,
@@ -8364,6 +8892,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Cajamarca: {
     label: 'Cajamarca',
+    iso3: null,
     population: '1,453,700',
     casesPastWeek: 1070,
     casesIncreasingPercentage: 38.242894056847554,
@@ -8373,6 +8902,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Callao: {
     label: 'Callao',
+    iso3: null,
     population: '1,129,900',
     casesPastWeek: 1483,
     casesIncreasingPercentage: 20.962479608482877,
@@ -8382,6 +8912,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Cusco: {
     label: 'Cusco',
+    iso3: null,
     population: '1,357,100',
     casesPastWeek: 905,
     casesIncreasingPercentage: 26.39664804469273,
@@ -8391,6 +8922,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Huancavelica: {
     label: 'Huancavelica',
+    iso3: null,
     population: '365,300',
     casesPastWeek: 178,
     casesIncreasingPercentage: 60.36036036036037,
@@ -8400,6 +8932,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Huanuco: {
     label: 'Huanuco',
+    iso3: null,
     population: '760,300',
     casesPastWeek: 801,
     casesIncreasingPercentage: 0.0,
@@ -8409,6 +8942,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Ica: {
     label: 'Ica',
+    iso3: null,
     population: '975,200',
     casesPastWeek: 1068,
     casesIncreasingPercentage: 7.552870090634434,
@@ -8418,6 +8952,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Junin: {
     label: 'Junin',
+    iso3: null,
     population: '1,361,500',
     casesPastWeek: 1864,
     casesIncreasingPercentage: 0.0,
@@ -8427,6 +8962,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_La_Libertad: {
     label: 'La Libertad',
+    iso3: null,
     population: '2,016,800',
     casesPastWeek: 610,
     casesIncreasingPercentage: 0.0,
@@ -8436,6 +8972,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Lambayeque: {
     label: 'Lambayeque',
+    iso3: null,
     population: '1,310,800',
     casesPastWeek: 563,
     casesIncreasingPercentage: 0.0,
@@ -8445,6 +8982,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Lima: {
     label: 'Lima',
+    iso3: null,
     population: '10,628,500',
     casesPastWeek: 16751,
     casesIncreasingPercentage: 1.7802892210475152,
@@ -8454,6 +8992,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Loreto: {
     label: 'Loreto',
+    iso3: null,
     population: '1,027,600',
     casesPastWeek: 283,
     casesIncreasingPercentage: 12.301587301587302,
@@ -8463,6 +9002,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Madre_de_Dios: {
     label: 'Madre de Dios',
+    iso3: null,
     population: '173,800',
     casesPastWeek: 47,
     casesIncreasingPercentage: 56.666666666666664,
@@ -8472,6 +9012,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Moquegua: {
     label: 'Moquegua',
+    iso3: null,
     population: '192,700',
     casesPastWeek: 473,
     casesIncreasingPercentage: 0.0,
@@ -8481,6 +9022,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Pasco: {
     label: 'Pasco',
+    iso3: null,
     population: '271,900',
     casesPastWeek: 314,
     casesIncreasingPercentage: 0.0,
@@ -8490,6 +9032,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Piura: {
     label: 'Piura',
+    iso3: null,
     population: '2,048,000',
     casesPastWeek: 658,
     casesIncreasingPercentage: 0.0,
@@ -8499,6 +9042,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Puno: {
     label: 'Puno',
+    iso3: null,
     population: '1,238,000',
     casesPastWeek: 403,
     casesIncreasingPercentage: 22.865853658536594,
@@ -8508,6 +9052,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_San_Martin: {
     label: 'San Martin',
+    iso3: null,
     population: '899,600',
     casesPastWeek: 558,
     casesIncreasingPercentage: 19.48608137044967,
@@ -8517,6 +9062,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Tacna: {
     label: 'Tacna',
+    iso3: null,
     population: '371,000',
     casesPastWeek: 588,
     casesIncreasingPercentage: 6.137184115523464,
@@ -8526,6 +9072,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Tumbes: {
     label: 'Tumbes',
+    iso3: null,
     population: '251,500',
     casesPastWeek: 246,
     casesIncreasingPercentage: 3.797468354430378,
@@ -8535,6 +9082,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Peru_Ucayali: {
     label: 'Ucayali',
+    iso3: null,
     population: '589,100',
     casesPastWeek: 337,
     casesIncreasingPercentage: 59.71563981042654,
@@ -8544,6 +9092,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Philippines: {
     label: 'Philippines',
+    iso3: 'PHL',
     population: '109,581,085',
     casesPastWeek: 13042,
     casesIncreasingPercentage: 1.2027624738108145,
@@ -8553,6 +9102,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Poland: {
     label: 'Poland',
+    iso3: 'POL',
     population: '37,846,605',
     casesPastWeek: 39863,
     casesIncreasingPercentage: 0.0,
@@ -8562,6 +9112,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Portugal: {
     label: 'Portugal',
+    iso3: 'PRT',
     population: '10,196,707',
     casesPastWeek: 86389,
     casesIncreasingPercentage: 30.670680058083242,
@@ -8571,6 +9122,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Qatar: {
     label: 'Qatar',
+    iso3: 'QAT',
     population: '2,881,060',
     casesPastWeek: 1742,
     casesIncreasingPercentage: 23.37110481586402,
@@ -8580,6 +9132,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Romania: {
     label: 'Romania',
+    iso3: 'ROU',
     population: '19,237,682',
     casesPastWeek: 17366,
     casesIncreasingPercentage: 0.0,
@@ -8589,6 +9142,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia: {
     label: 'Russia',
+    iso3: 'RUS',
     population: '145,934,460',
     casesPastWeek: 148868,
     casesIncreasingPercentage: 0.0,
@@ -8682,6 +9236,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Adygea_Republic: {
     label: 'Adygea Republic',
+    iso3: null,
     population: '453,376',
     casesPastWeek: 412,
     casesIncreasingPercentage: 0.0,
@@ -8691,6 +9246,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Altai_Krai: {
     label: 'Altai Krai',
+    iso3: null,
     population: '2,350,080',
     casesPastWeek: 1356,
     casesIncreasingPercentage: 0.0,
@@ -8700,6 +9256,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Altai_Republic: {
     label: 'Altai Republic',
+    iso3: null,
     population: '218,063',
     casesPastWeek: 369,
     casesIncreasingPercentage: 0.0,
@@ -8709,6 +9266,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Amur_Oblast: {
     label: 'Amur Oblast',
+    iso3: null,
     population: '798,424',
     casesPastWeek: 841,
     casesIncreasingPercentage: 2.0631067961164984,
@@ -8718,6 +9276,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Arkhangelsk_Oblast: {
     label: 'Arkhangelsk Oblast',
+    iso3: null,
     population: '1,155,028',
     casesPastWeek: 1786,
     casesIncreasingPercentage: 0.9039548022598876,
@@ -8727,6 +9286,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Astrakhan_Oblast: {
     label: 'Astrakhan Oblast',
+    iso3: null,
     population: '1,017,514',
     casesPastWeek: 1297,
     casesIncreasingPercentage: 5.361494719740056,
@@ -8736,6 +9296,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Bashkortostan_Republic: {
     label: 'Bashkortostan Republic',
+    iso3: null,
     population: '4,063,293',
     casesPastWeek: 1172,
     casesIncreasingPercentage: 0.5145797598627766,
@@ -8745,6 +9306,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Belgorod_Oblast: {
     label: 'Belgorod Oblast',
+    iso3: null,
     population: '1,549,876',
     casesPastWeek: 1286,
     casesIncreasingPercentage: 1.579778830963674,
@@ -8754,6 +9316,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Bryansk_Oblast: {
     label: 'Bryansk Oblast',
+    iso3: null,
     population: '1,210,982',
     casesPastWeek: 1332,
     casesIncreasingPercentage: 0.0,
@@ -8763,6 +9326,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Buryatia_Republic: {
     label: 'Buryatia Republic',
+    iso3: null,
     population: '984,511',
     casesPastWeek: 1056,
     casesIncreasingPercentage: 0.0,
@@ -8772,6 +9336,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Chechen_Republic: {
     label: 'Chechen Republic',
+    iso3: null,
     population: '1,436,981',
     casesPastWeek: 369,
     casesIncreasingPercentage: 0.0,
@@ -8781,6 +9346,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Chelyabinsk_Oblast: {
     label: 'Chelyabinsk Oblast',
+    iso3: null,
     population: '3,493,036',
     casesPastWeek: 2079,
     casesIncreasingPercentage: 1.1186770428015524,
@@ -8790,6 +9356,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Chukotka_Autonomous_Okrug: {
     label: 'Chukotka Autonomous Okrug',
+    iso3: null,
     population: '49,348',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -8799,6 +9366,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Chuvashia_Republic: {
     label: 'Chuvashia Republic',
+    iso3: null,
     population: '1,231,117',
     casesPastWeek: 745,
     casesIncreasingPercentage: 5.97439544807965,
@@ -8808,6 +9376,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Dagestan_Republic: {
     label: 'Dagestan Republic',
+    iso3: null,
     population: '3,063,885',
     casesPastWeek: 1057,
     casesIncreasingPercentage: 0.0,
@@ -8817,6 +9386,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Ingushetia_Republic: {
     label: 'Ingushetia Republic',
+    iso3: null,
     population: '488,043',
     casesPastWeek: 361,
     casesIncreasingPercentage: 0.0,
@@ -8826,6 +9396,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Irkutsk_Oblast: {
     label: 'Irkutsk Oblast',
+    iso3: null,
     population: '2,404,195',
     casesPastWeek: 1827,
     casesIncreasingPercentage: 0.0,
@@ -8835,6 +9406,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Ivanovo_Oblast: {
     label: 'Ivanovo Oblast',
+    iso3: null,
     population: '1,014,646',
     casesPastWeek: 1227,
     casesIncreasingPercentage: 0.0,
@@ -8844,6 +9416,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Jewish_Autonomous_Okrug: {
     label: 'Jewish Autonomous Okrug',
+    iso3: null,
     population: '162,014',
     casesPastWeek: 91,
     casesIncreasingPercentage: 7.058823529411762,
@@ -8853,6 +9426,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kabardino_Balkarian_Republic: {
     label: 'Kabardino-Balkarian Republic',
+    iso3: null,
     population: '865,828',
     casesPastWeek: 660,
     casesIncreasingPercentage: 0.0,
@@ -8862,6 +9436,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kaliningrad_Oblast: {
     label: 'Kaliningrad Oblast',
+    iso3: null,
     population: '994,599',
     casesPastWeek: 1434,
     casesIncreasingPercentage: 0.0,
@@ -8871,6 +9446,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kalmykia_Republic: {
     label: 'Kalmykia Republic',
+    iso3: null,
     population: '275,413',
     casesPastWeek: 566,
     casesIncreasingPercentage: 0.0,
@@ -8880,6 +9456,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kaluga_Oblast: {
     label: 'Kaluga Oblast',
+    iso3: null,
     population: '1,012,056',
     casesPastWeek: 1108,
     casesIncreasingPercentage: 0.0,
@@ -8889,6 +9466,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kamchatka_Krai: {
     label: 'Kamchatka Krai',
+    iso3: null,
     population: '315,557',
     casesPastWeek: 490,
     casesIncreasingPercentage: 0.0,
@@ -8898,6 +9476,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Karachay_Cherkess_Republic: {
     label: 'Karachay-Cherkess Republic',
+    iso3: null,
     population: '466,305',
     casesPastWeek: 542,
     casesIncreasingPercentage: 0.0,
@@ -8907,6 +9486,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Karelia_Republic: {
     label: 'Karelia Republic',
+    iso3: null,
     population: '622,484',
     casesPastWeek: 1955,
     casesIncreasingPercentage: 8.430393788130885,
@@ -8916,6 +9496,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kemerovo_Oblast: {
     label: 'Kemerovo Oblast',
+    iso3: null,
     population: '2,694,877',
     casesPastWeek: 786,
     casesIncreasingPercentage: 0.1273885350318471,
@@ -8925,6 +9506,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Khabarovsk_Krai: {
     label: 'Khabarovsk Krai',
+    iso3: null,
     population: '1,328,302',
     casesPastWeek: 2096,
     casesIncreasingPercentage: 0.0,
@@ -8934,6 +9516,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Khakassia_Republic: {
     label: 'Khakassia Republic',
+    iso3: null,
     population: '537,513',
     casesPastWeek: 707,
     casesIncreasingPercentage: 0.0,
@@ -8943,6 +9526,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Khanty_Mansi_Autonomous_Okrug: {
     label: 'Khanty-Mansi Autonomous Okrug',
+    iso3: null,
     population: '1,532,243',
     casesPastWeek: 1518,
     casesIncreasingPercentage: 1.742627345844494,
@@ -8952,6 +9536,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kirov_Oblast: {
     label: 'Kirov Oblast',
+    iso3: null,
     population: '1,283,238',
     casesPastWeek: 1514,
     casesIncreasingPercentage: 0.0,
@@ -8961,6 +9546,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Komi_Republic: {
     label: 'Komi Republic',
+    iso3: null,
     population: '840,873',
     casesPastWeek: 1216,
     casesIncreasingPercentage: 0.0,
@@ -8970,6 +9556,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kostroma_Oblast: {
     label: 'Kostroma Oblast',
+    iso3: null,
     population: '643,324',
     casesPastWeek: 431,
     casesIncreasingPercentage: 0.0,
@@ -8979,6 +9566,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Krasnodar_Krai: {
     label: 'Krasnodar Krai',
+    iso3: null,
     population: '5,603,420',
     casesPastWeek: 1378,
     casesIncreasingPercentage: 0.5839416058394109,
@@ -8988,6 +9576,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Krasnoyarsk_Krai: {
     label: 'Krasnoyarsk Krai',
+    iso3: null,
     population: '2,876,497',
     casesPastWeek: 2267,
     casesIncreasingPercentage: 0.8451957295373624,
@@ -8997,6 +9586,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kurgan_Oblast: {
     label: 'Kurgan Oblast',
+    iso3: null,
     population: '845,537',
     casesPastWeek: 735,
     casesIncreasingPercentage: 0.0,
@@ -9006,6 +9596,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Kursk_Oblast: {
     label: 'Kursk Oblast',
+    iso3: null,
     population: '1,115,237',
     casesPastWeek: 1260,
     casesIncreasingPercentage: 2.522375915378361,
@@ -9015,6 +9606,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Leningrad_Oblast: {
     label: 'Leningrad Oblast',
+    iso3: null,
     population: '1,813,816',
     casesPastWeek: 1572,
     casesIncreasingPercentage: 0.0,
@@ -9024,6 +9616,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Lipetsk_Oblast: {
     label: 'Lipetsk Oblast',
+    iso3: null,
     population: '1,150,201',
     casesPastWeek: 1079,
     casesIncreasingPercentage: 0.0,
@@ -9033,6 +9626,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Magadan_Oblast: {
     label: 'Magadan Oblast',
+    iso3: null,
     population: '144,091',
     casesPastWeek: 183,
     casesIncreasingPercentage: 0.0,
@@ -9042,6 +9636,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Mari_El_Republic: {
     label: 'Mari El Republic',
+    iso3: null,
     population: '682,333',
     casesPastWeek: 326,
     casesIncreasingPercentage: 0.0,
@@ -9051,6 +9646,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Mordovia_Republic: {
     label: 'Mordovia Republic',
+    iso3: null,
     population: '805,056',
     casesPastWeek: 565,
     casesIncreasingPercentage: 0.0,
@@ -9060,6 +9656,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Moscow: {
     label: 'Moscow',
+    iso3: null,
     population: '12,506,468',
     casesPastWeek: 21478,
     casesIncreasingPercentage: 0.0,
@@ -9069,6 +9666,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Moscow_Oblast: {
     label: 'Moscow Oblast',
+    iso3: null,
     population: '7,503,385',
     casesPastWeek: 7936,
     casesIncreasingPercentage: 0.0,
@@ -9078,6 +9676,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Murmansk_Oblast: {
     label: 'Murmansk Oblast',
+    iso3: null,
     population: '753,557',
     casesPastWeek: 1612,
     casesIncreasingPercentage: 0.0,
@@ -9087,6 +9686,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Nenets_Autonomous_Okrug: {
     label: 'Nenets Autonomous Okrug',
+    iso3: null,
     population: '43,997',
     casesPastWeek: 30,
     casesIncreasingPercentage: 7.14285714285714,
@@ -9096,6 +9696,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Nizhny_Novgorod_Oblast: {
     label: 'Nizhny Novgorod Oblast',
+    iso3: null,
     population: '3,234,752',
     casesPastWeek: 3398,
     casesIncreasingPercentage: 2.9696969696969777,
@@ -9105,6 +9706,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_North_Ossetia___Alania_Republic: {
     label: 'North Ossetia - Alania Republic',
+    iso3: null,
     population: '701,765',
     casesPastWeek: 544,
     casesIncreasingPercentage: 0.0,
@@ -9114,6 +9716,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Novgorod_Oblast: {
     label: 'Novgorod Oblast',
+    iso3: null,
     population: '606,476',
     casesPastWeek: 1257,
     casesIncreasingPercentage: 0.0,
@@ -9123,6 +9726,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Novosibirsk_Oblast: {
     label: 'Novosibirsk Oblast',
+    iso3: null,
     population: '2,788,849',
     casesPastWeek: 983,
     casesIncreasingPercentage: 0.0,
@@ -9132,6 +9736,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Omsk_Oblast: {
     label: 'Omsk Oblast',
+    iso3: null,
     population: '1,960,081',
     casesPastWeek: 1609,
     casesIncreasingPercentage: 0.0,
@@ -9141,6 +9746,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Orel_Oblast: {
     label: 'Orel Oblast',
+    iso3: null,
     population: '747,247',
     casesPastWeek: 1218,
     casesIncreasingPercentage: 0.0,
@@ -9150,6 +9756,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Orenburg_Oblast: {
     label: 'Orenburg Oblast',
+    iso3: null,
     population: '1,977,720',
     casesPastWeek: 1208,
     casesIncreasingPercentage: 0.9189640768588081,
@@ -9159,6 +9766,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Penza_Oblast: {
     label: 'Penza Oblast',
+    iso3: null,
     population: '1,331,655',
     casesPastWeek: 1598,
     casesIncreasingPercentage: 7.4646940147948815,
@@ -9168,6 +9776,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Perm_Krai: {
     label: 'Perm Krai',
+    iso3: null,
     population: '2,623,122',
     casesPastWeek: 2072,
     casesIncreasingPercentage: 1.7681728880157177,
@@ -9177,6 +9786,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Primorsky_Krai: {
     label: 'Primorsky Krai',
+    iso3: null,
     population: '1,913,037',
     casesPastWeek: 1584,
     casesIncreasingPercentage: 0.0,
@@ -9186,6 +9796,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Pskov_Oblast: {
     label: 'Pskov Oblast',
+    iso3: null,
     population: '636,546',
     casesPastWeek: 1261,
     casesIncreasingPercentage: 0.0,
@@ -9195,6 +9806,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Rostov_Oblast: {
     label: 'Rostov Oblast',
+    iso3: null,
     population: '4,220,452',
     casesPastWeek: 2731,
     casesIncreasingPercentage: 0.0,
@@ -9204,6 +9816,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Ryazan_Oblast: {
     label: 'Ryazan Oblast',
+    iso3: null,
     population: '1,121,474',
     casesPastWeek: 806,
     casesIncreasingPercentage: 0.0,
@@ -9213,6 +9826,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Saint_Petersburg: {
     label: 'Saint Petersburg',
+    iso3: null,
     population: '5,351,935',
     casesPastWeek: 22116,
     casesIncreasingPercentage: 3.143363492211537,
@@ -9222,6 +9836,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Sakha__Yakutiya__Republic: {
     label: 'Sakha (Yakutiya) Republic',
+    iso3: null,
     population: '964,330',
     casesPastWeek: 1023,
     casesIncreasingPercentage: 1.1869436201780381,
@@ -9231,6 +9846,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Sakhalin_Oblast: {
     label: 'Sakhalin Oblast',
+    iso3: null,
     population: '490,181',
     casesPastWeek: 871,
     casesIncreasingPercentage: 0.0,
@@ -9240,6 +9856,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Samara_Oblast: {
     label: 'Samara Oblast',
+    iso3: null,
     population: '3,193,514',
     casesPastWeek: 2001,
     casesIncreasingPercentage: 1.3164556962025342,
@@ -9249,6 +9866,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Saratov_Oblast: {
     label: 'Saratov Oblast',
+    iso3: null,
     population: '2,462,950',
     casesPastWeek: 1755,
     casesIncreasingPercentage: 0.0,
@@ -9258,6 +9876,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Smolensk_Oblast: {
     label: 'Smolensk Oblast',
+    iso3: null,
     population: '949,348',
     casesPastWeek: 1280,
     casesIncreasingPercentage: 10.918544194107449,
@@ -9267,6 +9886,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Stavropol_Krai: {
     label: 'Stavropol Krai',
+    iso3: null,
     population: '2,800,674',
     casesPastWeek: 1667,
     casesIncreasingPercentage: 0.0,
@@ -9276,6 +9896,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Sverdlovsk_Oblast: {
     label: 'Sverdlovsk Oblast',
+    iso3: null,
     population: '4,325,256',
     casesPastWeek: 2716,
     casesIncreasingPercentage: 1.1169024571854091,
@@ -9285,6 +9906,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tambov_Oblast: {
     label: 'Tambov Oblast',
+    iso3: null,
     population: '1,033,552',
     casesPastWeek: 1102,
     casesIncreasingPercentage: 0.0,
@@ -9294,6 +9916,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tatarstan_Republic: {
     label: 'Tatarstan Republic',
+    iso3: null,
     population: '3,894,284',
     casesPastWeek: 619,
     casesIncreasingPercentage: 0.0,
@@ -9303,6 +9926,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tomsk_Oblast: {
     label: 'Tomsk Oblast',
+    iso3: null,
     population: '1,078,280',
     casesPastWeek: 795,
     casesIncreasingPercentage: 0.0,
@@ -9312,6 +9936,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tula_Oblast: {
     label: 'Tula Oblast',
+    iso3: null,
     population: '1,491,855',
     casesPastWeek: 1374,
     casesIncreasingPercentage: 0.0,
@@ -9321,6 +9946,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tver_Oblast: {
     label: 'Tver Oblast',
+    iso3: null,
     population: '1,283,873',
     casesPastWeek: 1528,
     casesIncreasingPercentage: 0.0,
@@ -9330,6 +9956,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tyumen_Oblast: {
     label: 'Tyumen Oblast',
+    iso3: null,
     population: '3,692,400',
     casesPastWeek: 1128,
     casesIncreasingPercentage: 0.0,
@@ -9339,6 +9966,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Tyva_Republic: {
     label: 'Tyva Republic',
+    iso3: null,
     population: '321,722',
     casesPastWeek: 188,
     casesIncreasingPercentage: 11.904761904761907,
@@ -9348,6 +9976,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Udmurt_Republic: {
     label: 'Udmurt Republic',
+    iso3: null,
     population: '1,513,044',
     casesPastWeek: 1326,
     casesIncreasingPercentage: 0.0,
@@ -9357,6 +9986,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Ulyanovsk_Oblast: {
     label: 'Ulyanovsk Oblast',
+    iso3: null,
     population: '1,246,618',
     casesPastWeek: 1691,
     casesIncreasingPercentage: 0.0,
@@ -9366,6 +9996,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Vladimir_Oblast: {
     label: 'Vladimir Oblast',
+    iso3: null,
     population: '1,378,337',
     casesPastWeek: 1089,
     casesIncreasingPercentage: 0.0,
@@ -9375,6 +10006,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Volgograd_Oblast: {
     label: 'Volgograd Oblast',
+    iso3: null,
     population: '2,521,276',
     casesPastWeek: 1780,
     casesIncreasingPercentage: 0.0,
@@ -9384,6 +10016,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Vologda_Oblast: {
     label: 'Vologda Oblast',
+    iso3: null,
     population: '1,176,689',
     casesPastWeek: 2123,
     casesIncreasingPercentage: 0.0,
@@ -9393,6 +10026,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Voronezh_Oblast: {
     label: 'Voronezh Oblast',
+    iso3: null,
     population: '2,333,768',
     casesPastWeek: 2716,
     casesIncreasingPercentage: 0.0,
@@ -9402,6 +10036,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Yamalo_Nenets_Autonomous_Okrug: {
     label: 'Yamalo-Nenets Autonomous Okrug',
+    iso3: null,
     population: '538,547',
     casesPastWeek: 725,
     casesIncreasingPercentage: 0.0,
@@ -9411,6 +10046,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Yaroslavl_Oblast: {
     label: 'Yaroslavl Oblast',
+    iso3: null,
     population: '1,265,684',
     casesPastWeek: 1312,
     casesIncreasingPercentage: 0.0,
@@ -9420,6 +10056,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Russia_Zabaykalsky_Krai: {
     label: 'Zabaykalsky Krai',
+    iso3: null,
     population: '1,072,806',
     casesPastWeek: 1543,
     casesIncreasingPercentage: 0.0,
@@ -9429,6 +10066,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Rwanda: {
     label: 'Rwanda',
+    iso3: 'RWA',
     population: '12,952,209',
     casesPastWeek: 1943,
     casesIncreasingPercentage: 38.587731811697566,
@@ -9438,6 +10076,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Saint_Kitts_and_Nevis: {
     label: 'Saint Kitts and Nevis',
+    iso3: 'KNA',
     population: '53,192',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -9447,6 +10086,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Saint_Lucia: {
     label: 'Saint Lucia',
+    iso3: 'LCA',
     population: '183,629',
     casesPastWeek: 199,
     casesIncreasingPercentage: 15.02890173410405,
@@ -9456,6 +10096,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Saint_Vincent_and_the_Grenadines: {
     label: 'Saint Vincent and the Grenadines',
+    iso3: 'VCT',
     population: '110,947',
     casesPastWeek: 260,
     casesIncreasingPercentage: 13.53711790393013,
@@ -9465,6 +10106,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Samoa: {
     label: 'Samoa',
+    iso3: 'WSM',
     population: '196,130',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -9474,6 +10116,7 @@ export const Locations: { [key: string]: Location } = {
   },
   San_Marino: {
     label: 'San Marino',
+    iso3: 'SMR',
     population: '33,938',
     casesPastWeek: 96,
     casesIncreasingPercentage: 0.0,
@@ -9483,6 +10126,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sao_Tome_and_Principe: {
     label: 'Sao Tome and Principe',
+    iso3: 'STP',
     population: '219,161',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -9492,6 +10136,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Saudi_Arabia: {
     label: 'Saudi Arabia',
+    iso3: 'SAU',
     population: '34,813,867',
     casesPastWeek: 1442,
     casesIncreasingPercentage: 28.750000000000007,
@@ -9501,6 +10146,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Senegal: {
     label: 'Senegal',
+    iso3: 'SEN',
     population: '16,743,930',
     casesPastWeek: 1699,
     casesIncreasingPercentage: 0.0,
@@ -9510,6 +10156,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Serbia: {
     label: 'Serbia',
+    iso3: 'SRB',
     population: '8,737,370',
     casesPastWeek: 11070,
     casesIncreasingPercentage: 0.0,
@@ -9519,6 +10166,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Seychelles: {
     label: 'Seychelles',
+    iso3: 'SYC',
     population: '98,340',
     casesPastWeek: 328,
     casesIncreasingPercentage: 88.50574712643677,
@@ -9528,6 +10176,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sierra_Leone: {
     label: 'Sierra Leone',
+    iso3: 'SLE',
     population: '7,976,985',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -9537,6 +10186,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Singapore: {
     label: 'Singapore',
+    iso3: 'SGP',
     population: '5,850,343',
     casesPastWeek: 195,
     casesIncreasingPercentage: 0.0,
@@ -9546,6 +10196,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Slovakia: {
     label: 'Slovakia',
+    iso3: 'SVK',
     population: '5,459,643',
     casesPastWeek: 13151,
     casesIncreasingPercentage: 0.0,
@@ -9555,6 +10206,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Slovenia: {
     label: 'Slovenia',
+    iso3: 'SVN',
     population: '2,078,932',
     casesPastWeek: 8705,
     casesIncreasingPercentage: 0.0,
@@ -9564,6 +10216,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Solomon_Islands: {
     label: 'Solomon Islands',
+    iso3: 'SLB',
     population: '652,858',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -9573,6 +10226,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Somalia: {
     label: 'Somalia',
+    iso3: 'SOM',
     population: '15,893,219',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -9582,6 +10236,7 @@ export const Locations: { [key: string]: Location } = {
   },
   South_Africa: {
     label: 'South Africa',
+    iso3: 'ZAF',
     population: '59,308,690',
     casesPastWeek: 75060,
     casesIncreasingPercentage: 0.0,
@@ -9591,6 +10246,7 @@ export const Locations: { [key: string]: Location } = {
   },
   South_Sudan: {
     label: 'South Sudan',
+    iso3: 'SSD',
     population: '11,193,729',
     casesPastWeek: 95,
     casesIncreasingPercentage: 115.90909090909092,
@@ -9600,6 +10256,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain: {
     label: 'Spain',
+    iso3: 'ESP',
     population: '46,754,783',
     casesPastWeek: 247396,
     casesIncreasingPercentage: 22.592218191908977,
@@ -9629,6 +10286,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Andalusia: {
     label: 'Andalusia',
+    iso3: null,
     population: '8,427,405',
     casesPastWeek: 41881,
     casesIncreasingPercentage: 38.25762577578238,
@@ -9638,6 +10296,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Aragon: {
     label: 'Aragon',
+    iso3: null,
     population: '1,320,586',
     casesPastWeek: 4955,
     casesIncreasingPercentage: 14.911873840445278,
@@ -9647,6 +10306,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Asturias: {
     label: 'Asturias',
+    iso3: null,
     population: '1,022,205',
     casesPastWeek: 2489,
     casesIncreasingPercentage: 44.96214327315084,
@@ -9656,6 +10316,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Baleares: {
     label: 'Baleares',
+    iso3: null,
     population: '1,188,220',
     casesPastWeek: 4037,
     casesIncreasingPercentage: 0.0,
@@ -9665,6 +10326,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Canarias: {
     label: 'Canarias',
+    iso3: null,
     population: '2,206,901',
     casesPastWeek: 1999,
     casesIncreasingPercentage: 0.0,
@@ -9674,6 +10336,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Cantabria: {
     label: 'Cantabria',
+    iso3: null,
     population: '581,641',
     casesPastWeek: 1182,
     casesIncreasingPercentage: 13.65384615384615,
@@ -9683,6 +10346,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Castilla___La_Mancha: {
     label: 'Castilla - La Mancha',
+    iso3: null,
     population: '2,034,877',
     casesPastWeek: 15013,
     casesIncreasingPercentage: 30.24204042682397,
@@ -9692,6 +10356,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Castilla_y_Leon: {
     label: 'Castilla y Leon',
+    iso3: null,
     population: '2,407,733',
     casesPastWeek: 17432,
     casesIncreasingPercentage: 53.84343835495544,
@@ -9701,6 +10366,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Catalonia: {
     label: 'Catalonia',
+    iso3: null,
     population: '7,566,431',
     casesPastWeek: 35741,
     casesIncreasingPercentage: 0.0,
@@ -9710,6 +10376,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Ceuta: {
     label: 'Ceuta',
+    iso3: null,
     population: '84,829',
     casesPastWeek: 234,
     casesIncreasingPercentage: 17.587939698492463,
@@ -9719,6 +10386,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_C__Valenciana: {
     label: 'C. Valenciana',
+    iso3: null,
     population: '4,974,969',
     casesPastWeek: 47908,
     casesIncreasingPercentage: 44.23169556840077,
@@ -9728,6 +10396,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Extremadura: {
     label: 'Extremadura',
+    iso3: null,
     population: '1,065,424',
     casesPastWeek: 7809,
     casesIncreasingPercentage: 0.0,
@@ -9737,6 +10406,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Galicia: {
     label: 'Galicia',
+    iso3: null,
     population: '2,700,441',
     casesPastWeek: 10210,
     casesIncreasingPercentage: 48.9858456150591,
@@ -9746,6 +10416,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Madrid: {
     label: 'Madrid',
+    iso3: null,
     population: '6,641,649',
     casesPastWeek: 34154,
     casesIncreasingPercentage: 22.23176580058692,
@@ -9755,6 +10426,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Melilla: {
     label: 'Melilla',
+    iso3: null,
     population: '84,689',
     casesPastWeek: 443,
     casesIncreasingPercentage: 36.30769230769231,
@@ -9764,6 +10436,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Murcia: {
     label: 'Murcia',
+    iso3: null,
     population: '1,487,663',
     casesPastWeek: 11845,
     casesIncreasingPercentage: 5.354442764386724,
@@ -9773,6 +10446,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Navarra: {
     label: 'Navarra',
+    iso3: null,
     population: '649,946',
     casesPastWeek: 1632,
     casesIncreasingPercentage: 24.86610558530986,
@@ -9782,6 +10456,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_Pais_Vasco: {
     label: 'Pais Vasco',
+    iso3: null,
     population: '2,177,880',
     casesPastWeek: 6200,
     casesIncreasingPercentage: 29.951792077132676,
@@ -9791,6 +10466,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Spain_La_Rioja: {
     label: 'La Rioja',
+    iso3: null,
     population: '313,571',
     casesPastWeek: 2232,
     casesIncreasingPercentage: 38.80597014925373,
@@ -9800,6 +10476,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sri_Lanka: {
     label: 'Sri Lanka',
+    iso3: 'LKA',
     population: '21,413,250',
     casesPastWeek: 5368,
     casesIncreasingPercentage: 14.651858180264842,
@@ -9809,6 +10486,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sudan: {
     label: 'Sudan',
+    iso3: 'SDN',
     population: '43,849,269',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -9818,6 +10496,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Suriname: {
     label: 'Suriname',
+    iso3: 'SUR',
     population: '586,634',
     casesPastWeek: 530,
     casesIncreasingPercentage: 2.1194605009633882,
@@ -9827,6 +10506,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden: {
     label: 'Sweden',
+    iso3: 'SWE',
     population: '10,099,270',
     casesPastWeek: 23680,
     casesIncreasingPercentage: 0.0,
@@ -9858,6 +10538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Blekinge: {
     label: 'Blekinge',
+    iso3: null,
     population: '159,606',
     casesPastWeek: 437,
     casesIncreasingPercentage: 0.0,
@@ -9867,6 +10548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Dalarna: {
     label: 'Dalarna',
+    iso3: null,
     population: '287,966',
     casesPastWeek: 572,
     casesIncreasingPercentage: 0.0,
@@ -9876,6 +10558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Gavleborg: {
     label: 'Gavleborg',
+    iso3: null,
     population: '287,382',
     casesPastWeek: 526,
     casesIncreasingPercentage: 0.0,
@@ -9885,6 +10568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Gotland: {
     label: 'Gotland',
+    iso3: null,
     population: '59,686',
     casesPastWeek: 58,
     casesIncreasingPercentage: 0.0,
@@ -9894,6 +10578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Halland: {
     label: 'Halland',
+    iso3: null,
     population: '333,848',
     casesPastWeek: 1217,
     casesIncreasingPercentage: 0.0,
@@ -9903,6 +10588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Jamtland_Harjedalen: {
     label: 'Jamtland Harjedalen',
+    iso3: null,
     population: '130,810',
     casesPastWeek: 241,
     casesIncreasingPercentage: 0.0,
@@ -9912,6 +10598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Jonkoping: {
     label: 'Jonkoping',
+    iso3: null,
     population: '363,599',
     casesPastWeek: 1024,
     casesIncreasingPercentage: 0.0,
@@ -9921,6 +10608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Kalmar: {
     label: 'Kalmar',
+    iso3: null,
     population: '245,446',
     casesPastWeek: 605,
     casesIncreasingPercentage: 0.0,
@@ -9930,6 +10618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Kronoberg: {
     label: 'Kronoberg',
+    iso3: null,
     population: '201,469',
     casesPastWeek: 602,
     casesIncreasingPercentage: 0.0,
@@ -9939,6 +10628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Norrbotten: {
     label: 'Norrbotten',
+    iso3: null,
     population: '250,093',
     casesPastWeek: 557,
     casesIncreasingPercentage: 0.0,
@@ -9948,6 +10638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Orebro: {
     label: 'Orebro',
+    iso3: null,
     population: '304,805',
     casesPastWeek: 552,
     casesIncreasingPercentage: 0.0,
@@ -9957,6 +10648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Ostergotland: {
     label: 'Ostergotland',
+    iso3: null,
     population: '465,495',
     casesPastWeek: 1191,
     casesIncreasingPercentage: 0.0,
@@ -9966,6 +10658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Skane: {
     label: 'Skane',
+    iso3: null,
     population: '1,377,827',
     casesPastWeek: 5240,
     casesIncreasingPercentage: 0.0,
@@ -9975,6 +10668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Sormland: {
     label: 'Sormland',
+    iso3: null,
     population: '297,540',
     casesPastWeek: 441,
     casesIncreasingPercentage: 0.0,
@@ -9984,6 +10678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Stockholm: {
     label: 'Stockholm',
+    iso3: null,
     population: '2,377,081',
     casesPastWeek: 3459,
     casesIncreasingPercentage: 0.0,
@@ -9993,6 +10688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Uppsala: {
     label: 'Uppsala',
+    iso3: null,
     population: '383,713',
     casesPastWeek: 667,
     casesIncreasingPercentage: 0.0,
@@ -10002,6 +10698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Varmland: {
     label: 'Varmland',
+    iso3: null,
     population: '282,414',
     casesPastWeek: 265,
     casesIncreasingPercentage: 0.0,
@@ -10011,6 +10708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Vasterbotten: {
     label: 'Vasterbotten',
+    iso3: null,
     population: '271,736',
     casesPastWeek: 401,
     casesIncreasingPercentage: 0.0,
@@ -10020,6 +10718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Vasternorrland: {
     label: 'Vasternorrland',
+    iso3: null,
     population: '245,347',
     casesPastWeek: 576,
     casesIncreasingPercentage: 0.0,
@@ -10029,6 +10728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Vastmanland: {
     label: 'Vastmanland',
+    iso3: null,
     population: '275,845',
     casesPastWeek: 561,
     casesIncreasingPercentage: 0.0,
@@ -10038,6 +10738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Sweden_Vastra_Gotaland: {
     label: 'Vastra Gotaland',
+    iso3: null,
     population: '1,725,881',
     casesPastWeek: 4488,
     casesIncreasingPercentage: 0.0,
@@ -10047,6 +10748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Switzerland: {
     label: 'Switzerland',
+    iso3: 'CHE',
     population: '8,654,618',
     casesPastWeek: 14051,
     casesIncreasingPercentage: 0.0,
@@ -10056,6 +10758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Syria: {
     label: 'Syria',
+    iso3: 'SYR',
     population: '17,500,657',
     casesPastWeek: 592,
     casesIncreasingPercentage: 0.0,
@@ -10065,6 +10768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Taiwan_: {
     label: 'Taiwan*',
+    iso3: 'TWN',
     population: '23,816,775',
     casesPastWeek: 34,
     casesIncreasingPercentage: 25.92592592592593,
@@ -10074,6 +10778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Tajikistan: {
     label: 'Tajikistan',
+    iso3: 'TJK',
     population: '9,537,642',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -10083,6 +10788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Tanzania: {
     label: 'Tanzania',
+    iso3: 'TZA',
     population: '59,734,213',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -10092,6 +10798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Thailand: {
     label: 'Thailand',
+    iso3: 'THA',
     population: '69,799,978',
     casesPastWeek: 1077,
     casesIncreasingPercentage: 0.0,
@@ -10101,6 +10808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Timor_Leste: {
     label: 'Timor-Leste',
+    iso3: 'TLS',
     population: '1,318,442',
     casesPastWeek: 15,
     casesIncreasingPercentage: 400.0,
@@ -10110,6 +10818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Togo: {
     label: 'Togo',
+    iso3: 'TGO',
     population: '8,278,737',
     casesPastWeek: 360,
     casesIncreasingPercentage: 4.347826086956519,
@@ -10119,6 +10828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Trinidad_and_Tobago: {
     label: 'Trinidad and Tobago',
+    iso3: 'TTO',
     population: '1,399,491',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -10128,6 +10838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Tunisia: {
     label: 'Tunisia',
+    iso3: 'TUN',
     population: '11,818,618',
     casesPastWeek: 17283,
     casesIncreasingPercentage: 0.0,
@@ -10137,6 +10848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Turkey: {
     label: 'Turkey',
+    iso3: 'TUR',
     population: '84,339,067',
     casesPastWeek: 42504,
     casesIncreasingPercentage: 0.0,
@@ -10146,6 +10858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US: {
     label: 'United States (all)',
+    iso3: 'USA',
     population: '329,466,283',
     casesPastWeek: 1190010,
     casesIncreasingPercentage: 0.0,
@@ -10155,6 +10868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72001: {
     label: 'Adjuntas',
+    iso3: null,
     population: '17,363',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -10164,6 +10878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72003: {
     label: 'Aguada',
+    iso3: null,
     population: '36,694',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -10173,6 +10888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72005: {
     label: 'Aguadilla',
+    iso3: null,
     population: '50,265',
     casesPastWeek: 50,
     casesIncreasingPercentage: 11.111111111111116,
@@ -10182,6 +10898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72007: {
     label: 'Aguas Buenas',
+    iso3: null,
     population: '24,814',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -10191,6 +10908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72009: {
     label: 'Aibonito',
+    iso3: null,
     population: '22,108',
     casesPastWeek: 25,
     casesIncreasingPercentage: 4.166666666666674,
@@ -10200,6 +10918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72011: {
     label: 'Anasco',
+    iso3: null,
     population: '26,161',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -10209,6 +10928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72013: {
     label: 'Arecibo',
+    iso3: null,
     population: '81,966',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -10218,6 +10938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72015: {
     label: 'Arroyo',
+    iso3: null,
     population: '17,238',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -10227,6 +10948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72017: {
     label: 'Barceloneta',
+    iso3: null,
     population: '23,727',
     casesPastWeek: 23,
     casesIncreasingPercentage: 64.28571428571428,
@@ -10236,6 +10958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72019: {
     label: 'Barranquitas',
+    iso3: null,
     population: '27,725',
     casesPastWeek: 37,
     casesIncreasingPercentage: 48.0,
@@ -10245,6 +10968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72021: {
     label: 'Bayamon',
+    iso3: null,
     population: '169,269',
     casesPastWeek: 347,
     casesIncreasingPercentage: 8.09968847352025,
@@ -10254,6 +10978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72023: {
     label: 'Cabo Rojo',
+    iso3: null,
     population: '47,515',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -10263,6 +10988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72025: {
     label: 'Caguas',
+    iso3: null,
     population: '124,606',
     casesPastWeek: 155,
     casesIncreasingPercentage: 0.0,
@@ -10272,6 +10998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72027: {
     label: 'Camuy',
+    iso3: null,
     population: '30,504',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -10281,6 +11008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72029: {
     label: 'Canovanas',
+    iso3: null,
     population: '44,674',
     casesPastWeek: 66,
     casesIncreasingPercentage: 6.451612903225801,
@@ -10290,6 +11018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72031: {
     label: 'Carolina',
+    iso3: null,
     population: '146,984',
     casesPastWeek: 251,
     casesIncreasingPercentage: 4.149377593361003,
@@ -10299,6 +11028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72033: {
     label: 'Catano',
+    iso3: null,
     population: '23,121',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -10308,6 +11038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72035: {
     label: 'Cayey',
+    iso3: null,
     population: '42,409',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -10317,6 +11048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72037: {
     label: 'Ceiba',
+    iso3: null,
     population: '10,904',
     casesPastWeek: 25,
     casesIncreasingPercentage: 127.2727272727273,
@@ -10326,6 +11058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72039: {
     label: 'Ciales',
+    iso3: null,
     population: '15,808',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -10335,6 +11068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72041: {
     label: 'Cidra',
+    iso3: null,
     population: '38,307',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -10344,6 +11078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72043: {
     label: 'Coamo',
+    iso3: null,
     population: '38,336',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -10353,6 +11088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72045: {
     label: 'Comerio',
+    iso3: null,
     population: '18,648',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -10362,6 +11098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72047: {
     label: 'Corozal',
+    iso3: null,
     population: '32,293',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -10371,6 +11108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72049: {
     label: 'Culebra',
+    iso3: null,
     population: '1,714',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -10380,6 +11118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72051: {
     label: 'Dorado',
+    iso3: null,
     population: '36,141',
     casesPastWeek: 57,
     casesIncreasingPercentage: 18.75,
@@ -10389,6 +11128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72053: {
     label: 'Fajardo',
+    iso3: null,
     population: '29,454',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -10398,6 +11138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72054: {
     label: 'Florida',
+    iso3: null,
     population: '11,317',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -10407,6 +11148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72055: {
     label: 'Guanica',
+    iso3: null,
     population: '15,383',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -10416,6 +11158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72057: {
     label: 'Guayama',
+    iso3: null,
     population: '39,465',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -10425,6 +11168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72059: {
     label: 'Guayanilla',
+    iso3: null,
     population: '17,623',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -10434,6 +11178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72061: {
     label: 'Guaynabo',
+    iso3: null,
     population: '83,728',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -10443,6 +11188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72063: {
     label: 'Gurabo',
+    iso3: null,
     population: '47,093',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -10452,6 +11198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72065: {
     label: 'Hatillo',
+    iso3: null,
     population: '39,218',
     casesPastWeek: 20,
     casesIncreasingPercentage: 11.111111111111116,
@@ -10461,6 +11208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72067: {
     label: 'Hormigueros',
+    iso3: null,
     population: '15,518',
     casesPastWeek: 14,
     casesIncreasingPercentage: 55.55555555555556,
@@ -10470,6 +11218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72069: {
     label: 'Humacao',
+    iso3: null,
     population: '50,653',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -10479,6 +11228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72071: {
     label: 'Isabela',
+    iso3: null,
     population: '40,423',
     casesPastWeek: 44,
     casesIncreasingPercentage: 25.71428571428571,
@@ -10488,6 +11238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72073: {
     label: 'Jayuya',
+    iso3: null,
     population: '13,891',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -10497,6 +11248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72075: {
     label: 'Juana Diaz',
+    iso3: null,
     population: '44,679',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -10506,6 +11258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72077: {
     label: 'Juncos',
+    iso3: null,
     population: '38,155',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -10515,6 +11268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72079: {
     label: 'Lajas',
+    iso3: null,
     population: '22,010',
     casesPastWeek: 13,
     casesIncreasingPercentage: 8.333333333333325,
@@ -10524,6 +11278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72081: {
     label: 'Lares',
+    iso3: null,
     population: '24,276',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -10533,6 +11288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72083: {
     label: 'Las Marias',
+    iso3: null,
     population: '7,927',
     casesPastWeek: 4,
     casesIncreasingPercentage: 300.0,
@@ -10542,6 +11298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72085: {
     label: 'Las Piedras',
+    iso3: null,
     population: '37,007',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -10551,6 +11308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72087: {
     label: 'Loiza',
+    iso3: null,
     population: '24,553',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -10560,6 +11318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72089: {
     label: 'Luquillo',
+    iso3: null,
     population: '17,665',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -10569,6 +11328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72091: {
     label: 'Manati',
+    iso3: null,
     population: '37,287',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -10578,6 +11338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72093: {
     label: 'Maricao',
+    iso3: null,
     population: '5,430',
     casesPastWeek: 4,
     casesIncreasingPercentage: 300.0,
@@ -10587,6 +11348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72095: {
     label: 'Maunabo',
+    iso3: null,
     population: '10,321',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -10596,6 +11358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72097: {
     label: 'Mayaguez',
+    iso3: null,
     population: '71,530',
     casesPastWeek: 84,
     casesIncreasingPercentage: 33.33333333333333,
@@ -10605,6 +11368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72099: {
     label: 'Moca',
+    iso3: null,
     population: '34,891',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -10614,6 +11378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72101: {
     label: 'Morovis',
+    iso3: null,
     population: '30,335',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -10623,6 +11388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72103: {
     label: 'Naguabo',
+    iso3: null,
     population: '25,761',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -10632,6 +11398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72105: {
     label: 'Naranjito',
+    iso3: null,
     population: '27,349',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -10641,6 +11408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72107: {
     label: 'Orocovis',
+    iso3: null,
     population: '20,220',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -10650,6 +11418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72109: {
     label: 'Patillas',
+    iso3: null,
     population: '16,211',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -10659,6 +11428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72111: {
     label: 'Penuelas',
+    iso3: null,
     population: '19,249',
     casesPastWeek: 21,
     casesIncreasingPercentage: 31.25,
@@ -10668,6 +11438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72113: {
     label: 'Ponce',
+    iso3: null,
     population: '131,881',
     casesPastWeek: 148,
     casesIncreasingPercentage: 0.0,
@@ -10677,6 +11448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72115: {
     label: 'Quebradillas',
+    iso3: null,
     population: '22,918',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -10686,6 +11458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72117: {
     label: 'Rincon',
+    iso3: null,
     population: '13,656',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -10695,6 +11468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72119: {
     label: 'Rio Grande',
+    iso3: null,
     population: '48,025',
     casesPastWeek: 86,
     casesIncreasingPercentage: 59.25925925925925,
@@ -10704,6 +11478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72121: {
     label: 'Sabana Grande',
+    iso3: null,
     population: '21,712',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -10713,6 +11488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72123: {
     label: 'Salinas',
+    iso3: null,
     population: '27,128',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -10722,6 +11498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72125: {
     label: 'San German',
+    iso3: null,
     population: '30,227',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -10731,6 +11508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72127: {
     label: 'San Juan',
+    iso3: null,
     population: '318,441',
     casesPastWeek: 414,
     casesIncreasingPercentage: 0.0,
@@ -10740,6 +11518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72129: {
     label: 'San Lorenzo',
+    iso3: null,
     population: '35,989',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -10749,6 +11528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72131: {
     label: 'San Sebastian',
+    iso3: null,
     population: '35,528',
     casesPastWeek: 39,
     casesIncreasingPercentage: 50.0,
@@ -10758,6 +11538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72133: {
     label: 'Santa Isabel',
+    iso3: null,
     population: '21,209',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -10767,6 +11548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72135: {
     label: 'Toa Alta',
+    iso3: null,
     population: '72,025',
     casesPastWeek: 119,
     casesIncreasingPercentage: 12.264150943396235,
@@ -10776,6 +11558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72137: {
     label: 'Toa Baja',
+    iso3: null,
     population: '74,271',
     casesPastWeek: 85,
     casesIncreasingPercentage: 0.0,
@@ -10785,6 +11568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72139: {
     label: 'Trujillo Alto',
+    iso3: null,
     population: '63,674',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -10794,6 +11578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72141: {
     label: 'Utuado',
+    iso3: null,
     population: '27,395',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -10803,6 +11588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72143: {
     label: 'Vega Alta',
+    iso3: null,
     population: '36,061',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -10812,6 +11598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72145: {
     label: 'Vega Baja',
+    iso3: null,
     population: '50,023',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -10821,6 +11608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72147: {
     label: 'Vieques',
+    iso3: null,
     population: '8,386',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -10830,6 +11618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72149: {
     label: 'Villalba',
+    iso3: null,
     population: '21,372',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -10839,6 +11628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72151: {
     label: 'Yabucoa',
+    iso3: null,
     population: '32,282',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -10848,6 +11638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_72153: {
     label: 'Yauco',
+    iso3: null,
     population: '33,575',
     casesPastWeek: 22,
     casesIncreasingPercentage: 22.222222222222232,
@@ -10857,6 +11648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01001: {
     label: 'Autauga',
+    iso3: null,
     population: '55,869',
     casesPastWeek: 192,
     casesIncreasingPercentage: 0.0,
@@ -10866,6 +11658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01003: {
     label: 'Baldwin',
+    iso3: null,
     population: '223,234',
     casesPastWeek: 1005,
     casesIncreasingPercentage: 8.766233766233755,
@@ -10875,6 +11668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01005: {
     label: 'Barbour',
+    iso3: null,
     population: '24,686',
     casesPastWeek: 98,
     casesIncreasingPercentage: 38.0281690140845,
@@ -10884,6 +11678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01007: {
     label: 'Bibb',
+    iso3: null,
     population: '22,394',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -10893,6 +11688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01009: {
     label: 'Blount',
+    iso3: null,
     population: '57,826',
     casesPastWeek: 169,
     casesIncreasingPercentage: 0.0,
@@ -10902,6 +11698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01011: {
     label: 'Bullock',
+    iso3: null,
     population: '10,101',
     casesPastWeek: 45,
     casesIncreasingPercentage: 21.62162162162162,
@@ -10911,6 +11708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01013: {
     label: 'Butler',
+    iso3: null,
     population: '19,448',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -10920,6 +11718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01015: {
     label: 'Calhoun',
+    iso3: null,
     population: '113,605',
     casesPastWeek: 399,
     casesIncreasingPercentage: 0.0,
@@ -10929,6 +11728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01017: {
     label: 'Chambers',
+    iso3: null,
     population: '33,254',
     casesPastWeek: 215,
     casesIncreasingPercentage: 14.36170212765957,
@@ -10938,6 +11738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01019: {
     label: 'Cherokee',
+    iso3: null,
     population: '26,196',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -10947,6 +11748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01021: {
     label: 'Chilton',
+    iso3: null,
     population: '44,428',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -10956,6 +11758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01023: {
     label: 'Choctaw',
+    iso3: null,
     population: '12,589',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -10965,6 +11768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01025: {
     label: 'Clarke',
+    iso3: null,
     population: '23,622',
     casesPastWeek: 188,
     casesIncreasingPercentage: 3.8674033149171283,
@@ -10974,6 +11778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01027: {
     label: 'Clay',
+    iso3: null,
     population: '13,235',
     casesPastWeek: 44,
     casesIncreasingPercentage: 41.93548387096775,
@@ -10983,6 +11788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01029: {
     label: 'Cleburne',
+    iso3: null,
     population: '14,910',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -10992,6 +11798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01031: {
     label: 'Coffee',
+    iso3: null,
     population: '52,342',
     casesPastWeek: 214,
     casesIncreasingPercentage: 0.0,
@@ -11001,6 +11808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01033: {
     label: 'Colbert',
+    iso3: null,
     population: '55,241',
     casesPastWeek: 179,
     casesIncreasingPercentage: 0.0,
@@ -11010,6 +11818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01035: {
     label: 'Conecuh',
+    iso3: null,
     population: '12,067',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -11019,6 +11828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01037: {
     label: 'Coosa',
+    iso3: null,
     population: '10,663',
     casesPastWeek: 31,
     casesIncreasingPercentage: 19.23076923076923,
@@ -11028,6 +11838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01039: {
     label: 'Covington',
+    iso3: null,
     population: '37,049',
     casesPastWeek: 124,
     casesIncreasingPercentage: 6.896551724137923,
@@ -11037,6 +11848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01041: {
     label: 'Crenshaw',
+    iso3: null,
     population: '13,772',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -11046,6 +11858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01043: {
     label: 'Cullman',
+    iso3: null,
     population: '83,768',
     casesPastWeek: 251,
     casesIncreasingPercentage: 0.0,
@@ -11055,6 +11868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01045: {
     label: 'Dale',
+    iso3: null,
     population: '49,172',
     casesPastWeek: 146,
     casesIncreasingPercentage: 0.0,
@@ -11064,6 +11878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01047: {
     label: 'Dallas',
+    iso3: null,
     population: '37,196',
     casesPastWeek: 101,
     casesIncreasingPercentage: 0.0,
@@ -11073,6 +11888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01049: {
     label: 'DeKalb',
+    iso3: null,
     population: '71,513',
     casesPastWeek: 211,
     casesIncreasingPercentage: 0.0,
@@ -11082,6 +11898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01051: {
     label: 'Elmore',
+    iso3: null,
     population: '81,209',
     casesPastWeek: 378,
     casesIncreasingPercentage: 0.0,
@@ -11091,6 +11908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01053: {
     label: 'Escambia',
+    iso3: null,
     population: '36,633',
     casesPastWeek: 186,
     casesIncreasingPercentage: 0.0,
@@ -11100,6 +11918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01055: {
     label: 'Etowah',
+    iso3: null,
     population: '102,268',
     casesPastWeek: 372,
     casesIncreasingPercentage: 0.0,
@@ -11109,6 +11928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01057: {
     label: 'Fayette',
+    iso3: null,
     population: '16,302',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -11118,6 +11938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01059: {
     label: 'Franklin',
+    iso3: null,
     population: '31,362',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -11127,6 +11948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01061: {
     label: 'Geneva',
+    iso3: null,
     population: '26,271',
     casesPastWeek: 101,
     casesIncreasingPercentage: 0.0,
@@ -11136,6 +11958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01063: {
     label: 'Greene',
+    iso3: null,
     population: '8,111',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -11145,6 +11968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01065: {
     label: 'Hale',
+    iso3: null,
     population: '14,651',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -11154,6 +11978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01067: {
     label: 'Henry',
+    iso3: null,
     population: '17,205',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -11163,6 +11988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01069: {
     label: 'Houston',
+    iso3: null,
     population: '105,882',
     casesPastWeek: 411,
     casesIncreasingPercentage: 0.0,
@@ -11172,6 +11998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01071: {
     label: 'Jackson',
+    iso3: null,
     population: '51,626',
     casesPastWeek: 212,
     casesIncreasingPercentage: 10.416666666666675,
@@ -11181,6 +12008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01073: {
     label: 'Jefferson',
+    iso3: null,
     population: '658,573',
     casesPastWeek: 2642,
     casesIncreasingPercentage: 0.0,
@@ -11190,6 +12018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01075: {
     label: 'Lamar',
+    iso3: null,
     population: '13,805',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -11199,6 +12028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01077: {
     label: 'Lauderdale',
+    iso3: null,
     population: '92,729',
     casesPastWeek: 325,
     casesIncreasingPercentage: 0.0,
@@ -11208,6 +12038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01079: {
     label: 'Lawrence',
+    iso3: null,
     population: '32,924',
     casesPastWeek: 105,
     casesIncreasingPercentage: 0.0,
@@ -11217,6 +12048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01081: {
     label: 'Lee',
+    iso3: null,
     population: '164,542',
     casesPastWeek: 740,
     casesIncreasingPercentage: 0.0,
@@ -11226,6 +12058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01083: {
     label: 'Limestone',
+    iso3: null,
     population: '98,915',
     casesPastWeek: 347,
     casesIncreasingPercentage: 0.0,
@@ -11235,6 +12068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01085: {
     label: 'Lowndes',
+    iso3: null,
     population: '9,726',
     casesPastWeek: 52,
     casesIncreasingPercentage: 1.9607843137254832,
@@ -11244,6 +12078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01087: {
     label: 'Macon',
+    iso3: null,
     population: '18,068',
     casesPastWeek: 76,
     casesIncreasingPercentage: 40.74074074074075,
@@ -11253,6 +12088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01089: {
     label: 'Madison',
+    iso3: null,
     population: '372,909',
     casesPastWeek: 1258,
     casesIncreasingPercentage: 0.0,
@@ -11262,6 +12098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01091: {
     label: 'Marengo',
+    iso3: null,
     population: '18,863',
     casesPastWeek: 103,
     casesIncreasingPercentage: 134.0909090909091,
@@ -11271,6 +12108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01093: {
     label: 'Marion',
+    iso3: null,
     population: '29,709',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -11280,6 +12118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01095: {
     label: 'Marshall',
+    iso3: null,
     population: '96,774',
     casesPastWeek: 280,
     casesIncreasingPercentage: 0.0,
@@ -11289,6 +12128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01097: {
     label: 'Mobile',
+    iso3: null,
     population: '413,210',
     casesPastWeek: 1395,
     casesIncreasingPercentage: 0.0,
@@ -11298,6 +12138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01099: {
     label: 'Monroe',
+    iso3: null,
     population: '20,733',
     casesPastWeek: 72,
     casesIncreasingPercentage: 5.882352941176472,
@@ -11307,6 +12148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01101: {
     label: 'Montgomery',
+    iso3: null,
     population: '226,486',
     casesPastWeek: 976,
     casesIncreasingPercentage: 6.783369803063466,
@@ -11316,6 +12158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01103: {
     label: 'Morgan',
+    iso3: null,
     population: '119,679',
     casesPastWeek: 406,
     casesIncreasingPercentage: 0.0,
@@ -11325,6 +12168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01105: {
     label: 'Perry',
+    iso3: null,
     population: '8,923',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -11334,6 +12178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01107: {
     label: 'Pickens',
+    iso3: null,
     population: '19,930',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -11343,6 +12188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01109: {
     label: 'Pike',
+    iso3: null,
     population: '33,114',
     casesPastWeek: 138,
     casesIncreasingPercentage: 0.0,
@@ -11352,6 +12198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01111: {
     label: 'Randolph',
+    iso3: null,
     population: '22,722',
     casesPastWeek: 66,
     casesIncreasingPercentage: 34.6938775510204,
@@ -11361,6 +12208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01113: {
     label: 'Russell',
+    iso3: null,
     population: '57,961',
     casesPastWeek: 272,
     casesIncreasingPercentage: 15.254237288135597,
@@ -11370,6 +12218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01115: {
     label: 'St. Clair',
+    iso3: null,
     population: '89,512',
     casesPastWeek: 319,
     casesIncreasingPercentage: 0.0,
@@ -11379,6 +12228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01117: {
     label: 'Shelby',
+    iso3: null,
     population: '217,702',
     casesPastWeek: 831,
     casesIncreasingPercentage: 0.0,
@@ -11388,6 +12238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01119: {
     label: 'Sumter',
+    iso3: null,
     population: '12,427',
     casesPastWeek: 15,
     casesIncreasingPercentage: 1400.0,
@@ -11397,6 +12248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01121: {
     label: 'Talladega',
+    iso3: null,
     population: '79,978',
     casesPastWeek: 315,
     casesIncreasingPercentage: 0.0,
@@ -11406,6 +12258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01123: {
     label: 'Tallapoosa',
+    iso3: null,
     population: '40,367',
     casesPastWeek: 533,
     casesIncreasingPercentage: 732.8125,
@@ -11415,6 +12268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01125: {
     label: 'Tuscaloosa',
+    iso3: null,
     population: '209,355',
     casesPastWeek: 797,
     casesIncreasingPercentage: 36.00682593856654,
@@ -11424,6 +12278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01127: {
     label: 'Walker',
+    iso3: null,
     population: '63,521',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -11433,6 +12288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01129: {
     label: 'Washington',
+    iso3: null,
     population: '16,326',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -11442,6 +12298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01131: {
     label: 'Wilcox',
+    iso3: null,
     population: '10,373',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -11451,6 +12308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_01133: {
     label: 'Winston',
+    iso3: null,
     population: '23,629',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -11460,6 +12318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02013: {
     label: 'Aleutians East',
+    iso3: null,
     population: '3,337',
     casesPastWeek: 31,
     casesIncreasingPercentage: 3000.0,
@@ -11469,6 +12328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02016: {
     label: 'Aleutians West',
+    iso3: null,
     population: '5,634',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -11478,6 +12338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02020: {
     label: 'Anchorage',
+    iso3: null,
     population: '288,000',
     casesPastWeek: 433,
     casesIncreasingPercentage: 0.0,
@@ -11487,6 +12348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02050: {
     label: 'Bethel',
+    iso3: null,
     population: '18,386',
     casesPastWeek: 199,
     casesIncreasingPercentage: 5.85106382978724,
@@ -11496,6 +12358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02060: {
     label: 'Bristol Bay',
+    iso3: null,
     population: '836',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -11505,6 +12368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02068: {
     label: 'Denali',
+    iso3: null,
     population: '2,097',
     casesPastWeek: 4,
     casesIncreasingPercentage: 100.0,
@@ -11514,6 +12378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02070: {
     label: 'Dillingham',
+    iso3: null,
     population: '4,916',
     casesPastWeek: 10,
     casesIncreasingPercentage: 42.85714285714286,
@@ -11523,6 +12388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02090: {
     label: 'Fairbanks North Star',
+    iso3: null,
     population: '96,849',
     casesPastWeek: 159,
     casesIncreasingPercentage: 0.0,
@@ -11532,6 +12398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02100: {
     label: 'Haines',
+    iso3: null,
     population: '2,530',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -11541,6 +12408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02110: {
     label: 'Juneau',
+    iso3: null,
     population: '31,974',
     casesPastWeek: 31,
     casesIncreasingPercentage: 10.71428571428572,
@@ -11550,6 +12418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02122: {
     label: 'Kenai Peninsula',
+    iso3: null,
     population: '58,708',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -11559,6 +12428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02130: {
     label: 'Ketchikan Gateway',
+    iso3: null,
     population: '13,901',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -11568,6 +12438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02150: {
     label: 'Kodiak Island',
+    iso3: null,
     population: '12,998',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -11577,6 +12448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02158: {
     label: 'Kusilvak',
+    iso3: null,
     population: '8,314',
     casesPastWeek: 89,
     casesIncreasingPercentage: 23.611111111111114,
@@ -11586,6 +12458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02164: {
     label: 'Bristol Bay plus Lake and Peninsula',
+    iso3: null,
     population: '2,428',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -11595,6 +12468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02170: {
     label: 'Matanuska-Susitna',
+    iso3: null,
     population: '108,317',
     casesPastWeek: 204,
     casesIncreasingPercentage: 0.0,
@@ -11604,6 +12478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02180: {
     label: 'Nome',
+    iso3: null,
     population: '10,004',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -11613,6 +12488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02185: {
     label: 'North Slope',
+    iso3: null,
     population: '9,832',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -11622,6 +12498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02188: {
     label: 'Northwest Arctic',
+    iso3: null,
     population: '7,621',
     casesPastWeek: 41,
     casesIncreasingPercentage: 10.81081081081081,
@@ -11631,6 +12508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02195: {
     label: 'Petersburg',
+    iso3: null,
     population: '3,266',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -11640,6 +12518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02198: {
     label: 'Prince of Wales-Hyder',
+    iso3: null,
     population: '6,203',
     casesPastWeek: -1,
     casesIncreasingPercentage: 0.0,
@@ -11649,6 +12528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02220: {
     label: 'Sitka',
+    iso3: null,
     population: '8,493',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -11658,6 +12538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02230: {
     label: 'Skagway',
+    iso3: null,
     population: '1,183',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -11667,6 +12548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02240: {
     label: 'Southeast Fairbanks',
+    iso3: null,
     population: '6,893',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -11676,6 +12558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02261: {
     label: 'Valdez-Cordova',
+    iso3: null,
     population: '9,202',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -11685,6 +12568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02275: {
     label: 'Wrangell',
+    iso3: null,
     population: '2,502',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -11694,6 +12578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02282: {
     label: 'Yakutat',
+    iso3: null,
     population: '604',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -11703,6 +12588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_02290: {
     label: 'Yukon-Koyukuk',
+    iso3: null,
     population: '5,230',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -11712,6 +12598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04001: {
     label: 'Apache',
+    iso3: null,
     population: '71,887',
     casesPastWeek: 570,
     casesIncreasingPercentage: 46.153846153846146,
@@ -11721,6 +12608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04003: {
     label: 'Cochise',
+    iso3: null,
     population: '125,922',
     casesPastWeek: 568,
     casesIncreasingPercentage: 0.0,
@@ -11730,6 +12618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04005: {
     label: 'Coconino',
+    iso3: null,
     population: '143,476',
     casesPastWeek: 802,
     casesIncreasingPercentage: 0.0,
@@ -11739,6 +12628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04007: {
     label: 'Gila',
+    iso3: null,
     population: '54,018',
     casesPastWeek: 367,
     casesIncreasingPercentage: 11.550151975683898,
@@ -11748,6 +12638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04009: {
     label: 'Graham',
+    iso3: null,
     population: '38,837',
     casesPastWeek: 455,
     casesIncreasingPercentage: 43.987341772151886,
@@ -11757,6 +12648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04011: {
     label: 'Greenlee',
+    iso3: null,
     population: '9,498',
     casesPastWeek: 25,
     casesIncreasingPercentage: 25.0,
@@ -11766,6 +12658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04012: {
     label: 'La Paz',
+    iso3: null,
     population: '21,108',
     casesPastWeek: 141,
     casesIncreasingPercentage: 0.0,
@@ -11775,6 +12668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04013: {
     label: 'Maricopa',
+    iso3: null,
     population: '4,485,414',
     casesPastWeek: 31323,
     casesIncreasingPercentage: 0.0,
@@ -11784,6 +12678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04015: {
     label: 'Mohave',
+    iso3: null,
     population: '212,181',
     casesPastWeek: 1543,
     casesIncreasingPercentage: 11.167146974063403,
@@ -11793,6 +12688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04017: {
     label: 'Navajo',
+    iso3: null,
     population: '110,924',
     casesPastWeek: 645,
     casesIncreasingPercentage: 0.0,
@@ -11802,6 +12698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04019: {
     label: 'Pima',
+    iso3: null,
     population: '1,047,279',
     casesPastWeek: 6654,
     casesIncreasingPercentage: 0.0,
@@ -11811,6 +12708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04021: {
     label: 'Pinal',
+    iso3: null,
     population: '462,789',
     casesPastWeek: 3016,
     casesIncreasingPercentage: 0.0,
@@ -11820,6 +12718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04023: {
     label: 'Santa Cruz',
+    iso3: null,
     population: '46,498',
     casesPastWeek: 258,
     casesIncreasingPercentage: 0.0,
@@ -11829,6 +12728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04025: {
     label: 'Yavapai',
+    iso3: null,
     population: '235,099',
     casesPastWeek: 988,
     casesIncreasingPercentage: 0.0,
@@ -11838,6 +12738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_04027: {
     label: 'Yuma',
+    iso3: null,
     population: '213,787',
     casesPastWeek: 1337,
     casesIncreasingPercentage: 0.0,
@@ -11847,6 +12748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05001: {
     label: 'Arkansas',
+    iso3: null,
     population: '17,486',
     casesPastWeek: 122,
     casesIncreasingPercentage: 15.094339622641506,
@@ -11856,6 +12758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05003: {
     label: 'Ashley',
+    iso3: null,
     population: '19,657',
     casesPastWeek: 100,
     casesIncreasingPercentage: 17.647058823529417,
@@ -11865,6 +12768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05005: {
     label: 'Baxter',
+    iso3: null,
     population: '41,932',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -11874,6 +12778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05007: {
     label: 'Benton',
+    iso3: null,
     population: '279,141',
     casesPastWeek: 1116,
     casesIncreasingPercentage: 0.0,
@@ -11883,6 +12788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05009: {
     label: 'Boone',
+    iso3: null,
     population: '37,432',
     casesPastWeek: 166,
     casesIncreasingPercentage: 2.4691358024691468,
@@ -11892,6 +12798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05011: {
     label: 'Bradley',
+    iso3: null,
     population: '10,763',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -11901,6 +12808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05013: {
     label: 'Calhoun',
+    iso3: null,
     population: '5,189',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -11910,6 +12818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05015: {
     label: 'Carroll',
+    iso3: null,
     population: '28,380',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -11919,6 +12828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05017: {
     label: 'Chicot',
+    iso3: null,
     population: '10,118',
     casesPastWeek: 35,
     casesIncreasingPercentage: 20.68965517241379,
@@ -11928,6 +12838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05019: {
     label: 'Clark',
+    iso3: null,
     population: '22,320',
     casesPastWeek: 101,
     casesIncreasingPercentage: 0.0,
@@ -11937,6 +12848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05021: {
     label: 'Clay',
+    iso3: null,
     population: '14,551',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -11946,6 +12858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05023: {
     label: 'Cleburne',
+    iso3: null,
     population: '24,919',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -11955,6 +12868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05025: {
     label: 'Cleveland',
+    iso3: null,
     population: '7,956',
     casesPastWeek: 59,
     casesIncreasingPercentage: 9.259259259259256,
@@ -11964,6 +12878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05027: {
     label: 'Columbia',
+    iso3: null,
     population: '23,457',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -11973,6 +12888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05029: {
     label: 'Conway',
+    iso3: null,
     population: '20,846',
     casesPastWeek: 112,
     casesIncreasingPercentage: 0.0,
@@ -11982,6 +12898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05031: {
     label: 'Craighead',
+    iso3: null,
     population: '110,332',
     casesPastWeek: 371,
     casesIncreasingPercentage: 0.0,
@@ -11991,6 +12908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05033: {
     label: 'Crawford',
+    iso3: null,
     population: '63,257',
     casesPastWeek: 366,
     casesIncreasingPercentage: 0.0,
@@ -12000,6 +12918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05035: {
     label: 'Crittenden',
+    iso3: null,
     population: '47,955',
     casesPastWeek: 174,
     casesIncreasingPercentage: 0.0,
@@ -12009,6 +12928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05037: {
     label: 'Cross',
+    iso3: null,
     population: '16,419',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -12018,6 +12938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05039: {
     label: 'Dallas',
+    iso3: null,
     population: '7,009',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -12027,6 +12948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05041: {
     label: 'Desha',
+    iso3: null,
     population: '11,361',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -12036,6 +12958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05043: {
     label: 'Drew',
+    iso3: null,
     population: '18,219',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -12045,6 +12968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05045: {
     label: 'Faulkner',
+    iso3: null,
     population: '126,007',
     casesPastWeek: 557,
     casesIncreasingPercentage: 0.0,
@@ -12054,6 +12978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05047: {
     label: 'Franklin',
+    iso3: null,
     population: '17,715',
     casesPastWeek: 91,
     casesIncreasingPercentage: 2.2471910112359605,
@@ -12063,6 +12988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05049: {
     label: 'Fulton',
+    iso3: null,
     population: '12,477',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -12072,6 +12998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05051: {
     label: 'Garland',
+    iso3: null,
     population: '99,386',
     casesPastWeek: 495,
     casesIncreasingPercentage: 0.0,
@@ -12081,6 +13008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05053: {
     label: 'Grant',
+    iso3: null,
     population: '18,265',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -12090,6 +13018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05055: {
     label: 'Greene',
+    iso3: null,
     population: '45,325',
     casesPastWeek: 198,
     casesIncreasingPercentage: 0.0,
@@ -12099,6 +13028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05057: {
     label: 'Hempstead',
+    iso3: null,
     population: '21,532',
     casesPastWeek: 108,
     casesIncreasingPercentage: 21.34831460674158,
@@ -12108,6 +13038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05059: {
     label: 'Hot Spring',
+    iso3: null,
     population: '33,771',
     casesPastWeek: 163,
     casesIncreasingPercentage: 0.0,
@@ -12117,6 +13048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05061: {
     label: 'Howard',
+    iso3: null,
     population: '13,202',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -12126,6 +13058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05063: {
     label: 'Independence',
+    iso3: null,
     population: '37,825',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -12135,6 +13068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05065: {
     label: 'Izard',
+    iso3: null,
     population: '13,629',
     casesPastWeek: 44,
     casesIncreasingPercentage: 4.761904761904767,
@@ -12144,6 +13078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05067: {
     label: 'Jackson',
+    iso3: null,
     population: '16,719',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -12153,6 +13088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05069: {
     label: 'Jefferson',
+    iso3: null,
     population: '66,824',
     casesPastWeek: 302,
     casesIncreasingPercentage: 13.108614232209748,
@@ -12162,6 +13098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05071: {
     label: 'Johnson',
+    iso3: null,
     population: '26,578',
     casesPastWeek: 109,
     casesIncreasingPercentage: 0.0,
@@ -12171,6 +13108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05073: {
     label: 'Lafayette',
+    iso3: null,
     population: '6,624',
     casesPastWeek: 35,
     casesIncreasingPercentage: 39.99999999999999,
@@ -12180,6 +13118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05075: {
     label: 'Lawrence',
+    iso3: null,
     population: '16,406',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -12189,6 +13128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05077: {
     label: 'Lee',
+    iso3: null,
     population: '8,857',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -12198,6 +13138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05079: {
     label: 'Lincoln',
+    iso3: null,
     population: '13,024',
     casesPastWeek: 46,
     casesIncreasingPercentage: 2.2222222222222143,
@@ -12207,6 +13148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05081: {
     label: 'Little River',
+    iso3: null,
     population: '12,259',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -12216,6 +13158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05083: {
     label: 'Logan',
+    iso3: null,
     population: '21,466',
     casesPastWeek: 118,
     casesIncreasingPercentage: 6.3063063063063085,
@@ -12225,6 +13168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05085: {
     label: 'Lonoke',
+    iso3: null,
     population: '73,309',
     casesPastWeek: 362,
     casesIncreasingPercentage: 0.0,
@@ -12234,6 +13178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05087: {
     label: 'Madison',
+    iso3: null,
     population: '16,576',
     casesPastWeek: 65,
     casesIncreasingPercentage: 12.06896551724137,
@@ -12243,6 +13188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05089: {
     label: 'Marion',
+    iso3: null,
     population: '16,694',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -12252,6 +13198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05091: {
     label: 'Miller',
+    iso3: null,
     population: '43,257',
     casesPastWeek: 123,
     casesIncreasingPercentage: 0.0,
@@ -12261,6 +13208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05093: {
     label: 'Mississippi',
+    iso3: null,
     population: '40,651',
     casesPastWeek: 160,
     casesIncreasingPercentage: 0.0,
@@ -12270,6 +13218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05095: {
     label: 'Monroe',
+    iso3: null,
     population: '6,701',
     casesPastWeek: 57,
     casesIncreasingPercentage: 7.547169811320753,
@@ -12279,6 +13228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05097: {
     label: 'Montgomery',
+    iso3: null,
     population: '8,986',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -12288,6 +13238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05099: {
     label: 'Nevada',
+    iso3: null,
     population: '8,252',
     casesPastWeek: 40,
     casesIncreasingPercentage: 100.0,
@@ -12297,6 +13248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05101: {
     label: 'Newton',
+    iso3: null,
     population: '7,753',
     casesPastWeek: 25,
     casesIncreasingPercentage: 127.2727272727273,
@@ -12306,6 +13258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05103: {
     label: 'Ouachita',
+    iso3: null,
     population: '23,382',
     casesPastWeek: 109,
     casesIncreasingPercentage: 0.0,
@@ -12315,6 +13268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05105: {
     label: 'Perry',
+    iso3: null,
     population: '10,455',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -12324,6 +13278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05107: {
     label: 'Phillips',
+    iso3: null,
     population: '17,782',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -12333,6 +13288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05109: {
     label: 'Pike',
+    iso3: null,
     population: '10,718',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -12342,6 +13298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05111: {
     label: 'Poinsett',
+    iso3: null,
     population: '23,528',
     casesPastWeek: 122,
     casesIncreasingPercentage: 6.08695652173914,
@@ -12351,6 +13308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05113: {
     label: 'Polk',
+    iso3: null,
     population: '19,964',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -12360,6 +13318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05115: {
     label: 'Pope',
+    iso3: null,
     population: '64,072',
     casesPastWeek: 342,
     casesIncreasingPercentage: 0.0,
@@ -12369,6 +13328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05117: {
     label: 'Prairie',
+    iso3: null,
     population: '8,062',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -12378,6 +13338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05119: {
     label: 'Pulaski',
+    iso3: null,
     population: '391,911',
     casesPastWeek: 1745,
     casesIncreasingPercentage: 0.0,
@@ -12387,6 +13348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05121: {
     label: 'Randolph',
+    iso3: null,
     population: '17,958',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -12396,6 +13358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05123: {
     label: 'St. Francis',
+    iso3: null,
     population: '24,994',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -12405,6 +13368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05125: {
     label: 'Saline',
+    iso3: null,
     population: '122,437',
     casesPastWeek: 466,
     casesIncreasingPercentage: 0.0,
@@ -12414,6 +13378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05127: {
     label: 'Scott',
+    iso3: null,
     population: '10,281',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -12423,6 +13388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05129: {
     label: 'Searcy',
+    iso3: null,
     population: '7,881',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -12432,6 +13398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05131: {
     label: 'Sebastian',
+    iso3: null,
     population: '127,827',
     casesPastWeek: 652,
     casesIncreasingPercentage: 0.0,
@@ -12441,6 +13408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05133: {
     label: 'Sevier',
+    iso3: null,
     population: '17,007',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -12450,6 +13418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05135: {
     label: 'Sharp',
+    iso3: null,
     population: '17,442',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -12459,6 +13428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05137: {
     label: 'Stone',
+    iso3: null,
     population: '12,506',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -12468,6 +13438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05139: {
     label: 'Union',
+    iso3: null,
     population: '38,682',
     casesPastWeek: 199,
     casesIncreasingPercentage: 3.645833333333326,
@@ -12477,6 +13448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05141: {
     label: 'Van Buren',
+    iso3: null,
     population: '16,545',
     casesPastWeek: 68,
     casesIncreasingPercentage: 0.0,
@@ -12486,6 +13458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05143: {
     label: 'Washington',
+    iso3: null,
     population: '239,187',
     casesPastWeek: 1115,
     casesIncreasingPercentage: 0.0,
@@ -12495,6 +13468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05145: {
     label: 'White',
+    iso3: null,
     population: '78,753',
     casesPastWeek: 324,
     casesIncreasingPercentage: 0.0,
@@ -12504,6 +13478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05147: {
     label: 'Woodruff',
+    iso3: null,
     population: '6,320',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -12513,6 +13488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_05149: {
     label: 'Yell',
+    iso3: null,
     population: '21,341',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -12522,6 +13498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06001: {
     label: 'Alameda',
+    iso3: null,
     population: '1,671,329',
     casesPastWeek: 2318,
     casesIncreasingPercentage: 0.0,
@@ -12531,6 +13508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06003: {
     label: 'Alpine',
+    iso3: null,
     population: '1,129',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -12540,6 +13518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06005: {
     label: 'Amador',
+    iso3: null,
     population: '39,752',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -12549,6 +13528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06007: {
     label: 'Butte',
+    iso3: null,
     population: '219,186',
     casesPastWeek: 398,
     casesIncreasingPercentage: 0.0,
@@ -12558,6 +13538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06009: {
     label: 'Calaveras',
+    iso3: null,
     population: '45,905',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -12567,6 +13548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06011: {
     label: 'Colusa',
+    iso3: null,
     population: '21,547',
     casesPastWeek: 163,
     casesIncreasingPercentage: 29.36507936507937,
@@ -12576,6 +13558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06013: {
     label: 'Contra Costa',
+    iso3: null,
     population: '1,153,526',
     casesPastWeek: 2805,
     casesIncreasingPercentage: 0.0,
@@ -12585,6 +13568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06015: {
     label: 'Del Norte',
+    iso3: null,
     population: '27,812',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -12594,6 +13578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06017: {
     label: 'El Dorado',
+    iso3: null,
     population: '192,843',
     casesPastWeek: 427,
     casesIncreasingPercentage: 0.0,
@@ -12603,6 +13588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06019: {
     label: 'Fresno',
+    iso3: null,
     population: '999,101',
     casesPastWeek: 3980,
     casesIncreasingPercentage: 0.0,
@@ -12612,6 +13598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06021: {
     label: 'Glenn',
+    iso3: null,
     population: '28,393',
     casesPastWeek: 121,
     casesIncreasingPercentage: 0.0,
@@ -12621,6 +13608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06023: {
     label: 'Humboldt',
+    iso3: null,
     population: '135,558',
     casesPastWeek: 200,
     casesIncreasingPercentage: 0.0,
@@ -12630,6 +13618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06025: {
     label: 'Imperial',
+    iso3: null,
     population: '181,215',
     casesPastWeek: 441,
     casesIncreasingPercentage: 0.0,
@@ -12639,6 +13628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06027: {
     label: 'Inyo',
+    iso3: null,
     population: '18,039',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -12648,6 +13638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06029: {
     label: 'Kern',
+    iso3: null,
     population: '900,202',
     casesPastWeek: 4851,
     casesIncreasingPercentage: 0.0,
@@ -12657,6 +13648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06031: {
     label: 'Kings',
+    iso3: null,
     population: '152,940',
     casesPastWeek: 650,
     casesIncreasingPercentage: 0.0,
@@ -12666,6 +13658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06033: {
     label: 'Lake',
+    iso3: null,
     population: '64,386',
     casesPastWeek: 169,
     casesIncreasingPercentage: 0.0,
@@ -12675,6 +13668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06035: {
     label: 'Lassen',
+    iso3: null,
     population: '30,573',
     casesPastWeek: 175,
     casesIncreasingPercentage: 43.44262295081967,
@@ -12684,6 +13678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06037: {
     label: 'Los Angeles',
+    iso3: null,
     population: '10,039,107',
     casesPastWeek: 58403,
     casesIncreasingPercentage: 0.0,
@@ -12693,6 +13688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06039: {
     label: 'Madera',
+    iso3: null,
     population: '157,327',
     casesPastWeek: 665,
     casesIncreasingPercentage: 0.0,
@@ -12702,6 +13698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06041: {
     label: 'Marin',
+    iso3: null,
     population: '258,826',
     casesPastWeek: 385,
     casesIncreasingPercentage: 0.0,
@@ -12711,6 +13708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06043: {
     label: 'Mariposa',
+    iso3: null,
     population: '17,203',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -12720,6 +13718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06045: {
     label: 'Mendocino',
+    iso3: null,
     population: '86,749',
     casesPastWeek: 163,
     casesIncreasingPercentage: 0.0,
@@ -12729,6 +13728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06047: {
     label: 'Merced',
+    iso3: null,
     population: '277,680',
     casesPastWeek: 1556,
     casesIncreasingPercentage: 0.0,
@@ -12738,6 +13738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06049: {
     label: 'Modoc',
+    iso3: null,
     population: '8,841',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -12747,6 +13748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06051: {
     label: 'Mono',
+    iso3: null,
     population: '14,444',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -12756,6 +13758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06053: {
     label: 'Monterey',
+    iso3: null,
     population: '434,061',
     casesPastWeek: 1867,
     casesIncreasingPercentage: 0.0,
@@ -12765,6 +13768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06055: {
     label: 'Napa',
+    iso3: null,
     population: '137,744',
     casesPastWeek: 537,
     casesIncreasingPercentage: 0.0,
@@ -12774,6 +13778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06057: {
     label: 'Nevada',
+    iso3: null,
     population: '99,755',
     casesPastWeek: 188,
     casesIncreasingPercentage: 0.0,
@@ -12783,6 +13788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06059: {
     label: 'Orange',
+    iso3: null,
     population: '3,175,692',
     casesPastWeek: 12475,
     casesIncreasingPercentage: 0.0,
@@ -12792,6 +13798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06061: {
     label: 'Placer',
+    iso3: null,
     population: '398,329',
     casesPastWeek: 680,
     casesIncreasingPercentage: 0.0,
@@ -12801,6 +13808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06063: {
     label: 'Plumas',
+    iso3: null,
     population: '18,807',
     casesPastWeek: 32,
     casesIncreasingPercentage: 10.344827586206895,
@@ -12810,6 +13818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06065: {
     label: 'Riverside',
+    iso3: null,
     population: '2,470,546',
     casesPastWeek: 19120,
     casesIncreasingPercentage: 0.0,
@@ -12819,6 +13828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06067: {
     label: 'Sacramento',
+    iso3: null,
     population: '1,552,058',
     casesPastWeek: 4286,
     casesIncreasingPercentage: 0.0,
@@ -12828,6 +13838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06069: {
     label: 'San Benito',
+    iso3: null,
     population: '62,808',
     casesPastWeek: 284,
     casesIncreasingPercentage: 0.0,
@@ -12837,6 +13848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06071: {
     label: 'San Bernardino',
+    iso3: null,
     population: '2,180,085',
     casesPastWeek: 13244,
     casesIncreasingPercentage: 0.0,
@@ -12846,6 +13858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06073: {
     label: 'San Diego',
+    iso3: null,
     population: '3,338,330',
     casesPastWeek: 15408,
     casesIncreasingPercentage: 0.0,
@@ -12855,6 +13868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06075: {
     label: 'San Francisco',
+    iso3: null,
     population: '881,549',
     casesPastWeek: 1455,
     casesIncreasingPercentage: 0.0,
@@ -12864,6 +13878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06077: {
     label: 'San Joaquin',
+    iso3: null,
     population: '762,148',
     casesPastWeek: 2753,
     casesIncreasingPercentage: 0.0,
@@ -12873,6 +13888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06079: {
     label: 'San Luis Obispo',
+    iso3: null,
     population: '283,111',
     casesPastWeek: 1186,
     casesIncreasingPercentage: 0.0,
@@ -12882,6 +13898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06081: {
     label: 'San Mateo',
+    iso3: null,
     population: '766,573',
     casesPastWeek: 1926,
     casesIncreasingPercentage: 0.0,
@@ -12891,6 +13908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06083: {
     label: 'Santa Barbara',
+    iso3: null,
     population: '446,499',
     casesPastWeek: 2339,
     casesIncreasingPercentage: 0.0,
@@ -12900,6 +13918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06085: {
     label: 'Santa Clara',
+    iso3: null,
     population: '1,927,852',
     casesPastWeek: 5432,
     casesIncreasingPercentage: 0.0,
@@ -12909,6 +13928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06087: {
     label: 'Santa Cruz',
+    iso3: null,
     population: '273,213',
     casesPastWeek: 745,
     casesIncreasingPercentage: 0.0,
@@ -12918,6 +13938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06089: {
     label: 'Shasta',
+    iso3: null,
     population: '180,080',
     casesPastWeek: 357,
     casesIncreasingPercentage: 0.0,
@@ -12927,6 +13948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06091: {
     label: 'Sierra',
+    iso3: null,
     population: '3,005',
     casesPastWeek: 18,
     casesIncreasingPercentage: 157.14285714285717,
@@ -12936,6 +13958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06093: {
     label: 'Siskiyou',
+    iso3: null,
     population: '43,539',
     casesPastWeek: 76,
     casesIncreasingPercentage: 0.0,
@@ -12945,6 +13968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06095: {
     label: 'Solano',
+    iso3: null,
     population: '447,643',
     casesPastWeek: 1762,
     casesIncreasingPercentage: 0.0,
@@ -12954,6 +13978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06097: {
     label: 'Sonoma',
+    iso3: null,
     population: '494,336',
     casesPastWeek: 1328,
     casesIncreasingPercentage: 0.0,
@@ -12963,6 +13988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06099: {
     label: 'Stanislaus',
+    iso3: null,
     population: '550,660',
     casesPastWeek: 1847,
     casesIncreasingPercentage: 0.0,
@@ -12972,6 +13998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06101: {
     label: 'Sutter',
+    iso3: null,
     population: '96,971',
     casesPastWeek: 383,
     casesIncreasingPercentage: 0.0,
@@ -12981,6 +14008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06103: {
     label: 'Tehama',
+    iso3: null,
     population: '65,084',
     casesPastWeek: 497,
     casesIncreasingPercentage: 126.9406392694064,
@@ -12990,6 +14018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06105: {
     label: 'Trinity',
+    iso3: null,
     population: '12,285',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -12999,6 +14028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06107: {
     label: 'Tulare',
+    iso3: null,
     population: '466,195',
     casesPastWeek: 2104,
     casesIncreasingPercentage: 0.0,
@@ -13008,6 +14038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06109: {
     label: 'Tuolumne',
+    iso3: null,
     population: '54,478',
     casesPastWeek: 139,
     casesIncreasingPercentage: 12.096774193548377,
@@ -13017,6 +14048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06111: {
     label: 'Ventura',
+    iso3: null,
     population: '846,006',
     casesPastWeek: 5213,
     casesIncreasingPercentage: 0.0,
@@ -13026,6 +14058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06113: {
     label: 'Yolo',
+    iso3: null,
     population: '220,500',
     casesPastWeek: 681,
     casesIncreasingPercentage: 0.0,
@@ -13035,6 +14068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_06115: {
     label: 'Yuba',
+    iso3: null,
     population: '78,668',
     casesPastWeek: 231,
     casesIncreasingPercentage: 0.0,
@@ -13044,6 +14078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08001: {
     label: 'Adams',
+    iso3: null,
     population: '517,421',
     casesPastWeek: 1001,
     casesIncreasingPercentage: 0.0,
@@ -13053,6 +14088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08003: {
     label: 'Alamosa',
+    iso3: null,
     population: '16,233',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -13062,6 +14098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08005: {
     label: 'Arapahoe',
+    iso3: null,
     population: '656,590',
     casesPastWeek: 1275,
     casesIncreasingPercentage: 0.0,
@@ -13071,6 +14108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08007: {
     label: 'Archuleta',
+    iso3: null,
     population: '14,029',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -13080,6 +14118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08009: {
     label: 'Baca',
+    iso3: null,
     population: '3,581',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -13089,6 +14128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08011: {
     label: 'Bent',
+    iso3: null,
     population: '5,577',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -13098,6 +14138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08013: {
     label: 'Boulder',
+    iso3: null,
     population: '326,196',
     casesPastWeek: 466,
     casesIncreasingPercentage: 0.0,
@@ -13107,6 +14148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08014: {
     label: 'Broomfield',
+    iso3: null,
     population: '70,465',
     casesPastWeek: 149,
     casesIncreasingPercentage: 11.194029850746269,
@@ -13116,6 +14158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08015: {
     label: 'Chaffee',
+    iso3: null,
     population: '20,356',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -13125,6 +14168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08017: {
     label: 'Cheyenne',
+    iso3: null,
     population: '1,831',
     casesPastWeek: 7,
     casesIncreasingPercentage: 600.0,
@@ -13134,6 +14178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08019: {
     label: 'Clear Creek',
+    iso3: null,
     population: '9,700',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -13143,6 +14188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08021: {
     label: 'Conejos',
+    iso3: null,
     population: '8,205',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -13152,6 +14198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08023: {
     label: 'Costilla',
+    iso3: null,
     population: '3,887',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -13161,6 +14208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08025: {
     label: 'Crowley',
+    iso3: null,
     population: '6,061',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -13170,6 +14218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08027: {
     label: 'Custer',
+    iso3: null,
     population: '5,068',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -13179,6 +14228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08029: {
     label: 'Delta',
+    iso3: null,
     population: '31,162',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -13188,6 +14238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08031: {
     label: 'Denver',
+    iso3: null,
     population: '727,211',
     casesPastWeek: 1209,
     casesIncreasingPercentage: 0.0,
@@ -13197,6 +14248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08033: {
     label: 'Dolores',
+    iso3: null,
     population: '2,055',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -13206,6 +14258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08035: {
     label: 'Douglas',
+    iso3: null,
     population: '351,154',
     casesPastWeek: 579,
     casesIncreasingPercentage: 0.0,
@@ -13215,6 +14268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08037: {
     label: 'Eagle',
+    iso3: null,
     population: '55,127',
     casesPastWeek: 216,
     casesIncreasingPercentage: 0.0,
@@ -13224,6 +14278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08039: {
     label: 'Elbert',
+    iso3: null,
     population: '26,729',
     casesPastWeek: 35,
     casesIncreasingPercentage: 52.17391304347827,
@@ -13233,6 +14288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08041: {
     label: 'El Paso',
+    iso3: null,
     population: '720,403',
     casesPastWeek: 1081,
     casesIncreasingPercentage: 0.0,
@@ -13242,6 +14298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08043: {
     label: 'Fremont',
+    iso3: null,
     population: '47,839',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -13251,6 +14308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08045: {
     label: 'Garfield',
+    iso3: null,
     population: '60,061',
     casesPastWeek: 131,
     casesIncreasingPercentage: 0.0,
@@ -13260,6 +14318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08047: {
     label: 'Gilpin',
+    iso3: null,
     population: '6,243',
     casesPastWeek: 7,
     casesIncreasingPercentage: 133.33333333333334,
@@ -13269,6 +14328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08049: {
     label: 'Grand',
+    iso3: null,
     population: '15,734',
     casesPastWeek: 103,
     casesIncreasingPercentage: 164.1025641025641,
@@ -13278,6 +14338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08051: {
     label: 'Gunnison',
+    iso3: null,
     population: '17,462',
     casesPastWeek: 114,
     casesIncreasingPercentage: 32.558139534883715,
@@ -13287,6 +14348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08053: {
     label: 'Hinsdale',
+    iso3: null,
     population: '820',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -13296,6 +14358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08055: {
     label: 'Huerfano',
+    iso3: null,
     population: '6,897',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -13305,6 +14368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08057: {
     label: 'Jackson',
+    iso3: null,
     population: '1,392',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -13314,6 +14378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08059: {
     label: 'Jefferson',
+    iso3: null,
     population: '582,881',
     casesPastWeek: 928,
     casesIncreasingPercentage: 0.0,
@@ -13323,6 +14388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08061: {
     label: 'Kiowa',
+    iso3: null,
     population: '1,406',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -13332,6 +14398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08063: {
     label: 'Kit Carson',
+    iso3: null,
     population: '7,097',
     casesPastWeek: 21,
     casesIncreasingPercentage: 16.666666666666675,
@@ -13341,6 +14408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08065: {
     label: 'Lake',
+    iso3: null,
     population: '8,127',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -13350,6 +14418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08067: {
     label: 'La Plata',
+    iso3: null,
     population: '56,221',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -13359,6 +14428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08069: {
     label: 'Larimer',
+    iso3: null,
     population: '356,899',
     casesPastWeek: 615,
     casesIncreasingPercentage: 0.0,
@@ -13368,6 +14438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08071: {
     label: 'Las Animas',
+    iso3: null,
     population: '14,506',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -13377,6 +14448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08073: {
     label: 'Lincoln',
+    iso3: null,
     population: '5,701',
     casesPastWeek: 54,
     casesIncreasingPercentage: 68.75,
@@ -13386,6 +14458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08075: {
     label: 'Logan',
+    iso3: null,
     population: '22,409',
     casesPastWeek: 76,
     casesIncreasingPercentage: 0.0,
@@ -13395,6 +14468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08077: {
     label: 'Mesa',
+    iso3: null,
     population: '154,210',
     casesPastWeek: 733,
     casesIncreasingPercentage: 8.112094395280245,
@@ -13404,6 +14478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08079: {
     label: 'Mineral',
+    iso3: null,
     population: '769',
     casesPastWeek: 4,
     casesIncreasingPercentage: 33.33333333333333,
@@ -13413,6 +14488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08081: {
     label: 'Moffat',
+    iso3: null,
     population: '13,283',
     casesPastWeek: 23,
     casesIncreasingPercentage: 21.052631578947366,
@@ -13422,6 +14498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08083: {
     label: 'Montezuma',
+    iso3: null,
     population: '26,183',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -13431,6 +14508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08085: {
     label: 'Montrose',
+    iso3: null,
     population: '42,758',
     casesPastWeek: 198,
     casesIncreasingPercentage: 0.0,
@@ -13440,6 +14518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08087: {
     label: 'Morgan',
+    iso3: null,
     population: '29,068',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -13449,6 +14528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08089: {
     label: 'Otero',
+    iso3: null,
     population: '18,278',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -13458,6 +14538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08091: {
     label: 'Ouray',
+    iso3: null,
     population: '4,952',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -13467,6 +14548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08093: {
     label: 'Park',
+    iso3: null,
     population: '18,845',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -13476,6 +14558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08095: {
     label: 'Phillips',
+    iso3: null,
     population: '4,265',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -13485,6 +14568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08097: {
     label: 'Pitkin',
+    iso3: null,
     population: '17,767',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -13494,6 +14578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08099: {
     label: 'Prowers',
+    iso3: null,
     population: '12,172',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -13503,6 +14588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08101: {
     label: 'Pueblo',
+    iso3: null,
     population: '168,424',
     casesPastWeek: 168,
     casesIncreasingPercentage: 0.0,
@@ -13512,6 +14598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08103: {
     label: 'Rio Blanco',
+    iso3: null,
     population: '6,324',
     casesPastWeek: 48,
     casesIncreasingPercentage: 29.729729729729737,
@@ -13521,6 +14608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08105: {
     label: 'Rio Grande',
+    iso3: null,
     population: '11,267',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -13530,6 +14618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08107: {
     label: 'Routt',
+    iso3: null,
     population: '25,638',
     casesPastWeek: 172,
     casesIncreasingPercentage: 5.521472392638027,
@@ -13539,6 +14628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08109: {
     label: 'Saguache',
+    iso3: null,
     population: '6,824',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -13548,6 +14638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08111: {
     label: 'San Juan',
+    iso3: null,
     population: '728',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -13557,6 +14648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08113: {
     label: 'San Miguel',
+    iso3: null,
     population: '8,179',
     casesPastWeek: 131,
     casesIncreasingPercentage: 274.2857142857143,
@@ -13566,6 +14658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08115: {
     label: 'Sedgwick',
+    iso3: null,
     population: '2,248',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -13575,6 +14668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08117: {
     label: 'Summit',
+    iso3: null,
     population: '31,011',
     casesPastWeek: 132,
     casesIncreasingPercentage: 14.782608695652177,
@@ -13584,6 +14678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08119: {
     label: 'Teller',
+    iso3: null,
     population: '25,388',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -13593,6 +14688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08121: {
     label: 'Washington',
+    iso3: null,
     population: '4,908',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -13602,6 +14698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08123: {
     label: 'Weld',
+    iso3: null,
     population: '324,492',
     casesPastWeek: 698,
     casesIncreasingPercentage: 0.0,
@@ -13611,6 +14708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_08125: {
     label: 'Yuma',
+    iso3: null,
     population: '10,019',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -13620,6 +14718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09001: {
     label: 'Fairfield',
+    iso3: null,
     population: '943,332',
     casesPastWeek: 3340,
     casesIncreasingPercentage: 0.0,
@@ -13629,6 +14728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09003: {
     label: 'Hartford',
+    iso3: null,
     population: '891,720',
     casesPastWeek: 3735,
     casesIncreasingPercentage: 0.0,
@@ -13638,6 +14738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09005: {
     label: 'Litchfield',
+    iso3: null,
     population: '180,333',
     casesPastWeek: 512,
     casesIncreasingPercentage: 0.0,
@@ -13647,6 +14748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09007: {
     label: 'Middlesex',
+    iso3: null,
     population: '162,436',
     casesPastWeek: 602,
     casesIncreasingPercentage: 0.0,
@@ -13656,6 +14758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09009: {
     label: 'New Haven',
+    iso3: null,
     population: '854,757',
     casesPastWeek: 3573,
     casesIncreasingPercentage: 0.0,
@@ -13665,6 +14768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09011: {
     label: 'New London',
+    iso3: null,
     population: '265,206',
     casesPastWeek: 1517,
     casesIncreasingPercentage: 0.0,
@@ -13674,6 +14778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09013: {
     label: 'Tolland',
+    iso3: null,
     population: '150,721',
     casesPastWeek: 455,
     casesIncreasingPercentage: 0.0,
@@ -13683,6 +14788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_09015: {
     label: 'Windham',
+    iso3: null,
     population: '116,782',
     casesPastWeek: 691,
     casesIncreasingPercentage: 0.0,
@@ -13692,6 +14798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_10001: {
     label: 'Kent',
+    iso3: null,
     population: '180,786',
     casesPastWeek: 794,
     casesIncreasingPercentage: 0.0,
@@ -13701,6 +14808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_10003: {
     label: 'New Castle',
+    iso3: null,
     population: '558,753',
     casesPastWeek: 2300,
     casesIncreasingPercentage: 0.0,
@@ -13710,6 +14818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_10005: {
     label: 'Sussex',
+    iso3: null,
     population: '234,225',
     casesPastWeek: 1175,
     casesIncreasingPercentage: 0.0,
@@ -13719,6 +14828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_11001: {
     label: 'District of Columbia',
+    iso3: null,
     population: '705,749',
     casesPastWeek: 1450,
     casesIncreasingPercentage: 0.0,
@@ -13728,6 +14838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12001: {
     label: 'Alachua',
+    iso3: null,
     population: '269,043',
     casesPastWeek: 946,
     casesIncreasingPercentage: 0.0,
@@ -13737,6 +14848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12003: {
     label: 'Baker',
+    iso3: null,
     population: '29,210',
     casesPastWeek: 111,
     casesIncreasingPercentage: 0.0,
@@ -13746,6 +14858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12005: {
     label: 'Bay',
+    iso3: null,
     population: '174,705',
     casesPastWeek: 1219,
     casesIncreasingPercentage: 47.044632086851635,
@@ -13755,6 +14868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12007: {
     label: 'Bradford',
+    iso3: null,
     population: '28,201',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -13764,6 +14878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12009: {
     label: 'Brevard',
+    iso3: null,
     population: '601,942',
     casesPastWeek: 1656,
     casesIncreasingPercentage: 0.0,
@@ -13773,6 +14888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12011: {
     label: 'Broward',
+    iso3: null,
     population: '1,952,778',
     casesPastWeek: 7296,
     casesIncreasingPercentage: 0.0,
@@ -13782,6 +14898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12013: {
     label: 'Calhoun',
+    iso3: null,
     population: '14,105',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -13791,6 +14908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12015: {
     label: 'Charlotte',
+    iso3: null,
     population: '188,910',
     casesPastWeek: 402,
     casesIncreasingPercentage: 0.0,
@@ -13800,6 +14918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12017: {
     label: 'Citrus',
+    iso3: null,
     population: '149,657',
     casesPastWeek: 395,
     casesIncreasingPercentage: 0.0,
@@ -13809,6 +14928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12019: {
     label: 'Clay',
+    iso3: null,
     population: '219,252',
     casesPastWeek: 749,
     casesIncreasingPercentage: 0.0,
@@ -13818,6 +14938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12021: {
     label: 'Collier',
+    iso3: null,
     population: '384,902',
     casesPastWeek: 1050,
     casesIncreasingPercentage: 0.0,
@@ -13827,6 +14948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12023: {
     label: 'Columbia',
+    iso3: null,
     population: '71,686',
     casesPastWeek: 219,
     casesIncreasingPercentage: 0.0,
@@ -13836,6 +14958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12027: {
     label: 'DeSoto',
+    iso3: null,
     population: '38,001',
     casesPastWeek: 89,
     casesIncreasingPercentage: 0.0,
@@ -13845,6 +14968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12029: {
     label: 'Dixie',
+    iso3: null,
     population: '16,826',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -13854,6 +14978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12031: {
     label: 'Duval',
+    iso3: null,
     population: '957,755',
     casesPastWeek: 3582,
     casesIncreasingPercentage: 0.0,
@@ -13863,6 +14988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12033: {
     label: 'Escambia',
+    iso3: null,
     population: '318,316',
     casesPastWeek: 1773,
     casesIncreasingPercentage: 0.0,
@@ -13872,6 +14998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12035: {
     label: 'Flagler',
+    iso3: null,
     population: '115,081',
     casesPastWeek: 282,
     casesIncreasingPercentage: 0.0,
@@ -13881,6 +15008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12037: {
     label: 'Franklin',
+    iso3: null,
     population: '12,125',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -13890,6 +15018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12039: {
     label: 'Gadsden',
+    iso3: null,
     population: '45,660',
     casesPastWeek: 182,
     casesIncreasingPercentage: 0.0,
@@ -13899,6 +15028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12041: {
     label: 'Gilchrist',
+    iso3: null,
     population: '18,582',
     casesPastWeek: 43,
     casesIncreasingPercentage: 19.444444444444443,
@@ -13908,6 +15038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12043: {
     label: 'Glades',
+    iso3: null,
     population: '13,811',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -13917,6 +15048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12045: {
     label: 'Gulf',
+    iso3: null,
     population: '13,639',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -13926,6 +15058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12047: {
     label: 'Hamilton',
+    iso3: null,
     population: '14,428',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -13935,6 +15068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12049: {
     label: 'Hardee',
+    iso3: null,
     population: '26,937',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -13944,6 +15078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12051: {
     label: 'Hendry',
+    iso3: null,
     population: '42,022',
     casesPastWeek: 152,
     casesIncreasingPercentage: 0.0,
@@ -13953,6 +15088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12053: {
     label: 'Hernando',
+    iso3: null,
     population: '193,920',
     casesPastWeek: 531,
     casesIncreasingPercentage: 0.0,
@@ -13962,6 +15098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12055: {
     label: 'Highlands',
+    iso3: null,
     population: '106,221',
     casesPastWeek: 304,
     casesIncreasingPercentage: 0.0,
@@ -13971,6 +15108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12057: {
     label: 'Hillsborough',
+    iso3: null,
     population: '1,471,968',
     casesPastWeek: 4357,
     casesIncreasingPercentage: 0.0,
@@ -13980,6 +15118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12059: {
     label: 'Holmes',
+    iso3: null,
     population: '19,617',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -13989,6 +15128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12061: {
     label: 'Indian River',
+    iso3: null,
     population: '159,923',
     casesPastWeek: 555,
     casesIncreasingPercentage: 0.0,
@@ -13998,6 +15138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12063: {
     label: 'Jackson',
+    iso3: null,
     population: '46,414',
     casesPastWeek: 185,
     casesIncreasingPercentage: 0.0,
@@ -14007,6 +15148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12065: {
     label: 'Jefferson',
+    iso3: null,
     population: '14,246',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -14016,6 +15158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12067: {
     label: 'Lafayette',
+    iso3: null,
     population: '8,422',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -14025,6 +15168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12069: {
     label: 'Lake',
+    iso3: null,
     population: '367,118',
     casesPastWeek: 1277,
     casesIncreasingPercentage: 0.0,
@@ -14034,6 +15178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12071: {
     label: 'Lee',
+    iso3: null,
     population: '770,577',
     casesPastWeek: 2480,
     casesIncreasingPercentage: 0.0,
@@ -14043,6 +15188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12073: {
     label: 'Leon',
+    iso3: null,
     population: '293,582',
     casesPastWeek: 1531,
     casesIncreasingPercentage: 2.682763246143538,
@@ -14052,6 +15198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12075: {
     label: 'Levy',
+    iso3: null,
     population: '41,503',
     casesPastWeek: 119,
     casesIncreasingPercentage: 0.0,
@@ -14061,6 +15208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12077: {
     label: 'Liberty',
+    iso3: null,
     population: '8,354',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -14070,6 +15218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12079: {
     label: 'Madison',
+    iso3: null,
     population: '18,493',
     casesPastWeek: 76,
     casesIncreasingPercentage: 24.590163934426236,
@@ -14079,6 +15228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12081: {
     label: 'Manatee',
+    iso3: null,
     population: '403,253',
     casesPastWeek: 1279,
     casesIncreasingPercentage: 0.0,
@@ -14088,6 +15238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12083: {
     label: 'Marion',
+    iso3: null,
     population: '365,579',
     casesPastWeek: 1249,
     casesIncreasingPercentage: 0.0,
@@ -14097,6 +15248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12085: {
     label: 'Martin',
+    iso3: null,
     population: '161,000',
     casesPastWeek: 300,
     casesIncreasingPercentage: 0.0,
@@ -14106,6 +15258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12086: {
     label: 'Miami-Dade',
+    iso3: null,
     population: '2,716,940',
     casesPastWeek: 14555,
     casesIncreasingPercentage: 0.0,
@@ -14115,6 +15268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12087: {
     label: 'Monroe',
+    iso3: null,
     population: '74,228',
     casesPastWeek: 217,
     casesIncreasingPercentage: 0.0,
@@ -14124,6 +15278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12089: {
     label: 'Nassau',
+    iso3: null,
     population: '88,625',
     casesPastWeek: 416,
     casesIncreasingPercentage: 0.0,
@@ -14133,6 +15288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12091: {
     label: 'Okaloosa',
+    iso3: null,
     population: '210,738',
     casesPastWeek: 766,
     casesIncreasingPercentage: 0.0,
@@ -14142,6 +15298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12093: {
     label: 'Okeechobee',
+    iso3: null,
     population: '42,168',
     casesPastWeek: 149,
     casesIncreasingPercentage: 0.0,
@@ -14151,6 +15308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12095: {
     label: 'Orange',
+    iso3: null,
     population: '1,393,452',
     casesPastWeek: 5311,
     casesIncreasingPercentage: 0.0,
@@ -14160,6 +15318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12097: {
     label: 'Osceola',
+    iso3: null,
     population: '375,751',
     casesPastWeek: 1694,
     casesIncreasingPercentage: 0.0,
@@ -14169,6 +15328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12099: {
     label: 'Palm Beach',
+    iso3: null,
     population: '1,496,770',
     casesPastWeek: 4825,
     casesIncreasingPercentage: 0.0,
@@ -14178,6 +15338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12101: {
     label: 'Pasco',
+    iso3: null,
     population: '553,947',
     casesPastWeek: 1501,
     casesIncreasingPercentage: 0.0,
@@ -14187,6 +15348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12103: {
     label: 'Pinellas',
+    iso3: null,
     population: '974,996',
     casesPastWeek: 2723,
     casesIncreasingPercentage: 0.0,
@@ -14196,6 +15358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12105: {
     label: 'Polk',
+    iso3: null,
     population: '724,777',
     casesPastWeek: 2569,
     casesIncreasingPercentage: 0.0,
@@ -14205,6 +15368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12107: {
     label: 'Putnam',
+    iso3: null,
     population: '74,521',
     casesPastWeek: 216,
     casesIncreasingPercentage: 0.0,
@@ -14214,6 +15378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12109: {
     label: 'St. Johns',
+    iso3: null,
     population: '264,672',
     casesPastWeek: 937,
     casesIncreasingPercentage: 0.0,
@@ -14223,6 +15388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12111: {
     label: 'St. Lucie',
+    iso3: null,
     population: '328,297',
     casesPastWeek: 1008,
     casesIncreasingPercentage: 0.0,
@@ -14232,6 +15398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12113: {
     label: 'Santa Rosa',
+    iso3: null,
     population: '184,313',
     casesPastWeek: 908,
     casesIncreasingPercentage: 0.0,
@@ -14241,6 +15408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12115: {
     label: 'Sarasota',
+    iso3: null,
     population: '433,742',
     casesPastWeek: 1197,
     casesIncreasingPercentage: 0.0,
@@ -14250,6 +15418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12117: {
     label: 'Seminole',
+    iso3: null,
     population: '471,826',
     casesPastWeek: 1165,
     casesIncreasingPercentage: 0.0,
@@ -14259,6 +15428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12119: {
     label: 'Sumter',
+    iso3: null,
     population: '132,420',
     casesPastWeek: 328,
     casesIncreasingPercentage: 0.0,
@@ -14268,6 +15438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12121: {
     label: 'Suwannee',
+    iso3: null,
     population: '44,417',
     casesPastWeek: 140,
     casesIncreasingPercentage: 0.0,
@@ -14277,6 +15448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12123: {
     label: 'Taylor',
+    iso3: null,
     population: '21,569',
     casesPastWeek: 116,
     casesIncreasingPercentage: 0.0,
@@ -14286,6 +15458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12125: {
     label: 'Union',
+    iso3: null,
     population: '15,237',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -14295,6 +15468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12127: {
     label: 'Volusia',
+    iso3: null,
     population: '553,284',
     casesPastWeek: 1859,
     casesIncreasingPercentage: 0.0,
@@ -14304,6 +15478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12129: {
     label: 'Wakulla',
+    iso3: null,
     population: '33,739',
     casesPastWeek: 160,
     casesIncreasingPercentage: 0.0,
@@ -14313,6 +15488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12131: {
     label: 'Walton',
+    iso3: null,
     population: '74,071',
     casesPastWeek: 223,
     casesIncreasingPercentage: 0.0,
@@ -14322,6 +15498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_12133: {
     label: 'Washington',
+    iso3: null,
     population: '25,473',
     casesPastWeek: 100,
     casesIncreasingPercentage: 0.0,
@@ -14331,6 +15508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13001: {
     label: 'Appling',
+    iso3: null,
     population: '18,386',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -14340,6 +15518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13003: {
     label: 'Atkinson',
+    iso3: null,
     population: '8,165',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -14349,6 +15528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13005: {
     label: 'Bacon',
+    iso3: null,
     population: '11,164',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -14358,6 +15538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13007: {
     label: 'Baker',
+    iso3: null,
     population: '3,038',
     casesPastWeek: 13,
     casesIncreasingPercentage: 30.000000000000004,
@@ -14367,6 +15548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13009: {
     label: 'Baldwin',
+    iso3: null,
     population: '44,890',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -14376,6 +15558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13011: {
     label: 'Banks',
+    iso3: null,
     population: '19,234',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -14385,6 +15568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13013: {
     label: 'Barrow',
+    iso3: null,
     population: '83,240',
     casesPastWeek: 662,
     casesIncreasingPercentage: 0.0,
@@ -14394,6 +15578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13015: {
     label: 'Bartow',
+    iso3: null,
     population: '107,738',
     casesPastWeek: 629,
     casesIncreasingPercentage: 0.0,
@@ -14403,6 +15588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13017: {
     label: 'Ben Hill',
+    iso3: null,
     population: '16,700',
     casesPastWeek: 89,
     casesIncreasingPercentage: 0.0,
@@ -14412,6 +15598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13019: {
     label: 'Berrien',
+    iso3: null,
     population: '19,397',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -14421,6 +15608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13021: {
     label: 'Bibb',
+    iso3: null,
     population: '153,159',
     casesPastWeek: 723,
     casesIncreasingPercentage: 0.0,
@@ -14430,6 +15618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13023: {
     label: 'Bleckley',
+    iso3: null,
     population: '12,873',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -14439,6 +15628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13025: {
     label: 'Brantley',
+    iso3: null,
     population: '19,109',
     casesPastWeek: 101,
     casesIncreasingPercentage: 114.89361702127661,
@@ -14448,6 +15638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13027: {
     label: 'Brooks',
+    iso3: null,
     population: '15,457',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -14457,6 +15648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13029: {
     label: 'Bryan',
+    iso3: null,
     population: '39,627',
     casesPastWeek: 195,
     casesIncreasingPercentage: 3.1746031746031855,
@@ -14466,6 +15658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13031: {
     label: 'Bulloch',
+    iso3: null,
     population: '79,608',
     casesPastWeek: 319,
     casesIncreasingPercentage: 15.579710144927539,
@@ -14475,6 +15668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13033: {
     label: 'Burke',
+    iso3: null,
     population: '22,383',
     casesPastWeek: 142,
     casesIncreasingPercentage: 0.0,
@@ -14484,6 +15678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13035: {
     label: 'Butts',
+    iso3: null,
     population: '24,936',
     casesPastWeek: 125,
     casesIncreasingPercentage: 0.0,
@@ -14493,6 +15688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13037: {
     label: 'Calhoun',
+    iso3: null,
     population: '6,189',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -14502,6 +15698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13039: {
     label: 'Camden',
+    iso3: null,
     population: '54,666',
     casesPastWeek: 198,
     casesIncreasingPercentage: 12.5,
@@ -14511,6 +15708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13043: {
     label: 'Candler',
+    iso3: null,
     population: '10,803',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -14520,6 +15718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13045: {
     label: 'Carroll',
+    iso3: null,
     population: '119,992',
     casesPastWeek: 470,
     casesIncreasingPercentage: 3.9823008849557473,
@@ -14529,6 +15728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13047: {
     label: 'Catoosa',
+    iso3: null,
     population: '67,580',
     casesPastWeek: 277,
     casesIncreasingPercentage: 0.0,
@@ -14538,6 +15738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13049: {
     label: 'Charlton',
+    iso3: null,
     population: '13,392',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -14547,6 +15748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13051: {
     label: 'Chatham',
+    iso3: null,
     population: '289,430',
     casesPastWeek: 1169,
     casesIncreasingPercentage: 3.634751773049638,
@@ -14556,6 +15758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13053: {
     label: 'Chattahoochee',
+    iso3: null,
     population: '10,907',
     casesPastWeek: 193,
     casesIncreasingPercentage: 302.0833333333333,
@@ -14565,6 +15768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13055: {
     label: 'Chattooga',
+    iso3: null,
     population: '24,789',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -14574,6 +15778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13057: {
     label: 'Cherokee',
+    iso3: null,
     population: '258,773',
     casesPastWeek: 1501,
     casesIncreasingPercentage: 0.0,
@@ -14583,6 +15788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13059: {
     label: 'Clarke',
+    iso3: null,
     population: '128,331',
     casesPastWeek: 611,
     casesIncreasingPercentage: 0.0,
@@ -14592,6 +15798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13061: {
     label: 'Clay',
+    iso3: null,
     population: '2,834',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -14601,6 +15808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13063: {
     label: 'Clayton',
+    iso3: null,
     population: '292,256',
     casesPastWeek: 1113,
     casesIncreasingPercentage: 0.0,
@@ -14610,6 +15818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13065: {
     label: 'Clinch',
+    iso3: null,
     population: '6,618',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -14619,6 +15828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13067: {
     label: 'Cobb',
+    iso3: null,
     population: '760,141',
     casesPastWeek: 3686,
     casesIncreasingPercentage: 0.0,
@@ -14628,6 +15838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13069: {
     label: 'Coffee',
+    iso3: null,
     population: '43,273',
     casesPastWeek: 95,
     casesIncreasingPercentage: 0.0,
@@ -14637,6 +15848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13071: {
     label: 'Colquitt',
+    iso3: null,
     population: '45,600',
     casesPastWeek: 169,
     casesIncreasingPercentage: 0.0,
@@ -14646,6 +15858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13073: {
     label: 'Columbia',
+    iso3: null,
     population: '156,714',
     casesPastWeek: 821,
     casesIncreasingPercentage: 0.0,
@@ -14655,6 +15868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13075: {
     label: 'Cook',
+    iso3: null,
     population: '17,270',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -14664,6 +15878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13077: {
     label: 'Coweta',
+    iso3: null,
     population: '148,509',
     casesPastWeek: 595,
     casesIncreasingPercentage: 0.0,
@@ -14673,6 +15888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13079: {
     label: 'Crawford',
+    iso3: null,
     population: '12,404',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -14682,6 +15898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13081: {
     label: 'Crisp',
+    iso3: null,
     population: '22,372',
     casesPastWeek: 92,
     casesIncreasingPercentage: 0.0,
@@ -14691,6 +15908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13083: {
     label: 'Dade',
+    iso3: null,
     population: '16,116',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -14700,6 +15918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13085: {
     label: 'Dawson',
+    iso3: null,
     population: '26,108',
     casesPastWeek: 183,
     casesIncreasingPercentage: 0.0,
@@ -14709,6 +15928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13087: {
     label: 'Decatur',
+    iso3: null,
     population: '26,404',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -14718,6 +15938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13089: {
     label: 'DeKalb',
+    iso3: null,
     population: '759,297',
     casesPastWeek: 2651,
     casesIncreasingPercentage: 0.0,
@@ -14727,6 +15948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13091: {
     label: 'Dodge',
+    iso3: null,
     population: '20,605',
     casesPastWeek: 95,
     casesIncreasingPercentage: 0.0,
@@ -14736,6 +15958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13093: {
     label: 'Dooly',
+    iso3: null,
     population: '13,390',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -14745,6 +15968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13095: {
     label: 'Dougherty',
+    iso3: null,
     population: '87,956',
     casesPastWeek: 352,
     casesIncreasingPercentage: 0.0,
@@ -14754,6 +15978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13097: {
     label: 'Douglas',
+    iso3: null,
     population: '146,343',
     casesPastWeek: 706,
     casesIncreasingPercentage: 0.0,
@@ -14763,6 +15988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13099: {
     label: 'Early',
+    iso3: null,
     population: '10,190',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -14772,6 +15998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13101: {
     label: 'Echols',
+    iso3: null,
     population: '4,006',
     casesPastWeek: 22,
     casesIncreasingPercentage: 100.0,
@@ -14781,6 +16008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13103: {
     label: 'Effingham',
+    iso3: null,
     population: '64,296',
     casesPastWeek: 212,
     casesIncreasingPercentage: 0.0,
@@ -14790,6 +16018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13105: {
     label: 'Elbert',
+    iso3: null,
     population: '19,194',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -14799,6 +16028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13107: {
     label: 'Emanuel',
+    iso3: null,
     population: '22,646',
     casesPastWeek: 85,
     casesIncreasingPercentage: 0.0,
@@ -14808,6 +16038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13109: {
     label: 'Evans',
+    iso3: null,
     population: '10,654',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -14817,6 +16048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13111: {
     label: 'Fannin',
+    iso3: null,
     population: '26,188',
     casesPastWeek: 140,
     casesIncreasingPercentage: 0.0,
@@ -14826,6 +16058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13113: {
     label: 'Fayette',
+    iso3: null,
     population: '114,421',
     casesPastWeek: 402,
     casesIncreasingPercentage: 0.0,
@@ -14835,6 +16068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13115: {
     label: 'Floyd',
+    iso3: null,
     population: '98,498',
     casesPastWeek: 529,
     casesIncreasingPercentage: 7.0850202429149745,
@@ -14844,6 +16078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13117: {
     label: 'Forsyth',
+    iso3: null,
     population: '244,252',
     casesPastWeek: 1393,
     casesIncreasingPercentage: 0.5776173285198638,
@@ -14853,6 +16088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13119: {
     label: 'Franklin',
+    iso3: null,
     population: '23,349',
     casesPastWeek: 119,
     casesIncreasingPercentage: 0.0,
@@ -14862,6 +16098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13121: {
     label: 'Fulton',
+    iso3: null,
     population: '1,063,937',
     casesPastWeek: 4399,
     casesIncreasingPercentage: 0.0,
@@ -14871,6 +16108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13123: {
     label: 'Gilmer',
+    iso3: null,
     population: '31,369',
     casesPastWeek: 136,
     casesIncreasingPercentage: 0.0,
@@ -14880,6 +16118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13125: {
     label: 'Glascock',
+    iso3: null,
     population: '2,971',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -14889,6 +16128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13127: {
     label: 'Glynn',
+    iso3: null,
     population: '85,292',
     casesPastWeek: 358,
     casesIncreasingPercentage: 10.153846153846157,
@@ -14898,6 +16138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13129: {
     label: 'Gordon',
+    iso3: null,
     population: '57,963',
     casesPastWeek: 321,
     casesIncreasingPercentage: 6.29139072847682,
@@ -14907,6 +16148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13131: {
     label: 'Grady',
+    iso3: null,
     population: '24,633',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -14916,6 +16158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13133: {
     label: 'Greene',
+    iso3: null,
     population: '18,324',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -14925,6 +16168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13135: {
     label: 'Gwinnett',
+    iso3: null,
     population: '936,250',
     casesPastWeek: 6894,
     casesIncreasingPercentage: 8.94437420986094,
@@ -14934,6 +16178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13137: {
     label: 'Habersham',
+    iso3: null,
     population: '45,328',
     casesPastWeek: 151,
     casesIncreasingPercentage: 0.0,
@@ -14943,6 +16188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13139: {
     label: 'Hall',
+    iso3: null,
     population: '204,441',
     casesPastWeek: 1390,
     casesIncreasingPercentage: 0.0,
@@ -14952,6 +16198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13141: {
     label: 'Hancock',
+    iso3: null,
     population: '8,457',
     casesPastWeek: 33,
     casesIncreasingPercentage: 17.85714285714286,
@@ -14961,6 +16208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13143: {
     label: 'Haralson',
+    iso3: null,
     population: '29,792',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -14970,6 +16218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13145: {
     label: 'Harris',
+    iso3: null,
     population: '35,236',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -14979,6 +16228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13147: {
     label: 'Hart',
+    iso3: null,
     population: '26,205',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -14988,6 +16238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13149: {
     label: 'Heard',
+    iso3: null,
     population: '11,923',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -14997,6 +16248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13151: {
     label: 'Henry',
+    iso3: null,
     population: '234,561',
     casesPastWeek: 1309,
     casesIncreasingPercentage: 0.0,
@@ -15006,6 +16258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13153: {
     label: 'Houston',
+    iso3: null,
     population: '157,863',
     casesPastWeek: 747,
     casesIncreasingPercentage: 0.0,
@@ -15015,6 +16268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13155: {
     label: 'Irwin',
+    iso3: null,
     population: '9,416',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -15024,6 +16278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13157: {
     label: 'Jackson',
+    iso3: null,
     population: '72,977',
     casesPastWeek: 615,
     casesIncreasingPercentage: 0.0,
@@ -15033,6 +16288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13159: {
     label: 'Jasper',
+    iso3: null,
     population: '14,219',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -15042,6 +16298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13161: {
     label: 'Jeff Davis',
+    iso3: null,
     population: '15,115',
     casesPastWeek: 77,
     casesIncreasingPercentage: 8.450704225352123,
@@ -15051,6 +16308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13163: {
     label: 'Jefferson',
+    iso3: null,
     population: '15,362',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -15060,6 +16318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13165: {
     label: 'Jenkins',
+    iso3: null,
     population: '8,676',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -15069,6 +16328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13167: {
     label: 'Johnson',
+    iso3: null,
     population: '9,643',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -15078,6 +16338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13169: {
     label: 'Jones',
+    iso3: null,
     population: '28,735',
     casesPastWeek: 89,
     casesIncreasingPercentage: 0.0,
@@ -15087,6 +16348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13171: {
     label: 'Lamar',
+    iso3: null,
     population: '19,077',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -15096,6 +16358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13173: {
     label: 'Lanier',
+    iso3: null,
     population: '10,423',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -15105,6 +16368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13175: {
     label: 'Laurens',
+    iso3: null,
     population: '47,546',
     casesPastWeek: 232,
     casesIncreasingPercentage: 0.0,
@@ -15114,6 +16378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13177: {
     label: 'Lee',
+    iso3: null,
     population: '29,992',
     casesPastWeek: 190,
     casesIncreasingPercentage: 0.0,
@@ -15123,6 +16388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13179: {
     label: 'Liberty',
+    iso3: null,
     population: '61,435',
     casesPastWeek: 232,
     casesIncreasingPercentage: 23.404255319148938,
@@ -15132,6 +16398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13181: {
     label: 'Lincoln',
+    iso3: null,
     population: '7,921',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -15141,6 +16408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13183: {
     label: 'Long',
+    iso3: null,
     population: '19,559',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -15150,6 +16418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13185: {
     label: 'Lowndes',
+    iso3: null,
     population: '117,406',
     casesPastWeek: 463,
     casesIncreasingPercentage: 0.0,
@@ -15159,6 +16428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13187: {
     label: 'Lumpkin',
+    iso3: null,
     population: '33,610',
     casesPastWeek: 145,
     casesIncreasingPercentage: 0.0,
@@ -15168,6 +16438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13189: {
     label: 'McDuffie',
+    iso3: null,
     population: '21,312',
     casesPastWeek: 126,
     casesIncreasingPercentage: 0.0,
@@ -15177,6 +16448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13191: {
     label: 'McIntosh',
+    iso3: null,
     population: '14,378',
     casesPastWeek: 38,
     casesIncreasingPercentage: 65.21739130434783,
@@ -15186,6 +16458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13193: {
     label: 'Macon',
+    iso3: null,
     population: '12,947',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -15195,6 +16468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13195: {
     label: 'Madison',
+    iso3: null,
     population: '29,880',
     casesPastWeek: 159,
     casesIncreasingPercentage: 0.0,
@@ -15204,6 +16478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13197: {
     label: 'Marion',
+    iso3: null,
     population: '8,359',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -15213,6 +16488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13199: {
     label: 'Meriwether',
+    iso3: null,
     population: '21,167',
     casesPastWeek: 116,
     casesIncreasingPercentage: 1.7543859649122862,
@@ -15222,6 +16498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13201: {
     label: 'Miller',
+    iso3: null,
     population: '5,718',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -15231,6 +16508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13205: {
     label: 'Mitchell',
+    iso3: null,
     population: '21,863',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -15240,6 +16518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13207: {
     label: 'Monroe',
+    iso3: null,
     population: '27,578',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -15249,6 +16528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13209: {
     label: 'Montgomery',
+    iso3: null,
     population: '9,172',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -15258,6 +16538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13211: {
     label: 'Morgan',
+    iso3: null,
     population: '19,276',
     casesPastWeek: 99,
     casesIncreasingPercentage: 5.319148936170204,
@@ -15267,6 +16548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13213: {
     label: 'Murray',
+    iso3: null,
     population: '40,096',
     casesPastWeek: 210,
     casesIncreasingPercentage: 0.0,
@@ -15276,6 +16558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13215: {
     label: 'Muscogee',
+    iso3: null,
     population: '195,769',
     casesPastWeek: 640,
     casesIncreasingPercentage: 0.0,
@@ -15285,6 +16568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13217: {
     label: 'Newton',
+    iso3: null,
     population: '111,744',
     casesPastWeek: 527,
     casesIncreasingPercentage: 0.0,
@@ -15294,6 +16578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13219: {
     label: 'Oconee',
+    iso3: null,
     population: '40,280',
     casesPastWeek: 173,
     casesIncreasingPercentage: 0.0,
@@ -15303,6 +16588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13221: {
     label: 'Oglethorpe',
+    iso3: null,
     population: '15,259',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -15312,6 +16598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13223: {
     label: 'Paulding',
+    iso3: null,
     population: '168,667',
     casesPastWeek: 867,
     casesIncreasingPercentage: 0.0,
@@ -15321,6 +16608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13225: {
     label: 'Peach',
+    iso3: null,
     population: '27,546',
     casesPastWeek: 126,
     casesIncreasingPercentage: 0.0,
@@ -15330,6 +16618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13227: {
     label: 'Pickens',
+    iso3: null,
     population: '32,591',
     casesPastWeek: 170,
     casesIncreasingPercentage: 0.0,
@@ -15339,6 +16628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13229: {
     label: 'Pierce',
+    iso3: null,
     population: '19,465',
     casesPastWeek: 132,
     casesIncreasingPercentage: 0.0,
@@ -15348,6 +16638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13231: {
     label: 'Pike',
+    iso3: null,
     population: '18,962',
     casesPastWeek: 113,
     casesIncreasingPercentage: 12.99999999999999,
@@ -15357,6 +16648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13233: {
     label: 'Polk',
+    iso3: null,
     population: '42,613',
     casesPastWeek: 279,
     casesIncreasingPercentage: 0.0,
@@ -15366,6 +16658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13235: {
     label: 'Pulaski',
+    iso3: null,
     population: '11,137',
     casesPastWeek: 40,
     casesIncreasingPercentage: 2.564102564102555,
@@ -15375,6 +16668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13237: {
     label: 'Putnam',
+    iso3: null,
     population: '22,119',
     casesPastWeek: 82,
     casesIncreasingPercentage: 0.0,
@@ -15384,6 +16678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13239: {
     label: 'Quitman',
+    iso3: null,
     population: '2,299',
     casesPastWeek: 14,
     casesIncreasingPercentage: 100.0,
@@ -15393,6 +16688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13241: {
     label: 'Rabun',
+    iso3: null,
     population: '17,137',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -15402,6 +16698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13243: {
     label: 'Randolph',
+    iso3: null,
     population: '6,778',
     casesPastWeek: 35,
     casesIncreasingPercentage: 6.060606060606055,
@@ -15411,6 +16708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13245: {
     label: 'Richmond',
+    iso3: null,
     population: '202,518',
     casesPastWeek: 1226,
     casesIncreasingPercentage: 0.0,
@@ -15420,6 +16718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13247: {
     label: 'Rockdale',
+    iso3: null,
     population: '90,896',
     casesPastWeek: 345,
     casesIncreasingPercentage: 0.0,
@@ -15429,6 +16728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13249: {
     label: 'Schley',
+    iso3: null,
     population: '5,257',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -15438,6 +16738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13251: {
     label: 'Screven',
+    iso3: null,
     population: '13,966',
     casesPastWeek: 49,
     casesIncreasingPercentage: 39.99999999999999,
@@ -15447,6 +16748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13253: {
     label: 'Seminole',
+    iso3: null,
     population: '8,090',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -15456,6 +16758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13255: {
     label: 'Spalding',
+    iso3: null,
     population: '66,703',
     casesPastWeek: 272,
     casesIncreasingPercentage: 0.0,
@@ -15465,6 +16768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13257: {
     label: 'Stephens',
+    iso3: null,
     population: '25,925',
     casesPastWeek: 121,
     casesIncreasingPercentage: 23.469387755102034,
@@ -15474,6 +16778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13259: {
     label: 'Stewart',
+    iso3: null,
     population: '6,621',
     casesPastWeek: 30,
     casesIncreasingPercentage: 275.0,
@@ -15483,6 +16788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13261: {
     label: 'Sumter',
+    iso3: null,
     population: '29,524',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -15492,6 +16798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13263: {
     label: 'Talbot',
+    iso3: null,
     population: '6,195',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -15501,6 +16808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13265: {
     label: 'Taliaferro',
+    iso3: null,
     population: '1,537',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -15510,6 +16818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13267: {
     label: 'Tattnall',
+    iso3: null,
     population: '25,286',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -15519,6 +16828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13269: {
     label: 'Taylor',
+    iso3: null,
     population: '8,020',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -15528,6 +16838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13271: {
     label: 'Telfair',
+    iso3: null,
     population: '15,860',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -15537,6 +16848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13273: {
     label: 'Terrell',
+    iso3: null,
     population: '8,531',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -15546,6 +16858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13275: {
     label: 'Thomas',
+    iso3: null,
     population: '44,451',
     casesPastWeek: 233,
     casesIncreasingPercentage: 0.0,
@@ -15555,6 +16868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13277: {
     label: 'Tift',
+    iso3: null,
     population: '40,644',
     casesPastWeek: 168,
     casesIncreasingPercentage: 0.0,
@@ -15564,6 +16878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13279: {
     label: 'Toombs',
+    iso3: null,
     population: '26,830',
     casesPastWeek: 115,
     casesIncreasingPercentage: 0.0,
@@ -15573,6 +16888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13281: {
     label: 'Towns',
+    iso3: null,
     population: '12,037',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -15582,6 +16898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13283: {
     label: 'Treutlen',
+    iso3: null,
     population: '6,901',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -15591,6 +16908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13285: {
     label: 'Troup',
+    iso3: null,
     population: '69,922',
     casesPastWeek: 334,
     casesIncreasingPercentage: 0.0,
@@ -15600,6 +16918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13287: {
     label: 'Turner',
+    iso3: null,
     population: '7,985',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -15609,6 +16928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13289: {
     label: 'Twiggs',
+    iso3: null,
     population: '8,120',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -15618,6 +16938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13291: {
     label: 'Union',
+    iso3: null,
     population: '24,511',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -15627,6 +16948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13293: {
     label: 'Upson',
+    iso3: null,
     population: '26,320',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -15636,6 +16958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13295: {
     label: 'Walker',
+    iso3: null,
     population: '69,761',
     casesPastWeek: 227,
     casesIncreasingPercentage: 0.0,
@@ -15645,6 +16968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13297: {
     label: 'Walton',
+    iso3: null,
     population: '94,593',
     casesPastWeek: 525,
     casesIncreasingPercentage: 0.0,
@@ -15654,6 +16978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13299: {
     label: 'Ware',
+    iso3: null,
     population: '35,734',
     casesPastWeek: 234,
     casesIncreasingPercentage: 0.0,
@@ -15663,6 +16988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13301: {
     label: 'Warren',
+    iso3: null,
     population: '5,254',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -15672,6 +16998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13303: {
     label: 'Washington',
+    iso3: null,
     population: '20,374',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -15681,6 +17008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13305: {
     label: 'Wayne',
+    iso3: null,
     population: '29,927',
     casesPastWeek: 153,
     casesIncreasingPercentage: 0.0,
@@ -15690,6 +17018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13307: {
     label: 'Webster',
+    iso3: null,
     population: '2,607',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -15699,6 +17028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13309: {
     label: 'Wheeler',
+    iso3: null,
     population: '7,855',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -15708,6 +17038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13311: {
     label: 'White',
+    iso3: null,
     population: '30,798',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -15717,6 +17048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13313: {
     label: 'Whitfield',
+    iso3: null,
     population: '104,628',
     casesPastWeek: 575,
     casesIncreasingPercentage: 0.0,
@@ -15726,6 +17058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13315: {
     label: 'Wilcox',
+    iso3: null,
     population: '8,635',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -15735,6 +17068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13317: {
     label: 'Wilkes',
+    iso3: null,
     population: '9,777',
     casesPastWeek: 87,
     casesIncreasingPercentage: 3.571428571428581,
@@ -15744,6 +17078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13319: {
     label: 'Wilkinson',
+    iso3: null,
     population: '8,954',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -15753,6 +17088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_13321: {
     label: 'Worth',
+    iso3: null,
     population: '20,247',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -15762,6 +17098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_15001: {
     label: 'Hawaii',
+    iso3: null,
     population: '201,513',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -15771,6 +17108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_15003: {
     label: 'Honolulu',
+    iso3: null,
     population: '974,563',
     casesPastWeek: 552,
     casesIncreasingPercentage: 0.0,
@@ -15780,6 +17118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_15007: {
     label: 'Kauai',
+    iso3: null,
     population: '72,293',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -15789,6 +17128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_15009: {
     label: 'Maui',
+    iso3: null,
     population: '167,417',
     casesPastWeek: 177,
     casesIncreasingPercentage: 0.0,
@@ -15798,6 +17138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16001: {
     label: 'Ada',
+    iso3: null,
     population: '481,587',
     casesPastWeek: 1091,
     casesIncreasingPercentage: 0.0,
@@ -15807,6 +17148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16003: {
     label: 'Adams',
+    iso3: null,
     population: '4,294',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -15816,6 +17158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16005: {
     label: 'Bannock',
+    iso3: null,
     population: '87,808',
     casesPastWeek: 164,
     casesIncreasingPercentage: 0.0,
@@ -15825,6 +17168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16007: {
     label: 'Bear Lake',
+    iso3: null,
     population: '6,125',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -15834,6 +17178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16009: {
     label: 'Benewah',
+    iso3: null,
     population: '9,298',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -15843,6 +17188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16011: {
     label: 'Bingham',
+    iso3: null,
     population: '46,811',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -15852,6 +17198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16013: {
     label: 'Blaine',
+    iso3: null,
     population: '23,021',
     casesPastWeek: 141,
     casesIncreasingPercentage: 40.99999999999999,
@@ -15861,6 +17208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16015: {
     label: 'Boise',
+    iso3: null,
     population: '7,831',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -15870,6 +17218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16017: {
     label: 'Bonner',
+    iso3: null,
     population: '45,739',
     casesPastWeek: 158,
     casesIncreasingPercentage: 0.0,
@@ -15879,6 +17228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16019: {
     label: 'Bonneville',
+    iso3: null,
     population: '119,062',
     casesPastWeek: 201,
     casesIncreasingPercentage: 0.0,
@@ -15888,6 +17238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16021: {
     label: 'Boundary',
+    iso3: null,
     population: '12,245',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -15897,6 +17248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16023: {
     label: 'Butte',
+    iso3: null,
     population: '2,597',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -15906,6 +17258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16025: {
     label: 'Camas',
+    iso3: null,
     population: '1,106',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -15915,6 +17268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16027: {
     label: 'Canyon',
+    iso3: null,
     population: '229,849',
     casesPastWeek: 577,
     casesIncreasingPercentage: 0.0,
@@ -15924,6 +17278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16029: {
     label: 'Caribou',
+    iso3: null,
     population: '7,155',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -15933,6 +17288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16031: {
     label: 'Cassia',
+    iso3: null,
     population: '24,030',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -15942,6 +17298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16033: {
     label: 'Clark',
+    iso3: null,
     population: '845',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -15951,6 +17308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16035: {
     label: 'Clearwater',
+    iso3: null,
     population: '8,756',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -15960,6 +17318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16037: {
     label: 'Custer',
+    iso3: null,
     population: '4,315',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -15969,6 +17328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16039: {
     label: 'Elmore',
+    iso3: null,
     population: '27,511',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -15978,6 +17338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16041: {
     label: 'Franklin',
+    iso3: null,
     population: '13,876',
     casesPastWeek: 18,
     casesIncreasingPercentage: 38.46153846153846,
@@ -15987,6 +17348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16043: {
     label: 'Fremont',
+    iso3: null,
     population: '13,099',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -15996,6 +17358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16045: {
     label: 'Gem',
+    iso3: null,
     population: '18,112',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -16005,6 +17368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16047: {
     label: 'Gooding',
+    iso3: null,
     population: '15,179',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -16014,6 +17378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16049: {
     label: 'Idaho',
+    iso3: null,
     population: '16,667',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -16023,6 +17388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16051: {
     label: 'Jefferson',
+    iso3: null,
     population: '29,871',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -16032,6 +17398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16053: {
     label: 'Jerome',
+    iso3: null,
     population: '24,412',
     casesPastWeek: 41,
     casesIncreasingPercentage: 2.499999999999991,
@@ -16041,6 +17408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16055: {
     label: 'Kootenai',
+    iso3: null,
     population: '165,697',
     casesPastWeek: 496,
     casesIncreasingPercentage: 0.0,
@@ -16050,6 +17418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16057: {
     label: 'Latah',
+    iso3: null,
     population: '40,108',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -16059,6 +17428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16059: {
     label: 'Lemhi',
+    iso3: null,
     population: '8,027',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -16068,6 +17438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16061: {
     label: 'Lewis',
+    iso3: null,
     population: '3,838',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -16077,6 +17448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16063: {
     label: 'Lincoln',
+    iso3: null,
     population: '5,366',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -16086,6 +17458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16065: {
     label: 'Madison',
+    iso3: null,
     population: '39,907',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -16095,6 +17468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16067: {
     label: 'Minidoka',
+    iso3: null,
     population: '21,039',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -16104,6 +17478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16069: {
     label: 'Nez Perce',
+    iso3: null,
     population: '40,408',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -16113,6 +17488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16071: {
     label: 'Oneida',
+    iso3: null,
     population: '4,531',
     casesPastWeek: 15,
     casesIncreasingPercentage: 15.384615384615374,
@@ -16122,6 +17498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16073: {
     label: 'Owyhee',
+    iso3: null,
     population: '11,823',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -16131,6 +17508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16075: {
     label: 'Payette',
+    iso3: null,
     population: '23,951',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -16140,6 +17518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16077: {
     label: 'Power',
+    iso3: null,
     population: '7,681',
     casesPastWeek: 16,
     casesIncreasingPercentage: 33.33333333333333,
@@ -16149,6 +17528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16079: {
     label: 'Shoshone',
+    iso3: null,
     population: '12,882',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -16158,6 +17538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16081: {
     label: 'Teton',
+    iso3: null,
     population: '12,142',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -16167,6 +17548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16083: {
     label: 'Twin Falls',
+    iso3: null,
     population: '86,878',
     casesPastWeek: 142,
     casesIncreasingPercentage: 0.0,
@@ -16176,6 +17558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16085: {
     label: 'Valley',
+    iso3: null,
     population: '11,392',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -16185,6 +17568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_16087: {
     label: 'Washington',
+    iso3: null,
     population: '10,194',
     casesPastWeek: 52,
     casesIncreasingPercentage: 52.941176470588225,
@@ -16194,6 +17578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17001: {
     label: 'Adams',
+    iso3: null,
     population: '65,435',
     casesPastWeek: 233,
     casesIncreasingPercentage: 0.0,
@@ -16203,6 +17588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17003: {
     label: 'Alexander',
+    iso3: null,
     population: '5,761',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -16212,6 +17598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17005: {
     label: 'Bond',
+    iso3: null,
     population: '16,426',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -16221,6 +17608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17007: {
     label: 'Boone',
+    iso3: null,
     population: '53,544',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -16230,6 +17618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17009: {
     label: 'Brown',
+    iso3: null,
     population: '6,578',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -16239,6 +17628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17011: {
     label: 'Bureau',
+    iso3: null,
     population: '32,628',
     casesPastWeek: 60,
     casesIncreasingPercentage: 15.384615384615374,
@@ -16248,6 +17638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17013: {
     label: 'Calhoun',
+    iso3: null,
     population: '4,739',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -16257,6 +17648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17015: {
     label: 'Carroll',
+    iso3: null,
     population: '14,305',
     casesPastWeek: 45,
     casesIncreasingPercentage: 7.14285714285714,
@@ -16266,6 +17658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17017: {
     label: 'Cass',
+    iso3: null,
     population: '12,147',
     casesPastWeek: 47,
     casesIncreasingPercentage: 2.1739130434782705,
@@ -16275,6 +17668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17019: {
     label: 'Champaign',
+    iso3: null,
     population: '209,689',
     casesPastWeek: 518,
     casesIncreasingPercentage: 0.0,
@@ -16284,6 +17678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17021: {
     label: 'Christian',
+    iso3: null,
     population: '32,304',
     casesPastWeek: 82,
     casesIncreasingPercentage: 0.0,
@@ -16293,6 +17688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17023: {
     label: 'Clark',
+    iso3: null,
     population: '15,441',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -16302,6 +17698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17025: {
     label: 'Clay',
+    iso3: null,
     population: '13,184',
     casesPastWeek: 31,
     casesIncreasingPercentage: 40.90909090909092,
@@ -16311,6 +17708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17027: {
     label: 'Clinton',
+    iso3: null,
     population: '37,562',
     casesPastWeek: 185,
     casesIncreasingPercentage: 0.0,
@@ -16320,6 +17718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17029: {
     label: 'Coles',
+    iso3: null,
     population: '50,621',
     casesPastWeek: 100,
     casesIncreasingPercentage: 0.0,
@@ -16329,6 +17728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17031: {
     label: 'Cook',
+    iso3: null,
     population: '5,150,233',
     casesPastWeek: 11838,
     casesIncreasingPercentage: 0.0,
@@ -16338,6 +17738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17033: {
     label: 'Crawford',
+    iso3: null,
     population: '18,667',
     casesPastWeek: 78,
     casesIncreasingPercentage: 14.705882352941169,
@@ -16347,6 +17748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17035: {
     label: 'Cumberland',
+    iso3: null,
     population: '10,766',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -16356,6 +17758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17037: {
     label: 'DeKalb',
+    iso3: null,
     population: '104,897',
     casesPastWeek: 263,
     casesIncreasingPercentage: 0.0,
@@ -16365,6 +17768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17039: {
     label: 'De Witt',
+    iso3: null,
     population: '15,638',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -16374,6 +17778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17041: {
     label: 'Douglas',
+    iso3: null,
     population: '19,465',
     casesPastWeek: 59,
     casesIncreasingPercentage: 43.90243902439024,
@@ -16383,6 +17788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17043: {
     label: 'DuPage',
+    iso3: null,
     population: '922,921',
     casesPastWeek: 2153,
     casesIncreasingPercentage: 0.0,
@@ -16392,6 +17798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17045: {
     label: 'Edgar',
+    iso3: null,
     population: '17,161',
     casesPastWeek: 65,
     casesIncreasingPercentage: 160.0,
@@ -16401,6 +17808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17047: {
     label: 'Edwards',
+    iso3: null,
     population: '6,395',
     casesPastWeek: 18,
     casesIncreasingPercentage: 19.999999999999996,
@@ -16410,6 +17818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17049: {
     label: 'Effingham',
+    iso3: null,
     population: '34,008',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -16419,6 +17828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17051: {
     label: 'Fayette',
+    iso3: null,
     population: '21,336',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -16428,6 +17838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17053: {
     label: 'Ford',
+    iso3: null,
     population: '12,961',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -16437,6 +17848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17055: {
     label: 'Franklin',
+    iso3: null,
     population: '38,469',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -16446,6 +17858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17057: {
     label: 'Fulton',
+    iso3: null,
     population: '34,340',
     casesPastWeek: 81,
     casesIncreasingPercentage: 28.57142857142858,
@@ -16455,6 +17868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17059: {
     label: 'Gallatin',
+    iso3: null,
     population: '4,828',
     casesPastWeek: 12,
     casesIncreasingPercentage: 9.090909090909083,
@@ -16464,6 +17878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17061: {
     label: 'Greene',
+    iso3: null,
     population: '12,969',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -16473,6 +17888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17063: {
     label: 'Grundy',
+    iso3: null,
     population: '51,054',
     casesPastWeek: 192,
     casesIncreasingPercentage: 11.627906976744185,
@@ -16482,6 +17898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17065: {
     label: 'Hamilton',
+    iso3: null,
     population: '8,116',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -16491,6 +17908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17067: {
     label: 'Hancock',
+    iso3: null,
     population: '17,708',
     casesPastWeek: 81,
     casesIncreasingPercentage: 72.34042553191489,
@@ -16500,6 +17918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17069: {
     label: 'Hardin',
+    iso3: null,
     population: '3,821',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -16509,6 +17928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17071: {
     label: 'Henderson',
+    iso3: null,
     population: '6,646',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -16518,6 +17938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17073: {
     label: 'Henry',
+    iso3: null,
     population: '48,913',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -16527,6 +17948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17075: {
     label: 'Iroquois',
+    iso3: null,
     population: '27,114',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -16536,6 +17958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17077: {
     label: 'Jackson',
+    iso3: null,
     population: '56,750',
     casesPastWeek: 146,
     casesIncreasingPercentage: 0.0,
@@ -16545,6 +17968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17079: {
     label: 'Jasper',
+    iso3: null,
     population: '9,610',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -16554,6 +17978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17081: {
     label: 'Jefferson',
+    iso3: null,
     population: '37,684',
     casesPastWeek: 148,
     casesIncreasingPercentage: 0.0,
@@ -16563,6 +17988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17083: {
     label: 'Jersey',
+    iso3: null,
     population: '21,773',
     casesPastWeek: 107,
     casesIncreasingPercentage: 13.829787234042556,
@@ -16572,6 +17998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17085: {
     label: 'Jo Daviess',
+    iso3: null,
     population: '21,235',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -16581,6 +18008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17087: {
     label: 'Johnson',
+    iso3: null,
     population: '12,417',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -16590,6 +18018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17089: {
     label: 'Kane',
+    iso3: null,
     population: '532,403',
     casesPastWeek: 1467,
     casesIncreasingPercentage: 0.0,
@@ -16599,6 +18028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17091: {
     label: 'Kankakee',
+    iso3: null,
     population: '109,862',
     casesPastWeek: 289,
     casesIncreasingPercentage: 1.403508771929829,
@@ -16608,6 +18038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17093: {
     label: 'Kendall',
+    iso3: null,
     population: '128,990',
     casesPastWeek: 400,
     casesIncreasingPercentage: 0.0,
@@ -16617,6 +18048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17095: {
     label: 'Knox',
+    iso3: null,
     population: '49,699',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -16626,6 +18058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17097: {
     label: 'Lake',
+    iso3: null,
     population: '696,535',
     casesPastWeek: 1632,
     casesIncreasingPercentage: 0.0,
@@ -16635,6 +18068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17099: {
     label: 'LaSalle',
+    iso3: null,
     population: '108,669',
     casesPastWeek: 399,
     casesIncreasingPercentage: 0.0,
@@ -16644,6 +18078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17101: {
     label: 'Lawrence',
+    iso3: null,
     population: '15,678',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -16653,6 +18088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17103: {
     label: 'Lee',
+    iso3: null,
     population: '34,096',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -16662,6 +18098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17105: {
     label: 'Livingston',
+    iso3: null,
     population: '35,648',
     casesPastWeek: 168,
     casesIncreasingPercentage: 0.0,
@@ -16671,6 +18108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17107: {
     label: 'Logan',
+    iso3: null,
     population: '28,618',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -16680,6 +18118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17109: {
     label: 'McDonough',
+    iso3: null,
     population: '29,682',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -16689,6 +18128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17111: {
     label: 'McHenry',
+    iso3: null,
     population: '307,774',
     casesPastWeek: 716,
     casesIncreasingPercentage: 0.0,
@@ -16698,6 +18138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17113: {
     label: 'McLean',
+    iso3: null,
     population: '171,517',
     casesPastWeek: 421,
     casesIncreasingPercentage: 0.0,
@@ -16707,6 +18148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17115: {
     label: 'Macon',
+    iso3: null,
     population: '104,009',
     casesPastWeek: 207,
     casesIncreasingPercentage: 0.0,
@@ -16716,6 +18158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17117: {
     label: 'Macoupin',
+    iso3: null,
     population: '44,926',
     casesPastWeek: 199,
     casesIncreasingPercentage: 0.0,
@@ -16725,6 +18168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17119: {
     label: 'Madison',
+    iso3: null,
     population: '262,966',
     casesPastWeek: 1155,
     casesIncreasingPercentage: 0.0,
@@ -16734,6 +18178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17121: {
     label: 'Marion',
+    iso3: null,
     population: '37,205',
     casesPastWeek: 123,
     casesIncreasingPercentage: 0.0,
@@ -16743,6 +18188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17123: {
     label: 'Marshall',
+    iso3: null,
     population: '11,438',
     casesPastWeek: 43,
     casesIncreasingPercentage: 19.444444444444443,
@@ -16752,6 +18198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17125: {
     label: 'Mason',
+    iso3: null,
     population: '13,359',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -16761,6 +18208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17127: {
     label: 'Massac',
+    iso3: null,
     population: '13,772',
     casesPastWeek: 58,
     casesIncreasingPercentage: 18.36734693877551,
@@ -16770,6 +18218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17129: {
     label: 'Menard',
+    iso3: null,
     population: '12,196',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -16779,6 +18228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17131: {
     label: 'Mercer',
+    iso3: null,
     population: '15,437',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -16788,6 +18238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17133: {
     label: 'Monroe',
+    iso3: null,
     population: '34,637',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -16797,6 +18248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17135: {
     label: 'Montgomery',
+    iso3: null,
     population: '28,414',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -16806,6 +18258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17137: {
     label: 'Morgan',
+    iso3: null,
     population: '33,658',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -16815,6 +18268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17139: {
     label: 'Moultrie',
+    iso3: null,
     population: '14,501',
     casesPastWeek: 51,
     casesIncreasingPercentage: 13.33333333333333,
@@ -16824,6 +18278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17141: {
     label: 'Ogle',
+    iso3: null,
     population: '50,643',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -16833,6 +18288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17143: {
     label: 'Peoria',
+    iso3: null,
     population: '179,179',
     casesPastWeek: 561,
     casesIncreasingPercentage: 0.0,
@@ -16842,6 +18298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17145: {
     label: 'Perry',
+    iso3: null,
     population: '20,916',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -16851,6 +18308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17147: {
     label: 'Piatt',
+    iso3: null,
     population: '16,344',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -16860,6 +18318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17149: {
     label: 'Pike',
+    iso3: null,
     population: '15,561',
     casesPastWeek: 61,
     casesIncreasingPercentage: 52.49999999999999,
@@ -16869,6 +18328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17151: {
     label: 'Pope',
+    iso3: null,
     population: '4,177',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -16878,6 +18338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17153: {
     label: 'Pulaski',
+    iso3: null,
     population: '5,335',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -16887,6 +18348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17155: {
     label: 'Putnam',
+    iso3: null,
     population: '5,739',
     casesPastWeek: 12,
     casesIncreasingPercentage: 140.0,
@@ -16896,6 +18358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17157: {
     label: 'Randolph',
+    iso3: null,
     population: '31,782',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -16905,6 +18368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17159: {
     label: 'Richland',
+    iso3: null,
     population: '15,513',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -16914,6 +18378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17161: {
     label: 'Rock Island',
+    iso3: null,
     population: '141,879',
     casesPastWeek: 361,
     casesIncreasingPercentage: 12.812500000000004,
@@ -16923,6 +18388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17163: {
     label: 'St. Clair',
+    iso3: null,
     population: '259,686',
     casesPastWeek: 911,
     casesIncreasingPercentage: 0.0,
@@ -16932,6 +18398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17165: {
     label: 'Saline',
+    iso3: null,
     population: '23,491',
     casesPastWeek: 73,
     casesIncreasingPercentage: 8.955223880597018,
@@ -16941,6 +18408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17167: {
     label: 'Sangamon',
+    iso3: null,
     population: '194,672',
     casesPastWeek: 449,
     casesIncreasingPercentage: 0.0,
@@ -16950,6 +18418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17169: {
     label: 'Schuyler',
+    iso3: null,
     population: '6,768',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -16959,6 +18428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17171: {
     label: 'Scott',
+    iso3: null,
     population: '4,951',
     casesPastWeek: 35,
     casesIncreasingPercentage: 66.66666666666667,
@@ -16968,6 +18438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17173: {
     label: 'Shelby',
+    iso3: null,
     population: '21,634',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -16977,6 +18448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17175: {
     label: 'Stark',
+    iso3: null,
     population: '5,342',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -16986,6 +18458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17177: {
     label: 'Stephenson',
+    iso3: null,
     population: '44,498',
     casesPastWeek: 140,
     casesIncreasingPercentage: 53.846153846153854,
@@ -16995,6 +18468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17179: {
     label: 'Tazewell',
+    iso3: null,
     population: '131,803',
     casesPastWeek: 436,
     casesIncreasingPercentage: 0.0,
@@ -17004,6 +18478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17181: {
     label: 'Union',
+    iso3: null,
     population: '16,653',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -17013,6 +18488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17183: {
     label: 'Vermilion',
+    iso3: null,
     population: '75,758',
     casesPastWeek: 337,
     casesIncreasingPercentage: 0.0,
@@ -17022,6 +18498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17185: {
     label: 'Wabash',
+    iso3: null,
     population: '11,520',
     casesPastWeek: 54,
     casesIncreasingPercentage: 42.10526315789473,
@@ -17031,6 +18508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17187: {
     label: 'Warren',
+    iso3: null,
     population: '16,844',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -17040,6 +18518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17189: {
     label: 'Washington',
+    iso3: null,
     population: '13,887',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -17049,6 +18528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17191: {
     label: 'Wayne',
+    iso3: null,
     population: '16,215',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -17058,6 +18538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17193: {
     label: 'White',
+    iso3: null,
     population: '13,537',
     casesPastWeek: 77,
     casesIncreasingPercentage: 48.07692307692308,
@@ -17067,6 +18548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17195: {
     label: 'Whiteside',
+    iso3: null,
     population: '55,175',
     casesPastWeek: 195,
     casesIncreasingPercentage: 21.118012422360245,
@@ -17076,6 +18558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17197: {
     label: 'Will',
+    iso3: null,
     population: '690,743',
     casesPastWeek: 1823,
     casesIncreasingPercentage: 0.0,
@@ -17085,6 +18568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17199: {
     label: 'Williamson',
+    iso3: null,
     population: '66,597',
     casesPastWeek: 212,
     casesIncreasingPercentage: 0.0,
@@ -17094,6 +18578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17201: {
     label: 'Winnebago',
+    iso3: null,
     population: '282,572',
     casesPastWeek: 605,
     casesIncreasingPercentage: 0.0,
@@ -17103,6 +18588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_17203: {
     label: 'Woodford',
+    iso3: null,
     population: '38,459',
     casesPastWeek: 172,
     casesIncreasingPercentage: 21.98581560283688,
@@ -17112,6 +18598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18001: {
     label: 'Adams',
+    iso3: null,
     population: '35,777',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -17121,6 +18608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18003: {
     label: 'Allen',
+    iso3: null,
     population: '379,299',
     casesPastWeek: 972,
     casesIncreasingPercentage: 0.0,
@@ -17130,6 +18618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18005: {
     label: 'Bartholomew',
+    iso3: null,
     population: '83,779',
     casesPastWeek: 257,
     casesIncreasingPercentage: 0.0,
@@ -17139,6 +18628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18007: {
     label: 'Benton',
+    iso3: null,
     population: '8,748',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -17148,6 +18638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18009: {
     label: 'Blackford',
+    iso3: null,
     population: '11,758',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -17157,6 +18648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18011: {
     label: 'Boone',
+    iso3: null,
     population: '67,843',
     casesPastWeek: 203,
     casesIncreasingPercentage: 0.0,
@@ -17166,6 +18658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18013: {
     label: 'Brown',
+    iso3: null,
     population: '15,092',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -17175,6 +18668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18015: {
     label: 'Carroll',
+    iso3: null,
     population: '20,257',
     casesPastWeek: 70,
     casesIncreasingPercentage: 45.83333333333333,
@@ -17184,6 +18678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18017: {
     label: 'Cass',
+    iso3: null,
     population: '37,689',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -17193,6 +18688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18019: {
     label: 'Clark',
+    iso3: null,
     population: '118,302',
     casesPastWeek: 491,
     casesIncreasingPercentage: 0.0,
@@ -17202,6 +18698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18021: {
     label: 'Clay',
+    iso3: null,
     population: '26,225',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -17211,6 +18708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18023: {
     label: 'Clinton',
+    iso3: null,
     population: '32,399',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -17220,6 +18718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18025: {
     label: 'Crawford',
+    iso3: null,
     population: '10,577',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -17229,6 +18728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18027: {
     label: 'Daviess',
+    iso3: null,
     population: '33,351',
     casesPastWeek: 96,
     casesIncreasingPercentage: 0.0,
@@ -17238,6 +18738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18029: {
     label: 'Dearborn',
+    iso3: null,
     population: '49,458',
     casesPastWeek: 248,
     casesIncreasingPercentage: 0.0,
@@ -17247,6 +18748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18031: {
     label: 'Decatur',
+    iso3: null,
     population: '26,559',
     casesPastWeek: 68,
     casesIncreasingPercentage: 0.0,
@@ -17256,6 +18758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18033: {
     label: 'DeKalb',
+    iso3: null,
     population: '43,475',
     casesPastWeek: 109,
     casesIncreasingPercentage: 5.825242718446599,
@@ -17265,6 +18768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18035: {
     label: 'Delaware',
+    iso3: null,
     population: '114,135',
     casesPastWeek: 316,
     casesIncreasingPercentage: 0.0,
@@ -17274,6 +18778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18037: {
     label: 'Dubois',
+    iso3: null,
     population: '42,736',
     casesPastWeek: 126,
     casesIncreasingPercentage: 0.0,
@@ -17283,6 +18788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18039: {
     label: 'Elkhart',
+    iso3: null,
     population: '206,341',
     casesPastWeek: 342,
     casesIncreasingPercentage: 0.0,
@@ -17292,6 +18798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18041: {
     label: 'Fayette',
+    iso3: null,
     population: '23,102',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -17301,6 +18808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18043: {
     label: 'Floyd',
+    iso3: null,
     population: '78,522',
     casesPastWeek: 319,
     casesIncreasingPercentage: 0.0,
@@ -17310,6 +18818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18045: {
     label: 'Fountain',
+    iso3: null,
     population: '16,346',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -17319,6 +18828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18047: {
     label: 'Franklin',
+    iso3: null,
     population: '22,758',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -17328,6 +18838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18049: {
     label: 'Fulton',
+    iso3: null,
     population: '19,974',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -17337,6 +18848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18051: {
     label: 'Gibson',
+    iso3: null,
     population: '33,659',
     casesPastWeek: 160,
     casesIncreasingPercentage: 0.0,
@@ -17346,6 +18858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18053: {
     label: 'Grant',
+    iso3: null,
     population: '65,769',
     casesPastWeek: 193,
     casesIncreasingPercentage: 0.0,
@@ -17355,6 +18868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18055: {
     label: 'Greene',
+    iso3: null,
     population: '31,922',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -17364,6 +18878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18057: {
     label: 'Hamilton',
+    iso3: null,
     population: '338,011',
     casesPastWeek: 1175,
     casesIncreasingPercentage: 0.0,
@@ -17373,6 +18888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18059: {
     label: 'Hancock',
+    iso3: null,
     population: '78,168',
     casesPastWeek: 354,
     casesIncreasingPercentage: 0.0,
@@ -17382,6 +18898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18061: {
     label: 'Harrison',
+    iso3: null,
     population: '40,515',
     casesPastWeek: 224,
     casesIncreasingPercentage: 0.0,
@@ -17391,6 +18908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18063: {
     label: 'Hendricks',
+    iso3: null,
     population: '170,311',
     casesPastWeek: 570,
     casesIncreasingPercentage: 0.0,
@@ -17400,6 +18918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18065: {
     label: 'Henry',
+    iso3: null,
     population: '47,972',
     casesPastWeek: 161,
     casesIncreasingPercentage: 0.0,
@@ -17409,6 +18928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18067: {
     label: 'Howard',
+    iso3: null,
     population: '82,544',
     casesPastWeek: 371,
     casesIncreasingPercentage: 0.0,
@@ -17418,6 +18938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18069: {
     label: 'Huntington',
+    iso3: null,
     population: '36,520',
     casesPastWeek: 96,
     casesIncreasingPercentage: 0.0,
@@ -17427,6 +18948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18071: {
     label: 'Jackson',
+    iso3: null,
     population: '44,231',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -17436,6 +18958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18073: {
     label: 'Jasper',
+    iso3: null,
     population: '33,562',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -17445,6 +18968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18075: {
     label: 'Jay',
+    iso3: null,
     population: '20,436',
     casesPastWeek: 54,
     casesIncreasingPercentage: 17.391304347826097,
@@ -17454,6 +18978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18077: {
     label: 'Jefferson',
+    iso3: null,
     population: '32,308',
     casesPastWeek: 140,
     casesIncreasingPercentage: 0.0,
@@ -17463,6 +18988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18079: {
     label: 'Jennings',
+    iso3: null,
     population: '27,735',
     casesPastWeek: 68,
     casesIncreasingPercentage: 0.0,
@@ -17472,6 +18998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18081: {
     label: 'Johnson',
+    iso3: null,
     population: '158,167',
     casesPastWeek: 644,
     casesIncreasingPercentage: 0.0,
@@ -17481,6 +19008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18083: {
     label: 'Knox',
+    iso3: null,
     population: '36,594',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -17490,6 +19018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18085: {
     label: 'Kosciusko',
+    iso3: null,
     population: '79,456',
     casesPastWeek: 217,
     casesIncreasingPercentage: 0.0,
@@ -17499,6 +19028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18087: {
     label: 'LaGrange',
+    iso3: null,
     population: '39,614',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -17508,6 +19038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18089: {
     label: 'Lake',
+    iso3: null,
     population: '485,493',
     casesPastWeek: 1202,
     casesIncreasingPercentage: 0.0,
@@ -17517,6 +19048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18091: {
     label: 'LaPorte',
+    iso3: null,
     population: '109,888',
     casesPastWeek: 332,
     casesIncreasingPercentage: 0.0,
@@ -17526,6 +19058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18093: {
     label: 'Lawrence',
+    iso3: null,
     population: '45,370',
     casesPastWeek: 124,
     casesIncreasingPercentage: 0.0,
@@ -17535,6 +19068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18095: {
     label: 'Madison',
+    iso3: null,
     population: '129,569',
     casesPastWeek: 448,
     casesIncreasingPercentage: 0.0,
@@ -17544,6 +19078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18097: {
     label: 'Marion',
+    iso3: null,
     population: '964,582',
     casesPastWeek: 2877,
     casesIncreasingPercentage: 0.0,
@@ -17553,6 +19088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18099: {
     label: 'Marshall',
+    iso3: null,
     population: '46,258',
     casesPastWeek: 112,
     casesIncreasingPercentage: 0.0,
@@ -17562,6 +19098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18101: {
     label: 'Martin',
+    iso3: null,
     population: '10,255',
     casesPastWeek: 44,
     casesIncreasingPercentage: 57.14285714285714,
@@ -17571,6 +19108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18103: {
     label: 'Miami',
+    iso3: null,
     population: '35,516',
     casesPastWeek: 132,
     casesIncreasingPercentage: 0.0,
@@ -17580,6 +19118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18105: {
     label: 'Monroe',
+    iso3: null,
     population: '148,431',
     casesPastWeek: 348,
     casesIncreasingPercentage: 0.0,
@@ -17589,6 +19128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18107: {
     label: 'Montgomery',
+    iso3: null,
     population: '38,338',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -17598,6 +19138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18109: {
     label: 'Morgan',
+    iso3: null,
     population: '70,489',
     casesPastWeek: 295,
     casesIncreasingPercentage: 0.0,
@@ -17607,6 +19148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18111: {
     label: 'Newton',
+    iso3: null,
     population: '13,984',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -17616,6 +19158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18113: {
     label: 'Noble',
+    iso3: null,
     population: '47,744',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -17625,6 +19168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18115: {
     label: 'Ohio',
+    iso3: null,
     population: '5,875',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -17634,6 +19178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18117: {
     label: 'Orange',
+    iso3: null,
     population: '19,646',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -17643,6 +19188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18119: {
     label: 'Owen',
+    iso3: null,
     population: '20,799',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -17652,6 +19198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18121: {
     label: 'Parke',
+    iso3: null,
     population: '16,937',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -17661,6 +19208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18123: {
     label: 'Perry',
+    iso3: null,
     population: '19,169',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -17670,6 +19218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18125: {
     label: 'Pike',
+    iso3: null,
     population: '12,389',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -17679,6 +19228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18127: {
     label: 'Porter',
+    iso3: null,
     population: '170,389',
     casesPastWeek: 466,
     casesIncreasingPercentage: 0.0,
@@ -17688,6 +19238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18129: {
     label: 'Posey',
+    iso3: null,
     population: '25,427',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -17697,6 +19248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18131: {
     label: 'Pulaski',
+    iso3: null,
     population: '12,353',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -17706,6 +19258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18133: {
     label: 'Putnam',
+    iso3: null,
     population: '37,576',
     casesPastWeek: 130,
     casesIncreasingPercentage: 0.0,
@@ -17715,6 +19268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18135: {
     label: 'Randolph',
+    iso3: null,
     population: '24,665',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -17724,6 +19278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18137: {
     label: 'Ripley',
+    iso3: null,
     population: '28,324',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -17733,6 +19288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18139: {
     label: 'Rush',
+    iso3: null,
     population: '16,581',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -17742,6 +19298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18141: {
     label: 'St. Joseph',
+    iso3: null,
     population: '271,826',
     casesPastWeek: 683,
     casesIncreasingPercentage: 0.0,
@@ -17751,6 +19308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18143: {
     label: 'Scott',
+    iso3: null,
     population: '23,873',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -17760,6 +19318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18145: {
     label: 'Shelby',
+    iso3: null,
     population: '44,729',
     casesPastWeek: 174,
     casesIncreasingPercentage: 0.0,
@@ -17769,6 +19328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18147: {
     label: 'Spencer',
+    iso3: null,
     population: '20,277',
     casesPastWeek: 105,
     casesIncreasingPercentage: 1.9417475728155331,
@@ -17778,6 +19338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18149: {
     label: 'Starke',
+    iso3: null,
     population: '22,995',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -17787,6 +19348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18151: {
     label: 'Steuben',
+    iso3: null,
     population: '34,594',
     casesPastWeek: 82,
     casesIncreasingPercentage: 0.0,
@@ -17796,6 +19358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18153: {
     label: 'Sullivan',
+    iso3: null,
     population: '20,669',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -17805,6 +19368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18155: {
     label: 'Switzerland',
+    iso3: null,
     population: '10,751',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -17814,6 +19378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18157: {
     label: 'Tippecanoe',
+    iso3: null,
     population: '195,732',
     casesPastWeek: 621,
     casesIncreasingPercentage: 0.0,
@@ -17823,6 +19388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18159: {
     label: 'Tipton',
+    iso3: null,
     population: '15,148',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -17832,6 +19398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18161: {
     label: 'Union',
+    iso3: null,
     population: '7,054',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -17841,6 +19408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18163: {
     label: 'Vanderburgh',
+    iso3: null,
     population: '181,451',
     casesPastWeek: 870,
     casesIncreasingPercentage: 0.0,
@@ -17850,6 +19418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18165: {
     label: 'Vermillion',
+    iso3: null,
     population: '15,498',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -17859,6 +19428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18167: {
     label: 'Vigo',
+    iso3: null,
     population: '107,038',
     casesPastWeek: 286,
     casesIncreasingPercentage: 0.0,
@@ -17868,6 +19438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18169: {
     label: 'Wabash',
+    iso3: null,
     population: '30,996',
     casesPastWeek: 115,
     casesIncreasingPercentage: 0.0,
@@ -17877,6 +19448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18171: {
     label: 'Warren',
+    iso3: null,
     population: '8,265',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -17886,6 +19458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18173: {
     label: 'Warrick',
+    iso3: null,
     population: '62,998',
     casesPastWeek: 327,
     casesIncreasingPercentage: 0.0,
@@ -17895,6 +19468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18175: {
     label: 'Washington',
+    iso3: null,
     population: '28,036',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -17904,6 +19478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18177: {
     label: 'Wayne',
+    iso3: null,
     population: '65,884',
     casesPastWeek: 224,
     casesIncreasingPercentage: 0.0,
@@ -17913,6 +19488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18179: {
     label: 'Wells',
+    iso3: null,
     population: '28,296',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -17922,6 +19498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18181: {
     label: 'White',
+    iso3: null,
     population: '24,102',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -17931,6 +19508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_18183: {
     label: 'Whitley',
+    iso3: null,
     population: '33,964',
     casesPastWeek: 156,
     casesIncreasingPercentage: 0.0,
@@ -17940,6 +19518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19001: {
     label: 'Adair',
+    iso3: null,
     population: '7,152',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -17949,6 +19528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19003: {
     label: 'Adams',
+    iso3: null,
     population: '3,602',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -17958,6 +19538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19005: {
     label: 'Allamakee',
+    iso3: null,
     population: '13,687',
     casesPastWeek: 40,
     casesIncreasingPercentage: 42.85714285714286,
@@ -17967,6 +19548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19007: {
     label: 'Appanoose',
+    iso3: null,
     population: '12,426',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -17976,6 +19558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19009: {
     label: 'Audubon',
+    iso3: null,
     population: '5,496',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -17985,6 +19568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19011: {
     label: 'Benton',
+    iso3: null,
     population: '25,645',
     casesPastWeek: 48,
     casesIncreasingPercentage: 26.315789473684205,
@@ -17994,6 +19578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19013: {
     label: 'Black Hawk',
+    iso3: null,
     population: '131,228',
     casesPastWeek: 431,
     casesIncreasingPercentage: 18.08219178082191,
@@ -18003,6 +19588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19015: {
     label: 'Boone',
+    iso3: null,
     population: '26,234',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -18012,6 +19598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19017: {
     label: 'Bremer',
+    iso3: null,
     population: '25,062',
     casesPastWeek: 79,
     casesIncreasingPercentage: 31.666666666666664,
@@ -18021,6 +19608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19019: {
     label: 'Buchanan',
+    iso3: null,
     population: '21,175',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -18030,6 +19618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19021: {
     label: 'Buena Vista',
+    iso3: null,
     population: '19,620',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -18039,6 +19628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19023: {
     label: 'Butler',
+    iso3: null,
     population: '14,439',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -18048,6 +19638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19025: {
     label: 'Calhoun',
+    iso3: null,
     population: '9,668',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -18057,6 +19648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19027: {
     label: 'Carroll',
+    iso3: null,
     population: '20,165',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -18066,6 +19658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19029: {
     label: 'Cass',
+    iso3: null,
     population: '12,836',
     casesPastWeek: 26,
     casesIncreasingPercentage: 8.333333333333325,
@@ -18075,6 +19668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19031: {
     label: 'Cedar',
+    iso3: null,
     population: '18,627',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -18084,6 +19678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19033: {
     label: 'Cerro Gordo',
+    iso3: null,
     population: '42,450',
     casesPastWeek: 100,
     casesIncreasingPercentage: 0.0,
@@ -18093,6 +19688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19035: {
     label: 'Cherokee',
+    iso3: null,
     population: '11,235',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -18102,6 +19698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19037: {
     label: 'Chickasaw',
+    iso3: null,
     population: '11,933',
     casesPastWeek: 31,
     casesIncreasingPercentage: 82.35294117647058,
@@ -18111,6 +19708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19039: {
     label: 'Clarke',
+    iso3: null,
     population: '9,395',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -18120,6 +19718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19041: {
     label: 'Clay',
+    iso3: null,
     population: '16,016',
     casesPastWeek: 65,
     casesIncreasingPercentage: 66.66666666666667,
@@ -18129,6 +19728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19043: {
     label: 'Clayton',
+    iso3: null,
     population: '17,549',
     casesPastWeek: 31,
     casesIncreasingPercentage: 3.3333333333333437,
@@ -18138,6 +19738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19045: {
     label: 'Clinton',
+    iso3: null,
     population: '46,429',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -18147,6 +19748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19047: {
     label: 'Crawford',
+    iso3: null,
     population: '16,820',
     casesPastWeek: 62,
     casesIncreasingPercentage: 44.18604651162789,
@@ -18156,6 +19758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19049: {
     label: 'Dallas',
+    iso3: null,
     population: '93,453',
     casesPastWeek: 268,
     casesIncreasingPercentage: 0.0,
@@ -18165,6 +19768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19051: {
     label: 'Davis',
+    iso3: null,
     population: '9,000',
     casesPastWeek: 14,
     casesIncreasingPercentage: 27.27272727272727,
@@ -18174,6 +19778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19053: {
     label: 'Decatur',
+    iso3: null,
     population: '7,870',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -18183,6 +19788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19055: {
     label: 'Delaware',
+    iso3: null,
     population: '17,011',
     casesPastWeek: 39,
     casesIncreasingPercentage: 14.705882352941169,
@@ -18192,6 +19798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19057: {
     label: 'Des Moines',
+    iso3: null,
     population: '38,967',
     casesPastWeek: 142,
     casesIncreasingPercentage: 54.347826086956516,
@@ -18201,6 +19808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19059: {
     label: 'Dickinson',
+    iso3: null,
     population: '17,258',
     casesPastWeek: 46,
     casesIncreasingPercentage: 35.29411764705883,
@@ -18210,6 +19818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19061: {
     label: 'Dubuque',
+    iso3: null,
     population: '97,311',
     casesPastWeek: 313,
     casesIncreasingPercentage: 39.11111111111112,
@@ -18219,6 +19828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19063: {
     label: 'Emmet',
+    iso3: null,
     population: '9,208',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -18228,6 +19838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19065: {
     label: 'Fayette',
+    iso3: null,
     population: '19,650',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -18237,6 +19848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19067: {
     label: 'Floyd',
+    iso3: null,
     population: '15,642',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -18246,6 +19858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19069: {
     label: 'Franklin',
+    iso3: null,
     population: '10,070',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -18255,6 +19868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19071: {
     label: 'Fremont',
+    iso3: null,
     population: '6,960',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -18264,6 +19878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19073: {
     label: 'Greene',
+    iso3: null,
     population: '8,888',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -18273,6 +19888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19075: {
     label: 'Grundy',
+    iso3: null,
     population: '12,232',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -18282,6 +19898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19077: {
     label: 'Guthrie',
+    iso3: null,
     population: '10,689',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -18291,6 +19908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19079: {
     label: 'Hamilton',
+    iso3: null,
     population: '14,773',
     casesPastWeek: 44,
     casesIncreasingPercentage: 10.000000000000009,
@@ -18300,6 +19918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19081: {
     label: 'Hancock',
+    iso3: null,
     population: '10,630',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -18309,6 +19928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19083: {
     label: 'Hardin',
+    iso3: null,
     population: '16,846',
     casesPastWeek: 37,
     casesIncreasingPercentage: 42.307692307692314,
@@ -18318,6 +19938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19085: {
     label: 'Harrison',
+    iso3: null,
     population: '14,049',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -18327,6 +19948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19087: {
     label: 'Henry',
+    iso3: null,
     population: '19,954',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -18336,6 +19958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19089: {
     label: 'Howard',
+    iso3: null,
     population: '9,158',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -18345,6 +19968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19091: {
     label: 'Humboldt',
+    iso3: null,
     population: '9,558',
     casesPastWeek: 26,
     casesIncreasingPercentage: 13.043478260869556,
@@ -18354,6 +19978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19093: {
     label: 'Ida',
+    iso3: null,
     population: '6,860',
     casesPastWeek: 20,
     casesIncreasingPercentage: 33.33333333333333,
@@ -18363,6 +19988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19095: {
     label: 'Iowa',
+    iso3: null,
     population: '16,184',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -18372,6 +19998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19097: {
     label: 'Jackson',
+    iso3: null,
     population: '19,439',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -18381,6 +20008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19099: {
     label: 'Jasper',
+    iso3: null,
     population: '37,185',
     casesPastWeek: 124,
     casesIncreasingPercentage: 0.0,
@@ -18390,6 +20018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19101: {
     label: 'Jefferson',
+    iso3: null,
     population: '18,295',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -18399,6 +20028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19103: {
     label: 'Johnson',
+    iso3: null,
     population: '151,140',
     casesPastWeek: 253,
     casesIncreasingPercentage: 0.0,
@@ -18408,6 +20038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19105: {
     label: 'Jones',
+    iso3: null,
     population: '20,681',
     casesPastWeek: 45,
     casesIncreasingPercentage: 15.384615384615374,
@@ -18417,6 +20048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19107: {
     label: 'Keokuk',
+    iso3: null,
     population: '10,246',
     casesPastWeek: 20,
     casesIncreasingPercentage: 33.33333333333333,
@@ -18426,6 +20058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19109: {
     label: 'Kossuth',
+    iso3: null,
     population: '14,813',
     casesPastWeek: 93,
     casesIncreasingPercentage: 20.779220779220786,
@@ -18435,6 +20068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19111: {
     label: 'Lee',
+    iso3: null,
     population: '33,657',
     casesPastWeek: 102,
     casesIncreasingPercentage: 18.60465116279071,
@@ -18444,6 +20078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19113: {
     label: 'Linn',
+    iso3: null,
     population: '226,706',
     casesPastWeek: 370,
     casesIncreasingPercentage: 0.0,
@@ -18453,6 +20088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19115: {
     label: 'Louisa',
+    iso3: null,
     population: '11,035',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -18462,6 +20098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19117: {
     label: 'Lucas',
+    iso3: null,
     population: '8,600',
     casesPastWeek: 19,
     casesIncreasingPercentage: 46.153846153846146,
@@ -18471,6 +20108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19119: {
     label: 'Lyon',
+    iso3: null,
     population: '11,755',
     casesPastWeek: 37,
     casesIncreasingPercentage: 37.037037037037045,
@@ -18480,6 +20118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19121: {
     label: 'Madison',
+    iso3: null,
     population: '16,338',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -18489,6 +20128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19123: {
     label: 'Mahaska',
+    iso3: null,
     population: '22,095',
     casesPastWeek: 72,
     casesIncreasingPercentage: 22.033898305084755,
@@ -18498,6 +20138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19125: {
     label: 'Marion',
+    iso3: null,
     population: '33,253',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -18507,6 +20148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19127: {
     label: 'Marshall',
+    iso3: null,
     population: '39,369',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -18516,6 +20158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19129: {
     label: 'Mills',
+    iso3: null,
     population: '15,109',
     casesPastWeek: 25,
     casesIncreasingPercentage: 13.636363636363647,
@@ -18525,6 +20168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19131: {
     label: 'Mitchell',
+    iso3: null,
     population: '10,586',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -18534,6 +20178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19133: {
     label: 'Monona',
+    iso3: null,
     population: '8,615',
     casesPastWeek: 52,
     casesIncreasingPercentage: 33.33333333333333,
@@ -18543,6 +20188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19135: {
     label: 'Monroe',
+    iso3: null,
     population: '7,707',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -18552,6 +20198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19137: {
     label: 'Montgomery',
+    iso3: null,
     population: '9,917',
     casesPastWeek: 51,
     casesIncreasingPercentage: 88.88888888888889,
@@ -18561,6 +20208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19139: {
     label: 'Muscatine',
+    iso3: null,
     population: '42,664',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -18570,6 +20218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19141: {
     label: "O'Brien",
+    iso3: null,
     population: '13,753',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -18579,6 +20228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19143: {
     label: 'Osceola',
+    iso3: null,
     population: '5,958',
     casesPastWeek: 13,
     casesIncreasingPercentage: 116.66666666666666,
@@ -18588,6 +20238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19145: {
     label: 'Page',
+    iso3: null,
     population: '15,107',
     casesPastWeek: 34,
     casesIncreasingPercentage: 88.88888888888889,
@@ -18597,6 +20248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19147: {
     label: 'Palo Alto',
+    iso3: null,
     population: '8,886',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -18606,6 +20258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19149: {
     label: 'Plymouth',
+    iso3: null,
     population: '25,177',
     casesPastWeek: 43,
     casesIncreasingPercentage: 19.444444444444443,
@@ -18615,6 +20268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19151: {
     label: 'Pocahontas',
+    iso3: null,
     population: '6,619',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -18624,6 +20278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19153: {
     label: 'Polk',
+    iso3: null,
     population: '490,161',
     casesPastWeek: 1445,
     casesIncreasingPercentage: 0.0,
@@ -18633,6 +20288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19155: {
     label: 'Pottawattamie',
+    iso3: null,
     population: '93,206',
     casesPastWeek: 224,
     casesIncreasingPercentage: 10.8910891089109,
@@ -18642,6 +20298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19157: {
     label: 'Poweshiek',
+    iso3: null,
     population: '18,504',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -18651,6 +20308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19159: {
     label: 'Ringgold',
+    iso3: null,
     population: '4,894',
     casesPastWeek: 25,
     casesIncreasingPercentage: 4.166666666666674,
@@ -18660,6 +20318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19161: {
     label: 'Sac',
+    iso3: null,
     population: '9,721',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -18669,6 +20328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19163: {
     label: 'Scott',
+    iso3: null,
     population: '172,943',
     casesPastWeek: 485,
     casesIncreasingPercentage: 14.928909952606627,
@@ -18678,6 +20338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19165: {
     label: 'Shelby',
+    iso3: null,
     population: '11,454',
     casesPastWeek: 41,
     casesIncreasingPercentage: 57.692307692307686,
@@ -18687,6 +20348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19167: {
     label: 'Sioux',
+    iso3: null,
     population: '34,855',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -18696,6 +20358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19169: {
     label: 'Story',
+    iso3: null,
     population: '97,117',
     casesPastWeek: 172,
     casesIncreasingPercentage: 0.0,
@@ -18705,6 +20368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19171: {
     label: 'Tama',
+    iso3: null,
     population: '16,854',
     casesPastWeek: 44,
     casesIncreasingPercentage: 46.66666666666666,
@@ -18714,6 +20378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19173: {
     label: 'Taylor',
+    iso3: null,
     population: '6,121',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -18723,6 +20388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19175: {
     label: 'Union',
+    iso3: null,
     population: '12,241',
     casesPastWeek: 35,
     casesIncreasingPercentage: 84.21052631578947,
@@ -18732,6 +20398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19177: {
     label: 'Van Buren',
+    iso3: null,
     population: '7,044',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -18741,6 +20408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19179: {
     label: 'Wapello',
+    iso3: null,
     population: '34,969',
     casesPastWeek: 91,
     casesIncreasingPercentage: 0.0,
@@ -18750,6 +20418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19181: {
     label: 'Warren',
+    iso3: null,
     population: '51,466',
     casesPastWeek: 205,
     casesIncreasingPercentage: 0.0,
@@ -18759,6 +20428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19183: {
     label: 'Washington',
+    iso3: null,
     population: '21,965',
     casesPastWeek: 84,
     casesIncreasingPercentage: 18.309859154929576,
@@ -18768,6 +20438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19185: {
     label: 'Wayne',
+    iso3: null,
     population: '6,441',
     casesPastWeek: 6,
     casesIncreasingPercentage: 100.0,
@@ -18777,6 +20448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19187: {
     label: 'Webster',
+    iso3: null,
     population: '35,904',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -18786,6 +20458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19189: {
     label: 'Winnebago',
+    iso3: null,
     population: '10,354',
     casesPastWeek: 37,
     casesIncreasingPercentage: 5.714285714285716,
@@ -18795,6 +20468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19191: {
     label: 'Winneshiek',
+    iso3: null,
     population: '19,991',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -18804,6 +20478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19193: {
     label: 'Woodbury',
+    iso3: null,
     population: '103,107',
     casesPastWeek: 176,
     casesIncreasingPercentage: 0.0,
@@ -18813,6 +20488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19195: {
     label: 'Worth',
+    iso3: null,
     population: '7,381',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -18822,6 +20498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_19197: {
     label: 'Wright',
+    iso3: null,
     population: '12,562',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -18831,6 +20508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20001: {
     label: 'Allen',
+    iso3: null,
     population: '12,369',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -18840,6 +20518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20003: {
     label: 'Anderson',
+    iso3: null,
     population: '7,858',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -18849,6 +20528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20005: {
     label: 'Atchison',
+    iso3: null,
     population: '16,073',
     casesPastWeek: 46,
     casesIncreasingPercentage: 48.38709677419355,
@@ -18858,6 +20538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20007: {
     label: 'Barber',
+    iso3: null,
     population: '4,427',
     casesPastWeek: 17,
     casesIncreasingPercentage: 6.25,
@@ -18867,6 +20548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20009: {
     label: 'Barton',
+    iso3: null,
     population: '25,779',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -18876,6 +20558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20011: {
     label: 'Bourbon',
+    iso3: null,
     population: '14,534',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -18885,6 +20568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20013: {
     label: 'Brown',
+    iso3: null,
     population: '9,564',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -18894,6 +20578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20015: {
     label: 'Butler',
+    iso3: null,
     population: '66,911',
     casesPastWeek: 244,
     casesIncreasingPercentage: 0.0,
@@ -18903,6 +20588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20017: {
     label: 'Chase',
+    iso3: null,
     population: '2,648',
     casesPastWeek: 8,
     casesIncreasingPercentage: 300.0,
@@ -18912,6 +20598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20019: {
     label: 'Chautauqua',
+    iso3: null,
     population: '3,250',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -18921,6 +20608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20021: {
     label: 'Cherokee',
+    iso3: null,
     population: '19,939',
     casesPastWeek: 71,
     casesIncreasingPercentage: 0.0,
@@ -18930,6 +20618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20023: {
     label: 'Cheyenne',
+    iso3: null,
     population: '2,657',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -18939,6 +20628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20025: {
     label: 'Clark',
+    iso3: null,
     population: '1,994',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -18948,6 +20638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20027: {
     label: 'Clay',
+    iso3: null,
     population: '8,002',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -18957,6 +20648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20029: {
     label: 'Cloud',
+    iso3: null,
     population: '8,786',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -18966,6 +20658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20031: {
     label: 'Coffey',
+    iso3: null,
     population: '8,179',
     casesPastWeek: 29,
     casesIncreasingPercentage: 3.571428571428581,
@@ -18975,6 +20668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20033: {
     label: 'Comanche',
+    iso3: null,
     population: '1,700',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -18984,6 +20678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20035: {
     label: 'Cowley',
+    iso3: null,
     population: '34,908',
     casesPastWeek: 157,
     casesIncreasingPercentage: 0.0,
@@ -18993,6 +20688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20037: {
     label: 'Crawford',
+    iso3: null,
     population: '38,818',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -19002,6 +20698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20039: {
     label: 'Decatur',
+    iso3: null,
     population: '2,827',
     casesPastWeek: 7,
     casesIncreasingPercentage: 75.0,
@@ -19011,6 +20708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20041: {
     label: 'Dickinson',
+    iso3: null,
     population: '18,466',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -19020,6 +20718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20043: {
     label: 'Doniphan',
+    iso3: null,
     population: '7,600',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -19029,6 +20728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20045: {
     label: 'Douglas',
+    iso3: null,
     population: '122,259',
     casesPastWeek: 348,
     casesIncreasingPercentage: 0.0,
@@ -19038,6 +20738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20047: {
     label: 'Edwards',
+    iso3: null,
     population: '2,798',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -19047,6 +20748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20049: {
     label: 'Elk',
+    iso3: null,
     population: '2,530',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -19056,6 +20758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20051: {
     label: 'Ellis',
+    iso3: null,
     population: '28,553',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -19065,6 +20768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20053: {
     label: 'Ellsworth',
+    iso3: null,
     population: '6,102',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -19074,6 +20778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20055: {
     label: 'Finney',
+    iso3: null,
     population: '36,467',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -19083,6 +20788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20057: {
     label: 'Ford',
+    iso3: null,
     population: '33,619',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -19092,6 +20798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20059: {
     label: 'Franklin',
+    iso3: null,
     population: '25,544',
     casesPastWeek: 116,
     casesIncreasingPercentage: 63.38028169014085,
@@ -19101,6 +20808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20061: {
     label: 'Geary',
+    iso3: null,
     population: '31,670',
     casesPastWeek: 151,
     casesIncreasingPercentage: 0.0,
@@ -19110,6 +20818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20063: {
     label: 'Gove',
+    iso3: null,
     population: '2,636',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -19119,6 +20828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20065: {
     label: 'Graham',
+    iso3: null,
     population: '2,482',
     casesPastWeek: 12,
     casesIncreasingPercentage: 19.999999999999996,
@@ -19128,6 +20838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20067: {
     label: 'Grant',
+    iso3: null,
     population: '7,150',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -19137,6 +20848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20069: {
     label: 'Gray',
+    iso3: null,
     population: '5,988',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -19146,6 +20858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20071: {
     label: 'Greeley',
+    iso3: null,
     population: '1,232',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -19155,6 +20868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20073: {
     label: 'Greenwood',
+    iso3: null,
     population: '5,982',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -19164,6 +20878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20075: {
     label: 'Hamilton',
+    iso3: null,
     population: '2,539',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -19173,6 +20888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20077: {
     label: 'Harper',
+    iso3: null,
     population: '5,436',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -19182,6 +20898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20079: {
     label: 'Harvey',
+    iso3: null,
     population: '34,429',
     casesPastWeek: -37,
     casesIncreasingPercentage: 0.0,
@@ -19191,6 +20908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20081: {
     label: 'Haskell',
+    iso3: null,
     population: '3,968',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -19200,6 +20918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20083: {
     label: 'Hodgeman',
+    iso3: null,
     population: '1,794',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -19209,6 +20928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20085: {
     label: 'Jackson',
+    iso3: null,
     population: '13,171',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -19218,6 +20938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20087: {
     label: 'Jefferson',
+    iso3: null,
     population: '19,043',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -19227,6 +20948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20089: {
     label: 'Jewell',
+    iso3: null,
     population: '2,879',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -19236,6 +20958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20091: {
     label: 'Johnson',
+    iso3: null,
     population: '602,401',
     casesPastWeek: 2924,
     casesIncreasingPercentage: 16.170043702820823,
@@ -19245,6 +20968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20093: {
     label: 'Kearny',
+    iso3: null,
     population: '3,838',
     casesPastWeek: 16,
     casesIncreasingPercentage: 60.00000000000001,
@@ -19254,6 +20978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20095: {
     label: 'Kingman',
+    iso3: null,
     population: '7,152',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -19263,6 +20988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20097: {
     label: 'Kiowa',
+    iso3: null,
     population: '2,475',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -19272,6 +20998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20099: {
     label: 'Labette',
+    iso3: null,
     population: '19,618',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -19281,6 +21008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20101: {
     label: 'Lane',
+    iso3: null,
     population: '1,535',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -19290,6 +21018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20103: {
     label: 'Leavenworth',
+    iso3: null,
     population: '81,758',
     casesPastWeek: 302,
     casesIncreasingPercentage: 11.439114391143912,
@@ -19299,6 +21028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20105: {
     label: 'Lincoln',
+    iso3: null,
     population: '2,962',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -19308,6 +21038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20107: {
     label: 'Linn',
+    iso3: null,
     population: '9,703',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -19317,6 +21048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20109: {
     label: 'Logan',
+    iso3: null,
     population: '2,794',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -19326,6 +21058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20111: {
     label: 'Lyon',
+    iso3: null,
     population: '33,195',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -19335,6 +21068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20113: {
     label: 'McPherson',
+    iso3: null,
     population: '28,542',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -19344,6 +21078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20115: {
     label: 'Marion',
+    iso3: null,
     population: '11,884',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -19353,6 +21088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20117: {
     label: 'Marshall',
+    iso3: null,
     population: '9,707',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -19362,6 +21098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20119: {
     label: 'Meade',
+    iso3: null,
     population: '4,033',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -19371,6 +21108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20121: {
     label: 'Miami',
+    iso3: null,
     population: '34,237',
     casesPastWeek: 175,
     casesIncreasingPercentage: 38.888888888888886,
@@ -19380,6 +21118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20123: {
     label: 'Mitchell',
+    iso3: null,
     population: '5,979',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -19389,6 +21128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20125: {
     label: 'Montgomery',
+    iso3: null,
     population: '31,829',
     casesPastWeek: 145,
     casesIncreasingPercentage: 0.0,
@@ -19398,6 +21138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20127: {
     label: 'Morris',
+    iso3: null,
     population: '5,620',
     casesPastWeek: 29,
     casesIncreasingPercentage: 163.63636363636363,
@@ -19407,6 +21148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20129: {
     label: 'Morton',
+    iso3: null,
     population: '2,587',
     casesPastWeek: 5,
     casesIncreasingPercentage: 25.0,
@@ -19416,6 +21158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20131: {
     label: 'Nemaha',
+    iso3: null,
     population: '10,231',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -19425,6 +21168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20133: {
     label: 'Neosho',
+    iso3: null,
     population: '16,007',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -19434,6 +21178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20135: {
     label: 'Ness',
+    iso3: null,
     population: '2,750',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -19443,6 +21188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20137: {
     label: 'Norton',
+    iso3: null,
     population: '5,361',
     casesPastWeek: 5,
     casesIncreasingPercentage: 150.0,
@@ -19452,6 +21198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20139: {
     label: 'Osage',
+    iso3: null,
     population: '15,949',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -19461,6 +21208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20141: {
     label: 'Osborne',
+    iso3: null,
     population: '3,421',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -19470,6 +21218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20143: {
     label: 'Ottawa',
+    iso3: null,
     population: '5,704',
     casesPastWeek: 36,
     casesIncreasingPercentage: 63.63636363636365,
@@ -19479,6 +21228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20145: {
     label: 'Pawnee',
+    iso3: null,
     population: '6,414',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -19488,6 +21238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20147: {
     label: 'Phillips',
+    iso3: null,
     population: '5,234',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -19497,6 +21248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20149: {
     label: 'Pottawatomie',
+    iso3: null,
     population: '24,383',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -19506,6 +21258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20151: {
     label: 'Pratt',
+    iso3: null,
     population: '9,164',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -19515,6 +21268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20153: {
     label: 'Rawlins',
+    iso3: null,
     population: '2,530',
     casesPastWeek: 13,
     casesIncreasingPercentage: 8.333333333333325,
@@ -19524,6 +21278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20155: {
     label: 'Reno',
+    iso3: null,
     population: '61,998',
     casesPastWeek: 237,
     casesIncreasingPercentage: 0.0,
@@ -19533,6 +21288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20157: {
     label: 'Republic',
+    iso3: null,
     population: '4,636',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -19542,6 +21298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20159: {
     label: 'Rice',
+    iso3: null,
     population: '9,537',
     casesPastWeek: 39,
     casesIncreasingPercentage: 18.181818181818187,
@@ -19551,6 +21308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20161: {
     label: 'Riley',
+    iso3: null,
     population: '74,232',
     casesPastWeek: 202,
     casesIncreasingPercentage: 0.0,
@@ -19560,6 +21318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20163: {
     label: 'Rooks',
+    iso3: null,
     population: '4,920',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -19569,6 +21328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20165: {
     label: 'Rush',
+    iso3: null,
     population: '3,036',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -19578,6 +21338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20167: {
     label: 'Russell',
+    iso3: null,
     population: '6,856',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -19587,6 +21348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20169: {
     label: 'Saline',
+    iso3: null,
     population: '54,224',
     casesPastWeek: 206,
     casesIncreasingPercentage: 0.0,
@@ -19596,6 +21358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20171: {
     label: 'Scott',
+    iso3: null,
     population: '4,823',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -19605,6 +21368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20173: {
     label: 'Sedgwick',
+    iso3: null,
     population: '516,042',
     casesPastWeek: 1778,
     casesIncreasingPercentage: 0.0,
@@ -19614,6 +21378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20175: {
     label: 'Seward',
+    iso3: null,
     population: '21,428',
     casesPastWeek: 54,
     casesIncreasingPercentage: 25.581395348837212,
@@ -19623,6 +21388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20177: {
     label: 'Shawnee',
+    iso3: null,
     population: '176,875',
     casesPastWeek: 717,
     casesIncreasingPercentage: 0.0,
@@ -19632,6 +21398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20179: {
     label: 'Sheridan',
+    iso3: null,
     population: '2,521',
     casesPastWeek: 13,
     casesIncreasingPercentage: 8.333333333333325,
@@ -19641,6 +21408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20181: {
     label: 'Sherman',
+    iso3: null,
     population: '5,917',
     casesPastWeek: 15,
     casesIncreasingPercentage: 275.0,
@@ -19650,6 +21418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20183: {
     label: 'Smith',
+    iso3: null,
     population: '3,583',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -19659,6 +21428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20185: {
     label: 'Stafford',
+    iso3: null,
     population: '4,156',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -19668,6 +21438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20187: {
     label: 'Stanton',
+    iso3: null,
     population: '2,006',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -19677,6 +21448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20189: {
     label: 'Stevens',
+    iso3: null,
     population: '5,485',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -19686,6 +21458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20191: {
     label: 'Sumner',
+    iso3: null,
     population: '22,836',
     casesPastWeek: 105,
     casesIncreasingPercentage: 0.0,
@@ -19695,6 +21468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20193: {
     label: 'Thomas',
+    iso3: null,
     population: '7,777',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -19704,6 +21478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20195: {
     label: 'Trego',
+    iso3: null,
     population: '2,803',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -19713,6 +21488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20197: {
     label: 'Wabaunsee',
+    iso3: null,
     population: '6,931',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -19722,6 +21498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20199: {
     label: 'Wallace',
+    iso3: null,
     population: '1,518',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -19731,6 +21508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20201: {
     label: 'Washington',
+    iso3: null,
     population: '5,406',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -19740,6 +21518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20203: {
     label: 'Wichita',
+    iso3: null,
     population: '2,119',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -19749,6 +21528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20205: {
     label: 'Wilson',
+    iso3: null,
     population: '8,525',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -19758,6 +21538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20207: {
     label: 'Woodson',
+    iso3: null,
     population: '3,138',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -19767,6 +21548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_20209: {
     label: 'Wyandotte',
+    iso3: null,
     population: '165,429',
     casesPastWeek: 534,
     casesIncreasingPercentage: 0.0,
@@ -19776,6 +21558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21001: {
     label: 'Adair',
+    iso3: null,
     population: '19,202',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -19785,6 +21568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21003: {
     label: 'Allen',
+    iso3: null,
     population: '21,315',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -19794,6 +21578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21005: {
     label: 'Anderson',
+    iso3: null,
     population: '22,747',
     casesPastWeek: 90,
     casesIncreasingPercentage: 2.2727272727272707,
@@ -19803,6 +21588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21007: {
     label: 'Ballard',
+    iso3: null,
     population: '7,888',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -19812,6 +21598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21009: {
     label: 'Barren',
+    iso3: null,
     population: '44,249',
     casesPastWeek: 244,
     casesIncreasingPercentage: 9.90990990990992,
@@ -19821,6 +21608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21011: {
     label: 'Bath',
+    iso3: null,
     population: '12,500',
     casesPastWeek: 45,
     casesIncreasingPercentage: 2.2727272727272707,
@@ -19830,6 +21618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21013: {
     label: 'Bell',
+    iso3: null,
     population: '26,032',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -19839,6 +21628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21015: {
     label: 'Boone',
+    iso3: null,
     population: '133,581',
     casesPastWeek: 661,
     casesIncreasingPercentage: 0.0,
@@ -19848,6 +21638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21017: {
     label: 'Bourbon',
+    iso3: null,
     population: '19,788',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -19857,6 +21648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21019: {
     label: 'Boyd',
+    iso3: null,
     population: '46,718',
     casesPastWeek: 216,
     casesIncreasingPercentage: 0.0,
@@ -19866,6 +21658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21021: {
     label: 'Boyle',
+    iso3: null,
     population: '30,060',
     casesPastWeek: 117,
     casesIncreasingPercentage: 98.30508474576271,
@@ -19875,6 +21668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21023: {
     label: 'Bracken',
+    iso3: null,
     population: '8,303',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -19884,6 +21678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21025: {
     label: 'Breathitt',
+    iso3: null,
     population: '12,630',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -19893,6 +21688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21027: {
     label: 'Breckinridge',
+    iso3: null,
     population: '20,477',
     casesPastWeek: 71,
     casesIncreasingPercentage: 0.0,
@@ -19902,6 +21698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21029: {
     label: 'Bullitt',
+    iso3: null,
     population: '81,676',
     casesPastWeek: 438,
     casesIncreasingPercentage: 35.603715170278626,
@@ -19911,6 +21708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21031: {
     label: 'Butler',
+    iso3: null,
     population: '12,879',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -19920,6 +21718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21033: {
     label: 'Caldwell',
+    iso3: null,
     population: '12,747',
     casesPastWeek: 62,
     casesIncreasingPercentage: 14.814814814814813,
@@ -19929,6 +21728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21035: {
     label: 'Calloway',
+    iso3: null,
     population: '39,001',
     casesPastWeek: 167,
     casesIncreasingPercentage: 0.0,
@@ -19938,6 +21738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21037: {
     label: 'Campbell',
+    iso3: null,
     population: '93,584',
     casesPastWeek: 627,
     casesIncreasingPercentage: 21.27659574468086,
@@ -19947,6 +21748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21039: {
     label: 'Carlisle',
+    iso3: null,
     population: '4,760',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -19956,6 +21758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21041: {
     label: 'Carroll',
+    iso3: null,
     population: '10,631',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -19965,6 +21768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21043: {
     label: 'Carter',
+    iso3: null,
     population: '26,797',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -19974,6 +21778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21045: {
     label: 'Casey',
+    iso3: null,
     population: '16,159',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -19983,6 +21788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21047: {
     label: 'Christian',
+    iso3: null,
     population: '70,461',
     casesPastWeek: 337,
     casesIncreasingPercentage: 14.62585034013606,
@@ -19992,6 +21798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21049: {
     label: 'Clark',
+    iso3: null,
     population: '36,263',
     casesPastWeek: 155,
     casesIncreasingPercentage: 0.0,
@@ -20001,6 +21808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21051: {
     label: 'Clay',
+    iso3: null,
     population: '19,901',
     casesPastWeek: 95,
     casesIncreasingPercentage: 11.764705882352944,
@@ -20010,6 +21818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21053: {
     label: 'Clinton',
+    iso3: null,
     population: '10,218',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -20019,6 +21828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21055: {
     label: 'Crittenden',
+    iso3: null,
     population: '8,806',
     casesPastWeek: 29,
     casesIncreasingPercentage: 26.086956521739136,
@@ -20028,6 +21838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21057: {
     label: 'Cumberland',
+    iso3: null,
     population: '6,614',
     casesPastWeek: 41,
     casesIncreasingPercentage: 20.58823529411764,
@@ -20037,6 +21848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21059: {
     label: 'Daviess',
+    iso3: null,
     population: '101,511',
     casesPastWeek: 587,
     casesIncreasingPercentage: 0.0,
@@ -20046,6 +21858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21061: {
     label: 'Edmonson',
+    iso3: null,
     population: '12,150',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -20055,6 +21868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21063: {
     label: 'Elliott',
+    iso3: null,
     population: '7,517',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -20064,6 +21878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21065: {
     label: 'Estill',
+    iso3: null,
     population: '14,106',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -20073,6 +21888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21067: {
     label: 'Fayette',
+    iso3: null,
     population: '323,152',
     casesPastWeek: 1396,
     casesIncreasingPercentage: 0.0,
@@ -20082,6 +21898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21069: {
     label: 'Fleming',
+    iso3: null,
     population: '14,581',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -20091,6 +21908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21071: {
     label: 'Floyd',
+    iso3: null,
     population: '35,589',
     casesPastWeek: 177,
     casesIncreasingPercentage: 0.0,
@@ -20100,6 +21918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21073: {
     label: 'Franklin',
+    iso3: null,
     population: '50,991',
     casesPastWeek: 246,
     casesIncreasingPercentage: 33.69565217391304,
@@ -20109,6 +21928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21075: {
     label: 'Fulton',
+    iso3: null,
     population: '5,969',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -20118,6 +21938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21077: {
     label: 'Gallatin',
+    iso3: null,
     population: '8,869',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -20127,6 +21948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21079: {
     label: 'Garrard',
+    iso3: null,
     population: '17,666',
     casesPastWeek: 95,
     casesIncreasingPercentage: 46.153846153846146,
@@ -20136,6 +21958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21081: {
     label: 'Grant',
+    iso3: null,
     population: '25,069',
     casesPastWeek: 85,
     casesIncreasingPercentage: 0.0,
@@ -20145,6 +21968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21083: {
     label: 'Graves',
+    iso3: null,
     population: '37,266',
     casesPastWeek: 170,
     casesIncreasingPercentage: 0.0,
@@ -20154,6 +21978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21085: {
     label: 'Grayson',
+    iso3: null,
     population: '26,427',
     casesPastWeek: 106,
     casesIncreasingPercentage: 3.9215686274509887,
@@ -20163,6 +21988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21087: {
     label: 'Green',
+    iso3: null,
     population: '10,941',
     casesPastWeek: 57,
     casesIncreasingPercentage: 46.153846153846146,
@@ -20172,6 +21998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21089: {
     label: 'Greenup',
+    iso3: null,
     population: '35,098',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -20181,6 +22008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21091: {
     label: 'Hancock',
+    iso3: null,
     population: '8,722',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -20190,6 +22018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21093: {
     label: 'Hardin',
+    iso3: null,
     population: '110,958',
     casesPastWeek: 415,
     casesIncreasingPercentage: 0.0,
@@ -20199,6 +22028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21095: {
     label: 'Harlan',
+    iso3: null,
     population: '26,010',
     casesPastWeek: 138,
     casesIncreasingPercentage: 26.60550458715596,
@@ -20208,6 +22038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21097: {
     label: 'Harrison',
+    iso3: null,
     population: '18,886',
     casesPastWeek: 115,
     casesIncreasingPercentage: 0.0,
@@ -20217,6 +22048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21099: {
     label: 'Hart',
+    iso3: null,
     population: '19,035',
     casesPastWeek: 120,
     casesIncreasingPercentage: 30.434782608695656,
@@ -20226,6 +22058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21101: {
     label: 'Henderson',
+    iso3: null,
     population: '45,210',
     casesPastWeek: 192,
     casesIncreasingPercentage: 0.0,
@@ -20235,6 +22068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21103: {
     label: 'Henry',
+    iso3: null,
     population: '16,126',
     casesPastWeek: 64,
     casesIncreasingPercentage: 18.518518518518512,
@@ -20244,6 +22078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21105: {
     label: 'Hickman',
+    iso3: null,
     population: '4,380',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -20253,6 +22088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21107: {
     label: 'Hopkins',
+    iso3: null,
     population: '44,686',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -20262,6 +22098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21109: {
     label: 'Jackson',
+    iso3: null,
     population: '13,329',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -20271,6 +22108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21111: {
     label: 'Jefferson',
+    iso3: null,
     population: '766,757',
     casesPastWeek: 3021,
     casesIncreasingPercentage: 0.0,
@@ -20280,6 +22118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21113: {
     label: 'Jessamine',
+    iso3: null,
     population: '54,115',
     casesPastWeek: 278,
     casesIncreasingPercentage: 22.466960352422905,
@@ -20289,6 +22128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21115: {
     label: 'Johnson',
+    iso3: null,
     population: '22,188',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -20298,6 +22138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21117: {
     label: 'Kenton',
+    iso3: null,
     population: '166,998',
     casesPastWeek: 825,
     casesIncreasingPercentage: 0.0,
@@ -20307,6 +22148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21119: {
     label: 'Knott',
+    iso3: null,
     population: '14,806',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -20316,6 +22158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21121: {
     label: 'Knox',
+    iso3: null,
     population: '31,145',
     casesPastWeek: 151,
     casesIncreasingPercentage: 0.0,
@@ -20325,6 +22168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21123: {
     label: 'Larue',
+    iso3: null,
     population: '14,398',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -20334,6 +22178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21125: {
     label: 'Laurel',
+    iso3: null,
     population: '60,813',
     casesPastWeek: 339,
     casesIncreasingPercentage: 0.0,
@@ -20343,6 +22188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21127: {
     label: 'Lawrence',
+    iso3: null,
     population: '15,317',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -20352,6 +22198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21129: {
     label: 'Lee',
+    iso3: null,
     population: '7,403',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -20361,6 +22208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21131: {
     label: 'Leslie',
+    iso3: null,
     population: '9,877',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -20370,6 +22218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21133: {
     label: 'Letcher',
+    iso3: null,
     population: '21,553',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -20379,6 +22228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21135: {
     label: 'Lewis',
+    iso3: null,
     population: '13,275',
     casesPastWeek: 42,
     casesIncreasingPercentage: 19.999999999999996,
@@ -20388,6 +22238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21137: {
     label: 'Lincoln',
+    iso3: null,
     population: '24,549',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -20397,6 +22248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21139: {
     label: 'Livingston',
+    iso3: null,
     population: '9,194',
     casesPastWeek: 31,
     casesIncreasingPercentage: 14.814814814814813,
@@ -20406,6 +22258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21141: {
     label: 'Logan',
+    iso3: null,
     population: '27,102',
     casesPastWeek: 113,
     casesIncreasingPercentage: 7.619047619047614,
@@ -20415,6 +22268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21143: {
     label: 'Lyon',
+    iso3: null,
     population: '8,210',
     casesPastWeek: 22,
     casesIncreasingPercentage: 37.5,
@@ -20424,6 +22278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21145: {
     label: 'McCracken',
+    iso3: null,
     population: '65,418',
     casesPastWeek: 202,
     casesIncreasingPercentage: 0.0,
@@ -20433,6 +22288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21147: {
     label: 'McCreary',
+    iso3: null,
     population: '17,231',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -20442,6 +22298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21149: {
     label: 'McLean',
+    iso3: null,
     population: '9,207',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -20451,6 +22308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21151: {
     label: 'Madison',
+    iso3: null,
     population: '92,987',
     casesPastWeek: 435,
     casesIncreasingPercentage: 0.0,
@@ -20460,6 +22318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21153: {
     label: 'Magoffin',
+    iso3: null,
     population: '12,161',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -20469,6 +22328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21155: {
     label: 'Marion',
+    iso3: null,
     population: '19,273',
     casesPastWeek: 79,
     casesIncreasingPercentage: 9.722222222222232,
@@ -20478,6 +22338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21157: {
     label: 'Marshall',
+    iso3: null,
     population: '31,100',
     casesPastWeek: 163,
     casesIncreasingPercentage: 26.356589147286826,
@@ -20487,6 +22348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21159: {
     label: 'Martin',
+    iso3: null,
     population: '11,195',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -20496,6 +22358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21161: {
     label: 'Mason',
+    iso3: null,
     population: '17,070',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -20505,6 +22368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21163: {
     label: 'Meade',
+    iso3: null,
     population: '28,572',
     casesPastWeek: 144,
     casesIncreasingPercentage: 33.33333333333333,
@@ -20514,6 +22378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21165: {
     label: 'Menifee',
+    iso3: null,
     population: '6,489',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -20523,6 +22388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21167: {
     label: 'Mercer',
+    iso3: null,
     population: '21,933',
     casesPastWeek: 124,
     casesIncreasingPercentage: 0.0,
@@ -20532,6 +22398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21169: {
     label: 'Metcalfe',
+    iso3: null,
     population: '10,071',
     casesPastWeek: 38,
     casesIncreasingPercentage: 58.33333333333333,
@@ -20541,6 +22408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21171: {
     label: 'Monroe',
+    iso3: null,
     population: '10,650',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -20550,6 +22418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21173: {
     label: 'Montgomery',
+    iso3: null,
     population: '28,157',
     casesPastWeek: 113,
     casesIncreasingPercentage: 0.0,
@@ -20559,6 +22428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21175: {
     label: 'Morgan',
+    iso3: null,
     population: '13,309',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -20568,6 +22438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21177: {
     label: 'Muhlenberg',
+    iso3: null,
     population: '30,622',
     casesPastWeek: 105,
     casesIncreasingPercentage: 0.0,
@@ -20577,6 +22448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21179: {
     label: 'Nelson',
+    iso3: null,
     population: '46,233',
     casesPastWeek: 244,
     casesIncreasingPercentage: 0.0,
@@ -20586,6 +22458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21181: {
     label: 'Nicholas',
+    iso3: null,
     population: '7,269',
     casesPastWeek: 26,
     casesIncreasingPercentage: 8.333333333333325,
@@ -20595,6 +22468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21183: {
     label: 'Ohio',
+    iso3: null,
     population: '23,994',
     casesPastWeek: 112,
     casesIncreasingPercentage: 0.0,
@@ -20604,6 +22478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21185: {
     label: 'Oldham',
+    iso3: null,
     population: '66,799',
     casesPastWeek: 525,
     casesIncreasingPercentage: 0.0,
@@ -20613,6 +22488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21187: {
     label: 'Owen',
+    iso3: null,
     population: '10,901',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -20622,6 +22498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21189: {
     label: 'Owsley',
+    iso3: null,
     population: '4,415',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -20631,6 +22508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21191: {
     label: 'Pendleton',
+    iso3: null,
     population: '14,590',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -20640,6 +22518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21193: {
     label: 'Perry',
+    iso3: null,
     population: '25,758',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -20649,6 +22528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21195: {
     label: 'Pike',
+    iso3: null,
     population: '57,876',
     casesPastWeek: 265,
     casesIncreasingPercentage: 0.0,
@@ -20658,6 +22538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21197: {
     label: 'Powell',
+    iso3: null,
     population: '12,359',
     casesPastWeek: 52,
     casesIncreasingPercentage: 48.57142857142858,
@@ -20667,6 +22548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21199: {
     label: 'Pulaski',
+    iso3: null,
     population: '64,979',
     casesPastWeek: 272,
     casesIncreasingPercentage: 0.0,
@@ -20676,6 +22558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21201: {
     label: 'Robertson',
+    iso3: null,
     population: '2,108',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -20685,6 +22568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21203: {
     label: 'Rockcastle',
+    iso3: null,
     population: '16,695',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -20694,6 +22578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21205: {
     label: 'Rowan',
+    iso3: null,
     population: '24,460',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -20703,6 +22588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21207: {
     label: 'Russell',
+    iso3: null,
     population: '17,923',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -20712,6 +22598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21209: {
     label: 'Scott',
+    iso3: null,
     population: '57,004',
     casesPastWeek: 223,
     casesIncreasingPercentage: 0.0,
@@ -20721,6 +22608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21211: {
     label: 'Shelby',
+    iso3: null,
     population: '49,024',
     casesPastWeek: 178,
     casesIncreasingPercentage: 0.0,
@@ -20730,6 +22618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21213: {
     label: 'Simpson',
+    iso3: null,
     population: '18,572',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -20739,6 +22628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21215: {
     label: 'Spencer',
+    iso3: null,
     population: '19,351',
     casesPastWeek: 74,
     casesIncreasingPercentage: 13.846153846153841,
@@ -20748,6 +22638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21217: {
     label: 'Taylor',
+    iso3: null,
     population: '25,769',
     casesPastWeek: 95,
     casesIncreasingPercentage: 0.0,
@@ -20757,6 +22648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21219: {
     label: 'Todd',
+    iso3: null,
     population: '12,294',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -20766,6 +22658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21221: {
     label: 'Trigg',
+    iso3: null,
     population: '14,651',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -20775,6 +22668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21223: {
     label: 'Trimble',
+    iso3: null,
     population: '8,471',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -20784,6 +22678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21225: {
     label: 'Union',
+    iso3: null,
     population: '14,381',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -20793,6 +22688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21227: {
     label: 'Warren',
+    iso3: null,
     population: '132,896',
     casesPastWeek: 714,
     casesIncreasingPercentage: 7.36842105263158,
@@ -20802,6 +22698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21229: {
     label: 'Washington',
+    iso3: null,
     population: '12,095',
     casesPastWeek: 74,
     casesIncreasingPercentage: 0.0,
@@ -20811,6 +22708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21231: {
     label: 'Wayne',
+    iso3: null,
     population: '20,333',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -20820,6 +22718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21233: {
     label: 'Webster',
+    iso3: null,
     population: '12,942',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -20829,6 +22728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21235: {
     label: 'Whitley',
+    iso3: null,
     population: '36,264',
     casesPastWeek: 187,
     casesIncreasingPercentage: 0.0,
@@ -20838,6 +22738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21237: {
     label: 'Wolfe',
+    iso3: null,
     population: '7,157',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -20847,6 +22748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_21239: {
     label: 'Woodford',
+    iso3: null,
     population: '26,734',
     casesPastWeek: 109,
     casesIncreasingPercentage: 10.1010101010101,
@@ -20856,6 +22758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22001: {
     label: 'Acadia',
+    iso3: null,
     population: '62,045',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -20865,6 +22768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22003: {
     label: 'Allen',
+    iso3: null,
     population: '25,627',
     casesPastWeek: 85,
     casesIncreasingPercentage: 21.42857142857142,
@@ -20874,6 +22778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22005: {
     label: 'Ascension',
+    iso3: null,
     population: '126,604',
     casesPastWeek: 360,
     casesIncreasingPercentage: 0.0,
@@ -20883,6 +22788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22007: {
     label: 'Assumption',
+    iso3: null,
     population: '21,891',
     casesPastWeek: 156,
     casesIncreasingPercentage: 41.81818181818182,
@@ -20892,6 +22798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22009: {
     label: 'Avoyelles',
+    iso3: null,
     population: '40,144',
     casesPastWeek: 158,
     casesIncreasingPercentage: 0.0,
@@ -20901,6 +22808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22011: {
     label: 'Beauregard',
+    iso3: null,
     population: '37,497',
     casesPastWeek: 122,
     casesIncreasingPercentage: 0.0,
@@ -20910,6 +22818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22013: {
     label: 'Bienville',
+    iso3: null,
     population: '13,241',
     casesPastWeek: 77,
     casesIncreasingPercentage: 5.47945205479452,
@@ -20919,6 +22828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22015: {
     label: 'Bossier',
+    iso3: null,
     population: '127,039',
     casesPastWeek: 582,
     casesIncreasingPercentage: 0.34482758620688614,
@@ -20928,6 +22838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22017: {
     label: 'Caddo',
+    iso3: null,
     population: '240,204',
     casesPastWeek: 982,
     casesIncreasingPercentage: 0.0,
@@ -20937,6 +22848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22019: {
     label: 'Calcasieu',
+    iso3: null,
     population: '203,436',
     casesPastWeek: 772,
     casesIncreasingPercentage: 0.0,
@@ -20946,6 +22858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22021: {
     label: 'Caldwell',
+    iso3: null,
     population: '9,918',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -20955,6 +22868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22023: {
     label: 'Cameron',
+    iso3: null,
     population: '6,973',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -20964,6 +22878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22025: {
     label: 'Catahoula',
+    iso3: null,
     population: '9,494',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -20973,6 +22888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22027: {
     label: 'Claiborne',
+    iso3: null,
     population: '15,670',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -20982,6 +22898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22029: {
     label: 'Concordia',
+    iso3: null,
     population: '19,259',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -20991,6 +22908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22031: {
     label: 'De Soto',
+    iso3: null,
     population: '27,463',
     casesPastWeek: 160,
     casesIncreasingPercentage: 36.75213675213676,
@@ -21000,6 +22918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22033: {
     label: 'East Baton Rouge',
+    iso3: null,
     population: '440,059',
     casesPastWeek: 987,
     casesIncreasingPercentage: 0.0,
@@ -21009,6 +22928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22035: {
     label: 'East Carroll',
+    iso3: null,
     population: '6,861',
     casesPastWeek: 23,
     casesIncreasingPercentage: 9.523809523809534,
@@ -21018,6 +22938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22037: {
     label: 'East Feliciana',
+    iso3: null,
     population: '19,135',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -21027,6 +22948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22039: {
     label: 'Evangeline',
+    iso3: null,
     population: '33,395',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -21036,6 +22958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22041: {
     label: 'Franklin',
+    iso3: null,
     population: '20,015',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -21045,6 +22968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22043: {
     label: 'Grant',
+    iso3: null,
     population: '22,389',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -21054,6 +22978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22045: {
     label: 'Iberia',
+    iso3: null,
     population: '69,830',
     casesPastWeek: 222,
     casesIncreasingPercentage: 0.0,
@@ -21063,6 +22988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22047: {
     label: 'Iberville',
+    iso3: null,
     population: '32,511',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -21072,6 +22998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22049: {
     label: 'Jackson',
+    iso3: null,
     population: '15,744',
     casesPastWeek: 64,
     casesIncreasingPercentage: 56.09756097560976,
@@ -21081,6 +23008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22051: {
     label: 'Jefferson',
+    iso3: null,
     population: '432,493',
     casesPastWeek: 1584,
     casesIncreasingPercentage: 0.0,
@@ -21090,6 +23018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22053: {
     label: 'Jefferson Davis',
+    iso3: null,
     population: '31,368',
     casesPastWeek: 103,
     casesIncreasingPercentage: 0.0,
@@ -21099,6 +23028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22055: {
     label: 'Lafayette',
+    iso3: null,
     population: '244,390',
     casesPastWeek: 650,
     casesIncreasingPercentage: 0.0,
@@ -21108,6 +23038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22057: {
     label: 'Lafourche',
+    iso3: null,
     population: '97,614',
     casesPastWeek: 416,
     casesIncreasingPercentage: 0.0,
@@ -21117,6 +23048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22059: {
     label: 'LaSalle',
+    iso3: null,
     population: '14,892',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -21126,6 +23058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22061: {
     label: 'Lincoln',
+    iso3: null,
     population: '46,742',
     casesPastWeek: 186,
     casesIncreasingPercentage: 21.568627450980383,
@@ -21135,6 +23068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22063: {
     label: 'Livingston',
+    iso3: null,
     population: '140,789',
     casesPastWeek: 329,
     casesIncreasingPercentage: 0.0,
@@ -21144,6 +23078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22065: {
     label: 'Madison',
+    iso3: null,
     population: '10,951',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -21153,6 +23088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22067: {
     label: 'Morehouse',
+    iso3: null,
     population: '24,874',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -21162,6 +23098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22069: {
     label: 'Natchitoches',
+    iso3: null,
     population: '38,158',
     casesPastWeek: 165,
     casesIncreasingPercentage: 5.095541401273884,
@@ -21171,6 +23108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22071: {
     label: 'Orleans',
+    iso3: null,
     population: '390,144',
     casesPastWeek: 882,
     casesIncreasingPercentage: 0.0,
@@ -21180,6 +23118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22073: {
     label: 'Ouachita',
+    iso3: null,
     population: '153,279',
     casesPastWeek: 528,
     casesIncreasingPercentage: 0.0,
@@ -21189,6 +23128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22075: {
     label: 'Plaquemines',
+    iso3: null,
     population: '23,197',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -21198,6 +23138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22077: {
     label: 'Pointe Coupee',
+    iso3: null,
     population: '21,730',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -21207,6 +23148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22079: {
     label: 'Rapides',
+    iso3: null,
     population: '129,648',
     casesPastWeek: 433,
     casesIncreasingPercentage: 0.0,
@@ -21216,6 +23158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22081: {
     label: 'Red River',
+    iso3: null,
     population: '8,442',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -21225,6 +23168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22083: {
     label: 'Richland',
+    iso3: null,
     population: '20,122',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -21234,6 +23178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22085: {
     label: 'Sabine',
+    iso3: null,
     population: '23,884',
     casesPastWeek: 103,
     casesIncreasingPercentage: 1.980198019801982,
@@ -21243,6 +23188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22087: {
     label: 'St. Bernard',
+    iso3: null,
     population: '47,244',
     casesPastWeek: 180,
     casesIncreasingPercentage: 0.0,
@@ -21252,6 +23198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22089: {
     label: 'St. Charles',
+    iso3: null,
     population: '53,100',
     casesPastWeek: 209,
     casesIncreasingPercentage: 0.0,
@@ -21261,6 +23208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22091: {
     label: 'St. Helena',
+    iso3: null,
     population: '10,132',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -21270,6 +23218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22093: {
     label: 'St. James',
+    iso3: null,
     population: '21,096',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -21279,6 +23228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22095: {
     label: 'St. John the Baptist',
+    iso3: null,
     population: '42,837',
     casesPastWeek: 121,
     casesIncreasingPercentage: 0.0,
@@ -21288,6 +23238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22097: {
     label: 'St. Landry',
+    iso3: null,
     population: '82,124',
     casesPastWeek: 247,
     casesIncreasingPercentage: 0.0,
@@ -21297,6 +23248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22099: {
     label: 'St. Martin',
+    iso3: null,
     population: '53,431',
     casesPastWeek: 147,
     casesIncreasingPercentage: 0.0,
@@ -21306,6 +23258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22101: {
     label: 'St. Mary',
+    iso3: null,
     population: '49,348',
     casesPastWeek: 167,
     casesIncreasingPercentage: 2.4539877300613577,
@@ -21315,6 +23268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22103: {
     label: 'St. Tammany',
+    iso3: null,
     population: '260,419',
     casesPastWeek: 955,
     casesIncreasingPercentage: 0.0,
@@ -21324,6 +23278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22105: {
     label: 'Tangipahoa',
+    iso3: null,
     population: '134,758',
     casesPastWeek: 386,
     casesIncreasingPercentage: 0.0,
@@ -21333,6 +23288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22107: {
     label: 'Tensas',
+    iso3: null,
     population: '4,334',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -21342,6 +23298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22109: {
     label: 'Terrebonne',
+    iso3: null,
     population: '110,461',
     casesPastWeek: 526,
     casesIncreasingPercentage: 8.230452674897126,
@@ -21351,6 +23308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22111: {
     label: 'Union',
+    iso3: null,
     population: '22,108',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -21360,6 +23318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22113: {
     label: 'Vermilion',
+    iso3: null,
     population: '59,511',
     casesPastWeek: 191,
     casesIncreasingPercentage: 0.0,
@@ -21369,6 +23328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22115: {
     label: 'Vernon',
+    iso3: null,
     population: '47,429',
     casesPastWeek: 85,
     casesIncreasingPercentage: 0.0,
@@ -21378,6 +23338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22117: {
     label: 'Washington',
+    iso3: null,
     population: '46,194',
     casesPastWeek: 89,
     casesIncreasingPercentage: 0.0,
@@ -21387,6 +23348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22119: {
     label: 'Webster',
+    iso3: null,
     population: '38,340',
     casesPastWeek: 152,
     casesIncreasingPercentage: 0.0,
@@ -21396,6 +23358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22121: {
     label: 'West Baton Rouge',
+    iso3: null,
     population: '26,465',
     casesPastWeek: 68,
     casesIncreasingPercentage: 0.0,
@@ -21405,6 +23368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22123: {
     label: 'West Carroll',
+    iso3: null,
     population: '10,830',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -21414,6 +23378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22125: {
     label: 'West Feliciana',
+    iso3: null,
     population: '15,568',
     casesPastWeek: 41,
     casesIncreasingPercentage: 115.78947368421053,
@@ -21423,6 +23388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_22127: {
     label: 'Winn',
+    iso3: null,
     population: '13,904',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -21432,6 +23398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23001: {
     label: 'Androscoggin',
+    iso3: null,
     population: '108,277',
     casesPastWeek: 397,
     casesIncreasingPercentage: 0.0,
@@ -21441,6 +23408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23003: {
     label: 'Aroostook',
+    iso3: null,
     population: '67,055',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -21450,6 +23418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23005: {
     label: 'Cumberland',
+    iso3: null,
     population: '295,003',
     casesPastWeek: 769,
     casesIncreasingPercentage: 0.0,
@@ -21459,6 +23428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23007: {
     label: 'Franklin',
+    iso3: null,
     population: '30,199',
     casesPastWeek: 102,
     casesIncreasingPercentage: 104.0,
@@ -21468,6 +23438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23009: {
     label: 'Hancock',
+    iso3: null,
     population: '54,987',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -21477,6 +23448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23011: {
     label: 'Kennebec',
+    iso3: null,
     population: '122,302',
     casesPastWeek: 248,
     casesIncreasingPercentage: 0.0,
@@ -21486,6 +23458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23013: {
     label: 'Knox',
+    iso3: null,
     population: '39,772',
     casesPastWeek: 58,
     casesIncreasingPercentage: 0.0,
@@ -21495,6 +23468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23015: {
     label: 'Lincoln',
+    iso3: null,
     population: '34,634',
     casesPastWeek: 44,
     casesIncreasingPercentage: 15.789473684210531,
@@ -21504,6 +23478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23017: {
     label: 'Oxford',
+    iso3: null,
     population: '57,975',
     casesPastWeek: 195,
     casesIncreasingPercentage: 0.0,
@@ -21513,6 +23488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23019: {
     label: 'Penobscot',
+    iso3: null,
     population: '152,148',
     casesPastWeek: 252,
     casesIncreasingPercentage: 0.0,
@@ -21522,6 +23498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23021: {
     label: 'Piscataquis',
+    iso3: null,
     population: '16,785',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -21531,6 +23508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23023: {
     label: 'Sagadahoc',
+    iso3: null,
     population: '35,856',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -21540,6 +23518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23025: {
     label: 'Somerset',
+    iso3: null,
     population: '50,484',
     casesPastWeek: 92,
     casesIncreasingPercentage: 3.370786516853941,
@@ -21549,6 +23528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23027: {
     label: 'Waldo',
+    iso3: null,
     population: '39,715',
     casesPastWeek: 36,
     casesIncreasingPercentage: 43.99999999999999,
@@ -21558,6 +23538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23029: {
     label: 'Washington',
+    iso3: null,
     population: '31,379',
     casesPastWeek: 58,
     casesIncreasingPercentage: 0.0,
@@ -21567,6 +23548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_23031: {
     label: 'York',
+    iso3: null,
     population: '207,641',
     casesPastWeek: 596,
     casesIncreasingPercentage: 0.0,
@@ -21576,6 +23558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24001: {
     label: 'Allegany',
+    iso3: null,
     population: '70,416',
     casesPastWeek: 180,
     casesIncreasingPercentage: 38.46153846153846,
@@ -21585,6 +23568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24003: {
     label: 'Anne Arundel',
+    iso3: null,
     population: '579,234',
     casesPastWeek: 1644,
     casesIncreasingPercentage: 0.0,
@@ -21594,6 +23578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24005: {
     label: 'Baltimore',
+    iso3: null,
     population: '827,370',
     casesPastWeek: 1614,
     casesIncreasingPercentage: 0.0,
@@ -21603,6 +23588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24009: {
     label: 'Calvert',
+    iso3: null,
     population: '92,525',
     casesPastWeek: 245,
     casesIncreasingPercentage: 0.0,
@@ -21612,6 +23598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24011: {
     label: 'Caroline',
+    iso3: null,
     population: '33,406',
     casesPastWeek: 119,
     casesIncreasingPercentage: 0.0,
@@ -21621,6 +23608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24013: {
     label: 'Carroll',
+    iso3: null,
     population: '168,447',
     casesPastWeek: 308,
     casesIncreasingPercentage: 0.0,
@@ -21630,6 +23618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24015: {
     label: 'Cecil',
+    iso3: null,
     population: '102,855',
     casesPastWeek: 240,
     casesIncreasingPercentage: 0.0,
@@ -21639,6 +23628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24017: {
     label: 'Charles',
+    iso3: null,
     population: '163,257',
     casesPastWeek: 403,
     casesIncreasingPercentage: 0.0,
@@ -21648,6 +23638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24019: {
     label: 'Dorchester',
+    iso3: null,
     population: '31,929',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -21657,6 +23648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24021: {
     label: 'Frederick',
+    iso3: null,
     population: '259,547',
     casesPastWeek: 816,
     casesIncreasingPercentage: 0.0,
@@ -21666,6 +23658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24023: {
     label: 'Garrett',
+    iso3: null,
     population: '29,014',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -21675,6 +23668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24025: {
     label: 'Harford',
+    iso3: null,
     population: '255,441',
     casesPastWeek: 562,
     casesIncreasingPercentage: 0.0,
@@ -21684,6 +23678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24027: {
     label: 'Howard',
+    iso3: null,
     population: '325,690',
     casesPastWeek: 595,
     casesIncreasingPercentage: 0.0,
@@ -21693,6 +23688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24029: {
     label: 'Kent',
+    iso3: null,
     population: '19,422',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -21702,6 +23698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24031: {
     label: 'Montgomery',
+    iso3: null,
     population: '1,050,688',
     casesPastWeek: 2488,
     casesIncreasingPercentage: 0.0,
@@ -21711,6 +23708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24033: {
     label: "Prince George's",
+    iso3: null,
     population: '909,327',
     casesPastWeek: 2635,
     casesIncreasingPercentage: 0.0,
@@ -21720,6 +23718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24035: {
     label: "Queen Anne's",
+    iso3: null,
     population: '50,381',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -21729,6 +23728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24037: {
     label: "St. Mary's",
+    iso3: null,
     population: '113,510',
     casesPastWeek: 293,
     casesIncreasingPercentage: 0.0,
@@ -21738,6 +23738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24039: {
     label: 'Somerset',
+    iso3: null,
     population: '25,616',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -21747,6 +23748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24041: {
     label: 'Talbot',
+    iso3: null,
     population: '37,181',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -21756,6 +23758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24043: {
     label: 'Washington',
+    iso3: null,
     population: '151,049',
     casesPastWeek: 511,
     casesIncreasingPercentage: 0.0,
@@ -21765,6 +23768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24045: {
     label: 'Wicomico',
+    iso3: null,
     population: '103,609',
     casesPastWeek: 352,
     casesIncreasingPercentage: 0.0,
@@ -21774,6 +23778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24047: {
     label: 'Worcester',
+    iso3: null,
     population: '52,276',
     casesPastWeek: 177,
     casesIncreasingPercentage: 0.0,
@@ -21783,6 +23788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_24510: {
     label: 'Baltimore City',
+    iso3: null,
     population: '593,490',
     casesPastWeek: 1276,
     casesIncreasingPercentage: 0.0,
@@ -21792,6 +23798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Massachusetts_Dukes_and_Nantucket: {
     label: 'Dukes and Nantucket',
+    iso3: null,
     population: '28,731',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.8620689655172376,
@@ -21801,6 +23808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25001: {
     label: 'Barnstable',
+    iso3: null,
     population: '212,990',
     casesPastWeek: 821,
     casesIncreasingPercentage: 0.0,
@@ -21810,6 +23818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25003: {
     label: 'Berkshire',
+    iso3: null,
     population: '124,944',
     casesPastWeek: 330,
     casesIncreasingPercentage: 0.0,
@@ -21819,6 +23828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25005: {
     label: 'Bristol',
+    iso3: null,
     population: '565,217',
     casesPastWeek: 3141,
     casesIncreasingPercentage: 0.0,
@@ -21828,6 +23838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25009: {
     label: 'Essex',
+    iso3: null,
     population: '789,034',
     casesPastWeek: 3502,
     casesIncreasingPercentage: 0.0,
@@ -21837,6 +23848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25011: {
     label: 'Franklin',
+    iso3: null,
     population: '70,180',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -21846,6 +23858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25013: {
     label: 'Hampden',
+    iso3: null,
     population: '466,372',
     casesPastWeek: 2234,
     casesIncreasingPercentage: 0.0,
@@ -21855,6 +23868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25015: {
     label: 'Hampshire',
+    iso3: null,
     population: '160,830',
     casesPastWeek: 353,
     casesIncreasingPercentage: 0.0,
@@ -21864,6 +23878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25017: {
     label: 'Middlesex',
+    iso3: null,
     population: '1,611,699',
     casesPastWeek: 5089,
     casesIncreasingPercentage: 0.0,
@@ -21873,6 +23888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25021: {
     label: 'Norfolk',
+    iso3: null,
     population: '706,775',
     casesPastWeek: 2840,
     casesIncreasingPercentage: 0.0,
@@ -21882,6 +23898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25023: {
     label: 'Plymouth',
+    iso3: null,
     population: '521,202',
     casesPastWeek: 2263,
     casesIncreasingPercentage: 0.0,
@@ -21891,6 +23908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25025: {
     label: 'Suffolk',
+    iso3: null,
     population: '803,907',
     casesPastWeek: 3401,
     casesIncreasingPercentage: 0.0,
@@ -21900,6 +23918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_25027: {
     label: 'Worcester',
+    iso3: null,
     population: '830,622',
     casesPastWeek: 3298,
     casesIncreasingPercentage: 0.0,
@@ -21909,6 +23928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26001: {
     label: 'Alcona',
+    iso3: null,
     population: '10,405',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -21918,6 +23938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26003: {
     label: 'Alger',
+    iso3: null,
     population: '9,108',
     casesPastWeek: 37,
     casesIncreasingPercentage: 27.586206896551737,
@@ -21927,6 +23948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26005: {
     label: 'Allegan',
+    iso3: null,
     population: '118,081',
     casesPastWeek: 243,
     casesIncreasingPercentage: 0.0,
@@ -21936,6 +23958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26007: {
     label: 'Alpena',
+    iso3: null,
     population: '28,405',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -21945,6 +23968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26009: {
     label: 'Antrim',
+    iso3: null,
     population: '23,324',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -21954,6 +23978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26011: {
     label: 'Arenac',
+    iso3: null,
     population: '14,883',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -21963,6 +23988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26013: {
     label: 'Baraga',
+    iso3: null,
     population: '8,209',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -21972,6 +23998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26015: {
     label: 'Barry',
+    iso3: null,
     population: '61,550',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -21981,6 +24008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26017: {
     label: 'Bay',
+    iso3: null,
     population: '103,126',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -21990,6 +24018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26019: {
     label: 'Benzie',
+    iso3: null,
     population: '17,766',
     casesPastWeek: 48,
     casesIncreasingPercentage: 54.83870967741935,
@@ -21999,6 +24028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26021: {
     label: 'Berrien',
+    iso3: null,
     population: '153,401',
     casesPastWeek: 304,
     casesIncreasingPercentage: 0.0,
@@ -22008,6 +24038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26023: {
     label: 'Branch',
+    iso3: null,
     population: '43,517',
     casesPastWeek: 119,
     casesIncreasingPercentage: 0.0,
@@ -22017,6 +24048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26025: {
     label: 'Calhoun',
+    iso3: null,
     population: '134,159',
     casesPastWeek: 205,
     casesIncreasingPercentage: 0.0,
@@ -22026,6 +24058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26027: {
     label: 'Cass',
+    iso3: null,
     population: '51,787',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -22035,6 +24068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26029: {
     label: 'Charlevoix',
+    iso3: null,
     population: '26,143',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -22044,6 +24078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26031: {
     label: 'Cheboygan',
+    iso3: null,
     population: '25,276',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -22053,6 +24088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26033: {
     label: 'Chippewa',
+    iso3: null,
     population: '37,349',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -22062,6 +24098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26035: {
     label: 'Clare',
+    iso3: null,
     population: '30,950',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -22071,6 +24108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26037: {
     label: 'Clinton',
+    iso3: null,
     population: '79,595',
     casesPastWeek: 152,
     casesIncreasingPercentage: 0.0,
@@ -22080,6 +24118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26039: {
     label: 'Crawford',
+    iso3: null,
     population: '14,029',
     casesPastWeek: 20,
     casesIncreasingPercentage: 81.81818181818181,
@@ -22089,6 +24128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26041: {
     label: 'Delta',
+    iso3: null,
     population: '35,784',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -22098,6 +24138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26043: {
     label: 'Dickinson',
+    iso3: null,
     population: '25,239',
     casesPastWeek: 33,
     casesIncreasingPercentage: 17.85714285714286,
@@ -22107,6 +24148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26045: {
     label: 'Eaton',
+    iso3: null,
     population: '110,268',
     casesPastWeek: 226,
     casesIncreasingPercentage: 0.0,
@@ -22116,6 +24158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26047: {
     label: 'Emmet',
+    iso3: null,
     population: '33,415',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -22125,6 +24168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26049: {
     label: 'Genesee',
+    iso3: null,
     population: '405,813',
     casesPastWeek: 508,
     casesIncreasingPercentage: 0.0,
@@ -22134,6 +24178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26051: {
     label: 'Gladwin',
+    iso3: null,
     population: '25,449',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -22143,6 +24188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26053: {
     label: 'Gogebic',
+    iso3: null,
     population: '13,975',
     casesPastWeek: 46,
     casesIncreasingPercentage: 14.999999999999991,
@@ -22152,6 +24198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26055: {
     label: 'Grand Traverse',
+    iso3: null,
     population: '93,088',
     casesPastWeek: 163,
     casesIncreasingPercentage: 0.0,
@@ -22161,6 +24208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26057: {
     label: 'Gratiot',
+    iso3: null,
     population: '40,711',
     casesPastWeek: 68,
     casesIncreasingPercentage: 0.0,
@@ -22170,6 +24218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26059: {
     label: 'Hillsdale',
+    iso3: null,
     population: '45,605',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -22179,6 +24228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26061: {
     label: 'Houghton',
+    iso3: null,
     population: '35,684',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -22188,6 +24238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26063: {
     label: 'Huron',
+    iso3: null,
     population: '30,981',
     casesPastWeek: 139,
     casesIncreasingPercentage: 32.38095238095238,
@@ -22197,6 +24248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26065: {
     label: 'Ingham',
+    iso3: null,
     population: '292,406',
     casesPastWeek: 508,
     casesIncreasingPercentage: 0.0,
@@ -22206,6 +24258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26067: {
     label: 'Ionia',
+    iso3: null,
     population: '64,697',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -22215,6 +24268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26069: {
     label: 'Iosco',
+    iso3: null,
     population: '25,127',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -22224,6 +24278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26071: {
     label: 'Iron',
+    iso3: null,
     population: '11,066',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -22233,6 +24288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26073: {
     label: 'Isabella',
+    iso3: null,
     population: '69,872',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -22242,6 +24298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26075: {
     label: 'Jackson',
+    iso3: null,
     population: '158,510',
     casesPastWeek: 242,
     casesIncreasingPercentage: 0.0,
@@ -22251,6 +24308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26077: {
     label: 'Kalamazoo',
+    iso3: null,
     population: '265,066',
     casesPastWeek: 325,
     casesIncreasingPercentage: 0.0,
@@ -22260,6 +24318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26079: {
     label: 'Kalkaska',
+    iso3: null,
     population: '18,038',
     casesPastWeek: 14,
     casesIncreasingPercentage: 16.666666666666675,
@@ -22269,6 +24328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26081: {
     label: 'Kent',
+    iso3: null,
     population: '656,955',
     casesPastWeek: 1079,
     casesIncreasingPercentage: 0.0,
@@ -22278,6 +24338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26083: {
     label: 'Keweenaw',
+    iso3: null,
     population: '2,116',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -22287,6 +24348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26085: {
     label: 'Lake',
+    iso3: null,
     population: '11,853',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -22296,6 +24358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26087: {
     label: 'Lapeer',
+    iso3: null,
     population: '87,607',
     casesPastWeek: 76,
     casesIncreasingPercentage: 0.0,
@@ -22305,6 +24368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26089: {
     label: 'Leelanau',
+    iso3: null,
     population: '21,761',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -22314,6 +24378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26091: {
     label: 'Lenawee',
+    iso3: null,
     population: '98,451',
     casesPastWeek: 274,
     casesIncreasingPercentage: 0.0,
@@ -22323,6 +24388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26093: {
     label: 'Livingston',
+    iso3: null,
     population: '191,995',
     casesPastWeek: 332,
     casesIncreasingPercentage: 0.0,
@@ -22332,6 +24398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26095: {
     label: 'Luce',
+    iso3: null,
     population: '6,229',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -22341,6 +24408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26097: {
     label: 'Mackinac',
+    iso3: null,
     population: '10,799',
     casesPastWeek: 12,
     casesIncreasingPercentage: 140.0,
@@ -22350,6 +24418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26099: {
     label: 'Macomb',
+    iso3: null,
     population: '873,972',
     casesPastWeek: 1364,
     casesIncreasingPercentage: 0.0,
@@ -22359,6 +24428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26101: {
     label: 'Manistee',
+    iso3: null,
     population: '24,558',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -22368,6 +24438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26103: {
     label: 'Marquette',
+    iso3: null,
     population: '66,699',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -22377,6 +24448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26105: {
     label: 'Mason',
+    iso3: null,
     population: '29,144',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -22386,6 +24458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26107: {
     label: 'Mecosta',
+    iso3: null,
     population: '43,453',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -22395,6 +24468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26109: {
     label: 'Menominee',
+    iso3: null,
     population: '22,780',
     casesPastWeek: 33,
     casesIncreasingPercentage: 17.85714285714286,
@@ -22404,6 +24478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26111: {
     label: 'Midland',
+    iso3: null,
     population: '83,156',
     casesPastWeek: 111,
     casesIncreasingPercentage: 0.0,
@@ -22413,6 +24488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26113: {
     label: 'Missaukee',
+    iso3: null,
     population: '15,118',
     casesPastWeek: 46,
     casesIncreasingPercentage: 35.29411764705883,
@@ -22422,6 +24498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26115: {
     label: 'Monroe',
+    iso3: null,
     population: '150,500',
     casesPastWeek: 306,
     casesIncreasingPercentage: 0.0,
@@ -22431,6 +24508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26117: {
     label: 'Montcalm',
+    iso3: null,
     population: '63,888',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -22440,6 +24518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26119: {
     label: 'Montmorency',
+    iso3: null,
     population: '9,328',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -22449,6 +24528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26121: {
     label: 'Muskegon',
+    iso3: null,
     population: '173,566',
     casesPastWeek: 152,
     casesIncreasingPercentage: 0.0,
@@ -22458,6 +24538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26123: {
     label: 'Newaygo',
+    iso3: null,
     population: '48,980',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -22467,6 +24548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26125: {
     label: 'Oakland',
+    iso3: null,
     population: '1,257,584',
     casesPastWeek: 1651,
     casesIncreasingPercentage: 0.0,
@@ -22476,6 +24558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26127: {
     label: 'Oceana',
+    iso3: null,
     population: '26,467',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -22485,6 +24568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26129: {
     label: 'Ogemaw',
+    iso3: null,
     population: '20,997',
     casesPastWeek: 31,
     casesIncreasingPercentage: 82.35294117647058,
@@ -22494,6 +24578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26131: {
     label: 'Ontonagon',
+    iso3: null,
     population: '5,720',
     casesPastWeek: 25,
     casesIncreasingPercentage: 316.6666666666667,
@@ -22503,6 +24588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26133: {
     label: 'Osceola',
+    iso3: null,
     population: '23,460',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -22512,6 +24598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26135: {
     label: 'Oscoda',
+    iso3: null,
     population: '8,241',
     casesPastWeek: 14,
     casesIncreasingPercentage: 100.0,
@@ -22521,6 +24608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26137: {
     label: 'Otsego',
+    iso3: null,
     population: '24,668',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -22530,6 +24618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26139: {
     label: 'Ottawa',
+    iso3: null,
     population: '291,830',
     casesPastWeek: 567,
     casesIncreasingPercentage: 0.0,
@@ -22539,6 +24628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26141: {
     label: 'Presque Isle',
+    iso3: null,
     population: '12,592',
     casesPastWeek: 21,
     casesIncreasingPercentage: 75.0,
@@ -22548,6 +24638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26143: {
     label: 'Roscommon',
+    iso3: null,
     population: '24,019',
     casesPastWeek: 26,
     casesIncreasingPercentage: 30.000000000000004,
@@ -22557,6 +24648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26145: {
     label: 'Saginaw',
+    iso3: null,
     population: '190,539',
     casesPastWeek: 383,
     casesIncreasingPercentage: 0.0,
@@ -22566,6 +24658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26147: {
     label: 'St. Clair',
+    iso3: null,
     population: '159,128',
     casesPastWeek: 208,
     casesIncreasingPercentage: 0.0,
@@ -22575,6 +24668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26149: {
     label: 'St. Joseph',
+    iso3: null,
     population: '60,964',
     casesPastWeek: 154,
     casesIncreasingPercentage: 0.0,
@@ -22584,6 +24678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26151: {
     label: 'Sanilac',
+    iso3: null,
     population: '41,170',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -22593,6 +24688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26153: {
     label: 'Schoolcraft',
+    iso3: null,
     population: '8,094',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -22602,6 +24698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26155: {
     label: 'Shiawassee',
+    iso3: null,
     population: '68,122',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -22611,6 +24708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26157: {
     label: 'Tuscola',
+    iso3: null,
     population: '52,245',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -22620,6 +24718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26159: {
     label: 'Van Buren',
+    iso3: null,
     population: '75,677',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -22629,6 +24728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26161: {
     label: 'Washtenaw',
+    iso3: null,
     population: '367,601',
     casesPastWeek: 520,
     casesIncreasingPercentage: 0.0,
@@ -22638,6 +24738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26163: {
     label: 'Wayne',
+    iso3: null,
     population: '1,749,343',
     casesPastWeek: 2240,
     casesIncreasingPercentage: 0.0,
@@ -22647,6 +24748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_26165: {
     label: 'Wexford',
+    iso3: null,
     population: '33,631',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -22656,6 +24758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27001: {
     label: 'Aitkin',
+    iso3: null,
     population: '15,886',
     casesPastWeek: 38,
     casesIncreasingPercentage: 40.74074074074075,
@@ -22665,6 +24768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27003: {
     label: 'Anoka',
+    iso3: null,
     population: '356,921',
     casesPastWeek: 480,
     casesIncreasingPercentage: 0.0,
@@ -22674,6 +24778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27005: {
     label: 'Becker',
+    iso3: null,
     population: '34,423',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -22683,6 +24788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27007: {
     label: 'Beltrami',
+    iso3: null,
     population: '47,188',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -22692,6 +24798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27009: {
     label: 'Benton',
+    iso3: null,
     population: '40,889',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -22701,6 +24808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27011: {
     label: 'Big Stone',
+    iso3: null,
     population: '4,991',
     casesPastWeek: 14,
     casesIncreasingPercentage: 179.99999999999997,
@@ -22710,6 +24818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27013: {
     label: 'Blue Earth',
+    iso3: null,
     population: '67,653',
     casesPastWeek: 91,
     casesIncreasingPercentage: 0.0,
@@ -22719,6 +24828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27015: {
     label: 'Brown',
+    iso3: null,
     population: '25,008',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -22728,6 +24838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27017: {
     label: 'Carlton',
+    iso3: null,
     population: '35,871',
     casesPastWeek: 55,
     casesIncreasingPercentage: 25.0,
@@ -22737,6 +24848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27019: {
     label: 'Carver',
+    iso3: null,
     population: '105,089',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -22746,6 +24858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27021: {
     label: 'Cass',
+    iso3: null,
     population: '29,779',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -22755,6 +24868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27023: {
     label: 'Chippewa',
+    iso3: null,
     population: '11,800',
     casesPastWeek: 21,
     casesIncreasingPercentage: 320.0,
@@ -22764,6 +24878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27025: {
     label: 'Chisago',
+    iso3: null,
     population: '56,579',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -22773,6 +24888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27027: {
     label: 'Clay',
+    iso3: null,
     population: '64,222',
     casesPastWeek: 86,
     casesIncreasingPercentage: 0.0,
@@ -22782,6 +24898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27029: {
     label: 'Clearwater',
+    iso3: null,
     population: '8,818',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -22791,6 +24908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27031: {
     label: 'Cook',
+    iso3: null,
     population: '5,463',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -22800,6 +24918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27033: {
     label: 'Cottonwood',
+    iso3: null,
     population: '11,196',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -22809,6 +24928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27035: {
     label: 'Crow Wing',
+    iso3: null,
     population: '65,055',
     casesPastWeek: 91,
     casesIncreasingPercentage: 0.0,
@@ -22818,6 +24938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27037: {
     label: 'Dakota',
+    iso3: null,
     population: '429,021',
     casesPastWeek: 664,
     casesIncreasingPercentage: 0.0,
@@ -22827,6 +24948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27039: {
     label: 'Dodge',
+    iso3: null,
     population: '20,934',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -22836,6 +24958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27041: {
     label: 'Douglas',
+    iso3: null,
     population: '38,141',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -22845,6 +24968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27043: {
     label: 'Faribault',
+    iso3: null,
     population: '13,653',
     casesPastWeek: 48,
     casesIncreasingPercentage: 37.142857142857146,
@@ -22854,6 +24978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27045: {
     label: 'Fillmore',
+    iso3: null,
     population: '21,067',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -22863,6 +24988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27047: {
     label: 'Freeborn',
+    iso3: null,
     population: '30,281',
     casesPastWeek: 107,
     casesIncreasingPercentage: 0.0,
@@ -22872,6 +24998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27049: {
     label: 'Goodhue',
+    iso3: null,
     population: '46,340',
     casesPastWeek: 115,
     casesIncreasingPercentage: 0.0,
@@ -22881,6 +25008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27051: {
     label: 'Grant',
+    iso3: null,
     population: '5,972',
     casesPastWeek: 9,
     casesIncreasingPercentage: 28.57142857142858,
@@ -22890,6 +25018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27053: {
     label: 'Hennepin',
+    iso3: null,
     population: '1,265,843',
     casesPastWeek: 1631,
     casesIncreasingPercentage: 0.0,
@@ -22899,6 +25028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27055: {
     label: 'Houston',
+    iso3: null,
     population: '18,600',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -22908,6 +25038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27057: {
     label: 'Hubbard',
+    iso3: null,
     population: '21,491',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -22917,6 +25048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27059: {
     label: 'Isanti',
+    iso3: null,
     population: '40,596',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -22926,6 +25058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27061: {
     label: 'Itasca',
+    iso3: null,
     population: '45,130',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -22935,6 +25068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27063: {
     label: 'Jackson',
+    iso3: null,
     population: '9,846',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -22944,6 +25078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27065: {
     label: 'Kanabec',
+    iso3: null,
     population: '16,337',
     casesPastWeek: 22,
     casesIncreasingPercentage: 46.66666666666666,
@@ -22953,6 +25088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27067: {
     label: 'Kandiyohi',
+    iso3: null,
     population: '43,199',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -22962,6 +25098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27069: {
     label: 'Kittson',
+    iso3: null,
     population: '4,298',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -22971,6 +25108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27071: {
     label: 'Koochiching',
+    iso3: null,
     population: '12,229',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -22980,6 +25118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27073: {
     label: 'Lac qui Parle',
+    iso3: null,
     population: '6,623',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -22989,6 +25128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27075: {
     label: 'Lake',
+    iso3: null,
     population: '10,641',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -22998,6 +25138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27077: {
     label: 'Lake of the Woods',
+    iso3: null,
     population: '3,740',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -23007,6 +25148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27079: {
     label: 'Le Sueur',
+    iso3: null,
     population: '28,887',
     casesPastWeek: 54,
     casesIncreasingPercentage: 22.72727272727273,
@@ -23016,6 +25158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27081: {
     label: 'Lincoln',
+    iso3: null,
     population: '5,639',
     casesPastWeek: 9,
     casesIncreasingPercentage: 80.0,
@@ -23025,6 +25168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27083: {
     label: 'Lyon',
+    iso3: null,
     population: '25,474',
     casesPastWeek: 49,
     casesIncreasingPercentage: 19.512195121951216,
@@ -23034,6 +25178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27085: {
     label: 'McLeod',
+    iso3: null,
     population: '35,893',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -23043,6 +25188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27087: {
     label: 'Mahnomen',
+    iso3: null,
     population: '5,527',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -23052,6 +25198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27089: {
     label: 'Marshall',
+    iso3: null,
     population: '9,336',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -23061,6 +25208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27091: {
     label: 'Martin',
+    iso3: null,
     population: '19,683',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -23070,6 +25218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27093: {
     label: 'Meeker',
+    iso3: null,
     population: '23,222',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -23079,6 +25228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27095: {
     label: 'Mille Lacs',
+    iso3: null,
     population: '26,277',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -23088,6 +25238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27097: {
     label: 'Morrison',
+    iso3: null,
     population: '33,386',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -23097,6 +25248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27099: {
     label: 'Mower',
+    iso3: null,
     population: '40,062',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -23106,6 +25258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27101: {
     label: 'Murray',
+    iso3: null,
     population: '8,194',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -23115,6 +25268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27103: {
     label: 'Nicollet',
+    iso3: null,
     population: '34,274',
     casesPastWeek: 56,
     casesIncreasingPercentage: 21.739130434782616,
@@ -23124,6 +25278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27105: {
     label: 'Nobles',
+    iso3: null,
     population: '21,629',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -23133,6 +25288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27107: {
     label: 'Norman',
+    iso3: null,
     population: '6,375',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -23142,6 +25298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27109: {
     label: 'Olmsted',
+    iso3: null,
     population: '158,293',
     casesPastWeek: 367,
     casesIncreasingPercentage: 0.0,
@@ -23151,6 +25308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27111: {
     label: 'Otter Tail',
+    iso3: null,
     population: '58,746',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -23160,6 +25318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27113: {
     label: 'Pennington',
+    iso3: null,
     population: '14,119',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -23169,6 +25328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27115: {
     label: 'Pine',
+    iso3: null,
     population: '29,579',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -23178,6 +25338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27117: {
     label: 'Pipestone',
+    iso3: null,
     population: '9,126',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -23187,6 +25348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27119: {
     label: 'Polk',
+    iso3: null,
     population: '31,364',
     casesPastWeek: 28,
     casesIncreasingPercentage: 3.703703703703698,
@@ -23196,6 +25358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27121: {
     label: 'Pope',
+    iso3: null,
     population: '11,249',
     casesPastWeek: 10,
     casesIncreasingPercentage: 66.66666666666667,
@@ -23205,6 +25368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27123: {
     label: 'Ramsey',
+    iso3: null,
     population: '550,321',
     casesPastWeek: 804,
     casesIncreasingPercentage: 0.0,
@@ -23214,6 +25378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27125: {
     label: 'Red Lake',
+    iso3: null,
     population: '4,055',
     casesPastWeek: 4,
     casesIncreasingPercentage: 100.0,
@@ -23223,6 +25388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27127: {
     label: 'Redwood',
+    iso3: null,
     population: '15,170',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -23232,6 +25398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27129: {
     label: 'Renville',
+    iso3: null,
     population: '14,548',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -23241,6 +25408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27131: {
     label: 'Rice',
+    iso3: null,
     population: '66,972',
     casesPastWeek: 201,
     casesIncreasingPercentage: 6.914893617021267,
@@ -23250,6 +25418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27133: {
     label: 'Rock',
+    iso3: null,
     population: '9,315',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -23259,6 +25428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27135: {
     label: 'Roseau',
+    iso3: null,
     population: '15,165',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -23268,6 +25438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27137: {
     label: 'St. Louis',
+    iso3: null,
     population: '199,070',
     casesPastWeek: 361,
     casesIncreasingPercentage: 10.060975609756095,
@@ -23277,6 +25448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27139: {
     label: 'Scott',
+    iso3: null,
     population: '149,013',
     casesPastWeek: 260,
     casesIncreasingPercentage: 0.0,
@@ -23286,6 +25458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27141: {
     label: 'Sherburne',
+    iso3: null,
     population: '97,238',
     casesPastWeek: 107,
     casesIncreasingPercentage: 0.0,
@@ -23295,6 +25468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27143: {
     label: 'Sibley',
+    iso3: null,
     population: '14,865',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -23304,6 +25478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27145: {
     label: 'Stearns',
+    iso3: null,
     population: '161,075',
     casesPastWeek: 278,
     casesIncreasingPercentage: 4.9056603773584895,
@@ -23313,6 +25488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27147: {
     label: 'Steele',
+    iso3: null,
     population: '36,649',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -23322,6 +25498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27149: {
     label: 'Stevens',
+    iso3: null,
     population: '9,805',
     casesPastWeek: 10,
     casesIncreasingPercentage: 42.85714285714286,
@@ -23331,6 +25508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27151: {
     label: 'Swift',
+    iso3: null,
     population: '9,266',
     casesPastWeek: 14,
     casesIncreasingPercentage: 27.27272727272727,
@@ -23340,6 +25518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27153: {
     label: 'Todd',
+    iso3: null,
     population: '24,664',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -23349,6 +25528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27155: {
     label: 'Traverse',
+    iso3: null,
     population: '3,259',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -23358,6 +25538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27157: {
     label: 'Wabasha',
+    iso3: null,
     population: '21,627',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -23367,6 +25548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27159: {
     label: 'Wadena',
+    iso3: null,
     population: '13,682',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -23376,6 +25558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27161: {
     label: 'Waseca',
+    iso3: null,
     population: '18,612',
     casesPastWeek: 43,
     casesIncreasingPercentage: 48.27586206896552,
@@ -23385,6 +25568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27163: {
     label: 'Washington',
+    iso3: null,
     population: '262,440',
     casesPastWeek: 467,
     casesIncreasingPercentage: 0.0,
@@ -23394,6 +25578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27165: {
     label: 'Watonwan',
+    iso3: null,
     population: '10,897',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -23403,6 +25588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27167: {
     label: 'Wilkin',
+    iso3: null,
     population: '6,207',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -23412,6 +25598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27169: {
     label: 'Winona',
+    iso3: null,
     population: '50,484',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -23421,6 +25608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27171: {
     label: 'Wright',
+    iso3: null,
     population: '138,377',
     casesPastWeek: 221,
     casesIncreasingPercentage: 0.0,
@@ -23430,6 +25618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_27173: {
     label: 'Yellow Medicine',
+    iso3: null,
     population: '9,709',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -23439,6 +25628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28001: {
     label: 'Adams',
+    iso3: null,
     population: '30,693',
     casesPastWeek: 105,
     casesIncreasingPercentage: 3.960396039603964,
@@ -23448,6 +25638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28003: {
     label: 'Alcorn',
+    iso3: null,
     population: '36,953',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -23457,6 +25648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28005: {
     label: 'Amite',
+    iso3: null,
     population: '12,297',
     casesPastWeek: 44,
     casesIncreasingPercentage: 18.918918918918926,
@@ -23466,6 +25658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28007: {
     label: 'Attala',
+    iso3: null,
     population: '18,174',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -23475,6 +25668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28009: {
     label: 'Benton',
+    iso3: null,
     population: '8,259',
     casesPastWeek: 43,
     casesIncreasingPercentage: 10.256410256410264,
@@ -23484,6 +25678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28011: {
     label: 'Bolivar',
+    iso3: null,
     population: '30,628',
     casesPastWeek: 160,
     casesIncreasingPercentage: 15.94202898550725,
@@ -23493,6 +25688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28013: {
     label: 'Calhoun',
+    iso3: null,
     population: '14,361',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -23502,6 +25698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28015: {
     label: 'Carroll',
+    iso3: null,
     population: '9,947',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -23511,6 +25708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28017: {
     label: 'Chickasaw',
+    iso3: null,
     population: '17,103',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -23520,6 +25718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28019: {
     label: 'Choctaw',
+    iso3: null,
     population: '8,210',
     casesPastWeek: 34,
     casesIncreasingPercentage: 9.677419354838701,
@@ -23529,6 +25728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28021: {
     label: 'Claiborne',
+    iso3: null,
     population: '8,988',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -23538,6 +25738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28023: {
     label: 'Clarke',
+    iso3: null,
     population: '15,541',
     casesPastWeek: 95,
     casesIncreasingPercentage: 33.80281690140845,
@@ -23547,6 +25748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28025: {
     label: 'Clay',
+    iso3: null,
     population: '19,316',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -23556,6 +25758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28027: {
     label: 'Coahoma',
+    iso3: null,
     population: '22,124',
     casesPastWeek: 197,
     casesIncreasingPercentage: 17.964071856287433,
@@ -23565,6 +25768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28029: {
     label: 'Copiah',
+    iso3: null,
     population: '28,065',
     casesPastWeek: 89,
     casesIncreasingPercentage: 4.705882352941182,
@@ -23574,6 +25778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28031: {
     label: 'Covington',
+    iso3: null,
     population: '18,636',
     casesPastWeek: 97,
     casesIncreasingPercentage: 16.867469879518083,
@@ -23583,6 +25788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28033: {
     label: 'DeSoto',
+    iso3: null,
     population: '184,945',
     casesPastWeek: 621,
     casesIncreasingPercentage: 0.0,
@@ -23592,6 +25798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28035: {
     label: 'Forrest',
+    iso3: null,
     population: '74,897',
     casesPastWeek: 259,
     casesIncreasingPercentage: 6.1475409836065475,
@@ -23601,6 +25808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28037: {
     label: 'Franklin',
+    iso3: null,
     population: '7,713',
     casesPastWeek: 42,
     casesIncreasingPercentage: 68.0,
@@ -23610,6 +25818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28039: {
     label: 'George',
+    iso3: null,
     population: '24,500',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -23619,6 +25828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28041: {
     label: 'Greene',
+    iso3: null,
     population: '13,586',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -23628,6 +25838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28043: {
     label: 'Grenada',
+    iso3: null,
     population: '20,758',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -23637,6 +25848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28045: {
     label: 'Hancock',
+    iso3: null,
     population: '47,632',
     casesPastWeek: 277,
     casesIncreasingPercentage: 0.0,
@@ -23646,6 +25858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28047: {
     label: 'Harrison',
+    iso3: null,
     population: '208,080',
     casesPastWeek: 926,
     casesIncreasingPercentage: 0.0,
@@ -23655,6 +25868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28049: {
     label: 'Hinds',
+    iso3: null,
     population: '231,840',
     casesPastWeek: 684,
     casesIncreasingPercentage: 0.0,
@@ -23664,6 +25878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28051: {
     label: 'Holmes',
+    iso3: null,
     population: '17,010',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -23673,6 +25888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28053: {
     label: 'Humphreys',
+    iso3: null,
     population: '8,064',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -23682,6 +25898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28055: {
     label: 'Issaquena',
+    iso3: null,
     population: '1,327',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -23691,6 +25908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28057: {
     label: 'Itawamba',
+    iso3: null,
     population: '23,390',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -23700,6 +25918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28059: {
     label: 'Jackson',
+    iso3: null,
     population: '143,617',
     casesPastWeek: 614,
     casesIncreasingPercentage: 0.0,
@@ -23709,6 +25928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28061: {
     label: 'Jasper',
+    iso3: null,
     population: '16,383',
     casesPastWeek: 114,
     casesIncreasingPercentage: 10.679611650485432,
@@ -23718,6 +25938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28063: {
     label: 'Jefferson',
+    iso3: null,
     population: '6,990',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -23727,6 +25948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28065: {
     label: 'Jefferson Davis',
+    iso3: null,
     population: '11,128',
     casesPastWeek: 43,
     casesIncreasingPercentage: 95.45454545454545,
@@ -23736,6 +25958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28067: {
     label: 'Jones',
+    iso3: null,
     population: '68,098',
     casesPastWeek: 443,
     casesIncreasingPercentage: 14.175257731958757,
@@ -23745,6 +25968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28069: {
     label: 'Kemper',
+    iso3: null,
     population: '9,742',
     casesPastWeek: 38,
     casesIncreasingPercentage: 15.15151515151516,
@@ -23754,6 +25978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28071: {
     label: 'Lafayette',
+    iso3: null,
     population: '54,019',
     casesPastWeek: 263,
     casesIncreasingPercentage: 1.9379844961240345,
@@ -23763,6 +25988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28073: {
     label: 'Lamar',
+    iso3: null,
     population: '63,343',
     casesPastWeek: 217,
     casesIncreasingPercentage: 0.0,
@@ -23772,6 +25998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28075: {
     label: 'Lauderdale',
+    iso3: null,
     population: '74,125',
     casesPastWeek: 274,
     casesIncreasingPercentage: 0.0,
@@ -23781,6 +26008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28077: {
     label: 'Lawrence',
+    iso3: null,
     population: '12,586',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -23790,6 +26018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28079: {
     label: 'Leake',
+    iso3: null,
     population: '22,786',
     casesPastWeek: 76,
     casesIncreasingPercentage: 0.0,
@@ -23799,6 +26028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28081: {
     label: 'Lee',
+    iso3: null,
     population: '85,436',
     casesPastWeek: 275,
     casesIncreasingPercentage: 0.0,
@@ -23808,6 +26038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28083: {
     label: 'Leflore',
+    iso3: null,
     population: '28,183',
     casesPastWeek: 116,
     casesIncreasingPercentage: 20.833333333333325,
@@ -23817,6 +26048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28085: {
     label: 'Lincoln',
+    iso3: null,
     population: '34,153',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -23826,6 +26058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28087: {
     label: 'Lowndes',
+    iso3: null,
     population: '58,595',
     casesPastWeek: 189,
     casesIncreasingPercentage: 0.0,
@@ -23835,6 +26068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28089: {
     label: 'Madison',
+    iso3: null,
     population: '106,272',
     casesPastWeek: 367,
     casesIncreasingPercentage: 0.0,
@@ -23844,6 +26078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28091: {
     label: 'Marion',
+    iso3: null,
     population: '24,573',
     casesPastWeek: 136,
     casesIncreasingPercentage: 0.0,
@@ -23853,6 +26088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28093: {
     label: 'Marshall',
+    iso3: null,
     population: '35,294',
     casesPastWeek: 155,
     casesIncreasingPercentage: 0.0,
@@ -23862,6 +26098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28095: {
     label: 'Monroe',
+    iso3: null,
     population: '35,252',
     casesPastWeek: 153,
     casesIncreasingPercentage: 0.0,
@@ -23871,6 +26108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28097: {
     label: 'Montgomery',
+    iso3: null,
     population: '9,775',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -23880,6 +26118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28099: {
     label: 'Neshoba',
+    iso3: null,
     population: '29,118',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -23889,6 +26128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28101: {
     label: 'Newton',
+    iso3: null,
     population: '21,018',
     casesPastWeek: 86,
     casesIncreasingPercentage: 0.0,
@@ -23898,6 +26138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28103: {
     label: 'Noxubee',
+    iso3: null,
     population: '10,417',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -23907,6 +26148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28105: {
     label: 'Oktibbeha',
+    iso3: null,
     population: '49,587',
     casesPastWeek: 159,
     casesIncreasingPercentage: 13.571428571428568,
@@ -23916,6 +26158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28107: {
     label: 'Panola',
+    iso3: null,
     population: '34,192',
     casesPastWeek: 186,
     casesIncreasingPercentage: 0.0,
@@ -23925,6 +26168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28109: {
     label: 'Pearl River',
+    iso3: null,
     population: '55,535',
     casesPastWeek: 217,
     casesIncreasingPercentage: 0.0,
@@ -23934,6 +26178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28111: {
     label: 'Perry',
+    iso3: null,
     population: '11,973',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -23943,6 +26188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28113: {
     label: 'Pike',
+    iso3: null,
     population: '39,288',
     casesPastWeek: 81,
     casesIncreasingPercentage: 0.0,
@@ -23952,6 +26198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28115: {
     label: 'Pontotoc',
+    iso3: null,
     population: '32,174',
     casesPastWeek: 146,
     casesIncreasingPercentage: 0.0,
@@ -23961,6 +26208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28117: {
     label: 'Prentiss',
+    iso3: null,
     population: '25,126',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -23970,6 +26218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28119: {
     label: 'Quitman',
+    iso3: null,
     population: '6,792',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -23979,6 +26228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28121: {
     label: 'Rankin',
+    iso3: null,
     population: '155,271',
     casesPastWeek: 550,
     casesIncreasingPercentage: 0.0,
@@ -23988,6 +26238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28123: {
     label: 'Scott',
+    iso3: null,
     population: '28,124',
     casesPastWeek: 138,
     casesIncreasingPercentage: 1.4705882352941124,
@@ -23997,6 +26248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28125: {
     label: 'Sharkey',
+    iso3: null,
     population: '4,321',
     casesPastWeek: 25,
     casesIncreasingPercentage: 66.66666666666667,
@@ -24006,6 +26258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28127: {
     label: 'Simpson',
+    iso3: null,
     population: '26,658',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -24015,6 +26268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28129: {
     label: 'Smith',
+    iso3: null,
     population: '15,916',
     casesPastWeek: 99,
     casesIncreasingPercentage: 62.295081967213115,
@@ -24024,6 +26278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28131: {
     label: 'Stone',
+    iso3: null,
     population: '18,336',
     casesPastWeek: 102,
     casesIncreasingPercentage: 47.82608695652173,
@@ -24033,6 +26288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28133: {
     label: 'Sunflower',
+    iso3: null,
     population: '25,110',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -24042,6 +26298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28135: {
     label: 'Tallahatchie',
+    iso3: null,
     population: '13,809',
     casesPastWeek: 171,
     casesIncreasingPercentage: 163.07692307692307,
@@ -24051,6 +26308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28137: {
     label: 'Tate',
+    iso3: null,
     population: '28,321',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -24060,6 +26318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28139: {
     label: 'Tippah',
+    iso3: null,
     population: '22,015',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -24069,6 +26328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28141: {
     label: 'Tishomingo',
+    iso3: null,
     population: '19,383',
     casesPastWeek: 105,
     casesIncreasingPercentage: 0.0,
@@ -24078,6 +26338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28143: {
     label: 'Tunica',
+    iso3: null,
     population: '9,632',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -24087,6 +26348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28145: {
     label: 'Union',
+    iso3: null,
     population: '28,815',
     casesPastWeek: 138,
     casesIncreasingPercentage: 0.0,
@@ -24096,6 +26358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28147: {
     label: 'Walthall',
+    iso3: null,
     population: '14,286',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -24105,6 +26368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28149: {
     label: 'Warren',
+    iso3: null,
     population: '45,381',
     casesPastWeek: 201,
     casesIncreasingPercentage: 0.0,
@@ -24114,6 +26378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28151: {
     label: 'Washington',
+    iso3: null,
     population: '43,909',
     casesPastWeek: 156,
     casesIncreasingPercentage: 13.043478260869556,
@@ -24123,6 +26388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28153: {
     label: 'Wayne',
+    iso3: null,
     population: '20,183',
     casesPastWeek: 141,
     casesIncreasingPercentage: 22.608695652173914,
@@ -24132,6 +26398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28155: {
     label: 'Webster',
+    iso3: null,
     population: '9,689',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -24141,6 +26408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28157: {
     label: 'Wilkinson',
+    iso3: null,
     population: '8,630',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -24150,6 +26418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28159: {
     label: 'Winston',
+    iso3: null,
     population: '17,955',
     casesPastWeek: 75,
     casesIncreasingPercentage: 33.928571428571416,
@@ -24159,6 +26428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28161: {
     label: 'Yalobusha',
+    iso3: null,
     population: '12,108',
     casesPastWeek: 68,
     casesIncreasingPercentage: 7.9365079365079305,
@@ -24168,6 +26438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_28163: {
     label: 'Yazoo',
+    iso3: null,
     population: '29,690',
     casesPastWeek: 124,
     casesIncreasingPercentage: 0.0,
@@ -24177,6 +26448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Missouri_Kansas_City: {
     label: 'Kansas City',
+    iso3: null,
     population: '488,943',
     casesPastWeek: 1068,
     casesIncreasingPercentage: 14.346895074946463,
@@ -24186,6 +26458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29001: {
     label: 'Adair',
+    iso3: null,
     population: '25,343',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -24195,6 +26468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29003: {
     label: 'Andrew',
+    iso3: null,
     population: '17,712',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -24204,6 +26478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29005: {
     label: 'Atchison',
+    iso3: null,
     population: '5,143',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -24213,6 +26488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29007: {
     label: 'Audrain',
+    iso3: null,
     population: '25,388',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -24222,6 +26498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29009: {
     label: 'Barry',
+    iso3: null,
     population: '35,789',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -24231,6 +26508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29011: {
     label: 'Barton',
+    iso3: null,
     population: '11,754',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -24240,6 +26518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29013: {
     label: 'Bates',
+    iso3: null,
     population: '16,172',
     casesPastWeek: 37,
     casesIncreasingPercentage: 5.714285714285716,
@@ -24249,6 +26528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29015: {
     label: 'Benton',
+    iso3: null,
     population: '19,443',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -24258,6 +26538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29017: {
     label: 'Bollinger',
+    iso3: null,
     population: '12,133',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -24267,6 +26548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29019: {
     label: 'Boone',
+    iso3: null,
     population: '180,463',
     casesPastWeek: 374,
     casesIncreasingPercentage: 0.0,
@@ -24276,6 +26558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29021: {
     label: 'Buchanan',
+    iso3: null,
     population: '87,364',
     casesPastWeek: 124,
     casesIncreasingPercentage: 0.0,
@@ -24285,6 +26568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29023: {
     label: 'Butler',
+    iso3: null,
     population: '42,478',
     casesPastWeek: 87,
     casesIncreasingPercentage: 10.126582278481022,
@@ -24294,6 +26578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29025: {
     label: 'Caldwell',
+    iso3: null,
     population: '9,020',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -24303,6 +26588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29027: {
     label: 'Callaway',
+    iso3: null,
     population: '44,743',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -24312,6 +26598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29029: {
     label: 'Camden',
+    iso3: null,
     population: '46,305',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -24321,6 +26608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29031: {
     label: 'Cape Girardeau',
+    iso3: null,
     population: '78,871',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -24330,6 +26618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29033: {
     label: 'Carroll',
+    iso3: null,
     population: '8,679',
     casesPastWeek: 32,
     casesIncreasingPercentage: 33.33333333333333,
@@ -24339,6 +26628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29035: {
     label: 'Carter',
+    iso3: null,
     population: '5,982',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -24348,6 +26638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29037: {
     label: 'Cass',
+    iso3: null,
     population: '105,780',
     casesPastWeek: 271,
     casesIncreasingPercentage: 0.0,
@@ -24357,6 +26648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29039: {
     label: 'Cedar',
+    iso3: null,
     population: '14,349',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -24366,6 +26658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29041: {
     label: 'Chariton',
+    iso3: null,
     population: '7,426',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -24375,6 +26668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29043: {
     label: 'Christian',
+    iso3: null,
     population: '88,595',
     casesPastWeek: 190,
     casesIncreasingPercentage: 0.0,
@@ -24384,6 +26678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29045: {
     label: 'Clark',
+    iso3: null,
     population: '6,797',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -24393,6 +26688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29047: {
     label: 'Clay',
+    iso3: null,
     population: '249,948',
     casesPastWeek: 240,
     casesIncreasingPercentage: 0.0,
@@ -24402,6 +26698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29049: {
     label: 'Clinton',
+    iso3: null,
     population: '20,387',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -24411,6 +26708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29051: {
     label: 'Cole',
+    iso3: null,
     population: '76,745',
     casesPastWeek: 91,
     casesIncreasingPercentage: 0.0,
@@ -24420,6 +26718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29053: {
     label: 'Cooper',
+    iso3: null,
     population: '17,709',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -24429,6 +26728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29055: {
     label: 'Crawford',
+    iso3: null,
     population: '23,920',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -24438,6 +26738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29057: {
     label: 'Dade',
+    iso3: null,
     population: '7,561',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -24447,6 +26748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29059: {
     label: 'Dallas',
+    iso3: null,
     population: '16,878',
     casesPastWeek: 21,
     casesIncreasingPercentage: 16.666666666666675,
@@ -24456,6 +26758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29061: {
     label: 'Daviess',
+    iso3: null,
     population: '8,278',
     casesPastWeek: 17,
     casesIncreasingPercentage: 6.25,
@@ -24465,6 +26768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29063: {
     label: 'DeKalb',
+    iso3: null,
     population: '12,547',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -24474,6 +26778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29065: {
     label: 'Dent',
+    iso3: null,
     population: '15,573',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -24483,6 +26788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29067: {
     label: 'Douglas',
+    iso3: null,
     population: '13,185',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -24492,6 +26798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29069: {
     label: 'Dunklin',
+    iso3: null,
     population: '29,131',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -24501,6 +26808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29071: {
     label: 'Franklin',
+    iso3: null,
     population: '103,967',
     casesPastWeek: 272,
     casesIncreasingPercentage: 0.0,
@@ -24510,6 +26818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29073: {
     label: 'Gasconade',
+    iso3: null,
     population: '14,706',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -24519,6 +26828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29075: {
     label: 'Gentry',
+    iso3: null,
     population: '6,571',
     casesPastWeek: 26,
     casesIncreasingPercentage: 8.333333333333325,
@@ -24528,6 +26838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29077: {
     label: 'Greene',
+    iso3: null,
     population: '293,086',
     casesPastWeek: 595,
     casesIncreasingPercentage: 0.0,
@@ -24537,6 +26848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29079: {
     label: 'Grundy',
+    iso3: null,
     population: '9,850',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -24546,6 +26858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29081: {
     label: 'Harrison',
+    iso3: null,
     population: '8,352',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -24555,6 +26868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29083: {
     label: 'Henry',
+    iso3: null,
     population: '21,824',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -24564,6 +26878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29085: {
     label: 'Hickory',
+    iso3: null,
     population: '9,544',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -24573,6 +26888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29087: {
     label: 'Holt',
+    iso3: null,
     population: '4,403',
     casesPastWeek: 9,
     casesIncreasingPercentage: 125.0,
@@ -24582,6 +26898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29089: {
     label: 'Howard',
+    iso3: null,
     population: '10,001',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -24591,6 +26908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29091: {
     label: 'Howell',
+    iso3: null,
     population: '40,117',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -24600,6 +26918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29093: {
     label: 'Iron',
+    iso3: null,
     population: '10,125',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -24609,6 +26928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29095: {
     label: 'Jackson',
+    iso3: null,
     population: '703,011',
     casesPastWeek: 975,
     casesIncreasingPercentage: 0.0,
@@ -24618,6 +26938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29097: {
     label: 'Jasper',
+    iso3: null,
     population: '121,328',
     casesPastWeek: 298,
     casesIncreasingPercentage: 0.0,
@@ -24627,6 +26948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29099: {
     label: 'Jefferson',
+    iso3: null,
     population: '225,081',
     casesPastWeek: 573,
     casesIncreasingPercentage: 0.0,
@@ -24636,6 +26958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29101: {
     label: 'Johnson',
+    iso3: null,
     population: '54,062',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -24645,6 +26968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29103: {
     label: 'Knox',
+    iso3: null,
     population: '3,959',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -24654,6 +26978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29105: {
     label: 'Laclede',
+    iso3: null,
     population: '35,723',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -24663,6 +26988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29107: {
     label: 'Lafayette',
+    iso3: null,
     population: '32,708',
     casesPastWeek: 80,
     casesIncreasingPercentage: 23.076923076923084,
@@ -24672,6 +26998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29109: {
     label: 'Lawrence',
+    iso3: null,
     population: '38,355',
     casesPastWeek: 60,
     casesIncreasingPercentage: 122.22222222222223,
@@ -24681,6 +27008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29111: {
     label: 'Lewis',
+    iso3: null,
     population: '9,776',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -24690,6 +27018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29113: {
     label: 'Lincoln',
+    iso3: null,
     population: '59,013',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -24699,6 +27028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29115: {
     label: 'Linn',
+    iso3: null,
     population: '11,920',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -24708,6 +27038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29117: {
     label: 'Livingston',
+    iso3: null,
     population: '15,227',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -24717,6 +27048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29119: {
     label: 'McDonald',
+    iso3: null,
     population: '22,837',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -24726,6 +27058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29121: {
     label: 'Macon',
+    iso3: null,
     population: '15,117',
     casesPastWeek: 72,
     casesIncreasingPercentage: 43.99999999999999,
@@ -24735,6 +27068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29123: {
     label: 'Madison',
+    iso3: null,
     population: '12,088',
     casesPastWeek: 24,
     casesIncreasingPercentage: 71.42857142857142,
@@ -24744,6 +27078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29125: {
     label: 'Maries',
+    iso3: null,
     population: '8,697',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -24753,6 +27088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29127: {
     label: 'Marion',
+    iso3: null,
     population: '28,530',
     casesPastWeek: 55,
     casesIncreasingPercentage: 10.000000000000009,
@@ -24762,6 +27098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29129: {
     label: 'Mercer',
+    iso3: null,
     population: '3,617',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -24771,6 +27108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29131: {
     label: 'Miller',
+    iso3: null,
     population: '25,619',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -24780,6 +27118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29133: {
     label: 'Mississippi',
+    iso3: null,
     population: '13,180',
     casesPastWeek: 21,
     casesIncreasingPercentage: 75.0,
@@ -24789,6 +27128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29135: {
     label: 'Moniteau',
+    iso3: null,
     population: '16,132',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -24798,6 +27138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29137: {
     label: 'Monroe',
+    iso3: null,
     population: '8,644',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -24807,6 +27148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29139: {
     label: 'Montgomery',
+    iso3: null,
     population: '11,551',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -24816,6 +27158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29141: {
     label: 'Morgan',
+    iso3: null,
     population: '20,627',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -24825,6 +27168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29143: {
     label: 'New Madrid',
+    iso3: null,
     population: '17,076',
     casesPastWeek: 20,
     casesIncreasingPercentage: 5.263157894736836,
@@ -24834,6 +27178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29145: {
     label: 'Newton',
+    iso3: null,
     population: '58,236',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -24843,6 +27188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29147: {
     label: 'Nodaway',
+    iso3: null,
     population: '22,092',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -24852,6 +27198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29149: {
     label: 'Oregon',
+    iso3: null,
     population: '10,529',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -24861,6 +27208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29151: {
     label: 'Osage',
+    iso3: null,
     population: '13,615',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -24870,6 +27218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29153: {
     label: 'Ozark',
+    iso3: null,
     population: '9,174',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -24879,6 +27228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29155: {
     label: 'Pemiscot',
+    iso3: null,
     population: '15,805',
     casesPastWeek: 22,
     casesIncreasingPercentage: 22.222222222222232,
@@ -24888,6 +27238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29157: {
     label: 'Perry',
+    iso3: null,
     population: '19,136',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -24897,6 +27248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29159: {
     label: 'Pettis',
+    iso3: null,
     population: '42,339',
     casesPastWeek: 86,
     casesIncreasingPercentage: 0.0,
@@ -24906,6 +27258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29161: {
     label: 'Phelps',
+    iso3: null,
     population: '44,573',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -24915,6 +27268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29163: {
     label: 'Pike',
+    iso3: null,
     population: '18,302',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -24924,6 +27278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29165: {
     label: 'Platte',
+    iso3: null,
     population: '104,418',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -24933,6 +27288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29167: {
     label: 'Polk',
+    iso3: null,
     population: '32,149',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -24942,6 +27298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29169: {
     label: 'Pulaski',
+    iso3: null,
     population: '52,607',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -24951,6 +27308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29171: {
     label: 'Putnam',
+    iso3: null,
     population: '4,696',
     casesPastWeek: 9,
     casesIncreasingPercentage: 200.0,
@@ -24960,6 +27318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29173: {
     label: 'Ralls',
+    iso3: null,
     population: '10,309',
     casesPastWeek: 13,
     casesIncreasingPercentage: 44.44444444444444,
@@ -24969,6 +27328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29175: {
     label: 'Randolph',
+    iso3: null,
     population: '24,748',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -24978,6 +27338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29177: {
     label: 'Ray',
+    iso3: null,
     population: '23,018',
     casesPastWeek: 62,
     casesIncreasingPercentage: 19.23076923076923,
@@ -24987,6 +27348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29179: {
     label: 'Reynolds',
+    iso3: null,
     population: '6,270',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -24996,6 +27358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29181: {
     label: 'Ripley',
+    iso3: null,
     population: '13,288',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -25005,6 +27368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29183: {
     label: 'St. Charles',
+    iso3: null,
     population: '402,022',
     casesPastWeek: 819,
     casesIncreasingPercentage: 0.0,
@@ -25014,6 +27378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29185: {
     label: 'St. Clair',
+    iso3: null,
     population: '9,397',
     casesPastWeek: 22,
     casesIncreasingPercentage: 37.5,
@@ -25023,6 +27388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29186: {
     label: 'Ste. Genevieve',
+    iso3: null,
     population: '17,894',
     casesPastWeek: 27,
     casesIncreasingPercentage: 22.72727272727273,
@@ -25032,6 +27398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29187: {
     label: 'St. Francois',
+    iso3: null,
     population: '67,215',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -25041,6 +27408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29189: {
     label: 'St. Louis',
+    iso3: null,
     population: '994,205',
     casesPastWeek: 2709,
     casesIncreasingPercentage: 0.0,
@@ -25050,6 +27418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29195: {
     label: 'Saline',
+    iso3: null,
     population: '22,761',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -25059,6 +27428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29197: {
     label: 'Schuyler',
+    iso3: null,
     population: '4,660',
     casesPastWeek: 11,
     casesIncreasingPercentage: 22.222222222222232,
@@ -25068,6 +27438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29199: {
     label: 'Scotland',
+    iso3: null,
     population: '4,902',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -25077,6 +27448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29201: {
     label: 'Scott',
+    iso3: null,
     population: '38,280',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -25086,6 +27458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29203: {
     label: 'Shannon',
+    iso3: null,
     population: '8,166',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25095,6 +27468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29205: {
     label: 'Shelby',
+    iso3: null,
     population: '5,930',
     casesPastWeek: 10,
     casesIncreasingPercentage: 11.111111111111116,
@@ -25104,6 +27478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29207: {
     label: 'Stoddard',
+    iso3: null,
     population: '29,025',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -25113,6 +27488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29209: {
     label: 'Stone',
+    iso3: null,
     population: '31,952',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -25122,6 +27498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29211: {
     label: 'Sullivan',
+    iso3: null,
     population: '6,089',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -25131,6 +27508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29213: {
     label: 'Taney',
+    iso3: null,
     population: '55,928',
     casesPastWeek: 103,
     casesIncreasingPercentage: 0.0,
@@ -25140,6 +27518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29215: {
     label: 'Texas',
+    iso3: null,
     population: '25,398',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -25149,6 +27528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29217: {
     label: 'Vernon',
+    iso3: null,
     population: '20,563',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -25158,6 +27538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29219: {
     label: 'Warren',
+    iso3: null,
     population: '35,649',
     casesPastWeek: 74,
     casesIncreasingPercentage: 10.447761194029859,
@@ -25167,6 +27548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29221: {
     label: 'Washington',
+    iso3: null,
     population: '24,730',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -25176,6 +27558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29223: {
     label: 'Wayne',
+    iso3: null,
     population: '12,873',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -25185,6 +27568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29225: {
     label: 'Webster',
+    iso3: null,
     population: '39,592',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -25194,6 +27578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29227: {
     label: 'Worth',
+    iso3: null,
     population: '2,013',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25203,6 +27588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29229: {
     label: 'Wright',
+    iso3: null,
     population: '18,289',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -25212,6 +27598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_29510: {
     label: 'St. Louis City',
+    iso3: null,
     population: '300,576',
     casesPastWeek: 523,
     casesIncreasingPercentage: 2805.5555555555557,
@@ -25221,6 +27608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30001: {
     label: 'Beaverhead',
+    iso3: null,
     population: '9,453',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -25230,6 +27618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30003: {
     label: 'Big Horn',
+    iso3: null,
     population: '13,319',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -25239,6 +27628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30005: {
     label: 'Blaine',
+    iso3: null,
     population: '6,681',
     casesPastWeek: 8,
     casesIncreasingPercentage: 300.0,
@@ -25248,6 +27638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30007: {
     label: 'Broadwater',
+    iso3: null,
     population: '6,237',
     casesPastWeek: 13,
     casesIncreasingPercentage: 30.000000000000004,
@@ -25257,6 +27648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30009: {
     label: 'Carbon',
+    iso3: null,
     population: '10,725',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -25266,6 +27658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30011: {
     label: 'Carter',
+    iso3: null,
     population: '1,252',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25275,6 +27668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30013: {
     label: 'Cascade',
+    iso3: null,
     population: '81,366',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -25284,6 +27678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30015: {
     label: 'Chouteau',
+    iso3: null,
     population: '5,635',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -25293,6 +27688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30017: {
     label: 'Custer',
+    iso3: null,
     population: '11,402',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -25302,6 +27698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30019: {
     label: 'Daniels',
+    iso3: null,
     population: '1,690',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -25311,6 +27708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30021: {
     label: 'Dawson',
+    iso3: null,
     population: '8,613',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -25320,6 +27718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30023: {
     label: 'Deer Lodge',
+    iso3: null,
     population: '9,140',
     casesPastWeek: 45,
     casesIncreasingPercentage: 87.5,
@@ -25329,6 +27728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30025: {
     label: 'Fallon',
+    iso3: null,
     population: '2,846',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25338,6 +27738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30027: {
     label: 'Fergus',
+    iso3: null,
     population: '11,050',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -25347,6 +27748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30029: {
     label: 'Flathead',
+    iso3: null,
     population: '103,806',
     casesPastWeek: 293,
     casesIncreasingPercentage: 0.0,
@@ -25356,6 +27758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30031: {
     label: 'Gallatin',
+    iso3: null,
     population: '114,434',
     casesPastWeek: 376,
     casesIncreasingPercentage: 0.0,
@@ -25365,6 +27768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30033: {
     label: 'Garfield',
+    iso3: null,
     population: '1,258',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25374,6 +27778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30035: {
     label: 'Glacier',
+    iso3: null,
     population: '13,753',
     casesPastWeek: 33,
     casesIncreasingPercentage: 83.33333333333333,
@@ -25383,6 +27788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30037: {
     label: 'Golden Valley',
+    iso3: null,
     population: '821',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25392,6 +27798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30039: {
     label: 'Granite',
+    iso3: null,
     population: '3,379',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -25401,6 +27808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30041: {
     label: 'Hill',
+    iso3: null,
     population: '16,484',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -25410,6 +27818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30043: {
     label: 'Jefferson',
+    iso3: null,
     population: '12,221',
     casesPastWeek: 35,
     casesIncreasingPercentage: 6.060606060606055,
@@ -25419,6 +27828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30045: {
     label: 'Judith Basin',
+    iso3: null,
     population: '2,007',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -25428,6 +27838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30047: {
     label: 'Lake',
+    iso3: null,
     population: '30,458',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -25437,6 +27848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30049: {
     label: 'Lewis and Clark',
+    iso3: null,
     population: '69,432',
     casesPastWeek: 203,
     casesIncreasingPercentage: 0.0,
@@ -25446,6 +27858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30051: {
     label: 'Liberty',
+    iso3: null,
     population: '2,337',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25455,6 +27868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30053: {
     label: 'Lincoln',
+    iso3: null,
     population: '19,980',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -25464,6 +27878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30055: {
     label: 'McCone',
+    iso3: null,
     population: '1,664',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -25473,6 +27888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30057: {
     label: 'Madison',
+    iso3: null,
     population: '8,600',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -25482,6 +27898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30059: {
     label: 'Meagher',
+    iso3: null,
     population: '1,862',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25491,6 +27908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30061: {
     label: 'Mineral',
+    iso3: null,
     population: '4,397',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -25500,6 +27918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30063: {
     label: 'Missoula',
+    iso3: null,
     population: '119,600',
     casesPastWeek: 276,
     casesIncreasingPercentage: 0.0,
@@ -25509,6 +27928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30065: {
     label: 'Musselshell',
+    iso3: null,
     population: '4,633',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -25518,6 +27938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30067: {
     label: 'Park',
+    iso3: null,
     population: '16,606',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -25527,6 +27948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30069: {
     label: 'Petroleum',
+    iso3: null,
     population: '487',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25536,6 +27958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30071: {
     label: 'Phillips',
+    iso3: null,
     population: '3,954',
     casesPastWeek: 17,
     casesIncreasingPercentage: 466.6666666666667,
@@ -25545,6 +27968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30073: {
     label: 'Pondera',
+    iso3: null,
     population: '5,911',
     casesPastWeek: 16,
     casesIncreasingPercentage: 33.33333333333333,
@@ -25554,6 +27978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30075: {
     label: 'Powder River',
+    iso3: null,
     population: '1,682',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -25563,6 +27988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30077: {
     label: 'Powell',
+    iso3: null,
     population: '6,890',
     casesPastWeek: 22,
     casesIncreasingPercentage: 100.0,
@@ -25572,6 +27998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30079: {
     label: 'Prairie',
+    iso3: null,
     population: '1,077',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25581,6 +28008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30081: {
     label: 'Ravalli',
+    iso3: null,
     population: '43,806',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -25590,6 +28018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30083: {
     label: 'Richland',
+    iso3: null,
     population: '10,803',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -25599,6 +28028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30085: {
     label: 'Roosevelt',
+    iso3: null,
     population: '11,004',
     casesPastWeek: 27,
     casesIncreasingPercentage: 125.0,
@@ -25608,6 +28038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30087: {
     label: 'Rosebud',
+    iso3: null,
     population: '8,937',
     casesPastWeek: 58,
     casesIncreasingPercentage: 141.66666666666666,
@@ -25617,6 +28048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30089: {
     label: 'Sanders',
+    iso3: null,
     population: '12,113',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -25626,6 +28058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30091: {
     label: 'Sheridan',
+    iso3: null,
     population: '3,309',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25635,6 +28068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30093: {
     label: 'Silver Bow',
+    iso3: null,
     population: '34,915',
     casesPastWeek: 65,
     casesIncreasingPercentage: 20.370370370370374,
@@ -25644,6 +28078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30095: {
     label: 'Stillwater',
+    iso3: null,
     population: '9,642',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -25653,6 +28088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30097: {
     label: 'Sweet Grass',
+    iso3: null,
     population: '3,737',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25662,6 +28098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30099: {
     label: 'Teton',
+    iso3: null,
     population: '6,147',
     casesPastWeek: 22,
     casesIncreasingPercentage: 10.000000000000009,
@@ -25671,6 +28108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30101: {
     label: 'Toole',
+    iso3: null,
     population: '4,736',
     casesPastWeek: 7,
     casesIncreasingPercentage: 16.666666666666675,
@@ -25680,6 +28118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30103: {
     label: 'Treasure',
+    iso3: null,
     population: '696',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25689,6 +28128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30105: {
     label: 'Valley',
+    iso3: null,
     population: '7,396',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -25698,6 +28138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30107: {
     label: 'Wheatland',
+    iso3: null,
     population: '2,126',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25707,6 +28148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30109: {
     label: 'Wibaux',
+    iso3: null,
     population: '969',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25716,6 +28158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_30111: {
     label: 'Yellowstone',
+    iso3: null,
     population: '161,300',
     casesPastWeek: 254,
     casesIncreasingPercentage: 0.0,
@@ -25725,6 +28168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31001: {
     label: 'Adams',
+    iso3: null,
     population: '31,363',
     casesPastWeek: 58,
     casesIncreasingPercentage: 0.0,
@@ -25734,6 +28178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31003: {
     label: 'Antelope',
+    iso3: null,
     population: '6,298',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -25743,6 +28188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31005: {
     label: 'Arthur',
+    iso3: null,
     population: '463',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25752,6 +28198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31007: {
     label: 'Banner',
+    iso3: null,
     population: '745',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -25761,6 +28208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31009: {
     label: 'Blaine',
+    iso3: null,
     population: '465',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -25770,6 +28218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31011: {
     label: 'Boone',
+    iso3: null,
     population: '5,192',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -25779,6 +28228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31013: {
     label: 'Box Butte',
+    iso3: null,
     population: '10,783',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -25788,6 +28238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31015: {
     label: 'Boyd',
+    iso3: null,
     population: '1,919',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -25797,6 +28248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31017: {
     label: 'Brown',
+    iso3: null,
     population: '2,955',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -25806,6 +28258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31019: {
     label: 'Buffalo',
+    iso3: null,
     population: '49,659',
     casesPastWeek: 116,
     casesIncreasingPercentage: 0.0,
@@ -25815,6 +28268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31021: {
     label: 'Burt',
+    iso3: null,
     population: '6,459',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -25824,6 +28278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31023: {
     label: 'Butler',
+    iso3: null,
     population: '8,016',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -25833,6 +28288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31025: {
     label: 'Cass',
+    iso3: null,
     population: '26,248',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -25842,6 +28298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31027: {
     label: 'Cedar',
+    iso3: null,
     population: '8,402',
     casesPastWeek: 27,
     casesIncreasingPercentage: 12.5,
@@ -25851,6 +28308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31029: {
     label: 'Chase',
+    iso3: null,
     population: '3,924',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -25860,6 +28318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31031: {
     label: 'Cherry',
+    iso3: null,
     population: '5,689',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -25869,6 +28328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31033: {
     label: 'Cheyenne',
+    iso3: null,
     population: '8,910',
     casesPastWeek: 28,
     casesIncreasingPercentage: 154.54545454545453,
@@ -25878,6 +28338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31035: {
     label: 'Clay',
+    iso3: null,
     population: '6,203',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -25887,6 +28348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31037: {
     label: 'Colfax',
+    iso3: null,
     population: '10,709',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -25896,6 +28358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31039: {
     label: 'Cuming',
+    iso3: null,
     population: '8,846',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -25905,6 +28368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31041: {
     label: 'Custer',
+    iso3: null,
     population: '10,777',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -25914,6 +28378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31043: {
     label: 'Dakota',
+    iso3: null,
     population: '20,026',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -25923,6 +28388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31045: {
     label: 'Dawes',
+    iso3: null,
     population: '8,589',
     casesPastWeek: 27,
     casesIncreasingPercentage: 68.75,
@@ -25932,6 +28398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31047: {
     label: 'Dawson',
+    iso3: null,
     population: '23,595',
     casesPastWeek: 49,
     casesIncreasingPercentage: 58.06451612903225,
@@ -25941,6 +28408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31049: {
     label: 'Deuel',
+    iso3: null,
     population: '1,794',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -25950,6 +28418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31051: {
     label: 'Dixon',
+    iso3: null,
     population: '5,636',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -25959,6 +28428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31053: {
     label: 'Dodge',
+    iso3: null,
     population: '36,565',
     casesPastWeek: 95,
     casesIncreasingPercentage: 0.0,
@@ -25968,6 +28438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31055: {
     label: 'Douglas',
+    iso3: null,
     population: '571,327',
     casesPastWeek: 1647,
     casesIncreasingPercentage: 0.0,
@@ -25977,6 +28448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31057: {
     label: 'Dundy',
+    iso3: null,
     population: '1,693',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -25986,6 +28458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31059: {
     label: 'Fillmore',
+    iso3: null,
     population: '5,462',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -25995,6 +28468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31061: {
     label: 'Franklin',
+    iso3: null,
     population: '2,979',
     casesPastWeek: 5,
     casesIncreasingPercentage: 150.0,
@@ -26004,6 +28478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31063: {
     label: 'Frontier',
+    iso3: null,
     population: '2,627',
     casesPastWeek: 11,
     casesIncreasingPercentage: 83.33333333333333,
@@ -26013,6 +28488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31065: {
     label: 'Furnas',
+    iso3: null,
     population: '4,676',
     casesPastWeek: 30,
     casesIncreasingPercentage: 150.0,
@@ -26022,6 +28498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31067: {
     label: 'Gage',
+    iso3: null,
     population: '21,513',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -26031,6 +28508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31069: {
     label: 'Garden',
+    iso3: null,
     population: '1,837',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -26040,6 +28518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31071: {
     label: 'Garfield',
+    iso3: null,
     population: '1,969',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -26049,6 +28528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31073: {
     label: 'Gosper',
+    iso3: null,
     population: '1,990',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -26058,6 +28538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31075: {
     label: 'Grant',
+    iso3: null,
     population: '623',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26067,6 +28548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31077: {
     label: 'Greeley',
+    iso3: null,
     population: '2,356',
     casesPastWeek: 8,
     casesIncreasingPercentage: 166.66666666666666,
@@ -26076,6 +28558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31079: {
     label: 'Hall',
+    iso3: null,
     population: '61,353',
     casesPastWeek: 141,
     casesIncreasingPercentage: 0.0,
@@ -26085,6 +28568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31081: {
     label: 'Hamilton',
+    iso3: null,
     population: '9,324',
     casesPastWeek: 34,
     casesIncreasingPercentage: 21.42857142857142,
@@ -26094,6 +28578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31083: {
     label: 'Harlan',
+    iso3: null,
     population: '3,380',
     casesPastWeek: 8,
     casesIncreasingPercentage: 14.28571428571428,
@@ -26103,6 +28588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31085: {
     label: 'Hayes',
+    iso3: null,
     population: '922',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -26112,6 +28598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31087: {
     label: 'Hitchcock',
+    iso3: null,
     population: '2,762',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -26121,6 +28608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31089: {
     label: 'Holt',
+    iso3: null,
     population: '10,067',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -26130,6 +28618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31091: {
     label: 'Hooker',
+    iso3: null,
     population: '682',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26139,6 +28628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31093: {
     label: 'Howard',
+    iso3: null,
     population: '6,445',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -26148,6 +28638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31095: {
     label: 'Jefferson',
+    iso3: null,
     population: '7,046',
     casesPastWeek: 19,
     casesIncreasingPercentage: 35.71428571428572,
@@ -26157,6 +28648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31097: {
     label: 'Johnson',
+    iso3: null,
     population: '5,071',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -26166,6 +28658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31099: {
     label: 'Kearney',
+    iso3: null,
     population: '6,495',
     casesPastWeek: 20,
     casesIncreasingPercentage: 53.846153846153854,
@@ -26175,6 +28668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31101: {
     label: 'Keith',
+    iso3: null,
     population: '8,034',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -26184,6 +28678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31103: {
     label: 'Keya Paha',
+    iso3: null,
     population: '806',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -26193,6 +28688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31105: {
     label: 'Kimball',
+    iso3: null,
     population: '3,632',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -26202,6 +28698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31107: {
     label: 'Knox',
+    iso3: null,
     population: '8,332',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -26211,6 +28708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31109: {
     label: 'Lancaster',
+    iso3: null,
     population: '319,090',
     casesPastWeek: 1015,
     casesIncreasingPercentage: 0.0,
@@ -26220,6 +28718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31111: {
     label: 'Lincoln',
+    iso3: null,
     population: '34,914',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -26229,6 +28728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31113: {
     label: 'Logan',
+    iso3: null,
     population: '748',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26238,6 +28738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31115: {
     label: 'Loup',
+    iso3: null,
     population: '664',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26247,6 +28748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31117: {
     label: 'McPherson',
+    iso3: null,
     population: '494',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -26256,6 +28758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31119: {
     label: 'Madison',
+    iso3: null,
     population: '35,099',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -26265,6 +28768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31121: {
     label: 'Merrick',
+    iso3: null,
     population: '7,755',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -26274,6 +28778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31123: {
     label: 'Morrill',
+    iso3: null,
     population: '4,642',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -26283,6 +28788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31125: {
     label: 'Nance',
+    iso3: null,
     population: '3,519',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -26292,6 +28798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31127: {
     label: 'Nemaha',
+    iso3: null,
     population: '6,972',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -26301,6 +28808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31129: {
     label: 'Nuckolls',
+    iso3: null,
     population: '4,148',
     casesPastWeek: 13,
     casesIncreasingPercentage: 8.333333333333325,
@@ -26310,6 +28818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31131: {
     label: 'Otoe',
+    iso3: null,
     population: '16,012',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -26319,6 +28828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31133: {
     label: 'Pawnee',
+    iso3: null,
     population: '2,613',
     casesPastWeek: 6,
     casesIncreasingPercentage: 19.999999999999996,
@@ -26328,6 +28838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31135: {
     label: 'Perkins',
+    iso3: null,
     population: '2,891',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -26337,6 +28848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31137: {
     label: 'Phelps',
+    iso3: null,
     population: '9,034',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -26346,6 +28858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31139: {
     label: 'Pierce',
+    iso3: null,
     population: '7,148',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -26355,6 +28868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31141: {
     label: 'Platte',
+    iso3: null,
     population: '33,470',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -26364,6 +28878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31143: {
     label: 'Polk',
+    iso3: null,
     population: '5,213',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -26373,6 +28888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31145: {
     label: 'Red Willow',
+    iso3: null,
     population: '10,724',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -26382,6 +28898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31147: {
     label: 'Richardson',
+    iso3: null,
     population: '7,865',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -26391,6 +28908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31149: {
     label: 'Rock',
+    iso3: null,
     population: '1,357',
     casesPastWeek: -1,
     casesIncreasingPercentage: 0.0,
@@ -26400,6 +28918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31151: {
     label: 'Saline',
+    iso3: null,
     population: '14,224',
     casesPastWeek: 36,
     casesIncreasingPercentage: 12.5,
@@ -26409,6 +28928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31153: {
     label: 'Sarpy',
+    iso3: null,
     population: '187,196',
     casesPastWeek: 549,
     casesIncreasingPercentage: 0.0,
@@ -26418,6 +28938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31155: {
     label: 'Saunders',
+    iso3: null,
     population: '21,578',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -26427,6 +28948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31157: {
     label: 'Scotts Bluff',
+    iso3: null,
     population: '35,618',
     casesPastWeek: 47,
     casesIncreasingPercentage: 51.61290322580645,
@@ -26436,6 +28958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31159: {
     label: 'Seward',
+    iso3: null,
     population: '17,284',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -26445,6 +28968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31161: {
     label: 'Sheridan',
+    iso3: null,
     population: '5,246',
     casesPastWeek: 15,
     casesIncreasingPercentage: 50.0,
@@ -26454,6 +28978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31163: {
     label: 'Sherman',
+    iso3: null,
     population: '3,001',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26463,6 +28988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31165: {
     label: 'Sioux',
+    iso3: null,
     population: '1,166',
     casesPastWeek: 4,
     casesIncreasingPercentage: 100.0,
@@ -26472,6 +28998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31167: {
     label: 'Stanton',
+    iso3: null,
     population: '5,920',
     casesPastWeek: 6,
     casesIncreasingPercentage: 50.0,
@@ -26481,6 +29008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31169: {
     label: 'Thayer',
+    iso3: null,
     population: '5,003',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -26490,6 +29018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31171: {
     label: 'Thomas',
+    iso3: null,
     population: '722',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26499,6 +29028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31173: {
     label: 'Thurston',
+    iso3: null,
     population: '7,224',
     casesPastWeek: 25,
     casesIncreasingPercentage: 56.25,
@@ -26508,6 +29038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31175: {
     label: 'Valley',
+    iso3: null,
     population: '4,158',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -26517,6 +29048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31177: {
     label: 'Washington',
+    iso3: null,
     population: '20,729',
     casesPastWeek: 77,
     casesIncreasingPercentage: 4.054054054054057,
@@ -26526,6 +29058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31179: {
     label: 'Wayne',
+    iso3: null,
     population: '9,385',
     casesPastWeek: 13,
     casesIncreasingPercentage: 44.44444444444444,
@@ -26535,6 +29068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31181: {
     label: 'Webster',
+    iso3: null,
     population: '3,487',
     casesPastWeek: 8,
     casesIncreasingPercentage: 60.00000000000001,
@@ -26544,6 +29078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31183: {
     label: 'Wheeler',
+    iso3: null,
     population: '783',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -26553,6 +29088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_31185: {
     label: 'York',
+    iso3: null,
     population: '13,679',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -26562,6 +29098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32001: {
     label: 'Churchill',
+    iso3: null,
     population: '24,909',
     casesPastWeek: 133,
     casesIncreasingPercentage: 731.25,
@@ -26571,6 +29108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32003: {
     label: 'Clark',
+    iso3: null,
     population: '2,266,715',
     casesPastWeek: 7550,
     casesIncreasingPercentage: 0.0,
@@ -26580,6 +29118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32005: {
     label: 'Douglas',
+    iso3: null,
     population: '48,905',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -26589,6 +29128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32007: {
     label: 'Elko',
+    iso3: null,
     population: '52,778',
     casesPastWeek: 85,
     casesIncreasingPercentage: 0.0,
@@ -26598,6 +29138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32009: {
     label: 'Esmeralda',
+    iso3: null,
     population: '873',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -26607,6 +29148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32011: {
     label: 'Eureka',
+    iso3: null,
     population: '2,029',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -26616,6 +29158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32013: {
     label: 'Humboldt',
+    iso3: null,
     population: '16,831',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -26625,6 +29168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32015: {
     label: 'Lander',
+    iso3: null,
     population: '5,532',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -26634,6 +29178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32017: {
     label: 'Lincoln',
+    iso3: null,
     population: '5,183',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -26643,6 +29188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32019: {
     label: 'Lyon',
+    iso3: null,
     population: '57,510',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -26652,6 +29198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32021: {
     label: 'Mineral',
+    iso3: null,
     population: '4,505',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -26661,6 +29208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32023: {
     label: 'Nye',
+    iso3: null,
     population: '46,523',
     casesPastWeek: 122,
     casesIncreasingPercentage: 0.0,
@@ -26670,6 +29218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32027: {
     label: 'Pershing',
+    iso3: null,
     population: '6,725',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -26679,6 +29228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32029: {
     label: 'Storey',
+    iso3: null,
     population: '4,123',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -26688,6 +29238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32031: {
     label: 'Washoe',
+    iso3: null,
     population: '471,519',
     casesPastWeek: 1049,
     casesIncreasingPercentage: 0.0,
@@ -26697,6 +29248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32033: {
     label: 'White Pine',
+    iso3: null,
     population: '9,580',
     casesPastWeek: 23,
     casesIncreasingPercentage: 109.09090909090908,
@@ -26706,6 +29258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_32510: {
     label: 'Carson City',
+    iso3: null,
     population: '55,916',
     casesPastWeek: 137,
     casesIncreasingPercentage: 0.0,
@@ -26715,6 +29268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33001: {
     label: 'Belknap',
+    iso3: null,
     population: '61,303',
     casesPastWeek: 202,
     casesIncreasingPercentage: 0.0,
@@ -26724,6 +29278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33003: {
     label: 'Carroll',
+    iso3: null,
     population: '48,910',
     casesPastWeek: 159,
     casesIncreasingPercentage: 0.0,
@@ -26733,6 +29288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33005: {
     label: 'Cheshire',
+    iso3: null,
     population: '76,085',
     casesPastWeek: 213,
     casesIncreasingPercentage: 0.0,
@@ -26742,6 +29298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33007: {
     label: 'Coos',
+    iso3: null,
     population: '31,563',
     casesPastWeek: 151,
     casesIncreasingPercentage: 17.96875,
@@ -26751,6 +29308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33009: {
     label: 'Grafton',
+    iso3: null,
     population: '89,886',
     casesPastWeek: 249,
     casesIncreasingPercentage: 39.10614525139664,
@@ -26760,6 +29318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33011: {
     label: 'Hillsborough',
+    iso3: null,
     population: '417,025',
     casesPastWeek: 2018,
     casesIncreasingPercentage: 8.145766345123251,
@@ -26769,6 +29328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33013: {
     label: 'Merrimack',
+    iso3: null,
     population: '151,391',
     casesPastWeek: 359,
     casesIncreasingPercentage: 0.0,
@@ -26778,6 +29338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33015: {
     label: 'Rockingham',
+    iso3: null,
     population: '309,769',
     casesPastWeek: 1424,
     casesIncreasingPercentage: 16.721311475409827,
@@ -26787,6 +29348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33017: {
     label: 'Strafford',
+    iso3: null,
     population: '130,633',
     casesPastWeek: 489,
     casesIncreasingPercentage: 0.0,
@@ -26796,6 +29358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_33019: {
     label: 'Sullivan',
+    iso3: null,
     population: '43,146',
     casesPastWeek: 160,
     casesIncreasingPercentage: 0.0,
@@ -26805,6 +29368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34001: {
     label: 'Atlantic',
+    iso3: null,
     population: '263,670',
     casesPastWeek: 1458,
     casesIncreasingPercentage: 0.0,
@@ -26814,6 +29378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34003: {
     label: 'Bergen',
+    iso3: null,
     population: '932,202',
     casesPastWeek: 3340,
     casesIncreasingPercentage: 0.0,
@@ -26823,6 +29388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34005: {
     label: 'Burlington',
+    iso3: null,
     population: '445,349',
     casesPastWeek: 1762,
     casesIncreasingPercentage: 0.0,
@@ -26832,6 +29398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34007: {
     label: 'Camden',
+    iso3: null,
     population: '506,471',
     casesPastWeek: 1936,
     casesIncreasingPercentage: 0.0,
@@ -26841,6 +29408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34009: {
     label: 'Cape May',
+    iso3: null,
     population: '92,039',
     casesPastWeek: 386,
     casesIncreasingPercentage: 0.0,
@@ -26850,6 +29418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34011: {
     label: 'Cumberland',
+    iso3: null,
     population: '149,527',
     casesPastWeek: 895,
     casesIncreasingPercentage: 8.616504854368934,
@@ -26859,6 +29428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34013: {
     label: 'Essex',
+    iso3: null,
     population: '798,975',
     casesPastWeek: 2792,
     casesIncreasingPercentage: 0.0,
@@ -26868,6 +29438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34015: {
     label: 'Gloucester',
+    iso3: null,
     population: '291,636',
     casesPastWeek: 1333,
     casesIncreasingPercentage: 0.0,
@@ -26877,6 +29448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34017: {
     label: 'Hudson',
+    iso3: null,
     population: '672,391',
     casesPastWeek: 2984,
     casesIncreasingPercentage: 0.0,
@@ -26886,6 +29458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34019: {
     label: 'Hunterdon',
+    iso3: null,
     population: '124,371',
     casesPastWeek: 351,
     casesIncreasingPercentage: 0.0,
@@ -26895,6 +29468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34021: {
     label: 'Mercer',
+    iso3: null,
     population: '367,430',
     casesPastWeek: 1143,
     casesIncreasingPercentage: 0.0,
@@ -26904,6 +29478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34023: {
     label: 'Middlesex',
+    iso3: null,
     population: '825,062',
     casesPastWeek: 3235,
     casesIncreasingPercentage: 0.0,
@@ -26913,6 +29488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34025: {
     label: 'Monmouth',
+    iso3: null,
     population: '618,795',
     casesPastWeek: 3081,
     casesIncreasingPercentage: 0.0,
@@ -26922,6 +29498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34027: {
     label: 'Morris',
+    iso3: null,
     population: '491,845',
     casesPastWeek: 1843,
     casesIncreasingPercentage: 0.0,
@@ -26931,6 +29508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34029: {
     label: 'Ocean',
+    iso3: null,
     population: '607,186',
     casesPastWeek: 3069,
     casesIncreasingPercentage: 0.0,
@@ -26940,6 +29518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34031: {
     label: 'Passaic',
+    iso3: null,
     population: '501,826',
     casesPastWeek: 1842,
     casesIncreasingPercentage: 0.0,
@@ -26949,6 +29528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34033: {
     label: 'Salem',
+    iso3: null,
     population: '62,385',
     casesPastWeek: 234,
     casesIncreasingPercentage: 0.0,
@@ -26958,6 +29538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34035: {
     label: 'Somerset',
+    iso3: null,
     population: '328,934',
     casesPastWeek: 973,
     casesIncreasingPercentage: 0.0,
@@ -26967,6 +29548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34037: {
     label: 'Sussex',
+    iso3: null,
     population: '140,488',
     casesPastWeek: 621,
     casesIncreasingPercentage: 0.0,
@@ -26976,6 +29558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34039: {
     label: 'Union',
+    iso3: null,
     population: '556,341',
     casesPastWeek: 2041,
     casesIncreasingPercentage: 0.0,
@@ -26985,6 +29568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_34041: {
     label: 'Warren',
+    iso3: null,
     population: '105,267',
     casesPastWeek: 365,
     casesIncreasingPercentage: 0.0,
@@ -26994,6 +29578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35001: {
     label: 'Bernalillo',
+    iso3: null,
     population: '679,121',
     casesPastWeek: 1378,
     casesIncreasingPercentage: 0.0,
@@ -27003,6 +29588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35003: {
     label: 'Catron',
+    iso3: null,
     population: '3,527',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -27012,6 +29598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35005: {
     label: 'Chaves',
+    iso3: null,
     population: '64,615',
     casesPastWeek: 202,
     casesIncreasingPercentage: 0.0,
@@ -27021,6 +29608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35006: {
     label: 'Cibola',
+    iso3: null,
     population: '26,675',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -27030,6 +29618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35007: {
     label: 'Colfax',
+    iso3: null,
     population: '11,941',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -27039,6 +29628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35009: {
     label: 'Curry',
+    iso3: null,
     population: '48,954',
     casesPastWeek: 138,
     casesIncreasingPercentage: 0.0,
@@ -27048,6 +29638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35011: {
     label: 'De Baca',
+    iso3: null,
     population: '1,748',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -27057,6 +29648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35013: {
     label: 'Dona Ana',
+    iso3: null,
     population: '218,195',
     casesPastWeek: 673,
     casesIncreasingPercentage: 0.0,
@@ -27066,6 +29658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35015: {
     label: 'Eddy',
+    iso3: null,
     population: '58,460',
     casesPastWeek: 270,
     casesIncreasingPercentage: 0.0,
@@ -27075,6 +29668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35017: {
     label: 'Grant',
+    iso3: null,
     population: '26,998',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -27084,6 +29678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35019: {
     label: 'Guadalupe',
+    iso3: null,
     population: '4,300',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -27093,6 +29688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35021: {
     label: 'Harding',
+    iso3: null,
     population: '625',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -27102,6 +29698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35023: {
     label: 'Hidalgo',
+    iso3: null,
     population: '4,198',
     casesPastWeek: 21,
     casesIncreasingPercentage: 90.90909090909092,
@@ -27111,6 +29708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35025: {
     label: 'Lea',
+    iso3: null,
     population: '71,070',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -27120,6 +29718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35027: {
     label: 'Lincoln',
+    iso3: null,
     population: '19,572',
     casesPastWeek: 124,
     casesIncreasingPercentage: 24.0,
@@ -27129,6 +29728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35028: {
     label: 'Los Alamos',
+    iso3: null,
     population: '19,369',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -27138,6 +29738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35029: {
     label: 'Luna',
+    iso3: null,
     population: '23,709',
     casesPastWeek: 196,
     casesIncreasingPercentage: 47.36842105263157,
@@ -27147,6 +29748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35031: {
     label: 'McKinley',
+    iso3: null,
     population: '71,367',
     casesPastWeek: 320,
     casesIncreasingPercentage: 0.0,
@@ -27156,6 +29758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35033: {
     label: 'Mora',
+    iso3: null,
     population: '4,521',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -27165,6 +29768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35035: {
     label: 'Otero',
+    iso3: null,
     population: '67,490',
     casesPastWeek: 148,
     casesIncreasingPercentage: 0.0,
@@ -27174,6 +29778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35037: {
     label: 'Quay',
+    iso3: null,
     population: '8,253',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -27183,6 +29788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35039: {
     label: 'Rio Arriba',
+    iso3: null,
     population: '38,921',
     casesPastWeek: 183,
     casesIncreasingPercentage: 0.0,
@@ -27192,6 +29798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35041: {
     label: 'Roosevelt',
+    iso3: null,
     population: '18,500',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -27201,6 +29808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35043: {
     label: 'Sandoval',
+    iso3: null,
     population: '146,748',
     casesPastWeek: 308,
     casesIncreasingPercentage: 0.0,
@@ -27210,6 +29818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35045: {
     label: 'San Juan',
+    iso3: null,
     population: '123,958',
     casesPastWeek: 458,
     casesIncreasingPercentage: 0.0,
@@ -27219,6 +29828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35047: {
     label: 'San Miguel',
+    iso3: null,
     population: '27,277',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -27228,6 +29838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35049: {
     label: 'Santa Fe',
+    iso3: null,
     population: '150,358',
     casesPastWeek: 343,
     casesIncreasingPercentage: 0.0,
@@ -27237,6 +29848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35051: {
     label: 'Sierra',
+    iso3: null,
     population: '10,791',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -27246,6 +29858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35053: {
     label: 'Socorro',
+    iso3: null,
     population: '16,637',
     casesPastWeek: 47,
     casesIncreasingPercentage: 27.027027027027017,
@@ -27255,6 +29868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35055: {
     label: 'Taos',
+    iso3: null,
     population: '32,723',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -27264,6 +29878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35057: {
     label: 'Torrance',
+    iso3: null,
     population: '15,461',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -27273,6 +29888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35059: {
     label: 'Union',
+    iso3: null,
     population: '4,059',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -27282,6 +29898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_35061: {
     label: 'Valencia',
+    iso3: null,
     population: '76,688',
     casesPastWeek: 190,
     casesIncreasingPercentage: 0.0,
@@ -27291,6 +29908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36001: {
     label: 'Albany',
+    iso3: null,
     population: '305,506',
     casesPastWeek: 1504,
     casesIncreasingPercentage: 0.0,
@@ -27300,6 +29918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36003: {
     label: 'Allegany',
+    iso3: null,
     population: '46,091',
     casesPastWeek: 131,
     casesIncreasingPercentage: 0.0,
@@ -27309,6 +29928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36005: {
     label: 'Bronx',
+    iso3: null,
     population: '1,418,207',
     casesPastWeek: 7803,
     casesIncreasingPercentage: 0.0,
@@ -27318,6 +29938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36007: {
     label: 'Broome',
+    iso3: null,
     population: '190,488',
     casesPastWeek: 1058,
     casesIncreasingPercentage: 3.522504892367917,
@@ -27327,6 +29948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36009: {
     label: 'Cattaraugus',
+    iso3: null,
     population: '76,117',
     casesPastWeek: 263,
     casesIncreasingPercentage: 0.0,
@@ -27336,6 +29958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36011: {
     label: 'Cayuga',
+    iso3: null,
     population: '76,576',
     casesPastWeek: 379,
     casesIncreasingPercentage: 0.0,
@@ -27345,6 +29968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36013: {
     label: 'Chautauqua',
+    iso3: null,
     population: '126,903',
     casesPastWeek: 553,
     casesIncreasingPercentage: 0.0,
@@ -27354,6 +29978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36015: {
     label: 'Chemung',
+    iso3: null,
     population: '83,456',
     casesPastWeek: 300,
     casesIncreasingPercentage: 0.0,
@@ -27363,6 +29988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36017: {
     label: 'Chenango',
+    iso3: null,
     population: '47,207',
     casesPastWeek: 222,
     casesIncreasingPercentage: 9.90099009900991,
@@ -27372,6 +29998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36019: {
     label: 'Clinton',
+    iso3: null,
     population: '80,485',
     casesPastWeek: 333,
     casesIncreasingPercentage: 0.0,
@@ -27381,6 +30008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36021: {
     label: 'Columbia',
+    iso3: null,
     population: '59,461',
     casesPastWeek: 326,
     casesIncreasingPercentage: 0.0,
@@ -27390,6 +30018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36023: {
     label: 'Cortland',
+    iso3: null,
     population: '47,581',
     casesPastWeek: 149,
     casesIncreasingPercentage: 0.0,
@@ -27399,6 +30028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36025: {
     label: 'Delaware',
+    iso3: null,
     population: '44,135',
     casesPastWeek: 129,
     casesIncreasingPercentage: 27.722772277227726,
@@ -27408,6 +30038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36027: {
     label: 'Dutchess',
+    iso3: null,
     population: '294,218',
     casesPastWeek: 1486,
     casesIncreasingPercentage: 0.0,
@@ -27417,6 +30048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36029: {
     label: 'Erie',
+    iso3: null,
     population: '918,702',
     casesPastWeek: 3118,
     casesIncreasingPercentage: 0.0,
@@ -27426,6 +30058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36031: {
     label: 'Essex',
+    iso3: null,
     population: '36,885',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -27435,6 +30068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36033: {
     label: 'Franklin',
+    iso3: null,
     population: '50,022',
     casesPastWeek: 229,
     casesIncreasingPercentage: 27.93296089385475,
@@ -27444,6 +30078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36035: {
     label: 'Fulton',
+    iso3: null,
     population: '53,383',
     casesPastWeek: 291,
     casesIncreasingPercentage: 0.0,
@@ -27453,6 +30088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36037: {
     label: 'Genesee',
+    iso3: null,
     population: '57,280',
     casesPastWeek: 225,
     casesIncreasingPercentage: 0.0,
@@ -27462,6 +30098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36039: {
     label: 'Greene',
+    iso3: null,
     population: '47,188',
     casesPastWeek: 207,
     casesIncreasingPercentage: 0.0,
@@ -27471,6 +30108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36041: {
     label: 'Hamilton',
+    iso3: null,
     population: '4,416',
     casesPastWeek: 21,
     casesIncreasingPercentage: 61.53846153846154,
@@ -27480,6 +30118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36043: {
     label: 'Herkimer',
+    iso3: null,
     population: '61,319',
     casesPastWeek: 403,
     casesIncreasingPercentage: 0.0,
@@ -27489,6 +30128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36045: {
     label: 'Jefferson',
+    iso3: null,
     population: '109,834',
     casesPastWeek: 468,
     casesIncreasingPercentage: 0.0,
@@ -27498,6 +30138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36047: {
     label: 'Kings',
+    iso3: null,
     population: '2,559,903',
     casesPastWeek: 11736,
     casesIncreasingPercentage: 0.0,
@@ -27507,6 +30148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36049: {
     label: 'Lewis',
+    iso3: null,
     population: '26,296',
     casesPastWeek: 194,
     casesIncreasingPercentage: 0.0,
@@ -27516,6 +30158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36051: {
     label: 'Livingston',
+    iso3: null,
     population: '62,914',
     casesPastWeek: 232,
     casesIncreasingPercentage: 0.0,
@@ -27525,6 +30168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36053: {
     label: 'Madison',
+    iso3: null,
     population: '70,941',
     casesPastWeek: 254,
     casesIncreasingPercentage: 0.0,
@@ -27534,6 +30178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36055: {
     label: 'Monroe',
+    iso3: null,
     population: '741,770',
     casesPastWeek: 2405,
     casesIncreasingPercentage: 0.0,
@@ -27543,6 +30188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36057: {
     label: 'Montgomery',
+    iso3: null,
     population: '49,221',
     casesPastWeek: 271,
     casesIncreasingPercentage: 0.0,
@@ -27552,6 +30198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36059: {
     label: 'Nassau',
+    iso3: null,
     population: '1,356,924',
     casesPastWeek: 8300,
     casesIncreasingPercentage: 0.0,
@@ -27561,6 +30208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36061: {
     label: 'New York',
+    iso3: null,
     population: '1,628,706',
     casesPastWeek: 5464,
     casesIncreasingPercentage: 0.0,
@@ -27570,6 +30218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36063: {
     label: 'Niagara',
+    iso3: null,
     population: '209,281',
     casesPastWeek: 1021,
     casesIncreasingPercentage: 0.0,
@@ -27579,6 +30228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36065: {
     label: 'Oneida',
+    iso3: null,
     population: '228,671',
     casesPastWeek: 1155,
     casesIncreasingPercentage: 0.0,
@@ -27588,6 +30238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36067: {
     label: 'Onondaga',
+    iso3: null,
     population: '460,528',
     casesPastWeek: 1849,
     casesIncreasingPercentage: 0.0,
@@ -27597,6 +30248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36069: {
     label: 'Ontario',
+    iso3: null,
     population: '109,777',
     casesPastWeek: 292,
     casesIncreasingPercentage: 0.0,
@@ -27606,6 +30258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36071: {
     label: 'Orange',
+    iso3: null,
     population: '384,940',
     casesPastWeek: 1902,
     casesIncreasingPercentage: 0.0,
@@ -27615,6 +30268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36073: {
     label: 'Orleans',
+    iso3: null,
     population: '40,352',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -27624,6 +30278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36075: {
     label: 'Oswego',
+    iso3: null,
     population: '117,124',
     casesPastWeek: 360,
     casesIncreasingPercentage: 0.0,
@@ -27633,6 +30288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36077: {
     label: 'Otsego',
+    iso3: null,
     population: '59,493',
     casesPastWeek: 248,
     casesIncreasingPercentage: 16.4319248826291,
@@ -27642,6 +30298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36079: {
     label: 'Putnam',
+    iso3: null,
     population: '98,320',
     casesPastWeek: 541,
     casesIncreasingPercentage: 0.0,
@@ -27651,6 +30308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36081: {
     label: 'Queens',
+    iso3: null,
     population: '2,253,858',
     casesPastWeek: 11749,
     casesIncreasingPercentage: 0.0,
@@ -27660,6 +30318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36083: {
     label: 'Rensselaer',
+    iso3: null,
     population: '158,714',
     casesPastWeek: 757,
     casesIncreasingPercentage: 0.0,
@@ -27669,6 +30328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36085: {
     label: 'Richmond',
+    iso3: null,
     population: '476,143',
     casesPastWeek: 3043,
     casesIncreasingPercentage: 0.0,
@@ -27678,6 +30338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36087: {
     label: 'Rockland',
+    iso3: null,
     population: '325,789',
     casesPastWeek: 1615,
     casesIncreasingPercentage: 0.0,
@@ -27687,6 +30348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36089: {
     label: 'St. Lawrence',
+    iso3: null,
     population: '107,740',
     casesPastWeek: 510,
     casesIncreasingPercentage: 0.0,
@@ -27696,6 +30358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36091: {
     label: 'Saratoga',
+    iso3: null,
     population: '229,863',
     casesPastWeek: 967,
     casesIncreasingPercentage: 0.0,
@@ -27705,6 +30368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36093: {
     label: 'Schenectady',
+    iso3: null,
     population: '155,299',
     casesPastWeek: 751,
     casesIncreasingPercentage: 0.0,
@@ -27714,6 +30378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36095: {
     label: 'Schoharie',
+    iso3: null,
     population: '30,999',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -27723,6 +30388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36097: {
     label: 'Schuyler',
+    iso3: null,
     population: '17,807',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -27732,6 +30398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36099: {
     label: 'Seneca',
+    iso3: null,
     population: '34,016',
     casesPastWeek: 122,
     casesIncreasingPercentage: 0.0,
@@ -27741,6 +30408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36101: {
     label: 'Steuben',
+    iso3: null,
     population: '95,379',
     casesPastWeek: 233,
     casesIncreasingPercentage: 0.0,
@@ -27750,6 +30418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36103: {
     label: 'Suffolk',
+    iso3: null,
     population: '1,476,601',
     casesPastWeek: 9249,
     casesIncreasingPercentage: 0.0,
@@ -27759,6 +30428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36105: {
     label: 'Sullivan',
+    iso3: null,
     population: '75,432',
     casesPastWeek: 250,
     casesIncreasingPercentage: 0.0,
@@ -27768,6 +30438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36107: {
     label: 'Tioga',
+    iso3: null,
     population: '48,203',
     casesPastWeek: 179,
     casesIncreasingPercentage: 6.547619047619047,
@@ -27777,6 +30448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36109: {
     label: 'Tompkins',
+    iso3: null,
     population: '102,180',
     casesPastWeek: 218,
     casesIncreasingPercentage: 0.4608294930875667,
@@ -27786,6 +30458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36111: {
     label: 'Ulster',
+    iso3: null,
     population: '177,573',
     casesPastWeek: 679,
     casesIncreasingPercentage: 0.0,
@@ -27795,6 +30468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36113: {
     label: 'Warren',
+    iso3: null,
     population: '63,944',
     casesPastWeek: 255,
     casesIncreasingPercentage: 0.0,
@@ -27804,6 +30478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36115: {
     label: 'Washington',
+    iso3: null,
     population: '61,204',
     casesPastWeek: 241,
     casesIncreasingPercentage: 3.433476394849788,
@@ -27813,6 +30488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36117: {
     label: 'Wayne',
+    iso3: null,
     population: '89,918',
     casesPastWeek: 293,
     casesIncreasingPercentage: 0.0,
@@ -27822,6 +30498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36119: {
     label: 'Westchester',
+    iso3: null,
     population: '967,506',
     casesPastWeek: 5517,
     casesIncreasingPercentage: 0.0,
@@ -27831,6 +30508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36121: {
     label: 'Wyoming',
+    iso3: null,
     population: '39,859',
     casesPastWeek: 204,
     casesIncreasingPercentage: 0.0,
@@ -27840,6 +30518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_36123: {
     label: 'Yates',
+    iso3: null,
     population: '24,913',
     casesPastWeek: 90,
     casesIncreasingPercentage: 0.0,
@@ -27849,6 +30528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37001: {
     label: 'Alamance',
+    iso3: null,
     population: '169,509',
     casesPastWeek: 638,
     casesIncreasingPercentage: 0.0,
@@ -27858,6 +30538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37003: {
     label: 'Alexander',
+    iso3: null,
     population: '37,497',
     casesPastWeek: 96,
     casesIncreasingPercentage: 0.0,
@@ -27867,6 +30548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37005: {
     label: 'Alleghany',
+    iso3: null,
     population: '11,137',
     casesPastWeek: 40,
     casesIncreasingPercentage: 25.0,
@@ -27876,6 +30558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37007: {
     label: 'Anson',
+    iso3: null,
     population: '24,446',
     casesPastWeek: 140,
     casesIncreasingPercentage: 0.0,
@@ -27885,6 +30568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37009: {
     label: 'Ashe',
+    iso3: null,
     population: '27,203',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -27894,6 +30578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37011: {
     label: 'Avery',
+    iso3: null,
     population: '17,557',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -27903,6 +30588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37013: {
     label: 'Beaufort',
+    iso3: null,
     population: '46,994',
     casesPastWeek: 214,
     casesIncreasingPercentage: 0.0,
@@ -27912,6 +30598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37015: {
     label: 'Bertie',
+    iso3: null,
     population: '18,947',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -27921,6 +30608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37017: {
     label: 'Bladen',
+    iso3: null,
     population: '32,722',
     casesPastWeek: 158,
     casesIncreasingPercentage: 0.0,
@@ -27930,6 +30618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37019: {
     label: 'Brunswick',
+    iso3: null,
     population: '142,820',
     casesPastWeek: 460,
     casesIncreasingPercentage: 0.0,
@@ -27939,6 +30628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37021: {
     label: 'Buncombe',
+    iso3: null,
     population: '261,191',
     casesPastWeek: 750,
     casesIncreasingPercentage: 0.0,
@@ -27948,6 +30638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37023: {
     label: 'Burke',
+    iso3: null,
     population: '90,485',
     casesPastWeek: 561,
     casesIncreasingPercentage: 0.0,
@@ -27957,6 +30648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37025: {
     label: 'Cabarrus',
+    iso3: null,
     population: '216,453',
     casesPastWeek: 987,
     casesIncreasingPercentage: 0.0,
@@ -27966,6 +30658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37027: {
     label: 'Caldwell',
+    iso3: null,
     population: '82,178',
     casesPastWeek: 340,
     casesIncreasingPercentage: 0.0,
@@ -27975,6 +30668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37029: {
     label: 'Camden',
+    iso3: null,
     population: '10,867',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -27984,6 +30678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37031: {
     label: 'Carteret',
+    iso3: null,
     population: '69,473',
     casesPastWeek: 207,
     casesIncreasingPercentage: 0.0,
@@ -27993,6 +30688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37033: {
     label: 'Caswell',
+    iso3: null,
     population: '22,604',
     casesPastWeek: 107,
     casesIncreasingPercentage: 0.0,
@@ -28002,6 +30698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37035: {
     label: 'Catawba',
+    iso3: null,
     population: '159,551',
     casesPastWeek: 1021,
     casesIncreasingPercentage: 0.0,
@@ -28011,6 +30708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37037: {
     label: 'Chatham',
+    iso3: null,
     population: '74,470',
     casesPastWeek: 205,
     casesIncreasingPercentage: 2.499999999999991,
@@ -28020,6 +30718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37039: {
     label: 'Cherokee',
+    iso3: null,
     population: '28,612',
     casesPastWeek: 100,
     casesIncreasingPercentage: 0.0,
@@ -28029,6 +30728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37041: {
     label: 'Chowan',
+    iso3: null,
     population: '13,943',
     casesPastWeek: 104,
     casesIncreasingPercentage: 20.93023255813953,
@@ -28038,6 +30738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37043: {
     label: 'Clay',
+    iso3: null,
     population: '11,231',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -28047,6 +30748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37045: {
     label: 'Cleveland',
+    iso3: null,
     population: '97,947',
     casesPastWeek: 494,
     casesIncreasingPercentage: 0.0,
@@ -28056,6 +30758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37047: {
     label: 'Columbus',
+    iso3: null,
     population: '55,508',
     casesPastWeek: 323,
     casesIncreasingPercentage: 6.25,
@@ -28065,6 +30768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37049: {
     label: 'Craven',
+    iso3: null,
     population: '102,139',
     casesPastWeek: 390,
     casesIncreasingPercentage: 0.0,
@@ -28074,6 +30778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37051: {
     label: 'Cumberland',
+    iso3: null,
     population: '335,509',
     casesPastWeek: 1320,
     casesIncreasingPercentage: 0.0,
@@ -28083,6 +30788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37053: {
     label: 'Currituck',
+    iso3: null,
     population: '27,763',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -28092,6 +30798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37055: {
     label: 'Dare',
+    iso3: null,
     population: '37,009',
     casesPastWeek: 142,
     casesIncreasingPercentage: 0.0,
@@ -28101,6 +30808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37057: {
     label: 'Davidson',
+    iso3: null,
     population: '167,609',
     casesPastWeek: 854,
     casesIncreasingPercentage: 0.0,
@@ -28110,6 +30818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37059: {
     label: 'Davie',
+    iso3: null,
     population: '42,846',
     casesPastWeek: 167,
     casesIncreasingPercentage: 0.0,
@@ -28119,6 +30828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37061: {
     label: 'Duplin',
+    iso3: null,
     population: '58,741',
     casesPastWeek: 203,
     casesIncreasingPercentage: 0.0,
@@ -28128,6 +30838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37063: {
     label: 'Durham',
+    iso3: null,
     population: '321,488',
     casesPastWeek: 854,
     casesIncreasingPercentage: 0.0,
@@ -28137,6 +30848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37065: {
     label: 'Edgecombe',
+    iso3: null,
     population: '51,472',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -28146,6 +30858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37067: {
     label: 'Forsyth',
+    iso3: null,
     population: '382,295',
     casesPastWeek: 1572,
     casesIncreasingPercentage: 0.0,
@@ -28155,6 +30868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37069: {
     label: 'Franklin',
+    iso3: null,
     population: '69,685',
     casesPastWeek: 338,
     casesIncreasingPercentage: 0.0,
@@ -28164,6 +30878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37071: {
     label: 'Gaston',
+    iso3: null,
     population: '224,529',
     casesPastWeek: 1101,
     casesIncreasingPercentage: 0.0,
@@ -28173,6 +30888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37073: {
     label: 'Gates',
+    iso3: null,
     population: '11,562',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -28182,6 +30898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37075: {
     label: 'Graham',
+    iso3: null,
     population: '8,441',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -28191,6 +30908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37077: {
     label: 'Granville',
+    iso3: null,
     population: '60,443',
     casesPastWeek: 179,
     casesIncreasingPercentage: 0.0,
@@ -28200,6 +30918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37079: {
     label: 'Greene',
+    iso3: null,
     population: '21,069',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -28209,6 +30928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37081: {
     label: 'Guilford',
+    iso3: null,
     population: '537,174',
     casesPastWeek: 2177,
     casesIncreasingPercentage: 0.0,
@@ -28218,6 +30938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37083: {
     label: 'Halifax',
+    iso3: null,
     population: '50,010',
     casesPastWeek: 265,
     casesIncreasingPercentage: 0.0,
@@ -28227,6 +30948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37085: {
     label: 'Harnett',
+    iso3: null,
     population: '135,976',
     casesPastWeek: 484,
     casesIncreasingPercentage: 0.0,
@@ -28236,6 +30958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37087: {
     label: 'Haywood',
+    iso3: null,
     population: '62,317',
     casesPastWeek: 243,
     casesIncreasingPercentage: 0.0,
@@ -28245,6 +30968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37089: {
     label: 'Henderson',
+    iso3: null,
     population: '117,417',
     casesPastWeek: 394,
     casesIncreasingPercentage: 0.0,
@@ -28254,6 +30978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37091: {
     label: 'Hertford',
+    iso3: null,
     population: '23,677',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -28263,6 +30988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37093: {
     label: 'Hoke',
+    iso3: null,
     population: '55,234',
     casesPastWeek: 186,
     casesIncreasingPercentage: 0.0,
@@ -28272,6 +30998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37095: {
     label: 'Hyde',
+    iso3: null,
     population: '4,937',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -28281,6 +31008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37097: {
     label: 'Iredell',
+    iso3: null,
     population: '181,806',
     casesPastWeek: 1207,
     casesIncreasingPercentage: 13.546566321730946,
@@ -28290,6 +31018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37099: {
     label: 'Jackson',
+    iso3: null,
     population: '43,938',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -28299,6 +31028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37101: {
     label: 'Johnston',
+    iso3: null,
     population: '209,339',
     casesPastWeek: 739,
     casesIncreasingPercentage: 0.0,
@@ -28308,6 +31038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37103: {
     label: 'Jones',
+    iso3: null,
     population: '9,419',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -28317,6 +31048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37105: {
     label: 'Lee',
+    iso3: null,
     population: '61,779',
     casesPastWeek: 259,
     casesIncreasingPercentage: 0.0,
@@ -28326,6 +31058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37107: {
     label: 'Lenoir',
+    iso3: null,
     population: '55,949',
     casesPastWeek: 241,
     casesIncreasingPercentage: 0.0,
@@ -28335,6 +31068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37109: {
     label: 'Lincoln',
+    iso3: null,
     population: '86,111',
     casesPastWeek: 471,
     casesIncreasingPercentage: 0.0,
@@ -28344,6 +31078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37111: {
     label: 'McDowell',
+    iso3: null,
     population: '45,756',
     casesPastWeek: 223,
     casesIncreasingPercentage: 0.0,
@@ -28353,6 +31088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37113: {
     label: 'Macon',
+    iso3: null,
     population: '35,858',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -28362,6 +31098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37115: {
     label: 'Madison',
+    iso3: null,
     population: '21,755',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -28371,6 +31108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37117: {
     label: 'Martin',
+    iso3: null,
     population: '22,440',
     casesPastWeek: 94,
     casesIncreasingPercentage: 11.904761904761907,
@@ -28380,6 +31118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37119: {
     label: 'Mecklenburg',
+    iso3: null,
     population: '1,110,356',
     casesPastWeek: 4980,
     casesIncreasingPercentage: 0.0,
@@ -28389,6 +31128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37121: {
     label: 'Mitchell',
+    iso3: null,
     population: '14,964',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -28398,6 +31138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37123: {
     label: 'Montgomery',
+    iso3: null,
     population: '27,173',
     casesPastWeek: 154,
     casesIncreasingPercentage: 0.0,
@@ -28407,6 +31148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37125: {
     label: 'Moore',
+    iso3: null,
     population: '100,880',
     casesPastWeek: 467,
     casesIncreasingPercentage: 1.3015184381778733,
@@ -28416,6 +31158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37127: {
     label: 'Nash',
+    iso3: null,
     population: '94,298',
     casesPastWeek: 461,
     casesIncreasingPercentage: 17.902813299232733,
@@ -28425,6 +31168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37129: {
     label: 'New Hanover',
+    iso3: null,
     population: '234,473',
     casesPastWeek: 1348,
     casesIncreasingPercentage: 93.95683453237412,
@@ -28434,6 +31178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37131: {
     label: 'Northampton',
+    iso3: null,
     population: '19,483',
     casesPastWeek: 112,
     casesIncreasingPercentage: 4.672897196261672,
@@ -28443,6 +31188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37133: {
     label: 'Onslow',
+    iso3: null,
     population: '197,938',
     casesPastWeek: 808,
     casesIncreasingPercentage: 0.0,
@@ -28452,6 +31198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37135: {
     label: 'Orange',
+    iso3: null,
     population: '148,476',
     casesPastWeek: 301,
     casesIncreasingPercentage: 0.0,
@@ -28461,6 +31208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37137: {
     label: 'Pamlico',
+    iso3: null,
     population: '12,726',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -28470,6 +31218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37139: {
     label: 'Pasquotank',
+    iso3: null,
     population: '39,824',
     casesPastWeek: 180,
     casesIncreasingPercentage: 0.0,
@@ -28479,6 +31228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37141: {
     label: 'Pender',
+    iso3: null,
     population: '63,060',
     casesPastWeek: 402,
     casesIncreasingPercentage: 43.060498220640575,
@@ -28488,6 +31238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37143: {
     label: 'Perquimans',
+    iso3: null,
     population: '13,463',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -28497,6 +31248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37145: {
     label: 'Person',
+    iso3: null,
     population: '39,490',
     casesPastWeek: 172,
     casesIncreasingPercentage: 0.0,
@@ -28506,6 +31258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37147: {
     label: 'Pitt',
+    iso3: null,
     population: '180,742',
     casesPastWeek: 801,
     casesIncreasingPercentage: 0.0,
@@ -28515,6 +31268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37149: {
     label: 'Polk',
+    iso3: null,
     population: '20,724',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -28524,6 +31278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37151: {
     label: 'Randolph',
+    iso3: null,
     population: '143,667',
     casesPastWeek: 742,
     casesIncreasingPercentage: 2.203856749311295,
@@ -28533,6 +31288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37153: {
     label: 'Richmond',
+    iso3: null,
     population: '44,829',
     casesPastWeek: 196,
     casesIncreasingPercentage: 0.0,
@@ -28542,6 +31298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37155: {
     label: 'Robeson',
+    iso3: null,
     population: '130,625',
     casesPastWeek: 756,
     casesIncreasingPercentage: 0.0,
@@ -28551,6 +31308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37157: {
     label: 'Rockingham',
+    iso3: null,
     population: '91,010',
     casesPastWeek: 324,
     casesIncreasingPercentage: 0.0,
@@ -28560,6 +31318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37159: {
     label: 'Rowan',
+    iso3: null,
     population: '142,088',
     casesPastWeek: 682,
     casesIncreasingPercentage: 0.0,
@@ -28569,6 +31328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37161: {
     label: 'Rutherford',
+    iso3: null,
     population: '67,029',
     casesPastWeek: 326,
     casesIncreasingPercentage: 0.0,
@@ -28578,6 +31338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37163: {
     label: 'Sampson',
+    iso3: null,
     population: '63,531',
     casesPastWeek: 197,
     casesIncreasingPercentage: 0.0,
@@ -28587,6 +31348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37165: {
     label: 'Scotland',
+    iso3: null,
     population: '34,823',
     casesPastWeek: 126,
     casesIncreasingPercentage: 0.0,
@@ -28596,6 +31358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37167: {
     label: 'Stanly',
+    iso3: null,
     population: '62,806',
     casesPastWeek: 332,
     casesIncreasingPercentage: 0.0,
@@ -28605,6 +31368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37169: {
     label: 'Stokes',
+    iso3: null,
     population: '45,591',
     casesPastWeek: 246,
     casesIncreasingPercentage: 0.0,
@@ -28614,6 +31378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37171: {
     label: 'Surry',
+    iso3: null,
     population: '71,783',
     casesPastWeek: 381,
     casesIncreasingPercentage: 0.0,
@@ -28623,6 +31388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37173: {
     label: 'Swain',
+    iso3: null,
     population: '14,271',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -28632,6 +31398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37175: {
     label: 'Transylvania',
+    iso3: null,
     population: '34,385',
     casesPastWeek: 130,
     casesIncreasingPercentage: 0.0,
@@ -28641,6 +31408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37177: {
     label: 'Tyrrell',
+    iso3: null,
     population: '4,016',
     casesPastWeek: 31,
     casesIncreasingPercentage: 82.35294117647058,
@@ -28650,6 +31418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37179: {
     label: 'Union',
+    iso3: null,
     population: '239,859',
     casesPastWeek: 1153,
     casesIncreasingPercentage: 0.0,
@@ -28659,6 +31428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37181: {
     label: 'Vance',
+    iso3: null,
     population: '44,535',
     casesPastWeek: 196,
     casesIncreasingPercentage: 0.0,
@@ -28668,6 +31438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37183: {
     label: 'Wake',
+    iso3: null,
     population: '1,111,761',
     casesPastWeek: 4247,
     casesIncreasingPercentage: 0.0,
@@ -28677,6 +31448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37185: {
     label: 'Warren',
+    iso3: null,
     population: '19,731',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -28686,6 +31458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37187: {
     label: 'Washington',
+    iso3: null,
     population: '11,580',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -28695,6 +31468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37189: {
     label: 'Watauga',
+    iso3: null,
     population: '56,177',
     casesPastWeek: 114,
     casesIncreasingPercentage: 0.0,
@@ -28704,6 +31478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37191: {
     label: 'Wayne',
+    iso3: null,
     population: '123,131',
     casesPastWeek: 376,
     casesIncreasingPercentage: 0.0,
@@ -28713,6 +31488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37193: {
     label: 'Wilkes',
+    iso3: null,
     population: '68,412',
     casesPastWeek: 275,
     casesIncreasingPercentage: 0.0,
@@ -28722,6 +31498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37195: {
     label: 'Wilson',
+    iso3: null,
     population: '81,801',
     casesPastWeek: 333,
     casesIncreasingPercentage: 0.0,
@@ -28731,6 +31508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37197: {
     label: 'Yadkin',
+    iso3: null,
     population: '37,667',
     casesPastWeek: 167,
     casesIncreasingPercentage: 0.0,
@@ -28740,6 +31518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_37199: {
     label: 'Yancey',
+    iso3: null,
     population: '18,069',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -28749,6 +31528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38001: {
     label: 'Adams',
+    iso3: null,
     population: '2,216',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -28758,6 +31538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38003: {
     label: 'Barnes',
+    iso3: null,
     population: '10,415',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -28767,6 +31548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38005: {
     label: 'Benson',
+    iso3: null,
     population: '6,832',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -28776,6 +31558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38007: {
     label: 'Billings',
+    iso3: null,
     population: '928',
     casesPastWeek: -1,
     casesIncreasingPercentage: 0.0,
@@ -28785,6 +31568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38009: {
     label: 'Bottineau',
+    iso3: null,
     population: '6,282',
     casesPastWeek: 12,
     casesIncreasingPercentage: 140.0,
@@ -28794,6 +31578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38011: {
     label: 'Bowman',
+    iso3: null,
     population: '3,024',
     casesPastWeek: 18,
     casesIncreasingPercentage: 50.0,
@@ -28803,6 +31588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38013: {
     label: 'Burke',
+    iso3: null,
     population: '2,115',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -28812,6 +31598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38015: {
     label: 'Burleigh',
+    iso3: null,
     population: '95,626',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -28821,6 +31608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38017: {
     label: 'Cass',
+    iso3: null,
     population: '181,923',
     casesPastWeek: 183,
     casesIncreasingPercentage: 0.0,
@@ -28830,6 +31618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38019: {
     label: 'Cavalier',
+    iso3: null,
     population: '3,762',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -28839,6 +31628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38021: {
     label: 'Dickey',
+    iso3: null,
     population: '4,872',
     casesPastWeek: 7,
     casesIncreasingPercentage: 39.99999999999999,
@@ -28848,6 +31638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38023: {
     label: 'Divide',
+    iso3: null,
     population: '2,264',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -28857,6 +31648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38025: {
     label: 'Dunn',
+    iso3: null,
     population: '4,424',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -28866,6 +31658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38027: {
     label: 'Eddy',
+    iso3: null,
     population: '2,287',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -28875,6 +31668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38029: {
     label: 'Emmons',
+    iso3: null,
     population: '3,241',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -28884,6 +31678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38031: {
     label: 'Foster',
+    iso3: null,
     population: '3,210',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -28893,6 +31688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38033: {
     label: 'Golden Valley',
+    iso3: null,
     population: '1,761',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -28902,6 +31698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38035: {
     label: 'Grand Forks',
+    iso3: null,
     population: '69,451',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -28911,6 +31708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38037: {
     label: 'Grant',
+    iso3: null,
     population: '2,274',
     casesPastWeek: 3,
     casesIncreasingPercentage: 200.0,
@@ -28920,6 +31718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38039: {
     label: 'Griggs',
+    iso3: null,
     population: '2,231',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -28929,6 +31728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38041: {
     label: 'Hettinger',
+    iso3: null,
     population: '2,499',
     casesPastWeek: 8,
     casesIncreasingPercentage: 300.0,
@@ -28938,6 +31738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38043: {
     label: 'Kidder',
+    iso3: null,
     population: '2,480',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -28947,6 +31748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38045: {
     label: 'LaMoure',
+    iso3: null,
     population: '4,046',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -28956,6 +31758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38047: {
     label: 'Logan',
+    iso3: null,
     population: '1,850',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -28965,6 +31768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38049: {
     label: 'McHenry',
+    iso3: null,
     population: '5,745',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -28974,6 +31778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38051: {
     label: 'McIntosh',
+    iso3: null,
     population: '2,497',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -28983,6 +31788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38053: {
     label: 'McKenzie',
+    iso3: null,
     population: '15,024',
     casesPastWeek: 25,
     casesIncreasingPercentage: 25.0,
@@ -28992,6 +31798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38055: {
     label: 'McLean',
+    iso3: null,
     population: '9,450',
     casesPastWeek: 12,
     casesIncreasingPercentage: 50.0,
@@ -29001,6 +31808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38057: {
     label: 'Mercer',
+    iso3: null,
     population: '8,187',
     casesPastWeek: 11,
     casesIncreasingPercentage: 175.0,
@@ -29010,6 +31818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38059: {
     label: 'Morton',
+    iso3: null,
     population: '31,364',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -29019,6 +31828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38061: {
     label: 'Mountrail',
+    iso3: null,
     population: '10,545',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -29028,6 +31838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38063: {
     label: 'Nelson',
+    iso3: null,
     population: '2,879',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -29037,6 +31848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38065: {
     label: 'Oliver',
+    iso3: null,
     population: '1,959',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -29046,6 +31858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38067: {
     label: 'Pembina',
+    iso3: null,
     population: '6,801',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -29055,6 +31868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38069: {
     label: 'Pierce',
+    iso3: null,
     population: '3,975',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -29064,6 +31878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38071: {
     label: 'Ramsey',
+    iso3: null,
     population: '11,519',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -29073,6 +31888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38073: {
     label: 'Ransom',
+    iso3: null,
     population: '5,218',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -29082,6 +31898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38075: {
     label: 'Renville',
+    iso3: null,
     population: '2,327',
     casesPastWeek: 11,
     casesIncreasingPercentage: 1000.0,
@@ -29091,6 +31908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38077: {
     label: 'Richland',
+    iso3: null,
     population: '16,177',
     casesPastWeek: 38,
     casesIncreasingPercentage: 31.034482758620683,
@@ -29100,6 +31918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38079: {
     label: 'Rolette',
+    iso3: null,
     population: '14,176',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -29109,6 +31928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38081: {
     label: 'Sargent',
+    iso3: null,
     population: '3,898',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -29118,6 +31938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38083: {
     label: 'Sheridan',
+    iso3: null,
     population: '1,315',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -29127,6 +31948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38085: {
     label: 'Sioux',
+    iso3: null,
     population: '4,230',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -29136,6 +31958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38087: {
     label: 'Slope',
+    iso3: null,
     population: '750',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -29145,6 +31968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38089: {
     label: 'Stark',
+    iso3: null,
     population: '31,489',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -29154,6 +31978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38091: {
     label: 'Steele',
+    iso3: null,
     population: '1,890',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -29163,6 +31988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38093: {
     label: 'Stutsman',
+    iso3: null,
     population: '20,704',
     casesPastWeek: 16,
     casesIncreasingPercentage: 33.33333333333333,
@@ -29172,6 +31998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38095: {
     label: 'Towner',
+    iso3: null,
     population: '2,189',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -29181,6 +32008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38097: {
     label: 'Traill',
+    iso3: null,
     population: '8,036',
     casesPastWeek: 17,
     casesIncreasingPercentage: 41.66666666666667,
@@ -29190,6 +32018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38099: {
     label: 'Walsh',
+    iso3: null,
     population: '10,641',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -29199,6 +32028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38101: {
     label: 'Ward',
+    iso3: null,
     population: '67,641',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -29208,6 +32038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38103: {
     label: 'Wells',
+    iso3: null,
     population: '3,834',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -29217,6 +32048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_38105: {
     label: 'Williams',
+    iso3: null,
     population: '37,589',
     casesPastWeek: 84,
     casesIncreasingPercentage: 25.373134328358216,
@@ -29226,6 +32058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39001: {
     label: 'Adams',
+    iso3: null,
     population: '27,698',
     casesPastWeek: 113,
     casesIncreasingPercentage: 18.947368421052623,
@@ -29235,6 +32068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39003: {
     label: 'Allen',
+    iso3: null,
     population: '102,351',
     casesPastWeek: 434,
     casesIncreasingPercentage: 0.0,
@@ -29244,6 +32078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39005: {
     label: 'Ashland',
+    iso3: null,
     population: '53,484',
     casesPastWeek: 157,
     casesIncreasingPercentage: 0.0,
@@ -29253,6 +32088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39007: {
     label: 'Ashtabula',
+    iso3: null,
     population: '97,241',
     casesPastWeek: 156,
     casesIncreasingPercentage: 0.0,
@@ -29262,6 +32098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39009: {
     label: 'Athens',
+    iso3: null,
     population: '65,327',
     casesPastWeek: 176,
     casesIncreasingPercentage: 0.0,
@@ -29271,6 +32108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39011: {
     label: 'Auglaize',
+    iso3: null,
     population: '45,656',
     casesPastWeek: 103,
     casesIncreasingPercentage: 0.0,
@@ -29280,6 +32118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39013: {
     label: 'Belmont',
+    iso3: null,
     population: '67,006',
     casesPastWeek: 221,
     casesIncreasingPercentage: 0.0,
@@ -29289,6 +32128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39015: {
     label: 'Brown',
+    iso3: null,
     population: '43,432',
     casesPastWeek: 173,
     casesIncreasingPercentage: 0.0,
@@ -29298,6 +32138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39017: {
     label: 'Butler',
+    iso3: null,
     population: '383,134',
     casesPastWeek: 1407,
     casesIncreasingPercentage: 0.0,
@@ -29307,6 +32148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39019: {
     label: 'Carroll',
+    iso3: null,
     population: '26,914',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -29316,6 +32158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39021: {
     label: 'Champaign',
+    iso3: null,
     population: '38,885',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -29325,6 +32168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39023: {
     label: 'Clark',
+    iso3: null,
     population: '134,083',
     casesPastWeek: 387,
     casesIncreasingPercentage: 0.0,
@@ -29334,6 +32178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39025: {
     label: 'Clermont',
+    iso3: null,
     population: '206,428',
     casesPastWeek: 897,
     casesIncreasingPercentage: 0.0,
@@ -29343,6 +32188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39027: {
     label: 'Clinton',
+    iso3: null,
     population: '41,968',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -29352,6 +32198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39029: {
     label: 'Columbiana',
+    iso3: null,
     population: '101,883',
     casesPastWeek: 271,
     casesIncreasingPercentage: 0.0,
@@ -29361,6 +32208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39031: {
     label: 'Coshocton',
+    iso3: null,
     population: '36,600',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -29370,6 +32218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39033: {
     label: 'Crawford',
+    iso3: null,
     population: '41,494',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -29379,6 +32228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39035: {
     label: 'Cuyahoga',
+    iso3: null,
     population: '1,235,072',
     casesPastWeek: 3888,
     casesIncreasingPercentage: 0.0,
@@ -29388,6 +32238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39037: {
     label: 'Darke',
+    iso3: null,
     population: '51,113',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -29397,6 +32248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39039: {
     label: 'Defiance',
+    iso3: null,
     population: '38,087',
     casesPastWeek: 130,
     casesIncreasingPercentage: 0.0,
@@ -29406,6 +32258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39041: {
     label: 'Delaware',
+    iso3: null,
     population: '209,177',
     casesPastWeek: 633,
     casesIncreasingPercentage: 0.0,
@@ -29415,6 +32268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39043: {
     label: 'Erie',
+    iso3: null,
     population: '74,266',
     casesPastWeek: 302,
     casesIncreasingPercentage: 0.0,
@@ -29424,6 +32278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39045: {
     label: 'Fairfield',
+    iso3: null,
     population: '157,574',
     casesPastWeek: 693,
     casesIncreasingPercentage: 0.0,
@@ -29433,6 +32288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39047: {
     label: 'Fayette',
+    iso3: null,
     population: '28,525',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -29442,6 +32298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39049: {
     label: 'Franklin',
+    iso3: null,
     population: '1,316,756',
     casesPastWeek: 4212,
     casesIncreasingPercentage: 0.0,
@@ -29451,6 +32308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39051: {
     label: 'Fulton',
+    iso3: null,
     population: '42,126',
     casesPastWeek: 134,
     casesIncreasingPercentage: 0.0,
@@ -29460,6 +32318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39053: {
     label: 'Gallia',
+    iso3: null,
     population: '29,898',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -29469,6 +32328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39055: {
     label: 'Geauga',
+    iso3: null,
     population: '93,649',
     casesPastWeek: 300,
     casesIncreasingPercentage: 0.0,
@@ -29478,6 +32338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39057: {
     label: 'Greene',
+    iso3: null,
     population: '168,937',
     casesPastWeek: 483,
     casesIncreasingPercentage: 0.0,
@@ -29487,6 +32348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39059: {
     label: 'Guernsey',
+    iso3: null,
     population: '38,875',
     casesPastWeek: 146,
     casesIncreasingPercentage: 0.0,
@@ -29496,6 +32358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39061: {
     label: 'Hamilton',
+    iso3: null,
     population: '817,473',
     casesPastWeek: 3042,
     casesIncreasingPercentage: 0.0,
@@ -29505,6 +32368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39063: {
     label: 'Hancock',
+    iso3: null,
     population: '75,783',
     casesPastWeek: 165,
     casesIncreasingPercentage: 0.0,
@@ -29514,6 +32378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39065: {
     label: 'Hardin',
+    iso3: null,
     population: '31,365',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -29523,6 +32388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39067: {
     label: 'Harrison',
+    iso3: null,
     population: '15,040',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -29532,6 +32398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39069: {
     label: 'Henry',
+    iso3: null,
     population: '27,006',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -29541,6 +32408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39071: {
     label: 'Highland',
+    iso3: null,
     population: '43,161',
     casesPastWeek: 143,
     casesIncreasingPercentage: 0.0,
@@ -29550,6 +32418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39073: {
     label: 'Hocking',
+    iso3: null,
     population: '28,264',
     casesPastWeek: 92,
     casesIncreasingPercentage: 0.0,
@@ -29559,6 +32428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39075: {
     label: 'Holmes',
+    iso3: null,
     population: '43,960',
     casesPastWeek: 70,
     casesIncreasingPercentage: 7.692307692307687,
@@ -29568,6 +32438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39077: {
     label: 'Huron',
+    iso3: null,
     population: '58,266',
     casesPastWeek: 197,
     casesIncreasingPercentage: 0.0,
@@ -29577,6 +32448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39079: {
     label: 'Jackson',
+    iso3: null,
     population: '32,413',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -29586,6 +32458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39081: {
     label: 'Jefferson',
+    iso3: null,
     population: '65,325',
     casesPastWeek: 172,
     casesIncreasingPercentage: 0.0,
@@ -29595,6 +32468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39083: {
     label: 'Knox',
+    iso3: null,
     population: '62,322',
     casesPastWeek: 179,
     casesIncreasingPercentage: 0.0,
@@ -29604,6 +32478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39085: {
     label: 'Lake',
+    iso3: null,
     population: '230,149',
     casesPastWeek: 813,
     casesIncreasingPercentage: 0.0,
@@ -29613,6 +32488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39087: {
     label: 'Lawrence',
+    iso3: null,
     population: '59,463',
     casesPastWeek: 253,
     casesIncreasingPercentage: 0.0,
@@ -29622,6 +32498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39089: {
     label: 'Licking',
+    iso3: null,
     population: '176,862',
     casesPastWeek: 595,
     casesIncreasingPercentage: 0.0,
@@ -29631,6 +32508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39091: {
     label: 'Logan',
+    iso3: null,
     population: '45,672',
     casesPastWeek: 164,
     casesIncreasingPercentage: 0.0,
@@ -29640,6 +32518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39093: {
     label: 'Lorain',
+    iso3: null,
     population: '309,833',
     casesPastWeek: 1079,
     casesIncreasingPercentage: 0.0,
@@ -29649,6 +32528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39095: {
     label: 'Lucas',
+    iso3: null,
     population: '428,348',
     casesPastWeek: 1389,
     casesIncreasingPercentage: 0.0,
@@ -29658,6 +32538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39097: {
     label: 'Madison',
+    iso3: null,
     population: '44,731',
     casesPastWeek: 172,
     casesIncreasingPercentage: 0.0,
@@ -29667,6 +32548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39099: {
     label: 'Mahoning',
+    iso3: null,
     population: '228,683',
     casesPastWeek: 625,
     casesIncreasingPercentage: 0.0,
@@ -29676,6 +32558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39101: {
     label: 'Marion',
+    iso3: null,
     population: '65,093',
     casesPastWeek: 148,
     casesIncreasingPercentage: 0.0,
@@ -29685,6 +32568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39103: {
     label: 'Medina',
+    iso3: null,
     population: '179,746',
     casesPastWeek: 538,
     casesIncreasingPercentage: 0.0,
@@ -29694,6 +32578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39105: {
     label: 'Meigs',
+    iso3: null,
     population: '22,907',
     casesPastWeek: 58,
     casesIncreasingPercentage: 0.0,
@@ -29703,6 +32588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39107: {
     label: 'Mercer',
+    iso3: null,
     population: '41,172',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -29712,6 +32598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39109: {
     label: 'Miami',
+    iso3: null,
     population: '106,987',
     casesPastWeek: 345,
     casesIncreasingPercentage: 0.0,
@@ -29721,6 +32608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39111: {
     label: 'Monroe',
+    iso3: null,
     population: '13,654',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -29730,6 +32618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39113: {
     label: 'Montgomery',
+    iso3: null,
     population: '531,687',
     casesPastWeek: 1609,
     casesIncreasingPercentage: 0.0,
@@ -29739,6 +32628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39115: {
     label: 'Morgan',
+    iso3: null,
     population: '14,508',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -29748,6 +32638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39117: {
     label: 'Morrow',
+    iso3: null,
     population: '35,328',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -29757,6 +32648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39119: {
     label: 'Muskingum',
+    iso3: null,
     population: '86,215',
     casesPastWeek: 340,
     casesIncreasingPercentage: 0.0,
@@ -29766,6 +32658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39121: {
     label: 'Noble',
+    iso3: null,
     population: '14,424',
     casesPastWeek: 29,
     casesIncreasingPercentage: 0.0,
@@ -29775,6 +32668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39123: {
     label: 'Ottawa',
+    iso3: null,
     population: '40,525',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -29784,6 +32678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39125: {
     label: 'Paulding',
+    iso3: null,
     population: '18,672',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -29793,6 +32688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39127: {
     label: 'Perry',
+    iso3: null,
     population: '36,134',
     casesPastWeek: 107,
     casesIncreasingPercentage: 0.0,
@@ -29802,6 +32698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39129: {
     label: 'Pickaway',
+    iso3: null,
     population: '58,457',
     casesPastWeek: 256,
     casesIncreasingPercentage: 0.0,
@@ -29811,6 +32708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39131: {
     label: 'Pike',
+    iso3: null,
     population: '27,772',
     casesPastWeek: 133,
     casesIncreasingPercentage: 26.66666666666666,
@@ -29820,6 +32718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39133: {
     label: 'Portage',
+    iso3: null,
     population: '162,466',
     casesPastWeek: 515,
     casesIncreasingPercentage: 0.0,
@@ -29829,6 +32728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39135: {
     label: 'Preble',
+    iso3: null,
     population: '40,882',
     casesPastWeek: 99,
     casesIncreasingPercentage: 0.0,
@@ -29838,6 +32738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39137: {
     label: 'Putnam',
+    iso3: null,
     population: '33,861',
     casesPastWeek: 116,
     casesIncreasingPercentage: 0.0,
@@ -29847,6 +32748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39139: {
     label: 'Richland',
+    iso3: null,
     population: '121,154',
     casesPastWeek: 396,
     casesIncreasingPercentage: 0.0,
@@ -29856,6 +32758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39141: {
     label: 'Ross',
+    iso3: null,
     population: '76,666',
     casesPastWeek: 230,
     casesIncreasingPercentage: 0.0,
@@ -29865,6 +32768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39143: {
     label: 'Sandusky',
+    iso3: null,
     population: '58,518',
     casesPastWeek: 167,
     casesIncreasingPercentage: 0.0,
@@ -29874,6 +32778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39145: {
     label: 'Scioto',
+    iso3: null,
     population: '75,314',
     casesPastWeek: 220,
     casesIncreasingPercentage: 0.0,
@@ -29883,6 +32788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39147: {
     label: 'Seneca',
+    iso3: null,
     population: '55,178',
     casesPastWeek: 180,
     casesIncreasingPercentage: 0.0,
@@ -29892,6 +32798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39149: {
     label: 'Shelby',
+    iso3: null,
     population: '48,590',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -29901,6 +32808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39151: {
     label: 'Stark',
+    iso3: null,
     population: '370,606',
     casesPastWeek: 1122,
     casesIncreasingPercentage: 0.0,
@@ -29910,6 +32818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39153: {
     label: 'Summit',
+    iso3: null,
     population: '541,013',
     casesPastWeek: 1664,
     casesIncreasingPercentage: 0.0,
@@ -29919,6 +32828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39155: {
     label: 'Trumbull',
+    iso3: null,
     population: '197,974',
     casesPastWeek: 460,
     casesIncreasingPercentage: 0.0,
@@ -29928,6 +32838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39157: {
     label: 'Tuscarawas',
+    iso3: null,
     population: '91,987',
     casesPastWeek: 268,
     casesIncreasingPercentage: 0.0,
@@ -29937,6 +32848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39159: {
     label: 'Union',
+    iso3: null,
     population: '58,988',
     casesPastWeek: 240,
     casesIncreasingPercentage: 0.0,
@@ -29946,6 +32858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39161: {
     label: 'Van Wert',
+    iso3: null,
     population: '28,275',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -29955,6 +32868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39163: {
     label: 'Vinton',
+    iso3: null,
     population: '13,085',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -29964,6 +32878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39165: {
     label: 'Warren',
+    iso3: null,
     population: '234,602',
     casesPastWeek: 829,
     casesIncreasingPercentage: 0.0,
@@ -29973,6 +32888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39167: {
     label: 'Washington',
+    iso3: null,
     population: '59,911',
     casesPastWeek: 198,
     casesIncreasingPercentage: 0.0,
@@ -29982,6 +32898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39169: {
     label: 'Wayne',
+    iso3: null,
     population: '115,710',
     casesPastWeek: 299,
     casesIncreasingPercentage: 0.0,
@@ -29991,6 +32908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39171: {
     label: 'Williams',
+    iso3: null,
     population: '36,692',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -30000,6 +32918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39173: {
     label: 'Wood',
+    iso3: null,
     population: '130,817',
     casesPastWeek: 443,
     casesIncreasingPercentage: 0.0,
@@ -30009,6 +32928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_39175: {
     label: 'Wyandot',
+    iso3: null,
     population: '21,772',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -30018,6 +32938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40001: {
     label: 'Adair',
+    iso3: null,
     population: '22,194',
     casesPastWeek: 141,
     casesIncreasingPercentage: 0.0,
@@ -30027,6 +32948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40003: {
     label: 'Alfalfa',
+    iso3: null,
     population: '5,702',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -30036,6 +32958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40005: {
     label: 'Atoka',
+    iso3: null,
     population: '13,758',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -30045,6 +32968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40007: {
     label: 'Beaver',
+    iso3: null,
     population: '5,311',
     casesPastWeek: 19,
     casesIncreasingPercentage: 35.71428571428572,
@@ -30054,6 +32978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40009: {
     label: 'Beckham',
+    iso3: null,
     population: '21,859',
     casesPastWeek: 92,
     casesIncreasingPercentage: 0.0,
@@ -30063,6 +32988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40011: {
     label: 'Blaine',
+    iso3: null,
     population: '9,429',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -30072,6 +32998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40013: {
     label: 'Bryan',
+    iso3: null,
     population: '47,995',
     casesPastWeek: 262,
     casesIncreasingPercentage: 0.0,
@@ -30081,6 +33008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40015: {
     label: 'Caddo',
+    iso3: null,
     population: '28,762',
     casesPastWeek: 137,
     casesIncreasingPercentage: 0.0,
@@ -30090,6 +33018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40017: {
     label: 'Canadian',
+    iso3: null,
     population: '148,306',
     casesPastWeek: 706,
     casesIncreasingPercentage: 0.0,
@@ -30099,6 +33028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40019: {
     label: 'Carter',
+    iso3: null,
     population: '48,111',
     casesPastWeek: 302,
     casesIncreasingPercentage: 0.0,
@@ -30108,6 +33038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40021: {
     label: 'Cherokee',
+    iso3: null,
     population: '48,657',
     casesPastWeek: 170,
     casesIncreasingPercentage: 0.0,
@@ -30117,6 +33048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40023: {
     label: 'Choctaw',
+    iso3: null,
     population: '14,672',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -30126,6 +33058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40025: {
     label: 'Cimarron',
+    iso3: null,
     population: '2,137',
     casesPastWeek: -1,
     casesIncreasingPercentage: 0.0,
@@ -30135,6 +33068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40027: {
     label: 'Cleveland',
+    iso3: null,
     population: '284,014',
     casesPastWeek: 1487,
     casesIncreasingPercentage: 0.0,
@@ -30144,6 +33078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40029: {
     label: 'Coal',
+    iso3: null,
     population: '5,495',
     casesPastWeek: 31,
     casesIncreasingPercentage: 24.0,
@@ -30153,6 +33088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40031: {
     label: 'Comanche',
+    iso3: null,
     population: '120,749',
     casesPastWeek: 647,
     casesIncreasingPercentage: 0.0,
@@ -30162,6 +33098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40033: {
     label: 'Cotton',
+    iso3: null,
     population: '5,666',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -30171,6 +33108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40035: {
     label: 'Craig',
+    iso3: null,
     population: '14,142',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -30180,6 +33118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40037: {
     label: 'Creek',
+    iso3: null,
     population: '71,522',
     casesPastWeek: 353,
     casesIncreasingPercentage: 0.0,
@@ -30189,6 +33128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40039: {
     label: 'Custer',
+    iso3: null,
     population: '29,003',
     casesPastWeek: 91,
     casesIncreasingPercentage: 0.0,
@@ -30198,6 +33138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40041: {
     label: 'Delaware',
+    iso3: null,
     population: '43,009',
     casesPastWeek: 166,
     casesIncreasingPercentage: 0.0,
@@ -30207,6 +33148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40043: {
     label: 'Dewey',
+    iso3: null,
     population: '4,891',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -30216,6 +33158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40045: {
     label: 'Ellis',
+    iso3: null,
     population: '3,859',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -30225,6 +33168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40047: {
     label: 'Garfield',
+    iso3: null,
     population: '61,056',
     casesPastWeek: 260,
     casesIncreasingPercentage: 0.0,
@@ -30234,6 +33178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40049: {
     label: 'Garvin',
+    iso3: null,
     population: '27,711',
     casesPastWeek: 162,
     casesIncreasingPercentage: 0.0,
@@ -30243,6 +33188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40051: {
     label: 'Grady',
+    iso3: null,
     population: '55,834',
     casesPastWeek: 227,
     casesIncreasingPercentage: 0.0,
@@ -30252,6 +33198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40053: {
     label: 'Grant',
+    iso3: null,
     population: '4,333',
     casesPastWeek: 26,
     casesIncreasingPercentage: 30.000000000000004,
@@ -30261,6 +33208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40055: {
     label: 'Greer',
+    iso3: null,
     population: '5,712',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -30270,6 +33218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40057: {
     label: 'Harmon',
+    iso3: null,
     population: '2,653',
     casesPastWeek: 6,
     casesIncreasingPercentage: 500.0,
@@ -30279,6 +33228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40059: {
     label: 'Harper',
+    iso3: null,
     population: '3,688',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -30288,6 +33238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40061: {
     label: 'Haskell',
+    iso3: null,
     population: '12,627',
     casesPastWeek: 67,
     casesIncreasingPercentage: 21.818181818181827,
@@ -30297,6 +33248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40063: {
     label: 'Hughes',
+    iso3: null,
     population: '13,279',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -30306,6 +33258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40065: {
     label: 'Jackson',
+    iso3: null,
     population: '24,530',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -30315,6 +33268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40067: {
     label: 'Jefferson',
+    iso3: null,
     population: '6,002',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -30324,6 +33278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40069: {
     label: 'Johnston',
+    iso3: null,
     population: '11,085',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -30333,6 +33288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40071: {
     label: 'Kay',
+    iso3: null,
     population: '43,538',
     casesPastWeek: 324,
     casesIncreasingPercentage: 0.0,
@@ -30342,6 +33298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40073: {
     label: 'Kingfisher',
+    iso3: null,
     population: '15,765',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -30351,6 +33308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40075: {
     label: 'Kiowa',
+    iso3: null,
     population: '8,708',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -30360,6 +33318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40077: {
     label: 'Latimer',
+    iso3: null,
     population: '10,073',
     casesPastWeek: 40,
     casesIncreasingPercentage: 5.263157894736836,
@@ -30369,6 +33328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40079: {
     label: 'Le Flore',
+    iso3: null,
     population: '49,853',
     casesPastWeek: 191,
     casesIncreasingPercentage: 0.0,
@@ -30378,6 +33338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40081: {
     label: 'Lincoln',
+    iso3: null,
     population: '34,877',
     casesPastWeek: 131,
     casesIncreasingPercentage: 0.0,
@@ -30387,6 +33348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40083: {
     label: 'Logan',
+    iso3: null,
     population: '48,011',
     casesPastWeek: 175,
     casesIncreasingPercentage: 0.0,
@@ -30396,6 +33358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40085: {
     label: 'Love',
+    iso3: null,
     population: '10,253',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -30405,6 +33368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40087: {
     label: 'McClain',
+    iso3: null,
     population: '40,474',
     casesPastWeek: 206,
     casesIncreasingPercentage: 0.0,
@@ -30414,6 +33378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40089: {
     label: 'McCurtain',
+    iso3: null,
     population: '32,832',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -30423,6 +33388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40091: {
     label: 'McIntosh',
+    iso3: null,
     population: '19,596',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -30432,6 +33398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40093: {
     label: 'Major',
+    iso3: null,
     population: '7,629',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -30441,6 +33408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40095: {
     label: 'Marshall',
+    iso3: null,
     population: '16,931',
     casesPastWeek: 90,
     casesIncreasingPercentage: 0.0,
@@ -30450,6 +33418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40097: {
     label: 'Mayes',
+    iso3: null,
     population: '41,100',
     casesPastWeek: 224,
     casesIncreasingPercentage: 0.0,
@@ -30459,6 +33428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40099: {
     label: 'Murray',
+    iso3: null,
     population: '14,073',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -30468,6 +33438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40101: {
     label: 'Muskogee',
+    iso3: null,
     population: '67,997',
     casesPastWeek: 300,
     casesIncreasingPercentage: 0.0,
@@ -30477,6 +33448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40103: {
     label: 'Noble',
+    iso3: null,
     population: '11,131',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -30486,6 +33458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40105: {
     label: 'Nowata',
+    iso3: null,
     population: '10,076',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -30495,6 +33468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40107: {
     label: 'Okfuskee',
+    iso3: null,
     population: '11,993',
     casesPastWeek: 59,
     casesIncreasingPercentage: 5.35714285714286,
@@ -30504,6 +33478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40109: {
     label: 'Oklahoma',
+    iso3: null,
     population: '797,434',
     casesPastWeek: 3610,
     casesIncreasingPercentage: 0.0,
@@ -30513,6 +33488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40111: {
     label: 'Okmulgee',
+    iso3: null,
     population: '38,465',
     casesPastWeek: 125,
     casesIncreasingPercentage: 0.0,
@@ -30522,6 +33498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40113: {
     label: 'Osage',
+    iso3: null,
     population: '46,963',
     casesPastWeek: 181,
     casesIncreasingPercentage: 0.0,
@@ -30531,6 +33508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40115: {
     label: 'Ottawa',
+    iso3: null,
     population: '31,127',
     casesPastWeek: 113,
     casesIncreasingPercentage: 0.0,
@@ -30540,6 +33518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40117: {
     label: 'Pawnee',
+    iso3: null,
     population: '16,376',
     casesPastWeek: 68,
     casesIncreasingPercentage: 0.0,
@@ -30549,6 +33528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40119: {
     label: 'Payne',
+    iso3: null,
     population: '81,784',
     casesPastWeek: 371,
     casesIncreasingPercentage: 17.405063291139243,
@@ -30558,6 +33538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40121: {
     label: 'Pittsburg',
+    iso3: null,
     population: '43,654',
     casesPastWeek: 184,
     casesIncreasingPercentage: 0.0,
@@ -30567,6 +33548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40123: {
     label: 'Pontotoc',
+    iso3: null,
     population: '38,284',
     casesPastWeek: 253,
     casesIncreasingPercentage: 0.0,
@@ -30576,6 +33558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40125: {
     label: 'Pottawatomie',
+    iso3: null,
     population: '72,592',
     casesPastWeek: 271,
     casesIncreasingPercentage: 0.0,
@@ -30585,6 +33568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40127: {
     label: 'Pushmataha',
+    iso3: null,
     population: '11,096',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -30594,6 +33578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40129: {
     label: 'Roger Mills',
+    iso3: null,
     population: '3,583',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -30603,6 +33588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40131: {
     label: 'Rogers',
+    iso3: null,
     population: '92,459',
     casesPastWeek: 433,
     casesIncreasingPercentage: 0.0,
@@ -30612,6 +33598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40133: {
     label: 'Seminole',
+    iso3: null,
     population: '24,258',
     casesPastWeek: 136,
     casesIncreasingPercentage: 0.0,
@@ -30621,6 +33608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40135: {
     label: 'Sequoyah',
+    iso3: null,
     population: '41,569',
     casesPastWeek: 160,
     casesIncreasingPercentage: 0.0,
@@ -30630,6 +33618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40137: {
     label: 'Stephens',
+    iso3: null,
     population: '43,143',
     casesPastWeek: 255,
     casesIncreasingPercentage: 0.0,
@@ -30639,6 +33628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40139: {
     label: 'Texas',
+    iso3: null,
     population: '19,983',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -30648,6 +33638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40141: {
     label: 'Tillman',
+    iso3: null,
     population: '7,250',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -30657,6 +33648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40143: {
     label: 'Tulsa',
+    iso3: null,
     population: '651,552',
     casesPastWeek: 3019,
     casesIncreasingPercentage: 0.0,
@@ -30666,6 +33658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40145: {
     label: 'Wagoner',
+    iso3: null,
     population: '81,289',
     casesPastWeek: 399,
     casesIncreasingPercentage: 0.0,
@@ -30675,6 +33668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40147: {
     label: 'Washington',
+    iso3: null,
     population: '51,527',
     casesPastWeek: 181,
     casesIncreasingPercentage: 0.0,
@@ -30684,6 +33678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40149: {
     label: 'Washita',
+    iso3: null,
     population: '10,916',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -30693,6 +33688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40151: {
     label: 'Woods',
+    iso3: null,
     population: '8,793',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -30702,6 +33698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_40153: {
     label: 'Woodward',
+    iso3: null,
     population: '20,211',
     casesPastWeek: 112,
     casesIncreasingPercentage: 0.0,
@@ -30711,6 +33708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41001: {
     label: 'Baker',
+    iso3: null,
     population: '16,124',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -30720,6 +33718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41003: {
     label: 'Benton',
+    iso3: null,
     population: '93,053',
     casesPastWeek: 125,
     casesIncreasingPercentage: 0.0,
@@ -30729,6 +33728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41005: {
     label: 'Clackamas',
+    iso3: null,
     population: '418,187',
     casesPastWeek: 397,
     casesIncreasingPercentage: 0.0,
@@ -30738,6 +33738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41007: {
     label: 'Clatsop',
+    iso3: null,
     population: '40,224',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -30747,6 +33748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41009: {
     label: 'Columbia',
+    iso3: null,
     population: '52,354',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -30756,6 +33758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41011: {
     label: 'Coos',
+    iso3: null,
     population: '64,487',
     casesPastWeek: 72,
     casesIncreasingPercentage: 35.849056603773576,
@@ -30765,6 +33768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41013: {
     label: 'Crook',
+    iso3: null,
     population: '24,404',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -30774,6 +33778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41015: {
     label: 'Curry',
+    iso3: null,
     population: '22,925',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -30783,6 +33788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41017: {
     label: 'Deschutes',
+    iso3: null,
     population: '197,692',
     casesPastWeek: 242,
     casesIncreasingPercentage: 0.0,
@@ -30792,6 +33798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41019: {
     label: 'Douglas',
+    iso3: null,
     population: '110,980',
     casesPastWeek: 97,
     casesIncreasingPercentage: 0.0,
@@ -30801,6 +33808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41021: {
     label: 'Gilliam',
+    iso3: null,
     population: '1,912',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -30810,6 +33818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41023: {
     label: 'Grant',
+    iso3: null,
     population: '7,199',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -30819,6 +33828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41025: {
     label: 'Harney',
+    iso3: null,
     population: '7,393',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -30828,6 +33838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41027: {
     label: 'Hood River',
+    iso3: null,
     population: '23,382',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -30837,6 +33848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41029: {
     label: 'Jackson',
+    iso3: null,
     population: '220,944',
     casesPastWeek: 277,
     casesIncreasingPercentage: 0.0,
@@ -30846,6 +33858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41031: {
     label: 'Jefferson',
+    iso3: null,
     population: '24,658',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -30855,6 +33868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41033: {
     label: 'Josephine',
+    iso3: null,
     population: '87,487',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -30864,6 +33878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41035: {
     label: 'Klamath',
+    iso3: null,
     population: '68,238',
     casesPastWeek: 122,
     casesIncreasingPercentage: 0.0,
@@ -30873,6 +33888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41037: {
     label: 'Lake',
+    iso3: null,
     population: '7,869',
     casesPastWeek: 23,
     casesIncreasingPercentage: 109.09090909090908,
@@ -30882,6 +33898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41039: {
     label: 'Lane',
+    iso3: null,
     population: '382,067',
     casesPastWeek: 495,
     casesIncreasingPercentage: 0.0,
@@ -30891,6 +33908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41041: {
     label: 'Lincoln',
+    iso3: null,
     population: '49,962',
     casesPastWeek: 42,
     casesIncreasingPercentage: 2.4390243902439046,
@@ -30900,6 +33918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41043: {
     label: 'Linn',
+    iso3: null,
     population: '129,749',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -30909,6 +33928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41045: {
     label: 'Malheur',
+    iso3: null,
     population: '30,571',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -30918,6 +33938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41047: {
     label: 'Marion',
+    iso3: null,
     population: '347,818',
     casesPastWeek: 568,
     casesIncreasingPercentage: 0.0,
@@ -30927,6 +33948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41049: {
     label: 'Morrow',
+    iso3: null,
     population: '11,603',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -30936,6 +33958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41051: {
     label: 'Multnomah',
+    iso3: null,
     population: '812,855',
     casesPastWeek: 777,
     casesIncreasingPercentage: 0.0,
@@ -30945,6 +33968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41053: {
     label: 'Polk',
+    iso3: null,
     population: '86,085',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -30954,6 +33978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41055: {
     label: 'Sherman',
+    iso3: null,
     population: '1,780',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -30963,6 +33988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41057: {
     label: 'Tillamook',
+    iso3: null,
     population: '27,036',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -30972,6 +33998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41059: {
     label: 'Umatilla',
+    iso3: null,
     population: '77,950',
     casesPastWeek: 227,
     casesIncreasingPercentage: 0.0,
@@ -30981,6 +34008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41061: {
     label: 'Union',
+    iso3: null,
     population: '26,835',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -30990,6 +34018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41063: {
     label: 'Wallowa',
+    iso3: null,
     population: '7,208',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -30999,6 +34028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41065: {
     label: 'Wasco',
+    iso3: null,
     population: '26,682',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -31008,6 +34038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41067: {
     label: 'Washington',
+    iso3: null,
     population: '601,592',
     casesPastWeek: 635,
     casesIncreasingPercentage: 0.0,
@@ -31017,6 +34048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41069: {
     label: 'Wheeler',
+    iso3: null,
     population: '1,332',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -31026,6 +34058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_41071: {
     label: 'Yamhill',
+    iso3: null,
     population: '107,100',
     casesPastWeek: 117,
     casesIncreasingPercentage: 0.0,
@@ -31035,6 +34068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42001: {
     label: 'Adams',
+    iso3: null,
     population: '103,009',
     casesPastWeek: 398,
     casesIncreasingPercentage: 0.0,
@@ -31044,6 +34078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42003: {
     label: 'Allegheny',
+    iso3: null,
     population: '1,216,045',
     casesPastWeek: 2695,
     casesIncreasingPercentage: 0.0,
@@ -31053,6 +34088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42005: {
     label: 'Armstrong',
+    iso3: null,
     population: '64,735',
     casesPastWeek: 181,
     casesIncreasingPercentage: 0.0,
@@ -31062,6 +34098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42007: {
     label: 'Beaver',
+    iso3: null,
     population: '163,929',
     casesPastWeek: 376,
     casesIncreasingPercentage: 0.0,
@@ -31071,6 +34108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42009: {
     label: 'Bedford',
+    iso3: null,
     population: '47,888',
     casesPastWeek: 95,
     casesIncreasingPercentage: 0.0,
@@ -31080,6 +34118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42011: {
     label: 'Berks',
+    iso3: null,
     population: '421,164',
     casesPastWeek: 1521,
     casesIncreasingPercentage: 0.0,
@@ -31089,6 +34128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42013: {
     label: 'Blair',
+    iso3: null,
     population: '121,829',
     casesPastWeek: 351,
     casesIncreasingPercentage: 0.0,
@@ -31098,6 +34138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42015: {
     label: 'Bradford',
+    iso3: null,
     population: '60,323',
     casesPastWeek: 161,
     casesIncreasingPercentage: 0.0,
@@ -31107,6 +34148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42017: {
     label: 'Bucks',
+    iso3: null,
     population: '628,270',
     casesPastWeek: 1732,
     casesIncreasingPercentage: 0.0,
@@ -31116,6 +34158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42019: {
     label: 'Butler',
+    iso3: null,
     population: '187,853',
     casesPastWeek: 564,
     casesIncreasingPercentage: 0.0,
@@ -31125,6 +34168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42021: {
     label: 'Cambria',
+    iso3: null,
     population: '130,192',
     casesPastWeek: 360,
     casesIncreasingPercentage: 0.0,
@@ -31134,6 +34178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42023: {
     label: 'Cameron',
+    iso3: null,
     population: '4,447',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -31143,6 +34188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42025: {
     label: 'Carbon',
+    iso3: null,
     population: '64,182',
     casesPastWeek: 276,
     casesIncreasingPercentage: 0.0,
@@ -31152,6 +34198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42027: {
     label: 'Centre',
+    iso3: null,
     population: '162,385',
     casesPastWeek: 390,
     casesIncreasingPercentage: 0.0,
@@ -31161,6 +34208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42029: {
     label: 'Chester',
+    iso3: null,
     population: '524,989',
     casesPastWeek: 1201,
     casesIncreasingPercentage: 0.0,
@@ -31170,6 +34218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42031: {
     label: 'Clarion',
+    iso3: null,
     population: '38,438',
     casesPastWeek: 74,
     casesIncreasingPercentage: 0.0,
@@ -31179,6 +34228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42033: {
     label: 'Clearfield',
+    iso3: null,
     population: '79,255',
     casesPastWeek: 246,
     casesIncreasingPercentage: 0.0,
@@ -31188,6 +34238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42035: {
     label: 'Clinton',
+    iso3: null,
     population: '38,632',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -31197,6 +34248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42037: {
     label: 'Columbia',
+    iso3: null,
     population: '64,964',
     casesPastWeek: 180,
     casesIncreasingPercentage: 0.0,
@@ -31206,6 +34258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42039: {
     label: 'Crawford',
+    iso3: null,
     population: '84,629',
     casesPastWeek: 172,
     casesIncreasingPercentage: 0.0,
@@ -31215,6 +34268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42041: {
     label: 'Cumberland',
+    iso3: null,
     population: '253,370',
     casesPastWeek: 562,
     casesIncreasingPercentage: 0.0,
@@ -31224,6 +34278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42043: {
     label: 'Dauphin',
+    iso3: null,
     population: '278,299',
     casesPastWeek: 791,
     casesIncreasingPercentage: 0.0,
@@ -31233,6 +34288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42045: {
     label: 'Delaware',
+    iso3: null,
     population: '566,747',
     casesPastWeek: 1457,
     casesIncreasingPercentage: 0.0,
@@ -31242,6 +34298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42047: {
     label: 'Elk',
+    iso3: null,
     population: '29,910',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -31251,6 +34308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42049: {
     label: 'Erie',
+    iso3: null,
     population: '269,728',
     casesPastWeek: 685,
     casesIncreasingPercentage: 0.0,
@@ -31260,6 +34318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42051: {
     label: 'Fayette',
+    iso3: null,
     population: '129,274',
     casesPastWeek: 350,
     casesIncreasingPercentage: 0.0,
@@ -31269,6 +34328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42053: {
     label: 'Forest',
+    iso3: null,
     population: '7,247',
     casesPastWeek: 660,
     casesIncreasingPercentage: 283.72093023255815,
@@ -31278,6 +34338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42055: {
     label: 'Franklin',
+    iso3: null,
     population: '155,027',
     casesPastWeek: 484,
     casesIncreasingPercentage: 0.0,
@@ -31287,6 +34348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42057: {
     label: 'Fulton',
+    iso3: null,
     population: '14,530',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -31296,6 +34358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42059: {
     label: 'Greene',
+    iso3: null,
     population: '36,233',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -31305,6 +34368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42061: {
     label: 'Huntingdon',
+    iso3: null,
     population: '45,144',
     casesPastWeek: 126,
     casesIncreasingPercentage: 0.0,
@@ -31314,6 +34378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42063: {
     label: 'Indiana',
+    iso3: null,
     population: '84,073',
     casesPastWeek: 166,
     casesIncreasingPercentage: 7.096774193548394,
@@ -31323,6 +34388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42065: {
     label: 'Jefferson',
+    iso3: null,
     population: '43,425',
     casesPastWeek: 143,
     casesIncreasingPercentage: 12.598425196850393,
@@ -31332,6 +34398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42067: {
     label: 'Juniata',
+    iso3: null,
     population: '24,763',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -31341,6 +34408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42069: {
     label: 'Lackawanna',
+    iso3: null,
     population: '209,674',
     casesPastWeek: 739,
     casesIncreasingPercentage: 0.0,
@@ -31350,6 +34418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42071: {
     label: 'Lancaster',
+    iso3: null,
     population: '545,724',
     casesPastWeek: 1893,
     casesIncreasingPercentage: 0.0,
@@ -31359,6 +34428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42073: {
     label: 'Lawrence',
+    iso3: null,
     population: '85,512',
     casesPastWeek: 235,
     casesIncreasingPercentage: 0.0,
@@ -31368,6 +34438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42075: {
     label: 'Lebanon',
+    iso3: null,
     population: '141,793',
     casesPastWeek: 544,
     casesIncreasingPercentage: 0.0,
@@ -31377,6 +34448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42077: {
     label: 'Lehigh',
+    iso3: null,
     population: '369,318',
     casesPastWeek: 1348,
     casesIncreasingPercentage: 0.0,
@@ -31386,6 +34458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42079: {
     label: 'Luzerne',
+    iso3: null,
     population: '317,417',
     casesPastWeek: 960,
     casesIncreasingPercentage: 0.0,
@@ -31395,6 +34468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42081: {
     label: 'Lycoming',
+    iso3: null,
     population: '113,299',
     casesPastWeek: 385,
     casesIncreasingPercentage: 0.0,
@@ -31404,6 +34478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42083: {
     label: 'McKean',
+    iso3: null,
     population: '40,625',
     casesPastWeek: 280,
     casesIncreasingPercentage: 48.93617021276595,
@@ -31413,6 +34488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42085: {
     label: 'Mercer',
+    iso3: null,
     population: '109,424',
     casesPastWeek: 275,
     casesIncreasingPercentage: 0.0,
@@ -31422,6 +34498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42087: {
     label: 'Mifflin',
+    iso3: null,
     population: '46,138',
     casesPastWeek: 141,
     casesIncreasingPercentage: 0.0,
@@ -31431,6 +34508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42089: {
     label: 'Monroe',
+    iso3: null,
     population: '170,271',
     casesPastWeek: 438,
     casesIncreasingPercentage: 0.0,
@@ -31440,6 +34518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42091: {
     label: 'Montgomery',
+    iso3: null,
     population: '830,915',
     casesPastWeek: 2147,
     casesIncreasingPercentage: 0.0,
@@ -31449,6 +34528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42093: {
     label: 'Montour',
+    iso3: null,
     population: '18,230',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -31458,6 +34538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42095: {
     label: 'Northampton',
+    iso3: null,
     population: '305,285',
     casesPastWeek: 1318,
     casesIncreasingPercentage: 0.0,
@@ -31467,6 +34548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42097: {
     label: 'Northumberland',
+    iso3: null,
     population: '90,843',
     casesPastWeek: 331,
     casesIncreasingPercentage: 0.0,
@@ -31476,6 +34558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42099: {
     label: 'Perry',
+    iso3: null,
     population: '46,272',
     casesPastWeek: 105,
     casesIncreasingPercentage: 0.0,
@@ -31485,6 +34568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42101: {
     label: 'Philadelphia',
+    iso3: null,
     population: '1,584,064',
     casesPastWeek: 3295,
     casesIncreasingPercentage: 0.0,
@@ -31494,6 +34578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42103: {
     label: 'Pike',
+    iso3: null,
     population: '55,809',
     casesPastWeek: 143,
     casesIncreasingPercentage: 0.0,
@@ -31503,6 +34588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42105: {
     label: 'Potter',
+    iso3: null,
     population: '16,526',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -31512,6 +34598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42107: {
     label: 'Schuylkill',
+    iso3: null,
     population: '141,359',
     casesPastWeek: 588,
     casesIncreasingPercentage: 0.0,
@@ -31521,6 +34608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42109: {
     label: 'Snyder',
+    iso3: null,
     population: '40,372',
     casesPastWeek: 125,
     casesIncreasingPercentage: 0.0,
@@ -31530,6 +34618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42111: {
     label: 'Somerset',
+    iso3: null,
     population: '73,447',
     casesPastWeek: 181,
     casesIncreasingPercentage: 0.0,
@@ -31539,6 +34628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42113: {
     label: 'Sullivan',
+    iso3: null,
     population: '6,066',
     casesPastWeek: 40,
     casesIncreasingPercentage: 29.032258064516125,
@@ -31548,6 +34638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42115: {
     label: 'Susquehanna',
+    iso3: null,
     population: '40,328',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -31557,6 +34648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42117: {
     label: 'Tioga',
+    iso3: null,
     population: '40,591',
     casesPastWeek: 66,
     casesIncreasingPercentage: 4.761904761904767,
@@ -31566,6 +34658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42119: {
     label: 'Union',
+    iso3: null,
     population: '44,923',
     casesPastWeek: 199,
     casesIncreasingPercentage: 0.0,
@@ -31575,6 +34668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42121: {
     label: 'Venango',
+    iso3: null,
     population: '50,668',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -31584,6 +34678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42123: {
     label: 'Warren',
+    iso3: null,
     population: '39,191',
     casesPastWeek: 93,
     casesIncreasingPercentage: 0.0,
@@ -31593,6 +34688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42125: {
     label: 'Washington',
+    iso3: null,
     population: '206,865',
     casesPastWeek: 612,
     casesIncreasingPercentage: 0.0,
@@ -31602,6 +34698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42127: {
     label: 'Wayne',
+    iso3: null,
     population: '51,361',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -31611,6 +34708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42129: {
     label: 'Westmoreland',
+    iso3: null,
     population: '348,899',
     casesPastWeek: 846,
     casesIncreasingPercentage: 0.0,
@@ -31620,6 +34718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42131: {
     label: 'Wyoming',
+    iso3: null,
     population: '26,794',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -31629,6 +34728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_42133: {
     label: 'York',
+    iso3: null,
     population: '449,058',
     casesPastWeek: 1514,
     casesIncreasingPercentage: 0.0,
@@ -31638,6 +34738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_44001: {
     label: 'Bristol',
+    iso3: null,
     population: '48,479',
     casesPastWeek: 248,
     casesIncreasingPercentage: 0.0,
@@ -31647,6 +34748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_44003: {
     label: 'Kent',
+    iso3: null,
     population: '164,292',
     casesPastWeek: 843,
     casesIncreasingPercentage: 0.0,
@@ -31656,6 +34758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_44005: {
     label: 'Newport',
+    iso3: null,
     population: '82,082',
     casesPastWeek: 421,
     casesIncreasingPercentage: 0.0,
@@ -31665,6 +34768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_44007: {
     label: 'Providence',
+    iso3: null,
     population: '638,931',
     casesPastWeek: 3646,
     casesIncreasingPercentage: 0.0,
@@ -31674,6 +34778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_44009: {
     label: 'Washington',
+    iso3: null,
     population: '125,577',
     casesPastWeek: 366,
     casesIncreasingPercentage: 0.0,
@@ -31683,6 +34788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45001: {
     label: 'Abbeville',
+    iso3: null,
     population: '24,527',
     casesPastWeek: 212,
     casesIncreasingPercentage: 89.28571428571428,
@@ -31692,6 +34798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45003: {
     label: 'Aiken',
+    iso3: null,
     population: '170,872',
     casesPastWeek: 850,
     casesIncreasingPercentage: 0.0,
@@ -31701,6 +34808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45005: {
     label: 'Allendale',
+    iso3: null,
     population: '8,688',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -31710,6 +34818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45007: {
     label: 'Anderson',
+    iso3: null,
     population: '202,558',
     casesPastWeek: 1199,
     casesIncreasingPercentage: 0.0,
@@ -31719,6 +34828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45009: {
     label: 'Bamberg',
+    iso3: null,
     population: '14,066',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -31728,6 +34838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45011: {
     label: 'Barnwell',
+    iso3: null,
     population: '20,866',
     casesPastWeek: 112,
     casesIncreasingPercentage: 0.0,
@@ -31737,6 +34848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45013: {
     label: 'Beaufort',
+    iso3: null,
     population: '192,122',
     casesPastWeek: 1024,
     casesIncreasingPercentage: 31.958762886597935,
@@ -31746,6 +34858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45015: {
     label: 'Berkeley',
+    iso3: null,
     population: '227,907',
     casesPastWeek: 761,
     casesIncreasingPercentage: 0.0,
@@ -31755,6 +34868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45017: {
     label: 'Calhoun',
+    iso3: null,
     population: '14,553',
     casesPastWeek: 63,
     casesIncreasingPercentage: 0.0,
@@ -31764,6 +34878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45019: {
     label: 'Charleston',
+    iso3: null,
     population: '411,406',
     casesPastWeek: 1954,
     casesIncreasingPercentage: 0.0,
@@ -31773,6 +34888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45021: {
     label: 'Cherokee',
+    iso3: null,
     population: '57,300',
     casesPastWeek: 545,
     casesIncreasingPercentage: 136.9565217391304,
@@ -31782,6 +34898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45023: {
     label: 'Chester',
+    iso3: null,
     population: '32,244',
     casesPastWeek: 212,
     casesIncreasingPercentage: 0.0,
@@ -31791,6 +34908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45025: {
     label: 'Chesterfield',
+    iso3: null,
     population: '45,650',
     casesPastWeek: 243,
     casesIncreasingPercentage: 0.0,
@@ -31800,6 +34918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45027: {
     label: 'Clarendon',
+    iso3: null,
     population: '33,745',
     casesPastWeek: 178,
     casesIncreasingPercentage: 0.0,
@@ -31809,6 +34928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45029: {
     label: 'Colleton',
+    iso3: null,
     population: '37,677',
     casesPastWeek: 204,
     casesIncreasingPercentage: 0.0,
@@ -31818,6 +34938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45031: {
     label: 'Darlington',
+    iso3: null,
     population: '66,618',
     casesPastWeek: 399,
     casesIncreasingPercentage: 0.0,
@@ -31827,6 +34948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45033: {
     label: 'Dillon',
+    iso3: null,
     population: '30,479',
     casesPastWeek: 221,
     casesIncreasingPercentage: 0.0,
@@ -31836,6 +34958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45035: {
     label: 'Dorchester',
+    iso3: null,
     population: '162,809',
     casesPastWeek: 1053,
     casesIncreasingPercentage: 0.0,
@@ -31845,6 +34968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45037: {
     label: 'Edgefield',
+    iso3: null,
     population: '27,260',
     casesPastWeek: 208,
     casesIncreasingPercentage: 35.94771241830066,
@@ -31854,6 +34978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45039: {
     label: 'Fairfield',
+    iso3: null,
     population: '22,347',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -31863,6 +34988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45041: {
     label: 'Florence',
+    iso3: null,
     population: '138,293',
     casesPastWeek: 791,
     casesIncreasingPercentage: 0.0,
@@ -31872,6 +34998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45043: {
     label: 'Georgetown',
+    iso3: null,
     population: '62,680',
     casesPastWeek: 369,
     casesIncreasingPercentage: 0.0,
@@ -31881,6 +35008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45045: {
     label: 'Greenville',
+    iso3: null,
     population: '523,542',
     casesPastWeek: 3872,
     casesIncreasingPercentage: 0.0,
@@ -31890,6 +35018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45047: {
     label: 'Greenwood',
+    iso3: null,
     population: '70,811',
     casesPastWeek: 480,
     casesIncreasingPercentage: 0.0,
@@ -31899,6 +35028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45049: {
     label: 'Hampton',
+    iso3: null,
     population: '19,222',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -31908,6 +35038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45051: {
     label: 'Horry',
+    iso3: null,
     population: '354,081',
     casesPastWeek: 1881,
     casesIncreasingPercentage: 0.0,
@@ -31917,6 +35048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45053: {
     label: 'Jasper',
+    iso3: null,
     population: '30,073',
     casesPastWeek: 136,
     casesIncreasingPercentage: 41.66666666666667,
@@ -31926,6 +35058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45055: {
     label: 'Kershaw',
+    iso3: null,
     population: '66,551',
     casesPastWeek: 364,
     casesIncreasingPercentage: 0.0,
@@ -31935,6 +35068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45057: {
     label: 'Lancaster',
+    iso3: null,
     population: '98,012',
     casesPastWeek: 528,
     casesIncreasingPercentage: 0.0,
@@ -31944,6 +35078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45059: {
     label: 'Laurens',
+    iso3: null,
     population: '67,493',
     casesPastWeek: 427,
     casesIncreasingPercentage: 0.0,
@@ -31953,6 +35088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45061: {
     label: 'Lee',
+    iso3: null,
     population: '16,828',
     casesPastWeek: 96,
     casesIncreasingPercentage: 0.0,
@@ -31962,6 +35098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45063: {
     label: 'Lexington',
+    iso3: null,
     population: '298,750',
     casesPastWeek: 1557,
     casesIncreasingPercentage: 0.0,
@@ -31971,6 +35108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45065: {
     label: 'McCormick',
+    iso3: null,
     population: '9,463',
     casesPastWeek: 72,
     casesIncreasingPercentage: 35.849056603773576,
@@ -31980,6 +35118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45067: {
     label: 'Marion',
+    iso3: null,
     population: '30,657',
     casesPastWeek: 147,
     casesIncreasingPercentage: 0.0,
@@ -31989,6 +35128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45069: {
     label: 'Marlboro',
+    iso3: null,
     population: '26,118',
     casesPastWeek: 151,
     casesIncreasingPercentage: 0.0,
@@ -31998,6 +35138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45071: {
     label: 'Newberry',
+    iso3: null,
     population: '38,440',
     casesPastWeek: 194,
     casesIncreasingPercentage: 0.0,
@@ -32007,6 +35148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45073: {
     label: 'Oconee',
+    iso3: null,
     population: '79,546',
     casesPastWeek: 492,
     casesIncreasingPercentage: 0.0,
@@ -32016,6 +35158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45075: {
     label: 'Orangeburg',
+    iso3: null,
     population: '86,175',
     casesPastWeek: 497,
     casesIncreasingPercentage: 0.0,
@@ -32025,6 +35168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45077: {
     label: 'Pickens',
+    iso3: null,
     population: '126,884',
     casesPastWeek: 772,
     casesIncreasingPercentage: 0.0,
@@ -32034,6 +35178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45079: {
     label: 'Richland',
+    iso3: null,
     population: '415,759',
     casesPastWeek: 2134,
     casesIncreasingPercentage: 0.0,
@@ -32043,6 +35188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45081: {
     label: 'Saluda',
+    iso3: null,
     population: '20,473',
     casesPastWeek: 87,
     casesIncreasingPercentage: 3.571428571428581,
@@ -32052,6 +35198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45083: {
     label: 'Spartanburg',
+    iso3: null,
     population: '319,785',
     casesPastWeek: 2925,
     casesIncreasingPercentage: 42.822265625,
@@ -32061,6 +35208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45085: {
     label: 'Sumter',
+    iso3: null,
     population: '106,721',
     casesPastWeek: 578,
     casesIncreasingPercentage: 0.0,
@@ -32070,6 +35218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45087: {
     label: 'Union',
+    iso3: null,
     population: '27,316',
     casesPastWeek: 236,
     casesIncreasingPercentage: 151.06382978723403,
@@ -32079,6 +35228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45089: {
     label: 'Williamsburg',
+    iso3: null,
     population: '30,368',
     casesPastWeek: 204,
     casesIncreasingPercentage: 0.0,
@@ -32088,6 +35238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_45091: {
     label: 'York',
+    iso3: null,
     population: '280,979',
     casesPastWeek: 1418,
     casesIncreasingPercentage: 0.0,
@@ -32097,6 +35248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46003: {
     label: 'Aurora',
+    iso3: null,
     population: '2,751',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -32106,6 +35258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46005: {
     label: 'Beadle',
+    iso3: null,
     population: '18,453',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -32115,6 +35268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46007: {
     label: 'Bennett',
+    iso3: null,
     population: '3,365',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -32124,6 +35278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46009: {
     label: 'Bon Homme',
+    iso3: null,
     population: '6,901',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -32133,6 +35288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46011: {
     label: 'Brookings',
+    iso3: null,
     population: '35,077',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -32142,6 +35298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46013: {
     label: 'Brown',
+    iso3: null,
     population: '38,839',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -32151,6 +35308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46015: {
     label: 'Brule',
+    iso3: null,
     population: '5,297',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -32160,6 +35318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46017: {
     label: 'Buffalo',
+    iso3: null,
     population: '1,962',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -32169,6 +35328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46019: {
     label: 'Butte',
+    iso3: null,
     population: '10,429',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -32178,6 +35338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46021: {
     label: 'Campbell',
+    iso3: null,
     population: '1,376',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -32187,6 +35348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46023: {
     label: 'Charles Mix',
+    iso3: null,
     population: '9,292',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -32196,6 +35358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46025: {
     label: 'Clark',
+    iso3: null,
     population: '3,736',
     casesPastWeek: 8,
     casesIncreasingPercentage: 700.0,
@@ -32205,6 +35368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46027: {
     label: 'Clay',
+    iso3: null,
     population: '14,070',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -32214,6 +35378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46029: {
     label: 'Codington',
+    iso3: null,
     population: '28,009',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -32223,6 +35388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46031: {
     label: 'Corson',
+    iso3: null,
     population: '4,086',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -32232,6 +35398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46033: {
     label: 'Custer',
+    iso3: null,
     population: '8,972',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -32241,6 +35408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46035: {
     label: 'Davison',
+    iso3: null,
     population: '19,775',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -32250,6 +35418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46037: {
     label: 'Day',
+    iso3: null,
     population: '5,424',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -32259,6 +35428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46039: {
     label: 'Deuel',
+    iso3: null,
     population: '4,351',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -32268,6 +35438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46041: {
     label: 'Dewey',
+    iso3: null,
     population: '5,892',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -32277,6 +35448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46043: {
     label: 'Douglas',
+    iso3: null,
     population: '2,921',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -32286,6 +35458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46045: {
     label: 'Edmunds',
+    iso3: null,
     population: '3,829',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -32295,6 +35468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46047: {
     label: 'Fall River',
+    iso3: null,
     population: '6,713',
     casesPastWeek: 15,
     casesIncreasingPercentage: 15.384615384615374,
@@ -32304,6 +35478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46049: {
     label: 'Faulk',
+    iso3: null,
     population: '2,299',
     casesPastWeek: 9,
     casesIncreasingPercentage: 80.0,
@@ -32313,6 +35488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46051: {
     label: 'Grant',
+    iso3: null,
     population: '7,052',
     casesPastWeek: 38,
     casesIncreasingPercentage: 153.33333333333331,
@@ -32322,6 +35498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46053: {
     label: 'Gregory',
+    iso3: null,
     population: '4,185',
     casesPastWeek: 4,
     casesIncreasingPercentage: 300.0,
@@ -32331,6 +35508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46055: {
     label: 'Haakon',
+    iso3: null,
     population: '1,899',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -32340,6 +35518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46057: {
     label: 'Hamlin',
+    iso3: null,
     population: '6,164',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -32349,6 +35528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46059: {
     label: 'Hand',
+    iso3: null,
     population: '3,191',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -32358,6 +35538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46061: {
     label: 'Hanson',
+    iso3: null,
     population: '3,453',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -32367,6 +35548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46063: {
     label: 'Harding',
+    iso3: null,
     population: '1,298',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -32376,6 +35558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46065: {
     label: 'Hughes',
+    iso3: null,
     population: '17,526',
     casesPastWeek: 55,
     casesIncreasingPercentage: 37.5,
@@ -32385,6 +35568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46067: {
     label: 'Hutchinson',
+    iso3: null,
     population: '7,291',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -32394,6 +35578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46069: {
     label: 'Hyde',
+    iso3: null,
     population: '1,301',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -32403,6 +35588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46071: {
     label: 'Jackson',
+    iso3: null,
     population: '3,344',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -32412,6 +35598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46073: {
     label: 'Jerauld',
+    iso3: null,
     population: '2,013',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -32421,6 +35608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46075: {
     label: 'Jones',
+    iso3: null,
     population: '903',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -32430,6 +35618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46077: {
     label: 'Kingsbury',
+    iso3: null,
     population: '4,939',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -32439,6 +35628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46079: {
     label: 'Lake',
+    iso3: null,
     population: '12,797',
     casesPastWeek: 33,
     casesIncreasingPercentage: 26.923076923076916,
@@ -32448,6 +35638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46081: {
     label: 'Lawrence',
+    iso3: null,
     population: '25,844',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -32457,6 +35648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46083: {
     label: 'Lincoln',
+    iso3: null,
     population: '61,128',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -32466,6 +35658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46085: {
     label: 'Lyman',
+    iso3: null,
     population: '3,781',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -32475,6 +35668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46087: {
     label: 'McCook',
+    iso3: null,
     population: '5,586',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -32484,6 +35678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46089: {
     label: 'McPherson',
+    iso3: null,
     population: '2,379',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -32493,6 +35688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46091: {
     label: 'Marshall',
+    iso3: null,
     population: '4,935',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -32502,6 +35698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46093: {
     label: 'Meade',
+    iso3: null,
     population: '28,332',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -32511,6 +35708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46095: {
     label: 'Mellette',
+    iso3: null,
     population: '2,061',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -32520,6 +35718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46097: {
     label: 'Miner',
+    iso3: null,
     population: '2,216',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -32529,6 +35728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46099: {
     label: 'Minnehaha',
+    iso3: null,
     population: '193,134',
     casesPastWeek: 361,
     casesIncreasingPercentage: 0.0,
@@ -32538,6 +35738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46101: {
     label: 'Moody',
+    iso3: null,
     population: '6,576',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -32547,6 +35748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46102: {
     label: 'Oglala Lakota',
+    iso3: null,
     population: '14,177',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -32556,6 +35758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46103: {
     label: 'Pennington',
+    iso3: null,
     population: '113,775',
     casesPastWeek: 198,
     casesIncreasingPercentage: 0.0,
@@ -32565,6 +35768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46105: {
     label: 'Perkins',
+    iso3: null,
     population: '2,865',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -32574,6 +35778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46107: {
     label: 'Potter',
+    iso3: null,
     population: '2,153',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -32583,6 +35788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46109: {
     label: 'Roberts',
+    iso3: null,
     population: '10,394',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -32592,6 +35798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46111: {
     label: 'Sanborn',
+    iso3: null,
     population: '2,344',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -32601,6 +35808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46115: {
     label: 'Spink',
+    iso3: null,
     population: '6,376',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -32610,6 +35818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46117: {
     label: 'Stanley',
+    iso3: null,
     population: '3,098',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -32619,6 +35828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46119: {
     label: 'Sully',
+    iso3: null,
     population: '1,391',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -32628,6 +35838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46121: {
     label: 'Todd',
+    iso3: null,
     population: '10,177',
     casesPastWeek: 12,
     casesIncreasingPercentage: 140.0,
@@ -32637,6 +35848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46123: {
     label: 'Tripp',
+    iso3: null,
     population: '5,441',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -32646,6 +35858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46125: {
     label: 'Turner',
+    iso3: null,
     population: '8,384',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -32655,6 +35868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46127: {
     label: 'Union',
+    iso3: null,
     population: '15,932',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -32664,6 +35878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46129: {
     label: 'Walworth',
+    iso3: null,
     population: '5,435',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -32673,6 +35888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46135: {
     label: 'Yankton',
+    iso3: null,
     population: '22,814',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -32682,6 +35898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_46137: {
     label: 'Ziebach',
+    iso3: null,
     population: '2,756',
     casesPastWeek: -1,
     casesIncreasingPercentage: 0.0,
@@ -32691,6 +35908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47001: {
     label: 'Anderson',
+    iso3: null,
     population: '76,978',
     casesPastWeek: 254,
     casesIncreasingPercentage: 0.0,
@@ -32700,6 +35918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47003: {
     label: 'Bedford',
+    iso3: null,
     population: '49,713',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -32709,6 +35928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47005: {
     label: 'Benton',
+    iso3: null,
     population: '16,160',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -32718,6 +35938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47007: {
     label: 'Bledsoe',
+    iso3: null,
     population: '15,064',
     casesPastWeek: 40,
     casesIncreasingPercentage: 0.0,
@@ -32727,6 +35948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47009: {
     label: 'Blount',
+    iso3: null,
     population: '133,088',
     casesPastWeek: 479,
     casesIncreasingPercentage: 0.0,
@@ -32736,6 +35958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47011: {
     label: 'Bradley',
+    iso3: null,
     population: '108,110',
     casesPastWeek: 459,
     casesIncreasingPercentage: 0.0,
@@ -32745,6 +35968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47013: {
     label: 'Campbell',
+    iso3: null,
     population: '39,842',
     casesPastWeek: 145,
     casesIncreasingPercentage: 0.0,
@@ -32754,6 +35978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47015: {
     label: 'Cannon',
+    iso3: null,
     population: '14,678',
     casesPastWeek: 46,
     casesIncreasingPercentage: 0.0,
@@ -32763,6 +35988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47017: {
     label: 'Carroll',
+    iso3: null,
     population: '27,767',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -32772,6 +35998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47019: {
     label: 'Carter',
+    iso3: null,
     population: '56,391',
     casesPastWeek: 108,
     casesIncreasingPercentage: 0.0,
@@ -32781,6 +36008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47021: {
     label: 'Cheatham',
+    iso3: null,
     population: '40,667',
     casesPastWeek: 143,
     casesIncreasingPercentage: 0.0,
@@ -32790,6 +36018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47023: {
     label: 'Chester',
+    iso3: null,
     population: '17,297',
     casesPastWeek: 53,
     casesIncreasingPercentage: 0.0,
@@ -32799,6 +36028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47025: {
     label: 'Claiborne',
+    iso3: null,
     population: '31,959',
     casesPastWeek: 187,
     casesIncreasingPercentage: 0.0,
@@ -32808,6 +36038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47027: {
     label: 'Clay',
+    iso3: null,
     population: '7,615',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -32817,6 +36048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47029: {
     label: 'Cocke',
+    iso3: null,
     population: '36,004',
     casesPastWeek: 137,
     casesIncreasingPercentage: 0.0,
@@ -32826,6 +36058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47031: {
     label: 'Coffee',
+    iso3: null,
     population: '56,520',
     casesPastWeek: 175,
     casesIncreasingPercentage: 0.0,
@@ -32835,6 +36068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47033: {
     label: 'Crockett',
+    iso3: null,
     population: '14,230',
     casesPastWeek: 31,
     casesIncreasingPercentage: 6.896551724137923,
@@ -32844,6 +36078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47035: {
     label: 'Cumberland',
+    iso3: null,
     population: '60,520',
     casesPastWeek: 178,
     casesIncreasingPercentage: 0.0,
@@ -32853,6 +36088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47037: {
     label: 'Davidson',
+    iso3: null,
     population: '694,144',
     casesPastWeek: 2339,
     casesIncreasingPercentage: 0.0,
@@ -32862,6 +36098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47039: {
     label: 'Decatur',
+    iso3: null,
     population: '11,663',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -32871,6 +36108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47041: {
     label: 'DeKalb',
+    iso3: null,
     population: '20,490',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -32880,6 +36118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47043: {
     label: 'Dickson',
+    iso3: null,
     population: '53,948',
     casesPastWeek: 238,
     casesIncreasingPercentage: 5.3097345132743445,
@@ -32889,6 +36128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47045: {
     label: 'Dyer',
+    iso3: null,
     population: '37,159',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -32898,6 +36138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47047: {
     label: 'Fayette',
+    iso3: null,
     population: '41,133',
     casesPastWeek: 184,
     casesIncreasingPercentage: 0.0,
@@ -32907,6 +36148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47049: {
     label: 'Fentress',
+    iso3: null,
     population: '18,523',
     casesPastWeek: 52,
     casesIncreasingPercentage: 0.0,
@@ -32916,6 +36158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47051: {
     label: 'Franklin',
+    iso3: null,
     population: '42,208',
     casesPastWeek: 142,
     casesIncreasingPercentage: 0.0,
@@ -32925,6 +36168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47053: {
     label: 'Gibson',
+    iso3: null,
     population: '49,133',
     casesPastWeek: 131,
     casesIncreasingPercentage: 0.0,
@@ -32934,6 +36178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47055: {
     label: 'Giles',
+    iso3: null,
     population: '29,464',
     casesPastWeek: 123,
     casesIncreasingPercentage: 0.0,
@@ -32943,6 +36188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47057: {
     label: 'Grainger',
+    iso3: null,
     population: '23,320',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -32952,6 +36198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47059: {
     label: 'Greene',
+    iso3: null,
     population: '69,069',
     casesPastWeek: 197,
     casesIncreasingPercentage: 0.0,
@@ -32961,6 +36208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47061: {
     label: 'Grundy',
+    iso3: null,
     population: '13,427',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -32970,6 +36218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47063: {
     label: 'Hamblen',
+    iso3: null,
     population: '64,934',
     casesPastWeek: 290,
     casesIncreasingPercentage: 0.0,
@@ -32979,6 +36228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47065: {
     label: 'Hamilton',
+    iso3: null,
     population: '367,804',
     casesPastWeek: 1305,
     casesIncreasingPercentage: 0.0,
@@ -32988,6 +36238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47067: {
     label: 'Hancock',
+    iso3: null,
     population: '6,620',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -32997,6 +36248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47069: {
     label: 'Hardeman',
+    iso3: null,
     population: '25,050',
     casesPastWeek: 69,
     casesIncreasingPercentage: 1.4705882352941124,
@@ -33006,6 +36258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47071: {
     label: 'Hardin',
+    iso3: null,
     population: '25,652',
     casesPastWeek: 87,
     casesIncreasingPercentage: 8.749999999999991,
@@ -33015,6 +36268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47073: {
     label: 'Hawkins',
+    iso3: null,
     population: '56,786',
     casesPastWeek: 157,
     casesIncreasingPercentage: 0.0,
@@ -33024,6 +36278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47075: {
     label: 'Haywood',
+    iso3: null,
     population: '17,304',
     casesPastWeek: 58,
     casesIncreasingPercentage: 0.0,
@@ -33033,6 +36288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47077: {
     label: 'Henderson',
+    iso3: null,
     population: '28,117',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -33042,6 +36298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47079: {
     label: 'Henry',
+    iso3: null,
     population: '32,345',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -33051,6 +36308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47081: {
     label: 'Hickman',
+    iso3: null,
     population: '25,178',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -33060,6 +36318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47083: {
     label: 'Houston',
+    iso3: null,
     population: '8,201',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -33069,6 +36328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47085: {
     label: 'Humphreys',
+    iso3: null,
     population: '18,582',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -33078,6 +36338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47087: {
     label: 'Jackson',
+    iso3: null,
     population: '11,786',
     casesPastWeek: 24,
     casesIncreasingPercentage: 19.999999999999996,
@@ -33087,6 +36348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47089: {
     label: 'Jefferson',
+    iso3: null,
     population: '54,495',
     casesPastWeek: 211,
     casesIncreasingPercentage: 0.0,
@@ -33096,6 +36358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47091: {
     label: 'Johnson',
+    iso3: null,
     population: '17,788',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -33105,6 +36368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47093: {
     label: 'Knox',
+    iso3: null,
     population: '470,313',
     casesPastWeek: 1527,
     casesIncreasingPercentage: 0.0,
@@ -33114,6 +36378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47095: {
     label: 'Lake',
+    iso3: null,
     population: '7,016',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -33123,6 +36388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47097: {
     label: 'Lauderdale',
+    iso3: null,
     population: '25,633',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -33132,6 +36398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47099: {
     label: 'Lawrence',
+    iso3: null,
     population: '44,142',
     casesPastWeek: 158,
     casesIncreasingPercentage: 0.0,
@@ -33141,6 +36408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47101: {
     label: 'Lewis',
+    iso3: null,
     population: '12,268',
     casesPastWeek: 38,
     casesIncreasingPercentage: 8.571428571428562,
@@ -33150,6 +36418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47103: {
     label: 'Lincoln',
+    iso3: null,
     population: '34,366',
     casesPastWeek: 95,
     casesIncreasingPercentage: 0.0,
@@ -33159,6 +36428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47105: {
     label: 'Loudon',
+    iso3: null,
     population: '54,068',
     casesPastWeek: 152,
     casesIncreasingPercentage: 0.0,
@@ -33168,6 +36438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47107: {
     label: 'McMinn',
+    iso3: null,
     population: '53,794',
     casesPastWeek: 161,
     casesIncreasingPercentage: 0.0,
@@ -33177,6 +36448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47109: {
     label: 'McNairy',
+    iso3: null,
     population: '25,694',
     casesPastWeek: 108,
     casesIncreasingPercentage: 0.0,
@@ -33186,6 +36458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47111: {
     label: 'Macon',
+    iso3: null,
     population: '24,602',
     casesPastWeek: 73,
     casesIncreasingPercentage: 0.0,
@@ -33195,6 +36468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47113: {
     label: 'Madison',
+    iso3: null,
     population: '97,984',
     casesPastWeek: 245,
     casesIncreasingPercentage: 0.0,
@@ -33204,6 +36478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47115: {
     label: 'Marion',
+    iso3: null,
     population: '28,907',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -33213,6 +36488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47117: {
     label: 'Marshall',
+    iso3: null,
     population: '34,375',
     casesPastWeek: 144,
     casesIncreasingPercentage: 0.0,
@@ -33222,6 +36498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47119: {
     label: 'Maury',
+    iso3: null,
     population: '96,387',
     casesPastWeek: 354,
     casesIncreasingPercentage: 0.0,
@@ -33231,6 +36508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47121: {
     label: 'Meigs',
+    iso3: null,
     population: '12,422',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -33240,6 +36518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47123: {
     label: 'Monroe',
+    iso3: null,
     population: '46,545',
     casesPastWeek: 165,
     casesIncreasingPercentage: 0.0,
@@ -33249,6 +36528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47125: {
     label: 'Montgomery',
+    iso3: null,
     population: '208,993',
     casesPastWeek: 787,
     casesIncreasingPercentage: 0.0,
@@ -33258,6 +36538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47127: {
     label: 'Moore',
+    iso3: null,
     population: '6,488',
     casesPastWeek: 34,
     casesIncreasingPercentage: 36.00000000000001,
@@ -33267,6 +36548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47129: {
     label: 'Morgan',
+    iso3: null,
     population: '21,403',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -33276,6 +36558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47131: {
     label: 'Obion',
+    iso3: null,
     population: '30,069',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -33285,6 +36568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47133: {
     label: 'Overton',
+    iso3: null,
     population: '22,241',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -33294,6 +36578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47135: {
     label: 'Perry',
+    iso3: null,
     population: '8,076',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -33303,6 +36588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47137: {
     label: 'Pickett',
+    iso3: null,
     population: '5,048',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -33312,6 +36598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47139: {
     label: 'Polk',
+    iso3: null,
     population: '16,832',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -33321,6 +36608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47141: {
     label: 'Putnam',
+    iso3: null,
     population: '80,245',
     casesPastWeek: 256,
     casesIncreasingPercentage: 0.0,
@@ -33330,6 +36618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47143: {
     label: 'Rhea',
+    iso3: null,
     population: '33,167',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -33339,6 +36628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47145: {
     label: 'Roane',
+    iso3: null,
     population: '53,382',
     casesPastWeek: 159,
     casesIncreasingPercentage: 0.0,
@@ -33348,6 +36638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47147: {
     label: 'Robertson',
+    iso3: null,
     population: '71,813',
     casesPastWeek: 300,
     casesIncreasingPercentage: 0.0,
@@ -33357,6 +36648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47149: {
     label: 'Rutherford',
+    iso3: null,
     population: '332,285',
     casesPastWeek: 1052,
     casesIncreasingPercentage: 0.0,
@@ -33366,6 +36658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47151: {
     label: 'Scott',
+    iso3: null,
     population: '22,068',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -33375,6 +36668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47153: {
     label: 'Sequatchie',
+    iso3: null,
     population: '15,026',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -33384,6 +36678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47155: {
     label: 'Sevier',
+    iso3: null,
     population: '98,250',
     casesPastWeek: 378,
     casesIncreasingPercentage: 0.0,
@@ -33393,6 +36688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47157: {
     label: 'Shelby',
+    iso3: null,
     population: '937,166',
     casesPastWeek: 2628,
     casesIncreasingPercentage: 0.0,
@@ -33402,6 +36698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47159: {
     label: 'Smith',
+    iso3: null,
     population: '20,157',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -33411,6 +36708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47161: {
     label: 'Stewart',
+    iso3: null,
     population: '13,715',
     casesPastWeek: 69,
     casesIncreasingPercentage: 35.29411764705883,
@@ -33420,6 +36718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47163: {
     label: 'Sullivan',
+    iso3: null,
     population: '158,348',
     casesPastWeek: 384,
     casesIncreasingPercentage: 0.0,
@@ -33429,6 +36728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47165: {
     label: 'Sumner',
+    iso3: null,
     population: '191,283',
     casesPastWeek: 614,
     casesIncreasingPercentage: 0.0,
@@ -33438,6 +36738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47167: {
     label: 'Tipton',
+    iso3: null,
     population: '61,599',
     casesPastWeek: 190,
     casesIncreasingPercentage: 0.0,
@@ -33447,6 +36748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47169: {
     label: 'Trousdale',
+    iso3: null,
     population: '11,284',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -33456,6 +36758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47171: {
     label: 'Unicoi',
+    iso3: null,
     population: '17,883',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -33465,6 +36768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47173: {
     label: 'Union',
+    iso3: null,
     population: '19,972',
     casesPastWeek: 67,
     casesIncreasingPercentage: 26.415094339622634,
@@ -33474,6 +36778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47175: {
     label: 'Van Buren',
+    iso3: null,
     population: '5,872',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -33483,6 +36788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47177: {
     label: 'Warren',
+    iso3: null,
     population: '41,277',
     casesPastWeek: 137,
     casesIncreasingPercentage: 0.0,
@@ -33492,6 +36798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47179: {
     label: 'Washington',
+    iso3: null,
     population: '129,375',
     casesPastWeek: 295,
     casesIncreasingPercentage: 0.0,
@@ -33501,6 +36808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47181: {
     label: 'Wayne',
+    iso3: null,
     population: '16,673',
     casesPastWeek: 97,
     casesIncreasingPercentage: 110.86956521739131,
@@ -33510,6 +36818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47183: {
     label: 'Weakley',
+    iso3: null,
     population: '33,328',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -33519,6 +36828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47185: {
     label: 'White',
+    iso3: null,
     population: '27,345',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -33528,6 +36838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47187: {
     label: 'Williamson',
+    iso3: null,
     population: '238,412',
     casesPastWeek: 811,
     casesIncreasingPercentage: 0.0,
@@ -33537,6 +36848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_47189: {
     label: 'Wilson',
+    iso3: null,
     population: '144,657',
     casesPastWeek: 441,
     casesIncreasingPercentage: 0.0,
@@ -33546,6 +36858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48001: {
     label: 'Anderson',
+    iso3: null,
     population: '57,735',
     casesPastWeek: 149,
     casesIncreasingPercentage: 63.73626373626373,
@@ -33555,6 +36868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48003: {
     label: 'Andrews',
+    iso3: null,
     population: '18,705',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -33564,6 +36878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48005: {
     label: 'Angelina',
+    iso3: null,
     population: '86,715',
     casesPastWeek: 305,
     casesIncreasingPercentage: 0.0,
@@ -33573,6 +36888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48007: {
     label: 'Aransas',
+    iso3: null,
     population: '23,510',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -33582,6 +36898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48009: {
     label: 'Archer',
+    iso3: null,
     population: '8,553',
     casesPastWeek: 39,
     casesIncreasingPercentage: 0.0,
@@ -33591,6 +36908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48011: {
     label: 'Armstrong',
+    iso3: null,
     population: '1,887',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -33600,6 +36918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48013: {
     label: 'Atascosa',
+    iso3: null,
     population: '51,153',
     casesPastWeek: 411,
     casesIncreasingPercentage: 19.130434782608695,
@@ -33609,6 +36928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48015: {
     label: 'Austin',
+    iso3: null,
     population: '30,032',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -33618,6 +36938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48017: {
     label: 'Bailey',
+    iso3: null,
     population: '7,000',
     casesPastWeek: 17,
     casesIncreasingPercentage: 142.85714285714283,
@@ -33627,6 +36948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48019: {
     label: 'Bandera',
+    iso3: null,
     population: '23,112',
     casesPastWeek: 82,
     casesIncreasingPercentage: 10.81081081081081,
@@ -33636,6 +36958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48021: {
     label: 'Bastrop',
+    iso3: null,
     population: '88,723',
     casesPastWeek: 351,
     casesIncreasingPercentage: 60.273972602739725,
@@ -33645,6 +36968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48023: {
     label: 'Baylor',
+    iso3: null,
     population: '3,509',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -33654,6 +36978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48025: {
     label: 'Bee',
+    iso3: null,
     population: '32,565',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -33663,6 +36988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48027: {
     label: 'Bell',
+    iso3: null,
     population: '362,924',
     casesPastWeek: 987,
     casesIncreasingPercentage: 0.0,
@@ -33672,6 +36998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48029: {
     label: 'Bexar',
+    iso3: null,
     population: '2,003,554',
     casesPastWeek: 11471,
     casesIncreasingPercentage: 0.0,
@@ -33681,6 +37008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48031: {
     label: 'Blanco',
+    iso3: null,
     population: '11,931',
     casesPastWeek: 14,
     casesIncreasingPercentage: 7.692307692307687,
@@ -33690,6 +37018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48033: {
     label: 'Borden',
+    iso3: null,
     population: '654',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -33699,6 +37028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48035: {
     label: 'Bosque',
+    iso3: null,
     population: '18,685',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -33708,6 +37038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48037: {
     label: 'Bowie',
+    iso3: null,
     population: '93,245',
     casesPastWeek: 290,
     casesIncreasingPercentage: 0.0,
@@ -33717,6 +37048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48039: {
     label: 'Brazoria',
+    iso3: null,
     population: '374,264',
     casesPastWeek: 1792,
     casesIncreasingPercentage: 0.9009009009008917,
@@ -33726,6 +37058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48041: {
     label: 'Brazos',
+    iso3: null,
     population: '229,211',
     casesPastWeek: 920,
     casesIncreasingPercentage: 0.0,
@@ -33735,6 +37068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48043: {
     label: 'Brewster',
+    iso3: null,
     population: '9,203',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -33744,6 +37078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48045: {
     label: 'Briscoe',
+    iso3: null,
     population: '1,546',
     casesPastWeek: 8,
     casesIncreasingPercentage: 60.00000000000001,
@@ -33753,6 +37088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48047: {
     label: 'Brooks',
+    iso3: null,
     population: '7,093',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -33762,6 +37098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48049: {
     label: 'Brown',
+    iso3: null,
     population: '37,864',
     casesPastWeek: 215,
     casesIncreasingPercentage: 0.0,
@@ -33771,6 +37108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48051: {
     label: 'Burleson',
+    iso3: null,
     population: '18,443',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -33780,6 +37118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48053: {
     label: 'Burnet',
+    iso3: null,
     population: '48,155',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -33789,6 +37128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48055: {
     label: 'Caldwell',
+    iso3: null,
     population: '43,664',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -33798,6 +37138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48057: {
     label: 'Calhoun',
+    iso3: null,
     population: '21,290',
     casesPastWeek: 136,
     casesIncreasingPercentage: 115.87301587301586,
@@ -33807,6 +37148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48059: {
     label: 'Callahan',
+    iso3: null,
     population: '13,943',
     casesPastWeek: 79,
     casesIncreasingPercentage: 172.41379310344826,
@@ -33816,6 +37158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48061: {
     label: 'Cameron',
+    iso3: null,
     population: '423,163',
     casesPastWeek: 1050,
     casesIncreasingPercentage: 0.0,
@@ -33825,6 +37168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48063: {
     label: 'Camp',
+    iso3: null,
     population: '13,094',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -33834,6 +37178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48065: {
     label: 'Carson',
+    iso3: null,
     population: '5,926',
     casesPastWeek: 8,
     casesIncreasingPercentage: 60.00000000000001,
@@ -33843,6 +37188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48067: {
     label: 'Cass',
+    iso3: null,
     population: '30,026',
     casesPastWeek: 75,
     casesIncreasingPercentage: 0.0,
@@ -33852,6 +37198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48069: {
     label: 'Castro',
+    iso3: null,
     population: '7,530',
     casesPastWeek: 13,
     casesIncreasingPercentage: 85.71428571428572,
@@ -33861,6 +37208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48071: {
     label: 'Chambers',
+    iso3: null,
     population: '43,837',
     casesPastWeek: 195,
     casesIncreasingPercentage: 0.0,
@@ -33870,6 +37218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48073: {
     label: 'Cherokee',
+    iso3: null,
     population: '52,646',
     casesPastWeek: 143,
     casesIncreasingPercentage: 0.0,
@@ -33879,6 +37228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48075: {
     label: 'Childress',
+    iso3: null,
     population: '7,306',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -33888,6 +37238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48077: {
     label: 'Clay',
+    iso3: null,
     population: '10,471',
     casesPastWeek: 56,
     casesIncreasingPercentage: 9.80392156862746,
@@ -33897,6 +37248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48079: {
     label: 'Cochran',
+    iso3: null,
     population: '2,853',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -33906,6 +37258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48081: {
     label: 'Coke',
+    iso3: null,
     population: '3,387',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -33915,6 +37268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48083: {
     label: 'Coleman',
+    iso3: null,
     population: '8,175',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -33924,6 +37278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48085: {
     label: 'Collin',
+    iso3: null,
     population: '1,034,730',
     casesPastWeek: 4869,
     casesIncreasingPercentage: 0.0,
@@ -33933,6 +37288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48087: {
     label: 'Collingsworth',
+    iso3: null,
     population: '2,920',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -33942,6 +37298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48089: {
     label: 'Colorado',
+    iso3: null,
     population: '21,493',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -33951,6 +37308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48091: {
     label: 'Comal',
+    iso3: null,
     population: '156,209',
     casesPastWeek: 334,
     casesIncreasingPercentage: 0.0,
@@ -33960,6 +37318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48093: {
     label: 'Comanche',
+    iso3: null,
     population: '13,635',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -33969,6 +37328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48095: {
     label: 'Concho',
+    iso3: null,
     population: '2,726',
     casesPastWeek: 10,
     casesIncreasingPercentage: 25.0,
@@ -33978,6 +37338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48097: {
     label: 'Cooke',
+    iso3: null,
     population: '41,257',
     casesPastWeek: 236,
     casesIncreasingPercentage: 36.41618497109826,
@@ -33987,6 +37348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48099: {
     label: 'Coryell',
+    iso3: null,
     population: '75,951',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -33996,6 +37358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48101: {
     label: 'Cottle',
+    iso3: null,
     population: '1,398',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -34005,6 +37368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48103: {
     label: 'Crane',
+    iso3: null,
     population: '4,797',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -34014,6 +37378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48105: {
     label: 'Crockett',
+    iso3: null,
     population: '3,464',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -34023,6 +37388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48107: {
     label: 'Crosby',
+    iso3: null,
     population: '5,737',
     casesPastWeek: 25,
     casesIncreasingPercentage: 2400.0,
@@ -34032,6 +37398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48109: {
     label: 'Culberson',
+    iso3: null,
     population: '2,171',
     casesPastWeek: 27,
     casesIncreasingPercentage: 170.00000000000003,
@@ -34041,6 +37408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48111: {
     label: 'Dallam',
+    iso3: null,
     population: '7,287',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -34050,6 +37418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48113: {
     label: 'Dallas',
+    iso3: null,
     population: '2,635,516',
     casesPastWeek: 12195,
     casesIncreasingPercentage: 0.0,
@@ -34059,6 +37428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48115: {
     label: 'Dawson',
+    iso3: null,
     population: '12,728',
     casesPastWeek: 69,
     casesIncreasingPercentage: 18.965517241379317,
@@ -34068,6 +37438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48117: {
     label: 'Deaf Smith',
+    iso3: null,
     population: '18,546',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -34077,6 +37448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48119: {
     label: 'Delta',
+    iso3: null,
     population: '5,331',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -34086,6 +37458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48121: {
     label: 'Denton',
+    iso3: null,
     population: '887,207',
     casesPastWeek: 3544,
     casesIncreasingPercentage: 11.974723538704591,
@@ -34095,6 +37468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48123: {
     label: 'DeWitt',
+    iso3: null,
     population: '20,160',
     casesPastWeek: 64,
     casesIncreasingPercentage: 137.037037037037,
@@ -34104,6 +37478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48125: {
     label: 'Dickens',
+    iso3: null,
     population: '2,211',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -34113,6 +37488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48127: {
     label: 'Dimmit',
+    iso3: null,
     population: '10,124',
     casesPastWeek: 207,
     casesIncreasingPercentage: 93.45794392523365,
@@ -34122,6 +37498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48129: {
     label: 'Donley',
+    iso3: null,
     population: '3,278',
     casesPastWeek: 22,
     casesIncreasingPercentage: 266.66666666666663,
@@ -34131,6 +37508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48131: {
     label: 'Duval',
+    iso3: null,
     population: '11,157',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -34140,6 +37518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48133: {
     label: 'Eastland',
+    iso3: null,
     population: '18,360',
     casesPastWeek: 65,
     casesIncreasingPercentage: 4.8387096774193505,
@@ -34149,6 +37528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48135: {
     label: 'Ector',
+    iso3: null,
     population: '166,223',
     casesPastWeek: 1014,
     casesIncreasingPercentage: 49.337260677466865,
@@ -34158,6 +37538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48137: {
     label: 'Edwards',
+    iso3: null,
     population: '1,932',
     casesPastWeek: 15,
     casesIncreasingPercentage: 114.28571428571428,
@@ -34167,6 +37548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48139: {
     label: 'Ellis',
+    iso3: null,
     population: '184,826',
     casesPastWeek: 1194,
     casesIncreasingPercentage: 0.0,
@@ -34176,6 +37558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48141: {
     label: 'El Paso',
+    iso3: null,
     population: '839,238',
     casesPastWeek: 3448,
     casesIncreasingPercentage: 0.0,
@@ -34185,6 +37568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48143: {
     label: 'Erath',
+    iso3: null,
     population: '42,698',
     casesPastWeek: 112,
     casesIncreasingPercentage: 0.0,
@@ -34194,6 +37578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48145: {
     label: 'Falls',
+    iso3: null,
     population: '17,297',
     casesPastWeek: 70,
     casesIncreasingPercentage: 18.644067796610166,
@@ -34203,6 +37588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48147: {
     label: 'Fannin',
+    iso3: null,
     population: '35,514',
     casesPastWeek: 218,
     casesIncreasingPercentage: 0.0,
@@ -34212,6 +37598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48149: {
     label: 'Fayette',
+    iso3: null,
     population: '25,346',
     casesPastWeek: 91,
     casesIncreasingPercentage: 42.1875,
@@ -34221,6 +37608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48151: {
     label: 'Fisher',
+    iso3: null,
     population: '3,830',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -34230,6 +37618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48153: {
     label: 'Floyd',
+    iso3: null,
     population: '5,712',
     casesPastWeek: 37,
     casesIncreasingPercentage: 117.64705882352939,
@@ -34239,6 +37628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48155: {
     label: 'Foard',
+    iso3: null,
     population: '1,155',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -34248,6 +37638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48157: {
     label: 'Fort Bend',
+    iso3: null,
     population: '811,688',
     casesPastWeek: 3359,
     casesIncreasingPercentage: 0.0,
@@ -34257,6 +37648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48159: {
     label: 'Franklin',
+    iso3: null,
     population: '10,725',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -34266,6 +37658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48161: {
     label: 'Freestone',
+    iso3: null,
     population: '19,717',
     casesPastWeek: 19,
     casesIncreasingPercentage: 0.0,
@@ -34275,6 +37668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48163: {
     label: 'Frio',
+    iso3: null,
     population: '20,306',
     casesPastWeek: 101,
     casesIncreasingPercentage: 0.0,
@@ -34284,6 +37678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48165: {
     label: 'Gaines',
+    iso3: null,
     population: '21,492',
     casesPastWeek: 52,
     casesIncreasingPercentage: 126.08695652173911,
@@ -34293,6 +37688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48167: {
     label: 'Galveston',
+    iso3: null,
     population: '342,139',
     casesPastWeek: 1980,
     casesIncreasingPercentage: 0.0,
@@ -34302,6 +37698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48169: {
     label: 'Garza',
+    iso3: null,
     population: '6,229',
     casesPastWeek: 7,
     casesIncreasingPercentage: 600.0,
@@ -34311,6 +37708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48171: {
     label: 'Gillespie',
+    iso3: null,
     population: '26,988',
     casesPastWeek: 220,
     casesIncreasingPercentage: 129.16666666666666,
@@ -34320,6 +37718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48173: {
     label: 'Glasscock',
+    iso3: null,
     population: '1,409',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -34329,6 +37728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48175: {
     label: 'Goliad',
+    iso3: null,
     population: '7,658',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -34338,6 +37738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48177: {
     label: 'Gonzales',
+    iso3: null,
     population: '20,837',
     casesPastWeek: 186,
     casesIncreasingPercentage: 32.857142857142854,
@@ -34347,6 +37748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48179: {
     label: 'Gray',
+    iso3: null,
     population: '21,886',
     casesPastWeek: 58,
     casesIncreasingPercentage: 131.99999999999997,
@@ -34356,6 +37758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48181: {
     label: 'Grayson',
+    iso3: null,
     population: '136,212',
     casesPastWeek: 505,
     casesIncreasingPercentage: 0.0,
@@ -34365,6 +37768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48183: {
     label: 'Gregg',
+    iso3: null,
     population: '123,945',
     casesPastWeek: 674,
     casesIncreasingPercentage: 0.0,
@@ -34374,6 +37778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48185: {
     label: 'Grimes',
+    iso3: null,
     population: '28,880',
     casesPastWeek: -47,
     casesIncreasingPercentage: 0.0,
@@ -34383,6 +37788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48187: {
     label: 'Guadalupe',
+    iso3: null,
     population: '166,847',
     casesPastWeek: 999,
     casesIncreasingPercentage: 24.099378881987587,
@@ -34392,6 +37798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48189: {
     label: 'Hale',
+    iso3: null,
     population: '33,406',
     casesPastWeek: 138,
     casesIncreasingPercentage: 0.0,
@@ -34401,6 +37808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48191: {
     label: 'Hall',
+    iso3: null,
     population: '2,964',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -34410,6 +37818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48193: {
     label: 'Hamilton',
+    iso3: null,
     population: '8,461',
     casesPastWeek: 37,
     casesIncreasingPercentage: 2.777777777777768,
@@ -34419,6 +37828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48195: {
     label: 'Hansford',
+    iso3: null,
     population: '5,399',
     casesPastWeek: 15,
     casesIncreasingPercentage: 66.66666666666667,
@@ -34428,6 +37838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48197: {
     label: 'Hardeman',
+    iso3: null,
     population: '3,933',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -34437,6 +37848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48199: {
     label: 'Hardin',
+    iso3: null,
     population: '57,602',
     casesPastWeek: 108,
     casesIncreasingPercentage: 0.0,
@@ -34446,6 +37858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48201: {
     label: 'Harris',
+    iso3: null,
     population: '4,713,325',
     casesPastWeek: 12712,
     casesIncreasingPercentage: 0.0,
@@ -34455,6 +37868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48203: {
     label: 'Harrison',
+    iso3: null,
     population: '66,553',
     casesPastWeek: 302,
     casesIncreasingPercentage: 0.0,
@@ -34464,6 +37878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48205: {
     label: 'Hartley',
+    iso3: null,
     population: '5,576',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -34473,6 +37888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48207: {
     label: 'Haskell',
+    iso3: null,
     population: '5,658',
     casesPastWeek: 31,
     casesIncreasingPercentage: 19.23076923076923,
@@ -34482,6 +37898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48209: {
     label: 'Hays',
+    iso3: null,
     population: '230,191',
     casesPastWeek: 1075,
     casesIncreasingPercentage: 0.0,
@@ -34491,6 +37908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48211: {
     label: 'Hemphill',
+    iso3: null,
     population: '3,819',
     casesPastWeek: 59,
     casesIncreasingPercentage: 195.00000000000003,
@@ -34500,6 +37918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48213: {
     label: 'Henderson',
+    iso3: null,
     population: '82,737',
     casesPastWeek: 241,
     casesIncreasingPercentage: 0.0,
@@ -34509,6 +37928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48215: {
     label: 'Hidalgo',
+    iso3: null,
     population: '868,707',
     casesPastWeek: 2876,
     casesIncreasingPercentage: 5.078553160394583,
@@ -34518,6 +37938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48217: {
     label: 'Hill',
+    iso3: null,
     population: '36,649',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -34527,6 +37948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48219: {
     label: 'Hockley',
+    iso3: null,
     population: '23,021',
     casesPastWeek: 42,
     casesIncreasingPercentage: 75.0,
@@ -34536,6 +37958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48221: {
     label: 'Hood',
+    iso3: null,
     population: '61,643',
     casesPastWeek: 349,
     casesIncreasingPercentage: 0.0,
@@ -34545,6 +37968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48223: {
     label: 'Hopkins',
+    iso3: null,
     population: '37,084',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -34554,6 +37978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48225: {
     label: 'Houston',
+    iso3: null,
     population: '22,968',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -34563,6 +37988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48227: {
     label: 'Howard',
+    iso3: null,
     population: '36,664',
     casesPastWeek: 121,
     casesIncreasingPercentage: 15.238095238095228,
@@ -34572,6 +37998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48229: {
     label: 'Hudspeth',
+    iso3: null,
     population: '4,886',
     casesPastWeek: -18,
     casesIncreasingPercentage: 0.0,
@@ -34581,6 +38008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48231: {
     label: 'Hunt',
+    iso3: null,
     population: '98,594',
     casesPastWeek: 162,
     casesIncreasingPercentage: 0.0,
@@ -34590,6 +38018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48233: {
     label: 'Hutchinson',
+    iso3: null,
     population: '20,938',
     casesPastWeek: 52,
     casesIncreasingPercentage: 225.0,
@@ -34599,6 +38028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48235: {
     label: 'Irion',
+    iso3: null,
     population: '1,536',
     casesPastWeek: 11,
     casesIncreasingPercentage: 266.66666666666663,
@@ -34608,6 +38038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48237: {
     label: 'Jack',
+    iso3: null,
     population: '8,935',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -34617,6 +38048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48239: {
     label: 'Jackson',
+    iso3: null,
     population: '14,760',
     casesPastWeek: 111,
     casesIncreasingPercentage: 73.4375,
@@ -34626,6 +38058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48241: {
     label: 'Jasper',
+    iso3: null,
     population: '35,529',
     casesPastWeek: 88,
     casesIncreasingPercentage: 0.0,
@@ -34635,6 +38068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48243: {
     label: 'Jeff Davis',
+    iso3: null,
     population: '2,274',
     casesPastWeek: 3,
     casesIncreasingPercentage: 50.0,
@@ -34644,6 +38078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48245: {
     label: 'Jefferson',
+    iso3: null,
     population: '251,565',
     casesPastWeek: 509,
     casesIncreasingPercentage: 0.0,
@@ -34653,6 +38088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48247: {
     label: 'Jim Hogg',
+    iso3: null,
     population: '5,200',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -34662,6 +38098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48249: {
     label: 'Jim Wells',
+    iso3: null,
     population: '40,482',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -34671,6 +38108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48251: {
     label: 'Johnson',
+    iso3: null,
     population: '175,817',
     casesPastWeek: 1180,
     casesIncreasingPercentage: 0.0,
@@ -34680,6 +38118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48253: {
     label: 'Jones',
+    iso3: null,
     population: '20,083',
     casesPastWeek: 138,
     casesIncreasingPercentage: 115.625,
@@ -34689,6 +38128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48255: {
     label: 'Karnes',
+    iso3: null,
     population: '15,601',
     casesPastWeek: 83,
     casesIncreasingPercentage: 186.20689655172416,
@@ -34698,6 +38138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48257: {
     label: 'Kaufman',
+    iso3: null,
     population: '136,154',
     casesPastWeek: 877,
     casesIncreasingPercentage: 0.0,
@@ -34707,6 +38148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48259: {
     label: 'Kendall',
+    iso3: null,
     population: '47,431',
     casesPastWeek: 215,
     casesIncreasingPercentage: 4.878048780487809,
@@ -34716,6 +38158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48261: {
     label: 'Kenedy',
+    iso3: null,
     population: '404',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -34725,6 +38168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48263: {
     label: 'Kent',
+    iso3: null,
     population: '762',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -34734,6 +38178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48265: {
     label: 'Kerr',
+    iso3: null,
     population: '52,600',
     casesPastWeek: 222,
     casesIncreasingPercentage: 0.0,
@@ -34743,6 +38188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48267: {
     label: 'Kimble',
+    iso3: null,
     population: '4,337',
     casesPastWeek: 18,
     casesIncreasingPercentage: 100.0,
@@ -34752,6 +38198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48269: {
     label: 'King',
+    iso3: null,
     population: '272',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -34761,6 +38208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48271: {
     label: 'Kinney',
+    iso3: null,
     population: '3,667',
     casesPastWeek: 38,
     casesIncreasingPercentage: 5.555555555555558,
@@ -34770,6 +38218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48273: {
     label: 'Kleberg',
+    iso3: null,
     population: '30,680',
     casesPastWeek: 122,
     casesIncreasingPercentage: 4.2735042735042805,
@@ -34779,6 +38228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48275: {
     label: 'Knox',
+    iso3: null,
     population: '3,664',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -34788,6 +38238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48277: {
     label: 'Lamar',
+    iso3: null,
     population: '49,859',
     casesPastWeek: 146,
     casesIncreasingPercentage: 0.0,
@@ -34797,6 +38248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48279: {
     label: 'Lamb',
+    iso3: null,
     population: '12,893',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -34806,6 +38258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48281: {
     label: 'Lampasas',
+    iso3: null,
     population: '21,428',
     casesPastWeek: 81,
     casesIncreasingPercentage: 15.714285714285726,
@@ -34815,6 +38268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48283: {
     label: 'La Salle',
+    iso3: null,
     population: '7,520',
     casesPastWeek: -2,
     casesIncreasingPercentage: 0.0,
@@ -34824,6 +38278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48285: {
     label: 'Lavaca',
+    iso3: null,
     population: '20,154',
     casesPastWeek: 89,
     casesIncreasingPercentage: 23.611111111111114,
@@ -34833,6 +38288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48287: {
     label: 'Lee',
+    iso3: null,
     population: '17,239',
     casesPastWeek: 65,
     casesIncreasingPercentage: 0.0,
@@ -34842,6 +38298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48289: {
     label: 'Leon',
+    iso3: null,
     population: '17,404',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -34851,6 +38308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48291: {
     label: 'Liberty',
+    iso3: null,
     population: '88,219',
     casesPastWeek: 456,
     casesIncreasingPercentage: 0.0,
@@ -34860,6 +38318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48293: {
     label: 'Limestone',
+    iso3: null,
     population: '23,437',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -34869,6 +38328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48295: {
     label: 'Lipscomb',
+    iso3: null,
     population: '3,233',
     casesPastWeek: 14,
     casesIncreasingPercentage: 250.0,
@@ -34878,6 +38338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48297: {
     label: 'Live Oak',
+    iso3: null,
     population: '12,207',
     casesPastWeek: 49,
     casesIncreasingPercentage: 6.521739130434789,
@@ -34887,6 +38348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48299: {
     label: 'Llano',
+    iso3: null,
     population: '21,795',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -34896,6 +38358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48301: {
     label: 'Loving',
+    iso3: null,
     population: '169',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -34905,6 +38368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48303: {
     label: 'Lubbock',
+    iso3: null,
     population: '310,569',
     casesPastWeek: 855,
     casesIncreasingPercentage: 0.0,
@@ -34914,6 +38378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48305: {
     label: 'Lynn',
+    iso3: null,
     population: '5,951',
     casesPastWeek: 18,
     casesIncreasingPercentage: 28.57142857142858,
@@ -34923,6 +38388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48307: {
     label: 'McCulloch',
+    iso3: null,
     population: '7,984',
     casesPastWeek: 12,
     casesIncreasingPercentage: 50.0,
@@ -34932,6 +38398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48309: {
     label: 'McLennan',
+    iso3: null,
     population: '256,623',
     casesPastWeek: 763,
     casesIncreasingPercentage: 0.0,
@@ -34941,6 +38408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48311: {
     label: 'McMullen',
+    iso3: null,
     population: '743',
     casesPastWeek: 2,
     casesIncreasingPercentage: 100.0,
@@ -34950,6 +38418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48313: {
     label: 'Madison',
+    iso3: null,
     population: '14,284',
     casesPastWeek: 25,
     casesIncreasingPercentage: 127.2727272727273,
@@ -34959,6 +38428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48315: {
     label: 'Marion',
+    iso3: null,
     population: '9,854',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -34968,6 +38438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48317: {
     label: 'Martin',
+    iso3: null,
     population: '5,771',
     casesPastWeek: -5,
     casesIncreasingPercentage: 0.0,
@@ -34977,6 +38448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48319: {
     label: 'Mason',
+    iso3: null,
     population: '4,274',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -34986,6 +38458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48321: {
     label: 'Matagorda',
+    iso3: null,
     population: '36,643',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -34995,6 +38468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48323: {
     label: 'Maverick',
+    iso3: null,
     population: '58,722',
     casesPastWeek: 404,
     casesIncreasingPercentage: 0.0,
@@ -35004,6 +38478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48325: {
     label: 'Medina',
+    iso3: null,
     population: '51,584',
     casesPastWeek: 211,
     casesIncreasingPercentage: 0.0,
@@ -35013,6 +38488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48327: {
     label: 'Menard',
+    iso3: null,
     population: '2,138',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -35022,6 +38498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48329: {
     label: 'Midland',
+    iso3: null,
     population: '176,832',
     casesPastWeek: 514,
     casesIncreasingPercentage: 0.0,
@@ -35031,6 +38508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48331: {
     label: 'Milam',
+    iso3: null,
     population: '24,823',
     casesPastWeek: 310,
     casesIncreasingPercentage: 0.0,
@@ -35040,6 +38518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48333: {
     label: 'Mills',
+    iso3: null,
     population: '4,873',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -35049,6 +38528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48335: {
     label: 'Mitchell',
+    iso3: null,
     population: '8,545',
     casesPastWeek: 16,
     casesIncreasingPercentage: 23.076923076923084,
@@ -35058,6 +38538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48337: {
     label: 'Montague',
+    iso3: null,
     population: '19,818',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -35067,6 +38548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48339: {
     label: 'Montgomery',
+    iso3: null,
     population: '607,391',
     casesPastWeek: 2474,
     casesIncreasingPercentage: 0.0,
@@ -35076,6 +38558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48341: {
     label: 'Moore',
+    iso3: null,
     population: '20,940',
     casesPastWeek: 18,
     casesIncreasingPercentage: 80.0,
@@ -35085,6 +38568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48343: {
     label: 'Morris',
+    iso3: null,
     population: '12,388',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -35094,6 +38578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48345: {
     label: 'Motley',
+    iso3: null,
     population: '1,200',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -35103,6 +38588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48347: {
     label: 'Nacogdoches',
+    iso3: null,
     population: '65,204',
     casesPastWeek: 139,
     casesIncreasingPercentage: 6.923076923076921,
@@ -35112,6 +38598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48349: {
     label: 'Navarro',
+    iso3: null,
     population: '50,113',
     casesPastWeek: 283,
     casesIncreasingPercentage: 15.983606557377051,
@@ -35121,6 +38608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48351: {
     label: 'Newton',
+    iso3: null,
     population: '13,595',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -35130,6 +38618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48353: {
     label: 'Nolan',
+    iso3: null,
     population: '14,714',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -35139,6 +38628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48355: {
     label: 'Nueces',
+    iso3: null,
     population: '362,294',
     casesPastWeek: 1218,
     casesIncreasingPercentage: 0.0,
@@ -35148,6 +38638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48357: {
     label: 'Ochiltree',
+    iso3: null,
     population: '9,836',
     casesPastWeek: 20,
     casesIncreasingPercentage: 66.66666666666667,
@@ -35157,6 +38648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48359: {
     label: 'Oldham',
+    iso3: null,
     population: '2,112',
     casesPastWeek: 8,
     casesIncreasingPercentage: 60.00000000000001,
@@ -35166,6 +38658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48361: {
     label: 'Orange',
+    iso3: null,
     population: '83,396',
     casesPastWeek: 263,
     casesIncreasingPercentage: 148.1132075471698,
@@ -35175,6 +38668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48363: {
     label: 'Palo Pinto',
+    iso3: null,
     population: '29,189',
     casesPastWeek: 143,
     casesIncreasingPercentage: 21.18644067796611,
@@ -35184,6 +38678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48365: {
     label: 'Panola',
+    iso3: null,
     population: '23,194',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -35193,6 +38688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48367: {
     label: 'Parker',
+    iso3: null,
     population: '142,878',
     casesPastWeek: 934,
     casesIncreasingPercentage: 0.0,
@@ -35202,6 +38698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48369: {
     label: 'Parmer',
+    iso3: null,
     population: '9,605',
     casesPastWeek: 19,
     casesIncreasingPercentage: 89.99999999999999,
@@ -35211,6 +38708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48371: {
     label: 'Pecos',
+    iso3: null,
     population: '15,823',
     casesPastWeek: -47,
     casesIncreasingPercentage: 0.0,
@@ -35220,6 +38718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48373: {
     label: 'Polk',
+    iso3: null,
     population: '51,353',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -35229,6 +38728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48375: {
     label: 'Potter',
+    iso3: null,
     population: '117,415',
     casesPastWeek: 241,
     casesIncreasingPercentage: 0.0,
@@ -35238,6 +38738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48377: {
     label: 'Presidio',
+    iso3: null,
     population: '6,704',
     casesPastWeek: -12,
     casesIncreasingPercentage: 0.0,
@@ -35247,6 +38748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48379: {
     label: 'Rains',
+    iso3: null,
     population: '12,514',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -35256,6 +38758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48381: {
     label: 'Randall',
+    iso3: null,
     population: '137,713',
     casesPastWeek: 335,
     casesIncreasingPercentage: 0.0,
@@ -35265,6 +38768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48383: {
     label: 'Reagan',
+    iso3: null,
     population: '3,849',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -35274,6 +38778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48385: {
     label: 'Real',
+    iso3: null,
     population: '3,452',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -35283,6 +38788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48387: {
     label: 'Red River',
+    iso3: null,
     population: '12,023',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -35292,6 +38798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48389: {
     label: 'Reeves',
+    iso3: null,
     population: '15,976',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -35301,6 +38808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48391: {
     label: 'Refugio',
+    iso3: null,
     population: '6,948',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -35310,6 +38818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48393: {
     label: 'Roberts',
+    iso3: null,
     population: '854',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -35319,6 +38828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48395: {
     label: 'Robertson',
+    iso3: null,
     population: '17,074',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -35328,6 +38838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48397: {
     label: 'Rockwall',
+    iso3: null,
     population: '104,915',
     casesPastWeek: 567,
     casesIncreasingPercentage: 0.0,
@@ -35337,6 +38848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48399: {
     label: 'Runnels',
+    iso3: null,
     population: '10,264',
     casesPastWeek: 61,
     casesIncreasingPercentage: 17.307692307692314,
@@ -35346,6 +38858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48401: {
     label: 'Rusk',
+    iso3: null,
     population: '54,406',
     casesPastWeek: 228,
     casesIncreasingPercentage: 41.61490683229814,
@@ -35355,6 +38868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48403: {
     label: 'Sabine',
+    iso3: null,
     population: '10,542',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -35364,6 +38878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48405: {
     label: 'San Augustine',
+    iso3: null,
     population: '8,237',
     casesPastWeek: 13,
     casesIncreasingPercentage: 160.0,
@@ -35373,6 +38888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48407: {
     label: 'San Jacinto',
+    iso3: null,
     population: '28,859',
     casesPastWeek: 81,
     casesIncreasingPercentage: 17.391304347826097,
@@ -35382,6 +38898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48409: {
     label: 'San Patricio',
+    iso3: null,
     population: '66,730',
     casesPastWeek: 208,
     casesIncreasingPercentage: 0.0,
@@ -35391,6 +38908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48411: {
     label: 'San Saba',
+    iso3: null,
     population: '6,055',
     casesPastWeek: 24,
     casesIncreasingPercentage: 71.42857142857142,
@@ -35400,6 +38918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48413: {
     label: 'Schleicher',
+    iso3: null,
     population: '2,793',
     casesPastWeek: 13,
     casesIncreasingPercentage: 333.3333333333333,
@@ -35409,6 +38928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48415: {
     label: 'Scurry',
+    iso3: null,
     population: '16,703',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -35418,6 +38938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48417: {
     label: 'Shackelford',
+    iso3: null,
     population: '3,265',
     casesPastWeek: 23,
     casesIncreasingPercentage: 43.75,
@@ -35427,6 +38948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48419: {
     label: 'Shelby',
+    iso3: null,
     population: '25,274',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -35436,6 +38958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48421: {
     label: 'Sherman',
+    iso3: null,
     population: '3,022',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -35445,6 +38968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48423: {
     label: 'Smith',
+    iso3: null,
     population: '232,751',
     casesPastWeek: 928,
     casesIncreasingPercentage: 0.0,
@@ -35454,6 +38978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48425: {
     label: 'Somervell',
+    iso3: null,
     population: '9,128',
     casesPastWeek: 63,
     casesIncreasingPercentage: 39.99999999999999,
@@ -35463,6 +38988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48427: {
     label: 'Starr',
+    iso3: null,
     population: '64,633',
     casesPastWeek: 445,
     casesIncreasingPercentage: 0.0,
@@ -35472,6 +38998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48429: {
     label: 'Stephens',
+    iso3: null,
     population: '9,366',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -35481,6 +39008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48431: {
     label: 'Sterling',
+    iso3: null,
     population: '1,291',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -35490,6 +39018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48433: {
     label: 'Stonewall',
+    iso3: null,
     population: '1,350',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -35499,6 +39028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48435: {
     label: 'Sutton',
+    iso3: null,
     population: '3,776',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -35508,6 +39038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48437: {
     label: 'Swisher',
+    iso3: null,
     population: '7,397',
     casesPastWeek: 19,
     casesIncreasingPercentage: 11.764705882352944,
@@ -35517,6 +39048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48439: {
     label: 'Tarrant',
+    iso3: null,
     population: '2,102,515',
     casesPastWeek: 14443,
     casesIncreasingPercentage: 0.0,
@@ -35526,6 +39058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48441: {
     label: 'Taylor',
+    iso3: null,
     population: '138,034',
     casesPastWeek: 645,
     casesIncreasingPercentage: 0.0,
@@ -35535,6 +39068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48443: {
     label: 'Terrell',
+    iso3: null,
     population: '776',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -35544,6 +39078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48445: {
     label: 'Terry',
+    iso3: null,
     population: '12,337',
     casesPastWeek: 89,
     casesIncreasingPercentage: 394.44444444444446,
@@ -35553,6 +39088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48447: {
     label: 'Throckmorton',
+    iso3: null,
     population: '1,501',
     casesPastWeek: 8,
     casesIncreasingPercentage: 700.0,
@@ -35562,6 +39098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48449: {
     label: 'Titus',
+    iso3: null,
     population: '32,750',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -35571,6 +39108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48451: {
     label: 'Tom Green',
+    iso3: null,
     population: '119,200',
     casesPastWeek: 564,
     casesIncreasingPercentage: 0.0,
@@ -35580,6 +39118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48453: {
     label: 'Travis',
+    iso3: null,
     population: '1,273,954',
     casesPastWeek: 4181,
     casesIncreasingPercentage: 0.0,
@@ -35589,6 +39128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48455: {
     label: 'Trinity',
+    iso3: null,
     population: '14,651',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -35598,6 +39138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48457: {
     label: 'Tyler',
+    iso3: null,
     population: '21,672',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -35607,6 +39148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48459: {
     label: 'Upshur',
+    iso3: null,
     population: '41,753',
     casesPastWeek: 165,
     casesIncreasingPercentage: 0.0,
@@ -35616,6 +39158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48461: {
     label: 'Upton',
+    iso3: null,
     population: '3,657',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -35625,6 +39168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48463: {
     label: 'Uvalde',
+    iso3: null,
     population: '26,741',
     casesPastWeek: 356,
     casesIncreasingPercentage: 16.721311475409827,
@@ -35634,6 +39178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48465: {
     label: 'Val Verde',
+    iso3: null,
     population: '49,025',
     casesPastWeek: 460,
     casesIncreasingPercentage: 0.0,
@@ -35643,6 +39188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48467: {
     label: 'Van Zandt',
+    iso3: null,
     population: '56,590',
     casesPastWeek: 150,
     casesIncreasingPercentage: 0.0,
@@ -35652,6 +39198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48469: {
     label: 'Victoria',
+    iso3: null,
     population: '92,084',
     casesPastWeek: 312,
     casesIncreasingPercentage: 0.0,
@@ -35661,6 +39208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48471: {
     label: 'Walker',
+    iso3: null,
     population: '72,971',
     casesPastWeek: 667,
     casesIncreasingPercentage: 62.287104622871034,
@@ -35670,6 +39218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48473: {
     label: 'Waller',
+    iso3: null,
     population: '55,246',
     casesPastWeek: 215,
     casesIncreasingPercentage: 0.0,
@@ -35679,6 +39228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48475: {
     label: 'Ward',
+    iso3: null,
     population: '11,998',
     casesPastWeek: 64,
     casesIncreasingPercentage: 20.75471698113207,
@@ -35688,6 +39238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48477: {
     label: 'Washington',
+    iso3: null,
     population: '35,882',
     casesPastWeek: 57,
     casesIncreasingPercentage: 39.02439024390243,
@@ -35697,6 +39248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48479: {
     label: 'Webb',
+    iso3: null,
     population: '276,652',
     casesPastWeek: 3439,
     casesIncreasingPercentage: 0.0,
@@ -35706,6 +39258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48481: {
     label: 'Wharton',
+    iso3: null,
     population: '41,556',
     casesPastWeek: 178,
     casesIncreasingPercentage: 0.0,
@@ -35715,6 +39268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48483: {
     label: 'Wheeler',
+    iso3: null,
     population: '5,056',
     casesPastWeek: 15,
     casesIncreasingPercentage: 15.384615384615374,
@@ -35724,6 +39278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48485: {
     label: 'Wichita',
+    iso3: null,
     population: '132,230',
     casesPastWeek: 406,
     casesIncreasingPercentage: 0.0,
@@ -35733,6 +39288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48487: {
     label: 'Wilbarger',
+    iso3: null,
     population: '12,769',
     casesPastWeek: 48,
     casesIncreasingPercentage: 0.0,
@@ -35742,6 +39298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48489: {
     label: 'Willacy',
+    iso3: null,
     population: '21,358',
     casesPastWeek: 109,
     casesIncreasingPercentage: 0.0,
@@ -35751,6 +39308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48491: {
     label: 'Williamson',
+    iso3: null,
     population: '590,551',
     casesPastWeek: 3153,
     casesIncreasingPercentage: 0.0,
@@ -35760,6 +39318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48493: {
     label: 'Wilson',
+    iso3: null,
     population: '51,070',
     casesPastWeek: 235,
     casesIncreasingPercentage: 14.077669902912614,
@@ -35769,6 +39328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48495: {
     label: 'Winkler',
+    iso3: null,
     population: '8,010',
     casesPastWeek: 39,
     casesIncreasingPercentage: 14.705882352941169,
@@ -35778,6 +39338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48497: {
     label: 'Wise',
+    iso3: null,
     population: '69,984',
     casesPastWeek: 430,
     casesIncreasingPercentage: 0.0,
@@ -35787,6 +39348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48499: {
     label: 'Wood',
+    iso3: null,
     population: '45,539',
     casesPastWeek: 156,
     casesIncreasingPercentage: 0.0,
@@ -35796,6 +39358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48501: {
     label: 'Yoakum',
+    iso3: null,
     population: '8,713',
     casesPastWeek: 42,
     casesIncreasingPercentage: 250.0,
@@ -35805,6 +39368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48503: {
     label: 'Young',
+    iso3: null,
     population: '18,010',
     casesPastWeek: 146,
     casesIncreasingPercentage: 2.8169014084507005,
@@ -35814,6 +39378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48505: {
     label: 'Zapata',
+    iso3: null,
     population: '14,179',
     casesPastWeek: 107,
     casesIncreasingPercentage: 0.0,
@@ -35823,6 +39388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_48507: {
     label: 'Zavala',
+    iso3: null,
     population: '11,840',
     casesPastWeek: 183,
     casesIncreasingPercentage: 53.781512605042025,
@@ -35832,6 +39398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Utah_Bear_River: {
     label: 'Bear River',
+    iso3: null,
     population: '186,818',
     casesPastWeek: 650,
     casesIncreasingPercentage: 0.0,
@@ -35841,6 +39408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Utah_Central_Utah: {
     label: 'Central Utah',
+    iso3: null,
     population: '81,954',
     casesPastWeek: 316,
     casesIncreasingPercentage: 0.0,
@@ -35850,6 +39418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Utah_Southeast_Utah: {
     label: 'Southeast Utah',
+    iso3: null,
     population: '40,229',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -35859,6 +39428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Utah_Southwest_Utah: {
     label: 'Southwest Utah',
+    iso3: null,
     population: '252,042',
     casesPastWeek: 1116,
     casesIncreasingPercentage: 0.0,
@@ -35868,6 +39438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Utah_TriCounty: {
     label: 'TriCounty',
+    iso3: null,
     population: '56,622',
     casesPastWeek: 109,
     casesIncreasingPercentage: 0.0,
@@ -35877,6 +39448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_Utah_Weber_Morgan: {
     label: 'Weber-Morgan',
+    iso3: null,
     population: '272,337',
     casesPastWeek: 1049,
     casesIncreasingPercentage: 0.0,
@@ -35886,6 +39458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49011: {
     label: 'Davis',
+    iso3: null,
     population: '355,481',
     casesPastWeek: 1271,
     casesIncreasingPercentage: 0.0,
@@ -35895,6 +39468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49035: {
     label: 'Salt Lake',
+    iso3: null,
     population: '1,160,437',
     casesPastWeek: 4204,
     casesIncreasingPercentage: 0.0,
@@ -35904,6 +39478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49037: {
     label: 'San Juan',
+    iso3: null,
     population: '15,308',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -35913,6 +39488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49043: {
     label: 'Summit',
+    iso3: null,
     population: '42,145',
     casesPastWeek: 265,
     casesIncreasingPercentage: 0.0,
@@ -35922,6 +39498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49045: {
     label: 'Tooele',
+    iso3: null,
     population: '72,259',
     casesPastWeek: 222,
     casesIncreasingPercentage: 0.0,
@@ -35931,6 +39508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49049: {
     label: 'Utah',
+    iso3: null,
     population: '636,235',
     casesPastWeek: 2901,
     casesIncreasingPercentage: 0.0,
@@ -35940,6 +39518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_49051: {
     label: 'Wasatch',
+    iso3: null,
     population: '34,091',
     casesPastWeek: 191,
     casesIncreasingPercentage: 0.0,
@@ -35949,6 +39528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50001: {
     label: 'Addison',
+    iso3: null,
     population: '36,777',
     casesPastWeek: 43,
     casesIncreasingPercentage: 0.0,
@@ -35958,6 +39538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50003: {
     label: 'Bennington',
+    iso3: null,
     population: '35,470',
     casesPastWeek: 158,
     casesIncreasingPercentage: 25.396825396825395,
@@ -35967,6 +39548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50005: {
     label: 'Caledonia',
+    iso3: null,
     population: '29,993',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -35976,6 +39558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50007: {
     label: 'Chittenden',
+    iso3: null,
     population: '163,774',
     casesPastWeek: 332,
     casesIncreasingPercentage: 0.0,
@@ -35985,6 +39568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50009: {
     label: 'Essex',
+    iso3: null,
     population: '6,163',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -35994,6 +39578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50011: {
     label: 'Franklin',
+    iso3: null,
     population: '49,402',
     casesPastWeek: 41,
     casesIncreasingPercentage: 13.888888888888884,
@@ -36003,6 +39588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50013: {
     label: 'Grand Isle',
+    iso3: null,
     population: '7,235',
     casesPastWeek: 5,
     casesIncreasingPercentage: 0.0,
@@ -36012,6 +39598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50015: {
     label: 'Lamoille',
+    iso3: null,
     population: '25,362',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -36021,6 +39608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50017: {
     label: 'Orange',
+    iso3: null,
     population: '28,892',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -36030,6 +39618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50019: {
     label: 'Orleans',
+    iso3: null,
     population: '27,037',
     casesPastWeek: 23,
     casesIncreasingPercentage: 109.09090909090908,
@@ -36039,6 +39628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50021: {
     label: 'Rutland',
+    iso3: null,
     population: '58,191',
     casesPastWeek: 84,
     casesIncreasingPercentage: 0.0,
@@ -36048,6 +39638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50023: {
     label: 'Washington',
+    iso3: null,
     population: '58,409',
     casesPastWeek: 90,
     casesIncreasingPercentage: 21.62162162162162,
@@ -36057,6 +39648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50025: {
     label: 'Windham',
+    iso3: null,
     population: '42,222',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -36066,6 +39658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_50027: {
     label: 'Windsor',
+    iso3: null,
     population: '55,062',
     casesPastWeek: 77,
     casesIncreasingPercentage: 0.0,
@@ -36075,6 +39668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51001: {
     label: 'Accomack',
+    iso3: null,
     population: '32,316',
     casesPastWeek: 109,
     casesIncreasingPercentage: 0.0,
@@ -36084,6 +39678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51003: {
     label: 'Albemarle',
+    iso3: null,
     population: '109,330',
     casesPastWeek: 193,
     casesIncreasingPercentage: 0.0,
@@ -36093,6 +39688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51005: {
     label: 'Alleghany',
+    iso3: null,
     population: '14,860',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -36102,6 +39698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51007: {
     label: 'Amelia',
+    iso3: null,
     population: '13,145',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -36111,6 +39708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51009: {
     label: 'Amherst',
+    iso3: null,
     population: '31,605',
     casesPastWeek: 260,
     casesIncreasingPercentage: 9.704641350210963,
@@ -36120,6 +39718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51011: {
     label: 'Appomattox',
+    iso3: null,
     population: '15,911',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -36129,6 +39728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51013: {
     label: 'Arlington',
+    iso3: null,
     population: '236,842',
     casesPastWeek: 472,
     casesIncreasingPercentage: 0.0,
@@ -36138,6 +39738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51015: {
     label: 'Augusta',
+    iso3: null,
     population: '75,558',
     casesPastWeek: 273,
     casesIncreasingPercentage: 0.0,
@@ -36147,6 +39748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51017: {
     label: 'Bath',
+    iso3: null,
     population: '4,147',
     casesPastWeek: 10,
     casesIncreasingPercentage: 0.0,
@@ -36156,6 +39758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51019: {
     label: 'Bedford',
+    iso3: null,
     population: '78,997',
     casesPastWeek: 433,
     casesIncreasingPercentage: 0.0,
@@ -36165,6 +39768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51021: {
     label: 'Bland',
+    iso3: null,
     population: '6,280',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -36174,6 +39778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51023: {
     label: 'Botetourt',
+    iso3: null,
     population: '33,419',
     casesPastWeek: 98,
     casesIncreasingPercentage: 0.0,
@@ -36183,6 +39788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51025: {
     label: 'Brunswick',
+    iso3: null,
     population: '16,231',
     casesPastWeek: 136,
     casesIncreasingPercentage: 0.0,
@@ -36192,6 +39798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51027: {
     label: 'Buchanan',
+    iso3: null,
     population: '21,004',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -36201,6 +39808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51029: {
     label: 'Buckingham',
+    iso3: null,
     population: '17,148',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -36210,6 +39818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51031: {
     label: 'Campbell',
+    iso3: null,
     population: '54,885',
     casesPastWeek: 304,
     casesIncreasingPercentage: 0.0,
@@ -36219,6 +39828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51033: {
     label: 'Caroline',
+    iso3: null,
     population: '30,725',
     casesPastWeek: 115,
     casesIncreasingPercentage: 0.0,
@@ -36228,6 +39838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51035: {
     label: 'Carroll',
+    iso3: null,
     population: '29,791',
     casesPastWeek: 86,
     casesIncreasingPercentage: 0.0,
@@ -36237,6 +39848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51036: {
     label: 'Charles City',
+    iso3: null,
     population: '6,963',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -36246,6 +39858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51037: {
     label: 'Charlotte',
+    iso3: null,
     population: '11,880',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -36255,6 +39868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51041: {
     label: 'Chesterfield',
+    iso3: null,
     population: '352,802',
     casesPastWeek: 1379,
     casesIncreasingPercentage: 0.0,
@@ -36264,6 +39878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51043: {
     label: 'Clarke',
+    iso3: null,
     population: '14,619',
     casesPastWeek: 108,
     casesIncreasingPercentage: 71.42857142857142,
@@ -36273,6 +39888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51045: {
     label: 'Craig',
+    iso3: null,
     population: '5,131',
     casesPastWeek: 22,
     casesIncreasingPercentage: 10.000000000000009,
@@ -36282,6 +39898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51047: {
     label: 'Culpeper',
+    iso3: null,
     population: '52,605',
     casesPastWeek: 110,
     casesIncreasingPercentage: 0.0,
@@ -36291,6 +39908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51049: {
     label: 'Cumberland',
+    iso3: null,
     population: '9,932',
     casesPastWeek: 42,
     casesIncreasingPercentage: 7.692307692307687,
@@ -36300,6 +39918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51051: {
     label: 'Dickenson',
+    iso3: null,
     population: '14,318',
     casesPastWeek: 26,
     casesIncreasingPercentage: 0.0,
@@ -36309,6 +39928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51053: {
     label: 'Dinwiddie',
+    iso3: null,
     population: '28,544',
     casesPastWeek: 122,
     casesIncreasingPercentage: 0.0,
@@ -36318,6 +39938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51057: {
     label: 'Essex',
+    iso3: null,
     population: '10,953',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -36327,6 +39948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51059: {
     label: 'Fairfax',
+    iso3: null,
     population: '1,147,532',
     casesPastWeek: 2499,
     casesIncreasingPercentage: 0.0,
@@ -36336,6 +39958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51061: {
     label: 'Fauquier',
+    iso3: null,
     population: '71,222',
     casesPastWeek: 147,
     casesIncreasingPercentage: 0.0,
@@ -36345,6 +39968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51063: {
     label: 'Floyd',
+    iso3: null,
     population: '15,749',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -36354,6 +39978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51065: {
     label: 'Fluvanna',
+    iso3: null,
     population: '27,270',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -36363,6 +39988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51067: {
     label: 'Franklin',
+    iso3: null,
     population: '56,042',
     casesPastWeek: 197,
     casesIncreasingPercentage: 0.0,
@@ -36372,6 +39998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51069: {
     label: 'Frederick',
+    iso3: null,
     population: '89,313',
     casesPastWeek: 571,
     casesIncreasingPercentage: 24.945295404814004,
@@ -36381,6 +40008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51071: {
     label: 'Giles',
+    iso3: null,
     population: '16,720',
     casesPastWeek: 47,
     casesIncreasingPercentage: 0.0,
@@ -36390,6 +40018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51073: {
     label: 'Gloucester',
+    iso3: null,
     population: '37,348',
     casesPastWeek: 135,
     casesIncreasingPercentage: 0.0,
@@ -36399,6 +40028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51075: {
     label: 'Goochland',
+    iso3: null,
     population: '23,753',
     casesPastWeek: 105,
     casesIncreasingPercentage: 0.0,
@@ -36408,6 +40038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51077: {
     label: 'Grayson',
+    iso3: null,
     population: '15,550',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -36417,6 +40048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51079: {
     label: 'Greene',
+    iso3: null,
     population: '19,819',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -36426,6 +40058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51081: {
     label: 'Greensville',
+    iso3: null,
     population: '11,336',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -36435,6 +40068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51083: {
     label: 'Halifax',
+    iso3: null,
     population: '33,911',
     casesPastWeek: 146,
     casesIncreasingPercentage: 0.0,
@@ -36444,6 +40078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51085: {
     label: 'Hanover',
+    iso3: null,
     population: '107,766',
     casesPastWeek: 362,
     casesIncreasingPercentage: 0.0,
@@ -36453,6 +40088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51087: {
     label: 'Henrico',
+    iso3: null,
     population: '330,818',
     casesPastWeek: 1299,
     casesIncreasingPercentage: 0.0,
@@ -36462,6 +40098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51089: {
     label: 'Henry',
+    iso3: null,
     population: '50,557',
     casesPastWeek: 208,
     casesIncreasingPercentage: 0.0,
@@ -36471,6 +40108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51091: {
     label: 'Highland',
+    iso3: null,
     population: '2,190',
     casesPastWeek: 6,
     casesIncreasingPercentage: 19.999999999999996,
@@ -36480,6 +40118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51093: {
     label: 'Isle of Wight',
+    iso3: null,
     population: '37,109',
     casesPastWeek: 153,
     casesIncreasingPercentage: 0.0,
@@ -36489,6 +40128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51095: {
     label: 'James City',
+    iso3: null,
     population: '76,523',
     casesPastWeek: 439,
     casesIncreasingPercentage: 19.618528610354225,
@@ -36498,6 +40138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51097: {
     label: 'King and Queen',
+    iso3: null,
     population: '7,025',
     casesPastWeek: 24,
     casesIncreasingPercentage: 19.999999999999996,
@@ -36507,6 +40148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51099: {
     label: 'King George',
+    iso3: null,
     population: '26,836',
     casesPastWeek: 118,
     casesIncreasingPercentage: 0.0,
@@ -36516,6 +40158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51101: {
     label: 'King William',
+    iso3: null,
     population: '17,148',
     casesPastWeek: 50,
     casesIncreasingPercentage: 0.0,
@@ -36525,6 +40168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51103: {
     label: 'Lancaster',
+    iso3: null,
     population: '10,603',
     casesPastWeek: 44,
     casesIncreasingPercentage: 0.0,
@@ -36534,6 +40178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51105: {
     label: 'Lee',
+    iso3: null,
     population: '23,423',
     casesPastWeek: 131,
     casesIncreasingPercentage: 0.0,
@@ -36543,6 +40188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51107: {
     label: 'Loudoun',
+    iso3: null,
     population: '413,538',
     casesPastWeek: 1744,
     casesIncreasingPercentage: 37.43104806934594,
@@ -36552,6 +40198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51109: {
     label: 'Louisa',
+    iso3: null,
     population: '37,591',
     casesPastWeek: 109,
     casesIncreasingPercentage: 0.0,
@@ -36561,6 +40208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51111: {
     label: 'Lunenburg',
+    iso3: null,
     population: '12,196',
     casesPastWeek: 55,
     casesIncreasingPercentage: 0.0,
@@ -36570,6 +40218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51113: {
     label: 'Madison',
+    iso3: null,
     population: '13,261',
     casesPastWeek: 39,
     casesIncreasingPercentage: 2.6315789473684292,
@@ -36579,6 +40228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51115: {
     label: 'Mathews',
+    iso3: null,
     population: '8,834',
     casesPastWeek: 23,
     casesIncreasingPercentage: 0.0,
@@ -36588,6 +40238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51117: {
     label: 'Mecklenburg',
+    iso3: null,
     population: '30,587',
     casesPastWeek: 108,
     casesIncreasingPercentage: 2.857142857142847,
@@ -36597,6 +40248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51119: {
     label: 'Middlesex',
+    iso3: null,
     population: '10,582',
     casesPastWeek: 36,
     casesIncreasingPercentage: 2.857142857142847,
@@ -36606,6 +40258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51121: {
     label: 'Montgomery',
+    iso3: null,
     population: '98,535',
     casesPastWeek: 211,
     casesIncreasingPercentage: 0.0,
@@ -36615,6 +40268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51125: {
     label: 'Nelson',
+    iso3: null,
     population: '14,930',
     casesPastWeek: 72,
     casesIncreasingPercentage: 7.462686567164178,
@@ -36624,6 +40278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51127: {
     label: 'New Kent',
+    iso3: null,
     population: '23,091',
     casesPastWeek: 101,
     casesIncreasingPercentage: 94.23076923076923,
@@ -36633,6 +40288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51131: {
     label: 'Northampton',
+    iso3: null,
     population: '11,710',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -36642,6 +40298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51133: {
     label: 'Northumberland',
+    iso3: null,
     population: '12,095',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -36651,6 +40308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51135: {
     label: 'Nottoway',
+    iso3: null,
     population: '15,232',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -36660,6 +40318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51137: {
     label: 'Orange',
+    iso3: null,
     population: '37,051',
     casesPastWeek: 102,
     casesIncreasingPercentage: 0.0,
@@ -36669,6 +40328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51139: {
     label: 'Page',
+    iso3: null,
     population: '23,902',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -36678,6 +40338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51141: {
     label: 'Patrick',
+    iso3: null,
     population: '17,608',
     casesPastWeek: 55,
     casesIncreasingPercentage: 1.85185185185186,
@@ -36687,6 +40348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51143: {
     label: 'Pittsylvania',
+    iso3: null,
     population: '60,354',
     casesPastWeek: 265,
     casesIncreasingPercentage: 0.0,
@@ -36696,6 +40358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51145: {
     label: 'Powhatan',
+    iso3: null,
     population: '29,652',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -36705,6 +40368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51147: {
     label: 'Prince Edward',
+    iso3: null,
     population: '22,802',
     casesPastWeek: 126,
     casesIncreasingPercentage: 0.0,
@@ -36714,6 +40378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51149: {
     label: 'Prince George',
+    iso3: null,
     population: '38,353',
     casesPastWeek: 241,
     casesIncreasingPercentage: 46.06060606060607,
@@ -36723,6 +40388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51153: {
     label: 'Prince William',
+    iso3: null,
     population: '470,335',
     casesPastWeek: 1881,
     casesIncreasingPercentage: 0.0,
@@ -36732,6 +40398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51155: {
     label: 'Pulaski',
+    iso3: null,
     population: '34,027',
     casesPastWeek: 157,
     casesIncreasingPercentage: 16.296296296296298,
@@ -36741,6 +40408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51157: {
     label: 'Rappahannock',
+    iso3: null,
     population: '7,370',
     casesPastWeek: 37,
     casesIncreasingPercentage: 85.00000000000001,
@@ -36750,6 +40418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51159: {
     label: 'Richmond',
+    iso3: null,
     population: '9,023',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -36759,6 +40428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51161: {
     label: 'Roanoke',
+    iso3: null,
     population: '94,186',
     casesPastWeek: 340,
     casesIncreasingPercentage: 0.0,
@@ -36768,6 +40438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51163: {
     label: 'Rockbridge',
+    iso3: null,
     population: '22,573',
     casesPastWeek: 111,
     casesIncreasingPercentage: 24.7191011235955,
@@ -36777,6 +40448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51165: {
     label: 'Rockingham',
+    iso3: null,
     population: '81,948',
     casesPastWeek: 294,
     casesIncreasingPercentage: 0.0,
@@ -36786,6 +40458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51167: {
     label: 'Russell',
+    iso3: null,
     population: '26,586',
     casesPastWeek: 38,
     casesIncreasingPercentage: 0.0,
@@ -36795,6 +40468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51169: {
     label: 'Scott',
+    iso3: null,
     population: '21,566',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -36804,6 +40478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51171: {
     label: 'Shenandoah',
+    iso3: null,
     population: '43,616',
     casesPastWeek: 310,
     casesIncreasingPercentage: 23.015873015873023,
@@ -36813,6 +40488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51173: {
     label: 'Smyth',
+    iso3: null,
     population: '30,104',
     casesPastWeek: 104,
     casesIncreasingPercentage: 0.0,
@@ -36822,6 +40498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51175: {
     label: 'Southampton',
+    iso3: null,
     population: '17,631',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -36831,6 +40508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51177: {
     label: 'Spotsylvania',
+    iso3: null,
     population: '136,215',
     casesPastWeek: 593,
     casesIncreasingPercentage: 0.0,
@@ -36840,6 +40518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51179: {
     label: 'Stafford',
+    iso3: null,
     population: '152,882',
     casesPastWeek: 574,
     casesIncreasingPercentage: 0.0,
@@ -36849,6 +40528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51181: {
     label: 'Surry',
+    iso3: null,
     population: '6,422',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -36858,6 +40538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51183: {
     label: 'Sussex',
+    iso3: null,
     population: '11,159',
     casesPastWeek: 72,
     casesIncreasingPercentage: 2.857142857142847,
@@ -36867,6 +40548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51185: {
     label: 'Tazewell',
+    iso3: null,
     population: '40,595',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -36876,6 +40558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51187: {
     label: 'Warren',
+    iso3: null,
     population: '40,164',
     casesPastWeek: 140,
     casesIncreasingPercentage: 2.1897810218978186,
@@ -36885,6 +40568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51191: {
     label: 'Washington',
+    iso3: null,
     population: '53,740',
     casesPastWeek: 220,
     casesIncreasingPercentage: 0.0,
@@ -36894,6 +40578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51193: {
     label: 'Westmoreland',
+    iso3: null,
     population: '18,015',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -36903,6 +40588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51195: {
     label: 'Wise',
+    iso3: null,
     population: '37,383',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -36912,6 +40598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51197: {
     label: 'Wythe',
+    iso3: null,
     population: '28,684',
     casesPastWeek: 94,
     casesIncreasingPercentage: 0.0,
@@ -36921,6 +40608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51199: {
     label: 'York',
+    iso3: null,
     population: '68,280',
     casesPastWeek: 247,
     casesIncreasingPercentage: 3.347280334728042,
@@ -36930,6 +40618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51510: {
     label: 'Alexandria',
+    iso3: null,
     population: '159,428',
     casesPastWeek: 438,
     casesIncreasingPercentage: 0.0,
@@ -36939,6 +40628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51520: {
     label: 'Bristol',
+    iso3: null,
     population: '16,762',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -36948,6 +40638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51530: {
     label: 'Buena Vista',
+    iso3: null,
     population: '6,478',
     casesPastWeek: 54,
     casesIncreasingPercentage: 0.0,
@@ -36957,6 +40648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51540: {
     label: 'Charlottesville',
+    iso3: null,
     population: '47,266',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -36966,6 +40658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51550: {
     label: 'Chesapeake',
+    iso3: null,
     population: '244,835',
     casesPastWeek: 2089,
     casesIncreasingPercentage: 7.183170856849674,
@@ -36975,6 +40668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51570: {
     label: 'Colonial Heights',
+    iso3: null,
     population: '17,370',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -36984,6 +40678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51580: {
     label: 'Covington',
+    iso3: null,
     population: '5,538',
     casesPastWeek: 30,
     casesIncreasingPercentage: 0.0,
@@ -36993,6 +40688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51590: {
     label: 'Danville',
+    iso3: null,
     population: '40,044',
     casesPastWeek: 199,
     casesIncreasingPercentage: 0.0,
@@ -37002,6 +40698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51595: {
     label: 'Emporia',
+    iso3: null,
     population: '5,346',
     casesPastWeek: 54,
     casesIncreasingPercentage: 42.10526315789473,
@@ -37011,6 +40708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51600: {
     label: 'Fairfax City',
+    iso3: null,
     population: '24,019',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -37020,6 +40718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51610: {
     label: 'Falls Church',
+    iso3: null,
     population: '14,617',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -37029,6 +40728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51620: {
     label: 'Franklin City',
+    iso3: null,
     population: '7,967',
     casesPastWeek: 51,
     casesIncreasingPercentage: 0.0,
@@ -37038,6 +40738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51630: {
     label: 'Fredericksburg',
+    iso3: null,
     population: '29,036',
     casesPastWeek: 133,
     casesIncreasingPercentage: 19.819819819819816,
@@ -37047,6 +40748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51640: {
     label: 'Galax',
+    iso3: null,
     population: '6,347',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -37056,6 +40758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51650: {
     label: 'Hampton',
+    iso3: null,
     population: '134,510',
     casesPastWeek: 888,
     casesIncreasingPercentage: 62.637362637362635,
@@ -37065,6 +40768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51660: {
     label: 'Harrisonburg',
+    iso3: null,
     population: '53,016',
     casesPastWeek: 114,
     casesIncreasingPercentage: 0.0,
@@ -37074,6 +40778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51670: {
     label: 'Hopewell',
+    iso3: null,
     population: '22,529',
     casesPastWeek: 174,
     casesIncreasingPercentage: 0.0,
@@ -37083,6 +40788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51678: {
     label: 'Lexington',
+    iso3: null,
     population: '7,446',
     casesPastWeek: 61,
     casesIncreasingPercentage: 48.78048780487805,
@@ -37092,6 +40798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51680: {
     label: 'Lynchburg',
+    iso3: null,
     population: '82,168',
     casesPastWeek: 481,
     casesIncreasingPercentage: 0.0,
@@ -37101,6 +40808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51683: {
     label: 'Manassas',
+    iso3: null,
     population: '41,085',
     casesPastWeek: 140,
     casesIncreasingPercentage: 0.0,
@@ -37110,6 +40818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51685: {
     label: 'Manassas Park',
+    iso3: null,
     population: '17,478',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -37119,6 +40828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51690: {
     label: 'Martinsville',
+    iso3: null,
     population: '12,554',
     casesPastWeek: 60,
     casesIncreasingPercentage: 0.0,
@@ -37128,6 +40838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51700: {
     label: 'Newport News',
+    iso3: null,
     population: '179,225',
     casesPastWeek: 1023,
     casesIncreasingPercentage: 20.921985815602827,
@@ -37137,6 +40848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51710: {
     label: 'Norfolk',
+    iso3: null,
     population: '242,742',
     casesPastWeek: 905,
     casesIncreasingPercentage: 0.0,
@@ -37146,6 +40858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51720: {
     label: 'Norton',
+    iso3: null,
     population: '3,981',
     casesPastWeek: 1,
     casesIncreasingPercentage: 0.0,
@@ -37155,6 +40868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51730: {
     label: 'Petersburg',
+    iso3: null,
     population: '31,346',
     casesPastWeek: 287,
     casesIncreasingPercentage: 0.0,
@@ -37164,6 +40878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51735: {
     label: 'Poquoson',
+    iso3: null,
     population: '12,271',
     casesPastWeek: 78,
     casesIncreasingPercentage: 44.44444444444444,
@@ -37173,6 +40888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51740: {
     label: 'Portsmouth',
+    iso3: null,
     population: '94,398',
     casesPastWeek: 429,
     casesIncreasingPercentage: 0.0,
@@ -37182,6 +40898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51750: {
     label: 'Radford',
+    iso3: null,
     population: '18,249',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -37191,6 +40908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51760: {
     label: 'Richmond City',
+    iso3: null,
     population: '230,436',
     casesPastWeek: 747,
     casesIncreasingPercentage: 0.0,
@@ -37200,6 +40918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51770: {
     label: 'Roanoke City',
+    iso3: null,
     population: '99,143',
     casesPastWeek: 349,
     casesIncreasingPercentage: 0.0,
@@ -37209,6 +40928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51775: {
     label: 'Salem',
+    iso3: null,
     population: '25,301',
     casesPastWeek: 80,
     casesIncreasingPercentage: 0.0,
@@ -37218,6 +40938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51790: {
     label: 'Staunton',
+    iso3: null,
     population: '24,932',
     casesPastWeek: 122,
     casesIncreasingPercentage: 0.0,
@@ -37227,6 +40948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51800: {
     label: 'Suffolk',
+    iso3: null,
     population: '92,108',
     casesPastWeek: 438,
     casesIncreasingPercentage: 15.263157894736846,
@@ -37236,6 +40958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51810: {
     label: 'Virginia Beach',
+    iso3: null,
     population: '449,974',
     casesPastWeek: 1848,
     casesIncreasingPercentage: 0.0,
@@ -37245,6 +40968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51820: {
     label: 'Waynesboro',
+    iso3: null,
     population: '22,630',
     casesPastWeek: 132,
     casesIncreasingPercentage: 0.0,
@@ -37254,6 +40978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51830: {
     label: 'Williamsburg',
+    iso3: null,
     population: '14,954',
     casesPastWeek: 26,
     casesIncreasingPercentage: 30.000000000000004,
@@ -37263,6 +40988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_51840: {
     label: 'Winchester',
+    iso3: null,
     population: '28,078',
     casesPastWeek: 274,
     casesIncreasingPercentage: 87.67123287671232,
@@ -37272,6 +40998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53001: {
     label: 'Adams',
+    iso3: null,
     population: '19,983',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -37281,6 +41008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53003: {
     label: 'Asotin',
+    iso3: null,
     population: '22,582',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -37290,6 +41018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53005: {
     label: 'Benton',
+    iso3: null,
     population: '204,390',
     casesPastWeek: 422,
     casesIncreasingPercentage: 0.0,
@@ -37299,6 +41028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53007: {
     label: 'Chelan',
+    iso3: null,
     population: '77,200',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -37308,6 +41038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53009: {
     label: 'Clallam',
+    iso3: null,
     population: '77,331',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -37317,6 +41048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53011: {
     label: 'Clark',
+    iso3: null,
     population: '488,241',
     casesPastWeek: 661,
     casesIncreasingPercentage: 0.0,
@@ -37326,6 +41058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53013: {
     label: 'Columbia',
+    iso3: null,
     population: '3,985',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -37335,6 +41068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53015: {
     label: 'Cowlitz',
+    iso3: null,
     population: '110,593',
     casesPastWeek: 295,
     casesIncreasingPercentage: 0.0,
@@ -37344,6 +41078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53017: {
     label: 'Douglas',
+    iso3: null,
     population: '43,429',
     casesPastWeek: 69,
     casesIncreasingPercentage: 0.0,
@@ -37353,6 +41088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53019: {
     label: 'Ferry',
+    iso3: null,
     population: '7,627',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -37362,6 +41098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53021: {
     label: 'Franklin',
+    iso3: null,
     population: '95,222',
     casesPastWeek: 216,
     casesIncreasingPercentage: 0.0,
@@ -37371,6 +41108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53023: {
     label: 'Garfield',
+    iso3: null,
     population: '2,225',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -37380,6 +41118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53025: {
     label: 'Grant',
+    iso3: null,
     population: '97,733',
     casesPastWeek: 207,
     casesIncreasingPercentage: 0.0,
@@ -37389,6 +41128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53027: {
     label: 'Grays Harbor',
+    iso3: null,
     population: '75,061',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -37398,6 +41138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53029: {
     label: 'Island',
+    iso3: null,
     population: '85,141',
     casesPastWeek: 53,
     casesIncreasingPercentage: 3.9215686274509887,
@@ -37407,6 +41148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53031: {
     label: 'Jefferson',
+    iso3: null,
     population: '32,221',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -37416,6 +41158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53033: {
     label: 'King',
+    iso3: null,
     population: '2,252,782',
     casesPastWeek: 2418,
     casesIncreasingPercentage: 0.0,
@@ -37425,6 +41168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53035: {
     label: 'Kitsap',
+    iso3: null,
     population: '271,473',
     casesPastWeek: 223,
     casesIncreasingPercentage: 0.0,
@@ -37434,6 +41178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53037: {
     label: 'Kittitas',
+    iso3: null,
     population: '47,935',
     casesPastWeek: 49,
     casesIncreasingPercentage: 0.0,
@@ -37443,6 +41188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53039: {
     label: 'Klickitat',
+    iso3: null,
     population: '22,425',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -37452,6 +41198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53041: {
     label: 'Lewis',
+    iso3: null,
     population: '80,707',
     casesPastWeek: 148,
     casesIncreasingPercentage: 0.0,
@@ -37461,6 +41208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53043: {
     label: 'Lincoln',
+    iso3: null,
     population: '10,939',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -37470,6 +41218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53045: {
     label: 'Mason',
+    iso3: null,
     population: '66,768',
     casesPastWeek: 90,
     casesIncreasingPercentage: 0.0,
@@ -37479,6 +41228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53047: {
     label: 'Okanogan',
+    iso3: null,
     population: '42,243',
     casesPastWeek: 42,
     casesIncreasingPercentage: 0.0,
@@ -37488,6 +41238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53049: {
     label: 'Pacific',
+    iso3: null,
     population: '22,471',
     casesPastWeek: 39,
     casesIncreasingPercentage: 85.71428571428572,
@@ -37497,6 +41248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53051: {
     label: 'Pend Oreille',
+    iso3: null,
     population: '13,724',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -37506,6 +41258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53053: {
     label: 'Pierce',
+    iso3: null,
     population: '904,980',
     casesPastWeek: 1393,
     casesIncreasingPercentage: 0.0,
@@ -37515,6 +41268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53055: {
     label: 'San Juan',
+    iso3: null,
     population: '17,582',
     casesPastWeek: 2,
     casesIncreasingPercentage: 0.0,
@@ -37524,6 +41278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53057: {
     label: 'Skagit',
+    iso3: null,
     population: '129,205',
     casesPastWeek: 144,
     casesIncreasingPercentage: 0.0,
@@ -37533,6 +41288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53059: {
     label: 'Skamania',
+    iso3: null,
     population: '12,083',
     casesPastWeek: 13,
     casesIncreasingPercentage: 30.000000000000004,
@@ -37542,6 +41298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53061: {
     label: 'Snohomish',
+    iso3: null,
     population: '822,083',
     casesPastWeek: 658,
     casesIncreasingPercentage: 0.0,
@@ -37551,6 +41308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53063: {
     label: 'Spokane',
+    iso3: null,
     population: '522,798',
     casesPastWeek: 1174,
     casesIncreasingPercentage: 0.0,
@@ -37560,6 +41318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53065: {
     label: 'Stevens',
+    iso3: null,
     population: '45,723',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -37569,6 +41328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53067: {
     label: 'Thurston',
+    iso3: null,
     population: '290,536',
     casesPastWeek: 299,
     casesIncreasingPercentage: 0.0,
@@ -37578,6 +41338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53069: {
     label: 'Wahkiakum',
+    iso3: null,
     population: '4,488',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -37587,6 +41348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53071: {
     label: 'Walla Walla',
+    iso3: null,
     population: '60,760',
     casesPastWeek: 154,
     casesIncreasingPercentage: 0.0,
@@ -37596,6 +41358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53073: {
     label: 'Whatcom',
+    iso3: null,
     population: '229,247',
     casesPastWeek: 318,
     casesIncreasingPercentage: 0.0,
@@ -37605,6 +41368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53075: {
     label: 'Whitman',
+    iso3: null,
     population: '50,104',
     casesPastWeek: 107,
     casesIncreasingPercentage: 22.988505747126432,
@@ -37614,6 +41378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_53077: {
     label: 'Yakima',
+    iso3: null,
     population: '250,873',
     casesPastWeek: 702,
     casesIncreasingPercentage: 0.0,
@@ -37623,6 +41388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54001: {
     label: 'Barbour',
+    iso3: null,
     population: '16,441',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -37632,6 +41398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54003: {
     label: 'Berkeley',
+    iso3: null,
     population: '119,171',
     casesPastWeek: 543,
     casesIncreasingPercentage: 0.0,
@@ -37641,6 +41408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54005: {
     label: 'Boone',
+    iso3: null,
     population: '21,457',
     casesPastWeek: 86,
     casesIncreasingPercentage: 3.6144578313253017,
@@ -37650,6 +41418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54007: {
     label: 'Braxton',
+    iso3: null,
     population: '13,957',
     casesPastWeek: 37,
     casesIncreasingPercentage: 0.0,
@@ -37659,6 +41428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54009: {
     label: 'Brooke',
+    iso3: null,
     population: '21,939',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -37668,6 +41438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54011: {
     label: 'Cabell',
+    iso3: null,
     population: '91,945',
     casesPastWeek: 334,
     casesIncreasingPercentage: 0.0,
@@ -37677,6 +41448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54013: {
     label: 'Calhoun',
+    iso3: null,
     population: '7,109',
     casesPastWeek: 14,
     casesIncreasingPercentage: 0.0,
@@ -37686,6 +41458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54015: {
     label: 'Clay',
+    iso3: null,
     population: '8,508',
     casesPastWeek: 25,
     casesIncreasingPercentage: 78.57142857142858,
@@ -37695,6 +41468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54017: {
     label: 'Doddridge',
+    iso3: null,
     population: '8,448',
     casesPastWeek: 32,
     casesIncreasingPercentage: 0.0,
@@ -37704,6 +41478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54019: {
     label: 'Fayette',
+    iso3: null,
     population: '42,406',
     casesPastWeek: 142,
     casesIncreasingPercentage: 18.333333333333336,
@@ -37713,6 +41488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54021: {
     label: 'Gilmer',
+    iso3: null,
     population: '7,823',
     casesPastWeek: 21,
     casesIncreasingPercentage: 0.0,
@@ -37722,6 +41498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54023: {
     label: 'Grant',
+    iso3: null,
     population: '11,568',
     casesPastWeek: 28,
     casesIncreasingPercentage: 0.0,
@@ -37731,6 +41508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54025: {
     label: 'Greenbrier',
+    iso3: null,
     population: '34,662',
     casesPastWeek: 106,
     casesIncreasingPercentage: 0.0,
@@ -37740,6 +41518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54027: {
     label: 'Hampshire',
+    iso3: null,
     population: '23,175',
     casesPastWeek: 88,
     casesIncreasingPercentage: 6.024096385542177,
@@ -37749,6 +41528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54029: {
     label: 'Hancock',
+    iso3: null,
     population: '28,810',
     casesPastWeek: 76,
     casesIncreasingPercentage: 0.0,
@@ -37758,6 +41538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54031: {
     label: 'Hardy',
+    iso3: null,
     population: '13,776',
     casesPastWeek: 67,
     casesIncreasingPercentage: 0.0,
@@ -37767,6 +41548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54033: {
     label: 'Harrison',
+    iso3: null,
     population: '67,256',
     casesPastWeek: 262,
     casesIncreasingPercentage: 0.0,
@@ -37776,6 +41558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54035: {
     label: 'Jackson',
+    iso3: null,
     population: '28,576',
     casesPastWeek: 74,
     casesIncreasingPercentage: 0.0,
@@ -37785,6 +41568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54037: {
     label: 'Jefferson',
+    iso3: null,
     population: '57,146',
     casesPastWeek: 189,
     casesIncreasingPercentage: 0.0,
@@ -37794,6 +41578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54039: {
     label: 'Kanawha',
+    iso3: null,
     population: '178,124',
     casesPastWeek: 439,
     casesIncreasingPercentage: 0.0,
@@ -37803,6 +41588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54041: {
     label: 'Lewis',
+    iso3: null,
     population: '15,907',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -37812,6 +41598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54043: {
     label: 'Lincoln',
+    iso3: null,
     population: '20,409',
     casesPastWeek: 74,
     casesIncreasingPercentage: 0.0,
@@ -37821,6 +41608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54045: {
     label: 'Logan',
+    iso3: null,
     population: '32,019',
     casesPastWeek: 120,
     casesIncreasingPercentage: 0.0,
@@ -37830,6 +41618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54047: {
     label: 'McDowell',
+    iso3: null,
     population: '17,624',
     casesPastWeek: 51,
     casesIncreasingPercentage: 6.25,
@@ -37839,6 +41628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54049: {
     label: 'Marion',
+    iso3: null,
     population: '56,072',
     casesPastWeek: 294,
     casesIncreasingPercentage: 0.0,
@@ -37848,6 +41638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54051: {
     label: 'Marshall',
+    iso3: null,
     population: '30,531',
     casesPastWeek: 114,
     casesIncreasingPercentage: 0.0,
@@ -37857,6 +41648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54053: {
     label: 'Mason',
+    iso3: null,
     population: '26,516',
     casesPastWeek: 153,
     casesIncreasingPercentage: 25.409836065573764,
@@ -37866,6 +41658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54055: {
     label: 'Mercer',
+    iso3: null,
     population: '58,758',
     casesPastWeek: 133,
     casesIncreasingPercentage: 0.0,
@@ -37875,6 +41668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54057: {
     label: 'Mineral',
+    iso3: null,
     population: '26,868',
     casesPastWeek: 97,
     casesIncreasingPercentage: 73.21428571428572,
@@ -37884,6 +41678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54059: {
     label: 'Mingo',
+    iso3: null,
     population: '23,424',
     casesPastWeek: 101,
     casesIncreasingPercentage: 0.0,
@@ -37893,6 +41688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54061: {
     label: 'Monongalia',
+    iso3: null,
     population: '105,612',
     casesPastWeek: 361,
     casesIncreasingPercentage: 0.0,
@@ -37902,6 +41698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54063: {
     label: 'Monroe',
+    iso3: null,
     population: '13,275',
     casesPastWeek: 54,
     casesIncreasingPercentage: 8.000000000000007,
@@ -37911,6 +41708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54065: {
     label: 'Morgan',
+    iso3: null,
     population: '17,884',
     casesPastWeek: 35,
     casesIncreasingPercentage: 0.0,
@@ -37920,6 +41718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54067: {
     label: 'Nicholas',
+    iso3: null,
     population: '24,496',
     casesPastWeek: 62,
     casesIncreasingPercentage: 0.0,
@@ -37929,6 +41728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54069: {
     label: 'Ohio',
+    iso3: null,
     population: '41,411',
     casesPastWeek: 187,
     casesIncreasingPercentage: 0.0,
@@ -37938,6 +41738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54071: {
     label: 'Pendleton',
+    iso3: null,
     population: '6,969',
     casesPastWeek: 64,
     casesIncreasingPercentage: 0.0,
@@ -37947,6 +41748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54073: {
     label: 'Pleasants',
+    iso3: null,
     population: '7,460',
     casesPastWeek: 42,
     casesIncreasingPercentage: 100.0,
@@ -37956,6 +41758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54075: {
     label: 'Pocahontas',
+    iso3: null,
     population: '8,247',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -37965,6 +41768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54077: {
     label: 'Preston',
+    iso3: null,
     population: '33,432',
     casesPastWeek: 128,
     casesIncreasingPercentage: 0.0,
@@ -37974,6 +41778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54079: {
     label: 'Putnam',
+    iso3: null,
     population: '56,450',
     casesPastWeek: 167,
     casesIncreasingPercentage: 0.0,
@@ -37983,6 +41788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54081: {
     label: 'Raleigh',
+    iso3: null,
     population: '73,361',
     casesPastWeek: 301,
     casesIncreasingPercentage: 0.0,
@@ -37992,6 +41798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54083: {
     label: 'Randolph',
+    iso3: null,
     population: '28,695',
     casesPastWeek: 166,
     casesIncreasingPercentage: 0.0,
@@ -38001,6 +41808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54085: {
     label: 'Ritchie',
+    iso3: null,
     population: '9,554',
     casesPastWeek: 34,
     casesIncreasingPercentage: 0.0,
@@ -38010,6 +41818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54087: {
     label: 'Roane',
+    iso3: null,
     population: '13,688',
     casesPastWeek: 44,
     casesIncreasingPercentage: 7.317073170731714,
@@ -38019,6 +41828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54089: {
     label: 'Summers',
+    iso3: null,
     population: '12,573',
     casesPastWeek: 17,
     casesIncreasingPercentage: 0.0,
@@ -38028,6 +41838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54091: {
     label: 'Taylor',
+    iso3: null,
     population: '16,695',
     casesPastWeek: 66,
     casesIncreasingPercentage: 22.222222222222232,
@@ -38037,6 +41848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54093: {
     label: 'Tucker',
+    iso3: null,
     population: '6,839',
     casesPastWeek: 16,
     casesIncreasingPercentage: 23.076923076923084,
@@ -38046,6 +41858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54095: {
     label: 'Tyler',
+    iso3: null,
     population: '8,591',
     casesPastWeek: 54,
     casesIncreasingPercentage: 12.5,
@@ -38055,6 +41868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54097: {
     label: 'Upshur',
+    iso3: null,
     population: '24,176',
     casesPastWeek: 149,
     casesIncreasingPercentage: 56.84210526315789,
@@ -38064,6 +41878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54099: {
     label: 'Wayne',
+    iso3: null,
     population: '39,402',
     casesPastWeek: 131,
     casesIncreasingPercentage: 0.0,
@@ -38073,6 +41888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54101: {
     label: 'Webster',
+    iso3: null,
     population: '8,114',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -38082,6 +41898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54103: {
     label: 'Wetzel',
+    iso3: null,
     population: '15,065',
     casesPastWeek: 72,
     casesIncreasingPercentage: 5.882352941176472,
@@ -38091,6 +41908,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54105: {
     label: 'Wirt',
+    iso3: null,
     population: '5,821',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -38100,6 +41918,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54107: {
     label: 'Wood',
+    iso3: null,
     population: '83,518',
     casesPastWeek: 256,
     casesIncreasingPercentage: 0.0,
@@ -38109,6 +41928,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_54109: {
     label: 'Wyoming',
+    iso3: null,
     population: '20,394',
     casesPastWeek: 72,
     casesIncreasingPercentage: 0.0,
@@ -38118,6 +41938,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55001: {
     label: 'Adams',
+    iso3: null,
     population: '20,220',
     casesPastWeek: 51,
     casesIncreasingPercentage: 8.51063829787233,
@@ -38127,6 +41948,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55003: {
     label: 'Ashland',
+    iso3: null,
     population: '15,562',
     casesPastWeek: 36,
     casesIncreasingPercentage: 0.0,
@@ -38136,6 +41958,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55005: {
     label: 'Barron',
+    iso3: null,
     population: '45,244',
     casesPastWeek: 140,
     casesIncreasingPercentage: 0.0,
@@ -38145,6 +41968,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55007: {
     label: 'Bayfield',
+    iso3: null,
     population: '15,036',
     casesPastWeek: 27,
     casesIncreasingPercentage: 0.0,
@@ -38154,6 +41978,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55009: {
     label: 'Brown',
+    iso3: null,
     population: '264,542',
     casesPastWeek: 673,
     casesIncreasingPercentage: 0.0,
@@ -38163,6 +41988,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55011: {
     label: 'Buffalo',
+    iso3: null,
     population: '13,031',
     casesPastWeek: 61,
     casesIncreasingPercentage: 0.0,
@@ -38172,6 +41998,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55013: {
     label: 'Burnett',
+    iso3: null,
     population: '15,414',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -38181,6 +42008,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55015: {
     label: 'Calumet',
+    iso3: null,
     population: '50,089',
     casesPastWeek: 114,
     casesIncreasingPercentage: 0.0,
@@ -38190,6 +42018,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55017: {
     label: 'Chippewa',
+    iso3: null,
     population: '64,658',
     casesPastWeek: 178,
     casesIncreasingPercentage: 0.0,
@@ -38199,6 +42028,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55019: {
     label: 'Clark',
+    iso3: null,
     population: '34,774',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -38208,6 +42038,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55021: {
     label: 'Columbia',
+    iso3: null,
     population: '57,532',
     casesPastWeek: 145,
     casesIncreasingPercentage: 0.0,
@@ -38217,6 +42048,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55023: {
     label: 'Crawford',
+    iso3: null,
     population: '16,131',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -38226,6 +42058,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55025: {
     label: 'Dane',
+    iso3: null,
     population: '546,695',
     casesPastWeek: 822,
     casesIncreasingPercentage: 0.0,
@@ -38235,6 +42068,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55027: {
     label: 'Dodge',
+    iso3: null,
     population: '87,839',
     casesPastWeek: 139,
     casesIncreasingPercentage: 0.0,
@@ -38244,6 +42078,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55029: {
     label: 'Door',
+    iso3: null,
     population: '27,668',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -38253,6 +42088,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55031: {
     label: 'Douglas',
+    iso3: null,
     population: '43,150',
     casesPastWeek: 132,
     casesIncreasingPercentage: 0.0,
@@ -38262,6 +42098,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55033: {
     label: 'Dunn',
+    iso3: null,
     population: '45,368',
     casesPastWeek: 129,
     casesIncreasingPercentage: 0.0,
@@ -38271,6 +42108,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55035: {
     label: 'Eau Claire',
+    iso3: null,
     population: '104,646',
     casesPastWeek: 268,
     casesIncreasingPercentage: 0.0,
@@ -38280,6 +42118,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55037: {
     label: 'Florence',
+    iso3: null,
     population: '4,295',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -38289,6 +42128,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55039: {
     label: 'Fond du Lac',
+    iso3: null,
     population: '103,403',
     casesPastWeek: 227,
     casesIncreasingPercentage: 0.0,
@@ -38298,6 +42138,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55041: {
     label: 'Forest',
+    iso3: null,
     population: '9,004',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -38307,6 +42148,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55043: {
     label: 'Grant',
+    iso3: null,
     population: '51,439',
     casesPastWeek: 135,
     casesIncreasingPercentage: 11.570247933884303,
@@ -38316,6 +42158,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55045: {
     label: 'Green',
+    iso3: null,
     population: '36,960',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -38325,6 +42168,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55047: {
     label: 'Green Lake',
+    iso3: null,
     population: '18,913',
     casesPastWeek: 44,
     casesIncreasingPercentage: 51.72413793103448,
@@ -38334,6 +42178,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55049: {
     label: 'Iowa',
+    iso3: null,
     population: '23,678',
     casesPastWeek: 20,
     casesIncreasingPercentage: 0.0,
@@ -38343,6 +42188,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55051: {
     label: 'Iron',
+    iso3: null,
     population: '5,687',
     casesPastWeek: 25,
     casesIncreasingPercentage: 108.33333333333334,
@@ -38352,6 +42198,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55053: {
     label: 'Jackson',
+    iso3: null,
     population: '20,643',
     casesPastWeek: 37,
     casesIncreasingPercentage: 48.0,
@@ -38361,6 +42208,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55055: {
     label: 'Jefferson',
+    iso3: null,
     population: '84,769',
     casesPastWeek: 237,
     casesIncreasingPercentage: 0.0,
@@ -38370,6 +42218,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55057: {
     label: 'Juneau',
+    iso3: null,
     population: '26,687',
     casesPastWeek: 66,
     casesIncreasingPercentage: 0.0,
@@ -38379,6 +42228,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55059: {
     label: 'Kenosha',
+    iso3: null,
     population: '169,561',
     casesPastWeek: 404,
     casesIncreasingPercentage: 0.0,
@@ -38388,6 +42238,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55061: {
     label: 'Kewaunee',
+    iso3: null,
     population: '20,434',
     casesPastWeek: 81,
     casesIncreasingPercentage: 6.578947368421062,
@@ -38397,6 +42248,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55063: {
     label: 'La Crosse',
+    iso3: null,
     population: '118,016',
     casesPastWeek: 307,
     casesIncreasingPercentage: 0.0,
@@ -38406,6 +42258,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55065: {
     label: 'Lafayette',
+    iso3: null,
     population: '16,665',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -38415,6 +42268,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55067: {
     label: 'Langlade',
+    iso3: null,
     population: '19,189',
     casesPastWeek: 13,
     casesIncreasingPercentage: 0.0,
@@ -38424,6 +42278,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55069: {
     label: 'Lincoln',
+    iso3: null,
     population: '27,593',
     casesPastWeek: 59,
     casesIncreasingPercentage: 0.0,
@@ -38433,6 +42288,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55071: {
     label: 'Manitowoc',
+    iso3: null,
     population: '78,981',
     casesPastWeek: 157,
     casesIncreasingPercentage: 0.0,
@@ -38442,6 +42298,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55073: {
     label: 'Marathon',
+    iso3: null,
     population: '135,692',
     casesPastWeek: 287,
     casesIncreasingPercentage: 0.0,
@@ -38451,6 +42308,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55075: {
     label: 'Marinette',
+    iso3: null,
     population: '40,350',
     casesPastWeek: 78,
     casesIncreasingPercentage: 0.0,
@@ -38460,6 +42318,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55077: {
     label: 'Marquette',
+    iso3: null,
     population: '15,574',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -38469,6 +42328,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55078: {
     label: 'Menominee',
+    iso3: null,
     population: '4,556',
     casesPastWeek: 12,
     casesIncreasingPercentage: 0.0,
@@ -38478,6 +42338,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55079: {
     label: 'Milwaukee',
+    iso3: null,
     population: '945,726',
     casesPastWeek: 2083,
     casesIncreasingPercentage: 0.0,
@@ -38487,6 +42348,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55081: {
     label: 'Monroe',
+    iso3: null,
     population: '46,253',
     casesPastWeek: 153,
     casesIncreasingPercentage: 0.0,
@@ -38496,6 +42358,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55083: {
     label: 'Oconto',
+    iso3: null,
     population: '37,930',
     casesPastWeek: 70,
     casesIncreasingPercentage: 0.0,
@@ -38505,6 +42368,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55085: {
     label: 'Oneida',
+    iso3: null,
     population: '35,595',
     casesPastWeek: 79,
     casesIncreasingPercentage: 0.0,
@@ -38514,6 +42378,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55087: {
     label: 'Outagamie',
+    iso3: null,
     population: '187,885',
     casesPastWeek: 507,
     casesIncreasingPercentage: 0.0,
@@ -38523,6 +42388,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55089: {
     label: 'Ozaukee',
+    iso3: null,
     population: '89,221',
     casesPastWeek: 210,
     casesIncreasingPercentage: 0.0,
@@ -38532,6 +42398,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55091: {
     label: 'Pepin',
+    iso3: null,
     population: '7,287',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -38541,6 +42408,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55093: {
     label: 'Pierce',
+    iso3: null,
     population: '42,754',
     casesPastWeek: 111,
     casesIncreasingPercentage: 2.777777777777768,
@@ -38550,6 +42418,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55095: {
     label: 'Polk',
+    iso3: null,
     population: '43,783',
     casesPastWeek: 114,
     casesIncreasingPercentage: 0.0,
@@ -38559,6 +42428,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55097: {
     label: 'Portage',
+    iso3: null,
     population: '70,772',
     casesPastWeek: 130,
     casesIncreasingPercentage: 1.5625,
@@ -38568,6 +42438,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55099: {
     label: 'Price',
+    iso3: null,
     population: '13,351',
     casesPastWeek: 70,
     casesIncreasingPercentage: 105.88235294117645,
@@ -38577,6 +42448,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55101: {
     label: 'Racine',
+    iso3: null,
     population: '196,311',
     casesPastWeek: 528,
     casesIncreasingPercentage: 0.0,
@@ -38586,6 +42458,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55103: {
     label: 'Richland',
+    iso3: null,
     population: '17,252',
     casesPastWeek: 25,
     casesIncreasingPercentage: 56.25,
@@ -38595,6 +42468,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55105: {
     label: 'Rock',
+    iso3: null,
     population: '163,354',
     casesPastWeek: 437,
     casesIncreasingPercentage: 0.0,
@@ -38604,6 +42478,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55107: {
     label: 'Rusk',
+    iso3: null,
     population: '14,178',
     casesPastWeek: 25,
     casesIncreasingPercentage: 0.0,
@@ -38613,6 +42488,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55109: {
     label: 'St. Croix',
+    iso3: null,
     population: '90,687',
     casesPastWeek: 240,
     casesIncreasingPercentage: 0.0,
@@ -38622,6 +42498,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55111: {
     label: 'Sauk',
+    iso3: null,
     population: '64,442',
     casesPastWeek: 116,
     casesIncreasingPercentage: 0.0,
@@ -38631,6 +42508,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55113: {
     label: 'Sawyer',
+    iso3: null,
     population: '16,558',
     casesPastWeek: 58,
     casesIncreasingPercentage: 38.095238095238095,
@@ -38640,6 +42518,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55115: {
     label: 'Shawano',
+    iso3: null,
     population: '40,899',
     casesPastWeek: 82,
     casesIncreasingPercentage: 0.0,
@@ -38649,6 +42528,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55117: {
     label: 'Sheboygan',
+    iso3: null,
     population: '115,340',
     casesPastWeek: 200,
     casesIncreasingPercentage: 0.0,
@@ -38658,6 +42538,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55119: {
     label: 'Taylor',
+    iso3: null,
     population: '20,343',
     casesPastWeek: 45,
     casesIncreasingPercentage: 0.0,
@@ -38667,6 +42548,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55121: {
     label: 'Trempealeau',
+    iso3: null,
     population: '29,649',
     casesPastWeek: 71,
     casesIncreasingPercentage: 0.0,
@@ -38676,6 +42558,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55123: {
     label: 'Vernon',
+    iso3: null,
     population: '30,822',
     casesPastWeek: 44,
     casesIncreasingPercentage: 15.789473684210531,
@@ -38685,6 +42568,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55125: {
     label: 'Vilas',
+    iso3: null,
     population: '22,195',
     casesPastWeek: 56,
     casesIncreasingPercentage: 0.0,
@@ -38694,6 +42578,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55127: {
     label: 'Walworth',
+    iso3: null,
     population: '103,868',
     casesPastWeek: 219,
     casesIncreasingPercentage: 0.0,
@@ -38703,6 +42588,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55129: {
     label: 'Washburn',
+    iso3: null,
     population: '15,720',
     casesPastWeek: 60,
     casesIncreasingPercentage: 30.434782608695656,
@@ -38712,6 +42598,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55131: {
     label: 'Washington',
+    iso3: null,
     population: '136,034',
     casesPastWeek: 287,
     casesIncreasingPercentage: 0.0,
@@ -38721,6 +42608,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55133: {
     label: 'Waukesha',
+    iso3: null,
     population: '404,198',
     casesPastWeek: 959,
     casesIncreasingPercentage: 0.0,
@@ -38730,6 +42618,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55135: {
     label: 'Waupaca',
+    iso3: null,
     population: '50,990',
     casesPastWeek: 149,
     casesIncreasingPercentage: 0.0,
@@ -38739,6 +42628,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55137: {
     label: 'Waushara',
+    iso3: null,
     population: '24,443',
     casesPastWeek: 69,
     casesIncreasingPercentage: 16.94915254237288,
@@ -38748,6 +42638,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55139: {
     label: 'Winnebago',
+    iso3: null,
     population: '171,907',
     casesPastWeek: 409,
     casesIncreasingPercentage: 0.0,
@@ -38757,6 +42648,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_55141: {
     label: 'Wood',
+    iso3: null,
     population: '72,999',
     casesPastWeek: 158,
     casesIncreasingPercentage: 0.0,
@@ -38766,6 +42658,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56001: {
     label: 'Albany',
+    iso3: null,
     population: '38,880',
     casesPastWeek: 68,
     casesIncreasingPercentage: 23.636363636363633,
@@ -38775,6 +42668,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56003: {
     label: 'Big Horn',
+    iso3: null,
     population: '11,790',
     casesPastWeek: 24,
     casesIncreasingPercentage: 0.0,
@@ -38784,6 +42678,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56005: {
     label: 'Campbell',
+    iso3: null,
     population: '46,341',
     casesPastWeek: 82,
     casesIncreasingPercentage: 0.0,
@@ -38793,6 +42688,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56007: {
     label: 'Carbon',
+    iso3: null,
     population: '14,800',
     casesPastWeek: 57,
     casesIncreasingPercentage: 0.0,
@@ -38802,6 +42698,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56009: {
     label: 'Converse',
+    iso3: null,
     population: '13,822',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -38811,6 +42708,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56011: {
     label: 'Crook',
+    iso3: null,
     population: '7,584',
     casesPastWeek: 10,
     casesIncreasingPercentage: 150.0,
@@ -38820,6 +42718,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56013: {
     label: 'Fremont',
+    iso3: null,
     population: '39,261',
     casesPastWeek: 130,
     casesIncreasingPercentage: 0.0,
@@ -38829,6 +42728,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56015: {
     label: 'Goshen',
+    iso3: null,
     population: '13,211',
     casesPastWeek: 18,
     casesIncreasingPercentage: 0.0,
@@ -38838,6 +42738,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56017: {
     label: 'Hot Springs',
+    iso3: null,
     population: '4,413',
     casesPastWeek: 33,
     casesIncreasingPercentage: 0.0,
@@ -38847,6 +42748,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56019: {
     label: 'Johnson',
+    iso3: null,
     population: '8,445',
     casesPastWeek: 22,
     casesIncreasingPercentage: 0.0,
@@ -38856,6 +42758,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56021: {
     label: 'Laramie',
+    iso3: null,
     population: '99,500',
     casesPastWeek: 156,
     casesIncreasingPercentage: 0.0,
@@ -38865,6 +42768,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56023: {
     label: 'Lincoln',
+    iso3: null,
     population: '19,830',
     casesPastWeek: 31,
     casesIncreasingPercentage: 0.0,
@@ -38874,6 +42778,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56025: {
     label: 'Natrona',
+    iso3: null,
     population: '79,858',
     casesPastWeek: 273,
     casesIncreasingPercentage: 0.0,
@@ -38883,6 +42788,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56027: {
     label: 'Niobrara',
+    iso3: null,
     population: '2,356',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -38892,6 +42798,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56029: {
     label: 'Park',
+    iso3: null,
     population: '29,194',
     casesPastWeek: 87,
     casesIncreasingPercentage: 0.0,
@@ -38901,6 +42808,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56031: {
     label: 'Platte',
+    iso3: null,
     population: '8,393',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -38910,6 +42818,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56033: {
     label: 'Sheridan',
+    iso3: null,
     population: '30,485',
     casesPastWeek: 41,
     casesIncreasingPercentage: 0.0,
@@ -38919,6 +42828,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56035: {
     label: 'Sublette',
+    iso3: null,
     population: '9,831',
     casesPastWeek: 7,
     casesIncreasingPercentage: 0.0,
@@ -38928,6 +42838,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56037: {
     label: 'Sweetwater',
+    iso3: null,
     population: '42,343',
     casesPastWeek: 121,
     casesIncreasingPercentage: 0.0,
@@ -38937,6 +42848,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56039: {
     label: 'Teton',
+    iso3: null,
     population: '23,464',
     casesPastWeek: 246,
     casesIncreasingPercentage: 0.0,
@@ -38946,6 +42858,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56041: {
     label: 'Uinta',
+    iso3: null,
     population: '20,226',
     casesPastWeek: 83,
     casesIncreasingPercentage: 0.0,
@@ -38955,6 +42868,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56043: {
     label: 'Washakie',
+    iso3: null,
     population: '7,805',
     casesPastWeek: 15,
     casesIncreasingPercentage: 0.0,
@@ -38964,6 +42878,7 @@ export const Locations: { [key: string]: Location } = {
   },
   US_56045: {
     label: 'Weston',
+    iso3: null,
     population: '6,927',
     casesPastWeek: 8,
     casesIncreasingPercentage: 0.0,
@@ -38973,6 +42888,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Uganda: {
     label: 'Uganda',
+    iso3: 'UGA',
     population: '45,741,000',
     casesPastWeek: 1064,
     casesIncreasingPercentage: 210.20408163265304,
@@ -38982,6 +42898,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine: {
     label: 'Ukraine',
+    iso3: 'UKR',
     population: '43,733,759',
     casesPastWeek: 33453,
     casesIncreasingPercentage: 0.0,
@@ -39019,6 +42936,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Cherkasy_Oblast: {
     label: 'Cherkasy Oblast',
+    iso3: null,
     population: '1,206,351',
     casesPastWeek: 1124,
     casesIncreasingPercentage: 0.0,
@@ -39028,6 +42946,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Chernihiv_Oblast: {
     label: 'Chernihiv Oblast',
+    iso3: null,
     population: '1,005,745',
     casesPastWeek: 685,
     casesIncreasingPercentage: 0.0,
@@ -39037,6 +42956,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Chernivtsi_Oblast: {
     label: 'Chernivtsi Oblast',
+    iso3: null,
     population: '904,374',
     casesPastWeek: 1306,
     casesIncreasingPercentage: 0.0,
@@ -39046,6 +42966,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Crimea_Republic_: {
     label: 'Crimea Republic*',
+    iso3: null,
     population: '1,913,731',
     casesPastWeek: 1638,
     casesIncreasingPercentage: 0.0,
@@ -39055,6 +42976,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Dnipropetrovsk_Oblast: {
     label: 'Dnipropetrovsk Oblast',
+    iso3: null,
     population: '3,206,477',
     casesPastWeek: 1865,
     casesIncreasingPercentage: 0.0,
@@ -39064,6 +42986,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Donetsk_Oblast: {
     label: 'Donetsk Oblast',
+    iso3: null,
     population: '4,165,901',
     casesPastWeek: 1322,
     casesIncreasingPercentage: 0.0,
@@ -39073,6 +42996,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Ivano_Frankivsk_Oblast: {
     label: 'Ivano-Frankivsk Oblast',
+    iso3: null,
     population: '1,373,252',
     casesPastWeek: 1329,
     casesIncreasingPercentage: 43.36569579288025,
@@ -39082,6 +43006,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Kharkiv_Oblast: {
     label: 'Kharkiv Oblast',
+    iso3: null,
     population: '2,675,598',
     casesPastWeek: 1663,
     casesIncreasingPercentage: 0.0,
@@ -39091,6 +43016,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Kherson_Oblast: {
     label: 'Kherson Oblast',
+    iso3: null,
     population: '1,037,640',
     casesPastWeek: 535,
     casesIncreasingPercentage: 0.0,
@@ -39100,6 +43026,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Khmelnytskyi_Oblast: {
     label: 'Khmelnytskyi Oblast',
+    iso3: null,
     population: '1,264,705',
     casesPastWeek: 849,
     casesIncreasingPercentage: 0.0,
@@ -39109,6 +43036,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Kiev: {
     label: 'Kiev',
+    iso3: null,
     population: '2,950,800',
     casesPastWeek: 3422,
     casesIncreasingPercentage: 0.0,
@@ -39118,6 +43046,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Kiev_Oblast: {
     label: 'Kiev Oblast',
+    iso3: null,
     population: '1,767,940',
     casesPastWeek: 1664,
     casesIncreasingPercentage: 0.0,
@@ -39127,6 +43056,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Kirovohrad_Oblast: {
     label: 'Kirovohrad Oblast',
+    iso3: null,
     population: '945,549',
     casesPastWeek: 235,
     casesIncreasingPercentage: 0.0,
@@ -39136,6 +43066,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Luhansk_Oblast: {
     label: 'Luhansk Oblast',
+    iso3: null,
     population: '2,151,833',
     casesPastWeek: 455,
     casesIncreasingPercentage: 0.0,
@@ -39145,6 +43076,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Lviv_Oblast: {
     label: 'Lviv Oblast',
+    iso3: null,
     population: '2,522,021',
     casesPastWeek: 1892,
     casesIncreasingPercentage: 0.0,
@@ -39154,6 +43086,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Mykolaiv_Oblast: {
     label: 'Mykolaiv Oblast',
+    iso3: null,
     population: '2,522,021',
     casesPastWeek: 1411,
     casesIncreasingPercentage: 0.0,
@@ -39163,6 +43096,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Odessa_Oblast: {
     label: 'Odessa Oblast',
+    iso3: null,
     population: '2,380,308',
     casesPastWeek: 1647,
     casesIncreasingPercentage: 0.0,
@@ -39172,6 +43106,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Poltava_Oblast: {
     label: 'Poltava Oblast',
+    iso3: null,
     population: '1,400,439',
     casesPastWeek: 1223,
     casesIncreasingPercentage: 0.0,
@@ -39181,6 +43116,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Rivne_Oblast: {
     label: 'Rivne Oblast',
+    iso3: null,
     population: '1,157,301',
     casesPastWeek: 944,
     casesIncreasingPercentage: 0.0,
@@ -39190,6 +43126,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Sevastopol_: {
     label: 'Sevastopol*',
+    iso3: null,
     population: '443,211',
     casesPastWeek: 685,
     casesIncreasingPercentage: 3.318250377073917,
@@ -39199,6 +43136,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Sumy_Oblast: {
     label: 'Sumy Oblast',
+    iso3: null,
     population: '1,081,418',
     casesPastWeek: 839,
     casesIncreasingPercentage: 0.0,
@@ -39208,6 +43146,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Ternopil_Oblast: {
     label: 'Ternopil Oblast',
+    iso3: null,
     population: '1,045,879',
     casesPastWeek: 793,
     casesIncreasingPercentage: 0.0,
@@ -39217,6 +43156,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Vinnytsia_Oblast: {
     label: 'Vinnytsia Oblast',
+    iso3: null,
     population: '1,560,394',
     casesPastWeek: 1001,
     casesIncreasingPercentage: 0.0,
@@ -39226,6 +43166,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Volyn_Oblast: {
     label: 'Volyn Oblast',
+    iso3: null,
     population: '1,035,330',
     casesPastWeek: 783,
     casesIncreasingPercentage: 0.0,
@@ -39235,6 +43176,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Zakarpattia_Oblast: {
     label: 'Zakarpattia Oblast',
+    iso3: null,
     population: '1,256,802',
     casesPastWeek: 878,
     casesIncreasingPercentage: 11.847133757961782,
@@ -39244,6 +43186,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Zaporizhia_Oblast: {
     label: 'Zaporizhia Oblast',
+    iso3: null,
     population: '1,705,836',
     casesPastWeek: 2383,
     casesIncreasingPercentage: 0.0,
@@ -39253,6 +43196,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Ukraine_Zhytomyr_Oblast: {
     label: 'Zhytomyr Oblast',
+    iso3: null,
     population: '1,220,193',
     casesPastWeek: 882,
     casesIncreasingPercentage: 0.0,
@@ -39262,6 +43206,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Arab_Emirates: {
     label: 'United Arab Emirates',
+    iso3: 'ARE',
     population: '9,890,400',
     casesPastWeek: 24694,
     casesIncreasingPercentage: 8.865670325794639,
@@ -39271,6 +43216,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom: {
     label: 'United Kingdom',
+    iso3: 'GBR',
     population: '67,886,004',
     casesPastWeek: 252117,
     casesIncreasingPercentage: 0.0,
@@ -39295,6 +43241,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_England: {
     label: 'England',
+    iso3: null,
     population: '55,977,200',
     casesPastWeek: 229128,
     casesIncreasingPercentage: 0.0,
@@ -39304,6 +43251,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Northern_Ireland: {
     label: 'Northern Ireland',
+    iso3: null,
     population: '1,881,600',
     casesPastWeek: 4958,
     casesIncreasingPercentage: 0.0,
@@ -39313,6 +43261,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Scotland: {
     label: 'Scotland',
+    iso3: null,
     population: '5,463,300',
     casesPastWeek: 9868,
     casesIncreasingPercentage: 0.0,
@@ -39322,6 +43271,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Wales: {
     label: 'Wales',
+    iso3: null,
     population: '3,138,600',
     casesPastWeek: 7550,
     casesIncreasingPercentage: 0.0,
@@ -39331,6 +43281,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Bermuda: {
     label: 'Bermuda',
+    iso3: null,
     population: '62,273',
     casesPastWeek: 16,
     casesIncreasingPercentage: 0.0,
@@ -39340,6 +43291,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_British_Virgin_Islands: {
     label: 'British Virgin Islands',
+    iso3: null,
     population: '30,237',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -39349,6 +43301,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Cayman_Islands: {
     label: 'Cayman Islands',
+    iso3: null,
     population: '65,720',
     casesPastWeek: 9,
     casesIncreasingPercentage: 0.0,
@@ -39358,6 +43311,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Channel_Islands: {
     label: 'Channel Islands',
+    iso3: null,
     population: '170,499',
     casesPastWeek: 100,
     casesIncreasingPercentage: 16.279069767441868,
@@ -39367,6 +43321,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Falkland_Islands__Malvinas_: {
     label: 'Falkland Islands (Malvinas)',
+    iso3: null,
     population: '3,483',
     casesPastWeek: 3,
     casesIncreasingPercentage: 0.0,
@@ -39376,6 +43331,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Gibraltar: {
     label: 'Gibraltar',
+    iso3: null,
     population: '33,691',
     casesPastWeek: 296,
     casesIncreasingPercentage: 0.0,
@@ -39385,6 +43341,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Isle_of_Man: {
     label: 'Isle of Man',
+    iso3: null,
     population: '85,032',
     casesPastWeek: 4,
     casesIncreasingPercentage: 0.0,
@@ -39394,6 +43351,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Montserrat: {
     label: 'Montserrat',
+    iso3: null,
     population: '4,999',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -39403,6 +43361,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Turks_and_Caicos_Islands: {
     label: 'Turks and Caicos Islands',
+    iso3: null,
     population: '38,718',
     casesPastWeek: 185,
     casesIncreasingPercentage: 71.2962962962963,
@@ -39412,6 +43371,7 @@ export const Locations: { [key: string]: Location } = {
   },
   United_Kingdom_Anguilla: {
     label: 'Anguilla',
+    iso3: null,
     population: '15,002',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -39421,6 +43381,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Uruguay: {
     label: 'Uruguay',
+    iso3: 'URY',
     population: '3,473,727',
     casesPastWeek: 5255,
     casesIncreasingPercentage: 0.0,
@@ -39430,6 +43391,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Uzbekistan: {
     label: 'Uzbekistan',
+    iso3: 'UZB',
     population: '33,469,199',
     casesPastWeek: 407,
     casesIncreasingPercentage: 2.777777777777768,
@@ -39439,6 +43401,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Vanuatu: {
     label: 'Vanuatu',
+    iso3: 'VUT',
     population: '292,680',
     casesPastWeek: 0,
     casesIncreasingPercentage: 0.0,
@@ -39448,6 +43411,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Venezuela: {
     label: 'Venezuela',
+    iso3: 'VEN',
     population: '28,435,943',
     casesPastWeek: 3906,
     casesIncreasingPercentage: 22.330097087378633,
@@ -39457,6 +43421,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Vietnam: {
     label: 'Vietnam',
+    iso3: 'VNM',
     population: '97,338,583',
     casesPastWeek: 11,
     casesIncreasingPercentage: 0.0,
@@ -39466,6 +43431,7 @@ export const Locations: { [key: string]: Location } = {
   },
   West_Bank_and_Gaza: {
     label: 'West Bank and Gaza',
+    iso3: 'PSE',
     population: '5,101,416',
     casesPastWeek: 3383,
     casesIncreasingPercentage: 0.0,
@@ -39475,6 +43441,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Yemen: {
     label: 'Yemen',
+    iso3: 'YEM',
     population: '29,825,968',
     casesPastWeek: 6,
     casesIncreasingPercentage: 0.0,
@@ -39484,6 +43451,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Zambia: {
     label: 'Zambia',
+    iso3: 'ZMB',
     population: '18,383,956',
     casesPastWeek: 7732,
     casesIncreasingPercentage: 0.0,
@@ -39493,6 +43461,7 @@ export const Locations: { [key: string]: Location } = {
   },
   Zimbabwe: {
     label: 'Zimbabwe',
+    iso3: 'ZWE',
     population: '14,862,927',
     casesPastWeek: 4117,
     casesIncreasingPercentage: 0.0,

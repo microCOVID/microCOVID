@@ -1,3 +1,5 @@
+import i18n from 'i18n'
+import countries from 'i18n-iso-countries'
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
@@ -139,6 +141,11 @@ export const PrevalenceControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
   const { t } = useTranslation()
+  for (const iso_code of Object.keys(i18n.services.resourceStore.data)) {
+    countries.registerLocale(
+      require('i18n-iso-countries/langs/' + iso_code + '.json'), // eslint-disable-line @typescript-eslint/no-var-requires
+    )
+  }
   const locationGroups: { [key: string]: Array<string> } = {}
   for (const key in Locations) {
     const location = Locations[key]
@@ -208,10 +215,25 @@ export const PrevalenceControls: React.FunctionComponent<{
   const topLocationOptions = Object.keys(locationGroups).flatMap(
     (groupName) => {
       return locationGroups[groupName].map((locKey) => {
-        return { label: Locations[locKey].label, value: locKey }
+        const country_label =
+          Locations[locKey].iso3 &&
+          countries.getName(Locations[locKey].iso3!, i18n.language, {
+            select: 'official',
+          })
+            ? countries.getName(Locations[locKey].iso3!, i18n.language, {
+                select: 'official',
+              })
+            : Locations[locKey].label
+        return { label: country_label, value: locKey }
       })
     },
   )
+
+  // reorder the list according to the current locale, but keep
+  // English as-is to make sure US states remain at the top
+  if (i18n.language !== 'en') {
+    topLocationOptions.sort((a, b) => a.label.localeCompare(b.label))
+  }
 
   const selectedTopLocation = topLocationOptions.find(
     (option) => option.value === data.topLocation,
@@ -220,6 +242,9 @@ export const PrevalenceControls: React.FunctionComponent<{
   const subLocationOptions = !showSubLocation
     ? []
     : Locations[data.topLocation].subdivisions.map((locKey) => {
+        // We assume that sublocation names are either localized or don't have
+        // proper localized names. This is not always true, but the overhead of
+        // providing locallizations for them would not be worth it.
         return { label: Locations[locKey].label, value: locKey }
       })
   const selectedSubLocation = subLocationOptions.find(
