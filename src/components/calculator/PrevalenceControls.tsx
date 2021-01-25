@@ -212,8 +212,8 @@ export const PrevalenceControls: React.FunctionComponent<{
     false || isManualEntryCurrently,
   )
 
-  const topLocationOptions = Object.keys(locationGroups)
-    .flatMap((groupName) => {
+  const topLocationOptions = Object.keys(locationGroups).flatMap(
+    (groupName) => {
       return locationGroups[groupName].map((locKey) => {
         const country_label =
           Locations[locKey].iso3 &&
@@ -226,8 +226,14 @@ export const PrevalenceControls: React.FunctionComponent<{
             : Locations[locKey].label
         return { label: country_label, value: locKey }
       })
-    })
-    .sort((a, b) => a.label.localeCompare(b.label))
+    },
+  )
+
+  // reorder the list according to the current locale, but keep
+  // English as-is to make sure US states remain at the top
+  if (i18n.language !== 'en') {
+    topLocationOptions.sort((a, b) => a.label.localeCompare(b.label))
+  }
 
   const selectedTopLocation = topLocationOptions.find(
     (option) => option.value === data.topLocation,
