@@ -27,7 +27,6 @@ export const SimplePage: React.FunctionComponent<{
       <hr />
 
       <div dangerouslySetInnerHTML={{ __html: body }} />
-
     </div>
   )
 }
