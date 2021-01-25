@@ -3,7 +3,7 @@ const shortTitle = 'Risk Questions'
 const content = `
 The more you know about a person’s specific risks in the last 9 days, the better you can estimate the risk of being in contact with them.
 
-The **Option A** questions rae simpler, but don't provide as many prompts to assist you. The **Option B** question are more detailed to help you think through various kinds of possible activities.
+The **Option A** questions are simpler, but don't provide as many prompts to assist you. The **Option B** question are more detailed to help you think through various kinds of possible activities.
 
 
 ## ✅ Option A) The simple Questions

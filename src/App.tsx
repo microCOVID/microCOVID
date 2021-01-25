@@ -31,8 +31,8 @@ import {
   SpreadsheetNavDropdown,
   SpreadsheetTOC,
 } from 'pages/Spreadsheet'
+import { Symptoms } from 'pages/Symptoms'
 import riskQuestionsPage from 'posts/risk-questions'
-import symptomsPage from 'posts/symptoms'
 
 import 'styles/App.scss'
 
@@ -153,7 +153,7 @@ export const App = (): React.ReactElement => {
                 <SpreadsheetTOC />
               </Route>
               <Route path="/symptoms">
-                <SimplePage page={symptomsPage} />
+                <Symptoms />
               </Route>
               <Route path="/questions">
                 <SimplePage page={riskQuestionsPage} />

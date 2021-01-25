@@ -37,7 +37,7 @@ When choosing your budget, you want to factor in  two important aspects: risk to
 
 *   **Risk to others**: Even if you are personally comfortable with risk-taking, it’s important to choose a lower risk tolerance in order to protect vulnerable members of your community. Here are a few ways to think about that:
     *   If you get COVID, on average you will pass it to at least one other person, who in turn will pass it to others. Eventually it will reach someone who is at very high risk of death. By avoiding getting infected yourself, you are protecting these vulnerable members of your community.
-    *   A useful ethical rule-of-thumb is to behave in a way that would be good if _everyone_ behaved that way. So, we can ask: what risk tolerance would keep the pandemic at manageable levels if everyone followed it? In most places in the US right now, a 1% yearly risk of COVID would keep the pandemic at manageable levels. For public health reasons, we wouldn’t recommend voluntarily choosing a risk tolerance higher than 3%.[^risktolerance]
+    *   A useful ethical rule-of-thumb is to behave in a way that would be good if _everyone_ behaved that way. So, we can ask: what risk tolerance would keep the pandemic at manageable levels if everyone followed it? In most places in the US right now, a 1% yearly risk of COVID would keep the pandemic at manageable levels. For public health reasons, we wouldn’t recommend voluntarily choosing a risk tolerance higher than 3%.
 
 
     *   Some people (such as essential workers) have no choice but to run a high risk of getting COVID. Containing the pandemic across society only works if those of us who _do_ have a choice choose to take fewer risks.
@@ -268,8 +268,6 @@ In terms of qualitative scales, we like the following:
 
 
 
-[^risktolerance]:
-     You can check the annual rate of COVID infection for your region by looking up the number of cases in the past _day_; for states in the US, try [covidactnow.org](http://covidactnow.org). Divide by your region’s population (or by 100,000 if the figure you got was “cases per 100,000 population”) and multiply by 365 (days per year) to get the proportion of your region that will have a reported case of COVID this year at current rates. You probably want to aim to stay below that percentage. For the San Francisco Bay Area in August 2020, it’s about 3.5%. There’s no correction for potential underreporting here, since we want to err on the _low_ side (not take too many risks).
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
 [^unwell]: You probably can't do this anywhere near as reliably with someone you don't live with, which is why the discussion here is specific to housemates.
 [^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
