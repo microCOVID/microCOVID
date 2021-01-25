@@ -47,9 +47,17 @@ export const SpreadsheetTOC = (): React.ReactElement => {
       <div>
         <h2>What is the spreadsheet for?</h2>
         <p>
-          The spreadsheet can help you model the risk of activities and people
+          The microCOVID Risk Tracker is a spreadsheet that lets you estimate
+          the risk of getting COVID from an activity or relationship in your
+          daily life, using the{' '}
+          <Link to="/paper/research-source">best research available</Link>.
+        </p>
+        <p>
+          The Risk Tracker can help you model the risk of activities and people
           you are seeing more precisely than is possible with the{' '}
-          <Link to="/calculator">website calculator</Link>.
+          <Link to="/calculator">website calculator</Link>. You can track log
+          your activities over time to keep your activities within a risk budget
+          that you define to be safe.
         </p>
         <p>
           <strong>This spreadsheet might be a good fit for you if:</strong>
