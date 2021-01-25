@@ -26,7 +26,7 @@ export const Symptoms = (): React.ReactElement => {
               <strong>Symptoms: </strong>Do you have any of these symptoms? Are
               they{' '}
               <em>
-                <span style={{ textDecoration: 'underline' }}>new</span>
+                <u>new</u>
               </em>
               ,{' '}
               <em>
@@ -34,9 +34,7 @@ export const Symptoms = (): React.ReactElement => {
               </em>
               , or{' '}
               <em>
-                <span style={{ textDecoration: 'underline' }}>
-                  not easily explainable
-                </span>
+                <u>not easily explainable</u>
               </em>
               ?
             </th>
