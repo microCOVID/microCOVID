@@ -30,6 +30,8 @@ Errands include grocery shopping, transit, and other public settings. These can 
 
 Work is modeled just like the above socializing and errands, and you would ask similar kinds of questions: how many people is this person sharing indoor air space with? For how many hours per week? What is their risk profile like?
 
+Though you can do Advanced Method calculations on your own, the [spreadsheet](/spreadsheet) was designed for that very purpose. It is a helpful tool for both individuals and households/pods who want to manage their risk.
+
 The best way to understand how to apply the Advanced Method is through an example. See the [next section](10-example-person-risk) for a detailed example.
 
 

@@ -2,7 +2,10 @@
   "menu": {
     "calculator": "Calculator",
     "about": "About",
-    "spreadsheet": "Spreadsheet",
+    "spreadsheet": {
+      "introduction": "Introduction",
+      "header": "Spreadsheet"
+    },
     "contactus": "Contact Us",
     "whitepaper": "White Paper",
     "blog": "Blog"

@@ -1,18 +1,25 @@
 import React from 'react'
-import { Alert } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Alert, Button } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
+import { Link, useParams } from 'react-router-dom'
 
-const calculator = <Link to="/calculator">calculator</Link>
+import { DropdownNav } from 'components/DropdownNav'
+import { MarkdownContents } from 'components/markdown/PaperPage'
+import { mailchimpLink, spreadsheetUrl } from 'components/SpreadsheetUtil'
+import { TableOfContents } from 'components/TableOfContents'
+import { pages } from 'posts/spreadsheet/index'
 
-/**
- * Returns a link to the spreadsheet.
- * @param text Display text for the link. Defaults to 'spreadsheet'
- */
-function spreadsheet(text = 'spreadsheet') {
+export const Spreadsheet = (): React.ReactElement => {
+  const { id } = useParams()
+  const { t } = useTranslation()
   return (
-    <a href="https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ">
-      {text}
-    </a>
+    <MarkdownContents
+      posts={pages}
+      id={id}
+      rootTitle={t('menu.spreadsheet.introduction')}
+      sectionTitle="Spreadsheet"
+    />
   )
 }
 
@@ -24,79 +31,147 @@ export const SubscribeForm: React.FunctionComponent = () => {
         We will send email updates when we make feature upgrades and bug fixes
         to the spreadsheet.
       </p>
-      <p>
-        <a href="http://eepurl.com/hb6y4T" target="_blank" rel="noreferrer">
-          Sign up for spreadsheet updates
-        </a>
-      </p>
+      <p>{mailchimpLink()}</p>
     </>
   )
 }
 
-export const Spreadsheet = (): React.ReactElement => {
+export const SpreadsheetTOC = (): React.ReactElement => {
   return (
-    <div className="paperPage">
-      <h1>Spreadsheet</h1>
-      <p>
-        The {spreadsheet()} is a tool to help you with two things that the{' '}
-        {calculator} is not quite powerful enough for:
-      </p>
-      <p>
-        <ol>
-          <li>
-            The first is to{' '}
-            <b>
-              calculate someone's{' '}
-              <Link to="/paper/6-person-risk">Person Risk</Link>
-            </b>{' '}
-            using the <Link to="/paper/9-advanced-method">Advanced Method</Link>{' '}
-            as described in the white paper. The Advanced Method consists of
-            adding up the person's risk in from their behaviors in the last 2-9
-            days. The spreadsheet makes it easy to add up the activities.
-          </li>
-          <li>
-            The second is to <b>track your own microCOVIDs</b> over a longer
-            period of time. You might do this for a few reasons:
-            <ul>
-              <li>assessing your own risk,</li>
-              <li>
-                communicating with others about your risk status (e.g. by
-                sending them a link to a sheet listing your recent behavior)
-              </li>
-              <li>
-                creating agreements with others in your household (or bubble or
-                pod) about how many microCOVIDs you are allowed to "spend"
-                outside the household in a week or a month.
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </p>
-      <p>
-        The {spreadsheet()} includes a few multipliers that we mention in the{' '}
-        <Link to="/paper/13-q-and-a">Q&A</Link> section but did not include in
-        the main text or in the {calculator} for simplicity, such as better
-        masks. Other than that, each row on the spreadsheet does exactly the
-        same thing as the {calculator}.
-      </p>
-
-      <p>
-        <strong>{spreadsheet('Use the spreadsheet here')}</strong>
-      </p>
-
+    <TableOfContents
+      posts={pages}
+      title="Spreadsheet"
+      baseNavPath="/spreadsheet"
+    >
+      <hr />
+      <div>
+        <h2>What is the spreadsheet for?</h2>
+        <p>
+          The microCOVID Risk Tracker is a spreadsheet that lets you estimate
+          the risk of getting COVID from an activity or relationship in your
+          daily life, using the{' '}
+          <Link to="/paper/research-source">best research available</Link>.
+        </p>
+        <p>
+          The Risk Tracker can help you model the risk of activities and people
+          you are seeing more precisely than is possible with the{' '}
+          <Link to="/calculator">website calculator</Link>. You can track log
+          your activities over time to keep your activities within a risk budget
+          that you define to be safe.
+        </p>
+        <p>
+          <strong>This spreadsheet might be a good fit for you if:</strong>
+          <ol>
+            <li>
+              <strong>Maintaining a personal risk budget:</strong> You want to
+              log your activity over time to make sure you’re staying within
+              your intended budget.
+            </li>
+            <li>
+              <strong>Modeling the risk of seeing other people:</strong> You
+              want to know how risky it is to interact with a specific other
+              person. (Whereas the Calculator only has pre-built risk profiles.)
+            </li>
+            <li>
+              <strong>Household/pod risk budgeting:</strong> You live with
+              others or have other people you are seeing on a regular basis and
+              want to keep everyone's risk within a certain budget. (The{' '}
+              <Link to="/spreadsheet/household-pod">
+                households and pods page
+              </Link>{' '}
+              introduces this approach in detail.)
+            </li>
+          </ol>
+        </p>
+      </div>
+      <div>
+        <h2>Get started with the spreadsheet</h2>
+        <p>
+          Use the buttons below to copy the spreadsheet. You can than read the{' '}
+          <a href="/spreadsheet/quickstart">Quickstart Guide</a>.
+        </p>
+        <p>
+          <Button href={spreadsheetUrl} variant="primary" target="_blank">
+            Open the microCOVID spreadsheet <BsBoxArrowUpRight />
+          </Button>{' '}
+          <Button
+            href={spreadsheetUrl + '/copy'}
+            variant="secondary"
+            target="_blank"
+          >
+            Make a copy of the microCOVID spreadsheet <BsBoxArrowUpRight />
+          </Button>
+        </p>
+      </div>
       <SubscribeForm />
 
       <Alert variant="info">
-        <strong>Spreadsheet version 2.0 coming soon:</strong> We are looking for
-        beta testers for a new version of the spreadsheet. If you are interested
-        in using the microCOVID spreadsheet with your household/pod to track
-        your collective COVID risk and are willing in giving us feedback on this
-        updated version, please email Jeremy at{' '}
-        <a href="mailto:blanchard.jeremy@gmail.com">
+        <strong>Looking for testers:</strong> We are looking for folks who are
+        willing to offer feedback on this new version of the spreadsheet. If you
+        are using the microCOVID spreadsheet with your household/pod to track
+        your collective COVID risk and are intereted in giving us feedback on
+        your experience, please email Jeremy at{' '}
+        <a
+          href="mailto:blanchard.jeremy@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           blanchard.jeremy@gmail.com
         </a>
         .
       </Alert>
-    </div>
+      <div>
+        <h2>Have a question? Need support? Have feedback?</h2>
+        <p>We welcome questions, feedback, and feature requests.</p>
+        <p>
+          If you’re familiar with GitHub, please{' '}
+          <a href="https://github.com/microcovid/microcovid/issues/new">
+            open an issue there
+          </a>
+          .
+        </p>
+        <p>
+          If you’re not familiar with GitHub, you can email Jeremy Blanchard,
+          our spreadsheet maintainer, at{' '}
+          <a href="mailto:blanchard.jeremy@gmail.com">
+            blanchard.jeremy@gmail.com
+          </a>{' '}
+          or email the team at{' '}
+          <a href="mailto:info@microcovid.org">info@microcovid.org</a>
+        </p>
+      </div>
+      <div>
+        <h2>Spreadsheet changelog</h2>
+        <p>
+          Each time we update the spreadsheet, we create an entry in the
+          changelog (below) with instructions for how you can migrate your copy
+          of the spreadsheet to have the latest upgrades and bug fixes.
+        </p>
+        <p>
+          <strong>Current version:</strong> 2.0
+          <br />
+          <strong>Released on:</strong> 2021-01-11
+          <br />
+          🕑{' '}
+          <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#">
+            View the Spreadsheet Changelog
+          </a>
+        </p>
+      </div>
+      <h2>Spreadsheet documentation</h2>
+    </TableOfContents>
+  )
+}
+
+export const SpreadsheetNavDropdown = (): React.ReactElement => {
+  const { t } = useTranslation()
+  return (
+    <DropdownNav
+      title={t('menu.spreadsheet.header')}
+      baseNavPath="/spreadsheet"
+      posts={pages}
+      enableAll={false}
+      rootTitle={t('menu.spreadsheet.introduction')}
+    />
   )
 }
