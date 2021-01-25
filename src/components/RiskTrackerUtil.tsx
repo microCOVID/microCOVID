@@ -6,7 +6,7 @@ export const spreadsheetUrl =
 export const mailchimpSubscribeUrl = 'http://eepurl.com/hb6y4T'
 
 export function mailchimpLink(
-  text = 'Sign up for spreadsheet updates',
+  text = 'Sign up to be notified about Risk Tracker updates',
 ): JSX.Element {
   return (
     <a href={mailchimpSubscribeUrl} target="_blank" rel="noreferrer">

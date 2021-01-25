@@ -57,9 +57,9 @@ The [Calculator](/) has been updated as outlined in (What’s Changing). You may
 
 ## Impact on Spreadsheet users
 
-We recommend that [Spreadsheet](/spreadsheet) users update their pod to the newest version of the spreadsheet as soon as possible. The new version is set to use parameters for the the new variant.
+We recommend that [Risk Tracker spreadsheet](/tracker) users update their pod to the newest version of the spreadsheet as soon as possible. The new version is set to use parameters for the the new variant.
 
-See the [latest version of the template spreadsheet](/spreadsheet) or update your existing following the instructions in the [Spreadsheet Changelog](https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#heading=h.oojlk631x46d).
+See the [latest version of the template Risk Tracker spreadsheet](/tracker) or update your existing following the instructions in the [Risk Tracker Changelog](https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#heading=h.oojlk631x46d).
 
 ## Should I reduce my risk budget?
 

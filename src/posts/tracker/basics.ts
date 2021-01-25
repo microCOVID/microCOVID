@@ -1,9 +1,9 @@
-import { spreadsheetUrl } from 'components/SpreadsheetUtil'
+import { spreadsheetUrl } from 'components/RiskTrackerUtil'
 
-const title = 'Basic Spreadsheet Usage'
+const title = 'Basic Risk Tracker Usage'
 const shortTitle = 'Basic Usage'
 const content = `
-## Orienting yourself to the spreadsheet
+## Orienting yourself to the Risk Tracker spreadsheet
 
 **Sheets for regular use:**
 
@@ -11,7 +11,7 @@ const content = `
 *   **Pod Activity Log:** Where you log the activities for every person in your pod.
 *   **Custom People:** Allows you to precisely model the people you are seeing.
 *   **Locations:** Allows you to automatically track the COVID prevalence in your area (or the areas of the people you are seeing).
-*   **Example Activities:** A “menu”of examples activities to give you an idea of how to log things.
+*   **Example Activities:** A “menu” of examples activities to give you an idea of how to log things.
 *   _All sheets that start with “INTERNAL” are for internal calculations. Editing these may break the spreadsheet._
 
 ## What kinds of activities should be logged?
@@ -27,7 +27,7 @@ Your pod may decide to not log things that are under a certain threshold (for ex
 
 ## Logging an activity
 
-**Here are the steps to log an activity in the spreadsheet**
+**Here are the steps to log an activity in the Risk Tracker**
 1. **Go to the _Pod Activity Log_ sheet** and find the section with your name.
 2. **Fill in the row for your activity:**  You can hover over the header of each column to see detailed instructions.
 3. **Check the result:** Go to the _Pod Overview_ sheet to see how this activity fits relative to your budget.

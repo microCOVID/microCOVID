@@ -4,16 +4,16 @@ import expired from './img/colors-expired.png'
 import formula from './img/colors-formula.png'
 import overview from './img/colors-overview.png'
 
-const title = 'Spreadsheet FAQ'
+const title = 'Risk Tracker FAQ'
 const shortTitle = 'FAQ'
 const content = `
-Jump to: [General](#general-spreadsheet-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling) | [Risk Budget](#risk-budget)
+Jump to: [General](#general-risk-tracker-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling) | [Risk Budget](#risk-budget)
 
-# General Spreadsheet FAQ
+# General Risk Tracker FAQ
 
 ## The points for an activity I entered recently just changed... What happened? (Automatic Location Data Imports)
 
-By default, the spreadsheet automatically imports the latest data for each of the locations you’ve selected in the _Locations_ sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points. 
+By default, the Risk Tracker automatically imports the latest data for each of the locations you’ve selected in the _Locations_ sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points. 
 
 **Note:** We adjust activities before the date of the last import to match the prevalence that has been observed, and activities after the date of the last import to account for a ”delay factor” if COVID prevalence is increasing in your area. Because of this, it’s possible to enter the exact same activity on two different dates and see slightly different microCOVID scores.
 
@@ -54,7 +54,7 @@ By default, the spreadsheet automatically imports the latest data for each of th
    <img src="${budgetSetting}" alt="Budget setting" style="max-width: 500px;">
 
    </td>
-   <td>A spreadsheet setting that you can adjust if you’d like to.
+   <td>A setting that you can adjust if you’d like to.
    </td>
   </tr>
   <tr>
@@ -188,7 +188,7 @@ If some people are circulating, you only need to account for the people who are 
 *   If you see 5 different co-workers outdoors for brief interactions throughout the day, and you are near each person for 10 minutes at a time, you can either log that as “5 people for 10 minutes” or “1 person for 50 minutes.”
 *   If you’re in a store, you want to model the number of people who are 3+ feet, 6+ feet and 10-15 feet away from you _on average_. You can use the tool in the _Utilities_ sheet to help you convert those 3 distances to a total number of people who are 6 feet away.
 
-When the people you’re seeing all have the same risk profile, with the same precautions, you can enter it as one entry in the spreadsheet. 
+When the people you’re seeing all have the same risk profile, with the same precautions, you can enter them all as one "Custom Person" because they function together as a unit. If you're seeing people at different times or for different lengths of time each, you'll need to model them as separate Custom Person sections. 
 
 
 # Custom Person Modeling
@@ -202,7 +202,7 @@ If you are only seeing one person in the household, it is more accurate to model
 
 ## What if I don’t want to keep updating the Custom Person activity log every time I see the person?
 
-If you’d rather overestimate your points and not need to do as much up-keep on the spreadsheet,  you could do the following: Model the person and overestimate each of their activities. For example, on any given week they spend anywhere from 1-5 hours of social time with a single friend at a time. You could just model it as 5 hours of time and not worry about updating it each time. 
+If you’d rather overestimate your points and not need to do as much up-keep on the Risk Tracker, you could do the following: Model the person and overestimate each of their activities. For example, on any given week they spend anywhere from 1-5 hours of social time with a single friend at a time. You could just model it as 5 hours of time and not worry about updating it each time. 
 
 **Note:** Then you could work out an agreement with the person to notify you if their activities go beyond the range that you’ve modeled (for example: if they take a flight). It is very important that you trust that they will report any changes, since one risky activity on their part could make a huge difference in your budget. We also suggest proactively asking your contacts if they’ve had any additional activities.
 
@@ -213,15 +213,15 @@ If you’d rather overestimate your points and not need to do as much up-keep on
 
 **Option B:** to be even more precise, you can do the following:
 
-1. Ask them what their current microCOVID score is. If they are using the spreadsheet, they can find this number in the _Pod Overview_ sheet on the “Risk to other people you see outside of the house” row under the column for their name.
-2. Enter their name and their score on your spreadsheet in the _INTERNAL_PERSON_ sheet under the “Manual Entries” section.
+1. Ask them what their current microCOVID score is. If they are using the Risk Tracker, they can find this number in the _Pod Overview_ sheet on the “Risk to other people you see outside of the house” row under the column for their name.
+2. Enter their name and their score on your Risk Tracker in the _INTERNAL_PERSON_ sheet under the “Manual Entries” section.
 
 
 # Risk Budget
 
 ## What’s the difference between “risk to me” and “risk to pod”?
 
-The spreadsheet is designed to ensure that you are only exposing your podmates to the budget you have specified. Certain features allow you to take on more risk but reduce the risk you pose to your podmates.
+The Risk Tracker is designed to ensure that you are only exposing your podmates to the budget you have specified. Certain features allow you to take on more risk but reduce the risk you pose to your podmates.
 
 One main place this occurs is with the “contact will report symptoms” checkbox, which reduces the risk to the pod by 50%. 
 
@@ -230,13 +230,13 @@ For example, If you log an activity that is 300 points, and the person you’re 
 
 ## Can I “save up” my points and use them later? Do points “roll over”?
 
-Though you could track your budget along any time frame you want (weekly budget, monthly budget, etc), the spreadsheet is built to consider a weekly budget timeframe.
+Though you could track your budget along any time frame you want (weekly budget, monthly budget, etc), the Risk Tracker is built to consider a weekly budget timeframe.
 
 If you want to “save up” points and use more in a future week, it’s possible to do so and still hold true to the "X% risk of getting per year" budget you've chosen. However, if you have others in your pod, you’ll be temporarily increasing the risk they pose to the people they see beyond the usual amount. For example, if you go 2 months without using any points, you could use them all in one week, which might put you at, say, 1,000 microCOVIDs. Your podmates are being exposed to 30% of that risk, which in this example would be 300 microCOVIDs. If one of them is going to see a loved one for a few days who is more vulnerable to COVID (and only has a budget of 20 microCOVIDs), your activities make it difficult for them to do so safely. It’s important to discuss this situation as a pod and come to agreements about how you’d like to handle situations like this.
 
 One way some pods have addressed this is by allowing you to “save up” your points over time, and set a max on how many you can use in a given week (for example, your pod might agree that any person can use up to 2x your weekly budget in a given week as long as it still fits within their overall annual total.)
 
-The spreadsheet is not currently built to assist you with calculating your annual total points used and points remaining. You’re welcome to adapt it to that situation.
+The Risk Tracker is not currently built to assist you with calculating your annual total points used and points remaining. You’re welcome to adapt it to that situation.
 
 
 ## What’s up with the 0-7 day  range and 2-9 day range? What are they for? Why the difference? 

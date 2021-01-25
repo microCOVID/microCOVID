@@ -4,18 +4,18 @@ import podOverview from './img/pod-overview.png'
 import {
   mailchimpSubscribeUrl,
   spreadsheetUrl,
-} from 'components/SpreadsheetUtil'
+} from 'components/RiskTrackerUtil'
 
-const title = 'Spreadsheet Quickstart Guide for Pods'
+const title = 'Risk Tracker Quickstart Guide for Pods'
 const shortTitle = 'Quickstart Guide'
 const content = `
-One common way to use this spreadsheet is to have all people within the same household/pod continuously track their own exposure so that this spreadsheet can convey how much risk they are introducing to the pod and how much risk the pod is bringing to them. This quickstart guide shows how to set up and use the spreadsheet for this scenario. If you're using the spreadsheet for other scenarios, this guide may still be useful, though some of the steps may not apply to you.
+One common way to use the Risk Tracker spreadsheet is to have all people within the same household/pod continuously track their own exposure so that Risk Tracker can calculate how much risk they are introducing to the pod and how much risk the pod is bringing to them. This quickstart guide shows how to set up and use the Risk Tracker for this scenario. If you're using the Risk Tracker for other scenarios, this guide may still be useful, though some of the steps may not apply to you.
 
-Follow these steps to set up a copy of the spreadsheet for yourself or your household/pod. Before you begin using the spreadsheet, we recommend you play around with the [microCOVID website calculator](/) to get a sense of how the model works.
+Follow these steps to set up a copy of the Risk Tracker for yourself or your household/pod. Before you begin using the Risk Tracker, we recommend you play around with the [website calculator](/) to get a sense of how the model works.
 
 ## Steps to get started
 
-1. **Copy the spreadsheet:** Open the [microCOVID template spreadsheet](${spreadsheetUrl}). When you’re ready, you can [click here to make a copy of the spreadsheet](${spreadsheetUrl}/copy).
+1. **Copy the spreadsheet:** Open the [microCOVID template Risk Tracker spreadsheet](${spreadsheetUrl}). When you’re ready, you can [click here to make a copy of the spreadsheet](${spreadsheetUrl}/copy).
 2. **Add the names of each person to the _Pod Overview_ sheet in the top row of the blue table:** Replace the example names (Alice, Bob, etc) with the names of each person in your pod. Each person you enter will reduce the budget each person gets.
 
     <img src="${podOverview}" alt="Pod overview" style="max-width: 600px;">
@@ -24,7 +24,7 @@ Follow these steps to set up a copy of the spreadsheet for yourself or your hous
 
     <img src="${budgetSetting}" alt="Budget setting" style="max-width: 500px;">
 
-    **Important note:** The spreadsheet is designed to ensure that you are only exposing your podmates to that total amount of risk. Certain features allow you to take on more risk than your budget amount, but because of certain precautions (like symptoms reporting), the risk you introduce to your podmates will still be within the agreed upon budget. [Read more about this in the Spreadsheet FAQ](./faq).
+    **Important note:** The RIsk Tracker is designed to ensure that you are only exposing your podmates to that total amount of risk. Certain features allow you to take on more risk than your budget amount, but because of certain precautions (like symptoms reporting), the risk you introduce to your podmates will still be within the agreed upon budget. [Read more about this in the Risk Tracker FAQ](./faq).
 
 4. **Add the name of each person in your pod to the _Pod Activity Log_ sheet.**
     1. Begin by replacing the example names (Alice, Bob, etc) with the names of people in your pod.
@@ -32,7 +32,7 @@ Follow these steps to set up a copy of the spreadsheet for yourself or your hous
 
 5. **Set your location:** Go to the _Locations_ sheet > Select your state (or country) from the dropdown > Select your region. You can change the two example locations to ones you intend to use. Put a checkmark next to the location that you want to use as your default. This data will automatically update every 3-7 days. 
 
-6. **Adjust your shared budget reductions for grocery shopping:** The spreadsheet offers a way to share the points of grocery shopping across your whole pod. (You can also do shared budget reductions for other activities.) There are 3 things you need to set if you want to use this feature: 
+6. **Adjust your shared budget reductions for grocery shopping:** The Risk Tracker offers a way to share the points of grocery shopping across your whole pod. (You can also do shared budget reductions for other activities.) There are 3 things you need to set if you want to use this feature: 
     1. In the Pod Overview sheet, under “Shared budget reductions," set the “Podmate name” to the person who does the grocery shopping
     2. Set the “Grocery hours per week” number.
     3. Set the “Grocery mask type” to the type of mask the grocery shopper uses. (A better mask will give everyone more points in their baseline budget).     
@@ -44,7 +44,7 @@ Follow these steps to set up a copy of the spreadsheet for yourself or your hous
 
 ## What's next
 
-You can read more about [logging activities](./basics), [custom modeling the risk of a person you’re interacting with](./basics), [the spreadsheet FAQ](./faq), or about [using microCOVID with your household/pod](./household-pod).
+You can read more about [logging activities](./basics), [custom modeling the risk of a person you’re interacting with](./basics), [the Risk Tracker FAQ](./faq), or about [using microCOVID with your household/pod](./household-pod).
 
 **Tip:** Most of the spreadsheet column headers have a note explaining how to use them. Many common questions are answered in these notes. You can access the note by hovering over any column with a black triangle in the top right corner. For example: 
 
@@ -53,7 +53,7 @@ You can read more about [logging activities](./basics), [custom modeling the ris
 
 ## Get the latest updates
 
-[Subscribe to receive updates about the spreadsheet as we upgrade it](${mailchimpSubscribeUrl}).
+[Subscribe to receive updates about the Risk Tracker as we upgrade it](${mailchimpSubscribeUrl}).
 `
 
 const post = { title, shortTitle, content }

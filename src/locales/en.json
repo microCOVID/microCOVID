@@ -2,9 +2,9 @@
   "menu": {
     "calculator": "Calculator",
     "about": "About",
-    "spreadsheet": {
+    "risk_tracker": {
       "introduction": "Introduction",
-      "header": "Spreadsheet"
+      "header": "Risk Tracker"
     },
     "contactus": "Contact Us",
     "whitepaper": "White Paper",
@@ -138,7 +138,7 @@
       "microcovid_header": "What is a microCOVID?",
       "microcovid_explanation": "<p>The calculator introduces a new concept, the microCOVID. One microCOVID is a one-in-a-million chance of getting COVID.</p> <p>An activity that’s 20,000 microCOVIDs is very unsafe, as you have a 2% risk of getting COVID <em>every time you do it</em>. An activity that’s 20 microCOVIDs is relatively safe, as you could do it every week for a year and still have only about a 0.1% chance of getting COVID.</p>",
       "budget_header": "How can I manage my risk using a risk budget?",
-      "budget_explanation": "We decided an annual risk budget of a 1% chance of catching COVID per year was reasonable for most healthy people who are not in contact with vulnerable groups. To learn how we arrived at that number, <1>click here</1>. If you want to follow this 1%-risk-per-year budget, you’ll want your weekly budget of activities to sum to less than about 200 microCOVIDs each week. We’ve created a handy <3>spreadsheet</3> that lets you keep track of your activities over time."
+      "budget_explanation": "We decided an annual risk budget of a 1% chance of catching COVID per year was reasonable for most healthy people who are not in contact with vulnerable groups. To learn how we arrived at that number, <1>click here</1>. If you want to follow this 1%-risk-per-year budget, you’ll want your weekly budget of activities to sum to less than about 200 microCOVIDs each week. We’ve created a handy <3>risk tracker tool</3> that lets you keep track of your activities over time."
     },
     "risk_tolerance_1_percent_label": "Standard Caution Budget",
     "risk_tolerance_1_percent_explanation": "Budget: 1% chance of COVID per year (200 microCOVIDs per week) (suggested for healthy people NOT in close contact with more vulnerable people)",
@@ -235,7 +235,7 @@
     "data_inputs_lead": "This website contains three outputs of our investigation",
     "data_inputs_calculator": "a <1>calculator</1> that you can use to calculate your COVID risk",
     "data_inputs_whitepaper": "a <1>white paper</1> that explains our estimation method",
-    "data_inputs_spreadsheet": "and a <1>spreadsheet</1> to compute your COVID risk in more detail and to track your risk over time.",
+    "data_inputs_spreadsheet": "and a <1>Risk Tracker spreadsheet</1> to compute your COVID risk in more detail and to track your risk over time.",
     "data_inputs_recommendation": "You should start with either the <2>calculator</2> or the <5>white paper</5>.",
     "disclaimer": "<0>Disclaimer</0>In this tool we state our best estimate based on available evidence, even when that evidence is not conclusive. We have read a lot of experts' research, but we are not ourselves experts in this topic. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance.",
     "contact_us_header": "Contact us",

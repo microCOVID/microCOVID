@@ -18,7 +18,7 @@ We use three different methods of guessing someone’s chance of having COVID.
 *   The **[Intermediate Method](8-intermediate-method)** adds adjustments for whether the person is or isn’t an essential worker.
 *   The **[Advanced Method](9-advanced-method)** is to add up the risk of each individual activity that person has done recently.
 
-You do not need to understand exactly how these methods work to use the [calculator](/calculator), but if you want to create your own custom estimates for specific people in your life then we strongly recommend learning to use the [Advanced Method](/paper-9-advanced-method) and the associated [spreadsheet](/spreadsheet).
+You do not need to understand exactly how these methods work to use the [calculator](/calculator), but if you want to create your own custom estimates for specific people in your life then we strongly recommend learning to use the [Advanced Method](/paper-9-advanced-method) and the associated [Risk Tracker spreadsheet](/tracker).
 
 
 ### Skip ahead and takeaways

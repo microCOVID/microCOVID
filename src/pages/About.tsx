@@ -35,8 +35,8 @@ export const About = (): React.ReactElement => {
         </li>
         <li>
           <Trans i18nKey="about.data_inputs_spreadsheet">
-            and a <Link to="/spreadsheet/">spreadsheet</Link> to compute your
-            COVID risk in more detail and to track your risk over time.
+            and a <Link to="/tracker">Risk Tracker spreadsheet</Link> to compute
+            your COVID risk in more detail and to track your risk over time.
           </Trans>
         </li>
       </ul>

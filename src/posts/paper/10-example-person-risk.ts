@@ -32,7 +32,7 @@ In our [calculator](/calculator) we’ve provided some Person Risk Profiles that
 Now that we’ve looked at Person Risk, we can combine it with Activity Risk to get the cost in microCOVIDs of a given activity. Hooray, you made it!
 
 [^13]:
-     If the people in your household/pod have any significant exposure to the outside world (including groceries, essential work, etc.) then you will need to include your own contact with your housemates (or others in your pod) in your estimate of how many microCOVIDs of exposure _you_ have incurred, because those people’s Activity Risk is not zero. The fact that they are in your pod does not change the fact that everything they have done in the past 10 days poses a risk to you. See our [household/pod documentation](/spreadsheet/household-pod) for more info on managing risk in that setting.
+     If the people in your household/pod have any significant exposure to the outside world (including groceries, essential work, etc.) then you will need to include your own contact with your housemates (or others in your pod) in your estimate of how many microCOVIDs of exposure _you_ have incurred, because those people’s Activity Risk is not zero. The fact that they are in your pod does not change the fact that everything they have done in the past 10 days poses a risk to you. See our [household/pod documentation](/tracker/household-pod) for more info on managing risk in that setting.
 
 [^14]:
      If Reasonable Rosie keeps up this rate of 217 microCOVIDs per week, she’ll incur about 11,000 microCOVIDs per year, which implies about a 1% chance of getting COVID during that year. This is much lower than the average American!
