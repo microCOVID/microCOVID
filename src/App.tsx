@@ -19,19 +19,20 @@ import { QueryParamProvider } from 'use-query-params'
 
 import { PageViews } from 'components/Analytics'
 import { Footer } from 'components/Footer'
+import { SimplePage } from 'components/markdown/SimplePage'
 import { ScrollToTop } from 'components/ScrollToTop'
 import { About } from 'pages/About'
 import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
-import { RiskQuestions } from 'pages/RiskQuestions'
 import {
   Spreadsheet,
   SpreadsheetNavDropdown,
   SpreadsheetTOC,
 } from 'pages/Spreadsheet'
-import { Symptoms } from 'pages/Symptoms'
+import riskQuestionsPage from 'posts/risk-questions'
+import symptomsPage from 'posts/symptoms'
 
 import 'styles/App.scss'
 
@@ -152,10 +153,10 @@ export const App = (): React.ReactElement => {
                 <SpreadsheetTOC />
               </Route>
               <Route path="/symptoms">
-                <Symptoms />
+                <SimplePage page={symptomsPage} />
               </Route>
               <Route path="/questions">
-                <RiskQuestions />
+                <SimplePage page={riskQuestionsPage} />
               </Route>
               <Route path="/about">
                 <About />
