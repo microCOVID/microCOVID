@@ -103,7 +103,7 @@ export const RiskTrackerTOC = (): React.ReactElement => {
       <Alert variant="info">
         <strong>Looking for testers:</strong> We are looking for folks who are
         willing to offer feedback on this new version of the spreadsheet. If you
-        are using the microCOVID spreadsheet with your household/pod to track
+        are using the Risk Tracker spreadsheet with your household/pod to track
         your collective COVID risk and are intereted in giving us feedback on
         your experience, please email Jeremy at{' '}
         <a
