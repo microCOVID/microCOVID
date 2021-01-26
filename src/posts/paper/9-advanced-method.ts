@@ -6,7 +6,7 @@ To get an even more accurate estimate for Person Risk, we can actually add up th
 
 The **Advanced Method** is to add up the risk of each individual activity that person has done recently.
 
-The [spreadsheet](/spreadsheet) is a tool that can help you add up activities in the Advanced Method.
+The [Risk Tracker](/tracker) is a tool that can help you add up activities in the Advanced Method.
 
 Just like you can calculate this for each of your actions, you can also calculate it for your friend’s actions, using the same formula:
 
@@ -30,7 +30,7 @@ Errands include grocery shopping, transit, and other public settings. These can 
 
 Work is modeled just like the above socializing and errands, and you would ask similar kinds of questions: how many people is this person sharing indoor air space with? For how many hours per week? What is their risk profile like?
 
-Though you can do Advanced Method calculations on your own, the [spreadsheet](/spreadsheet) was designed for that very purpose. It is a helpful tool for both individuals and households/pods who want to manage their risk.
+Though you can do Advanced Method calculations on your own, the [Risk Tracker](/tracker) was designed for that very purpose. It is a helpful tool for both individuals and households/pods who want to manage their risk.
 
 The best way to understand how to apply the Advanced Method is through an example. See the [next section](10-example-person-risk) for a detailed example.
 

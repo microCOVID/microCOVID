@@ -75,7 +75,7 @@ Let’s now explore how to quantify the risk of various activities in terms of m
      Technically, what we mean when we say “1% per year” is a 1% _annualized_ risk. That is, if we go 6 months without getting sick, we aren’t going to double our chances and bump up to a 2% chance in the following 6 months to even it out. We’ll continue at the same 1% annualized risk level.
 
 [^5]:
-     We have a detailed write up on [how to adjust your budget given the number of people in your household/pod](/spreadsheet/household-pod#how-the-number-of-people-in-your-household-affects-your-budget).
+     We have a detailed write up on [how to adjust your budget given the number of people in your household/pod](/tracker/household-pod#how-the-number-of-people-in-your-household-affects-your-budget).
 
 `
 

@@ -1,9 +1,9 @@
 import sharedBudgetReductions from './img/shared-budget-reductions.png'
 
-const title = 'Using the spreadsheet with your household/pod'
+const title = 'Using the Risk Tracker with your household/pod'
 const shortTitle = 'For Your Household/Pod'
 const content = `
-## Pods in the context of the spreadsheet
+## Pods in the context of the Risk Tracker
 
 A **pod** is small network of trusted friends or relatives who are in regular contact with one another (many times per week) and are following a shared set of agreements to try to keep everyone safe from COVID. [^poddefinition]
 
@@ -22,7 +22,7 @@ A **pod** is small network of trusted friends or relatives who are in regular co
 
 **What if I live alone?**
 
-*   If you live alone and are using the spreadsheet, you can think of yourself as a “pod of 1.”
+*   If you live alone and are using the Risk Tracker, you can think of yourself as a “pod of 1.”
 *   If you live alone and are seeing someone regularly and don’t want to log every interaction with them, you might choose to include them in your pod.
 
 **Example pod:**
@@ -32,10 +32,10 @@ A **pod** is small network of trusted friends or relatives who are in regular co
 *   Total pod size = 5
 
 
-## Getting started with the spreadsheet for pods
+## Getting started with the Risk Tracker for pods
 
 1. **Find your spreadsheet wizard:** Each house needs a local “spreadsheet wizard” who has taken a deep dive into how this system works. As your resident microCOVID expert, you might want to read the [white paper](/paper) so you’re prepared to help answer questions about why certain things work the way they do.
-2. **Follow the steps in the [Spreadsheet Quickstart Guide](./quickstart)**.
+2. **Follow the steps in the [Risk Tracker Quickstart Guide](./quickstart)**.
 
 
 ## How the number of people in your household affects your budget

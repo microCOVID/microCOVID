@@ -1,5 +1,6 @@
 import React from 'react'
 import { Alert } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export const Symptoms = (): React.ReactElement => {
   return (
@@ -10,7 +11,8 @@ export const Symptoms = (): React.ReactElement => {
         You can use this page as a reminder for which COVID symptoms to be
         mindful of.{' '}
         <em>
-          (This page is designed for microCOVID spreadsheet users to send to a
+          (This page is designed for{' '}
+          <Link to="/tracker">microCOVID Risk Tracker</Link> users to send to a
           contact they are interacting with.)
         </em>
       </p>
@@ -22,7 +24,7 @@ export const Symptoms = (): React.ReactElement => {
       <table>
         <tbody>
           <tr>
-            <th colSpan={2}>
+            <th>
               <strong>Symptoms: </strong>Do you have any of these symptoms? Are
               they{' '}
               <em>
@@ -40,7 +42,7 @@ export const Symptoms = (): React.ReactElement => {
             </th>
           </tr>
           <tr>
-            <td colSpan={2} style={{ fontSize: '1.3em', lineHeight: '1.5em' }}>
+            <td style={{ fontSize: '1.3em', lineHeight: '1.5em' }}>
               <ul>
                 <li>🌡️ Temperature of 99.5 or above</li>
                 <li>🥵 Subjective “feverish feeling”</li>
@@ -52,7 +54,7 @@ export const Symptoms = (): React.ReactElement => {
             </td>
           </tr>
           <tr>
-            <td colSpan={2}>
+            <td>
               <em>Other less-common COVID symptoms:</em> 😓 fatigue, 💥 body
               aches, 🤯 headache, 😩 sore throat, 🤢 nausea or vomiting, 💩
               diarrhea
