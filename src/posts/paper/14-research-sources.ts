@@ -40,19 +40,56 @@ This is a highly speculative number. [Li et al.](https://www.ncbi.nlm.nih.gov/pm
 
 #### Masks
 
-We get our wearer protection figure of 2x from [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) (again!), who estimated this number for surgical masks at 2–3x. [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) provides us some corroboration that high-quality masks, in practice when worn by non-healthcare-workers, give about 2x benefit. [Lai et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) uses mannequins and precisely calibrated aerosol spray to further verify the performance of basic surgical masks under a variety of conditions, and this research confirms that under “normal wearing” conditions, there’s roughly a 2x wearer protection. Other analyses we have seen shave off some efficacy to account for masks worn improperly or poorly-made DIY masks. We keep our number at 2x here, and emphasize that this is for high-quality and well-fitting masks, in part because 2x is simple and not too far off.
+_Note: we updated our mask categories and numbers in late January of 2021._
 
-As for protection to the other party by wearing a mask (also known as “source control”), we estimate a source control factor of 4x. We base this on several sources:
+We divide our analysis into source control (protecting others) and PPE (protecting the wearer). We draw the majority of our sources from the [Howard et al.](https://www.preprints.org/manuscript/202004.0203/v4) Evidence Review (version 4 from Oct 2020), which surveys a variety of study types, some COVID-specific, and some studying particle filtration as a property of the fabric, or for other pathogens such as influenza.
 
-*   [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza estimated around 5x protection for homemade cloth masks and around 7x for surgical masks (see Figure 4).
-*   [Milton et al](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) provided a somewhat lower estimate of a 3.6x reduction in the number of exhaled influenza viruses if the infected person wore a surgical mask.
-*   [Fischer et al](https://advances.sciencemag.org/content/early/2020/08/07/sciadv.abd3083) counted respiratory droplets produced during normal speech through a variety of mask types. We averaged the droplet counts for the four cotton masks in their study (which were among the less effective masks tested) and found a 5.4x reduction in emitted droplets relative to no mask.
-
-We combine these numbers to estimate approximately a 4x reduction. Again, this is a case where we have seen other analyses (especially those estimating _population-wide_ efficacy of mask-wearing) knock these numbers down somewhat. We keep the higher numbers here because we believe that if _you personally_ are hanging out with someone and they are _not actually wearing_ their mask (for example, it is hanging off their chin) you will notice that they aren’t wearing a mask, and not count this as giving you any extra protection factor. These types of “imperfect use” considerations need to be factored in more strongly than we do here when analyzing mask efficacy at the societal level.
-
-We note that we think masks on the infected person might not help proportionately as much at larger indoor distances, because surgical masks are most effective at stopping larger droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)).
 
 For N95 masks, [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) found that N95 masks reduced infection rates by 10x compared to surgical masks. This would be a 20x reduction in risk compared to no mask, but we have discounted this to 10x to account for the difficulty of getting a medical-grade fit test.
+
+
+##### Masks: Source control
+For source control, we draw on the following sources, three of which are new in this revision of our estimates:
+* Davies et al.: percent filtration of influenza microorganisms isolated from coughs, and total reduction in colony-forming units.
+* Milton et al.: proportion of flu viral copies reduced vs no mask on patient.
+* Fischer et al.: relative droplet count as show in Fig 3
+* Kumar et al.: simulation of leakage and airflow
+* van der Sande et al.: protection factor from inside to outside (concentration ratio)
+* Lindsley et al.: proportion of cough aerosol blocked
+* Konda et al.: filtration efficiency of fabrics
+
+We start by estimating a number for surgical masks specifically. The lowest estimates come from Lindsley et al. (60% proportion of cough aerosol blocked, which is a 1.7x reduction) and from van der Sande et al., at about a 2.5x protection factor. The source we found most helpful was Milton et al. which estimates 3.4x fewer viral copies overall, and helpfully splits up that reduction into a 2.8x reduction in viral copy numbers in "fine" aerosols, and a much-larger 25x reduction in "coarse" aerosols. As an intermediate value, Davies et al. Table 4 shows about 7x fewer colony-forming units. To provide an upper bound, Kumar et al. shows that 12% of the airflow leaks (so, given that the airflow that did not leak cannot be more than 100% blocked, the total protection cannot be more than 88% which is about an 8.3x reduction). Other sources showed even higher protection numbers, e.g. Davies et al. in Table 1 shows an 89-to-96-percent filtration rate of coughs, and the Fischer et al relative droplet count in Fig 3 is 0.01 which is very small.
+
+Overall, our takeaway is that surgical masks probably reduce outgoing "coarse" aerosols more effectively, and "fine" aerosols less effectively, and so the overall protection factor for COVID will depend on how much COVID is transmitted through different aerosol sizes; relatedly, how to interpret values measured for influenza will also depend on influenza's distribution between different aerosol sizes. Our response to this uncertainty is to estimate likely more source control protection than the low-end values of 2.5-3.4x, but not by a great deal and certainly not more than 8x, settling on a guess of about 4x protection factor (1/4 multiplier) from surgical masks when worn to protect others from the wearer.
+
+For masks that provide _less_ protection to others, we derive our source control estimates for thin and thick cotton masks by using relative comparisons to surgical masks and to one another. Davies et al. Table 1 shows that a "scarf" is about 56-65% as protective as a surgical mask, and a "cotton mix" is 70-78% as protective as a surgical mask. Davies et al. Table 4 suggests that the homemade mask was about 92% as effective at blocking colony-forming units as a surgical mask. Fischer et al. shows the relative droplet count in Fig 3 for "bandanas" as 0.5, and for "cotton" as 0.2 (i.e. 80% of droplets filtered), implying a bandana is about 60% as effective. Finally, the Lindsley et al proportion of cough aerosol blocked is 47% for polyester neck gaiter and 60% for a procedure mask (which we think is a surgical mask), implying a neck gaiter is 78% as effective as a surgical mask. Overall, in summary, we interpret these ratios as implying that a thick, well-fitted cotton mask would be about 80%-90% as effective as a surgical mask (which we estimated above reduces others' exposure by 4x), which makes 2.5x-3x protection which we round off for simplicity to 3x. In turn, a thinner or worse-fitting homemade mask looks to be no less than 50% as effective as a surgical mask, which we round off to 2x (1/2 multiplier).
+
+We didn't find any sources describing fitted masks with PM2.5 filters. We choose to guess that these are more protective than thick fitted cotton masks, and about as protective as a surgical mask due to similar fit characteristics and similarly being made from a fabric whose filtration properties were considered in the design, so we suggest the 1/4 multiplier.
+
+For masks that provide _more_ protection to others, such as KN95s and N95s, we make a distinction between getting a truly airtight seal, such that _all_ the exhaled air is going _through_ the mask, versus just wearing a rated mask on one's face without being sure it has sealed, allowing for some leakage.
+
+Despite the _fabric_ often being highly rated for filtration, KN95 masks usually provide a loose fit, with visible gaps, not much better than a surgical mask ([O'Kelly et al.](https://www.medrxiv.org/content/10.1101/2020.08.17.20176735v1.full.pdf)). In our personal experience with earloop KN95s, we have not been able to get a firm/tight seal. We therefore would estimate their source control factor as being in roughly the same 1/4 ballpark as surgical masks (_not_ in the rated ballpark of 95% protection i.e. 1/20 reduction), but perhaps slightly higher due to improved fabric. To quantitatively estimate the amount of improvement, we use [Konda et al.](https://pubs.acs.org/doi/10.1021/acsnano.0c03252)'s data about fabric filtration from a surgical mask with gaps, versus an N95 with gaps, as letting through 0.68 as much aerosol (as 0.34/0.5), which implies a slightly-improved 1/6 factor for KN95s instead of a 1/4 factor for surgical masks. We note this is a fairly speculative estimate, as the data on KN95s is limited. We also use this estimate as the source control factor for an N95 mask that the wearer has NOT checked for a seal.
+
+For a NIOSH-rated medical-grade N95 mask that the user _has_ checked for an airtight seal (No outflow valve; No beards; No earloops, elastic headbands needed for tight fit) we don't find any studies measuring real-world source control properties, because most studies assume these masks are worn for PPE. Some studies already analyzed earlier in this section suggest extremely good source control from an N95: Fischer et al. shows an incredibly small relative droplet count, below 0.001, as show in Fig S1; Lindsley et al. shows a 99% proportion of cough aerosol blocked. for N95 respirator. We assume therefore that sealed N95s provide very good protection, although we are reluctant to assign values higher than the NIOSH-rated 95% (1/20). To get to our final figure, we draw on the broad trend we observe in comparing source control factors (this section) with PPE factors (next section) for the lesser-rated masks: across the board, we estimate approximately a 2x larger protection factor for source control compared to the PPE factor for the same mask type. Therefore, we start with a PPE analysis of well-sealed N95s (below), which estimates a 1/8 protection factor worn as PPE, and extrapolate a twice-as-good 1/16 protection factor for well-sealed N95s worn for source control.
+
+Finally, when wearing a reusable P100 respirator with the outflow valve covered with surgical mask fabric, we assume the same protection factor as a surgical mask: 1/4. This is a guess; the surgical mask data assumed some amount of "leakage" whereas a fully covered valve is more likely to direct _all_ the exhaled air through the fabric, which might suggest more source control protection; however, the exhaled air emerges in a more concentrated "jet", which might suggest less source control. We don't have a good way of knowing, so we go with our best guess.
+
+We note that in a more nuanced analysis we might consider estimating a smaller protection factor at further indoor distances, and a larger protection factor at close distances, because surgical masks are particularly effective at stopping  droplets ([Leung et al.](https://www.nature.com/articles/s41591-020-0843-2)) which travel shorter distances. However, for ease of use, the microcovid model makes an independence assumption of the various mitigating factors and variables.
+
+
+##### Masks: PPE
+
+TODO, not done yet, etc.
+
+(old)
+We get our wearer protection figure of 2x from [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) (again!), who estimated this number for surgical masks at 2–3x. [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) provides us some corroboration that high-quality masks, in practice when worn by non-healthcare-workers, give about 2x benefit. [Lai et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) uses mannequins and precisely calibrated aerosol spray to further verify the performance of basic surgical masks under a variety of conditions, and this research confirms that under “normal wearing” conditions, there’s roughly a 2x wearer protection. Other analyses we have seen shave off some efficacy to account for masks worn improperly or poorly-made DIY masks. We keep our number at 2x here, and emphasize that this is for high-quality and well-fitting masks, in part because 2x is simple and not too far off.
+
+
+
+
+
+
+
 #### Outdoor / Ventilation
 
 ##### Outdoor
@@ -76,9 +113,9 @@ The sources above hint at up to a 100x benefit. Fellow armchair modeler Peter Hu
 ##### Ventilation
 We draw our figure for room with HEPA filters from [Curtius & Schrod](https://www.medrxiv.org/content/10.1101/2020.10.02.20205633v2), who found that running HEPA filters in a class room with total hourly flow rate equal to 5x the volume of the room to decrease the concentration of aerosols in the room by 90%. They further project that this would decrease the liklihood of COVID transmission by 3x for a 1-hour interaction and 6x for a 2-hour interaction. We split the difference apply 4x in the calculator (but note that the longer your interaction lasts, the greater an impact air purifiers will have). We note that simply circulating air is insufficient - the air must either be exchanged with the outside or passed through a high quality filter (HEPA is equivalent to P100; HVAC filters rated on the MERV scale do not meet this critieria.)
 
-It's important that your filter is actually circulating sufficient air. 
-* Look up the model of your air purifier online; it should have a rating in CFM, which will be for running at maximum. 
-* Measure the length and width of your room in feet. 
+It's important that your filter is actually circulating sufficient air.
+* Look up the model of your air purifier online; it should have a rating in CFM, which will be for running at maximum.
+* Measure the length and width of your room in feet.
 * For a normal room height (8ft), ensure \`CFM > 2/3 * length * width\`
 
 The derivation of this rule is as follows:
@@ -93,7 +130,7 @@ CFM = 2/3 * (square footage)
 
 From this, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down and partially enclosed spaces (i.e. at least one wall is open to outside air).
 
-Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's [BART](https://www.bart.gov/news/articles/2020/news20200813) claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. 
+Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's [BART](https://www.bart.gov/news/articles/2020/news20200813) claims that their trains circulate and purify air every 70 seconds, or 50 times an hour.
 
 On planes, [Silcott et al](https://www.ustranscom.mil/cmd/docs/TRANSCOM%20Report%20Final.pdf) directly measured aerosol concentrations on a plane and found that the plane's filtration system resulted in 90% less exposure than a house. Since this is the same reduction as Curtis & Schrod found, we reason that the same reduction should apply. However, plane rides tend to be 2+ hours, so we use the 6x reduction that Curtis & Schrod calculated.
 
