@@ -9,13 +9,13 @@ import {
 const title = 'Risk Tracker Quickstart Guide for Pods'
 const shortTitle = 'Quickstart Guide'
 const content = `
-One common way to use the Risk Tracker spreadsheet is to have all people within the same household/pod continuously track their own exposure so that Risk Tracker can calculate how much risk they are introducing to the pod and how much risk the pod is bringing to them. This quickstart guide shows how to set up and use the Risk Tracker for this scenario. If you're using the Risk Tracker for other scenarios, this guide may still be useful, though some of the steps may not apply to you.
+One common way to use the Risk Tracker is to have all people within the same household/pod continuously track their own exposure so that Risk Tracker can calculate how much risk they are introducing to the pod and how much risk the pod is bringing to them. This quickstart guide shows how to set up and use the Risk Tracker for this scenario. If you're using the Risk Tracker for other scenarios, this guide may still be useful, though some of the steps may not apply to you.
 
 Follow these steps to set up a copy of the Risk Tracker for yourself or your household/pod. Before you begin using the Risk Tracker, we recommend you play around with the [website calculator](/) to get a sense of how the model works.
 
 ## Steps to get started
 
-1. **Copy the spreadsheet:** Open the [microCOVID template Risk Tracker spreadsheet](${spreadsheetUrl}). When you’re ready, you can [click here to make a copy of the spreadsheet](${spreadsheetUrl}/copy).
+1. **Copy the spreadsheet:** [View the microCOVID Risk Tracker](${spreadsheetUrl}). When you’re ready, you can [click here to make a copy of the Risk Tracker](${spreadsheetUrl}/copy).
 2. **Add the names of each person to the _Pod Overview_ sheet in the top row of the blue table:** Replace the example names (Alice, Bob, etc) with the names of each person in your pod. Each person you enter will reduce the budget each person gets.
 
     <img src="${podOverview}" alt="Pod overview" style="max-width: 600px;">

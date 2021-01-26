@@ -3,7 +3,7 @@ import { spreadsheetUrl } from 'components/RiskTrackerUtil'
 const title = 'Basic Risk Tracker Usage'
 const shortTitle = 'Basic Usage'
 const content = `
-## Orienting yourself to the Risk Tracker spreadsheet
+## Orienting yourself to the Risk Tracker
 
 **Sheets for regular use:**
 

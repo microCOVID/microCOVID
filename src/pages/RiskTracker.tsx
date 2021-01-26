@@ -29,7 +29,7 @@ export const SubscribeForm: React.FunctionComponent = () => {
       <h2>Subscribe for updates</h2>
       <p>
         We will send email updates when we make feature upgrades and bug fixes
-        to the Risk Tracker spreadsheet.
+        to the Risk Tracker.
       </p>
       <p>{mailchimpLink()}</p>
     </>
@@ -81,20 +81,19 @@ export const RiskTrackerTOC = (): React.ReactElement => {
       <div>
         <h2>Get started with the Risk Tracker</h2>
         <p>
-          Use the buttons below to copy the Risk Tracker spreadsheet. You can
-          than read the <a href="/tracker/quickstart">Quickstart Guide</a>.
+          Use the buttons below to copy the Risk Tracker. You can than read the{' '}
+          <a href="/tracker/quickstart">Quickstart Guide</a>.
         </p>
         <p>
           <Button href={spreadsheetUrl} variant="primary" target="_blank">
-            Open the microCOVID Risk Tracker spreadsheet <BsBoxArrowUpRight />
+            View the Risk Tracker <BsBoxArrowUpRight />
           </Button>{' '}
           <Button
             href={spreadsheetUrl + '/copy'}
             variant="secondary"
             target="_blank"
           >
-            Make a copy of the microCOVID Risk Tracker spreadsheet{' '}
-            <BsBoxArrowUpRight />
+            Make a copy of the Risk Tracker <BsBoxArrowUpRight />
           </Button>
         </p>
       </div>
@@ -103,9 +102,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
       <Alert variant="info">
         <strong>Looking for testers:</strong> We are looking for folks who are
         willing to offer feedback on this new version of the spreadsheet. If you
-        are using the Risk Tracker spreadsheet with your household/pod to track
-        your collective COVID risk and are intereted in giving us feedback on
-        your experience, please email Jeremy at{' '}
+        are using the Risk Tracker with your household/pod to track your
+        collective COVID risk and are intereted in giving us feedback on your
+        experience, please email Jeremy at{' '}
         <a
           href="mailto:blanchard.jeremy@gmail.com"
           target="_blank"
@@ -138,10 +137,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
       <div>
         <h2>Risk Tracker changelog</h2>
         <p>
-          Each time we update the Risk Tracker spreadsheet, we create an entry
-          in the changelog (below) with instructions for how you can migrate
-          your copy of the spreadsheet to have the latest upgrades and bug
-          fixes.
+          Each time we update the Risk Tracker, we create an entry in the
+          changelog (below) with instructions for how you can migrate your copy
+          of the spreadsheet to have the latest upgrades and bug fixes.
         </p>
         <p>
           <strong>Current version:</strong> 2.0
