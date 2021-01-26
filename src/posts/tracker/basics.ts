@@ -21,6 +21,8 @@ To accurately track your risk against your budget, you will want to log any acti
 * You are sharing indoor air space with anyone
 * You are outdooors and within 15 feet of someone for more than a passing moment
 
+We've developed a detailed list of [risk activity questions](/questions) that you can use to help you think of which activities you've done that you would want to log.
+
 You do not need to log any activities with people who are in your [microCOVID Pod](./household-pod) if you are all tracking your risk together. If others in your househould/pod are not tracking their risk in a shared system (like the spreadsheet), you will need to log your interactions with them.
 
 Your pod may decide to not log things that are under a certain threshold (for example: anything equal to or less than 3 points).
