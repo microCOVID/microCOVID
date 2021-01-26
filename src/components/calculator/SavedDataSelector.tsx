@@ -43,7 +43,7 @@ export const SavedDataSelector: React.FunctionComponent<{
           emptyLabel={t('calculator.no_prebuilt_scenario_found')}
           highlightOnlyResult={true}
           id="predefined-typeahead"
-          inputProps={{ autoComplete: 'off' }}
+          inputProps={{ autoComplete: 'chrome-off' }}
           onChange={(e: string[]) => {
             if (e.length !== 1) {
               setSavedData('')
