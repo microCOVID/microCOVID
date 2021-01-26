@@ -23,6 +23,7 @@ export interface CalculatorData {
   riskBudget: number
 
   // Prevalence
+  useManualEntry: number
   topLocation: string
   subLocation: string
   population: string
@@ -49,6 +50,7 @@ export interface CalculatorData {
 export const defaultValues: CalculatorData = {
   riskBudget: BUDGET_ONE_PERCENT,
 
+  useManualEntry: 0,
   topLocation: '',
   subLocation: '',
   population: '',
@@ -82,7 +84,7 @@ export const DAY_0 = new Date(2020, 1, 12)
 const MS_PER_DAY = 1000 * 60 * 60 * 24
 
 // From https://covid19-projections.com/estimating-true-infections-revisited/
-const prevalanceRatio = (positivityPercent: number | null, date: Date) => {
+const prevalenceRatio = (positivityPercent: number | null, date: Date) => {
   const day_i = (date.getTime() - DAY_0.getTime()) / MS_PER_DAY
   if (positivityPercent === null || positivityPercent > 100) {
     // No positivity data, assume the worst.
@@ -150,7 +152,7 @@ export const calculateLocationReportedPrevalence = (
     }
 
     const lastWeek = data.casesPastWeek
-    if (lastWeek === 0 && data.topLocation === '') {
+    if (data.useManualEntry && lastWeek === 0) {
       // If the data say zero cases, go with it; but if the user
       // entered zero cases, call it incomplete.
       return null
@@ -175,7 +177,7 @@ export const calculateLocationPersonAverage = (
   }
 
   try {
-    const underreportingFactor = prevalanceRatio(
+    const underreportingFactor = prevalenceRatio(
       data.positiveCasePercentage,
       data.prevalanceDataDate,
     )

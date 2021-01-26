@@ -123,9 +123,11 @@ export const Calculator = (): React.ReactElement => {
     return { points: expectedValue, lowerBound, upperBound }
   }, [calculatorData, setQuery])
 
+  // Location mode and not blank OR fully valid manual mode
   const prevalenceIsFilled =
-    calculatorData.topLocation !== '' ||
-    (parsePopulation(calculatorData.population) > 0 &&
+    (!calculatorData.useManualEntry && calculatorData.topLocation !== '') ||
+    (calculatorData.useManualEntry &&
+      parsePopulation(calculatorData.population) > 0 &&
       calculatorData.casesPastWeek > 0 &&
       calculatorData.casesIncreasingPercentage >= 0 &&
       calculatorData.positiveCasePercentage !== null &&

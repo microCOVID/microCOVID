@@ -5,6 +5,7 @@ import { CalculatorData } from './calculate'
 export type PartialData = Omit<
   CalculatorData,
   | 'riskBudget'
+  | 'useManualEntry'
   | 'topLocation'
   | 'subLocation'
   | 'population'
