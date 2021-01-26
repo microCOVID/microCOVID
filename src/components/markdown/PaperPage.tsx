@@ -11,14 +11,14 @@ export const MarkdownContents: React.FunctionComponent<{
   posts: PostMap
   id: string
   allInOnePage?: boolean
-  rootTitle?: string
+  tableOfContentsPageTitle?: string
   sectionTitle?: string
   showSectionNumbers?: boolean
 }> = ({
   posts,
   id,
   allInOnePage,
-  rootTitle = 'Table of Contents',
+  tableOfContentsPageTitle = 'Table of Contents',
   sectionTitle = '',
   showSectionNumbers = false,
 }) => {
@@ -56,7 +56,7 @@ export const MarkdownContents: React.FunctionComponent<{
             ← Previous: {posts[prev].shortTitle || posts[prev].title}
           </PageLink>
         ) : (
-          <Link to="./">← {rootTitle}</Link>
+          <Link to="./">← {tableOfContentsPageTitle}</Link>
         )}
 
         {next && (

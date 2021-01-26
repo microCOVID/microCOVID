@@ -17,7 +17,7 @@ export const RiskTrackerDocumentation = (): React.ReactElement => {
     <MarkdownContents
       posts={pages}
       id={id}
-      rootTitle={t('menu.risk_tracker.introduction')}
+      tableOfContentsPageTitle={t('menu.risk_tracker.introduction')}
       sectionTitle={t('menu.risk_tracker.header')}
     />
   )
@@ -165,7 +165,7 @@ export const RiskTrackerNavDropdown = (): React.ReactElement => {
       baseNavPath="/tracker"
       posts={pages}
       enableAll={false}
-      rootTitle={t('menu.risk_tracker.introduction')}
+      tableOfContentsPageTitle={t('menu.risk_tracker.introduction')}
     />
   )
 }
