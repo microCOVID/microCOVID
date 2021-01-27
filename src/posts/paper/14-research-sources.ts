@@ -45,8 +45,8 @@ _Note: we updated our mask categories and numbers in late January of 2021._
 We divide our analysis into protecting others (source control) and protecting the wearer (PPE). We draw the majority of our sources from the [Howard et al.](https://www.preprints.org/manuscript/202004.0203/v4) Evidence Review (version 4 from Oct 2020), which surveys a variety of study types, some COVID-specific, and some studying particle filtration as a property of the fabric, or for other pathogens such as influenza.
 
 
-##### Masks: Protecting the wearer
-For protecting the wearer (i.e. source control), we draw on the following sources, three of which are new in this revision of our estimates:
+##### Masks: Protecting others
+For protecting others (i.e. source control), we draw on the following sources, three of which are new in this revision of our estimates:
 * [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic): percent filtration of influenza microorganisms isolated from coughs, and total reduction in colony-forming units.
 * [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205): proportion of flu viral copies reduced vs no mask on patient.
 * [Fischer et al.](https://advances.sciencemag.org/content/6/36/eabd3083): relative droplet count as show in Fig 3
