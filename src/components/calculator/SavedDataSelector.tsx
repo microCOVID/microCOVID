@@ -17,6 +17,13 @@ export const SavedDataSelector: React.FunctionComponent<{
   const { t } = useTranslation()
   const prepopulatedOptions = Object.keys(prepopulated)
 
+  let selected: string[] = []
+  if (props.scenarioName !== undefined && props.scenarioName !== '') {
+    const selectedOption = props.scenarioName + ' '
+    prepopulatedOptions.push(selectedOption) // Create a fake option so the selected option still appears in the dropdown
+    selected = [selectedOption]
+  }
+
   const setSavedData = (key: string): void => {
     let foundData: PartialData | CalculatorData | null = null
     foundData = prepopulated[key]
@@ -41,20 +48,19 @@ export const SavedDataSelector: React.FunctionComponent<{
         <Typeahead
           clearButton={true}
           emptyLabel={t('calculator.no_prebuilt_scenario_found')}
+          multiple
           highlightOnlyResult={true}
           id="predefined-typeahead"
           inputProps={{ autoComplete: 'chrome-off' }}
           onChange={(e: string[]) => {
-            if (e.length !== 1) {
+            if (e.length === 0) {
               setSavedData('')
             }
-            setSavedData(e[0])
+            setSavedData(e[e.length - 1])
           }}
           options={prepopulatedOptions}
           placeholder={t('calculator.select_scenario')}
-          defaultSelected={
-            props.scenarioName in prepopulated ? [props.scenarioName] : []
-          }
+          selected={selected}
         />
       </InputGroup>
     </Form.Group>
