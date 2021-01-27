@@ -150,6 +150,14 @@
       color: #444
     }
 
+    .rbt-token {
+      pointer-events: none;
+      font-size: 1.17188rem;
+
+      .rbt-close {
+        pointer-events: auto;
+      }
+    }
     .dropdown-item {
       font-size: $input-font-size-lg;
       white-space: normal;  // Wrap lines
