@@ -3,7 +3,7 @@ import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsFillInfoCircleFill, BsLink45Deg } from 'react-icons/bs'
+import { BsCheckBox, BsFillInfoCircleFill, BsLink45Deg } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 import 'pages/styles/Calculator.scss'
@@ -157,13 +157,6 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          <Alert className="alert-info">
-            <BsFillInfoCircleFill />{' '}
-            <Trans i18nKey="calculator.alerts.masks_update">
-              <strong>Model update:</strong> Lipsum{' '}
-              <Link to="/paper/14-research-sources#masks">White Paper</Link>.
-            </Trans>
-          </Alert>
           <p>
             <Trans i18nKey="calculator.intro.whats_this">
               Lorem ipsum <a href="/paper">whitepaper</a> dolor sic amet...
@@ -171,7 +164,29 @@ export const Calculator = (): React.ReactElement => {
           </p>
           <FirstTimeUserIntroduction />
         </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
+        <Col lg="4" md="12">
+          <Alert variant="secondary">
+            <BsCheckBox />{' '}
+            <Trans i18nKey="calculator.alerts.survey_request">
+              <strong>We would love your feedback:</strong> lipsum
+              <a
+                href="https://forms.gle/WzFWcmyXwQMNRqGa7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                survey
+              </a>{' '}
+              lipsum
+            </Trans>
+          </Alert>
+          <Alert className="alert-info">
+            <BsFillInfoCircleFill />{' '}
+            <Trans i18nKey="calculator.alerts.masks_update">
+              <strong>Model update:</strong> Lipsum{' '}
+              <Link to="/paper/14-research-sources#masks">White Paper</Link>.
+            </Trans>
+          </Alert>
+        </Col>
       </Row>
       <Row>
         <Col>
