@@ -155,7 +155,7 @@
     },
     "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
     "alerts": {
-      "top_alert": "<0>Model update:</0> Our mask options have been expanded and updated. For more details, see the <3>White Paper.</3>",
+      "top_alert": "<0>Model update:</0> Our mask options have been expanded and updated. For more details, see the Masks section of the <3>White Paper.</3>",
       "survey_request": "<0>We would love your feedback:</0> We want your help to make the microCOVID calculator as helpful as possible! <2>Please fill out our user survey</2> to help us prioritize new features."
     }
   },
@@ -187,8 +187,8 @@
     "surgical_mask": "Surgical mask",
     "filtered_mask": "Fabric mask with PM2.5 filter insert",
     "kn95_mask": "KN95 mask",
-    "n95_mask": "Medical-grade N95 that fits but has NOT been checked for airtight seal",
-    "n95_sealed_mask": "Medical-grade N95 that HAS been checked for airtight seal. (No valve, earloops, beards.)",
+    "n95_mask": "Medical-grade N95 that fits, but you are NOT sure it is sealed",
+    "n95_sealed_mask": "Medical-grade N95 that you have achieved an airtight seal",
     "p100_mask": "P100 respirator, NIOSH-certified reusable, with covered outflow valve.",
     "silent_voice": "Not talking (such as quietly riding the train)",
     "normal_voice": "Normal conversation",
