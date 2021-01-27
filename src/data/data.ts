@@ -93,7 +93,7 @@ const p100Label = i18n.t('data.p100_mask')
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   thin: formValue(thinLabel, 0.5),
-  cotton: formValue(cottonLabel, 0.3333),
+  cotton: formValue(cottonLabel, 1 / 3),
   surgical: formValue(surgicalLabel, 0.25),
   pm: formValue(pmLabel, 0.25),
   kn95: formValue(kn95Label, 0.1667),
@@ -104,11 +104,11 @@ export const TheirMask: { [key: string]: FormValue } = {
 export const YourMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   thin: formValue(thinLabel, 1.0),
-  cotton: formValue(cottonLabel, 0.6667),
+  cotton: formValue(cottonLabel, 2 / 3),
   surgical: formValue(surgicalLabel, 0.5),
   pm: formValue(pmLabel, 0.5),
-  kn95: formValue(kn95Label, 0.3333),
-  n95Unsealed: formValue(n95UnsealedLabel, 0.3333),
+  kn95: formValue(kn95Label, 1 / 3),
+  n95Unsealed: formValue(n95UnsealedLabel, 1 / 3),
   n95Sealed: formValue(n95SealedLabel, 0.125),
   p100: formValue(p100Label, 0.05),
 }
