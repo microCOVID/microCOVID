@@ -1,6 +1,6 @@
 import React from 'react'
-import { Collapse } from 'react-bootstrap'
-import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
+
+import { ControlledExpandable } from 'components/Expandable'
 
 export const MaskDetails: React.FunctionComponent<{
   showMaskDetails: boolean
@@ -8,18 +8,14 @@ export const MaskDetails: React.FunctionComponent<{
 }> = ({ showMaskDetails, setShowMaskDetails }) => {
   return (
     <>
-      <span
-        className="expandable-header"
-        onClick={() => setShowMaskDetails(!showMaskDetails)}
-        aria-controls="mask-details"
-        aria-expanded={showMaskDetails}
+      <ControlledExpandable
+        id="mask-details-expandable"
+        header="Learn more about masks"
+        open={showMaskDetails}
+        setter={setShowMaskDetails}
       >
-        {showMaskDetails ? <BsChevronDown /> : <BsChevronRight />}
-        Learn more about masks
-      </span>
-      <Collapse in={showMaskDetails}>
         <div id="mask-details">{maskDetailContents}</div>
-      </Collapse>
+      </ControlledExpandable>
     </>
   )
 }
