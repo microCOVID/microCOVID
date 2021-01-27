@@ -179,7 +179,7 @@ describe('calculate', () => {
       setting: 'indoor',
       distance: 'sixFt',
       duration: 60,
-      theirMask: 'cotton',
+      theirMask: 'basic',
       yourMask: 'surgical',
       voice: 'silent',
     })
