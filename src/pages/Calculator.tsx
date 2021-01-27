@@ -107,13 +107,19 @@ export const Calculator = (): React.ReactElement => {
       recordCalculatorChanged(expectedValue)
     }
 
+    const getStringForLocalStorage = (incomingData: CalculatorData) => {
+      const data: Partial<CalculatorData> = {
+        ...incomingData,
+        persistedAt: Date.now(),
+      }
+      delete data['prevalanceDataDate']
+      return JSON.stringify(data)
+    }
+
     // Store data for refresh
     localStorage.setItem(
       FORM_STATE_KEY,
-      JSON.stringify({
-        ...calculatorData,
-        persistedAt: Date.now(),
-      }),
+      getStringForLocalStorage(calculatorData),
     )
 
     setQuery(filterParams(calculatorData), 'replace')
@@ -123,7 +129,6 @@ export const Calculator = (): React.ReactElement => {
     return { points: expectedValue, lowerBound, upperBound }
   }, [calculatorData, setQuery])
 
-  // Location mode and not blank OR fully valid manual mode
   const prevalenceIsFilled =
     (!calculatorData.useManualEntry && calculatorData.topLocation !== '') ||
     (calculatorData.useManualEntry &&
