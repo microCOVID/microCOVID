@@ -161,7 +161,8 @@
             "US-AK": "Az egész terület (vagy válassz megyét)",
             "US-LA": "Az egész terület (vagy válassz megyét)",
             "country_or_regions": "Az egész terület (vagy válassz régiót)"
-        }
+        },
+        "no_prebuilt_scenario_found": "Még nincs ilyen kész példánk, de kézzel összeállíthatod lentebb."
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
