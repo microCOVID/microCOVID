@@ -180,7 +180,7 @@ describe('calculate', () => {
       distance: 'sixFt',
       duration: 60,
       theirMask: 'basic',
-      yourMask: 'filtered',
+      yourMask: 'surgical',
       voice: 'silent',
     })
 

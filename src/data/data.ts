@@ -83,34 +83,34 @@ export const Distance: { [key: string]: FormValue } = {
 
 const noneLabel = i18n.t('data.no_mask')
 const thinLabel = i18n.t('data.thin_mask')
-const cottonLabel = i18n.t('data.cotton_mask')
+const basicLabel = i18n.t('data.basic_mask')
 const surgicalLabel = i18n.t('data.surgical_mask')
-const pmLabel = i18n.t('data.pm_mask')
+const filteredLabel = i18n.t('data.filtered_mask')
 const kn95Label = i18n.t('data.kn95_mask')
-const n95UnsealedLabel = i18n.t('data.n95_unsealed_mask')
+const n95Label = i18n.t('data.n95_mask')
 const n95SealedLabel = i18n.t('data.n95_sealed_mask')
 const p100Label = i18n.t('data.p100_mask')
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
-  thin: formValue(thinLabel, 0.5),
-  basic: formValue(cottonLabel, 1 / 3),
-  surgical: formValue(surgicalLabel, 0.25),
-  filtered: formValue(pmLabel, 0.25),
-  kn95: formValue(kn95Label, 0.1667),
-  n95Unsealed: formValue(n95UnsealedLabel, 0.1667),
-  n95Sealed: formValue(n95SealedLabel, 0.0625),
-  p100: formValue(p100Label, 0.3333),
+  thin: formValue(thinLabel, 1 / 2),
+  basic: formValue(basicLabel, 1 / 3),
+  surgical: formValue(surgicalLabel, 1 / 4),
+  filtered: formValue(filteredLabel, 1 / 4),
+  kn95: formValue(kn95Label, 1 / 6),
+  n95: formValue(n95Label, 1 / 6),
+  n95Sealed: formValue(n95SealedLabel, 1 / 8),
+  p100: formValue(p100Label, 1 / 3),
 }
 export const YourMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   thin: formValue(thinLabel, 1.0),
-  basic: formValue(cottonLabel, 2 / 3),
-  surgical: formValue(surgicalLabel, 0.5),
-  filtered: formValue(pmLabel, 0.5),
+  basic: formValue(basicLabel, 2 / 3),
+  surgical: formValue(surgicalLabel, 1 / 2),
+  filtered: formValue(filteredLabel, 1 / 2),
   kn95: formValue(kn95Label, 1 / 3),
-  n95Unsealed: formValue(n95UnsealedLabel, 1 / 3),
-  n95Sealed: formValue(n95SealedLabel, 0.125),
-  p100: formValue(p100Label, 0.05),
+  n95: formValue(n95Label, 1 / 3),
+  n95Sealed: formValue(n95SealedLabel, 1 / 8),
+  p100: formValue(p100Label, 1 / 20),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
