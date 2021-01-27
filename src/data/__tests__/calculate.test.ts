@@ -179,8 +179,8 @@ describe('calculate', () => {
       setting: 'indoor',
       distance: 'sixFt',
       duration: 60,
-      theirMask: 'cotton',
-      yourMask: 'surgical',
+      theirMask: 'basic',
+      yourMask: 'filtered',
       voice: 'silent',
     })
 
@@ -254,8 +254,8 @@ describe('calculate', () => {
         setting: 'outdoor',
         distance: 'tenFt',
         duration: 1,
-        theirMask: 'surgical',
-        yourMask: 'surgical',
+        theirMask: 'filtered',
+        yourMask: 'filtered',
         voice: 'silent',
       }
 
@@ -298,8 +298,8 @@ describe('calculate', () => {
         setting: 'outdoor',
         distance: 'tenFt',
         duration: 1,
-        theirMask: 'surgical',
-        yourMask: 'surgical',
+        theirMask: 'filtered',
+        yourMask: 'filtered',
         voice: 'silent',
       }
 
@@ -351,7 +351,7 @@ describe('calculate', () => {
       const maskedIntimate: CalculatorData = {
         ...unmaskedIntimate,
         yourMask: 'n95',
-        theirMask: 'surgical',
+        theirMask: 'filtered',
       }
 
       expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))

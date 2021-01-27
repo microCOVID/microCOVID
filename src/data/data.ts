@@ -93,9 +93,9 @@ const p100Label = i18n.t('data.p100_mask')
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   thin: formValue(thinLabel, 0.5),
-  cotton: formValue(cottonLabel, 1 / 3),
+  basic: formValue(cottonLabel, 1 / 3),
   surgical: formValue(surgicalLabel, 0.25),
-  pm: formValue(pmLabel, 0.25),
+  filtered: formValue(pmLabel, 0.25),
   kn95: formValue(kn95Label, 0.1667),
   n95Unsealed: formValue(n95UnsealedLabel, 0.1667),
   n95Sealed: formValue(n95SealedLabel, 0.0625),
@@ -104,9 +104,9 @@ export const TheirMask: { [key: string]: FormValue } = {
 export const YourMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
   thin: formValue(thinLabel, 1.0),
-  cotton: formValue(cottonLabel, 2 / 3),
+  basic: formValue(cottonLabel, 2 / 3),
   surgical: formValue(surgicalLabel, 0.5),
-  pm: formValue(pmLabel, 0.5),
+  filtered: formValue(pmLabel, 0.5),
   kn95: formValue(kn95Label, 1 / 3),
   n95Unsealed: formValue(n95UnsealedLabel, 1 / 3),
   n95Sealed: formValue(n95SealedLabel, 0.125),
@@ -151,7 +151,7 @@ export const livingAloneMult =
   10 *
   Voice.silent.multiplier *
   Distance.sixFt.multiplier *
-  TheirMask.cotton.multiplier *
+  TheirMask.basic.multiplier *
   YourMask.surgical.multiplier *
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
