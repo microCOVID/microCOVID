@@ -112,7 +112,7 @@
         "select_location_placeholder": "Válassz országot vagy államot...",
         "select_location_enter_manually": "Add meg kézzel...",
         "prevalence_info_source_information": "A jelentett esetek számát a <1>Johns Hopkins CSSE adatbázisból</1>, a pozitív tesztek arányát a USA-ban a <4>Covid Act Now-ról</4>, a világ többi részén pedig az <7>Our World in Data-ról</7> gyűjtjük le.",
-        "select_scenario": "Opcionális: válassz a kész példák közül",
+        "select_scenario": "Válassz a kész példák közül vagy add meg a részleteket lentebb...",
         "baseline_risk": "alapkockázat",
         "risk_modifier_frac_2nd": "{{frac}} kockázat",
         "risk_modifier_frac_3rd": "{{frac}} kockázat",
@@ -161,7 +161,8 @@
             "US-AK": "Az egész terület (vagy válassz megyét)",
             "US-LA": "Az egész terület (vagy válassz megyét)",
             "country_or_regions": "Az egész terület (vagy válassz régiót)"
-        }
+        },
+        "no_prebuilt_scenario_found": "Még nincs ilyen kész példánk, de kézzel összeállíthatod lentebb."
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",

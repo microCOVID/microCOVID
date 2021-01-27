@@ -4,5 +4,15 @@
         "spreadsheet": "Foaie de calcul",
         "about": "Despre noi",
         "calculator": "Calculator"
-    }
+    },
+    "calculator": {
+        "precautions": {
+            "your_mask_question": "Ce mască purtați?",
+            "your_mask_header": "Masca dumneavoastră",
+            "environment_question": "Înăuntru sau afară? Este vorba de un spațiu ventilat, sau cu aer filtrat?",
+            "environment_header": "Locație",
+            "label": "Precauții"
+        }
+    },
+    "current_lang_two_letter_code": "ro"
 }
