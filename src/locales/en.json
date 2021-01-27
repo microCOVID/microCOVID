@@ -182,14 +182,14 @@
     "sixft_distance": "6+ feet / 2+ meters apart",
     "tenft_distance": "10+ feet / 3+ meters apart",
     "no_mask": "No mask or poorly-worn mask",
-    "thin_mask": "Cotton mask, thin (bandana, buff; or: loose fit, falls down)"
-	"cotton_mask": "Cotton mask, thick (multi-layer cotton mask with tight, secure fit)"
-	"surgical_mask": "Surgical mask"
+    "thin_mask": "Cotton mask, thin (bandana, buff; or: loose fit, falls down)",
+    "cotton_mask": "Cotton mask, thick (multi-layer cotton mask with tight, secure fit)",
+    "surgical_mask": "Surgical mask",
     "pm_mask": "Fabric mask with PM2.5 filter insert",
     "kn95_mask": "KN95 mask",
     "n95_unsealed_mask": "Medical-grade N95 that fits but has NOT been checked for an airtight seal",
     "n95_sealed_mask": "Medical-grade N95 that HAS been checked for an airtight seal. (No outflow valve, no earloops, no beards.)",
-    "p100_mask": "P100 respirator, NIOSH-certified reusable, with covered outflow valve."
+    "p100_mask": "P100 respirator, NIOSH-certified reusable, with covered outflow valve.",
     "silent_voice": "Not talking (such as quietly riding the train)",
     "normal_voice": "Normal conversation",
     "loud_voice": "Loud talking (shouting, talking over music, singing)",

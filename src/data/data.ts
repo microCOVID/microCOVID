@@ -151,8 +151,8 @@ export const livingAloneMult =
   10 *
   Voice.silent.multiplier *
   Distance.sixFt.multiplier *
-  TheirMask.basic.multiplier *
-  YourMask.filtered.multiplier *
+  TheirMask.cotton.multiplier *
+  YourMask.surgical.multiplier *
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
 
