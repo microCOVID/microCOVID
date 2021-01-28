@@ -1,8 +1,10 @@
-#yourMaskButtonGroup {
-  width: 100%;
-  overflow-x: scroll;
+@import '~styles/variables.scss';
+
+.form-group label.btn {
+  font-size: $font-size-base
 }
 
-#yourMaskHelpText {
-  margin-bottom: 1em;
+.segmented-scrollable {
+  width: 100%;
+  overflow-x: scroll;
 }
