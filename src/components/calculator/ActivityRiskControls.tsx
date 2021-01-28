@@ -1,11 +1,12 @@
-import React from 'react'
-import { Popover } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Popover, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { SelectControl } from './controls/SelectControl'
 import { CalculatorData } from 'data/calculate'
 import { Setting, TheirMask, Voice, YourMask } from 'data/data'
+import 'components/calculator/styles/ActivityRiskControls.scss'
 
 export const ActivityRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -22,6 +23,9 @@ export const ActivityRiskControls: React.FunctionComponent<{
     </h3>
   )
 
+  const [yourMask2, setYourMask2] = useState(
+    'If you\'re eating or drinking, select "no mask"',
+  )
   if (repeatedEvent) {
     return (
       <React.Fragment>
@@ -37,6 +41,44 @@ export const ActivityRiskControls: React.FunctionComponent<{
     return <div />
   }
 
+  const theseMaskOptions = [
+    {
+      name: 'No mask',
+      value: 'No mask, poorly worn mask, or eating/drinking [Baseline risk]',
+    },
+    {
+      name: 'Cotton (thin)',
+      value:
+        'Thin or loose (bandana, buff; or: loose fit, falls down) [baseline risk]',
+    },
+    {
+      name: 'Cotton (thick)',
+      value:
+        'Thick and snug (multi-layer cotton mask with tight, secure fit) [2/3rd the risk]',
+    },
+    {
+      name: 'Surgical',
+      value: 'Loose-fitting disposable blue or green mask [1/2 the risk]',
+    },
+    {
+      name: 'Filter Insert',
+      value: 'Fabric mask with PM2.5 filter insert [1/2 the risk]',
+    },
+    { name: 'KN95', value: '[1/3 the risk]' },
+    {
+      name: 'Medical N95',
+      value: 'Fits, but you are NOT sure it is sealed [1/6th the risk]',
+    },
+    {
+      name: 'Medical N95 (sealed)',
+      value: 'Air-tight seal. No valve, no earloops, no beard. [1/8 the risk]',
+    },
+    {
+      name: 'P100 respirator',
+      value:
+        'NIOSH-certified reusable, with covered outflow valve. [1/20th the risk]',
+    },
+  ]
   return (
     <React.Fragment>
       {header}
@@ -71,6 +113,77 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={YourMask}
       />
+      <header style={{color: "black"}}>Outline buttons:</header>
+      <ToggleButtonGroup
+        type="radio"
+        name="yourMaskButtonGroup"
+        id="yourMaskButtonGroup"
+      >
+        {theseMaskOptions.map((radio, idx) => (
+          <ToggleButton
+            key={idx}
+            type="radio"
+            variant="outline-cyan"
+            name="radio"
+            value={radio.value}
+            checked={yourMask2 === radio.value}
+            onChange={(e) => setYourMask2(e.currentTarget.value)}
+          >
+            {radio.name}
+          </ToggleButton>
+        ))}
+      </ToggleButtonGroup>
+      <div id="yourMaskHelpText" className="text-muted">
+        {yourMask2}
+      </div>
+
+      <header style={{color: "black"}}>Solid buttons:</header>
+      <ToggleButtonGroup
+        type="radio"
+        name="yourMaskButtonGroup"
+        id="yourMaskButtonGroup"
+      >
+        {theseMaskOptions.map((radio, idx) => (
+          <ToggleButton
+            key={idx}
+            type="radio"
+            variant="cyan"
+            name="radio"
+            value={radio.value}
+            checked={yourMask2 === radio.value}
+            onChange={(e) => setYourMask2(e.currentTarget.value)}
+          >
+            {radio.name}
+          </ToggleButton>
+        ))}
+      </ToggleButtonGroup>
+      <div id="yourMaskHelpText" className="text-muted">
+        {yourMask2}
+      </div>
+
+{/*
+      <header style={{color: "black"}}>Vertical buttons:</header>
+      <ToggleButtonGroup
+        type="radio"
+        name="yourMaskButtonGroup"
+        id="yourMaskButtonGroupVertical"
+        vertical={true}
+      >
+        {theseMaskOptions.map((radio, idx) => (
+          <ToggleButton
+            key={idx}
+            type="radio"
+            variant="outline-cyan"
+            name="radio"
+            value={radio.value}
+            checked={yourMask2 === radio.value}
+            onChange={(e) => setYourMask2(e.currentTarget.value)}
+          >
+            {radio.name} - {radio.value}
+          </ToggleButton>
+        ))}
+      </ToggleButtonGroup>
+*/}
       <SelectControl
         id="theirMask"
         header={t('calculator.precautions.their_mask_header')}
