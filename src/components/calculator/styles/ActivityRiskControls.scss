@@ -6,5 +6,58 @@
 
 .segmented-scrollable {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+}
+
+.segmented-scrollable label {
+  background-color: $white;
+  border-color: $gray-400;
+}
+
+#yourMask.segmented-scrollable .btn:hover {
+  background-color: desaturate(lighten($cyan, 15%), 15%);
+}
+
+#theirMask.segmented-scrollable .btn:hover {
+  background-color: $gray-500;
+}
+
+#yourMask.segmented-scrollable .active:hover {
+  background-color: $cyan !important;
+}
+
+#theirMask.segmented-scrollable .active:hover {
+  background-color: $secondary !important;
+}
+
+#yourMask.segmented-scrollable .active:hover span {
+  color: desaturate(lighten($cyan, 35%), 25%);
+}
+
+#theirMask.segmented-scrollable .active:hover span {
+  color: $gray-300;
+}
+
+.segmented-label {
+  font-weight: bold;
+  min-height: 3.5em;
+  display: block;
+}
+
+.segmented-multiplier {
+  font-size: small;
+  color: $gray-600;
+}
+
+.btn:hover .segmented-multiplier {
+  color: $white;
+}
+
+.active .segmented-label {
+  font-weight: bold;
+}
+
+.active .segmented-multiplier {
+  color: $white;
+  font-weight: bolder;
 }

@@ -22,34 +22,35 @@ export const SegmentedControl: React.FunctionComponent<{
   variant?: string
   showActiveDesc?: boolean
 }> = (props) => {
+  const dataValue = props.id in props.data ? props.data[props.id] : ''
+  const activeValue = typeof dataValue === 'string' ? dataValue : ''
   const [activeDesc, setActiveDesc] = useState(
-    props.helpText ? props.helpText : '',
+    activeValue && activeValue in props.source
+      ? props.source[activeValue].value
+      : props.helpText
+      ? props.helpText
+      : '',
   )
-  const activeValue = props.data[props.id] || ''
+  const [hoverDesc, setHoverDesc] = useState(activeDesc)
   const { t } = useTranslation()
-  // identical to SelectControl's.
+  // 0.25 -> "1/4x"
   function formatRiskMultiplierInternal(multiplier: number): string {
     if (multiplier === 1) {
-      return t('calculator.baseline_risk')
+      return t('calculator.baseline_risk_short')
     } else if (multiplier > 0 && multiplier < 1) {
       const frac = num2fraction(multiplier)
-      const denom = frac.split('/')[1]
-      // range handling in i18next is a hot buggy mess, this manual approach will have to do for the time being
-      if (denom === '2')
-        return t('calculator.risk_modifier_frac_2nd', { frac: frac })
-      else if (denom === '3')
-        return t('calculator.risk_modifier_frac_3rd', { frac: frac })
-      else return t('calculator.risk_modifier_frac_plural', { frac: frac })
+      return t('calculator.risk_modifier_multiple_short', { multiplier: frac })
     } else {
-      return t('calculator.risk_modifier_multiple', { multiplier: multiplier })
+      return t('calculator.risk_modifier_multiple_short', {
+        multiplier: multiplier,
+      })
     }
   }
-  // identical to SelectControl's.
   const formatRiskMultiplier = (hideRisk?: boolean, multiplier?: number) => {
     if (hideRisk || multiplier === undefined) {
       return ''
     }
-    return ` [${formatRiskMultiplierInternal(multiplier)}]`
+    return formatRiskMultiplierInternal(multiplier)
   }
 
   return (
@@ -75,25 +76,31 @@ export const SegmentedControl: React.FunctionComponent<{
             name={props.id}
             value={value}
             checked={props.data[props.id] === value}
+            onMouseEnter={() => setHoverDesc(props.source[value].value)}
+            onMouseLeave={() => setHoverDesc('')}
             onChange={(e) => {
-              setActiveDesc(
-                props.source[value].value +
-                  formatRiskMultiplier(
-                    props.hideRisk,
-                    props.source[value].multiplier,
-                  ),
-              )
+              setActiveDesc(props.source[value].value)
               props.setter({ ...props.data, [props.id]: e.currentTarget.value })
             }}
           >
-            {props.labelFactory
-              ? props.labelFactory(value)
-              : props.source[value].label}
+            <span className="segmented-label">
+              {props.labelFactory
+                ? props.labelFactory(value)
+                : props.source[value].label}
+            </span>
+            <span className="segmented-multiplier">
+              {props.labelFactory
+                ? ''
+                : formatRiskMultiplier(
+                    props.hideRisk,
+                    props.source[value].multiplier,
+                  )}
+            </span>
           </ToggleButton>
         ))}
       </ToggleButtonGroup>
       <Form.Text id={props.id + 'HelpText'} muted>
-        {activeDesc}
+        {hoverDesc || activeDesc}
       </Form.Text>
     </div>
   )

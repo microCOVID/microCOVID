@@ -111,7 +111,8 @@ const filteredDesc = i18n.t('data.filtered_mask')
 const kn95Desc = i18n.t('data.kn95_mask')
 const n95Desc = i18n.t('data.n95_mask')
 const n95SealedDesc = i18n.t('data.n95_sealed_mask')
-const p100Desc = i18n.t('data.p100_mask')
+const p100DescTheirs = i18n.t('data.p100_mask_theirs')
+const p100DescYours = i18n.t('data.p100_mask_yours')
 /*
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
@@ -145,7 +146,7 @@ export const TheirMask: { [key: string]: CheckBoxFormValue } = {
   kn95: segmentedFormValue(kn95Label, kn95Desc, 1 / 6),
   n95: segmentedFormValue(n95Label, n95Desc, 1 / 6),
   n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 16),
-  p100: segmentedFormValue(p100Label, p100Desc, 1 / 3),
+  p100: segmentedFormValue(p100Label, p100DescTheirs, 1 / 3),
 }
 export const YourMask: { [key: string]: CheckBoxFormValue } = {
   none: segmentedFormValue(noneLabel, noneDesc, 1.0),
@@ -156,7 +157,7 @@ export const YourMask: { [key: string]: CheckBoxFormValue } = {
   kn95: segmentedFormValue(kn95Label, kn95Desc, 1 / 3),
   n95: segmentedFormValue(n95Label, n95Desc, 1 / 3),
   n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 8),
-  p100: segmentedFormValue(p100Label, p100Desc, 1 / 20),
+  p100: segmentedFormValue(p100Label, p100DescYours, 1 / 20),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
