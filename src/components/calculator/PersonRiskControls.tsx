@@ -13,7 +13,7 @@ const personCountPopover = (
     <Popover.Title as="h3">About "Number of People"</Popover.Title>
     <Popover.Content>
       <p>
-        You only need to include the number of people within 15 feet. For a
+        You only need to include the number of people within 15 feet (5 meters). For a
         dense crowd, you can use the following maximums:
         <ul>
           <li>
