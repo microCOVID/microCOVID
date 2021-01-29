@@ -25,6 +25,9 @@ You do not need to log any activities with people who are in your [microCOVID Po
 
 Your pod may decide to not log things that are under a certain threshold (for example: anything equal to or less than 3 points).
 
+**Resource:** We have created a [Risk Questions page](/questions) that you (and/or your contacts) can use to think through specific activities that you would want to log in order to have an accurate account of your budget.
+
+
 ## Logging an activity
 
 **Here are the steps to log an activity in the Risk Tracker**
