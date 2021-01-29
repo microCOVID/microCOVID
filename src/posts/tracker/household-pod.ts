@@ -74,9 +74,9 @@ Important: The 30% chance of transmission to housemates number is based on the f
 
 The main thing most group houses are concerned about is the question: how do we negotiate the risk to one another?
 
-**Risk to me:** Any activities I’ve done in the last 0-7 days counts against my budget for myself.
+**Risk to pod:** Any activities in the last 0-7 days counts against my pod budget. Though my activities still pose risk to others beyond day 7, for the purposes of budgeting, if each person consistently stay within their budget for a given week, that means we are staying within our budget overall. 
 
-**Risk to pod:** Any activities in the last 2-9 days counts against my pod budget.
+**Risk to me:** Throughout the system, you will see "Risk to me" listed. If you are interested in keeping your individual risk within a certain budget, you will want to keep an eye on this total, since the rest of the Risk Tracker is built with the "Risk to pod" as the central number.
 
 
 ## How to track & report your risk to people outside your pod / house

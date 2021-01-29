@@ -124,7 +124,7 @@ This table provides a fuller explanation for each of the Built-in Person Risk pr
 
 
 
-## Using the Custom People sheet to model more precisely
+## Using the Custom People sheet to model risk more precisely
 
 The more we know about the person’s details, the more precise their Person Risk value will be. If the person has taken low-risk actions in the last 10 days, the risk to you will likely be lower than if you used any of the built-in Person Risk types.
 
@@ -138,6 +138,7 @@ The good news is that modeling a custom person is almost exactly the same as mod
 1. **Ask them about their behavior in the last 10 days**
     *   The more you know about what they have done in the last 10 days, the more accurate you can be. Since we are overestimating when there is uncertainty, quite often being more precise will reduce the person’s risk score.
     *   **Tip:** If you wish, you can send them our [recent activity questions](/questions) as a way to make the process clearer and smoother.
+    *   **Note:** Modeling someone's activities for the last 10 days is 
 2. **Create a row for the person**
     *   Type their name in any blank row in the “Person Name” column and that row will automatically turn into a “total” row for that person’s points.  All the activities you enter below this row will be a part of that person’s total. 
     *   If this profile is something that could be used "generically" regardless of location, check the "Is this a generic person profile that should be adjustable by location?" box to the left of "Person Name". Checking this box means that when you use this profile later in an activity entry you should be to adjust the score based on the location by location. Examples: A generic bodyworker, a generic hair stylist, a generic person who just gets groceries. 

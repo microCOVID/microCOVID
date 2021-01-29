@@ -245,7 +245,7 @@ You may notice that the _Pod Activity Log_ sheet calculates your risk in the las
 
 A 2-9 day range is when you would most likely be contagious to others if you were exposed (or when <span style="text-decoration:underline;">they</span> are most likely contagious to <span style="text-decoration:underline;">you</span>). In the _Custom People_ sheet, we total the activities in the last 2-9 days because activities in the last 0-1 days wouldn’t yet present a significant risk of transmission to you.
 
-_A note here:_ We use a 2-9 day range because it is convenient for working with a weekly budget. This is fine when working with lower microCOVID values. But when working with higher risk scenarios (100x or more over your weekly budget), a 14-day range without symptoms would be important to ensure full safety.
+_A note here:_ We use a 2-9 day range because it is convenient for working with a weekly budget. This is fine when working with lower microCOVID values. But when working with higher risk scenarios (100x or more over your weekly budget), a 21-day range without symptoms would be important to ensure full safety. Higher risk activities to think about might include: flights, parties/bars, or contact with someone who has COVID. If you want to include a higher risk activity in the Custom Person model, the easiest way is to just not put a date next to the activity when you enter it, and then remove it after day 21.
 
 `
 
