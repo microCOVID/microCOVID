@@ -98,7 +98,7 @@ export const TheirMask: { [key: string]: FormValue } = {
   filtered: formValue(filteredLabel, 1 / 4),
   kn95: formValue(kn95Label, 1 / 6),
   n95: formValue(n95Label, 1 / 6),
-  n95Sealed: formValue(n95SealedLabel, 1 / 8),
+  n95Sealed: formValue(n95SealedLabel, 1 / 16),
   p100: formValue(p100Label, 1 / 3),
 }
 export const YourMask: { [key: string]: FormValue } = {
