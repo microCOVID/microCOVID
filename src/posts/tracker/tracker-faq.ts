@@ -104,12 +104,13 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
    </td>
    <td>💨 No mask: <strong><code>Baseline</code></strong>
    </td>
-   <td>😷 My cotton mask: <strong><code>Baseline</code></strong><br />
-😷 Your cotton/surgical mask: <strong><code>x1/4</code></strong><br />
+   <td>😷 My cotton mask (thick, secure): <strong><code>x2/3</code></strong><br />
+😷 Your cotton mask: <strong><code>x1/3</code></strong><br />
 ⚕️ My surgical mask: <strong><code>x1/2</code></strong> <br />
-⚕️ Mask w/ filter insert: <strong><code>x1/2</code></strong><br />
-⚔️ KN95 or unsealed N95: <strong><code>x1/4</code></strong><br />
-🛡️ <a href="https://www.youtube.com/watch?v=p8ay3kTqsuo" target="_blank" " rel="noopener">Sealed</a> N95: <strong><code>x1/10</code></strong><br />
+⚕️ My mask w/ PM2.5 filter insert: <strong><code>x1/2</code></strong><br />
+⚔️ My KN95: <strong><code>x1/3</code></strong><br />
+⚔️ My Unsealed N95: <strong><code>x1/3</code></strong><br />
+🛡️ My <a href="https://www.youtube.com/watch?v=p8ay3kTqsuo" target="_blank" " rel="noopener">Sealed</a> medical-grade N95: <strong><code>x1/8</code></strong><br />
    </td>
   </tr>
   <tr>
