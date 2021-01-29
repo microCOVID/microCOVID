@@ -38,7 +38,7 @@ export const App = (): React.ReactElement => {
           <PageViews />
           <Helmet>
             <link
-              href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@500&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Slab:wght@500&display=swap"
               rel="stylesheet"
             />
             <meta

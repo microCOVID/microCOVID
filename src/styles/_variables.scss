@@ -69,13 +69,15 @@ $body-color: #444;
 
 $enable-responsive-font-sizes: 1;
 
+// $font-weight-bold: 900 !default;
+
 // Links
 
 $link-color: $success !default;
 
 // Fonts
 
-$font-family-sans-serif: 'LatoLocal', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 
