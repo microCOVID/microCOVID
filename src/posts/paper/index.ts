@@ -4,6 +4,7 @@ import post11 from 'posts/paper/11-putting-it-all-together'
 import post12 from 'posts/paper/12-calculator-and-conclusion'
 import post13 from 'posts/paper/13-q-and-a'
 import post14 from 'posts/paper/14-research-sources'
+import uncertaintyEstimation from 'posts/paper/15-uncertainty-estimation'
 import post2 from 'posts/paper/2-riskiness'
 import post3 from 'posts/paper/3-covid-transmission'
 import post4 from 'posts/paper/4-computing-microcovids'
@@ -31,5 +32,6 @@ export const pages: PostMap = {
   '12-calculator-and-conclusion': post12,
   '13-q-and-a': post13,
   '14-research-sources': post14,
+  'uncertainty-estimation': uncertaintyEstimation,
   changelog, // Keep this as the last entry.
 }
