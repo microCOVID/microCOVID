@@ -47,7 +47,7 @@ Here, let’s lay out the relative risk of taking a grocery trip with different 
   <img src=${image1}/>
 </figure>
 
-Source: [microCOVID calculator](https://www.microcovid.org/)
+Source: [microCOVID calculator](https://www.microcovid.org/) and [microCOVID whitepaper](https://www.microcovid.org/paper/14-research-sources#masks)
 
 That last bar for a P100 + goggles is tiny!  It’s clear we can do much better than cloth masks.  
 
