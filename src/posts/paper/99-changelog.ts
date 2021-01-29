@@ -8,9 +8,9 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(2021, 0, 27),
+    date: new Date(2021, 0, 28),
     content: `
-* Created new mask categories and updated multipliers for mask types. See Increased One-time interraction transmission rate from 6% to 9% to account for more contagious COVID variant B117. See [the Masks section of Research Sources](/paper/14-research-sources#masks) in the White Paper for details.`,
+* Created new mask categories and updated multipliers for mask types. See [the Masks section of Research Sources](/paper/14-research-sources#masks) in the White Paper for details.`,
   },
   {
     date: new Date(2021, 0, 5),

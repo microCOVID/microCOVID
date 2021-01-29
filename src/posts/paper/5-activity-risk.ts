@@ -74,7 +74,7 @@ Hopefully this puts the risk of indoor gatherings into perspective. To compare t
 Indoor unmasked interactions are quite risky, but being outdoors and wearing masks both make a _huge_ difference.
 
 
-**Masks**: We estimate that masks reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources)), so for simplicity we treat them as "no mask", even though we do believe they provide some benefit.
+**Masks**: We estimate that masks reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources#masks)), so for simplicity we treat them as "no mask", even though we do believe they provide some benefit.
 
 
 **Outdoors**: We estimate that being outside reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
@@ -117,7 +117,7 @@ _To learn about the scientific research supporting our estimates, please see the
 Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 [^1]:
-     The calculator and risk tracker include a more detailed breakdown of different mask types with different multipliers. The [Research Sources](14-research-sources) section explains the detailed sources and reasoning for these different types.
+     The [Calculator](/) and [Risk Tracker](/tracker) include a more detailed breakdown of different mask types with different multipliers. Our [masks research](14-research-sources#masks) section explains the detailed sources and reasoning for these different types.
 
 [^super]:
     Another possibility we considered, which is much more speculative, is that this has to do with some people naturally producing more respiratory droplets when they talk and breathe ([Meselson](https://www.nejm.org/doi/full/10.1056/nejmc2009324)). These people are called superspreaders. Therefore it might be the case that if you live with a superspreader, you are almost certain to get it, but most people are not that highly infectious.

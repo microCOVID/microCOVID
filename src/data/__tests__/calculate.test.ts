@@ -138,8 +138,8 @@ describe('calculate', () => {
       ((PREVALENCE * 2) / 20) *
         0.06 *
         B117_CONTAGIOUSNESS_ADJUSTMENT *
-        0.3333 *
-        0.6667 *
+        (1 / 3) *
+        (2 / 3) *
         1e6,
     )
   })
