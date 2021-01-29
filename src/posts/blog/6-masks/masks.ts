@@ -12,7 +12,7 @@ import p100taped3m from './images/image9.png'
 import { ImageMeta } from 'posts/post'
 
 const image: ImageMeta = {
-  url: n95, // N95 image
+  url: maskgraph, // N95 image
   width: 1334,
   height: 892,
 }
