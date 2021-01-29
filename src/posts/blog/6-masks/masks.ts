@@ -1,4 +1,6 @@
 import image1 from './images/image1.png'
+import image10 from './images/image10.jpg'
+import image11 from './images/image11.png'
 import image2 from './images/image2.png'
 import image3 from './images/image3.png'
 import image4 from './images/image4.jpg'
@@ -7,8 +9,6 @@ import image6 from './images/image6.png'
 import image7 from './images/image7.png'
 import image8 from './images/image8.png'
 import image9 from './images/image9.png'
-import image10 from './images/image10.jpg'
-import image11 from './images/image11.png'
 import { ImageMeta } from 'posts/post'
 
 const image: ImageMeta = {
@@ -17,15 +17,13 @@ const image: ImageMeta = {
   height: 892,
 }
 
-
-
 const title = 'Still using a cloth mask?  Upgrade to an N95 or P100!'
 
 const author = 'Matt Bell'
 const date = 'January 28, 2021'
 
 const summary =
-  'With caseloads near record highs and more infectious variants starting to spread, it\'s time to upgrade your masks to N95 or better, both to protect yourself and to slow the spread of the disease'
+  "With caseloads near record highs and more infectious variants starting to spread, it's time to upgrade your masks to N95 or better, both to protect yourself and to slow the spread of the disease"
 const content = `
 It’s year 2 of the pandemic, and masks have gone from a strange new experience to a core part of public life (and a fashion accessory!).  With caseloads at record highs and a more infectious new variant on the horizon, we felt it was time to build a concise review for which masks give you the most protection and when you want to use them.  
 
@@ -49,7 +47,7 @@ Here, let’s lay out the relative risk of taking a grocery trip with different 
   <img src=${image1}/>
 </figure>
 
-Source: [microCOVID whitepaper](https://www.microcovid.org/paper/5-activity-risk)
+Source: [microCOVID calculator](https://www.microcovid.org/)
 
 That last bar for a P100 + goggles is tiny!  It’s clear we can do much better than cloth masks.  
 
@@ -269,5 +267,5 @@ We hope this guide has been useful to you!  Our goal is to keep you protected fr
 If you have thoughts on this guide or other products we should mention, please message us at [info@microcovid.org](mailto:info@microcovid.org).  
 `
 
-export const post = { title, summary, content, author, date }
+export const post = { title, summary, content, author, date, image }
 export default post
