@@ -82,20 +82,35 @@ export const Distance: { [key: string]: FormValue } = {
 }
 
 const noneLabel = i18n.t('data.no_mask')
+const thinLabel = i18n.t('data.thin_mask')
 const basicLabel = i18n.t('data.basic_mask')
+const surgicalLabel = i18n.t('data.surgical_mask')
 const filteredLabel = i18n.t('data.filtered_mask')
+const kn95Label = i18n.t('data.kn95_mask')
 const n95Label = i18n.t('data.n95_mask')
+const n95SealedLabel = i18n.t('data.n95_sealed_mask')
+const p100Label = i18n.t('data.p100_mask')
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
-  basic: formValue(basicLabel, 0.25),
-  filtered: formValue(filteredLabel, 0.25),
-  n95: formValue(n95Label, 0.1),
+  thin: formValue(thinLabel, 1 / 2),
+  basic: formValue(basicLabel, 1 / 3),
+  surgical: formValue(surgicalLabel, 1 / 4),
+  filtered: formValue(filteredLabel, 1 / 4),
+  kn95: formValue(kn95Label, 1 / 6),
+  n95: formValue(n95Label, 1 / 6),
+  n95Sealed: formValue(n95SealedLabel, 1 / 8),
+  p100: formValue(p100Label, 1 / 3),
 }
 export const YourMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
-  basic: formValue(basicLabel, 1.0),
-  filtered: formValue(filteredLabel, 0.5),
-  n95: formValue(n95Label, 0.1),
+  thin: formValue(thinLabel, 1.0),
+  basic: formValue(basicLabel, 2 / 3),
+  surgical: formValue(surgicalLabel, 1 / 2),
+  filtered: formValue(filteredLabel, 1 / 2),
+  kn95: formValue(kn95Label, 1 / 3),
+  n95: formValue(n95Label, 1 / 3),
+  n95Sealed: formValue(n95SealedLabel, 1 / 8),
+  p100: formValue(p100Label, 1 / 20),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
@@ -137,7 +152,7 @@ export const livingAloneMult =
   Voice.silent.multiplier *
   Distance.sixFt.multiplier *
   TheirMask.basic.multiplier *
-  YourMask.filtered.multiplier *
+  YourMask.surgical.multiplier *
   Interaction.oneTime.multiplier *
   Setting.indoor.multiplier
 

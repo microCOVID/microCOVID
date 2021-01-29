@@ -155,7 +155,7 @@
     },
     "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
     "alerts": {
-      "b117": "<0>Model update:</0> We've adjusted parameters for the new COVID-19 variant, B117. Read more <3>here.</3>",
+      "masks_update": "<0>Model update:</0> Our mask options have been expanded and updated. For more details, see the Masks section of the <3>White Paper</3>.",
       "survey_request": "<0>We would love your feedback:</0> We want your help to make the microCOVID calculator as helpful as possible! <2>Please fill out our user survey</2> to help us prioritize new features."
     }
   },
@@ -181,10 +181,15 @@
     "normal_distance": "Normal socializing (~3 feet / ~1 meter apart)",
     "sixft_distance": "6+ feet / 2+ meters apart",
     "tenft_distance": "10+ feet / 3+ meters apart",
-    "no_mask": "No mask or poorly-worn mask",
-    "basic_mask": "Cotton mask, bandana, or buff",
-    "filtered_mask": "Surgical mask or mask with PM2.5 filter insert",
-    "n95_mask": "Well-fitting, well-sealed N95 respirator",
+    "no_mask": "No mask",
+    "thin_mask": "Cotton mask, thin or loose (bandana, buff; or: loose fit, falls down)",
+    "basic_mask": "Cotton mask, thick and snug (multi-layer cotton mask with tight, secure fit)",
+    "surgical_mask": "Surgical mask",
+    "filtered_mask": "Fabric mask with PM2.5 filter insert",
+    "kn95_mask": "KN95 mask",
+    "n95_mask": "Medical-grade N95 that fits, but you are NOT sure it is sealed",
+    "n95_sealed_mask": "Medical-grade N95 that you have achieved an airtight seal",
+    "p100_mask": "P100 respirator, NIOSH-certified reusable, with covered outflow valve.",
     "silent_voice": "Not talking (such as quietly riding the train)",
     "normal_voice": "Normal conversation",
     "loud_voice": "Loud talking (shouting, talking over music, singing)",

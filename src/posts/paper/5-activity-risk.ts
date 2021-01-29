@@ -40,8 +40,8 @@ Here are our estimates for the change in risk based on these modifiers:
 
 | Modification | Change in COVID risk to me | Citations: Why do we think this? <br>|
 |--|--|--|
-| I’m wearing a high-quality mask[^1] | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
-| Other person is wearing a high-quality mask | / 4 | <sub><super>[Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic) on improvised masks for influenza (5–7x), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205) on exhalations from influenza patients (3x), [Fischer et al](https://advances.sciencemag.org/content/early/2020/08/07/sciadv.abd3083) on droplet attenuation by various mask types</super></sub> |
+| I’m wearing a surgical mask[^1] | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
+| Other person is wearing a surgical mask | / 4 | <sub><super>[Lindsley et al.](https://www.medrxiv.org/content/10.1101/2020.10.05.20207241v1), [van der Sande et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2440799/), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205), [Kumar et al.](https://arxiv.org/pdf/2005.03444.pdf), [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic), [Fischer et al. ](https://advances.sciencemag.org/content/6/36/eabd3083), [O'Kelly et al.](https://www.medrxiv.org/content/10.1101/2020.08.17.20176735v1.full.pdf)</super></sub> |
 | Outdoors | / 20 or more | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
 | 6+ feet distance | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
 | Each additional 3 feet of distance (up to 12 feet) | / 2 | <sub><super>Same as above</super></sub> |
@@ -74,7 +74,7 @@ Hopefully this puts the risk of indoor gatherings into perspective. To compare t
 Indoor unmasked interactions are quite risky, but being outdoors and wearing masks both make a _huge_ difference.
 
 
-**Masks**: We estimate that masks reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources)), so for simplicity we treat them as "no mask", even though we do believe they provide some benefit.
+**Masks**: We estimate that masks reduce your risk by 8x. This is if _both_ people are wearing masks. _Your_ mask decreases the risk to _you_ by about 2x. And _their_ mask decreases risk to _you_ by 4x. This assumes [a reasonably well-fitting surgical mask](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/). For more protection, there are other types of masks you can wear (addressed in the [Q&A](/paper/13-q-and-a)). Bandanas, buffs, or other single-layer coverings provide significantly less protection than we estimate here (see [Research Sources](/paper/14-research-sources#masks)), so for simplicity we treat them as "no mask", even though we do believe they provide some benefit.
 
 
 **Outdoors**: We estimate that being outside reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
@@ -108,11 +108,6 @@ You might ask: why isn’t the risk of getting COVID from someone in your house 
 
 The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](14-research-sources#household-member) for slightly more detail.
 
-### Important note
-
-_We keep calling these numbers “estimates.” Please take our uncertainty seriously! The evidence for these numbers is far from conclusive. We cannot say that the true probability **is** 6%. All we can say is that **we estimate** it at 6%._
-
-_Please provide attribution to us when you use our estimates, so that others can check our work. This is an important way to fight misinformation._
 
 _To learn about the scientific research supporting our estimates, please see the [Research Sources](14-research-sources) section._
 
@@ -122,7 +117,7 @@ _To learn about the scientific research supporting our estimates, please see the
 Now we understand Activity Risk, or how your chance of getting the virus changes based on the activity you’re doing. But Activity Risk _assumes_ the other person is COVID-positive. What are the actual chances that whoever you're interacting with has COVID? Let’s look at Person Risk to understand that.
 
 [^1]:
-     We mean surgical masks, well-fitted cloth masks with a filter, or similar high-quality masks. Bandanas, poorly-fitting masks, or DIY masks will give less protection than this.
+     The [Calculator](/) and [Risk Tracker](/tracker) include a more detailed breakdown of different mask types with different multipliers. Our [masks research](14-research-sources#masks) section explains the detailed sources and reasoning for these different types.
 
 [^super]:
     Another possibility we considered, which is much more speculative, is that this has to do with some people naturally producing more respiratory droplets when they talk and breathe ([Meselson](https://www.nejm.org/doi/full/10.1056/nejmc2009324)). These people are called superspreaders. Therefore it might be the case that if you live with a superspreader, you are almost certain to get it, but most people are not that highly infectious.
