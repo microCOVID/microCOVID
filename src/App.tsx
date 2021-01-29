@@ -128,7 +128,7 @@ export const App = (): React.ReactElement => {
                     variant="Info"
                     title={'🌐 ' + t('current_lang_two_letter_code')}
                   >
-                    <Dropdown.Item href="?lng=en">
+                    <Dropdown.Item href="?lng=en-US">
                       <strong>English</strong>
                     </Dropdown.Item>
                     <Dropdown.Item href="?lng=cs">Čeština</Dropdown.Item>

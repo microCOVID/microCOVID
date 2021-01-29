@@ -231,7 +231,7 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   // reorder the list according to the current locale, but keep
   // English as-is to make sure US states remain at the top
-  if (i18n.language !== 'en') {
+  if (i18n.language !== 'en-US') {
     topLocationOptions.sort((a, b) => a.label.localeCompare(b.label))
   }
 
