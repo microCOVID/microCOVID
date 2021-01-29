@@ -32,7 +32,7 @@ It’s year 2 of the pandemic, and masks have gone from a strange new experience
 * **For anything indoors (eg shopping), you want to be wearing an N95 or better**
    * N95s need to fit properly to work, with a complete seal forming around the edge when you inhale.  If you have a beard, you will need to shave it to get the full benefit of a proper seal.
    * Unlike last year, N95s are easy to get now!  Options include [Respokare](https://n95maskco.com/collections/n95-masks) (let them air out for a week first so the smell goes away) and [WellBefore](https://wellbefore.com/collections/3m-niosh-n95-masks).
-   * N95s should be thrown out if they get wet, dirty, or hard to breathe through.  Some sources say they should be thrown out after 8 hours of cumulative use, but they may be good for longer.
+   * N95s should be thrown out if they get overly dirty or hard to breathe through.  Some sources say they should be thrown out after 8 hours of cumulative use, but they may be good for longer.
    * If you like the nice aesthetic look of a cloth mask, wear it over an N95.  
    * KN95s (the Chinese standard) vary widely in quality, and usually have ear loops instead of head straps, which reduces fit quality.  They are occasionally as good as N95s, but sometimes no better than cloth.  Here’s [one decent option](https://wellbefore.com/collections/kn95-masks/products/kn95-disposable-fda-ce?variant=32898772795521).     
 * **If you’re doing something high risk (like riding in a crowded airplane or bus) you should use a modified P100 respirator and goggles**.  Good P100 options include [3M](https://www.amazon.com/3M-Facepiece-Respirator-6291-Particulate/dp/B000FTEDMM/) and the [GVS Ellipse](https://www.amazon.com/GVS-SPR457-Elipse-Respirator-Medium/dp/B013SIIBFQ/).  You’ll need to tape a piece of surgical mask or cloth over the outflow valve in the center to filter your exhalation.  For goggles, you can use ski goggles, safety goggles, or other types of eye protection.  There are also full-face P100 respirators that include eye protection such as the [Moldex full-face respirator](https://www.amazon.com/gp/product/B004IVYSDW?pf_rd_r=S1E5KA094NB7YJB389JF&pf_rd_p=5ae2c7f8-e0c6-4f35-9071-dc3240e894a8) + replaceable [P100 filters](https://www.amazon.com/Moldex-M7940-7000-Particulate-Filter/dp/B015MG3XNM/).
@@ -116,7 +116,7 @@ However, there’s one situation where cloth masks still excel — outdoor exerc
 * **Breathability:** Good
 * **Useful for:** Outdoor activities
 * **Benefits:** Cheap
-* **Downsides:** Disposable, limited protection, can’t get wet. 
+* **Downsides:** Disposable, limited protection, can't be washed. 
 
 <figure>
 <img src=${surgical} width="267", height="275"/>
@@ -135,7 +135,7 @@ Surgical masks are a step up from cloth masks, but they have limited relevance i
 * **Breathability:** Good
 * **Useful for:** Outdoor activities
 * **Benefits:** Cheap
-* **Downsides:** Disposable, limited protection, can’t get wet,  look out for shady KN95 vendors 
+* **Downsides:** Disposable, limited protection, can’t be washed,  look out for shady KN95 vendors 
 
 <figure>
 <img src=${kn95earloop} width="270", height="270"/>
@@ -158,7 +158,7 @@ Another challenge with KN95 masks is that most of them come with ear loops inste
 * **Breathability:** Good
 * **Useful for:** Any regular indoor public spaces -- shopping, transit
 * **Benefits:** Good enough protection for most scenarios  
-* **Downsides:** Can’t get wet
+* **Downsides:** Can’t be washed
 
 <figure>
 <img src=${n95} width="296", height="329"/>
@@ -180,7 +180,8 @@ However, in order to actually get that full benefit, you need to do some things 
 *   The mask should have straps that go around the back of your head, not just ear loops.  Head straps give you a tighter fit
 
 ### Reusing your N95
-*   You’ll need to throw out your N95 mask if it gets wet, overly dirty, or difficult to breathe through.
+*   You’ll need to throw out your N95 mask if it gets overly dirty or difficult to breathe through.
+*   If it gets wet, its filtration efficiency will drop to around 70%, making it much less effective than an intact N95, but still better than a cloth or surgical mask.  
 *   If you have a large supply of N95 masks and there are no shortages in your region, you should consider retiring each mask after 8 hours of total use.  This is the recommended lifetime stated by most manufacturers.  However, if supplies are low, it is possible to continue to use the same mask for longer than 8 houes.  While most N95 masks designed for 8 hours, and in high-particulate settings (e.g., wildfires) masks will become clogged during this time, it appears that most N95 masks can still achieve good performance over longer periods of use in everyday settings where the main goal is to filter viruses.  The [CDC specifically recommends this](https://www.cdc.gov/coronavirus/2019-ncov/hcp/ppe-strategy/decontamination-reuse-respirators.html#:~:text=The%20healthcare%20staff%20member%20can,off%E2%80%9D%20during%20storage.) when supplies are low, though it notes that filtration efficiency will decrease during extended use.  However, even an N95 that has been used many times is still likely better protection than a cloth mask.     
 *   Since you’ll likely reuse the mask, be sure to treat the outer surface as potentially contaminated after you wear it, especially if you’ve been to a high risk location.  A mask that’s been sitting unused for 8 days can be considered sterilized again as nearly all viruses decay by that time.  
 
@@ -208,7 +209,7 @@ However, in order to actually get that full benefit, you need to do some things 
 * **Breathability:** Excellent
 * **Useful for:** High risk activities such as flying, traveling in crowded vehicles, or visiting hospitals.
 * **Benefits:** Best protection out there, very comfortable, can wear it for hours
-* **Downsides:** Large, expensive, can’t get wet, makes your voice sound funny, people will stare at you
+* **Downsides:** Large, expensive, can’t be washed, makes your voice sound funny, people will stare at you
 
 <figure>
 <img src=${p100} width="514", height="339"/>
