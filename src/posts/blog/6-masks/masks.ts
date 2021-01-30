@@ -91,7 +91,7 @@ Now we’re going to go through masks by type, explaining what each type is usef
 * **Downsides:** Minimal protection
 
 <figure>
-<img src=${poorfittingmasks} width="550", height="387"/>
+<img src=${poorfittingmasks} width="550"/>
 </figure>
 
 Cloth masks were a great stopgap solution in spring and summer 2020 when the world was struggling to produce enough PPE for healthcare workers.  However, that’s since changed, and you’re usually better off wearing a mask that brings more protection.  
