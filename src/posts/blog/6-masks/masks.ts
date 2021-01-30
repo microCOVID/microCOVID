@@ -196,7 +196,7 @@ However, in order to actually get that full benefit, you need to do some things 
 **Exhalation valves:** It should be noted that some N95s come with an exhalation valve.  While this makes the mask easier to breathe through, it lets you expel air from your mouth without any filtration, which isn’t safe for the people around you.  However, you don’t need to throw these masks out; you can just tape over the exhalation valve (on the outside, so other people know) and then wear it like a normal N95, or just put a surgical mask over it.
 
 <figure>
-<img src=${exhalationvalvetape} width="531", height="258"/>
+<img src=${exhalationvalvetape} width="531"/>
 </figure>
 
 **How N95s work:** N95 (and KN95) masks work on a very different principle from cloth masks -- they have an electrostatic charge that attracts small airborne particles that pass through the mask.  Water destroys the electric charge, so getting the mask wet will make it stop working.  Separately, the mask will stop working effectively once too many particles have become caught in it.  Here’s a [cute video explanation](https://www.youtube.com/watch?v=eAdanPfQdCA).
@@ -220,7 +220,7 @@ However, in order to actually get that full benefit, you need to do some things 
 * **Downsides:** Large, expensive, can’t be washed, makes your voice sound funny, people will stare at you
 
 <figure>
-<img src=${p100} width="514", height="339"/>
+<img src=${p100} width="514"/>
 </figure>
 
 P100 respirators are designed for serious professional hazardous materials work — mold remediation, asbestos removal, toxic waste cleanup, tear gas attacks.  They’re the best protection you can get.  They have rubber seals that tightly cover your face, adjustable headstraps, and, best of all, filters designed to remove 99.97% of small particles from the air.  They’re designed to be comfortable and easy to breathe through for hours on end.  They won’t fog your glasses, and the inside of the mask won’t get moist even if you’re walking around or engaging in moderate exercise.  If you want to cut your risk of catching COVID way down while living in comfort, this is your tool.  
@@ -236,11 +236,11 @@ Since P100s were designed for hazardous environments as opposed to pandemics, th
 This modification is easy and takes no more than 5 minutes.  You’ll need your P100, a surgical mask, and some tape.  (If you don’t have a surgical mask, you can use a piece of cloth for this purpose, but surgical masks practically grow on trees at this point.)  Find the exhalation valve on the P100.  It should be obvious, but if not, put the mask on and feel where the air blows out of the mask when you breathe out.  Cut a piece of surgical mask that’s somewhat larger than the exhalation valve and then use the tape to attach it to the exhalation valve.  You’ll want to block as little of the exhalation valve with tape as possible since you want the surgical mask to filter this air instead of having the tape block it.  If you simply tape over the exhalation valve as you do with an N95, the mask will become very difficult to breathe through, as the air you exhale will have nowhere to go.  The inhalation filters often have one-way valves, and even if they don’t, you don’t want your moist breath degrading them.
 
 <figure>
-<img src=${p100tapedmoldex} width="527", height="265"/>
+<img src=${p100tapedmoldex} width="527"/>
 </figure>
 
 <figure>
-<img src=${p100taped3m} width="527", height="259"/>
+<img src=${p100taped3m} width="527"/>
 </figure>
 
 Aside from high-particulate scenarios such as wildfire smoke, P100 respirators can generally be used for an extended period of time spanning many cumulative full days of use. The filters only need to be replaced when they become wet, excessively dirty, or difficult to breathe through.  Some P100 filters have a stated lifetime of about 6 months once opened whether you use them or not; however it is unclear whether this applies to all P100 filters or just ones that have a VOC filtering capability.  In any case, a P100 that has been open for more than 6 months is still likely your best option if you can’t get a new one.  
@@ -260,7 +260,7 @@ Options include:
 ## Eye protection - Goggles and face shields 
 
 
-<figure class="float-right">
+<figure>
 <img src=${faceshield} width="243", height="243"/>
 </figure>
 
