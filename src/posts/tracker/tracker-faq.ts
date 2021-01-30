@@ -172,11 +172,11 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
 
 ## How do I insert new rows into the Activity Log?
 
-Because everyone is using the activity log, you will eventually need to insert new rows, here is a video that demonstrates how to do so:
+Because everyone is using the Activity Log, you will eventually run out of space need to insert new rows. Here is a video that demonstrates how to do so:
 
-🎥 [Watch video →](https://d.pr/v/FZipL8)
+🎥 [Watch video →](https://youtu.be/LxydVc72TS4)
 
-These steps fill the formulas into the new rows. If you do not follow these steps, the calculation totals won’t work.
+If you do not follow these steps, the calculations won’t work for the new rows you added.
 
 
 ## How do I log interacting with multiple different people over a period of time? (Example: an outdoor party)
