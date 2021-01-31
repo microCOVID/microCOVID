@@ -61,6 +61,17 @@ That last bar for a P100 + goggles is tiny!  It’s clear we can do much better 
 
 # Want more?  Here’s a primer on masks  
 
+* [How do masks protect you?](#how-do-masks-protect-you)
+* [Cloth masks](#cloth-masks)
+* [Surgical masks](#surgical-masks)
+* [KN95 masks with ear loops](#kn95-masks-with-ear-loops)
+* [Well-fitting N95 masks (with head straps)](#well-fitting-n95-masks-with-head-straps)
+* [Modified P100 respirators](#modified-p100-respirators)
+* [Eye protection - Goggles and face shields](#eye-protection---goggles-and-face-shields)
+* [Final thoughts](#final-thoughts)
+
+<hr>
+
 ## How do masks protect you?
 
 
