@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { Link, useParams } from 'react-router-dom'
 
+import activityModeling from './img/activity-modeling.png'
+import podOverviewIntro from './img/budget-overview.png'
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
 import { mailchimpLink, spreadsheetUrl } from 'components/RiskTrackerUtil'
@@ -17,7 +19,7 @@ export const RiskTrackerDocumentation = (): React.ReactElement => {
     <MarkdownContents
       posts={pages}
       id={id}
-      tableOfContentsPageTitle={t('menu.risk_tracker.introduction')}
+      tableOfContentsPageTitle={t('menu.risk_tracker.start_here')}
       sectionTitle={t('menu.risk_tracker.header')}
     />
   )
@@ -48,6 +50,11 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           daily life, using the{' '}
           <Link to="/paper/research-source">best research available</Link>.
         </p>
+        <img
+          src={podOverviewIntro}
+          alt="Pod overview"
+          style={{ width: '800px', maxWidth: '100%' }}
+        />
         <p>
           The Risk Tracker can help you model the risk of activities and people
           you are seeing more precisely than is possible with the{' '}
@@ -96,11 +103,16 @@ export const RiskTrackerTOC = (): React.ReactElement => {
             Make a copy of the Risk Tracker <BsBoxArrowUpRight />
           </Button>
         </p>
+        <img
+          src={activityModeling}
+          alt="Activity modeling spreadsheet screenshot"
+          style={{ width: '800px', maxWidth: '100%' }}
+        />
       </div>
       <SubscribeForm />
 
       <Alert variant="info">
-        <strong>Looking for testers:</strong> We are looking for folks who are
+        <strong>Looking for feedback:</strong> We are looking for folks who are
         willing to offer feedback on this new version of the spreadsheet. If you
         are using the Risk Tracker with your household/pod to track your
         collective COVID risk and are intereted in giving us feedback on your
@@ -144,7 +156,7 @@ export const RiskTrackerTOC = (): React.ReactElement => {
         <p>
           <strong>Current version:</strong> 2.0
           <br />
-          <strong>Released on:</strong> 2021-01-11
+          <strong>Released on:</strong> 2021-01-31
           <br />
           🕑{' '}
           <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8">
@@ -165,7 +177,7 @@ export const RiskTrackerNavDropdown = (): React.ReactElement => {
       baseNavPath="/tracker"
       posts={pages}
       enableAll={false}
-      tableOfContentsPageTitle={t('menu.risk_tracker.introduction')}
+      tableOfContentsPageTitle={t('menu.risk_tracker.start_here')}
     />
   )
 }

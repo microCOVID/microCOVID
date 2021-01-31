@@ -21,6 +21,8 @@ To accurately track your risk against your budget, you will want to log any acti
 * You are sharing indoor air space with anyone
 * You are outdooors and within 15 feet of someone for more than a passing moment
 
+We've developed a detailed list of [risk activity questions](/questions) that you can use to help you think of which activities you've done that you would want to log.
+
 You do not need to log any activities with people who are in your [microCOVID Pod](./household-pod) if you are all tracking your risk together. If others in your househould/pod are not tracking their risk in a shared system (like the spreadsheet), you will need to log your interactions with them.
 
 Your pod may decide to not log things that are under a certain threshold (for example: anything equal to or less than 3 points).
@@ -33,8 +35,8 @@ Your pod may decide to not log things that are under a certain threshold (for ex
 **Here are the steps to log an activity in the Risk Tracker**
 1. **Go to the _Pod Activity Log_ sheet** and find the section with your name.
 2. **Fill in the row for your activity:**  You can hover over the header of each column to see detailed instructions.
-3. **Check the result:** Go to the _Pod Overview_ sheet to see how this activity fits relative to your budget.
-4. **Adjust as-needed:** If you are modeling an activity in advance and the risk is using more of your budget than you would like, see if there are additional precautions you can take to lower the risk.
+3. **Check the result:** Go to the _Pod Overview_ sheet to see how this activity fits relative to your budget. The graph at the top tells you how many points are remaining in your weekly budget and the total number of points you've used in the last 7 days.
+4. **Adjust as-needed:** If you are modeling an activity in advance of doing it and it is using more of your budget than you would like, see if there are additional precautions you can take to lower the risk (for example: wear a better mask, move it outdoors, distance, reduce the duration, etc.).
 
 **NOTE:** If you run out of rows in your section, [follow these steps to insert new rows](./faq#how-do-i-insert-new-rows-into-the-activity-log).
 
@@ -138,7 +140,7 @@ The good news is that modeling a custom person is almost exactly the same as mod
 1. **Ask them about their behavior in the last 10 days**
     *   The more you know about what they have done in the last 10 days, the more accurate you can be. Since we are overestimating when there is uncertainty, quite often being more precise will reduce the person’s risk score.
     *   **Tip:** If you wish, you can send them our [recent activity questions](/questions) as a way to make the process clearer and smoother.
-    *   **Note:** Modeling someone's activities for the last 10 days is 
+    *   **Note:** Modeling someone's activities for the last 10 days is only accurate when their risk score is relatively low. If they have done anything beyond their "standard week" in the last 21 days, you may want to include those activities in their entry. You can read more about doing so in the [FAQ](./faq#whats-up-with-the-0-7-day--range-and-2-9-day-range-what-are-they-for-why-the-difference).
 2. **Create a row for the person**
     *   Type their name in any blank row in the “Person Name” column and that row will automatically turn into a “total” row for that person’s points.  All the activities you enter below this row will be a part of that person’s total. 
     *   If this profile is something that could be used "generically" regardless of location, check the "Is this a generic person profile that should be adjustable by location?" box to the left of "Person Name". Checking this box means that when you use this profile later in an activity entry you should be to adjust the score based on the location by location. Examples: A generic bodyworker, a generic hair stylist, a generic person who just gets groceries. 
