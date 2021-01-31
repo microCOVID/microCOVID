@@ -9,8 +9,8 @@
             "details_range_explanation": "Creemos con aproximadamente un 90% de confianza que el riesgo real se encuentra entre estos dos valores. Consulta nuestra <2>estimación de incertidumbre</2>.",
             "details_range_number": "{{ from }} y {{ to }} microCOVIDs",
             "details_range": "Probablemente entre",
-            "frequency_explanation_oneoff": "Dado que esta es una interacción única, el resultado se muestra como <strong>microCOVIDs <u> cada vez que </u> tienes esta interacción</strong>. Si realizas esta actividad muchas veces a la semana, cada vez que la realices, se contabilizará en tu presupuesto semanal. Si realizas esta actividad varias veces con las mismas personas cada semana, regístralas como \"{{repeated_type_suggestion}}\" para ver cuál es la tasa máxima de transmisión por semana.",
-            "frequency_explanation_repeated": "Dado que ves a estas personas muchas veces a la semana, el resultado que ves es <strong> microCOVIDs <u> por semana </u> </strong>.",
+            "frequency_explanation_oneoff": "Dado que esta es una interacción única, el resultado se muestra como <strong>microCOVIDs <u>cada vez que</u> tienes esta interacción</strong>. Si realizas esta actividad muchas veces a la semana, cada vez que la realices, se contabilizará en tu presupuesto semanal. Si realizas esta actividad varias veces con las mismas personas cada semana, regístralas como \"{{repeated_type_suggestion}}\" para ver cuál es la tasa máxima de transmisión por semana.",
+            "frequency_explanation_repeated": "Dado que ves a estas personas muchas veces a la semana, el resultado que ves es <strong> microCOVIDs <u>por semana</u></strong>.",
             "details_frequency": "Frecuencia",
             "details_total_risk_number": "{{ points }} en un millón ({{ percentage }})",
             "details_total_risk": "Riesgo total",
@@ -21,7 +21,7 @@
             "details_activity_risk": "Riesgo de Actividad",
             "details_person_risk": "Riesgo Personal",
             "details_overview_header": "Cálculo",
-            "details_header_closed": "Muestra los detalles del cálculo",
+            "details_header_closed": "Mostrar los detalles del cálculo",
             "percentage_suffix": "% de tu presupuesto de riesgo semanal",
             "multiple_suffix": "x tu presupuesto de riesgo semanal",
             "person": "persona",
@@ -75,7 +75,7 @@
         "duration_header": "Duración",
         "distance_question": "¿Qué tan cerca están estas personas a tu alrededor, en promedio?",
         "people_count": "Gente",
-        "number_of_people_near_you_onetime": "¿Cuántas personas hay normalmente en 5 metros alredor de ti en cualquier momento de esta actividad?",
+        "number_of_people_near_you_onetime": "¿Cuántas personas hay normalmente en 5 metros alrededor de ti en cualquier momento de esta actividad?",
         "pointsdisplay": {
             "range": "probablemente entre: {{ from }} hasta {{ to }}",
             "microCOVIDs": "microCOVIDs",
@@ -83,28 +83,28 @@
         },
         "riskreduction": {
             "onetime_warning": "Estos pueden ser pertinentes o no a tu actividad.",
-            "onetime_tips": "<li>MoDifiquE sus actividades (hágalas con Mascarilla, con Distancia sana y en Exteriores)</li> <li>!Use la mejor mascarilla facial que pueda! <br/><1/></li> <li>Visite lugares públicos durante las horas de menor aforo</li> <li> Reduzca las idas a tiendas haciendo un solo viaje para comprar para varias personas, pidiendo que le entreguen a domicilio o comprando en línea</li> <li>Si esta actividad es con amigos, pídales que no asistan si ellos o cualquiera de sus conocidos se sienten mal</li>",
+            "onetime_tips": "<li>Modifica tus actividades (hazlas con Mascarilla, con Distancia sana y en Exteriores)</li> <li>!Usa la mejor mascarilla facial que puedas! <br/><1/></li> <li>Visita lugares públicos durante las horas de menor aforo</li> <li>Reduce las idas a tiendas haciendo un solo viaje para comprar para varias personas, pidiendo que te entreguen a domicilio o comprando en línea</li> <li>Si esta actividad es con amigos, pídeles que no asistan si ellos o cualquiera de sus conocidos se sienten mal</li>",
             "onetime_header": "Estas son algunas formas de reducir el riesgo de esta actividad",
-            "housemates_tips": "<li>Hable con ellos acerca de cómo sus acciones afectan su propio riesgo, tanto como el de usted</li> <li>Solicíteles que MoDifiquEn sus actividades (Mascarillas, Distancia sana y ambientes al Exterior) </li> <li>Los trabajadores esenciales pueden usar una mascarilla de alta calidad (ej. N95/FFP2) para trabajar <1/></li> <li>Pídales que reduzcan las actividades sociales sin sana distancia al mínimo número de personas posibles</li> <li>Fomente que sus conocidos se aislen y se realicen pruebas de diagnóstico a la primera señal de síntomas de Covid</li> <li>Si tienen alto riesgo ante Covid y debe estar en interiores con ellos:<ul> <li>Usen mascarillas en espacios cerrados</li> <li>Maximicen la ventilación abriendo ventanas, encendiendo ventiladores que introduzcan aire desde el exterior y con filtros de aire HEPA </li> <li>Aíslense dentro de la casa manteniéndose cada uno en cuartos distintos</li> </ul></li>",
-            "housemates_header": "Aquí hay algunas maneras en que puedes colaborar con tus conocidos cercanos para reducir tu nivel de riesgo"
+            "housemates_tips": "<li>Habla con ellos acerca de cómo sus acciones afectan tu riesgo, tanto como el de ellos</li> <li>Pídeles que MoDifiquEn sus actividades (Mascarillas, sana Distancia y ambientes al Exterior) </li> <li>Los trabajadores esenciales pueden usar una mascarilla de alta calidad (ej. N95 o KN95) para trabajar <1/></li> <li>Pídeles que reduzcan las actividades sociales sin sana distancia al mínimo número de personas posibles</li> <li>Alienta a tus conocidos que se aíslen y se realicen pruebas de diagnóstico a la primera señal de síntomas de COVID-19</li> <li>Si ellos tienen alto riesgo de adquirir COVID-19 y debes estar en interiores con ellos:<ul> <li>Usen mascarillas en espacios cerrados</li> <li>Maximicen la ventilación abriendo ventanas, encendiendo ventiladores que introduzcan aire desde el exterior y usen filtros de aire HEPA</li> <li>Aíslense dentro de la casa manteniéndose cada uno en cuartos distintos.</li> </ul></li>",
+            "housemates_header": "Aquí hay algunas maneras en las que puedes colaborar con tus conocidos cercanos para reducir su nivel de riesgo"
         },
         "risk_modifier_frac_2nd": "{{frac}} del riesgo",
         "select_scenario": "Opcional: comienza con una actividad común predefinida",
         "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) y <7>Our World in Data</7> (tasas de prueba positivas internacionales).",
         "select_location_enter_manually": "Ingresa los datos manualmente...",
         "select_location_placeholder": "Elige tu país o un estado de EUA...",
-        "location_selector_header": "Paso 1: Seleccione su localidad",
+        "location_selector_header": "Paso 1: Selecciona tu localidad",
         "location_subprompt_US": "Estado completo o seleccione su condado...",
         "location_subprompt_US-AK": "Estado completo o seleccione su barrio...",
         "location_subprompt_US-LA": "Total del estado o provincia, o seleccione su municipio...",
         "location_subprompt_country_or_regions": "Total por país o elija una región...",
-        "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Lo invitamos a que encuentre formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
-        "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento super dispersador.",
+        "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Te invitamos a que encuentres formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
+        "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
-        "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluídos.",
+        "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluidos.",
         "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás quedándote actualmente?",
-        "person_risk_profile_question": "¿Cuál es su perfil de riesgo?",
-        "distance_header": "Distancias",
+        "person_risk_profile_question": "¿Cuál es el perfil de riesgo de los demás?",
+        "distance_header": "Distancia",
         "nearby_people_label": "Gente cercana",
         "intro": {
             "whats_this": "Hemos construido un estimador que te permite calcular el riesgo de contraer COVID-19 de una actividad o persona en tu vida diaria, utilizando la <1>mejor investigación disponible</1>. Esperamos que esta herramienta te ayude a mejorar tu intuición, a reducir tus niveles de estrés y a descubrir buenas estrategias de reducción de daños. </p> <p>El primer paso para proteger a tu familia y comunidad es evitar contraer COVID-19.",
@@ -115,7 +115,7 @@
             "survey_request": "<0>Nos encantaría recibir tus comentarios:</0> ¡Queremos tu ayuda para que el estimador de microCOVIDs sea lo más útil posible! <2>Por favor, participa en nuestra encuesta de usuarios</2> para ayudarnos a priorizar nuevas funciones.",
             "b117": "<0>Actualización del modelo:</0> Hemos ajustado los parámetros para la nueva variante del COVID-19, B117. Lee más <3>aquí</3>"
         },
-        "saved_scenario_loaded_message": "Has seleccionado este escenario: <strong> {{ scenarioName }} </strong>. ¿Lo que se muestra a continuación se parece a la actividad que tienes en mente? Si no es así, ajústalos hasta que sean similares.",
+        "saved_scenario_loaded_message": "Has seleccionado este escenario: <strong>{{ scenarioName }}</strong>. ¿Lo que se muestra a continuación se parece a la actividad que tienes en mente? Si no es así, ajústalos hasta que sean similares.",
         "warning": {
             "body": "En esta herramienta indicamos nuestra mejor estimación basada en la evidencia disponible, incluso cuando esa evidencia no es concluyente. Hemos leído muchas investigaciones de expertos, pero nosotros mismos no somos expertos en este tema. Este trabajo no ha sido revisado científicamente por pares. Todavía hay mucha incertidumbre sobre el COVID-19. No uses esta herramienta como consejo médico. Sigue acatando las indicaciones del gobierno.",
             "important": "Importante"
@@ -129,7 +129,7 @@
         "firsttime": {
             "microcovid_header": "¿Qué es un microCOVID?",
             "budget_header": "¿Cómo puedo administrar mi riesgo utilizando un presupuesto de riesgo?",
-            "microcovid_explanation": "<p>El estimador presenta un nuevo concepto, el microCOVID. Un microCOVID es una probabilidad de una en un millón de contraer COVID-19.</p> <p>Una actividad de 20,000 microCOVIDS es muy insegura, ya que tiene un 2% de riesgo de contraer COVID-19<em>cada vez que la haces</em>.Una actividad de 20 microCOVIDs es relativamente segura, ya que podrías realizarla todas las semanas durante un año y aún tener solo un 0.1% de probabilidad de contraer COVID-19.</p>",
+            "microcovid_explanation": "<p>El estimador presenta un nuevo concepto, el microCOVID. Un microCOVID es una probabilidad de una en un millón de contraer COVID-19.</p> <p>Una actividad de 20,000 microCOVIDS es muy insegura, ya que tienes un 2% de riesgo de contraer COVID-19<em>cada vez que la haces</em>. Una actividad de 20 microCOVIDs es relativamente segura, ya que podrías realizarla todas las semanas durante un año y aún tener solo un 0.1% de probabilidad de contraer COVID-19.</p>",
             "budget_explanation": "Decidimos que un presupuesto anual de riesgo de 1% de probabilidad de contraer COVID-19 por año era razonable para la mayoría de las personas sanas que no están en contacto con grupos vulnerables. Para saber cómo llegamos a ese número, <1>haz clic aquí</1>. Si quieres usar este presupuesto de 1% de riesgo por año, vas a requerir que tu presupuesto semanal de actividades sume menos de unos 200 microCOVIDs por semana. Hemos creado una útil <3>hoja de cálculo</3> que te permite hacer un seguimiento de tus actividades a lo largo del tiempo."
         },
         "risk_modifier_frac_3rd": "{{frac}} del riesgo",
@@ -137,8 +137,8 @@
         "risk_modifier_multiple": "{{multiplier}} veces el riesgo",
         "risk_modifier_frac_plural": "{{frac}} parte del riesgo",
         "switch_button": {
-            "enter_data_manually": "Cambia a ingreso manual de datos",
-            "select_location": "Cambia a datos precargados de ubicación"
+            "enter_data_manually": "Cambiar a ingreso manual de datos",
+            "select_location": "Cambiar a datos precargados de ubicación"
         },
         "location_sublabel": {
             "country_or_regions": "Provincia, región o estado",
@@ -199,7 +199,7 @@
         "1person_15minCarRide": "Viaje en coche con otra persona durante 15 minutos",
         "indoorUnmasked2": "Actividad relajada al interior con mascarillas con otras 2 personas además de ti",
         "outdoorMasked2": "Actividad o salida relajada al aire libre con mascarillas con otras 2 personas además de ti",
-        "oneNightStand": "Sexo casual una única vez con una persona desconocida"
+        "oneNightStand": "Sexo casual con una persona desconocida"
     },
     "data": {
         "person": {
@@ -207,10 +207,10 @@
             "microcovid_budget_deci_percent": "Mantiene un presupuesto de 20 microCOVIDs por semana (\"Presupuesto de Precaución Alta\")",
             "microcovid_budget_one_percent": "Mantiene un presupuesto de 200 microCOVIDs por semana (\"Presupuesto Estándar de Precaución\")",
             "bars": "Fue a un bar en los últimos 10 días",
-            "contactWorks": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona que es trabajadora social o de salud.",
-            "contact10": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 10 personas cuyo perfil de riesgo no conoces.",
-            "contact4": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 4 personas cuyo perfil de riesgo no conoces.",
-            "contact1": "Tiene(n) contacto cercano, dentro de una burbuja exclusiva, con 1 persona cuyo perfil de riesgo no conoces.",
+            "contactWorks": "En una burbuja exclusiva. Además en contacto cercano con un trabajador social o de salud.",
+            "contact10": "En una burbuja exclusiva. Además en contacto cercano con 10 personas de perfil desconocido.",
+            "contact4": "En una burbuja exclusiva. Además en contacto cercano con 4 personas de perfil desconocido.",
+            "contact1": "En una burbuja exclusiva. Además en contacto cercano con una persona de perfil desconocido.",
             "closedPod20": "En una burbuja exclusiva de 20 personas",
             "closedPod10": "En una burbuja exclusiva de 10 personas",
             "closedPod4": "En una burbuja exclusiva de 4 personas",
@@ -220,10 +220,10 @@
             "frontline": "Un trabajador social o de salud",
             "average": "Una persona promedio en tu área"
         },
-        "loud_voice": "Hablando en voz alta (gritando, cantando, teniendo que gritar más alto que la música ambiental para que se te escuche)",
+        "loud_voice": "Hablando en voz alta (gritando, cantando, conversando con música ambiental)",
         "normal_voice": "Conversación normal",
         "silent_voice": "Sin hablar (por ej.: viajar en tren en silencio)",
-        "n95_mask": "Mascarilla N95 o KN95 bien ajustada y bien sellada",
+        "n95_mask": "Mascarilla N95, KN95 o FFP2 bien ajustada y bien sellada",
         "filtered_mask": "Mascarilla quirúrgica o mascarilla con filtro PM2.5",
         "basic_mask": "Mascarilla de algodón, pañuelo embozado (bandana paliacate) o bufanda elástica (\"buff\")",
         "no_mask": "Sin mascarilla o mascarilla mal puesta",
@@ -241,7 +241,7 @@
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
         "sixft_distance": "2 metros o más de distancia",
         "transit": "Un vagón de tren con filtro para aire",
-        "intimate_distance": "Besarse"
+        "intimate_distance": "Besar"
     },
     "buttons": {
         "select_default_action": "Elige uno..."

@@ -274,6 +274,7 @@ class State(Place):
 
 
 class Country(Place):
+    iso3: Optional[str] # USA
     states: Dict[str, State] = {}
 
     @property
@@ -291,11 +292,13 @@ class Country(Place):
                 for state in self.states.values()
                 if state.name != "Unknown"
             ]
+        result.iso3 = self.iso3
         return result
 
 
 class AppLocation(pydantic.BaseModel):
     label: str
+    iso3: Optional[str]
     population: str
     casesPastWeek: int
     casesIncreasingPercentage: float
@@ -664,6 +667,7 @@ def main() -> None:
                     f"Duplicate population info for {place!r}: {line.Population}"
                 )
             if isinstance(place, Country):
+                place.iso3 = line.iso3
                 country_by_iso3[line.iso3] = place
             place.population = line.Population
             if isinstance(place, (County, State)) and line.FIPS is not None:

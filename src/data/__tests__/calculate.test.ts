@@ -135,36 +135,38 @@ describe('calculate', () => {
     const response = calcValue(data)
     // average * 2 people * outdoor * 1 hr * their mask * your mask
     expect(response).toBeCloseTo(
-      ((((PREVALENCE * 2) / 20) * 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT) /
-        4 /
-        1) *
+      ((PREVALENCE * 2) / 20) *
+        0.06 *
+        B117_CONTAGIOUSNESS_ADJUSTMENT *
+        (1 / 3) *
+        (2 / 3) *
         1e6,
     )
   })
 
   it.each`
     scenario                                                          | result
-    ${'Outdoor masked hangout with 2 other people'}                   | ${9 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Outdoor masked hangout with 2 other people'}                   | ${8 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Indoor unmasked hangout with 2 other people'}                  | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Car ride with 1 other person for 15 mins'}                     | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'One-night stand with a random person'}                         | ${2880}
-    ${'Live-in partner who has no indoor interactions besides you'}   | ${21.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (average # of shoppers)'}         | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (few other shoppers)'}            | ${45 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Plane ride (full flight)'}                                     | ${369 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Plane ride (middle seat empty)'}                               | ${180 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Live-in partner who has no indoor interactions besides you'}   | ${29 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Grocery store for 60 minutes (average # of shoppers)'}         | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Grocery store for 60 minutes (few other shoppers)'}            | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Plane ride (full flight)'}                                     | ${328 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Plane ride (middle seat empty)'}                               | ${160 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Eating in restaurant, outdoors'}                               | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Eating in restaurant, indoors'}                                | ${4050 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Going to bar'}                                                 | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Outdoor party: 80 people, masked, with 3 feet between people'} | ${1080 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Outdoor party: 80 people, masked, with 3 feet between people'} | ${960 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Indoor party: 25 people, unmasked'}                            | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Outdoor, masked hangout with person who has COVID'}            | ${750 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Outdoor, masked hangout with person who has COVID'}            | ${666.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Indoor, unmasked hangout with person who has COVID'}           | ${60000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Voting in-person'}                                             | ${3 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Voting in-person'}                                             | ${2.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = testData(prepopulated[scenario])
 
-    expect(calcValue(data)).toBeCloseTo(result)
+    expect(calcValue(data)).toBeCloseTo(result, 0)
   })
 
   it('should produce a self-consistent living alone risk profile', () => {
@@ -178,7 +180,7 @@ describe('calculate', () => {
       distance: 'sixFt',
       duration: 60,
       theirMask: 'basic',
-      yourMask: 'filtered',
+      yourMask: 'surgical',
       voice: 'silent',
     })
 

@@ -1,3 +1,5 @@
+import i18n from 'i18n'
+import countries from 'i18n-iso-countries'
 import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup } from 'react-bootstrap'
@@ -139,6 +141,11 @@ export const PrevalenceControls: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
   const { t } = useTranslation()
+  for (const iso_code of Object.keys(i18n.services.resourceStore.data)) {
+    countries.registerLocale(
+      require('i18n-iso-countries/langs/' + iso_code + '.json'), // eslint-disable-line @typescript-eslint/no-var-requires
+    )
+  }
   const locationGroups: { [key: string]: Array<string> } = {}
   for (const key in Locations) {
     const location = Locations[key]
@@ -170,6 +177,7 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const handleSelectLocationButtonOnClick = () => {
     setLocationData('', '')
+    setDetailsOpen(false)
   }
 
   // If a stored location exists, load latest data for that location.
@@ -207,10 +215,25 @@ export const PrevalenceControls: React.FunctionComponent<{
   const topLocationOptions = Object.keys(locationGroups).flatMap(
     (groupName) => {
       return locationGroups[groupName].map((locKey) => {
-        return { label: Locations[locKey].label, value: locKey }
+        const country_label =
+          Locations[locKey].iso3 &&
+          countries.getName(Locations[locKey].iso3!, i18n.language, {
+            select: 'official',
+          })
+            ? countries.getName(Locations[locKey].iso3!, i18n.language, {
+                select: 'official',
+              })
+            : Locations[locKey].label
+        return { label: country_label, value: locKey }
       })
     },
   )
+
+  // reorder the list according to the current locale, but keep
+  // English as-is to make sure US states remain at the top
+  if (i18n.language !== 'en-US') {
+    topLocationOptions.sort((a, b) => a.label.localeCompare(b.label))
+  }
 
   const selectedTopLocation = topLocationOptions.find(
     (option) => option.value === data.topLocation,
@@ -219,6 +242,9 @@ export const PrevalenceControls: React.FunctionComponent<{
   const subLocationOptions = !showSubLocation
     ? []
     : Locations[data.topLocation].subdivisions.map((locKey) => {
+        // We assume that sublocation names are either localized or don't have
+        // proper localized names. This is not always true, but the overhead of
+        // providing locallizations for them would not be worth it.
         return { label: Locations[locKey].label, value: locKey }
       })
   const selectedSubLocation = subLocationOptions.find(
@@ -239,6 +265,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           clearButton={true}
           highlightOnlyResult={true}
           id="top-location-typeahead"
+          inputProps={{ autoComplete: 'off' }}
           onChange={(e: Option[]) => {
             if (e.length !== 1) {
               setLocationData('', '')
@@ -263,6 +290,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             clearButton={true}
             highlightOnlyResult={true}
             id="sub-location-typeahead"
+            inputProps={{ autoComplete: 'chrome-off' }}
             onChange={(e: Option[]) => {
               if (e.length !== 1) {
                 setLocationData(data.topLocation, '')
@@ -279,21 +307,25 @@ export const PrevalenceControls: React.FunctionComponent<{
         </div>
       )}
       {isManualEntryCurrently ? (
-        <button
-          id="switchBetweenManualDataAndLocationSelection"
-          className="btn btn-secondary"
-          onClick={handleSelectLocationButtonOnClick}
-        >
-          {t('calculator.switch_button.select_location')}
-        </button>
+        <span>
+          <button
+            id="switchBetweenManualDataAndLocationSelection"
+            className="btn btn-link text-muted"
+            onClick={handleSelectLocationButtonOnClick}
+          >
+            {t('calculator.switch_button.select_location')}
+          </button>
+        </span>
       ) : (
-        <button
-          id="switchBetweenManualDataAndLocationSelection"
-          className="btn btn-secondary"
-          onClick={handleEnterDataButtonOnClick}
-        >
-          {t('calculator.switch_button.enter_data_manually')}
-        </button>
+        <span>
+          <button
+            id="switchBetweenManualDataAndLocationSelection"
+            className="btn btn-link text-muted"
+            onClick={handleEnterDataButtonOnClick}
+          >
+            {t('calculator.switch_button.enter_data_manually')}
+          </button>
+        </span>
       )}
       <ControlledExpandable
         id="prevalence-details"
@@ -312,7 +344,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             setter({ ...data, casesPastWeek: parseInt(value || '') })
           }
           inputType="number"
-          isEditable={!locationSet}
+          isEditable={isManualEntryCurrently}
           className="hide-number-buttons"
         />
         <PrevalenceField
@@ -321,7 +353,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           value={data.population}
           setter={(value) => setter({ ...data, population: value })}
           inputType="text"
-          isEditable={!locationSet}
+          isEditable={isManualEntryCurrently}
           className="hide-number-buttons"
         />
         {locationSet && data.casesIncreasingPercentage === 0 ? (
@@ -337,7 +369,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             }}
             inputType="number"
             min={0}
-            isEditable={!locationSet}
+            isEditable={isManualEntryCurrently}
             className="hide-number-buttons"
           />
         )}
@@ -363,7 +395,7 @@ export const PrevalenceControls: React.FunctionComponent<{
             inputType="number"
             max={100}
             min={0}
-            isEditable={!locationSet}
+            isEditable={isManualEntryCurrently}
             className="hide-number-buttons"
           />
         )}

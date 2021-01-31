@@ -152,9 +152,9 @@ export const Calculator = (): React.ReactElement => {
         <Col md="12" lg="8" id="calculator-introduction">
           <Alert className="alert-info">
             <BsFillInfoCircleFill />{' '}
-            <Trans i18nKey="calculator.alerts.b117">
+            <Trans i18nKey="calculator.alerts.masks_update">
               <strong>Model update:</strong> Lipsum{' '}
-              <Link to="/blog/b117">here.</Link>
+              <Link to="/paper/14-research-sources#masks">White Paper</Link>.
             </Trans>
           </Alert>
           <p>
