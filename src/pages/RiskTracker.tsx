@@ -63,7 +63,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           that you define to be safe.
         </p>
         <p>
-          <strong>The Risk Tracker might be a good fit for you if:</strong>
+          <strong>
+            The Risk Tracker might be a good fit if you are interested in:
+          </strong>
           <ol>
             <li>
               <strong>Maintaining a personal risk budget:</strong> You want to
@@ -88,7 +90,7 @@ export const RiskTrackerTOC = (): React.ReactElement => {
       <div>
         <h2>Get started with the Risk Tracker</h2>
         <p>
-          Use the buttons below to copy the Risk Tracker. You can than read the{' '}
+          Use the buttons below to copy the Risk Tracker. You can then read the{' '}
           <a href="/tracker/quickstart">Quickstart Guide</a>.
         </p>
         <p>
