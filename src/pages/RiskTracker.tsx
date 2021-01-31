@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { Link, useParams } from 'react-router-dom'
 
+import activityModeling from './img/activity-modeling.png'
 import podOverviewIntro from './img/budget-overview.png'
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
@@ -102,6 +103,11 @@ export const RiskTrackerTOC = (): React.ReactElement => {
             Make a copy of the Risk Tracker <BsBoxArrowUpRight />
           </Button>
         </p>
+        <img
+          src={activityModeling}
+          alt="Activity modeling spreadsheet screenshot"
+          style={{ width: '800px', maxWidth: '100%' }}
+        />
       </div>
       <SubscribeForm />
 
