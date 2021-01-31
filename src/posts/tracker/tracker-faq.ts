@@ -81,17 +81,15 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
   <tr>
    <th><strong>Type of precaution</strong>
    </th>
-   <th><strong>Baseline</strong>
-   </th>
    <th><strong>Risk modifier TO ME</strong>
    </th>
   </tr>
   <tr>
    <td><strong><em>Location</em></strong>
    </td>
-   <td>🏠 Indoors: <strong><code>Baseline</code></strong>
-   </td>
-   <td>🌲 Outdoors: <strong><code>x1/20</code></strong><br />
+   <td>
+🏠 Indoors: <strong><code>Baseline</code></strong><br />
+🌲 Outdoors: <strong><code>x1/20</code></strong><br />
 ✨ Indoors with a HEPA filter (flow rate 5x room size): <strong><code>x1/4</code></strong><br />
 🚂 A train with air filtration: <strong><code>x1/4</code></strong><br />
 ✈️ An airplane: <strong><code>x1/4</code></strong><br />
@@ -100,35 +98,50 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
    </td>
   </tr>
   <tr>
-   <td><strong><em>Masks</em></strong>
+   <td><strong><em>Mask I am wearing</em></strong>
    </td>
-   <td>💨 No mask: <strong><code>Baseline</code></strong>
-   </td>
-   <td>😷 My cotton mask (thick, secure): <strong><code>x2/3</code></strong><br />
-😷 Your cotton mask: <strong><code>x1/3</code></strong><br />
+   <td>
+💨 No mask: <strong><code>Baseline</code></strong><br />
+😷 My cotton mask (thick, secure): <strong><code>x2/3</code></strong><br />
 ⚕️ My surgical mask: <strong><code>x1/2</code></strong> <br />
 ⚕️ My mask w/ PM2.5 filter insert: <strong><code>x1/2</code></strong><br />
 ⚔️ My KN95: <strong><code>x1/3</code></strong><br />
-⚔️ My Unsealed N95: <strong><code>x1/3</code></strong><br />
-🛡️ My <a href="https://www.youtube.com/watch?v=p8ay3kTqsuo" target="_blank" " rel="noopener">Sealed</a> medical-grade N95: <strong><code>x1/8</code></strong><br />
+⚔️ My N95 (fits, but you're NOT sure it is sealed): <strong><code>x1/3</code></strong><br />
+🛡️ My N95 (<a href="https://www.youtube.com/watch?v=p8ay3kTqsuo" target="_blank" rel="noopener">airtight seal</a>): <strong><code>x1/8</code></strong><br />
+⚔️ My 🔒 P100 respirator (NIOSH-certified reusable, with covered outflow valve): <strong><code>x1/20</code></strong><br />
+<em><a href="/blog/masks">Read more about masks on our blog</a></em><br />
+   </td>
+  </tr>
+  <tr>
+   <td><strong><em>Mask they are wearing</em></strong>
+   </td>
+   <td>
+💨 No mask: <strong><code>Baseline</code></strong><br />
+😷 Their cotton mask: <strong><code>x1/3</code></strong><br />
+⚕️ Their surgical mask: <strong><code>x1/4</code></strong> <br />
+⚕️ Their mask w/ PM2.5 filter insert: <strong><code>x1/4</code></strong><br />
+⚔️ Their KN95: <strong><code>x1/6</code></strong><br />
+⚔️ Their N95 (fits, but you're NOT sure it is sealed): <strong><code>x1/6</code></strong><br />
+🛡️ Their N95 (<a href="https://www.youtube.com/watch?v=p8ay3kTqsuo" target="_blank" rel="noopener">airtight seal</a>): <strong><code>x1/16</code></strong><br />
+⚔️ Their 🔒 P100 respirator (NIOSH-certified reusable, with covered outflow valve): <strong><code>x1/3</code></strong><br />
+<em><a href="/blog/masks">Read more about masks on our blog</a></em><br />
    </td>
   </tr>
   <tr>
    <td><strong><em>Distance</em></strong>
    </td>
-   <td>☕ 3 feet: <strong><code>Baseline</code></strong>
-   </td>
-   <td>↔️  6+ feet: <strong><code>x1/2</code></strong> <br />
-🏈  10+ feet: <strong><code>x1/4</code></strong> <br />
-❤️ 0 feet: <strong><code>x2</code></strong> <br />
+   <td>
+☕ 3 feet: <strong><code>Baseline</code></strong><br />
+↔️  6+ feet: <strong><code>x1/2</code></strong><br />
+🏈  10+ feet: <strong><code>x1/4</code></strong><br />
+❤️ 0 feet: <strong><code>x2</code></strong><br />
    </td>
   </tr>
   <tr>
    <td><strong><em>Volume</em></strong>
    </td>
-   <td>💬 Normal volume: <strong><code>Baseline</code></strong>
-   </td>
    <td>
+   💬 Normal volume: <strong><code>Baseline</code></strong><br />
    🤐 Silent: <strong><code>x1/5</code></strong><br />
    ❗ Loud / Singing: <strong><code>x5</code></strong>
    </td>
@@ -136,10 +149,9 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
   <tr>
    <td><strong><em>Symptoms</em></strong>
    </td>
-   <td>❓ Didn’t ask before: <strong><code>Baseline</code></strong>
-   </td>
    <td>
-   ✅ Ask about symptoms before: <strong><code>x1/2</code></strong>
+   ❓ Didn’t ask before: <strong><code>Baseline</code></strong><br />
+   ✅ Ask about symptoms before: <strong><code>x3/6</code></strong>
    </td>
   </tr>
 </table>
@@ -151,17 +163,15 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
   <tr>
    <th><strong>Modification</strong>
    </th>
-   <th><strong>Baseline</strong>
-   </th>
-   <th colspan="2" ><strong>Less risk TO PODMATES</strong>
+   <th><strong>Less risk TO PODMATES</strong>
    </th>
   </tr>
   <tr>
    <td><strong><em>Symptoms reporting</em></strong>
    </td>
-   <td>❓ No reporting: <strong><code>Baseline</code></strong>
-   </td>
-   <td colspan="2" >📞 Contact promises to report symptoms in the 10 days after your interaction: <strong><code>1/2</code></strong>
+   <td>
+   ❓ No reporting: <strong><code>Baseline</code></strong><br />
+   📞 Contact promises to report symptoms in the 10 days after your interaction: <strong><code>x1/2</code></strong>
    </td>
   </tr>
 </table>
@@ -172,11 +182,13 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
 
 ## How do I insert new rows into the Activity Log?
 
-Because everyone is using the Activity Log, you will eventually run out of space need to insert new rows. Here is a video that demonstrates how to do so:
+Because everyone is using the _ Pod Activity Log_, you will eventually run out of space need to enter activities. 
+
+Here is a video that demonstrates how to do so:
 
 🎥 [Watch video →](https://youtu.be/LxydVc72TS4)
 
-If you do not follow these steps, the calculations won’t work for the new rows you added.
+You can follow these same steps to insert rows on the _Pod Activity Log_ sheet and the _Custom People_ sheet. If you do not follow these steps, the calculations won’t work for the new rows you added.
 
 
 ## How do I log interacting with multiple different people over a period of time? (Example: an outdoor party)
