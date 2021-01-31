@@ -22,7 +22,7 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         <p>
           <Trans i18nKey="calculator.firsttime.budget_explanation">
             Lorem ipsum <a href="/paper/2-riskiness">riskyness link</a>
-            dolor sic <a href="/spreadsheet">spreadsheet link</a>
+            dolor sic <a href="/tracker">risk tracker link</a>
           </Trans>
         </p>
       </Expandable>

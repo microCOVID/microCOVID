@@ -28,6 +28,10 @@
     }
   }
 
+  h3 {
+    font-weight: normal;
+  }
+
   p, ul, ol {
     margin-bottom: 1.6rem;
     ul, ol {
@@ -35,6 +39,8 @@
       margin-bottom: 0rem
     }
   }
+
+  
 
   .warning {
     border: 2px solid $warning-border;
@@ -99,6 +105,8 @@
 
   th {
     border-bottom: 1px solid $gray-500;
+    background-color: $purple;
+    color: white;
   }
 
   td, th {
@@ -146,6 +154,7 @@
 
   img {
     max-width: 100%;
+    margin-bottom: 1.6rem;
   }
 
   figcaption {

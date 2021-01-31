@@ -11,7 +11,17 @@ export const MarkdownContents: React.FunctionComponent<{
   posts: PostMap
   id: string
   allInOnePage?: boolean
-}> = ({ posts, id, allInOnePage }) => {
+  tableOfContentsPageTitle?: string
+  sectionTitle?: string
+  showSectionNumbers?: boolean
+}> = ({
+  posts,
+  id,
+  allInOnePage,
+  tableOfContentsPageTitle = 'Table of Contents',
+  sectionTitle = '',
+  showSectionNumbers = false,
+}) => {
   // Return 404 for unknown pages
   const slugs = Object.keys(posts)
 
@@ -46,7 +56,7 @@ export const MarkdownContents: React.FunctionComponent<{
             ← Previous: {posts[prev].shortTitle || posts[prev].title}
           </PageLink>
         ) : (
-          <Link to="./">← Table of Contents</Link>
+          <Link to="./">← {tableOfContentsPageTitle}</Link>
         )}
 
         {next && (
@@ -92,7 +102,11 @@ export const MarkdownContents: React.FunctionComponent<{
       </Helmet>
 
       <span id={id}></span>
-      <div className="sectionIndicator">Section {slugs.indexOf(id) + 1}</div>
+      <div className="sectionIndicator">
+        {sectionTitle && <>{sectionTitle}</>}
+        {sectionTitle && showSectionNumbers && <> &raquo; </>}
+        {showSectionNumbers && <>Section {slugs.indexOf(id) + 1}</>}
+      </div>
 
       <h1 className="pageTitle">{page.title}</h1>
 
