@@ -19,7 +19,7 @@ export const RiskTrackerDocumentation = (): React.ReactElement => {
     <MarkdownContents
       posts={pages}
       id={id}
-      tableOfContentsPageTitle={t('menu.risk_tracker.introduction')}
+      tableOfContentsPageTitle={t('menu.risk_tracker.start_here')}
       sectionTitle={t('menu.risk_tracker.header')}
     />
   )
@@ -156,7 +156,7 @@ export const RiskTrackerTOC = (): React.ReactElement => {
         <p>
           <strong>Current version:</strong> 2.0
           <br />
-          <strong>Released on:</strong> 2021-01-11
+          <strong>Released on:</strong> 2021-01-31
           <br />
           🕑{' '}
           <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8">
@@ -177,7 +177,7 @@ export const RiskTrackerNavDropdown = (): React.ReactElement => {
       baseNavPath="/tracker"
       posts={pages}
       enableAll={false}
-      tableOfContentsPageTitle={t('menu.risk_tracker.introduction')}
+      tableOfContentsPageTitle={t('menu.risk_tracker.start_here')}
     />
   )
 }
