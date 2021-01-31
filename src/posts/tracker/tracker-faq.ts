@@ -241,6 +241,14 @@ One main place this occurs is with the “contact will report symptoms” checkb
 For example, If you log an activity that is 300 points, and the person you’re seeing  agrees to report symptoms, you still incur all 300 points as a risk to yourself. However you are only exposing your pod to 150 points, since you would quarantine after the person notified you about symptoms, and you would have spent less potentially-contagious time around your podmates.
 
 
+## How do I know the risk I pose to other people outside my pod?
+
+On the _Pod Overview_ sheet, there is a section (in pink) called "Other Pod Stats." The row titled **"Your risk to other people you see outside of the house/pod"** contains your current risk score to other people outside the pod. 
+
+While your "risk to pod" is calculated over the last 0-7 days to make budgeting easy, your actually current risk to other people includes any activities in the 2-23 days and includes the risk your podmates pose to you.
+
+Assuming you currently have no symptoms, your activities over the last 2-23 days "decay" over time, meaning they are contribute fewer and fewer points toward your total (compares to how much they originally cost). That's because the longer you go without showing symptoms from that activity, the less likely you are to have contracted a case of COVID.
+
 ## Can I “save up” my points and use them later? Do points “roll over”?
 
 Though you could track your budget along any time frame you want (weekly budget, monthly budget, etc), the Risk Tracker is built to consider a weekly budget timeframe.
