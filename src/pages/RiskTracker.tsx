@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { Link, useParams } from 'react-router-dom'
 
+import podOverviewIntro from './img/budget-overview.png'
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
 import { mailchimpLink, spreadsheetUrl } from 'components/RiskTrackerUtil'
@@ -48,6 +49,11 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           daily life, using the{' '}
           <Link to="/paper/research-source">best research available</Link>.
         </p>
+        <img
+          src={podOverviewIntro}
+          alt="Pod overview"
+          style={{ width: '800px', maxWidth: '100%' }}
+        />
         <p>
           The Risk Tracker can help you model the risk of activities and people
           you are seeing more precisely than is possible with the{' '}
@@ -100,7 +106,7 @@ export const RiskTrackerTOC = (): React.ReactElement => {
       <SubscribeForm />
 
       <Alert variant="info">
-        <strong>Looking for testers:</strong> We are looking for folks who are
+        <strong>Looking for feedback:</strong> We are looking for folks who are
         willing to offer feedback on this new version of the spreadsheet. If you
         are using the Risk Tracker with your household/pod to track your
         collective COVID risk and are intereted in giving us feedback on your
