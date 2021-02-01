@@ -48,20 +48,13 @@ Once we take into account how many microCOVIDs are used up by living with each o
 \n
 \n
 
-In general, if you are young and healthy, don’t regularly visit anyone who is [older](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age) or has [COVID risk factors](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html), and are lucky enough to be able to make voluntary choices about your risk exposure, then we think aiming for 10,000 microCOVIDs per year (corresponding to 1% risk of COVID per year) is a plausible choice. This is based on two important considerations: risk to _you_, and risk to _others_.
+### Choosing your risk budget
 
+In general, if you are young and healthy, don’t regularly visit anyone who is [older](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age) or has [COVID risk factors](https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html), and are lucky enough to be able to make voluntary choices about your risk exposure, then we think aiming for 10,000 microCOVIDs per year (corresponding to 1% risk of COVID per year) is a plausible choice. 
 
-*   **Risk to you:** If you are in the under-40 age bracket and do not have other risk factors, then a 1% chance of COVID per year puts your risk of disability due to COVID at about the same level as your risk of disability due to driving a car.[^6]
+You can read more details on [choosing your risk budget](/paper/13-q-and-a#how-should-i-choose-my-annual-risk-budget) here.
 
-
-*   **Risk to others**: Even if you are personally comfortable with risk-taking, it’s important to choose a lower risk tolerance in order to protect vulnerable members of your community. Here are a few ways to think about that:
-    *   If you get COVID, on average you will pass it to at least one other person, who in turn will pass it to others. Eventually it will reach someone who is at very high risk of death. By avoiding getting infected yourself, you are protecting these vulnerable members of your community.
-    *   A useful ethical rule-of-thumb is to behave in a way that would be good if _everyone_ behaved that way. So, we can ask: what risk tolerance would keep the pandemic at manageable levels if everyone followed it? In most places in the US right now, a 1% yearly risk of COVID would keep the pandemic at manageable levels. For public health reasons, we wouldn’t recommend voluntarily choosing a risk tolerance higher than 3%.[^7]
-
-
-    *   Some people (such as essential workers) have no choice but to run a high risk of getting COVID. Containing the pandemic across society only works if those of us who _do_ have a choice choose to take fewer risks.
-
-What we want you to take away from this section is that for people in the authors’ demographics, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
+What we want you to take away from this section is that for people in the authors’ demographics, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1,000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
 
 Let’s now explore how to quantify the risk of various activities in terms of microCOVIDs.
 
@@ -82,29 +75,8 @@ Let’s now explore how to quantify the risk of various activities in terms of m
      Technically, what we mean when we say “1% per year” is a 1% _annualized_ risk. That is, if we go 6 months without getting sick, we aren’t going to double our chances and bump up to a 2% chance in the following 6 months to even it out. We’ll continue at the same 1% annualized risk level.
 
 [^5]:
-     Since we live in a household of 8 people, we also have to account for the substantial risk of getting COVID _from each other_, not just outside the house. To keep each person’s annualized risk below 1% (10,000 microCOVIDs), each person only gets a budget of about 3,000 “out-of-house” microCOVIDs to “spend” on their personal activities:
-     \`\`\`
-     individual budget * (1 + 7 * housemate transmission risk) = 10,000
-     individual budget * (1 + 7 * 0.3) = 10,000
-     individual budget = 3225
-     \`\`\`
-     We hope to discuss these budgeting considerations for communal living in much more detail in a future writeup.
+     We have a detailed write up on [how to adjust your budget given the number of people in your household/pod](/tracker/household-pod#how-the-number-of-people-in-your-household-affects-your-budget).
 
-[^6]:
-     Here are our calculations. We think as many as 1 in 10 COVID cases could potentially lead to long-term negative health consequences for the infected person; we don't think the ratio is likely to be higher than that, due to sources like the app-based [COVID Symptom Study](https://covid.joinzoe.com/post/covid-long-term) that found one in ten cases weren't fully recovered after 3 weeks. That would mean that a 1% chance of COVID is the same as up to a 0.1% chance of ongoing negative health consequences from COVID. The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018 [there were](https://cdan.nhtsa.gov/tsftables/National%20Statistics.pdf) 2,491,000 car-crash-related injuries (of any severity) spread across 3,240,327,000,000 vehicle miles travelled (see the [NHTSA website](https://cdan.nhtsa.gov/tsftables/tsfar.htm) for more detailed breakdowns). [A study of Swedish car crash injuries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3256772/) found that 11.4% of them met the criteria for at least “1% permanent medical impairment” five years later. (“Permanent medical impairment” is a [legally-relevant concept](https://www.disabilitysecrets.com/resources/understanding-permanent-disability-rating-system.htm) that attempts to quantify disability, and the 1% level was the lowest level of disability that was discussed in the Swedish car crash study.) Multiplying this out, we get a 0.11% chance of ongoing negative health consequences from driving for one year.
-
-     You may choose to follow a different risk budget. Here is some information that might be helpful in deciding what is right for you:
-     * Among people under 40, the chance of death from COVID is about 0.1-0.2% ([Our World in Data](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age))
-     * Among people over 60, this rises to 2-3% and doubles with every 10 years over 70.
-     * A 0.1% chance of death is equivalent to...
-       * Driving 100,000 miles ([IIHS](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state))
-       * Base jumping 3 times ([Wikipedia](https://en.wikipedia.org/wiki/BASE_jumping#Safety))
-       * 167 skydiving jumps ([Skydive California](https://skydivecalifornia.com/blog/skydiving-statistics))
-    
-    Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolearnce.
-
-[^7]:
-     You can check the annual rate of COVID infection for your region by looking up the number of cases in the past _day_; for states in the US, try [covidactnow.org](http://covidactnow.org). Divide by your region’s population (or by 100,000 if the figure you got was “cases per 100,000 population”) and multiply by 365 (days per year) to get the proportion of your region that will have a reported case of COVID this year at current rates. You probably want to aim to stay below that percentage. For the San Francisco Bay Area in August 2020, it’s about 3.5%. Note that unlike the analysis we’ll do in the next section, there’s no correction for potential underreporting here, since we want to err on the _low_ side (not take too many risks).
 `
 
 const post = { title, shortTitle, content }

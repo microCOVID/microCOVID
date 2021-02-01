@@ -15,7 +15,14 @@ export const Paper = (): React.ReactElement => {
   if (id === 'all') {
     return <MarkdownCombinedPage posts={pages} />
   } else {
-    return <MarkdownContents posts={pages} id={id} />
+    return (
+      <MarkdownContents
+        posts={pages}
+        id={id}
+        sectionTitle="White Paper"
+        showSectionNumbers={true}
+      />
+    )
   }
 }
 
@@ -58,6 +65,7 @@ export const PaperNavDropdown = (): React.ReactElement => {
       baseNavPath="/paper"
       posts={pages}
       enableAll={true}
+      enableIndexNumbers={true}
     />
   )
 }
