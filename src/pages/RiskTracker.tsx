@@ -40,7 +40,12 @@ export const SubscribeForm: React.FunctionComponent = () => {
 
 export const RiskTrackerTOC = (): React.ReactElement => {
   return (
-    <TableOfContents posts={pages} title="Risk Tracker" baseNavPath="/tracker">
+    <TableOfContents
+      posts={pages}
+      title="Risk Tracker"
+      baseNavPath="/tracker"
+      quickJump={RiskTrackerNavDropdown()}
+    >
       <hr />
       <div>
         <h2>What is the Risk Tracker for?</h2>
@@ -175,11 +180,11 @@ export const RiskTrackerNavDropdown = (): React.ReactElement => {
   const { t } = useTranslation()
   return (
     <DropdownNav
-      title={t('menu.risk_tracker.header')}
+      title={t('instructions')}
       baseNavPath="/tracker"
       posts={pages}
       enableAll={false}
-      tableOfContentsPageTitle={t('menu.risk_tracker.start_here')}
+      skipTableOfContents={true}
     />
   )
 }

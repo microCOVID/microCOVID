@@ -86,6 +86,7 @@
     a {
       color: $gray-800;
       text-decoration: none;
+      margin: 0;
 
       &:hover {
         color: $primary;
@@ -96,6 +97,16 @@
     .next {
       text-align: right;
     }
+
+    .nav-link {
+      padding: 0 !important;
+    }
+
+    .dropdown-item:hover {
+      color: $white;
+      text-decoration: none;
+    }
+
   }
 
   table {

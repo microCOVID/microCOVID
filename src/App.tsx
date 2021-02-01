@@ -26,11 +26,7 @@ import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
-import {
-  RiskTrackerDocumentation,
-  RiskTrackerNavDropdown,
-  RiskTrackerTOC,
-} from 'pages/RiskTracker'
+import { RiskTrackerDocumentation, RiskTrackerTOC } from 'pages/RiskTracker'
 import { Symptoms } from 'pages/Symptoms'
 import riskQuestionsPage from 'posts/risk-questions'
 
@@ -91,7 +87,14 @@ export const App = (): React.ReactElement => {
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
-                    <RiskTrackerNavDropdown />
+                    <NavLink
+                      to="/tracker"
+                      className="nav-link"
+                      exact
+                      activeClassName="active"
+                    >
+                      <Trans>menu.risk_tracker.header</Trans>
+                    </NavLink>
                   </Nav.Item>
                   <Nav.Item>
                     <PaperNavDropdown />

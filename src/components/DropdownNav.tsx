@@ -10,6 +10,7 @@ export const DropdownNav: React.FunctionComponent<{
   enableAll: boolean
   tableOfContentsPageTitle?: string
   enableIndexNumbers?: boolean
+  skipTableOfContents?: boolean
 }> = ({
   title,
   baseNavPath,
@@ -17,12 +18,15 @@ export const DropdownNav: React.FunctionComponent<{
   enableAll,
   tableOfContentsPageTitle = 'Table of Contents',
   enableIndexNumbers = false,
+  skipTableOfContents = false,
 }) => {
   return (
     <NavDropdown title={title} id="basic-nav-dropdown">
-      <NavDropdown.Item href={baseNavPath}>
-        {tableOfContentsPageTitle}
-      </NavDropdown.Item>
+      {skipTableOfContents ? null : (
+        <NavDropdown.Item href={baseNavPath}>
+          {tableOfContentsPageTitle}
+        </NavDropdown.Item>
+      )}
       {enableAll ? (
         <NavDropdown.Item href={`${baseNavPath}/all`}>
           All In One Page
