@@ -1,6 +1,11 @@
 import num2fraction from 'num2fraction'
 import React, { useState } from 'react'
-import { Form, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
+import {
+  OverlayTrigger,
+  ToggleButton,
+  ToggleButtonGroup,
+  Tooltip,
+} from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
@@ -14,24 +19,16 @@ export const SegmentedControl: React.FunctionComponent<{
   source: { [key: string]: CheckBoxFormValue }
   label?: string
   header?: string
-  helpText?: string
   popover?: JSX.Element
   hideRisk?: boolean
   className?: string
   labelFactory?: (value: string) => string
+  useHoverDesc?: boolean
   variant?: string
-  showActiveDesc?: boolean
 }> = (props) => {
   const dataValue = props.id in props.data ? props.data[props.id] : ''
   const activeValue = typeof dataValue === 'string' ? dataValue : ''
-  const [activeDesc, setActiveDesc] = useState(
-    activeValue && activeValue in props.source
-      ? props.source[activeValue].value
-      : props.helpText
-      ? props.helpText
-      : '',
-  )
-  const [hoverDesc, setHoverDesc] = useState(activeDesc)
+  const [hoverDesc, setHoverDesc] = useState<string>('')
   const { t } = useTranslation()
   // 0.25 -> "1/4x"
   function formatRiskMultiplierInternal(multiplier: number): string {
@@ -53,55 +50,81 @@ export const SegmentedControl: React.FunctionComponent<{
     return formatRiskMultiplierInternal(multiplier)
   }
 
+  const hoverDescIfPresentOtherwiseActiveDesc =
+    hoverDesc !== ''
+      ? hoverDesc
+      : (activeValue !== '' && props.source[activeValue].value) || ''
+
   return (
     <div className="form-group">
       <ControlLabel
         id={props.id}
-        label={props.label}
+        label={hoverDescIfPresentOtherwiseActiveDesc}
         header={props.header}
         popover={props.popover}
       />
-      <ToggleButtonGroup
-        type="radio"
-        name={props.id}
-        id={props.id}
-        className={props.className}
-        value={activeValue}
-      >
-        {Object.keys(props.source).map((value, index) => (
-          <ToggleButton
-            key={index}
-            type="radio"
-            variant={props.variant}
-            name={props.id}
-            value={value}
-            checked={props.data[props.id] === value}
-            onMouseEnter={() => setHoverDesc(props.source[value].value)}
-            onMouseLeave={() => setHoverDesc('')}
-            onChange={(e) => {
-              setActiveDesc(props.source[value].value)
-              props.setter({ ...props.data, [props.id]: e.currentTarget.value })
-            }}
-          >
-            <span className="segmented-label">
-              {props.labelFactory
-                ? props.labelFactory(value)
-                : props.source[value].label}
-            </span>
-            <span className="segmented-multiplier">
-              {props.labelFactory
-                ? ''
-                : formatRiskMultiplier(
-                    props.hideRisk,
-                    props.source[value].multiplier,
-                  )}
-            </span>
-          </ToggleButton>
-        ))}
-      </ToggleButtonGroup>
-      <Form.Text id={props.id + 'HelpText'} muted>
-        {hoverDesc || activeDesc}
-      </Form.Text>
+      <div className="segmented-scrollable">
+        <ToggleButtonGroup
+          type="radio"
+          name={props.id}
+          id={props.id}
+          className={'segmented-wrap ' + props.className}
+          value={activeValue}
+        >
+          {Object.keys(props.source).map((value, index) => (
+            <OverlayTrigger
+              placement="top"
+              key={value}
+              overlay={
+                <Tooltip
+                  id={props.id + '-tooltip-' + value}
+                  className="segmented-tooltip"
+                >
+                  {props.source[value].value}
+                </Tooltip>
+              }
+            >
+              <ToggleButton
+                key={index}
+                type="radio"
+                variant={props.variant}
+                name={props.id}
+                value={value}
+                className="segmented-button"
+                checked={props.data[props.id] === value}
+                onChange={(e) => {
+                  props.setter({
+                    ...props.data,
+                    [props.id]: e.currentTarget.value,
+                  })
+                }}
+                onMouseEnter={() =>
+                  props.useHoverDesc && setHoverDesc(props.source[value].value)
+                }
+                onMouseLeave={() => props.useHoverDesc && setHoverDesc('')}
+              >
+                <span className="segmented-label">
+                  {props.labelFactory
+                    ? props.labelFactory(value)
+                    : props.source[value].label}
+                </span>
+                <span className="segmented-multiplier">
+                  {props.labelFactory
+                    ? ''
+                    : formatRiskMultiplier(
+                        props.hideRisk,
+                        props.source[value].multiplier,
+                      )}
+                </span>
+                <span className="segmented-value">
+                  {props.source[value].value}
+                </span>
+              </ToggleButton>
+            </OverlayTrigger>
+          ))}
+        </ToggleButtonGroup>
+        {props.children}
+      </div>
     </div>
   )
 }
