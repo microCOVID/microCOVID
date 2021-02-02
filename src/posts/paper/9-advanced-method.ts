@@ -2,7 +2,7 @@ const title = 'The Advanced Method makes a list of the person’s recent behavio
 const shortTitle = 'Advanced Method'
 const content = `
 
-To get an even more accurate estimate for Person Risk, we can actually add up the risk (in microCOVIDs) of their recent behavior. Remember, a single microCOVID represents a one-in-a-million chance of getting COVID.
+To get a more accurate estimate for Person Risk, we can actually add up the risk (in microCOVIDs) of their recent behavior. Remember, a single microCOVID represents a one-in-a-million chance of getting COVID.
 
 The **Advanced Method** is to add up the risk of each individual activity that person has done recently.
 

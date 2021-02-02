@@ -208,13 +208,6 @@ export const RiskProfile: { [key: string]: PersonRiskValue } = {
     personalMultiplier: 1.0,
     ...noContacts,
   },
-
-  frontline: {
-    label: i18n.t('data.person.frontline'),
-    personalMultiplier: HEALTHCARE_MULT,
-    ...noContacts,
-  },
-
   livingAlone: {
     label: i18n.t('data.person.livingAlone'),
     personalMultiplier: livingAloneMult,
