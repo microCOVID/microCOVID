@@ -274,7 +274,7 @@ class State(Place):
 
 
 class Country(Place):
-    iso3: Optional[str] # USA
+    iso3: Optional[str]  # USA
     states: Dict[str, State] = {}
 
     @property
