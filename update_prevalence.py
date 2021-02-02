@@ -613,6 +613,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "MS Zaandam",
         "Western Sahara",
         "Micronesia",
+        "Palau",
     ):
         return True
     if line.Country_Region == "US":
