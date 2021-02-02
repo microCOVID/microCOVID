@@ -88,7 +88,6 @@
     "person_risk_profile_header": "Risk Profile",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
-    "frontline_worker_acknowledgement": "We deeply appreciate the sacrifices that frontline workers are making during the pandemic. We encourage you to find safe ways of supporting these people, keeping them socially included and cared for. We expect that most of these workers will be vaccinated in the next few months, which should substantially reduce their risk of infection/transmission.",
     "category_very_low": "Very Low",
     "category_low": "Low",
     "category_moderate": "Moderate",

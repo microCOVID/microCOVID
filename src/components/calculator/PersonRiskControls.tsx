@@ -170,11 +170,6 @@ export const PersonRiskControls: React.FunctionComponent<{
           )
         }}
       />
-      {data.riskProfile === 'frontline' ? (
-        <div className="warning">
-          <Trans>calculator.frontline_worker_acknowledgement</Trans>
-        </div>
-      ) : null}
       <br />
     </React.Fragment>
   )
