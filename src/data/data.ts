@@ -98,21 +98,21 @@ const thinLabel = i18n.t('data.thin_mask_short')
 const basicLabel = i18n.t('data.basic_mask_short')
 const surgicalLabel = i18n.t('data.surgical_mask_short')
 const filteredLabel = i18n.t('data.filtered_mask_short')
-const kn95Label = i18n.t('data.kn95_mask_short')
 const n95Label = i18n.t('data.n95_mask_short')
 const n95SealedLabel = i18n.t('data.n95_sealed_mask_short')
 const p100Label = i18n.t('data.p100_mask_short')
+const otherLabel = i18n.t('data.other_mask_short')
 
 const noneDesc = i18n.t('data.no_mask')
 const thinDesc = i18n.t('data.thin_mask')
 const basicDesc = i18n.t('data.basic_mask')
 const surgicalDesc = i18n.t('data.surgical_mask')
 const filteredDesc = i18n.t('data.filtered_mask')
-const kn95Desc = i18n.t('data.kn95_mask')
 const n95Desc = i18n.t('data.n95_mask')
 const n95SealedDesc = i18n.t('data.n95_sealed_mask')
 const p100DescTheirs = i18n.t('data.p100_mask_theirs')
 const p100DescYours = i18n.t('data.p100_mask_yours')
+const otherDesc = i18n.t('data.other_mask')
 /*
 export const TheirMask: { [key: string]: FormValue } = {
   none: formValue(noneLabel, 1.0),
@@ -143,7 +143,6 @@ export const TheirMask: { [key: string]: CheckBoxFormValue } = {
   basic: segmentedFormValue(basicLabel, basicDesc, 1 / 3),
   surgical: segmentedFormValue(surgicalLabel, surgicalDesc, 1 / 4),
   filtered: segmentedFormValue(filteredLabel, filteredDesc, 1 / 4),
-  kn95: segmentedFormValue(kn95Label, kn95Desc, 1 / 6),
   n95: segmentedFormValue(n95Label, n95Desc, 1 / 6),
   n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 16),
   p100: segmentedFormValue(p100Label, p100DescTheirs, 1 / 3),
@@ -154,7 +153,6 @@ export const YourMask: { [key: string]: CheckBoxFormValue } = {
   basic: segmentedFormValue(basicLabel, basicDesc, 2 / 3),
   surgical: segmentedFormValue(surgicalLabel, surgicalDesc, 1 / 2),
   filtered: segmentedFormValue(filteredLabel, filteredDesc, 1 / 2),
-  kn95: segmentedFormValue(kn95Label, kn95Desc, 1 / 3),
   n95: segmentedFormValue(n95Label, n95Desc, 1 / 3),
   n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 8),
   p100: segmentedFormValue(p100Label, p100DescYours, 1 / 20),
