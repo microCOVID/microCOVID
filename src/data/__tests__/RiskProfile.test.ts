@@ -31,7 +31,6 @@ describe('personRiskMultiplier', () => {
   it.each`
     profile
     ${'average'}
-    ${'frontline'}
     ${'livingAlone'}
     ${'bars'}
   `(

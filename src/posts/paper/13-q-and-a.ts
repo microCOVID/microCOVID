@@ -130,17 +130,17 @@ Yes! Cloth masks and surgical masks protect others more than they protect _you_ 
 
 ### What about masks that provide more protection, like an N95 or P100 respirator?
 
-These masks provide more protection than a cloth or surgical mask, it’s true:
+These masks provide more protection than a cloth or surgical mask:
 
-* For a well-fitted, well-sealed N95, we roughly estimate a 10x reduction in risk for the wearer (versus 2x for a surgical mask or high-quality cloth mask).
-  * But remember, these masks are only effective if you get a tight seal around your face, and unless you’re professionally trained in how to do this, you probably don’t! All of the studies on N95s are from hospitals, where the medical professionals are fit-tested and have training in mask wearing. Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [fit test](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) and watch some online training in order to effectively use your N95.
+* Masks that claim to have N95-like filter media (e.x. KN95, Vogmask), can be considered equivalent to KN95's - designed to filter, but not rigorously quality controlled or tightly fitted. These receive a 6x protection factor.
 
-* A P100 is even better. Since P100s are generally not used in medical settings, there isn’t the sort of research that would let one state a protection factor under typical use with any kind of confidence. [One study](https://pubmed.ncbi.nlm.nih.gov/24011377) found P100s to filter out a virus aerosol at their stated 99.97% filtration efficiency, but at those levels your risk probably starts to be dominated by previously-small effects like surface transmission and getting virus in your eyes. We think that under ideal conditions, the risk reduction with a P100 might plausibly be as high as 100x compared to no mask, but we’re really not sure.
-  * P100s are easier to test the seal on. You can search for online training on how to do this.
-  * Note that P100 respirators typically have an outflow valve, meaning they provide minimal protection to others from you, so if you take this route, you should at least cover the outflow valve with a surgical mask.
+* For a well-fitted, well-sealed N95, we roughly estimate an 8x reduction in risk for the wearer (versus 2x for a surgical mask or high-quality cloth mask).
+  * But remember, these masks are only effective if you get a tight seal around your face! Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [fit test](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) and watch some online training in order to effectively use your N95.
 
+* A P100 is even better. We estimate that P100's provide a 20x recuction in risk. 
+  * A major reason we like P100s is they are easier to get a good seal on. You can search for online training on how to do this.
+  * Note that P100 respirators typically have an outflow valve, meaning they provide minimal protection to others from you, so if you use a P100, you may be legally required to cover the  outflow valve with cloth or a surgical mask.
 
-If you think your mask has better filtration than a surgical mask (2x modifier), but it _doesn’t_ seal on your face, we advise against counting it as a 10x improvement. We recommend a 5x modifier at most.
 
 ### What P100 do you recommend?
 
@@ -154,9 +154,30 @@ The “outdoors” modifier is the one we have the least confidence of. At large
 
 # Person Risk Q&A
 
-### Basic method: Other than essential workers, is anyone above average?
+### Are people who work outside the home riskier than people who work from home?
 
-Of course! Someone should probably be considered “above average risk” if they have lots of contact with others and minimal protection; if they regularly attend gatherings, or recently attended a large gathering, especially indoors; or if they seem to think “this isn’t a big deal” or “I don’t care” when considering precautions.
+We do not think that, as a blanket rule, every person who works outside the home is riskier than every person who works from home. Activites outside of work play a major role in a person's chances of contracting COVID.
+
+For instance, a Healthcare Worker who wears a sealed N95 mask while seeing one unmasked patient at a time for 40 hours per week, but does not see any other people in a typical week, would be calculated as follows:
+\`average_risk * 40 hours * 9%/hr * 1/8 (N95) = 0.45 * average_risk\`
+
+Therefore, this worker could be less risky than the average person in the area (although the final risk will depend on what else they are doing in terms of chores and socializing).
+
+We recommend using the [Advanced Method](/paper/9-advanced-method) to estimate the risk of all your close contacts, rather than using blanket risk categories. The [Risk Tracker](/tracker) is an excellent tool for keeping a tally of one's personal risk. The microCOVID team includes a Primary Care Provider who tracks and reports her risk using this tool, which suggests that her weekly risk is on the order of 100microCOVIDs per week.
+
+We originally proposed an "Intermediate Method", in which people who work outside the home are guestimated at 2x or 3x the population average. This was based on the following two studies:
+* [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf) found a 6x higher positive test rate among frontline service workers.
+* [Data from Washington State](https://www.doh.wa.gov/Portals/1/Documents/1600/coronavirus/IndustrySectorReport.pdf) suggested Heath and Social Service workers had been infected at 2x the average rate.
+
+However, we have retracted this method for the following reasons:
+* These studies include data early in the pandemic when COVID-19 was poorly understood and good PPE was unavailable.
+* It appears that the average person has become significantly riskier since early in the pandemic (more social activity / less lockdown yields high overall rates).
+* These categories of people are highly heterogenious. Lumping them all together makes no sense.
+  * Differences in PPE alone can reduce transmission risk by 10x, which would be a larger effect than either of these studies.
+  * Many hospitals have precautions that decrease the liklihood that a random HCW will be exposed to COVID.
+  * On the other hand, some HCW's directly work with confirmed COVID patients, which is a much higher risk category.
+* Various studies, such as [Baker et al.](https://www.acpjournals.org/doi/10.7326/M20-7145) have shown that, for at least some pockets of healthcare workers, healthcare workers are no more likely to get infected through their work than the average person is to get infected through socializing.
+* The above Washington State report shows that people who work outside the home got COVID at about the average rate for the state.
 
 # Specific Activities Q&A
 
