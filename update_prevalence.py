@@ -165,6 +165,18 @@ class CANRegionSummary(pydantic.BaseModel):
     population: int
 
 
+# Romanian sub-national dataset:
+class RomaniaPrevalenceData(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://covid19.geo-spatial.org/external/charts_vasile/assets/json/cazuri_zile_long.json"
+
+    Date: date = pydantic.Field(alias="Data")
+    County: str = pydantic.Field(alias="Judet")
+    Population: int = pydantic.Field(alias="Populatie")
+    TotalCases: int = pydantic.Field(alias="Cazuri total")
+
+
 # Our unified representation:
 
 
@@ -729,6 +741,13 @@ def main() -> None:
                     country.tests_in_past_week = (
                         line.Seven_day_smoothed_daily_change * 7
                     )
+
+        # Romanian county (judet) data. Treat as states internally.
+        for line in parse_json(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
+            state = data.get_state(line.County, country="Romania")
+            state.population = line.Population
+            state.cumulative_cases[line.Date] = line.TotalCases
+
 
     finally:
         cache.save()
