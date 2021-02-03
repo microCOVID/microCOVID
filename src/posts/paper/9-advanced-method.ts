@@ -38,7 +38,7 @@ The best way to understand how to apply the Advanced Method is through an exampl
 
 
 [^12]:
-     The 2-9 day window is an approximation for people who keep relatively constant schedules or maintain a similar level of risky behaviors week over week (for instance, by using microCOVID to track their own activites). If this is not a good description of the person's behavior (e.x. they recently took a flight, went to a party or indoor restaurant, or had contact with someone with COVID), it is necessary to count up all their activities from the last 2-23 days (3 weeks). Events past 5 days have diminishing effects on their riskiness, which makes this method difficult to do by hand. The [Risk Tracker](/tracker) handles this calculation for us. For details on how this is derived, see [Research Sources](/paper/14-research-sources#infectious-period).
+     The 2-9 day window is an approximation for people who keep relatively constant schedules or maintain a similar level of risky behaviors week over week (for instance, by using microCOVID to track their own activites). If this is not a good description of the person's behavior (e.g. they recently took a flight, went to a party or indoor restaurant, or had contact with someone with COVID), it is necessary to count up all their activities from the last 2-23 days (3 weeks). Events past 5 days have diminishing effects on their riskiness, which makes this method difficult to do by hand. The [Risk Tracker](/tracker) handles this calculation for us. For details on how this is derived, see [Research Sources](/paper/14-research-sources#infectious-period).
 `
 
 const post = { title, shortTitle, content }
