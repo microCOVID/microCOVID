@@ -88,7 +88,6 @@
     "person_risk_profile_header": "Risk Profile",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
-    "frontline_worker_acknowledgement": "We deeply appreciate the sacrifices that frontline workers are making during the pandemic. We encourage you to find safe ways of supporting these people, keeping them socially included and cared for. We expect that most of these workers will be vaccinated in the next few months, which should substantially reduce their risk of infection/transmission.",
     "category_very_low": "Very Low",
     "category_low": "Low",
     "category_moderate": "Moderate",
@@ -127,7 +126,7 @@
       "select_location": "Switch to pre-populated location data",
       "enter_data_manually": "Switch to manual data entry mode"
     },
-    "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), and <7>Our World in Data</7> (international positive test rates).",
+    "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
     "select_scenario": "Search for an activity or build your own below...",
     "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
     "baseline_risk": "baseline risk",
