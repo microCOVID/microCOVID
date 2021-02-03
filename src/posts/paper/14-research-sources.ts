@@ -246,13 +246,17 @@ Combining these sources, we built a model that accounts for time to developing s
 
 ![](${infectiousDecayModel})
 
-This peaks on day 2 and decays over time.
+This peaks on day 2 and decays over time. Since the risk starting around day 20 is small, we arbitrarily choose a cutoff time of 23 days, which yields an infectious window of exactly 3 weeks (2-23 days).
 
-Many people have a weekly routine, which makes modeling their risk for 7 days compelling. Since the risk starting around day 20 is small, we arbitrarily choose a cutoff time of 23 days, which yields an infectious window of exactly 3 weeks (2-23 days). If a person regularly gets a total of \`X\` microCOVIDs over the course of 7 days and we believe that they do the same activities each week, they will have done the activity exactly 3 times in any past 2-23 day window so we can estimate that their risk on any given day will be
+Many people have a weekly routine, which makes modeling their risk for 7 days compelling. If a person regularly gets a total of \`X\` microCOVIDs over the course of 7 days and they do the same activities each week, then learning they are currently symptom-free allows us to estimate their *current* risk of having COVID as 60% lower than their weekly total X.
+
+Explaining how we calculate that: they will have done the activity exactly 3 times in any past 2-23 day window so we can estimate that their risk on any given day will be:
 
 \`3 * X * SUM(Relative Risk) / 21 days = 0.6 * X\`
 
-Therefore a person with a regular schedule could be modeled based on their normal 7 day week, but users tracking risk with the Risk Tracker will be able to more precisely know the risk they pose to others on any given day. This is the basis of the 2-9 day window cited elsewhere in the whitepaper. There is absolutely nothing magical about day 9; on day 10 there is still 16% of the original risk left; if a person’s risky activities do not follow a 7 day cycle, you may need to ask them for what they have done for up to the last 23 days.
+Therefore a person with a regular schedule could be modeled based on their normal 7 day week, but users tracking risk with the Risk Tracker will be able to more precisely know the risk they pose to others on any given day.
+
+The 2-9 day window cited elsewhere in the whitepaper is one way of simplifying this decay over time, by treating it as though there is no decay from day 2 through 9, and then all the decay occurs as a sharp step on day 10. This is purely a simplification: there is absolutely nothing magical about day 9; in reality, on day 10 there is still 16% of the original risk left. If a person’s risky activities do not follow a 7 day cycle, and they have some something very risky more than 9 days ago, you may need to ask them for what they have done for up to the last 2 or even 3 weeks.
 
 ### Note on Infectious Period: Contacts' symptoms
 
