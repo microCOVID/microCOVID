@@ -9,16 +9,23 @@ const ImageMetaIfPresent = (image?: ImageMeta) => {
   if (image === undefined) {
     return null
   }
-  return (
-    <>
-      <meta
-        property="og:image"
-        content={process.env.REACT_APP_DEPLOY_PRIME_URL + image.url}
-      />
-      <meta property="og:image:height" content={image.height.toString()} />
-      <meta property="og:image:width" content={image.width.toString()} />
-    </>
-  )
+  return [
+    <meta
+      property="og:image"
+      content={process.env.REACT_APP_DEPLOY_PRIME_URL + image.url}
+      key="imageUrl"
+    />,
+    <meta
+      property="og:image:height"
+      content={image.height.toString()}
+      key="imageHeight"
+    />,
+    <meta
+      property="og:image:width"
+      content={image.width.toString()}
+      key="imageWidth"
+    />,
+  ]
 }
 
 export const BlogPostPage: React.FunctionComponent<{

@@ -1,6 +1,7 @@
-import ferrettiFig1 from './img/ferretti-fig-1.png'
 import ferrettiFig2 from './img/ferretti-infectiousness.gif'
 import heExtended from './img/he-extended-fig-1.png'
+import infectiousDecayModel from './img/infectious_decay_model.png'
+import mcaloonIncubationPeriod from './img/mcaloon_incubation_period.png'
 import positiveTestRate from './img/positive-test-rate.png'
 
 const title = 'Research Sources'
@@ -229,13 +230,33 @@ treat the effect as an unknown safety margin rather than using it
 to reduce our prevalence estimate.
 
 
-### Basic Method: Infectious period
+### Infectious period
 
-We mentioned in the [Basic Method](7-basic-method) that the reason we use a week's worth of cases in our prevalence estimate is that people are most infectious in a roughly week-long span of time between 2 and 9 days after they were infected. Similarly, the [Advanced Method](9-advanced-method) works by tallying up all of someone's activities between 2 and 9 days ago.
+We state in the [Advanced Method](https://www.microcovid.org/paper/9-advanced-method) that a person’s risk is the sum of all of someone's activities between 2 and 9 days ago. This is an approximation based on the more complex model used by the Risk Tracker, which is based on the following sources:
 
-We have found the following graph useful for thinking about this. [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) Figure 1 shows several curves in black that provide different estimates of the distribution of SARS-CoV-2 “generation time,” which is the time between when a person gets infected and when they transmit the virus to someone else. The curve with the thickest line is the one they picked as the best-fitting distribution. We observe that not very many transmissions occur fewer than 2 days after infection or more than 9 days after infection. (Not a *negligible* fraction from a public health standpoint, but few enough to not dominate our personal judgments about our risk.)
+- [Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936) shows that transmission to someone else within 2 days of getting infected is very unlikely.
+- [McAloon et al](https://bmjopen.bmj.com/content/bmjopen/10/8/e039652.full.pdf) gives us a distribution of how long it takes for a person to develop symptoms:
+![](${mcaloonIncubationPeriod})
 
-![Ferretti et al](${ferrettiFig1})
+- [Byambasuren et al](https://jammi.utpjournals.press/doi/10.3138/jammi-2020-0030) tells us that 17% of COVID cases never develop symptoms and these cases are 42% as likely to transmit COVID to others compared to patients who have or will develop symptoms.
+- [Covid Strategy Calculator](https://covidstrategycalculator.github.io/CovidStrategyCalculator.html) gives us a distribution for probability of infection conditioned on not having symptoms, which we combine with McAloon et al. to derive a lognormal distribution for risk of never symptomatic cases.
+- [Lee et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2769235) Shows that 50% of cases that are never symptomatic are completely recovered (undetectable amounts of virus) in 16 days and 90% are recovered in 23 days.
+
+Combining these sources, we built a model that accounts for time to developing symptoms, proportion of cases that are asymptomatic, and decreased infectiousness of asymptomatic individuals:
+
+![](${infectiousDecayModel})
+
+This peaks on day 2 and decays over time. Since the risk starting around day 20 is small, we arbitrarily choose a cutoff time of 23 days, which yields an infectious window of exactly 3 weeks (2-23 days).
+
+Many people have a weekly routine, which makes modeling their risk for 7 days compelling. If a person regularly gets a total of \`X\` microCOVIDs over the course of 7 days and they do the same activities each week, then learning they are currently symptom-free allows us to estimate their *current* risk of having COVID as 60% lower than their weekly total X.
+
+Explaining how we calculate that: they will have done the activity exactly 3 times in any past 2-23 day window so we can estimate that their risk on any given day will be:
+
+\`3 * X * SUM(Relative Risk) / 21 days = 0.6 * X\`
+
+Therefore a person with a regular schedule could be modeled based on their normal 7 day week, but users tracking risk with the Risk Tracker will be able to more precisely know the risk they pose to others on any given day.
+
+The 2-9 day window cited elsewhere in the whitepaper is one way of simplifying this decay over time, by treating it as though there is no decay from day 2 through 9, and then all the decay occurs as a sharp step on day 10. This is purely a simplification: there is absolutely nothing magical about day 9; in reality, on day 10 there is still 16% of the original risk left. If a person’s risky activities do not follow a 7 day cycle, and they have some something very risky more than 9 days ago, you may need to ask them for what they have done for up to the last 2 or even 3 weeks.
 
 ### Note on Infectious Period: Contacts' symptoms
 
