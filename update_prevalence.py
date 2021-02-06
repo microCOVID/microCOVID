@@ -389,6 +389,8 @@ class AllData:
                 jhu_line.Province_State,
                 country=jhu_line.Country_Region,
             )
+        elif jhu_line.Country_Region == "Korea, South":
+            return self.get_country("South Korea")
         else:
             return self.get_country(jhu_line.Country_Region)
 
@@ -674,6 +676,10 @@ def main() -> None:
                 # has its own entry so turn the combo into just Bristol Bay
                 line.Admin2 = "Yakutat"
                 line.Population = 604  # from Google
+            if (
+                line.Country_Region == "Korea, South"
+            ):
+                line.Country_Region = "South Korea"
             place = data.get_jhu_place(line)
             if place.population != 0:
                 raise ValueError(
