@@ -360,20 +360,21 @@ describe('calculate', () => {
       const oneHourIntimate: CalculatorData = {
         ...baseTestData,
         ...prepopulated['One-night stand with a random person'],
+        riskProfile: 'closedPod4',
         duration: 60,
       }
       const oneMinuteIntimate: CalculatorData = {
         ...oneHourIntimate,
         duration: 1,
       }
-      const twoHourIntimate: CalculatorData = {
+      const sixtythreeminuteIntimate: CalculatorData = {
         ...oneHourIntimate,
-        duration: 120,
+        duration: 63,
       }
 
       expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(oneHourIntimate))
-      expect(calcValue(twoHourIntimate)).toEqual(
-        calcValue(oneHourIntimate)! * 2,
+      expect(calcValue(sixtythreeminuteIntimate)).toBeCloseTo(
+        calcValue(oneHourIntimate)! * 1.05,
       )
     })
     it('should not apply talking multiplier', () => {
