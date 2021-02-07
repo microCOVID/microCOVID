@@ -87,7 +87,7 @@
         "risk_modifier_multiple": "{{multiplier}}× le risque",
         "risk_modifier_frac_2nd": "{{frac}} du risque",
         "baseline_risk": "risque de base",
-        "select_scenario": "Optionnel : commencez par une activité commune prédéfinie",
+        "select_scenario": "Optionnel : commencez par une activité commune prédéfinie...",
         "prevalence_info_source_information": "Données de prévalence consolidées de <1>Johns Hopkins CSSE</1> (cas signalés), <4>Covid Act Now</4> (taux de tests positifs aux États-Unis) et <7>Our World in Data</7> (taux internationaux de tests positifs).",
         "select_location_enter_manually": "Entrez les données manuellement…",
         "select_location_placeholder": "Sélectionnez le pays ou l'État américain...",
