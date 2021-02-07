@@ -48,13 +48,6 @@ export const About = (): React.ReactElement => {
         </Trans>
       </p>
 
-      <p className="warning">
-        <Trans i18nKey="about.disclaimer">
-          <h2>Disclaimer</h2>
-          Lorem ipsum dolor sic amet...
-        </Trans>
-      </p>
-
       <h2>
         <Trans>about.contact_us_header</Trans>
       </h2>
