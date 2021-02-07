@@ -90,7 +90,7 @@
         },
         "risk_modifier_frac_2nd": "{{frac}} del riesgo",
         "select_scenario": "Opcional: comienza con una actividad común predefinida",
-        "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) y <7>Our World in Data</7> (tasas de prueba positivas internacionales).",
+        "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) <7>Our World in Data</7> (tasas de prueba positivas internacionales), y <10>Coronavirus COVID-19 România</10> (casos reportados en Rumania).",
         "select_location_enter_manually": "Ingresa los datos manualmente...",
         "select_location_placeholder": "Elige tu país o un estado de EUA...",
         "location_selector_header": "Paso 1: Selecciona tu localidad",
@@ -99,7 +99,7 @@
         "location_subprompt_US-LA": "Total del estado o provincia, o seleccione su municipio...",
         "location_subprompt_country_or_regions": "Total por país o elija una región...",
         "frontline_worker_acknowledgement": "Agradecemos profundamente los sacrificios que los trabajadores sanitarios y esenciales realizan durante esta pandemia. Te invitamos a que encuentres formas seguras de apoyar a estas personas, manteniendo relaciones sociales con ellos y viendo por sus necesidades. Esperamos que la mayoría de estos trabajadores serán vacunados durante los siguientes meses, lo que debería reducir sustancialmente su riesgo de infección y transmisión.",
-        "large_group_warning": "Advertencia: Este es un número alto. Recuerde que sólo necesita contar a las personas a menos de 4 metros y medio de usted (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
+        "large_group_warning": "Advertencia: Este es un número alto. Recuerda que solo necesitas contar a las personas a menos de 5 metros de distancia de ti (no a todos los presentes). Sin embargo, una reunión de un número alto de personas podría poner en riesgo a todos y abre la posibilidad de volverse un evento superpropagador.",
         "household_members_note": "Si estás modelando la exposición de los miembros de tu hogar, cuenta solamente a los contactos externos al hogar para evitar duplicar conteos",
         "intimate_risk_warning": "Hemos supuesto al menos un mínimo de riesgo a besarse debido al riesgo involucrado en el intercambio de fluidos.",
         "number_of_people_near_you_partner": "¿Con cuántas personas vives o estás quedándote actualmente?",
@@ -113,7 +113,8 @@
         "risk_tolerance_1_percent_label": "Presupuesto estándar de seguridad",
         "alerts": {
             "survey_request": "<0>Nos encantaría recibir tus comentarios:</0> ¡Queremos tu ayuda para que el estimador de microCOVIDs sea lo más útil posible! <2>Por favor, participa en nuestra encuesta de usuarios</2> para ayudarnos a priorizar nuevas funciones.",
-            "b117": "<0>Actualización del modelo:</0> Hemos ajustado los parámetros para la nueva variante del COVID-19, B117. Lee más <3>aquí</3>"
+            "b117": "<0>Actualización del modelo:</0> Hemos ajustado los parámetros para la nueva variante del COVID-19, B117. Lee más <3>aquí</3>",
+            "masks_update": "<0> Actualización del modelo: </0> Nuestras opciones de mascarillas se han ampliado y actualizado. Para obtener más detalles, consulta la sección de Mascarillas de la <3>Publicación</3>."
         },
         "saved_scenario_loaded_message": "Has seleccionado este escenario: <strong>{{ scenarioName }}</strong>. ¿Lo que se muestra a continuación se parece a la actividad que tienes en mente? Si no es así, ajústalos hasta que sean similares.",
         "warning": {
@@ -130,7 +131,7 @@
             "microcovid_header": "¿Qué es un microCOVID?",
             "budget_header": "¿Cómo puedo administrar mi riesgo utilizando un presupuesto de riesgo?",
             "microcovid_explanation": "<p>El estimador presenta un nuevo concepto, el microCOVID. Un microCOVID es una probabilidad de una en un millón de contraer COVID-19.</p> <p>Una actividad de 20,000 microCOVIDS es muy insegura, ya que tienes un 2% de riesgo de contraer COVID-19<em>cada vez que la haces</em>. Una actividad de 20 microCOVIDs es relativamente segura, ya que podrías realizarla todas las semanas durante un año y aún tener solo un 0.1% de probabilidad de contraer COVID-19.</p>",
-            "budget_explanation": "Decidimos que un presupuesto anual de riesgo de 1% de probabilidad de contraer COVID-19 por año era razonable para la mayoría de las personas sanas que no están en contacto con grupos vulnerables. Para saber cómo llegamos a ese número, <1>haz clic aquí</1>. Si quieres usar este presupuesto de 1% de riesgo por año, vas a requerir que tu presupuesto semanal de actividades sume menos de unos 200 microCOVIDs por semana. Hemos creado una útil <3>hoja de cálculo</3> que te permite hacer un seguimiento de tus actividades a lo largo del tiempo."
+            "budget_explanation": "Decidimos que un presupuesto anual de riesgo de 1% de probabilidad de contraer COVID-19 por año era razonable para la mayoría de las personas sanas que no están en contacto con grupos vulnerables. Para saber cómo llegamos a ese número, <1>haz clic aquí</1>. Si quieres usar este presupuesto de 1% de riesgo por año, vas a requerir que tu presupuesto semanal de actividades sume menos de unos 200 microCOVIDs por semana. Hemos creado un útil <3>monitor de riesgo</3> que te permite hacer un seguimiento de tus actividades a lo largo del tiempo."
         },
         "risk_modifier_frac_3rd": "{{frac}} del riesgo",
         "baseline_risk": "riesgo base",
@@ -152,7 +153,8 @@
             "US-LA": "Total a nivel provincia/región/estado, o elige un municipio...",
             "country_or_regions": "Total a nivel país, o elige una provincia, región o estado..."
         },
-        "select_location_label": "País o estado de EUA"
+        "select_location_label": "País o estado de EUA",
+        "no_prebuilt_scenario_found": "Todavía no tenemos este escenario, pero puedes crear uno a continuación."
     },
     "current_lang_two_letter_code": "es",
     "menu": {
@@ -161,7 +163,11 @@
         "spreadsheet": "Hoja de cálculo",
         "about": "Acerca de",
         "whitepaper": "Publicación",
-        "contactus": "Contacto"
+        "contactus": "Contacto",
+        "risk_tracker": {
+            "header": "Monitor de Riesgo",
+            "start_here": "Empezar aquí"
+        }
     },
     "button": {
         "copy_link": "Copiar enlace a este escenario",
@@ -174,7 +180,7 @@
         "contact_us_header": "Contacto",
         "disclaimer": "<0>Descargo de responsabilidad</0> En esta herramienta indicamos nuestra mejor estimación basada en la evidencia disponible, incluso cuando esa evidencia no es concluyente. Hemos leído muchas investigaciones de expertos, pero nosotros mismos no somos expertos en este tema. Este trabajo no ha sido revisado científicamente por pares. Todavía hay mucha incertidumbre sobre el COVID-19. No uses esta herramienta como consejo médico. Sigue acatando las indicaciones del gobierno.",
         "data_inputs_recommendation": "Te sugerimos empezar con el <2>estimador</2> o la <5>publicación</5>.",
-        "data_inputs_spreadsheet": "y una <1>hoja de cálculo</1> para calcular tu riesgo de contraer COVID-19 con más detalle y para realizar un seguimiento de tu riesgo a lo largo del tiempo.",
+        "data_inputs_spreadsheet": "y un <1>monitor de riesgo</1> para calcular tu riesgo de contraer COVID-19 con más detalle y para realizar un seguimiento de tu riesgo a lo largo del tiempo.",
         "data_inputs_whitepaper": "una <1>publicación</1> que explica nuestro método de estimación",
         "data_inputs_calculator": "un <1>estimador</1> que puedes utilizar para calcular tu riesgo de contraer COVID-19",
         "data_inputs_lead": "Este sitio contiene tres resultados de nuestra investigación",
@@ -223,10 +229,10 @@
         "loud_voice": "Hablando en voz alta (gritando, cantando, conversando con música ambiental)",
         "normal_voice": "Conversación normal",
         "silent_voice": "Sin hablar (por ej.: viajar en tren en silencio)",
-        "n95_mask": "Mascarilla N95, KN95 o FFP2 bien ajustada y bien sellada",
-        "filtered_mask": "Mascarilla quirúrgica o mascarilla con filtro PM2.5",
-        "basic_mask": "Mascarilla de algodón, pañuelo embozado (bandana paliacate) o bufanda elástica (\"buff\")",
-        "no_mask": "Sin mascarilla o mascarilla mal puesta",
+        "n95_mask": "Mascarilla N95 de buen tamaño, pero no estás seguro si sella bien",
+        "filtered_mask": "Mascarilla de tela con filtro PM2.5",
+        "basic_mask": "Mascarilla de algodón, gruesa y ajustada (mascarilla de algodón de varias capas ajuste ceñido y seguro)",
+        "no_mask": "Sin mascarilla",
         "tenft_distance": "3 metros o más de distancia",
         "normal_distance": "Socialización normal (~1 metro de distancia)",
         "close_distance": "Cercana (menos de 30 cm de distancia)",
@@ -241,7 +247,12 @@
         "oneTime": "Interacción única o actividad repetida [probabilidad de {{ percentage }} de transmisión por hora]",
         "sixft_distance": "2 metros o más de distancia",
         "transit": "Un vagón de tren con filtro para aire",
-        "intimate_distance": "Besar"
+        "intimate_distance": "Besar",
+        "p100_mask": "Respirador P100, certificado por NIOSH que es reutilizable, con válvula de salida cubierta",
+        "n95_sealed_mask": "Mascarilla N95 de tipo médico con sello hermético",
+        "kn95_mask": "Mascarilla KN95",
+        "surgical_mask": "Mascarilla quirúrgica",
+        "thin_mask": "Mascarilla de algodón, delgada o floja (bandana, bufanda elástica, o cuelga floja, se cae)"
     },
     "buttons": {
         "select_default_action": "Elige uno..."
