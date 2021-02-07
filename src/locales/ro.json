@@ -27,7 +27,7 @@
             "no_intimate_bonus_outdoors": "Ignorăm mediul înconjurător in acest calcul. Atunci când oamenii sunt atît de aproape unii de alții, nu credem că mai contează ventilația sau distincția spațiu închis/spațiu deschis"
         },
         "explanationcard": {
-            "activity_risk_capped_note": "(NOTA:  <2>Am limitat acest număr la riscul de activitate maxim</2>.)",
+            "activity_risk_capped_note": "(NOTA: <2>Am limitat acest număr la riscul de activitate maxim</2>.)",
             "chance": "șansă",
             "details_steps_header": "Pași de calcul",
             "details_activity_risk": "Risc per activitate",
