@@ -12,6 +12,10 @@
             "environment_question": "Înăuntru sau afară? Este vorba de un spațiu ventilat, sau cu aer filtrat?",
             "environment_header": "Locație",
             "label": "Precauții"
+        },
+        "explanationcard": {
+            "activity_risk_capped_note": "(NOTA:  <2>Am limitat acest număr la riscul de activitate maxim</2>.)",
+            "chance": "șansă"
         }
     },
     "current_lang_two_letter_code": "ro"
