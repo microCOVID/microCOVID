@@ -39,7 +39,11 @@
             "multiple_suffix": "x bugetul dumneavoastră de risc săptămânal",
             "person_0": "persoană",
             "person_1": "oameni",
-            "person_2": "oameni"
+            "person_2": "oameni",
+            "details_range": "Probabil între",
+            "details_frequency": "Frecvență",
+            "details_total_risk": "Risc total",
+            "details_number_of_people": "Număr de persoane"
         },
         "risk_note_about_household_members": "Atunci când estimăm riscul de infecție de la un colocatar sau partener/soț/soție presupunem că interacțiunile au loc în interior, fără mască sau distanțare."
     },
