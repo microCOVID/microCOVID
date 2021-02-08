@@ -152,9 +152,10 @@
     "risk_group_empty_warning": "First, enter your location",
     "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
     "alerts": {
-      "masks_update": "<0>Model update:</0> Our mask options have been expanded and updated. For more details, see the Masks section of the <3>White Paper</3>.",
-      "b117": "<0>Model update:</0> We've adjusted parameters for the new COVID-19 variant, B117. Read more <3>here</3>.",
-      "survey_request": "<0>We would love your feedback:</0> We want your help to make the microCOVID calculator as helpful as possible! <2>Please fill out our user survey</2> to help us prioritize new features."
+      "masks_update": "<0>January 26th, 2021:</0> We created new mask categories, and updated multipliers for mask types. Read more on <3>our new blog post about masks</3>.",
+      "b117": "<0>January 7th, 2021:</0> We've adjusted the model parameters for the new COVID-19 variant, B117. Read more <3>here</3>.",
+      "survey_request": "<0>We would love your feedback:</0> We want your help to make the microCOVID calculator as helpful as possible! <2>Please fill out our user survey</2> to help us prioritize new features.",
+      "full_changelog": "full changelog..."
     }
   },
   "per week": "per week",

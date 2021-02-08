@@ -3,7 +3,7 @@ import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsCheckBox, BsFillInfoCircleFill, BsLink45Deg } from 'react-icons/bs'
+import { BsLink45Deg } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 import 'pages/styles/Calculator.scss'
@@ -165,8 +165,7 @@ export const Calculator = (): React.ReactElement => {
           <FirstTimeUserIntroduction />
         </Col>
         <Col lg="4" md="12">
-          <Alert variant="info">
-            <BsCheckBox />{' '}
+          <Alert className="request-feedback" variant="primary">
             <Trans i18nKey="calculator.alerts.survey_request">
               <strong>We would love your feedback:</strong> lipsum
               <a
@@ -179,13 +178,21 @@ export const Calculator = (): React.ReactElement => {
               lipsum
             </Trans>
           </Alert>
-          <Alert variant="secondary">
-            <BsFillInfoCircleFill />{' '}
+          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.masks_update">
               <strong>Model update:</strong> Lipsum{' '}
-              <Link to="/paper/14-research-sources#masks">White Paper</Link>.
+              <Link to="/blog/masks">our new blog post about masks</Link>.
             </Trans>
           </Alert>
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.b117">
+              <strong>Model update:</strong> Lipsum{' '}
+              <Link to="/blog/b117">White Paper</Link>.
+            </Trans>
+          </Alert>
+          <Link id="full-changelog" to="/paper/changelog">
+            {t('calculator.alerts.full_changelog')}
+          </Link>
         </Col>
       </Row>
       <Row>
