@@ -60,14 +60,15 @@
     margin-bottom: 0;
   }
   
-  .postAuthor {
-    font-weight: bold;
-    margin-top: 10px;
+
+  .postMeta {
+    color: $gray-700;
+    margin-top: 8px;
+    margin-bottom: 15px;
   }
 
-  .postDate {
-    color: $gray-500;
-    margin-bottom: 10px;
+  .postAuthor {
+    margin-top: 10px;
   }
 
   .sectionIndicator {
