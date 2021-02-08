@@ -36,7 +36,7 @@ img {
 
 ## How the Risk Tracker helped our house get our lives back
 
-Here’s a bit of the backstory behind this new version: Up until [microCOVID](/) was released in August 2020, my house was struggling with the same thing many communal houses were struggling with: we want to make sure to keep ourselves, each other, and the wider community safe from COVID, *and* at the same time, there are were things that were important enough that we want to be able to do. 
+Here’s a bit of the backstory behind this new version. Up until [microCOVID](/) was released in August 2020, my house was struggling with the same thing many communal houses were struggling with: we want to make sure to keep ourselves, each other, and the wider community safe from COVID, *and* at the same time, there are things that are important enough that we want to be able to find a way to do them. 
 
 The dilemma: how do you make decisions about what a “safe amount of risk is” when living with many other people?
 
