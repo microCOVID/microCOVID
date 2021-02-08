@@ -46,7 +46,7 @@ So when I got my hands on the original microCOVID spreadsheet, I went to town up
 
 Let me say this: since we replaced our consensus approach with a microCOVID budget approach, COVID-related relationship stress in the house has gone down dramatically. We can now make choices on our own about what we do that’s within our individual risk budget! Once the system is set up and everyone knows how to use it, we don’t need to have much (if any) group meeting time to talk about our COVID agreements.
 
-***Having this new approach has saved us SO much energy. We got our lives back.*** *Both in that we aren’t constantly talking about COVID decisions every week, and that we have flexibility to take certain actions that are important to us.*
+**Having this new approach has saved us SO much energy. We got our lives back.** Both in that we aren’t constantly talking about COVID decisions every week, and that we have flexibility to take certain actions that are important to us.
 
 I realized that, although I personally love spreadsheets, many people don’t. I wanted to find a way for everyone to be able to get their lives back the way my house did. That’s why I’ve been working with the team for the last few months upgrading the risk tracker to be cleaner, clearer, and easier to use so that anyone could pick it up and start using it for their pod. We hope you find it useful for your situation.
 
@@ -63,7 +63,7 @@ Here’s what’s you’ll find in the latest version:
 
 - **Household/pod risk budget tracking** to empower individuals within your group to have more flexibility to make decisions while keeping everyone’s risk within an agreed-upon risk threshold.
 - A new [**quickstart guide**](/tracker/quickstart) to orient you to the spreadsheet.
-- [**Step-by-step instructions**](/tracker/basics) ****to help answer many common questions about the spreadsheet and how to use it in specific scenarios.
+- [**Step-by-step instructions**](/tracker/basics) to help answer many common questions about the spreadsheet and how to use it in specific scenarios.
 - [**Custom person risk modeling**](/tracker/basics#using-the-custom-people-sheet-to-model-risk-more-precisely), so you can figure out just how risky that friend or co-worker is to see.
 - **Updated mask options** and risk multipliers that match the Calculator. (See our recent blog posts on [upgrading your mask](/blog/masks).)
 
