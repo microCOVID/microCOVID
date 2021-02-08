@@ -10,7 +10,6 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
       <Expandable
         id="first-time-user-introduction"
         header={t('calculator.firsttime.microcovid_header')}
-        open={true}
       >
         <Trans>calculator.firsttime.microcovid_explanation</Trans>
       </Expandable>
