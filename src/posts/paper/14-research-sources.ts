@@ -93,10 +93,11 @@ if height = 8ft,
 CFM = 2/3 * (square footage)
 \`\`\`
 
-###### Moving car with windows rolled down; a space with one or more sides open to the outdoors
-From the above data, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down and partially enclosed spaces (i.e. at least one wall is open to outside air).
+###### Moving car with windows rolled down
+From the above data, we also deduce that areas that have high rates of air exchange while not being "outside" per-se should be similarly safer. This includes cars with the windows rolled down. We suggest rolling the windows all the way down, not leaving them "cracked", to make sure enough air is being circulated.
 
-We suggest rolling the windows all the way down, not leaving them "cracked", to make sure enough air is being circulated.
+###### A space with one or more sides open to the outdoors
+In a similar way as the item above, partially enclosed spaces have higher rates of air exchange than a fully indoor environment (i.e. at least one wall is open to outside air).
 
 ###### Mass transit: trains, airplanes, buses
 Finally, many mass transit options have very high air circulation standards, so we apply the same risk reduction. For instance, SF's [BART](https://www.bart.gov/news/articles/2020/news20200813) claims that their trains circulate and purify air every 70 seconds, or 50 times an hour. 
