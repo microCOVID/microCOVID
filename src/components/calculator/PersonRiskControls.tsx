@@ -91,6 +91,8 @@ export const PersonRiskControls: React.FunctionComponent<{
           <input
             className="form-control form-control-lg col-md-3"
             type="number"
+            inputMode="numeric"
+            pattern="[0-9]*"
             value={data.personCount}
             onChange={(e) =>
               setter({
@@ -129,6 +131,8 @@ export const PersonRiskControls: React.FunctionComponent<{
             <input
               className="form-control form-control-lg col-md-3"
               type="number"
+              inputMode="numeric"
+              pattern="[0-9]*"
               value={data.duration}
               onChange={(e) =>
                 setter({
@@ -170,11 +174,6 @@ export const PersonRiskControls: React.FunctionComponent<{
           )
         }}
       />
-      {data.riskProfile === 'frontline' ? (
-        <div className="warning">
-          <Trans>calculator.frontline_worker_acknowledgement</Trans>
-        </div>
-      ) : null}
       <br />
     </React.Fragment>
   )

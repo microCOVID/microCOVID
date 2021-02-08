@@ -5,7 +5,11 @@
         "spreadsheet": "Táblázat (csak angolul)",
         "contactus": "Kapcsolat",
         "whitepaper": "Tanulmány (csak angolul)",
-        "blog": "Blog"
+        "blog": "Blog",
+        "risk_tracker": {
+            "header": "Kockázatkövető (csak angolul)",
+            "start_here": "Bevezetés"
+        }
     },
     "current_lang_two_letter_code": "hu",
     "calculator": {
@@ -74,7 +78,7 @@
         },
         "nearby_people_label": "Emberek körülötted",
         "number_of_people_near_you_partner": "Hány emberrel élsz együtt?",
-        "number_of_people_near_you_onetime": "Hányan vannak körülötted 3 méteren belül általában?",
+        "number_of_people_near_you_onetime": "Hányan vannak körülötted 5 méteren belül általában?",
         "people_count": "Résztvevők száma",
         "distance_question": "Átlagban milyen messze vannak tőled?",
         "distance_header": "Távolság",
@@ -111,7 +115,7 @@
         "location_selector_header": "1. lépés: Hol vagy?",
         "select_location_placeholder": "Válassz országot vagy államot...",
         "select_location_enter_manually": "Add meg kézzel...",
-        "prevalence_info_source_information": "A jelentett esetek számát a <1>Johns Hopkins CSSE adatbázisból</1>, a pozitív tesztek arányát a USA-ban a <4>Covid Act Now-ról</4>, a világ többi részén pedig az <7>Our World in Data-ról</7> gyűjtjük le.",
+        "prevalence_info_source_information": "A jelentett esetek számát a <1>Johns Hopkins CSSE adatbázisból</1>, a pozitív tesztek arányát a USA-ban a <4>Covid Act Now-ról</4>, a világ többi részén pedig az <7>Our World in Data-ról</7> gyűjtjük le. A román regionális adatok forrása a <10>Coronavirus COVID-19 România</10>.",
         "select_scenario": "Válassz a kész példák közül vagy add meg a részleteket lentebb...",
         "baseline_risk": "alapkockázat",
         "risk_modifier_frac_2nd": "{{frac}} kockázat",
@@ -122,7 +126,7 @@
             "microcovid_header": "Mi az a microCOVID?",
             "microcovid_explanation": "<p>A kockázat számításához bevezettünk egy új fogalmat, a microCOVID-ot. Egy microCOVID egy a millióhoz esély jelent arra, hogy elkapd a koronavírust.</p> <p>Egy 20 000 microCOVID-os tevékenység veszélyes, mert 2% esélyed van arra, hogy megfertőződj <em>minden egyes alkalommal</em>, amikor részt veszel rajta. Egy 20 microCOVID-os tevékenység relatíve biztonságos, mert egy éven keresztül minden héten végezhetnéd, és még így is csak 0,1% esélyed lenne arra, hogy ennek során megfertőződj.</p>",
             "budget_header": "Mire jó a kockázati keret?",
-            "budget_explanation": "Úgy gondoljuk, hogy az évi 1%-os fertőzési kockázat egy kezelhető mérték a legtöbb egészséges ember számára, aki nincs kapcsolatban veszélyeztetett csoportokkal (a részleteket <1>lásd itt</1>). Ha tartani akarod ezt az évi 1%-os számot, akkor a heti tevékenységeid kockázatát összesen 200 microCOVID alatt kell tartanod. Létrehoztunk egy <3>Excel-táblát</3> is, amibe fel tudod jegyezni a tevékenységeidet."
+            "budget_explanation": "Úgy gondoljuk, hogy az évi 1%-os fertőzési kockázat egy kezelhető mérték a legtöbb egészséges ember számára, aki nincs kapcsolatban veszélyeztetett csoportokkal (a részleteket <1>lásd itt</1>). Ha tartani akarod ezt az évi 1%-os számot, akkor a heti tevékenységeid kockázatát összesen 200 microCOVID alatt kell tartanod. Létrehoztunk egy <3>kockázatkövető táblázatot</3> is, amibe fel tudod jegyezni a tevékenységeidet."
         },
         "risk_tolerance_1_percent_label": "Átlagos keret",
         "risk_tolerance_1_percent_explanation": "Keret: évi 1% esély a fertőzésre, avagy 200 microCOVID hetente (javasolt érték, ha nem vagy veszélyeztetett)",
@@ -143,7 +147,8 @@
         "saved_scenario_loaded_message": "Ezt a kész példát választottad ki: <strong>{{ scenarioName }}</strong>. Az alábbi beállítások megfelelnek a tevékenységnek, amire gondoltál? Ha nem, nyugodtan állítsd át őket.",
         "alerts": {
             "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> Szükségünk van rád ahhoz, hogy ez az oldal minél szélesebb kör számára legyen hasznos. <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
-            "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul."
+            "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul.",
+            "masks_update": "<0>Modellfrissítés:</0> A kiválasztható maszkok körét kibővítettük és frissítettük. A részletekről a <3>tanulmány maszkokról szóló fejezetében</3> olvashatsz angolul."
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -181,10 +186,10 @@
         "normal_distance": "Normál társalgási távolság (~1 méter)",
         "sixft_distance": ">2 méteres távolság",
         "tenft_distance": ">3 méteres távolság",
-        "no_mask": "Nem vagy rosszul viselt maszk",
-        "basic_mask": "Szövetmaszk vagy sál",
-        "filtered_mask": "Sebészmaszk vagy PM2.5 szűrős maszk",
-        "n95_mask": "Megfelelően viselt, arcra simuló N95 vagy FFP2 maszk",
+        "no_mask": "Maszk nélkül",
+        "basic_mask": "Vastag, jól illeszkedő, több rétegű szövetmaszk",
+        "filtered_mask": "Szövetmaszk PM2.5 szűrőbetéttel",
+        "n95_mask": "Arcra simuló, jól illeszkedő N95 vagy FFP2 maszk, nem ellenőrzött légmentes zárással",
         "silent_voice": "Csöndben, beszélgetés nélkül",
         "normal_voice": "Átlagos beszélgetés",
         "loud_voice": "Hangos (kiabálás, éneklés)",
@@ -210,7 +215,12 @@
         "car_windows_down": "Mozgó autó leengedett ablakkal",
         "transit": "Vonat légszűrő berendezéssel",
         "filtered": "Beltér HEPA légszűrővel (óránként ötszöri légcserével)",
-        "plane": "Repülő"
+        "plane": "Repülő",
+        "p100_mask": "P100 maszk lefedett kilégző szeleppel",
+        "n95_sealed_mask": "Arca simuló, jól illeszkedő N95 vagy FFP2 maszk, ami légmentesen zár",
+        "kn95_mask": "KN95 maszk",
+        "thin_mask": "Vékony, lazán illeszkedő vagy félrecsúszott szövetmaszk, kendő vagy sál",
+        "surgical_mask": "Sebészmaszk"
     },
     "scenario": {
         "outdoorMasked2": "Találkozás két másik emberrel szabadban, maszkban",
@@ -238,7 +248,7 @@
         "data_inputs_lead": "Három fő formában foglaltuk össze az eredményeinket",
         "data_inputs_calculator": "egy <1>kalkulátor</1>, aminek segítségével felbecsülheted a fertőzési kockázatod,",
         "data_inputs_whitepaper": "egy <1>tanulmány</1>, ami elmagyarázza a módszertanunk (csak angolul elérhető),",
-        "data_inputs_spreadsheet": "és egy <1>táblázat</1>, ami segít részletesebben kiszámolni és követni a fertőzési kockázatod.",
+        "data_inputs_spreadsheet": "és egy <1>kockázatkövető táblázat</1>, ami segít részletesebben kiszámolni és követni a fertőzési kockázatod.",
         "data_inputs_recommendation": "Vagy a <2>kalkulátorral</2>, vagy a <5>tanulmánnyal</5> érdemes kezdened.",
         "disclaimer": "<0>Figyelmeztetés</0> Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és az eszköz sem esett át tudományos igényű ellenőrzésen. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat.",
         "contact_us_header": "Elérhetőség",

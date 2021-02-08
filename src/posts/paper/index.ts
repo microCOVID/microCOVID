@@ -11,7 +11,6 @@ import post4 from 'posts/paper/4-computing-microcovids'
 import post5 from 'posts/paper/5-activity-risk'
 import post6 from 'posts/paper/6-person-risk'
 import post7 from 'posts/paper/7-basic-method'
-import post8 from 'posts/paper/8-intermediate-method'
 import post9 from 'posts/paper/9-advanced-method'
 import changelog from 'posts/paper/99-changelog'
 import { PostMap } from 'posts/post'
@@ -25,7 +24,6 @@ export const pages: PostMap = {
   '5-activity-risk': post5,
   '6-person-risk': post6,
   '7-basic-method': post7,
-  '8-intermediate-method': post8,
   '9-advanced-method': post9,
   '10-example-person-risk': post10,
   '11-putting-it-all-together': post11,

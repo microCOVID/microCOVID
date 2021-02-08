@@ -165,6 +165,18 @@ class CANRegionSummary(pydantic.BaseModel):
     population: int
 
 
+# Romanian sub-national dataset:
+class RomaniaPrevalenceData(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://covid19.geo-spatial.org/external/charts_vasile/assets/json/cazuri_zile_long.json"
+
+    Date: date = pydantic.Field(alias="Data")
+    County: str = pydantic.Field(alias="Judet")
+    Population: int = pydantic.Field(alias="Populatie")
+    TotalCases: int = pydantic.Field(alias="Cazuri total")
+
+
 # Our unified representation:
 
 
@@ -274,7 +286,7 @@ class State(Place):
 
 
 class Country(Place):
-    iso3: Optional[str] # USA
+    iso3: Optional[str]  # USA
     states: Dict[str, State] = {}
 
     @property
@@ -377,6 +389,8 @@ class AllData:
                 jhu_line.Province_State,
                 country=jhu_line.Country_Region,
             )
+        elif jhu_line.Country_Region == "Korea, South":
+            return self.get_country("South Korea")
         else:
             return self.get_country(jhu_line.Country_Region)
 
@@ -613,6 +627,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "MS Zaandam",
         "Western Sahara",
         "Micronesia",
+        "Palau",
     ):
         return True
     if line.Country_Region == "US":
@@ -661,6 +676,10 @@ def main() -> None:
                 # has its own entry so turn the combo into just Bristol Bay
                 line.Admin2 = "Yakutat"
                 line.Population = 604  # from Google
+            if (
+                line.Country_Region == "Korea, South"
+            ):
+                line.Country_Region = "South Korea"
             place = data.get_jhu_place(line)
             if place.population != 0:
                 raise ValueError(
@@ -728,6 +747,13 @@ def main() -> None:
                     country.tests_in_past_week = (
                         line.Seven_day_smoothed_daily_change * 7
                     )
+
+        # Romanian county (judet) data. Treat as states internally.
+        for line in parse_json(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
+            state = data.get_state(line.County, country="Romania")
+            state.population = line.Population
+            state.cumulative_cases[line.Date] = line.TotalCases
+
 
     finally:
         cache.save()

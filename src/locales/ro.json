@@ -3,7 +3,12 @@
         "contactus": "Scrie-ne",
         "spreadsheet": "Foaie de calcul",
         "about": "Despre noi",
-        "calculator": "Calculator"
+        "calculator": "Calculator",
+        "blog": "Blog",
+        "risk_tracker": {
+            "header": "Tracker de risc",
+            "start_here": "Începeți aici"
+        }
     },
     "calculator": {
         "precautions": {
@@ -11,8 +16,36 @@
             "your_mask_header": "Masca dumneavoastră",
             "environment_question": "Înăuntru sau afară? Este vorba de un spațiu ventilat, sau cu aer filtrat?",
             "environment_header": "Locație",
-            "label": "Precauții"
-        }
+            "label": "Precauții",
+            "volume_question": "Cât vorbește lumea?",
+            "volume_header": "Volum",
+            "filtered_ensure_airflow": "Asigurați-vă că filtrul are un flux suficient pentru camera dv. Pentru ajutor cu asta, vedeți <1>aici</1>.",
+            "their_mask_note": "Dacă mănâncă sau beau, selectați “fără mască”",
+            "their_mask_question": "Ce maști poartă celelalte persoane?",
+            "their_mask_header": "Maștile celorlalți",
+            "your_mask_note": "Dacă mâncați sau beți, selectați “fără mască”",
+            "no_intimate_bonus_outdoors": "Ignorăm mediul înconjurător in acest calcul. Atunci când oamenii sunt atît de aproape unii de alții, nu credem că mai contează ventilația sau distincția spațiu închis/spațiu deschis"
+        },
+        "explanationcard": {
+            "activity_risk_capped_note": "(NOTA: <2>Am limitat acest număr la riscul de activitate maxim</2>.)",
+            "chance": "șansă",
+            "details_steps_header": "Pași de calcul",
+            "details_activity_risk": "Risc per activitate",
+            "details_person_risk": "Risc per persoană",
+            "details_overview_header": "Calcul",
+            "details_header_open": "Ascundeți calculul în detaliu",
+            "details_header_closed": "Arătați calculul în detaliu",
+            "percentage_suffix": "% din bugetul dumneavoastră de risc săptămânal",
+            "multiple_suffix": "x bugetul dumneavoastră de risc săptămânal",
+            "person_0": "persoană",
+            "person_1": "oameni",
+            "person_2": "oameni",
+            "details_range": "Probabil între",
+            "details_frequency": "Frecvență",
+            "details_total_risk": "Risc total",
+            "details_number_of_people": "Număr de persoane"
+        },
+        "risk_note_about_household_members": "Atunci când estimăm riscul de infecție de la un colocatar sau partener/soț/soție presupunem că interacțiunile au loc în interior, fără mască sau distanțare."
     },
     "current_lang_two_letter_code": "ro"
 }

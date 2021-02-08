@@ -52,7 +52,8 @@
             "details_total_risk_explanation": "Til slutt ganges personrisikoen, aktivitetsrisikoen, og antall folk sammen, som resulterer med en omtrent <strong>{{ points }}-milliontedels ({{ percentage }})</strong> sjanse for å bli smittet av COVID-19 fra denne aktiviteten, med disse folkene <strong>{{ frequency }}</strong>.",
             "details_activity_risk_explanation": "Så regnes aktivitetsrisikoen ut. En person som utfører denne aktiviteten med COVID-19 har <strong>{{ activity_risk }} sjanse</strong> for å smitte deg.",
             "details_range_explanation": "Det antas av oss med omtrent 90% sikkerhet at den faktiske risikoen er et sted mellom disse to verdiene. Se vår <2>usikkerhetsvurdering</2>.",
-            "frequency_explanation_oneoff": "Siden dette er et engangstilfelle, vises resultatet som <strong>mikroCOVID-enheter <u>hver gang</u>denne interaksjonen finner sted</strong>. Hvis du utfører denne aktiviteten mange ganger i uken, vil det bekostet ditt ukentlige budsjett. Hvis du utfører aktiviteten gjentagende med samme folk hver uke, før dem opp som \"{{ repeated_type_suggestion }}\" for å se hva maksimal overføringsrate er per uke."
+            "frequency_explanation_oneoff": "Siden dette er et engangstilfelle, vises resultatet som <strong>mikroCOVID-enheter <u>hver gang</u>denne interaksjonen finner sted</strong>. Hvis du utfører denne aktiviteten mange ganger i uken, vil det bekostet ditt ukentlige budsjett. Hvis du utfører aktiviteten gjentagende med samme folk hver uke, før dem opp som \"{{ repeated_type_suggestion }}\" for å se hva maksimal overføringsrate er per uke.",
+            "activity_risk_capped_note": "(Merk: Vi har <2>begrenset dette tallet til maksimal aktivitetsrisiko </2>.)"
         },
         "precautions": {
             "their_mask_header": "Deres maske",

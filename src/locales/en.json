@@ -2,7 +2,10 @@
   "menu": {
     "calculator": "Calculator",
     "about": "About",
-    "spreadsheet": "Spreadsheet",
+    "risk_tracker": {
+      "start_here": "Start Here",
+      "header": "Risk Tracker"
+    },
     "contactus": "Contact Us",
     "whitepaper": "White Paper",
     "blog": "Blog"
@@ -85,7 +88,6 @@
     "person_risk_profile_header": "Risk Profile",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
-    "frontline_worker_acknowledgement": "We deeply appreciate the sacrifices that frontline workers are making during the pandemic. We encourage you to find safe ways of supporting these people, keeping them socially included and cared for. We expect that most of these workers will be vaccinated in the next few months, which should substantially reduce their risk of infection/transmission.",
     "category_very_low": "Very Low",
     "category_low": "Low",
     "category_moderate": "Moderate",
@@ -124,7 +126,7 @@
       "select_location": "Switch to pre-populated location data",
       "enter_data_manually": "Switch to manual data entry mode"
     },
-    "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), and <7>Our World in Data</7> (international positive test rates).",
+    "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
     "select_scenario": "Search for an activity or build your own below...",
     "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
     "baseline_risk": "baseline risk",
@@ -136,7 +138,7 @@
       "microcovid_header": "What is a microCOVID?",
       "microcovid_explanation": "<p>The calculator introduces a new concept, the microCOVID. One microCOVID is a one-in-a-million chance of getting COVID.</p> <p>An activity that’s 20,000 microCOVIDs is very unsafe, as you have a 2% risk of getting COVID <em>every time you do it</em>. An activity that’s 20 microCOVIDs is relatively safe, as you could do it every week for a year and still have only about a 0.1% chance of getting COVID.</p>",
       "budget_header": "How can I manage my risk using a risk budget?",
-      "budget_explanation": "We decided an annual risk budget of a 1% chance of catching COVID per year was reasonable for most healthy people who are not in contact with vulnerable groups. To learn how we arrived at that number, <1>click here</1>. If you want to follow this 1%-risk-per-year budget, you’ll want your weekly budget of activities to sum to less than about 200 microCOVIDs each week. We’ve created a handy <3>spreadsheet</3> that lets you keep track of your activities over time."
+      "budget_explanation": "We decided an annual risk budget of a 1% chance of catching COVID per year was reasonable for most healthy people who are not in contact with vulnerable groups. To learn how we arrived at that number, <1>click here</1>. If you want to follow this 1%-risk-per-year budget, you’ll want your weekly budget of activities to sum to less than about 200 microCOVIDs each week. We’ve created a handy <3>Risk Tracker</3> that lets you keep track of your activities over time."
     },
     "risk_tolerance_1_percent_label": "Standard Caution Budget",
     "risk_tolerance_1_percent_explanation": "Budget: 1% chance of COVID per year (200 microCOVIDs per week) (suggested for healthy people NOT in close contact with more vulnerable people)",
@@ -238,7 +240,7 @@
     "data_inputs_lead": "This website contains three outputs of our investigation",
     "data_inputs_calculator": "a <1>calculator</1> that you can use to calculate your COVID risk",
     "data_inputs_whitepaper": "a <1>white paper</1> that explains our estimation method",
-    "data_inputs_spreadsheet": "and a <1>spreadsheet</1> to compute your COVID risk in more detail and to track your risk over time.",
+    "data_inputs_spreadsheet": "and a <1>Risk Tracker</1> to compute your COVID risk in more detail and to track your risk over time.",
     "data_inputs_recommendation": "You should start with either the <2>calculator</2> or the <5>white paper</5>.",
     "disclaimer": "<0>Disclaimer</0>In this tool we state our best estimate based on available evidence, even when that evidence is not conclusive. We have read a lot of experts' research, but we are not ourselves experts in this topic. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance.",
     "contact_us_header": "Contact us",

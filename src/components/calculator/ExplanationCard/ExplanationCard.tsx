@@ -234,9 +234,7 @@ export default function ExplanationCard(props: {
               <br />
               <Trans i18nKey="calculator.explanationcard.details_range_explanation">
                 Lorem ipsum{' '}
-                <a href="paper/14-research-sources#uncertainty-estimation">
-                  uncertainty link
-                </a>{' '}
+                <a href="/paper/uncertainty-estimation">uncertainty link</a>{' '}
                 dolor sic amet
               </Trans>
             </li>

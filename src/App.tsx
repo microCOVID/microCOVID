@@ -19,13 +19,20 @@ import { QueryParamProvider } from 'use-query-params'
 
 import { PageViews } from 'components/Analytics'
 import { Footer } from 'components/Footer'
+import { SimplePage } from 'components/markdown/SimplePage'
 import { ScrollToTop } from 'components/ScrollToTop'
 import { About } from 'pages/About'
 import { Blog, BlogTOC } from 'pages/Blog'
 import { Calculator } from 'pages/Calculator'
 import { Contact } from 'pages/Contact'
 import { Paper, PaperNavDropdown, PaperTOC } from 'pages/Paper'
-import { Spreadsheet } from 'pages/Spreadsheet'
+import {
+  RiskTrackerDocumentation,
+  RiskTrackerNavDropdown,
+  RiskTrackerTOC,
+} from 'pages/RiskTracker'
+import { Symptoms } from 'pages/Symptoms'
+import riskQuestionsPage from 'posts/risk-questions'
 
 import 'styles/App.scss'
 
@@ -84,13 +91,7 @@ export const App = (): React.ReactElement => {
                     </NavLink>
                   </Nav.Item>
                   <Nav.Item>
-                    <NavLink
-                      to="/spreadsheet"
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      <Trans>menu.spreadsheet</Trans>
-                    </NavLink>
+                    <RiskTrackerNavDropdown />
                   </Nav.Item>
                   <Nav.Item>
                     <PaperNavDropdown />
@@ -145,6 +146,21 @@ export const App = (): React.ReactElement => {
               <Route path="/calculator">
                 <Redirect to={{ pathname: '/' }} />
               </Route>
+              <Route path="/tracker/:id">
+                <RiskTrackerDocumentation />
+              </Route>
+              <Route exact path="/tracker">
+                <RiskTrackerTOC />
+              </Route>
+              <Route path="/spreadsheet">
+                <Redirect to="/tracker" />
+              </Route>
+              <Route path="/symptoms">
+                <Symptoms />
+              </Route>
+              <Route path="/questions">
+                <SimplePage page={riskQuestionsPage} />
+              </Route>
               <Route path="/about">
                 <About />
               </Route>
@@ -159,9 +175,6 @@ export const App = (): React.ReactElement => {
               </Route>
               <Route exact path="/blog">
                 <BlogTOC />
-              </Route>
-              <Route path="/spreadsheet">
-                <Spreadsheet />
               </Route>
               <Route path="/contact">
                 <Contact />
