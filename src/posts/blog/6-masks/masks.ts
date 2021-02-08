@@ -47,7 +47,7 @@ It’s year 2 of the pandemic, and masks have gone from a strange new experience
 *   **Cloth masks provide some protection to others, but do very little to protect you**.  They’re fine for outdoor use and are the best option for heavy outdoor exercise since they’re not damaged by sweat and you can wash them for reuse.  
 *   **Eye protection (goggles, face shields) is no substitute for wearing a mask**, but does provide some additional protection in high risk scenarios when paired with a good mask.
 
-Here, let’s lay out the relative risk to you of taking a grocery trip with different mask options:
+Here, let’s look at the relative risk to you of any typical activity with different mask options:
 
 <figure>
   <img src=${maskgraph}/>
