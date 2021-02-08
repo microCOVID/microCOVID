@@ -8,7 +8,7 @@ describe('calculator page', () => {
   it('renders at all', () => {
     const { getByText } = render(<Calculator />, { wrapper: AllProviders })
 
-    expect(getByText(/constructed a calculator that lets/i)).toBeInTheDocument()
+    expect(getByText(/new quantitative unit for risk/i)).toBeInTheDocument()
   })
 
   it('activity details section reveals after location is selected', () => {

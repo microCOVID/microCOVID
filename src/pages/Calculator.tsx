@@ -158,11 +158,25 @@ export const Calculator = (): React.ReactElement => {
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
           <p>
-            <Trans i18nKey="calculator.intro.whats_this">
-              Lorem ipsum <a href="/paper">whitepaper</a> dolor sic amet...
+            <Trans i18nKey="calculator.intro.whats_this2">
+              Lorem ipsum dolor sic amet...
+              <span>grocery store</span>,<span>see a specific person</span>,
+              <span>work precautions</span>,
             </Trans>
           </p>
           <FirstTimeUserIntroduction />
+          <p>
+            <Trans i18nKey="calculator.intro.see_video">
+              Lorem ipsum dolor sic amet...
+              <a
+                href="https://www.youtube.com/watch?v=5-ybfrEk1CI"
+                target="_blank"
+                rel="noreferrer"
+              >
+                here
+              </a>
+            </Trans>
+          </p>
         </Col>
         <Col lg="4" md="12">
           <Alert className="request-feedback" variant="primary">
