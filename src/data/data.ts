@@ -29,8 +29,6 @@ const formValue = function (label: string, multiplier: number): FormValue {
   return { label, multiplier }
 }
 
-export const TOP_LOCATION_MANUAL_ENTRY = 'MANUAL_DATA'
-
 export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
 
 export const oneTimeMult = 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT

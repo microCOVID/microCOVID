@@ -123,8 +123,7 @@
     "select_location_label": "Country or US State",
     "select_location_placeholder": "Select Country or US State...",
     "switch_button": {
-      "select_location": "Switch to pre-populated location data",
-      "enter_data_manually": "Switch to manual data entry mode"
+      "enter_data_manually": "Override location-based data"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
     "select_scenario": "Search for an activity or build your own below...",
