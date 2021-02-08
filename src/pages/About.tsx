@@ -11,7 +11,26 @@ export const About = (): React.ReactElement => {
         <Trans>about.intro_header</Trans>
       </h2>
       <p>
-        <Trans>about.basic_description</Trans>
+        <Trans i18nKey="about.basic_description">
+          <p>
+            This is a project to quantitatively estimate the COVID risk to you
+            from your ordinary daily activities.
+          </p>
+          <p>
+            We trawled the scientific literature for data about the likelihood
+            of getting COVID from different situations, and combined the data
+            into a model that people can use. We estimate COVID risk in units of
+            microCOVIDs, where 1 microCOVID = a one-in-a-million chance of
+            getting COVID.
+          </p>
+          <p>
+            We want to help as many people as possible feel more empowered to
+            make decisions around COVID risk by helping them understand how
+            COVID is transmitted. We hope this tool will help hone your
+            intuition, lower your stress levels, and figure out good
+            harm-reduction strategies.
+          </p>
+        </Trans>
       </p>
 
       <h2>
@@ -48,24 +67,9 @@ export const About = (): React.ReactElement => {
         </Trans>
       </p>
 
-      <p className="warning">
-        <Trans i18nKey="about.disclaimer">
-          <h2>Disclaimer</h2>
-          Lorem ipsum dolor sic amet...
-        </Trans>
-      </p>
-
       <h2>
-        <Trans>about.contact_us_header</Trans>
-      </h2>
-      <p>
-        <Trans i18nKey="about.feedback">
-          feedback goes <Link to="/contact">here</Link>.
-        </Trans>
-      </p>
-      <h3>
         <Trans>about.donations_header</Trans>
-      </h3>
+      </h2>
       <p>
         <Trans>about.donations_details</Trans>
       </p>

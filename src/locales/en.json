@@ -151,10 +151,6 @@
     "risk_step_label": "Step 2: Describe the activity or relationship",
     "type_of_interaction": "Is this a specific activity or an ongoing relationship?",
     "risk_group_empty_warning": "First, enter your location",
-    "warning": {
-      "important": "Important",
-      "body": "In this tool we state our best estimate based on available evidence, even when that evidence is not conclusive. We have read a lot of experts' research, but we are not ourselves experts in this topic. This work has not been scientifically peer-reviewed. There is still a lot of uncertainty about COVID. Do not rely on this tool for medical advice. Please continue to follow government guidance."
-    },
     "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
     "alerts": {
       "masks_update": "<0>Model update:</0> Our mask options have been expanded and updated. For more details, see the Masks section of the <3>White Paper</3>.",
@@ -235,7 +231,7 @@
   },
   "about": {
     "intro_header": "What is the microCOVID project?",
-    "basic_description": "This is a project to quantitatively estimate the COVID risk to you from your ordinary daily activities. We trawled the scientific literature for data about the likelihood of getting COVID from different situations, and combined the data into a model that people can use. We estimate COVID risk in units of microCOVIDs, where 1 microCOVID = a one-in-a-million chance of getting COVID.",
+    "basic_description": "<1>This is a project to quantitatively estimate the COVID risk to you from your ordinary daily activities.</1><2>We trawled the scientific literature for data about the likelihood of getting COVID from different situations, and combined the data into a model that people can use. We estimate COVID risk in units of microCOVIDs, where 1 microCOVID = a one-in-a-million chance of getting COVID.</2><3>We want to help as many people as possible feel more empowered to make decisions around COVID risk by helping them understand how COVID is transmitted. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</3>",
     "where_to_start_header": "Where do I start?",
     "data_inputs_lead": "This website contains three outputs of our investigation",
     "data_inputs_calculator": "a <1>calculator</1> that you can use to calculate your COVID risk",
