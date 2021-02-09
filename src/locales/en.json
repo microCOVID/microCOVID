@@ -135,16 +135,18 @@
     "risk_modifier_multiple": "{{multiplier}}x the risk",
     "firsttime": {
       "microcovid_header": "What is a microCOVID?",
-      "microcovid_explanation": "<p>The calculator introduces a new concept, the microCOVID. One microCOVID is a one-in-a-million chance of getting COVID.</p> <p>An activity that’s 20,000 microCOVIDs is very unsafe, as you have a 2% risk of getting COVID <em>every time you do it</em>. An activity that’s 20 microCOVIDs is relatively safe, as you could do it every week for a year and still have only about a 0.1% chance of getting COVID.</p>",
-      "budget_header": "How can I manage my risk using a risk budget?",
-      "budget_explanation": "We decided an annual risk budget of a 1% chance of catching COVID per year was reasonable for most healthy people who are not in contact with vulnerable groups. To learn how we arrived at that number, <1>click here</1>. If you want to follow this 1%-risk-per-year budget, you’ll want your weekly budget of activities to sum to less than about 200 microCOVIDs each week. We’ve created a handy <3>Risk Tracker</3> that lets you keep track of your activities over time."
+      "microcovid_explanation": "<p>We created the concept of the \"microcovid\" as a new quantitative unit for risk. One microCOVID is a one-in-a-million chance of getting COVID.</p> <p>An activity that’s 20,000 microCOVIDs means that you have a 2% risk of getting COVID <em>every time you do it</em>. An activity that’s 20 microCOVIDs (or 0.00002%) is relatively safe, as you could do it <em>every week for a year</em> and still have only accumulated about a 0.1% chance of getting COVID.</p>",
+      "budget_header": "What is a risk budget?",
+      "budget_explanation": "<p>You may decide that you're comfortable with taking on a certain amount of COVID risk. You can think about this amount of risk that you're willing to take on as a \"risk budget\".</p> <p>For most healthy people who are not in contact with vulnerable groups, we think an annual risk budget of a <strong>1% chance of catching COVID</strong> is reasonable - that's a budget of 10,000 microCOVIDs a year. In order to meet this budget, you'd need to stick to a maximum of about <strong>200 microCOVIDs a week</strong>.</p>"
     },
     "risk_tolerance_1_percent_label": "Standard Caution Budget",
     "risk_tolerance_1_percent_explanation": "Budget: 1% chance of COVID per year (200 microCOVIDs per week) (suggested for healthy people NOT in close contact with more vulnerable people)",
     "risk_tolerance_point1_percent_label": "High Caution Budget",
     "risk_tolerance_point1_percent_explanation": "Budget: 0.1% chance of COVID per year (20 microCOVIDs per week) (suggested if you or your close contacts are more vulnerable to COVID)",
     "intro": {
+      "whats_this2": "This calculator lets you estimate COVID risk and find effective safety measures for customizable situations. Examples: how risky is <1>a trip to my grocery store</1>? What's the safest way to <3>see a friend</3>? How much would it help to <5>wear a better mask at my workplace</5>?",
       "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
+      "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
       "call_to_action": "Calculate the approximate COVID risk of an activity or relationship"
     },
     "risk_step_label": "Step 2: Describe the activity or relationship",
@@ -152,8 +154,10 @@
     "risk_group_empty_warning": "First, enter your location",
     "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
     "alerts": {
-      "masks_update": "<0>Model update:</0> Our mask options have been expanded and updated. For more details, see the Masks section of the <3>White Paper</3>.",
-      "survey_request": "<0>We would love your feedback:</0> We want your help to make the microCOVID calculator as helpful as possible! <2>Please fill out our user survey</2> to help us prioritize new features."
+      "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
+      "b117": "<0>January 5th, 2021:</0> The calculator now accounts for the new more infectious COVID-19 variant B117. Read more <3>here</3>.",
+      "survey_request": "<0>We would love your feedback:</0> Please fill out <2>our user survey</2> to help us make the calculator as helpful as possible, and prioritize new features.",
+      "full_changelog": "see all updates..."
     }
   },
   "per week": "per week",
