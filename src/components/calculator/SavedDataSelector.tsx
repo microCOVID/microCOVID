@@ -1,3 +1,4 @@
+import i18n from 'i18n'
 import React from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
@@ -54,8 +55,7 @@ export const SavedDataSelector: React.FunctionComponent<{
 
   let selected: string[] = []
   if (props.scenarioName !== undefined && props.scenarioName !== '') {
-    const selectedOption = props.scenarioName + ' '
-    prepopulatedOptions.push(selectedOption) // Create a fake option so the selected option still appears in the dropdown
+    const selectedOption = props.scenarioName
     selected = [selectedOption]
   }
 
@@ -70,6 +70,22 @@ export const SavedDataSelector: React.FunctionComponent<{
       })
     }
     props.scenarioNameSetter(key)
+  }
+
+  const filterByCallback = (
+    option: string,
+    props: { text: string; selected: string[] },
+  ) => {
+    const propsText: string = props.text || ''
+
+    // User is considering switching scenarios. Show all options.
+    if (props.selected.length > 0) {
+      return true
+    }
+    if (option === i18n.t('scenario.custom')) {
+      return true
+    }
+    return option.toLowerCase().indexOf(propsText.toLowerCase()) !== -1
   }
 
   return (
@@ -98,11 +114,23 @@ export const SavedDataSelector: React.FunctionComponent<{
         </InputGroup.Prepend>
         <Typeahead
           clearButton={true}
+          filterBy={filterByCallback}
           emptyLabel={t('calculator.no_prebuilt_scenario_found')}
-          multiple
           highlightOnlyResult={true}
           id="predefined-typeahead"
-          inputProps={{ autoComplete: 'chrome-off' }}
+          inputProps={{
+            autoComplete: 'chrome-off',
+            shouldSelectHint: (shouldSelect: boolean, event) => {
+              if (
+                event.keyCode === 13 /* return */ ||
+                event.keyCode === 9 /* tab */
+              ) {
+                return true
+              }
+              return shouldSelect
+            },
+          }}
+          multiple
           onChange={(e: string[]) => {
             if (e.length === 0) {
               setSavedData(t('scenario.custom'))

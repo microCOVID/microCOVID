@@ -307,4 +307,18 @@ export const prepopulated: {
     voice: 'silent',
     theirVaccine: 'undefined',
   },
+  [i18n.t('scenario.custom')]: {
+    // profile is ignored. Fill with anything.
+    riskProfile: '',
+    interaction: '',
+    personCount: 0,
+    symptomsChecked: 'no',
+
+    setting: '',
+    distance: '',
+    duration: 0,
+    theirMask: '',
+    yourMask: '',
+    voice: '',
+  },
 }

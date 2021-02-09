@@ -168,6 +168,9 @@
     .rbt-input-main {
       font-size: $input-font-size-lg;
     }
+    .rbt-input-hint {
+      color: rgba(68,68,68,0.6) !important;
+    }
 
     .rbt-close {
       color: #444
