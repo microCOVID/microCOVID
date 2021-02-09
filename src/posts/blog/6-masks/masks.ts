@@ -39,7 +39,7 @@ It’s year 2 of the pandemic, and masks have gone from a strange new experience
 
 * **For anything indoors (eg shopping), you want to be wearing an N95 or better**
    * N95s need to fit properly to work, with a complete seal forming around the edge when you inhale.  If you have a beard, you will need to shave it to get the full benefit of a proper seal.
-   * Unlike last year, N95s are easy to get now!  Options include [Respokare](https://n95maskco.com/collections/n95-masks) (let them air out for a week first so the smell goes away) and [WellBefore](https://wellbefore.com/collections/3m-niosh-n95-masks).
+   * Unlike last year, N95s are easy to get now!  Options include [Respokare](https://n95maskco.com/collections/n95-masks) (let them air out for a week first so the smell goes away), [MSC Direct](https://www.mscdirect.com/product/details/63488605), [Grainger](https://www.grainger.com/search?searchQuery=3M+N95), and [WellBefore](https://wellbefore.com/collections/3m-niosh-n95-masks). If one of these vendors is sold out, try the others.  In general the 3M masks are better than lesser known brands.  Valved N95 masks are an option if you cover the valve with tape or wear a cloth mask over it to filter your exhalations. 
    * N95s should be thrown out if they get overly dirty or hard to breathe through.  Some sources say they should be thrown out after 8 hours of cumulative use, but they may be good for longer.
    * If you like the nice aesthetic look of a cloth mask, wear it over an N95.  
    * KN95s (the Chinese standard) vary widely in quality, and usually have ear loops instead of head straps, which reduces fit quality.  They are occasionally as good as N95s, but sometimes no better than cloth.  Here’s [one decent option](https://wellbefore.com/collections/kn95-masks/products/kn95-disposable-fda-ce?variant=32898772795521).     
@@ -215,8 +215,11 @@ However, in order to actually get that full benefit, you need to do some things 
 #### Shopping guide:
 
 *   [Respokare](https://n95maskco.com/collections/n95-masks) has good N95s.  Their seal is excellent.  However, when they arrive you have to let them air out for a week first so the smell goes away.  
-*   [WellBefore](https://wellbefore.com/collections/3m-niosh-n95-masks) has a range of good N95s, though some are often sold out at any given time.
+*   [MSC Direct](https://www.mscdirect.com/product/details/63488605) sometimes has basic but reliable 3M N95s in boxes of 50 for amazingly low prices.  Get a big box and share with your friends!
+*   [Grainger](https://www.grainger.com/search?searchQuery=3M+N95) is usually sold out of valveless N95s, but you can buy very high quality valved 3M N95s from them and then cover the valve with tape or wear a cloth mask over it to filter your exhalations.  [This one](https://www.grainger.com/product/3M-Disposable-Respirator-4JG36) is expensive but very comfortable.  [This one](https://www.grainger.com/product/3M-Disposable-Respirator-4JF99) is a cheaper but still good option.
+*   [WellBefore](https://wellbefore.com/collections/3m-niosh-n95-masks) has a range of good N95s, though some are usually sold out at any given time.
 *   If your budget is really tight, WellBefore also sells a [decent KN95](https://wellbefore.com/collections/kn95-masks/products/kn95-disposable-fda-ce?variant=32898772795521) with adjustable head straps.  
+*   If one of these vendors is sold out, try the others.  There's always inventory available from at least one of them.  In general the 3M masks are better than lesser known brands. 
 
 <hr>
 
