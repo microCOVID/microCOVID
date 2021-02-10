@@ -1,4 +1,5 @@
 import copy from 'copy-to-clipboard'
+import i18n from 'i18n'
 import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
@@ -17,7 +18,10 @@ import { FirstTimeUserIntroduction } from 'components/calculator/FirstTimeUserIn
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
-import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import {
+  SavedDataLink,
+  SavedDataSelector,
+} from 'components/calculator/SavedDataSelector'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
@@ -137,6 +141,10 @@ export const Calculator = (): React.ReactElement => {
       calculatorData.casesIncreasingPercentage >= 0 &&
       calculatorData.positiveCasePercentage !== null &&
       calculatorData.positiveCasePercentage > 0)
+  const scenarioIsFilled =
+    (scenarioName !== undefined && scenarioName !== '') ||
+    (calculatorData.interaction !== undefined &&
+      calculatorData.interaction !== '')
   const repeatedEvent = ['repeated', 'partner'].includes(
     calculatorData.interaction,
   )
@@ -160,8 +168,24 @@ export const Calculator = (): React.ReactElement => {
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
-              <span>grocery store</span>,<span>see a specific person</span>,
-              <span>work precautions</span>,
+              <SavedDataLink
+                currentData={calculatorData}
+                setter={setCalculatorData}
+                scenarioName={i18n.t('scenario.60minShopping')}
+                scenarioNameSetter={setScenarioName}
+              >
+                grocery store
+              </SavedDataLink>
+              ,
+              <SavedDataLink
+                currentData={calculatorData}
+                setter={setCalculatorData}
+                scenarioName={i18n.t('scenario.outdoorMasked2')}
+                scenarioNameSetter={setScenarioName}
+              >
+                see a friend
+              </SavedDataLink>
+              ,<span>work precautions</span>
             </Trans>
           </p>
           <FirstTimeUserIntroduction />
@@ -228,47 +252,47 @@ export const Calculator = (): React.ReactElement => {
 
         <Col md="12" lg="8" id="activity-section">
           <Card id="person-risk">
-            {prevalenceIsFilled ? (
-              <React.Fragment>
-                <header id="activity-risk">
-                  <Trans>calculator.risk_step_label</Trans>
-                </header>
-                <Row>
-                  <Col className="calculator-buttons">
-                    <SavedDataSelector
-                      currentData={calculatorData}
-                      setter={setCalculatorData}
-                      scenarioName={scenarioName}
-                      scenarioNameSetter={setScenarioName}
-                    />
-                  </Col>
-                </Row>
-                {!scenarioName ? null : (
-                  <Alert variant="info">
-                    <Trans values={{ scenarioName: scenarioName }}>
-                      calculator.saved_scenario_loaded_message
-                    </Trans>
-                  </Alert>
-                )}
-                <div>
-                  <GenericSelectControl
-                    id="interaction"
-                    label={t('calculator.type_of_interaction')}
-                    // This setter defaults to a personCount of 1 if the interaction type is "partner"
-                    setter={(value) =>
-                      setCalculatorData({
-                        ...calculatorData,
-                        interaction: value,
-                        personCount:
-                          value === 'partner' ? 1 : calculatorData.personCount,
-                      })
-                    }
-                    value={calculatorData.interaction}
-                    source={Interaction}
-                    hideRisk={true}
-                  />
-                </div>
+            <header id="activity-risk">
+              <Trans>calculator.risk_step_label</Trans>
+            </header>
+            <Row>
+              <Col className="calculator-buttons">
+                <SavedDataSelector
+                  currentData={calculatorData}
+                  setter={setCalculatorData}
+                  scenarioName={scenarioName}
+                  scenarioNameSetter={setScenarioName}
+                />
+              </Col>
+            </Row>
+            {!scenarioName ? null : (
+              <Alert variant="info">
+                <Trans values={{ scenarioName: scenarioName }}>
+                  calculator.saved_scenario_loaded_message
+                </Trans>
+              </Alert>
+            )}
+            <div>
+              <GenericSelectControl
+                id="interaction"
+                label={t('calculator.type_of_interaction')}
+                // This setter defaults to a personCount of 1 if the interaction type is "partner"
+                setter={(value) =>
+                  setCalculatorData({
+                    ...calculatorData,
+                    interaction: value,
+                    personCount:
+                      value === 'partner' ? 1 : calculatorData.personCount,
+                  })
+                }
+                value={calculatorData.interaction}
+                source={Interaction}
+                hideRisk={true}
+              />
+            </div>
 
+            {prevalenceIsFilled && scenarioIsFilled ? (
+              <React.Fragment>
                 <Row>
                   <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls
@@ -309,7 +333,9 @@ export const Calculator = (): React.ReactElement => {
               </React.Fragment>
             ) : (
               <div className="empty">
-                <Trans>calculator.risk_group_empty_warning</Trans>
+                {scenarioIsFilled ? (
+                  <Trans>calculator.risk_group_empty_warning</Trans>
+                ) : null}
               </div>
             )}
           </Card>

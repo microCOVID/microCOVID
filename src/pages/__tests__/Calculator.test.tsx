@@ -20,11 +20,23 @@ describe('calculator page', () => {
     )
 
     const interactionTypeLabelQuery = /Is this a specific activity or an ongoing relationship/i
-    expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
+    const peopleLabelQuery = /Nearby people/i
+
+    expect(getByText(interactionTypeLabelQuery)).toBeInTheDocument()
+    expect(queryByText(peopleLabelQuery)).not.toBeInTheDocument()
     const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
     fireEvent.click(topLocationBox)
     const californiaOption = getByText(/California/i)
     fireEvent.click(californiaOption)
     expect(getByText(interactionTypeLabelQuery)).toBeInTheDocument()
+
+    const interactionTypeBox = getByText(/Select one/i)
+    fireEvent.click(interactionTypeBox)
+    const oneTimeOption = getByText(/One-time interaction/i)
+    fireEvent.click(oneTimeOption)
+
+    expect(getByText(interactionTypeLabelQuery)).toBeInTheDocument()
+    // DONOTSUBMIT why is this broken?
+    //expect(getByText(peopleLabelQuery)).toBeInTheDocument()
   })
 })

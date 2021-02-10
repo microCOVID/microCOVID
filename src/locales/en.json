@@ -126,7 +126,7 @@
       "enter_data_manually": "Override location-based data"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
-    "select_scenario": "Search for an activity or build your own below...",
+    "select_scenario": "Search for a scenario or build your own below...",
     "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
     "baseline_risk": "baseline risk",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
@@ -149,7 +149,7 @@
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
       "call_to_action": "Calculate the approximate COVID risk of an activity or relationship"
     },
-    "risk_step_label": "Step 2: Describe the activity or relationship",
+    "risk_step_label": "Step 2: Describe the scenario",
     "type_of_interaction": "Is this a specific activity or an ongoing relationship?",
     "risk_group_empty_warning": "First, enter your location",
     "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",

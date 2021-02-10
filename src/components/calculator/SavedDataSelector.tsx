@@ -1,12 +1,45 @@
 import i18n from 'i18n'
 import React from 'react'
-import { Form, InputGroup } from 'react-bootstrap'
+import { Button, Form, InputGroup } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { useTranslation } from 'react-i18next'
 import { BsSearch } from 'react-icons/bs'
 
 import { CalculatorData } from 'data/calculate'
 import { PartialData, prepopulated } from 'data/prepopulated'
+
+export const SavedDataLink: React.FunctionComponent<{
+  currentData: CalculatorData
+  setter: (newData: CalculatorData) => void
+  scenarioName: string
+  scenarioNameSetter: (newScenario: string) => void
+}> = (props): React.ReactElement => {
+  const setSavedData = (key: string): void => {
+    let foundData: PartialData | CalculatorData | null = null
+    foundData = prepopulated[key]
+
+    if (foundData) {
+      props.setter({
+        ...props.currentData,
+        ...foundData,
+      })
+    }
+    props.scenarioNameSetter(key)
+  }
+
+  return (
+    <Button
+      variant="link"
+      className="p-0 m-0 border-0"
+      onClick={() => {
+        setSavedData(props.scenarioName)
+        props.scenarioNameSetter(props.scenarioName)
+      }}
+    >
+      {props.children}
+    </Button>
+  )
+}
 
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData

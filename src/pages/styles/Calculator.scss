@@ -11,6 +11,11 @@
     font-size: $h4-font-size;
     position: relative;
 
+    .btn {
+      font-size: $h4-font-size !important;
+      vertical-align: baseline !important;
+    }
+
   }
 
   .request-feedback {
