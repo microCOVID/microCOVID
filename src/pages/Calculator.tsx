@@ -18,6 +18,7 @@ import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
@@ -153,6 +154,25 @@ export const Calculator = (): React.ReactElement => {
 
   const { t } = useTranslation()
 
+  const SavedScenarioMessage: React.FunctionComponent<{
+    scenarioName: string
+  }> = (props): React.ReactElement => {
+    if (props.scenarioName === t('scenario.custom')) {
+      return (
+        <Alert variant="info">
+          <Trans>calculator.custom_scenario_message</Trans>
+        </Alert>
+      )
+    } else {
+      return (
+        <Alert variant="info">
+          <Trans values={{ scenarioName: scenarioName }}>
+            calculator.saved_scenario_loaded_message
+          </Trans>
+        </Alert>
+      )
+    }
+  }
   return (
     <div id="calculator">
       <Row>
@@ -244,11 +264,7 @@ export const Calculator = (): React.ReactElement => {
                   </Col>
                 </Row>
                 {!scenarioName ? null : (
-                  <Alert variant="info">
-                    <Trans values={{ scenarioName: scenarioName }}>
-                      calculator.saved_scenario_loaded_message
-                    </Trans>
-                  </Alert>
+                  <SavedScenarioMessage scenarioName={scenarioName} />
                 )}
                 <div>
                   <GenericSelectControl
@@ -267,8 +283,61 @@ export const Calculator = (): React.ReactElement => {
                     source={Interaction}
                     hideRisk={true}
                   />
+                  {calculatorData.interaction === 'oneTime' ? (
+                    <Alert variant="info">
+                      <Trans
+                        i18nKey="calculator.one_time_interaction_risk_message"
+                        values={{
+                          percentage: fixedPointPrecisionPercent(
+                            Interaction['oneTime'].multiplier,
+                          ),
+                        }}
+                      >
+                        Lorem ipsum <strong>dolor</strong> sit
+                      </Trans>
+                    </Alert>
+                  ) : null}
+                  {calculatorData.interaction === 'repeated' ? (
+                    <Alert variant="info">
+                      <Trans
+                        i18nKey="calculator.repeated_interaction_risk_message"
+                        values={{
+                          percentage: fixedPointPrecisionPercent(
+                            Interaction[calculatorData.interaction].multiplier,
+                          ),
+                        }}
+                      >
+                        Lorem ipsum <strong>dolor</strong>
+                      </Trans>
+                    </Alert>
+                  ) : null}
+                  {calculatorData.interaction === 'partner' ? (
+                    <Alert variant="info">
+                      <Trans
+                        i18nKey="calculator.partner_interaction_risk_message"
+                        values={{
+                          percentage: fixedPointPrecisionPercent(
+                            Interaction[calculatorData.interaction].multiplier,
+                          ),
+                        }}
+                      >
+                        Lorem ipsum <strong>dolor</strong>
+                      </Trans>
+                    </Alert>
+                  ) : null}
+                  {calculatorData.interaction !== undefined &&
+                  calculatorData.interaction !== '' ? (
+                    <p>
+                      <Trans i18nKey="calculator.whats_next_interaction_risk_message">
+                        Lorem ipsum dolor <strong>sit amet</strong>
+                        (backed by{' '}
+                        <Link to="/paper/14-research-sources">
+                          research
+                        </Link>!) {/* DONOTSUBMIT open in new tab */}
+                      </Trans>
+                    </p>
+                  ) : null}
                 </div>
-
                 <Row>
                   <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls

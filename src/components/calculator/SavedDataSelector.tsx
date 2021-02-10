@@ -2,8 +2,10 @@ import React from 'react'
 import { Form, InputGroup } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { useTranslation } from 'react-i18next'
+import { Trans } from 'react-i18next'
 import { BsSearch } from 'react-icons/bs'
 
+import { ControlLabel } from 'components/calculator/controls/ControlLabel'
 import { CalculatorData } from 'data/calculate'
 import { PartialData, prepopulated } from 'data/prepopulated'
 
@@ -39,6 +41,14 @@ export const SavedDataSelector: React.FunctionComponent<{
 
   return (
     <Form.Group>
+      <ControlLabel
+        id="predefined-typeahead"
+        label={
+          <Trans i18nKey="calculator.select_scenario">
+            Look for a premade scenario or <span>build your own</span>
+          </Trans>
+        }
+      />
       <InputGroup>
         <InputGroup.Prepend>
           <InputGroup.Text>
@@ -59,7 +69,7 @@ export const SavedDataSelector: React.FunctionComponent<{
             setSavedData(e[e.length - 1])
           }}
           options={prepopulatedOptions}
-          placeholder={t('calculator.select_scenario')}
+          placeholder={t('calculator.select_scenario_placeholder')}
           selected={selected}
         />
       </InputGroup>
