@@ -42,17 +42,17 @@ export const Interaction: { [key: string]: FormValue } = {
     }),
     multiplier: oneTimeMult,
   },
-  repeated: {
-    label: i18n.t('data.repeated', {
-      percentage: fixedPointPrecisionPercent(housemateMult),
-    }),
-    multiplier: housemateMult,
-  },
   partner: {
     label: i18n.t('data.partner', {
       percentage: fixedPointPrecisionPercent(partnerMult),
     }),
     multiplier: partnerMult,
+  },
+  repeated: {
+    label: i18n.t('data.repeated', {
+      percentage: fixedPointPrecisionPercent(housemateMult),
+    }),
+    multiplier: housemateMult,
   },
 }
 
