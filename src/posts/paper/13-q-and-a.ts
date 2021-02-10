@@ -2,7 +2,7 @@ const title = 'Q&A'
 const shortTitle = title
 const content = `
 
-Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
+Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Vaccines](#vaccines-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
 
 # General Q&A
 
@@ -178,6 +178,54 @@ However, we have retracted this method for the following reasons:
   * On the other hand, some HCW's directly work with confirmed COVID patients, which is a much higher risk category.
 * Various studies, such as [Baker et al.](https://www.acpjournals.org/doi/10.7326/M20-7145) have shown that, for at least some pockets of healthcare workers, healthcare workers are no more likely to get infected through their work than the average person is to get infected through socializing.
 * The above Washington State report shows that people who work outside the home got COVID at about the average rate for the state.
+
+# Vaccines Q&A
+
+## How should we think about people who have been vaccinated?
+
+There are two questions that are important for understanding vaccines:
+
+1. How much safer for the vaccinated individual is exposure to COVID?
+2. How much less likely is it for a vaccinated individuals to expose others to COVID? (Or equivalently, how much less likely is a vaccinated individual to catch COVID?)
+
+We address these two questions individually.
+
+### 1. How much safer for the vaccinated individual is exposure to COVID?
+All currently approved vaccines are proven significantly reduce the chance of getting sick. If you do get sick after being vaccinated, you are significantly less likely to be hospitalized or die. However, one of the scary things about COVID is that cases with no outward symptoms have been found to cause severe lung damage [source?]. As a result:
+
+- For people who are trying to avoid COVID to avoid long term health problems, we do not recommend changing your budget (beyond what the reduction in microCOVIDs from #2 allows you to do).
+- For people who are trying to avoid COVID to avoid hospitalization or death as a direct result of COVID (generally those who are more vulnerable to COVID), having both doses of the AstraZeneca, Pfizer, or Moderna vaccines and waiting 1-2 weeks after the second dose should reduce your chance of death by an additional 2-10x over the microCOVID reduction outlined in part 2. As such, you may consider increasing your microCOVID budget from 0.1% / year to somewhere between 0.2% / year and 1% / year.
+
+
+### 2. How much less likely is it for vaccinated individuals to expose others to COVID?
+
+We do not know for sure how likely it is for a vaccinated individual to expose others to COVID. Vaccinated individuals still have a chance of becoming sick (even if they are not seriously ill), and may be asymptomatic carriers of the virus, capable of infecting others without having symptoms themselves. None of the vaccine studies have directly addressed what the chances of transmission from a vaccinated individual are. We attempt to make educated guesses by pulling in other sources. For our derivation of these numbers, see the [Research Sources](/paper/14-research-sources#vaccines)
+
+|             | microCOVID multiplier 7 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
+| ----------- | ------------------------------------------- | -------------------------------------------- |
+| AstraZeneca | 0.56                                        | 0.4                                          |
+| Moderna     | 0.56                                        | 0.2 (*)                                      |
+| Pfizer (**) | 0.56                                        | 0.2                                          |
+
+
+(*) Moderna's Phase III study was only designed to count participants who got symptomatic cases of COVID. Our multiplier is based in part on data from testing all participants on the day of the second dose. Since the immune response after the second dose appears to be significantly stronger than after, this number could be as good as 0.05. Moderna is collecting additional data which may affect these numbers.
+
+(**) Pfizer's Phase III study also does not report asymptomatic COVID cases. We use the same numbers as Moderna because the metrics that _are_ reported are quite similar, and the design of the vaccines themselves are quite similar. The multiplier after the 2nd dose could be as low as 0.05 or as high as 0.45. Pfizer is collecting additional data which may affect these numbers.
+
+For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day. Completing the 2nd dose of AstraZeneca’s vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
+
+While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game changing - universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
+
+## Reconciling risk to self and risk to others.
+
+If you chose a microCOVID budget based on the risk COVID poses to yourself, 
+you may decide that you are comfortable with a higher microCOVID budget post-vaccination. 
+However, we ask that you consider the effect your microCOVID budget has on those who you come into close contact with. 
+
+Even if you are vaccinated, increasing your microCOVID budget increases your of passing COVID on to others (although
+the aforementioned multipliers mean you can do more activities within the _same_ budget). Before increasing your 
+microcovid budget, discuss this with any regular close contacts you have, such as housemates, partners, or co-workers. 
+Also consider the potential impact on your community at large. 
 
 # Specific Activities Q&A
 
