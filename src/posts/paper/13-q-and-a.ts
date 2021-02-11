@@ -183,6 +183,8 @@ However, we have retracted this method for the following reasons:
 
 ## How should we think about people who have been vaccinated?
 
+**TL;DR**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond. Additionally, each microCOVID *may* be 2-4x less likely to land a vaccinated individual in a hospital.
+
 People who have been vaccinated are less likely to catch COVID and transmit it to others, which results in them getting fewer microCOVIDs from activities.
 However, they are not totally immune to COVID, and it is quite easy for a vaccinated person to counteract the decreased risk per activity by doing lots of
 risky activities (for instance, the Moderna vaccine confers a 1/5x multiplier for incoming microCOVIDs, so a vaccinated person who does 5x more risky behavior
@@ -207,7 +209,7 @@ For perspective, the first dose of either vaccine confers equivalent protection 
 
 While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game changing - universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
 
-### 2. If a vaccintaed individual contracts COVID, how much less (or more) likley is this to result in negative consequences?
+### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences?
 
 At first glance, among all vaccinated individuals across all 3 studies, only 1 case of severe COVID-19 was observed, with no hospitalizations or deaths. However, there were only a small number of severe cases in the control group, which means we cannot say with much certainty how effective the vaccines are at preventing severe COVID-19. One might squint at the data and suggest that the reduction in severe cases is 2-4x the reduction in microCOVIDs suggested above.
 
