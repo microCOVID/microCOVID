@@ -34,6 +34,22 @@ export const About = (): React.ReactElement => {
       </p>
 
       <h2>
+        <Trans>about.who_are_we_header</Trans>
+      </h2>
+      <p>
+        <Trans i18nKey="about.who_are_we_body">
+          see the <Link to="/paper/1-intro#authors">white paper</Link> for
+          detailed roles.
+        </Trans>
+      </p>
+      <h3>
+        <Trans>about.affiliations_header</Trans>
+      </h3>
+      <p>
+        <Trans>about.affiliations_body</Trans>
+      </p>
+
+      <h2>
         <Trans>about.where_to_start_header</Trans>
       </h2>
       <p>
