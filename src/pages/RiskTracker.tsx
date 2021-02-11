@@ -48,7 +48,7 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           The microCOVID Risk Tracker is a spreadsheet that lets you estimate
           the risk of getting COVID from an activity or relationship in your
           daily life, using the{' '}
-          <Link to="/paper/research-source">best research available</Link>.
+          <Link to="/paper/14-research-sources">best research available</Link>.
         </p>
         <img
           src={podOverviewIntro}
