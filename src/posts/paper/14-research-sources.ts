@@ -300,6 +300,7 @@ indicating that the vaccine is doing better than simply preventing symptoms. The
 |                         | Control Group | Vaccinated Group |
 | ----------------------- | ------------- | ---------------- |
 | Participants            | 8600          | 8600             |
+| Severe Cases            | 10            | 0                |
 | Symptomatic Cases       | 248           | 84               |
 | Never symptomatic cases | 73            | 57               |
 
@@ -307,6 +308,8 @@ Treating never-symptomatic cases as .42 relative infectiousness, this gives:
 control group adjusted infectiousness: \`(1 * 248 + 0.42 * 73) = 279%\` 
 vaccinated group adjusted infectiousness: \`(1 * 84 + 0.42 * 57) = 109\`
 The relative infectiousness of the vaccinated group is therefore \`109 / 279 = 0.39\`
+
+AstraZeneca's trial found 10 cases of severe COVID, all in the control group, giving a risk reduction of 90%, 95% CI of (22, 100)
 
 ### Moderna & Pfizer
 Phase III trials from Moderna and Pfizer (the most common vaccines in the United States) only tested for symptomatic COVID. Moderna’s and Pfizer’s vaccines are similar in both design and efficacy, so we consider them together.
@@ -317,6 +320,7 @@ Data from [Pfizer’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMo
 | ----------------- | ------------- | ---------------- |
 | Participants      | 21,728        | 21,720           |
 | Symptomatic Cases | 162           | 8                |
+| Severe Cases[^pfizer-supplement]| 4             | 1                |
 
 Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389):
 
@@ -324,6 +328,7 @@ Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJM
 | ----------------- | ------------- | ---------------- |
 | Participants      | 15,210        | 15,210           |
 | Symptomatic Cases | 185           | 11               |
+| Severe Cases      | 30            | 0                |
 
 First, we note that these two vaccines are very, very effective at preventing symptomatic COVID (95% for Pfizer and 94% for Moderna). Second, we note that the Phase III studies do not include data on cases without symptoms. 
 
@@ -347,6 +352,10 @@ We assume that Pfizer's vaccine has similar performance as Moderna's on the basi
 
 Post Phase III studies for Moderna and Pfizer are in progress, we expect to update these numbers as data becomes available.
 
+The overall risk reduction for preventing severe cases of Moderna is 97%. We calculate a 95% CI of (76.5, 100)
+
+Pfizer cites a 75% vaccine effectiveness at preventing severe disease, with a 95% CI of (-152.6, 99.5)
+
 ### Single Shot Efficacy
 For vaccines require 2 doses, we see reductions in symptomatic COVID after a single shot of about 50% across Moderna, Pfizer, and AstraZeneca. Moderna further provided data suggesting a 63% reduction in total cases (symptomatic and otherwise). This gives us the following estimated case distribution:
 
@@ -359,6 +368,7 @@ For vaccines require 2 doses, we see reductions in symptomatic COVID after a sin
 This gives an overall multiplier of \`(0.4 + .42 * .23) / (0.8 + .42 * .2) = 0.56\`
 HOWEVER, data that immunity is much shorter-lived in individuals with one dose of a 2 dose vaccine. We recommend getting the second dose as soon as it is available.
 
+
 [^1]:
      We find it easier to understand the difference between an odds ratio and a risk ratio in a medical context. If 100 people walk into your clinic with heart disease, and twice as many were smokers as non-smokers, then the odds ratio is 2x. But that doesn’t tell you what you would get if you _started_ with 50 smokers and 50 nonsmokers and watched for heart disease later. You don’t know what the base rate of smoking was in your original dataset. See [https://psychscenehub.com/psychpedia/odds-ratio-2](https://psychscenehub.com/psychpedia/odds-ratio-2) for more on this.
 
@@ -368,6 +378,8 @@ HOWEVER, data that immunity is much shorter-lived in individuals with one dose o
 [^heupdate]: If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).
 
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
+
+[^pfizer-supplement]: Data on severe cases for Pfizer's vaccine is provided in their [supplement](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file/nejmoa2034577_appendix.pdf)
 `
 
 const post = { title, shortTitle, content }
