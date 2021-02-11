@@ -309,7 +309,7 @@ control group adjusted infectiousness: \`(1 * 248 + 0.42 * 73) = 279%\`
 vaccinated group adjusted infectiousness: \`(1 * 84 + 0.42 * 57) = 109\`
 The relative infectiousness of the vaccinated group is therefore \`109 / 279 = 0.39\`
 
-AstraZeneca's trial found 10 cases of severe COVID, all in the control group, giving a risk reduction of 90%, 95% CI of (22, 100)
+AstraZeneca's trial found 10 cases of severe COVID, all in the control group. We calculate a risk reduction of 90%, 95% CI of (22%, 100%)[^confidence-interval]
 
 ### Moderna & Pfizer
 Phase III trials from Moderna and Pfizer (the most common vaccines in the United States) only tested for symptomatic COVID. Moderna’s and Pfizer’s vaccines are similar in both design and efficacy, so we consider them together.
@@ -352,7 +352,7 @@ We assume that Pfizer's vaccine has similar performance as Moderna's on the basi
 
 Post Phase III studies for Moderna and Pfizer are in progress, we expect to update these numbers as data becomes available.
 
-The overall risk reduction for preventing severe cases of Moderna is 97%. We calculate a 95% CI of (76.5, 100)
+The overall risk reduction for preventing severe cases of Moderna is 97%. We calculate a 95% CI of (76.5, 100)[^confidence-interval]
 
 Pfizer cites a 75% vaccine effectiveness at preventing severe disease, with a 95% CI of (-152.6, 99.5)
 
@@ -380,6 +380,8 @@ HOWEVER, data that immunity is much shorter-lived in individuals with one dose o
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
 
 [^pfizer-supplement]: Data on severe cases for Pfizer's vaccine is provided in their [supplement](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file/nejmoa2034577_appendix.pdf)
+
+[^confidence-interval]: We use the calculator on [Scale Statistics](https://www.scalestatistics.com/relative-risk.html) to calculate confidence intervals when none is provided. For situations where one group has 0 cases, we substitute 1 for this computation.
 `
 
 const post = { title, shortTitle, content }
