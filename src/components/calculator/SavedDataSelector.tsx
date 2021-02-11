@@ -88,6 +88,7 @@ export const SavedDataSelector: React.FunctionComponent<{
     return option.toLowerCase().indexOf(propsText.toLowerCase()) !== -1
   }
 
+  const savedDataRef = React.createRef<Typeahead<string>>()
   return (
     <Form.Group id="predefined-typeahead-group">
       <ControlLabel
@@ -114,8 +115,8 @@ export const SavedDataSelector: React.FunctionComponent<{
         </InputGroup.Prepend>
         <Typeahead
           clearButton={true}
-          filterBy={filterByCallback}
           emptyLabel={t('calculator.no_prebuilt_scenario_found')}
+          filterBy={filterByCallback}
           highlightOnlyResult={true}
           id="predefined-typeahead"
           inputProps={{
@@ -137,7 +138,13 @@ export const SavedDataSelector: React.FunctionComponent<{
             }
             setSavedData(e[e.length - 1])
           }}
+          onFocus={() => {
+            if (savedDataRef.current) {
+              savedDataRef.current.getInput().select()
+            }
+          }}
           options={prepopulatedOptions}
+          ref={savedDataRef}
           selected={selected}
         />
       </InputGroup>
