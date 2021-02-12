@@ -16,13 +16,6 @@ const summary =
   'Navigating house/pod agreements around COVID can be really stressful. We made a tool to help make it a lot easier.'
 const content = `
 
-<style>
-img {
-  max-width: 100%;
-  height: auto;
-}
-</style>
-
 *Today we’re launching a new version of the microCOVID Risk Tracker with features for households and pods to collectively budget their risk over time.* [*You can download the latest version of the Risk Tracker here →*](/tracker)
 
 
@@ -44,6 +37,9 @@ We encountered questions like:
 * “Sam really wants to see their bodyworker. I really wanted to see my partner. But was I ok being in indirect contact with that bodyworker for Sam's sake? Did Sam think my happiness from seeing my partner was worth the risk they'd experience?”
 
 Then we disocvered the microCOVID spreadsheet. I realized it had the potential to completely change how we had these discussions. If we could quantify and track how much risk each of us were taking, we could allocate everyone a small but even share of risk that they could use to make their own decisions, without consulting the house every time.
+
+We agreed that each of us was willing to take on a 1% chance of getting COVID over the next year.[^budget] Dividing risk evenly among each of of our 7 housemates meant we could each bring 68 microCOVIDs each week; this became our risk "budget" that we could plan against.
+
 
 I'll say this: since we replaced our consensus approach with a microCOVID budget approach, COVID-related relationship stress in the house has gone down dramatically. We can now make choices on our own about what we do that’s within our individual risk budget! Once the system is set up and everyone knows how to use it, we don’t need to have many (if any) group meeting time to talk about our COVID agreements.
 
@@ -67,6 +63,7 @@ Here’s what’s you’ll find in the latest version:
 - [**Step-by-step instructions**](/tracker/basics) to help answer many common questions about the spreadsheet and how to use it in specific scenarios.
 - [**Custom person risk modeling**](/tracker/basics#using-the-custom-people-sheet-to-model-risk-more-precisely), so you can figure out just how risky that friend or co-worker is to see.
 - **Updated mask options** and risk multipliers that match the Calculator. (See our recent blog posts on [upgrading your mask](/blog/masks).)
+- A more accurate "risk to others outside of the pod" number that includes all of your activities over the last 23 days, but "decays" over time (if you don't develop symptoms). You can read more about our model for [infectuiousness period](/paper/14-research-sources#infectious-period) here.
 
 
 ## Get Started
@@ -85,6 +82,10 @@ You can read the Risk Tracker documentation here:
 We’d love your feedback on this new version, so please do [contact us](/contact) if you have any questions/ideas you want to share.
 
 If you know anyone who might benefit from trying on a risk budget approach like this, please pass this post along to them.
+
+*(Thanks to Ben Shaya for helping co-author this post.)*
+
+[^budget]: You can read more about [selecting a microCOVID budget](/paper/13-q-and-a#how-should-i-choose-my-annual-risk-budget) here.
 `
 
 export const post = { title, summary, content, author, date, image }
