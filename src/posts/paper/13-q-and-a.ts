@@ -223,7 +223,7 @@ If you do decide you want to increase your microCOVID budget post vaccination,
 * Consider the potential impact on your community at large — taking on more risk of being an asymptomatic spreader could result in you infecting many other people.
 
 ### So is a vaccinated person safer to be around than an unvaccinated person?
-Not necessarily. A person's risk is the product of their precautions and activities. Just as a person who wears a mask to indoor parties is not safer than a person who doesn't wear a mask but also doesn't leave their house, a person who is vaccinated but does 5x more risky behavior is not safer than an unvaccinated person who is staying isolated. To accurately understand a person's risk, you need to model what behaviors the person is doing, including the MODifier for being vaccinated.
+Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated person who does the same activities as a unvaccinated person will be less risky to be around. However, if the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got vaccinated! The only way to accurately understand a person's risk is to model each of their activities and multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
 
 # Specific Activities Q&A
 
