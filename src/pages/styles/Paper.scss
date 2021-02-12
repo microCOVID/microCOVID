@@ -66,14 +66,15 @@
     margin-bottom: 0;
   }
   
-  .postAuthor {
-    font-weight: bold;
-    margin-top: 10px;
+
+  .postByLine {
+    color: $gray-700;
+    margin-top: 8px;
+    margin-bottom: 15px;
   }
 
-  .postDate {
-    color: $gray-500;
-    margin-bottom: 10px;
+  .postAuthor {
+    margin-top: 10px;
   }
 
   .sectionIndicator {
@@ -160,6 +161,7 @@
 
   img {
     max-width: 100%;
+    height: auto;
     margin-bottom: 1.6rem;
   }
 
