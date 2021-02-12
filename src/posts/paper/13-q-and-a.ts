@@ -183,7 +183,7 @@ However, we have retracted this method for the following reasons:
 
 ## How should we think about people who have been vaccinated?
 
-**TL;DR**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond. Additionally, each microCOVID *may* be 2-4x less likely to land a vaccinated individual in a hospital.
+***Summary**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond. Additionally, each microCOVID *may* be 2-4x less likely to land a vaccinated individual in a hospital.*
 
 People who have been vaccinated are less likely to catch COVID and transmit it to others, which results in them getting fewer microCOVIDs from activities.
 However, they are not totally immune to COVID, and it is quite easy for a vaccinated person to counteract the decreased risk per activity by doing lots of
@@ -192,12 +192,12 @@ after being vaccinated would be just as many microCOVIDs as before).
 
 There are two questions that are important for understanding vaccines:
 
-1. How much less likely is it for a vaccinated individual to catch COVID? This determines the reduction in microCOVIDs a vaccinated individual receives from a given action.
-2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences (hospitalizaton or death). This determines how much a person can increase their microCOVID budget for being vaccinated (on top of being able to do more activities from part 1).
+1. How much less likely is it for a vaccinated individual to catch COVID? This determines the ***reduction in microCOVIDs*** a vaccinated individual receives from a given action.
+2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences (hospitalization or death). This determines how much a person can ***increase their microCOVID budget*** for being vaccinated (on top of being able to do more activities from part 1).
 
 ### 1. How much less likely is it for vaccinated individuals to catch COVID? (Reduction in microCOVIDs)
 
-We do not know for sure how likely it is for a vaccinated individual to catch to COVID. Vaccinated individuals still have a chance of becoming sick (even if they are not seriously ill), and may be asymptomatic carriers of the virus, capable of infecting others without having symptoms themselves. None of the vaccine studies have directly addressed what the chances of transmission from a vaccinated individual are. We attempt to make educated guesses by pulling in other sources. For our derivation of these numbers, see the [Research Sources](/paper/14-research-sources#vaccines).
+We do not know for sure how likely it is for a vaccinated individual to catch COVID. Vaccinated individuals still have a chance of becoming sick (even if they are not seriously ill), and may be asymptomatic carriers of the virus, capable of infecting others without having symptoms themselves. None of the vaccine studies have directly addressed what the chances of transmission from a vaccinated individual are. We attempt to make educated guesses by pulling in other sources. For our derivation of these numbers, see the [Research Sources](/paper/14-research-sources#vaccines).
 
 |             | microCOVID multiplier 7 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
 | ----------- | ------------------------------------------- | -------------------------------------------- |
@@ -205,11 +205,11 @@ We do not know for sure how likely it is for a vaccinated individual to catch to
 | Moderna     | 0.56                                        | 0.2 [^moderna]                               |
 | Pfizer [^pfizer] | 0.56                                   | 0.2                                          |
 
-For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day. Completing the 2nd dose of AstraZeneca’s vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
+For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
 
-While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game changing - universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
+While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game-changing — universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
 
-### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences?
+### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
 
 At first glance, among all vaccinated individuals across all 3 studies, only 1 case of severe COVID-19 was observed, with no hospitalizations or deaths. However, there were only a small number of severe cases in the control group, which means we cannot say with much certainty how effective the vaccines are at preventing severe COVID-19. One might squint at the data and suggest that the reduction in severe cases is 2-4x the reduction in microCOVIDs suggested above.
 
@@ -218,8 +218,12 @@ Additionally, we have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.20
 As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)),
 but we do not recommend increasing your microCOVID budget on top of that given current data. This may change as more data about the vaccines is gathered.
 
-If you do decide you want to increase your microCOVID budget, discuss this with any regular close contacts you have, such as housemates, partners, or co-workers - your increased risk of COVID, asymptomatic or not, could affect them more than it affects you. 
-Also consider the potential impact on your community at large.
+If you do decide you want to increase your microCOVID budget post vaccination,
+* Discuss this with any regular close contacts you have, such as housemates, partners, or co-workers — your increased risk of COVID, asymptomatic or not, could affect them more than it affects you.
+* Consider the potential impact on your community at large — taking on more risk of being an asymptomatic spreader could result in you infecting many other people.
+
+### So is a vaccinated person safer to be around than an unvaccinated person?
+Not necessarily. A person's risk is the product of their precautions and activities. Just as a person who wears a mask to indoor parties is not safer than a person who doesn't wear a mask but also doesn't leave their house, a person who is vaccinated but does 5x more risky behavior is not safer than an unvaccinated person who is staying isolated. To accurately understand a person's risk, you need to model what behaviors the person is doing, including the MODifier for being vaccinated.
 
 # Specific Activities Q&A
 
