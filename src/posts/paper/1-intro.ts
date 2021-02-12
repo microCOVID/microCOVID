@@ -48,7 +48,7 @@ Since then, the project has grown to include like-minded individuals around the 
 
 **Risk Tracker:** Jeremy Blanchard, Catherine Olsson, Joshua Oreman, Ben Shaya 
 
-**Social Media:** Catherine Olsson, Ben Shaya, Luke Lew, Finan Adamson
+**Social Media and Blogging:** Catherine Olsson, Ben Shaya, Matt Bell, Luke Lew, Finan Adamson
 
 _Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Danny Hernandez, David Mears, Derek Foster, Elliot Olds, Eugene Shvarts, Jacob Falkovich, Jeremy Howard, Jessica Watson Miller, Ivan Gayton, Katja Grace, Matt Bell, Peter Favaloro, Peter Hurford, Zvi Mowshowitz, and other friends who chose to remain anonymous. (Giving feedback does not imply endorsement of, or agreement with, this writeup.)_
 
