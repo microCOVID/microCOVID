@@ -21,13 +21,13 @@ export const Footer = (): React.ReactElement => (
         />
       </a>
       <p>
-        <span property="dct:title">microCOVID Project</span> by{' '}
+        <span property="dct:title">microCOVID Project</span>{' '}
         <Link
           to="/paper/1-intro#authors"
           property="cc:attributionName"
           rel="cc:attributionURL"
         >
-          the Ibasho community
+          (see White Paper for list of authors)
         </Link>
         {' is licensed under a '}
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
