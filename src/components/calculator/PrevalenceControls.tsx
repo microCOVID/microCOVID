@@ -1,19 +1,14 @@
 import i18n from 'i18n'
 import countries from 'i18n-iso-countries'
-import { isNumber } from 'lodash'
 import React, { useEffect, useState } from 'react'
-import { Card, Form, InputGroup } from 'react-bootstrap'
+import { ToggleButton } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './controls/ControlLabel'
-import { ControlledExpandable } from 'components/Expandable'
-import {
-  CalculatorData,
-  calculateLocationPersonAverage,
-  calculateLocationReportedPrevalence,
-} from 'data/calculate'
-import { TOP_LOCATION_MANUAL_ENTRY } from 'data/data'
+import { LocationPrevalenceDetails } from './prevalence/LocationPrevalenceDetails'
+import { ManualPrevalenceDetails } from './prevalence/ManualPrevalenceDetails'
+import { CalculatorData } from 'data/calculate'
 import { Locations, PrevalenceDataDate } from 'data/location'
 import 'components/calculator/styles/PrevalenceControls.scss'
 
@@ -28,112 +23,6 @@ const isFilled = (val: string): boolean => {
 
 const isTopLocation = (val: string): boolean => {
   return isFilled(val) && !!Locations[val]
-}
-
-const isManualEntry = (val: string): boolean => {
-  return val === TOP_LOCATION_MANUAL_ENTRY
-}
-
-const PrevalenceField: React.FunctionComponent<{
-  id: string
-  label: string
-  value: string | number
-  unit?: string
-  setter: (newValue: string) => void
-  inputType: string
-  isEditable: boolean
-  max?: number
-  min?: number
-  helpText?: string
-  className?: string
-}> = ({
-  id,
-  label,
-  value,
-  setter,
-  unit,
-  inputType,
-  isEditable,
-  max,
-  min,
-  helpText,
-  className,
-}): React.ReactElement => {
-  if (!isEditable) {
-    return (
-      <div>
-        {label}: {typeof value === 'number' ? value.toLocaleString() : value}
-        {unit}
-      </div>
-    )
-  }
-  let body: React.ReactElement = (
-    <Form.Control
-      className={'form-control form-control-lg col-md-3 col-lg-6 ' + className}
-      type={inputType}
-      value={value}
-      readOnly={!isEditable}
-      onChange={(e) => {
-        if (isNumber(max) || isNumber(min)) {
-          let newValue = Number.parseFloat(e.target.value)
-          newValue = isNumber(max) && newValue > max ? max : newValue
-          newValue = isNumber(min) && newValue < min ? min : newValue
-          setter(newValue.toString())
-        } else {
-          setter(e.target.value)
-        }
-      }}
-    />
-  )
-  if (unit) {
-    body = (
-      <InputGroup className="mb-3">
-        {body}
-        <InputGroup.Append>
-          <InputGroup.Text>%</InputGroup.Text>
-        </InputGroup.Append>
-      </InputGroup>
-    )
-  }
-  return (
-    <Form.Group controlId={id} className="mb-3">
-      <Form.Label>{label}</Form.Label>
-      {body}
-      {helpText && (
-        <Form.Text id={id + 'HelpText'} muted>
-          {helpText}
-        </Form.Text>
-      )}
-    </Form.Group>
-  )
-}
-
-export const PrevalenceResult = (props: {
-  data: CalculatorData
-}): React.ReactElement => {
-  return (
-    <Card className="prevalence-result">
-      <Card.Body>
-        <div>
-          <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
-          {(
-            (calculateLocationReportedPrevalence(props.data) || 0) * 100
-          ).toFixed(2)}
-          %
-        </div>
-        <div>
-          <strong>
-            <Trans>calculator.prevalence.adjusted_prevalence</Trans>:{' '}
-            {(
-              ((calculateLocationPersonAverage(props.data) || 0) * 100) /
-              1e6
-            ).toFixed(2)}
-            %
-          </strong>
-        </div>
-      </Card.Body>
-    </Card>
-  )
 }
 
 export const PrevalenceControls: React.FunctionComponent<{
@@ -160,9 +49,6 @@ export const PrevalenceControls: React.FunctionComponent<{
   }
 
   const setLocationData = (topLocation: string, subLocation: string) => {
-    if (isManualEntry(topLocation)) {
-      setDetailsOpen(true)
-    }
     setter({
       ...data,
       ...dataForLocation(subLocation || topLocation),
@@ -171,18 +57,33 @@ export const PrevalenceControls: React.FunctionComponent<{
     })
   }
 
-  const handleEnterDataButtonOnClick = () => {
-    setLocationData(TOP_LOCATION_MANUAL_ENTRY, '')
-  }
+  const setManualPrevalenceData = (isManualEntry: boolean) => {
+    setIsManualEntryCurrently(isManualEntry)
+    const useManualEntry = isManualEntry ? 1 : 0
 
-  const handleSelectLocationButtonOnClick = () => {
-    setLocationData('', '')
-    setDetailsOpen(false)
+    if (isManualEntry) {
+      setter({
+        ...data,
+        useManualEntry,
+      })
+    } else if (!isManualEntry) {
+      // Going back to location mode. Reset location data so that details match the selected country/state and region.
+      const topLocation = data.topLocation
+      const subLocation = data.subLocation
+      setter({
+        ...data,
+        ...dataForLocation(subLocation || topLocation),
+        useManualEntry,
+      })
+    }
   }
 
   // If a stored location exists, load latest data for that location.
   useEffect(() => {
-    if (isFilled(data.subLocation) || isTopLocation(data.topLocation)) {
+    if (
+      !data.useManualEntry &&
+      (isFilled(data.subLocation) || isTopLocation(data.topLocation))
+    ) {
       setLocationData(data.topLocation, data.subLocation)
     }
     // Intentionally not depending on data so that this runs once on mount.
@@ -204,9 +105,11 @@ export const PrevalenceControls: React.FunctionComponent<{
     isTopLocation(data.topLocation) &&
     Locations[data.topLocation].subdivisions.length > 1
 
-  const locationSet = isTopLocation(data.topLocation)
+  const locationSet = !data.useManualEntry && isTopLocation(data.topLocation)
 
-  const isManualEntryCurrently = isManualEntry(data.topLocation)
+  const [isManualEntryCurrently, setIsManualEntryCurrently] = useState<boolean>(
+    !!data.useManualEntry,
+  )
 
   const [detailsOpen, setDetailsOpen] = useState(
     false || isManualEntryCurrently,
@@ -256,16 +159,17 @@ export const PrevalenceControls: React.FunctionComponent<{
       <header id="location">
         <Trans>calculator.location_selector_header</Trans>
       </header>
-      <div className="form-group" hidden={isManualEntryCurrently}>
+      <div className="form-group">
         <ControlLabel
           id="top-location-typeahead"
           header={t('calculator.select_location_label')}
         />
         <Typeahead
           clearButton={true}
+          disabled={isManualEntryCurrently}
           highlightOnlyResult={true}
           id="top-location-typeahead"
-          inputProps={{ autoComplete: 'off' }}
+          inputProps={{ autoComplete: 'chrome-off' }}
           onChange={(e: Option[]) => {
             if (e.length !== 1) {
               setLocationData('', '')
@@ -280,7 +184,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           }
         />
       </div>
-      {!showSubLocation ? null : (
+      {showSubLocation && (
         <div className="form-group">
           <ControlLabel
             id="sub-location-typeahead"
@@ -288,6 +192,7 @@ export const PrevalenceControls: React.FunctionComponent<{
           />
           <Typeahead
             clearButton={true}
+            disabled={isManualEntryCurrently}
             highlightOnlyResult={true}
             id="sub-location-typeahead"
             inputProps={{ autoComplete: 'chrome-off' }}
@@ -306,149 +211,41 @@ export const PrevalenceControls: React.FunctionComponent<{
           />
         </div>
       )}
-      {isManualEntryCurrently ? (
-        <span>
-          <button
-            id="switchBetweenManualDataAndLocationSelection"
-            className="btn btn-link text-muted"
-            onClick={handleSelectLocationButtonOnClick}
-          >
-            {t('calculator.switch_button.select_location')}
-          </button>
-        </span>
-      ) : (
-        <span>
-          <button
-            id="switchBetweenManualDataAndLocationSelection"
-            className="btn btn-link text-muted"
-            onClick={handleEnterDataButtonOnClick}
-          >
+      <span>
+        <ToggleButton
+          id="switchBetweenManualDataAndLocationSelection"
+          name={t('calculator.switch_button.select_location')}
+          type="checkbox"
+          checked={isManualEntryCurrently}
+          value="1"
+          variant="link"
+          className="text-muted"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setManualPrevalenceData(e.currentTarget.checked)
+          }}
+        >
+          <span id="switchBetweenManualDataAndLocationSelectionText">
             {t('calculator.switch_button.enter_data_manually')}
-          </button>
-        </span>
+          </span>
+        </ToggleButton>
+      </span>
+      {isManualEntryCurrently ? (
+        <ManualPrevalenceDetails
+          id="prevalence-details"
+          data={data}
+          setter={setter}
+        />
+      ) : (
+        <LocationPrevalenceDetails
+          id="prevalence-details"
+          data={data}
+          header={t('calculator.prevalence.details_header')}
+          open={detailsOpen}
+          setter={setDetailsOpen}
+          hide={isManualEntryCurrently}
+          locationSet={locationSet}
+        />
       )}
-      <ControlledExpandable
-        id="prevalence-details"
-        header={t('calculator.prevalence.details_header')}
-        headerClassName={isManualEntryCurrently ? 'd-none' : ''}
-        open={detailsOpen}
-        setter={setDetailsOpen}
-      >
-        <PrevalenceResult data={data} />
-
-        <PrevalenceField
-          id="reported-cases"
-          label={t('calculator.prevalence.last_week_cases')}
-          value={data.casesPastWeek || 0}
-          setter={(value) =>
-            setter({ ...data, casesPastWeek: parseInt(value || '') })
-          }
-          inputType="number"
-          isEditable={isManualEntryCurrently}
-          className="hide-number-buttons"
-        />
-        <PrevalenceField
-          id="population"
-          label={t('calculator.prevalence.population')}
-          value={data.population}
-          setter={(value) => setter({ ...data, population: value })}
-          inputType="text"
-          isEditable={isManualEntryCurrently}
-          className="hide-number-buttons"
-        />
-        {locationSet && data.casesIncreasingPercentage === 0 ? (
-          <div>{t('calculator.prevalence.cases_stable_or_decreasing')}</div>
-        ) : (
-          <PrevalenceField
-            id="percent-increase"
-            label={t('calculator.prevalence.percent_increase_in_cases')}
-            value={data.casesIncreasingPercentage}
-            unit="%"
-            setter={(value) => {
-              setter({ ...data, casesIncreasingPercentage: Number(value) })
-            }}
-            inputType="number"
-            min={0}
-            isEditable={isManualEntryCurrently}
-            className="hide-number-buttons"
-          />
-        )}
-        {data.positiveCasePercentage === null ? (
-          <PrevalenceField
-            id="positive-test-rate"
-            label={t('calculator.prevalence.positive_case_percentage')}
-            value="no data available"
-            unit="%"
-            setter={(_value) => null}
-            inputType="text"
-            isEditable={false}
-          />
-        ) : (
-          <PrevalenceField
-            id="positive-test-rate"
-            label={t('calculator.prevalence.positive_case_percentage')}
-            value={data.positiveCasePercentage.toString()}
-            unit="%"
-            setter={(value) => {
-              setter({ ...data, positiveCasePercentage: Number(value) })
-            }}
-            inputType="number"
-            max={100}
-            min={0}
-            isEditable={isManualEntryCurrently}
-            className="hide-number-buttons"
-          />
-        )}
-        {!locationSet ? null : (
-          <>
-            <div>
-              <em>
-                <Trans>calculator.prevalence.data_last_updated</Trans>:{' '}
-                {PrevalenceDataDate}
-              </em>
-            </div>
-            <div>
-              <p className="mt-3">
-                <Trans i18nKey="calculator.prevalence_info_source_information">
-                  Prevalence data consolidated from {}
-                  <a
-                    href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Johns Hopkins CSSE
-                  </a>{' '}
-                  (reported cases), {}
-                  <a
-                    href="https://apidocs.covidactnow.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Covid Act Now
-                  </a>{' '}
-                  (US positive test rates), {}
-                  <a
-                    href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Our World in Data
-                  </a>{' '}
-                  (international positive test rates), and {}
-                  <a
-                    href="https://covid19.geo-spatial.org/despre"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Coronavirus COVID-19 România
-                  </a>{' '}
-                  (Romania reported cases).
-                </Trans>
-              </p>
-            </div>
-          </>
-        )}
-      </ControlledExpandable>
     </React.Fragment>
   )
 }

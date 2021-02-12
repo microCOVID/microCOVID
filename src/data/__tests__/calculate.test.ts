@@ -32,6 +32,7 @@ const dateAfterDay0 = (daysAfterDay0: number) => {
 // Prevailance is PREVALENCE (2x prevalance ratio)
 const baseTestData = {
   riskBudget: BUDGET_ONE_PERCENT,
+  useManualEntry: 0,
   subLocation: 'mock city',
   topLocation: 'mock state',
   population: '1,000,000',

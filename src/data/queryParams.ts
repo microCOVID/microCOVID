@@ -3,11 +3,11 @@ import { QueryParamConfigMap } from 'serialize-query-params'
 import { NumberParam, StringParam } from 'use-query-params'
 
 import { CalculatorData, QueryData, defaultValues } from './calculate'
-import { TOP_LOCATION_MANUAL_ENTRY } from './data'
 
 export const queryConfig: QueryParamConfigMap = {
   riskBudget: NumberParam,
 
+  useManualEntry: NumberParam,
   topLocation: StringParam,
   subLocation: StringParam,
   population: StringParam,
@@ -33,7 +33,7 @@ export const filterParams = (data: CalculatorData): QueryData => {
     return k in queryConfig && v !== defaultValues[fk]
   })
 
-  if (filtered.topLocation !== TOP_LOCATION_MANUAL_ENTRY) {
+  if (data.useManualEntry === 0) {
     // Remove data that will be fetched if location is set.
     delete filtered.population
     delete filtered.casesPastWeek
