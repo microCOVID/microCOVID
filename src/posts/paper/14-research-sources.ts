@@ -284,11 +284,6 @@ This works because Bob is less than 7x "too risky." If he were 10x "too risky," 
 
 If each visit only requires 3 or 5 days of isolation instead of 10, Alice can probably see her partner more often, which is likely to be good for both Alice's and Bob's mental health.
 
-### Intermediate Method: Frontline worker adjustment
-
-We estimate that frontline workers are 3x more likely to have COVID, and anyone who is not a frontline worker is 0.5x as likely to be infected. Here is how we made that calculation.
-
-First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/) showing that around 55 million people in the US are essential workers (38% of workforce and 17% of the population); we sanity-check this against [another source](https://bayareaequityatlas.org/essential-workers) citing 28% of workers in the Bay Area are essential workers. In [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)’s blanket testing survey of residents in the Mission District in San Francisco, they found a positive test rate of 5% among frontline service workers and 0.8% among non-frontline workers (6.27x higher for frontline workers). The overall prevalence is a population-weighted average: \`prevalence_total = 0.17 x p_essential + 0.83 x (p_essential / 6.27)\`. From this we compute \`p_essential = 3.3 x prevalence_total\`. We round off to 3x for essential workers, and 0.5x for all others.
 
 
 

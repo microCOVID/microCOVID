@@ -8,6 +8,12 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 1, 2),
+    content: `
+* Remove "frontline worker", "healthcare worker", and "works from home" person risk categories.
+* Remove the "Intermediate Method" from the white paper. You can read more about [our rationale for this change](/paper/13-q-and-a#are-people-who-work-outside-the-home-riskier-than-people-who-work-from-home).`,
+  },
+  {
     date: new Date(2021, 0, 28),
     content: `
 * Created new mask categories and updated multipliers for mask types. See [the Masks section of Research Sources](/paper/14-research-sources#masks) in the White Paper for details.`,
@@ -23,8 +29,7 @@ const changes: Change[] = [
  * Re-labeled "frontline worker" to "healthcare + social worker".
  * Reduced risk of healthcare + social workers to 2x average (previously 3x).
  * Re-labeled "Not an essential or front-line worker" to "a person who works from home."
- * Note This recategorizes people who work outside the home but *not* in healthcare/social work settings as "An average person in your area."
- * See revised [Intermediate Method](/paper/8-intermediate-method) for rationale.`,
+ * Note This recategorizes people who work outside the home but *not* in healthcare/social work settings as "An average person in your area."`,
   },
   {
     date: new Date(2020, 11, 19),

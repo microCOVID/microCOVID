@@ -174,8 +174,8 @@ However, we have retracted this method for the following reasons:
 * It appears that the average person has become significantly riskier since early in the pandemic (more social activity / less lockdown yields high overall rates).
 * These categories of people are highly heterogenious. Lumping them all together makes no sense.
   * Differences in PPE alone can reduce transmission risk by 10x, which would be a larger effect than either of these studies.
-  * Many hospitals have precautions that decrease the liklihood that a random HCW will be exposed to COVID.
-  * On the other hand, some HCW's directly work with confirmed COVID patients, which is a much higher risk category.
+  * Many hospitals have precautions that decrease the liklihood that a random healthcare worker will be exposed to COVID.
+  * On the other hand, some healthcare workers directly work with confirmed COVID patients, which is a much higher risk category.
 * Various studies, such as [Baker et al.](https://www.acpjournals.org/doi/10.7326/M20-7145) have shown that, for at least some pockets of healthcare workers, healthcare workers are no more likely to get infected through their work than the average person is to get infected through socializing.
 * The above Washington State report shows that people who work outside the home got COVID at about the average rate for the state.
 
@@ -292,7 +292,7 @@ In terms of qualitative scales, we like the following:
 [^1]:  More concerning symptoms include cough, chest tightness/discomfort, obvious sore throat, body aches, malaise, loss of taste/smell, nausea/vomiting, loss of appetite, diarrhea, any subjective “feverish feeling” or elevated temperature, fainting, or thermometer reading of >100.4.
 [^unwell]: You probably can't do this anywhere near as reliably with someone you don't live with, which is why the discussion here is specific to housemates.
 [^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
-[^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
+[^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the risk of an average person in your area, just as a safety margin.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
 [^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.
 
