@@ -174,8 +174,8 @@ However, we have retracted this method for the following reasons:
 * It appears that the average person has become significantly riskier since early in the pandemic (more social activity / less lockdown yields high overall rates).
 * These categories of people are highly heterogenious. Lumping them all together makes no sense.
   * Differences in PPE alone can reduce transmission risk by 10x, which would be a larger effect than either of these studies.
-  * Many hospitals have precautions that decrease the liklihood that a random HCW will be exposed to COVID.
-  * On the other hand, some HCW's directly work with confirmed COVID patients, which is a much higher risk category.
+  * Many hospitals have precautions that decrease the liklihood that a random healthcare worker will be exposed to COVID.
+  * On the other hand, some healthcare workers directly work with confirmed COVID patients, which is a much higher risk category.
 * Various studies, such as [Baker et al.](https://www.acpjournals.org/doi/10.7326/M20-7145) have shown that, for at least some pockets of healthcare workers, healthcare workers are no more likely to get infected through their work than the average person is to get infected through socializing.
 * The above Washington State report shows that people who work outside the home got COVID at about the average rate for the state.
 

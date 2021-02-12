@@ -37,8 +37,6 @@ There is not just one answer for “How risky is it to invite one person over fo
 ## Detailed steps for Basic Method
 To learn how do these steps manually, or to understand how the calculator does it, read the rest of this page.
 
-Or skip to the next page to learn about the [Intermediate Method](8-intermediate-method).
-
 
 
 ### Step one: Look up reported cases
