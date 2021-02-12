@@ -15,7 +15,6 @@ This means that the chance someone has COVID (which we’re calling “Person Ri
 We use three different methods of guessing someone’s chance of having COVID.
 
 *   The **[Basic Method](7-basic-method)** is to just assume the person is “average” for their region. The chance your friend has COVID is the chance that _anyone_ in your geographic area has COVID.
-*   The **[Intermediate Method](8-intermediate-method)** adds adjustments for whether the person is or isn’t an essential worker.
 *   The **[Advanced Method](9-advanced-method)** is to add up the risk of each individual activity that person has done recently.
 
 You do not need to understand exactly how these methods work to use the [calculator](/calculator), but if you want to create your own custom estimates for specific people in your life then we strongly recommend learning to use the [Advanced Method](/paper-9-advanced-method) and the associated [risk tracking tool](/tracker).
@@ -31,7 +30,7 @@ If you would like to skip ahead, please first read the following takeaways that 
   * We estimate essential workers are 3x more likely than average to have COVID.
   * People who are not essential workers are half as likely as average to have COVID.
 
-If you would like to understand how we use the basic, intermediate, and advanced methods to calculate Person Risk, read on.
+If you would like to understand how we use the basic and advanced methods to calculate Person Risk, read on.
 
 
 Skip ahead to [Putting it all together](11-putting-it-all-together), or read on about the [Basic Method](7-basic-method) for more detail.

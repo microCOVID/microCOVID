@@ -11,8 +11,6 @@ You’re planning to hang out with Rosie and want to know her Person Risk, so yo
 
 *   Basic method: **5106** Person Risk.
     *   Because we estimate the San Francisco prevalence of COVID infection (at the time of writing) as 5106-in-a-million. This would change if prevalence changed.
-*   Intermediate method: **2553** Person Risk.
-    *   Rosie is _not_ a frontline worker, so we can reduce our estimate by the Frontline Work Factor of 1/2.
 *   Advanced method: **217** Person Risk
     *   _Remember, here you’re calculating **Rosie’s own** risk of getting COVID from **her** activities, in microCOVIDs, which you can then use in calculating **your** risk of getting COVID from her._
     *   Each walk starts with a 6% Activity Risk (for one-time contact per hour) times 1.5 hours, and then gets a decrease of 2x for Rosie’s mask, 4x for her friend’s mask, and 20x for being outdoors. Since you she at regular distance on these walks (3 feet), there is no additional reduction for distance. We’ll treat the friends as average residents (using the 5106 Person Risk from the Basic Method above). Five walks in the past ten days adds up to \`0.06/hr ⨉ 1.5hr ⨉ 5 ⨉ 5106 ⨉ (1/2) ⨉ (1/4) ⨉ (1/20) = 14\` microCOVIDs.
@@ -23,7 +21,7 @@ You’re planning to hang out with Rosie and want to know her Person Risk, so yo
 
     *   So the total COVID risk for Rosie, based on her behaviors, is \`153 + 14 + 50 = 217\` microCOVIDs. Now you can use this number as the “Person Risk” when you’re calculating your own chance of getting COVID from Rosie.
 
-One thing you will notice is that when we re-compute Rosie's Person Risk via more detailed methods, we get substantially smaller numbers. This is because the Basic and Intermediate method both assume Rosie is about average, which is not true. In fact, she is being about ten times more cautious than the average non-essential-worker in her geographic area. The more you know about a person’s behavior, the more accurate your estimate can be. In some cases it might go up, in other cases it might go down.
+One thing you will notice is that when we re-compute Rosie's Person Risk via the advanced method, we get substantially smaller numbers. This is because the Basic method assumes Rosie is about average, which is not true. In fact, she is being about ten times more cautious than the average non-essential-worker in her geographic area. The more you know about a person’s behavior, the more accurate your estimate can be. In some cases it might go up, in other cases it might go down.
 
 With a total COVID risk of 217 microCOVIDs, Rosie is being much more cautious than average![^14] It’s also possible we’re still overestimating her risk, even using the Advanced Method. For example, if her friends are similar to her, then they are probably more cautious than average as well, which would reduce her COVID risk from socializing.
 
