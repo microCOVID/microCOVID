@@ -7,14 +7,13 @@ const image: ImageMeta = {
   height: 502,
 }
 
-const title =
-  'How our house got our lives back by using a collective “risk budget”'
+const title = 'microCOVID Risk Tracker: How our house got our lives back'
 
 const author = 'Jeremy Blanchard'
-const date = 'February 7, 2021'
+const date = 'February 11, 2021'
 
 const summary =
-  'Navigating house agreements around COVID can be really stressful. We made a tool to help make it a lot easier.'
+  'Navigating house/pod agreements around COVID can be really stressful. We made a tool to help make it a lot easier.'
 const content = `
 
 <style>
@@ -23,8 +22,6 @@ img {
   height: auto;
 }
 </style>
-
-
 
 *Today we’re launching a new version of the microCOVID Risk Tracker with features for households and pods to collectively budget their risk over time.* [*You can download the latest version of the Risk Tracker here →*](/tracker)
 
@@ -36,19 +33,23 @@ img {
 
 ## How the Risk Tracker helped our house get our lives back
 
-Here’s a bit of the backstory behind this new version. Up until [microCOVID](/) was released in August 2020, my house was struggling with the same thing many communal houses were struggling with: we want to make sure to keep ourselves, each other, and the wider community safe from COVID, *and* at the same time, there are things that are important enough that we want to be able to find a way to do them. 
+We're launching Version 2 of the [microCOVID Risk Tracker](/tracker) today, and I want to share a bit of the backstory. Up until [microCOVID](/) was released in August 2020, my house was struggling with the same thing I know many communal houses were struggling with: we want to make sure to keep ourselves, each other, and the wider community safe from COVID, *and* at the same time, there are things that are important enough that we want to be able to find a way to do them. 
 
 The dilemma: how do you make decisions about what a “safe amount of risk is” when living with many other people?
 
-At that time our system was similar to many other group houses: masked, outdoor, distance hangs were okay, but anything other than that needed group input/consensus. As you might imagine, having every single person’s activities be subject to a consensus discussion in a house meeting is a recipe for a ton of stress and struggle. (“What’s riskier: a 3-hour unmasked. outdoor hang? Or a 30-minute indoor, masked hang? 🤷‍♂️” and “Okay I know you really want to see your bodyworker and I really want to see my partner, but are either of those risks we’re willing to take?!”)
+At that time our system was similar to many other group houses: masked, outdoor, distance hangs were okay, but anything other than that needed group input/consensus. Having every single person’s activities be subject to a consensus discussion in a house meeting is a recipe for a ton of stress and struggle.
 
-So when I got my hands on the original microCOVID spreadsheet, I went to town upgrading it for our house to use. I asked the team dozens of questions to make sure I had my head around how it was supposed to work.
+We encountered questions like:
+* “What’s riskier: a 3-hour unmasked. outdoor hang? Or a 30-minute indoor, masked hang? 🤷‍♂️”
+* “Sam really wants to see their bodyworker. I really wanted to see my partner. But was I ok being in indirect contact with that bodyworker for Sam's sake? Did Sam think my happiness from seeing my partner was worth the risk they'd experience?”
 
-Let me say this: since we replaced our consensus approach with a microCOVID budget approach, COVID-related relationship stress in the house has gone down dramatically. We can now make choices on our own about what we do that’s within our individual risk budget! Once the system is set up and everyone knows how to use it, we don’t need to have much (if any) group meeting time to talk about our COVID agreements.
+Then we disocvered the microCOVID spreadsheet. I realized it had the potential to completely change how we had these discussions. If we could quantify and track how much risk each of us were taking, we could allocate everyone a small but even share of risk that they could use to make their own decisions, without consulting the house every time.
 
-**Having this new approach has saved us SO much energy. We got our lives back.** Both in that we aren’t constantly talking about COVID decisions every week, and that we have flexibility to take certain actions that are important to us.
+I'll say this: since we replaced our consensus approach with a microCOVID budget approach, COVID-related relationship stress in the house has gone down dramatically. We can now make choices on our own about what we do that’s within our individual risk budget! Once the system is set up and everyone knows how to use it, we don’t need to have many (if any) group meeting time to talk about our COVID agreements.
 
-I realized that, although I personally love spreadsheets, many people don’t. I wanted to find a way for everyone to be able to get their lives back the way my house did. That’s why I’ve been working with the team for the last few months upgrading the risk tracker to be cleaner, clearer, and easier to use so that anyone could pick it up and start using it for their pod. We hope you find it useful for your situation.
+**Having this new approach has saved us SO much energy. We got our lives back.**  We aren’t constantly talking about COVID decisions every week, and we have flexibility to take certain actions that are important to us.
+
+I realized that, although I personally love spreadsheets, many people don’t. I wanted to find a way for everyone to be able to get their lives back the way my house did. That’s why I’ve been working with the microCOVID team for the last few months to upgrade the risk tracker so it is cleaner, clearer, and easier to use. I want anyone to be able to pick it up and start using it for their house/pod. We hope you find it useful for your situation!
 
 
 ----------
