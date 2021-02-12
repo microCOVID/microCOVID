@@ -18,8 +18,10 @@ export const BlogPosts: React.FC<{ posts: BlogPostMap }> = ({ posts }) => (
             <Link to={`blog/${postID}`}>
               <h1 className="pageTitle">{page.title}</h1>
             </Link>
-            <div className="postAuthor">{page.author}</div>
-            <div className="postDate">{page.date}</div>
+            <div className="postByLine">
+              <span className="postAuthor">{page.author}</span> •{' '}
+              <span className="postDate">{page.date}</span>
+            </div>
 
             <p>{page.summary}</p>
 

@@ -26,13 +26,6 @@ const summary =
   "With caseloads near record highs and new, more infectious COVID variants starting to spread, it's time to upgrade your masks to N95 or better, both to protect yourself and to slow the spread of the disease"
 const content = `
 
-<style>
-img {
-  max-width: 100%;
-  height: auto;
-}
-</style>
-
 It’s year 2 of the pandemic, and masks have gone from a strange new experience to a core part of public life (and a fashion accessory!).  With caseloads at record highs and a more infectious [new variant](b117) on the horizon, we felt it was time to build a concise review for which masks give you the most protection and when you want to use them.  
 
 ## What’s the really short version?
