@@ -245,7 +245,11 @@
     "contact_us_header": "Contact us",
     "feedback": "If you have any feedback, questions, or would like to help out, please contact us <1>here</1>.",
     "donations_header": "Donations",
-    "donations_details": "We also welcome donations and tips, if you feel so moved. No pressure, truly. We're all volunteers and we don't currently have any funding to work on this project. Thank you in advance!"
+    "donations_details": "We also welcome donations and tips, if you feel so moved. No pressure, truly. Thank you in advance!",
+    "who_are_we_header": "Who are we?",
+    "who_are_we_body": "We are a group of community conscious, numerically-minded volunteers. Our project has no funding from any institution—scientific, government, or private. For a list of contributors, see the <1>White Paper</1>.",
+    "affiliations_header": "Disclosure of Affiliations",
+    "affiliations_body": "This project is a purely personal project by volunteers, NOT affiliated with any institution or employer. We do not speak for our affiliates or employers; all statements in this project reflect our own personal views. In the interest of full disclosure: our contributors are affiliated with or employed by organizations including One Medical, Massachusetts General Hospital, London School of Hygiene and Tropical Medicine, Google, Matterport, Omada Health, Open Philanthropy Project, Hudson River Trading, Academy for Coaching Excellence, and Shapr3D."
   },
   "button": {
     "copy_link": "Copy link to this scenario",

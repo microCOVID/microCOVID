@@ -34,13 +34,21 @@ Footnotes[^demo] usually contain nerdy details for detail-loving readers, and of
 
 ## Authors:
 
-This article (and corresponding calculator) was collaboratively written by the members and friends of Ibasho, a communal house in San Francisco. Our goal is to protect our broader community’s physical and mental health during the pandemic, by promoting balanced evidence-based decision-making by individuals in our community.
+This article (and corresponding calculator) was originally collaboratively written by the members and friends of Ibasho, a communal house in San Francisco. Our goal is to protect our broader community’s physical and mental health during the pandemic, by promoting balanced evidence-based decision-making by individuals in our community.
 
-**Cite us collectively as:** The Ibasho community. We are members and friends of Ibasho, a communal house in San Francisco.
+Since then, the project has grown to include like-minded individuals around the world.
 
-**White paper:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Anna Tsykalova, Stephanie Bachar, Sarah Dobro, Matt Bell
+**Cite us collectively as:** The microCOVID Project
 
-**Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon, Jeremy Blanchard
+**Original White Paper and Model:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Anna Tsykalova, Stephanie Bachar, Sarah Dobro, MD, Matt Bell
+
+**Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon, Jeremy Blanchard, Matt Bell, Jenny Wong, Melody Chang, Josh Oreman, Peter Gyongyosi, Michael Cohn, and the microCOVID github community.
+
+**Ongoing Model Researchers:** Catherine Olsson, Ben Shaya, Joshua Oreman, Riley Drake, Joshua Slocum
+
+**Risk Tracker:** Jeremy Blanchard, Catherine Olsson, Joshua Oreman, Ben Shaya 
+
+**Social Media and Blogging:** Catherine Olsson, Ben Shaya, Matt Bell, Luke Lew, Finan Adamson
 
 _Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Danny Hernandez, David Mears, Derek Foster, Elliot Olds, Eugene Shvarts, Jacob Falkovich, Jeremy Howard, Jessica Watson Miller, Ivan Gayton, Katja Grace, Matt Bell, Peter Favaloro, Peter Hurford, Zvi Mowshowitz, and other friends who chose to remain anonymous. (Giving feedback does not imply endorsement of, or agreement with, this writeup.)_
 
