@@ -2,7 +2,7 @@ const title = 'Q&A'
 const shortTitle = title
 const content = `
 
-Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
+Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Vaccines](#vaccines-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
 
 # General Q&A
 
@@ -179,6 +179,52 @@ However, we have retracted this method for the following reasons:
 * Various studies, such as [Baker et al.](https://www.acpjournals.org/doi/10.7326/M20-7145) have shown that, for at least some pockets of healthcare workers, healthcare workers are no more likely to get infected through their work than the average person is to get infected through socializing.
 * The above Washington State report shows that people who work outside the home got COVID at about the average rate for the state.
 
+# Vaccines Q&A
+
+## How should we think about people who have been vaccinated?
+
+***Summary**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond. Additionally, each microCOVID *may* be 2-4x less likely to land a vaccinated individual in a hospital.*
+
+People who have been vaccinated are less likely to catch COVID and transmit it to others, which results in them getting fewer microCOVIDs from activities.
+However, they are not totally immune to COVID, and it is quite easy for a vaccinated person to counteract the decreased risk per activity by doing lots of
+risky activities (for instance, the Moderna vaccine confers a 1/5x multiplier for incoming microCOVIDs, so a vaccinated person who does 5x more risky behavior
+after being vaccinated would be just as many microCOVIDs as before).
+
+There are two questions that are important for understanding vaccines:
+
+1. How much less likely is it for a vaccinated individual to catch COVID? This determines the ***reduction in microCOVIDs*** a vaccinated individual receives from a given action.
+2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences (hospitalization or death). This determines how much a person can ***increase their microCOVID budget*** for being vaccinated (on top of being able to do more activities from part 1).
+
+### 1. How much less likely is it for vaccinated individuals to catch COVID? (Reduction in microCOVIDs)
+
+We do not know for sure how likely it is for a vaccinated individual to catch COVID. Vaccinated individuals still have a chance of becoming sick (even if they are not seriously ill), and may be asymptomatic carriers of the virus, capable of infecting others without having symptoms themselves. None of the vaccine studies have directly addressed what the chances of transmission from a vaccinated individual are. We attempt to make educated guesses by pulling in other sources. For our derivation of these numbers, see the [Research Sources](/paper/14-research-sources#vaccines).
+
+|             | microCOVID multiplier 7 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
+| ----------- | ------------------------------------------- | -------------------------------------------- |
+| AstraZeneca | 0.56                                        | 0.4                                          |
+| Moderna     | 0.56                                        | 0.2 [^moderna]                               |
+| Pfizer [^pfizer] | 0.56                                   | 0.2                                          |
+
+For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
+
+While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game-changing — universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
+
+### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
+
+At first glance, among all vaccinated individuals across all 3 studies, only 1 case of severe COVID-19 was observed, with no hospitalizations or deaths. However, there were only a small number of severe cases in the control group, which means we cannot say with much certainty how effective the vaccines are at preventing severe COVID-19. One might squint at the data and suggest that the reduction in severe cases is 2-4x the reduction in microCOVIDs suggested above.
+
+Additionally, we have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
+
+As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)),
+but we do not recommend increasing your microCOVID budget on top of that given current data. This may change as more data about the vaccines is gathered.
+
+If you do decide you want to increase your microCOVID budget post vaccination,
+* Discuss this with any regular close contacts you have, such as housemates, partners, or co-workers — your increased risk of COVID, asymptomatic or not, could affect them more than it affects you.
+* Consider the potential impact on your community at large — taking on more risk of being an asymptomatic spreader could result in you infecting many other people.
+
+### So is a vaccinated person safer to be around than an unvaccinated person?
+Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated person who does the same activities as a unvaccinated person will be less risky to be around. However, if the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got vaccinated! The only way to accurately understand a person's risk is to model each of their activities and multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
+
 # Specific Activities Q&A
 
 ### Can I let a friend use the bathroom in my house?
@@ -293,6 +339,8 @@ In terms of qualitative scales, we like the following:
 [^unwell]: You probably can't do this anywhere near as reliably with someone you don't live with, which is why the discussion here is specific to housemates.
 [^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
+[^moderna]: Moderna's Phase III study was only designed to count participants who got symptomatic cases of COVID. Our multiplier is based in part on data from testing all participants on the day of the second dose. Since the immune response after the second dose appears to be significantly stronger than after, this number could be as good as 0.05. Moderna is collecting additional data which may affect these numbers.
+[^pfizer]: Pfizer's Phase III study also does not report asymptomatic COVID cases. We use the same numbers as Moderna because the metrics that _are_ reported are quite similar, and the design of the vaccines themselves are quite similar. The multiplier after the 2nd dose could be as low as 0.05 or as high as 0.45. Pfizer is collecting additional data which may affect these numbers.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
 [^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.
 
