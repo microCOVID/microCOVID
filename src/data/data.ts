@@ -5,6 +5,8 @@ import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPre
 export interface CheckBoxFormValue extends FormValue {
   value: string
   sublabel?: string
+  oneShotMultiplier?: number
+  twoShotMultiplier?: number
 }
 
 export interface BaseFormValue {
@@ -34,6 +36,30 @@ export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
 export const oneTimeMult = 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT
 export const housemateMult = 0.3
 export const partnerMult = 0.48
+
+export const YourVaccine = [
+  {
+    label: 'Pfizer or Moderna',
+    value: 'pfizer',
+    multiplier: 0,
+    oneShotMultiplier: 0.56,
+    twoShotMultiplier: 0.2,
+  },
+  {
+    label: 'AstraZeneca',
+    value: 'astraZeneca',
+    multiplier: 0,
+    oneShotMultiplier: 0.56,
+    twoShotMultiplier: 0.4,
+  },
+  {
+    label: 'Not sure or not listed here',
+    value: 'unknown',
+    multiplier: 0,
+    oneShotMultiplier: 0.56,
+    twoShotMultiplier: 0.4,
+  },
+]
 
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: {

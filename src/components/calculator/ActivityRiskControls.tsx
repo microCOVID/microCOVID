@@ -1,11 +1,12 @@
-import React from 'react'
-import { Popover } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Form, Popover, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
+import { RadioControl } from './controls/RadioControl'
 import { SelectControl } from './controls/SelectControl'
 import { CalculatorData } from 'data/calculate'
-import { Setting, TheirMask, Voice, YourMask } from 'data/data'
+import { Setting, TheirMask, Voice, YourMask, YourVaccine } from 'data/data'
 
 export const ActivityRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -13,6 +14,30 @@ export const ActivityRiskControls: React.FunctionComponent<{
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   const { t } = useTranslation()
+  const [yourVaccineShots, setYourVaccineShots] = useState(0)
+  const [yourVaccineType, setYourVaccineType] = useState('')
+  const [
+    yourVaccinePassedTimeWindow,
+    setYourVaccinePassedTimeWindow,
+  ] = useState(false)
+  const yourVaccineEffectiveShots =
+    yourVaccineShots +
+    (yourVaccineShots === 0 || yourVaccinePassedTimeWindow ? 0 : -1)
+
+  const getVaccineMultiplier = (vaxType: string, numShots: number) => {
+    const whichVaccine = YourVaccine.find(
+      (vaccine) => vaccine.value === vaxType,
+    )
+    if (whichVaccine === undefined) {
+      return 1
+    }
+    if (numShots === 1 && whichVaccine.oneShotMultiplier !== undefined) {
+      return whichVaccine.oneShotMultiplier
+    } else if (numShots === 2 && whichVaccine.twoShotMultiplier !== undefined) {
+      return whichVaccine.twoShotMultiplier
+    }
+    return 1
+  }
 
   const header = (
     <h3 className="h2 accent">
@@ -89,6 +114,53 @@ export const ActivityRiskControls: React.FunctionComponent<{
         setter={setter}
         source={Voice}
       />
+      <Form.Group controlId="yourVaccine">
+        Are you vaccinated?
+        <ToggleButtonGroup
+          type="radio"
+          value={yourVaccineShots}
+          onChange={(val: number) => {
+            setYourVaccineShots(val)
+            setYourVaccinePassedTimeWindow(false)
+          }}
+          name="yourVaccine"
+        >
+          <ToggleButton value={0}>No</ToggleButton>
+          <ToggleButton value={1}>1 shot</ToggleButton>
+          <ToggleButton value={2}>2 shots</ToggleButton>
+        </ToggleButtonGroup>
+      </Form.Group>
+      {yourVaccineShots > 0 ? (
+        <>
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              checked={yourVaccinePassedTimeWindow}
+              onChange={() =>
+                setYourVaccinePassedTimeWindow(!yourVaccinePassedTimeWindow)
+              }
+              id="yourVaccinePassedTimeWindow"
+              label={
+                yourVaccineShots === 1
+                  ? 'Last shot at least 7 days ago'
+                  : 'Last shot at least 14 days ago'
+              }
+            />
+          </Form.Group>
+          <RadioControl
+            id="yourVaccineType"
+            setter={(value: string) => setYourVaccineType(value)}
+            source={YourVaccine}
+            value={yourVaccineType}
+            label="Which vaccine did you get?"
+          />
+        </>
+      ) : null}
+      <p>Effective shots: {yourVaccineEffectiveShots}</p>
+      <p>
+        Vaccine:{' '}
+        {getVaccineMultiplier(yourVaccineType, yourVaccineEffectiveShots)}
+      </p>
     </React.Fragment>
   )
 }
