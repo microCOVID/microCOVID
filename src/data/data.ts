@@ -42,6 +42,12 @@ export const Interaction: { [key: string]: FormValue } = {
     }),
     multiplier: oneTimeMult,
   },
+  workplace: {
+    label: i18n.t('data.workplace', {
+      percentage: fixedPointPrecisionPercent(oneTimeMult),
+    }),
+    multiplier: oneTimeMult,
+  },
   partner: {
     label: i18n.t('data.partner', {
       percentage: fixedPointPrecisionPercent(partnerMult),

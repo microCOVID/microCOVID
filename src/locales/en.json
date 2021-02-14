@@ -127,7 +127,6 @@
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
     "select_scenario": "Look for a premade scenario or <1>build your own</1>:",
-    "select_scenario_placeholder": "Custom scenario",
     "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
     "baseline_risk": "baseline risk",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
@@ -173,7 +172,8 @@
     "select_default_action": "Select one..."
   },
   "data": {
-    "oneTime": "How risky is this gathering/activity/errand/workplace?",
+    "oneTime": "How risky is this gathering/activity/errand?",
+    "workplace": "How risky is going in to work?",
     "partner": "How risky is it to live/stay with a partner/spouse?",
     "repeated": "How risky is it to live/stay with others (like roommates or family)?",
     "indoor": "Indoor",

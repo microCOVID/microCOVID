@@ -216,7 +216,8 @@ export const calculatePersonRiskEach = (
       // If risk profile isn't selected, call it incomplete
       return null
     }
-    const isHousemate = data.interaction !== 'oneTime'
+    const isHousemate =
+      data.interaction === 'partner' || data.interaction === 'repeated'
     return (
       averagePersonRisk *
       personRiskMultiplier({
@@ -236,7 +237,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       return null
     }
 
-    if (data.interaction !== 'oneTime') {
+    if (data.interaction === 'partner' || data.interaction === 'repeated') {
       return Interaction[data.interaction].multiplier
     }
 

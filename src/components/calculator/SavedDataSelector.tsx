@@ -69,7 +69,6 @@ export const SavedDataSelector: React.FunctionComponent<{
             setSavedData(e[e.length - 1])
           }}
           options={prepopulatedOptions}
-          placeholder={t('calculator.select_scenario_placeholder')}
           selected={selected}
         />
       </InputGroup>

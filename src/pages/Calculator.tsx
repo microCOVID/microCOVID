@@ -283,7 +283,8 @@ export const Calculator = (): React.ReactElement => {
                     source={Interaction}
                     hideRisk={true}
                   />
-                  {calculatorData.interaction === 'oneTime' ? (
+                  {calculatorData.interaction === 'oneTime' ||
+                  calculatorData.interaction === 'workplace' ? (
                     <Alert variant="info">
                       <Trans
                         i18nKey="calculator.one_time_interaction_risk_message"
