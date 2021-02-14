@@ -85,7 +85,14 @@ export const SavedDataSelector: React.FunctionComponent<{
     if (option === i18n.t('scenario.custom')) {
       return true
     }
-    return option.toLowerCase().indexOf(propsText.toLowerCase()) !== -1
+
+    // Remove diacritics, ignore case
+    const normalizeString = (str: string) =>
+      str
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+    return normalizeString(option).indexOf(normalizeString(propsText)) !== -1
   }
 
   const savedDataRef = React.createRef<Typeahead<string>>()
