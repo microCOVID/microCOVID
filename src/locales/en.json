@@ -220,6 +220,7 @@
     }
   },
   "scenario": {
+    "custom": "Build your own scenario",
     "outdoorMasked2": "Outdoor masked hangout with 2 other people",
     "indoorUnmasked2": "Indoor unmasked hangout with 2 other people",
     "1person_15minCarRide": "Car ride with 1 other person for 15 mins",

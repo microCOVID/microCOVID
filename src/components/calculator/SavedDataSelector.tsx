@@ -64,7 +64,7 @@ export const SavedDataSelector: React.FunctionComponent<{
           inputProps={{ autoComplete: 'chrome-off' }}
           onChange={(e: string[]) => {
             if (e.length === 0) {
-              setSavedData('')
+              setSavedData(t('scenario.custom'))
             }
             setSavedData(e[e.length - 1])
           }}
