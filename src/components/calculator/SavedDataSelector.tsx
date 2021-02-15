@@ -1,5 +1,5 @@
 import i18n from 'i18n'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { useTranslation } from 'react-i18next'
@@ -52,10 +52,13 @@ export const SavedDataSelector: React.FunctionComponent<{
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
   const prepopulatedOptions = Object.keys(prepopulated)
+  const [internalScenarioName, setInternalScenarioName] = useState(
+    props.scenarioName,
+  )
 
   let selected: string[] = []
-  if (props.scenarioName !== undefined && props.scenarioName !== '') {
-    const selectedOption = props.scenarioName
+  if (internalScenarioName !== undefined && internalScenarioName !== '') {
+    const selectedOption = internalScenarioName
     selected = [selectedOption]
   }
 
@@ -96,6 +99,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   }
 
   const savedDataRef = React.createRef<Typeahead<string>>()
+  const goButtonRef = React.createRef<HTMLButtonElement>()
   return (
     <Form.Group id="predefined-typeahead-group">
       <ControlLabel
@@ -115,13 +119,19 @@ export const SavedDataSelector: React.FunctionComponent<{
         }
       />
       <InputGroup>
-        <InputGroup.Prepend>
-          <InputGroup.Text>
-            <BsSearch />
-          </InputGroup.Text>
-        </InputGroup.Prepend>
+        <Button
+          as={InputGroup.Prepend}
+          variant="muted"
+          className="input-group-text"
+          onClick={() => {
+            console.log(savedDataRef, savedDataRef.current)
+            savedDataRef.current && savedDataRef.current.focus()
+          }}
+        >
+          <BsSearch className="align-middle" />
+        </Button>
         <Typeahead
-          clearButton={true}
+          clearButton={false}
           emptyLabel={t('calculator.no_prebuilt_scenario_found')}
           filterBy={showMatchesAndCustomScenario}
           highlightOnlyResult={true}
@@ -143,9 +153,13 @@ export const SavedDataSelector: React.FunctionComponent<{
           multiple
           onChange={(e: string[]) => {
             if (e.length === 0) {
-              setSavedData(t('scenario.custom'))
+              setInternalScenarioName('')
+            } else {
+              setInternalScenarioName(e[e.length - 1])
+              if (goButtonRef.current) {
+                goButtonRef.current.focus()
+              }
             }
-            setSavedData(e[e.length - 1])
           }}
           onFocus={() => {
             // If the user clicks anywhere in the box, highlight all the
@@ -159,6 +173,20 @@ export const SavedDataSelector: React.FunctionComponent<{
           ref={savedDataRef}
           selected={selected}
         />
+        <Button
+          variant="primary"
+          className="ml-1"
+          onClick={() => {
+            if (selected.length <= 0) {
+              setSavedData(t('scenario.custom'))
+            } else {
+              setSavedData(internalScenarioName)
+            }
+          }}
+          ref={goButtonRef}
+        >
+          {t('calculator.select_scenario_go')}
+        </Button>
       </InputGroup>
     </Form.Group>
   )
