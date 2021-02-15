@@ -156,23 +156,32 @@ export const Calculator = (): React.ReactElement => {
 
   const SavedScenarioMessage: React.FunctionComponent<{
     scenarioName: string
-  }> = (props): React.ReactElement => {
-    if (props.scenarioName === t('scenario.custom')) {
-      return (
-        <Alert variant="info">
-          <Trans>calculator.custom_scenario_message</Trans>
-        </Alert>
-      )
-    } else {
-      return (
-        <Alert variant="info">
-          <Trans values={{ scenarioName: scenarioName }}>
-            calculator.saved_scenario_loaded_message
-          </Trans>
-        </Alert>
-      )
-    }
-  }
+  }> = (props): React.ReactElement => (
+    <Alert variant="info">
+      <Trans values={{ scenarioName: props.scenarioName }}>
+        calculator.saved_scenario_loaded_message
+      </Trans>
+    </Alert>
+  )
+
+  const BaseTransmissionRateMessage: React.FunctionComponent<{
+    interaction: string
+    messageKey: string
+  }> = (props): React.ReactElement => (
+    <Alert variant="info">
+      <Trans
+        i18nKey={props.messageKey}
+        values={{
+          percentage: fixedPointPrecisionPercent(
+            Interaction[props.interaction].multiplier,
+          ),
+        }}
+      >
+        Lorem ipsum <strong>dolor</strong> sit
+      </Trans>
+    </Alert>
+  )
+
   return (
     <div id="calculator">
       <Row>
@@ -263,7 +272,8 @@ export const Calculator = (): React.ReactElement => {
                     />
                   </Col>
                 </Row>
-                {!scenarioName ? null : (
+                {!scenarioName ||
+                scenarioName === t('scenario.custom') ? null : (
                   <SavedScenarioMessage scenarioName={scenarioName} />
                 )}
                 <div>
@@ -285,46 +295,22 @@ export const Calculator = (): React.ReactElement => {
                   />
                   {calculatorData.interaction === 'oneTime' ||
                   calculatorData.interaction === 'workplace' ? (
-                    <Alert variant="info">
-                      <Trans
-                        i18nKey="calculator.one_time_interaction_risk_message"
-                        values={{
-                          percentage: fixedPointPrecisionPercent(
-                            Interaction['oneTime'].multiplier,
-                          ),
-                        }}
-                      >
-                        Lorem ipsum <strong>dolor</strong> sit
-                      </Trans>
-                    </Alert>
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.one_time_interaction_risk_message"
+                    />
                   ) : null}
                   {calculatorData.interaction === 'repeated' ? (
-                    <Alert variant="info">
-                      <Trans
-                        i18nKey="calculator.repeated_interaction_risk_message"
-                        values={{
-                          percentage: fixedPointPrecisionPercent(
-                            Interaction[calculatorData.interaction].multiplier,
-                          ),
-                        }}
-                      >
-                        Lorem ipsum <strong>dolor</strong>
-                      </Trans>
-                    </Alert>
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.repeated_interaction_risk_message"
+                    />
                   ) : null}
                   {calculatorData.interaction === 'partner' ? (
-                    <Alert variant="info">
-                      <Trans
-                        i18nKey="calculator.partner_interaction_risk_message"
-                        values={{
-                          percentage: fixedPointPrecisionPercent(
-                            Interaction[calculatorData.interaction].multiplier,
-                          ),
-                        }}
-                      >
-                        Lorem ipsum <strong>dolor</strong>
-                      </Trans>
-                    </Alert>
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.partner_interaction_risk_message"
+                    />
                   ) : null}
                   {calculatorData.interaction !== undefined &&
                   calculatorData.interaction !== '' ? (
@@ -332,9 +318,10 @@ export const Calculator = (): React.ReactElement => {
                       <Trans i18nKey="calculator.whats_next_interaction_risk_message">
                         Lorem ipsum dolor <strong>sit amet</strong>
                         (backed by{' '}
-                        <Link to="/paper/14-research-sources">
+                        <Link to="/paper/14-research-sources" target="_blank">
                           research
-                        </Link>!) {/* DONOTSUBMIT open in new tab */}
+                        </Link>
+                        !)
                       </Trans>
                     </p>
                   ) : null}

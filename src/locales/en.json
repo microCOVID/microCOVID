@@ -150,14 +150,13 @@
       "call_to_action": "Calculate the approximate COVID risk of an activity or relationship"
     },
     "risk_step_label": "Step 2: Describe the scenario",
-    "type_of_interaction": "What do you want to learn?",
+    "type_of_interaction": "What do you want to know?",
     "one_time_interaction_risk_message": "If one person is infected, there is a baseline <1>{{ percentage }} chance of transmission per hour</1>.",
     "repeated_interaction_risk_message": "If one person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
     "partner_interaction_risk_message": "If this person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
     "whats_next_interaction_risk_message": "How likely is it someone is infected? It depends on your location and the choices of people around you. This calculator will also walk you through <1>choices you can make</1> to change the baseline risk (backed by <4>research</4>!)",
     "risk_group_empty_warning": "Enter your location first.",
-    "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
-    "custom_scenario_message": "You are building your own scenario. <strong>Fill out the calculator</strong> to learn how risky it is.",
+    "saved_scenario_loaded_message": "If needed, adjust these prefilled answers for the <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
       "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
       "b117": "<0>January 5th, 2021:</0> The calculator now accounts for the new more infectious COVID-19 variant B117. Read more <3>here</3>.",
