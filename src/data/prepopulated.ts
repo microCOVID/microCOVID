@@ -308,7 +308,8 @@ export const prepopulated: {
     theirVaccine: 'undefined',
   },
   [i18n.t('scenario.custom')]: {
-    // profile is ignored. Fill with anything.
+    // This special profile is applied to reset the rest of the calculator.
+    // Keep at the end of this list.
     riskProfile: '',
     interaction: '',
     personCount: 0,

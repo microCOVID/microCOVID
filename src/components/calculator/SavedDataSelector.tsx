@@ -72,7 +72,7 @@ export const SavedDataSelector: React.FunctionComponent<{
     props.scenarioNameSetter(key)
   }
 
-  const filterByCallback = (
+  const showMatchesAndCustomScenario = (
     option: string,
     props: { text: string; selected: string[] },
   ) => {
@@ -116,16 +116,18 @@ export const SavedDataSelector: React.FunctionComponent<{
         <Typeahead
           clearButton={true}
           emptyLabel={t('calculator.no_prebuilt_scenario_found')}
-          filterBy={filterByCallback}
+          filterBy={showMatchesAndCustomScenario}
           highlightOnlyResult={true}
           id="predefined-typeahead"
           inputProps={{
             autoComplete: 'chrome-off',
             shouldSelectHint: (shouldSelect: boolean, event) => {
-              if (
-                event.keyCode === 13 /* return */ ||
-                event.keyCode === 9 /* tab */
-              ) {
+              // If a user starts typing a scenario and an autocomplete
+              // hint appears in the input bar for the rest of the
+              // scenario name, pressing the tab button selects the
+              // autocomplete hint. shouldSelectHint is necessary to have
+              // the same behaviour when hitting the enter key instead.
+              if (event.keyCode === 13 /* return */) {
                 return true
               }
               return shouldSelect
@@ -139,6 +141,9 @@ export const SavedDataSelector: React.FunctionComponent<{
             setSavedData(e[e.length - 1])
           }}
           onFocus={() => {
+            // If the user clicks anywhere in the box, highlight all the
+            // text so that they can start searching for a new scenario
+            // immediately.
             if (savedDataRef.current) {
               savedDataRef.current.getInput().select()
             }
