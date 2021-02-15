@@ -126,7 +126,7 @@
       "enter_data_manually": "Override location-based data"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
-    "select_scenario": "Look for a premade scenario or <1>build your own</1>:",
+    "select_scenario": "Start with a premade scenario or <2>build your own</2>:",
     "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
     "baseline_risk": "baseline risk",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
@@ -156,7 +156,7 @@
     "partner_interaction_risk_message": "If this person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
     "whats_next_interaction_risk_message": "How likely is it someone is infected? It depends on your location and the choices of people around you. This calculator will also walk you through <1>choices you can make</1> to change the baseline risk (backed by <4>research</4>!)",
     "risk_group_empty_warning": "Enter your location first.",
-    "saved_scenario_loaded_message": "If needed, adjust these prefilled answers for the <strong>{{ scenarioName }}</strong> scenario.",
+    "saved_scenario_loaded_message": "If needed, adjust the following prefilled answers to match your <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
       "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
       "b117": "<0>January 5th, 2021:</0> The calculator now accounts for the new more infectious COVID-19 variant B117. Read more <3>here</3>.",

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, InputGroup } from 'react-bootstrap'
+import { Button, Form, InputGroup } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { useTranslation } from 'react-i18next'
 import { Trans } from 'react-i18next'
@@ -9,6 +9,39 @@ import { ControlLabel } from 'components/calculator/controls/ControlLabel'
 import { CalculatorData } from 'data/calculate'
 import { PartialData, prepopulated } from 'data/prepopulated'
 
+const SavedDataLink: React.FunctionComponent<{
+  currentData: CalculatorData
+  setter: (newData: CalculatorData) => void
+  scenarioName: string
+  scenarioNameSetter: (newScenario: string) => void
+}> = (props): React.ReactElement => {
+  const setSavedData = (key: string): void => {
+    let foundData: PartialData | CalculatorData | null = null
+    foundData = prepopulated[key]
+
+    if (foundData) {
+      props.setter({
+        ...props.currentData,
+        ...foundData,
+      })
+    }
+    props.scenarioNameSetter(key)
+  }
+
+  return (
+    <Button
+      className="p-0 m-0 border-0 scenario-shortcut"
+      onClick={() => {
+        setSavedData(props.scenarioName)
+        props.scenarioNameSetter(props.scenarioName)
+      }}
+      size="lg"
+      variant="link"
+    >
+      {props.children}
+    </Button>
+  )
+}
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
@@ -40,12 +73,20 @@ export const SavedDataSelector: React.FunctionComponent<{
   }
 
   return (
-    <Form.Group>
+    <Form.Group id="predefined-typeahead-group">
       <ControlLabel
         id="predefined-typeahead"
         label={
           <Trans i18nKey="calculator.select_scenario">
-            Look for a premade scenario or <span>build your own</span>
+            Look for a premade scenario or{' '}
+            <SavedDataLink
+              currentData={props.currentData}
+              setter={props.setter}
+              scenarioName={t('scenario.custom')}
+              scenarioNameSetter={props.scenarioNameSetter}
+            >
+              build your own
+            </SavedDataLink>
           </Trans>
         }
       />

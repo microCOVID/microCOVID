@@ -188,4 +188,8 @@
       text-decoration: initial;
     }
   }
+
+  label[for=predefined-typeahead] {
+    text-align: left;
+  }
 }
