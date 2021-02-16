@@ -4,7 +4,7 @@ import 'components/calculator/styles/ControlLabel.scss'
 
 export const ControlLabel: React.FunctionComponent<{
   id: string
-  label?: string
+  label?: string | JSX.Element
   header?: string
   popover?: JSX.Element
 }> = (props) => (

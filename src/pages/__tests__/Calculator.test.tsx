@@ -19,7 +19,7 @@ describe('calculator page', () => {
       },
     )
 
-    const interactionTypeLabelQuery = /Is this a specific activity or an ongoing relationship/i
+    const interactionTypeLabelQuery = /What do you want to know/i
     expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
     const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
     fireEvent.click(topLocationBox)
