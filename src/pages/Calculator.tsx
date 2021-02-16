@@ -18,6 +18,7 @@ import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
@@ -153,6 +154,34 @@ export const Calculator = (): React.ReactElement => {
 
   const { t } = useTranslation()
 
+  const SavedScenarioMessage: React.FunctionComponent<{
+    scenarioName: string
+  }> = (props): React.ReactElement => (
+    <Alert variant="info">
+      <Trans values={{ scenarioName: props.scenarioName }}>
+        calculator.saved_scenario_loaded_message
+      </Trans>
+    </Alert>
+  )
+
+  const BaseTransmissionRateMessage: React.FunctionComponent<{
+    interaction: string
+    messageKey: string
+  }> = (props): React.ReactElement => (
+    <Alert variant="info">
+      <Trans
+        i18nKey={props.messageKey}
+        values={{
+          percentage: fixedPointPrecisionPercent(
+            Interaction[props.interaction].multiplier,
+          ),
+        }}
+      >
+        Lorem ipsum <strong>dolor</strong> sit
+      </Trans>
+    </Alert>
+  )
+
   return (
     <div id="calculator">
       <Row>
@@ -243,12 +272,9 @@ export const Calculator = (): React.ReactElement => {
                     />
                   </Col>
                 </Row>
-                {!scenarioName ? null : (
-                  <Alert variant="info">
-                    <Trans values={{ scenarioName: scenarioName }}>
-                      calculator.saved_scenario_loaded_message
-                    </Trans>
-                  </Alert>
+                {!scenarioName ||
+                scenarioName === t('scenario.custom') ? null : (
+                  <SavedScenarioMessage scenarioName={scenarioName} />
                 )}
                 <div>
                   <GenericSelectControl
@@ -267,8 +293,39 @@ export const Calculator = (): React.ReactElement => {
                     source={Interaction}
                     hideRisk={true}
                   />
+                  {calculatorData.interaction === 'oneTime' ||
+                  calculatorData.interaction === 'workplace' ? (
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.one_time_interaction_risk_message"
+                    />
+                  ) : null}
+                  {calculatorData.interaction === 'repeated' ? (
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.repeated_interaction_risk_message"
+                    />
+                  ) : null}
+                  {calculatorData.interaction === 'partner' ? (
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.partner_interaction_risk_message"
+                    />
+                  ) : null}
+                  {calculatorData.interaction !== undefined &&
+                  calculatorData.interaction !== '' ? (
+                    <p>
+                      <Trans i18nKey="calculator.whats_next_interaction_risk_message">
+                        Lorem ipsum dolor <strong>sit amet</strong>
+                        (backed by{' '}
+                        <Link to="/paper/14-research-sources" target="_blank">
+                          research
+                        </Link>
+                        !)
+                      </Trans>
+                    </p>
+                  ) : null}
                 </div>
-
                 <Row>
                   <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls

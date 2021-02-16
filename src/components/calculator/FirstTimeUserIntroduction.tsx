@@ -17,12 +17,10 @@ export function FirstTimeUserIntroduction(): React.ReactElement {
         id="budget-intro"
         header={t('calculator.firsttime.budget_header')}
       >
-        <p>
-          <Trans i18nKey="calculator.firsttime.budget_explanation">
-            Lorem ipsum <a href="/paper/2-riskiness">riskyness link</a>
-            dolor sic <a href="/tracker">risk tracker link</a>
-          </Trans>
-        </p>
+        <Trans i18nKey="calculator.firsttime.budget_explanation">
+          Lorem ipsum <a href="/paper/2-riskiness">riskyness link</a>
+          dolor sic <a href="/tracker">risk tracker link</a>
+        </Trans>
       </Expandable>
     </>
   )

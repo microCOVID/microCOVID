@@ -243,6 +243,24 @@ describe('calculate', () => {
     },
   )
 
+  describe('Interaction: workplace', () => {
+    const workplace = testData({
+      ...baseTestData,
+      ...repeatedDontCare,
+      riskProfile: 'average',
+      interaction: 'workplace',
+      personCount: 1,
+    })
+
+    it('should behave the same as a one time interaction', () => {
+      const oneTime: CalculatorData = {
+        ...workplace,
+        interaction: 'oneTime',
+      }
+      expect(calcValue(workplace)).toEqual(calcValue(oneTime))
+    })
+  })
+
   describe('Interaction: partner', () => {
     const partner = testData(
       prepopulated[

@@ -126,7 +126,7 @@
       "enter_data_manually": "Override location-based data"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
-    "select_scenario": "Search for an activity or build your own below...",
+    "select_scenario": "Start with a premade scenario or <2>build your own</2>:",
     "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
     "baseline_risk": "baseline risk",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
@@ -149,10 +149,14 @@
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
       "call_to_action": "Calculate the approximate COVID risk of an activity or relationship"
     },
-    "risk_step_label": "Step 2: Describe the activity or relationship",
-    "type_of_interaction": "Is this a specific activity or an ongoing relationship?",
-    "risk_group_empty_warning": "First, enter your location",
-    "saved_scenario_loaded_message": "You selected this scenario: <strong>{{ scenarioName }}</strong>. Do the points below look like the activity you have in mind? If not, adjust it until it looks right.",
+    "risk_step_label": "Step 2: Describe the scenario",
+    "type_of_interaction": "What do you want to know?",
+    "one_time_interaction_risk_message": "If one person is infected, there is a baseline <1>{{ percentage }} chance of transmission per hour</1>.",
+    "repeated_interaction_risk_message": "If one person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
+    "partner_interaction_risk_message": "If this person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
+    "whats_next_interaction_risk_message": "How likely is it someone is infected? It depends on your location and the choices of people around you. This calculator will also walk you through <1>choices you can make</1> to change the baseline risk (backed by <4>research</4>!)",
+    "risk_group_empty_warning": "Enter your location first.",
+    "saved_scenario_loaded_message": "If needed, adjust the following prefilled answers to match your <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
       "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
       "b117": "<0>January 5th, 2021:</0> The calculator now accounts for the new more infectious COVID-19 variant B117. Read more <3>here</3>.",
@@ -167,9 +171,10 @@
     "select_default_action": "Select one..."
   },
   "data": {
-    "oneTime": "One-time interaction or repeated activity [{{ percentage }} chance of transmission per hour]",
-    "repeated": "Household member, or visitor staying at your home [{{ percentage }} chance of transmission per week]",
-    "partner": "Partner / spouse [{{ percentage }} chance of transmission per week]",
+    "oneTime": "How risky is this gathering/activity/errand?",
+    "workplace": "How risky is going in to work?",
+    "partner": "How risky is it to live/stay with a partner/spouse?",
+    "repeated": "How risky is it to live/stay with others (like roommates or family)?",
     "indoor": "Indoor",
     "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
     "transit": "A train with air filtration",
@@ -214,6 +219,7 @@
     }
   },
   "scenario": {
+    "custom": "Build your own scenario",
     "outdoorMasked2": "Outdoor masked hangout with 2 other people",
     "indoorUnmasked2": "Indoor unmasked hangout with 2 other people",
     "1person_15minCarRide": "Car ride with 1 other person for 15 mins",
