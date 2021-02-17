@@ -26,9 +26,6 @@ If you would like to skip ahead, please first read the following takeaways that 
 
 * **The chance someone has COVID is very different in different geographic regions.**
   * The very same activity that is fairly safe where I live might be fairly dangerous where my parents live, because the risk that people have COVID there is higher.
-* **People who interact with the public at work are at greater risk of having COVID.**
-  * We estimate essential workers are 3x more likely than average to have COVID.
-  * People who are not essential workers are half as likely as average to have COVID.
 
 If you would like to understand how we use the basic and advanced methods to calculate Person Risk, read on.
 
