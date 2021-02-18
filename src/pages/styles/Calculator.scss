@@ -2,6 +2,8 @@
 @import "~bootstrap/scss/mixins/_breakpoints.scss";
 @import "~rfs/scss";
 @import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
 @import '~react-bootstrap-typeahead/css/Typeahead.css';
 
 #calculator {
@@ -25,16 +27,16 @@
     padding-bottom: 1.25em;
   }
 
-  .boring-link {
+  .stealthy-link {
     font-style: italic;
     color: $secondary;
     text-decoration: none;
     padding: 0;
   }
 
-  .boring-link:hover {
-    color: $primary;
-    text-decoration: underline;
+  .stealthy-link:hover {
+    color: $primary !important;
+    text-decoration: underline !important;
   }
 
   .col-md-12 {
@@ -42,7 +44,6 @@
   }
 
   .calculator-buttons {
-    text-align: right;
   }
 
   // Colorful section headers
@@ -194,4 +195,29 @@
   label[for=predefined-typeahead] {
     text-align: left;
   }
+
+  .saved-data-text {
+    color: $secondary;
+    font-style: italic;
+    @include font-size($input-font-size-lg);
+  }
+
+  .collapsing-vertical-control {
+    .label {
+      color: #444 !important;
+    }
+  }
+
+  .scenario-results {
+    span {
+      color: $primary;
+    }
+  }
+    .scenario-results:hover {
+      background-color: $gray-200;
+      span {
+        color: $primary !important;
+      }
+    }
+
 }

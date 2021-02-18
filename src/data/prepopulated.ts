@@ -23,21 +23,6 @@ export type PartialData = Omit<
 export const prepopulated: {
   [key: string]: PartialData
 } = {
-  [i18n.t('scenario.custom')]: {
-    // This special profile is applied to reset the rest of the calculator.
-    riskProfile: '',
-    interaction: '',
-    personCount: 0,
-    symptomsChecked: 'no',
-
-    setting: '',
-    distance: '',
-    duration: 0,
-    theirMask: '',
-    yourMask: '',
-    voice: '',
-    theirVaccine: 'undefined',
-  },
   [i18n.t('scenario.outdoorMasked2')]: {
     riskProfile: 'average',
     interaction: 'oneTime',
@@ -321,5 +306,6 @@ export const prepopulated: {
     theirMask: '',
     yourMask: '',
     voice: '',
+    theirVaccine: 'undefined',
   },
 }

@@ -1,12 +1,20 @@
 import i18n from 'i18n'
 import React, { useState } from 'react'
-import { Button, Form, InputGroup } from 'react-bootstrap'
+import { Alert, Button, Form, InputGroup, Media } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { useTranslation } from 'react-i18next'
 import { Trans } from 'react-i18next'
-import { BsSearch } from 'react-icons/bs'
+import { BsArrowCounterclockwise, BsSearch } from 'react-icons/bs'
+import {
+  BsBriefcaseFill,
+  BsFillHouseDoorFill,
+  BsFillPersonFill,
+  BsHeartFill,
+} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 import { ControlLabel } from 'components/calculator/controls/ControlLabel'
+import { InteractionTypeDisplay } from 'components/calculator/selectors/InteractionTypeSelector'
 import { CalculatorData } from 'data/calculate'
 import { PartialData, prepopulated } from 'data/prepopulated'
 
@@ -15,7 +23,10 @@ const SavedDataLink: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
   scenarioName: string
   scenarioNameSetter: (newScenario: string) => void
+  setEditInteractionType: (newEdit: boolean) => void
+  setEditScenario: (newShow: boolean) => void
 }> = (props): React.ReactElement => {
+  const { t } = useTranslation()
   const setSavedData = (key: string): void => {
     let foundData: PartialData | CalculatorData | null = null
     foundData = prepopulated[key]
@@ -27,14 +38,16 @@ const SavedDataLink: React.FunctionComponent<{
       })
     }
     props.scenarioNameSetter(key)
+    props.setEditInteractionType(key === '' || key === t('scenario.custom'))
   }
 
   return (
     <Button
-      className="p-0 m-0 border-0 scenario-shortcut"
+      className="p-0 m-0 border-0 align-baseline scenario-shortcut"
       onClick={() => {
         setSavedData(props.scenarioName)
         props.scenarioNameSetter(props.scenarioName)
+        props.setEditScenario(false)
       }}
       size="lg"
       variant="link"
@@ -43,22 +56,164 @@ const SavedDataLink: React.FunctionComponent<{
     </Button>
   )
 }
+
+// show [Build your own scenario] if no preset found
+const SavedScenarioContinue: React.FunctionComponent<{
+  variant: string
+  scenarioName: string
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+}> = (props): React.ReactElement => {
+  const { t } = useTranslation()
+  return (
+    <div className="mt-2">
+      {t('calculator.no_prebuilt_scenario_found', {
+        scenarioName: props.scenarioName,
+      })}
+      <Button
+        className="mt-1 d-block"
+        variant="primary"
+        onClick={props.onClick}
+      >
+        {t('calculator.saved_scenario_continue_custom')}
+      </Button>
+    </div>
+  )
+}
+
+const InteractionTypeIcon: React.FunctionComponent<{
+  interaction: string
+}> = (props): React.ReactElement => {
+  const iconFromInteractionType = (interaction: string) => {
+    const iconProps = { size: 24 }
+    if (props.interaction === 'oneTime') {
+      return <BsFillPersonFill {...iconProps} />
+    } else if (interaction === 'workplace') {
+      return <BsBriefcaseFill {...iconProps} />
+    } else if (interaction === 'repeated') {
+      return <BsFillHouseDoorFill {...iconProps} />
+    } else if (interaction === 'partner') {
+      // The heart is naturally positioned a little too high. Move it down
+      // slightly.
+      return (
+        <BsHeartFill
+          {...iconProps}
+          style={{ position: 'relative', top: '2px' }}
+        />
+      )
+    }
+    return <BsFillPersonFill {...iconProps} />
+  }
+  return (
+    <div className="rounded-circle p-2 mr-2 bg-primary text-white">
+      {iconFromInteractionType(props.interaction)}
+    </div>
+  )
+}
+
+const SavedScenarioCard: React.FunctionComponent<{
+  currentData: CalculatorData
+  variant: string
+  showingResults: boolean
+  setEditScenario: (show: boolean) => void
+  scenarioName: string
+  scenarioNameSetter: (newScenario: string) => void
+  onStartOver: (event: React.MouseEvent<HTMLButtonElement>) => void
+  startOverButton?: JSX.Element
+  editInteractionType: boolean
+  setEditInteractionType: (newEdit: boolean) => void
+  interactionType: string
+}> = (props): React.ReactElement => {
+  const { t } = useTranslation()
+  const heading =
+    props.scenarioName !== '' ? props.scenarioName : t('scenario.custom')
+
+  const isPresetScenario =
+    props.scenarioName !== undefined &&
+    props.scenarioName !== '' &&
+    props.scenarioName !== t('scenario.custom')
+  const showResetButton = !props.editInteractionType && !isPresetScenario
+
+  const startOverButton = (
+    <Button
+      className="m-0 p-0 pl-0 pl-sm-1 float-right float-sm-right border-0 align-baseline"
+      onClick={props.onStartOver}
+      variant="link"
+    >
+      <BsArrowCounterclockwise className="align-middle" />
+      {t('calculator.select_scenario_start_over')}
+    </Button>
+  )
+
+  return (
+    <>
+      <div className="saved-data-text">
+        {props.showingResults
+          ? t('calculator.scenario_show_results')
+          : t('calculator.scenario_guide_through')}
+      </div>
+      <Alert variant={props.variant} className="bg-white">
+        <Media>
+          <InteractionTypeIcon interaction={props.interactionType} />
+          <Media.Body>
+            <Alert.Heading className="scenario-name mb-0">
+              {startOverButton}
+              {heading}
+            </Alert.Heading>
+            <InteractionTypeDisplay
+              currentData={props.currentData}
+              interactionType={props.interactionType}
+              editInteractionType={props.editInteractionType}
+              setEditInteractionType={props.setEditInteractionType}
+              showResetButton={showResetButton}
+            />
+          </Media.Body>
+        </Media>
+        {!props.editInteractionType && (
+          <>
+            <hr />
+            <div className="text-secondary">
+              <Trans i18nKey="calculator.saved_scenario_loaded_message">
+                Lorem ipsum dolor <strong>sit amet</strong>
+                (backed by{' '}
+                <Link
+                  to="/paper/14-research-sources"
+                  target="_blank"
+                  className="stealthy-link"
+                >
+                  research
+                </Link>
+                !)
+              </Trans>
+            </div>
+          </>
+        )}
+        {props.children}
+      </Alert>
+    </>
+  )
+}
+
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
   scenarioName: string
   scenarioNameSetter: (newScenario: string) => void
   label?: string
+  showingResults: boolean
+  editScenario: boolean
+  setEditScenario: (newEdit: boolean) => void
+  editInteractionType: boolean
+  setEditInteractionType: (newEdit: boolean) => void
+  interactionType: string
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
   const prepopulatedOptions = Object.keys(prepopulated)
-  const [internalScenarioName, setInternalScenarioName] = useState(
-    props.scenarioName,
-  )
+  const [inputText, setInputText] = useState('')
+  const [autoFocus, setAutoFocus] = useState(false)
 
   let selected: string[] = []
-  if (internalScenarioName !== undefined && internalScenarioName !== '') {
-    const selectedOption = internalScenarioName
+  if (props.scenarioName !== undefined && props.scenarioName !== '') {
+    const selectedOption = props.scenarioName
     selected = [selectedOption]
   }
 
@@ -73,6 +228,7 @@ export const SavedDataSelector: React.FunctionComponent<{
       })
     }
     props.scenarioNameSetter(key)
+    props.setEditInteractionType(key === '' || key === t('scenario.custom'))
   }
 
   const showMatchesAndCustomScenario = (
@@ -99,19 +255,42 @@ export const SavedDataSelector: React.FunctionComponent<{
   }
 
   const savedDataRef = React.createRef<Typeahead<string>>()
-  const goButtonRef = React.createRef<HTMLButtonElement>()
+  if (!props.editScenario) {
+    return (
+      <>
+        <SavedScenarioCard
+          currentData={props.currentData}
+          variant="secondary"
+          scenarioName={props.scenarioName}
+          scenarioNameSetter={setSavedData}
+          showingResults={props.showingResults}
+          setEditScenario={props.setEditScenario}
+          onStartOver={() => {
+            setSavedData('')
+            props.setEditScenario(true)
+            setAutoFocus(true)
+          }}
+          editInteractionType={props.editInteractionType}
+          setEditInteractionType={props.setEditInteractionType}
+          interactionType={props.interactionType}
+        />
+      </>
+    )
+  }
   return (
     <Form.Group id="predefined-typeahead-group">
       <ControlLabel
         id="predefined-typeahead"
         label={
           <Trans i18nKey="calculator.select_scenario">
-            Look for a premade scenario or{' '}
+            Start with a premade scenario or{' '}
             <SavedDataLink
               currentData={props.currentData}
               setter={props.setter}
               scenarioName={t('scenario.custom')}
-              scenarioNameSetter={props.scenarioNameSetter}
+              scenarioNameSetter={setSavedData}
+              setEditScenario={props.setEditScenario}
+              setEditInteractionType={props.setEditInteractionType}
             >
               build your own
             </SavedDataLink>
@@ -124,15 +303,14 @@ export const SavedDataSelector: React.FunctionComponent<{
           variant="muted"
           className="input-group-text"
           onClick={() => {
-            console.log(savedDataRef, savedDataRef.current)
             savedDataRef.current && savedDataRef.current.focus()
           }}
         >
           <BsSearch className="align-middle" />
         </Button>
         <Typeahead
+          autoFocus={autoFocus}
           clearButton={false}
-          emptyLabel={t('calculator.no_prebuilt_scenario_found')}
           filterBy={showMatchesAndCustomScenario}
           highlightOnlyResult={true}
           id="predefined-typeahead"
@@ -150,14 +328,20 @@ export const SavedDataSelector: React.FunctionComponent<{
               return shouldSelect
             },
           }}
-          multiple
+          onBlur={() => {
+            if (savedDataRef.current) {
+              savedDataRef.current.hideMenu()
+            }
+          }}
           onChange={(e: string[]) => {
             if (e.length === 0) {
-              setInternalScenarioName('')
+              setSavedData('')
+              props.setEditScenario(true)
             } else {
-              setInternalScenarioName(e[e.length - 1])
-              if (goButtonRef.current) {
-                goButtonRef.current.focus()
+              setSavedData(e[e.length - 1])
+              props.setEditScenario(false)
+              if (savedDataRef.current) {
+                savedDataRef.current.blur()
               }
             }
           }}
@@ -169,25 +353,25 @@ export const SavedDataSelector: React.FunctionComponent<{
               savedDataRef.current.getInput().select()
             }
           }}
+          onInputChange={(text: string) => {
+            setInputText(text)
+          }}
           options={prepopulatedOptions}
           ref={savedDataRef}
           selected={selected}
         />
-        <Button
-          variant="primary"
-          className="ml-1"
-          onClick={() => {
-            if (selected.length <= 0) {
-              setSavedData(t('scenario.custom'))
-            } else {
-              setSavedData(internalScenarioName)
-            }
-          }}
-          ref={goButtonRef}
-        >
-          {t('calculator.select_scenario_go')}
-        </Button>
       </InputGroup>
+      {selected.length === 0 && inputText.length > 0 && (
+        <SavedScenarioContinue
+          variant="muted"
+          scenarioName={props.scenarioName}
+          onClick={() => {
+            setSavedData(t('scenario.custom'))
+            props.setEditScenario(false)
+            setInputText('')
+          }}
+        />
+      )}
     </Form.Group>
   )
 }
