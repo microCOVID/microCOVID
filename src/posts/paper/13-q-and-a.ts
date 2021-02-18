@@ -313,11 +313,12 @@ The most important thing to remember in attending a protest is that you may not 
 
 # Related Work
 
-### How do microCOVIDs relate to initial viral load?
+### How do microCOVIDs relate to initial dose?
 
-“[Initial viral load](https://thezvi.wordpress.com/2020/04/01/taking-initial-viral-load-seriously/)” refers to how big a “dose” of virus you get when you first get exposed to the virus. If you’re exposed to more viral particles, evidence suggests that you’re more likely to develop a severe infection. This means it’s important to try to reduce the strength of your initial exposure, not just in order to avoid getting sick.
+"Initial dose" — sometimes referred to as “[initial viral load](https://thezvi.wordpress.com/2020/04/01/taking-initial-viral-load-seriously/)” — 
+refers to how big a “dose” of virus you get when you first get exposed to the virus. If you’re exposed to more viral particles, evidence suggests that you’re more likely to develop a severe infection. This means it’s important to try to reduce the strength of your initial exposure, not just in order to avoid getting sick.
 
-For the same total number of microCOVIDs, our guess is that getting them from many smaller independent sources (many mask walks, numerous brief grocery runs, etc.) is more likely to involve a low initial viral load than getting them from fewer riskier contacts (household members who don’t take many precautions; cuddling a random person whose recent activities you don’t know). \
+For the same total number of microCOVIDs, our guess is that getting them from many smaller independent sources (many mask walks, numerous brief grocery runs, etc.) is more likely to involve a low initial viral dose than getting them from fewer riskier contacts (household members who don’t take many precautions; cuddling a random person whose recent activities you don’t know).
 
 
 ### Are there other similar models or scales?
