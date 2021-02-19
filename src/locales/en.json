@@ -221,7 +221,7 @@
       "pfizer": "Pfizer BioNTech",
       "moderna": "Moderna",
       "astra_zeneca": "AstraZeneca",
-      "unkown": "Unknown or other"
+      "unknown": "Unknown or other"
     }
   },
   "scenario": {
