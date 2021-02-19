@@ -474,9 +474,9 @@ describe('calculate', () => {
     })
 
     it('Should apply vaccine multiplier to housemates activities', () => {
-      const noVaccineHousemate = {
+      const noVaccineHousemate: CalculatorData = {
         ...noVaccineScenario,
-        interraction: 'repeated',
+        interaction: 'repeated',
       }
       const vaccineHousemate = {
         ...noVaccineHousemate,
