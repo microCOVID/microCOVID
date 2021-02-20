@@ -124,9 +124,9 @@
         "risk_modifier_multiple": "{{multiplier}}x kockázat",
         "firsttime": {
             "microcovid_header": "Mi az a microCOVID?",
-            "microcovid_explanation": "<p>A kockázat számításához bevezettünk egy új fogalmat, a microCOVID-ot. Egy microCOVID egy a millióhoz esély jelent arra, hogy elkapd a koronavírust.</p> <p>Egy 20 000 microCOVID-os tevékenység veszélyes, mert 2% esélyed van arra, hogy megfertőződj <em>minden egyes alkalommal</em>, amikor részt veszel rajta. Egy 20 microCOVID-os tevékenység relatíve biztonságos, mert egy éven keresztül minden héten végezhetnéd, és még így is csak 0,1% esélyed lenne arra, hogy ennek során megfertőződj.</p>",
-            "budget_header": "Mire jó a kockázati keret?",
-            "budget_explanation": "Úgy gondoljuk, hogy az évi 1%-os fertőzési kockázat egy kezelhető mérték a legtöbb egészséges ember számára, aki nincs kapcsolatban veszélyeztetett csoportokkal (a részleteket <1>lásd itt</1>). Ha tartani akarod ezt az évi 1%-os számot, akkor a heti tevékenységeid kockázatát összesen 200 microCOVID alatt kell tartanod. Létrehoztunk egy <3>kockázatkövető táblázatot</3> is, amibe fel tudod jegyezni a tevékenységeidet."
+            "microcovid_explanation": "<p>A kockázat számszerűsítéséhez bevezettünk egy új fogalmat, a microCOVID-ot. Egy microCOVID egy a millióhoz esély jelent arra, hogy elkapd a koronavírust.</p> <p>Egy 20 000 microCOVID-os tevékenység során 2% esélyed van arra, hogy megfertőződj <em>minden egyes alkalommal</em>, amikor részt veszel rajta. Egy 20 microCOVID-os (azaz 0.00002% kockázatot jelentő) tevékenység relatíve biztonságos, mert egy éven keresztül minden héten végezhetnéd, és még így is csak 0,1%-nyi esélyt halmoztál fel arra, hogy megfertőződj.</p>",
+            "budget_header": "Mi az a kockázati keret?",
+            "budget_explanation": "<p>Saját magad végiggondolhatod, hogy mekkora kockázatot vállalsz fel a megfertőződésre. Ezt a kockázatot felfoghatod úgy, mint a saját \"kockázati kereted\".</p> <p>Úgy gondoljuk, hogy az évi 1%-os fertőzési kockázat egy kezelhető érték a legtöbb egészséges ember számára, aki nincs kapcsolatban veszélyeztetett csoportokkal -- ez egy évi 10,000 microCOVID-os keretet jelent. Ha tartani akarod ezt, ahhoz a heti tevékenységeid kockázatát összesen <strong>200 microCOVID alatt kell tartanod.</strong></p>"
         },
         "risk_tolerance_1_percent_label": "Átlagos keret",
         "risk_tolerance_1_percent_explanation": "Keret: évi 1% esély a fertőzésre, avagy 200 microCOVID hetente (javasolt érték, ha nem vagy veszélyeztetett)",
@@ -134,7 +134,9 @@
         "risk_tolerance_point1_percent_explanation": "Keret: évi 0.1% esély a fertőzésre, avagy 20 microCOVID hetente (javasolt érték, ha veszélyeztetett vagy, vagy gyakran találkozol veszélyeztetettel)",
         "intro": {
             "whats_this": "Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen használható intuíciót és megfelelő ártalomcsökkentési stratégiákat kialakítani, és csökkenteni a vírussal kapcsolatos stresszt.</p><p>A legfontosabb lépés a családod és a környezeted megóvására, ha te magad nem kapod el a koronavírust.",
-            "call_to_action": "Számold ki egy tevékenység vagy kapcsolat COVID-kockázatát!"
+            "call_to_action": "Számold ki egy tevékenység vagy kapcsolat COVID-kockázatát!",
+            "see_video": "A kalkulátor használatát részletesen bemutatja egy <1>angol nyelvű videó itt</1>.",
+            "whats_this2": "Ennek a kalkulátornak a segítségével meg tudod becsülni különböző tevékenységek fertőzési kockázatát és megnézheted, hogy mi lehet egy hatékony védekezés ezekben a helyzetekben. Például megnézheted, hogy milyen kockázattal jár <1>elmenni a boltba</1>, <3>meglátogatni egy barátot/3>, vagy hogy mennyit érne <5>jobb maszkot hordani a munkahelyen</5>."
         },
         "risk_step_label": "2. lépés: Mit csinálsz, kivel találkozol?",
         "type_of_interaction": "Konkrét tevékenység vagy folyamatos kapcsolat?",
@@ -146,9 +148,10 @@
         "frontline_worker_acknowledgement": "Tudjuk, hogy mekkora kockázatot és áldozatot vállalnak az egészségügyi és szociális ágazatok dolgozói. Hálásak vagyunk a munkájukért, és arra kérünk mindenkit, hogy találjuk meg a módját, hogy segítsük őket, és ne vágjuk el őket a társas kapcsolatainkból, még ha valamivel magasabb kockázatot is jelent velük találkozni. Egy jelentős részük az elkövetkező hónapokban várhatóan megkapja a védőoltást, és így jelentősen lecsökken ez a kockázat.",
         "saved_scenario_loaded_message": "Ezt a kész példát választottad ki: <strong>{{ scenarioName }}</strong>. Az alábbi beállítások megfelelnek a tevékenységnek, amire gondoltál? Ha nem, nyugodtan állítsd át őket.",
         "alerts": {
-            "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> Szükségünk van rád ahhoz, hogy ez az oldal minél szélesebb kör számára legyen hasznos. <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
+            "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
             "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul.",
-            "masks_update": "<0>Modellfrissítés:</0> A kiválasztható maszkok körét kibővítettük és frissítettük. A részletekről a <3>tanulmány maszkokról szóló fejezetében</3> olvashatsz angolul."
+            "masks_update": "<0>2021. január 28:</0> A kiválasztható maszkok körét kibővítettük és frissítettük. A részletekről a <3>tanulmány maszkokról szóló fejezetében</3> olvashatsz angolul.",
+            "full_changelog": "régebbi változtatások..."
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -243,7 +246,7 @@
     },
     "about": {
         "intro_header": "Miről szól a microCOVID projekt?",
-        "basic_description": "A projekt célja számszerűsített becslést adni arra, hogy az egyes napi tevékenységeid milyen kockázattal járnak a koronavírus szempontjából. A tudományos irodalomból összegyűjtöttük az egyes helyzetek fertőzési kockázatait, és építettünk belőle egy modellt, aminek segítségével mindenki megbecsülheti a saját kockázatát. A kockázat mértékegységének az 1 microCOVID-ot választottuk, ahol 1 microCOVID = egy az egymillióhoz esély arra, hogy a elkapd a koronavírust.",
+        "basic_description": "<1>A projekt célja számszerűsített becslést adni arra, hogy az egyes napi tevékenységeid milyen kockázattal járnak a koronavírus szempontjából.</1> <2>A tudományos irodalomból összegyűjtöttük az egyes helyzetek fertőzési kockázatait, és építettünk belőle egy modellt, aminek segítségével mindenki megbecsülheti a saját kockázatát. A kockázat mértékegységének az 1 microCOVID-ot választottuk, ahol 1 microCOVID = egy az egymillióhoz esély arra, hogy a elkapd a koronavírust.</2><3>Minél több embernek akarunk segítséget nyújtani abban, hogy pontosabban megértse, hogy hogyan terjed a koronavírus. Reméljük, hogy hozzá tudunk járulni ahhoz, hogy egy jobb intuíciót alakíts ki, csökkentsd a stressz-szinted és jó ártalomcsökkentési stratégiákat tudj kidolgozni.</3>",
         "where_to_start_header": "Hol kezdjem?",
         "data_inputs_lead": "Három fő formában foglaltuk össze az eredményeinket",
         "data_inputs_calculator": "egy <1>kalkulátor</1>, aminek segítségével felbecsülheted a fertőzési kockázatod,",
@@ -254,7 +257,8 @@
         "contact_us_header": "Elérhetőség",
         "feedback": "Ha visszajelzést adnál, kérdésed van, vagy szeretnél segíteni, <1>itt elérhetsz minket</1>.",
         "donations_header": "Támogatás",
-        "donations_details": "Önkéntes munkában, külső anyagi támogatás nélkül dolgozunk ezen a projekten. Ha megteheted, szívesen fogadunk minden támogatást, de ne érezd kötelességednek. Előre is kösz!"
+        "donations_details": "Ha megteheted, szívesen fogadunk minden támogatást, de ne érezd kötelességednek. Előre is kösz!",
+        "who_are_we_header": "Kik vagyunk mi?"
     },
     "button": {
         "copy_link": "Megosztható link ehhez a tevékenységhez",
