@@ -5,7 +5,11 @@
         "contactus": "Kontakt",
         "about": "Über das Projekt",
         "calculator": "Rechner",
-        "blog": "Blog"
+        "blog": "Blog",
+        "risk_tracker": {
+            "header": "Risiko-Zähler",
+            "start_here": "Starte Hier"
+        }
     },
     "current_lang_two_letter_code": "de",
     "calculator": {
@@ -18,7 +22,7 @@
             "your_mask_note": "Falls du isst oder trinkst, wähle „keine Maske“",
             "your_mask_question": "Welche Maske trägst du?",
             "your_mask_header": "Deine Maske",
-            "no_intimate_bonus_outdoors": "Wegen der geringen Abstände gehen wir nicht davon aus, dass der Aufenthalt im Freien das Risiko substantiell senkt. Daher gibt es keinen Bonus für den Aufenthalt im Freien mit geringen Abständen.",
+            "no_intimate_bonus_outdoors": "Wir ignorieren die Wahl der Umgebung in dieser Berechnung. Wir gehen nicht davon aus, dass gute Belüftung oder der Aufenthalt im Freien das Risiko maßgeblich senken, wenn sich Menschen so dicht zusammen aufhalten.",
             "environment_question": "Ist es drinnen oder draußen? Ist der Raum belüftet oder wird die Luft gefiltert?",
             "label": "Vorsichtsmaßnahmen",
             "environment_header": "Umgebung",
@@ -89,7 +93,7 @@
         "duration_header": "Dauer",
         "distance_header": "Abstand",
         "distance_question": "Wie nah sind diese Leute im Schnitt?",
-        "number_of_people_near_you_onetime": "Wieviele Leute sind bei dieser Aktivität normalerweise in deiner Nähe?",
+        "number_of_people_near_you_onetime": "Wie viele Leute sind bei dieser Aktivität normalerweise in einem Radius von 5 Metern um dich herum, zu jedem beliebigen Zeitpunkt?",
         "people_count": "Leute",
         "number_of_people_near_you_partner": "Mit wievielen Leuten wohnst du zusammen?",
         "nearby_people_label": "Leute in der Nähe",
@@ -110,43 +114,47 @@
         "risk_modifier_frac_plural": "{{frac}} des Risikos",
         "risk_modifier_frac_3rd": "{{frac}} des Risikos",
         "risk_modifier_frac_2nd": "{{frac}} des Risikos",
-        "prevalence_info_source_information": "Die Prävalenzdaten setzen sich zusammen aus denen des <1>Johns Hopkins CSSE</1> (gemeldete Fälle), von <4>Covid Act Now</4> (Positivtest-Raten der USA) und von <7>Our World in Data</7> (internationale Positivtest-Raten).",
+        "prevalence_info_source_information": "Die Prävalenzdaten setzen sich zusammen aus denen des <1>Johns Hopkins CSSE</1> (gemeldete Fälle), von <4>Covid Act Now</4> (Positivtest-Raten der USA), von <7>Our World in Data</7> (internationale Positivtest-Raten) und <10>Coronavirus COVID-19 România</10> (rumänische gemeldete Fälle).",
         "risk_tolerance_1_percent_explanation": "Budget: 1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) (empfohlen für gesunde Menschen, die NICHT in engem Kontakt mit stärker gefährdeten Personen stehen)",
         "risk_modifier_multiple": "{{multiplier}}x das Risiko",
         "baseline_risk": "Basisrisiko",
-        "select_scenario": "Optional: Beginne mit einer vordefinierten, gewöhnlichen Aktivität",
+        "select_scenario": "Beginne mit einem vordefinierten Szenario oder <2>erstelle dein eigenes</2>:",
         "firsttime": {
-            "budget_header": "Wie kann ich mein Risiko durch Verwendung eines Risikobudgets steuern?",
+            "budget_header": "Was ist ein Risikobudget?",
             "microcovid_header": "Was ist ein micoCOVID?",
-            "microcovid_explanation": "<p>Der Modellrechner stellt ein neues Konzept vor, das des microCOVIDs. Ein microCOVID entspricht einer Wahrscheinlichkiet von eins-zu-eine-Million, sich mit COVID zu infizieren.</p> <p>Eine Aktivität, die 20.000 microCOVIDs entspricht, ist ziemlich unsicher, da hier eine Wahrscheinlichkeit von 2 % besteht, dass du dich mit COVID ansteckst - <em>jedes Mal, wenn du sie ausführst</em>. Eine Aktivität, die 20 micoCOVIDs entspricht, ist vergleichsweise sicher, weil du sie ein Jahr lang jede Woche ausführen kannst und du dich dabei mit einer Wahrscheinlichkeit von nur 0,1 % mit COVID infizierst.</p>",
-            "budget_explanation": "Wir halten ein jährliches Risikobudget einer 1 %-Chance einer COVID-Infektion für die meisten gesunden Menschen für vernünftig, die nicht in Kontakt mit gefährdeteren Gruppen stehen. Wie wir zu dieser Einschätzung gekommen sind, kannst du <1>hier</1> erfahren. Falls du dieses Budget einer jährlichen 1 %-Infektionswahrscheinlichkeit einhalten willst, sollte das wöchentliche Budget deiner Aktivitäten insgesamt ca. 200 microCOVIDs pro Woche nicht überschreiten. Wir haben eine nützliche <3>Arbeitsmappe</3> entworfen, mit der du deine Aktivitäten im Zeitverlauf mitverfolgen kannst."
+            "microcovid_explanation": "<p>Wir haben das Konzept des \"microcovid\" als eine neue quantitative Einheit für Risiko kreiert. Ein microCOVID entspricht einer Wahrscheinlichkiet von eins-zu-eine-Million, sich mit COVID zu infizieren.</p> <p>Eine Aktivität, die 20.000 microCOVIDs entspricht, bedeutet dass hierbei eine Wahrscheinlichkeit von 2 % besteht, dass du dich mit COVID ansteckst - <em>jedes Mal, wenn du sie ausführst</em>. Eine Aktivität, die 20 micoCOVIDs (oder 0,00002%) entspricht, ist vergleichsweise sicher, weil du sie <em>ein Jahr lang jede Woche </em> ausführen kannst und die summierte Wahrscheinlichkeit, dich mit COVID anzustecken, immer noch nur etwa 0,1% beträgt.</p>",
+            "budget_explanation": "<p>Du entscheidest dich möglicherweise, dass du ein gewisses Risiko COVID zu bekommen eingehen möchtest. Du kannst dir dieses Risiko, dass du bereit bist einzugehen, als ein \"Risikobudget\" vorstellen.</p> <p>Wir sind der Meinung, dass für die meisten gesunden Menschen, die nicht in Kontakt mit gefährdeteren Gruppen stehen, ein jährliches Risikobudget von einer <strong>1%-Chance an COVID zu erkranken</strong> vernünftig ist - das entspricht einem Budget von 10.000 microCOVIDS pro Jahr. Um dieses Budget einzuhalten, dürftest du dich maximal <strong>200 microCOVIDs pro Woche</strong> aussetzen.</p>"
         },
         "intro": {
             "call_to_action": "Berechne das ungefähre COVID-Risiko einer Aktivität oder Beziehung",
-            "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Aktivitäte oder einer Beziehung in deinem Alltag einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt.</p><p>Der erste Schritt um deine Familie und deine Umgebung zu schützen ist zu verhindern, dass du selbst COVID bekommst."
+            "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Aktivitäte oder einer Beziehung in deinem Alltag einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt.</p><p>Der erste Schritt um deine Familie und deine Umgebung zu schützen ist zu verhindern, dass du selbst COVID bekommst.",
+            "see_video": "Wenn du eine Video-Erklärung über den Rechner und wie man ihn benutzt sehen möchtest, klicke <1>hier</1>.",
+            "whats_this2": "Dieser Rechner erlaubt es dir, dein COVID-Infektionsrisiko abzuschätzen und effektive Sicherheits-Konzepte für anpassbare Situationen zu finden. Beispiele: wie risikoreich ist <1>ein Gang zu meinem Supermarkt</1>? Was ist der sicherste Weg, <3>einen Freund zu treffen</3>? Wie viel würde es bringen, <5>eine bessere Maske auf der Arbeit zu tragen</5>?"
         },
         "warning": {
             "important": "Wichtig",
             "body": "Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen Ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
         },
-        "risk_group_empty_warning": "Gib zunächst deinen Ort ein",
-        "type_of_interaction": "Ist dies eine bestimmte Aktivität oder eine laufende Beziehung?",
-        "risk_step_label": "Schritt 2: Beschreibe die Aktivität oder die Beziehung",
+        "risk_group_empty_warning": "Gib zunächst deinen Ort ein.",
+        "type_of_interaction": "Was möchtest du wissen?",
+        "risk_step_label": "Schritt 2: Beschreibe das Szenario",
         "select_location_enter_manually": "Daten manuell eingeben …",
-        "select_location_placeholder": "Wähle einen Ort aus …",
+        "select_location_placeholder": "Wähle ein Land oder US Bundesstaat …",
         "location_selector_header": "Schritt 1: Gib deinen Aufenthaltsort ein",
         "location_subprompt_US": "Gesamtes Bundesland oder County auswählen …",
         "location_subprompt_US-AK": "Gesamtes Bundesland oder Borough auswählen …",
         "location_subprompt_US-LA": "Gesamtes Bundesland oder Parish auswählen …",
         "location_subprompt_country_or_regions": "Gesamtes Land oder Region auswählen …",
-        "saved_scenario_loaded_message": "Sie haben dieses Szenario ausgewählt: <strong>{{ scenarioName }}</strong>. Sehen die folgenden Punkte wie die Aktivität aus, an die Sie denken? Wenn nicht, passen Sie es an, bis es richtig aussieht.",
+        "saved_scenario_loaded_message": "Falls nötig, passe die folgenden, bereits ausgefüllten, Antworten an, damit sie zu deinem <strong>{{ scenarioName }}</strong> Szenario passen.",
         "alerts": {
-            "survey_request": "<0>Wir hätten gerne deine Rückmeldung:</0> Wir hätten gerne deine Hilfe, um den microCOVID-Rechner so nützlich wie möglich zu machen! <2>Bitte füll unseren Nutzerfragebogen aus</2>, um neue Funktionen priorisieren zu können.",
-            "b117": "<0>Modell-Aktualisierung:</0> Wir haben die Parameter an die neue COVID-19-Variante, B117, angepasst. Lies mehr darüber <3>hier.</3>"
+            "survey_request": "<0>Wir hätten gerne deine Rückmeldung:</0> Bitte fülle <2>unseren Nutzerfragebogen</2> aus, um uns dabei zu helfen, den microCOVID-Rechner so nützlich wie möglich zu machen und neue Funktionen priorisieren zu können.",
+            "b117": "<0>5. Januar 2021:</0> Wir haben die Parameter an die neue COVID-19-Variante, B117, angepasst. Lies mehr darüber <3>hier</3>.",
+            "full_changelog": "Zeige alle Updates...",
+            "masks_update": "<0>28. Januar 2021:</0> Wir haben neue Maskentypen hinzugefügt und die Multiplikatoren für bestehende aktualisiert. Erfahre mehr in <3>unserem neuen Blog-Post über Masken</3>."
         },
         "frontline_worker_acknowledgement": "Wir schätzen die Opfer, die die Frontarbeiter während der Pandemie bringen, sehr. Wir ermutigen dich, sichere Wege zu finden, diese Menschen zu unterstützen, sie sozial einzubeziehen und zu pflegen. Wir gehen davon aus, dass die meisten dieser Arbeitnehmer in den nächsten Monaten geimpft werden, was ihr Infektionsrisiko/die Übertragung erheblich verringern dürfte.",
         "switch_button": {
-            "enter_data_manually": "Wechseln in den manuellen Dateneingabemodus",
+            "enter_data_manually": "Überschreibe standortbezogene Daten",
             "select_location": "Wechseln zu vorab aufgefüllten Standortdaten"
         },
         "select_location_label": "Land oder US-Bundesstaat",
@@ -161,7 +169,12 @@
             "US-AK": "Gesamtes Bundesland, oder Bezirk auswählen…",
             "US-LA": "Gesamtes Bundesland, oder Kommune auswählen…",
             "country_or_regions": "Gesamtes Land oder Region auswählen …"
-        }
+        },
+        "whats_next_interaction_risk_message": "Wie wahrscheinlich ist es, dass jemand infiziert ist? Das hängt von deinem Aufenthaltsort und dem Verhalten der Leute um dich herum ab. Dieser Rechner wird dich außerdem durch <1>Entscheidungen, die du treffen kannst</1> führen, um dein Ausgangsrisiko zu verändern (belegt durch <4>Forschung</4>!)",
+        "partner_interaction_risk_message": "Wenn diese Person infiziert ist, gilt der Ausgangswert einer <1>{{ percentage }} Chance der Übertragung pro Woche</1>.",
+        "repeated_interaction_risk_message": "Wenn eine Person infiziert ist, gilt der Ausgangswert einer <1>{{ percentage }} Chance der Übertragung pro Woche</1>.",
+        "one_time_interaction_risk_message": "Wenn eine Person infiziert ist, gilt der Ausgangswert einer <1>{{percentage}} Chance der Übertragung pro Stunde</1>.",
+        "no_prebuilt_scenario_found": "Wir haben dieses Szenario bisher nicht, aber du kannst dein eigenes unten erstellen."
     },
     "data": {
         "person": {
@@ -185,10 +198,10 @@
         "loud_voice": "Laute Unterhaltung (rufen, Musik übertönen, singen)",
         "normal_voice": "Normale Unterhaltung",
         "silent_voice": "Kein Sprechen (wie beim stillen Zugfahren)",
-        "n95_mask": "Gut sitzende, gut abschließende N95-Maske",
-        "filtered_mask": "Chirurgische Maske oder Maske mit einem PM2,5-Einsatzfilter",
-        "basic_mask": "Stoffmaske oder Stoffhalstuch",
-        "no_mask": "Keine oder nur unzweckmäßig getragene Maske",
+        "n95_mask": "Medizinische N95-Maske die passt, aber du bist NICHT sicher, ob sie abdichtet",
+        "filtered_mask": "Stoff-Maske mit einem PM2,5-Einsatzfilter",
+        "basic_mask": "Baumwoll-Maske, dick und enganliegend (mehrlagige Baumwoll-Maske mit engem, sicherem Sitz)",
+        "no_mask": "Keine Maske",
         "tenft_distance": "3+ Meter entfernt",
         "sixft_distance": "2+ Meter entfernt",
         "normal_distance": "Normaler sozialer Umgang (ca. 1 Meter entfernt)",
@@ -196,21 +209,27 @@
         "intimate_distance": "Küssen",
         "outdoor": "Draußen",
         "indoor": "Drinnen",
-        "partner": "Partner / Ehepartner [{{ percentage }}-Chance einer Infektion je Woche]",
-        "repeated": "Haushaltsmitglied, oder übernachtender Besucher [{{ percentage }}-Chance einer Infektion je Woche]",
-        "oneTime": "Einmalige Begegnung oder wiederholte Aktivität [{{ percentage }}-Chance einer Infektion je Stunde]",
+        "partner": "Wie risikoreich ist es, mit einem Partner/Ehepartner zusammen zu wohnen/leben?",
+        "repeated": "Wie risikoreich ist es, mit anderen Personen zusammen zu wohnen/leben (z.B. Mitbewohner oder Familienangehörige)?",
+        "oneTime": "Wie risikoreich ist dieses Treffen/Aktivität/Erledigung?",
         "partially_enclosed": "Ein Raum mit einer oder mehreren nach außen offenen Seiten",
         "car_windows_down": "Ein fahrendes Auto mit heruntergefahrenen Fensterscheiben",
         "transit": "Ein Zug mit Luftfilterung",
         "filtered": "Innen mit einem HEPA-Filter (Durchflussrate 5× Raumgröße)",
-        "plane": "Ein Flugzeug"
+        "plane": "Ein Flugzeug",
+        "p100_mask": "P100 Atemgerät, NIOSH-zertifiziert wiederverwendbar, mit abgedecktem Auslassventil",
+        "n95_sealed_mask": "Medizinische N95-Maske die luftdicht abdichtet",
+        "kn95_mask": "KN95 Maske",
+        "surgical_mask": "Medizinische Maske",
+        "thin_mask": "Baumwoll-Maske, dünn oder lose (Halstuch, Schal, oder: loser Sitz, rutscht herunter)",
+        "workplace": "Wie risikoreich ist es, zur Arbeit zu gehen?"
     },
     "scenario": {
         "votingInPerson": "Stimmabgabe im Wahllokal",
         "indoorUnmaskedWithCovidPositive": "Treffen im Inneren mit einer Person, die COVID hat, wobei keine Masken getragen werden",
         "outdoorMaskedWithCovidPositive": "Treffen im Freien mit einer Person, die COVID-19 hat, wobei Masken getragen werden",
-        "smallIndoorParty25": "Kleine Indoor-Party: 25 Leute, ohne dass Masken getragen werden",
-        "largeOutdoorParty": "Große Party im Freien: 1,5 Meter Abstand zwischen den Leuten, wobei Masken getragen werden",
+        "smallIndoorParty25": "Indoor-Party: 25 Leute, wobei keine Masken getragen werden",
+        "largeOutdoorParty": "Party im Freien: 80 Menschen, 1 Meter Abstand zwischen den Leuten, wobei Masken getragen werden",
         "bar": "Bar-Besuch",
         "restaurantIndoors": "Essengehen (Restaurant), drinnen",
         "restaurantOutdoors": "Essengehen (Restaurant), draußen",
@@ -218,18 +237,19 @@
         "60minShopping": "60 Minuten im Supermarkt (durchschnittliche Nr von Kunden)",
         "liveInPartner_noContacts": "Lebenspartner, der sich außer mit dir mit niemandem im Inneren trifft",
         "oneNightStand": "One-Night-Stand mit einer zufälligen Person",
-        "1person_15minCarRide": "15-minütige Autofahrt mit einer Person",
-        "indoorUnmasked2": "Treffen mit zwei Leuten im Inneren, wobei keine Masken getragen werden",
-        "outdoorMasked2": "Treffen mit zwei Leuten im Freien, wobei Masken getragen werden",
+        "1person_15minCarRide": "15-minütige Autofahrt mit einer anderen Person",
+        "indoorUnmasked2": "Treffen mit zwei anderen Leuten im Inneren, wobei keine Masken getragen werden",
+        "outdoorMasked2": "Treffen mit zwei anderen Leuten im Freien, wobei Masken getragen werden",
         "planeRideMiddleSeatEmpty": "Flug (mittlere Sitzpläne freigehalten)",
-        "60minShoppingFew": "60 Minuten im Supermarkt (nur wenige andere Kunden)"
+        "60minShoppingFew": "60 Minuten im Supermarkt (nur wenige andere Kunden)",
+        "custom": "Erstelle dein eigenes Szenario"
     },
     "about": {
-        "basic_description": "Dies ist ein Projekt, um das COVID-Risiko aus deinen täglichen Aktivitäten abzuschätzen. Wir haben die Wissenschaftsliteratur nach Daten über die Wahrscheinlichkeit einer COVID-Infektion in verschiedenen Situationen durchkämmt und haben diese Daten in ein nutzbares Modell zusammengefasst. Wir schätzen das COVID-Risiko in der Einheit „microCOVIDs“, wobei 1 microCOVID ein eins-zu-eine-Million-Chance einer COVID-Infektion darstellt.",
-        "data_inputs_spreadsheet": "und eine <1>Arbeitsmappe</1>, um dein COVID-Risiko detaillierter zu berechnen und dein Risiko im Zeitverlauf verfolgen zu können.",
+        "basic_description": "<1>Dies ist ein Projekt, um das COVID-Risiko aus deinen täglichen Aktivitäten abzuschätzen.</1> <2>Wir haben die Wissenschaftsliteratur nach Daten über die Wahrscheinlichkeit einer COVID-Infektion in verschiedenen Situationen durchkämmt und haben diese Daten in ein nutzbares Modell zusammengefasst. Wir schätzen das COVID-Risiko in der Einheit „microCOVIDs“, wobei 1 microCOVID ein eins-zu-eine-Million-Chance einer COVID-Infektion darstellt.</2> <3>Wir wollen so vielen Menschen wie möglich dabei helfen, sich befähigt zu fühlen, Entscheidungen rund um COVID-Risiko zu treffen, indem wir Ihnen dabei helfen zu verstehen, wie COVID übertragen wird. Wir hoffen dieses Werkzeug wird dir dabei helfen, deine Intuition zu trainieren, dein Stress-Level zu senken und gute Schadensbegrenzungs-Strategien zu entwickeln.</3>",
+        "data_inputs_spreadsheet": "und einen <1>Risiko-Zähler</1>, um dein COVID-Risiko detaillierter zu berechnen und dein Risiko im Zeitverlauf verfolgen zu können.",
         "data_inputs_calculator": "ein <1>Rechner</1>, mit dem du dein COVID-Risiko berechnen kannst",
         "data_inputs_whitepaper": "ein <1>White Paper</1>, das unsere Schätzmethode erläutert",
-        "donations_details": "Wir freuen uns auch über Spenden und Trinkgeld, falls dich das Projekt so sehr begeistert. Es ist aber wirklich kein Muss. Wir sind alles Freiwillige und werden zur Zeit nicht finanziert, um an diesem Projekt zu arbeiten. Danke im Voraus!",
+        "donations_details": "Wir freuen uns auch über Spenden und Trinkgeld, falls dich das Projekt so sehr begeistert. Es ist aber wirklich kein Muss. Danke im Voraus!",
         "donations_header": "Spenden",
         "feedback": "Falls du Feedback oder Fragen hast oder mithelfen möchtest, nimmer mit uns <1>hier</1> Kontakt auf.",
         "contact_us_header": "Nimm Kontakt mit uns auf",
@@ -237,7 +257,11 @@
         "data_inputs_lead": "Diese Website enthält drei Ergebnisse unserer Recherchen",
         "where_to_start_header": "Wo fange ich an?",
         "intro_header": "Was ist das micoCOVID-Projekt?",
-        "disclaimer": "<0>Haftungsausschluss</0> Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen Ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein."
+        "disclaimer": "<0>Haftungsausschluss</0> Mit diesem Werkzeug versuchen wir, eine bestmögliche, evidenzbasierte Schätzung abzugeben, auch wenn die Evidenzbasis möglicherweise nicht schlüssig ist. Wir haben uns mit zahlreichen wissenschaftlichen Untersuchungen beschäftigt, sind selbst aber keine Experten auf diesem Gebiet. Unsere Arbeit wurde keinem wissenschaftlichen Kreuzgutachten unterzogen. In Bezug auf COVID-19 gibt es immer noch viel Ungewissheit. Verlass dich nicht auf dieses Werkzeug im Sinne eines medizinischen Ratschlags. Bitte halte weiterhin die Vorgaben deiner Regierung ein.",
+        "affiliations_body": "Dieses Projekt ist ein ausschließlich privates Projekt von Freiwilligen, NICHT verbunden mit irgendeiner Institution oder einem Arbeitgeber. Wir sprechen nicht für unsere Geschäftspartner oder Arbeitgeber; alle Aussagen in diesem Projekt geben unsere eigene, persönliche Meinung wieder. Im Interesse der vollständigen Transparenz: unsere Mitwirkenden sind Geschäftspartner von oder angestellt bei Organisationen, welche One Medical, Massachusetts General Hospital, London School of Hygiene and Tropical Medicine, Google, Matterport, Omada Health, Open Philanthropy Project, Hudson River Trading, Academy for Coaching Excellence und Shapr3D beinhalten.",
+        "affiliations_header": "Offenlegung von Beziehungen",
+        "who_are_we_body": "Wir sind eine Gruppe von gemeinschafts-orientierten, zahlen-fokussierten Freiwilligen. Unser Projekt bekommt keine finanzielle Unterstützung von irgendeiner Institution - weder akademisch, noch staatlich oder privat. Um eine Liste der Mitarbeitenden zu sehen, schau in das <1>White Paper</1>.",
+        "who_are_we_header": "Wer sind wir?"
     },
     "button": {
         "copy_link": "Link zu diesem Szenario kopieren",
