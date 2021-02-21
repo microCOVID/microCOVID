@@ -4,6 +4,7 @@ import { Form } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
+import { recordCalculatorOptionSelected } from 'components/Analytics'
 import IosOptgroup from 'components/IosOptgroup'
 import { CalculatorData } from 'data/calculate'
 import { BaseFormValue } from 'data/data'
@@ -56,7 +57,10 @@ export const GenericSelectControl: React.FunctionComponent<{
       <select
         id={props.id}
         className={'form-control form-control-lg ' + props.className}
-        onChange={(e) => props.setter(e.target.value)}
+        onChange={(e) => {
+          recordCalculatorOptionSelected(props.id, e.target.value)
+          props.setter(e.target.value)
+        }}
         value={
           typeof props.value === 'object'
             ? props.value.toDateString()

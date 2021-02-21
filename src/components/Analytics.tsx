@@ -22,6 +22,17 @@ export function recordCalculatorChanged(points: number): void {
   lastPoints = points // Don't record an event if nothing actually changed.
 }
 
+export function recordCalculatorOptionSelected(
+  field: string,
+  label: string,
+): void {
+  ReactGA.event({
+    category: 'Calculator',
+    action: 'changed ' + field,
+    label,
+  })
+}
+
 export function recordSavedCustom(points: number): void {
   ReactGA.event({
     category: 'Calculator',

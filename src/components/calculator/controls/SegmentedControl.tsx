@@ -9,6 +9,7 @@ import {
 import { useTranslation } from 'react-i18next'
 
 import ControlLabel from './ControlLabel'
+import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { CalculatorData } from 'data/calculate'
 import { CheckBoxFormValue } from 'data/data'
 
@@ -93,6 +94,10 @@ export const SegmentedControl: React.FunctionComponent<{
                 className="segmented-button"
                 checked={props.data[props.id] === value}
                 onChange={(e) => {
+                  recordCalculatorOptionSelected(
+                    props.id,
+                    e.currentTarget.value,
+                  )
                   props.setter({
                     ...props.data,
                     [props.id]: e.currentTarget.value,
