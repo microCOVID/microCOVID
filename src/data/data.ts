@@ -29,6 +29,14 @@ const formValue = function (label: string, multiplier: number): FormValue {
   return { label, multiplier }
 }
 
+const segmentedFormValue = function (
+  label: string,
+  value: string,
+  multiplier: number,
+): CheckBoxFormValue {
+  return { label, multiplier, value }
+}
+
 export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
 
 export const oneTimeMult = 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT
@@ -85,36 +93,43 @@ export const Distance: { [key: string]: FormValue } = {
   tenFt: formValue(i18n.t('data.tenft_distance'), 0.25),
 }
 
-const noneLabel = i18n.t('data.no_mask')
-const thinLabel = i18n.t('data.thin_mask')
-const basicLabel = i18n.t('data.basic_mask')
-const surgicalLabel = i18n.t('data.surgical_mask')
-const filteredLabel = i18n.t('data.filtered_mask')
-const kn95Label = i18n.t('data.kn95_mask')
-const n95Label = i18n.t('data.n95_mask')
-const n95SealedLabel = i18n.t('data.n95_sealed_mask')
-const p100Label = i18n.t('data.p100_mask')
-export const TheirMask: { [key: string]: FormValue } = {
-  none: formValue(noneLabel, 1.0),
-  thin: formValue(thinLabel, 1 / 2),
-  basic: formValue(basicLabel, 1 / 3),
-  surgical: formValue(surgicalLabel, 1 / 4),
-  filtered: formValue(filteredLabel, 1 / 4),
-  kn95: formValue(kn95Label, 1 / 6),
-  n95: formValue(n95Label, 1 / 6),
-  n95Sealed: formValue(n95SealedLabel, 1 / 16),
-  p100: formValue(p100Label, 1 / 3),
+const noneLabel = i18n.t('data.no_mask_short')
+const thinLabel = i18n.t('data.thin_mask_short')
+const basicLabel = i18n.t('data.basic_mask_short')
+const surgicalLabel = i18n.t('data.surgical_mask_short')
+const filteredLabel = i18n.t('data.filtered_mask_short')
+const n95Label = i18n.t('data.n95_mask_short')
+const n95SealedLabel = i18n.t('data.n95_sealed_mask_short')
+const p100Label = i18n.t('data.p100_mask_short')
+
+const noneDesc = i18n.t('data.no_mask')
+const thinDesc = i18n.t('data.thin_mask')
+const basicDesc = i18n.t('data.basic_mask')
+const surgicalDesc = i18n.t('data.surgical_mask')
+const filteredDesc = i18n.t('data.filtered_mask')
+const n95Desc = i18n.t('data.n95_mask')
+const n95SealedDesc = i18n.t('data.n95_sealed_mask')
+const p100DescTheirs = i18n.t('data.p100_mask_theirs')
+const p100DescYours = i18n.t('data.p100_mask_yours')
+export const TheirMask: { [key: string]: CheckBoxFormValue } = {
+  none: segmentedFormValue(noneLabel, noneDesc, 1.0),
+  thin: segmentedFormValue(thinLabel, thinDesc, 1 / 2),
+  basic: segmentedFormValue(basicLabel, basicDesc, 1 / 3),
+  surgical: segmentedFormValue(surgicalLabel, surgicalDesc, 1 / 4),
+  filtered: segmentedFormValue(filteredLabel, filteredDesc, 1 / 4),
+  n95: segmentedFormValue(n95Label, n95Desc, 1 / 6),
+  n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 16),
+  p100: segmentedFormValue(p100Label, p100DescTheirs, 1 / 3),
 }
-export const YourMask: { [key: string]: FormValue } = {
-  none: formValue(noneLabel, 1.0),
-  thin: formValue(thinLabel, 1.0),
-  basic: formValue(basicLabel, 2 / 3),
-  surgical: formValue(surgicalLabel, 1 / 2),
-  filtered: formValue(filteredLabel, 1 / 2),
-  kn95: formValue(kn95Label, 1 / 3),
-  n95: formValue(n95Label, 1 / 3),
-  n95Sealed: formValue(n95SealedLabel, 1 / 8),
-  p100: formValue(p100Label, 1 / 20),
+export const YourMask: { [key: string]: CheckBoxFormValue } = {
+  none: segmentedFormValue(noneLabel, noneDesc, 1.0),
+  thin: segmentedFormValue(thinLabel, thinDesc, 1.0),
+  basic: segmentedFormValue(basicLabel, basicDesc, 2 / 3),
+  surgical: segmentedFormValue(surgicalLabel, surgicalDesc, 1 / 2),
+  filtered: segmentedFormValue(filteredLabel, filteredDesc, 1 / 2),
+  n95: segmentedFormValue(n95Label, n95Desc, 1 / 3),
+  n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 8),
+  p100: segmentedFormValue(p100Label, p100DescYours, 1 / 20),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {
