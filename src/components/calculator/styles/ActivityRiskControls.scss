@@ -1,0 +1,167 @@
+@import '~styles/variables.scss';
+
+// TODO(jy2wong) transfer to SegmentedControl.scss
+.form-group label.btn {
+  font-size: $font-size-base
+}
+
+.segmented-scrollable {
+  width: 100%;
+  overflow-x: auto;
+  padding-right: 1px;
+}
+
+.segmented-scrollable label {
+  background-color: $white;
+  border-color: $gray-400;
+}
+
+.segmented-label {
+  font-weight: bold;
+  min-height: 3.1em;
+  display: block;
+}
+
+.segmented-multiplier {
+  font-size: small;
+  color: $gray-600;
+}
+
+.segmented-value {
+  display: none;  // hide on desktop
+}
+
+.btn:hover .segmented-multiplier {
+  color: $white;
+}
+
+.active .segmented-label {
+  font-weight: bold;
+}
+
+.active .segmented-multiplier {
+  color: $white;
+  font-weight: bolder;
+}
+
+// hide focus indicator on segmented control buttons.
+.active.focus.segmented-button {
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .segmented-wrap {
+    padding-left: 1px;
+    flex-wrap: wrap;
+  }
+
+  .segmented-button {
+    width: 100%;
+  }
+
+  .segmented-label {
+    text-align: left;
+    min-height: 0;
+    display: inline;
+    float: left;
+  }
+
+  .segmented-multiplier {
+    display: inline;
+    float: right;
+  }
+
+  .active .segmented-value {
+    display: inline;
+    color: $gray-500;
+    float: left;
+    width: 100%;
+  }
+  .active:hover .segmented-value {
+    color: $white;
+  }
+
+  .segmented-scrollable .active span {
+    color: $white !important;
+  }
+  .segmented-scrollable .active:hover span {
+    color: $white !important;
+  }
+
+  .segmented-tooltip {
+    display: none !important;
+  }
+
+  .btn-group {
+    // Remove doubled borders on inner buttons
+    > .btn:not(:first-child),
+    > .btn-group:not(:first-child) > .btn {
+      border-top: 0 !important;
+    }
+  }
+
+}
+// TODO(jy2wong) end transfer to SegmentedControl.scss
+
+.mask-not-listed-prompt.btn {
+  margin: 0.4em 0 0 0.5em;
+  padding: 0 !important;
+  transition: none;
+  border: none;
+}
+
+.mask-not-listed-prompt.btn:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.mask-not-listed {
+  margin-top: 1em;
+  border: none !important;
+}
+
+.mask-not-listed button {
+  color: $primary !important;
+}
+
+.mask-not-listed thead {
+  background-color: $secondary;
+  color: $white;
+}
+
+#yourMaskHelpText, #theirMaskHelpText {
+  padding-left: 0.5em;
+}
+
+#yourMask.segmented-scrollable .btn:hover {
+  background-color: desaturate(lighten($cyan, 15%), 15%);
+}
+
+#yourMask.segmented-scrollable .active:hover {
+  background-color: $cyan !important;
+}
+
+#yourMask.segmented-scrollable .active:hover span {
+  color: desaturate(lighten($cyan, 35%), 25%);
+}
+
+#theirMask.segmented-scrollable .btn:hover {
+  background-color: $gray-500;
+}
+
+#theirMask.segmented-scrollable .active:hover {
+  background-color: $secondary !important;
+}
+
+#theirMask.segmented-scrollable .active:hover span {
+  color: $gray-300;
+}
+
+@media (max-width: 768px) {
+  // hide mask description from "YourMask: " line on mobile
+  label[for="yourMask"] span, label[for="theirMask"] span {
+    display: none;
+    height: 0;
+  }
+}
+
