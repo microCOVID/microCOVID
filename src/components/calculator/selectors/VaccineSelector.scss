@@ -1,0 +1,16 @@
+@import '~styles/_variables.scss';
+@import "~rfs/scss";
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+.vaccine-selector button.btn-link {
+  align-items: center;
+  display: flex;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 8;
+
+  span.pad-left {
+    padding-left: 0.4em;
+  }
+}
