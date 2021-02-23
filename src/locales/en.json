@@ -143,7 +143,7 @@
     "risk_modifier_multiple_short": "{{multiplier}}x",
     "firsttime": {
       "microcovid_header": "What is a microCOVID?",
-      "microcovid_explanation": "<p>We created the concept of the \"microcovid\" as a new quantitative unit for risk. One microCOVID is a one-in-a-million chance of getting COVID.</p> <p>An activity that’s 20,000 microCOVIDs means that you have a 2% risk of getting COVID <em>every time you do it</em>. An activity that’s 20 microCOVIDs (or 0.00002%) is relatively safe, as you could do it <em>every week for a year</em> and still have only accumulated about a 0.1% chance of getting COVID.</p>",
+      "microcovid_explanation": "<p>We created the concept of the \"microcovid\" as a new quantitative unit for risk. One microCOVID is a one-in-a-million chance of getting COVID.</p> <p>An activity that’s 20,000 microCOVIDs means that you have a 2% risk of getting COVID <em>every time you do it</em>. An activity that’s 20 microCOVIDs (or 0.002%) is relatively safe, as you could do it <em>every week for a year</em> and still have only accumulated about a 0.1% chance of getting COVID.</p>",
       "budget_header": "What is a risk budget?",
       "budget_explanation": "<p>You may decide that you're comfortable with taking on a certain amount of COVID risk. You can think about this amount of risk that you're willing to take on as a \"risk budget\".</p> <p>For most healthy people who are not in contact with vulnerable groups, we think an annual risk budget of a <strong>1% chance of catching COVID</strong> is reasonable - that's a budget of 10,000 microCOVIDs a year. In order to meet this budget, you'd need to stick to a maximum of about <strong>200 microCOVIDs a week</strong>.</p>"
     },
