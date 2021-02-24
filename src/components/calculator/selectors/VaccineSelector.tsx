@@ -35,7 +35,7 @@ export const VaccineSelector: React.FunctionComponent<{
       <Form.Group controlId={props.id} className="vaccine-selector">
         <Button variant="link" size="lg" onClick={() => setExpanded(true)}>
           <BsPlusSquareFill />
-          <span className="pad-left">
+          <span className="pl-2">
             {t('calculator.precautions.i_have_been_vaccinated')}
           </span>
         </Button>

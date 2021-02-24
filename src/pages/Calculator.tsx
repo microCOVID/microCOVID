@@ -339,7 +339,7 @@ export const Calculator = (): React.ReactElement => {
                       repeatedEvent={repeatedEvent}
                     />
                   </Col>
-                  <Col xs="12" id="vacines" className="calculator-params">
+                  <Col xs="12" id="vaccines" className="calculator-params">
                     <VaccineSelector
                       id="yourVaccine"
                       header={t('calculator.precautions.your_vaccine_header')}
