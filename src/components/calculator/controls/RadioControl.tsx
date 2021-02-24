@@ -2,6 +2,7 @@ import React from 'react'
 import { Form } from 'react-bootstrap'
 
 import ControlLabel from './ControlLabel'
+import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { CheckBoxFormValue } from 'data/data'
 
 export const RadioControl: React.FunctionComponent<{
@@ -28,7 +29,10 @@ export const RadioControl: React.FunctionComponent<{
           type="radio"
           name={props.id}
           value={current.value}
-          onChange={() => props.setter(current.value)}
+          onChange={() => {
+            recordCalculatorOptionSelected(props.id, current.value)
+            props.setter(current.value)
+          }}
           defaultChecked={current.value === props.value.toString()}
         />
         <Form.Check.Label>

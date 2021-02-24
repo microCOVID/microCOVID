@@ -8,6 +8,8 @@ import {
   RiskProfileEnum,
   Setting,
   TheirMask,
+  VaccineValue,
+  Vaccines,
   Voice,
   YourMask,
   intimateDurationFloor,
@@ -45,6 +47,10 @@ export interface CalculatorData {
   theirMask: string
   yourMask: string
   voice: string
+
+  // Vaccine
+  yourVaccineType: string
+  yourVaccineDoses: number
 }
 
 export const defaultValues: CalculatorData = {
@@ -70,6 +76,9 @@ export const defaultValues: CalculatorData = {
   theirMask: '',
   yourMask: '',
   voice: '',
+
+  yourVaccineType: '',
+  yourVaccineDoses: 0,
 }
 
 interface CalculatorResult {
@@ -105,7 +114,7 @@ export const migrateDataToCurrent = (
 ): CalculatorData => {
   const data: Partial<CalculatorData> = { ...incomingData }
   const fixOne = (
-    table: { [key: string]: FormValue | PersonRiskValue },
+    table: { [key: string]: FormValue | PersonRiskValue | VaccineValue },
     prop: keyof CalculatorData,
   ) => {
     const current = data[prop]
@@ -120,6 +129,14 @@ export const migrateDataToCurrent = (
   fixOne(TheirMask, 'theirMask')
   fixOne(YourMask, 'yourMask')
   fixOne(Voice, 'voice')
+  fixOne(Vaccines, 'yourVaccineType')
+
+  if (
+    data['yourVaccineDoses'] !== undefined &&
+    (data['yourVaccineDoses'] > 2 || data['yourVaccineDoses'] < 0)
+  ) {
+    delete data['yourVaccineDoses']
+  }
   return { ...defaultValues, ...data }
 }
 
@@ -231,14 +248,34 @@ export const calculatePersonRiskEach = (
   }
 }
 
+const getVaccineMultiplier = (data: CalculatorData): number | null => {
+  if (data.yourVaccineType === '') {
+    return 1
+  }
+  const vaccineMultiplierPerDose =
+    Vaccines[data.yourVaccineType].multiplierPerDose
+  if (
+    data.yourVaccineDoses >= vaccineMultiplierPerDose.length ||
+    data.yourVaccineDoses < 0
+  ) {
+    return null
+  }
+  return vaccineMultiplierPerDose[data.yourVaccineDoses]
+}
+
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
   try {
     if (data.interaction === '') {
       return null
     }
 
+    const vaccineMultiplier = getVaccineMultiplier(data)
+    if (vaccineMultiplier === null) {
+      return null
+    }
+
     if (data.interaction === 'partner' || data.interaction === 'repeated') {
-      return Interaction[data.interaction].multiplier
+      return Interaction[data.interaction].multiplier * vaccineMultiplier
     }
 
     let multiplier = Interaction[data.interaction].multiplier
@@ -276,7 +313,8 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
     if (multiplier > MAX_ACTIVITY_RISK) {
       multiplier = MAX_ACTIVITY_RISK
     }
-    return multiplier
+
+    return multiplier * vaccineMultiplier
   } catch (e) {
     return null
   }
