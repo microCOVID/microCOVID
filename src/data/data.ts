@@ -344,24 +344,24 @@ RiskProfile[RiskProfileEnum.HAS_COVID] = {
 
 export interface VaccineValue {
   label: string
-  multipliers: number[] // mulipliers[n] is the multiplier for having |n| doses of vaccine.
+  multiplierPerDose: number[] // muliplierPerDose[n] is the multiplier for having |n| doses of vaccine.
 }
 
 export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multipliers: [1, 0.56, 0.2],
+    multiplierPerDose: [1, 0.56, 0.2],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multipliers: [1, 0.56, 0.2],
+    multiplierPerDose: [1, 0.56, 0.2],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
-    multipliers: [1, 0.56, 0.4],
+    multiplierPerDose: [1, 0.56, 0.4],
   },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
-    multipliers: [1, 0.56, 0.4],
+    multiplierPerDose: [1, 0.56, 0.4],
   },
 }

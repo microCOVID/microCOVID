@@ -252,14 +252,15 @@ const getVaccineMultiplier = (data: CalculatorData): number | null => {
   if (data.yourVaccineType === '') {
     return 1
   }
-  const vaccineMultipliers = Vaccines[data.yourVaccineType].multipliers
+  const vaccineMultiplierPerDose =
+    Vaccines[data.yourVaccineType].multiplierPerDose
   if (
-    data.yourVaccineDoses >= vaccineMultipliers.length ||
+    data.yourVaccineDoses >= vaccineMultiplierPerDose.length ||
     data.yourVaccineDoses < 0
   ) {
     return null
   }
-  return vaccineMultipliers[data.yourVaccineDoses]
+  return vaccineMultiplierPerDose[data.yourVaccineDoses]
 }
 
 export const calculateActivityRisk = (data: CalculatorData): number | null => {
@@ -270,7 +271,6 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
 
     const vaccineMultiplier = getVaccineMultiplier(data)
     if (vaccineMultiplier === null) {
-      console.log(data.yourVaccineType + ' ' + data.yourVaccineDoses)
       return null
     }
 
