@@ -5,6 +5,7 @@ import { BsPlusSquareFill } from 'react-icons/bs'
 
 import ControlLabel from '../controls/ControlLabel'
 
+import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { Vaccines } from 'data/data'
 
 import './VaccineSelector.scss'
@@ -67,6 +68,7 @@ export const VaccineSelector: React.FunctionComponent<{
                 className="segmented-button"
                 checked={props.current.vaccineType === value}
                 onChange={(e) => {
+                  recordCalculatorOptionSelected(typeId, e.currentTarget.value)
                   props.setter({
                     ...props.current,
                     vaccineType: e.currentTarget.value,
@@ -87,6 +89,7 @@ export const VaccineSelector: React.FunctionComponent<{
               checked={false}
               onChange={() => {
                 setExpanded(false)
+                recordCalculatorOptionSelected(typeId, '')
                 props.setter({
                   ...props.current,
                   vaccineType: '',
@@ -114,7 +117,7 @@ export const VaccineSelector: React.FunctionComponent<{
             className={'segmented-wrap ' + props.variant}
             value={props.current.vaccineDoses}
           >
-            {Vaccines[props.current.vaccineType].multipliers.map(
+            {Vaccines[props.current.vaccineType].multiplierPerDose.map(
               (value: number, index) => (
                 <ToggleButton
                   key={index}
@@ -125,6 +128,7 @@ export const VaccineSelector: React.FunctionComponent<{
                   className="semented-button"
                   checked={props.current.vaccineDoses === index}
                   onChange={() => {
+                    recordCalculatorOptionSelected(dosesId, index.toString())
                     props.setter({
                       ...props.current,
                       vaccineDoses: index,
