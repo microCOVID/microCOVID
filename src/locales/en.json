@@ -232,6 +232,12 @@
       "microcovid_budget_one_percent": "Keeps to a budget of 200 microCOVID per week (\"Standard Caution Budget\")",
       "microcovid_budget_deci_percent": "Keeps to a budget of 20 microCOVID per week (\"High Caution Budget\")",
       "hasCovid": "Has COVID"
+    },
+    "vaccine": {
+      "pfizer": "Pfizer BioNTech",
+      "moderna": "Moderna",
+      "astra_zeneca": "AstraZeneca",
+      "unknown": "Unknown or other"
     }
   },
   "scenario": {

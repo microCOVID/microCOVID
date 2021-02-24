@@ -296,12 +296,11 @@ describe('calculate', () => {
   })
 
   describe('Interaction: housemate', () => {
-    const base = {
-      ...baseTestData,
+    const base = testData({
       riskProfile: 'average',
       interaction: 'repeated',
       personCount: 1,
-    }
+    })
     const housemate: CalculatorData = {
       ...base,
       setting: 'indoor',
@@ -347,11 +346,10 @@ describe('calculate', () => {
   })
 
   describe('Distance: intimate', () => {
+    const indoorIntimate: CalculatorData = testData(
+      prepopulated['One-night stand with a random person'],
+    )
     it('should not give a bonus for outdoors', () => {
-      const indoorIntimate: CalculatorData = {
-        ...baseTestData,
-        ...prepopulated['One-night stand with a random person'],
-      }
       const outdoorIntimate: CalculatorData = {
         ...indoorIntimate,
         setting: 'outdoor',
@@ -361,12 +359,11 @@ describe('calculate', () => {
     })
 
     it('should not give a bonus for masks', () => {
-      const unmaskedIntimate: CalculatorData = {
-        ...baseTestData,
+      const unmaskedIntimate = testData({
         ...prepopulated['One-night stand with a random person'],
         yourMask: 'none',
         theirMask: 'none',
-      }
+      })
       const maskedIntimate: CalculatorData = {
         ...unmaskedIntimate,
         yourMask: 'n95',
@@ -377,8 +374,7 @@ describe('calculate', () => {
     })
     it('should be at least 12% (1 hr) transfer risk.', () => {
       const oneHourIntimate: CalculatorData = {
-        ...baseTestData,
-        ...prepopulated['One-night stand with a random person'],
+        ...indoorIntimate,
         duration: 60,
       }
       const oneMinuteIntimate: CalculatorData = {
@@ -396,11 +392,10 @@ describe('calculate', () => {
       )
     })
     it('should not apply talking multiplier', () => {
-      const kissingTalking: CalculatorData = {
-        ...baseTestData,
+      const kissingTalking = testData({
         ...prepopulated['One-night stand with a random person'],
         voice: 'normal',
-      }
+      })
       const kissingSilent: CalculatorData = {
         ...kissingTalking,
         voice: 'silent',
@@ -421,8 +416,7 @@ describe('calculate', () => {
       ${1}     | ${'indoor'}  | ${1440 / 120} | ${'should not have a minimum risk'}
       ${120}   | ${'outdoor'} | ${1440}       | ${'should not give an outdoors bonus'}
     `(' $scenario', ({ duration, setting, result }) => {
-      const data: CalculatorData = {
-        ...baseTestData,
+      const data: CalculatorData = testData({
         personCount: 1,
         interaction: 'oneTime',
         riskProfile: 'average',
@@ -432,9 +426,82 @@ describe('calculate', () => {
         voice: 'normal',
         setting,
         duration,
-      }
+      })
 
       expect(calcValue(data)).toEqual(result * B117_CONTAGIOUSNESS_ADJUSTMENT)
+    })
+  })
+
+  describe('yourVaccine', () => {
+    const noVaccineScenario = testData(
+      prepopulated['Car ride with 1 other person for 15 mins'],
+    )
+    const noVaccineValue = calcValue(noVaccineScenario)
+
+    it.each`
+      type             | doses | multiplier
+      ${'pfizer'}      | ${0}  | ${1}
+      ${'pfizer'}      | ${1}  | ${0.56}
+      ${'pfizer'}      | ${2}  | ${0.2}
+      ${'moderna'}     | ${0}  | ${1}
+      ${'moderna'}     | ${1}  | ${0.56}
+      ${'moderna'}     | ${2}  | ${0.2}
+      ${'astraZeneca'} | ${0}  | ${1}
+      ${'astraZeneca'} | ${1}  | ${0.56}
+      ${'astraZeneca'} | ${2}  | ${0.4}
+    `(
+      '$doses doses of $type should give a multiplier of $multiplier',
+      ({ type, doses, multiplier }) => {
+        const data: CalculatorData = {
+          ...noVaccineScenario,
+          yourVaccineDoses: doses,
+          yourVaccineType: type,
+        }
+        expect(calcValue(data)! / noVaccineValue!).toBeCloseTo(multiplier)
+      },
+    )
+
+    it('Should apply vaccine reduction after activity max', () => {
+      const noVaccineLongScenario = { ...noVaccineScenario, duration: 100000 }
+      const vaccineLongScenario = {
+        ...noVaccineLongScenario,
+        yourVaccineDoses: 2,
+        yourVaccineType: 'pfizer',
+      }
+      expect(calcValue(vaccineLongScenario)).toBeCloseTo(
+        calcValue(noVaccineLongScenario)! * 0.2,
+      )
+    })
+
+    it('Should apply vaccine multiplier to housemates activities', () => {
+      const noVaccineHousemate: CalculatorData = {
+        ...noVaccineScenario,
+        interaction: 'repeated',
+      }
+      const vaccineHousemate = {
+        ...noVaccineHousemate,
+        yourVaccineDoses: 2,
+        yourVaccineType: 'pfizer',
+      }
+      expect(calcValue(vaccineHousemate)).toBeCloseTo(
+        calcValue(noVaccineHousemate)! * 0.2,
+      )
+    })
+
+    it('Should apply vaccine multiplier to partner activities', () => {
+      const noVaccinePartner = testData(
+        prepopulated[
+          'Live-in partner who has no indoor interactions besides you'
+        ],
+      )
+      const vaccinePartner = {
+        ...noVaccinePartner,
+        yourVaccineDoses: 2,
+        yourVaccineType: 'pfizer',
+      }
+      expect(calcValue(vaccinePartner)).toBeCloseTo(
+        calcValue(noVaccinePartner)! * 0.2,
+      )
     })
   })
 })

@@ -341,3 +341,27 @@ RiskProfile[RiskProfileEnum.HAS_COVID] = {
   numOtherTraceableContacts: NaN,
   contactsMultiplier: NaN,
 }
+
+export interface VaccineValue {
+  label: string
+  multiplierPerDose: number[] // muliplierPerDose[n] is the multiplier for having |n| doses of vaccine.
+}
+
+export const Vaccines: { [key: string]: VaccineValue } = {
+  pfizer: {
+    label: i18n.t('data.vaccine.pfizer'),
+    multiplierPerDose: [1, 0.56, 0.2],
+  },
+  moderna: {
+    label: i18n.t('data.vaccine.moderna'),
+    multiplierPerDose: [1, 0.56, 0.2],
+  },
+  astraZeneca: {
+    label: i18n.t('data.vaccine.astra_zeneca'),
+    multiplierPerDose: [1, 0.56, 0.4],
+  },
+  unknown: {
+    label: i18n.t('data.vaccine.unknown'),
+    multiplierPerDose: [1, 0.56, 0.4],
+  },
+}
