@@ -38,6 +38,8 @@ Follow these steps to set up a copy of the Risk Tracker for yourself or your hou
     3. Set the “Grocery mask type” to the type of mask the grocery shopper uses. (A better mask will give everyone more points in their baseline budget).     
     _Note:_ If you don’t want to share the cost of shopping across everyone, or you get your groceries delivered, you can just leave “Grocery hours per week” set to 0.
 
+7. **Subscribe for updates:** Each time we release updates and bug fixes to the Risk Tracker, we will notify everyone who has signed up for updates, so you can update your copy of the spreadsheet. We encourage everyone who is actively using the spreadsheet to [subscribe to be notified about Risk Tracker updates](${mailchimpSubscribeUrl}).
+
 
 🎉 You’re now ready to start logging your activities in the _Activity Log_ sheet. Try it out by filling in a row! 
 
