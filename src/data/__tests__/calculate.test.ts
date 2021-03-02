@@ -386,7 +386,9 @@ describe('calculate', () => {
         duration: 30,
       }
 
-      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(twentyMinuteIntimate))
+      expect(calcValue(oneMinuteIntimate)).toEqual(
+        calcValue(twentyMinuteIntimate),
+      )
       expect(calcValue(thirtyMinuteIntimate)).toBeCloseTo(
         calcValue(twentyMinuteIntimate)! * 1.5,
       )
