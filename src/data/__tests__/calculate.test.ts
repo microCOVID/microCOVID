@@ -357,24 +357,24 @@ describe('calculate', () => {
       expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
     })
     it('should be at least 12% (1 hr) transfer risk.', () => {
-      const oneHourIntimate: CalculatorData = {
+      const twentyMinuteIntimate: CalculatorData = {
         ...baseTestData,
         ...prepopulated['One-night stand with a random person'],
         riskProfile: 'closedPod4',
-        duration: 60,
+        duration: 20,
       }
       const oneMinuteIntimate: CalculatorData = {
-        ...oneHourIntimate,
+        ...twentyMinuteIntimate,
         duration: 1,
       }
-      const sixtythreeminuteIntimate: CalculatorData = {
-        ...oneHourIntimate,
-        duration: 63,
+      const thirtyMinuteIntimate: CalculatorData = {
+        ...twentyMinuteIntimate,
+        duration: 30,
       }
 
-      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(oneHourIntimate))
-      expect(calcValue(sixtythreeminuteIntimate)).toBeCloseTo(
-        calcValue(oneHourIntimate)! * 1.05,
+      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(twentyMinuteIntimate))
+      expect(calcValue(thirtyMinuteIntimate)).toBeCloseTo(
+        calcValue(twentyMinuteIntimate)! * 1.5,
       )
     })
     it('should not apply talking multiplier', () => {
