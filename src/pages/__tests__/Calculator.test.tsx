@@ -8,7 +8,7 @@ describe('calculator page', () => {
   it('renders at all', () => {
     const { getByText } = render(<Calculator />, { wrapper: AllProviders })
 
-    expect(getByText(/constructed a calculator that lets/i)).toBeInTheDocument()
+    expect(getByText(/new quantitative unit for risk/i)).toBeInTheDocument()
   })
 
   it('activity details section reveals after location is selected', () => {
@@ -19,7 +19,7 @@ describe('calculator page', () => {
       },
     )
 
-    const interactionTypeLabelQuery = /Is this a specific activity or an ongoing relationship/i
+    const interactionTypeLabelQuery = /What do you want to know/i
     expect(queryByText(interactionTypeLabelQuery)).not.toBeInTheDocument()
     const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
     fireEvent.click(topLocationBox)

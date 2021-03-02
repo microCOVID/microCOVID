@@ -3,7 +3,7 @@ import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
-import { BsFillInfoCircleFill, BsLink45Deg } from 'react-icons/bs'
+import { BsLink45Deg } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 import 'pages/styles/Calculator.scss'
@@ -18,6 +18,11 @@ import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import {
+  VaccineSelector,
+  VaccineStatus,
+} from 'components/calculator/selectors/VaccineSelector'
+import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
@@ -107,13 +112,19 @@ export const Calculator = (): React.ReactElement => {
       recordCalculatorChanged(expectedValue)
     }
 
+    const getStringForLocalStorage = (incomingData: CalculatorData) => {
+      const data: Partial<CalculatorData> = {
+        ...incomingData,
+        persistedAt: Date.now(),
+      }
+      delete data['prevalanceDataDate']
+      return JSON.stringify(data)
+    }
+
     // Store data for refresh
     localStorage.setItem(
       FORM_STATE_KEY,
-      JSON.stringify({
-        ...calculatorData,
-        persistedAt: Date.now(),
-      }),
+      getStringForLocalStorage(calculatorData),
     )
 
     setQuery(filterParams(calculatorData), 'replace')
@@ -124,8 +135,9 @@ export const Calculator = (): React.ReactElement => {
   }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
-    calculatorData.topLocation !== '' ||
-    (parsePopulation(calculatorData.population) > 0 &&
+    (!calculatorData.useManualEntry && calculatorData.topLocation !== '') ||
+    (calculatorData.useManualEntry &&
+      parsePopulation(calculatorData.population) > 0 &&
       calculatorData.casesPastWeek > 0 &&
       calculatorData.casesIncreasingPercentage >= 0 &&
       calculatorData.positiveCasePercentage !== null &&
@@ -146,25 +158,83 @@ export const Calculator = (): React.ReactElement => {
 
   const { t } = useTranslation()
 
+  const SavedScenarioMessage: React.FunctionComponent<{
+    scenarioName: string
+  }> = (props): React.ReactElement => (
+    <Alert variant="info">
+      <Trans values={{ scenarioName: props.scenarioName }}>
+        calculator.saved_scenario_loaded_message
+      </Trans>
+    </Alert>
+  )
+
+  const BaseTransmissionRateMessage: React.FunctionComponent<{
+    interaction: string
+    messageKey: string
+  }> = (props): React.ReactElement => (
+    <Alert variant="info">
+      <Trans
+        i18nKey={props.messageKey}
+        values={{
+          percentage: fixedPointPrecisionPercent(
+            Interaction[props.interaction].multiplier,
+          ),
+        }}
+      >
+        Lorem ipsum <strong>dolor</strong> sit
+      </Trans>
+    </Alert>
+  )
+
   return (
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          <Alert className="alert-info">
-            <BsFillInfoCircleFill />{' '}
-            <Trans i18nKey="calculator.alerts.masks_update">
-              <strong>Model update:</strong> Lipsum{' '}
-              <Link to="/paper/14-research-sources#masks">White Paper</Link>.
-            </Trans>
-          </Alert>
           <p>
-            <Trans i18nKey="calculator.intro.whats_this">
-              Lorem ipsum <a href="/paper">whitepaper</a> dolor sic amet...
+            <Trans i18nKey="calculator.intro.whats_this2">
+              Lorem ipsum dolor sic amet...
+              <span>grocery store</span>,<span>see a specific person</span>,
+              <span>work precautions</span>,
             </Trans>
           </p>
           <FirstTimeUserIntroduction />
+          <p>
+            <Trans i18nKey="calculator.intro.see_video">
+              Lorem ipsum dolor sic amet...
+              <a
+                href="https://www.youtube.com/watch?v=5-ybfrEk1CI"
+                target="_blank"
+                rel="noreferrer"
+              >
+                here
+              </a>
+            </Trans>
+          </p>
         </Col>
-        <Col lg="4" md="12" className="d-none d-lg-block"></Col>
+        <Col lg="4" md="12">
+          <Alert className="request-feedback" variant="primary">
+            <Trans i18nKey="calculator.alerts.survey_request">
+              <strong>We would love your feedback:</strong> lipsum
+              <a
+                href="https://forms.gle/WzFWcmyXwQMNRqGa7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                survey
+              </a>{' '}
+              lipsum
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.vaccines_update">
+              <strong>Model update:</strong>{' '}
+              <Link to="/paper/13-1-and-a#vaccines-qa)">{'Q&A'}</Link>.
+            </Trans>
+          </Alert>
+          <Link id="full-changelog" to="/paper/changelog">
+            {t('calculator.alerts.full_changelog')}
+          </Link>
+        </Col>
       </Row>
       <Row>
         <Col>
@@ -200,12 +270,9 @@ export const Calculator = (): React.ReactElement => {
                     />
                   </Col>
                 </Row>
-                {!scenarioName ? null : (
-                  <Alert variant="info">
-                    <Trans values={{ scenarioName: scenarioName }}>
-                      calculator.saved_scenario_loaded_message
-                    </Trans>
-                  </Alert>
+                {!scenarioName ||
+                scenarioName === t('scenario.custom') ? null : (
+                  <SavedScenarioMessage scenarioName={scenarioName} />
                 )}
                 <div>
                   <GenericSelectControl
@@ -224,8 +291,39 @@ export const Calculator = (): React.ReactElement => {
                     source={Interaction}
                     hideRisk={true}
                   />
+                  {calculatorData.interaction === 'oneTime' ||
+                  calculatorData.interaction === 'workplace' ? (
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.one_time_interaction_risk_message"
+                    />
+                  ) : null}
+                  {calculatorData.interaction === 'repeated' ? (
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.repeated_interaction_risk_message"
+                    />
+                  ) : null}
+                  {calculatorData.interaction === 'partner' ? (
+                    <BaseTransmissionRateMessage
+                      interaction={calculatorData.interaction}
+                      messageKey="calculator.partner_interaction_risk_message"
+                    />
+                  ) : null}
+                  {calculatorData.interaction !== undefined &&
+                  calculatorData.interaction !== '' ? (
+                    <p>
+                      <Trans i18nKey="calculator.whats_next_interaction_risk_message">
+                        Lorem ipsum dolor <strong>sit amet</strong>
+                        (backed by{' '}
+                        <Link to="/paper/14-research-sources" target="_blank">
+                          research
+                        </Link>
+                        !)
+                      </Trans>
+                    </p>
+                  ) : null}
                 </div>
-
                 <Row>
                   <Col xs="12" id="person-risk" className="calculator-params">
                     <PersonRiskControls
@@ -239,6 +337,28 @@ export const Calculator = (): React.ReactElement => {
                       data={calculatorData}
                       setter={setCalculatorData}
                       repeatedEvent={repeatedEvent}
+                    />
+                  </Col>
+                  <Col xs="12" id="vaccines" className="calculator-params">
+                    <VaccineSelector
+                      id="yourVaccine"
+                      header={t('calculator.precautions.your_vaccine_header')}
+                      label={t('calculator.precautions.your_vaccine_label')}
+                      dosesLabel={t(
+                        'calculator.precautions.your_vaccine_doses_label',
+                      )}
+                      variant="outline-cyan"
+                      current={{
+                        vaccineDoses: calculatorData.yourVaccineDoses,
+                        vaccineType: calculatorData.yourVaccineType,
+                      }}
+                      setter={(newStatus: VaccineStatus) => {
+                        setCalculatorData({
+                          ...calculatorData,
+                          yourVaccineDoses: newStatus.vaccineDoses,
+                          yourVaccineType: newStatus.vaccineType,
+                        })
+                      }}
                     />
                   </Col>
                 </Row>
@@ -293,16 +413,6 @@ export const Calculator = (): React.ReactElement => {
             lowerBound={lowerBound}
             upperBound={upperBound}
           />
-        </Col>
-      </Row>
-      <Row>
-        <Col lg={{ span: 8, offset: 4 }}>
-          <p className="warning" style={{ margin: '0' }}>
-            <b>
-              <Trans>calculator.warning.important</Trans>:{' '}
-            </b>
-            <Trans>calculator.warning.body</Trans>
-          </p>
         </Col>
       </Row>
     </div>

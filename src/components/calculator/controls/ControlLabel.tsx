@@ -4,7 +4,7 @@ import 'components/calculator/styles/ControlLabel.scss'
 
 export const ControlLabel: React.FunctionComponent<{
   id: string
-  label?: string
+  label?: string | JSX.Element
   header?: string
   popover?: JSX.Element
 }> = (props) => (
@@ -13,7 +13,8 @@ export const ControlLabel: React.FunctionComponent<{
       <div className="label-wrapper">
         <label htmlFor={props.id}>
           <div>
-            {props.header && <strong>{props.header}:</strong>} {props.label}
+            {props.header && <strong>{props.header}:</strong>}{' '}
+            <span>{props.label}</span>
           </div>
         </label>
         {props.popover && (

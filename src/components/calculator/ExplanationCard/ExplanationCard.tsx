@@ -141,7 +141,8 @@ export default function ExplanationCard(props: {
               )}
               <br />
               <Trans values={{ person_risk: personRiskEachFormatted }}>
-                {props.data.interaction !== 'oneTime' &&
+                {(props.data.interaction === 'partner' ||
+                  props.data.interaction === 'repeated') &&
                 RiskProfile[props.data.riskProfile].numHousemates >= 1
                   ? 'calculator.explanationcard.details_person_risk_explanation_housemate'
                   : 'calculator.explanationcard.details_person_risk_explanation'}

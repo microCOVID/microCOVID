@@ -284,12 +284,89 @@ This works because Bob is less than 7x "too risky." If he were 10x "too risky," 
 
 If each visit only requires 3 or 5 days of isolation instead of 10, Alice can probably see her partner more often, which is likely to be good for both Alice's and Bob's mental health.
 
-### Intermediate Method: Frontline worker adjustment
+## Vaccines
 
-We estimate that frontline workers are 3x more likely to have COVID, and anyone who is not a frontline worker is 0.5x as likely to be infected. Here is how we made that calculation.
+### Assumptions
 
-First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/who-are-essential-workers-a-comprehensive-look-at-their-wages-demographics-and-unionization-rates/) showing that around 55 million people in the US are essential workers (38% of workforce and 17% of the population); we sanity-check this against [another source](https://bayareaequityatlas.org/essential-workers) citing 28% of workers in the Bay Area are essential workers. In [Chamie et al.](https://www.medrxiv.org/content/10.1101/2020.06.15.20132233v1.full.pdf)’s blanket testing survey of residents in the Mission District in San Francisco, they found a positive test rate of 5% among frontline service workers and 0.8% among non-frontline workers (6.27x higher for frontline workers). The overall prevalence is a population-weighted average: \`prevalence_total = 0.17 x p_essential + 0.83 x (p_essential / 6.27)\`. From this we compute \`p_essential = 3.3 x prevalence_total\`. We round off to 3x for essential workers, and 0.5x for all others.
+- We use [Byambasuren et al.](https://www.medrxiv.org/content/10.1101/2020.05.10.20097543v3.full.pdf) as our source for transmission from asymptomatic cases; they found that (in an unvaccinated population), 17% of cases never have symptoms and these individuals are 42% as likely to transmit COVID as individuals who eventually have symptoms.
+- We assume that individuals who are tested once per week with a PCR test and never test positive are not infectious to others. This is not a perfect, as PCR tests have a non-trivial false negative rate, but we presume that the false negative rates in control and trial groups cancel out.
 
+### AstraZeneca
+AstraZeneca’s [trial](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3777268) used at-home test kits to test for asymptomatic cases of COVID.
+They found that, 14 days after administration of the second dose, compared to the control group, 
+the people in the vaccinated group were both less likely to test positive for symptomatic COVID and less likely to test positive for asymptomatic COVID,
+indicating that the vaccine is doing better than simply preventing symptoms. The aggregate results were:
+
+|                         | Control Group | Vaccinated Group |
+| ----------------------- | ------------- | ---------------- |
+| Participants            | 8600          | 8600             |
+| Severe Cases            | 10            | 0                |
+| Symptomatic Cases       | 248           | 84               |
+| Never symptomatic cases | 73            | 57               |
+
+Treating never-symptomatic cases as .42 relative infectiousness, this gives: 
+control group adjusted infectiousness: \`(1 * 248 + 0.42 * 73) = 279%\` 
+vaccinated group adjusted infectiousness: \`(1 * 84 + 0.42 * 57) = 109\`
+The relative infectiousness of the vaccinated group is therefore \`109 / 279 = 0.39\`
+
+AstraZeneca's trial found 10 cases of severe COVID, all in the control group. We calculate a risk reduction of 90%, 95% CI of (22%, 100%)[^confidence-interval]
+
+### Moderna & Pfizer
+Phase III trials from Moderna and Pfizer (the most common vaccines in the United States) only tested for symptomatic COVID. Moderna’s and Pfizer’s vaccines are similar in both design and efficacy, so we consider them together.
+
+Data from [Pfizer’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2034577):
+
+|                   | Control Group | Vaccinated Group |
+| ----------------- | ------------- | ---------------- |
+| Participants      | 21,728        | 21,720           |
+| Symptomatic Cases | 162           | 8                |
+| Severe Cases[^pfizer-supplement]| 4             | 1                |
+
+Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389):
+
+|                   | Control Group | Vaccinated Group |
+| ----------------- | ------------- | ---------------- |
+| Participants      | 15,210        | 15,210           |
+| Symptomatic Cases | 185           | 11               |
+| Severe Cases      | 30            | 0                |
+
+First, we note that these two vaccines are very, very effective at preventing symptomatic COVID (95% for Pfizer and 94% for Moderna). Second, we note that the Phase III studies do not include data on cases without symptoms. 
+
+However, in a [supplement provided to the FDA](https://www.fda.gov/media/144453/download), Moderna showed a 63% reduction in positive PCR swabs at the time of the 2nd dose among people who had no symptoms of COVID up to that point.
+
+This indicates that the total reduction in Symptomatic + Never Symptomatic COVID cases from *the first dose* of Moderna’s vaccine is 63%. Likely it is even better after the second dose. From this, we construct the following chart:
+
+|                                                         | Control Group                | Vaccinated Group            |
+| ------------------------------------------------------- | ---------------------------- | --------------------------- |
+| Participants                                            | 15,210                       | 15,210                      |
+| Symptomatic Cases                                       | 185                          | 11                          |
+| Symptomatic + Asymptomatic                              | 222 (1.2x symptomatic cases) | < 82 (0.37 x control group) |
+| Never symptomatic cases<br>(subtract previous two rows) | 37                           | < 71                        |
+
+Now we can calculate the overall effect on contagiousness:
+Control group adjusted contagiousness = \`185 * 1 + 37 * .42 = 200\`
+Vaccinated group adjusted contagiousness = \`11 * 1 + 71 * .42 = 40\`
+Relative contagiousness of vaccinated group = \`40 / 200 = 0.2\`
+
+We assume that Pfizer's vaccine has similar performance as Moderna's on the basis of similar design and reported metrics.
+
+Post Phase III studies for Moderna and Pfizer are in progress, we expect to update these numbers as data becomes available.
+
+The overall risk reduction for preventing severe cases of Moderna is 97%. We calculate a 95% CI of (76.5, 100)[^confidence-interval]
+
+Pfizer cites a 75% vaccine effectiveness at preventing severe disease, with a 95% CI of (-152.6, 99.5)
+
+### Single Shot Efficacy
+For vaccines require 2 doses, we see reductions in symptomatic COVID after a single shot of about 50% across Moderna, Pfizer, and AstraZeneca. Moderna further provided data suggesting a 63% reduction in total cases (symptomatic and otherwise). This gives us the following estimated case distribution:
+
+|                            | Control Group                         | Single Dose Vaccinated            |
+| -------------------------- | ------------------------------------- | --------------------------------- |
+| Symptomatic + Asymptomatic | 1                                     | <0.63 (from Moderna’s supplement) |
+| Symptomatic                | 0.8 (ratio from Byambasuren, Moderna) | 0.4 (~50% reported reduction)     |
+| Asymptomatic (subtract)    | .2                                    | <.23                              |
+
+This gives an overall multiplier of \`(0.4 + .42 * .23) / (0.8 + .42 * .2) = 0.56\`
+HOWEVER, data that immunity is much shorter-lived in individuals with one dose of a 2 dose vaccine. We recommend getting the second dose as soon as it is available.
 
 
 [^1]:
@@ -301,6 +378,10 @@ First, we use data from [McNicholas & Poydock Table 4](https://www.epi.org/blog/
 [^heupdate]: If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).
 
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
+
+[^pfizer-supplement]: Data on severe cases for Pfizer's vaccine is provided in their [supplement](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file/nejmoa2034577_appendix.pdf)
+
+[^confidence-interval]: We use the calculator on [Scale Statistics](https://www.scalestatistics.com/relative-risk.html) to calculate confidence intervals when none is provided. For situations where one group has 0 cases, we substitute 1 for this computation.
 `
 
 const post = { title, shortTitle, content }
