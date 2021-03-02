@@ -18,6 +18,10 @@ import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import {
+  VaccineSelector,
+  VaccineStatus,
+} from 'components/calculator/selectors/VaccineSelector'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import { Card } from 'components/Card'
 import {
@@ -222,15 +226,9 @@ export const Calculator = (): React.ReactElement => {
             </Trans>
           </Alert>
           <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.masks_update">
-              <strong>Model update:</strong> Lipsum{' '}
-              <Link to="/blog/masks">our new blog post about masks</Link>.
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.b117">
-              <strong>Model update:</strong> Lipsum{' '}
-              <Link to="/blog/b117">White Paper</Link>.
+            <Trans i18nKey="calculator.alerts.vaccines_update">
+              <strong>Model update:</strong>{' '}
+              <Link to="/paper/13-1-and-a#vaccines-qa)">{'Q&A'}</Link>.
             </Trans>
           </Alert>
           <Link id="full-changelog" to="/paper/changelog">
@@ -339,6 +337,28 @@ export const Calculator = (): React.ReactElement => {
                       data={calculatorData}
                       setter={setCalculatorData}
                       repeatedEvent={repeatedEvent}
+                    />
+                  </Col>
+                  <Col xs="12" id="vaccines" className="calculator-params">
+                    <VaccineSelector
+                      id="yourVaccine"
+                      header={t('calculator.precautions.your_vaccine_header')}
+                      label={t('calculator.precautions.your_vaccine_label')}
+                      dosesLabel={t(
+                        'calculator.precautions.your_vaccine_doses_label',
+                      )}
+                      variant="outline-cyan"
+                      current={{
+                        vaccineDoses: calculatorData.yourVaccineDoses,
+                        vaccineType: calculatorData.yourVaccineType,
+                      }}
+                      setter={(newStatus: VaccineStatus) => {
+                        setCalculatorData({
+                          ...calculatorData,
+                          yourVaccineDoses: newStatus.vaccineDoses,
+                          yourVaccineType: newStatus.vaccineType,
+                        })
+                      }}
                     />
                   </Col>
                 </Row>
