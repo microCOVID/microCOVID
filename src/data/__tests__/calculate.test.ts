@@ -401,7 +401,7 @@ describe('calculate', () => {
         ...indoorIntimate,
         interaction: 'partner',
       }
-      expect(calcValue(tenHourIntimate)).toBeCloseTo(calcValue(partnerIntimate))
+      expect(calcValue(tenHourIntimate)).toBeCloseTo(calcValue(partnerIntimate)!,)
     })
     it('should not apply talking multiplier', () => {
       const kissingTalking = testData({
