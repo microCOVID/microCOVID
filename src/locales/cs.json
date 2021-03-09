@@ -97,7 +97,7 @@
         "intro": {
             "whats_this": "Vytvořili jsme kalkulačku, která vám pomůže odhadnout riziko nákazy COVIDem z aktivit či kontaktů ve vašem každodenním životě s pomocí <1>nejlepšího dostupného výzkumu</1>. Doufáme, že vám tento nástroj pomůže zlepšit si intuici, snížit úroveň stresu a přijít na efektivní strategie pro redukci rizika.</p><p>Prvním krokem k ochraně vašich blízkých je sami se chránit před nákazou COVIDem.",
             "call_to_action": "Spočítat přibližné riziko nákazy pro kontakt či aktivitu",
-            "see_video": "Videoprůvodce ke kalkulačce je ke zhlédnutí <1>zde</1>",
+            "see_video": "Videoprůvodce ke kalkulačce je ke zhlédnutí <1>zde</1>.",
             "whats_this2": "Tato kalkulačka vám umožňuje odhadnout míru rizika koronaviru a najít účinná opatření pro různé situace. Příklady: Jak riskantní je <1>jít nakoupit potraviny</1>? Jak co nejbezpečněji <3>navštívit kamaráda</3>? Jak moc by pomohlo <5>nosit lepší masku v práci</5>?"
         },
         "risk_tolerance_point1_percent_explanation": "Rizikový rozpočet: 0,1% pravděpodobnost nákazy COVIDem za rok (20 microCOVID týdně) (doporučeno, pokud Vy nebo Vaši blízí patříte do více ohrožené skupiny)",
@@ -151,7 +151,7 @@
         "nearby_people_label": "Lidé poblíž",
         "alerts": {
             "survey_request": "<0>Budeme rádi za vaši zpětnou vazbu:</0> Oceníme vaši pomoc, abychom udělali microCOVID kalkulačku co nejužitečnější! <2>Prosím vyplňte náš dotazník pro uživatele</2>, abyste nám pomohli určit priority pro další vývoj tohoto nástroje.",
-            "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde.</3>",
+            "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde</3>.",
             "masks_update": "<0>28. 1. 2021:</0> Přidali jsme nové typy masek a aktualizovali součinitele pro ty existující. Více se dozvíte v <3>našem novém blogovém příspěvku o maskách</3>.",
             "vaccines_update": "<0> 23. 2. 2021:</0> Kalkulačka nově sníží vaše riziko v případě, že jste očkováni. Více v <2>otázkách a odpovědích</2>."
         },
@@ -167,7 +167,7 @@
             "US": "Celý federální stát nebo jeho region...",
             "US-LA": "Celý federální stát nebo jeho region...",
             "US-AK": "Celý stát, případně zvolte oblast...",
-            "country_or_regions": "Celá země nebo vybrat region"
+            "country_or_regions": "Celá země nebo vybrat region..."
         },
         "one_time_interaction_risk_message": "Je-li jedna z osob nakažená, pak je výchozí <1>pravděpodobnost přenesu {{ percentage }} za hodinu</1>.",
         "whats_next_interaction_risk_message": "Jaká je pravděpodobnost, že je někdo nakažený? To záleží na tom, kde jste a kdo je kolem vás. Tato kalkulačka vás provede <1>možnostmi, které máte</1>, abyste mohli změnit výchozí riziko (založeno na <4>vědě</4>!)",
