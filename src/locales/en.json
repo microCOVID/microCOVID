@@ -256,6 +256,7 @@
     "liveInPartner_noContacts": "Live-in partner who has no indoor interactions besides you",
     "60minShopping": "Grocery store for 60 minutes (average # of shoppers)",
     "60minShoppingFew": "Grocery store for 60 minutes (few other shoppers)",
+    "60minShoppingCrowded": "Grocery store for 60 minutes (crowded)",
     "planeRide": "Plane ride (full flight)",
     "planeRideMiddleSeatEmpty": "Plane ride (middle seat empty)",
     "restaurantOutdoors": "Eating in restaurant, outdoors",
