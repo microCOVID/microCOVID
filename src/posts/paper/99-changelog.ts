@@ -8,6 +8,12 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 1, 21),
+    content: `
+* Added precaution for being vaccinated. See paper [Q&A](/paper/13-1-and-a#vaccines-qa) and [Research Sources](/paper/14-research-sources#vaccines) for details.
+* Note: vaccines also reduce the risk of people who you interact with, we just haven't implemented this yet.`,
+  },
+  {
     date: new Date(2021, 1, 2),
     content: `
 * Remove "frontline worker", "healthcare worker", and "works from home" person risk categories.

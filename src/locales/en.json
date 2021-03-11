@@ -31,7 +31,13 @@
       "their_mask_header": "Their mask",
       "filtered_ensure_airflow": "Ensure sufficient flow through the filter for your room. For help on how to do this, see <1>here</1>.",
       "volume_header": "Volume",
-      "volume_question": "How much is everyone talking?"
+      "volume_question": "How much is everyone talking?",
+      "your_vaccine_header": "Your Vaccine",
+      "your_vaccine_label": "Which vaccine did you receive?",
+      "your_vaccine_doses_label": "How many doses?",
+      "no_vaccine": "No vaccine",
+      "doses_7_days_ago": "If your last dose was <1 week ago, subtract one dose when answering--the last dose may not be protecting you yet.",
+      "i_have_been_vaccinated": "Add your vaccine"
     },
     "risk_note_about_household_members": "When estimating your risk of infection from a household member or partner/spouse we assume these interactions are indoors, unmasked, and undistanced.",
     "explanationcard": {
@@ -166,6 +172,7 @@
     "risk_group_empty_warning": "Enter your location first.",
     "saved_scenario_loaded_message": "If needed, adjust the following prefilled answers to match your <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
+      "vaccines_update": "<0> February 23rd, 2021:</0> The calculator now reduces your risk if you are vaccinated. Learn more in the <2>Q&A</2>.",
       "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
       "b117": "<0>January 5th, 2021:</0> The calculator now accounts for the new more infectious COVID-19 variant B117. Read more <3>here</3>.",
       "survey_request": "<0>We would love your feedback:</0> Please fill out <2>our user survey</2> to help us make the calculator as helpful as possible, and prioritize new features.",

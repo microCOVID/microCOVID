@@ -13,6 +13,7 @@ import {
   Voice,
   YourMask,
 } from 'data/data'
+
 import 'components/calculator/styles/ActivityRiskControls.scss'
 
 export const ActivityRiskControls: React.FunctionComponent<{
