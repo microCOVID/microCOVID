@@ -25,6 +25,9 @@ export const queryConfig: QueryParamConfigMap = {
   theirMask: StringParam,
   yourMask: StringParam,
   voice: StringParam,
+
+  yourVaccineDoses: NumberParam,
+  yourVaccineType: StringParam,
 }
 
 export const filterParams = (data: CalculatorData): QueryData => {
