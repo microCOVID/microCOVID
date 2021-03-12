@@ -336,7 +336,7 @@ Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJM
 
 Fortunately, we have access to a [supplement provided to the FDA](https://www.fda.gov/media/144453/download), which provides a useful clue about reduction of non-symptomatic cases. In this supplementary data, Moderna showed a 63% reduction in positive PCR swabs at the time of the 2nd dose among people who had no symptoms of COVID up to that point. Some of these people might've later shown symptoms. This indicates that the total reduction in Later-Symptomatic + Never Symptomatic COVID cases from *the first dose* of Moderna’s vaccine was 63%.
 
-We therefore use \`1 - 0.63 = 0.37 \` as a conservative estimate of the reduction of total COVID cases in the vaccinated group. Likely it is even better after the second dose. From this, we construct the following chart:
+We therefore use \`1 - 0.63 = 0.37 \` as a conservative estimate of the reduction of total COVID cases in the vaccinated group. Likely it is even better after the second dose. We also note that, from Byambsuren et al. again, if 17% of cases are never symptomatic, then there are 1/(1-0.17)=1.2x as many symptomatic-and-asymptomatic cases combined as there are never symptomatic cases. From this, we construct the following chart:
 
 |                                                         | Control Group                | Vaccinated Group            |
 | ------------------------------------------------------- | ---------------------------- | --------------------------- |
