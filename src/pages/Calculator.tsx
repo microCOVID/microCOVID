@@ -228,7 +228,7 @@ export const Calculator = (): React.ReactElement => {
           <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.vaccines_update">
               <strong>Model update:</strong>{' '}
-              <Link to="/paper/13-1-and-a#vaccines-qa)">{'Q&A'}</Link>.
+              <Link to="/paper/13-q-and-a#vaccines-qa">{'Q&A'}</Link>.
             </Trans>
           </Alert>
           <Link id="full-changelog" to="/paper/changelog">

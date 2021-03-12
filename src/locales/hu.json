@@ -36,7 +36,13 @@
                 "their_prompt": "Nem találod a maszkjuk a listában?",
                 "your_prompt": "Nem találod a maszkod a listában?",
                 "select_instead": "Ezt a típust válaszd: {{ mask_type }}."
-            }
+            },
+            "i_have_been_vaccinated": "Beoltottak?",
+            "doses_7_days_ago": "Ha kevesebb, mint egy hete oltottak be, akkor azt még ne számold bele, mert még nem biztos, hogy kialakult a megfelelő védelem.",
+            "no_vaccine": "Nem oltottak be",
+            "your_vaccine_doses_label": "Hány adagot kaptál meg eddig?",
+            "your_vaccine_label": "Téged melyik vakcinával oltottak be?",
+            "your_vaccine_header": "A te oltásod"
         },
         "risk_note_about_household_members": "Egy háztartásban együtt lakóknál és élettársaknál feltételezzük, hogy a találkozások beltérben, maszk- és távolságtartás nélkül történnek.",
         "explanationcard": {
@@ -161,7 +167,8 @@
             "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
             "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul.",
             "masks_update": "<0>2021. január 28:</0> A kiválasztható maszkok körét kibővítettük és frissítettük. A részletekről a <3>tanulmány maszkokról szóló fejezetében</3> olvashatsz angolul.",
-            "full_changelog": "régebbi változtatások..."
+            "full_changelog": "régebbi változtatások...",
+            "vaccines_update": "<0>2020. február 23. :</0> A kalkulátorban megadhatod a védőoltásod. A részletekről többet olvashatsz angolul a tanulmány <2>gyakori kérdések</2>-részében."
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -292,7 +299,10 @@
         "feedback": "Ha visszajelzést adnál, kérdésed van, vagy szeretnél segíteni, <1>itt elérhetsz minket</1>.",
         "donations_header": "Támogatás",
         "donations_details": "Ha megteheted, szívesen fogadunk minden támogatást, de ne érezd kötelességednek. Előre is kösz!",
-        "who_are_we_header": "Kik vagyunk mi?"
+        "who_are_we_header": "Kik vagyunk mi?",
+        "affiliations_body": "Ez a projekt szigorúan a résztvevő önkéntesek magánprojektje és nem áll kapcsolatban semmilyen szervezettel vagy munkaadóval. Bármi, amit mondunk vagy teszünk, a saját nevünkben mondjuk vagy tesszük, és nem a velünk kapcsolatban álló szervezetek vagy munkaadóink nevében. Ezzel együtt a teljes átláthatóság jegyében szeretnénk közzétenni, hogy az önkénteseink milyen szervezetekkel és cégekkel állnak kapcsolatban. Ezek az alábbiak: One Medical, Massachusetts General Hospital, London School of Hygiene and Tropical Medicine, Google, Matterport, Omada Health, Open Philanthropy Project, Hudson River Trading, Academy for Coaching Excellence, Shapr3D.",
+        "affiliations_header": "Kapcsolataink közzététele",
+        "who_are_we_body": "Mi mind a környezetünkért felelősséget érző, számokkal szívesen foglalkozó önkéntesek vagyunk. Nem támogat minket se tudományos, se kormányzati, se magántulajdonban lévő szervezet. A támogatók listáját megtalálod a <1>tanulmányban</1>."
     },
     "button": {
         "copy_link": "Megosztható link ehhez a tevékenységhez",

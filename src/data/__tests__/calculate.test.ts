@@ -152,8 +152,9 @@ describe('calculate', () => {
     ${'Car ride with 1 other person for 15 mins'}                     | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'One-night stand with a random person'}                         | ${2880}
     ${'Live-in partner who has no indoor interactions besides you'}   | ${29 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (average # of shoppers)'}         | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (few other shoppers)'}            | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Grocery store for 60 minutes (average # of shoppers)'}         | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Grocery store for 60 minutes (few other shoppers)'}            | ${24 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'Grocery store for 60 minutes (crowded)'}                       | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Plane ride (full flight)'}                                     | ${328 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Plane ride (middle seat empty)'}                               | ${160 * B117_CONTAGIOUSNESS_ADJUSTMENT}
     ${'Eating in restaurant, outdoors'}                               | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
