@@ -144,6 +144,7 @@ export const Voice: { [key: string]: FormValue } = {
 }
 
 export const BUDGET_TEN_PERCENT = 100000
+export const BUDGET_THREE_PERCENT = 30000
 export const BUDGET_ONE_PERCENT = 10000
 export const BUDGET_ONE_TENTH_PERCENT = 1000
 
@@ -153,6 +154,12 @@ export const budgetOptions = [
     sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
     multiplier: 1,
     value: BUDGET_TEN_PERCENT.toString(),
+  },
+  {
+    label: i18n.t('calculator.risk_tolerance_3_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_3_percent_explanation'),
+    multiplier: 0.3,
+    value: BUDGET_THREE_PERCENT.toString(),
   },
   {
     label: i18n.t('calculator.risk_tolerance_1_percent_label'),

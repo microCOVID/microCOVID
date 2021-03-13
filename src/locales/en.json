@@ -155,6 +155,8 @@
     },
     "risk_tolerance_10_percent_label": "Harm Reduction Budget",
     "risk_tolerance_10_percent_explanation": "Budget: 10% chance of COVID per year (2000 microCOVIDs per week) Use this if you can't avoid risk, but still want to make smart choices. Remember: if you get infected, you will infect others. Try taking the smallest risk you can to protect them.",
+    "risk_tolerance_3_percent_label": "Low Caution Budget",
+    "risk_tolerance_3_percent_explanation": "Budget: 3% chance of COVID per year (600 microCOVIDs per week). If you must or willing to take on a MUCH bigger risk for you and those you meet.",
     "risk_tolerance_1_percent_label": "Standard Caution Budget",
     "risk_tolerance_1_percent_explanation": "Budget: 1% chance of COVID per year (200 microCOVIDs per week) Suggested for healthy people NOT in close contact with more vulnerable people.",
     "risk_tolerance_point1_percent_label": "High Caution Budget",
