@@ -46,7 +46,19 @@
             "your_mask_header": "Ваша маска",
             "label": "Меры предосторожности",
             "volume_question": "Как много вы (и те кто с вами) говорите?",
-            "their_mask_header": "Их маски"
+            "their_mask_header": "Их маски",
+            "mask_not_listed": {
+                "others": "Прочие",
+                "select_instead": "Выбрать {{ mask_type }}.",
+                "n95_like": "Vogmask, KF94, P2, 1й корейский класс, DS2 или PFF2",
+                "instructions": "Инструкции",
+                "mask_type": "Тип маски",
+                "their_prompt": "Не видите их маски в списке?",
+                "your_prompt": "Не видите свою маску в списке?"
+            },
+            "no_intimate_bonus_outdoors": "В этом расчете мы игнорируем выбор среды. Мы не уверены что хорошая вентиляция или пребывание на открытом воздухе существенно снижают риск, когда люди находятся так близко друг к другу.",
+            "environment_question": "В помещении или на открытом воздухе? Проветривается ли помещение или фильтруется ли воздух?",
+            "environment_header": "Окружающая среда"
         }
     },
     "current_lang_two_letter_code": "ru",
@@ -55,7 +67,11 @@
         "spreadsheet": "Таблица",
         "calculator": "Калькулятор",
         "blog": "Блог",
-        "about": "О проекте"
+        "about": "О проекте",
+        "risk_tracker": {
+            "header": "Трекер рисков",
+            "start_here": "Начните здесь"
+        }
     },
     "scenario": {
         "restaurantOutdoors": "Приём пищи в ресторане, вне помещения",
