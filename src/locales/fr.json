@@ -61,7 +61,16 @@
             "environment_question": "Est-ce à l’intérieur ou à l’extérieur ? L’espace est-il ventilé ou l’air est-il filtré ?",
             "environment_header": "Environnement",
             "label": "Précautions",
-            "filtered_ensure_airflow": "Assurez un débit suffisant à travers le filtre pour votre pièce. Pour obtenir de l’aide sur la manière de procéder, cliquez <1>ici</1>."
+            "filtered_ensure_airflow": "Assurez un débit suffisant à travers le filtre pour votre pièce. Pour obtenir de l’aide sur la manière de procéder, cliquez <1>ici</1>.",
+            "mask_not_listed": {
+                "others": "Autres",
+                "select_instead": "Sélectionnez {{ mask_type }}.",
+                "n95_like": "Vogmask, KF94, P2, 1re classe Korea, DS2 ou FFP2",
+                "instructions": "Instructions",
+                "mask_type": "Type de masque",
+                "their_prompt": "Vous ne voyez pas le masque dans la liste ?",
+                "your_prompt": "Vous ne voyez pas votre masque dans la liste ?"
+            }
         },
         "firsttime": {
             "budget_explanation": "Nous avons décidé qu’un budget de risque annuel de 1 % de contracter la COVID-19 par an était raisonnable pour la plupart des personnes en bonne santé qui ne sont pas en contact avec des groupes vulnérables. Pour savoir comment nous sommes arrivés à ce nombre, <1>cliquez ici</1>. Si vous voulez suivre ce budget de 1 % de risque par an, vous voudrez que votre budget hebdomadaire d’activités soit inférieur à environ 200 microCOVIDs par semaine. Nous avons créé une <3>feuille de calcul</3> pratique qui vous permet de suivre vos activités au fil du temps.",
@@ -161,7 +170,11 @@
         "spreadsheet": "Feuille de calcul",
         "about": "À propos",
         "calculator": "Calculateur",
-        "blog": "Blog"
+        "blog": "Blog",
+        "risk_tracker": {
+            "header": "Suivi des risques",
+            "start_here": "Commencer ici"
+        }
     },
     "data": {
         "person": {
@@ -218,7 +231,8 @@
         "data_inputs_lead": "Ce site web contient trois résultats de nos recherches",
         "where_to_start_header": "Par où commencer ?",
         "basic_description": "Ceci est un projet pour estimer quantitativement le risque COVID pour vous à partir de vos activités quotidiennes ordinaires. Nous avons parcouru la littérature scientifique à la recherche de données sur la probabilité de contracter la COVID-19 dans différentes situations et avons combiné les données dans un modèle que les gens peuvent utiliser. Nous estimons le risque de COVID-19 en unités de microCOVID, où 1 microCOVID = une chance sur un million de contacter la COVID-19.",
-        "intro_header": "Qu’est-ce que le projet microCOVID ?"
+        "intro_header": "Qu’est-ce que le projet microCOVID ?",
+        "affiliations_header": "Divulgation des affiliations"
     },
     "button": {
         "reset_form": "Réinitialiser le formulaire",

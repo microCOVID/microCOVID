@@ -1,7 +1,7 @@
 {
     "calculator": {
         "precautions": {
-            "no_intimate_bonus_outdoors": "Při blízkém kontaktu není jasné, že by venkovní prostředí nějak výrazněji snižovalo riziko. U bližších nebo intimních setkání tedy už nesnižujeme riziko za pobyt venku.",
+            "no_intimate_bonus_outdoors": "U tohoto výpočtu nebereme v úvahu výběr prostředí. Není totiž zřejmé, že dobré větrání nebo pobyt venku významně snižuje riziko v případě, že jsou lidé takto blízko u sebe.",
             "environment_question": "Uvnitř či venku? Jak je prostor ventilován? Filtrace vzduchu?",
             "environment_header": "Prostředí",
             "label": "Opatření",
@@ -13,7 +13,23 @@
             "your_mask_note": "Pokud jíte či pijete, zvolte \"Žádná maska\"",
             "your_mask_question": "Jakou masku máte nasazenou Vy?",
             "your_mask_header": "Vaše maska",
-            "their_mask_note": "Pokud jí či pijí, zvolte \"žádná maska\""
+            "their_mask_note": "Pokud jí či pijí, zvolte \"žádná maska\"",
+            "i_have_been_vaccinated": "Přidejte svoji vakcínu",
+            "doses_7_days_ago": "V případě, že jste poslední dávku dostal(a) méně než před týdnem, pak tuto dávku nepočítejte–ještě vás nemusí chránit.",
+            "no_vaccine": "Žádná vakcína",
+            "your_vaccine_doses_label": "Kolik dávek?",
+            "your_vaccine_label": "Jakou vakcínou jste byl(a) očkován(a)?",
+            "your_vaccine_header": "Vaše vakcína",
+            "mask_not_listed": {
+                "others_fallback": "Vyberte {{ mask_type }} jakožto konzervativní odhad.",
+                "others": "Jiné",
+                "select_instead": "Vyberte {{ mask_type }}.",
+                "n95_like": "Vogmask, KF94, P2, Korea 1st class, DS2 nebo PFF2",
+                "instructions": "Co vybrat",
+                "mask_type": "Typ masky",
+                "their_prompt": "Jejich maska není v seznamu?",
+                "your_prompt": "Vaše maska není v seznamu?"
+            }
         },
         "explanationcard": {
             "details_total_risk_number": "{{ points }} ku jednomu milionu ({{ percentage }})",
@@ -66,27 +82,29 @@
             "onetime_header": "Zde je několik způsobů snížení rizika této aktivity"
         },
         "firsttime": {
-            "budget_explanation": "Předpokládáme, že riziko nákazy COVIDem 1% za rok je přiměřené a přijatelné pro většinu zdravých lidí, kteří nejsou v kontaktu s více ohroženými skupinami. Jak jsme k tomuto odhadu dospěli se můžete dočíst <1>zde</1> (anglicky). Pokud se chcete řídit rizikovým rozpočtem 1% za rok, váš rozpočet na součet rizikovosti Vašich aktivit je přibližně 200 microCOVID na týden. Vytvořili jsme pro vás též šikovnou <3>interaktivní tabulku</3> (Google spreadsheet, anglicky), která vám pomůže s dlouhodobějším přehledem vašich aktivit.",
-            "microcovid_explanation": "<p>Tato kalkulačka zavádí novou jednotku: microCOVID. Jeden microCOVID odpovídá pravděpodobnosti nakažení se COVIDem jedna ku milionu.</p> <p>Aktivita s 20 000 microCOVIDy je poměrně nebezpečná, protože představuje 2% pravděpodobnost nakažení <em>pokaždé, když ji provádíte</em>. Aktivita s 20 microCOVIDy je naopak poměrně bezpečná: pokud byste ji prováděli celý rok jednou týdně, celková roční pravděpodobnost nákažení při této aktivitě je cca 0.1%.</p>",
+            "budget_explanation": "<p>Můžete se rozhodnout, jak velkému riziku jste ochotni se vystavit. Toto celkové riziko, které jste ochotni podstoupit, představuje váš „rizikový rozpočet“.</p> <p>Myslíme si, že pro většinu zdravých lidí, kteří nejsou v kontaktu s ohroženými skupinami, je rozumná míra rizika <strong>pravděpodobnost 1 % nakažení koronavirem</strong> – to představuje roční rizikový rozpočet 10 000 mikrocovidů. Aby se člověk do tohoto rozpočtu vešel, musí udržet míru rizika na maximu asi <strong>200 mikrocovidů týdně</strong>.</p>",
+            "microcovid_explanation": "<p>Vymysleli jsme pojel „mikrocovid“ jako novou jednotku rizika. Jeden microCOVID odpovídá pravděpodobnosti nakažení se COVIDem jedna ku milionu.</p> <p>Aktivita s 20 000 microCOVIDy je poměrně nebezpečná, protože představuje 2% pravděpodobnost nakažení <em>pokaždé, když ji provádíte</em>. Aktivita s 20 microCOVIDy je naopak poměrně bezpečná: pokud byste ji prováděli <em>jednou týdně po celý rok</em>, celková roční pravděpodobnost nakažení při této aktivitě je cca 0.1%.</p>",
             "microcovid_header": "Co je microCOVID?",
-            "budget_header": "Jak můžu rozvrhovat své riziko pomocí rizikového rozpočtu?"
+            "budget_header": "Co je to rizikový rozpočet?"
         },
         "distance_question": "Jak daleko jsou běžně tito lidé v okolí?",
         "warning": {
             "body": "V tomto nástroji předkládáme své nejlepší odhady založené na dostupných vědeckých materiálech, a to i pokud nejsou jejich závěry jednoznačné či definitivní. Přečetli jsme velké množství výzkumu odborníků v této oblasti, ale sami v ní odborníky nejsme. Naše práce nebyla vědecky recenzována. Okolo vlastností COVIDu je stále velké množství nejistoty a neznámých. Nepoužívejte tento nástroj pro lékařská rozhodnutí. I nadále se, prosím, řiďte nařízeními své vlády.",
             "important": "Důležité"
         },
-        "risk_group_empty_warning": "Za prvé, zadejte svou lokaci",
-        "type_of_interaction": "Jde o specifickou aktivitu nebo o dlouhodobý vztah?",
+        "risk_group_empty_warning": "Nejprve zadejte svou lokaci.",
+        "type_of_interaction": "Co chcete vědět?",
         "intro": {
             "whats_this": "Vytvořili jsme kalkulačku, která vám pomůže odhadnout riziko nákazy COVIDem z aktivit či kontaktů ve vašem každodenním životě s pomocí <1>nejlepšího dostupného výzkumu</1>. Doufáme, že vám tento nástroj pomůže zlepšit si intuici, snížit úroveň stresu a přijít na efektivní strategie pro redukci rizika.</p><p>Prvním krokem k ochraně vašich blízkých je sami se chránit před nákazou COVIDem.",
-            "call_to_action": "Spočítat přibližné riziko nákazy pro kontakt či aktivitu"
+            "call_to_action": "Spočítat přibližné riziko nákazy pro kontakt či aktivitu",
+            "see_video": "Videoprůvodce ke kalkulačce je ke zhlédnutí <1>zde</1>.",
+            "whats_this2": "Tato kalkulačka vám umožňuje odhadnout míru rizika koronaviru a najít účinná opatření pro různé situace. Příklady: Jak riskantní je <1>jít nakoupit potraviny</1>? Jak co nejbezpečněji <3>navštívit kamaráda</3>? Jak moc by pomohlo <5>nosit lepší masku v práci</5>?"
         },
         "risk_tolerance_point1_percent_explanation": "Rizikový rozpočet: 0,1% pravděpodobnost nákazy COVIDem za rok (20 microCOVID týdně) (doporučeno, pokud Vy nebo Vaši blízí patříte do více ohrožené skupiny)",
         "risk_tolerance_point1_percent_label": "Vysoký rizikový rozpočet",
-        "prevalence_info_source_information": "Data o prevalenci konsolidována z <1>Johns Hopkins CSSE</1> (počty případů), <4>Covid Act Now</4> (US pozitivita testů), and <7>Our World in Data</7> (mezinárodní pozitivita testů).",
+        "prevalence_info_source_information": "Data o prevalenci konsolidována z <1>Johns Hopkins CSSE</1> (počty případů), <4>Covid Act Now</4> (US pozitivita testů), <7>Our World in Data</7> (pozitivita testů ve světě) a <10>Coronavirus COVID-19 România</10> (počty případů v Rumunsku).",
         "select_location_enter_manually": "Vložit data manuálně ...",
-        "select_location_placeholder": "Vyberte lokaci ...",
+        "select_location_placeholder": "Vyberte zemi nebo stát USA ...",
         "location_selector_header": "Krok 1: Vyberte Vaši lokaci",
         "location_subprompt_US": "Celý federální stát nebo jeho region ...",
         "location_subprompt_US-AK": "Celý stát, případně zvolte oblast...",
@@ -105,7 +123,7 @@
         },
         "household_members_note": "Pokud modelujete riziko od členů Vaší domácnosti, počítejte pouze jejich kontakty mimo domácnost (kontakty mezi členy domácnosti jsou započteny jinde)",
         "duration_question": "Jak dlouho aktivita trvá, v minutách? (Při opakované aktivitě: v minutách týdně)",
-        "number_of_people_near_you_onetime": "Kolik lidí je při této aktivitě běžně ve Vaší blízkosti?",
+        "number_of_people_near_you_onetime": "Kolik lidí se při této aktivitě běžně vyskytne v libovolný čas v okruhu 5 metrů od vás?",
         "risk_tolerance_1_percent_explanation": "Rizikový rozpočet: 1% pravděpodobnost nákazy COVIDem za rok (200 mikroCOVID týdně) (doporučeno pro zdravé lidi kteří NEJSOU v kontaktu s více ohroženými skupinami)",
         "risk_tolerance_1_percent_label": "Běžný rizikový rozpočet",
         "risk_modifier_multiple": "{{multiplier}}x riziko",
@@ -113,8 +131,8 @@
         "risk_modifier_frac_2nd": "{{frac}} rizika",
         "baseline_risk": "základní riziko",
         "intimate_risk_warning": "Nejnižší možné riziko aktivity nastavujeme pro polibky vyšší kvůli rizikům souvisejícím s výměnou tekutin.",
-        "risk_step_label": "Krok 2: Popište aktivitu, vztah či kontakt",
-        "select_scenario": "Volitelně: Začněte předdefinovaou aktivitou",
+        "risk_step_label": "Krok 2: Popište situaci",
+        "select_scenario": "Začněte s jednou z předem připravených situací nebo si <2>sestavte vlastní</2>:",
         "category_postfix": "riziko",
         "category_extreme": "Extrémní",
         "category_dangerously_high": "Nebezpečně vysoké",
@@ -123,7 +141,7 @@
         "category_moderate": "Střední",
         "category_low": "Nízké",
         "category_very_low": "Velmi nízké",
-        "large_group_warning": "Varování: Toto je nezvykle hodně lidí. Nezapomeňte, že je třeba započíst jen lidi do vzdálenosti cca 4.5 metrů (ne všechny v okolí, hale etc.). Přesto platí, že shromáždění většího množství lidí přestavují velké riziko hromadného přenosu (tzv. super-spreadingových událostí).",
+        "large_group_warning": "Varování: Toto je nezvykle hodně lidí. Nezapomeňte, že je třeba započíst jen lidi do vzdálenosti cca 5 metrů (ne všechny v okolí, hale apod.). Přesto platí, že shromáždění většího množství lidí přestavují velké riziko hromadného přenosu (tzv. super-spreadingových událostí).",
         "person_risk_profile_header": "Rizikový profil",
         "person_risk_profile_question": "Jaký je jejich rizikový profil?",
         "duration_header": "Trvání",
@@ -133,9 +151,11 @@
         "nearby_people_label": "Lidé poblíž",
         "alerts": {
             "survey_request": "<0>Budeme rádi za vaši zpětnou vazbu:</0> Oceníme vaši pomoc, abychom udělali microCOVID kalkulačku co nejužitečnější! <2>Prosím vyplňte náš dotazník pro uživatele</2>, abyste nám pomohli určit priority pro další vývoj tohoto nástroje.",
-            "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde.</3>"
+            "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde</3>.",
+            "masks_update": "<0>28. 1. 2021:</0> Přidali jsme nové typy masek a aktualizovali součinitele pro ty existující. Více se dozvíte v <3>našem novém blogovém příspěvku o maskách</3>.",
+            "vaccines_update": "<0> 23. 2. 2021:</0> Kalkulačka nově sníží vaše riziko v případě, že jste očkováni. Více v <2>otázkách a odpovědích</2>."
         },
-        "saved_scenario_loaded_message": "Zvolili jste scénář: <strong>{{ scenarioName }}</strong>. Zkontrolujte volby níže, zda odpovídají tomu, co máte na mysli. Pokud ne, upravte je tak, aby odpovídaly.",
+        "saved_scenario_loaded_message": "V případě potřeby upravte předvolené odpovědi, aby odpovídaly konkrétní situaci <strong>{{ scenarioName }}</strong>.",
         "frontline_worker_acknowledgement": "Hluboce oceňujeme oběti, které dělají během pandemie pracovníci v první linii. Doporučujeme najít bezpečný způsob, jak těmto lidem poskytnout podporu a péči a předejít tomu, že se budou cítit izolovaní. Přepdpokládáme, že většina z nich bude očkována v nejbližších měsících, což výrazně sníží riziko, že se nakazí nebo někoho nakazí.",
         "location_sublabel": {
             "US": "Subregion",
@@ -146,8 +166,20 @@
         "location_subprompt": {
             "US": "Celý federální stát nebo jeho region...",
             "US-LA": "Celý federální stát nebo jeho region...",
-            "US-AK": "Celý stát, případně zvolte oblast..."
-        }
+            "US-AK": "Celý stát, případně zvolte oblast...",
+            "country_or_regions": "Celá země nebo vybrat region..."
+        },
+        "one_time_interaction_risk_message": "Je-li jedna z osob nakažená, pak je výchozí <1>pravděpodobnost přenesu {{ percentage }} za hodinu</1>.",
+        "whats_next_interaction_risk_message": "Jaká je pravděpodobnost, že je někdo nakažený? To záleží na tom, kde jste a kdo je kolem vás. Tato kalkulačka vás provede <1>možnostmi, které máte</1>, abyste mohli změnit výchozí riziko (založeno na <4>vědě</4>!)",
+        "partner_interaction_risk_message": "Je-li tato osoba nakažená, pak je výchozí <1>pravděpodobnost přenosu {{ percentage }} za týden</1>.",
+        "repeated_interaction_risk_message": "Je-li jedna z osob nakažená, pak je výchozí <1>pravděpodobnost přenosu {{ percentage }} za týden</1>.",
+        "risk_modifier_multiple_short": "{{multiplier}}x",
+        "baseline_risk_short": "základ",
+        "no_prebuilt_scenario_found": "Tuto situaci jsme zatím nepřipravili, ale níže si ji můžete sestavit ručně sami.",
+        "switch_button": {
+            "enter_data_manually": "Nastavit data oblasti ručně"
+        },
+        "select_location_label": "Země nebo stát USA"
     },
     "current_lang_two_letter_code": "cs",
     "menu": {
@@ -156,7 +188,11 @@
         "calculator": "Kalkulačka",
         "whitepaper": "Metodika",
         "spreadsheet": "Spreadsheet",
-        "blog": "Blog"
+        "blog": "Blog",
+        "risk_tracker": {
+            "header": "Počítač rizika",
+            "start_here": "Začněte zde"
+        }
     },
     "data": {
         "person": {

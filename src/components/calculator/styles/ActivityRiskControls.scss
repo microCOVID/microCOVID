@@ -16,9 +16,12 @@
   border-color: $gray-400;
 }
 
+.two-lines {
+  min-height: 3.1em
+}
+
 .segmented-label {
   font-weight: bold;
-  min-height: 3.1em;
   display: block;
 }
 
@@ -49,6 +52,7 @@
   box-shadow: none !important;
 }
 
+.mobile-vertical {
 @media (max-width: 768px) {
   .segmented-wrap {
     padding-left: 1px;
@@ -100,6 +104,7 @@
     }
   }
 
+}
 }
 // TODO(jy2wong) end transfer to SegmentedControl.scss
 

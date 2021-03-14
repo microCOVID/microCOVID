@@ -26,7 +26,10 @@
             "environment_question": "Ist es drinnen oder draußen? Ist der Raum belüftet oder wird die Luft gefiltert?",
             "label": "Vorsichtsmaßnahmen",
             "environment_header": "Umgebung",
-            "filtered_ensure_airflow": "Stelle sicher, dass der Filter für deinen Raum ausreichend durchströmt ist. Hilfe dazu findest du unter <1>hier</ 1>."
+            "filtered_ensure_airflow": "Stelle sicher, dass der Filter für deinen Raum ausreichend durchströmt ist. Hilfe dazu findest du unter <1>hier</ 1>.",
+            "mask_not_listed": {
+                "your_prompt": "Ist deine Maske nicht in der Liste?"
+            }
         },
         "risk_note_about_household_members": "Bei der Bestimmung des Risikos, sich bei meinem Haushaltsmitglied oder einem Partner / Ehepartner anzustecken, gehen wir davon aus, dass die Kontakte drinnen, ohne Maske und ohne Abstände erfolgen.",
         "explanationcard": {

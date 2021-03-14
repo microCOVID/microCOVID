@@ -64,7 +64,7 @@ export const SegmentedControl: React.FunctionComponent<{
         header={props.header}
         popover={props.popover}
       />
-      <div className="segmented-scrollable">
+      <div className="segmented-scrollable mobile-vertical">
         <ToggleButtonGroup
           type="radio"
           name={props.id}
@@ -108,7 +108,7 @@ export const SegmentedControl: React.FunctionComponent<{
                 }
                 onMouseLeave={() => props.useHoverDesc && setHoverDesc('')}
               >
-                <span className="segmented-label">
+                <span className="segmented-label two-lines">
                   {props.labelFactory
                     ? props.labelFactory(value)
                     : props.source[value].label}
