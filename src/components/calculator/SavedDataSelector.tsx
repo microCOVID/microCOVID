@@ -10,6 +10,7 @@ import {
   BsFillHouseDoorFill,
   BsFillPersonFill,
   BsHeartFill,
+  BsQuestion,
 } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
@@ -105,7 +106,7 @@ const InteractionTypeIcon: React.FunctionComponent<{
         />
       )
     }
-    return <BsFillPersonFill {...iconProps} />
+    return <BsQuestion {...iconProps} />
   }
   return (
     <div className="rounded-circle p-2 mr-2 bg-primary text-white">
