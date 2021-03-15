@@ -13,6 +13,7 @@ import {
 } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
+import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { ControlLabel } from 'components/calculator/controls/ControlLabel'
 import { InteractionTypeDisplay } from 'components/calculator/selectors/InteractionTypeSelector'
 import { CalculatorData } from 'data/calculate'
@@ -39,6 +40,9 @@ const SavedDataLink: React.FunctionComponent<{
     }
     props.scenarioNameSetter(key)
     props.setEditInteractionType(key === '' || key === t('scenario.custom'))
+    if (key !== undefined && key !== '') {
+      recordCalculatorOptionSelected('scenario', key)
+    }
   }
 
   return (
@@ -229,6 +233,9 @@ export const SavedDataSelector: React.FunctionComponent<{
     }
     props.scenarioNameSetter(key)
     props.setEditInteractionType(key === '' || key === t('scenario.custom'))
+    if (key !== undefined && key !== '') {
+      recordCalculatorOptionSelected('scenario', key)
+    }
   }
 
   const showMatchesAndCustomScenario = (
