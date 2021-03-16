@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 
 import MaskDetails from './maskDetails'
@@ -6,29 +6,14 @@ import MaskDetails from './maskDetails'
 export const RiskReduction: React.FunctionComponent<{
   repeatedEvent: boolean
 }> = ({ repeatedEvent }) => {
-  const [showMaskDetails, setShowMaskDetails] = useState(false)
-
   return (
     <div className="mt-2" id="additional-precautions">
-      {repeatedEvent ? (
-        <HousematesAdvice
-          showMaskDetails={showMaskDetails}
-          setShowMaskDetails={setShowMaskDetails}
-        />
-      ) : (
-        <OnetimeAdvice
-          showMaskDetails={showMaskDetails}
-          setShowMaskDetails={setShowMaskDetails}
-        />
-      )}
+      {repeatedEvent ? <HousematesAdvice /> : <OnetimeAdvice />}
     </div>
   )
 }
 
-export const HousematesAdvice: React.FunctionComponent<{
-  showMaskDetails: boolean
-  setShowMaskDetails: (val: boolean) => void
-}> = (props) => {
+export const HousematesAdvice: React.FunctionComponent = () => {
   const { t } = useTranslation()
   return (
     <>
@@ -36,20 +21,14 @@ export const HousematesAdvice: React.FunctionComponent<{
       <ol className="mt-2">
         <Trans i18nKey="calculator.riskreduction.housemates_tips">
           Lorem ipsum
-          <MaskDetails
-            showMaskDetails={props.showMaskDetails}
-            setShowMaskDetails={props.setShowMaskDetails}
-          />
+          <MaskDetails />
         </Trans>
       </ol>
     </>
   )
 }
 
-export const OnetimeAdvice: React.FunctionComponent<{
-  showMaskDetails: boolean
-  setShowMaskDetails: (val: boolean) => void
-}> = (props) => {
+export const OnetimeAdvice: React.FunctionComponent = () => {
   const { t } = useTranslation()
   return (
     <>
@@ -58,10 +37,7 @@ export const OnetimeAdvice: React.FunctionComponent<{
       <ol className="mt-2">
         <Trans i18nKey="calculator.riskreduction.onetime_tips">
           Lorem ipsum
-          <MaskDetails
-            showMaskDetails={props.showMaskDetails}
-            setShowMaskDetails={props.setShowMaskDetails}
-          />
+          <MaskDetails />
         </Trans>
       </ol>
     </>

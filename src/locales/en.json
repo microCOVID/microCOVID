@@ -73,19 +73,21 @@
       "risk_budget_used": "Budget used",
       "risk_budget_usage_explanation": "This interaction uses <strong>{{ usage }}</strong>. This amount of your budget will be used <strong>{{ frequency }}</strong>.",
       "risk_tolerance_selector_header": "Adjust your risk tolerance",
-      "last_updated": "Model last updated on {{ date }}. (<1>See changelog</1>)"
+      "last_updated": "Model last updated on {{ date }}. <1>See all updates...</1>"
     },
     "pointsdisplay": {
       "microCOVIDs": "microCOVIDs",
       "range": "probably between: {{ from }} to {{ to }}",
       "empty_warning": "Fill in calculator to see risk level"
     },
+    "post_results_survey": "Would you like to <1>answer a few questions to help improve microCOVID</1>?",
     "riskreduction": {
       "housemates_header": "Here are some ways you can work with close contacts to reduce their risk",
       "housemates_tips": "<li>Talk to them about how their choices affect your risk, as well as theirs</li> <li>Ask them to MODify their activities (Masked, Outdoors, Distanced)</li> <li>Essential workers can wear a top quality mask (e.g., N95 or KN95) to work <1/></li> <li>Ask them to limit undistanced socializing to as few people as possible</li> <li>Encourage close contacts to isolate and get tested at the first sign of COVID symptoms</li> <li>If they have high COVID risk and you must be inside with them: <ul> <li>Wear masks inside</li> <li>Maximize ventilation using open windows, fans blowing in outside air, and HEPA filters </li> <li>Isolate within the house by staying in different rooms.</li> </ul></li>",
-      "onetime_header": "Here are some ways of reducing the risk of this activity",
+      "onetime_header": "How to reduce risk",
       "onetime_warning": "These may or may not apply to your activity.",
-      "onetime_tips": "<li>MODify your activities (make them Masked, Outdoors, Distanced)</li> <li>Wear the best mask you can get! <br/><1/></li> <li>Visit public places during less crowded hours</li> <li> Reduce shopping trips by doing one trip for multiple people, using delivery services, or shopping online</li> <li>If this activity is with friends, encourage them to not come if they or any of their close contacts are feeling unwell</li>"
+      "onetime_tips": "<li>MODify your activities (make them Masked, Outdoors, Distanced)</li> <li>Wear the best mask you can get! <1/></li> <li>Visit public places during less crowded hours</li> <li> Reduce shopping trips by doing one trip for multiple people, using delivery services, or shopping online</li> <li>If this activity is with friends, encourage them to not come if they or any of their close contacts are feeling unwell</li>",
+      "link_to_mask_blog": "Learn more about masks in our blog post."
     },
     "nearby_people_label": "Nearby people",
     "number_of_people_near_you_partner": "How many people are you living or staying with?",
