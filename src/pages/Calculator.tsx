@@ -231,7 +231,7 @@ export const Calculator = (): React.ReactElement => {
               <Link to="/paper/13-q-and-a#vaccines-qa">{'Q&A'}</Link>.
             </Trans>
           </Alert>
-          <Link id="full-changelog" to="/paper/changelog">
+          <Link className="boring-link" to="/paper/changelog">
             {t('calculator.alerts.full_changelog')}
           </Link>
         </Col>
