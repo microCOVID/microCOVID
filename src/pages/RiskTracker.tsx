@@ -156,9 +156,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           of the spreadsheet to have the latest upgrades and bug fixes.
         </p>
         <p>
-          <strong>Current version:</strong> 2.0
+          <strong>Current version:</strong> 2.2
           <br />
-          <strong>Released on:</strong> 2021-01-31
+          <strong>Released on:</strong> 2021-03-16
           <br />
           🕑{' '}
           <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8">

@@ -226,6 +226,12 @@ export const Calculator = (): React.ReactElement => {
             </Trans>
           </Alert>
           <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.vaccines_update_2">
+              <strong>Model update:</strong> <Link to="/tracker">{'here'}</Link>
+              .
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.vaccines_update">
               <strong>Model update:</strong>{' '}
               <Link to="/paper/13-q-and-a#vaccines-qa">{'Q&A'}</Link>.
