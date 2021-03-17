@@ -150,6 +150,12 @@ export const BUDGET_ONE_TENTH_PERCENT = 1000
 
 export const budgetOptions = [
   {
+    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
+    multiplier: 0.1,
+    value: BUDGET_ONE_TENTH_PERCENT.toString(),
+  },
+  {
     label: i18n.t('calculator.risk_tolerance_10_percent_label'),
     sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
     multiplier: 1,
@@ -158,20 +164,14 @@ export const budgetOptions = [
   {
     label: i18n.t('calculator.risk_tolerance_3_percent_label'),
     sublabel: i18n.t('calculator.risk_tolerance_3_percent_explanation'),
-    multiplier: 0.3,
+    multiplier: 3,
     value: BUDGET_THREE_PERCENT.toString(),
   },
   {
     label: i18n.t('calculator.risk_tolerance_1_percent_label'),
     sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
-    multiplier: 1,
+    multiplier: 10,
     value: BUDGET_ONE_PERCENT.toString(),
-  },
-  {
-    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
-    multiplier: 0.1,
-    value: BUDGET_ONE_TENTH_PERCENT.toString(),
   },
 ]
 
