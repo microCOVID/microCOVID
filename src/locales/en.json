@@ -156,9 +156,9 @@
       "budget_explanation": "<p>You may decide that you're comfortable with taking on a certain amount of COVID risk. You can think about this amount of risk that you're willing to take on as a \"risk budget\".</p> <p>For most healthy people who are not in contact with vulnerable groups, we think an annual risk budget of a <strong>1% chance of catching COVID</strong> is reasonable - that's a budget of 10,000 microCOVIDs a year. In order to meet this budget, you'd need to stick to a maximum of about <strong>200 microCOVIDs a week</strong>.</p>"
     },
     "risk_tolerance_10_percent_label": "Harm Reduction Budget",
-    "risk_tolerance_10_percent_explanation": "10% chance of COVID per year (2000 microCOVIDs per week) Use this if you can't avoid risk, but still want to make smart choices. Remember: if you get infected, you will infect others. Try taking the smallest risk you can to protect them.",
+    "risk_tolerance_10_percent_explanation": "10% chance of COVID per year (2000 microCOVIDs per week) Use this if you can't avoid risk, but still want to make smart choices. Remember: if you get COVID, you may give it to anyone you come in contact with. Try taking the smallest risk you can to protect them.",
     "risk_tolerance_3_percent_label": "Low Caution Budget",
-    "risk_tolerance_3_percent_explanation": "3% chance of COVID per year (600 microCOVIDs per week). If you must or willing to take on a MUCH bigger risk for you and those you meet.",
+    "risk_tolerance_3_percent_explanation": "3% chance of COVID per year (600 microCOVIDs per week). If you are healthy and prefer to live a riskier lifestyle AND everyone you live with / share air with is willing to do the same.",
     "risk_tolerance_1_percent_label": "Standard Caution Budget",
     "risk_tolerance_1_percent_explanation": "1% chance of COVID per year (200 microCOVIDs per week) Suggested for healthy people NOT in close contact with more vulnerable people.",
     "risk_tolerance_point1_percent_label": "High Caution Budget",
