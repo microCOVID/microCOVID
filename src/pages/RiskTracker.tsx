@@ -81,8 +81,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
               <strong>
                 Modeling someone outside of your pod who has been vaccinated:
               </strong>{' '}
-              The Risk Tracker is currently the only place where you can model
-              the risk of seeing someone else who has been vaccinated.
+              This Risk Tracker allows you to model the risk of seeing someone
+              else who has been vaccinated. We do not anticipate adding this
+              functionality to the Calculator.
             </li>
             <li>
               <strong>Household/pod risk budgeting:</strong> You live with
