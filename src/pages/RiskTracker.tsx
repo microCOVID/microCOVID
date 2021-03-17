@@ -120,11 +120,11 @@ export const RiskTrackerTOC = (): React.ReactElement => {
         collective COVID risk and are intereted in giving us feedback on your
         experience, please email Jeremy at{' '}
         <a
-          href="mailto:blanchard.jeremy@gmail.com"
+          href="mailto:tracker@microcovid.org"
           target="_blank"
           rel="noreferrer"
         >
-          blanchard.jeremy@gmail.com
+          tracker@microcovid.org
         </a>
         .
       </Alert>
@@ -139,13 +139,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           .
         </p>
         <p>
-          If you’re not familiar with GitHub, you can email questions to Jeremy
-          Blanchard, our spreadsheet maintainer, at{' '}
-          <a href="mailto:blanchard.jeremy@gmail.com">
-            blanchard.jeremy@gmail.com
-          </a>{' '}
-          or the team at{' '}
-          <a href="mailto:info@microcovid.org">info@microcovid.org</a>
+          If you’re not familiar with GitHub, you can email questions to our
+          team at{' '}
+          <a href="mailto:tracker@microcovid.org">tracker@microcovid.org</a>.
         </p>
       </div>
       <div>
