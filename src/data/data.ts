@@ -156,10 +156,10 @@ export const budgetOptions = [
     value: BUDGET_ONE_TENTH_PERCENT.toString(),
   },
   {
-    label: i18n.t('calculator.risk_tolerance_10_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
+    label: i18n.t('calculator.risk_tolerance_1_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
     multiplier: 1,
-    value: BUDGET_TEN_PERCENT.toString(),
+    value: BUDGET_ONE_PERCENT.toString(),
   },
   {
     label: i18n.t('calculator.risk_tolerance_3_percent_label'),
@@ -168,10 +168,10 @@ export const budgetOptions = [
     value: BUDGET_THREE_PERCENT.toString(),
   },
   {
-    label: i18n.t('calculator.risk_tolerance_1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
+    label: i18n.t('calculator.risk_tolerance_10_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
     multiplier: 10,
-    value: BUDGET_ONE_PERCENT.toString(),
+    value: BUDGET_TEN_PERCENT.toString(),
   },
 ]
 
