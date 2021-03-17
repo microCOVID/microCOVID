@@ -78,6 +78,14 @@ export const RiskTrackerTOC = (): React.ReactElement => {
               person. (Whereas the Calculator only has pre-built risk profiles.)
             </li>
             <li>
+              <strong>
+                Modeling someone outside of your pod who has been vaccinated:
+              </strong>{' '}
+              This Risk Tracker allows you to model the risk of seeing someone
+              else who has been vaccinated. We do not anticipate adding this
+              functionality to the Calculator.
+            </li>
+            <li>
               <strong>Household/pod risk budgeting:</strong> You live with
               others or have other people you are seeing on a regular basis and
               want to keep everyone's risk within a certain budget. (The{' '}
@@ -152,9 +160,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           of the spreadsheet to have the latest upgrades and bug fixes.
         </p>
         <p>
-          <strong>Current version:</strong> 2.0
+          <strong>Current version:</strong> 2.2
           <br />
-          <strong>Released on:</strong> 2021-01-31
+          <strong>Released on:</strong> 2021-03-16
           <br />
           🕑{' '}
           <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8">
