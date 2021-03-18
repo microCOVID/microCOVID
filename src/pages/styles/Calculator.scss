@@ -25,14 +25,14 @@
     padding-bottom: 1.25em;
   }
 
-  #full-changelog {
+  .boring-link {
     font-style: italic;
     color: $secondary;
     text-decoration: none;
     padding: 0;
   }
 
-  #full-changelog:hover {
+  .boring-link:hover {
     color: $primary;
     text-decoration: underline;
   }
