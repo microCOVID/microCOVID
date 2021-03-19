@@ -36,16 +36,13 @@ export const RadioControl: React.FunctionComponent<{
           defaultChecked={current.value === props.value.toString()}
         />
         <Form.Check.Label>
-          {current.sublabel ? (
-            <>
-              <strong>{current.label}</strong>
-              <br />
-              {current.sublabel}
-            </>
-          ) : (
-            current.label
-          )}
+          <strong>{current.label}</strong>
         </Form.Check.Label>
+        {current.sublabel && (
+          <>
+            <Form.Text as="div">{current.sublabel}</Form.Text>
+          </>
+        )}
       </Form.Check>
     ))}
     {props.helpText && (
