@@ -18,7 +18,7 @@ This is an advanced method because it requires asking about and calculating the 
 
 ## Add up the person’s socializing, errands, and work
 
-The advanced method hinges on getting an accurate picture of all of your contacts' activities and risks. This requires examining their lives in more scrutiny than you may be used to in normal times. To help, we've developed a (list of questions)[/questions] to ensure you are thorough in assessing their risk.
+The advanced method hinges on getting an accurate picture of all of your contacts' activities and risks. This requires examining their lives in more scrutiny than you may be used to in normal times. To help, we've developed a [list of questions](/questions) to ensure you are thorough in assessing their risk.
 
 We think about risk in three categories: socializing, errands, and work. To calculate total Person Risk using the advanced method, you can add these three categories together, as follows:
 

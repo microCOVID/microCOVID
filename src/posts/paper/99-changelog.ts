@@ -8,6 +8,11 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 2, 16),
+    content: `
+* The latest version of the [Risk Tracker](/tracker) now supports modeling the risk of someone you are seeing who is vaccinated.`,
+  },
+  {
     date: new Date(2021, 1, 21),
     content: `
 * Added precaution for being vaccinated. See paper [Q&A](/paper/13-1-and-a#vaccines-qa) and [Research Sources](/paper/14-research-sources#vaccines) for details.
