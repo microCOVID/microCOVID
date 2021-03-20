@@ -126,7 +126,8 @@
         "no_prebuilt_scenario_found": "У нас нет такого сценария, но вы можете построить свой собственный ниже.",
         "risk_modifier_frac_2nd": "{{frac}} риск",
         "baseline_risk_short": "базовый",
-        "baseline_risk": "базовый риск"
+        "baseline_risk": "базовый риск",
+        "risk_modifier_frac_3rd": "{{frac}} риска"
     },
     "current_lang_two_letter_code": "ru",
     "menu": {
