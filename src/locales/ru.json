@@ -127,7 +127,8 @@
         "risk_modifier_frac_2nd": "{{frac}} риск",
         "baseline_risk_short": "базовый",
         "baseline_risk": "базовый риск",
-        "risk_modifier_frac_3rd": "{{frac}} риска"
+        "risk_modifier_frac_3rd": "{{frac}} риска",
+        "risk_modifier_frac_plural": "{{frac}} рисков"
     },
     "current_lang_two_letter_code": "ru",
     "menu": {
