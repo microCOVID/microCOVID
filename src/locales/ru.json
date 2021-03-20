@@ -130,7 +130,8 @@
         "risk_modifier_frac_3rd": "{{frac}} риска",
         "risk_modifier_frac_plural": "{{frac}} рисков",
         "firsttime": {
-            "microcovid_header": "Что такое microCOVID?"
+            "microcovid_header": "Что такое microCOVID?",
+            "budget_header": "Что такое бюджет риска?"
         }
     },
     "current_lang_two_letter_code": "ru",
