@@ -77,7 +77,7 @@
             "risk_budget_used": "Elhasznált kockázat",
             "risk_budget_usage_explanation": "Ennek a tevékenységnek az \"ára\" <strong>{{ usage }}</strong>. Ezt elhasználod <strong>{{ frequency }}</strong>.",
             "risk_tolerance_selector_header": "Mekkora kockázatot vállalsz be",
-            "last_updated": "A modell utoljára frissítve: {{ date }}. (<1>A változások listája elérhető itt.</1>)",
+            "last_updated": "A modell utoljára frissítve: {{ date }}. <1>A változások listája elérhető itt.</1>",
             "activity_risk_capped_note": "(FIGYELEM: Ezt az értéket <2>limitáltuk a maximális Tevékenységkockázat értékével</2>.)"
         },
         "pointsdisplay": {
@@ -88,9 +88,10 @@
         "riskreduction": {
             "housemates_header": "Pár jótanács, hogy hogyan tudjátok a lakótársaiddal/partnereddel együtt csökkenteni a kockázatotok",
             "housemates_tips": "<li>Magyarázd el nekik, hogy egymásra vagytok utalva és az ő döntéseik befolyásolják a te biztonságod is, és ez fordítva is igaz.</li> <li>Kérd meg őket, hogy ha csak lehet, minden tevékenységüket végezzék maszkban, szabadban, a többiektől távolságot tartva.</li> <li>Ha eljárnak dolgozni otthonról, az elérhető legjobb minőségű maszkot hordják a munkahelyükön (pl. N95/FFP2-est)</li> <1/> <li>Kérd meg őket, hogy a lehető legkevesebb emberrel találkozzanak úgy, hogy nem tartanak távolságot egymás közt.</li> <li>Ha megoldható, a koronavírus-fertőzés első jele esetén azonnal teszteltessétek le és izoláljátok magatok.</li> <li>Ha valamelyikük nagy a kockázatnak van kitéve és muszáj beltérben együtt lenni vele, <ul> <li>hordjatok maszkot</li> <li>maximalizáljátok a szellőzést ablaknyitással, ventilátorokkal és HEPA-szűrőkkel</li> <li>izoláljátok el magatok a házon belül külön szobákban</li> </ul></li>",
-            "onetime_header": "Néhány tipp, hogy hogyan csökkentheted a tevékenységed kockázatát",
+            "onetime_header": "Hogyan csökkentheted a tevékenységed kockázatát?",
             "onetime_warning": "Előfordulhat, hogy a tippek némelyike nem értelmezhető az adott tevékenységre, de a többit attól még érdemes megfontolni.",
-            "onetime_tips": "<li>Próbálj minél több tevékenységet maszkban, szabadban és távolságot tartva végezni.</li> <li>Az elérhető legjobb maszkot viseld! <br/><1/></li> <li>Nyilvános helyekre akkor menj, amikor a legkevesebben vannak ott.</li> <li>Próbálj meg minél kevesebbszer boltba menni. Vásároljatok be többen együtt, vagy próbáljátok ki a házhozszállítást.</li> <li>Ha másokkal találkozol, említsd nekik, hogy ha ők vagy a közeli kapcsolataik rosszul vannak, akkor inkább ne jöjjenek el.</li>"
+            "onetime_tips": "<li>Próbálj minél több tevékenységet maszkban, szabadban és távolságot tartva végezni.</li> <li>Az elérhető legjobb maszkot viseld! <1/></li> <li>Nyilvános helyekre akkor menj, amikor a legkevesebben vannak ott.</li> <li>Próbálj meg minél kevesebbszer boltba menni. Vásároljatok be többen együtt, vagy próbáljátok ki a házhozszállítást.</li> <li>Ha másokkal találkozol, említsd nekik, hogy ha ők vagy a közeli kapcsolataik rosszul vannak, akkor inkább ne jöjjenek el.</li>",
+            "link_to_mask_blog": "A blogpostunkban részletesen írunk a maszkokról."
         },
         "nearby_people_label": "Emberek körülötted",
         "number_of_people_near_you_partner": "Hány emberrel élsz együtt?",
@@ -168,7 +169,8 @@
             "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul.",
             "masks_update": "<0>2021. január 28:</0> A kiválasztható maszkok körét kibővítettük és frissítettük. A részletekről a <3>tanulmány maszkokról szóló fejezetében</3> olvashatsz angolul.",
             "full_changelog": "régebbi változtatások...",
-            "vaccines_update": "<0>2020. február 23. :</0> A kalkulátorban megadhatod a védőoltásod. A részletekről többet olvashatsz angolul a tanulmány <2>gyakori kérdések</2>-részében."
+            "vaccines_update": "<0>2020. február 23. :</0> A kalkulátorban megadhatod a védőoltásod. A részletekről többet olvashatsz angolul a tanulmány <2>gyakori kérdések</2>-részében.",
+            "vaccines_update_2": "<0>2021. március 16:</0> A Kockázatkövetőben meg tudod adni, ha valakit már beoltottak. <2>Itt találsz</2> erről több információt."
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -193,7 +195,8 @@
         "repeated_interaction_risk_message": "Ha egyvalaki fertőzött, a továbbfertőzési esély alapértéke <1>hetente {{ percentage }}</1>.",
         "one_time_interaction_risk_message": "Ha egyvalaki fertőzött, a továbbfertőzési esély alapértéke <1>óránként {{ percentage }}</1>.",
         "risk_modifier_multiple_short": "{{multiplier}}x",
-        "baseline_risk_short": "alapérték"
+        "baseline_risk_short": "alapérték",
+        "post_results_survey": "Lenne időd <1>pár angol kérdést megválaszolni</1>, segítve ezzel az oldal fejlesztését?"
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
@@ -283,7 +286,8 @@
         "indoorUnmaskedWithCovidPositive": "Találkozó beltéren, maszk nélkül egy koronavírusossal",
         "planeRideMiddleSeatEmpty": "Repülőút (üresen hagyott középső ülések)",
         "60minShoppingFew": "Egyórás bevásárlás (közel üres boltban)",
-        "custom": "Állítsd össze a saját szkenáriód"
+        "custom": "Állítsd össze a saját szkenáriód",
+        "60minShoppingCrowded": "Egyórás bevásárlás (zsúfolt boltban)"
     },
     "about": {
         "intro_header": "Miről szól a microCOVID projekt?",
