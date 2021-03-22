@@ -184,7 +184,7 @@
     "one_time_interaction_risk_message": "<1>{{ percentage }} per hour</1> baseline chance of transmission for each infected person nearby",
     "repeated_interaction_risk_message": "<1>{{ percentage }} per week</1> baseline chance of transmission for each infected person nearby",
     "partner_interaction_risk_message": "<1>{{ percentage }} per week</1> baseline chance of transmission if this person is infected",
-    "location_risk_message": "~{{ prevalence }} of people in your location are infectious right now",
+    "location_risk_message": "~{{ prevalence }} of people here are currently infectious. We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
     "risk_group_empty_warning": "Enter your location first.",
     "alerts": {
       "average_vaccine": "<0>June 22nd, 2021:</0> Added an option to specify vaccination status of average people. Learn more about the derivation <2>here</2>.",

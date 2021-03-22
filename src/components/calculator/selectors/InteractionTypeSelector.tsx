@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Collapse } from 'react-bootstrap'
+import { Button, Collapse, Dropdown } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
@@ -7,10 +7,12 @@ import { VerticalControl } from 'components/calculator/controls/VerticalControl'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import { CalculatorData, calculateLocationPersonAverage } from 'data/calculate'
 import { BaseFormValue, Interaction } from 'data/data'
+import 'components/calculator/styles/InteractionTypeSelector.scss'
 
 export const InteractionTypeDisplay: React.FunctionComponent<{
   currentData: CalculatorData
   interactionType: string
+  setInteractionType: (newData: string) => void
   editInteractionType: boolean
   setEditInteractionType: (newEdit: boolean) => void
   showResetButton: boolean
@@ -18,7 +20,7 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
   const { t } = useTranslation()
   const [showInteractionTypeMath, setShowInteractionTypeMath] = useState(false)
   const getInteractionRiskMessage = (interactionType: string) => {
-    if (interactionType === 'oneTime' || interactionType === 'work') {
+    if (interactionType === 'oneTime' || interactionType === 'workplace') {
       return 'calculator.one_time_interaction_risk_message'
     } else if (interactionType === 'repeated') {
       return 'calculator.repeated_interaction_risk_message'
@@ -32,48 +34,63 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
     return 'calculator.one_time_interaction_risk_message'
   }
 
+  const formattedInteractionTypeName = props.showResetButton ? (
+    <Dropdown>
+      <Dropdown.Toggle
+        id="custom-interaction-type"
+        variant="light"
+        className="text-wrap"
+      >
+        {t(Interaction[props.interactionType].label)}
+      </Dropdown.Toggle>
+      <Dropdown.Menu className="w-100">
+        {Object.keys(Interaction).map((value, index) => {
+          return (
+            <Dropdown.Item
+              key={index}
+              className="text-wrap"
+              onSelect={() => {
+                props.setInteractionType(value)
+              }}
+            >
+              {Interaction[value].label}
+            </Dropdown.Item>
+          )
+        })}
+      </Dropdown.Menu>
+    </Dropdown>
+  ) : (
+    <span>
+      {props.interactionType === undefined || props.interactionType === ''
+        ? t('calculator.set_interaction_type_to_continue')
+        : t(Interaction[props.interactionType].label)}
+    </span>
+  )
+
   return (
     <>
-      <span className="d-inline-block">
-        {props.editInteractionType ||
-        Interaction[props.interactionType] === undefined
-          ? t('calculator.set_interaction_type_to_continue')
-          : t(Interaction[props.interactionType].label)}{' '}
-        {props.showResetButton && (
-          <Button
-            className="m-0 py-0 pl-0 pl-sm-2 d-inline-block border-0 align-baseline text-secondary"
-            onClick={() => {
-              props.setEditInteractionType(true)
-            }}
-            size="sm"
-            variant="light"
-          >
-            x {t('calculator.change_interaction_type')}
-            {/*
-              <BsX className="align-top" />
-              */}
-          </Button>
-        )}
-        {props.interactionType !== undefined && !props.editInteractionType && (
-          <Button
-            onClick={() => setShowInteractionTypeMath(!showInteractionTypeMath)}
-            aria-controls="interaction-type-math"
-            aria-expanded={showInteractionTypeMath}
-            variant="link"
-            size="sm"
-            className="pl-0 font-weight-bold d-block"
-          >
-            {showInteractionTypeMath ? (
-              <BsChevronDown className="align-baseline" />
-            ) : (
-              <BsChevronRight className="align-baseline" />
-            )}
-            {showInteractionTypeMath
-              ? t('calculator.hide_math')
-              : t('calculator.show_math')}
-          </Button>
-        )}
-      </span>
+      <div className="d-inline-block d-md-inline">
+        {formattedInteractionTypeName}
+      </div>
+      {props.interactionType !== undefined && !props.editInteractionType && (
+        <Button
+          onClick={() => setShowInteractionTypeMath(!showInteractionTypeMath)}
+          aria-controls="interaction-type-math"
+          aria-expanded={showInteractionTypeMath}
+          variant="link"
+          size="sm"
+          className="pl-0 font-weight-bold d-block underline-for-focus"
+        >
+          {showInteractionTypeMath ? (
+            <BsChevronDown className="align-baseline" />
+          ) : (
+            <BsChevronRight className="align-baseline" />
+          )}
+          {showInteractionTypeMath
+            ? t('calculator.hide_math')
+            : t('calculator.show_math')}
+        </Button>
+      )}
       {props.interactionType !== undefined && !props.editInteractionType && (
         <Collapse in={showInteractionTypeMath}>
           <ul>

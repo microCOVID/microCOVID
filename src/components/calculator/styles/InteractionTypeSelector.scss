@@ -1,0 +1,16 @@
+@import '~styles/variables.scss';
+
+#custom-interaction-type {
+  text-align: left;
+}
+
+#custom-interaction-type::after {
+  display: block;
+  float: right;
+  margin-top: 0.5em;
+}
+
+.underline-for-focus:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

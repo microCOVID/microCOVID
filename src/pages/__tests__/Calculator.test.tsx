@@ -66,26 +66,20 @@ describe('calculator page', () => {
     fireEvent.click(gathering)
     expect(queryByText(nearbyPeople)).toBeInTheDocument()
 
-    const changeScenarioType = /x Clear/i
-    fireEvent.click(getByText(changeScenarioType))
-    expect(queryByText(nearbyPeople)).not.toBeInTheDocument()
-    expect(queryByText(changeScenarioType)).not.toBeInTheDocument()
+    fireEvent.click(getByText(/A gathering/i))
 
     const workOption = /Going to work/i
     fireEvent.click(getByText(workOption))
     expect(queryByText(nearbyPeople)).toBeInTheDocument()
-    expect(queryByText(changeScenarioType)).toBeInTheDocument()
   })
 
   it('Applies preset scenarios', () => {
-    const {
-      queryAllByRole,
-      getByText,
-      queryByText,
-      getByPlaceholderText,
-    } = render(<Calculator />, {
-      wrapper: AllProviders,
-    })
+    const { queryAllByRole, getByText, getByPlaceholderText } = render(
+      <Calculator />,
+      {
+        wrapper: AllProviders,
+      },
+    )
 
     const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
     fireEvent.click(topLocationBox)
@@ -98,11 +92,8 @@ describe('calculator page', () => {
 
     // Basic functionality check
     const outdoorHangout = /Outdoor masked hangout with 2 other people/i
-    const changeScenarioType = /x Clear/i
     const nearbyPeople = /How many people/i
     fireEvent.click(getByText(outdoorHangout))
-    // Cannot change interaction type from a preset.
-    expect(queryByText(changeScenarioType)).not.toBeInTheDocument()
     expect(getByText(nearbyPeople)).toBeInTheDocument()
     expect(getByText(outdoorHangout)).toBeInTheDocument()
 
@@ -111,8 +102,6 @@ describe('calculator page', () => {
 
     const indoorHangout = /Indoor unmasked hangout with 2 other people/i
     fireEvent.click(getByText(indoorHangout))
-    // Cannot change interaction type from a preset.
-    expect(queryByText(changeScenarioType)).not.toBeInTheDocument()
     expect(getByText(nearbyPeople)).toBeInTheDocument()
     expect(getByText(indoorHangout)).toBeInTheDocument()
   })

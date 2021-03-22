@@ -125,6 +125,7 @@ const SavedScenarioCard: React.FunctionComponent<{
   onStartOver: (event: React.MouseEvent<HTMLButtonElement>) => void
   startOverButton?: JSX.Element
   editInteractionType: boolean
+  setInteractionType: (newInteraction: string) => void
   setEditInteractionType: (newEdit: boolean) => void
   interactionType: string
 }> = (props): React.ReactElement => {
@@ -165,6 +166,7 @@ const SavedScenarioCard: React.FunctionComponent<{
               {heading}
             </Alert.Heading>
             <InteractionTypeDisplay
+              setInteractionType={props.setInteractionType}
               currentData={props.currentData}
               interactionType={props.interactionType}
               editInteractionType={props.editInteractionType}
@@ -210,6 +212,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   editInteractionType: boolean
   setEditInteractionType: (newEdit: boolean) => void
   interactionType: string
+  setInteractionType: (newInteraction: string) => void
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
   const prepopulatedOptions = Object.keys(prepopulated)
@@ -272,6 +275,7 @@ export const SavedDataSelector: React.FunctionComponent<{
           scenarioName={props.scenarioName}
           scenarioNameSetter={setSavedData}
           showingResults={props.showingResults}
+          setInteractionType={props.setInteractionType}
           setEditScenario={props.setEditScenario}
           onStartOver={() => {
             setSavedData('')

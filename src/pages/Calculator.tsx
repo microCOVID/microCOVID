@@ -273,6 +273,17 @@ export const Calculator = (): React.ReactElement => {
                       editInteractionType={editInteractionType}
                       setEditInteractionType={setEditInteractionType}
                       interactionType={calculatorData.interaction}
+                      setInteractionType={(value) => {
+                        setCalculatorData({
+                          ...calculatorData,
+                          interaction: value,
+                          personCount:
+                            value === 'partner'
+                              ? 1
+                              : calculatorData.personCount,
+                        })
+                        recordCalculatorOptionSelected('interaction', value)
+                      }}
                     />
                   </Col>
                 </Row>
