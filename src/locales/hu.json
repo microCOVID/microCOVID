@@ -146,9 +146,9 @@
             "budget_explanation": "<p>Saját magad végiggondolhatod, hogy mekkora kockázatot vállalsz fel a megfertőződésre. Ezt a kockázatot felfoghatod úgy, mint a saját \"kockázati kereted\".</p> <p>Úgy gondoljuk, hogy az évi 1%-os fertőzési kockázat egy kezelhető érték a legtöbb egészséges ember számára, aki nincs kapcsolatban veszélyeztetett csoportokkal -- ez egy évi 10,000 microCOVID-os keretet jelent. Ha tartani akarod ezt, ahhoz a heti tevékenységeid kockázatát összesen <strong>200 microCOVID alatt kell tartanod.</strong></p>"
         },
         "risk_tolerance_1_percent_label": "Átlagos keret",
-        "risk_tolerance_1_percent_explanation": "Keret: évi 1% esély a fertőzésre, avagy 200 microCOVID hetente (javasolt érték, ha nem vagy veszélyeztetett)",
+        "risk_tolerance_1_percent_explanation": "Évi 1% esély a fertőzésre (200 microCOVID hetente). Válaszd ezt, ha egészséges vagy és nem kerülsz közeli kapcsolatba veszélyeztetettekkel.",
         "risk_tolerance_point1_percent_label": "Kockázatkerülő keret",
-        "risk_tolerance_point1_percent_explanation": "Keret: évi 0.1% esély a fertőzésre, avagy 20 microCOVID hetente (javasolt érték, ha veszélyeztetett vagy, vagy gyakran találkozol veszélyeztetettel)",
+        "risk_tolerance_point1_percent_explanation": "Évi 0.1% esély a fertőzésre (20 microCOVID hetente). Válaszd ezt, ha veszélyeztetett vagy, vagy gyakran találkozol veszélyeztetettel.",
         "intro": {
             "whats_this": "Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen használható intuíciót és megfelelő ártalomcsökkentési stratégiákat kialakítani, és csökkenteni a vírussal kapcsolatos stresszt.</p><p>A legfontosabb lépés a családod és a környezeted megóvására, ha te magad nem kapod el a koronavírust.",
             "call_to_action": "Számold ki egy tevékenység vagy kapcsolat COVID-kockázatát!",
@@ -196,7 +196,11 @@
         "one_time_interaction_risk_message": "Ha egyvalaki fertőzött, a továbbfertőzési esély alapértéke <1>óránként {{ percentage }}</1>.",
         "risk_modifier_multiple_short": "{{multiplier}}x",
         "baseline_risk_short": "alapérték",
-        "post_results_survey": "Lenne időd <1>pár angol kérdést megválaszolni</1>, segítve ezzel az oldal fejlesztését?"
+        "post_results_survey": "Lenne időd <1>pár angol kérdést megválaszolni</1>, segítve ezzel az oldal fejlesztését?",
+        "risk_tolerance_3_percent_explanation": "Évi 3% esély a fertőzésre (600 microCOVID hetente). Válaszd ezt, ha egészséges vagy és több kockázatot szeretnél vállalni (vagy kell vállalnod), és MINDENKI, akivel együtt élsz vagy egy légtérben tartózkodsz ugyanígy tesz.",
+        "risk_tolerance_3_percent_label": "Kockázattűrő keret",
+        "risk_tolerance_10_percent_explanation": "Évi 10% esély a fertőzésre (2000 microCOVID hetente). Válaszd ezt, ha nem tudod elkerülni a fertőzés kockázatát, de azért jó döntéseket akarsz hozni. Ne feledd: ha megfertőződsz, azt könnyen átadhatod bárkinek, akivel kapcsolatba kerülsz. Próbáld a lehető legkisebb kockázatot vállalni az ő érdekükben is.",
+        "risk_tolerance_10_percent_label": "Ártalomcsökkentő keret"
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
