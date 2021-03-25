@@ -6,7 +6,8 @@ export const spreadsheetUrl =
 // Do not include '/edit' at the end of the URL, because we append different paths like /copy or /template/preview depending on the use case
 
 export const mailchimpSubscribeUrl = 'http://eepurl.com/hb6y4T'
-export const changelogUrl = 'https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8'
+export const changelogUrl =
+  'https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8'
 
 export function mailchimpLink(
   text = 'Sign up to be notified about Risk Tracker updates',
