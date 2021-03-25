@@ -8,11 +8,7 @@ import activityModeling from './img/activity-modeling.png'
 import podOverviewIntro from './img/budget-overview.png'
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
-import {
-  changelogUrl,
-  mailchimpSubscribeUrl,
-  spreadsheetUrl,
-} from 'components/RiskTrackerUtil'
+import { changelogUrl, mailchimpSubscribeUrl } from 'components/RiskTrackerUtil'
 import { TableOfContents } from 'components/TableOfContents'
 import { pages } from 'posts/tracker/index'
 
