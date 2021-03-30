@@ -443,13 +443,15 @@ describe('calculate', () => {
       type             | doses | multiplier
       ${'pfizer'}      | ${0}  | ${1}
       ${'pfizer'}      | ${1}  | ${0.56}
-      ${'pfizer'}      | ${2}  | ${0.2}
+      ${'pfizer'}      | ${2}  | ${0.1}
       ${'moderna'}     | ${0}  | ${1}
       ${'moderna'}     | ${1}  | ${0.56}
-      ${'moderna'}     | ${2}  | ${0.2}
+      ${'moderna'}     | ${2}  | ${0.1}
       ${'astraZeneca'} | ${0}  | ${1}
       ${'astraZeneca'} | ${1}  | ${0.56}
       ${'astraZeneca'} | ${2}  | ${0.4}
+      ${'johnson'}     | ${0}  | ${1}
+      ${'johnson'}     | ${1}  | ${0.33}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
@@ -470,7 +472,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineLongScenario)).toBeCloseTo(
-        calcValue(noVaccineLongScenario)! * 0.2,
+        calcValue(noVaccineLongScenario)! * 0.1,
       )
     })
 
@@ -485,7 +487,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineHousemate)).toBeCloseTo(
-        calcValue(noVaccineHousemate)! * 0.2,
+        calcValue(noVaccineHousemate)! * 0.1,
       )
     })
 
@@ -501,7 +503,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccinePartner)).toBeCloseTo(
-        calcValue(noVaccinePartner)! * 0.2,
+        calcValue(noVaccinePartner)! * 0.1,
       )
     })
   })
