@@ -13,6 +13,7 @@ const changes: Change[] = [
 * Vaccine updates: 
   * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
   * Improved multiplier for Moderna and Pfizer's vaccines (0.2 -> 0.1) based on new data.
+  * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZenica / Johnson & Johnson (Pfizer's was the only study that used 7 days).
   * See [Research Sources](/paper/14-research-sources#vaccines) for rationale.`,
   },
   {
