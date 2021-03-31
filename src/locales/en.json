@@ -36,7 +36,7 @@
       "your_vaccine_label": "Which vaccine did you receive?",
       "your_vaccine_doses_label": "How many doses?",
       "no_vaccine": "No vaccine",
-      "doses_7_days_ago": "If your last dose was <1 week ago, subtract one dose when answering--the last dose may not be protecting you yet.",
+      "doses_7_days_ago": "If your last dose was <2 weeks ago, subtract one dose when answering--the last dose may not be protecting you yet.",
       "i_have_been_vaccinated": "Add your vaccine"
     },
     "risk_note_about_household_members": "When estimating your risk of infection from a household member or partner/spouse we assume these interactions are indoors, unmasked, and undistanced.",
@@ -178,6 +178,7 @@
     "risk_group_empty_warning": "Enter your location first.",
     "saved_scenario_loaded_message": "If needed, adjust the following prefilled answers to match your <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
+      "vaccines_update_3": "<0>March 30th, 2021:</0> The calculator and Risk Tracker now include support for Johnson & Johnson's vaccine. Pfizer & Moderna's effectiveness have been updated. Waiting time between receiving a dose and getting the benefits from it increased to 14 days. Learn more <2>here</2>.",
       "vaccines_update_2": "<0>March 16th, 2021:</0> The Risk Tracker now allows you to model seeing someone else who has been vaccinated. Learn more <2>here</2>.",
       "vaccines_update": "<0> February 23rd, 2021:</0> The calculator now reduces your risk if you are vaccinated. Learn more in the <2>Q&A</2>.",
       "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
@@ -251,6 +252,7 @@
       "pfizer": "Pfizer BioNTech",
       "moderna": "Moderna",
       "astra_zeneca": "AstraZeneca",
+      "johnson_johnson": "Johnson & Johnson",
       "unknown": "Unknown or other"
     }
   },

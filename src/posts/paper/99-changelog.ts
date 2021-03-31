@@ -8,6 +8,15 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 2, 30),
+    content: `
+* Vaccine updates: 
+  * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
+  * Improved multiplier for Moderna and Pfizer's vaccines (0.2 -> 0.1) based on new data.
+  * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZenica / Johnson & Johnson (Pfizer's was the only study that used 7 days).
+  * See [Research Sources](/paper/14-research-sources#vaccines) for rationale.`,
+  },
+  {
     date: new Date(2021, 2, 16),
     content: `
 * The latest version of the [Risk Tracker](/tracker) now supports modeling the risk of someone you are seeing who is vaccinated.`,
