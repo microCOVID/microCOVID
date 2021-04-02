@@ -8,7 +8,12 @@ import activityModeling from './img/activity-modeling.png'
 import podOverviewIntro from './img/budget-overview.png'
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
-import { mailchimpLink, spreadsheetUrl } from 'components/RiskTrackerUtil'
+import {
+  mailchimpLink,
+  riskTrackerReleaseDate,
+  riskTrackerVersion,
+  spreadsheetUrl,
+} from 'components/RiskTrackerUtil'
 import { TableOfContents } from 'components/TableOfContents'
 import { pages } from 'posts/tracker/index'
 
@@ -160,9 +165,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
           of the spreadsheet to have the latest upgrades and bug fixes.
         </p>
         <p>
-          <strong>Current version:</strong> 2.2
+          <strong>Current version:</strong> {riskTrackerVersion}
           <br />
-          <strong>Released on:</strong> 2021-03-16
+          <strong>Released on:</strong> {riskTrackerReleaseDate}
           <br />
           🕑{' '}
           <a href="https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8">
