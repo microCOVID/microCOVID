@@ -77,9 +77,10 @@
         "riskreduction": {
             "housemates_header": "Několik rad pro komunikaci s blízkými kontakty ohledně snížení rizika",
             "onetime_warning": "Tyto se mohou ale také nemusí týkat vaší aktivity.",
-            "onetime_tips": "<li>Upravte své aktivity (VOR: Venku, Odstup, Rouška)</li> <li>Noste nejlepší masku, kterou seženete (roušku či respirátor) <br/><1/></li> <li>Navštěvujte veřejná místa v méně rušné hodiny</li> <li>Omezte cesty do obchodu nákupováním pro více lidí najednou, využitím doručovacích služeb či nákupů online</li> <li>Pokud je aktivita s přáteli, požádejte je, aby nepřišli necítí-li se oni či jejich blízké kontakty dobře</li>",
+            "onetime_tips": "<li>Upravte své aktivity (VOR: Venku, Odstup, Rouška)</li> <li>Noste nejlepší masku, kterou seženete (roušku či respirátor) <1/></li> <li>Navštěvujte veřejná místa v méně rušné hodiny</li> <li>Omezte cesty do obchodu nákupováním pro více lidí najednou, využitím doručovacích služeb či nákupů online</li> <li>Pokud je aktivita s přáteli, požádejte je, aby nepřišli necítí-li se oni či jejich blízké kontakty dobře</li>",
             "housemates_tips": "<li>Promluvte si s nimi o tom, jak jejich volby ovlivňují vaše i jejich riziko</li> <li>Požádejte je, aby upravili své aktivity (VOR: Venku, Odstup, Rouška)</li> <li>Pracovníci v první linii můžou v práci nosit respirátor. <1/></li> <li>Požádejte je, aby omezili blízká setkání na minimum</li> <li>Nábadejte je, aby se při prvních příznacích COVIDu izolovali a nechali se otestovat</li> <li>Pokud mají vysoké riziko COVIDu a vy s nimi musíte pobývat uvnitř: <ul> <li>Noste roušku</li> <li>Maximalizujte ventilaci otevřenými okny, větráky přivádějícími vzduch z vnějšku a HEPA filtry </li> <li>Izolujte se v domě v různých místnostech.</li> </ul></li>",
-            "onetime_header": "Zde je několik způsobů snížení rizika této aktivity"
+            "onetime_header": "Jak snížit riziko",
+            "link_to_mask_blog": "Více o maskách v našem blogovém příspěvku."
         },
         "firsttime": {
             "budget_explanation": "<p>Můžete se rozhodnout, jak velkému riziku jste ochotni se vystavit. Toto celkové riziko, které jste ochotni podstoupit, představuje váš „rizikový rozpočet“.</p> <p>Myslíme si, že pro většinu zdravých lidí, kteří nejsou v kontaktu s ohroženými skupinami, je rozumná míra rizika <strong>pravděpodobnost 1 % nakažení koronavirem</strong> – to představuje roční rizikový rozpočet 10 000 mikrocovidů. Aby se člověk do tohoto rozpočtu vešel, musí udržet míru rizika na maximu asi <strong>200 mikrocovidů týdně</strong>.</p>",
@@ -150,10 +151,12 @@
         "number_of_people_near_you_partner": "S kolika lidmi žijete či bydlíte?",
         "nearby_people_label": "Lidé poblíž",
         "alerts": {
-            "survey_request": "<0>Budeme rádi za vaši zpětnou vazbu:</0> Oceníme vaši pomoc, abychom udělali microCOVID kalkulačku co nejužitečnější! <2>Prosím vyplňte náš dotazník pro uživatele</2>, abyste nám pomohli určit priority pro další vývoj tohoto nástroje.",
+            "survey_request": "<0>Budeme rádi za vaši zpětnou vazbu:</0> Vyplňte prosím <2>náš uživatelský dotazník</2>, pomůžete nám ke zlepšování kalkulačky a k určení priorit pro další vývoj.",
             "b117": "<0>Aktualizace modelu:</0> Upravili jsme patametry pro novou variantu COVIDu, B117. Více si můžete přečíst <3>zde</3>.",
             "masks_update": "<0>28. 1. 2021:</0> Přidali jsme nové typy masek a aktualizovali součinitele pro ty existující. Více se dozvíte v <3>našem novém blogovém příspěvku o maskách</3>.",
-            "vaccines_update": "<0> 23. 2. 2021:</0> Kalkulačka nově sníží vaše riziko v případě, že jste očkováni. Více v <2>otázkách a odpovědích</2>."
+            "vaccines_update": "<0> 23. 2. 2021:</0> Kalkulačka nově sníží vaše riziko v případě, že jste očkováni. Více v <2>otázkách a odpovědích</2>.",
+            "full_changelog": "ukázat všechny novinky...",
+            "vaccines_update_2": "<0>16. 3. 2021:</0> Počítač rizika nově umožňuje modelovat návštěvu očkovaného člověka. Více informací <2>zde</2>."
         },
         "saved_scenario_loaded_message": "V případě potřeby upravte předvolené odpovědi, aby odpovídaly konkrétní situaci <strong>{{ scenarioName }}</strong>.",
         "frontline_worker_acknowledgement": "Hluboce oceňujeme oběti, které dělají během pandemie pracovníci v první linii. Doporučujeme najít bezpečný způsob, jak těmto lidem poskytnout podporu a péči a předejít tomu, že se budou cítit izolovaní. Přepdpokládáme, že většina z nich bude očkována v nejbližších měsících, což výrazně sníží riziko, že se nakazí nebo někoho nakazí.",
@@ -179,7 +182,8 @@
         "switch_button": {
             "enter_data_manually": "Nastavit data oblasti ručně"
         },
-        "select_location_label": "Země nebo stát USA"
+        "select_location_label": "Země nebo stát USA",
+        "post_results_survey": "Chtěl(a) byste <1>odpovědět na pár otázek a pomoci tak vylepšit microCOVID</1>?"
     },
     "current_lang_two_letter_code": "cs",
     "menu": {
@@ -208,19 +212,19 @@
             "nonFrontline": "Průměrný člověk ze stejné oblasti, který pracuje z domova",
             "frontline": "Zdravotnický nebo sociální pracovník",
             "average": "Průměrný člověk ze stejné oblasti",
-            "microcovid_budget_deci_percent": "Používá microCOVID pro udržení rizika pod 0.1% za rok (200 microcovidů za týden)",
-            "microcovid_budget_one_percent": "Používá microCOVID pro udržení rizika pod 1% za rok (200 microcovidů za týden)",
+            "microcovid_budget_deci_percent": "Drží se rozpočtu 20 microCOVIDů týdně („Rozpočet vysoké opatrnosti“)",
+            "microcovid_budget_one_percent": "Drží se rozpočtu 200 microCOVIDů týdně („Rozpočet standardní opatrnosti“)",
             "contactWorks": "Má 1 blízký kontakt, který je zdravotnický nebo sociální pracovník. Jinak je v uzavřené bublině.",
             "livingAlone": "Žije sám/a a pouze chodí nakupovat"
         },
-        "filtered_mask": "Chirurgická maska nebo maska/rouška s PM2,5 filtrační vložkou",
-        "repeated": "Člen domácnosti nebo návštěva žijící u Vás doma [{{ percentage }} pravděpodobnost přenosu týdně]",
+        "filtered_mask": "Látková rouška s vyjímatelnou filtrační vložkou",
+        "repeated": "Jak rizikové je žít/bydlet s jinými lidmi (např. spolubydlící či rodina)?",
         "loud_voice": "Hlasitý hovor (křik, překřikování hudby, zpěv)",
         "normal_voice": "Běžná konverzace",
         "silent_voice": "Žádný hovor (např. tichá jízda vlakem)",
-        "n95_mask": "Dobře padnoucí a těsnící N95 / FFP2 respirátor",
-        "basic_mask": "Bavlněná rouška či jiná látková ochrana",
-        "no_mask": "Žádná či špatně nasazená maska",
+        "n95_mask": "Sedí, ale nejste si jistí, jestli těsní",
+        "basic_mask": "Vícevrstvá látková rouška, přiléhavá, správně padnoucí",
+        "no_mask": "Žádná maska; příp. konzumace jídla či nápojů",
         "tenft_distance": "Alespoň 3 m od sebe",
         "sixft_distance": "Alespoň 2 m od sebe",
         "normal_distance": "Běžná socializace (cca 1 m od sebe)",
@@ -233,46 +237,69 @@
         "transit": "Vlak s filtrovanou ventilací",
         "filtered": "Uvnitř s HEPA filtrem (průtok filtrem 5x objem místnosti)",
         "indoor": "Uvnitř",
-        "partner": "Partner/ka nebo manžel/ka [{{ percentage }} pravděpodobnost přenosu týdně]",
-        "oneTime": "Jednorázová interakce či opakovaná aktivita [{{ percentage }} pravděpodobnost přenosu za hodinu]"
+        "partner": "Jak rizikové je žít/bydlet s partnerem/partnerkou/manželem/manželkou?",
+        "oneTime": "Jak rizikové je toto setkání/aktivita/záležitost?",
+        "vaccine": {
+            "unknown": "Neznámá nebo jiná",
+            "astra_zeneca": "AstraZeneca",
+            "moderna": "Moderna",
+            "pfizer": "Pfizer BioNTech"
+        },
+        "p100_mask_short": "P100 respirátor",
+        "n95_sealed_mask_short": "N95 (utěsněná)",
+        "n95_mask_short": "N95, KN95 nebo FFP2",
+        "filtered_mask_short": "Filtrační vložka",
+        "surgical_mask_short": "Chirurgická",
+        "basic_mask_short": "Látková, silná a přiléhavá",
+        "thin_mask_short": "Látková, tenká či volná",
+        "no_mask_short": "Žádná maska",
+        "p100_mask_theirs": "Respirátor P100, NIOSH certifikace, znovupoužitelný, není jasné, jestli je výdechový ventil chráněn",
+        "p100_mask_yours": "Respirátor P100, certifikace NIOSH, znovupoužitelný s krytým výdechovým ventilem",
+        "n95_sealed_mask": "Vzduchotěsná, bez ventilu, žádné gumičky za uši, bez vousů",
+        "surgical_mask": "Volná jednorázová modrá (nebo zelená) chirurgická rouška",
+        "thin_mask": "Látková rouška, tenká či volná (šátek či nákrčník nebo volná či padající rouška)",
+        "workplace": "Jak rizikové je chození do práce?"
     },
     "button": {
         "copy_link": "Zkopírovat odkaz na tento scénář",
         "reset_form": "Restartovat formulář"
     },
     "about": {
-        "donations_details": "Vítáme také sponzorské dary v jakékoli výši. Je to pouze na vás. Jsme dobrovolníky a tento projekt aktuálně nemá žádné financování. Děkujeme předem!",
+        "donations_details": "Vítáme také sponzorské dary v jakékoli výši. Je to pouze na vás. Děkujeme předem!",
         "donations_header": "Sponzorský dar",
         "feedback": "Pokud máte jakoukoli zpětnou vazbu, dotaz nebo byste rádi pomohli, kontaktujte nás <1>zde</1>.",
         "contact_us_header": "Kontaktujte nás",
         "disclaimer": "<0>Varování</0> Tímto nástrojem činíme odhady na základě dostupných důkazy, i když nejsou vždy průkazné. Četli jsme mnoho odborného výzkumu, ale my sami odborníky nejsme. Tato práce neprošla recenzním řízením (peer review). Ohledně COVIDu panuje stále mnoho nejistot. Nespoléhejte na tento nástroj v lékařských otázkách. Žádáme vás, abyste nadále dodržovali vládní nařízení.",
         "data_inputs_recommendation": "Měli byste začít <2>kalkulačkou</2> nebo <5>white paperem</5>.",
-        "data_inputs_spreadsheet": "a <1>spreadsheet</1>, kde si můžete spočíst vaše COVID riziko podrobněji a zaznamenávat ho v čase.",
+        "data_inputs_spreadsheet": "a <1>počítač rizika</1>, kde si můžete spočíst vaše COVID riziko podrobněji a zaznamenávat ho v čase.",
         "data_inputs_whitepaper": "<1>white paper</1> , který vysvětluje naši metodiku",
         "data_inputs_lead": "Tato stránka obsahuje tři výstupy našeho průzkumu",
         "where_to_start_header": "Kde mám začít?",
         "intro_header": "Co je projekt microCOVID?",
         "data_inputs_calculator": "<1>kalkulačku</1>, kterou můžete použít k výpočtu rizika COVIDu",
-        "basic_description": "Cílem projektu je odhadnout riziko chytit COVID během každodenních činností. Pro získání dat o pravděpodobnosti chycení COVIDu jsem prošli vědeckou literaturu a zkombinovali tato data do modelu, který může používat každý. Riziko COVIDu odhadujeme v jednotkách microCOVIDy, kde 1 microCOVID = šance jedna ku jednomu milionu chytit COVID."
+        "basic_description": "<1>Cílem projektu je odhadnout riziko chytit COVID během každodenních činností.</1><2>Pro získání dat o pravděpodobnosti chycení COVIDu jsme prošli vědeckou literaturu a zkombinovali tato data do modelu, který může používat každý. Riziko COVIDu odhadujeme v jednotce microCOVID, kde 1 microCOVID = šance jedna ku milionu chytit COVID.</2><3>Chceme pomoci co největšímu počtu lidí, aby pocítili, jak mohou svými rozhodnutími ovlivnit riziko nakažení COVIDem, tím, že jim objasníme, jak se COVID přenáší. Doufáme, že vám tento nástroj pomůže zdokonalit intuici, snížit hladinu stresu a najít vhodné strategie pro snížení škod.</3>",
+        "who_are_we_header": "Kdo jsme my?"
     },
     "scenario": {
         "indoorUnmaskedWithCovidPositive": "Setkání s osobou mající COVID, uvnitř a bez masky",
         "votingInPerson": "Návštěva volební místnosti",
         "outdoorMaskedWithCovidPositive": "Setkání s osobou mající COVID, venku a s maskou",
-        "smallIndoorParty25": "Malá vnitřní oslava: 25 lidí bez masek",
-        "largeOutdoorParty": "Velká venkovní oslava: s maskami a metrovými rozestupy",
+        "smallIndoorParty25": "Vnitřní oslava: 25 lidí bez masek",
+        "largeOutdoorParty": "Venkovní oslava: 80 lidí s maskami a metrovými rozestupy",
         "bar": "Návštěva baru",
-        "planeRide": "Let letadlem",
+        "planeRide": "Let letadlem (plně obsazeno)",
         "60minShopping": "Nákup v supermarketu trvající 60 minut (běžný počet dalších nakupujících)",
         "liveInPartner_noContacts": "Partner/ka, který/á s vámi bydlí a nemá kromě vás žádné interakce",
-        "1person_15minCarRide": "Jízda autem s jednou osobou trvající 15 minut",
-        "indoorUnmasked2": "Setkání s dvěma lidmi bez masek, uvnitř",
-        "outdoorMasked2": "Setkání s dvěma lidmi v maskách, venku",
+        "1person_15minCarRide": "Jízda autem s jednou další osobou trvající 15 minut",
+        "indoorUnmasked2": "Setkání se dvěma dalšími lidmi bez masek, uvnitř",
+        "outdoorMasked2": "Setkání se dvěma dalšími lidmi v maskách, venku",
         "restaurantIndoors": "Jídlo v restauraci, uvnitř",
         "restaurantOutdoors": "Jídlo v restauraci, venku",
         "oneNightStand": "Známost na jednu noc s náhodnout osobou",
         "planeRideMiddleSeatEmpty": "Cesta letadlem (prostřední sedadlo ponecháno prázdné)",
-        "60minShoppingFew": "60-minutový nákup v samoobsluze (malý počet dalších nakupujících)"
+        "60minShoppingFew": "60-minutový nákup v samoobsluze (malý počet dalších nakupujících)",
+        "60minShoppingCrowded": "Obchod s potravinami na 60 minut (přelidněno)",
+        "custom": "Sestavte si vlastní situaci"
     },
     "buttons": {
         "select_default_action": "Zvolte jednu možnost ..."

@@ -86,13 +86,17 @@ export default function ExplanationCard(props: {
   const calculationBreakdown = () => {
     return (
       <>
-        <div id="changelog">
-          <Trans
-            i18nKey="calculator.explanationcard.last_updated"
-            values={{ date: lastUpdated.toLocaleDateString() }}
-          >
-            Model last updated on (date). (
-            <Link to="/paper/changelog">Changelog</Link>)
+        <div className="mb-2">
+          <Trans i18nKey="calculator.post_results_survey">
+            Would you like to
+            <a
+              href="https://forms.gle/Ud62hF3iaP82TDaz9"
+              target="_blank"
+              rel="noreferrer"
+            >
+              tell us how you used the calculator today
+            </a>
+            ?
           </Trans>
         </div>
         <Expandable
@@ -100,6 +104,18 @@ export default function ExplanationCard(props: {
           header={t('calculator.explanationcard.details_header_closed')}
           headerExpanded={t('calculator.explanationcard.details_header_open')}
         >
+          <div id="changelog">
+            <Trans
+              i18nKey="calculator.explanationcard.last_updated"
+              values={{ date: lastUpdated.toLocaleDateString() }}
+            >
+              Model last updated on (date). (
+              <Link className="boring-link" to="/paper/changelog">
+                Changelog
+              </Link>
+              )
+            </Trans>
+          </div>
           <div>
             <h4>{t('calculator.explanationcard.details_overview_header')}:</h4>
             <div id="calculation-breakdown">

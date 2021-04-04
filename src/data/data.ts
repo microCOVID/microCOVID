@@ -143,10 +143,18 @@ export const Voice: { [key: string]: FormValue } = {
   },
 }
 
+export const BUDGET_TEN_PERCENT = 100000
+export const BUDGET_THREE_PERCENT = 30000
 export const BUDGET_ONE_PERCENT = 10000
 export const BUDGET_ONE_TENTH_PERCENT = 1000
 
 export const budgetOptions = [
+  {
+    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
+    multiplier: 0.1,
+    value: BUDGET_ONE_TENTH_PERCENT.toString(),
+  },
   {
     label: i18n.t('calculator.risk_tolerance_1_percent_label'),
     sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
@@ -154,10 +162,16 @@ export const budgetOptions = [
     value: BUDGET_ONE_PERCENT.toString(),
   },
   {
-    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
-    multiplier: 0.1,
-    value: BUDGET_ONE_TENTH_PERCENT.toString(),
+    label: i18n.t('calculator.risk_tolerance_3_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_3_percent_explanation'),
+    multiplier: 3,
+    value: BUDGET_THREE_PERCENT.toString(),
+  },
+  {
+    label: i18n.t('calculator.risk_tolerance_10_percent_label'),
+    sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
+    multiplier: 10,
+    value: BUDGET_TEN_PERCENT.toString(),
   },
 ]
 
@@ -350,15 +364,19 @@ export interface VaccineValue {
 export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multiplierPerDose: [1, 0.56, 0.2],
+    multiplierPerDose: [1, 0.56, 0.1],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multiplierPerDose: [1, 0.56, 0.2],
+    multiplierPerDose: [1, 0.56, 0.1],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
     multiplierPerDose: [1, 0.56, 0.4],
+  },
+  johnson: {
+    label: i18n.t('data.vaccine.johnson_johnson'),
+    multiplierPerDose: [1, 0.33],
   },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),

@@ -320,7 +320,6 @@ Data from [Pfizer’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMo
 | ----------------- | ------------- | ---------------- |
 | Participants      | 21,728        | 21,720           |
 | Symptomatic Cases | 162           | 8                |
-| Severe Cases[^pfizer-supplement]| 4             | 1                |
 
 Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389):
 
@@ -328,33 +327,57 @@ Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJM
 | ----------------- | ------------- | ---------------- |
 | Participants      | 15,210        | 15,210           |
 | Symptomatic Cases | 185           | 11               |
-| Severe Cases      | 30            | 0                |
 
 First, we note that these two vaccines are very, very effective at preventing symptomatic COVID (95% for Pfizer and 94% for Moderna). Second, we note that the Phase III studies do not include data on cases without symptoms. 
 
-However, in a [supplement provided to the FDA](https://www.fda.gov/media/144453/download), Moderna showed a 63% reduction in positive PCR swabs at the time of the 2nd dose among people who had no symptoms of COVID up to that point.
+Since then, a [study](https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e3.htm) done by the CDC found 90% reduction in all cases (symptomatic + asymptomatic) 14+ days after participants received Moderna or Pfizer’s vaccine.
 
-This indicates that the total reduction in Symptomatic + Never Symptomatic COVID cases from *the first dose* of Moderna’s vaccine is 63%. Likely it is even better after the second dose. From this, we construct the following chart:
+From this, we construct the following table for Moderna:
 
-|                                                         | Control Group                | Vaccinated Group            |
-| ------------------------------------------------------- | ---------------------------- | --------------------------- |
-| Participants                                            | 15,210                       | 15,210                      |
-| Symptomatic Cases                                       | 185                          | 11                          |
-| Symptomatic + Asymptomatic                              | 222 (1.2x symptomatic cases) | < 82 (0.37 x control group) |
-| Never symptomatic cases<br>(subtract previous two rows) | 37                           | < 71                        |
+|                                                                        | Control Group                            | Vaccinated Group                   |
+| ---------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
+| Participants                                                           | 15,210                                   | 15,210                             |
+| Symptomatic cases (From phase III Trial)                               | 185                                      | 11                                 |
+| Symptomatic + Never Symptomatic                                        | 222 (0.17 / (1-0.17) x symptomatic cases)| 22 (0.1 x control group, CDC data) |
+| Never Symptomatic cases (Symptomatic +Never Symptomatic - Symptomatic) | 37                                       | 11                                 |
 
-Now we can calculate the overall effect on contagiousness:
-Control group adjusted contagiousness = \`185 * 1 + 37 * .42 = 200\`
-Vaccinated group adjusted contagiousness = \`11 * 1 + 71 * .42 = 40\`
-Relative contagiousness of vaccinated group = \`40 / 200 = 0.2\`
+Now we can calculate the overall effect on contagiousness: 
+Control group adjusted contagiousness = \`185 * 1 + 37 * .42 = 200\` 
+Vaccinated group adjusted contagiousness = \`11 * 1 + 11 * .42 = 15.65\` 
+Relative contagiousness of vaccinated group = \`15.65 / 200 = 0.08\`. 
 
-We assume that Pfizer's vaccine has similar performance as Moderna's on the basis of similar design and reported metrics.
+We assume that Pfizer’s vaccine has similar performance as Moderna’s on the basis that they have similar designs and reported metrics.
 
-Post Phase III studies for Moderna and Pfizer are in progress, we expect to update these numbers as data becomes available.
+Additionally, a [study of the Pfizer vaccine in the UK](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3790399) of 23,324 participants found 86% reduction of symptomatic and never-symptomatic cases. [Israel’s study](https://www.nejm.org/doi/full/10.1056/NEJMoa2101765) of 500,000 vaccinated individuals suggests 92% reduction in all cases of COVID-19, but we have some concerns over the completeness of their coverage of never-symptomatic cases.
 
-The overall risk reduction for preventing severe cases of Moderna is 97%. We calculate a 95% CI of (76.5, 100)[^confidence-interval]
+Israel’s study provides much more complete data on the risk reduction for severe COVID (the Phase III studies for both Moderna and Pfizer were underpowered to determine this). They found a 92% risk reduction for severe COVID among participants who had received both doses of the Pfizer vaccine. Note that “severe illness” is [defined by NIH](https://www.covid19treatmentguidelines.nih.gov/overview/clinical-spectrum/) as requiring supplemental oxygen (i.e. hospitalization).
 
-Pfizer cites a 75% vaccine effectiveness at preventing severe disease, with a 95% CI of (-152.6, 99.5)
+### Johnson & Johnson
+
+For Johnson & Johnson’s vaccine, we used data from a [brief](https://www.fda.gov/media/146217/download) filed with the FDA based on their Phase III study. The J&J trial tracked both symptomatic and never-symptomatic infections. Johnson and Johnson performed serology assays for non-spike-protein antibodies on days 1, 29 and 71 to track never-symptomatic infections. They also counted an never-symptomatic infection if a participant presented with a positive PCR test but no symptoms. Symptomatic cases were counted if a patient presented with symptoms and tested positive via PCR at least 14 days after administration of the vaccine.
+
+
+|                                      | Control Group | Vaccinated Group |
+| ------------------------------------ | ------------- | ---------------- |
+| Symptomatic Cases (14-71 days)       | 351 / 19544   | 117/19514        |
+| Never-symptomatic Cases (0-29 days)  | 182 / 19809   | 159 / 19739      |
+| Never-symptomatic Cases (29-71 days) | 54 / 19162    | 22 / 19301       |
+
+From this data we see that J&J’s vaccine reduces both symptomatic and never-symptomatic cases. The never-symptomatic efficacy is improve after 29 days compared to days 14-29. 
+
+We calculate overall effect on contagiousness:
+
+Days 14-29:
+Control Group:  \`351 / 19544 * 1 + 182 / 19809 * 0.42 = 0.02\`  
+Vaccinated Group: \`117 / 19514 * 1 + 159 / 19739 * 0.42 = 0.0094\`
+Contagiousness ratio: \`0.0076 / 0.020 = 0.43\`
+
+Days 29-71:
+Control Group: \`351 / 19544 * 1 + 54 / 19162 * 0.42 = 0.019\`
+Vaccinated Group: \`117 / 19514 * 1 + 22 / 19301 * 0.42 = 0.0065\`
+Contagiousness ratio: \`0.0062 / 0.019 = 0.34\`
+
+From this we estimate that the microCOVID multiplier for the Johnson and Johnson vaccine is 0.38 14 days after injection, dropping down to 0.33 29 days post infection. Because these two multipliers are close together and the higher multiplier only covers weeks 2-4, for simplicity’s sake we recommend using a multiplier of 1/3x for 14 days post-vaccination and onwards. 
 
 ### Single Shot Efficacy
 For vaccines require 2 doses, we see reductions in symptomatic COVID after a single shot of about 50% across Moderna, Pfizer, and AstraZeneca. Moderna further provided data suggesting a 63% reduction in total cases (symptomatic and otherwise). This gives us the following estimated case distribution:
@@ -378,10 +401,6 @@ HOWEVER, data that immunity is much shorter-lived in individuals with one dose o
 [^heupdate]: If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).
 
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
-
-[^pfizer-supplement]: Data on severe cases for Pfizer's vaccine is provided in their [supplement](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file/nejmoa2034577_appendix.pdf)
-
-[^confidence-interval]: We use the calculator on [Scale Statistics](https://www.scalestatistics.com/relative-risk.html) to calculate confidence intervals when none is provided. For situations where one group has 0 cases, we substitute 1 for this computation.
 `
 
 const post = { title, shortTitle, content }
