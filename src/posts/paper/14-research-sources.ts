@@ -391,6 +391,38 @@ For vaccines require 2 doses, we see reductions in symptomatic COVID after a sin
 This gives an overall multiplier of \`(0.4 + .42 * .23) / (0.8 + .42 * .2) = 0.56\`
 HOWEVER, data that immunity is much shorter-lived in individuals with one dose of a 2 dose vaccine. We recommend getting the second dose as soon as it is available.
 
+### Sputnik V (Gamelaya Research)
+
+The efficacy of the Sputnik V vaccine produced by the Gamelaya Research Institute is based on their phase 3 trial information [published in Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-8/fulltext). The test setup is similar to Moderna & Pfizer in that only symptomatic cases of COVID were measured, but in this case, the control and vaccinated groups had a different size. Therefore our calculation is similar: we can calculate the ratio of never-symptomatic cases based on Byambasuren et al., but we need to normalize the adjusted infectiousness figures for the group size.
+
+This is how the numbers look like 14 days after dose 1:
+
+|                                 | Control Group                            |  Vaccinated Group                       |
+| ------------------------------- | ---------------------------------------- | --------------------------------------- |
+| Participants                    | 4,950                                    | 14,999                                  |
+| Symptomatic Cases               | 79                                       | 30                                      |
+| Never symptomatic cases         | 16 (0.17 / (1-0.17) x symptomatic cases) | 6 (0.17 / (1-0.17) x symptomatic cases) |
+
+Now we can calculate the overall effect on contagiousness:
+Control group adjusted contagiousness = \`(79 * 1 + 16 * .42) / 4,950 = 1.73%\`
+Vaccinated group adjusted contagiousness = \`(30 * 1 + 6 * .42) / 14,999 = 0.22%\`
+Relative contagiousness of vaccinated group = \`0.22 / 1.73 = 0.13\`.
+
+This is how the numbers look like 7 days after dose 2:
+
+|                                 | Control Group                            |  Vaccinated Group                       |
+| ------------------------------- | ---------------------------------------- | --------------------------------------- |
+| Participants                    | 4,601                                    | 14,094                                  |
+| Symptomatic Cases               | 47                                       | 13                                      |
+| Never symptomatic cases         | 10 (0.17 / (1-0.17) x symptomatic cases) | 3 (0.17 / (1-0.17) x symptomatic cases) |
+
+Now we can calculate the overall effect on contagiousness:
+Control group adjusted contagiousness = \`(47 * 1 + 10 * .42) / 4,601 = 1.11%\`
+Vaccinated group adjusted contagiousness = \`(13 * 1 + 3 * .42) / 14,094 = 0.10%\`
+Relative contagiousness of vaccinated group = \`0.10 / 1.11 = 0.09\`.
+
+The trial also measured efficacy 21 days after dose 1, on the day of dose 2, which practically equivalent numbers to what they saw 7 days after. This suggests that the Sputnik V vaccine offers a strong protection 2-3 weeks after the first dose, and the second dose is only required to make the effect more permanent.
+
 
 [^1]:
      We find it easier to understand the difference between an odds ratio and a risk ratio in a medical context. If 100 people walk into your clinic with heart disease, and twice as many were smokers as non-smokers, then the odds ratio is 2x. But that doesn’t tell you what you would get if you _started_ with 50 smokers and 50 nonsmokers and watched for heart disease later. You don’t know what the base rate of smoking was in your original dataset. See [https://psychscenehub.com/psychpedia/odds-ratio-2](https://psychscenehub.com/psychpedia/odds-ratio-2) for more on this.

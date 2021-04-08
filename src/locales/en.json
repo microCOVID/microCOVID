@@ -253,7 +253,8 @@
       "moderna": "Moderna",
       "astra_zeneca": "AstraZeneca",
       "johnson_johnson": "Johnson & Johnson",
-      "unknown": "Unknown or other"
+      "unknown": "Unknown or other",
+      "sputnik": "Sputnik V"
     }
   },
   "scenario": {
