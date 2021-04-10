@@ -381,7 +381,7 @@ From this we estimate that the microCOVID multiplier for the Johnson and Johnson
 
 ### Sputnik V (Gamelaya Research)
 
-The efficacy of the Sputnik V vaccine produced by the Gamelaya Research Institute is based on their phase 3 trial information [published in Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-8/fulltext). Our calculation is similar to the one used for Moderna & Pfizer. Non-symptomatic cases were not measured in this study, so based on Byambasuren et al. and measurements for other vaccines, we estimate non-symptomatic cases to be 17% of all cases in the control group and 50% in the vaccinated one. As the control and the vaccinated group had a different size, we also have to normalize the adjusted infectiousness figures.
+The efficacy of the Sputnik V vaccine produced by the Gamelaya Research Institute is based on their phase 3 trial information [published in Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-8/fulltext). Our calculation is similar to the one used for Moderna & Pfizer. Non-symptomatic cases were not measured in this study, so based on Byambasuren et al. and the CDC study about Moderna/Pfizer, we estimate non-symptomatic cases to be 17% of all cases in the control group and 50% in the vaccinated one. As the control and the vaccinated group had a different size, we also have to normalize the adjusted infectiousness figures.
 
 This is how the numbers look like 14 days after dose 1:
 
