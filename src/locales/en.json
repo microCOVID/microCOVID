@@ -178,12 +178,9 @@
     "risk_group_empty_warning": "Enter your location first.",
     "saved_scenario_loaded_message": "If needed, adjust the following prefilled answers to match your <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
+      "sputnik_added": "<0>April 10th, 2021:</0> Added the Sputnik V vaccine to the calculator. Learn more about our calculation of its efficacy <2>here</2>.",
       "vaccines_update_3": "<0>March 30th, 2021:</0> The calculator and Risk Tracker now include support for Johnson & Johnson's vaccine. Pfizer & Moderna's effectiveness have been updated. Waiting time between receiving a dose and getting the benefits from it increased to 14 days. Learn more <2>here</2>.",
       "vaccines_update_2": "<0>March 16th, 2021:</0> The Risk Tracker now allows you to model seeing someone else who has been vaccinated. Learn more <2>here</2>.",
-      "vaccines_update": "<0> February 23rd, 2021:</0> The calculator now reduces your risk if you are vaccinated. Learn more in the <2>Q&A</2>.",
-      "masks_update": "<0>January 28th, 2021:</0> We added new mask types, and updated multipliers for existing ones. Learn more in <3>our new blog post about masks</3>.",
-      "b117": "<0>January 5th, 2021:</0> The calculator now accounts for the new more infectious COVID-19 variant B117. Read more <3>here</3>.",
-      "survey_request": "<0>We would love your feedback:</0> Please fill out <2>our user survey</2> to help us make the calculator as helpful as possible, and prioritize new features.",
       "full_changelog": "see all updates..."
     }
   },
@@ -253,7 +250,8 @@
       "moderna": "Moderna",
       "astra_zeneca": "AstraZeneca",
       "johnson_johnson": "Johnson & Johnson",
-      "unknown": "Unknown or other"
+      "unknown": "Unknown or other",
+      "sputnik": "Sputnik V"
     }
   },
   "scenario": {
