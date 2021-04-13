@@ -212,19 +212,6 @@ export const Calculator = (): React.ReactElement => {
           </p>
         </Col>
         <Col lg="4" md="12">
-          <Alert className="request-feedback" variant="primary">
-            <Trans i18nKey="calculator.alerts.survey_request">
-              <strong>We would love your feedback:</strong> lipsum
-              <a
-                href="https://forms.gle/WzFWcmyXwQMNRqGa7"
-                target="_blank"
-                rel="noreferrer"
-              >
-                survey
-              </a>{' '}
-              lipsum
-            </Trans>
-          </Alert>
           <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.sputnik_added">
               <strong>DATE PLACEHOLDER:</strong>{' '}
