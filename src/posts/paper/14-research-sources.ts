@@ -377,7 +377,39 @@ Control Group: \`351 / 19544 * 1 + 54 / 19162 * 0.42 = 0.019\`
 Vaccinated Group: \`117 / 19514 * 1 + 22 / 19301 * 0.42 = 0.0065\`
 Contagiousness ratio: \`0.0062 / 0.019 = 0.34\`
 
-From this we estimate that the microCOVID multiplier for the Johnson and Johnson vaccine is 0.38 14 days after injection, dropping down to 0.33 29 days post infection. Because these two multipliers are close together and the higher multiplier only covers weeks 2-4, for simplicity’s sake we recommend using a multiplier of 1/3x for 14 days post-vaccination and onwards. 
+From this we estimate that the microCOVID multiplier for the Johnson and Johnson vaccine is 0.38 14 days after injection, dropping down to 0.33 29 days post infection. Because these two multipliers are close together and the higher multiplier only covers weeks 2-4, for simplicity’s sake we recommend using a multiplier of 1/3x for 14 days post-vaccination and onwards.
+
+### Sputnik V (Gamelaya Research)
+
+The efficacy of the Sputnik V vaccine produced by the Gamelaya Research Institute is based on their phase 3 trial information [published in Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-8/fulltext). Our calculation is similar to the one used for Moderna & Pfizer. Non-symptomatic cases were not measured in this study, so based on Byambasuren et al. and the CDC study about Moderna/Pfizer, we estimate non-symptomatic cases to be 17% of all cases in the control group and 50% in the vaccinated one. As the control and the vaccinated group had a different size, we also have to normalize the adjusted infectiousness figures.
+
+This is how the numbers look like 14 days after dose 1:
+
+|                                 | Control Group                            |  Vaccinated Group                       |
+| ------------------------------- | ---------------------------------------- | --------------------------------------- |
+| Participants                    | 4,950                                    | 14,999                                  |
+| Symptomatic Cases               | 79                                       | 30                                      |
+| Never symptomatic cases         | 16 (0.17 / (1-0.17) x symptomatic cases) | 30 (= symptomatic cases)                |
+
+Now we can calculate the overall effect on contagiousness:
+* Control group adjusted contagiousness = \`(79 * 1 + 16 * .42) / 4,950 = 1.73%\`
+* Vaccinated group adjusted contagiousness = \`(30 * 1 + 30 * .42) / 14,999 = 0.28%\`
+* Relative contagiousness of vaccinated group = \`0.22 / 1.73 = 0.16\`.
+
+This is how the numbers look like 7 days after dose 2:
+
+|                                 | Control Group                            |  Vaccinated Group                       |
+| ------------------------------- | ---------------------------------------- | --------------------------------------- |
+| Participants                    | 4,601                                    | 14,094                                  |
+| Symptomatic Cases               | 47                                       | 13                                      |
+| Never symptomatic cases         | 10 (0.17 / (1-0.17) x symptomatic cases) | 13 (= symptomatic cases)                |
+
+Now we can calculate the overall effect on contagiousness:
+* Control group adjusted contagiousness = \`(47 * 1 + 10 * .42) / 4,601 = 1.11%\`
+* Vaccinated group adjusted contagiousness = \`(13 * 1 + 13 * .42) / 14,094 = 0.13%\`
+* Relative contagiousness of vaccinated group = \`0.10 / 1.11 = 0.12\`.
+
+The trial also measured efficacy 21 days after dose 1, on the day of dose 2, with practically equivalent numbers to what they saw 7 days after. This suggests that the Sputnik V vaccine offers a strong protection 2-3 weeks after the first dose, and the second dose is only required for long-term protection.
 
 ### Single Shot Efficacy
 For vaccines require 2 doses, we see reductions in symptomatic COVID after a single shot of about 50% across Moderna, Pfizer, and AstraZeneca. Moderna further provided data suggesting a 63% reduction in total cases (symptomatic and otherwise). This gives us the following estimated case distribution:

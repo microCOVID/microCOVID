@@ -212,28 +212,21 @@ export const Calculator = (): React.ReactElement => {
           </p>
         </Col>
         <Col lg="4" md="12">
-          <Alert className="request-feedback" variant="primary">
-            <Trans i18nKey="calculator.alerts.survey_request">
-              <strong>We would love your feedback:</strong> lipsum
-              <a
-                href="https://forms.gle/WzFWcmyXwQMNRqGa7"
-                target="_blank"
-                rel="noreferrer"
-              >
-                survey
-              </a>{' '}
-              lipsum
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.sputnik_added">
+              <strong>DATE PLACEHOLDER:</strong>{' '}
+              <Link to="/paper/14-research-sources#sputnik-v-gamelaya-research">
+                {'DETAILS LINK PLACEHOLDER'}
+              </Link>
+              .
             </Trans>
           </Alert>
           <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.vaccines_update_3">
-              <strong>Model update:</strong>{' '}
-              <Link to="/paper/13-q-and-a#vaccines-qa">{'Q&A'}</Link>.
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.vaccines_update_2">
-              <strong>Model update:</strong> <Link to="/tracker">{'here'}</Link>
+              <strong>DATE PLACEHOLDER:</strong>{' '}
+              <Link to="/paper/13-q-and-a#vaccines-qa">
+                {'DETAILS LINK PLACEHOLDER'}
+              </Link>
               .
             </Trans>
           </Alert>

@@ -8,6 +8,11 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 3, 10),
+    content: `
+* Added Gamelaya Research's Sputnik V vaccine to the calculator. See the [Research Sources](/paper/14-research-sources#sputnik-v-gamelaya-research) section of the White Paper for details.`,
+  },
+  {
     date: new Date(2021, 2, 30),
     content: `
 * Vaccine updates: 

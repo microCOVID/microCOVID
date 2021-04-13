@@ -38,7 +38,7 @@
                 "select_instead": "Ezt a típust válaszd: {{ mask_type }}."
             },
             "i_have_been_vaccinated": "Beoltottak?",
-            "doses_7_days_ago": "Ha kevesebb, mint egy hete oltottak be, akkor azt még ne számold bele, mert még nem biztos, hogy kialakult a megfelelő védelem.",
+            "doses_7_days_ago": "Ha kevesebb, mint két hete oltottak be, akkor azt még ne számold bele, mert még nem biztos, hogy kialakult a megfelelő védelem.",
             "no_vaccine": "Nem oltottak be",
             "your_vaccine_doses_label": "Hány adagot kaptál meg eddig?",
             "your_vaccine_label": "Téged melyik vakcinával oltottak be?",
@@ -170,7 +170,8 @@
             "masks_update": "<0>2021. január 28:</0> A kiválasztható maszkok körét kibővítettük és frissítettük. A részletekről a <3>tanulmány maszkokról szóló fejezetében</3> olvashatsz angolul.",
             "full_changelog": "régebbi változtatások...",
             "vaccines_update": "<0>2020. február 23. :</0> A kalkulátorban megadhatod a védőoltásod. A részletekről többet olvashatsz angolul a tanulmány <2>gyakori kérdések</2>-részében.",
-            "vaccines_update_2": "<0>2021. március 16:</0> A Kockázatkövetőben meg tudod adni, ha valakit már beoltottak. <2>Itt találsz</2> erről több információt."
+            "vaccines_update_2": "<0>2021. március 16:</0> A Kockázatkövetőben meg tudod adni, ha valakit már beoltottak. <2>Itt találsz</2> erről több információt.",
+            "vaccines_update_3": "<0>2021. március 30.</0> A kalkulátor és a kockázatkövetőben most már a Johnson & Johnson-vakcinát is meg lehet adni. Pontosítottuk a Pfizer- és Moderna-oltások hatásosságát. Megnöveltük az oltások hatására való kivárási időt 14 napra. <2>Itt olvashatsz többet erről</2>."
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -258,7 +259,8 @@
             "unknown": "Egyéb vagy nem ismert",
             "astra_zeneca": "AstraZeneca",
             "moderna": "Moderna",
-            "pfizer": "Pfizer BioNTech"
+            "pfizer": "Pfizer BioNTech",
+            "johnson_johnson": "Johnson & Johnson"
         },
         "p100_mask_short": "P100",
         "n95_sealed_mask_short": "N95 (légmentesen zárt)",

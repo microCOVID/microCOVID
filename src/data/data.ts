@@ -378,6 +378,10 @@ export const Vaccines: { [key: string]: VaccineValue } = {
     label: i18n.t('data.vaccine.johnson_johnson'),
     multiplierPerDose: [1, 0.33],
   },
+  sputnik: {
+    label: i18n.t('data.vaccine.sputnik'),
+    multiplierPerDose: [1, 0.15, 0.1],
+  },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
     multiplierPerDose: [1, 0.56, 0.4],

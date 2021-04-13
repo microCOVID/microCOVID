@@ -86,19 +86,6 @@ export default function ExplanationCard(props: {
   const calculationBreakdown = () => {
     return (
       <>
-        <div className="mb-2">
-          <Trans i18nKey="calculator.post_results_survey">
-            Would you like to
-            <a
-              href="https://forms.gle/Ud62hF3iaP82TDaz9"
-              target="_blank"
-              rel="noreferrer"
-            >
-              tell us how you used the calculator today
-            </a>
-            ?
-          </Trans>
-        </div>
         <Expandable
           id="calculation-explanation"
           header={t('calculator.explanationcard.details_header_closed')}
