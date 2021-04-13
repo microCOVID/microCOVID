@@ -137,7 +137,7 @@ These masks provide more protection than a cloth or surgical mask:
 * For a well-fitted, well-sealed N95, we roughly estimate an 8x reduction in risk for the wearer (versus 2x for a surgical mask or high-quality cloth mask).
   * But remember, these masks are only effective if you get a tight seal around your face! Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [seal check](https://www.cdc.gov/niosh/docs/2018-130/pdfs/2018-130.pdf) and watch a [video](https://www.youtube.com/watch?v=CoSb-HJJ5tk) in order to effectively use your N95.
 
-* A P100 is even better. We estimate that P100's provide a 20x recuction in risk. 
+* A P100 is even better. We estimate that P100's provide a 20x reduction in risk. 
   * A major reason we like P100s is they are easier to get a good seal on. You can search for online training on how to do this.
   * Note that P100 respirators typically have an outflow valve, meaning they provide minimal protection to others from you, so if you use a P100, you may be legally required to cover the  outflow valve with cloth or a surgical mask.
 
