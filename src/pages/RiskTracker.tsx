@@ -8,7 +8,12 @@ import activityModeling from './img/activity-modeling.png'
 import podOverviewIntro from './img/budget-overview.png'
 import { DropdownNav } from 'components/DropdownNav'
 import { MarkdownContents } from 'components/markdown/PaperPage'
-import { changelogUrl, mailchimpSubscribeUrl } from 'components/RiskTrackerUtil'
+import {
+  changelogUrl,
+  mailchimpSubscribeUrl,
+  riskTrackerReleaseDate,
+  riskTrackerVersion,
+} from 'components/RiskTrackerUtil'
 import { TableOfContents } from 'components/TableOfContents'
 import { pages } from 'posts/tracker/index'
 
@@ -99,9 +104,9 @@ export const RiskTrackerTOC = (): React.ReactElement => {
         <h2>Latest release</h2>
         <p>
           <strong>
-            Current version: <mark>2.2.1</mark>{' '}
+            Current version: <mark>{riskTrackerVersion}</mark>{' '}
           </strong>{' '}
-          (Released on: 2021-03-18)
+          (Released on: {riskTrackerReleaseDate})
           <br />
           <Button href={changelogUrl} variant="primary" target="_blank">
             View Upgrade Instructions <BsBoxArrowUpRight />

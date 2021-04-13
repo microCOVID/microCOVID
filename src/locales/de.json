@@ -28,8 +28,20 @@
             "environment_header": "Umgebung",
             "filtered_ensure_airflow": "Stelle sicher, dass der Filter für deinen Raum ausreichend durchströmt ist. Hilfe dazu findest du unter <1>hier</ 1>.",
             "mask_not_listed": {
-                "your_prompt": "Ist deine Maske nicht in der Liste?"
-            }
+                "your_prompt": "Ist deine Maske nicht in der Liste?",
+                "others_fallback": "Wähle {{ mask_type }} als konservative Schätzung.",
+                "others": "Andere",
+                "select_instead": "{{ mask_type }} auswählen",
+                "instructions": "Anleitung",
+                "mask_type": "Maskenart",
+                "their_prompt": "Ist die Maske der Anderen nicht in der Liste?"
+            },
+            "i_have_been_vaccinated": "Deine Impfung hinzufügen",
+            "doses_7_days_ago": "Wenn deine letzte Dosis weniger als 1 Woche her ist, zieh 1 von deiner Antwort ab -- möglicherweise schützt dich die letzte Dosis noch nicht.",
+            "no_vaccine": "Keine Impfung",
+            "your_vaccine_doses_label": "Wie viele Dosen?",
+            "your_vaccine_label": "Welche Impfung hast du erhalten?",
+            "your_vaccine_header": "Deine Impfung"
         },
         "risk_note_about_household_members": "Bei der Bestimmung des Risikos, sich bei meinem Haushaltsmitglied oder einem Partner / Ehepartner anzustecken, gehen wir davon aus, dass die Kontakte drinnen, ohne Maske und ohne Abstände erfolgen.",
         "explanationcard": {
@@ -64,7 +76,7 @@
             "percentage_suffix": "% deines wöchentlichen Risikobudgets",
             "multiple_suffix": "x dein wöchentliches Risikobudget",
             "risk_budget_explanation": "Du hast ein jährliches Risikobudget einer {{ budget_percent }}-Chance einer COVID-Infektion pro Jahr ausgewählt ({{ budget_points }} microCOVIDs). Das entspricht einem wöchentlichen Budget von <strong>{{ budget_weekly }} microCOVIDs pro Woche</strong>.",
-            "last_updated": "Das Modell wurde zuletzt am {{ date }} aktualisiert. (<1>Siehe das Änderungsprotokoll</1>)",
+            "last_updated": "Das Modell wurde zuletzt am {{ date }} aktualisiert. <1>Siehe alle Änderungen...</1>",
             "activity_risk_capped_note": "(Hinweis: Wir haben diese Zahl <2> auf das maximale Aktivitätsrisiko begrenzt</2>.)"
         },
         "pointsdisplay": {
@@ -73,11 +85,12 @@
             "microCOVIDs": "microCOVIDs"
         },
         "riskreduction": {
-            "onetime_tips": "<li>Passe deine Aktivitäten an (MAD: „Maske, Abstand, Draußen“)</li> <li>Trage die beste Maske, die du kriegen kannst! <br/><1/></li> <li>Suche öffentliche Orte zu weniger belebten Uhrzeiten auf</li> <li> Reduziert Einkäufe, indem ihr einen Einkauf für mehrere Leute erledigt, Lieferdienste nutzt oder online einkauft</li> <li>Falls diese Aktivität normalerweise mit Freunden stattfindet, bitte sie, nicht mitzukommen, falls sie oder ihre unmittelbaren Kontakte sich nicht wohlfühlen</li>",
+            "onetime_tips": "<li>Passe deine Aktivitäten an (MAD: „Maske, Abstand, Draußen“)</li> <li>Trage die beste Maske, die du kriegen kannst! <1/></li> <li>Suche öffentliche Orte zu weniger belebten Uhrzeiten auf</li> <li> Reduziert Einkäufe, indem ihr einen Einkauf für mehrere Leute erledigt, Lieferdienste nutzt oder online einkauft</li> <li>Falls diese Aktivität normalerweise mit Freunden stattfindet, bitte sie, nicht mitzukommen, falls sie oder ihre unmittelbaren Kontakte sich nicht wohlfühlen</li>",
             "housemates_tips": "<li>Kläre sie darüber auf, wie ihre Maßnahmen sowohl ihr als auch dein Risiko beeinflussen können</li> <li>Bitte sie, ihre Aktivitäten anzupassen („Masken, draußen, Abstand“</li> <li>Systemrelevante Mitarbeiter können bei der Arbeit Masken bester Qualität tragen (z.B. N95 or KN95) <1/></li> <li>Bitte sie, Treffen ohne Abstand auf so wenig Personen wie möglich zu reduzieren</li> <li>Ermutige enge Kontakte, sich beim ersten Auftreten von COVID-Symptonen zu isolieren und testen zu lassen</li> <li>Falls sie ein hohes COVID-Risiko haben und du dich mit ihnen drinnen aufhalten musst: <ul> <li>Tragt drinnen Masken</li> <li>Sorgt für maximalen Luftaustausch durch Öffnen der Fenster, Ventilatoren, die Luft von draußen hineinblasen, und mit HEPA-Filtern</li> <li>Isoliert euch auch innerhalb des Gebäudes, indem ihr euch in unterschiedlichen Räumen aufhaltet.</li> </ul></li>",
             "onetime_warning": "Diese können auf deine Aktivität zutreffen oder auch nicht.",
-            "onetime_header": "Hier sind ein paar Möglichkeiten, das Risiko für diese Aktivität zu senken",
-            "housemates_header": "Hier sind ein paar Maßnahmen, die du mit engen Kontakten zur Reduzierung des Risikos ergreifen kannst"
+            "onetime_header": "Wie man Risiko reduziert",
+            "housemates_header": "Hier sind ein paar Maßnahmen, die du mit engen Kontakten zur Reduzierung des Risikos ergreifen kannst",
+            "link_to_mask_blog": "Erfahre mehr über Masken in unserem Blogeintrag."
         },
         "category_postfix": "Risiko",
         "category_extreme": "Extrem",
@@ -87,7 +100,7 @@
         "category_moderate": "Mittleres",
         "category_low": "Niedriges",
         "category_very_low": "Sehr niedriges",
-        "large_group_warning": "Achtung: Das ist eine große Anzahl an Leuten. Beachte, dass du nur die Anzahl der Leute erfassen sollst, die sich innerhalb von ca. 4,5 Metern aufhalten (also nicht jeden, der sich in dem Gebiet aufhält). Allerdings stellen große Personengruppen für jeden ein Risiko dar und können zu einem Superausbreitung-Ereignis führen.",
+        "large_group_warning": "Achtung: Das ist eine große Anzahl an Leuten. Beachte, dass du nur die Anzahl der Leute erfassen sollst, die sich innerhalb von 5 Metern aufhalten (also nicht jeden, der sich in dem Gebiet aufhält). Allerdings stellen große Personengruppen für jeden ein Risiko dar und können zu einem Superausbreitung-Ereignis führen.",
         "household_members_note": "Wenn du das potentielle Risiko duch Haushaltsmitglieder simulieren möchtest, zähle nur deren Kontakte außerhalb des Hauses, um eine Doppelzählung zu vermeiden",
         "person_risk_profile_header": "Infektionsrisiko",
         "person_risk_profile_question": "Was ist deren Risikoprofil?",
@@ -111,21 +124,21 @@
             "adjusted_prevalence": "Angepasste Prävalenz",
             "reported_prevalence": "Gemeldete Prävalenz"
         },
-        "risk_tolerance_point1_percent_explanation": "Budget: 0,1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) (empfohlen, wenn du oder deine engen Kontakte durch COVID stärker gefährdet seid)",
+        "risk_tolerance_point1_percent_explanation": "0,1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) Empfohlen, wenn du oder deine engen Kontakte durch COVID stärker gefährdet seid.",
         "risk_tolerance_point1_percent_label": "Hochvorsichtiges Budget",
         "risk_tolerance_1_percent_label": "Durchschnittlich vorsichtiges Budget",
         "risk_modifier_frac_plural": "{{frac}} des Risikos",
         "risk_modifier_frac_3rd": "{{frac}} des Risikos",
         "risk_modifier_frac_2nd": "{{frac}} des Risikos",
         "prevalence_info_source_information": "Die Prävalenzdaten setzen sich zusammen aus denen des <1>Johns Hopkins CSSE</1> (gemeldete Fälle), von <4>Covid Act Now</4> (Positivtest-Raten der USA), von <7>Our World in Data</7> (internationale Positivtest-Raten) und <10>Coronavirus COVID-19 România</10> (rumänische gemeldete Fälle).",
-        "risk_tolerance_1_percent_explanation": "Budget: 1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) (empfohlen für gesunde Menschen, die NICHT in engem Kontakt mit stärker gefährdeten Personen stehen)",
+        "risk_tolerance_1_percent_explanation": "1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) Empfohlen für gesunde Menschen, die NICHT in engem Kontakt mit stärker gefährdeten Personen stehen.",
         "risk_modifier_multiple": "{{multiplier}}x das Risiko",
         "baseline_risk": "Basisrisiko",
         "select_scenario": "Beginne mit einem vordefinierten Szenario oder <2>erstelle dein eigenes</2>:",
         "firsttime": {
             "budget_header": "Was ist ein Risikobudget?",
             "microcovid_header": "Was ist ein micoCOVID?",
-            "microcovid_explanation": "<p>Wir haben das Konzept des \"microcovid\" als eine neue quantitative Einheit für Risiko kreiert. Ein microCOVID entspricht einer Wahrscheinlichkiet von eins-zu-eine-Million, sich mit COVID zu infizieren.</p> <p>Eine Aktivität, die 20.000 microCOVIDs entspricht, bedeutet dass hierbei eine Wahrscheinlichkeit von 2 % besteht, dass du dich mit COVID ansteckst - <em>jedes Mal, wenn du sie ausführst</em>. Eine Aktivität, die 20 micoCOVIDs (oder 0,00002%) entspricht, ist vergleichsweise sicher, weil du sie <em>ein Jahr lang jede Woche </em> ausführen kannst und die summierte Wahrscheinlichkeit, dich mit COVID anzustecken, immer noch nur etwa 0,1% beträgt.</p>",
+            "microcovid_explanation": "<p>Wir haben das Konzept des \"microcovid\" als eine neue quantitative Einheit für Risiko kreiert. Ein microCOVID entspricht einer Wahrscheinlichkiet von eins-zu-eine-Million, sich mit COVID zu infizieren.</p> <p>Eine Aktivität, die 20.000 microCOVIDs entspricht, bedeutet dass hierbei eine Wahrscheinlichkeit von 2 % besteht, dass du dich mit COVID ansteckst - <em>jedes Mal, wenn du sie ausführst</em>. Eine Aktivität, die 20 micoCOVIDs (oder 0,002%) entspricht, ist vergleichsweise sicher, weil du sie <em>ein Jahr lang jede Woche </em> ausführen kannst und die summierte Wahrscheinlichkeit, dich mit COVID anzustecken, immer noch nur etwa 0,1% beträgt.</p>",
             "budget_explanation": "<p>Du entscheidest dich möglicherweise, dass du ein gewisses Risiko COVID zu bekommen eingehen möchtest. Du kannst dir dieses Risiko, dass du bereit bist einzugehen, als ein \"Risikobudget\" vorstellen.</p> <p>Wir sind der Meinung, dass für die meisten gesunden Menschen, die nicht in Kontakt mit gefährdeteren Gruppen stehen, ein jährliches Risikobudget von einer <strong>1%-Chance an COVID zu erkranken</strong> vernünftig ist - das entspricht einem Budget von 10.000 microCOVIDS pro Jahr. Um dieses Budget einzuhalten, dürftest du dich maximal <strong>200 microCOVIDs pro Woche</strong> aussetzen.</p>"
         },
         "intro": {
@@ -153,7 +166,9 @@
             "survey_request": "<0>Wir hätten gerne deine Rückmeldung:</0> Bitte fülle <2>unseren Nutzerfragebogen</2> aus, um uns dabei zu helfen, den microCOVID-Rechner so nützlich wie möglich zu machen und neue Funktionen priorisieren zu können.",
             "b117": "<0>5. Januar 2021:</0> Wir haben die Parameter an die neue COVID-19-Variante, B117, angepasst. Lies mehr darüber <3>hier</3>.",
             "full_changelog": "Zeige alle Updates...",
-            "masks_update": "<0>28. Januar 2021:</0> Wir haben neue Maskentypen hinzugefügt und die Multiplikatoren für bestehende aktualisiert. Erfahre mehr in <3>unserem neuen Blog-Post über Masken</3>."
+            "masks_update": "<0>28. Januar 2021:</0> Wir haben neue Maskentypen hinzugefügt und die Multiplikatoren für bestehende aktualisiert. Erfahre mehr in <3>unserem neuen Blog-Post über Masken</3>.",
+            "vaccines_update": "<0> 23. Februar 2021:</0> Der Rechner vermindert jetzt dein Risiko, wenn du geimpft wurdest. Mehr erfährst du in dem <2>Q&A</2>.",
+            "vaccines_update_2": "<0>16. März 2021:</0> Der Risiko-Zähler erlaubt jetzt Szenarien, bei denen du eine Person triffst, die bereits geimpft wurde. Siehe dazu mehr<2>hier</2>."
         },
         "frontline_worker_acknowledgement": "Wir schätzen die Opfer, die die Frontarbeiter während der Pandemie bringen, sehr. Wir ermutigen dich, sichere Wege zu finden, diese Menschen zu unterstützen, sie sozial einzubeziehen und zu pflegen. Wir gehen davon aus, dass die meisten dieser Arbeitnehmer in den nächsten Monaten geimpft werden, was ihr Infektionsrisiko/die Übertragung erheblich verringern dürfte.",
         "switch_button": {
@@ -177,7 +192,14 @@
         "partner_interaction_risk_message": "Wenn diese Person infiziert ist, gilt der Ausgangswert einer <1>{{ percentage }} Chance der Übertragung pro Woche</1>.",
         "repeated_interaction_risk_message": "Wenn eine Person infiziert ist, gilt der Ausgangswert einer <1>{{ percentage }} Chance der Übertragung pro Woche</1>.",
         "one_time_interaction_risk_message": "Wenn eine Person infiziert ist, gilt der Ausgangswert einer <1>{{percentage}} Chance der Übertragung pro Stunde</1>.",
-        "no_prebuilt_scenario_found": "Wir haben dieses Szenario bisher nicht, aber du kannst dein eigenes unten erstellen."
+        "no_prebuilt_scenario_found": "Wir haben dieses Szenario bisher nicht, aber du kannst dein eigenes unten erstellen.",
+        "risk_tolerance_3_percent_explanation": "3 %-Chance einer COVID-Infektion pro Jahr (600 microCOVIDs pro Woche). Für den Fall, dass du gesund bist und lieber einen riskanteren Lebensstil führen möchtest UND alle, mit denen du zusammenwohnst/Luft austauschst, das auch tun.",
+        "risk_tolerance_3_percent_label": "Unterdurchschnittlich vorsichtiges Budget",
+        "risk_tolerance_10_percent_explanation": "10%-Chance einer COVID-Infektion pro Jahr (2000 microCOVIDs pro Woche). Nutze das, wenn du Risiken nicht vermeiden kannst, aber immer noch gute Entscheidungen treffen willst. Denk daran: wenn du COVID kriegst, kannst du alle deine Kontakte infizieren. Versuche, das minimale Risiko einzugehen, um sie zu schützen.",
+        "risk_tolerance_10_percent_label": "Schadensminimierung-Risikobudget",
+        "risk_modifier_multiple_short": "{{multiplier}}-fach",
+        "baseline_risk_short": "Basisrisiko",
+        "post_results_survey": "Würdest du <1>ein paar Fragen beantworten, um microCOVID zu verbessern</1>?"
     },
     "data": {
         "person": {
@@ -201,10 +223,10 @@
         "loud_voice": "Laute Unterhaltung (rufen, Musik übertönen, singen)",
         "normal_voice": "Normale Unterhaltung",
         "silent_voice": "Kein Sprechen (wie beim stillen Zugfahren)",
-        "n95_mask": "Medizinische N95-Maske die passt, aber du bist NICHT sicher, ob sie abdichtet",
-        "filtered_mask": "Stoff-Maske mit einem PM2,5-Einsatzfilter",
-        "basic_mask": "Baumwoll-Maske, dick und enganliegend (mehrlagige Baumwoll-Maske mit engem, sicherem Sitz)",
-        "no_mask": "Keine Maske",
+        "n95_mask": "Maske, die passt, aber du bist NICHT sicher, ob sie abdichtet",
+        "filtered_mask": "Stoff-Maske mit Einsatzfilter",
+        "basic_mask": "Mehrlagige Stoff-Maske mit engem, sicheren Sitz",
+        "no_mask": "Keine Maske; vielleicht mit Essen/Trinken",
         "tenft_distance": "3+ Meter entfernt",
         "sixft_distance": "2+ Meter entfernt",
         "normal_distance": "Normaler sozialer Umgang (ca. 1 Meter entfernt)",
@@ -221,11 +243,24 @@
         "filtered": "Innen mit einem HEPA-Filter (Durchflussrate 5× Raumgröße)",
         "plane": "Ein Flugzeug",
         "p100_mask": "P100 Atemgerät, NIOSH-zertifiziert wiederverwendbar, mit abgedecktem Auslassventil",
-        "n95_sealed_mask": "Medizinische N95-Maske die luftdicht abdichtet",
+        "n95_sealed_mask": "Luftdicht abgedichtet; kein Ventil, kein Bart",
         "kn95_mask": "KN95 Maske",
-        "surgical_mask": "Medizinische Maske",
-        "thin_mask": "Baumwoll-Maske, dünn oder lose (Halstuch, Schal, oder: loser Sitz, rutscht herunter)",
-        "workplace": "Wie risikoreich ist es, zur Arbeit zu gehen?"
+        "surgical_mask": "Lose anliegende medizinische Maske",
+        "thin_mask": "Stoff-Maske, dünn oder lose (Halstuch, Schal, oder: loser Sitz, rutscht herunter)",
+        "workplace": "Wie risikoreich ist es, zur Arbeit zu gehen?",
+        "vaccine": {
+            "unknown": "Unbekannt oder andere",
+            "astra_zeneca": "AstraZeneca",
+            "moderna": "Moderna",
+            "pfizer": "Pfizer BioNTech"
+        },
+        "p100_mask_short": "P100-Schutzmaske",
+        "n95_mask_short": "N95, KN95, oder FFP2",
+        "filtered_mask_short": "Einsatzfilter",
+        "surgical_mask_short": "Medizinisch",
+        "basic_mask_short": "Stoff, dick und enganliegend",
+        "thin_mask_short": "Stoff, dünn oder lose",
+        "no_mask_short": "Keine Maske"
     },
     "scenario": {
         "votingInPerson": "Stimmabgabe im Wahllokal",
@@ -245,7 +280,8 @@
         "outdoorMasked2": "Treffen mit zwei anderen Leuten im Freien, wobei Masken getragen werden",
         "planeRideMiddleSeatEmpty": "Flug (mittlere Sitzpläne freigehalten)",
         "60minShoppingFew": "60 Minuten im Supermarkt (nur wenige andere Kunden)",
-        "custom": "Erstelle dein eigenes Szenario"
+        "custom": "Erstelle dein eigenes Szenario",
+        "60minShoppingCrowded": "Lebensmittelladen, 60 Minuten (stark besucht)"
     },
     "about": {
         "basic_description": "<1>Dies ist ein Projekt, um das COVID-Risiko aus deinen täglichen Aktivitäten abzuschätzen.</1> <2>Wir haben die Wissenschaftsliteratur nach Daten über die Wahrscheinlichkeit einer COVID-Infektion in verschiedenen Situationen durchkämmt und haben diese Daten in ein nutzbares Modell zusammengefasst. Wir schätzen das COVID-Risiko in der Einheit „microCOVIDs“, wobei 1 microCOVID ein eins-zu-eine-Million-Chance einer COVID-Infektion darstellt.</2> <3>Wir wollen so vielen Menschen wie möglich dabei helfen, sich befähigt zu fühlen, Entscheidungen rund um COVID-Risiko zu treffen, indem wir Ihnen dabei helfen zu verstehen, wie COVID übertragen wird. Wir hoffen dieses Werkzeug wird dir dabei helfen, deine Intuition zu trainieren, dein Stress-Level zu senken und gute Schadensbegrenzungs-Strategien zu entwickeln.</3>",
