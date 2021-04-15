@@ -1,10 +1,10 @@
 Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,25459700,75,3e-06,2.0,1.0,6e-06
+Entire country,25459700,71,3e-06,2.0,1.0,6e-06
 Australian Capital Territory,428100,0,2e-06,2.0,1.0,5e-06
-New South Wales,8118000,25,3e-06,2.0,1.3889,9e-06
-Northern Territory,245600,4,2e-05,2.0,2.0,8.1e-05
-Queensland,5115500,30,6e-06,2.0,1.0,1.2e-05
-South Australia,1756500,7,5e-06,2.0,1.0,9e-06
+New South Wales,8118000,31,4e-06,2.0,1.24,1e-05
+Northern Territory,245600,0,4e-06,2.0,1.0,8e-06
+Queensland,5115500,11,2e-06,2.0,1.0,5e-06
+South Australia,1756500,13,8e-06,2.0,1.8571,3e-05
 Tasmania,535500,0,2e-06,2.0,1.0,4e-06
-Victoria,6629900,0,0.0,2.0,1.0,0.0
-Western Australia,2630600,9,4e-06,2.0,1.0,8e-06
+Victoria,6629900,3,1e-06,2.0,1.0,1e-06
+Western Australia,2630600,13,5e-06,2.0,1.4444,1.5e-05
