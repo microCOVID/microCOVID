@@ -183,7 +183,7 @@ However, we have retracted this method for the following reasons:
 
 ## How should we think about people who have been vaccinated?
 
-***Summary**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond. Additionally, each microCOVID *may* be 2-4x less likely to land a vaccinated individual in a hospital.*
+***Summary**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond.
 
 People who have been vaccinated are less likely to catch COVID and transmit it to others, which results in them getting fewer microCOVIDs from activities.
 However, they are not totally immune to COVID, and it is quite easy for a vaccinated person to counteract the decreased risk per activity by doing lots of
@@ -212,16 +212,26 @@ While the vaccines are nowhere near making you invulnerable to COVID, remember t
 
 ### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
 
-Data from Israel's study suggests that Pfizer's vaccine reduced cases of severe COVID by 92%, about the same as the reduction in mild/asymptomatic COVID. Therefore we do not think that mRNA vaccines reduce the chance of hospitalization or death beyond the reduction in contracting COVID in the first place. It is possible that the traditional vaccines (AstraZenica, Johnson&Johnson) are somewhat more protective againt severe COVID than mild COVID, but we have not seen compelling data for this.
+Data from Israel's study suggests that Pfizer's vaccine reduced cases of severe COVID by 92% (95% CI, 75 to 100), about the same as the reduction in mild/asymptomatic COVID.
+Therefore we do not think that mRNA vaccines significantly reduce the chance of hospitalization or death beyond the reduction in contracting COVID in the first
+place. Note that the error bars on this figure are somewhat wide; the risk reduction is likely somewhere between 3x and 1/3x.
 
-Additionally, we have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
+We have not done a thorough analysis of this effect in other vaccines.
 
-As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)),
-but we do not recommend increasing your microCOVID budget on top of that given current data.
+We have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
+However, this study is quite small and we have not seen more recent studies showing this effect (if you are aware of additional data on this, please let us know!)
 
-If you do decide you want to increase your microCOVID budget post vaccination,
-* Discuss this with any regular close contacts you have, such as housemates, partners, or co-workers — your increased risk of COVID, asymptomatic or not, could affect them more than it affects you.
-* Consider the potential impact on your community at large — taking on more risk of being an asymptomatic spreader could result in you infecting many other people.
+As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
+but we do not have a general recommendation on changing your microCOVID budget after vaccination.
+
+Some reasons you might want to change your budget:
+* If you live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
+* You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. 10x for the mRNA vaccines) while still having the same impact on them. 
+
+Some reasons you might not want to change your budget:
+* You are in an elevated risk category and are worried about the health risk to yourself.
+* You interact regularly with someone who is not vaccinated (or people whose vaccination status you don't know) and don't want to risk giving them COVID.
+* You interact regularly with someone who is vaccinated but might not get the full benefits of the vaccine (i.e. immunocompromised)
 
 ### So is a vaccinated person safer to be around than an unvaccinated person?
 Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated person who does the same activities as a unvaccinated person will be less risky to be around. However, if the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got vaccinated! The only way to accurately understand a person's risk is to model each of their activities and multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
