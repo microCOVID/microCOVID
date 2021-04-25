@@ -212,9 +212,7 @@ While the vaccines are nowhere near making you invulnerable to COVID, remember t
 
 ### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
 
-Data from Israel's study suggests that Pfizer's vaccine reduced cases of severe COVID by 92%, about the same as the reduction in mild/asymptomatic COVID. Therefore we do not think that mRNA vaccines reduce the chance of hospitalization or death beyond the reduction in contracting COVID in the first place. It is possible that the traditional vaccines (AstraZenica, Johnson&Johnson) are somewhat more protective againt severe COVID than mild COVID, but we have not seen compelling data for this.
-
-Additionally, we have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
+We have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
 
 As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)),
 but we do not recommend increasing your microCOVID budget on top of that given current data.
