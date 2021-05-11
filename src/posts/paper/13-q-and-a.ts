@@ -187,7 +187,7 @@ However, we have retracted this method for the following reasons:
 
 People who have been vaccinated are less likely to catch COVID and transmit it to others, which results in them getting fewer microCOVIDs from activities.
 However, they are not totally immune to COVID, and it is quite easy for a vaccinated person to counteract the decreased risk per activity by doing lots of
-risky activities (for instance, the Moderna vaccine confers a 1/5x multiplier for incoming microCOVIDs, so a vaccinated person who does 5x more risky behavior
+risky activities (for instance, the Moderna vaccine confers a 1/10x multiplier for incoming microCOVIDs, so a vaccinated person who does 10x more risky behavior
 after being vaccinated would be just as many microCOVIDs as before).
 
 There are two questions that are important for understanding vaccines:
