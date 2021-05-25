@@ -364,11 +364,11 @@ export interface VaccineValue {
 export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multiplierPerDose: [1, 0.56, 0.1],
+    multiplierPerDose: [1, 0.2, 0.1],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multiplierPerDose: [1, 0.56, 0.1],
+    multiplierPerDose: [1, 0.2, 0.1],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
