@@ -1,7 +1,7 @@
 Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,1059361,873,0.000825,2.2813,1.0804,0.002034
-Bristol,48479,0,2.1e-05,2.1524,1.0,4.4e-05
-Kent,164292,0,6e-06,2.2541,1.0,1.4e-05
-Newport,82082,0,1.2e-05,2.3006,1.0,2.8e-05
-Providence,638931,0,2e-06,2.3017,1.0,4e-06
-Washington,125577,0,8e-06,2.2017,1.0,1.8e-05
+Entire state,1059361,485,0.000459,2.2946,1.0,0.001053
+Bristol,48479,0,2.1e-05,2.1558,1.0,4.4e-05
+Kent,164292,0,6e-06,2.3622,1.0,1.4e-05
+Newport,82082,0,1.2e-05,2.26,1.0,2.8e-05
+Providence,638931,0,2e-06,2.3052,1.0,4e-06
+Washington,125577,0,8e-06,2.2097,1.0,1.8e-05
