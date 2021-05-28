@@ -356,7 +356,6 @@ describe('calculate', () => {
         ...indoorIntimate,
         setting: 'outdoor',
       }
-
       expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
@@ -374,23 +373,38 @@ describe('calculate', () => {
 
       expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
     })
-    it('should be at least 12% (1 hr) transfer risk.', () => {
-      const oneHourIntimate: CalculatorData = {
+    it('should be at least 12% (20 min) transfer risk.', () => {
+      const twentyMinuteIntimate: CalculatorData = {
         ...indoorIntimate,
-        duration: 60,
+        duration: 20,
       }
       const oneMinuteIntimate: CalculatorData = {
-        ...oneHourIntimate,
+        ...twentyMinuteIntimate,
         duration: 1,
       }
-      const twoHourIntimate: CalculatorData = {
-        ...oneHourIntimate,
-        duration: 120,
+      const thirtyMinuteIntimate: CalculatorData = {
+        ...twentyMinuteIntimate,
+        duration: 30,
       }
 
-      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(oneHourIntimate))
-      expect(calcValue(twoHourIntimate)).toEqual(
-        calcValue(oneHourIntimate)! * 2,
+      expect(calcValue(oneMinuteIntimate)).toEqual(
+        calcValue(twentyMinuteIntimate),
+      )
+      expect(calcValue(thirtyMinuteIntimate)).toBeCloseTo(
+        calcValue(twentyMinuteIntimate)! * 1.5,
+      )
+    })
+    it('should not exceed live-in-partner risk,', () => {
+      const tenHourIntimate: CalculatorData = {
+        ...indoorIntimate,
+        duration: 600,
+      }
+      const partnerIntimate: CalculatorData = {
+        ...indoorIntimate,
+        interaction: 'partner',
+      }
+      expect(calcValue(tenHourIntimate)).toBeCloseTo(
+        calcValue(partnerIntimate)!,
       )
     })
     it('should not apply talking multiplier', () => {

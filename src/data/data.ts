@@ -83,10 +83,10 @@ export const Setting: { [key: string]: FormValue } = {
   },
 }
 
-export const intimateDurationFloor = 60
+export const intimateDurationFloor = 20
 
 export const Distance: { [key: string]: FormValue } = {
-  intimate: formValue(i18n.t('data.intimate_distance'), 2),
+  intimate: formValue(i18n.t('data.intimate_distance'), 5),
   close: formValue(i18n.t('data.close_distance'), 2),
   normal: formValue(i18n.t('data.normal_distance'), 1),
   sixFt: formValue(i18n.t('data.sixft_distance'), 0.5),
