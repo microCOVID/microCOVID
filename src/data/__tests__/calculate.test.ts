@@ -39,7 +39,8 @@ const baseTestData = {
   casesPastWeek: 2999, // will add 1 in pseudocount
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
-  prevalanceDataDate: dateAfterDay0(25), // prevalance ratio = 25 * positivity_rate ** 0.5 + 2
+  // prevalance ratio = 1000 / (10 + i) * positivity_rate ** 0.5 + 2 = 25 * positivity_rate ** 0.5 + 2
+  prevalanceDataDate: dateAfterDay0(30),
   symptomsChecked: 'no',
 }
 
@@ -92,12 +93,12 @@ describe('calculateLocationPersonAverage', () => {
 
   it.each`
     day    | result
-    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 25 + 2)}
-    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 50 + 2)}
-    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 75 + 2)}
-    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 325 + 2)}
+    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 10 + 2)}
+    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 35 + 2)}
+    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 60 + 2)}
+    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 310 + 2)}
   `(
-    'should reduce the effect of positiveCasePercentage as 1250 / (days + 25), days = $day',
+    'should reduce the effect of positiveCasePercentage as 1000 / (days + 10), days = $day',
     ({ day, result }) => {
       expect(
         calculateLocationPersonAverage(
