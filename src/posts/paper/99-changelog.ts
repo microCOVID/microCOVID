@@ -8,6 +8,13 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 5, 27),
+    content: `
+* Updated constants for under-reporting factor
+  * New numbers from [COVID 19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/) December 2020 update.
+  * Results in slightly lower prevalence estimates.`,
+  },
+  {
     date: new Date(2021, 3, 10),
     content: `
 * Added Gamelaya Research's Sputnik V vaccine to the calculator. See the [Research Sources](/paper/14-research-sources#sputnik-v-gamelaya-research) section of the White Paper for details.`,
