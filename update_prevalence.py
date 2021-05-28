@@ -337,7 +337,7 @@ class AppLocation(pydantic.BaseModel):
         positivityRate = self.positiveCasePercentage
         if positivityRate is None or positivityRate > 100:
             positivityRate = 100
-        final = (1250 / (day_i + 25)) * (positivityRate / 100) ** 0.5 + 2
+        final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
 
     def as_csv_data(self) -> Dict[str, str]:
