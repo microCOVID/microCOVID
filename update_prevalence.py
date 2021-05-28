@@ -193,17 +193,17 @@ class Place(pydantic.BaseModel):
     tests_in_past_week: Optional[int]
 
     @property
-    def recent_daily_cases(self) -> List[int]:
+    def recent_daily_cumulative_cases(self) -> List[int]:
         """Returns a list whose last entry is the most recent day's
-        case count, and earlier entries are earlier days' counts.
-        So recent_daily_cases[-5] is the number of cases reported
-        5 days ago.
+        cumulative case count, and earlier entries are earlier days' counts.
+        So recent_daily_cumulative_cases[-5] is the total number of cases reported
+        up to 5 days ago.
         """
-        daily_cases = []
+        daily_cumulative_cases = []
         current = effective_date
         if current not in self.cumulative_cases:
             raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
-        while len(daily_cases) < 14:
+        while len(daily_cumulative_cases) < 14:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
                 if prev > min(self.cumulative_cases.keys()):
@@ -214,15 +214,21 @@ class Place(pydantic.BaseModel):
                 # But missing data at the beginning is normal -- counties
                 # typically only show up when they have any cases.
                 self.cumulative_cases[prev] = self.cumulative_cases[current]
-            daily_cases.append(
-                self.cumulative_cases[current] - self.cumulative_cases[prev]
+            daily_cumulative_cases.append(
+                self.cumulative_cases[current]
             )
             current = prev
-        return daily_cases[::-1]
+        return daily_cumulative_cases[::-1]
 
     @property
     def cases_last_week(self) -> int:
-        return sum(self.recent_daily_cases[-7:])
+        return max(self.recent_daily_cumulative_cases[-7:]) - \
+            min(self.recent_daily_cumulative_cases[-7:])
+
+    @property
+    def cases_week_before(self) -> int:
+        return max(self.recent_daily_cumulative_cases[-14:-7]) - \
+            min(self.recent_daily_cumulative_cases[-14:-7])
 
     @property
     @abc.abstractmethod
@@ -231,11 +237,17 @@ class Place(pydantic.BaseModel):
 
     def as_app_data(self) -> "AppLocation":
         last_week = self.cases_last_week
-        week_before = sum(self.recent_daily_cases[-14:-7])
+        week_before = self.cases_week_before
         if last_week <= week_before or week_before <= 0:
             increase = 0
         else:
             increase = last_week / week_before - 1
+
+        if (self.population <= 0 and self.name != "Unknown"):
+            raise ValueError(f'Population for {self.name} is {self.population}')
+
+        if (self.cases_last_week < 0):
+            raise ValueError(f'Cases for {self.name} is {self.cases_last_week}')
 
         return AppLocation(
             label=self.name,
