@@ -1,7 +1,7 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,1059361,249,0.000236,2.1454,1.0,0.000506
-Bristol,48479,17,0.000371,2.1288,1.0,0.00079
-Kent,164292,44,0.000274,2.1483,1.0,0.000588
-Newport,82082,33,0.000414,2.1454,1.0,0.000889
-Providence,638931,287,0.000451,2.1578,1.0,0.000973
-Washington,125577,27,0.000223,2.1304,1.0,0.000475
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
+Entire state,1059361,230,0.000218,2.1427,1.0,0.000467,0.000962,0.000114
+Bristol,48479,17,0.000371,2.0886,1.0,0.000775,0.001722,0.000203
+Kent,164292,44,0.000274,2.1317,1.0,0.000584,0.001251,0.000148
+Newport,82082,33,0.000414,2.1452,1.0,0.000889,0.001982,0.000234
+Providence,638931,287,0.000451,2.1521,1.0,0.00097,0.001751,0.000207
+Washington,125577,27,0.000223,2.1301,1.0,0.000475,0.001051,0.000124
