@@ -7,6 +7,10 @@ export interface Location {
   positiveCasePercentage: number | null
   topLevelGroup: string | null
   subdivisions: string[]
+  incompleteVaccinations?: number
+  completeVaccinations?: number
+  unvaccinatedPrevalenceRatio?: number
+  averageFullyVaccinatedMultiplier?: number
 }
 
 // NOTE: anything between 'locations start' and 'locations end',

@@ -8,6 +8,7 @@ if sys.version_info < (3, 6):
 import abc
 import collections
 import csv
+from functools import reduce
 import json
 import re
 import os
@@ -45,6 +46,29 @@ def calc_effective_date() -> date:
 
 
 effective_date = calc_effective_date()
+
+
+# Read the Risk Tracker's vaccine table.
+# Format:
+# Type,0 dose,1 dose,2 dose
+def import_vaccine_multipliers():
+    vaccines = {}
+    with open('./public/tracker/vaccine_table.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            vaccine_name = row[0]
+            if vaccine_name in ['No Vaccine', 'Unknown vaccine, unknown date']:
+                continue
+            if vaccine_name == 'Johnson & Johnson':
+                vaccine_name = 'Janssen'  # JHU dataset uses 'Janssen' for this vaccine.
+            vaccines[vaccine_name] = {
+                'partial': float(row[2]),
+                'complete': float(row[3]),
+            }
+    vaccines['Unknown'] = vaccines['AstraZenica']
+    return vaccines
+
+VACCINE_MULTIPLIERS = import_vaccine_multipliers()
 
 
 # Johns Hopkins dataset
@@ -109,6 +133,30 @@ class JHUCasesTimeseriesGlobal(pydantic.BaseModel):
     Long: float
     cumulative_cases: Dict[date, int] = {}
 
+class JHUVaccinesHourlyUs(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/us_data/hourly/vaccine_data_us.csv"
+
+    FIPS: Optional[int]
+    Province_State: Optional[str]
+    Country_Region: Optional[str]
+    Vaccine_Type: Optional[str]
+    Doses_admin: Optional[int]  # raw numbers of doses
+    Stage_One_Doses: Optional[int]
+    Stage_Two_Doses: Optional[int]
+
+class JHUVaccinesGlobal(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/vaccine_data_global.csv"
+
+    UID: Optional[int]
+    Province_State: Optional[str]
+    Country_Region: Optional[str]
+    People_partially_vaccinated: Optional[int]  # raw number of people
+    People_fully_vaccinated: Optional[int]
+
 
 # Our World in Data dataset:
 
@@ -142,6 +190,9 @@ class CANMetrics(pydantic.BaseModel):
     testPositivityRatio: Optional[float]  # 7-day rolling average
     caseDensity: Optional[float]  # cases per 100k pop, 7-day rolling average
 
+class CANActuals(pydantic.BaseModel):
+    vaccinationsInitiated: Optional[int]  # Raw numbers of people vaccinated
+    vaccinationsCompleted: Optional[int]
 
 class CANRegionSummary(pydantic.BaseModel):
     # https://github.com/covid-projections/covid-data-model/blob/master/api/README.V1.md#RegionSummary
@@ -160,7 +211,7 @@ class CANRegionSummary(pydantic.BaseModel):
     county: Optional[str]
     # lastUpdatedDate: datetime in nonstandard format, ignored for now
     # projections: ignored
-    # actuals: ignored
+    actuals: Optional[CANActuals]
     metrics: Optional[CANMetrics]
     population: int
 
@@ -177,9 +228,12 @@ class RomaniaPrevalenceData(pydantic.BaseModel):
     TotalCases: int = pydantic.Field(alias="Cazuri total")
 
 
+# Represents number of people vaccinated.
+class Vaccination(pydantic.BaseModel):
+    partial_vaccinations: int = 0
+    completed_vaccinations: int = 0
+
 # Our unified representation:
-
-
 class Place(pydantic.BaseModel):
     fullname: str  # "San Francisco, California, US"
     name: str  # "San Francisco"
@@ -191,6 +245,9 @@ class Place(pydantic.BaseModel):
     # just the number of tests. We can approximate positivity rate
     # from that and the known number of cases.
     tests_in_past_week: Optional[int]
+
+    vaccines_by_type: Optional[Dict[str, Vaccination]]
+    vaccines_total = Vaccination()
 
     @property
     def recent_daily_cumulative_cases(self) -> List[int]:
@@ -235,6 +292,85 @@ class Place(pydantic.BaseModel):
     def app_key(self) -> str:
         ...
 
+    def set_total_vaccines(self, partial_vaccinations: int, complete_vaccinations: int):
+        self.vaccines_total.partial_vaccinations = partial_vaccinations
+        self.vaccines_total.completed_vaccinations = complete_vaccinations
+    
+    def set_vaccines_of_type(self, vaccine_type: str, partial: int, complete: int):
+        if self.vaccines_by_type is None:
+            self.vaccines_by_type = {}
+        
+        self.vaccines_by_type[vaccine_type] = Vaccination()
+        self.vaccines_by_type[vaccine_type].partial_vaccinations = partial
+        self.vaccines_by_type[vaccine_type].completed_vaccinations = complete
+
+    def completed_vaccination_total(self):
+        if (self.vaccines_by_type is not None):
+            return reduce(lambda x, key: x + self.vaccines_by_type[key].completed_vaccinations, self.vaccines_by_type, 0)
+        return self.vaccines_total.completed_vaccinations
+
+    def partial_vaccination_total(self):
+        if (self.vaccines_by_type is not None):
+            return reduce(lambda x, key: x + self.vaccines_by_type[key].partial_vaccinations, self.vaccines_by_type, 0)
+        return self.vaccines_total.partial_vaccinations
+
+    # Compute the estimated risk ratio for an unvaccinated person vs an average person.
+    # Average prevalence = sum(prevalence in group * proportion of population in group)
+    #                    = sum(vaccine_mult * unvaccinated_prev * proportion of population)
+    # Unvaccinated risk / Average risk = sum(vaccine_mult * proportion of pop)
+    #                                  = population / sum(vaccine_mult * proportion of pop)
+    # Where the sum is taken over all vaccine types and status (incl no vaccine)
+    def unvaccinated_relative_prevalence(self) -> float:
+        total_vaccinated = 0
+        risk_sum = 0
+
+        if (self.vaccines_by_type is not None):
+            for vaccine_type, vaccine_status in self.vaccines_by_type.items():
+                total_vaccinated += vaccine_status.completed_vaccinations
+                total_vaccinated += vaccine_status.partial_vaccinations
+                risk_sum += VACCINE_MULTIPLIERS[vaccine_type]['complete'] * vaccine_status.completed_vaccinations
+                risk_sum += VACCINE_MULTIPLIERS[vaccine_type]['partial'] * vaccine_status.partial_vaccinations
+        else:
+            risk_sum = (
+                VACCINE_MULTIPLIERS['Unknown']['complete'] * 
+                self.vaccines_total.completed_vaccinations +
+                VACCINE_MULTIPLIERS['Unknown']['partial'] * 
+                self.vaccines_total.partial_vaccinations
+            )
+            total_vaccinated = (
+                self.vaccines_total.completed_vaccinations + 
+                self.vaccines_total.partial_vaccinations
+            )
+
+        assert (
+            total_vaccinated <= self.population
+        ), f"{self.label} has over 100% vaccinated. Population: {self.population}, vaccinations: {total_vaccinated}"
+
+        if total_vaccinated == 0:
+            return 
+
+        total_unvaccinated = self.population - total_vaccinated
+        risk_sum += 1 * total_unvaccinated
+        return float(self.population) / risk_sum
+
+
+    # Computes the average vaccine multiplier of the region. For use in computing
+    # "Average vaccinated" person
+    def average_fully_vaccinated_multiplier(self) -> float:
+        if (self.vaccines_by_type is None):
+            return VACCINE_MULTIPLIERS['Unknown']['complete']
+
+        vaccine_multiplier = 0
+        total_fully_vaccinated = 0
+        for vaccine_type, vaccine_status in self.vaccines_by_type.items():
+            total_fully_vaccinated += vaccine_status.completed_vaccinations
+            vaccine_multiplier += vaccine_status.completed_vaccinations * VACCINE_MULTIPLIERS[vaccine_type]['complete']
+
+        if total_fully_vaccinated == 0:
+            return VACCINE_MULTIPLIERS['Unknown']['complete']     
+        return vaccine_multiplier / total_fully_vaccinated
+
+    
     def as_app_data(self) -> "AppLocation":
         last_week = self.cases_last_week
         week_before = self.cases_week_before
@@ -259,6 +395,10 @@ class Place(pydantic.BaseModel):
                 if self.test_positivity_rate is not None
                 else None
             ),
+            incompleteVaccinations=self.partial_vaccination_total() or None,
+            completeVaccinations=self.completed_vaccination_total() or None,
+            unvaccinatedPrevalenceRatio=self.unvaccinated_relative_prevalence(),
+            averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
         )
 
 
@@ -329,6 +469,10 @@ class AppLocation(pydantic.BaseModel):
     positiveCasePercentage: Optional[float]
     topLevelGroup: Optional[str] = None
     subdivisions: List[str] = []
+    incompleteVaccinations: Optional[int]
+    completeVaccinations: Optional[int]
+    unvaccinatedPrevalenceRatio: Optional[float]
+    averageFullyVaccinatedMultiplier: float
 
     # https://covid19-projections.com/estimating-true-infections-revisited/
     def prevalanceRatio(self) -> float:
@@ -345,6 +489,7 @@ class AppLocation(pydantic.BaseModel):
         reported = (self.casesPastWeek + 1) / population
         underreporting = self.prevalanceRatio()
         delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
+        estimated_prevalence = reported * underreporting * delay
         return {
             "Name": self.label,
             "Population": str(population),
@@ -352,9 +497,18 @@ class AppLocation(pydantic.BaseModel):
             "Reported prevalence": str(round(reported, 6)),
             "Underreporting factor": str(round(underreporting, 4)),
             "Delay factor": str(round(delay, 4)),
-            "Estimated prevalence": str(round(reported * underreporting * delay, 6)),
+            "Estimated prevalence": str(round(estimated_prevalence, 6)),
+            "Estimated unvaccinated prevalence": (
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence))
+                if self.unvaccinatedPrevalenceRatio is not None
+                else "Unknown"
+            ),
+            "Estimated vaccinated prevalence": (
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier))
+                if self.unvaccinatedPrevalenceRatio is not None
+                else "Unknown"
+            )
         }
-
 
 class AppLocations(pydantic.BaseModel):
     __root__: Dict[str, AppLocation]
@@ -364,6 +518,8 @@ class AllData:
     def __init__(self) -> None:
         self.countries: Dict[str, Country] = {}
         self.fips_to_county: Dict[int, County] = {}
+        self.uid_to_place: Dict[int, Place] = {}
+
 
     def get_country(self, name: str) -> Country:
         if name not in self.countries:
@@ -377,6 +533,9 @@ class AllData:
                 name=name, fullname=f"{name}, {country}", country=country
             )
         return parent.states[name]
+
+    def get_state_or_raise(self, name: str, country: str) -> State:
+        return self.countries[country].states[name]
 
     def get_county(self, name: str, *, state: str, country: str) -> County:
         parent = self.get_state(state, country=country)
@@ -421,6 +580,11 @@ class AllData:
                             )
                         self.fips_to_county[fips] = county
 
+    def add_place_to_uid_cache(self, uid: int, place: Place):
+        self.uid_to_place[uid] = place
+
+    # Attempt to set the population, cases, and postitive test rates of a region
+    # based on the stats of all its sub-regions
     def rollup_totals(self) -> None:
         fake_names = ("Unknown", "Unassigned", "Recovered")
 
@@ -473,8 +637,21 @@ class AllData:
                         parent.cases_last_week / tests_last_week
                     )
 
+        def rolldown_vaccine_types(parent: Place,  children: list[Place]):
+            for child in children:
+                if (child.vaccines_by_type is None):
+                    child_vaccinations = child.vaccines_total
+                    # Assume that sub-places have the same ratio of vaccine types
+                    completed_vaccination_total = parent.completed_vaccination_total()
+                    partial_vaccination_total = parent.partial_vaccination_total()
+                    for vaccine_type, parent_vaccinations in parent.vaccines_by_type.items():
+                        child_partials = parent_vaccinations.partial_vaccinations * child_vaccinations.partial_vaccinations / partial_vaccination_total
+                        child_completes = parent_vaccinations.completed_vaccinations * child_vaccinations.completed_vaccinations / completed_vaccination_total
+                        child.set_vaccines_of_type(vaccine_type, child_partials, child_completes)
+
         for country in self.countries.values():
             for state in country.states.values():
+                rolldown_vaccine_types(state, state.counties.values())
                 for county in state.counties.values():
                     if county.population == 0 and county.name not in fake_names:
                         raise ValueError(f"Missing population data for {county!r}")
@@ -519,6 +696,7 @@ class AllData:
                             # Some US counties don't have data; fall back to
                             # assuming they're average for their state.
                             county.test_positivity_rate = state.test_positivity_rate
+
 
                 if not rollup_cases(state, "counties"):
                     if state.country == "Nigeria":
@@ -693,6 +871,7 @@ def main() -> None:
             ):
                 line.Country_Region = "South Korea"
             place = data.get_jhu_place(line)
+            data.add_place_to_uid_cache(line.UID, place)
             if place.population != 0:
                 raise ValueError(
                     f"Duplicate population info for {place!r}: {line.Population}"
@@ -725,7 +904,38 @@ def main() -> None:
                 place.cumulative_cases[current] = line.Confirmed
             current -= timedelta(days=1)
 
-        # Test positivity per US county and state
+        # Global vaccination rates
+        for item in parse_csv(cache, JHUVaccinesGlobal, JHUVaccinesGlobal.SOURCE):
+            if item.UID is None or item.People_partially_vaccinated is None:
+                continue
+            try:
+                place = data.uid_to_place[item.UID]
+                place.set_total_vaccines(item.People_partially_vaccinated - item.People_fully_vaccinated, item.People_fully_vaccinated)
+            except KeyError:
+                print(f"Could not find UID {item.UID}")
+
+        # US vaccination rates
+        for item in parse_csv(cache, JHUVaccinesHourlyUs, JHUVaccinesHourlyUs.SOURCE):
+            try:
+                state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
+                if item.Vaccine_Type == "All":
+                    state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
+                elif item.Vaccine_Type in ['Pfizer', 'Moderna']:
+                    # If listed, Stage_One_Doses appears to include people with second doses.
+                    partially_vaccinated = (
+                        item.Stage_One_Doses - item.Stage_Two_Doses
+                        if item.Stage_One_Doses is not None
+                        else item.Doses_admin - item.Stage_Two_Doses * 2
+                    )
+                    state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
+                elif item.Vaccine_Type == 'Janssen':
+                    state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
+            except KeyError:
+                continue
+                # Suppressed debug info - includes things like DoD, VHA, etc.
+                # print(f"Could not find state {item.Province_State}")
+
+        # Test positivity and vaccination status per US county and state
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
             assert (
                 type(item.fips) is int
@@ -740,6 +950,10 @@ def main() -> None:
             ), f"expected {item.state} to be {county.state}"
             if item.metrics is not None:
                 county.test_positivity_rate = item.metrics.testPositivityRatio
+            if item.actuals is not None and item.actuals.vaccinationsCompleted is not None:
+                completed_vaccinations= item.actuals.vaccinationsCompleted
+                partial_vaccinations = item.actuals.vaccinationsInitiated - completed_vaccinations
+                county.set_total_vaccines(partial_vaccinations, completed_vaccinations)
 
         for item in parse_json(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
             state_name = us_state_name_by_abbrev[item.state]
