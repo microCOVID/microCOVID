@@ -1,18 +1,18 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire country,83783945,17434,0.000208,2.4165,1.0,0.000503,0.000658,0.000263
-Baden-Wurttemberg,11069533,2433,0.00022,2.4165,1.0,0.000531,Unknown,Unknown
-Bayern,13076721,2447,0.000187,2.4165,1.0,0.000452,Unknown,Unknown
-Berlin,3644826,675,0.000185,2.4165,1.0,0.000448,Unknown,Unknown
-Brandenburg,2511917,239,9.6e-05,2.4165,1.0,0.000231,Unknown,Unknown
-Bremen,682986,107,0.000158,2.4165,1.0,0.000382,Unknown,Unknown
-Hamburg,1841179,286,0.000156,2.4165,1.0,0.000377,Unknown,Unknown
-Hessen,6265809,1196,0.000191,2.4165,1.0,0.000462,Unknown,Unknown
-Mecklenburg-Vorpommern,1609675,88,5.5e-05,2.4165,1.0,0.000134,Unknown,Unknown
-Niedersachsen,7982448,970,0.000122,2.4165,1.0,0.000294,Unknown,Unknown
-Nordrhein-Westfalen,17932651,3589,0.0002,2.4165,1.0,0.000484,Unknown,Unknown
-Rheinland-Pfalz,4084844,832,0.000204,2.4165,1.0,0.000493,Unknown,Unknown
-Saarland,990509,186,0.000189,2.4165,1.0,0.000456,Unknown,Unknown
-Sachsen,4077937,858,0.000211,2.4165,1.0,0.000509,Unknown,Unknown
-Sachsen-Anhalt,2208321,359,0.000163,2.4165,1.0,0.000394,Unknown,Unknown
-Schleswig-Holstein,2896712,228,7.9e-05,2.4165,1.0,0.000191,Unknown,Unknown
-Thuringen,2143145,431,0.000202,2.4165,1.0,0.000487,Unknown,Unknown
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,83783945,17434,0.000208,2.4165,1.0,0.000503
+Baden-Wurttemberg,11069533,2433,0.00022,2.4165,1.0,0.000531
+Bayern,13076721,2447,0.000187,2.4165,1.0,0.000452
+Berlin,3644826,675,0.000185,2.4165,1.0,0.000448
+Brandenburg,2511917,239,9.6e-05,2.4165,1.0,0.000231
+Bremen,682986,107,0.000158,2.4165,1.0,0.000382
+Hamburg,1841179,286,0.000156,2.4165,1.0,0.000377
+Hessen,6265809,1196,0.000191,2.4165,1.0,0.000462
+Mecklenburg-Vorpommern,1609675,88,5.5e-05,2.4165,1.0,0.000134
+Niedersachsen,7982448,970,0.000122,2.4165,1.0,0.000294
+Nordrhein-Westfalen,17932651,3589,0.0002,2.4165,1.0,0.000484
+Rheinland-Pfalz,4084844,832,0.000204,2.4165,1.0,0.000493
+Saarland,990509,186,0.000189,2.4165,1.0,0.000456
+Sachsen,4077937,858,0.000211,2.4165,1.0,0.000509
+Sachsen-Anhalt,2208321,359,0.000163,2.4165,1.0,0.000394
+Schleswig-Holstein,2896712,228,7.9e-05,2.4165,1.0,0.000191
+Thuringen,2143145,431,0.000202,2.4165,1.0,0.000487

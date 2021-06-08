@@ -1,29 +1,29 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire country,43733759,11208,0.000256,2.5785,1.0,0.000661,0.00067,0.000268
-Cherkasy Oblast,1206351,311,0.000259,2.5785,1.0,0.000667,Unknown,Unknown
-Chernihiv Oblast,1005745,296,0.000295,2.5785,1.0,0.000761,Unknown,Unknown
-Chernivtsi Oblast,904374,232,0.000258,2.5785,1.0,0.000664,Unknown,Unknown
-Crimea Republic*,1913731,634,0.000332,2.5785,1.1142,0.000953,Unknown,Unknown
-Dnipropetrovsk Oblast,3206477,733,0.000229,2.5785,1.0,0.00059,Unknown,Unknown
-Donetsk Oblast,4165901,409,9.8e-05,2.5785,1.0,0.000254,Unknown,Unknown
-Ivano-Frankivsk Oblast,1373252,190,0.000139,2.5785,1.0,0.000359,Unknown,Unknown
-Kharkiv Oblast,2675598,491,0.000184,2.5785,1.0,0.000474,Unknown,Unknown
-Kherson Oblast,1037640,348,0.000336,2.5785,1.0,0.000867,Unknown,Unknown
-Khmelnytskyi Oblast,1264705,260,0.000206,2.5785,1.0,0.000532,Unknown,Unknown
-Kiev,2950800,2254,0.000764,2.5785,1.2814,0.002525,Unknown,Unknown
-Kiev Oblast,1767940,759,0.00043,2.5785,1.0,0.001108,Unknown,Unknown
-Kirovohrad Oblast,945549,115,0.000123,2.5785,1.0,0.000316,Unknown,Unknown
-Luhansk Oblast,2151833,129,6e-05,2.5785,1.0,0.000156,Unknown,Unknown
-Lviv Oblast,2522021,450,0.000179,2.5785,1.0,0.000461,Unknown,Unknown
-Mykolaiv Oblast,2522021,443,0.000176,2.5785,1.0,0.000454,Unknown,Unknown
-Odessa Oblast,2380308,265,0.000112,2.5785,1.0,0.000288,Unknown,Unknown
-Poltava Oblast,1400439,149,0.000107,2.5785,1.0,0.000276,Unknown,Unknown
-Rivne Oblast,1157301,452,0.000391,2.5785,1.0,0.001009,Unknown,Unknown
-Sevastopol*,443211,153,0.000347,2.5785,1.0,0.000896,Unknown,Unknown
-Sumy Oblast,1081418,318,0.000295,2.5785,1.0,0.000761,Unknown,Unknown
-Ternopil Oblast,1045879,235,0.000226,2.5785,1.0,0.000582,Unknown,Unknown
-Vinnytsia Oblast,1560394,159,0.000103,2.5785,1.0,0.000264,Unknown,Unknown
-Volyn Oblast,1035330,290,0.000281,2.5785,1.0,0.000725,Unknown,Unknown
-Zakarpattia Oblast,1256802,157,0.000126,2.5785,1.0,0.000324,Unknown,Unknown
-Zaporizhia Oblast,1705836,689,0.000404,2.5785,1.0,0.001043,Unknown,Unknown
-Zhytomyr Oblast,1220193,287,0.000236,2.5785,1.0,0.000609,Unknown,Unknown
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,43733759,11208,0.000256,2.5785,1.0,0.000661
+Cherkasy Oblast,1206351,311,0.000259,2.5785,1.0,0.000667
+Chernihiv Oblast,1005745,296,0.000295,2.5785,1.0,0.000761
+Chernivtsi Oblast,904374,232,0.000258,2.5785,1.0,0.000664
+Crimea Republic*,1913731,634,0.000332,2.5785,1.1142,0.000953
+Dnipropetrovsk Oblast,3206477,733,0.000229,2.5785,1.0,0.00059
+Donetsk Oblast,4165901,409,9.8e-05,2.5785,1.0,0.000254
+Ivano-Frankivsk Oblast,1373252,190,0.000139,2.5785,1.0,0.000359
+Kharkiv Oblast,2675598,491,0.000184,2.5785,1.0,0.000474
+Kherson Oblast,1037640,348,0.000336,2.5785,1.0,0.000867
+Khmelnytskyi Oblast,1264705,260,0.000206,2.5785,1.0,0.000532
+Kiev,2950800,2254,0.000764,2.5785,1.2814,0.002525
+Kiev Oblast,1767940,759,0.00043,2.5785,1.0,0.001108
+Kirovohrad Oblast,945549,115,0.000123,2.5785,1.0,0.000316
+Luhansk Oblast,2151833,129,6e-05,2.5785,1.0,0.000156
+Lviv Oblast,2522021,450,0.000179,2.5785,1.0,0.000461
+Mykolaiv Oblast,2522021,443,0.000176,2.5785,1.0,0.000454
+Odessa Oblast,2380308,265,0.000112,2.5785,1.0,0.000288
+Poltava Oblast,1400439,149,0.000107,2.5785,1.0,0.000276
+Rivne Oblast,1157301,452,0.000391,2.5785,1.0,0.001009
+Sevastopol*,443211,153,0.000347,2.5785,1.0,0.000896
+Sumy Oblast,1081418,318,0.000295,2.5785,1.0,0.000761
+Ternopil Oblast,1045879,235,0.000226,2.5785,1.0,0.000582
+Vinnytsia Oblast,1560394,159,0.000103,2.5785,1.0,0.000264
+Volyn Oblast,1035330,290,0.000281,2.5785,1.0,0.000725
+Zakarpattia Oblast,1256802,157,0.000126,2.5785,1.0,0.000324
+Zaporizhia Oblast,1705836,689,0.000404,2.5785,1.0,0.001043
+Zhytomyr Oblast,1220193,287,0.000236,2.5785,1.0,0.000609

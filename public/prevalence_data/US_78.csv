@@ -1,2 +1,2 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire state,107268,95,0.000895,2.3277,1.6102,0.003354,0.004831,0.000509
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire state,107268,95,0.000895,2.3277,1.6102,0.003354

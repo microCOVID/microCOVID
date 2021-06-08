@@ -1,3 +1,3 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire state,705749,110,0.000157,2.1694,1.1579,0.000395,0.000825,9.9e-05
-District of Columbia,705749,110,0.000157,2.1694,1.1579,0.000395,0.000737,8.8e-05
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire state,705749,110,0.000157,2.1694,1.1579,0.000395
+District of Columbia,705749,110,0.000157,2.1694,1.1579,0.000395

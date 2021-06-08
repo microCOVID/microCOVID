@@ -1,4 +1,4 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire country,5792203,4813,0.000831,2.1701,1.0,0.001804,0.002311,0.000924
-Faroe Islands,48865,23,0.000491,2.1701,1.0,0.001066,Unknown,Unknown
-Greenland,56772,3,7e-05,2.1701,1.0,0.000153,Unknown,Unknown
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,5792203,4813,0.000831,2.1701,1.0,0.001804
+Faroe Islands,48865,23,0.000491,2.1701,1.0,0.001066
+Greenland,56772,3,7e-05,2.1701,1.0,0.000153
