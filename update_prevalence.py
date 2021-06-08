@@ -499,12 +499,12 @@ class AppLocation(pydantic.BaseModel):
             "Delay factor": str(round(delay, 4)),
             "Estimated prevalence": str(round(estimated_prevalence, 6)),
             "Estimated unvaccinated prevalence": (
-                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence))
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence, 6))
                 if self.unvaccinatedPrevalenceRatio is not None
                 else "Unknown"
             ),
             "Estimated vaccinated prevalence": (
-                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier))
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier, 6))
                 if self.unvaccinatedPrevalenceRatio is not None
                 else "Unknown"
             )
