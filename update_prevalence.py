@@ -19,25 +19,6 @@ from pathlib import Path
 from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any
 from us_state_abbrev import us_state_name_by_abbrev
 
-VACCINE_MULTIPLIERS = {
-    'Moderna': {
-        'complete': 0.1,
-        'partial': 0.56
-    },
-    'Pfizer': {
-        'complete': 0.1,
-        'partial': 0.56,
-    },
-    'Janssen': {
-        'complete': 0.33,
-        'partial': 0.33,
-    },
-    'Unknown': {
-        'complete': 0.4,
-        'partial': 0.56,
-    },
-}
-
 try:
     import pydantic
     import requests
@@ -65,6 +46,29 @@ def calc_effective_date() -> date:
 
 
 effective_date = calc_effective_date()
+
+
+# Read the Risk Tracker's vaccine table.
+# Format:
+# Type,0 dose,1 dose,2 dose
+def import_vaccine_multipliers():
+    vaccines = {}
+    with open('./public/tracker/vaccine_table.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            vaccine_name = row[0]
+            if vaccine_name in ['No Vaccine', 'Unknown vaccine, unknown date']:
+                continue
+            if vaccine_name == 'Johnson & Johnson':
+                vaccine_name = 'Janssen'  # JHU dataset uses 'Janssen' for this vaccine.
+            vaccines[vaccine_name] = {
+                'partial': float(row[2]),
+                'complete': float(row[3]),
+            }
+    vaccines['Unknown'] = vaccines['AstraZenica']
+    return vaccines
+
+VACCINE_MULTIPLIERS = import_vaccine_multipliers()
 
 
 # Johns Hopkins dataset
@@ -314,7 +318,8 @@ class Place(pydantic.BaseModel):
     # Average prevalence = sum(prevalence in group * proportion of population in group)
     #                    = sum(vaccine_mult * unvaccinated_prev * proportion of population)
     # Unvaccinated risk / Average risk = sum(vaccine_mult * proportion of pop)
-    #                                  = population / sum(vaccine_mult * # of vaccinations)
+    #                                  = population / sum(vaccine_mult * proportion of pop)
+    # Where the sum is taken over all vaccine types and status (incl no vaccine)
     def unvaccinated_relative_prevalence(self) -> float:
         total_vaccinated = 0
         risk_sum = 0
@@ -329,7 +334,7 @@ class Place(pydantic.BaseModel):
             risk_sum = (
                 VACCINE_MULTIPLIERS['Unknown']['complete'] * 
                 self.vaccines_total.completed_vaccinations +
-                VACCINE_MULTIPLIERS['Unknown']['complete'] * 
+                VACCINE_MULTIPLIERS['Unknown']['partial'] * 
                 self.vaccines_total.partial_vaccinations
             )
             total_vaccinated = (
@@ -348,6 +353,24 @@ class Place(pydantic.BaseModel):
         risk_sum += 1 * total_unvaccinated
         return float(self.population) / risk_sum
 
+
+    # Computes the average vaccine multiplier of the region. For use in computing
+    # "Average vaccinated" person
+    def average_fully_vaccinated_multiplier(self) -> float:
+        if (self.vaccines_by_type is None):
+            return VACCINE_MULTIPLIERS['Unknown']['complete']
+
+        vaccine_multiplier = 0
+        total_fully_vaccinated = 0
+        for vaccine_type, vaccine_status in self.vaccines_by_type.items():
+            total_fully_vaccinated += vaccine_status.completed_vaccinations
+            vaccine_multiplier += vaccine_status.completed_vaccinations * VACCINE_MULTIPLIERS[vaccine_type]['complete']
+
+        if total_fully_vaccinated == 0:
+            return VACCINE_MULTIPLIERS['Unknown']['complete']     
+        return vaccine_multiplier / total_fully_vaccinated
+
+    
     def as_app_data(self) -> "AppLocation":
         last_week = self.cases_last_week
         week_before = self.cases_week_before
@@ -375,6 +398,7 @@ class Place(pydantic.BaseModel):
             incompleteVaccinations=self.partial_vaccination_total() or None,
             completeVaccinations=self.completed_vaccination_total() or None,
             unvaccinatedPrevalenceRatio=self.unvaccinated_relative_prevalence(),
+            averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
         )
 
 
@@ -448,6 +472,7 @@ class AppLocation(pydantic.BaseModel):
     incompleteVaccinations: Optional[int]
     completeVaccinations: Optional[int]
     unvaccinatedPrevalenceRatio: Optional[float]
+    averageFullyVaccinatedMultiplier: float
 
     # https://covid19-projections.com/estimating-true-infections-revisited/
     def prevalanceRatio(self) -> float:
@@ -478,6 +503,11 @@ class AppLocation(pydantic.BaseModel):
                 if self.unvaccinatedPrevalenceRatio is not None
                 else "Unknown"
             ),
+            "Estimated vaccinated prevalence": (
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier))
+                if self.unvaccinatedPrevalenceRatio is not None
+                else "Unknown"
+            )
         }
 
 class AppLocations(pydantic.BaseModel):
@@ -489,6 +519,7 @@ class AllData:
         self.countries: Dict[str, Country] = {}
         self.fips_to_county: Dict[int, County] = {}
         self.uid_to_place: Dict[int, Place] = {}
+
 
     def get_country(self, name: str) -> Country:
         if name not in self.countries:

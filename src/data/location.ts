@@ -10,6 +10,7 @@ export interface Location {
   incompleteVaccinations?: number
   completeVaccinations?: number
   unvaccinatedPrevalenceRatio?: number
+  averageFullyVaccinatedMultiplier?: number
 }
 
 // NOTE: anything between 'locations start' and 'locations end',
