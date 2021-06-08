@@ -498,16 +498,17 @@ class AppLocation(pydantic.BaseModel):
             "Underreporting factor": str(round(underreporting, 4)),
             "Delay factor": str(round(delay, 4)),
             "Estimated prevalence": str(round(estimated_prevalence, 6)),
-            "Estimated unvaccinated prevalence": (
-                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence, 6))
-                if self.unvaccinatedPrevalenceRatio is not None
-                else "Unknown"
-            ),
-            "Estimated vaccinated prevalence": (
-                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier, 6))
-                if self.unvaccinatedPrevalenceRatio is not None
-                else "Unknown"
-            )
+            # TODO: Figure out how to add vaccine data to export without breaking existing sheets.
+            # "Estimated unvaccinated prevalence": (
+            #     str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence, 6))
+            #     if self.unvaccinatedPrevalenceRatio is not None
+            #     else "Unknown"
+            # ),
+            # "Estimated vaccinated prevalence": (
+            #     str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier, 6))
+            #     if self.unvaccinatedPrevalenceRatio is not None
+            #     else "Unknown"
+            # )
         }
 
 class AppLocations(pydantic.BaseModel):

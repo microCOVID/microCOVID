@@ -1,15 +1,15 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire country,37855702,10933,0.000289,2.3149,1.0,0.000669,0.000936,0.000375
-Alberta,4413146,1601,0.000363,2.3149,1.0,0.00084,Unknown,Unknown
-British Columbia,5110917,1057,0.000207,2.3149,1.0,0.000479,Unknown,Unknown
-Manitoba,1377517,1603,0.001164,2.3149,1.0,0.002695,Unknown,Unknown
-New Brunswick,779993,51,6.7e-05,2.3149,1.0,0.000154,Unknown,Unknown
-Newfoundland and Labrador,521365,37,7.3e-05,2.3149,1.0,0.000169,Unknown,Unknown
-Northwest Territories,44904,0,2.2e-05,2.3149,1.0,5.2e-05,Unknown,Unknown
-Nova Scotia,977457,101,0.000104,2.3149,1.0,0.000242,Unknown,Unknown
-Ontario,14711827,4453,0.000303,2.3149,1.0,0.000701,Unknown,Unknown
-Prince Edward Island,158158,0,6e-06,2.3149,1.0,1.5e-05,Unknown,Unknown
-Quebec,8537674,1433,0.000168,2.3149,1.0,0.000389,Unknown,Unknown
-Saskatchewan,1181666,593,0.000503,2.3149,1.0,0.001164,Unknown,Unknown
-Yukon,41078,3,9.7e-05,2.3149,1.0,0.000225,Unknown,Unknown
-Nunavut,38780,1,5.2e-05,2.3149,1.0,0.000119,Unknown,Unknown
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,37855702,10933,0.000289,2.3149,1.0,0.000669
+Alberta,4413146,1601,0.000363,2.3149,1.0,0.00084
+British Columbia,5110917,1057,0.000207,2.3149,1.0,0.000479
+Manitoba,1377517,1603,0.001164,2.3149,1.0,0.002695
+New Brunswick,779993,51,6.7e-05,2.3149,1.0,0.000154
+Newfoundland and Labrador,521365,37,7.3e-05,2.3149,1.0,0.000169
+Northwest Territories,44904,0,2.2e-05,2.3149,1.0,5.2e-05
+Nova Scotia,977457,101,0.000104,2.3149,1.0,0.000242
+Ontario,14711827,4453,0.000303,2.3149,1.0,0.000701
+Prince Edward Island,158158,0,6e-06,2.3149,1.0,1.5e-05
+Quebec,8537674,1433,0.000168,2.3149,1.0,0.000389
+Saskatchewan,1181666,593,0.000503,2.3149,1.0,0.001164
+Yukon,41078,3,9.7e-05,2.3149,1.0,0.000225
+Nunavut,38780,1,5.2e-05,2.3149,1.0,0.000119

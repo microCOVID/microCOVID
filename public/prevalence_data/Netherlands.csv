@@ -1,18 +1,18 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire country,17134873,12773,0.000745,2.5603,1.0,0.001909,0.002412,0.000965
-Drenthe,493682,306,0.000622,2.5603,1.0,0.001592,Unknown,Unknown
-Flevoland,423021,235,0.000558,2.5603,1.0,0.001428,Unknown,Unknown
-Friesland,649957,310,0.000478,2.5603,1.0,0.001225,Unknown,Unknown
-Gelderland,2085952,1566,0.000751,2.5603,1.0,0.001923,Unknown,Unknown
-Groningen,585866,313,0.000536,2.5603,1.0,0.001372,Unknown,Unknown
-Limburg,1117201,865,0.000775,2.5603,1.0,0.001985,Unknown,Unknown
-Noord-Brabant,2562955,2205,0.000861,2.5603,1.0,0.002204,Unknown,Unknown
-Noord-Holland,2879527,1669,0.00058,2.5603,1.0,0.001485,Unknown,Unknown
-Overijssel,1162406,970,0.000835,2.5603,1.0,0.002139,Unknown,Unknown
-Utrecht,1354834,894,0.000661,2.5603,1.0,0.001691,Unknown,Unknown
-Zeeland,383488,144,0.000378,2.5603,1.0,0.000968,Unknown,Unknown
-Zuid-Holland,3708696,3217,0.000868,2.5603,1.0,0.002222,Unknown,Unknown
-Aruba,106766,66,0.000628,2.5603,1.3469,0.002164,Unknown,Unknown
-Curacao,164100,7,4.9e-05,2.5603,2.0,0.00025,Unknown,Unknown
-Sint Maarten,42882,51,0.001213,2.5603,1.8214,0.005655,Unknown,Unknown
-Bonaire, Sint Eustatius and Saba,26221,2,0.000114,2.5603,1.0,0.000293,Unknown,Unknown
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,17134873,12773,0.000745,2.5603,1.0,0.001909
+Drenthe,493682,306,0.000622,2.5603,1.0,0.001592
+Flevoland,423021,235,0.000558,2.5603,1.0,0.001428
+Friesland,649957,310,0.000478,2.5603,1.0,0.001225
+Gelderland,2085952,1566,0.000751,2.5603,1.0,0.001923
+Groningen,585866,313,0.000536,2.5603,1.0,0.001372
+Limburg,1117201,865,0.000775,2.5603,1.0,0.001985
+Noord-Brabant,2562955,2205,0.000861,2.5603,1.0,0.002204
+Noord-Holland,2879527,1669,0.00058,2.5603,1.0,0.001485
+Overijssel,1162406,970,0.000835,2.5603,1.0,0.002139
+Utrecht,1354834,894,0.000661,2.5603,1.0,0.001691
+Zeeland,383488,144,0.000378,2.5603,1.0,0.000968
+Zuid-Holland,3708696,3217,0.000868,2.5603,1.0,0.002222
+Aruba,106766,66,0.000628,2.5603,1.3469,0.002164
+Curacao,164100,7,4.9e-05,2.5603,2.0,0.00025
+Sint Maarten,42882,51,0.001213,2.5603,1.8214,0.005655
+Bonaire, Sint Eustatius and Saba,26221,2,0.000114,2.5603,1.0,0.000293

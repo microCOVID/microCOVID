@@ -1,13 +1,13 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence,Estimated unvaccinated prevalence,Estimated vaccinated prevalence
-Entire country,65273512,34545,0.000529,2.3149,1.0,0.001225,0.00157,0.000628
-French Guiana,298682,689,0.00231,2.3149,1.0408,0.005566,Unknown,Unknown
-French Polynesia,280904,24,8.9e-05,2.3149,1.0,0.000206,Unknown,Unknown
-Guadeloupe,400127,234,0.000587,2.3149,1.0,0.00136,Unknown,Unknown
-Martinique,375265,81,0.000219,2.3149,1.0,0.000506,Unknown,Unknown
-Mayotte,272813,22,8.4e-05,2.3149,1.0,0.000195,Unknown,Unknown
-New Caledonia,285491,0,4e-06,2.3149,1.0,8e-06,Unknown,Unknown
-Reunion,895308,1174,0.001312,2.3149,1.0,0.003038,Unknown,Unknown
-Saint Barthelemy,9885,0,0.000101,2.3149,1.0,0.000234,Unknown,Unknown
-Saint Pierre and Miquelon,5795,0,0.000173,2.3149,1.0,0.000399,Unknown,Unknown
-St Martin,38659,125,0.003259,2.3149,1.0,0.007545,Unknown,Unknown
-Wallis and Futuna,15289,0,6.5e-05,2.3149,1.0,0.000151,Unknown,Unknown
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,65273512,34545,0.000529,2.3149,1.0,0.001225
+French Guiana,298682,689,0.00231,2.3149,1.0408,0.005566
+French Polynesia,280904,24,8.9e-05,2.3149,1.0,0.000206
+Guadeloupe,400127,234,0.000587,2.3149,1.0,0.00136
+Martinique,375265,81,0.000219,2.3149,1.0,0.000506
+Mayotte,272813,22,8.4e-05,2.3149,1.0,0.000195
+New Caledonia,285491,0,4e-06,2.3149,1.0,8e-06
+Reunion,895308,1174,0.001312,2.3149,1.0,0.003038
+Saint Barthelemy,9885,0,0.000101,2.3149,1.0,0.000234
+Saint Pierre and Miquelon,5795,0,0.000173,2.3149,1.0,0.000399
+St Martin,38659,125,0.003259,2.3149,1.0,0.007545
+Wallis and Futuna,15289,0,6.5e-05,2.3149,1.0,0.000151
