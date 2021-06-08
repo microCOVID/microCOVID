@@ -250,6 +250,11 @@
       "johnson_johnson": "Johnson & Johnson",
       "unknown": "Unknown or other",
       "sputnik": "Sputnik V"
+    },
+    "their_vaccine": {
+      "yes": "Yes",
+      "no": "No",
+      "unknown": "I don't know"
     }
   },
   "scenario": {
