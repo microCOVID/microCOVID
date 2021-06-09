@@ -83,10 +83,10 @@ export const Setting: { [key: string]: FormValue } = {
   },
 }
 
-export const intimateDurationFloor = 60
+export const intimateDurationFloor = 20
 
 export const Distance: { [key: string]: FormValue } = {
-  intimate: formValue(i18n.t('data.intimate_distance'), 2),
+  intimate: formValue(i18n.t('data.intimate_distance'), 5),
   close: formValue(i18n.t('data.close_distance'), 2),
   normal: formValue(i18n.t('data.normal_distance'), 1),
   sixFt: formValue(i18n.t('data.sixft_distance'), 0.5),
@@ -385,5 +385,17 @@ export const Vaccines: { [key: string]: VaccineValue } = {
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
     multiplierPerDose: [1, 0.56, 0.4],
+  },
+}
+
+export const TheirVaccine = {
+  vaccinated: {
+    label: i18n.t('data.their_vaccine.yes'),
+  },
+  unvaccinated: {
+    label: i18n.t('data.their_vaccine.no'),
+  },
+  undefined: {
+    label: i18n.t('data.their_vaccine.unknown'),
   },
 }

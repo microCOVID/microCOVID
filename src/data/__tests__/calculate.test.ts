@@ -39,7 +39,8 @@ const baseTestData = {
   casesPastWeek: 2999, // will add 1 in pseudocount
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
-  prevalanceDataDate: dateAfterDay0(25), // prevalance ratio = 25 * positivity_rate ** 0.5 + 2
+  // prevalance ratio = 1000 / (10 + i) * positivity_rate ** 0.5 + 2 = 25 * positivity_rate ** 0.5 + 2
+  prevalanceDataDate: dateAfterDay0(30),
   symptomsChecked: 'no',
 }
 
@@ -92,12 +93,12 @@ describe('calculateLocationPersonAverage', () => {
 
   it.each`
     day    | result
-    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 25 + 2)}
-    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 50 + 2)}
-    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 75 + 2)}
-    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 325 + 2)}
+    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 10 + 2)}
+    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 35 + 2)}
+    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 60 + 2)}
+    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 310 + 2)}
   `(
-    'should reduce the effect of positiveCasePercentage as 1250 / (days + 25), days = $day',
+    'should reduce the effect of positiveCasePercentage as 1000 / (days + 10), days = $day',
     ({ day, result }) => {
       expect(
         calculateLocationPersonAverage(
@@ -355,7 +356,6 @@ describe('calculate', () => {
         ...indoorIntimate,
         setting: 'outdoor',
       }
-
       expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
@@ -373,23 +373,38 @@ describe('calculate', () => {
 
       expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
     })
-    it('should be at least 12% (1 hr) transfer risk.', () => {
-      const oneHourIntimate: CalculatorData = {
+    it('should be at least 12% (20 min) transfer risk.', () => {
+      const twentyMinuteIntimate: CalculatorData = {
         ...indoorIntimate,
-        duration: 60,
+        duration: 20,
       }
       const oneMinuteIntimate: CalculatorData = {
-        ...oneHourIntimate,
+        ...twentyMinuteIntimate,
         duration: 1,
       }
-      const twoHourIntimate: CalculatorData = {
-        ...oneHourIntimate,
-        duration: 120,
+      const thirtyMinuteIntimate: CalculatorData = {
+        ...twentyMinuteIntimate,
+        duration: 30,
       }
 
-      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(oneHourIntimate))
-      expect(calcValue(twoHourIntimate)).toEqual(
-        calcValue(oneHourIntimate)! * 2,
+      expect(calcValue(oneMinuteIntimate)).toEqual(
+        calcValue(twentyMinuteIntimate),
+      )
+      expect(calcValue(thirtyMinuteIntimate)).toBeCloseTo(
+        calcValue(twentyMinuteIntimate)! * 1.5,
+      )
+    })
+    it('should not exceed live-in-partner risk,', () => {
+      const tenHourIntimate: CalculatorData = {
+        ...indoorIntimate,
+        duration: 600,
+      }
+      const partnerIntimate: CalculatorData = {
+        ...indoorIntimate,
+        interaction: 'partner',
+      }
+      expect(calcValue(tenHourIntimate)).toBeCloseTo(
+        calcValue(partnerIntimate)!,
       )
     })
     it('should not apply talking multiplier', () => {

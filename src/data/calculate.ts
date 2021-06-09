@@ -51,6 +51,8 @@ export interface CalculatorData {
   // Vaccine
   yourVaccineType: string
   yourVaccineDoses: number
+
+  theirVaccine: string
 }
 
 export const defaultValues: CalculatorData = {
@@ -79,6 +81,8 @@ export const defaultValues: CalculatorData = {
 
   yourVaccineType: '',
   yourVaccineDoses: 0,
+
+  theirVaccine: 'undefined',
 }
 
 interface CalculatorResult {
@@ -100,7 +104,7 @@ const prevalenceRatio = (positivityPercent: number | null, date: Date) => {
     positivityPercent = 100
   }
   const positivityRate = positivityPercent / 100
-  return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
+  return (1000 / (day_i + 10)) * positivityRate ** 0.5 + 2
 }
 
 // These are the variables exposed via query parameters

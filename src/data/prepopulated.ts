@@ -33,6 +33,7 @@ export const prepopulated: {
     theirMask: '',
     yourMask: '',
     voice: '',
+    theirVaccine: 'undefined',
   },
   [i18n.t('scenario.outdoorMasked2')]: {
     riskProfile: 'average',
@@ -46,6 +47,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.indoorUnmasked2')]: {
@@ -60,6 +62,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.1person_15minCarRide')]: {
@@ -74,6 +77,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.oneNightStand')]: {
@@ -88,6 +92,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.liveInPartner_noContacts')]: {
@@ -102,6 +107,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.60minShopping')]: {
@@ -116,6 +122,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.60minShoppingFew')]: {
@@ -130,6 +137,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.60minShoppingCrowded')]: {
@@ -144,6 +152,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.planeRide')]: {
@@ -158,6 +167,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.planeRideMiddleSeatEmpty')]: {
@@ -172,6 +182,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.restaurantOutdoors')]: {
@@ -186,6 +197,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.restaurantIndoors')]: {
@@ -200,6 +212,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.bar')]: {
@@ -214,6 +227,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'loud',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.largeOutdoorParty')]: {
@@ -228,6 +242,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.smallIndoorParty25')]: {
@@ -242,6 +257,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.outdoorMaskedWithCovidPositive')]: {
@@ -256,6 +272,7 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.indoorUnmaskedWithCovidPositive')]: {
@@ -270,6 +287,7 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
   },
 
   [i18n.t('scenario.votingInPerson')]: {
@@ -284,5 +302,6 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
   },
 }
