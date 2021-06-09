@@ -8,7 +8,7 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(2021, 5, 27),
+    date: new Date(2021, 4, 27),
     content: `
 * Updated constants for under-reporting factor
   * New numbers from [COVID 19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/) December 2020 update.
