@@ -387,3 +387,15 @@ export const Vaccines: { [key: string]: VaccineValue } = {
     multiplierPerDose: [1, 0.56, 0.4],
   },
 }
+
+export const TheirVaccine = {
+  vaccinated: {
+    label: i18n.t('data.their_vaccine.yes'),
+  },
+  unvaccinated: {
+    label: i18n.t('data.their_vaccine.no'),
+  },
+  undefined: {
+    label: i18n.t('data.their_vaccine.unknown'),
+  },
+}
