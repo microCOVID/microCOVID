@@ -224,15 +224,22 @@ However, this study is quite small and we have not seen more recent studies show
 As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
 Whether you also want to change your budget in addition to this is a personal choice.
 
-Some reasons you might want to change your budget:
+Some ways you may want to change your budget in response to getting vaccinated people around you vaccinated:
 * If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
 * You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. 10x for the mRNA vaccines) while still having the same impact on them. 
 * If you are primarily concerned about hospitalization/death but unconcerned about effects of mild COVID, you may double your budget post vaccination.
 
-Some reasons you might not want to change your budget:
-* You are in an elevated risk category and are worried about the health risk to yourself.
-* You interact regularly with someone who is not vaccinated (or people whose vaccination status you don't know) and don't want to risk giving them COVID.
-* You interact regularly with someone who is vaccinated but might not get the full benefits of the vaccine (i.e. immunocompromised)
+Example A:
+
+You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .3 * 5) = 80 microCOVID/week\`. All 6 of you are now vaccinated.
+* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .03 * 5) = 174 microCOVID/week\`.
+* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`80 / 0.1 = 800 microCOVID/week\`.
+* If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further double your budget (accepting a higher risk of mild/asymptomatic COVID).
+
+Example B:
+
+You live with or care for someone with a condition that reduces the efficacy of a vaccine (consult their doctor).
+* You choose not to change your budget, since this person is just as likely to get COVID from you as before.
 
 ### So is a vaccinated person safer to be around than an unvaccinated person?
 Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated person who does the same activities as a unvaccinated person will be less risky to be around. However, if the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got vaccinated! The only way to accurately understand a person's risk is to model each of their activities and multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
