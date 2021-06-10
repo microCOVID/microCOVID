@@ -212,9 +212,9 @@ While the vaccines are nowhere near making you invulnerable to COVID, remember t
 
 ### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
 
-Data from Israel's study suggests that Pfizer's vaccine reduced cases of severe COVID by 92% (95% CI, 75 to 100), about the same as the reduction in mild/asymptomatic COVID.
-Therefore we do not think that mRNA vaccines significantly reduce the chance of hospitalization or death beyond the reduction in contracting COVID in the first
-place. Note that the error bars on this figure are somewhat wide; the risk reduction is likely somewhere between 3x and 1/3x.
+Data from [Israel's nationwide-study](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00947-8/fulltext) showed that Pfizer's
+vaccine reduced cases of severe COVID by 97.2% (CI 96.8–97.5) and for all COVID cases by 95.3% (94.9–95.7). Therefore, we think that mRNA vaccines
+provide an additional factor of 2 reduction against severe COVID on top of reducing the chance of contracting COVID at all.
 
 We have not done a thorough analysis of this effect in other vaccines.
 
@@ -222,11 +222,12 @@ We have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) sugg
 However, this study is quite small and we have not seen more recent studies showing this effect (if you are aware of additional data on this, please let us know!)
 
 As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
-but we do not have a general recommendation on changing your microCOVID budget after vaccination.
+Whether you also want to change your budget in addition to this is a personal choice.
 
 Some reasons you might want to change your budget:
-* If you live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
+* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
 * You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. 10x for the mRNA vaccines) while still having the same impact on them. 
+* If you are primarily concerned about hospitalization/death but unconcerned about effects of mild COVID, you may double your budget post vaccination.
 
 Some reasons you might not want to change your budget:
 * You are in an elevated risk category and are worried about the health risk to yourself.
