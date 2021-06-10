@@ -218,11 +218,13 @@ provide an additional factor of 2 reduction against severe COVID on top of reduc
 
 We have not done a thorough analysis of this effect in other vaccines.
 
-We have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
-However, this study is quite small and we have not seen more recent studies showing this effect (if you are aware of additional data on this, please let us know!)
+We have not seen data that describes the effect of vaccines on long COVID in mild/asymptomatic cases. The 1% annual risk budget is based on risks of long term effects of
+COVID (as opposed to hospitalization or death) 
+* A [study by ZOE](https://www.medrxiv.org/content/10.1101/2020.10.19.20214494v1.full.pdf) found that "one in twenty people (5%) had COVID-19 symptoms for more than eight weeks, and around 2% of people can experience symptoms for 12 weeks or more".
+* Another [study](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) early in the pandemic found lung abnormalities in half of asymptomatic COVID-19 cases.
 
-As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
-Whether you also want to change your budget in addition to this is a personal choice.
+As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs based on how the vaccine affects your chances of infecting others (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
+You may additionally increase your budget based on how the vaccine reduces your own chances of negative outcomes, but this is a personal choice dependent on your own view of how averse to the various possible negative outcomes you are.
 
 Some ways you may want to change your budget in response to getting vaccinated people around you vaccinated:
 * If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
