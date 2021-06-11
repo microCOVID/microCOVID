@@ -219,9 +219,10 @@ provide an additional factor of 2 reduction against severe COVID on top of reduc
 We have not done a thorough analysis of this effect in other vaccines.
 
 We have not seen data that describes the effect of vaccines on long COVID in mild/asymptomatic cases. The 1% annual risk budget is based on risks of long term effects of
-COVID (as opposed to hospitalization or death) 
-* A [study by ZOE](https://www.medrxiv.org/content/10.1101/2020.10.19.20214494v1.full.pdf) found that "one in twenty people (5%) had COVID-19 symptoms for more than eight weeks, and around 2% of people can experience symptoms for 12 weeks or more".
-* Another [study](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) early in the pandemic found lung abnormalities in half of asymptomatic COVID-19 cases.
+COVID (as opposed to hospitalization or death). Reports of prevalence in long COVID in unvaccinated people varies widely:
+* A [study by ZOE](https://www.medrxiv.org/content/10.1101/2020.10.19.20214494v1.full.pdf) found that "one in twenty people (5%) had COVID-19 symptoms for more than eight weeks, and around 2% of people can experience symptoms for 12 weeks or more". The data for this was self-reported and the researchers noted that many participants stopped reporting data before the conclusion of the study.
+* Another [study](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) early in the pandemic found lung abnormalities in half of asymptomatic COVID-19 cases on the Diamond Princess cruise ship. These lung abnormalities are similar to pneumonia; it is unclear from that study what percent led to long term health changes.
+* Researchers found [heart abnormalities in 78 of 100 recovered patients](https://jamanetwork.com/journals/jamacardiology/fullarticle/2768916), sampling an average of 71 days after initial diagnosis. There may be self-selection bias among participants in this cohort.
 
 As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs based on how the vaccine affects your chances of infecting others (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
 You may additionally increase your budget based on how the vaccine reduces your own chances of negative outcomes, but this is a personal choice dependent on your own view of how averse to the various possible negative outcomes you are.
