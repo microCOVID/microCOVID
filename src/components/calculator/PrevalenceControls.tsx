@@ -256,6 +256,9 @@ interface PrevalanceData {
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
   prevalanceDataDate: Date
+  completeVaccinations: number | null
+  unvaccinatedPrevalenceRatio: number | null
+  averageFullyVaccinatedMultiplier: number | null
 }
 
 function dataForLocation(location: string): PrevalanceData {
@@ -272,6 +275,10 @@ function dataForLocation(location: string): PrevalanceData {
           ? null
           : Math.round(locationData.positiveCasePercentage * 10) / 10,
       prevalanceDataDate: new Date(PrevalenceDataDate),
+      completeVaccinations: locationData.completeVaccinations,
+      unvaccinatedPrevalenceRatio: locationData.unvaccinatedPrevalenceRatio,
+      averageFullyVaccinatedMultiplier:
+        locationData.averageFullyVaccinatedMultiplier,
     }
   }
 
@@ -281,5 +288,8 @@ function dataForLocation(location: string): PrevalanceData {
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 0,
     prevalanceDataDate: new Date(),
+    completeVaccinations: null,
+    unvaccinatedPrevalenceRatio: null,
+    averageFullyVaccinatedMultiplier: null,
   }
 }
