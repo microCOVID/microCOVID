@@ -88,7 +88,7 @@ export const defaultValues: CalculatorData = {
   yourVaccineType: '',
   yourVaccineDoses: 0,
 
-  theirVaccine: 'undefined',
+  theirVaccine: '',
 }
 
 interface CalculatorResult {
