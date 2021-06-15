@@ -388,14 +388,12 @@ export const Vaccines: { [key: string]: VaccineValue } = {
   },
 }
 
-export const TheirVaccine = {
-  vaccinated: {
-    label: i18n.t('data.their_vaccine.yes'),
-  },
-  unvaccinated: {
-    label: i18n.t('data.their_vaccine.no'),
-  },
-  undefined: {
-    label: i18n.t('data.their_vaccine.unknown'),
-  },
+const yesVaccinatedDesc = i18n.t('data.yes_vaccinated')
+const noVaccinatedDesc = i18n.t('data.no_vaccinated')
+const unknownVaccinatedDesc = i18n.t('data.unknown_vaccinated')
+
+export const TheirVaccine: { [key: string]: CheckBoxFormValue } = {
+  vaccinated: segmentedFormValue(i18n.t('data.their_vaccine.yes'), yesVaccinatedDesc, 1 / 2),
+  unvaccinated: segmentedFormValue(i18n.t('data.their_vaccine.no'), noVaccinatedDesc, 1.0),
+  unknown: segmentedFormValue(i18n.t('data.their_vaccine.unknown'), unknownVaccinatedDesc, 1.0)
 }

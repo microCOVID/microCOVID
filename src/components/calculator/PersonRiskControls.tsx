@@ -3,10 +3,13 @@ import { Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './controls/ControlLabel'
+import { SegmentedControl } from './controls/SegmentedControl'
 import { SelectControl } from './controls/SelectControl'
 import { fixedPointPrecision } from './util/FormatPrecision'
 import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
-import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
+import { Distance, RiskProfile, TheirVaccine, intimateDurationFloor } from 'data/data'
+
+import 'components/calculator/styles/PersonRiskControls.scss'
 
 const personCountPopover = (
   <Popover id="popover-basic">
@@ -173,6 +176,15 @@ export const PersonRiskControls: React.FunctionComponent<{
               : ` [${fixedPointPrecision(personRisk)} microCOVIDs]`)
           )
         }}
+      />
+      <SegmentedControl
+        id="theirVaccine"
+        header={t('calculator.their_vaccine_header')}
+        data={data}
+        setter={setter}
+        source={TheirVaccine}
+        className="segmented-scrollable"
+        variant="outline-cyan"
       />
       <br />
     </React.Fragment>

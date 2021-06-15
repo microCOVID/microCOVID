@@ -99,6 +99,7 @@
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "person_risk_profile_question": "What is their risk profile?",
     "person_risk_profile_header": "Risk Profile",
+    "their_vaccine_header": "Their vaccine: Are they fully vaccinated?",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
     "category_very_low": "Very Low",
@@ -225,6 +226,9 @@
     "silent_voice": "Not talking (such as quietly riding the train)",
     "normal_voice": "Normal conversation",
     "loud_voice": "Loud talking (shouting, talking over music, singing)",
+    "yes_vaccinated": "Final vaccination dose was more than 2 weeks ago",
+    "no_vaccinated": "Has received no vaccine or partial vaccination",
+    "unknown_vaccinated": "Unsure of vaccination status",
     "person": {
       "average": "An average person in your area",
       "frontline": "A healthcare or social worker",
