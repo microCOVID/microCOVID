@@ -41,6 +41,8 @@ const baseTestData = {
   positiveCasePercentage: 0,
   // prevalance ratio = 1000 / (10 + i) * positivity_rate ** 0.5 + 2 = 25 * positivity_rate ** 0.5 + 2
   prevalanceDataDate: dateAfterDay0(30),
+  unvaccinatedPrevalenceRatio: 2,
+  averageFullyVaccinatedMultiplier: 0.1,
   symptomsChecked: 'no',
 }
 
@@ -520,6 +522,29 @@ describe('calculate', () => {
       expect(calcValue(vaccinePartner)).toBeCloseTo(
         calcValue(noVaccinePartner)! * 0.1,
       )
+    })
+  })
+
+  describe('theirVaccine', () => {
+    const noVaccineScenario = testData(
+      prepopulated['Car ride with 1 other person for 15 mins'],
+    )
+    const defaultValue = calcValue(noVaccineScenario)!
+
+    it('Should use "undefined" by default', () => {
+      expect(noVaccineScenario.theirVaccine).toEqual('undefined')
+    })
+
+    it('Should increase risk for unvaccinated people', () => {
+      expect(
+        calcValue({ ...noVaccineScenario, theirVaccine: 'unvaccinated' }),
+      ).toEqual(defaultValue * 2)
+    })
+
+    it('Should decrease risk for vaccinated people', () => {
+      expect(
+        calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
+      ).toEqual(defaultValue * 2 * 0.1)
     })
   })
 })
