@@ -118,7 +118,8 @@
       "cases_stable_or_decreasing": "Cases are stable or decreasing.",
       "percent_increase_in_cases": "Percent increase in cases from last week to this week",
       "positive_case_percentage": "Percent of tests that come back positive",
-      "data_last_updated": "Data last updated"
+      "data_last_updated": "Data last updated",
+      "completed_vaccinations": "Percent of population fully vaccinated"
     },
     "location_selector_header": "Step 1: Enter your location",
     "location_subprompt": {

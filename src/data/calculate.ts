@@ -33,6 +33,9 @@ export interface CalculatorData {
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
   prevalanceDataDate: Date
+  completeVaccinations: number | null
+  unvaccinatedPrevalenceRatio: number | null
+  averageFullyVaccinatedMultiplier: number | null
 
   // Person risk
   riskProfile: keyof typeof RiskProfile
@@ -66,6 +69,9 @@ export const defaultValues: CalculatorData = {
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
   prevalanceDataDate: new Date(),
+  completeVaccinations: null,
+  unvaccinatedPrevalenceRatio: null,
+  averageFullyVaccinatedMultiplier: null,
 
   riskProfile: '',
   interaction: '',
@@ -237,16 +243,42 @@ export const calculatePersonRiskEach = (
       // If risk profile isn't selected, call it incomplete
       return null
     }
+
     const isHousemate =
       data.interaction === 'partner' || data.interaction === 'repeated'
-    return (
+    const unadjustedRisk =
       averagePersonRisk *
       personRiskMultiplier({
         riskProfile: RiskProfile[data.riskProfile],
         isHousemate,
         symptomsChecked: data.symptomsChecked,
       })
-    )
+
+    if (
+      // TODO: Support vaccinated risk for other Risk Profiles.
+      data.riskProfile !== 'average' ||
+      data.unvaccinatedPrevalenceRatio === null ||
+      data.averageFullyVaccinatedMultiplier === null
+    ) {
+      return unadjustedRisk
+    }
+
+    switch (data.theirVaccine) {
+      case 'vaccinated':
+        return (
+          unadjustedRisk *
+          data.unvaccinatedPrevalenceRatio *
+          data.averageFullyVaccinatedMultiplier
+        )
+      case 'unvaccinated':
+        return unadjustedRisk * data.unvaccinatedPrevalenceRatio
+      // falls through
+      case 'undefined':
+        return unadjustedRisk
+      default:
+        console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
+        return null
+    }
   } catch (e) {
     return null
   }
