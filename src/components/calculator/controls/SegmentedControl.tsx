@@ -24,8 +24,11 @@ export const SegmentedControl: React.FunctionComponent<{
   hideRisk?: boolean
   className?: string
   labelFactory?: (value: string) => string
-  useHoverDesc?: boolean
+  useHoverDesc?: boolean // If true, label will be overridden by the hovered option's description.
+  useActiveDesc?: boolean // If true, label will be overridden by the selected option's description.
+
   variant?: string
+  showTooltip?: boolean // If true, the hovered option will have the description shown above.
 }> = (props) => {
   const dataValue = props.id in props.data ? props.data[props.id] : ''
   const activeValue = typeof dataValue === 'string' ? dataValue : ''
@@ -54,13 +57,15 @@ export const SegmentedControl: React.FunctionComponent<{
   const hoverDescIfPresentOtherwiseActiveDesc =
     hoverDesc !== ''
       ? hoverDesc
-      : (activeValue !== '' && props.source[activeValue].value) || ''
+      : props.useActiveDesc && activeValue !== ''
+      ? props.source[activeValue].description || ''
+      : props.label || ''
 
   return (
     <div className="form-group">
       <ControlLabel
         id={props.id}
-        label={hoverDescIfPresentOtherwiseActiveDesc}
+        label={props.label || hoverDescIfPresentOtherwiseActiveDesc}
         header={props.header}
         popover={props.popover}
       />
@@ -72,16 +77,17 @@ export const SegmentedControl: React.FunctionComponent<{
           className={'segmented-wrap ' + props.className}
           value={activeValue}
         >
-          {Object.keys(props.source).map((value, index) => (
+          {Object.entries(props.source).map(([key, formValue], index) => (
             <OverlayTrigger
               placement="top"
-              key={value}
+              key={key}
+              trigger={props.showTooltip ? ['hover', 'focus'] : []}
               overlay={
                 <Tooltip
-                  id={props.id + '-tooltip-' + value}
+                  id={props.id + '-tooltip-' + key}
                   className="segmented-tooltip"
                 >
-                  {props.source[value].value}
+                  {formValue.description}
                 </Tooltip>
               }
             >
@@ -90,9 +96,9 @@ export const SegmentedControl: React.FunctionComponent<{
                 type="radio"
                 variant={props.variant}
                 name={props.id}
-                value={value}
+                value={key}
                 className="segmented-button"
-                checked={props.data[props.id] === value}
+                checked={props.data[props.id] === key}
                 onChange={(e) => {
                   recordCalculatorOptionSelected(
                     props.id,
@@ -104,26 +110,32 @@ export const SegmentedControl: React.FunctionComponent<{
                   })
                 }}
                 onMouseEnter={() =>
-                  props.useHoverDesc && setHoverDesc(props.source[value].value)
+                  props.useHoverDesc &&
+                  formValue.description &&
+                  setHoverDesc(formValue.description)
                 }
                 onMouseLeave={() => props.useHoverDesc && setHoverDesc('')}
               >
-                <span className="segmented-label two-lines">
+                <span
+                  className={
+                    'segmented-label' + formValue.multiplier ? ' two-lines' : ''
+                  }
+                >
                   {props.labelFactory
-                    ? props.labelFactory(value)
-                    : props.source[value].label}
+                    ? props.labelFactory(key)
+                    : formValue.label}
                 </span>
-                <span className="segmented-multiplier">
-                  {props.labelFactory
-                    ? ''
-                    : formatRiskMultiplier(
-                        props.hideRisk,
-                        props.source[value].multiplier,
-                      )}
-                </span>
-                <span className="segmented-value">
-                  {props.source[value].value}
-                </span>
+                {formValue.multiplier ? (
+                  <div className="segmented-multiplier">
+                    {props.labelFactory
+                      ? ''
+                      : formatRiskMultiplier(
+                          props.hideRisk,
+                          formValue.multiplier,
+                        )}
+                  </div>
+                ) : null}
+                <span className="segmented-value">{formValue.description}</span>
               </ToggleButton>
             </OverlayTrigger>
           ))}

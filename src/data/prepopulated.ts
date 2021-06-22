@@ -36,7 +36,7 @@ export const prepopulated: {
     theirMask: '',
     yourMask: '',
     voice: '',
-    theirVaccine: 'undefined', // TODO update this
+    theirVaccine: 'undefined',
   },
   [i18n.t('scenario.outdoorMasked2')]: {
     riskProfile: 'average',

@@ -7,9 +7,12 @@ import { SegmentedControl } from './controls/SegmentedControl'
 import { SelectControl } from './controls/SelectControl'
 import { fixedPointPrecision } from './util/FormatPrecision'
 import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
-import { Distance, RiskProfile, TheirVaccine, intimateDurationFloor } from 'data/data'
-
-import 'components/calculator/styles/PersonRiskControls.scss'
+import {
+  Distance,
+  RiskProfile,
+  TheirVaccine,
+  intimateDurationFloor,
+} from 'data/data'
 
 const personCountPopover = (
   <Popover id="popover-basic">
@@ -177,15 +180,20 @@ export const PersonRiskControls: React.FunctionComponent<{
           )
         }}
       />
-      <SegmentedControl
-        id="theirVaccine"
-        header={t('calculator.their_vaccine_header')}
-        data={data}
-        setter={setter}
-        source={TheirVaccine}
-        className="segmented-scrollable"
-        variant="outline-cyan"
-      />
+      {data.riskProfile === 'average' ? (
+        <SegmentedControl
+          id="theirVaccine"
+          header={t('calculator.their_vaccine_header')}
+          label={t('calculator.their_vaccine_question')}
+          data={data}
+          setter={setter}
+          source={TheirVaccine}
+          className="segmented-scrollable"
+          variant="outline-cyan"
+          showTooltip={true}
+          useHoverDesc={false}
+        />
+      ) : null}
       <br />
     </React.Fragment>
   )

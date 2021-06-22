@@ -8,6 +8,14 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 5, 22),
+    content: `
+* Added the option to select the vaccination state of average people
+  * Imported vaccination data from JHU and Covid Act Now.
+  * See [Research Sources](/paper/14-research-sources#others-vaccines) for derivation and caveats.    
+`,
+  },
+  {
     date: new Date(2021, 4, 27),
     content: `
 * Updated constants for under-reporting factor
@@ -36,7 +44,7 @@ const changes: Change[] = [
   {
     date: new Date(2021, 1, 21),
     content: `
-* Added precaution for being vaccinated. See paper [Q&A](/paper/13-1-and-a#vaccines-qa) and [Research Sources](/paper/14-research-sources#vaccines) for details.
+* Added precaution for being vaccinated. See paper [Q&A](/paper/13-q-and-a#vaccines-qa) and [Research Sources](/paper/14-research-sources#vaccines) for details.
 * Note: vaccines also reduce the risk of people who you interact with, we just haven't implemented this yet.`,
   },
   {
