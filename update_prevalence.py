@@ -342,13 +342,14 @@ class Place(pydantic.BaseModel):
                 self.vaccines_total.partial_vaccinations
             )
 
-        assert (
-            total_vaccinated <= self.population
-        ), f"{self.label} has over 100% vaccinated. Population: {self.population}, vaccinations: {total_vaccinated}"
-
         if total_vaccinated == 0:
             return 
 
+        if total_vaccinated >= self.population:
+            # This probably means people from other counties have gotten their
+            # vaccine here. Just assume 100% vaccination.
+            return total_vaccinated / risk_sum
+         
         total_unvaccinated = self.population - total_vaccinated
         risk_sum += 1 * total_unvaccinated
         return float(self.population) / risk_sum
@@ -638,7 +639,7 @@ class AllData:
                         parent.cases_last_week / tests_last_week
                     )
 
-        def rolldown_vaccine_types(parent: Place,  children: list[Place]):
+        def rolldown_vaccine_types(parent: Place,  children: List[Place]):
             for child in children:
                 if (child.vaccines_by_type is None):
                     child_vaccinations = child.vaccines_total
@@ -810,6 +811,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Federal Bureau of Prisons",
         "Veteran Hospitals",
         "Repatriated Travellers",
+        "Summer Olympics 2020",
     ):
         return True
     if line.Country_Region in (
@@ -819,6 +821,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Western Sahara",
         "Micronesia",
         "Palau",
+        "Summer Olympics 2020",
     ):
         return True
     if line.Country_Region == "US":
