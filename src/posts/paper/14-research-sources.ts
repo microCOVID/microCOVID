@@ -423,6 +423,38 @@ For vaccines require 2 doses, we see reductions in symptomatic COVID after a sin
 This gives an overall multiplier of \`(0.4 + .42 * .23) / (0.8 + .42 * .2) = 0.56\`
 HOWEVER, data that immunity is much shorter-lived in individuals with one dose of a 2 dose vaccine. We recommend getting the second dose as soon as it is available.
 
+### Others' Vaccines
+For the purposes of providing an estimate of the riskiness of an "average vaccinated person",
+we must consider that the "average" person in a region has some likelihood of being vaccinated.
+A vaccinated individual is (vaccine multiplier) times less likely to get COVID than the
+average unvaccinated individual, which is not the same as the average individual.
+
+We make the assumption that vaccinated and unvaccinated people are doing roughly the same
+activities - we explicitly don't like this assumption, but don't have good data for what
+ratio of risky activites to use instead.
+
+Then:
+\`\`\`
+Average prevalence = sum(prevalence in group * proportion of population in group)
+                   = sum(vaccine_mult * unvaccinated_prev * proportion of population)
+Unvaccinated risk / Average risk = sum(vaccine_mult * proportion of pop)
+                                 = population / sum(vaccine_mult * proportion of pop)
+Where the sum is taken over all vaccine types and status (including no vaccine)
+\`\`\`
+
+To get data for vaccine prevalence, we use data from JHU for Countires and US States,
+combined with data from Covid Act Now for vaccines in a county. JHU breaks down 
+vaccinations by manufacturer for US States, and we assume that US Counties have the 
+same ratio of vaccine types.
+
+We do not have a data source for vaccine type breakdown in countries outside the US; 
+we calculate as if all vaccines were AstraZeneca. This results in under-estimating the
+riskiness of unvaccinated people and over-estimating the riskiness of vaccinated people
+in countries where more effective vaccines are being used.
+
+We have not (yet) done this calculation for other risk profiles; the calculation is somewhat
+different. The Risk Tracker remains the best tool for estimating the risk of a vaccinated
+person whose behaviors are known.
 
 [^1]:
      We find it easier to understand the difference between an odds ratio and a risk ratio in a medical context. If 100 people walk into your clinic with heart disease, and twice as many were smokers as non-smokers, then the odds ratio is 2x. But that doesn’t tell you what you would get if you _started_ with 50 smokers and 50 nonsmokers and watched for heart disease later. You don’t know what the base rate of smoking was in your original dataset. See [https://psychscenehub.com/psychpedia/odds-ratio-2](https://psychscenehub.com/psychpedia/odds-ratio-2) for more on this.

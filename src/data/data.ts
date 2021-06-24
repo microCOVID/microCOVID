@@ -3,7 +3,7 @@ import i18n from '../i18n'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
-  value: string
+  description?: string
   sublabel?: string
 }
 
@@ -31,10 +31,10 @@ const formValue = function (label: string, multiplier: number): FormValue {
 
 const segmentedFormValue = function (
   label: string,
-  value: string,
+  description: string,
   multiplier: number,
 ): CheckBoxFormValue {
-  return { label, multiplier, value }
+  return { label, multiplier, description }
 }
 
 export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
@@ -148,32 +148,31 @@ export const BUDGET_THREE_PERCENT = 30000
 export const BUDGET_ONE_PERCENT = 10000
 export const BUDGET_ONE_TENTH_PERCENT = 1000
 
-export const budgetOptions = [
-  {
-    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
-    multiplier: 0.1,
-    value: BUDGET_ONE_TENTH_PERCENT.toString(),
-  },
-  {
-    label: i18n.t('calculator.risk_tolerance_1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
-    multiplier: 1,
-    value: BUDGET_ONE_PERCENT.toString(),
-  },
-  {
-    label: i18n.t('calculator.risk_tolerance_3_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_3_percent_explanation'),
-    multiplier: 3,
-    value: BUDGET_THREE_PERCENT.toString(),
-  },
-  {
-    label: i18n.t('calculator.risk_tolerance_10_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
-    multiplier: 10,
-    value: BUDGET_TEN_PERCENT.toString(),
-  },
-]
+export const budgetOptions: { [key: string]: CheckBoxFormValue } = {}
+
+budgetOptions[BUDGET_ONE_TENTH_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
+  multiplier: 0.1,
+}
+
+budgetOptions[BUDGET_ONE_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_1_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
+  multiplier: 1,
+}
+
+budgetOptions[BUDGET_THREE_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_3_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_3_percent_explanation'),
+  multiplier: 3,
+}
+
+budgetOptions[BUDGET_TEN_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_10_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
+  multiplier: 10,
+}
 
 // TODO(beshaya): Move RiskProfile to it's own file.
 /*
@@ -388,14 +387,20 @@ export const Vaccines: { [key: string]: VaccineValue } = {
   },
 }
 
-export const TheirVaccine = {
+export const TheirVaccine: { [key: string]: CheckBoxFormValue } = {
   vaccinated: {
     label: i18n.t('data.their_vaccine.yes'),
+    description: i18n.t('data.their_vaccine.yes_description'),
+    multiplier: 0,
   },
   unvaccinated: {
     label: i18n.t('data.their_vaccine.no'),
+    description: i18n.t('data.their_vaccine.no_description'),
+    multiplier: 0,
   },
   undefined: {
     label: i18n.t('data.their_vaccine.unknown'),
+    description: i18n.t('data.their_vaccine.unknown_description'),
+    multiplier: 0,
   },
 }

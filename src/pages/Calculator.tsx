@@ -213,6 +213,14 @@ export const Calculator = (): React.ReactElement => {
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.average_vaccine">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/paper/14-research-sources#others-vaccines">
+                HERE_PLACEHOLDER
+              </Link>
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.december_covid19projections">
               <strong>DATE PLACEHOLDER</strong>{' '}
               <a href="https://covid19-projections.com/estimating-true-infections-revisited/">

@@ -6,7 +6,6 @@
 }
 
 .segmented-scrollable {
-  width: 100%;
   overflow-x: auto;
   padding-right: 1px;
 }
@@ -94,6 +93,7 @@
 
   .segmented-tooltip {
     display: none !important;
+    visibility: hidden;
   }
 
   .btn-group {
