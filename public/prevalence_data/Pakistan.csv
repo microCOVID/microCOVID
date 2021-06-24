@@ -1,9 +1,9 @@
 Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,220892331,5773,2.6e-05,2.2997,1.0,6e-05
-Azad Jammu and Kashmir,4045366,157,3.9e-05,2.2997,1.0,9e-05
-Balochistan,12344408,342,2.8e-05,2.2997,1.0892,7e-05
-Gilgit-Baltistan,1013584,93,9.3e-05,2.2997,1.4762,0.000315
-Islamabad,2006572,187,9.4e-05,2.2997,1.0,0.000215
-Khyber Pakhtunkhwa,30523371,834,2.7e-05,2.2997,1.0,6.3e-05
-Punjab,110012442,762,7e-06,2.2997,1.0,1.6e-05
-Sindh,47886051,3398,7.1e-05,2.2997,1.0,0.000163
+Entire country,220892331,5638,2.6e-05,2.2985,1.0,5.9e-05
+Azad Jammu and Kashmir,4045366,196,4.9e-05,2.2985,1.1598,0.00013
+Balochistan,12344408,379,3.1e-05,2.2985,1.1662,8.3e-05
+Gilgit-Baltistan,1013584,110,0.00011,2.2985,1.746,0.00044
+Islamabad,2006572,192,9.6e-05,2.2985,1.0,0.000221
+Khyber Pakhtunkhwa,30523371,707,2.3e-05,2.2985,1.0,5.3e-05
+Punjab,110012442,808,7e-06,2.2985,1.0,1.7e-05
+Sindh,47886051,3246,6.8e-05,2.2985,1.0,0.000156
