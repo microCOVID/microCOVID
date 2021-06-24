@@ -443,12 +443,12 @@ Where the sum is taken over all vaccine types and status (including no vaccine)
 \`\`\`
 
 To get data for vaccine prevalence, we use data from JHU for Countires and US States,
-combined with data from Covid Act Now for vaccines in a county. JHU breakds down 
+combined with data from Covid Act Now for vaccines in a county. JHU breaks down 
 vaccinations by manufacturer for US States, and we assume that US Counties have the 
 same ratio of vaccine types.
 
 We do not have a data source for vaccine type breakdown in countries outside the US; 
-we calculate as if all vaccines were AstraZenica. This results in under-estimating the
+we calculate as if all vaccines were AstraZeneca. This results in under-estimating the
 riskiness of unvaccinated people and over-estimating the riskiness of vaccinated people
 in countries where more effective vaccines are being used.
 
