@@ -17,7 +17,6 @@
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-github-headings": "^2.0.0",
     "markdown-it-link-attributes": "^3.0.0",
-    "node-sass": "^4.14.1",
     "num2fraction": "^1.2.2",
     "popper.js": "^1.16.1",
     "query-string": "^6.13.5",
@@ -32,6 +31,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.0-next.64",
     "rfs": "^9.0.3",
+    "sass": "^1.35.1",
     "use-query-params": "^1.1.8"
   },
   "scripts": {
