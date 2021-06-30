@@ -90,23 +90,25 @@ const InteractionTypeIcon: React.FunctionComponent<{
 }> = (props): React.ReactElement => {
   const iconFromInteractionType = (interaction: string) => {
     const iconProps = { size: 24 }
-    if (props.interaction === 'oneTime') {
-      return <BsFillPersonFill {...iconProps} />
-    } else if (interaction === 'workplace') {
-      return <BsBriefcaseFill {...iconProps} />
-    } else if (interaction === 'repeated') {
-      return <BsFillHouseDoorFill {...iconProps} />
-    } else if (interaction === 'partner') {
-      // The heart is naturally positioned a little too high. Move it down
-      // slightly.
-      return (
-        <BsHeartFill
-          {...iconProps}
-          style={{ position: 'relative', top: '2px' }}
-        />
-      )
+    switch (interaction) {
+      case 'oneTime':
+        return <BsFillPersonFill {...iconProps} />
+      case 'workplace':
+        return <BsBriefcaseFill {...iconProps} />
+      case 'repeated':
+        return <BsFillHouseDoorFill {...iconProps} />
+      case 'partner':
+        // The heart is naturally positioned a little too high. Move it down
+        // slightly.
+        return (
+          <BsHeartFill
+            {...iconProps}
+            style={{ position: 'relative', top: '2px' }}
+          />
+        )
+      default:
+        return <BsQuestion {...iconProps} />
     }
-    return <BsQuestion {...iconProps} />
   }
   return (
     <div className="rounded-circle p-2 mr-2 bg-primary text-white">

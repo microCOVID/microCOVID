@@ -4,6 +4,13 @@ import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { BaseFormValue } from 'data/data'
 
+// Collapsing vertical control. Basically, a replacement for vertically
+// arranged radio buttons that collapses when the user makes a choice. This
+// differs from a regular dropdown in that
+//
+// 1) the choices do not float. They push content further down the page and
+//    do not hide anything.
+// 2) unlike native dropdowns, all options are visible at once.
 export const VerticalControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void

@@ -103,7 +103,8 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
                   ),
                 }}
               >
-                Blah <strong>blah</strong>
+                <strong>9% per hour</strong> baseline chance of transmission for
+                each infected person nearby
               </Trans>
             </li>
             <li>
