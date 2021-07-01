@@ -33,7 +33,7 @@ export interface CalculatorData {
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
   prevalanceDataDate: Date
-  completeVaccinations: number | null
+  percentFullyVaccinated: number | null
   unvaccinatedPrevalenceRatio: number | null
   averageFullyVaccinatedMultiplier: number | null
 
@@ -69,7 +69,7 @@ export const defaultValues: CalculatorData = {
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
   prevalanceDataDate: new Date(),
-  completeVaccinations: null,
+  percentFullyVaccinated: null,
   unvaccinatedPrevalenceRatio: null,
   averageFullyVaccinatedMultiplier: null,
 

@@ -6,7 +6,7 @@ interface PrevalanceData {
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
   prevalanceDataDate: Date
-  completeVaccinations: number | null
+  percentFullyVaccinated: number | null
   unvaccinatedPrevalenceRatio: number | null
   averageFullyVaccinatedMultiplier: number | null
 }
@@ -15,6 +15,8 @@ export function dataForLocation(location: string): PrevalanceData {
   const locationData = Locations[location]
 
   if (locationData) {
+    const population = Number(locationData.population.replace(/[^0-9.e]/g, ''))
+
     return {
       population: locationData.population,
       casesPastWeek: locationData.casesPastWeek,
@@ -25,7 +27,9 @@ export function dataForLocation(location: string): PrevalanceData {
           ? null
           : Math.round(locationData.positiveCasePercentage * 10) / 10,
       prevalanceDataDate: new Date(PrevalenceDataDate),
-      completeVaccinations: locationData.completeVaccinations,
+      percentFullyVaccinated: locationData.completeVaccinations
+        ? locationData.completeVaccinations / population
+        : null,
       unvaccinatedPrevalenceRatio: locationData.unvaccinatedPrevalenceRatio,
       averageFullyVaccinatedMultiplier:
         locationData.averageFullyVaccinatedMultiplier,
@@ -38,7 +42,7 @@ export function dataForLocation(location: string): PrevalanceData {
     casesIncreasingPercentage: 0,
     positiveCasePercentage: 0,
     prevalanceDataDate: new Date(),
-    completeVaccinations: null,
+    percentFullyVaccinated: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: null,
   }
