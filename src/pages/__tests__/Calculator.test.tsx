@@ -41,7 +41,7 @@ describe('calculator page', () => {
     const californiaOption = getByText(/California/i)
     fireEvent.click(californiaOption)
 
-    const buildYourOwn = /build your own/i
+    const buildYourOwn = /build a custom scenario/i
     const gatheringOption = /A gathering/i
     const nearbyPeople = /How many people/i
 

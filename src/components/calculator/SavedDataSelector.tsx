@@ -129,11 +129,6 @@ const SavedScenarioCard: React.FunctionComponent<{
 
   return (
     <>
-      <div className="saved-data-text">
-        {props.showingResults
-          ? t('calculator.scenario_show_results')
-          : t('calculator.scenario_guide_through')}
-      </div>
       <Alert variant={props.variant} className="bg-white">
         <Media>
           <InteractionTypeIcon interaction={props.interactionType} />
