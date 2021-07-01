@@ -1,4 +1,3 @@
-import i18n from 'i18n'
 import React, { useState } from 'react'
 import { Alert, Button, Form, InputGroup, Media } from 'react-bootstrap'
 import { Typeahead } from 'react-bootstrap-typeahead'
@@ -14,46 +13,23 @@ import {
 } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
-import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { ControlLabel } from 'components/calculator/controls/ControlLabel'
 import { InteractionTypeDisplay } from 'components/calculator/selectors/InteractionTypeSelector'
 import { CalculatorData } from 'data/calculate'
-import { PartialData, prepopulated } from 'data/prepopulated'
+import { prepopulated } from 'data/prepopulated'
 
-const SavedDataLink: React.FunctionComponent<{
-  currentData: CalculatorData
-  setter: (newData: CalculatorData) => void
+interface PresetScenario {
   scenarioName: string
-  scenarioNameSetter: (newScenario: string) => void
-  setEditInteractionType: (newEdit: boolean) => void
-  setEditScenario: (newShow: boolean) => void
+}
+
+// Link that activates a preset.
+const SavedDataLink: React.FunctionComponent<{
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }> = (props): React.ReactElement => {
-  const { t } = useTranslation()
-  const setSavedData = (key: string): void => {
-    let foundData: PartialData | CalculatorData | null = null
-    foundData = prepopulated[key]
-
-    if (foundData) {
-      props.setter({
-        ...props.currentData,
-        ...foundData,
-      })
-    }
-    props.scenarioNameSetter(key)
-    props.setEditInteractionType(key === '' || key === t('scenario.custom'))
-    if (key !== undefined && key !== '') {
-      recordCalculatorOptionSelected('scenario', key)
-    }
-  }
-
   return (
     <Button
       className="p-0 m-0 border-0 align-baseline scenario-shortcut"
-      onClick={() => {
-        setSavedData(props.scenarioName)
-        props.scenarioNameSetter(props.scenarioName)
-        props.setEditScenario(false)
-      }}
+      onClick={props.onClick}
       size="lg"
       variant="link"
     >
@@ -121,25 +97,24 @@ const SavedScenarioCard: React.FunctionComponent<{
   currentData: CalculatorData
   variant: string
   showingResults: boolean
-  setEditScenario: (show: boolean) => void
   scenarioName: string
-  scenarioNameSetter: (newScenario: string) => void
   onStartOver: (event: React.MouseEvent<HTMLButtonElement>) => void
-  startOverButton?: JSX.Element
-  editInteractionType: boolean
   setInteractionType: (newInteraction: string) => void
-  setEditInteractionType: (newEdit: boolean) => void
   interactionType: string
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
   const heading =
-    props.scenarioName !== '' ? props.scenarioName : t('scenario.custom')
+    props.scenarioName !== ''
+      ? t('scenario.' + props.scenarioName)
+      : t('scenario.custom')
 
   const isPresetScenario =
     props.scenarioName !== undefined &&
     props.scenarioName !== '' &&
-    props.scenarioName !== t('scenario.custom')
-  const showResetButton = !props.editInteractionType && !isPresetScenario
+    props.scenarioName !== 'custom'
+  const editInteractionType =
+    props.interactionType === undefined || props.interactionType === ''
+  const showResetButton = !editInteractionType && !isPresetScenario
 
   const startOverButton = (
     <Button
@@ -168,16 +143,14 @@ const SavedScenarioCard: React.FunctionComponent<{
               {heading}
             </Alert.Heading>
             <InteractionTypeDisplay
-              setInteractionType={props.setInteractionType}
               currentData={props.currentData}
               interactionType={props.interactionType}
-              editInteractionType={props.editInteractionType}
-              setEditInteractionType={props.setEditInteractionType}
+              setInteractionType={props.setInteractionType}
               showResetButton={showResetButton}
             />
           </Media.Body>
         </Media>
-        {!props.editInteractionType && (
+        {!editInteractionType && (
           <>
             <hr />
             <div className="text-secondary">
@@ -205,56 +178,34 @@ const SavedScenarioCard: React.FunctionComponent<{
 export const SavedDataSelector: React.FunctionComponent<{
   currentData: CalculatorData
   setter: (newData: CalculatorData) => void
-  scenarioName: string
-  scenarioNameSetter: (newScenario: string) => void
+  setSavedData: (newScenario: string) => void
   label?: string
   showingResults: boolean
-  editScenario: boolean
-  setEditScenario: (newEdit: boolean) => void
-  editInteractionType: boolean
-  setEditInteractionType: (newEdit: boolean) => void
   interactionType: string
   setInteractionType: (newInteraction: string) => void
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
-  const prepopulatedOptions = Object.keys(prepopulated)
+  const prepopulatedOptions = Object.keys(prepopulated).map(
+    (preset): PresetScenario => {
+      return { scenarioName: preset }
+    },
+  )
   const [inputText, setInputText] = useState('')
   const [autoFocus, setAutoFocus] = useState(false)
-
-  let selected: string[] = []
-  if (props.scenarioName !== undefined && props.scenarioName !== '') {
-    const selectedOption = props.scenarioName
-    selected = [selectedOption]
-  }
-
-  const setSavedData = (key: string): void => {
-    let foundData: PartialData | CalculatorData | null = null
-    foundData = prepopulated[key]
-
-    if (foundData) {
-      props.setter({
-        ...props.currentData,
-        ...foundData,
-      })
-    }
-    props.scenarioNameSetter(key)
-    props.setEditInteractionType(key === '' || key === t('scenario.custom'))
-    if (key !== undefined && key !== '') {
-      recordCalculatorOptionSelected('scenario', key)
-    }
-  }
+  const scenarioName = props.currentData.scenarioName || ''
+  const editScenario = scenarioName === ''
 
   const showMatchesAndCustomScenario = (
-    option: string,
-    props: { text: string; selected: string[] },
-  ) => {
-    const propsText: string = props.text || ''
+    option: PresetScenario,
+    props: { text: string; selected: PresetScenario[] },
+  ): boolean => {
+    const propsText = props.text || ''
 
     // User is considering switching scenarios. Show all options.
     if (props.selected.length > 0) {
       return true
     }
-    if (option === i18n.t('scenario.custom')) {
+    if (option.scenarioName === 'custom') {
       return true
     }
 
@@ -264,29 +215,28 @@ export const SavedDataSelector: React.FunctionComponent<{
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
-    return normalizeString(option).indexOf(normalizeString(propsText)) !== -1
+    return (
+      normalizeString(option.scenarioName).indexOf(
+        normalizeString(propsText),
+      ) !== -1
+    )
   }
 
-  const savedDataRef = React.createRef<Typeahead<string>>()
-  if (!props.editScenario) {
+  const savedDataRef = React.createRef<Typeahead<PresetScenario>>()
+  if (!editScenario) {
     return (
       <>
         <SavedScenarioCard
           currentData={props.currentData}
           variant="secondary"
-          scenarioName={props.scenarioName}
-          scenarioNameSetter={setSavedData}
+          scenarioName={scenarioName}
           showingResults={props.showingResults}
+          interactionType={props.interactionType}
           setInteractionType={props.setInteractionType}
-          setEditScenario={props.setEditScenario}
           onStartOver={() => {
-            setSavedData('')
-            props.setEditScenario(true)
+            props.setSavedData('')
             setAutoFocus(true)
           }}
-          editInteractionType={props.editInteractionType}
-          setEditInteractionType={props.setEditInteractionType}
-          interactionType={props.interactionType}
         />
       </>
     )
@@ -299,12 +249,9 @@ export const SavedDataSelector: React.FunctionComponent<{
           <Trans i18nKey="calculator.select_scenario">
             Start with a premade scenario or{' '}
             <SavedDataLink
-              currentData={props.currentData}
-              setter={props.setter}
-              scenarioName={t('scenario.custom')}
-              scenarioNameSetter={setSavedData}
-              setEditScenario={props.setEditScenario}
-              setEditInteractionType={props.setEditInteractionType}
+              onClick={() => {
+                props.setSavedData('custom')
+              }}
             >
               build your own
             </SavedDataLink>
@@ -342,18 +289,19 @@ export const SavedDataSelector: React.FunctionComponent<{
               return shouldSelect
             },
           }}
+          labelKey={(option: PresetScenario): string => {
+            return t('scenario.' + option.scenarioName)
+          }}
           onBlur={() => {
             if (savedDataRef.current) {
               savedDataRef.current.hideMenu()
             }
           }}
-          onChange={(e: string[]) => {
+          onChange={(e: PresetScenario[]) => {
             if (e.length === 0) {
-              setSavedData('')
-              props.setEditScenario(true)
+              props.setSavedData('')
             } else {
-              setSavedData(e[e.length - 1])
-              props.setEditScenario(false)
+              props.setSavedData(e[e.length - 1].scenarioName)
               if (savedDataRef.current) {
                 savedDataRef.current.blur()
               }
@@ -372,16 +320,14 @@ export const SavedDataSelector: React.FunctionComponent<{
           }}
           options={prepopulatedOptions}
           ref={savedDataRef}
-          selected={selected}
         />
       </InputGroup>
-      {selected.length === 0 && inputText.length > 0 && (
+      {inputText.length > 0 && (
         <SavedScenarioContinue
           variant="muted"
-          scenarioName={props.scenarioName}
+          scenarioName={scenarioName}
           onClick={() => {
-            setSavedData(t('scenario.custom'))
-            props.setEditScenario(false)
+            props.setSavedData('custom')
             setInputText('')
           }}
         />

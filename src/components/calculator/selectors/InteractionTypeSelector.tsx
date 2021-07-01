@@ -13,8 +13,6 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
   currentData: CalculatorData
   interactionType: string
   setInteractionType: (newData: string) => void
-  editInteractionType: boolean
-  setEditInteractionType: (newEdit: boolean) => void
   showResetButton: boolean
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
@@ -72,7 +70,7 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
       <div className="d-inline-block d-md-inline">
         {formattedInteractionTypeName}
       </div>
-      {props.interactionType !== undefined && !props.editInteractionType && (
+      {props.interactionType !== undefined && props.interactionType !== '' && (
         <Button
           onClick={() => setShowInteractionTypeMath(!showInteractionTypeMath)}
           aria-controls="interaction-type-math"
@@ -91,7 +89,7 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
             : t('calculator.show_math')}
         </Button>
       )}
-      {props.interactionType !== undefined && !props.editInteractionType && (
+      {props.interactionType !== undefined && props.interactionType !== '' && (
         <Collapse in={showInteractionTypeMath}>
           <ul>
             <li>
@@ -103,8 +101,8 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
                   ),
                 }}
               >
-                <strong>9% per hour</strong> baseline chance of transmission for
-                each infected person nearby
+                [<strong>9% per hour</strong> baseline chance of transmission
+                for each infected person nearby]
               </Trans>
             </li>
             <li>
@@ -120,7 +118,8 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
                     ).toFixed(2) + '%',
                 }}
               >
-                Blah <strong>blah</strong>
+                [<strong>~0.03%</strong> of people here are currently
+                infectious.]
               </Trans>
             </li>
           </ul>
@@ -138,23 +137,17 @@ export const InteractionTypeSelector: React.FunctionComponent<{
   label?: string
   className?: string
   labelFactory?: (value: string) => string
-  editMode: boolean
-  setEditMode: (newEditMode: boolean) => void
 }> = (props) => {
   return (
     <>
       <div className="form-group">
-        {props.editMode && (
-          <VerticalControl
-            id={props.id}
-            editMode={props.editMode}
-            setEditMode={props.setEditMode}
-            setter={props.setter}
-            source={props.source}
-            value={props.value}
-            labelFactory={props.labelFactory}
-          />
-        )}
+        <VerticalControl
+          id={props.id}
+          setter={props.setter}
+          source={props.source}
+          value={props.value}
+          labelFactory={props.labelFactory}
+        />
       </div>
     </>
   )

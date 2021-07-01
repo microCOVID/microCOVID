@@ -142,7 +142,7 @@
       "enter_data_manually": "Override location-based data"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
-    "select_scenario": "Start with a premade scenario or <2>build your own</2>:",
+    "select_scenario": "Start with a premade scenario or <2>build a custom scenario</2>:",
     "no_prebuilt_scenario_found": "No premade scenario found.",
     "saved_scenario_continue_custom": "Build your own scenario",
     "scenario_show_results": "Showing results for",
@@ -181,10 +181,10 @@
     "show_math": "Show math",
     "hide_math": "Hide math",
     "set_interaction_type_to_continue": "Choose an interaction type to continue.",
-    "one_time_interaction_risk_message": "<1>{{ percentage }} per hour</1> baseline chance of transmission for each infected person nearby",
-    "repeated_interaction_risk_message": "<1>{{ percentage }} per week</1> baseline chance of transmission for each infected person nearby",
-    "partner_interaction_risk_message": "<1>{{ percentage }} per week</1> baseline chance of transmission if this person is infected",
-    "location_risk_message": "~{{ prevalence }} of people here are currently infectious. We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
+    "one_time_interaction_risk_message": "<1>{{ percentage }} per hour baseline chance of transmission</1> for each infected person nearby",
+    "repeated_interaction_risk_message": "<1>{{ percentage }} per week baseline chance of transmission</1> for each infected person nearby",
+    "partner_interaction_risk_message": "<1>{{ percentage }} per week baseline chance of transmission</1> if this person is infected",
+    "location_risk_message": "<1>~{{ prevalence }} of people here are currently infectious.</1> We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
     "risk_group_empty_warning": "Enter your location first.",
     "alerts": {
       "average_vaccine": "<0>June 22nd, 2021:</0> Added an option to specify vaccination status of average people. Learn more about the derivation <2>here</2>.",

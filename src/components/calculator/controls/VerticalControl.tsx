@@ -16,8 +16,6 @@ export const VerticalControl: React.FunctionComponent<{
   setter: (value: string) => void
   source: { [key: string]: BaseFormValue }
   value: string | number
-  editMode: boolean
-  setEditMode: (newEditMode: boolean) => void
   labelFactory?: (value: string) => string
 }> = (props) => {
   const [suppressCollapse, setSuppressCollapse] = useState(false)
@@ -36,7 +34,6 @@ export const VerticalControl: React.FunctionComponent<{
     // If user exits selection via link that activates a preset scenario,
     // get out of edit mode.
     return () => {
-      props.setEditMode(false)
       setSuppressCollapse(false)
     }
     // TODO(jy2wong) this line should use react-hooks/exhaustive-deps
@@ -78,15 +75,14 @@ export const VerticalControl: React.FunctionComponent<{
                   recordCalculatorOptionSelected(props.id, value)
                   props.setter(value)
                 }
-                props.setEditMode(false)
               }
             }}
             onKeyDown={(e) => {
+              // Arrow keys. User hasn't committed to an option yet.
               if (37 <= e.keyCode && e.keyCode <= 40) {
                 setSuppressCollapse(true)
               } else if (e.keyCode === 9 || e.keyCode === 13) {
                 setSuppressCollapse(false)
-                props.setEditMode(false)
                 recordCalculatorOptionSelected(props.id, value)
                 props.setter(value)
               }

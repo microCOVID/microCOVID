@@ -34,6 +34,7 @@ import {
   parsePopulation,
 } from 'data/calculate'
 import { Interaction } from 'data/data'
+import { PartialData, prepopulated } from 'data/prepopulated'
 import {
   filterParams,
   queryConfig,
@@ -70,17 +71,6 @@ export const Calculator = (): React.ReactElement => {
 
   const { t } = useTranslation()
 
-  const [editScenario, setEditScenario] = useState(
-    calculatorData.interaction === undefined ||
-      calculatorData.interaction === '',
-  )
-  const [scenarioName, setScenarioName] = useState('')
-
-  const [editInteractionType, setEditInteractionType] = useState(
-    calculatorData.interaction === undefined ||
-      calculatorData.interaction === '',
-  )
-
   const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
   const removeQueryParams = () => {
@@ -91,8 +81,6 @@ export const Calculator = (): React.ReactElement => {
     window.scrollTo(0, 0)
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
-    setScenarioName('')
-    setEditScenario(true)
     removeQueryParams()
   }
 
@@ -164,6 +152,13 @@ export const Calculator = (): React.ReactElement => {
   const repeatedEvent = ['repeated', 'partner'].includes(
     calculatorData.interaction,
   )
+
+  const editScenario =
+    calculatorData.scenarioName === undefined ||
+    calculatorData.scenarioName === ''
+  const editInteractionType =
+    calculatorData.interaction === undefined ||
+    calculatorData.interaction === ''
 
   const shareButton = (
     <button
@@ -265,13 +260,35 @@ export const Calculator = (): React.ReactElement => {
                     <SavedDataSelector
                       currentData={calculatorData}
                       setter={setCalculatorData}
-                      scenarioName={scenarioName}
-                      scenarioNameSetter={setScenarioName}
+                      setSavedData={(newScenario: string): void => {
+                        let foundData:
+                          | PartialData
+                          | CalculatorData
+                          | null = null
+                        foundData = prepopulated[newScenario]
+
+                        if (newScenario === '') {
+                          setCalculatorData({
+                            ...calculatorData,
+                            scenarioName: newScenario,
+                            interaction: '',
+                          })
+                        } else if (foundData) {
+                          setCalculatorData({
+                            ...calculatorData,
+                            ...foundData,
+                            scenarioName: newScenario,
+                          })
+                        }
+
+                        if (newScenario !== undefined && newScenario !== '') {
+                          recordCalculatorOptionSelected(
+                            'scenario',
+                            newScenario,
+                          )
+                        }
+                      }}
                       showingResults={pointsVisible}
-                      editScenario={editScenario}
-                      setEditScenario={setEditScenario}
-                      editInteractionType={editInteractionType}
-                      setEditInteractionType={setEditInteractionType}
                       interactionType={calculatorData.interaction}
                       setInteractionType={(value) => {
                         setCalculatorData({
@@ -289,7 +306,7 @@ export const Calculator = (): React.ReactElement => {
                 </Row>
                 {!editScenario ? (
                   <React.Fragment>
-                    <div>
+                    {editInteractionType ? (
                       <InteractionTypeSelector
                         id="interaction"
                         // This setter defaults to a personCount of 1 if the interaction type is "partner"
@@ -306,11 +323,8 @@ export const Calculator = (): React.ReactElement => {
                         }}
                         value={calculatorData.interaction}
                         source={Interaction}
-                        editMode={editInteractionType}
-                        setEditMode={setEditInteractionType}
                       />
-                    </div>
-                    {!editInteractionType && (
+                    ) : (
                       <>
                         <Row>
                           <Col

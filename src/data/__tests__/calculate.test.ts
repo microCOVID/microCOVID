@@ -133,7 +133,7 @@ describe('calculateLocationPersonAverage', () => {
 
 describe('calculate', () => {
   it('produces same results as by hand', () => {
-    const scenario = 'Outdoor masked hangout with 2 other people'
+    const scenario = 'outdoorMasked2'
     const data: CalculatorData = testData(prepopulated[scenario])
 
     const response = calcValue(data)
@@ -149,25 +149,25 @@ describe('calculate', () => {
   })
 
   it.each`
-    scenario                                                          | result
-    ${'Outdoor masked hangout with 2 other people'}                   | ${8 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Indoor unmasked hangout with 2 other people'}                  | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Car ride with 1 other person for 15 mins'}                     | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'One-night stand with a random person'}                         | ${2880}
-    ${'Live-in partner who has no indoor interactions besides you'}   | ${29 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (average # of shoppers)'}         | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (few other shoppers)'}            | ${24 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (crowded)'}                       | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Plane ride (full flight)'}                                     | ${328 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Plane ride (middle seat empty)'}                               | ${160 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Eating in restaurant, outdoors'}                               | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Eating in restaurant, indoors'}                                | ${4050 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Going to bar'}                                                 | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Outdoor party: 80 people, masked, with 3 feet between people'} | ${960 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Indoor party: 25 people, unmasked'}                            | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Outdoor, masked hangout with person who has COVID'}            | ${666.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Indoor, unmasked hangout with person who has COVID'}           | ${60000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Voting in-person'}                                             | ${2.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    scenario                             | result
+    ${'outdoorMasked2'}                  | ${8 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'indoorUnmasked2'}                 | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'1person_15minCarRide'}            | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'oneNightStand'}                   | ${2880}
+    ${'liveInPartner_noContacts'}        | ${29 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'60minShopping'}                   | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'60minShoppingFew'}                | ${24 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'60minShoppingCrowded'}            | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'planeRide'}                       | ${328 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'planeRideMiddleSeatEmpty'}        | ${160 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'restaurantOutdoors'}              | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'restaurantIndoors'}               | ${4050 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'bar'}                             | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'largeOutdoorParty'}               | ${960 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'smallIndoorParty25'}              | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'outdoorMaskedWithCovidPositive'}  | ${666.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'indoorUnmaskedWithCovidPositive'} | ${60000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'votingInPerson'}                  | ${2.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = testData(prepopulated[scenario])
 
@@ -266,11 +266,7 @@ describe('calculate', () => {
   })
 
   describe('Interaction: partner', () => {
-    const partner = testData(
-      prepopulated[
-        'Live-in partner who has no indoor interactions besides you'
-      ],
-    )
+    const partner = testData(prepopulated['liveInPartner_noContacts'])
     it('should not be affected by multipliers', () => {
       const bonuses: CalculatorData = {
         ...partner,
@@ -351,7 +347,7 @@ describe('calculate', () => {
 
   describe('Distance: intimate', () => {
     const indoorIntimate: CalculatorData = testData(
-      prepopulated['One-night stand with a random person'],
+      prepopulated['oneNightStand'],
     )
     it('should not give a bonus for outdoors', () => {
       const outdoorIntimate: CalculatorData = {
@@ -363,7 +359,7 @@ describe('calculate', () => {
 
     it('should not give a bonus for masks', () => {
       const unmaskedIntimate = testData({
-        ...prepopulated['One-night stand with a random person'],
+        ...prepopulated['oneNightStand'],
         yourMask: 'none',
         theirMask: 'none',
       })
@@ -411,7 +407,7 @@ describe('calculate', () => {
     })
     it('should not apply talking multiplier', () => {
       const kissingTalking = testData({
-        ...prepopulated['One-night stand with a random person'],
+        ...prepopulated['oneNightStand'],
         voice: 'normal',
       })
       const kissingSilent: CalculatorData = {
@@ -451,9 +447,7 @@ describe('calculate', () => {
   })
 
   describe('yourVaccine', () => {
-    const noVaccineScenario = testData(
-      prepopulated['Car ride with 1 other person for 15 mins'],
-    )
+    const noVaccineScenario = testData(prepopulated['1person_15minCarRide'])
     const noVaccineValue = calcValue(noVaccineScenario)
 
     it.each`
@@ -510,9 +504,7 @@ describe('calculate', () => {
 
     it('Should apply vaccine multiplier to partner activities', () => {
       const noVaccinePartner = testData(
-        prepopulated[
-          'Live-in partner who has no indoor interactions besides you'
-        ],
+        prepopulated['liveInPartner_noContacts'],
       )
       const vaccinePartner = {
         ...noVaccinePartner,
@@ -526,9 +518,7 @@ describe('calculate', () => {
   })
 
   describe('theirVaccine', () => {
-    const noVaccineScenario = testData(
-      prepopulated['Car ride with 1 other person for 15 mins'],
-    )
+    const noVaccineScenario = testData(prepopulated['1person_15minCarRide'])
     const defaultValue = calcValue(noVaccineScenario)!
 
     it('Should use "undefined" by default', () => {

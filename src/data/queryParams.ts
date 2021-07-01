@@ -30,6 +30,8 @@ export const queryConfig: QueryParamConfigMap = {
   yourVaccineType: StringParam,
 
   theirVaccine: StringParam,
+
+  scenarioName: StringParam,
 }
 
 export const filterParams = (data: CalculatorData): QueryData => {
