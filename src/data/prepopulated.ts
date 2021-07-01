@@ -13,7 +13,7 @@ export type PartialData = Omit<
   | 'casesIncreasingPercentage'
   | 'positiveCasePercentage'
   | 'prevalanceDataDate'
-  | 'completeVaccinations'
+  | 'percentFullyVaccinated'
   | 'unvaccinatedPrevalenceRatio'
   | 'averageFullyVaccinatedMultiplier'
   | 'yourVaccineType'
