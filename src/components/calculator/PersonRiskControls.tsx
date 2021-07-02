@@ -180,7 +180,20 @@ export const PersonRiskControls: React.FunctionComponent<{
           )
         }}
       />
-      {data.riskProfile === 'average' ? (
+      {TheirVaccineIfAvailable(data, setter)}
+      <br />
+    </React.Fragment>
+  )
+}
+
+function TheirVaccineIfAvailable(
+  data: CalculatorData,
+  setter: (newData: CalculatorData) => void,
+) {
+  const { t } = useTranslation()
+  if (data.riskProfile === 'average') {
+    if (data.unvaccinatedPrevalenceRatio) {
+      return (
         <SegmentedControl
           id="theirVaccine"
           header={t('calculator.their_vaccine_header')}
@@ -193,10 +206,16 @@ export const PersonRiskControls: React.FunctionComponent<{
           showTooltip={true}
           useHoverDesc={false}
         />
-      ) : null}
-      <br />
-    </React.Fragment>
-  )
+      )
+    }
+    return (
+      <div className="warning">
+        <Trans>calculator.no_vaccine_prevalence</Trans>
+      </div>
+    )
+  }
+  // Not a supported risk profile.
+  return null
 }
 
 function GroupSizeWarning(props: { people: number }): React.ReactElement {

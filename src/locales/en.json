@@ -184,7 +184,8 @@
       "december_covid19projections": "<0>May 27th, 2021:</0> Updated underreporting model based on update from <2>COVID19 Projections</2>. This results in slightly lower risk estimates.",
       "sputnik_added": "<0>April 10th, 2021:</0> Added the Sputnik V vaccine to the calculator. Learn more about our calculation of its efficacy <2>here</2>.",
       "full_changelog": "see all updates..."
-    }
+    },
+    "no_vaccine_prevalence": "Since our system doesn't yet have vaccine data for your region, we aren't able to provide a way for you to adjust your score based on whether or not the person you're seeing is vaccinated."
   },
   "per week": "per week",
   "each time you do it": "each time you do it",
@@ -257,7 +258,7 @@
     },
     "their_vaccine": {
       "yes": "Yes",
-      "no": "No",  
+      "no": "No",
       "unknown": "I don't know",
       "yes_description": "Final vaccination dose was more than 2 weeks ago",
       "no_description": "Has received no vaccine or partial vaccination",
