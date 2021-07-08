@@ -277,15 +277,20 @@ class Place(pydantic.BaseModel):
             current = prev
         return daily_cumulative_cases[::-1]
 
+    # Makes an estimate of the number of new cases in a slice of daily cumulative
+    # cases. Nominally is values[-1] - values[0], but sometimes regions post
+    # corrections which result in the number of cases decreasing.
+    def cases_in_cum_cases(self, values) -> int:
+        min_index = values.index(min(values))
+        return max(values[min_index:]) - min(values)
+
     @property
     def cases_last_week(self) -> int:
-        return max(self.recent_daily_cumulative_cases[-7:]) - \
-            min(self.recent_daily_cumulative_cases[-7:])
+        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-7:])
 
     @property
     def cases_week_before(self) -> int:
-        return max(self.recent_daily_cumulative_cases[-14:-7]) - \
-            min(self.recent_daily_cumulative_cases[-14:-7])
+        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-14:-7])
 
     @property
     @abc.abstractmethod
