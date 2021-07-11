@@ -18,17 +18,20 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
   const { t } = useTranslation()
   const [showInteractionTypeMath, setShowInteractionTypeMath] = useState(false)
   const getInteractionRiskMessage = (interactionType: string) => {
-    if (interactionType === 'oneTime' || interactionType === 'workplace') {
-      return 'calculator.one_time_interaction_risk_message'
-    } else if (interactionType === 'repeated') {
-      return 'calculator.repeated_interaction_risk_message'
-    } else if (interactionType === 'partner') {
-      return 'calculator.partner_interaction_risk_message'
+    switch (interactionType) {
+      case 'oneTime':
+      case 'workplace':
+        return 'calculator.one_time_interaction_risk_message'
+      case 'repeated':
+        return 'calculator.repeated_interaction_risk_message'
+      case 'partner':
+        return 'calculator.partner_interaction_risk_message'
+      default:
+        console.warn(
+          'No interaction risk message for interaction type ',
+          interactionType,
+        )
     }
-    console.warn(
-      'No interaction risk message for interaction type ',
-      interactionType,
-    )
     return 'calculator.one_time_interaction_risk_message'
   }
 
@@ -42,16 +45,16 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
         {t(Interaction[props.interactionType].label)}
       </Dropdown.Toggle>
       <Dropdown.Menu className="w-100">
-        {Object.keys(Interaction).map((value, index) => {
+        {Object.entries(Interaction).map(([key, interaction], index) => {
           return (
             <Dropdown.Item
               key={index}
               className="text-wrap"
               onSelect={() => {
-                props.setInteractionType(value)
+                props.setInteractionType(key)
               }}
             >
-              {Interaction[value].label}
+              {interaction.label}
             </Dropdown.Item>
           )
         })}

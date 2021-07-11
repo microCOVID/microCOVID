@@ -101,14 +101,11 @@ export const Calculator = (): React.ReactElement => {
     addAlert('Link copied to clipboard!')
   }
 
-  const [pointsVisible, setPointsVisible] = useState(false)
-
   const { points, lowerBound, upperBound } = useMemo(() => {
     // Risk calculation
     const result = calculate(calculatorData)
     if (result === null) {
       document.getElementById('points-row')?.classList.remove('has-points')
-      setPointsVisible(false)
       return { points: -1, lowerBound: -1, upperBound: -1 }
     }
 
@@ -136,8 +133,6 @@ export const Calculator = (): React.ReactElement => {
     setQuery(filterParams(calculatorData), 'replace')
 
     document.getElementById('points-row')?.classList.add('has-points')
-
-    setPointsVisible(true)
     return { points: expectedValue, lowerBound, upperBound }
   }, [calculatorData, setQuery])
 
@@ -153,12 +148,12 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.interaction,
   )
 
-  const editScenario =
-    calculatorData.scenarioName === undefined ||
-    calculatorData.scenarioName === ''
-  const editInteractionType =
-    calculatorData.interaction === undefined ||
-    calculatorData.interaction === ''
+  const scenarioSelected =
+    calculatorData.scenarioName !== undefined &&
+    calculatorData.scenarioName !== ''
+  const interactionSelected =
+    calculatorData.interaction !== undefined &&
+    calculatorData.interaction !== ''
 
   const shareButton = (
     <button
@@ -261,10 +256,7 @@ export const Calculator = (): React.ReactElement => {
                       currentData={calculatorData}
                       setter={setCalculatorData}
                       setSavedData={(newScenario: string): void => {
-                        let foundData:
-                          | PartialData
-                          | CalculatorData
-                          | null = null
+                        let foundData: PartialData | null = null
                         foundData = prepopulated[newScenario]
 
                         if (newScenario === '') {
@@ -288,7 +280,7 @@ export const Calculator = (): React.ReactElement => {
                           )
                         }
                       }}
-                      showingResults={pointsVisible}
+                      showingResults={points !== -1}
                       interactionType={calculatorData.interaction}
                       setInteractionType={(value) => {
                         setCalculatorData({
@@ -304,9 +296,9 @@ export const Calculator = (): React.ReactElement => {
                     />
                   </Col>
                 </Row>
-                {!editScenario ? (
+                {scenarioSelected && (
                   <React.Fragment>
-                    {editInteractionType ? (
+                    {!interactionSelected ? (
                       <InteractionTypeSelector
                         id="interaction"
                         // This setter defaults to a personCount of 1 if the interaction type is "partner"
@@ -404,7 +396,7 @@ export const Calculator = (): React.ReactElement => {
                       </>
                     )}
                   </React.Fragment>
-                ) : null}
+                )}
               </React.Fragment>
             ) : (
               <div className="empty">
