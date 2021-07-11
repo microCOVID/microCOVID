@@ -44,7 +44,7 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
       >
         {t(Interaction[props.interactionType].label)}
       </Dropdown.Toggle>
-      <Dropdown.Menu className="w-100">
+      <Dropdown.Menu id="custom-interaction-menu" className="w-100">
         {Object.entries(Interaction).map(([key, interaction], index) => {
           return (
             <Dropdown.Item
