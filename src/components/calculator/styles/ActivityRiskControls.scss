@@ -54,6 +54,7 @@
 .mobile-vertical {
 @media (max-width: 768px) {
   .segmented-wrap {
+    // everything but the first button loses its left border without this
     padding-left: 1px;
     flex-wrap: wrap;
   }
@@ -96,11 +97,21 @@
     visibility: hidden;
   }
 
-  .btn-group {
+  .segmented-wrap.btn-group {
     // Remove doubled borders on inner buttons
     > .btn:not(:first-child),
     > .btn-group:not(:first-child) > .btn {
       border-top: 0 !important;
+    }
+
+    > .btn:first-child {
+      border-radius: 0.25rem 0.25rem 0 0;
+      // first button ends up shifted 1px to the right without this?
+      margin-left: -1px;
+    }
+
+    > .btn:last-child {
+      border-radius: 0 0 0.25rem 0.25rem;
     }
   }
 
