@@ -16,6 +16,7 @@ import {
   partnerMult,
   personRiskMultiplier,
 } from 'data/data'
+import { PartialData, prepopulated } from 'data/prepopulated'
 
 export interface CalculatorData {
   // Persistence
@@ -124,12 +125,16 @@ export type QueryData = Partial<CalculatorData>
 // Replace any values that no longer exist with empty string (nothing selected).
 // This is used when restoring a previous saved scenario, in case we changed
 // the model in the meantime.
-export const migrateDataToCurrent = (
-  incomingData: Record<string, unknown>,
+// sanitizeData() is used to clean both query parameters in the URL and
+// anything in local storage.
+export const sanitizeData = (
+  data: Partial<CalculatorData>,
+  fillCustomIfScenarioMissing: boolean,
 ): CalculatorData => {
-  const data: Partial<CalculatorData> = { ...incomingData }
   const fixOne = (
-    table: { [key: string]: FormValue | PersonRiskValue | VaccineValue },
+    table: {
+      [key: string]: FormValue | PartialData | PersonRiskValue | VaccineValue
+    },
     prop: keyof CalculatorData,
   ) => {
     const current = data[prop]
@@ -145,6 +150,7 @@ export const migrateDataToCurrent = (
   fixOne(YourMask, 'yourMask')
   fixOne(Voice, 'voice')
   fixOne(Vaccines, 'yourVaccineType')
+  fixOne(prepopulated, 'scenarioName')
 
   if (
     data['yourVaccineDoses'] !== undefined &&
@@ -152,7 +158,31 @@ export const migrateDataToCurrent = (
   ) {
     delete data['yourVaccineDoses']
   }
-  return { ...defaultValues, ...data }
+
+  // No scenario name. Must be old stored data or an old query. For backwards
+  // compatibility, set the implied scenarioName to 'custom' so that the results
+  // appear on the page (they won't if scenarioName is the defaultValues default
+  // of '').
+  if (data['scenarioName'] === undefined) {
+    return fillCustomIfScenarioMissing
+      ? { ...defaultValues, scenarioName: 'custom', ...data }
+      : { ...defaultValues, scenarioName: '', ...data }
+  } else {
+    return { ...defaultValues, ...data }
+  }
+}
+
+export const migrateDataToCurrent = (
+  incomingData: Record<string, unknown>,
+): CalculatorData => {
+  const data: Partial<CalculatorData> = { ...incomingData }
+  // local storage may be present but "empty"
+  const isLocalStorageAFullScenario =
+    data['interaction'] !== undefined && data['interaction'] !== ''
+  return sanitizeData(
+    data,
+    isLocalStorageAFullScenario /* fillCustomIfScenarioMissing */,
+  )
 }
 
 export const ONE_MILLION = 1e6 // One 'full' COVID
