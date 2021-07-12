@@ -1,3 +1,4 @@
+@use "sass:color";
 @import '~styles/variables.scss';
 
 // TODO(jy2wong) transfer to SegmentedControl.scss
@@ -51,9 +52,33 @@
   box-shadow: none !important;
 }
 
+.segmented-scrollable .btn-outline-secondary.btn:hover {
+  background-color: $gray-500;
+}
+
+.segmented-scrollable .btn-outline-secondary.active:hover {
+  background-color: $secondary !important;
+}
+
+.segmented-scrollable .btn-outline-secondary.active:hover span {
+  color: $gray-300;
+}
+
+.segmented-scrollable .btn-outline-cyan.btn:hover {
+  background-color: color.adjust($cyan, $lightness: 15%, $saturation: -15%);
+  color: color.mix($cyan, $white, 10%) !important;
+}
+
+.segmented-scrollable .btn-outline-cyan.active:hover {
+  // Arrow keys do not move between options. Mouse is hovering over a currently
+  // selected option.
+  color: color.mix($cyan, $white, 20%) !important;
+}
+
 .mobile-vertical {
 @media (max-width: 768px) {
   .segmented-wrap {
+    // everything but the first button loses its left border without this
     padding-left: 1px;
     flex-wrap: wrap;
   }
@@ -96,11 +121,21 @@
     visibility: hidden;
   }
 
-  .btn-group {
+  .segmented-wrap.btn-group {
     // Remove doubled borders on inner buttons
     > .btn:not(:first-child),
     > .btn-group:not(:first-child) > .btn {
       border-top: 0 !important;
+    }
+
+    > .btn:first-child {
+      border-radius: 0.25rem 0.25rem 0 0;
+      // first button ends up shifted 1px to the right without this?
+      margin-left: -1px;
+    }
+
+    > .btn:last-child {
+      border-radius: 0 0 0.25rem 0.25rem;
     }
   }
 
@@ -136,30 +171,6 @@
 
 #yourMaskHelpText, #theirMaskHelpText {
   padding-left: 0.5em;
-}
-
-#yourMask.segmented-scrollable .btn:hover {
-  background-color: desaturate(lighten($cyan, 15%), 15%);
-}
-
-#yourMask.segmented-scrollable .active:hover {
-  background-color: $cyan !important;
-}
-
-#yourMask.segmented-scrollable .active:hover span {
-  color: desaturate(lighten($cyan, 35%), 25%);
-}
-
-#theirMask.segmented-scrollable .btn:hover {
-  background-color: $gray-500;
-}
-
-#theirMask.segmented-scrollable .active:hover {
-  background-color: $secondary !important;
-}
-
-#theirMask.segmented-scrollable .active:hover span {
-  color: $gray-300;
 }
 
 @media (max-width: 768px) {

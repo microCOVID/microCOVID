@@ -49,13 +49,13 @@ export const VaccineSelector: React.FunctionComponent<{
   return (
     <div className="vaccine-selector">
       <Form.Group controlId={typeId}>
-        <div className="mobile-vertical">
-          <ControlLabel id={typeId} header={props.header} label={props.label} />
+        <ControlLabel id={typeId} header={props.header} label={props.label} />
+        <div className="segmented-scrollable mobile-vertical">
           <ToggleButtonGroup
             type="radio"
             name={typeId}
             id={typeId}
-            className={'segmented-wrap ' + props.variant}
+            className={'segmented-wrap segmented-scrollable'}
             value={props.current.vaccineType}
           >
             {Object.keys(Vaccines).map((value: string, index) => (
@@ -75,9 +75,7 @@ export const VaccineSelector: React.FunctionComponent<{
                   })
                 }}
               >
-                <span className="segmented-wrap segmented-label">
-                  {Vaccines[value].label}
-                </span>
+                <span className="segmented-label">{Vaccines[value].label}</span>
               </ToggleButton>
             ))}
             <ToggleButton
@@ -114,7 +112,7 @@ export const VaccineSelector: React.FunctionComponent<{
           <ToggleButtonGroup
             name={dosesId}
             id={dosesId}
-            className={'segmented-wrap ' + props.variant}
+            className="segmented-wrap segmented-scrollable"
             value={props.current.vaccineDoses}
           >
             {Vaccines[props.current.vaccineType].multiplierPerDose.map(
@@ -125,7 +123,7 @@ export const VaccineSelector: React.FunctionComponent<{
                   variant={props.variant}
                   name={dosesId}
                   value={index}
-                  className="semented-button"
+                  className="segmented-button"
                   checked={props.current.vaccineDoses === index}
                   onChange={() => {
                     recordCalculatorOptionSelected(dosesId, index.toString())
