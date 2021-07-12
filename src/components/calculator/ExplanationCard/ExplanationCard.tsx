@@ -97,7 +97,7 @@ export default function ExplanationCard(props: {
               values={{ date: lastUpdated.toLocaleDateString() }}
             >
               Model last updated on (date). (
-              <Link className="boring-link" to="/paper/changelog">
+              <Link className="stealthy-link" to="/paper/changelog">
                 Changelog
               </Link>
               )

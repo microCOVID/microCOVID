@@ -56,6 +56,9 @@ export interface CalculatorData {
   yourVaccineDoses: number
 
   theirVaccine: string
+
+  // Preset scenario name
+  scenarioName?: string
 }
 
 export const defaultValues: CalculatorData = {
@@ -89,6 +92,8 @@ export const defaultValues: CalculatorData = {
   yourVaccineDoses: 0,
 
   theirVaccine: 'undefined',
+
+  scenarioName: '',
 }
 
 interface CalculatorResult {

@@ -8,21 +8,23 @@ import { Link } from 'react-router-dom'
 import { encodeQueryParams, useQueryParams } from 'use-query-params'
 import 'pages/styles/Calculator.scss'
 
-import { recordCalculatorChanged } from 'components/Analytics'
+import {
+  recordCalculatorChanged,
+  recordCalculatorOptionSelected,
+} from 'components/Analytics'
 import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
-import { GenericSelectControl } from 'components/calculator/controls/SelectControl'
 import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
 import { FirstTimeUserIntroduction } from 'components/calculator/FirstTimeUserIntroduction'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
 import { PrevalenceControls } from 'components/calculator/PrevalenceControls'
 import { SavedDataSelector } from 'components/calculator/SavedDataSelector'
+import { InteractionTypeSelector } from 'components/calculator/selectors/InteractionTypeSelector'
 import {
   VaccineSelector,
   VaccineStatus,
 } from 'components/calculator/selectors/VaccineSelector'
-import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 import { Card } from 'components/Card'
 import {
   CalculatorData,
@@ -32,6 +34,7 @@ import {
   parsePopulation,
 } from 'data/calculate'
 import { Interaction } from 'data/data'
+import { PartialData, prepopulated } from 'data/prepopulated'
 import {
   filterParams,
   queryConfig,
@@ -43,7 +46,6 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [scenarioName, setScenarioName] = useState('')
 
   // Mount / unmount
   useEffect(() => {
@@ -67,6 +69,8 @@ export const Calculator = (): React.ReactElement => {
     useQueryDataIfPresent(query, migratedPreviousData),
   )
 
+  const { t } = useTranslation()
+
   const addAlert = (alert: string) => setAlerts([...alerts, alert])
 
   const removeQueryParams = () => {
@@ -77,7 +81,6 @@ export const Calculator = (): React.ReactElement => {
     window.scrollTo(0, 0)
     localStorage.setItem(FORM_STATE_KEY, JSON.stringify(defaultValues))
     setCalculatorData(defaultValues)
-    setScenarioName('')
     removeQueryParams()
   }
 
@@ -130,7 +133,6 @@ export const Calculator = (): React.ReactElement => {
     setQuery(filterParams(calculatorData), 'replace')
 
     document.getElementById('points-row')?.classList.add('has-points')
-
     return { points: expectedValue, lowerBound, upperBound }
   }, [calculatorData, setQuery])
 
@@ -146,6 +148,13 @@ export const Calculator = (): React.ReactElement => {
     calculatorData.interaction,
   )
 
+  const scenarioSelected =
+    calculatorData.scenarioName !== undefined &&
+    calculatorData.scenarioName !== ''
+  const interactionSelected =
+    calculatorData.interaction !== undefined &&
+    calculatorData.interaction !== ''
+
   const shareButton = (
     <button
       type="button"
@@ -154,36 +163,6 @@ export const Calculator = (): React.ReactElement => {
     >
       <BsLink45Deg /> <Trans>button.copy_link</Trans>
     </button>
-  )
-
-  const { t } = useTranslation()
-
-  const SavedScenarioMessage: React.FunctionComponent<{
-    scenarioName: string
-  }> = (props): React.ReactElement => (
-    <Alert variant="info">
-      <Trans values={{ scenarioName: props.scenarioName }}>
-        calculator.saved_scenario_loaded_message
-      </Trans>
-    </Alert>
-  )
-
-  const BaseTransmissionRateMessage: React.FunctionComponent<{
-    interaction: string
-    messageKey: string
-  }> = (props): React.ReactElement => (
-    <Alert variant="info">
-      <Trans
-        i18nKey={props.messageKey}
-        values={{
-          percentage: fixedPointPrecisionPercent(
-            Interaction[props.interaction].multiplier,
-          ),
-        }}
-      >
-        Lorem ipsum <strong>dolor</strong> sit
-      </Trans>
-    </Alert>
   )
 
   return (
@@ -238,7 +217,11 @@ export const Calculator = (): React.ReactElement => {
               .
             </Trans>
           </Alert>
-          <Link className="boring-link" to="/paper/changelog">
+          <Link
+            id="full-changelog"
+            className="stealthy-link"
+            to="/paper/changelog"
+          >
             {t('calculator.alerts.full_changelog')}
           </Link>
         </Col>
@@ -272,124 +255,148 @@ export const Calculator = (): React.ReactElement => {
                     <SavedDataSelector
                       currentData={calculatorData}
                       setter={setCalculatorData}
-                      scenarioName={scenarioName}
-                      scenarioNameSetter={setScenarioName}
-                    />
-                  </Col>
-                </Row>
-                {!scenarioName ||
-                scenarioName === t('scenario.custom') ? null : (
-                  <SavedScenarioMessage scenarioName={scenarioName} />
-                )}
-                <div>
-                  <GenericSelectControl
-                    id="interaction"
-                    label={t('calculator.type_of_interaction')}
-                    // This setter defaults to a personCount of 1 if the interaction type is "partner"
-                    setter={(value) =>
-                      setCalculatorData({
-                        ...calculatorData,
-                        interaction: value,
-                        personCount:
-                          value === 'partner' ? 1 : calculatorData.personCount,
-                      })
-                    }
-                    value={calculatorData.interaction}
-                    source={Interaction}
-                    hideRisk={true}
-                  />
-                  {calculatorData.interaction === 'oneTime' ||
-                  calculatorData.interaction === 'workplace' ? (
-                    <BaseTransmissionRateMessage
-                      interaction={calculatorData.interaction}
-                      messageKey="calculator.one_time_interaction_risk_message"
-                    />
-                  ) : null}
-                  {calculatorData.interaction === 'repeated' ? (
-                    <BaseTransmissionRateMessage
-                      interaction={calculatorData.interaction}
-                      messageKey="calculator.repeated_interaction_risk_message"
-                    />
-                  ) : null}
-                  {calculatorData.interaction === 'partner' ? (
-                    <BaseTransmissionRateMessage
-                      interaction={calculatorData.interaction}
-                      messageKey="calculator.partner_interaction_risk_message"
-                    />
-                  ) : null}
-                  {calculatorData.interaction !== undefined &&
-                  calculatorData.interaction !== '' ? (
-                    <p>
-                      <Trans i18nKey="calculator.whats_next_interaction_risk_message">
-                        Lorem ipsum dolor <strong>sit amet</strong>
-                        (backed by{' '}
-                        <Link to="/paper/14-research-sources" target="_blank">
-                          research
-                        </Link>
-                        !)
-                      </Trans>
-                    </p>
-                  ) : null}
-                </div>
-                <Row>
-                  <Col xs="12" id="person-risk" className="calculator-params">
-                    <PersonRiskControls
-                      data={calculatorData}
-                      setter={setCalculatorData}
-                      repeatedEvent={repeatedEvent}
-                    />
-                  </Col>
-                  <Col xs="12" id="modifiers" className="calculator-params">
-                    <ActivityRiskControls
-                      data={calculatorData}
-                      setter={setCalculatorData}
-                      repeatedEvent={repeatedEvent}
-                    />
-                  </Col>
-                  <Col xs="12" id="vaccines" className="calculator-params">
-                    <VaccineSelector
-                      id="yourVaccine"
-                      header={t('calculator.precautions.your_vaccine_header')}
-                      label={t('calculator.precautions.your_vaccine_label')}
-                      dosesLabel={t(
-                        'calculator.precautions.your_vaccine_doses_label',
-                      )}
-                      variant="outline-cyan"
-                      current={{
-                        vaccineDoses: calculatorData.yourVaccineDoses,
-                        vaccineType: calculatorData.yourVaccineType,
+                      setSavedData={(newScenario: string): void => {
+                        let foundData: PartialData | null = null
+                        foundData = prepopulated[newScenario]
+
+                        if (newScenario === '') {
+                          setCalculatorData({
+                            ...calculatorData,
+                            scenarioName: newScenario,
+                            interaction: '',
+                          })
+                        } else if (foundData) {
+                          setCalculatorData({
+                            ...calculatorData,
+                            ...foundData,
+                            scenarioName: newScenario,
+                          })
+                        }
+
+                        if (newScenario !== undefined && newScenario !== '') {
+                          recordCalculatorOptionSelected(
+                            'scenario',
+                            newScenario,
+                          )
+                        }
                       }}
-                      setter={(newStatus: VaccineStatus) => {
+                      showingResults={points !== -1}
+                      interactionType={calculatorData.interaction}
+                      setInteractionType={(value) => {
                         setCalculatorData({
                           ...calculatorData,
-                          yourVaccineDoses: newStatus.vaccineDoses,
-                          yourVaccineType: newStatus.vaccineType,
+                          interaction: value,
+                          personCount:
+                            value === 'partner'
+                              ? 1
+                              : calculatorData.personCount,
                         })
+                        recordCalculatorOptionSelected('interaction', value)
                       }}
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col className="form-buttons">
-                    {alerts.map((alert, idx) => (
-                      <AutoAlert
-                        key={idx}
-                        variant="info"
-                        message={alert}
-                        timeout={3000}
+                {scenarioSelected && (
+                  <React.Fragment>
+                    {!interactionSelected ? (
+                      <InteractionTypeSelector
+                        id="interaction"
+                        // This setter defaults to a personCount of 1 if the interaction type is "partner"
+                        setter={(value) => {
+                          setCalculatorData({
+                            ...calculatorData,
+                            interaction: value,
+                            personCount:
+                              value === 'partner'
+                                ? 1
+                                : calculatorData.personCount,
+                          })
+                          recordCalculatorOptionSelected('interaction', value)
+                        }}
+                        value={calculatorData.interaction}
+                        source={Interaction}
                       />
-                    ))}
-                    <button
-                      id="reset-form-button"
-                      type="button"
-                      className="btn btn-secondary float-right"
-                      onClick={resetForm}
-                    >
-                      <Trans>button.reset_form</Trans>
-                    </button>
-                    {shareButton}
-                  </Col>
-                </Row>
+                    ) : (
+                      <>
+                        <Row>
+                          <Col
+                            xs="12"
+                            id="person-risk"
+                            className="calculator-params"
+                          >
+                            <PersonRiskControls
+                              data={calculatorData}
+                              setter={setCalculatorData}
+                              repeatedEvent={repeatedEvent}
+                            />
+                          </Col>
+                          <Col
+                            xs="12"
+                            id="modifiers"
+                            className="calculator-params"
+                          >
+                            <ActivityRiskControls
+                              data={calculatorData}
+                              setter={setCalculatorData}
+                              repeatedEvent={repeatedEvent}
+                            />
+                          </Col>
+                          <Col
+                            xs="12"
+                            id="vaccines"
+                            className="calculator-params"
+                          >
+                            <VaccineSelector
+                              id="yourVaccine"
+                              header={t(
+                                'calculator.precautions.your_vaccine_header',
+                              )}
+                              label={t(
+                                'calculator.precautions.your_vaccine_label',
+                              )}
+                              dosesLabel={t(
+                                'calculator.precautions.your_vaccine_doses_label',
+                              )}
+                              variant="outline-cyan"
+                              current={{
+                                vaccineDoses: calculatorData.yourVaccineDoses,
+                                vaccineType: calculatorData.yourVaccineType,
+                              }}
+                              setter={(newStatus: VaccineStatus) => {
+                                setCalculatorData({
+                                  ...calculatorData,
+                                  yourVaccineDoses: newStatus.vaccineDoses,
+                                  yourVaccineType: newStatus.vaccineType,
+                                })
+                              }}
+                            />
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col className="form-buttons">
+                            {alerts.map((alert, idx) => (
+                              <AutoAlert
+                                key={idx}
+                                variant="info"
+                                message={alert}
+                                timeout={3000}
+                              />
+                            ))}
+                            <button
+                              id="reset-form-button"
+                              type="button"
+                              className="btn btn-secondary float-right"
+                              onClick={resetForm}
+                            >
+                              <Trans>button.reset_form</Trans>
+                            </button>
+                            {shareButton}
+                          </Col>
+                        </Row>
+                      </>
+                    )}
+                  </React.Fragment>
+                )}
               </React.Fragment>
             ) : (
               <div className="empty">

@@ -1,0 +1,21 @@
+@import '~styles/variables.scss';
+
+#custom-interaction-type {
+  text-align: left;
+}
+
+// dropdown arrow
+#custom-interaction-type::after {
+  display: block;
+  float: right;
+  margin-top: 0.5em;
+}
+
+#custom-interaction-menu .dropdown-item {
+  text-decoration: none;
+}
+
+.underline-for-focus:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

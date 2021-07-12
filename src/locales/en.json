@@ -142,8 +142,11 @@
       "enter_data_manually": "Override location-based data"
     },
     "prevalence_info_source_information": "Prevalence data consolidated from <1>Johns Hopkins CSSE</1> (reported cases), <4>Covid Act Now</4> (US positive test rates), <7>Our World in Data</7> (international positive test rates), and <10>Coronavirus COVID-19 România</10> (Romania reported cases).",
-    "select_scenario": "Start with a premade scenario or <2>build your own</2>:",
-    "no_prebuilt_scenario_found": "We don't have this scenario yet, but you can build your own below.",
+    "select_scenario": "Start with a premade scenario or <2>build a custom scenario</2>:",
+    "no_prebuilt_scenario_found": "No premade scenario found.",
+    "saved_scenario_continue_custom": "Build a custom scenario",
+    "select_scenario_start_over": "Restart",
+    "saved_scenario_loaded_message": "Adjust the values below to match your situation and see how you can reduce risk (<4>based on research</4>!)",
     "baseline_risk": "baseline risk",
     "baseline_risk_short": "baseline",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
@@ -169,16 +172,18 @@
       "whats_this2": "This calculator lets you estimate COVID risk and find effective safety measures for customizable situations. Examples: how risky is <1>a trip to my grocery store</1>? What's the safest way to <3>see a friend</3>? How much would it help to <5>wear a better mask at my workplace</5>?",
       "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
-      "call_to_action": "Calculate the approximate COVID risk of an activity or relationship"
+      "call_to_action": "Calculate approximate risk of contracting COVID"
     },
     "risk_step_label": "Step 2: Describe the scenario",
-    "type_of_interaction": "What do you want to know?",
-    "one_time_interaction_risk_message": "If one person is infected, there is a baseline <1>{{ percentage }} chance of transmission per hour</1>.",
-    "repeated_interaction_risk_message": "If one person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
-    "partner_interaction_risk_message": "If this person is infected, there is a baseline <1>{{ percentage }} chance of transmission per week</1>.",
-    "whats_next_interaction_risk_message": "How likely is it someone is infected? It depends on your location and the choices of people around you. This calculator will also walk you through <1>choices you can make</1> to change the baseline risk (backed by <4>research</4>!)",
+    "change_interaction_type": "Clear",
+    "show_math": "Show math",
+    "hide_math": "Hide math",
+    "set_interaction_type_to_continue": "Choose an interaction type to continue.",
+    "one_time_interaction_risk_message": "<1>{{ percentage }} per hour baseline chance of transmission</1> for each infected person nearby",
+    "repeated_interaction_risk_message": "<1>{{ percentage }} per week baseline chance of transmission</1> for each infected person nearby",
+    "partner_interaction_risk_message": "<1>{{ percentage }} per week baseline chance of transmission</1> if this person is infected",
+    "location_risk_message": "<1>~{{ prevalence }} of people here are currently infectious.</1> We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
     "risk_group_empty_warning": "Enter your location first.",
-    "saved_scenario_loaded_message": "If needed, adjust the following prefilled answers to match your <strong>{{ scenarioName }}</strong> scenario.",
     "alerts": {
       "average_vaccine": "<0>June 22nd, 2021:</0> Added an option to specify vaccination status of average people. Learn more about the derivation <2>here</2>.",
       "december_covid19projections": "<0>May 27th, 2021:</0> Updated underreporting model based on update from <2>COVID19 Projections</2>. This results in slightly lower risk estimates.",
@@ -194,10 +199,10 @@
     "select_default_action": "Select one..."
   },
   "data": {
-    "oneTime": "How risky is this gathering/activity/errand?",
-    "workplace": "How risky is going in to work?",
-    "partner": "How risky is it to live/stay with a partner/spouse?",
-    "repeated": "How risky is it to live/stay with others (like roommates or family)?",
+    "oneTime": "A gathering, activity, or errand",
+    "workplace": "Going to work",
+    "partner": "Living/staying with a partner/spouse",
+    "repeated": "Living/staying with others (like roommates or family)",
     "indoor": "Indoor",
     "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
     "transit": "A train with air filtration",
@@ -266,7 +271,7 @@
     }
   },
   "scenario": {
-    "custom": "Build your own scenario",
+    "custom": "A custom scenario",
     "outdoorMasked2": "Outdoor masked hangout with 2 other people",
     "indoorUnmasked2": "Indoor unmasked hangout with 2 other people",
     "1person_15minCarRide": "Car ride with 1 other person for 15 mins",
