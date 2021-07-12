@@ -29,6 +29,7 @@ export interface CalculatorData {
   useManualEntry: number
   topLocation: string
   subLocation: string
+  subSubLocation: string | null // non-US county
   population: string
   casesPastWeek: number
   casesIncreasingPercentage: number
@@ -68,6 +69,7 @@ export const defaultValues: CalculatorData = {
   useManualEntry: 0,
   topLocation: '',
   subLocation: '',
+  subSubLocation: '',
   population: '',
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
