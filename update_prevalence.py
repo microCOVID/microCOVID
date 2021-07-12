@@ -17,6 +17,7 @@ from datetime import date, datetime, timedelta
 from operator import attrgetter
 from pathlib import Path
 from time import sleep
+from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any, Union
 from us_state_abbrev import us_state_name_by_abbrev
 
 try:
@@ -44,9 +45,14 @@ def calc_effective_date() -> date:
         now -= timedelta(days=1)
     return now.date()
 
+def calc_canada_effective_date() -> date:
+    # take the current time in the westernmost timezone (PT), which is UTC -8 or
+    # UTC -7 depending on time of year. Other timezones may be 2 days behind.
+    last_full_day = datetime.utcnow() - timedelta(hours=8) - timedelta(days=1)
+    return last_full_day.date()
 
 effective_date = calc_effective_date()
-
+canada_effective_date = calc_effective_date()
 
 # Read the Risk Tracker's vaccine table.
 # Format:
@@ -226,6 +232,103 @@ class RomaniaPrevalenceData(pydantic.BaseModel):
     County: str = pydantic.Field(alias="Judet")
     Population: int = pydantic.Field(alias="Populatie")
     TotalCases: int = pydantic.Field(alias="Cazuri total")
+
+
+# Canada Health Region population info dataset:
+class CanadaOpenCovidRegions(pydantic.BaseModel):
+    class RegionInfo(pydantic.BaseModel):
+        HR_UID: int
+        province: str
+        province_full: str
+        health_region: str
+        pop: Union[int, str]
+
+    SOURCE: ClassVar[
+        str
+    ] = "https://api.opencovid.ca/other?stat=hr"
+
+    hr: List[RegionInfo]
+
+# Canada Health Region cases dataset:
+class CanadaOpenCovidCases(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://api.opencovid.ca/timeseries?stat=cases&loc={hr_uid}&ymd=true&before={before}&after={after}"
+
+    class Report(pydantic.BaseModel):
+        province: str
+        health_region: str
+        date_report: date
+        cumulative_cases: int
+    cases: List[Report]
+
+class CanadaOpenCovidProvinces(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://api.opencovid.ca/other?stat=prov"
+
+    class Report(pydantic.BaseModel):
+        province: str       # PEI
+        province_full: str  # Prince Edward Island
+        province_short: str # PE
+
+    prov: List[Report]
+
+# Canada provincial case and test data
+class CanadaOpenCovidProvincialSummary(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://api.opencovid.ca/summary?loc={province}&ymd=true&before={before}&after={after}"
+
+    class Report(pydantic.BaseModel):
+        cumulative_cases: int
+        cumulative_testing: int              # number of total people tested
+        cumulative_avaccine: Union[int, str] # number of total shots administered
+        # number of people who have received a complete sequence of shots. Note
+        # that in Canada it is common for people to have mixed shots (e.g.
+        # first shot Pfizer second shot Moderna).
+        cumulative_cvaccine: Union[int, str]
+        date_: date = pydantic.Field(alias="date")
+
+    summary: List[Report]
+
+# Canada Health Region vaccination dataset:
+class CanadaRegionalVaccinationReports(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://api.covid19tracker.ca/reports/regions/{hr_uid}?fill_dates=true&after={after}&before={before}"
+
+    class Report(pydantic.BaseModel):
+        date_: date = pydantic.Field(alias="date")
+        total_cases: int
+        total_tests: Optional[int]
+        total_vaccinations: Optional[int] # number of shots delivered
+        total_vaccinated: Optional[int] # number of people who have completed all shots
+
+    hr_uid: int
+    last_updated: datetime
+    data: List[Report]
+
+class CanadaVaccineDistribution(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://api.covid19tracker.ca/vaccines/distribution/split"
+
+    # no qualifier: distributed
+    # administered: total number of doses given including both first and second
+    # doses
+    class Data(pydantic.BaseModel):
+        province: str # 2-letter abbrev
+        pfizer_biontech: Optional[int]
+        pfizer_biontech_administered: Optional[int]
+        moderna: Optional[int]
+        moderna_administered: Optional[int]
+        astrazeneca: Optional[int]
+        astrazeneca_administered: Optional[int]
+        johnson: Optional[int]
+        johnson_administered: Optional[int]
+
+    data: List[Data]
 
 
 # Represents number of people vaccinated.
@@ -617,6 +720,12 @@ class AllData:
         else:
             return self.get_country(jhu_line.Country_Region)
 
+    def get_canada_region_place(self, line: CanadaOpenCovidRegions.RegionInfo) -> Place:
+        return self.get_county(
+                line.health_region,
+                state=line.province_full,
+                country="Canada")
+
     def populate_fips_cache(self) -> None:
         self.fips_to_county.clear()
         for country in self.countries.values():
@@ -638,7 +747,7 @@ class AllData:
     # Attempt to set the population, cases, and postitive test rates of a region
     # based on the stats of all its sub-regions
     def rollup_totals(self) -> None:
-        fake_names = ("Unknown", "Unassigned", "Recovered")
+        fake_names = ("Unknown", "Unassigned", "Recovered", "Repatriated")
 
         def rollup_population(parent: Place, child_attr: str) -> None:
             children: Dict[str, Place] = getattr(parent, child_attr)
@@ -689,6 +798,25 @@ class AllData:
                         parent.cases_last_week / tests_last_week
                     )
 
+        def rollup_vaccines(parent: Place, child_attr: str) -> None:
+            children: Dict[str, Place] = getattr(parent, child_attr)
+
+            if (parent.population > 0 and
+                    parent.vaccines_total.partial_vaccinations == 0 and
+                    parent.vaccines_total.completed_vaccinations == 0):
+                all_children_total_population = 0
+                all_children_total_completed_vaccinations = 0
+                all_children_total_partial_vaccinations = 0
+                for child in children.values():
+                    all_children_total_population += child.population
+                    all_children_total_completed_vaccinations += child.vaccines_total.completed_vaccinations
+                    all_children_total_partial_vaccinations += child.vaccines_total.partial_vaccinations
+                if all_children_total_population > 0:
+                    parent.set_total_vaccines(
+                            parent.population * all_children_total_partial_vaccinations / all_children_total_population,
+                            parent.population * all_children_total_completed_vaccinations / all_children_total_population
+                    )
+
         def rolldown_vaccine_types(parent: Place,  children: List[Place]):
             for child in children:
                 if (child.vaccines_by_type is None):
@@ -713,6 +841,7 @@ class AllData:
                     if county.population == 0 and county.name not in fake_names:
                         raise ValueError(f"Missing population data for {county!r}")
                 rollup_population(state, "counties")
+                rollup_vaccines(state, "counties")
             rollup_population(country, "states")
 
         for country in list(self.countries.values()):
@@ -1067,7 +1196,120 @@ def main() -> None:
             state = data.get_state(line.County, country="Romania")
             state.population = line.Population
             state.cumulative_cases[line.Date] = line.TotalCases
+        # Add Canada Public Health Unit (county-level) data
+        populate_since = canada_effective_date - timedelta(days=16)
+        canada_one_week_ago = canada_effective_date - timedelta(days=6)
+        canada_regions = parse_json(cache, CanadaOpenCovidRegions,
+                                           CanadaOpenCovidRegions.SOURCE)
+        def get_partially_vaccinated(total_shots, total_fully_vaccinated, shots_for_full_vaccination) -> int:
+            return total_shots - shots_for_full_vaccination * total_fully_vaccinated
+        counter = 0
+        for region in canada_regions.hr:
+            if (region.HR_UID == 9999): # Repatriated/not reported. Skip.
+                continue
+            counter += 1
+            print(f"Fetching region {counter}: {region.health_region} ({region.HR_UID})")
 
+            # add population data
+            place = data.get_canada_region_place(region)
+            if place.population != 0:
+                raise ValueError(
+                    f"Duplicate population info for {place!r}: {region.Population}"
+                )
+            if region.pop != "NULL":
+                place.population = region.pop
+
+            def process_regional_vaccination_reports():
+                vaccination_reports = parse_json(
+                        cache,
+                        CanadaRegionalVaccinationReports,
+                        CanadaRegionalVaccinationReports.SOURCE.format(
+                            hr_uid=region.HR_UID,
+                            before=canada_effective_date.strftime("%Y-%m-%d"),
+                            after=populate_since.strftime("%Y-%m-%d")))
+
+                # get region vaccination counts from covid19tracker.ca.
+                # Canada is not using J&J as of 2021-07-14; all vaccines in use are 2-shot.
+                for report in vaccination_reports.data:
+                    shots_for_full_vaccination = 2
+                    if report.total_vaccinated and report.total_vaccinations:
+                        people_partially_vaccinated = get_partially_vaccinated(
+                                report.total_vaccinations,
+                                report.total_vaccinated,
+                                shots_for_full_vaccination)
+                        place.set_total_vaccines(
+                                people_partially_vaccinated, report.total_vaccinated)
+
+            def process_regional_case_reports():
+                # get region case counts from opencovid.ca, which seems to have
+                # cleaner data than covid19tracker.ca
+                case_reports = parse_json(
+                        cache,
+                        CanadaOpenCovidCases,
+                        CanadaOpenCovidCases.SOURCE.format(
+                            hr_uid=region.HR_UID,
+                            before=canada_effective_date.strftime("%Y-%m-%d"),
+                            after=populate_since.strftime("%Y-%m-%d")))
+                for report in case_reports.cases:
+                    place.cumulative_cases[report.date_report] = report.cumulative_cases
+
+            process_regional_vaccination_reports()
+            process_regional_case_reports()
+
+        # get test rates per-province from opencovid.ca.
+        # canada_one_week_ago + timedelta(days=1) is the start of one week ago,
+        # but go back one day to properly count.
+        canada_one_week_cumulative_baseline = canada_one_week_ago - timedelta(days=1)
+        vaccine_distribution_reports = parse_json(
+                cache,
+                CanadaVaccineDistribution,
+                CanadaVaccineDistribution.SOURCE)
+        provinces = parse_json(
+                cache,
+                CanadaOpenCovidProvinces,
+                CanadaOpenCovidProvinces.SOURCE)
+        for province in provinces.prov:
+            min_test_count = None
+            max_test_count = None
+            place = data.get_state(province.province_full, country="Canada")
+            provincial_reports = parse_json(
+                    cache,
+                    CanadaOpenCovidProvincialSummary,
+                    CanadaOpenCovidProvincialSummary.SOURCE.format(
+                            province=province.province_short,
+                            before=canada_effective_date.strftime("%Y-%m-%d"),
+                            after=populate_since.strftime("%Y-%m-%d")))
+            for report in provincial_reports.summary:
+                # check bounds just in case the reports interval gets changed later
+                if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
+                    if report.cumulative_testing:
+                        min_test_count =  report.cumulative_testing if min_test_count is None else min(min_test_count, report.cumulative_testing)
+                        max_test_count =  report.cumulative_testing if max_test_count is None else max(max_test_count, report.cumulative_testing)
+
+            if min_test_count is not None and max_test_count is not None:
+                place.tests_in_past_week = max_test_count - min_test_count
+
+            # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
+            provincial_dist = next((d for d in vaccine_distribution_reports.data if d.province == province.province_short), None)
+            if provincial_dist is not None:
+                # match JHU naming convention
+                administered_shots = sum([
+                    provincial_dist.pfizer_biontech_administered,
+                    provincial_dist.moderna_administered,
+                    provincial_dist.astrazeneca_administered])
+                proportional_weights = {
+                        'Pfizer': provincial_dist.pfizer_biontech_administered / administered_shots,
+                        'Moderna': provincial_dist.moderna_administered / administered_shots,
+                        'AstraZeneca': provincial_dist.astrazeneca_administered / administered_shots
+                }
+                for k, v in proportional_weights.items():
+                    place.set_vaccines_of_type(
+                            k,
+                            v * get_partially_vaccinated(
+                                provincial_reports.summary[-1].cumulative_avaccine,
+                                provincial_reports.summary[-1].cumulative_cvaccine, 2),
+                            v * provincial_reports.summary[-1].cumulative_cvaccine
+                    )
 
     finally:
         cache.save()
