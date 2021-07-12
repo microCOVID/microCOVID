@@ -1,6 +1,7 @@
 import num2fraction from 'num2fraction'
 import React, { useState } from 'react'
 import {
+  Form,
   OverlayTrigger,
   ToggleButton,
   ToggleButtonGroup,
@@ -62,7 +63,7 @@ export const SegmentedControl: React.FunctionComponent<{
       : props.label || ''
 
   return (
-    <div className="form-group">
+    <Form.Group controlId={props.id}>
       <ControlLabel
         id={props.id}
         label={props.label || hoverDescIfPresentOtherwiseActiveDesc}
@@ -142,6 +143,6 @@ export const SegmentedControl: React.FunctionComponent<{
         </ToggleButtonGroup>
         {props.children}
       </div>
-    </div>
+    </Form.Group>
   )
 }
