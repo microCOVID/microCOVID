@@ -107,7 +107,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
                 >
                   Covid Act Now
                 </a>{' '}
-                (US positive test rates), {}
+                (US positive test rates), and {}
                 <a
                   href="https://ourworldindata.org/coronavirus-testing#testing-for-covid-19-background-the-our-world-in-data-covid-19-testing-dataset"
                   target="_blank"
@@ -115,16 +115,62 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
                 >
                   Our World in Data
                 </a>{' '}
-                (international positive test rates), and {}
-                <a
-                  href="https://covid19.geo-spatial.org/despre"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Coronavirus COVID-19 România
-                </a>{' '}
-                (Romania reported cases).
+                (international positive test rates). Additional data from:
               </Trans>
+              <ul>
+                <li>
+                  <Trans i18nKey="calculator.prevalence_info_supplementary_sources.romania">
+                    <a
+                      href="https://covid19.geo-spatial.org/despre"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Coronavirus COVID-19 România
+                    </a>{' '}
+                    (Romania reported cases)
+                  </Trans>
+                </li>
+                <li>
+                  <Trans i18nKey="calculator.prevalence_info_supplementary_sources.canada1">
+                    <a
+                      href="https://opencovid.ca/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      COVID-19 Canada Open Data Working Group
+                    </a>{' '}
+                    (Canada province and region data, {}
+                    <a
+                      href="https://creativecommons.org/licenses/by/4.0/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      CC BY 4.0
+                    </a>
+                    )
+                  </Trans>
+                </li>
+                <li>
+                  <Trans i18nKey="calculator.prevalence_info_supplementary_sources.canada2">
+                    <a
+                      href="https://covid19tracker.ca/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      COVID-19 Tracker Canada
+                    </a>{' '}
+                    (Canada vaccination data, {}
+                    <a
+                      href="https://creativecommons.org/licenses/by/4.0/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      CC BY 4.0
+                    </a>
+                    )
+                  </Trans>
+                </li>
+              </ul>
             </p>
           </div>
         </>
