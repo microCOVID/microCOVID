@@ -39,7 +39,10 @@ const baseTestData = {
   casesPastWeek: 2999, // will add 1 in pseudocount
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
-  prevalanceDataDate: dateAfterDay0(25), // prevalance ratio = 25 * positivity_rate ** 0.5 + 2
+  // prevalance ratio = 1000 / (10 + i) * positivity_rate ** 0.5 + 2 = 25 * positivity_rate ** 0.5 + 2
+  prevalanceDataDate: dateAfterDay0(30),
+  unvaccinatedPrevalenceRatio: 2,
+  averageFullyVaccinatedMultiplier: 0.1,
   symptomsChecked: 'no',
 }
 
@@ -92,12 +95,12 @@ describe('calculateLocationPersonAverage', () => {
 
   it.each`
     day    | result
-    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 25 + 2)}
-    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 50 + 2)}
-    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 75 + 2)}
-    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1250) / 325 + 2)}
+    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 10 + 2)}
+    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 35 + 2)}
+    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 60 + 2)}
+    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 310 + 2)}
   `(
-    'should reduce the effect of positiveCasePercentage as 1250 / (days + 25), days = $day',
+    'should reduce the effect of positiveCasePercentage as 1000 / (days + 10), days = $day',
     ({ day, result }) => {
       expect(
         calculateLocationPersonAverage(
@@ -130,7 +133,7 @@ describe('calculateLocationPersonAverage', () => {
 
 describe('calculate', () => {
   it('produces same results as by hand', () => {
-    const scenario = 'Outdoor masked hangout with 2 other people'
+    const scenario = 'outdoorMasked2'
     const data: CalculatorData = testData(prepopulated[scenario])
 
     const response = calcValue(data)
@@ -146,25 +149,25 @@ describe('calculate', () => {
   })
 
   it.each`
-    scenario                                                          | result
-    ${'Outdoor masked hangout with 2 other people'}                   | ${8 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Indoor unmasked hangout with 2 other people'}                  | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Car ride with 1 other person for 15 mins'}                     | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'One-night stand with a random person'}                         | ${2880}
-    ${'Live-in partner who has no indoor interactions besides you'}   | ${29 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (average # of shoppers)'}         | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (few other shoppers)'}            | ${24 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Grocery store for 60 minutes (crowded)'}                       | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Plane ride (full flight)'}                                     | ${328 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Plane ride (middle seat empty)'}                               | ${160 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Eating in restaurant, outdoors'}                               | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Eating in restaurant, indoors'}                                | ${4050 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Going to bar'}                                                 | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Outdoor party: 80 people, masked, with 3 feet between people'} | ${960 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Indoor party: 25 people, unmasked'}                            | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Outdoor, masked hangout with person who has COVID'}            | ${666.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Indoor, unmasked hangout with person who has COVID'}           | ${60000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
-    ${'Voting in-person'}                                             | ${2.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    scenario                             | result
+    ${'outdoorMasked2'}                  | ${8 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'indoorUnmasked2'}                 | ${720 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'1person_15minCarRide'}            | ${90 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'oneNightStand'}                   | ${2880}
+    ${'liveInPartner_noContacts'}        | ${29 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'60minShopping'}                   | ${40 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'60minShoppingFew'}                | ${24 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'60minShoppingCrowded'}            | ${80 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'planeRide'}                       | ${328 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'planeRideMiddleSeatEmpty'}        | ${160 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'restaurantOutdoors'}              | ${202.5 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'restaurantIndoors'}               | ${4050 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'bar'}                             | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'largeOutdoorParty'}               | ${960 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'smallIndoorParty25'}              | ${27000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'outdoorMaskedWithCovidPositive'}  | ${666.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'indoorUnmaskedWithCovidPositive'} | ${60000 * B117_CONTAGIOUSNESS_ADJUSTMENT}
+    ${'votingInPerson'}                  | ${2.6 * B117_CONTAGIOUSNESS_ADJUSTMENT}
   `('should return $result for $scenario', ({ scenario, result }) => {
     const data: CalculatorData = testData(prepopulated[scenario])
 
@@ -263,11 +266,7 @@ describe('calculate', () => {
   })
 
   describe('Interaction: partner', () => {
-    const partner = testData(
-      prepopulated[
-        'Live-in partner who has no indoor interactions besides you'
-      ],
-    )
+    const partner = testData(prepopulated['liveInPartner_noContacts'])
     it('should not be affected by multipliers', () => {
       const bonuses: CalculatorData = {
         ...partner,
@@ -348,20 +347,19 @@ describe('calculate', () => {
 
   describe('Distance: intimate', () => {
     const indoorIntimate: CalculatorData = testData(
-      prepopulated['One-night stand with a random person'],
+      prepopulated['oneNightStand'],
     )
     it('should not give a bonus for outdoors', () => {
       const outdoorIntimate: CalculatorData = {
         ...indoorIntimate,
         setting: 'outdoor',
       }
-
       expect(calcValue(outdoorIntimate)).toEqual(calcValue(indoorIntimate))
     })
 
     it('should not give a bonus for masks', () => {
       const unmaskedIntimate = testData({
-        ...prepopulated['One-night stand with a random person'],
+        ...prepopulated['oneNightStand'],
         yourMask: 'none',
         theirMask: 'none',
       })
@@ -373,28 +371,43 @@ describe('calculate', () => {
 
       expect(calcValue(unmaskedIntimate)).toEqual(calcValue(maskedIntimate))
     })
-    it('should be at least 12% (1 hr) transfer risk.', () => {
-      const oneHourIntimate: CalculatorData = {
+    it('should be at least 12% (20 min) transfer risk.', () => {
+      const twentyMinuteIntimate: CalculatorData = {
         ...indoorIntimate,
-        duration: 60,
+        duration: 20,
       }
       const oneMinuteIntimate: CalculatorData = {
-        ...oneHourIntimate,
+        ...twentyMinuteIntimate,
         duration: 1,
       }
-      const twoHourIntimate: CalculatorData = {
-        ...oneHourIntimate,
-        duration: 120,
+      const thirtyMinuteIntimate: CalculatorData = {
+        ...twentyMinuteIntimate,
+        duration: 30,
       }
 
-      expect(calcValue(oneMinuteIntimate)).toEqual(calcValue(oneHourIntimate))
-      expect(calcValue(twoHourIntimate)).toEqual(
-        calcValue(oneHourIntimate)! * 2,
+      expect(calcValue(oneMinuteIntimate)).toEqual(
+        calcValue(twentyMinuteIntimate),
+      )
+      expect(calcValue(thirtyMinuteIntimate)).toBeCloseTo(
+        calcValue(twentyMinuteIntimate)! * 1.5,
+      )
+    })
+    it('should not exceed live-in-partner risk,', () => {
+      const tenHourIntimate: CalculatorData = {
+        ...indoorIntimate,
+        duration: 600,
+      }
+      const partnerIntimate: CalculatorData = {
+        ...indoorIntimate,
+        interaction: 'partner',
+      }
+      expect(calcValue(tenHourIntimate)).toBeCloseTo(
+        calcValue(partnerIntimate)!,
       )
     })
     it('should not apply talking multiplier', () => {
       const kissingTalking = testData({
-        ...prepopulated['One-night stand with a random person'],
+        ...prepopulated['oneNightStand'],
         voice: 'normal',
       })
       const kissingSilent: CalculatorData = {
@@ -434,22 +447,22 @@ describe('calculate', () => {
   })
 
   describe('yourVaccine', () => {
-    const noVaccineScenario = testData(
-      prepopulated['Car ride with 1 other person for 15 mins'],
-    )
+    const noVaccineScenario = testData(prepopulated['1person_15minCarRide'])
     const noVaccineValue = calcValue(noVaccineScenario)
 
     it.each`
       type             | doses | multiplier
       ${'pfizer'}      | ${0}  | ${1}
       ${'pfizer'}      | ${1}  | ${0.56}
-      ${'pfizer'}      | ${2}  | ${0.2}
+      ${'pfizer'}      | ${2}  | ${0.1}
       ${'moderna'}     | ${0}  | ${1}
       ${'moderna'}     | ${1}  | ${0.56}
-      ${'moderna'}     | ${2}  | ${0.2}
+      ${'moderna'}     | ${2}  | ${0.1}
       ${'astraZeneca'} | ${0}  | ${1}
       ${'astraZeneca'} | ${1}  | ${0.56}
       ${'astraZeneca'} | ${2}  | ${0.4}
+      ${'johnson'}     | ${0}  | ${1}
+      ${'johnson'}     | ${1}  | ${0.33}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
@@ -470,7 +483,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineLongScenario)).toBeCloseTo(
-        calcValue(noVaccineLongScenario)! * 0.2,
+        calcValue(noVaccineLongScenario)! * 0.1,
       )
     })
 
@@ -485,15 +498,13 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineHousemate)).toBeCloseTo(
-        calcValue(noVaccineHousemate)! * 0.2,
+        calcValue(noVaccineHousemate)! * 0.1,
       )
     })
 
     it('Should apply vaccine multiplier to partner activities', () => {
       const noVaccinePartner = testData(
-        prepopulated[
-          'Live-in partner who has no indoor interactions besides you'
-        ],
+        prepopulated['liveInPartner_noContacts'],
       )
       const vaccinePartner = {
         ...noVaccinePartner,
@@ -501,8 +512,29 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccinePartner)).toBeCloseTo(
-        calcValue(noVaccinePartner)! * 0.2,
+        calcValue(noVaccinePartner)! * 0.1,
       )
+    })
+  })
+
+  describe('theirVaccine', () => {
+    const noVaccineScenario = testData(prepopulated['1person_15minCarRide'])
+    const defaultValue = calcValue(noVaccineScenario)!
+
+    it('Should use "undefined" by default', () => {
+      expect(noVaccineScenario.theirVaccine).toEqual('undefined')
+    })
+
+    it('Should increase risk for unvaccinated people', () => {
+      expect(
+        calcValue({ ...noVaccineScenario, theirVaccine: 'unvaccinated' }),
+      ).toEqual(defaultValue * 2)
+    })
+
+    it('Should decrease risk for vaccinated people', () => {
+      expect(
+        calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
+      ).toEqual(defaultValue * 2 * 0.1)
     })
   })
 })

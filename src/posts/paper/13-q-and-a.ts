@@ -135,9 +135,9 @@ These masks provide more protection than a cloth or surgical mask:
 * Masks that claim to have N95-like filter media (e.x. KN95, Vogmask), can be considered equivalent to KN95's - designed to filter, but not rigorously quality controlled or tightly fitted. These receive a 6x protection factor.
 
 * For a well-fitted, well-sealed N95, we roughly estimate an 8x reduction in risk for the wearer (versus 2x for a surgical mask or high-quality cloth mask).
-  * But remember, these masks are only effective if you get a tight seal around your face! Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [fit test](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) and watch some online training in order to effectively use your N95.
+  * But remember, these masks are only effective if you get a tight seal around your face! Just “wearing an N95” doesn’t protect you all the way. We have seen a friend of ours “wear an N95” that was much too big for their face, leaving a big gap under their chin. Other friends have worn an N95 over a beard, but facial hair definitely prevents a good seal. [One study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) shows that even a pair of tiny points of leakage a couple of millimeters in diameter dramatically increases the number of aerosol particles that can pass through a high quality mask. Please do a [seal check](https://www.cdc.gov/niosh/docs/2018-130/pdfs/2018-130.pdf) and watch a [video](https://www.youtube.com/watch?v=CoSb-HJJ5tk) in order to effectively use your N95.
 
-* A P100 is even better. We estimate that P100's provide a 20x recuction in risk. 
+* A P100 is even better. We estimate that P100's provide a 20x reduction in risk. 
   * A major reason we like P100s is they are easier to get a good seal on. You can search for online training on how to do this.
   * Note that P100 respirators typically have an outflow valve, meaning they provide minimal protection to others from you, so if you use a P100, you may be legally required to cover the  outflow valve with cloth or a surgical mask.
 
@@ -183,11 +183,11 @@ However, we have retracted this method for the following reasons:
 
 ## How should we think about people who have been vaccinated?
 
-***Summary**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond. Additionally, each microCOVID *may* be 2-4x less likely to land a vaccinated individual in a hospital.*
+***Summary**: Vaccinated people receive a multiplier on all incoming microCOVIDs from their activities. The multiplier depends on which vaccine they've gotten and is contingent on having waited long enough for their immune system to respond.
 
 People who have been vaccinated are less likely to catch COVID and transmit it to others, which results in them getting fewer microCOVIDs from activities.
 However, they are not totally immune to COVID, and it is quite easy for a vaccinated person to counteract the decreased risk per activity by doing lots of
-risky activities (for instance, the Moderna vaccine confers a 1/5x multiplier for incoming microCOVIDs, so a vaccinated person who does 5x more risky behavior
+risky activities (for instance, the Moderna vaccine confers a 1/10x multiplier for incoming microCOVIDs, so a vaccinated person who does 10x more risky behavior
 after being vaccinated would be just as many microCOVIDs as before).
 
 There are two questions that are important for understanding vaccines:
@@ -197,30 +197,52 @@ There are two questions that are important for understanding vaccines:
 
 ### 1. How much less likely is it for vaccinated individuals to catch COVID? (Reduction in microCOVIDs)
 
-We do not know for sure how likely it is for a vaccinated individual to catch COVID. Vaccinated individuals still have a chance of becoming sick (even if they are not seriously ill), and may be asymptomatic carriers of the virus, capable of infecting others without having symptoms themselves. None of the vaccine studies have directly addressed what the chances of transmission from a vaccinated individual are. We attempt to make educated guesses by pulling in other sources. For our derivation of these numbers, see the [Research Sources](/paper/14-research-sources#vaccines).
+Below is our best estimates for the vaccine efficacies for various vaccines. These are based on a weighted average of the efficacy of each vaccine vs. symptomatic and never-symptomatic COVID-19 infections. See [Research Sources](/paper/14-research-sources#vaccines) for the full derivations.
 
-|             | microCOVID multiplier 7 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
-| ----------- | ------------------------------------------- | -------------------------------------------- |
-| AstraZeneca | 0.56                                        | 0.4                                          |
-| Moderna     | 0.56                                        | 0.2 [^moderna]                               |
-| Pfizer [^pfizer] | 0.56                                   | 0.2                                          |
+|             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
+| ----------- | -------------------------------------------- | -------------------------------------------- |
+| AstraZeneca | 0.56                                         | 0.4                                          |
+| Moderna     | 0.56                                         | 0.1                                          |
+| Pfizer      | 0.56                                         | 0.1                                          |
+| Johnson & Johnson | 0.33                                   | N/A                                          |
 
-For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
+For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s or a single dose of Johnson & Johnson's vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a N95 mask all the time.
 
 While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game-changing — universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
 
 ### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
 
-At first glance, among all vaccinated individuals across all 3 studies, only 1 case of severe COVID-19 was observed, with no hospitalizations or deaths. However, there were only a small number of severe cases in the control group, which means we cannot say with much certainty how effective the vaccines are at preventing severe COVID-19. One might squint at the data and suggest that the reduction in severe cases is 2-4x the reduction in microCOVIDs suggested above.
+Data from [Israel's nationwide-study](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00947-8/fulltext) showed that Pfizer's
+vaccine reduced cases of severe COVID by 97.2% (CI 96.8–97.5) and for all COVID cases by 95.3% (94.9–95.7). Therefore, we think that mRNA vaccines
+provide an additional factor of 2 reduction against severe COVID on top of reducing the chance of contracting COVID at all.
 
-Additionally, we have seen [data](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) suggesting that asymptomatic COVID-19 could result in lung damage in half of cases.
+We have not done a thorough analysis of this effect in other vaccines.
 
-As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)),
-but we do not recommend increasing your microCOVID budget on top of that given current data. This may change as more data about the vaccines is gathered.
+We have not seen data that describes the effect of vaccines on long COVID in mild/asymptomatic cases. The 1% annual risk budget is based on risks of long term effects of
+COVID (as opposed to hospitalization or death). Reports of prevalence in long COVID in unvaccinated people varies widely:
+* A [study by ZOE](https://www.medrxiv.org/content/10.1101/2020.10.19.20214494v1.full.pdf) found that "one in twenty people (5%) had COVID-19 symptoms for more than eight weeks, and around 2% of people can experience symptoms for 12 weeks or more". The data for this was self-reported and the researchers noted that many participants stopped reporting data before the conclusion of the study.
+* Another [study](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) early in the pandemic found lung abnormalities in half of asymptomatic COVID-19 cases on the Diamond Princess cruise ship. These lung abnormalities are similar to pneumonia; it is unclear from that study what percent led to long term health changes.
+* Researchers found [heart abnormalities in 78 of 100 recovered patients](https://jamanetwork.com/journals/jamacardiology/fullarticle/2768916), sampling an average of 71 days after initial diagnosis. There may be self-selection bias among participants in this cohort.
 
-If you do decide you want to increase your microCOVID budget post vaccination,
-* Discuss this with any regular close contacts you have, such as housemates, partners, or co-workers — your increased risk of COVID, asymptomatic or not, could affect them more than it affects you.
-* Consider the potential impact on your community at large — taking on more risk of being an asymptomatic spreader could result in you infecting many other people.
+As a result, getting a vaccination yourself confers a reduction in incoming microCOVIDs based on how the vaccine affects your chances of infecting others (as outlined [above](#1-how-much-less-likely-is-it-for-vaccinated-individuals-to-catch-covid-reduction-in-microcovids)).
+You may additionally increase your budget based on how the vaccine reduces your own chances of negative outcomes, but this is a personal choice dependent on your own view of how averse to the various possible negative outcomes you are.
+
+Some ways you may want to change your budget in after you and your close contacts are vaccinated:
+* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
+* You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. 10x for the mRNA vaccines) while still having the same impact on them. 
+* If you are primarily concerned about hospitalization/death but unconcerned about effects of mild COVID, you may double your budget post vaccination.
+
+Example A:
+
+You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .3 * 5) = 80 microCOVID/week\`. All 6 of you are now vaccinated.
+* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .03 * 5) = 174 microCOVID/week\`.
+* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`80 / 0.1 = 800 microCOVID/week\`.
+* If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further double your budget (accepting a higher risk of mild/asymptomatic COVID).
+
+Example B:
+
+You live with or care for someone with a condition that reduces the efficacy of a vaccine (consult their doctor).
+* You choose not to change your budget, since this person is just as likely to get COVID from you as before.
 
 ### So is a vaccinated person safer to be around than an unvaccinated person?
 Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated person who does the same activities as a unvaccinated person will be less risky to be around. However, if the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got vaccinated! The only way to accurately understand a person's risk is to model each of their activities and multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
@@ -340,8 +362,6 @@ In terms of qualitative scales, we like the following:
 [^unwell]: You probably can't do this anywhere near as reliably with someone you don't live with, which is why the discussion here is specific to housemates.
 [^2]: This is due to the fact that much less transmission occurs more than 3 days before the appearance of symptoms ([He et al](https://www.nature.com/articles/s41591-020-0869-5), figure 1c middle graph) or fewer than 2 days after infection ([Ferretti et al](https://science.sciencemag.org/content/368/6491/eabb6936), figure 1 “generation time”). In order for Carol to infect Bob before Alice shows symptoms, Carol’s generation time would have to be greater than the delay between Alice’s infectiousness and Alice’s symptoms, which is unlikely.
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
-[^moderna]: Moderna's Phase III study was only designed to count participants who got symptomatic cases of COVID. Our multiplier is based in part on data from testing all participants on the day of the second dose. Since the immune response after the second dose appears to be significantly stronger than after, this number could be as good as 0.05. Moderna is collecting additional data which may affect these numbers.
-[^pfizer]: Pfizer's Phase III study also does not report asymptomatic COVID cases. We use the same numbers as Moderna because the metrics that _are_ reported are quite similar, and the design of the vaccines themselves are quite similar. The multiplier after the 2nd dose could be as low as 0.05 or as high as 0.45. Pfizer is collecting additional data which may affect these numbers.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
 [^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.
 

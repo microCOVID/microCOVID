@@ -8,9 +8,43 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 5, 22),
+    content: `
+* Added the option to select the vaccination state of average people
+  * Imported vaccination data from JHU and Covid Act Now.
+  * See [Research Sources](/paper/14-research-sources#others-vaccines) for derivation and caveats.    
+`,
+  },
+  {
+    date: new Date(2021, 4, 27),
+    content: `
+* Updated constants for under-reporting factor
+  * New numbers from [COVID 19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/) December 2020 update.
+  * Results in slightly lower prevalence estimates.`,
+  },
+  {
+    date: new Date(2021, 3, 10),
+    content: `
+* Added Gamelaya Research's Sputnik V vaccine to the calculator. See the [Research Sources](/paper/14-research-sources#sputnik-v-gamelaya-research) section of the White Paper for details.`,
+  },
+  {
+    date: new Date(2021, 2, 30),
+    content: `
+* Vaccine updates: 
+  * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
+  * Improved multiplier for Moderna and Pfizer's vaccines (0.2 -> 0.1) based on new data.
+  * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZenica / Johnson & Johnson (Pfizer's was the only study that used 7 days).
+  * See [Research Sources](/paper/14-research-sources#vaccines) for rationale.`,
+  },
+  {
+    date: new Date(2021, 2, 16),
+    content: `
+* The latest version of the [Risk Tracker](/tracker) now supports modeling the risk of someone you are seeing who is vaccinated.`,
+  },
+  {
     date: new Date(2021, 1, 21),
     content: `
-* Added precaution for being vaccinated. See paper [Q&A](/paper/13-1-and-a#vaccines-qa) and [Research Sources](/paper/14-research-sources#vaccines) for details.
+* Added precaution for being vaccinated. See paper [Q&A](/paper/13-q-and-a#vaccines-qa) and [Research Sources](/paper/14-research-sources#vaccines) for details.
 * Note: vaccines also reduce the risk of people who you interact with, we just haven't implemented this yet.`,
   },
   {

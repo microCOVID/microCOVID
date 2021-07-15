@@ -3,7 +3,7 @@ import i18n from '../i18n'
 import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
-  value: string
+  description?: string
   sublabel?: string
 }
 
@@ -31,10 +31,10 @@ const formValue = function (label: string, multiplier: number): FormValue {
 
 const segmentedFormValue = function (
   label: string,
-  value: string,
+  description: string,
   multiplier: number,
 ): CheckBoxFormValue {
-  return { label, multiplier, value }
+  return { label, multiplier, description }
 }
 
 export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
@@ -83,10 +83,10 @@ export const Setting: { [key: string]: FormValue } = {
   },
 }
 
-export const intimateDurationFloor = 60
+export const intimateDurationFloor = 20
 
 export const Distance: { [key: string]: FormValue } = {
-  intimate: formValue(i18n.t('data.intimate_distance'), 2),
+  intimate: formValue(i18n.t('data.intimate_distance'), 5),
   close: formValue(i18n.t('data.close_distance'), 2),
   normal: formValue(i18n.t('data.normal_distance'), 1),
   sixFt: formValue(i18n.t('data.sixft_distance'), 0.5),
@@ -143,23 +143,36 @@ export const Voice: { [key: string]: FormValue } = {
   },
 }
 
+export const BUDGET_TEN_PERCENT = 100000
+export const BUDGET_THREE_PERCENT = 30000
 export const BUDGET_ONE_PERCENT = 10000
 export const BUDGET_ONE_TENTH_PERCENT = 1000
 
-export const budgetOptions = [
-  {
-    label: i18n.t('calculator.risk_tolerance_1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
-    multiplier: 1,
-    value: BUDGET_ONE_PERCENT.toString(),
-  },
-  {
-    label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
-    sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
-    multiplier: 0.1,
-    value: BUDGET_ONE_TENTH_PERCENT.toString(),
-  },
-]
+export const budgetOptions: { [key: string]: CheckBoxFormValue } = {}
+
+budgetOptions[BUDGET_ONE_TENTH_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_point1_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_point1_percent_explanation'),
+  multiplier: 0.1,
+}
+
+budgetOptions[BUDGET_ONE_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_1_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_1_percent_explanation'),
+  multiplier: 1,
+}
+
+budgetOptions[BUDGET_THREE_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_3_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_3_percent_explanation'),
+  multiplier: 3,
+}
+
+budgetOptions[BUDGET_TEN_PERCENT.toString()] = {
+  label: i18n.t('calculator.risk_tolerance_10_percent_label'),
+  sublabel: i18n.t('calculator.risk_tolerance_10_percent_explanation'),
+  multiplier: 10,
+}
 
 // TODO(beshaya): Move RiskProfile to it's own file.
 /*
@@ -350,18 +363,44 @@ export interface VaccineValue {
 export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multiplierPerDose: [1, 0.56, 0.2],
+    multiplierPerDose: [1, 0.56, 0.1],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multiplierPerDose: [1, 0.56, 0.2],
+    multiplierPerDose: [1, 0.56, 0.1],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
     multiplierPerDose: [1, 0.56, 0.4],
   },
+  johnson: {
+    label: i18n.t('data.vaccine.johnson_johnson'),
+    multiplierPerDose: [1, 0.33],
+  },
+  sputnik: {
+    label: i18n.t('data.vaccine.sputnik'),
+    multiplierPerDose: [1, 0.15, 0.1],
+  },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
     multiplierPerDose: [1, 0.56, 0.4],
+  },
+}
+
+export const TheirVaccine: { [key: string]: CheckBoxFormValue } = {
+  vaccinated: {
+    label: i18n.t('data.their_vaccine.yes'),
+    description: i18n.t('data.their_vaccine.yes_description'),
+    multiplier: 0,
+  },
+  unvaccinated: {
+    label: i18n.t('data.their_vaccine.no'),
+    description: i18n.t('data.their_vaccine.no_description'),
+    multiplier: 0,
+  },
+  undefined: {
+    label: i18n.t('data.their_vaccine.unknown'),
+    description: i18n.t('data.their_vaccine.unknown_description'),
+    multiplier: 0,
   },
 }

@@ -8,7 +8,7 @@ import { CheckBoxFormValue } from 'data/data'
 export const RadioControl: React.FunctionComponent<{
   id: string
   setter: (value: string) => void
-  source: Array<CheckBoxFormValue>
+  source: { [key: string]: CheckBoxFormValue }
   value: string
   label?: string
   header?: string
@@ -23,29 +23,26 @@ export const RadioControl: React.FunctionComponent<{
       header={props.header}
       popover={props.popover}
     />
-    {props.source.map((current, index) => (
+    {Object.entries(props.source).map(([key, formValue], index) => (
       <Form.Check key={index} id={props.id + index}>
         <Form.Check.Input
           type="radio"
           name={props.id}
-          value={current.value}
+          value={key}
           onChange={() => {
-            recordCalculatorOptionSelected(props.id, current.value)
-            props.setter(current.value)
+            recordCalculatorOptionSelected(props.id, key)
+            props.setter(key)
           }}
-          defaultChecked={current.value === props.value.toString()}
+          defaultChecked={key === props.value.toString()}
         />
         <Form.Check.Label>
-          {current.sublabel ? (
-            <>
-              <strong>{current.label}</strong>
-              <br />
-              {current.sublabel}
-            </>
-          ) : (
-            current.label
-          )}
+          <strong>{formValue.label}</strong>
         </Form.Check.Label>
+        {formValue.sublabel && (
+          <>
+            <Form.Text as="div">{formValue.sublabel}</Form.Text>
+          </>
+        )}
       </Form.Check>
     ))}
     {props.helpText && (

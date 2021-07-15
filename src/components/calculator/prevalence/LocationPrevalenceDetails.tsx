@@ -70,6 +70,16 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
         }
         unit="%"
       />
+      <PrevalenceFieldStatic
+        id="vaccinated-rate"
+        label={t('calculator.prevalence.completed_vaccinations')}
+        value={
+          props.data.percentFullyVaccinated === null
+            ? 'no data available'
+            : (100 * props.data.percentFullyVaccinated).toFixed(0)
+        }
+        unit="%"
+      />
       {!props.locationSet ? null : (
         <>
           <div>

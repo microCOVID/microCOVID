@@ -1,5 +1,3 @@
-import i18n from '../i18n'
-
 import { CalculatorData } from './calculate'
 
 export type PartialData = Omit<
@@ -13,6 +11,9 @@ export type PartialData = Omit<
   | 'casesIncreasingPercentage'
   | 'positiveCasePercentage'
   | 'prevalanceDataDate'
+  | 'percentFullyVaccinated'
+  | 'unvaccinatedPrevalenceRatio'
+  | 'averageFullyVaccinatedMultiplier'
   | 'yourVaccineType'
   | 'yourVaccineDoses'
 >
@@ -20,21 +21,7 @@ export type PartialData = Omit<
 export const prepopulated: {
   [key: string]: PartialData
 } = {
-  [i18n.t('scenario.custom')]: {
-    // This special profile is applied to reset the rest of the calculator.
-    riskProfile: '',
-    interaction: '',
-    personCount: 0,
-    symptomsChecked: 'no',
-
-    setting: '',
-    distance: '',
-    duration: 0,
-    theirMask: '',
-    yourMask: '',
-    voice: '',
-  },
-  [i18n.t('scenario.outdoorMasked2')]: {
+  outdoorMasked2: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
@@ -46,9 +33,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'outdoorMasked2',
   },
 
-  [i18n.t('scenario.indoorUnmasked2')]: {
+  indoorUnmasked2: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
@@ -60,9 +49,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'indoorUnmasked2',
   },
 
-  [i18n.t('scenario.1person_15minCarRide')]: {
+  '1person_15minCarRide': {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 1,
@@ -74,9 +65,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: '1person_15minCarRide',
   },
 
-  [i18n.t('scenario.oneNightStand')]: {
+  oneNightStand: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 1,
@@ -88,9 +81,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'oneNightStand',
   },
 
-  [i18n.t('scenario.liveInPartner_noContacts')]: {
+  liveInPartner_noContacts: {
     riskProfile: 'livingAlone',
     interaction: 'partner',
     personCount: 1,
@@ -102,9 +97,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'liveInPartner_noContacts',
   },
 
-  [i18n.t('scenario.60minShopping')]: {
+  '60minShopping': {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 5,
@@ -116,9 +113,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
+    scenarioName: '60minShopping',
   },
 
-  [i18n.t('scenario.60minShoppingFew')]: {
+  '60minShoppingFew': {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 3,
@@ -130,9 +129,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
+    scenarioName: '60minShoppingFew',
   },
 
-  [i18n.t('scenario.60minShoppingCrowded')]: {
+  '60minShoppingCrowded': {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 10,
@@ -144,9 +145,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
+    scenarioName: '60minShoppingCrowded',
   },
 
-  [i18n.t('scenario.planeRide')]: {
+  planeRide: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 41,
@@ -158,9 +161,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
+    scenarioName: 'planeRide',
   },
 
-  [i18n.t('scenario.planeRideMiddleSeatEmpty')]: {
+  planeRideMiddleSeatEmpty: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 20,
@@ -172,9 +177,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
+    scenarioName: 'planeRideMiddleSeatEmpty',
   },
 
-  [i18n.t('scenario.restaurantOutdoors')]: {
+  restaurantOutdoors: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
@@ -186,9 +193,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'restaurantOutdoors',
   },
 
-  [i18n.t('scenario.restaurantIndoors')]: {
+  restaurantIndoors: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
@@ -200,9 +209,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'restaurantIndoors',
   },
 
-  [i18n.t('scenario.bar')]: {
+  bar: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 15,
@@ -214,9 +225,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'loud',
+    theirVaccine: 'undefined',
+    scenarioName: 'bar',
   },
 
-  [i18n.t('scenario.largeOutdoorParty')]: {
+  largeOutdoorParty: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 80,
@@ -228,9 +241,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'largeOutdoorParty',
   },
 
-  [i18n.t('scenario.smallIndoorParty25')]: {
+  smallIndoorParty25: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 25,
@@ -242,9 +257,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'smallIndoorParty25',
   },
 
-  [i18n.t('scenario.outdoorMaskedWithCovidPositive')]: {
+  outdoorMaskedWithCovidPositive: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
     personCount: 1,
@@ -256,9 +273,11 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'outdoorMaskedWithCovidPositive',
   },
 
-  [i18n.t('scenario.indoorUnmaskedWithCovidPositive')]: {
+  indoorUnmaskedWithCovidPositive: {
     riskProfile: 'hasCovid',
     interaction: 'oneTime',
     personCount: 1,
@@ -270,9 +289,11 @@ export const prepopulated: {
     theirMask: 'none',
     yourMask: 'none',
     voice: 'normal',
+    theirVaccine: 'undefined',
+    scenarioName: 'indoorUnmaskedWithCovidPositive',
   },
 
-  [i18n.t('scenario.votingInPerson')]: {
+  votingInPerson: {
     riskProfile: 'average',
     interaction: 'oneTime',
     personCount: 2,
@@ -284,5 +305,24 @@ export const prepopulated: {
     theirMask: 'basic',
     yourMask: 'basic',
     voice: 'silent',
+    theirVaccine: 'undefined',
+    scenarioName: 'votingInPerson',
+  },
+  custom: {
+    // This special profile is applied to reset the rest of the calculator.
+    // Keep at the end of this list.
+    riskProfile: '',
+    interaction: '',
+    personCount: 0,
+    symptomsChecked: 'no',
+
+    setting: '',
+    distance: '',
+    duration: 0,
+    theirMask: '',
+    yourMask: '',
+    voice: '',
+    theirVaccine: 'undefined',
+    scenarioName: 'custom',
   },
 }

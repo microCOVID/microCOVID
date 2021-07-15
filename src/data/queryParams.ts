@@ -2,7 +2,12 @@ import { isEmpty, pickBy } from 'lodash'
 import { QueryParamConfigMap } from 'serialize-query-params'
 import { NumberParam, StringParam } from 'use-query-params'
 
-import { CalculatorData, QueryData, defaultValues } from './calculate'
+import {
+  CalculatorData,
+  QueryData,
+  defaultValues,
+  sanitizeData,
+} from './calculate'
 
 export const queryConfig: QueryParamConfigMap = {
   riskBudget: NumberParam,
@@ -28,6 +33,10 @@ export const queryConfig: QueryParamConfigMap = {
 
   yourVaccineDoses: NumberParam,
   yourVaccineType: StringParam,
+
+  theirVaccine: StringParam,
+
+  scenarioName: StringParam,
 }
 
 export const filterParams = (data: CalculatorData): QueryData => {
@@ -54,9 +63,13 @@ export const useQueryDataIfPresent = (
   calcData: CalculatorData,
 ): CalculatorData => {
   const queryDataFiltered = pickBy(queryData, (v) => v !== undefined)
+
   if (isEmpty(queryDataFiltered)) {
     return calcData
   } else {
-    return { ...defaultValues, ...queryDataFiltered }
+    return sanitizeData(
+      queryDataFiltered,
+      true /* fillCustomIfScenarioMissing */,
+    )
   }
 }

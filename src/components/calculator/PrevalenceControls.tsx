@@ -9,8 +9,9 @@ import ControlLabel from './controls/ControlLabel'
 import { LocationPrevalenceDetails } from './prevalence/LocationPrevalenceDetails'
 import { ManualPrevalenceDetails } from './prevalence/ManualPrevalenceDetails'
 import { CalculatorData } from 'data/calculate'
-import { Locations, PrevalenceDataDate } from 'data/location'
+import { Locations } from 'data/location'
 import 'components/calculator/styles/PrevalenceControls.scss'
+import { dataForLocation } from 'data/locationHelpers'
 
 interface Option {
   label: string
@@ -248,38 +249,4 @@ export const PrevalenceControls: React.FunctionComponent<{
       )}
     </React.Fragment>
   )
-}
-
-interface PrevalanceData {
-  population: string
-  casesPastWeek: number
-  casesIncreasingPercentage: number
-  positiveCasePercentage: number | null
-  prevalanceDataDate: Date
-}
-
-function dataForLocation(location: string): PrevalanceData {
-  const locationData = Locations[location]
-
-  if (locationData) {
-    return {
-      population: locationData.population,
-      casesPastWeek: locationData.casesPastWeek,
-      casesIncreasingPercentage:
-        Math.round(locationData.casesIncreasingPercentage * 10) / 10,
-      positiveCasePercentage:
-        locationData.positiveCasePercentage === null
-          ? null
-          : Math.round(locationData.positiveCasePercentage * 10) / 10,
-      prevalanceDataDate: new Date(PrevalenceDataDate),
-    }
-  }
-
-  return {
-    population: '',
-    casesPastWeek: 0,
-    casesIncreasingPercentage: 0,
-    positiveCasePercentage: 0,
-    prevalanceDataDate: new Date(),
-  }
 }

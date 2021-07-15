@@ -9,7 +9,8 @@
   border-top-right-radius: 0;
 
   h4 {
-    margin-top: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
   }
 
   code {
@@ -17,8 +18,10 @@
   }
 
   #changelog {
-    padding-bottom: 1.25rem;
+    color: $secondary;
     font-style: italic;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
   }
   
   #calculation-explanation {

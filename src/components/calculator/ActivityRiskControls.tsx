@@ -190,6 +190,8 @@ const MaskSelector: React.FunctionComponent<{
       source={props.source}
       className="segmented-scrollable"
       variant={props.variant}
+      showTooltip={true}
+      useActiveDesc={true}
     >
       <MaskShowExtras id={props.id + 'NotListed'} prompt={props.helpPrompt} />
     </SegmentedControl>

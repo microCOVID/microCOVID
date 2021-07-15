@@ -3,10 +3,16 @@ import { Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from './controls/ControlLabel'
+import { SegmentedControl } from './controls/SegmentedControl'
 import { SelectControl } from './controls/SelectControl'
 import { fixedPointPrecision } from './util/FormatPrecision'
 import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
-import { Distance, RiskProfile, intimateDurationFloor } from 'data/data'
+import {
+  Distance,
+  RiskProfile,
+  TheirVaccine,
+  intimateDurationFloor,
+} from 'data/data'
 
 const personCountPopover = (
   <Popover id="popover-basic">
@@ -174,9 +180,42 @@ export const PersonRiskControls: React.FunctionComponent<{
           )
         }}
       />
+      {TheirVaccineIfAvailable(data, setter)}
       <br />
     </React.Fragment>
   )
+}
+
+function TheirVaccineIfAvailable(
+  data: CalculatorData,
+  setter: (newData: CalculatorData) => void,
+) {
+  const { t } = useTranslation()
+  if (data.riskProfile === 'average') {
+    if (data.unvaccinatedPrevalenceRatio) {
+      return (
+        <SegmentedControl
+          id="theirVaccine"
+          header={t('calculator.their_vaccine_header')}
+          label={t('calculator.their_vaccine_question')}
+          data={data}
+          setter={setter}
+          source={TheirVaccine}
+          className="segmented-scrollable"
+          variant="outline-cyan"
+          showTooltip={true}
+          useHoverDesc={false}
+        />
+      )
+    }
+    return (
+      <div className="warning">
+        <Trans>calculator.no_vaccine_prevalence</Trans>
+      </div>
+    )
+  }
+  // Not a supported risk profile.
+  return null
 }
 
 function GroupSizeWarning(props: { people: number }): React.ReactElement {

@@ -16,6 +16,7 @@ import {
   partnerMult,
   personRiskMultiplier,
 } from 'data/data'
+import { PartialData, prepopulated } from 'data/prepopulated'
 
 export interface CalculatorData {
   // Persistence
@@ -33,6 +34,9 @@ export interface CalculatorData {
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
   prevalanceDataDate: Date
+  percentFullyVaccinated: number | null
+  unvaccinatedPrevalenceRatio: number | null
+  averageFullyVaccinatedMultiplier: number | null
 
   // Person risk
   riskProfile: keyof typeof RiskProfile
@@ -51,6 +55,11 @@ export interface CalculatorData {
   // Vaccine
   yourVaccineType: string
   yourVaccineDoses: number
+
+  theirVaccine: string
+
+  // Preset scenario name
+  scenarioName?: string
 }
 
 export const defaultValues: CalculatorData = {
@@ -64,6 +73,9 @@ export const defaultValues: CalculatorData = {
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
   prevalanceDataDate: new Date(),
+  percentFullyVaccinated: null,
+  unvaccinatedPrevalenceRatio: null,
+  averageFullyVaccinatedMultiplier: null,
 
   riskProfile: '',
   interaction: '',
@@ -79,6 +91,10 @@ export const defaultValues: CalculatorData = {
 
   yourVaccineType: '',
   yourVaccineDoses: 0,
+
+  theirVaccine: 'undefined',
+
+  scenarioName: '',
 }
 
 interface CalculatorResult {
@@ -100,7 +116,7 @@ const prevalenceRatio = (positivityPercent: number | null, date: Date) => {
     positivityPercent = 100
   }
   const positivityRate = positivityPercent / 100
-  return (1250 / (day_i + 25)) * positivityRate ** 0.5 + 2
+  return (1000 / (day_i + 10)) * positivityRate ** 0.5 + 2
 }
 
 // These are the variables exposed via query parameters
@@ -109,12 +125,16 @@ export type QueryData = Partial<CalculatorData>
 // Replace any values that no longer exist with empty string (nothing selected).
 // This is used when restoring a previous saved scenario, in case we changed
 // the model in the meantime.
-export const migrateDataToCurrent = (
-  incomingData: Record<string, unknown>,
+// sanitizeData() is used to clean both query parameters in the URL and
+// anything in local storage.
+export const sanitizeData = (
+  data: Partial<CalculatorData>,
+  fillCustomIfScenarioMissing: boolean,
 ): CalculatorData => {
-  const data: Partial<CalculatorData> = { ...incomingData }
   const fixOne = (
-    table: { [key: string]: FormValue | PersonRiskValue | VaccineValue },
+    table: {
+      [key: string]: FormValue | PartialData | PersonRiskValue | VaccineValue
+    },
     prop: keyof CalculatorData,
   ) => {
     const current = data[prop]
@@ -130,6 +150,7 @@ export const migrateDataToCurrent = (
   fixOne(YourMask, 'yourMask')
   fixOne(Voice, 'voice')
   fixOne(Vaccines, 'yourVaccineType')
+  fixOne(prepopulated, 'scenarioName')
 
   if (
     data['yourVaccineDoses'] !== undefined &&
@@ -137,7 +158,31 @@ export const migrateDataToCurrent = (
   ) {
     delete data['yourVaccineDoses']
   }
-  return { ...defaultValues, ...data }
+
+  // No scenario name. Must be old stored data or an old query. For backwards
+  // compatibility, set the implied scenarioName to 'custom' so that the results
+  // appear on the page (they won't if scenarioName is the defaultValues default
+  // of '').
+  if (data['scenarioName'] === undefined) {
+    return fillCustomIfScenarioMissing
+      ? { ...defaultValues, scenarioName: 'custom', ...data }
+      : { ...defaultValues, scenarioName: '', ...data }
+  } else {
+    return { ...defaultValues, ...data }
+  }
+}
+
+export const migrateDataToCurrent = (
+  incomingData: Record<string, unknown>,
+): CalculatorData => {
+  const data: Partial<CalculatorData> = { ...incomingData }
+  // local storage may be present but "empty"
+  const isLocalStorageAFullScenario =
+    data['interaction'] !== undefined && data['interaction'] !== ''
+  return sanitizeData(
+    data,
+    isLocalStorageAFullScenario /* fillCustomIfScenarioMissing */,
+  )
 }
 
 export const ONE_MILLION = 1e6 // One 'full' COVID
@@ -233,16 +278,42 @@ export const calculatePersonRiskEach = (
       // If risk profile isn't selected, call it incomplete
       return null
     }
+
     const isHousemate =
       data.interaction === 'partner' || data.interaction === 'repeated'
-    return (
+    const unadjustedRisk =
       averagePersonRisk *
       personRiskMultiplier({
         riskProfile: RiskProfile[data.riskProfile],
         isHousemate,
         symptomsChecked: data.symptomsChecked,
       })
-    )
+
+    if (
+      // TODO: Support vaccinated risk for other Risk Profiles.
+      data.riskProfile !== 'average' ||
+      data.unvaccinatedPrevalenceRatio === null ||
+      data.averageFullyVaccinatedMultiplier === null
+    ) {
+      return unadjustedRisk
+    }
+
+    switch (data.theirVaccine) {
+      case 'vaccinated':
+        return (
+          unadjustedRisk *
+          data.unvaccinatedPrevalenceRatio *
+          data.averageFullyVaccinatedMultiplier
+        )
+      case 'unvaccinated':
+        return unadjustedRisk * data.unvaccinatedPrevalenceRatio
+      // falls through
+      case 'undefined':
+        return unadjustedRisk
+      default:
+        console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
+        return null
+    }
   } catch (e) {
     return null
   }
