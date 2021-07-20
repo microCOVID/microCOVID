@@ -169,6 +169,8 @@
     "risk_tolerance_point1_percent_label": "High Caution Budget",
     "risk_tolerance_point1_percent_explanation": "0.1% chance of COVID per year (20 microCOVIDs per week) Suggested if you or your close contacts are more vulnerable to COVID.",
     "intro": {
+      "delta_warning_heading": "Warning: Delta variant research in progress",
+      "delta_warning": "The calculator currently gives risk estimates <2>2-6x lower than they should be</2> given the increased infectiousness of the Delta variant. We're working on an update!",
       "whats_this2": "This calculator lets you estimate COVID risk and find effective safety measures for customizable situations. Examples: how risky is <1>a trip to my grocery store</1>? What's the safest way to <3>see a friend</3>? How much would it help to <5>wear a better mask at my workplace</5>?",
       "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",

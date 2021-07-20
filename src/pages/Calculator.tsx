@@ -46,6 +46,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
+  const [showWarning, setShowWarning] = useState(true)
 
   // Mount / unmount
   useEffect(() => {
@@ -169,6 +170,23 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
+          {showWarning && (
+            <Alert
+              variant="primary"
+              onClose={() => setShowWarning(false)}
+              dismissible
+            >
+              <Alert.Heading>
+                {t('calculator.intro.delta_warning_heading')}
+              </Alert.Heading>
+              <Trans i18nKey="calculator.intro.delta_warning">
+                The calculator currently gives risk estimates{' '}
+                <strong>2-6x lower than they should be</strong> given the
+                increased infectiousness of the Delta variant. We're working on
+                an update!
+              </Trans>
+            </Alert>
+          )}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
