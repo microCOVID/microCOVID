@@ -16,7 +16,7 @@ import shutil
 from datetime import date, datetime, timedelta
 from operator import attrgetter
 from pathlib import Path
-from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any
+from time import sleep
 from us_state_abbrev import us_state_name_by_abbrev
 
 try:
@@ -65,7 +65,7 @@ def import_vaccine_multipliers():
                 'partial': float(row[2]),
                 'complete': float(row[3]),
             }
-    vaccines['Unknown'] = vaccines['AstraZenica']
+    vaccines['Unknown'] = vaccines['AstraZeneca']
     return vaccines
 
 VACCINE_MULTIPLIERS = import_vaccine_multipliers()
@@ -429,6 +429,10 @@ class Place(pydantic.BaseModel):
         if (self.cases_last_week < 0):
             raise ValueError(f'Cases for {self.name} is {self.cases_last_week}.')
 
+        if self.test_positivity_rate is not None and (
+                self.test_positivity_rate < 0 or self.test_positivity_rate > 1):
+            raise ValueError(f'Positive test rate for {self.name} is {self.test_positivity_rate}')
+
         return AppLocation(
             label=self.name,
             population=f"{self.population:,}",
@@ -519,19 +523,23 @@ class AppLocation(pydantic.BaseModel):
     averageFullyVaccinatedMultiplier: float
 
     # https://covid19-projections.com/estimating-true-infections-revisited/
-    def prevalanceRatio(self) -> float:
+    def prevalenceRatio(self) -> float:
         DAY_0 = datetime(2020, 2, 12)
         day_i = (datetime.now() - DAY_0).days
         positivityRate = self.positiveCasePercentage
         if positivityRate is None or positivityRate > 100:
             positivityRate = 100
+        if positivityRate < 0:
+            raise ValueError(
+                    f"Positivity rate is negative: {positivityRate}"
+            )
         final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
 
     def as_csv_data(self) -> Dict[str, str]:
         population = int(self.population.replace(",", ""))
         reported = (self.casesPastWeek + 1) / population
-        underreporting = self.prevalanceRatio()
+        underreporting = self.prevalenceRatio()
         delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
         estimated_prevalence = reported * underreporting * delay
         return {
@@ -564,7 +572,6 @@ class AllData:
         self.countries: Dict[str, Country] = {}
         self.fips_to_county: Dict[int, County] = {}
         self.uid_to_place: Dict[int, Place] = {}
-
 
     def get_country(self, name: str) -> Country:
         if name not in self.countries:
@@ -696,7 +703,12 @@ class AllData:
 
         for country in self.countries.values():
             for state in country.states.values():
-                rolldown_vaccine_types(state, state.counties.values())
+                if state.test_positivity_rate is None and state.tests_in_past_week is not None:
+                    state.test_positivity_rate = (
+                        state.cases_last_week / state.tests_in_past_week
+                    )
+                if state.vaccines_by_type is not None:
+                    rolldown_vaccine_types(state, state.counties.values())
                 for county in state.counties.values():
                     if county.population == 0 and county.name not in fake_names:
                         raise ValueError(f"Missing population data for {county!r}")
@@ -737,11 +749,14 @@ class AllData:
                             county.test_positivity_rate = (
                                 county.cases_last_week / county.tests_in_past_week
                             )
+                            if county.cases_last_week > county.tests_in_past_week:
+                                print(f"Falling back to state data for {county.name} because it has more cases than tests in the last week with a positivity rate of {county.test_positivity_rate}.")
+                                county.test_positivity_rate = state.test_positivity_rate
+
                         elif state.test_positivity_rate is not None:
                             # Some US counties don't have data; fall back to
                             # assuming they're average for their state.
                             county.test_positivity_rate = state.test_positivity_rate
-
 
                 if not rollup_cases(state, "counties"):
                     if state.country == "Nigeria":
@@ -806,6 +821,9 @@ class DataCache(pydantic.BaseModel):
         self.data[url] = requests.get(url).text
         return self.data[url]
 
+    def remove(self, url:str):
+        del self.data[url]
+
 
 def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
     print(f"Fetching {url}...", end=" ", flush=True)
@@ -842,10 +860,27 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
     return result
 
 
-def parse_json(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
+def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
     print(f"Fetching {url}...", end=" ", flush=True)
     result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url)))
     print(f"read {len(result)} objects")
+    return result
+
+
+def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
+    max_attempts = 2
+    retry_time_seconds = 2
+    for attempt in range(max_attempts):
+        try:
+            contents_as_json = json.loads(cache.get(url))
+            break
+        except json.JSONDecodeError as e:
+            print(f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}")
+            print(f"Trying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)...")
+            sleep(retry_time_seconds)
+            cache.remove(url)
+
+    result = pydantic.parse_obj_as(model, json.loads(cache.get(url)))
     return result
 
 
@@ -938,7 +973,7 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        populate_since = effective_date - timedelta(days=15)
+        populate_since = effective_date - timedelta(days=16)
         current = effective_date
         while current >= populate_since:
             for line in parse_csv(
@@ -989,7 +1024,7 @@ def main() -> None:
                 # print(f"Could not find state {item.Province_State}")
 
         # Test positivity and vaccination status per US county and state
-        for item in parse_json(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
+        for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
             assert (
                 type(item.fips) is int
             ), "Expected item.fips to be int but got {}".format(type(item.fips))
@@ -1008,7 +1043,7 @@ def main() -> None:
                 partial_vaccinations = item.actuals.vaccinationsInitiated - completed_vaccinations
                 county.set_total_vaccines(partial_vaccinations, completed_vaccinations)
 
-        for item in parse_json(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
+        for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
             state_name = us_state_name_by_abbrev[item.state]
             state = data.countries["US"].states[state_name]
             if item.metrics is not None:
@@ -1028,7 +1063,7 @@ def main() -> None:
                     )
 
         # Romanian county (judet) data. Treat as states internally.
-        for line in parse_json(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
+        for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
             state = data.get_state(line.County, country="Romania")
             state.population = line.Population
             state.cumulative_cases[line.Date] = line.TotalCases
