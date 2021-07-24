@@ -1,6 +1,11 @@
 // Emits a comma if the digit at `orderOfMagnitude` should be proceeded by one.
-function commaIfNeeded(orderOfMagnitude: number): string {
-  return orderOfMagnitude > 0 && orderOfMagnitude % 3 === 0 ? ',' : ''
+function commaIfNeeded(
+  orderOfMagnitude: number,
+  thousandsSeparator: string,
+): string {
+  return orderOfMagnitude > 0 && orderOfMagnitude % 3 === 0
+    ? thousandsSeparator
+    : ''
 }
 
 /**
@@ -11,6 +16,7 @@ export function fixedPointPrecision(
   valOrNull: number | null,
   maxNumber = 1e6,
   decimalsNearMax = false,
+  thousandsSeparator = ',',
 ): string {
   if (!valOrNull) {
     return '0'
@@ -44,7 +50,7 @@ export function fixedPointPrecision(
       } else {
         output += '0'
       }
-      output += commaIfNeeded(shift)
+      output += commaIfNeeded(shift, thousandsSeparator)
     }
     if (!keepShowingDigits || !decimalsNearMax) {
       return output
@@ -69,11 +75,11 @@ export function fixedPointPrecision(
 
   if (orderOfMagnitude >= 0) {
     if (orderOfMagnitude % 3 === 0) {
-      output += commaIfNeeded(orderOfMagnitude)
+      output += commaIfNeeded(orderOfMagnitude, thousandsSeparator)
     }
     for (let shift = orderOfMagnitude - 1; shift >= 0; --shift) {
       output += '0'
-      output += commaIfNeeded(shift)
+      output += commaIfNeeded(shift, thousandsSeparator)
     }
     return output
   }
@@ -86,18 +92,24 @@ export function fixedPointPrecision(
  * Converts |val| to a percentage (including '%') with SIGFIGS sigfigs.
  * @param val
  */
-export function fixedPointPrecisionPercent(val: number | null): string {
+export function fixedPointPrecisionPercent(
+  val: number | null,
+  suffix = '%',
+): string {
   if (!val) {
-    return '0%'
+    return '0' + suffix
   }
   if (val > 0.9999999) {
-    return '100%'
+    return '100' + suffix
+  } else if (0.1 < val && val < 0.9) {
+    return (val * 100).toFixed() + suffix
   }
   return (
     fixedPointPrecision(
       val * 100,
       /*maxNumber=*/ 100,
       /*decimalsNearMax=*/ true,
-    ) + '%'
+      /*thousandsSeparator=*/ '',
+    ) + suffix
   )
 }
