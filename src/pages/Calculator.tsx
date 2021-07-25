@@ -180,10 +180,8 @@ export const Calculator = (): React.ReactElement => {
                 {t('calculator.intro.delta_warning_heading')}
               </Alert.Heading>
               <Trans i18nKey="calculator.intro.delta_warning">
-                The calculator currently gives risk estimates{' '}
-                <strong>2-6x lower than they should be</strong> given the
-                increased infectiousness of the Delta variant. We're working on
-                an update!
+                Risks have increased substantially, including for vaccinated
+                people.
               </Trans>
             </Alert>
           )}
