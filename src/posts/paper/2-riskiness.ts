@@ -54,7 +54,7 @@ In general, if you are young and healthy, don’t regularly visit anyone who is 
 
 You can read more details on [choosing your risk budget](/paper/13-q-and-a#how-should-i-choose-my-annual-risk-budget) here.
 
-What we want you to take away from this section is that for people under 50, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1,000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
+What we want you to take away from this section is that for people under 40, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1,000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
 
 Let’s now explore how to quantify the risk of various activities in terms of microCOVIDs.
 
