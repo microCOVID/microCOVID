@@ -16,17 +16,33 @@ Read this section if you are interested in the epistemic nitty-gritty behind our
 
 #### One-time contact
 
-This is the chance that you would get COVID from spending more than 10 minutes indoors or in close proximity to someone who is COVID-positive. We estimate this as “about 6% per hour” from combining multiple sources:
+This is the chance that you would get COVID from spending more than 10 minutes indoors or in close proximity to someone who is COVID-positive. We estimate this as "about 14% per hour."
 
+For the original virus, we estimated “about 6% per hour” from combining multiple sources:
 1. In a study of train passengers that analyzed 2,334 index patients with COVID, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) found that passengers on seats within the same row as the index patient had an average attack rate of 1.5%; for passengers in adjacent seats, the attack rate increased 1.3% per hour. Assuming train passengers are mostly silent, combining this with the respiration rates from the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277) would imply that a conversational hangout in the adjacent seat of a train would be a risk of **roughly 6% per hour**. The distance between adjacent seats on this train was half a meter, and we think typical socialization is moderately further away than this, which gives some extra breathing room on the estimate.
 2. Using the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), we modify the “Class” scenario (1 infected instructor speaking loudly) to propose a normal conversational volume, smaller room (10ft wide x 14ft long x 10ft high), and no masks, leaving other parameters unchanged. This outputs 2.8% per hour; however, this model notes it assumes uniform mixing of air and ignores near-field effects, so is not a good estimate for interactions that aren’t 6+ feet. If we take this as our 6+ feet estimate, and double it as per the “Distance” modifiers described later, this also **suggests 6% per hour**. (Note that this is rather dependent on room size: increasing the 10ft width to 15ft decreases the estimate by a third.)
 3. [Bi et al](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) analyzed Shenzhen contact tracing data from Jan 14–Feb 12 (1281 contacts of 291 cases). Their Table 3 provides data about how often close contacts of COVID-positive people got infected based on different types of contact. The average estimates for each group tend to fall **roughly between 6-9%** (total, not per hour); we note that the vast majority of the infections in this dataset come from the “Contact frequency: Often” category, so we expect this to be an overestimate for the “Moderate” and “Rare” frequency. This data was collected in a setting where 17% of cases were isolated _before_ symptom onset, and we would expect a larger fraction isolated after symptom onset, so the numbers would be higher in a setting where people are not being notified when their contacts get sick.
 4. Next is [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) who did a meta-analysis of 172 studies covering 26,000 individuals, to determine the impact of various interventions (masks, distance, and eye protection) on transmissibility. Importantly to note, they included analyses of SARS and MERS, not just COVID-19. As shown in their Table 2, they found baseline transmissibility values (without masks/distance/etc) of 12.8%, 17.4%, and 16% in different groups. These data mostly come from healthcare settings, and the baseline assumption is direct physical contact, rather than an ordinary socializing distance. We don’t know how many hours were generally spent with patients. We assume these are infected patients who have sought treatment, so definitionally there is no additional distance from anyone symptomatic, so we might expect casual social contact outside a healthcare setting to carry a lower infection probability. However, COVID-19 may be [more infectious/contagious](https://www.medicalnewstoday.com/articles/how-do-sars-and-mers-compare-with-covid-19#Coronaviruses-past-and-present) than SARS and MERS. Overall, this is consistent with “6% per hour” for normal socializing if the average duration in this dataset is on the order of 2 hours; if the baseline “no distance” is closer together than typical socializing; or some combination.
 5. In a prospective study in Taiwan, [Cheng et al](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) found a secondary attack rate of 1.0% among contacts of longer than 15 minutes who were exposed within the first 5 days of symptom onset. This **implies a rate of 4% per hour** if all the contacts were only 15 minutes (and even lower rates if the contacts were for longer).
 
+When B.1.1.7. became the dominant variant, we increased this number by 1.5x based on [Davies et al](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf)
+which found that a 56% faster growth rate best explained the rapid expansion of the B.1.1.7. variant vs other variants.
+
+When Delta became the dominant variant, we increased this number by 1.5x again based on [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa)
+finding 1.6x the number of secondary transmission clusters in households which had an index patient infected with the delta variant
+vs households where the index patient had been infected with B.1.1.7.
+
 #### Household member
 
-This is the chance of getting infected from a household member who has COVID. We use the estimate of 30% from the meta-analysis of [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) (specifically their updated June 27 version). We explain a bit here about where their estimate comes from.
+This is the chance of getting infected from a household member who has COVID. We use the estimate of 40%, which we get via
+a naive analysis of the data in [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa),
+which is, to our knowledge, the only study of household tranmission with the Delta variant.
+
+We note that this is only 1.3x the original transmission risk for households members. This could indicate that the original number was too high,
+or it could indicate that households are becoming better at isolating infected individuals, driving down the overall chance of household
+transmission.
+
+Previously we used 30% from the meta-analysis of [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) (specifically their updated June 27 version). We explain a bit here about where their estimate comes from.
 
 [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) used three different methods to synthesize existing literature. The first method is a re-analysis of nine recent studies, which gives them the central estimate of 30% for the “secondary attack rate” (which is the parameter we care about: the chance of getting infected from a housemate who has COVID). They point out that the estimates vary substantially from source to source, which they conjecture is likely in part due to variations in isolation practices.
 
@@ -34,8 +50,13 @@ Their other two estimation methods use independent datasets. Although these two 
 
 #### Partner
 
-This is a highly speculative number. [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) found a 1.6x higher infection rate among spouses than among other adult household members. This is just one datapoint, but it’s the best we have right now. We use this to adjust the 30% figure from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) up by 1.6x, to get 48% for spouses.
+This is something of a speculative number. We found two studies that compare household transmission among spouses vs non-spouses:
+* [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) found a 1.6x higher transmission rate among spouses than among other adult household members.
+* [Lewis et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1166/5893024) found a 1.4x higher transmission rate.
 
+We use this to adjust the 40% figure from [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa) up by 1.5x, to get ~60% for spouses.
+
+_This number was updated from 48% to 60% as part of the Delta variant overhaul in July 2021._
 
 ### Modifiers to Activity Risk: Masked, Outdoors/Ventilation, Distanced
 
