@@ -19,7 +19,7 @@ const changes: Change[] = [
   | J&J                     |  .34       | .36            |
   | AstraZeneca             |  .4        | .47            |
   | AstraZeneca Single Dose |  .56       | 0.76           |
-  | Pfizer/Moderna          |  .1        | 0.16           |
+  | Pfizer/Moderna          |  .1        | 0.17           |
   | Pfizer/Moderna Single   |  .56       | 0.76           |
 * See [Research Sources](/paper/14-research-sources#delta-variant) for sources.
 `,

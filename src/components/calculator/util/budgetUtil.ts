@@ -23,7 +23,6 @@ export const budgetConsumption = (
   )
   const weekBudget = getWeekBudget(budget)
   const weeksConsumed = displayedPoints / weekBudget
-  console.log(points, displayedPoints, weekBudget, weeksConsumed)
 
   if (weeksConsumed >= 1.5)
     return fixedPointPrecision(weeksConsumed) + multiple_suffix

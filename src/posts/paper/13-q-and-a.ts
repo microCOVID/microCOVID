@@ -202,8 +202,8 @@ Below is our best estimates for the vaccine efficacies for various vaccines. The
 |             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
 | ----------- | -------------------------------------------- | -------------------------------------------- |
 | AstraZeneca | 0.76                                         | 0.47                                         |
-| Moderna     | 0.76                                         | 0.16                                         |
-| Pfizer      | 0.76                                         | 0.16                                         |
+| Moderna     | 0.76                                         | 0.17                                         |
+| Pfizer      | 0.76                                         | 0.17                                         |
 | Johnson & Johnson | 0.36                                   | N/A                                          |
 
 For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s or a single dose of Johnson & Johnson's vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
