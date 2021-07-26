@@ -457,7 +457,7 @@ describe('calculate', () => {
       ${'astraZeneca'} | ${1}  | ${0.76}
       ${'astraZeneca'} | ${2}  | ${0.47}
       ${'johnson'}     | ${0}  | ${1}
-      ${'johnson'}     | ${1}  | ${0.4}
+      ${'johnson'}     | ${1}  | ${0.36}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
