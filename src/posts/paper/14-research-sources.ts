@@ -310,62 +310,64 @@ If each visit only requires 3 or 5 days of isolation instead of 10, Alice can pr
 ### Assumptions
 
 - We use [Byambasuren et al.](https://www.medrxiv.org/content/10.1101/2020.05.10.20097543v3.full.pdf) as our source for transmission from asymptomatic cases; they found that (in an unvaccinated population), 17% of cases never have symptoms and these individuals are 42% as likely to transmit COVID as individuals who eventually have symptoms.
+  - From this we calculate that for every infection, there are .83 symptomatic infections and .17 never-symptomatic infections.
+  - Or, for every symptomatic infection, there are .17 / .83 ≈ .2 asymptomatic infections (we use this extensively below) 
 - We assume that individuals who are tested once per week with a PCR test and never test positive are not infectious to others. This is not a perfect, as PCR tests have a non-trivial false negative rate, but we presume that the false negative rates in control and trial groups cancel out.
+
+### Delta Variant Revision Note
+We are in the process of updating the data / calculations below with data for vaccine performance against the Delta variant. We used the following
+sources: 
+* [Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) studied vaccine efficacy for Pfizer and and AstraZeneca's vaccine:
+> “after 1 dose of vaccine with B.1.617.2 cases 33.5% (95%CI: 20.6 to 44.3) compared to B.1.1.7 cases 51.1% (95%CI: 47.3 to 54.7) with similar results for both vaccines. With BNT162b2 2 dose effectiveness reduced from 93.4% (95%CI: 90.4 to 95.5) with B.1.1.7 to 87.9% (95%CI: 78.2 to 93.2) with B.1.617.2. With ChAdOx1 2 dose effectiveness reduced from 66.1% (95% CI: 54.0 to 75.0) with B.1.1.7 to 59.8% (95%CI: 28.9 to 77.3) with B.1.617.2."
+* [Edara et al.](https://www.nejm.org/doi/10.1056/NEJMc2107799) showed similar antibody neutralizing rates between Pfizer and Moderna's vaccines, leading us to (continue to) use the same numbers for Pfizer and Moderna.
+* We were unable to find data on vaccine effectiveness vs. never-symptomatic infection with the Delta variant. We used applied the same ratio of symptomatic to asymptomatic infections per vaccine as found previously (see below for sources for each vaccine).
+* We were unable to find data on Johnson&Johnson's vaccine vs the Delta variant. We combined the following:
+  * Johnson & Johnson's [phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2101544) included data for subtrials in South Africa in which 95% of cases were the Beta variant. They found that vaccine efficacy against moderate to severe-critical COVID-19 was 64% in this subtrial.
+  * [Tada et al.](https://www.biorxiv.org/content/10.1101/2021.07.02.450959v1.full.pdf) found that the Beta and Delta variants had similar levels of antibody neutralization, roughly suggesting that the two variants have similar propensity for immune escape.
+  * Thus, we used efficacy from the South African arm of Johnson & Johnson's vaccine trials as the efficacy of the vaccine vs. the Delta variant.
 
 ### AstraZeneca
 AstraZeneca’s [trial](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3777268) used at-home test kits to test for asymptomatic cases of COVID.
-They found that, 14 days after administration of the second dose, compared to the control group, 
-the people in the vaccinated group were both less likely to test positive for symptomatic COVID and less likely to test positive for asymptomatic COVID,
-indicating that the vaccine is doing better than simply preventing symptoms. The aggregate results were:
+Their study reported that, among fully vaccinated participants, there were 57 never-symptomatic cases and 84 
+symptomatic cases, or .68 never-symptomatic cases per symptomatic case.
+
+[Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) found a 59.8% (95%CI: 28.9 to 77.3)
+reduction in cases of symptomatic COVID among people fully vaccinated with AstraZeneca's vaccine.
+
+For each symptomatic case among unvaccinated people, this gives us:
 
 |                         | Control Group | Vaccinated Group |
 | ----------------------- | ------------- | ---------------- |
-| Participants            | 8600          | 8600             |
-| Severe Cases            | 10            | 0                |
-| Symptomatic Cases       | 248           | 84               |
-| Never symptomatic cases | 73            | 57               |
+| Symptomatic Cases       | 1             | .4               |
+| Never symptomatic cases | 0.2 (Byambasuren)          | .4*.68 = .27     |
 
-Treating never-symptomatic cases as .42 relative infectiousness, this gives: 
-control group adjusted infectiousness: \`(1 * 248 + 0.42 * 73) = 279%\` 
-vaccinated group adjusted infectiousness: \`(1 * 84 + 0.42 * 57) = 109\`
-The relative infectiousness of the vaccinated group is therefore \`109 / 279 = 0.39\`
-
-AstraZeneca's trial found 10 cases of severe COVID, all in the control group. We calculate a risk reduction of 90%, 95% CI of (22%, 100%)[^confidence-interval]
+Treating never-symptomatic cases as .4 relative infectiousness, this gives an infectiousness adjusted ratio of:
+\`(.4 + .4 * .27) / (1 + .4 * .2) = 0.47\`
 
 ### Moderna & Pfizer
-Phase III trials from Moderna and Pfizer (the most common vaccines in the United States) only tested for symptomatic COVID. Moderna’s and Pfizer’s vaccines are similar in both design and efficacy, so we consider them together.
+Phase III trials from [Moderna](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389) and [Pfizer](https://www.nejm.org/doi/full/10.1056/NEJMoa2034577) (the most common vaccines in the United States) both found 95% reductions in symptomatic COVID cases.
 
-Data from [Pfizer’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2034577):
+The CDC released a [study](https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e3.htm) showing 90% reduction in all cases (symptomatic + asymptomatic) 14+ days after participants received Moderna or Pfizer’s vaccine.
 
-|                   | Control Group | Vaccinated Group |
-| ----------------- | ------------- | ---------------- |
-| Participants      | 21,728        | 21,720           |
-| Symptomatic Cases | 162           | 8                |
+We then back-calculate the number of asymptomatic cases among vaccinated individuals:
 
-Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389):
+1. For every symptomatic case among unvaccinated people, there are .2 unsympomatic cases, or 1.2 total cases (Byambasuren)
+2. For every symptomatic case among unvaccinated people, there are .05 symptomatic cases among vaccinated (Phase III studies)
+3. For every total case among unvaccinated people, there are .1 total cases among vaccinated people (CDC)
+4. For every symptomatic case among unvaccinated people, there are 1.2 * .1 = .12 total cases. (1 & 3)
+5. For every symptomatic case among unvaccinated people, there are .12 - .05 = 0.07 asymptomatic cases among vaccinated people. (2 & 4)
+6. For every symptomatic case among vaccinated people, there are 0.07 / 0.05 = 1.4 symptomatic cases among vaccinated people (2 & 5)
 
-|                   | Control Group | Vaccinated Group |
-| ----------------- | ------------- | ---------------- |
-| Participants      | 15,210        | 15,210           |
-| Symptomatic Cases | 185           | 11               |
+We then combine this with [Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) which found Pfizer's vaccine to be
+87.9% (95%CI: 78.2 to 93.2) effective at reducing the chance of symptomatic infection by the Delta variant.
 
-First, we note that these two vaccines are very, very effective at preventing symptomatic COVID (95% for Pfizer and 94% for Moderna). Second, we note that the Phase III studies do not include data on cases without symptoms. 
+|                     | Control Group                            | Vaccinated Group                   |
+| ------------------- | ---------------------------------------- | ---------------------------------- |
+| Symptomatic cases   | 1                                        | .12 (Bernal)                       |
+| Never symptomatic   | .2 (Byambasuren)                         | .12 * 1.4 = .17                    |
 
-Since then, a [study](https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e3.htm) done by the CDC found 90% reduction in all cases (symptomatic + asymptomatic) 14+ days after participants received Moderna or Pfizer’s vaccine.
-
-From this, we construct the following table for Moderna:
-
-|                                                                        | Control Group                            | Vaccinated Group                   |
-| ---------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| Participants                                                           | 15,210                                   | 15,210                             |
-| Symptomatic cases (From phase III Trial)                               | 185                                      | 11                                 |
-| Symptomatic + Never Symptomatic                                        | 222 (0.17 / (1-0.17) x symptomatic cases)| 22 (0.1 x control group, CDC data) |
-| Never Symptomatic cases (Symptomatic +Never Symptomatic - Symptomatic) | 37                                       | 11                                 |
-
-Now we can calculate the overall effect on contagiousness: 
-Control group adjusted contagiousness = \`185 * 1 + 37 * .42 = 200\` 
-Vaccinated group adjusted contagiousness = \`11 * 1 + 11 * .42 = 15.65\` 
-Relative contagiousness of vaccinated group = \`15.65 / 200 = 0.08\`. 
+Treating never-symptomatic cases as .4 relative infectiousness, this gives an infectiousness adjusted ratio of:
+\`(.12 + .4 * .17) / (1 + .4 * .2) = 0.17\`
 
 We assume that Pfizer’s vaccine has similar performance as Moderna’s on the basis that they have similar designs and reported metrics.
 
@@ -374,9 +376,7 @@ Additionally, a [study of the Pfizer vaccine in the UK](https://papers.ssrn.com/
 Israel’s study provides much more complete data on the risk reduction for severe COVID (the Phase III studies for both Moderna and Pfizer were underpowered to determine this). They found a 92% risk reduction for severe COVID among participants who had received both doses of the Pfizer vaccine. Note that “severe illness” is [defined by NIH](https://www.covid19treatmentguidelines.nih.gov/overview/clinical-spectrum/) as requiring supplemental oxygen (i.e. hospitalization).
 
 ### Johnson & Johnson
-
 For Johnson & Johnson’s vaccine, we used data from a [brief](https://www.fda.gov/media/146217/download) filed with the FDA based on their Phase III study. The J&J trial tracked both symptomatic and never-symptomatic infections. Johnson and Johnson performed serology assays for non-spike-protein antibodies on days 1, 29 and 71 to track never-symptomatic infections. They also counted an never-symptomatic infection if a participant presented with a positive PCR test but no symptoms. Symptomatic cases were counted if a patient presented with symptoms and tested positive via PCR at least 14 days after administration of the vaccine.
-
 
 |                                      | Control Group | Vaccinated Group |
 | ------------------------------------ | ------------- | ---------------- |
@@ -384,23 +384,31 @@ For Johnson & Johnson’s vaccine, we used data from a [brief](https://www.fda.g
 | Never-symptomatic Cases (0-29 days)  | 182 / 19809   | 159 / 19739      |
 | Never-symptomatic Cases (29-71 days) | 54 / 19162    | 22 / 19301       |
 
-From this data we see that J&J’s vaccine reduces both symptomatic and never-symptomatic cases. The never-symptomatic efficacy is improve after 29 days compared to days 14-29. 
+From this data we get a ratio of rougly .18 asymptomatic cases per symptomatic case.
 
-We calculate overall effect on contagiousness:
+We are currently unable to find research of Johnson & Johnson's vaccine's effectiveness vs the Delta variant. In lieu of 
+data for Delta variant:
 
-Days 14-29:
-Control Group:  \`351 / 19544 * 1 + 182 / 19809 * 0.42 = 0.02\`  
-Vaccinated Group: \`117 / 19514 * 1 + 159 / 19739 * 0.42 = 0.0094\`
-Contagiousness ratio: \`0.0076 / 0.020 = 0.43\`
+* [Tada et al.](https://www.biorxiv.org/content/10.1101/2021.07.02.450959v1.full.pdf) found that the Beta and Delta variants had similar levels of antibody neutralization, roughly suggesting that the two variants have similar propensity for immune escape.
+* Johnson & Johnson's [phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2101544) included data for subtrials in South Africa in which 95% of cases were the Beta variant. They found that vaccine efficacy against moderate to severe-critical COVID-19 was 64% in this subtrial.
 
-Days 29-71:
-Control Group: \`351 / 19544 * 1 + 54 / 19162 * 0.42 = 0.019\`
-Vaccinated Group: \`117 / 19514 * 1 + 22 / 19301 * 0.42 = 0.0065\`
-Contagiousness ratio: \`0.0062 / 0.019 = 0.34\`
+Therefore we provide the efficacy of the vaccine against the Beta variant, with the expectation that this is similar to the
+efficacy against the Delta variant.
 
-From this we estimate that the microCOVID multiplier for the Johnson and Johnson vaccine is 0.38 14 days after injection, dropping down to 0.33 29 days post infection. Because these two multipliers are close together and the higher multiplier only covers weeks 2-4, for simplicity’s sake we recommend using a multiplier of 1/3x for 14 days post-vaccination and onwards.
+|                     | Control Group                            | Vaccinated Group                    |
+| ------------------- | ---------------------------------------- | ----------------------------------- |
+| Symptomatic cases   | 1                                        | .36 (J&J Phase 3, South Africa arm) |
+| Never symptomatic   | .2 (Byambasuren)                         | .36 * .18 = .065                    |
+
+Treating never-symptomatic cases as .4 relative infectiousness, this gives an infectiousness adjusted ratio of:
+\`(.36 + .4 * .065) / (1 + .4 * .2) = 0.36\`
+
+We note that Johnson & Johnson reported significantly more never-symptomatic cases in days 0-29 of the trial compared to 29-71.
+Rather than complicate the calculator by adding a slightly higher second number for the first 29 days, we suggest simply
+noting this and being more cautious during days 14-29 while your immunity is still increasing.
 
 ### Sputnik V (Gamelaya Research)
+_Not yet updated for the Delta variant_
 
 The efficacy of the Sputnik V vaccine produced by the Gamelaya Research Institute is based on their phase 3 trial information [published in Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-8/fulltext). Our calculation is similar to the one used for Moderna & Pfizer. Non-symptomatic cases were not measured in this study, so based on Byambasuren et al. and the CDC study about Moderna/Pfizer, we estimate non-symptomatic cases to be 17% of all cases in the control group and 50% in the vaccinated one. As the control and the vaccinated group had a different size, we also have to normalize the adjusted infectiousness figures.
 
@@ -433,16 +441,18 @@ Now we can calculate the overall effect on contagiousness:
 The trial also measured efficacy 21 days after dose 1, on the day of dose 2, with practically equivalent numbers to what they saw 7 days after. This suggests that the Sputnik V vaccine offers a strong protection 2-3 weeks after the first dose, and the second dose is only required for long-term protection.
 
 ### Single Shot Efficacy
-For vaccines require 2 doses, we see reductions in symptomatic COVID after a single shot of about 50% across Moderna, Pfizer, and AstraZeneca. Moderna further provided data suggesting a 63% reduction in total cases (symptomatic and otherwise). This gives us the following estimated case distribution:
+For a single dose of vaccines require 2 doses, we used [Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) 
+which reported 33.5% efficacy vs symptomatic COVID for a single dose of either Pfizer and AstraZeneca's vaccines.
+
+Moderna provided a [supplement](https://www.fda.gov/media/144453/download) from their Phase III trial that suggested .6
+asymptomatic infections per symptom infection 3 weeks after the first dose. 
 
 |                            | Control Group                         | Single Dose Vaccinated            |
 | -------------------------- | ------------------------------------- | --------------------------------- |
-| Symptomatic + Asymptomatic | 1                                     | <0.63 (from Moderna’s supplement) |
-| Symptomatic                | 0.8 (ratio from Byambasuren, Moderna) | 0.4 (~50% reported reduction)     |
-| Asymptomatic (subtract)    | .2                                    | <.23                              |
+| Symptomatic                | 1                                     | 0.665 (Bernal et al.)             |
+| Asymptomatic (subtract)    | .2 (ratio from Byambasuren)           | 0.4 (0.6 x symptomatic)           |
 
-This gives an overall multiplier of \`(0.4 + .42 * .23) / (0.8 + .42 * .2) = 0.56\`
-HOWEVER, data that immunity is much shorter-lived in individuals with one dose of a 2 dose vaccine. We recommend getting the second dose as soon as it is available.
+This gives an overall multiplier of \`(0.665 + .4 * .4) / (1 + .4 * .2) = 0.76\` for Moderna, Pfizer, and AstraZeneca.
 
 ### Others' Vaccines
 For the purposes of providing an estimate of the riskiness of an "average vaccinated person",
