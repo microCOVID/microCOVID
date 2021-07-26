@@ -159,7 +159,7 @@ The “outdoors” modifier is the one we have the least confidence of. At large
 We do not think that, as a blanket rule, every person who works outside the home is riskier than every person who works from home. Activites outside of work play a major role in a person's chances of contracting COVID.
 
 For instance, a Healthcare Worker who wears a sealed N95 mask while seeing one unmasked patient at a time for 40 hours per week, but does not see any other people in a typical week, would be calculated as follows:
-\`average_risk * 40 hours * 9%/hr * 1/8 (N95) = 0.45 * average_risk\`
+\`average_risk * 40 hours * 14%/hr * 1/8 (N95) = 0.7 * average_risk\`
 
 Therefore, this worker could be less risky than the average person in the area (although the final risk will depend on what else they are doing in terms of chores and socializing).
 
