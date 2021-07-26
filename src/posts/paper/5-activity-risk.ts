@@ -14,7 +14,16 @@ We start by first estimating the risk of interacting with a single COVID-positiv
 
 So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, we estimate the chance of you getting COVID from that single interaction as 14%.
 
-How did we come up with this number? It's a rough estimate combining many sources: the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study, and the DONOTSUBMIT DELTA CITATION to adjust for the [Delta variant](DONOTSUBMIT link to blog post). For the gory details of how we combine these sources, please see [Research Sources](14-research-sources#one-time-contact).
+How did we come up with this number? It's a rough estimate combining many sources: 
+the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the
+[Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277),
+[Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the
+[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, 
+and the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. 
+We have since increaased this number by 1.5x based on a study by [Davies et al](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf) 
+on the increased contagiousness of B.1.1.7., and then again by another 1.5x based on a study of the Delta variant by 
+[Allen et al.](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf).
+For the gory details of how we combine these sources, please see [Research Sources](14-research-sources#one-time-contact).
 
 Think of this as our “reference interaction.” We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
@@ -102,13 +111,22 @@ We do the calculation differently for household members and spouses/partners bec
 
 <p class="calloutText">Activity Risk of living with 1 spouse/partner, who has COVID, for 1 week = 60%</p>
 
-DONOTSUBMIT(jy2wong) can we genuinely still say this?
 These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 60%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the estimate of household member risk (40%) only as bad as about 3 hours of hanging out indoors with a friend (at 14% per hour)? Our main guess is that people often reduce their level of interaction with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk.[^super] We look forward to improved data.
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? 
+Why is the estimate of household member risk (40%) only as bad as about 3 hours of hanging out indoors with a friend (at 14% per hour)?
+We don't really know why this is, but we do know that over the last year and a half, studies continued to find tranmission rates within a household well below 100%.
+Some hypotheses include:
+* Individuals have orders of magnitude differences in the amount of aersols they produce, this could lead to some people just never becoming contagious
+* The period of maximum contagiousness may be as short as 12 hours. If housemates / spounses happen to not interact with each other in this window, the chance of infection drops.
+* Housemates / partners may isolated from each other upon noticing symptoms, which reduces the chance of transmission.
+* The hourly rate of transmission is likely non-linear, i.e. 3 hours in a row with someone is likely less risky than 3x the risk of 1 hour.
 
 DONOTSUBMIT(jy2wong) update citations
-The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](14-research-sources#household-member) for slightly more detail.
+The original household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/).
+We increased the household transmission rate for delta based on [Allen et al.](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf).
+We scaled the partner transmission rate based on the same study.
+See [Research Sources](14-research-sources#household-member) for slightly more detail.
 
 
 _To learn about the scientific research supporting our estimates, please see the [Research Sources](14-research-sources) section._
