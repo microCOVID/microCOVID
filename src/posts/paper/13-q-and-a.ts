@@ -201,20 +201,22 @@ Below is our best estimates for the vaccine efficacies for various vaccines. The
 
 |             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
 | ----------- | -------------------------------------------- | -------------------------------------------- |
-| AstraZeneca | 0.56                                         | 0.4                                          |
-| Moderna     | 0.56                                         | 0.1                                          |
-| Pfizer      | 0.56                                         | 0.1                                          |
-| Johnson & Johnson | 0.33                                   | N/A                                          |
+| AstraZeneca | 0.76                                         | 0.47                                         |
+| Moderna     | 0.76                                         | 0.16                                         |
+| Pfizer      | 0.76                                         | 0.16                                         |
+| Johnson & Johnson | 0.36                                   | N/A                                          |
 
-For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s or a single dose of Johnson & Johnson's vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a N95 mask all the time.
+For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s or a single dose of Johnson & Johnson's vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
 
 While the vaccines are nowhere near making you invulnerable to COVID, remember that these vaccines are absolutely game-changing — universal vaccination would reduce *everyone’s* chance of catching COVID by 50% or more. This will (likely) reduce the rate of community spread to the point that every week has fewer cases than the last (R<1). The end of the pandemic is in sight. 
 
 ### 2. If a vaccinated individual contracts COVID, how much less (or more) likely is this to result in negative consequences? (Increased budget)
 
-Data from [Israel's nationwide-study](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00947-8/fulltext) showed that Pfizer's
-vaccine reduced cases of severe COVID by 97.2% (CI 96.8–97.5) and for all COVID cases by 95.3% (94.9–95.7). Therefore, we think that mRNA vaccines
-provide an additional factor of 2 reduction against severe COVID on top of reducing the chance of contracting COVID at all.
+The Israeli government released 
+[data](https://www.gov.il/en/departments/news/06072021-04?fbclid=IwAR2NrFAfFumQumzVW4CBcdGjYf4bPwPUOZOHq6OA21I98wWQZ6nAS850ID8)
+that suggests that citizens with Pfizer's mRNA vaccine were getting infected at 36% the rate of unvaccinated citizens, 
+but hospitalized at only 7% the rate. This suggests the vaccine confers a 5x reduction in serious cases of COVID in addition
+to the reduces chances of getting COVID at all.
 
 We have not done a thorough analysis of this effect in other vaccines.
 
@@ -230,14 +232,14 @@ You may additionally increase your budget based on how the vaccine reduces your 
 Some ways you may want to change your budget in after you and your close contacts are vaccinated:
 * If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
 * You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. 10x for the mRNA vaccines) while still having the same impact on them. 
-* If you are primarily concerned about hospitalization/death but unconcerned about effects of mild COVID, you may double your budget post vaccination.
+* If you are only concerned about the risk of your own hospitalization/death and unconcerned about effects of mild COVID, you may 5x your budget post vaccination.
 
 Example A:
 
 You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .3 * 5) = 80 microCOVID/week\`. All 6 of you are now vaccinated.
 * If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .03 * 5) = 174 microCOVID/week\`.
 * If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`80 / 0.1 = 800 microCOVID/week\`.
-* If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further double your budget (accepting a higher risk of mild/asymptomatic COVID).
+* If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further 5x your budget (accepting a higher risk of mild/asymptomatic COVID).
 
 Example B:
 
@@ -245,7 +247,28 @@ You live with or care for someone with a condition that reduces the efficacy of 
 * You choose not to change your budget, since this person is just as likely to get COVID from you as before.
 
 ### So is a vaccinated person safer to be around than an unvaccinated person?
-Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated person who does the same activities as a unvaccinated person will be less risky to be around. However, if the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got vaccinated! The only way to accurately understand a person's risk is to model each of their activities and multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
+Not necessarily. A person's risk is the product of their precautions and activities. It is true that a vaccinated
+person who does the same activities as a unvaccinated person will be less risky to be around. However, if
+the vaccinated person starts doing more risky behaviors, they could end up being more risky than before they got 
+vaccinated! The only way to accurately understand a person's risk is to model each of their activities and 
+multiply that total by the modifier from the table above. The [Risk Tracker](/tracker) makes it easier to do this.
+
+### I heard that Pfizer’s vaccine is only 64% effective in Israel. Why is microCOVID treating it as 84% effective?
+
+We dug into claims that the 
+[effectiveness of vaccines in Israel is 64%](https://www.gov.il/en/departments/news/06072021-04?fbclid=IwAR2NrFAfFumQumzVW4CBcdGjYf4bPwPUOZOHq6OA21I98wWQZ6nAS850ID8)
+but had concerns about the methodology. These reports control for “age group..., sex, and calendar week”
+([Haas et al](https://www.gov.il/BlobFolder/news/06052021-02/ru/NEWS_Corona_lancet-article.pdf)) 
+**but not individual behavior**. Since Israel’s policy allows vaccinated individuals to participate in many activities
+with high risk of exposure (restaurants, movie theaters, etc. without masks), we hypothesize that the 64% effective
+number captures a combination of reduced efficacy of the vaccine vs the Delta variant AND increased opportunity for
+exposures.
+
+Therefore, we used data from research in the UK that compared # of cases of the Delta variant vs the Alpha variant
+among vaccinated and unvaccinated individuals, which attempts to assess the vaccines’ efficacy in isolation 
+([Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1)),
+([Stowe et al.](https://khub.net/web/phe-national/public-library/-/document_library/v2WsRK3ZlEig/view_file/479607329)).
+These studies found 88% vaccine efficacy vs symptomatic COVID, which we adjusted to 84% to account for asymptomatic cases.
 
 # Specific Activities Q&A
 
