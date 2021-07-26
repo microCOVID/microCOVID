@@ -16,7 +16,7 @@ const changes: Change[] = [
   | Hourly Multiplier       |  9%        | 14%            |
   | Housemate               |  30%       | 40%            |
   | Partner                 |  48%       | 60%            |
-  | J&J                     |  .34       | .4             |
+  | J&J                     |  .34       | .36            |
   | AstraZeneca             |  .4        | .47            |
   | AstraZeneca Single Dose |  .56       | 0.76           |
   | Pfizer/Moderna          |  .1        | 0.16           |
