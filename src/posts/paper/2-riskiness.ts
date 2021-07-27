@@ -32,16 +32,16 @@ We use microCOVIDs rather than some other scale factor (milliCOVIDs? nanoCOVIDs?
 
 ### How much is a microCOVID?
 
-We—the authors—are a group of 30-something-year-olds in San Francisco who live together in a communal house and mostly work from home. After much discussion (which we hope to explain later in a future post), we agreed that we would aim to keep each of our individual risks of getting COVID below **1% per year**[^4] (i.e., about **10,000 microCOVIDs per year**). We don’t regularly interact with anyone who is at high risk of severe illness from COVID, but we also care a lot about doing our part to reduce the spread of the pandemic.
+This whitepaper was started by a group of 30-something-year-olds in San Francisco who live together in a communal 9-person house and mostly work from home. After much discussion (which we hope to explain later in a future post), the household agreed to aim to keep each housemate's individual risks of getting COVID below **1% per year**[^4] (i.e., about **10,000 microCOVIDs per year**). Important factors in this decision were that nobody in the household regularly interacted with anyone who was at high risk of severe illness from COVID, and that the household collectively cared a lot about doing their part to reduce the spread of the pandemic.
 
-Once we take into account how many microCOVIDs are used up by living with each other, we each have 3,000 microCOVIDs to spend per year[^5]. With this budget:
+Each person had 2,400 microCOVIDs to spend per year after taking into account how many microCOVIDs would be used up just by living with each other[^5]. With this budget:
 
 | An activity that measures this many microCOVIDs... | feels this risky… | … and we could do the activity this often, if we were not doing much else |
-|----------------------------------------------|---------------------|---------------------------------------------------------------------------|
-|                                       1 μCoV | almost negligible   | dozens of times per week                                                  |
-|                                      10 μCoV | moderate risk       | several times per week                                                    |
-|                                      100 μCoV | quite substantial risk       | once or twice a month                                                    |
-|                                      1000 μCoV | borderline reckless       | once a year, *maybe*                                                    |
+|----------------------------------------------------|------------------------|----------------------------------------------------------------------|
+|                                           1 μCoV   | almost negligible      | dozens of times per week                                             |
+|                                          10 μCoV   | moderate risk          | a few times per week                                                 |
+|                                          100 μCoV  | quite substantial risk | once or twice a month                                                |
+|                                          1000 μCoV | borderline reckless    | once a year, *maybe*                                                 |
 
 
 
@@ -54,7 +54,7 @@ In general, if you are young and healthy, don’t regularly visit anyone who is 
 
 You can read more details on [choosing your risk budget](/paper/13-q-and-a#how-should-i-choose-my-annual-risk-budget) here.
 
-What we want you to take away from this section is that for people in the authors’ demographics, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1,000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
+What we want you to take away from this section is that for people under 40, an activity that is 1 microCOVID is _very low risk_, whereas an activity that is 1,000 microCOVIDs is _very high risk_. Furthermore, any risk of infection that you incur is not just a risk to you, but also a risk to vulnerable people in your community.
 
 Let’s now explore how to quantify the risk of various activities in terms of microCOVIDs.
 

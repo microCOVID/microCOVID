@@ -4,7 +4,7 @@ const content = `
 
 **Person Risk** is the chance that the other person currently has COVID. This is based on overall prevalence in your area and their recent behaviors.
 
-So you’ve decided to meet a friend for lunch. You know the Activity Risk is 6% per hour (for an indoor unmasked lunch) and much less if you [MODify](3-covid-transmission#mod-hangouts-masked-outdoors-distance) your hangout. But the Activity Risk _assumes_ that they currently have COVID.
+So you’ve decided to meet a friend for lunch. You know the Activity Risk is 14% per hour (for an indoor unmasked lunch) and much less if you [MODify](3-covid-transmission#mod-hangouts-masked-outdoors-distance) your hangout. But the Activity Risk _assumes_ that they currently have COVID.
 
 What’s the chance that your friend actually has COVID? They aren’t coughing and they feel totally fine. Can you conclude they aren’t infected? Unfortunately, no. Roughly [55% of COVID transmissions](https://science.sciencemag.org/content/368/6491/eabb6936) happen when the person has _no symptoms_.[^4]
 

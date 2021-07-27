@@ -1,6 +1,8 @@
 const title = 'Uncertainty Estimation'
 const shortTitle = title
 const content = `
+_Warning: the entire uncertainty estimation section needs to be revisited for the Delta variant. Proceed with caution._
+
 In this writeup, we've presented individual numbers for all the parameters of our model:
 * 30% Activity Risk from a housemate per week, or 48% from a partner
 * 6% baseline Activity Risk per hour (indoor, unmasked, undistanced)
