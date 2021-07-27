@@ -8,7 +8,7 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(2021, 6, 23),
+    date: new Date(2021, 6, 26),
     content: `
 * Updated transmission and vaccine numbers for Delta variant:
   |                         | Previous   | Delta Variant  |
