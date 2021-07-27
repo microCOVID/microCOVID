@@ -56,7 +56,9 @@ This is something of a speculative number. We found two studies that compare hou
 
 We use this to adjust the 40% figure from [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa) up by 1.5x, to get ~60% for spouses.
 
-_This number was updated from 48% to 60% as part of the Delta variant overhaul in July 2021._
+_This number was updated from 48%[^alphahousehold] to 60% as part of the Delta variant overhaul in July 2021._
+
+[^alphahousehold]: 48% came from taking the previous household transmission figure 30% and multiplying by 1.6x (we had not factored in the Lewis et al. paper at time of calculation).
 
 ### Modifiers to Activity Risk: Masked, Outdoors/Ventilation, Distanced
 

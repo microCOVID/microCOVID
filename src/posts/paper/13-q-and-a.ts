@@ -68,9 +68,9 @@ Other important precautions include washing & sanitizing your hands, covering yo
 
 # Activity Risk Q&A
 
-### What if I hang out with someone indoors for a long time? If we hang out for 5 hours, that’s an Activity Risk of 6% ⨉ 5 = 30%, which is the same risk as for a household member.
+### What if I hang out with someone indoors for a long time? If we hang out for 3 hours, that’s an Activity Risk of 14% ⨉ 3 = 42%, which is slightly more than the risk for a household member.
 
-In the case of a long indoor hangout, we suggest just to cap the total Activity Risk at the household member number (30%). Or if you’re cuddling or being intimate, cap the total Activity Risk at 48% as mentioned above for spouse/partner. These are not particularly principled answers. As we’ve mentioned in footnotes before, the ability to just add microCOVIDs (rather than multiplying probabilities) starts to break down as probabilities get larger. Additionally, the data we’re basing our guesses off is more relevant to the smaller risks that we more commonly see with typical activities. Certainly don’t use an Activity Risk larger than 100% for anything.
+In the case of a long indoor hangout, we suggest just to cap the total Activity Risk at the household member number (40%). Or if you’re cuddling or being intimate, cap the total Activity Risk at 60% as mentioned above for spouse/partner. These are not particularly principled answers. As we’ve mentioned in footnotes before, the ability to just add microCOVIDs (rather than multiplying probabilities) starts to break down as probabilities get larger. Additionally, the data we’re basing our guesses off is more relevant to the smaller risks that we more commonly see with typical activities. Certainly don’t use an Activity Risk larger than 100% for anything.
 
 ### If you live with multiple people, do you account for the additional risk of a longer infection chain within the household?
 
@@ -81,7 +81,7 @@ Imagine I live with Alice and Bob. Alice gets sick. There are two things that co
 1. I get it _directly_ from Alice.
 2. I don’t get it from Alice, but _Bob_ does. Then Bob infects _me_!
 
-There’s a \`30%\` chance that I get sick directly from Alice. There’s a \`70% * 30% * 30% = 6%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 36% than 30%.
+There’s a \`40%\` chance that I get sick directly from Alice. There’s a \`60% * 40% * 40% = 10%\` chance that the second scenario happens instead. So you might think the total risk to me should be more like 50% than 40%.
 
 We currently don’t model this effect, and we think that’s pretty safe if (and only if) you and your household members are conscientious about monitoring for symptoms and isolating from one another at the first sign that someone in the house is feeling unwell. Such isolation should include some reduction in contact between the household members that still feel fine, since one or more of them might have become infected by the unwell person before their symptoms appeared.[^unwell]
 
@@ -91,7 +91,7 @@ Here’s why isolating helps reduce this source of error:
 * Prompt isolation means it’s less likely[^isolation] I get it directly from Alice, _and_ less likely that Bob gets it and can pass it to me.
 * Even if Bob ends up getting sick, Bob and I can start avoiding each other immediately, as soon as Alice gets symptoms. Although it’s quite possible for Alice to give COVID to Bob before Alice has symptoms, it’s much less likely for Bob to pass it on to me _before Alice has symptoms_.[^2]
 
-As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 30% number for the Activity Risk of having a house hold member.
+As a result of these considerations, we don’t think we’re making a huge error by using the unadjusted 40% number for the Activity Risk of having a house hold member.
 
 Of note here: while full isolation is the gold standard for reducing infection risk, it’s useful to also have some lighter-weight tools that you can deploy if you’re uneasy about infection risk for some reason but not uneasy enough to find hard isolation to be worth the (admittedly considerable) social and practical costs. Extrapolating from the [MOD factors](3-covid-transmission#mod-hangouts-masked-outdoors-distance), we think wearing a mask around the house for several days probably reduces your risk of infecting your housemates by about 4x, which is a lot of protection to get from a relatively simple intervention. In the authors’ household we deploy this one if we’re feeling at all unusual, even if the symptoms (such as a scratchy throat) aren’t suggestive of COVID; or if we’ve recently done something moderately higher-risk than usual.
 
@@ -230,15 +230,15 @@ As a result, getting a vaccination yourself confers a reduction in incoming micr
 You may additionally increase your budget based on how the vaccine reduces your own chances of negative outcomes, but this is a personal choice dependent on your own view of how averse to the various possible negative outcomes you are.
 
 Some ways you may want to change your budget in after you and your close contacts are vaccinated:
-* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.3N)). After everyone is vaccinated, this increases to (200 / (1 + 0.03N)).
-* You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. 10x for the mRNA vaccines) while still having the same impact on them. 
-* If you are only concerned about the risk of your own hospitalization/death and unconcerned about effects of mild COVID, you may 5x your budget post vaccination.
+* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been (200 / (1 + 0.4N)). After everyone is vaccinated, this increases to (200 / (1 + 0.4*0.17*N)).
+* You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. ~6x for the mRNA vaccines) while still having the same impact on them.
+* If you are only concerned about the risk of your own hospitalization/death and unconcerned about effects of mild COVID or potential long-term symptoms, you may 5x your budget post vaccination.
 
 Example A:
 
-You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .3 * 5) = 80 microCOVID/week\`. All 6 of you are now vaccinated.
-* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .03 * 5) = 174 microCOVID/week\`.
-* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`80 / 0.1 = 800 microCOVID/week\`.
+You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .4 * 5) = 67 microCOVID/week\`. All 6 of you are now vaccinated.
+* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .4 * .17 * 5) = 149 microCOVID/week\`.
+* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`67 / 0.17 = 394 microCOVID/week\`.
 * If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further 5x your budget (accepting a higher risk of mild/asymptomatic COVID).
 
 Example B:
@@ -296,7 +296,7 @@ We personally use an additional multiplier of at least 2x for cuddling, Our orig
 
 We think it doesn’t make sense to take the full “outdoor” bonus when cuddling, because your faces are very close together. Finally, we think a brief hug probably doesn’t meaningfully change your risk, but we don’t have any evidence for that. Basically, we really don’t know and don’t have any evidence here, so take this with more grain of salt than the rest of our more-research-backed numbers.
 
-We don’t have an additional multiplier for kissing. A one-time hangout combined with the cuddling multiplier is already an Activity Risk of 2 ⨉ 6% per hour = 12% per hour, which makes two and a half hours of cuddling appear riskier than having a roommate. As a side note, it seems to us that masked sex might be a lot safer from a COVID standpoint than making out without masks... provided you actually have the willpower to keep your masks on!
+A one-time hangout combined with the kissing multiplier is an Activity Risk of 5 ⨉ 14% per hour = 70% per hour, which can be capped off to the live-in partner multiplier of 60%. As a side note, it seems to us that masked sex might be a lot safer from a COVID standpoint than making out without masks... provided you actually have the willpower to keep your masks on!
 
 
 ### Cuddling and hugging aside, is it risky to touch the other person if we remain a normal socializing distance apart?
@@ -351,6 +351,8 @@ For grocery stores, we count the average number of people near us: in our neighb
 Haircuts can be modeled by counting each person in the hair salon. We definitely recommend wearing the best mask you have that won’t interfere with the haircut, and checking in advance that your mask style will be fine. If your stylist is usually chatty, we suggest for an extra safety margin to ask the hair stylist to chat less! We found an anecdote [on Twitter](https://twitter.com/robshirkey/status/1269369868182315014) about 140 clients who were in close contact with two infected hair stylists, indoors, with both client and stylist wearing masks. 45 clients were tested – all negative – and we haven’t heard of any cases among the others. Last we checked this was statistically consistent with the Activity Risk and modifier suggestions we use in this writeup.
 
 ### Going to a protest?
+
+_Warning: This answer hasn't been updated for the Delta variant._
 
 The risk of attending a protest depends on how close you get to others, whether they are yelling/chanting, whether they are wearing masks, and other factors we have not modeled in this writeup (for example, we have heard anecdotally that it is lower risk to be in a group where people are moving constantly, rather than staying near the same people for a long time). If you are in a shoulder-to-shoulder group of yelling people without masks, you might be near 10 people within 6 feet: Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ 5x yelling (see earlier in Q&A) = 30% per hour. Alternately, if you are in a group of cyclists protesting by biking down the road banging drums and gongs, that might be more like Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ (1/5 silent) ⨉ (1/2 at least 6ft away) = 0.6% per hour. This is a 50 times less risky activity. There are many ways to protest. We encourage you to keep all the same heuristics in mind: if possible, avoid very dense crowds, yelling, and enclosed spaces; and wear masks to protect yourself and others.
 
