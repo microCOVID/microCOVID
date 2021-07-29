@@ -8,6 +8,23 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 6, 26),
+    content: `
+* Updated transmission and vaccine numbers for Delta variant:
+  |                         | Previous   | Delta Variant  |
+  | ----------------------- | ---------- | -------------- |
+  | Hourly Multiplier       |  9%        | 14%            |
+  | Housemate               |  30%       | 40%            |
+  | Partner                 |  48%       | 60%            |
+  | J&J                     |  .34       | .36            |
+  | AstraZeneca             |  .4        | .47            |
+  | AstraZeneca Single Dose |  .56       | 0.76           |
+  | Pfizer/Moderna          |  .1        | 0.17           |
+  | Pfizer/Moderna Single   |  .56       | 0.76           |
+* See [Research Sources](/paper/14-research-sources#delta-variant) for sources.
+`,
+  },
+  {
     date: new Date(2021, 5, 22),
     content: `
 * Added the option to select the vaccination state of average people
@@ -33,7 +50,7 @@ const changes: Change[] = [
 * Vaccine updates: 
   * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
   * Improved multiplier for Moderna and Pfizer's vaccines (0.2 -> 0.1) based on new data.
-  * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZenica / Johnson & Johnson (Pfizer's was the only study that used 7 days).
+  * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZeneca / Johnson & Johnson (Pfizer's was the only study that used 7 days).
   * See [Research Sources](/paper/14-research-sources#vaccines) for rationale.`,
   },
   {

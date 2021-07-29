@@ -10,11 +10,20 @@ In this section we explain how we estimate Activity Risk for an activity involvi
 
 We start by first estimating the risk of interacting with a single COVID-positive person indoors for 1 hour at a normal socializing distance of 3 feet while having a normal-volume conversation.
 
-<p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 6%</p>
+<p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 14%</p>
 
-So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, we estimate the chance of you getting COVID from that single interaction as 6%.
+So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, we estimate the chance of you getting COVID from that single interaction as 14%.
 
-How did we come up with this number? It's a rough estimate combining many sources: the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), [Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the [Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, and the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study. For the gory details of how we combine these sources, please see [Research Sources](14-research-sources#one-time-contact).
+How did we come up with this number? It's a rough estimate combining many sources:
+the [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study, the
+[Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277),
+[Bi et al.](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) which uses contact tracing data, the
+[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis,
+and the [Cheng et al.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) prospective study.
+We have since increased this number by 1.5x based on a study by [Davies et al](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf)
+on the increased contagiousness of B.1.1.7., and then again by another 1.5x based on a study of the Delta variant by
+[Allen et al.](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf).
+For the gory details of how we combine these sources, please see [Research Sources](14-research-sources#one-time-contact).
 
 Think of this as our “reference interaction.” We can now use it as a starting point to estimate the risk of other kinds of interactions.
 
@@ -60,11 +69,11 @@ There is substantial uncertainty in many of these numbers. We’ve taken uncerta
 
 ### Example calculations
 
-To calculate the Activity Risk of lunch in the park with your friend, start with 6% (the Activity Risk for our “reference interaction”) and apply modifiers as needed: \`6% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.6%\`. You have a **0.6%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks or volume because the reference interaction is already unmasked and at normal volume.
+To calculate the Activity Risk of lunch in the park with your friend, start with 14% (the Activity Risk for our “reference interaction”) and apply modifiers as needed: \`14% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.7%\`. You have a **0.7%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks or volume because the reference interaction is already unmasked and at normal volume.
 
-What about indoor dining with that friend? You’re there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 6% and apply modifiers: \`6% * 2 (hours) = 12%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, and at normal volume, you don’t need further modifiers. You have a **12%** chance of getting COVID from your indoor lunch if your friend has COVID.
+What about indoor dining with that friend? You’re there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 14% and apply modifiers: \`14% * 2 (hours) = 28%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, and at normal volume, you don’t need further modifiers. You have a **28%** chance of getting COVID from your indoor lunch if your friend has COVID.
 
-Compare the risk of getting sick from these interactions: 12% for indoor dining vs. 0.6% for lunch in the park. That’s a big difference! Remember, your friend won’t necessarily know that they have COVID, and it’s very common to be infectious before you show symptoms. And that’s with only one person!
+Compare the risk of getting sick from these interactions: 28% for indoor dining vs. 0.7% for lunch in the park. That’s a big difference! Remember, your friend won’t necessarily know that they have COVID, and it’s very common to be infectious before you show symptoms. And that’s with only one person!
 
 Hopefully this puts the risk of indoor gatherings into perspective. To compare the Activity Risk of other activities, such as going grocery shopping or attending a large outdoor party, try our [calculator](/calculator) or check out the [Q&A](13-q-and-a#specific-activities-qa) for tips and tricks. In the next section, we will look at calculating the risk of activities with multiple people.
 
@@ -98,15 +107,25 @@ Curious how we got these numbers? Again, check out the [Research Sources](14-res
 
 We do the calculation differently for household members and spouses/partners because you’re likely to interact with them on a recurring basis. We estimate a single, fixed Activity Risk for one week of living in the same household as someone who is COVID-positive.
 
-<p class="calloutText">Activity Risk of living with 1 household member, who has COVID, for 1 week = 30%</p>
+<p class="calloutText">Activity Risk of living with 1 household member, who has COVID, for 1 week = 40%</p>
 
-<p class="calloutText">Activity Risk of living with 1 spouse/partner, who has COVID, for 1 week = 48%</p>
+<p class="calloutText">Activity Risk of living with 1 spouse/partner, who has COVID, for 1 week = 60%</p>
 
-These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 48%.
+These numbers clearly show that if your housemate gets COVID, it is _not_ inevitable that you will get COVID too! Even if your spouse or partner (who you are likely to share a bed with) gets COVID, your chance of getting it is still only about 60%.
 
-You might ask: why isn’t the risk of getting COVID from someone in your house higher? Why is the estimate of household member risk (30%) only as bad as about 5 hours of hanging out indoors with a friend (at 6% per hour)? Our main guess is that people often reduce their level of interaction with household members who have been exposed or have started showing symptoms. This means that “living with someone who has COVID” doesn’t mean the same behavior you normally have with household members. It could also just be the case that our estimates are wrong: we might be overestimating the one-time hangout risk, or underestimating the household member risk.[^super] We look forward to improved data.
+You might ask: why isn’t the risk of getting COVID from someone in your house higher? 
+Why is the estimate of household member risk (40%) only as bad as about 3 hours of hanging out indoors with a friend (at 14% per hour)?
+We don't really know why this is, but we do know that over the last year and a half, studies continued to find transmission rates within a household well below 100%.
+Some hypotheses include:
+* Individuals have orders of magnitude differences in the amount of aerosols they produce, this could lead to some people just never becoming contagious
+* The period of maximum contagiousness may be as short as 12 hours. If housemates / spounses happen to not interact with each other in this window, the chance of infection drops.
+* Housemates / partners may isolated from each other upon noticing symptoms, which reduces the chance of transmission.
+* The hourly rate of transmission is likely non-linear, i.e. 3 hours in a row with someone is likely less risky than 3x the risk of 1 hour.
 
-The household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) See [Research Sources](14-research-sources#household-member) for slightly more detail.
+The original household member estimate comes directly from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) meta-analysis. The partner estimate is very speculative, based on adjusting [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) using a datapoint from [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/).
+We increased the household transmission rate for delta based on [Allen et al.](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf).
+We scaled the partner transmission rate based on the same study.
+See [Research Sources](14-research-sources#household-member) for slightly more detail.
 
 
 _To learn about the scientific research supporting our estimates, please see the [Research Sources](14-research-sources) section._

@@ -37,11 +37,9 @@ const segmentedFormValue = function (
   return { label, multiplier, description }
 }
 
-export const B117_CONTAGIOUSNESS_ADJUSTMENT = 1.5
-
-export const oneTimeMult = 0.06 * B117_CONTAGIOUSNESS_ADJUSTMENT
-export const housemateMult = 0.3
-export const partnerMult = 0.48
+export const oneTimeMult = 0.14
+export const housemateMult = 0.4
+export const partnerMult = 0.6
 
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: {
@@ -363,27 +361,27 @@ export interface VaccineValue {
 export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multiplierPerDose: [1, 0.56, 0.1],
+    multiplierPerDose: [1, 0.76, 0.17],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multiplierPerDose: [1, 0.56, 0.1],
+    multiplierPerDose: [1, 0.76, 0.17],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
-    multiplierPerDose: [1, 0.56, 0.4],
+    multiplierPerDose: [1, 0.76, 0.47],
   },
   johnson: {
     label: i18n.t('data.vaccine.johnson_johnson'),
-    multiplierPerDose: [1, 0.33],
+    multiplierPerDose: [1, 0.36],
   },
   sputnik: {
     label: i18n.t('data.vaccine.sputnik'),
-    multiplierPerDose: [1, 0.15, 0.1],
+    multiplierPerDose: [1, 0.76, 0.17],
   },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
-    multiplierPerDose: [1, 0.56, 0.4],
+    multiplierPerDose: [1, 0.76, 0.47],
   },
 }
 

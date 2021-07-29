@@ -180,10 +180,8 @@ export const Calculator = (): React.ReactElement => {
                 {t('calculator.intro.delta_warning_heading')}
               </Alert.Heading>
               <Trans i18nKey="calculator.intro.delta_warning">
-                The calculator currently gives risk estimates{' '}
-                <strong>2-6x lower than they should be</strong> given the
-                increased infectiousness of the Delta variant. We're working on
-                an update!
+                Risks have increased substantially, including for vaccinated
+                people.
               </Trans>
             </Alert>
           )}
@@ -210,29 +208,17 @@ export const Calculator = (): React.ReactElement => {
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.delta_numbers">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.average_vaccine">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/paper/14-research-sources#others-vaccines">
                 HERE_PLACEHOLDER
               </Link>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.december_covid19projections">
-              <strong>DATE PLACEHOLDER</strong>{' '}
-              <a href="https://covid19-projections.com/estimating-true-infections-revisited/">
-                COVID19-PROJECTIONS LINK PLACEHOLDER
-              </a>
-              .
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.sputnik_added">
-              <strong>DATE PLACEHOLDER:</strong>{' '}
-              <Link to="/paper/14-research-sources#sputnik-v-gamelaya-research">
-                {'DETAILS LINK PLACEHOLDER'}
-              </Link>
-              .
             </Trans>
           </Alert>
           <Link
