@@ -260,7 +260,7 @@ class Place(pydantic.BaseModel):
         current = effective_date
         if current not in self.cumulative_cases:
             raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
-        while len(daily_cumulative_cases) < 14:
+        while len(daily_cumulative_cases) < 15:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
                 if prev > min(self.cumulative_cases.keys()):
@@ -281,16 +281,51 @@ class Place(pydantic.BaseModel):
     # cases. Nominally is values[-1] - values[0], but sometimes regions post
     # corrections which result in the number of cases decreasing.
     def cases_in_cum_cases(self, values) -> int:
-        min_index = values.index(min(values))
-        return max(values[min_index:]) - min(values)
+        # list of indices right before negative corrections. If values = [3,2,3,0,5],
+        # then negative_corrections == [0, 2]
+        negative_corrections = [i for i, val in enumerate(values[:-1]) if val > values[i+1]]
+        corrections_within_bounds = min(values) == values[0] and max(values) == values[-1]
+        if len(negative_corrections) == 0 or corrections_within_bounds:
+            return values[-1] - values[0]
+
+        # Always use values[-1] rather than max(values) because max(values) is
+        # either values[-1] or there's been a negative correction that should take precedence.
+        if min(values[:-1]) <= values[-1]:
+            possibly_suspect_correction = False
+            for local_max_idx in negative_corrections:
+                value_before_correction = values[local_max_idx]
+                value_correction = values[local_max_idx + 1]
+                value_after_correction = None if local_max_idx + 2 >= len(values) else values[local_max_idx + 2]
+
+                if value_after_correction is not None:
+                    correction_size = value_before_correction - value_correction # flipped
+                    overall_change = value_after_correction - value_before_correction
+                    # arbitrary heuristic to look for cases where the negative correction
+                    # itself might be the data that's wrong. Warn if:
+                    #   * removing the negative correction would create consistent data,
+                    #   * the correction is substantial (more than 5 people) and
+                    #   * the correction is proportionally much larger than the overall change
+                    #     ignoring the correction
+
+                    if value_before_correction <= value_after_correction and correction_size > max(5, 3 * overall_change):
+                        possibly_suspect_correction = True
+                        break
+
+            if values[0] > min(values[:-1]) and possibly_suspect_correction:
+                print(f"Warning: {len(negative_corrections)} negative cumulative case corrections {negative_corrections} for {self.fullname}. values={values}. Negative correction is suspect; check numbers manually.")
+            return values[-1] - min(values[:-1])
+
+        # looks complicated. Print a warning.
+        print(f"Warning: {len(negative_corrections)} negative cumulative case corrections {negative_corrections} for {self.fullname}. values={values}. Decreasing cumulative case counts for {self.name}. Assuming no cases.")
+        return 0
 
     @property
     def cases_last_week(self) -> int:
-        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-7:])
+        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-8:])
 
     @property
     def cases_week_before(self) -> int:
-        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-14:-7])
+        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-15:-7])
 
     @property
     @abc.abstractmethod
@@ -389,7 +424,7 @@ class Place(pydantic.BaseModel):
             raise ValueError(f'Population for {self.name} is {self.population}')
 
         if (self.cases_last_week < 0):
-            raise ValueError(f'Cases for {self.name} is {self.cases_last_week}')
+            raise ValueError(f'Cases for {self.name} is {self.cases_last_week}.')
 
         return AppLocation(
             label=self.name,
@@ -730,6 +765,12 @@ class AllData:
             if not rollup_cases(country, "states"):
                 raise ValueError(f"Missing case data for {country!r}")
             rollup_testing(country, "states")
+            for state in list(country.states.values()):
+                if state.name in fake_names:
+                    # Now that we've incorporated these unassigned/etc state
+                    # cases into the country totals, we have no further need
+                    # of the state-level data.
+                    del country.states[state.name]
 
 
 class DataCache(pydantic.BaseModel):
@@ -894,7 +935,7 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        populate_since = effective_date - timedelta(days=15)
+        populate_since = effective_date - timedelta(days=16)
         current = effective_date
         while current >= populate_since:
             for line in parse_csv(
