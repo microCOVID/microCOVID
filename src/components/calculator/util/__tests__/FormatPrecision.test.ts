@@ -5,21 +5,26 @@ import {
 
 describe('fixedPointPrecision', () => {
   it('rounds numbers greater than 1', () => {
-    expect(fixedPointPrecision(11)).toEqual('10')
-    expect(fixedPointPrecision(16)).toEqual('20')
-    expect(fixedPointPrecision(230)).toEqual('200')
+    expect(fixedPointPrecision(11)).toEqual('11')
+    expect(fixedPointPrecision(16)).toEqual('16')
+    expect(fixedPointPrecision(233)).toEqual('230')
+    expect(fixedPointPrecision(268)).toEqual('270')
+    expect(fixedPointPrecision(269)).toEqual('270')
   })
 
   it('rounds numbers less than 1', () => {
     expect(fixedPointPrecision(0.11)).toEqual('0.1')
     expect(fixedPointPrecision(0.046)).toEqual('0.05')
+    expect(fixedPointPrecision(0.37)).toEqual('0.4')
+    expect(fixedPointPrecision(0.33)).toEqual('0.3')
+    expect(fixedPointPrecision(0.949)).toEqual('0.9')
     expect(fixedPointPrecision(0.09539241516791933)).toEqual('0.1')
   })
 
   it('rounds numbers that will increase their order of magnitude', () => {
     expect(fixedPointPrecision(0.09539241516791933)).toEqual('0.1')
     expect(fixedPointPrecision(0.99)).toEqual('1')
-    expect(fixedPointPrecision(99)).toEqual('100')
+    expect(fixedPointPrecision(99.7)).toEqual('100')
   })
 
   it('adds commas', () => {
@@ -29,8 +34,7 @@ describe('fixedPointPrecision', () => {
   it('shows precision for numbers close to 1e6', () => {
     expect(fixedPointPrecision(996700)).toEqual('997,000')
     expect(fixedPointPrecision(999920)).toEqual('999,920')
-    // This isn't super right, but it also seems odd to report 100% when it's not?
-    expect(fixedPointPrecision(1e6 - 0.1)).toEqual('999,999')
+    expect(fixedPointPrecision(1e6 - 0.1)).toEqual('999,999.9')
     expect(fixedPointPrecision(1e6)).toEqual('1,000,000')
   })
 })
@@ -61,10 +65,10 @@ describe('fixedPointPrecisionPercent', () => {
     expect(fixedPointPrecisionPercent(0.009)).toEqual('0.9%')
     expect(fixedPointPrecisionPercent(0.014)).toEqual('1%')
   })
-  it('shows precision for percentages close to 1', () => {
+  it('shows precision for percentages close to 100%', () => {
     expect(fixedPointPrecisionPercent(0.9992)).toEqual('99.92%')
+    expect(fixedPointPrecisionPercent(0.99992)).toEqual('99.992%')
     expect(fixedPointPrecisionPercent(0.98)).toEqual('98%')
-    // TODO(jy2wong) it'd be nice if this was 99% instead
-    expect(fixedPointPrecisionPercent(0.99)).toEqual('99.0%')
+    expect(fixedPointPrecisionPercent(0.99)).toEqual('99%')
   })
 })

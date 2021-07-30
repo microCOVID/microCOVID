@@ -8,7 +8,7 @@ import { RadioControl } from '../controls/RadioControl'
 import RiskReduction from './RiskReduction'
 import riskTolerancePopover from './riskTolerancePopover'
 import {
-  budgetConsumption,
+  getBudgetConsumptionInfo,
   getWeekBudget,
 } from 'components/calculator/util/budgetUtil'
 import {
@@ -73,11 +73,13 @@ export default function ExplanationCard(props: {
     props.data.riskBudget / 1000000,
   )
   const weekBudgetFormatted = getWeekBudget(props.data.riskBudget)
-  const budgetConsumptionFormatted = budgetConsumption(
+  const budgetConsumptionInfo = getBudgetConsumptionInfo(
     props.points,
     props.data.riskBudget,
-    t('calculator.explanationcard.multiple_suffix'),
-    t('calculator.explanationcard.percentage_suffix'),
+  )
+  const budgetConsumptionFormatted = t(
+    budgetConsumptionInfo.translateString,
+    budgetConsumptionInfo.value,
   )
   const repeatedTypeSuggestion =
     props.data.distance === 'intimate'
