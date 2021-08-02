@@ -1,6 +1,7 @@
 import React from 'react'
-import { Popover } from 'react-bootstrap'
+import { Button, InputGroup, Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
+import { BsDash, BsPlus } from 'react-icons/bs'
 
 import ControlLabel from './controls/ControlLabel'
 import { SegmentedControl } from './controls/SegmentedControl'
@@ -94,19 +95,59 @@ export const PersonRiskControls: React.FunctionComponent<{
             header={t('calculator.people_count')}
             popover={personCountPopover}
           />
-          <input
-            className="form-control form-control-lg col-md-3"
-            type="number"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            value={data.personCount}
-            onChange={(e) =>
-              setter({
-                ...data,
-                personCount: Math.max(0, parseInt(e.target.value)),
-              })
-            }
-          />
+          <InputGroup>
+            <Button
+              as={InputGroup.Prepend}
+              className="input-group-text"
+              onClick={() => {
+                if (isNaN(data.personCount)) {
+                  setter({
+                    ...data,
+                    personCount: 0,
+                  })
+                }
+                if (data.personCount >= 1) {
+                  setter({
+                    ...data,
+                    personCount: data.personCount - 1,
+                  })
+                }
+              }}
+            >
+              <BsDash className="align-middle" />
+            </Button>
+            <input
+              className="form-control form-control-lg col-md-2"
+              type="number"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              value={data.personCount}
+              onChange={(e) =>
+                setter({
+                  ...data,
+                  personCount: Math.max(0, parseInt(e.target.value)),
+                })
+              }
+            />
+            <Button
+              as={InputGroup.Append}
+              className="input-group-text"
+              onClick={() => {
+                if (isNaN(data.personCount)) {
+                  setter({
+                    ...data,
+                    personCount: 0,
+                  })
+                }
+                setter({
+                  ...data,
+                  personCount: data.personCount + 1,
+                })
+              }}
+            >
+              <BsPlus className="align-middle" />
+            </Button>
+          </InputGroup>
           <GroupSizeWarning people={data.personCount} />
         </div>
       )}

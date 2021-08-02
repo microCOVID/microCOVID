@@ -325,28 +325,6 @@ export const Calculator = (): React.ReactElement => {
                         <Row>
                           <Col
                             xs="12"
-                            id="person-risk"
-                            className="calculator-params"
-                          >
-                            <PersonRiskControls
-                              data={calculatorData}
-                              setter={setCalculatorData}
-                              repeatedEvent={repeatedEvent}
-                            />
-                          </Col>
-                          <Col
-                            xs="12"
-                            id="modifiers"
-                            className="calculator-params"
-                          >
-                            <ActivityRiskControls
-                              data={calculatorData}
-                              setter={setCalculatorData}
-                              repeatedEvent={repeatedEvent}
-                            />
-                          </Col>
-                          <Col
-                            xs="12"
                             id="vaccines"
                             className="calculator-params"
                           >
@@ -373,6 +351,28 @@ export const Calculator = (): React.ReactElement => {
                                   yourVaccineType: newStatus.vaccineType,
                                 })
                               }}
+                            />
+                          </Col>
+                          <Col
+                            xs="12"
+                            id="person-risk"
+                            className="calculator-params"
+                          >
+                            <PersonRiskControls
+                              data={calculatorData}
+                              setter={setCalculatorData}
+                              repeatedEvent={repeatedEvent}
+                            />
+                          </Col>
+                          <Col
+                            xs="12"
+                            id="modifiers"
+                            className="calculator-params"
+                          >
+                            <ActivityRiskControls
+                              data={calculatorData}
+                              setter={setCalculatorData}
+                              repeatedEvent={repeatedEvent}
                             />
                           </Col>
                         </Row>
