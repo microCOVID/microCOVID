@@ -137,6 +137,10 @@
       "US": "County"
     },
     "select_location_label": "Country or US State",
+    "select_location_label_clarifications": {
+      "country": "nation",
+      "US_state": "US state"
+    },
     "select_location_placeholder": "Select Country or US State…",
     "switch_button": {
       "enter_data_manually": "Override location-based data"
