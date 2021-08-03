@@ -1,6 +1,6 @@
 import i18n from '../i18n'
 
-import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
+import { formatPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
   description?: string
@@ -45,25 +45,25 @@ export const partnerMult = 0.6
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: {
     label: i18n.t('data.oneTime', {
-      percentage: fixedPointPrecisionPercent(oneTimeMult),
+      percentage: formatPercent(oneTimeMult, { decimalPointsToShow: 2 }),
     }),
     multiplier: oneTimeMult,
   },
   workplace: {
     label: i18n.t('data.workplace', {
-      percentage: fixedPointPrecisionPercent(oneTimeMult),
+      percentage: formatPercent(oneTimeMult),
     }),
     multiplier: oneTimeMult,
   },
   partner: {
     label: i18n.t('data.partner', {
-      percentage: fixedPointPrecisionPercent(partnerMult),
+      percentage: formatPercent(partnerMult),
     }),
     multiplier: partnerMult,
   },
   repeated: {
     label: i18n.t('data.repeated', {
-      percentage: fixedPointPrecisionPercent(housemateMult),
+      percentage: formatPercent(housemateMult),
     }),
     multiplier: housemateMult,
   },

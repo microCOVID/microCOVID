@@ -12,11 +12,11 @@ import {
   getWeekBudget,
 } from 'components/calculator/util/budgetUtil'
 import {
-  displayPercent,
   displayPoints,
+  displayPointsPercent,
   showPoints,
 } from 'components/calculator/util/displayUtil'
-import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
+import { formatPercent } from 'components/calculator/util/FormatPrecision'
 import Card from 'components/Card'
 import Expandable from 'components/Expandable'
 import {
@@ -58,8 +58,8 @@ export default function ExplanationCard(props: {
 
   const personRiskEachFormatted = personRiskEach.toLocaleString()
   const pointsFormatted = displayPoints(points)
-  const pointsPercentFormatted = displayPercent(points)
-  const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)
+  const pointsPercentFormatted = displayPointsPercent(points)
+  const activityRiskFormatted = formatPercent(activityRisk)
   const personCountSuffixFormatted = t('calculator.explanationcard.person', {
     count: props.data.personCount,
   })
@@ -69,8 +69,8 @@ export default function ExplanationCard(props: {
   const lowerBoundFormatted = displayPoints(props.lowerBound)
   const upperBoundFormatted = displayPoints(props.upperBound)
   const budgetFormatted = displayPoints(props.data.riskBudget)
-  const budgetAnnualPercentFormatted = fixedPointPrecisionPercent(
-    props.data.riskBudget / 1000000,
+  const budgetAnnualPercentFormatted = formatPercent(
+    props.data.riskBudget / 1e6,
   )
   const weekBudgetFormatted = getWeekBudget(props.data.riskBudget)
   const budgetConsumptionInfo = getBudgetConsumptionInfo(

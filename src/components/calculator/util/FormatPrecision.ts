@@ -1,3 +1,5 @@
+import i18n from 'i18n'
+
 /**
  * Format points for display - fixed point with a set precision.
  * By default, show 2 sigfigs for numbers greater than 1 and 1 sigfig for
@@ -5,17 +7,26 @@
  */
 export function fixedPointPrecision(
   valOrNull: number | null,
-  maxNumber = 1e6,
-  minNumber = 1,
-  numberStyle = 'decimal',
-  useGrouping = true,
+  options: Partial<{
+    maxNumber: number
+    oneSigFigThreshold: number
+    numberStyle: string
+    useGrouping: boolean
+  }> = {},
 ): string {
+  // largest possible number microCOVID will ever display
+  const maxNumber = options.maxNumber || 1e6
+  // show only 1 sigfig below this value.
+  const oneSigFigThreshold = options.oneSigFigThreshold || 1
+  const numberStyle = options.numberStyle || 'decimal'
+  const useGrouping = options.useGrouping === undefined || options.useGrouping
+
   if (!valOrNull) {
-    return Number(0).toLocaleString('en-US', { style: numberStyle })
+    return Number(0).toLocaleString(i18n.language, { style: numberStyle })
   }
   const val: number = valOrNull
   const orderOfMagnitude = Math.floor(Math.log10(val))
-  let sigFigsToShow = val >= 0.9999999 * minNumber ? 2 : 1
+  let sigFigsToShow = val >= 0.9999999 * oneSigFigThreshold ? 2 : 1
   if (val > 0.9 * maxNumber) {
     // Show digits until we reach one that isn't a 9.
     // For probabilities close to 1, the sigfig we want to show is (1 - P)
@@ -42,7 +53,7 @@ export function fixedPointPrecision(
       ++shift
     }
   }
-  return val.toLocaleString('en-US', {
+  return val.toLocaleString(i18n.language, {
     maximumSignificantDigits: sigFigsToShow,
     style: numberStyle,
     useGrouping: useGrouping,
@@ -53,11 +64,22 @@ export function fixedPointPrecision(
  * Converts |val| to a percentage (including '%').
  * @param val
  */
-export function fixedPointPrecisionPercent(val: number | null): string {
-  return fixedPointPrecision(
-    !val ? 0 : val,
-    /*maxNumber=*/ 1,
-    /*minNumber=*/ 0.1,
-    /*numberStyle=*/ 'percent',
-  )
+export function formatPercent(
+  val: number | null,
+  options: Partial<{
+    decimalPointsToShow: number
+  }> = {},
+): string {
+  if (options.decimalPointsToShow === undefined) {
+    return fixedPointPrecision(!val ? 0 : val, {
+      maxNumber: 1,
+      oneSigFigThreshold: 0.1,
+      numberStyle: 'percent',
+    })
+  }
+  return Number(!val ? 0 : val).toLocaleString(i18n.language, {
+    style: 'percent',
+    minimumFractionDigits: options.decimalPointsToShow,
+    maximumFractionDigits: options.decimalPointsToShow,
+  })
 }
