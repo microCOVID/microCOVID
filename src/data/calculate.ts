@@ -8,6 +8,7 @@ import {
   RiskProfileEnum,
   Setting,
   TheirMask,
+  VaccineModifiableRiskProfiles,
   VaccineValue,
   Vaccines,
   Voice,
@@ -292,29 +293,43 @@ export const calculatePersonRiskEach = (
       })
 
     if (
-      // TODO: Support vaccinated risk for other Risk Profiles.
-      data.riskProfile !== 'average' ||
+      !VaccineModifiableRiskProfiles.includes(data.riskProfile) ||
       data.unvaccinatedPrevalenceRatio === null ||
       data.averageFullyVaccinatedMultiplier === null
     ) {
       return unadjustedRisk
     }
 
-    switch (data.theirVaccine) {
-      case 'vaccinated':
-        return (
-          unadjustedRisk *
-          data.unvaccinatedPrevalenceRatio *
-          data.averageFullyVaccinatedMultiplier
-        )
-      case 'unvaccinated':
-        return unadjustedRisk * data.unvaccinatedPrevalenceRatio
-      // falls through
-      case 'undefined':
-        return unadjustedRisk
-      default:
-        console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
-        return null
+    if (data.riskProfile === 'average') {
+      switch (data.theirVaccine) {
+        case 'vaccinated':
+          return (
+            unadjustedRisk *
+            data.unvaccinatedPrevalenceRatio *
+            data.averageFullyVaccinatedMultiplier
+          )
+        case 'unvaccinated':
+          return unadjustedRisk * data.unvaccinatedPrevalenceRatio
+        case 'undefined':
+          return unadjustedRisk
+        default:
+          console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
+          return null
+      }
+    } else {
+      // These are risk profiles that were set up for unvaccinated people.
+      switch (data.theirVaccine) {
+        case 'vaccinated':
+          return unadjustedRisk * data.averageFullyVaccinatedMultiplier
+        case 'unvaccinated':
+          return unadjustedRisk
+        // falls through
+        case 'undefined':
+          return unadjustedRisk / data.unvaccinatedPrevalenceRatio
+        default:
+          console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
+          return null
+      }
     }
   } catch (e) {
     return null
