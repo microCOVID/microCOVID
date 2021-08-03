@@ -128,6 +128,27 @@ export const PrevalenceControls: React.FunctionComponent<{
                 select: 'official',
               })
             : Locations[locKey].label
+        if (Locations[locKey].iso3! === 'GEO') {
+          // Georgia the country
+          return {
+            label:
+              country_label +
+              ' (' +
+              t('calculator.select_location_label_clarifications.country') +
+              ')',
+            value: locKey,
+          }
+        } else if (locKey === 'US_13') {
+          // Georgia the US state
+          return {
+            label:
+              country_label +
+              ' (' +
+              t('calculator.select_location_label_clarifications.US_state') +
+              ')',
+            value: locKey,
+          }
+        }
         return { label: country_label, value: locKey }
       })
     },
