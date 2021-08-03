@@ -201,13 +201,6 @@ export const PrevalenceControls: React.FunctionComponent<{
     : Locations[data.subLocation].subdivisions.map((locKey) => {
         return { label: Locations[locKey].label, value: locKey }
       })
-  console.log(
-    'show non us counties:',
-    showSubSubLocation,
-    data.subLocation,
-    'options:',
-    subSubLocationOptions,
-  )
   const selectedSubSubLocation = subSubLocationOptions.find(
     (option) => option.value === data.subSubLocation,
   )

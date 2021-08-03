@@ -67,6 +67,10 @@ def import_vaccine_multipliers():
                 continue
             if vaccine_name == 'Johnson & Johnson':
                 vaccine_name = 'Janssen'  # JHU dataset uses 'Janssen' for this vaccine.
+            elif vaccine_name == 'AstraZenica':
+                # AstraZenEca is mispelled in the csv. Can't change it without
+                # breaking the risk tracker.
+                vaccine_name = 'AstraZeneca'
             vaccines[vaccine_name] = {
                 'partial': float(row[2]),
                 'complete': float(row[3]),
@@ -268,9 +272,9 @@ class CanadaOpenCovidProvinces(pydantic.BaseModel):
     ] = "https://api.opencovid.ca/other?stat=prov"
 
     class Report(pydantic.BaseModel):
-        province: str       # PEI
-        province_full: str  # Prince Edward Island
-        province_short: str # PE
+        province: str        # PEI
+        province_full: str   # Prince Edward Island
+        province_short: str  # PE
 
     prov: List[Report]
 
@@ -282,8 +286,8 @@ class CanadaOpenCovidProvincialSummary(pydantic.BaseModel):
 
     class Report(pydantic.BaseModel):
         cumulative_cases: int
-        cumulative_testing: int              # number of total people tested
-        cumulative_avaccine: Union[int, str] # number of total shots administered
+        cumulative_testing: int               # number of total people tested
+        cumulative_avaccine: Union[int, str]  # number of total shots administered
         # number of people who have received a complete sequence of shots. Note
         # that in Canada it is common for people to have mixed shots (e.g.
         # first shot Pfizer second shot Moderna).
@@ -302,8 +306,8 @@ class CanadaRegionalVaccinationReports(pydantic.BaseModel):
         date_: date = pydantic.Field(alias="date")
         total_cases: int
         total_tests: Optional[int]
-        total_vaccinations: Optional[int] # number of shots delivered
-        total_vaccinated: Optional[int] # number of people who have completed all shots
+        total_vaccinations: Optional[int]  # number of shots delivered
+        total_vaccinated: Optional[int]    # number of people who have completed all shots
 
     hr_uid: int
     last_updated: datetime
@@ -637,9 +641,8 @@ class AppLocation(pydantic.BaseModel):
         if positivityRate is None or positivityRate > 100:
             positivityRate = 100
         if positivityRate < 0:
-            raise ValueError(
-                    f"Positivity rate is negative: {positivityRate}"
-            )
+            print(f"Warning: Positivity rate is negative: {positivityRate}")
+            positivityRate = 0
         final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
 
@@ -836,9 +839,13 @@ class AllData:
         for country in self.countries.values():
             for state in country.states.values():
                 if state.test_positivity_rate is None and state.tests_in_past_week is not None:
-                    state.test_positivity_rate = (
-                        state.cases_last_week / state.tests_in_past_week
-                    )
+                    try:
+                        state.test_positivity_rate = (
+                            state.cases_last_week / state.tests_in_past_week
+                        )
+                    except ZeroDivisionError:
+                        print(f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}")
+                        state.test_positivity_rate = None
                 if state.vaccines_by_type is not None:
                     rolldown_vaccine_types(state, state.counties.values())
                 for county in state.counties.values():
