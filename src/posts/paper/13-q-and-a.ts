@@ -56,7 +56,7 @@ You may choose to follow a different risk budget. Here is some information that 
     * Base jumping 3 times ([Wikipedia](https://en.wikipedia.org/wiki/BASE_jumping#Safety))
     * 167 skydiving jumps ([Skydive California](https://skydivecalifornia.com/blog/skydiving-statistics))
 
-Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolearnce.
+Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolerance.
 
 
 ### If there’s a precaution I don’t see a multiplier for here, should I still do it?
