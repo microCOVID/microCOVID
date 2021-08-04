@@ -109,7 +109,7 @@
     "category_high": "High",
     "category_very_high": "Very High",
     "category_dangerously_high": "Dangerously high",
-    "category_extreme": "Extreme",
+    "category_extreme": "Extremely High",
     "category_postfix": "Risk",
     "prevalence": {
       "reported_prevalence": "Reported prevalence",
@@ -183,10 +183,12 @@
     "risk_tolerance_10_percent_explanation": "10% chance of COVID per year (2000 microCOVIDs per week) Use this if you can't avoid risk, but still want to make smart choices. Remember: if you get COVID, you may give it to anyone you come in contact with. Try taking the smallest risk you can to protect them.",
     "risk_tolerance_3_percent_label": "Low Caution Budget",
     "risk_tolerance_3_percent_explanation": "3% chance of COVID per year (600 microCOVIDs per week). If you are healthy and prefer to live a riskier lifestyle AND everyone you live with / share air with is willing to do the same.",
-    "risk_tolerance_1_percent_label": "Standard Caution Budget",
-    "risk_tolerance_1_percent_explanation": "1% chance of COVID per year (200 microCOVIDs per week) Suggested for healthy people NOT in close contact with more vulnerable people.",
+    "risk_tolerance_1_percent_label": "Standard Unvaccinated Caution Budget",
+    "risk_tolerance_1_percent_explanation": "1% chance of COVID per year (200 microCOVIDs per week). Suggested for healthy unvaccinated or partially vaccinated people not in close contact with more vulnerable people.",
     "risk_tolerance_point1_percent_label": "High Caution Budget",
     "risk_tolerance_point1_percent_explanation": "0.1% chance of COVID per year (20 microCOVIDs per week) Suggested if you or your close contacts are more vulnerable to COVID.",
+    "risk_tolerance_2_percent_label": "Standard Vaccinated Caution Budget",
+    "risk_tolerance_2_percent_explanation": "2% chance of COVID per year (400 microCOVIDs per week). Suggested for healthy vaccinated people NOT in close contact with more vulnerable people.",
     "intro": {
       "delta_warning_heading": "Now updated for the Delta variant",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
