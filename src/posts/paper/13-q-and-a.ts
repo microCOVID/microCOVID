@@ -42,9 +42,26 @@ When choosing your budget, you want to factor in  two important aspects: risk to
 
     *   Some people (such as essential workers) have no choice but to run a high risk of getting COVID. Containing the pandemic across society only works if those of us who _do_ have a choice choose to take fewer risks.
 
-### How did you arrive at a 1% annual risk budget
+### How did you arrive at a 1% annual risk budget?
 
-We think as many as 1 in 10 COVID cases could potentially lead to long-term negative health consequences for the infected person; we don't think the ratio is likely to be higher than that, due to sources like the app-based [COVID Symptom Study](https://covid.joinzoe.com/post/covid-long-term) that found one in ten cases weren't fully recovered after 3 weeks. That would mean that a 1% chance of COVID is the same as up to a 0.1% chance of ongoing negative health consequences from COVID. The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018 [there were](https://cdan.nhtsa.gov/tsftables/National%20Statistics.pdf) 2,491,000 car-crash-related injuries (of any severity) spread across 3,240,327,000,000 vehicle miles travelled (see the [NHTSA website](https://cdan.nhtsa.gov/tsftables/tsfar.htm) for more detailed breakdowns). [A study of Swedish car crash injuries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3256772/) found that 11.4% of them met the criteria for at least “1% permanent medical impairment” five years later. (“Permanent medical impairment” is a [legally-relevant concept](https://www.disabilitysecrets.com/resources/understanding-permanent-disability-rating-system.htm) that attempts to quantify disability, and the 1% level was the lowest level of disability that was discussed in the Swedish car crash study.) Multiplying this out, we get a 0.11% chance of ongoing negative health consequences from driving for one year.
+We think roughly 1 in 10 COVID cases lead to long-term negative health consequences for the infected person 
+("long COVID"). Data from the UK's 
+[Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021)
+suggests that 13.7% of COVID-infected people may continue to experience symptoms after 12 weeks and 12% continue
+to experience symtpoms after 18.5 weeks.[^ons] That would mean that a 1% chance of COVID is the same as up to a
+0.12% chance of ongoing negative health consequences from COVID for at least 4 months.
+
+The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018
+there were [2,491,000 car-crash-related injuries](https://cdan.nhtsa.gov/tsftables/National%20Statistics.pdf)
+(of any severity) spread across 3,240,327,000,000 vehicle miles travelled (see the 
+[NHTSA website](https://cdan.nhtsa.gov/tsftables/tsfar.htm) for more detailed breakdowns). 
+[A study of Swedish car crash injuries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3256772/) found that
+11.4% of them met the criteria for at least “1% permanent medical impairment” five years later. 
+(“Permanent medical impairment” is a 
+[legally-relevant concept](https://www.disabilitysecrets.com/resources/understanding-permanent-disability-rating-system.htm)
+that attempts to quantify disability, and the 1% level was the lowest level of disability that was discussed in the
+Swedish car crash study.) Multiplying this out, we get a 0.11% chance of ongoing negative health consequences from 
+driving for one year.
 
 You may choose to follow a different risk budget. Here is some information that might be helpful in deciding what is right for you:
   * Among people under 40, the chance of death from COVID is about 0.1-0.2% ([Our World in Data](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age))
@@ -54,7 +71,7 @@ You may choose to follow a different risk budget. Here is some information that 
     * Base jumping 3 times ([Wikipedia](https://en.wikipedia.org/wiki/BASE_jumping#Safety))
     * 167 skydiving jumps ([Skydive California](https://skydivecalifornia.com/blog/skydiving-statistics))
 
-Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolearnce.
+Also remember that, if you take on personal risk, you also present a risk to others. Take care to isolate from others who do not consent to your risk tolerance.
 
 
 ### If there’s a precaution I don’t see a multiplier for here, should I still do it?
@@ -223,6 +240,7 @@ We have not done a thorough analysis of this effect in other vaccines.
 We have not seen data that describes the effect of vaccines on long COVID in mild/asymptomatic cases. The 1% annual risk budget is based on risks of long term effects of
 COVID (as opposed to hospitalization or death). Reports of prevalence in long COVID in unvaccinated people varies widely:
 * A [study by ZOE](https://www.medrxiv.org/content/10.1101/2020.10.19.20214494v1.full.pdf) found that "one in twenty people (5%) had COVID-19 symptoms for more than eight weeks, and around 2% of people can experience symptoms for 12 weeks or more". The data for this was self-reported and the researchers noted that many participants stopped reporting data before the conclusion of the study.
+* Data from the UK's [Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021) showed that, of a sample of 20,000 people infected with COVID, 13.7% continued to experience symptoms after twelve weeks.
 * Another [study](https://pubs.rsna.org/doi/full/10.1148/ryct.2020200110) early in the pandemic found lung abnormalities in half of asymptomatic COVID-19 cases on the Diamond Princess cruise ship. These lung abnormalities are similar to pneumonia; it is unclear from that study what percent led to long term health changes.
 * Researchers found [heart abnormalities in 78 of 100 recovered patients](https://jamanetwork.com/journals/jamacardiology/fullarticle/2768916), sampling an average of 71 days after initial diagnosis. There may be self-selection bias among participants in this cohort.
 
@@ -389,6 +407,7 @@ In terms of qualitative scales, we like the following:
 [^3]: When we do these calculations, the lowest Person Risk we allow ourselves to assign anyone is 1/100th the Intermediate Person Risk, just as a safety margin.
 [^4]:  [Jimenez’s aerosol transmission tool](https://docs.google.com/spreadsheets/d/1Enmh7DJZ8kN8Ia6yDOsPs42Y-jlsp7R8Hwy7LiUUJO4/edit#gid=154529406&range=A106:B106) lends some support to the idea of using CO2 as a proxy for density of exhalations.
 [^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.
+[^ons]: The data from the study are truncated at 130 days (~18.5 weeks), at which point 12% of the study participants infected with COVID continued to experience symptoms (Figure 3 from [Prevalence of ongoing symptoms following coronavirus (COVID-19) infection in the UK: 1 April 2021](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021)).
 
 `
 
