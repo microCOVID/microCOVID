@@ -44,9 +44,24 @@ When choosing your budget, you want to factor in  two important aspects: risk to
 
 ### How did you arrive at a 1% annual risk budget?
 
-We think as many as 1 in 10 COVID cases could potentially lead to long-term negative health consequences for the infected person ("long COVID"). Data from the UK's [Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021) suggests that 13.7% of COVID-infected people may continue to experience symptoms after 12 weeks, and 12% after 18.5 weeks.[^ons] That would mean that a 1% chance of COVID is the same as up to a 0.12% chance of ongoing negative health consequences from COVID.
+We think roughly 1 in 10 COVID cases lead to long-term negative health consequences for the infected person 
+("long COVID"). Data from the UK's 
+[Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021)
+suggests that 13.7% of COVID-infected people may continue to experience symptoms after 12 weeks and 12% continue
+to experience symtpoms after 18.5 weeks.[^ons] That would mean that a 1% chance of COVID is the same as up to a
+0.12% chance of ongoing negative health consequences from COVID for at least 4 months.
 
-The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018 [there were](https://cdan.nhtsa.gov/tsftables/National%20Statistics.pdf) 2,491,000 car-crash-related injuries (of any severity) spread across 3,240,327,000,000 vehicle miles travelled (see the [NHTSA website](https://cdan.nhtsa.gov/tsftables/tsfar.htm) for more detailed breakdowns). [A study of Swedish car crash injuries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3256772/) found that 11.4% of them met the criteria for at least “1% permanent medical impairment” five years later. (“Permanent medical impairment” is a [legally-relevant concept](https://www.disabilitysecrets.com/resources/understanding-permanent-disability-rating-system.htm) that attempts to quantify disability, and the 1% level was the lowest level of disability that was discussed in the Swedish car crash study.) Multiplying this out, we get a 0.11% chance of ongoing negative health consequences from driving for one year.
+The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018
+there were [2,491,000 car-crash-related injuries](https://cdan.nhtsa.gov/tsftables/National%20Statistics.pdf)
+(of any severity) spread across 3,240,327,000,000 vehicle miles travelled (see the 
+[NHTSA website](https://cdan.nhtsa.gov/tsftables/tsfar.htm) for more detailed breakdowns). 
+[A study of Swedish car crash injuries](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3256772/) found that
+11.4% of them met the criteria for at least “1% permanent medical impairment” five years later. 
+(“Permanent medical impairment” is a 
+[legally-relevant concept](https://www.disabilitysecrets.com/resources/understanding-permanent-disability-rating-system.htm)
+that attempts to quantify disability, and the 1% level was the lowest level of disability that was discussed in the
+Swedish car crash study.) Multiplying this out, we get a 0.11% chance of ongoing negative health consequences from 
+driving for one year.
 
 You may choose to follow a different risk budget. Here is some information that might be helpful in deciding what is right for you:
   * Among people under 40, the chance of death from COVID is about 0.1-0.2% ([Our World in Data](https://ourworldindata.org/mortality-risk-covid#case-fatality-rate-of-covid-19-by-age))
