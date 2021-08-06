@@ -48,7 +48,7 @@ We think roughly 1 in 10 COVID cases lead to long-term negative health consequen
 ("long COVID"). Data from the UK's 
 [Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021)
 suggests that 13.7% of COVID-infected people may continue to experience symptoms after 12 weeks and 12% continue
-to experience symtpoms after 18.5 weeks.[^ons] That would mean that a 1% chance of COVID is the same as up to a
+to experience symptoms after 18.5 weeks.[^ons] That would mean that a 1% chance of COVID is the same as up to a
 0.12% chance of ongoing negative health consequences from COVID for at least 4 months.
 
 The average American drives [13,476 miles per year](https://www.fhwa.dot.gov/ohim/onh00/bar8.htm). In 2018
