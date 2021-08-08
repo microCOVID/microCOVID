@@ -1,4 +1,4 @@
 Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,5792203,6444,0.001113,2.2231,1.2668,0.003133
-Faroe Islands,48865,8,0.000184,2.2231,1.0,0.000409
-Greenland,56772,38,0.000687,2.2231,2.0,0.003054
+Entire country,5792203,6158,0.001063,2.2287,1.0383,0.002461
+Faroe Islands,48865,4,0.000102,2.2287,1.0,0.000228
+Greenland,56772,49,0.000881,2.2287,1.6333,0.003206
