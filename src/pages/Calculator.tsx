@@ -208,6 +208,12 @@ export const Calculator = (): React.ReactElement => {
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.delta_blog">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.delta_numbers">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
