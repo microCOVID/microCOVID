@@ -35,7 +35,7 @@ One thing that the Delta variant *hasn’t* changed is the effectiveness of simp
 
 Still, the Delta variant *has* affected the consequences of contracting COVID. We’ll discuss the risk of hospitalization, death, long-term symptoms, and of passing the infection to the people around you.
 
-### Avoiding hospitalization/death
+## Avoiding hospitalization/death
 
 <figure>
   <img src="${deltaHospitalization}" alt="Picture of hospital on a green circle, next to the text: Your chance of hospitalization (if you become infected with the Delta variant) is still low" />
@@ -49,7 +49,7 @@ Some folks have asked us if this means they should tolerate a higher risk budget
 
 [^3]: [Stowe et al.](https://khub.net/web/phe-national/public-library/-/document_library/v2WsRK3ZlEig/view_file/479607329?_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_v2WsRK3ZlEig_redirect=https%3A%2F%2Fkhub.net%3A443%2Fweb%2Fphe-national%2Fpublic-library%2F-%2Fdocument_library%2Fv2WsRK3ZlEig%2Fview%2F479607266)
 
-### Avoiding long-term COVID symptoms
+## Avoiding long-term COVID symptoms
 
 <figure>
   <img src="${deltaLongCovid}" alt="A clock with a red arrow around it to indicate the passage of time behind a coronavirus particle, all on a yellow background. The text reads 'Your chance of long-term symptoms (even if you have a mild case of COVID) is ~2-38%' with a clarification that there is ongoing research. There is a color-coded horizontal bar with 0% on the left as green (not alarming) going through yellow, orange, and red on the way to purple on the far right as 100% (extremely alarming). 2-38% is indicated on the bar and is in the yellow to red range, to be interpreted as somewhere between concerning and alarming." />
@@ -68,7 +68,7 @@ For less-vulnerable, vaccinated people, **long COVID is likely a** ***larger*** 
 
 With the incomplete information available today, some microCOVID contributors are accepting 2x the infection risk they did prior to being vaccinated, but we are not yet comfortable making this a general recommendation. We expect to have better guidelines in the future as scientific knowledge progresses and we know more about long COVID, communicability, and possible new variants.
 
-### Protecting friends/family/children/strangers
+## Protecting friends/family/children/strangers
 
 **The Delta variant disproportionately infects unvaccinated people**. Some of these people are children under 12, for whom no vaccine has been authorized yet. Others cannot get vaccinated due to medical factors (like severe allergies, cancer treatment or immune system issues).
 
@@ -85,6 +85,31 @@ You can also encourage the people around you to take simple steps to reduce thei
 We hope this post resolves some of the uncertainty around Delta, or at least gives you sharper boundaries around what is and isn’t currently known. As always, **the goal of microCOVID is to empower people to navigate the pandemic without giving up everything nor taking on more risk than they intended to**.
 
 For those who are interested, the next section will dig into the research studies and decision processes behind the latest updates to the microCOVID model.
+
+----------
+
+# Nitty Gritty: Changes to the microCOVID Model
+## Increased Transmissibility
+
+The hourly multiplier for COVID transmission has increased from 9% to 14%. The transmission rate for housemates has increased from 30% to 40%. The transmission rate for partners has increased from 48% to 60%. These increases reflect recent studies demonstrating the R<sub>0</sub> for the Delta variant is substantially higher than for the Alpha variant. 
+
+## Reduced Vaccine Effectiveness Against Infection
+
+Data has shown that vaccines are less effective at preventing symptomatic infection by the Delta variant than they were for the previously predominant Alpha variant. Pfizer/Moderna/Sputnik V have been reduced from a 90% reduction to a 84% reduction. AstraZeneca has been reduced from 60% to 54%. Single doses for all of the above have been reduced from 44% effective to 24%. 
+
+Johnson&Johnson’s single dose vaccine effectiveness reduced from 72% to 64% effective. Johnson and Johnson’s [phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2101544) included separate data for subtrials run in North America and in South Africa. ~95% of cases in North America were of the original strain, and ~95% of cases in South Africa were of the Beta[^beta] variant. Antibody studies have demonstrated that the Beta variant has achieved equal or greater antibody escape compared the Delta variant. We thus use the J&J vaccine’s efficacy against the Beta variant as a stand-in approximation for its efficacy against the Delta variant while we await publication of [J&J clinical trial data for the Delta variant](https://www.wsj.com/articles/j-j-vaccine-highly-effective-against-delta-variant-in-south-african-trial-11628292645).
+
+Combining the effects of increased transmissibility and reduced vaccine effectiveness against infection, our model says that if you are fully vaccinated with Pfizer/Moderna/Sputnik V, then 60 minutes of exposure to someone infected with the Beta variant is equivalent to 25 minutes of exposure to someone infected with the Delta variant.
+
+[^beta]: Beta is the new name for the B.1.351 variant, also sometimes referred to in the media as the “South Africa variant.”
+
+## I heard that Pfizer’s vaccine is only 64% effective in Israel. Why is microCOVID treating it as 84% effective?
+
+We dug into claims that the [effectiveness of vaccines in Israel is 64%](https://www.gov.il/en/departments/news/06072021-04?fbclid=IwAR2NrFAfFumQumzVW4CBcdGjYf4bPwPUOZOHq6OA21I98wWQZ6nAS850ID8) but had concerns about the methodology. These reports control for “age group (16–24, 25–34, 35–44, 45–54, 55–64, 65–74, 75–84, and ≥85 years), sex, and calendar week” ([Haas et al](https://www.gov.il/BlobFolder/news/06052021-02/ru/NEWS_Corona_lancet-article.pdf)) **but not** **individual behavior**. Since Israel’s policy allows vaccinated individuals to participate in many activities with high risk of exposure (restaurants, movie theaters, etc. without masks), we hypothesize that the 64% effective number captures a combination of reduced efficacy of the vaccine vs the Delta variant AND increased opportunity for exposures.
+
+Therefore, we instead used data from research in the UK that compared # of cases of Delta vs Alpha[^alpha] among vaccinated and unvaccinated individuals, which attempts to assess the vaccines’ efficacy in isolation ([Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1)), ([Stowe et al.](https://khub.net/web/phe-national/public-library/-/document_library/v2WsRK3ZlEig/view_file/479607329?_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_v2WsRK3ZlEig_redirect=https%3A%2F%2Fkhub.net%3A443%2Fweb%2Fphe-national%2Fpublic-library%2F-%2Fdocument_library%2Fv2WsRK3ZlEig%2Fview%2F479607266)). These studies found 88% vaccine efficacy vs symptomatic COVID, which we adjusted to 84% to account for asymptomatic cases.
+
+[^alpha]: Alpha is the new name for the B.1.1.7 variant, also sometimes referred to in the media as the “UK variant.”
 `
 
 export const post = { title, summary, content, author, date, image }
