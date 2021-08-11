@@ -12,7 +12,7 @@ const image: ImageMeta = {
 const title = 'The Delta Variant'
 
 const author = 'Team microCOVID'
-const date = 'August 9, 2021'
+const date = 'August 10, 2021'
 
 const summary =
   'The Delta variant, now the most common worldwide, has substantially increased COVID risk, including for vaccinated people. We discuss the risk of hospitalization, death, long-term symptoms, and of passing the infection to the people around you.'

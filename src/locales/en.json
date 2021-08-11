@@ -196,7 +196,7 @@
       "sputnik_added": "<0>April 10th, 2021:</0> Added the Sputnik V vaccine to the calculator. Learn more about our calculation of its efficacy <2>here</2>.",
       "full_changelog": "see all updates…",
       "delta_numbers": "<0>July 26th, 2021:</0> Updated for the Delta variant. Risks have increased substantially, including for vaccinated people. <2>Technical details here.</2>",
-      "delta_blog": "<0>August 9th, 2021:</0> New <2>blog post</2> about the Delta variant."
+      "delta_blog": "<0>August 10th, 2021:</0> New <2>blog post</2> about the Delta variant."
     },
     "no_vaccine_prevalence": "Since our system doesn't yet have vaccine data for your region, we aren't able to provide a way for you to adjust your score based on whether or not the person you're seeing is vaccinated."
   },
