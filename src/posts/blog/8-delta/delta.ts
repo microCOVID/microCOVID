@@ -1,12 +1,11 @@
 import deltaHospitalization from './img/delta_hospitalization.png'
-import deltaInfographic from './img/delta_infographic.png'
 import deltaLongCovid from './img/delta_longcovid.png'
 import { ImageMeta } from 'posts/post'
 
 const image: ImageMeta = {
-  url: deltaInfographic,
-  width: 600,
-  height: 600,
+  url: deltaLongCovid,
+  width: 1200,
+  height: 406,
 }
 
 const title = 'The Delta Variant'
