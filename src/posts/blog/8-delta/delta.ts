@@ -90,7 +90,7 @@ For those who are interested, the next section will dig into the research studie
 # Nitty Gritty: Changes to the microCOVID Model
 ## Increased Transmissibility
 
-The hourly multiplier for COVID transmission has increased from 9% to 14%. The transmission rate for housemates has increased from 30% to 40%. The transmission rate for partners has increased from 48% to 60%. These increases reflect recent studies demonstrating the R<sub>0</sub> for the Delta variant is substantially higher than for the Alpha variant. 
+The hourly multiplier for COVID transmission has increased from 9% to 14%. The transmission rate for housemates has increased from 30% to 40%. The transmission rate for partners has increased from 48% to 60%. These increases reflect recent studies demonstrating the R<sub>0</sub> for the Delta variant is substantially higher than for the Alpha[^alpha] variant. 
 
 ## Reduced Vaccine Effectiveness Against Infection
 
@@ -106,7 +106,7 @@ Combining the effects of increased transmissibility and reduced vaccine effectiv
 
 We dug into claims that the [effectiveness of vaccines in Israel is 64%](https://www.gov.il/en/departments/news/06072021-04?fbclid=IwAR2NrFAfFumQumzVW4CBcdGjYf4bPwPUOZOHq6OA21I98wWQZ6nAS850ID8) but had concerns about the methodology. These reports control for “age group (16–24, 25–34, 35–44, 45–54, 55–64, 65–74, 75–84, and ≥85 years), sex, and calendar week” ([Haas et al](https://www.gov.il/BlobFolder/news/06052021-02/ru/NEWS_Corona_lancet-article.pdf)) **but not** **individual behavior**. Since Israel’s policy allows vaccinated individuals to participate in many activities with high risk of exposure (restaurants, movie theaters, etc. without masks), we hypothesize that the 64% effective number captures a combination of reduced efficacy of the vaccine vs the Delta variant AND increased opportunity for exposures.
 
-Therefore, we instead used data from research in the UK that compared # of cases of Delta vs Alpha[^alpha] among vaccinated and unvaccinated individuals, which attempts to assess the vaccines’ efficacy in isolation ([Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1)), ([Stowe et al.](https://khub.net/web/phe-national/public-library/-/document_library/v2WsRK3ZlEig/view_file/479607329?_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_v2WsRK3ZlEig_redirect=https%3A%2F%2Fkhub.net%3A443%2Fweb%2Fphe-national%2Fpublic-library%2F-%2Fdocument_library%2Fv2WsRK3ZlEig%2Fview%2F479607266)). These studies found 88% vaccine efficacy vs symptomatic COVID, which we adjusted to 84% to account for asymptomatic cases.
+Therefore, we instead used data from research in the UK that compared # of cases of Delta vs Alpha among vaccinated and unvaccinated individuals, which attempts to assess the vaccines’ efficacy in isolation ([Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1)), ([Stowe et al.](https://khub.net/web/phe-national/public-library/-/document_library/v2WsRK3ZlEig/view_file/479607329?_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_v2WsRK3ZlEig_redirect=https%3A%2F%2Fkhub.net%3A443%2Fweb%2Fphe-national%2Fpublic-library%2F-%2Fdocument_library%2Fv2WsRK3ZlEig%2Fview%2F479607266)). These studies found 88% vaccine efficacy vs symptomatic COVID, which we adjusted to 84% to account for asymptomatic cases.
 
 [^alpha]: Alpha is the new name for the B.1.1.7 variant, also sometimes referred to in the media as the “UK variant.”
 `
