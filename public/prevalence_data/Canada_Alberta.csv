@@ -1,0 +1,7 @@
+Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire state,4413146,2268,0.000514,2.4011,1.6713,0.002063
+Calgary,1680755,922,0.000549,2.4011,1.2717,0.001677
+Central,479601,140,0.000294,2.4011,1.3333,0.000941
+Edmonton,1443597,536,0.000372,2.4011,2.0,0.001786
+North,460964,347,0.000755,2.4011,2.0,0.003625
+South,306399,330,0.00108,2.4011,2.0,0.005188
