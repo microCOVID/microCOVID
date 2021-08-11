@@ -1009,7 +1009,7 @@ def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Mode
 
 def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     max_attempts = 2
-    retry_time_seconds = 2
+    retry_time_seconds = 3
     for attempt in range(max_attempts):
         try:
             contents_as_json = json.loads(cache.get(url))
@@ -1303,23 +1303,44 @@ def main() -> None:
             # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
             provincial_dist = next((d for d in vaccine_distribution_reports.data if d.province == province.province_short), None)
             if provincial_dist is not None:
-                # match JHU naming convention
-                administered_shots = sum([
-                    provincial_dist.pfizer_biontech_administered,
-                    provincial_dist.moderna_administered,
-                    provincial_dist.astrazeneca_administered])
+                # Use distribution numbers as a proxy if administered numbers
+                # aren't available under the assumption that the relative
+                # proportions of distribution by manufacturer is roughly the
+                # same as relative proportions of administration by manufacturer
+                administered_shots_by_manufacturer = {
+                    manufacturer: administered if administered is not None else (distributed or 0)
+                    for (manufacturer, administered, distributed) in zip(
+                        ["Pfizer", "Moderna", "AstraZeneca"],  # match JHU naming convention
+                        [
+                            provincial_dist.pfizer_biontech_administered,
+                            provincial_dist.moderna_administered,
+                            provincial_dist.astrazeneca_administered,
+                        ],
+                        [
+                            provincial_dist.pfizer_biontech,
+                            provincial_dist.moderna,
+                            provincial_dist.astrazeneca,
+                        ],
+                    )
+                }
+                total_administered_shots = sum(
+                    [shots for shots in administered_shots_by_manufacturer.values()]
+                )
+
                 proportional_weights = {
-                        'Pfizer': provincial_dist.pfizer_biontech_administered / administered_shots,
-                        'Moderna': provincial_dist.moderna_administered / administered_shots,
-                        'AstraZeneca': provincial_dist.astrazeneca_administered / administered_shots
+                    manufacturer: shots / total_administered_shots
+                    for (manufacturer, shots) in administered_shots_by_manufacturer.items()
                 }
                 for k, v in proportional_weights.items():
                     place.set_vaccines_of_type(
-                            k,
-                            v * get_partially_vaccinated(
-                                provincial_reports.summary[-1].cumulative_avaccine,
-                                provincial_reports.summary[-1].cumulative_cvaccine, 2),
-                            v * provincial_reports.summary[-1].cumulative_cvaccine
+                        k,
+                        v
+                        * get_partially_vaccinated(
+                            provincial_reports.summary[-1].cumulative_avaccine,
+                            provincial_reports.summary[-1].cumulative_cvaccine,
+                            2,
+                        ),
+                        v * provincial_reports.summary[-1].cumulative_cvaccine,
                     )
 
     finally:
