@@ -48,8 +48,8 @@
         "explanationcard": {
             "person": "ember",
             "person_plural": "ember",
-            "multiple_suffix": "x több, mint a heti kockázati kereted",
-            "percentage_suffix": "%-a a heti kockázati keretednek",
+            "multiple_suffix": "{{ multiple }}x több, mint a heti kockázati kereted",
+            "percentage_suffix": "{{ percentage }}-a a heti kockázati keretednek",
             "details_header_closed": "Hogy jött ez ki?",
             "details_header_open": "Hogy jött ez ki?",
             "details_overview_header": "A matek",

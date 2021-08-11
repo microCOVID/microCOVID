@@ -73,8 +73,8 @@
             "details_overview_header": "Berechnung",
             "details_header_closed": "Berechnungsdetails einblenden",
             "details_header_open": "Berechnungsdetails ausblenden",
-            "percentage_suffix": "% deines wöchentlichen Risikobudgets",
-            "multiple_suffix": "x dein wöchentliches Risikobudget",
+            "percentage_suffix": "{{ percentage }} deines wöchentlichen Risikobudgets",
+            "multiple_suffix": "{{ multiple }}x dein wöchentliches Risikobudget",
             "risk_budget_explanation": "Du hast ein jährliches Risikobudget einer {{ budget_percent }}-Chance einer COVID-Infektion pro Jahr ausgewählt ({{ budget_points }} microCOVIDs). Das entspricht einem wöchentlichen Budget von <strong>{{ budget_weekly }} microCOVIDs pro Woche</strong>.",
             "last_updated": "Das Modell wurde zuletzt am {{ date }} aktualisiert. <1>Siehe alle Änderungen...</1>",
             "activity_risk_capped_note": "(Hinweis: Wir haben diese Zahl <2> auf das maximale Aktivitätsrisiko begrenzt</2>.)"

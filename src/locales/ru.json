@@ -58,8 +58,8 @@
             "details_person_risk_explanation": "В начале мы считаем, что каждый человек на этой территории с вероятностью <strong>{{ person_risk }} на миллион </strong> заражён COVID.",
             "details_activity_risk": "Риск Активности",
             "details_person_risk": "Персональный Риск",
-            "percentage_suffix": "% вашего недельного бюджета риска",
-            "multiple_suffix": "умножить на ваш недельный бюджет риска"
+            "percentage_suffix": "{{ percentage }} вашего недельного бюджета риска",
+            "multiple_suffix": "{{ multiple }} умножить на ваш недельный бюджет риска"
         },
         "precautions": {
             "volume_header": "Объём",
