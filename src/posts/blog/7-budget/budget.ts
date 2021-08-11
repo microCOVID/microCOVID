@@ -36,7 +36,7 @@ We encountered questions like:
 * “What’s riskier: a 3-hour unmasked. outdoor hang? Or a 30-minute indoor, masked hang? 🤷‍♂️”
 * “Sam really wants to see their bodyworker. I really wanted to see my partner. But was I ok being in indirect contact with that bodyworker for Sam's sake? Did Sam think my happiness from seeing my partner was worth the risk they'd experience?”
 
-Then we disocvered the microCOVID spreadsheet. I realized it had the potential to completely change how we had these discussions. If we could quantify and track how much risk each of us were taking, we could allocate everyone a small but even share of risk that they could use to make their own decisions, without consulting the house every time.
+Then we discovered the microCOVID spreadsheet. I realized it had the potential to completely change how we had these discussions. If we could quantify and track how much risk each of us were taking, we could allocate everyone a small but even share of risk that they could use to make their own decisions, without consulting the house every time.
 
 We agreed that each of us was willing to take on a 1% chance of getting COVID over the next year.[^budget] Dividing risk evenly among each of of our 7 housemates meant we could each bring 68 microCOVIDs each week; this became our risk "budget" that we could plan against.
 
