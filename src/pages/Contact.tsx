@@ -28,7 +28,7 @@ export const Contact = (): React.ReactElement => {
         >
           issue
         </a>{' '}
-        on github, tweet at{' '}
+        on GitHub, tweet at{' '}
         <a
           href="https://twitter.com/microcovid"
           target="_blank"
@@ -53,7 +53,7 @@ export const Contact = (): React.ReactElement => {
               target="_blank"
               rel="noreferrer"
             >
-              github
+              GitHub
             </a>
           </li>
           <li>
@@ -64,7 +64,7 @@ export const Contact = (): React.ReactElement => {
               target="_blank"
               rel="noreferrer"
             >
-              directly on github
+              directly on GitHub
             </a>{' '}
             in your browser; this will propose a change which we will review
             before it becomes final.
