@@ -85,6 +85,11 @@ export const Contact = (): React.ReactElement => {
         to suggest improvements or to translate the site to more languages,
         making it accessible to more people around the world.
       </p>
+      <h3>Press Inquiries</h3>
+      <p>
+        If you'd like to interview someone on the team for a press story, please
+        email <a href="mailto:press@microcovid.org">press@microcovid.org</a>.
+      </p>
       <h3>Questions</h3>
       <p>
         If you have a question or something is confusing, and it's not in the
