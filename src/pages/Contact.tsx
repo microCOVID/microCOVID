@@ -28,7 +28,7 @@ export const Contact = (): React.ReactElement => {
         >
           issue
         </a>{' '}
-        on github, tweet at{' '}
+        on GitHub, tweet at{' '}
         <a
           href="https://twitter.com/microcovid"
           target="_blank"
@@ -53,7 +53,7 @@ export const Contact = (): React.ReactElement => {
               target="_blank"
               rel="noreferrer"
             >
-              github
+              GitHub
             </a>
           </li>
           <li>
@@ -64,7 +64,7 @@ export const Contact = (): React.ReactElement => {
               target="_blank"
               rel="noreferrer"
             >
-              directly on github
+              directly on GitHub
             </a>{' '}
             in your browser; this will propose a change which we will review
             before it becomes final.
@@ -84,6 +84,11 @@ export const Contact = (): React.ReactElement => {
         <a href="https://hosted.weblate.org/engage/microcovid/">Sign up here</a>{' '}
         to suggest improvements or to translate the site to more languages,
         making it accessible to more people around the world.
+      </p>
+      <h3>Press Inquiries</h3>
+      <p>
+        If you'd like to interview someone on the team for a press story, please
+        email <a href="mailto:press@microcovid.org">press@microcovid.org</a>.
       </p>
       <h3>Questions</h3>
       <p>
