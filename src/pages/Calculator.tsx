@@ -182,6 +182,8 @@ export const Calculator = (): React.ReactElement => {
               <Trans i18nKey="calculator.intro.delta_warning">
                 Risks have increased substantially, including for vaccinated
                 people.
+                <Link to="/blog/delta">See blog post</Link>
+                for more details.
               </Trans>
             </Alert>
           )}
@@ -207,6 +209,12 @@ export const Calculator = (): React.ReactElement => {
           </p>
         </Col>
         <Col lg="4" md="12">
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.delta_blog">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
           <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.delta_numbers">
               <strong>DATE_PLACEHOLDER</strong>{' '}
