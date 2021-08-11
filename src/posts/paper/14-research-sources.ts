@@ -16,17 +16,33 @@ Read this section if you are interested in the epistemic nitty-gritty behind our
 
 #### One-time contact
 
-This is the chance that you would get COVID from spending more than 10 minutes indoors or in close proximity to someone who is COVID-positive. We estimate this as “about 6% per hour” from combining multiple sources:
+This is the chance that you would get COVID from spending more than 10 minutes indoors or in close proximity to someone who is COVID-positive. We estimate this as "about 14% per hour."
 
+For the original virus, we estimated “about 6% per hour” from combining multiple sources:
 1. In a study of train passengers that analyzed 2,334 index patients with COVID, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) found that passengers on seats within the same row as the index patient had an average attack rate of 1.5%; for passengers in adjacent seats, the attack rate increased 1.3% per hour. Assuming train passengers are mostly silent, combining this with the respiration rates from the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277) would imply that a conversational hangout in the adjacent seat of a train would be a risk of **roughly 6% per hour**. The distance between adjacent seats on this train was half a meter, and we think typical socialization is moderately further away than this, which gives some extra breathing room on the estimate.
 2. Using the [Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), we modify the “Class” scenario (1 infected instructor speaking loudly) to propose a normal conversational volume, smaller room (10ft wide x 14ft long x 10ft high), and no masks, leaving other parameters unchanged. This outputs 2.8% per hour; however, this model notes it assumes uniform mixing of air and ignores near-field effects, so is not a good estimate for interactions that aren’t 6+ feet. If we take this as our 6+ feet estimate, and double it as per the “Distance” modifiers described later, this also **suggests 6% per hour**. (Note that this is rather dependent on room size: increasing the 10ft width to 15ft decreases the estimate by a third.)
 3. [Bi et al](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930287-5) analyzed Shenzhen contact tracing data from Jan 14–Feb 12 (1281 contacts of 291 cases). Their Table 3 provides data about how often close contacts of COVID-positive people got infected based on different types of contact. The average estimates for each group tend to fall **roughly between 6-9%** (total, not per hour); we note that the vast majority of the infections in this dataset come from the “Contact frequency: Often” category, so we expect this to be an overestimate for the “Moderate” and “Rare” frequency. This data was collected in a setting where 17% of cases were isolated _before_ symptom onset, and we would expect a larger fraction isolated after symptom onset, so the numbers would be higher in a setting where people are not being notified when their contacts get sick.
 4. Next is [Chu et al](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) who did a meta-analysis of 172 studies covering 26,000 individuals, to determine the impact of various interventions (masks, distance, and eye protection) on transmissibility. Importantly to note, they included analyses of SARS and MERS, not just COVID-19. As shown in their Table 2, they found baseline transmissibility values (without masks/distance/etc) of 12.8%, 17.4%, and 16% in different groups. These data mostly come from healthcare settings, and the baseline assumption is direct physical contact, rather than an ordinary socializing distance. We don’t know how many hours were generally spent with patients. We assume these are infected patients who have sought treatment, so definitionally there is no additional distance from anyone symptomatic, so we might expect casual social contact outside a healthcare setting to carry a lower infection probability. However, COVID-19 may be [more infectious/contagious](https://www.medicalnewstoday.com/articles/how-do-sars-and-mers-compare-with-covid-19#Coronaviruses-past-and-present) than SARS and MERS. Overall, this is consistent with “6% per hour” for normal socializing if the average duration in this dataset is on the order of 2 hours; if the baseline “no distance” is closer together than typical socializing; or some combination.
 5. In a prospective study in Taiwan, [Cheng et al](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2765641) found a secondary attack rate of 1.0% among contacts of longer than 15 minutes who were exposed within the first 5 days of symptom onset. This **implies a rate of 4% per hour** if all the contacts were only 15 minutes (and even lower rates if the contacts were for longer).
 
+When B.1.1.7. became the dominant variant, we increased this number by 1.5x based on [Davies et al](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf)
+which found that a 56% faster growth rate best explained the rapid expansion of the B.1.1.7. variant vs other variants.
+
+When Delta became the dominant variant, we increased this number by 1.5x again based on [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa)
+finding 1.6x the number of secondary transmission clusters in households which had an index patient infected with the delta variant
+vs households where the index patient had been infected with B.1.1.7.
+
 #### Household member
 
-This is the chance of getting infected from a household member who has COVID. We use the estimate of 30% from the meta-analysis of [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) (specifically their updated June 27 version). We explain a bit here about where their estimate comes from.
+This is the chance of getting infected from a household member who has COVID. We use the estimate of 40%, which we get via
+a naive analysis of the data in [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa),
+which is, to our knowledge, the only study of household tranmission with the Delta variant.
+
+We note that this is only 1.3x the original transmission risk for households members. This could indicate that the original number was too high,
+or it could indicate that households are becoming better at isolating infected individuals, driving down the overall chance of household
+transmission.
+
+Previously we used 30% from the meta-analysis of [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) (specifically their updated June 27 version). We explain a bit here about where their estimate comes from.
 
 [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) used three different methods to synthesize existing literature. The first method is a re-analysis of nine recent studies, which gives them the central estimate of 30% for the “secondary attack rate” (which is the parameter we care about: the chance of getting infected from a housemate who has COVID). They point out that the estimates vary substantially from source to source, which they conjecture is likely in part due to variations in isolation practices.
 
@@ -34,8 +50,15 @@ Their other two estimation methods use independent datasets. Although these two 
 
 #### Partner
 
-This is a highly speculative number. [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) found a 1.6x higher infection rate among spouses than among other adult household members. This is just one datapoint, but it’s the best we have right now. We use this to adjust the 30% figure from [Curmei et al.](https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2) up by 1.6x, to get 48% for spouses.
+This is something of a speculative number. We found two studies that compare household transmission among spouses vs non-spouses:
+* [Li et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7184465/) found a 1.6x higher transmission rate among spouses than among other adult household members.
+* [Lewis et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1166/5893024) found a 1.4x higher transmission rate.
 
+We use this to adjust the 40% figure from [Allen et al.](https://khub.net/documents/135939561/405676950/Increased+Household+Transmission+of+COVID-19+Cases+-+national+case+study.pdf/7f7764fb-ecb0-da31-77b3-b1a8ef7be9aa) up by 1.5x, to get ~60% for spouses.
+
+_This number was updated from 48%[^alphahousehold] to 60% as part of the Delta variant overhaul in July 2021._
+
+[^alphahousehold]: 48% came from taking the previous household transmission figure 30% and multiplying by 1.6x (we had not factored in the Lewis et al. paper at time of calculation).
 
 ### Modifiers to Activity Risk: Masked, Outdoors/Ventilation, Distanced
 
@@ -289,62 +312,64 @@ If each visit only requires 3 or 5 days of isolation instead of 10, Alice can pr
 ### Assumptions
 
 - We use [Byambasuren et al.](https://www.medrxiv.org/content/10.1101/2020.05.10.20097543v3.full.pdf) as our source for transmission from asymptomatic cases; they found that (in an unvaccinated population), 17% of cases never have symptoms and these individuals are 42% as likely to transmit COVID as individuals who eventually have symptoms.
+  - From this we calculate that for every infection, there are .83 symptomatic infections and .17 never-symptomatic infections.
+  - Or, for every symptomatic infection, there are .17 / .83 ≈ .2 asymptomatic infections (we use this extensively below) 
 - We assume that individuals who are tested once per week with a PCR test and never test positive are not infectious to others. This is not a perfect, as PCR tests have a non-trivial false negative rate, but we presume that the false negative rates in control and trial groups cancel out.
+
+### Delta Variant Revision Note
+We are in the process of updating the data / calculations below with data for vaccine performance against the Delta variant. We used the following
+sources: 
+* [Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) studied vaccine efficacy for Pfizer and and AstraZeneca's vaccine:
+> “after 1 dose of vaccine with B.1.617.2 cases 33.5% (95%CI: 20.6 to 44.3) compared to B.1.1.7 cases 51.1% (95%CI: 47.3 to 54.7) with similar results for both vaccines. With BNT162b2 2 dose effectiveness reduced from 93.4% (95%CI: 90.4 to 95.5) with B.1.1.7 to 87.9% (95%CI: 78.2 to 93.2) with B.1.617.2. With ChAdOx1 2 dose effectiveness reduced from 66.1% (95% CI: 54.0 to 75.0) with B.1.1.7 to 59.8% (95%CI: 28.9 to 77.3) with B.1.617.2."
+* [Edara et al.](https://www.nejm.org/doi/10.1056/NEJMc2107799) showed similar antibody neutralizing rates between Pfizer and Moderna's vaccines, leading us to (continue to) use the same numbers for Pfizer and Moderna.
+* We were unable to find data on vaccine effectiveness vs. never-symptomatic infection with the Delta variant. We used applied the same ratio of symptomatic to asymptomatic infections per vaccine as found previously (see below for sources for each vaccine).
+* We were unable to find data on Johnson&Johnson's vaccine vs the Delta variant. We combined the following:
+  * Johnson & Johnson's [phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2101544) included data for subtrials in South Africa in which 95% of cases were the Beta variant. They found that vaccine efficacy against moderate to severe-critical COVID-19 was 64% in this subtrial.
+  * [Tada et al.](https://www.biorxiv.org/content/10.1101/2021.07.02.450959v1.full.pdf) found that the Beta and Delta variants had similar levels of antibody neutralization, roughly suggesting that the two variants have similar propensity for immune escape.
+  * Thus, we used efficacy from the South African arm of Johnson & Johnson's vaccine trials as the efficacy of the vaccine vs. the Delta variant.
 
 ### AstraZeneca
 AstraZeneca’s [trial](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3777268) used at-home test kits to test for asymptomatic cases of COVID.
-They found that, 14 days after administration of the second dose, compared to the control group, 
-the people in the vaccinated group were both less likely to test positive for symptomatic COVID and less likely to test positive for asymptomatic COVID,
-indicating that the vaccine is doing better than simply preventing symptoms. The aggregate results were:
+Their study reported that, among fully vaccinated participants, there were 57 never-symptomatic cases and 84 
+symptomatic cases, or .68 never-symptomatic cases per symptomatic case.
+
+[Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) found a 59.8% (95%CI: 28.9 to 77.3)
+reduction in cases of symptomatic COVID among people fully vaccinated with AstraZeneca's vaccine.
+
+For each symptomatic case among unvaccinated people, this gives us:
 
 |                         | Control Group | Vaccinated Group |
 | ----------------------- | ------------- | ---------------- |
-| Participants            | 8600          | 8600             |
-| Severe Cases            | 10            | 0                |
-| Symptomatic Cases       | 248           | 84               |
-| Never symptomatic cases | 73            | 57               |
+| Symptomatic Cases       | 1             | .4               |
+| Never symptomatic cases | 0.2 (Byambasuren)          | .4*.68 = .27     |
 
-Treating never-symptomatic cases as .42 relative infectiousness, this gives: 
-control group adjusted infectiousness: \`(1 * 248 + 0.42 * 73) = 279%\` 
-vaccinated group adjusted infectiousness: \`(1 * 84 + 0.42 * 57) = 109\`
-The relative infectiousness of the vaccinated group is therefore \`109 / 279 = 0.39\`
-
-AstraZeneca's trial found 10 cases of severe COVID, all in the control group. We calculate a risk reduction of 90%, 95% CI of (22%, 100%)[^confidence-interval]
+Treating never-symptomatic cases as .4 relative infectiousness, this gives an infectiousness adjusted ratio of:
+\`(.4 + .4 * .27) / (1 + .4 * .2) = 0.47\`
 
 ### Moderna & Pfizer
-Phase III trials from Moderna and Pfizer (the most common vaccines in the United States) only tested for symptomatic COVID. Moderna’s and Pfizer’s vaccines are similar in both design and efficacy, so we consider them together.
+Phase III trials from [Moderna](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389) and [Pfizer](https://www.nejm.org/doi/full/10.1056/NEJMoa2034577) (the most common vaccines in the United States) both found 95% reductions in symptomatic COVID cases.
 
-Data from [Pfizer’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2034577):
+The CDC released a [study](https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e3.htm) showing 90% reduction in all cases (symptomatic + asymptomatic) 14+ days after participants received Moderna or Pfizer’s vaccine.
 
-|                   | Control Group | Vaccinated Group |
-| ----------------- | ------------- | ---------------- |
-| Participants      | 21,728        | 21,720           |
-| Symptomatic Cases | 162           | 8                |
+We then back-calculate the number of asymptomatic cases among vaccinated individuals:
 
-Data from [Moderna’s phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2035389):
+1. For every symptomatic case among unvaccinated people, there are .2 unsympomatic cases, or 1.2 total cases (Byambasuren)
+2. For every symptomatic case among unvaccinated people, there are .05 symptomatic cases among vaccinated (Phase III studies)
+3. For every total case among unvaccinated people, there are .1 total cases among vaccinated people (CDC)
+4. For every symptomatic case among unvaccinated people, there are 1.2 * .1 = .12 total cases. (1 & 3)
+5. For every symptomatic case among unvaccinated people, there are .12 - .05 = 0.07 asymptomatic cases among vaccinated people. (2 & 4)
+6. For every symptomatic case among vaccinated people, there are 0.07 / 0.05 = 1.4 symptomatic cases among vaccinated people (2 & 5)
 
-|                   | Control Group | Vaccinated Group |
-| ----------------- | ------------- | ---------------- |
-| Participants      | 15,210        | 15,210           |
-| Symptomatic Cases | 185           | 11               |
+We then combine this with [Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) which found Pfizer's vaccine to be
+87.9% (95%CI: 78.2 to 93.2) effective at reducing the chance of symptomatic infection by the Delta variant.
 
-First, we note that these two vaccines are very, very effective at preventing symptomatic COVID (95% for Pfizer and 94% for Moderna). Second, we note that the Phase III studies do not include data on cases without symptoms. 
+|                     | Control Group                            | Vaccinated Group                   |
+| ------------------- | ---------------------------------------- | ---------------------------------- |
+| Symptomatic cases   | 1                                        | .12 (Bernal)                       |
+| Never symptomatic   | .2 (Byambasuren)                         | .12 * 1.4 = .17                    |
 
-Since then, a [study](https://www.cdc.gov/mmwr/volumes/70/wr/mm7013e3.htm) done by the CDC found 90% reduction in all cases (symptomatic + asymptomatic) 14+ days after participants received Moderna or Pfizer’s vaccine.
-
-From this, we construct the following table for Moderna:
-
-|                                                                        | Control Group                            | Vaccinated Group                   |
-| ---------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| Participants                                                           | 15,210                                   | 15,210                             |
-| Symptomatic cases (From phase III Trial)                               | 185                                      | 11                                 |
-| Symptomatic + Never Symptomatic                                        | 222 (0.17 / (1-0.17) x symptomatic cases)| 22 (0.1 x control group, CDC data) |
-| Never Symptomatic cases (Symptomatic +Never Symptomatic - Symptomatic) | 37                                       | 11                                 |
-
-Now we can calculate the overall effect on contagiousness: 
-Control group adjusted contagiousness = \`185 * 1 + 37 * .42 = 200\` 
-Vaccinated group adjusted contagiousness = \`11 * 1 + 11 * .42 = 15.65\` 
-Relative contagiousness of vaccinated group = \`15.65 / 200 = 0.08\`. 
+Treating never-symptomatic cases as .4 relative infectiousness, this gives an infectiousness adjusted ratio of:
+\`(.12 + .4 * .17) / (1 + .4 * .2) = 0.17\`
 
 We assume that Pfizer’s vaccine has similar performance as Moderna’s on the basis that they have similar designs and reported metrics.
 
@@ -353,9 +378,7 @@ Additionally, a [study of the Pfizer vaccine in the UK](https://papers.ssrn.com/
 Israel’s study provides much more complete data on the risk reduction for severe COVID (the Phase III studies for both Moderna and Pfizer were underpowered to determine this). They found a 92% risk reduction for severe COVID among participants who had received both doses of the Pfizer vaccine. Note that “severe illness” is [defined by NIH](https://www.covid19treatmentguidelines.nih.gov/overview/clinical-spectrum/) as requiring supplemental oxygen (i.e. hospitalization).
 
 ### Johnson & Johnson
-
 For Johnson & Johnson’s vaccine, we used data from a [brief](https://www.fda.gov/media/146217/download) filed with the FDA based on their Phase III study. The J&J trial tracked both symptomatic and never-symptomatic infections. Johnson and Johnson performed serology assays for non-spike-protein antibodies on days 1, 29 and 71 to track never-symptomatic infections. They also counted an never-symptomatic infection if a participant presented with a positive PCR test but no symptoms. Symptomatic cases were counted if a patient presented with symptoms and tested positive via PCR at least 14 days after administration of the vaccine.
-
 
 |                                      | Control Group | Vaccinated Group |
 | ------------------------------------ | ------------- | ---------------- |
@@ -363,23 +386,31 @@ For Johnson & Johnson’s vaccine, we used data from a [brief](https://www.fda.g
 | Never-symptomatic Cases (0-29 days)  | 182 / 19809   | 159 / 19739      |
 | Never-symptomatic Cases (29-71 days) | 54 / 19162    | 22 / 19301       |
 
-From this data we see that J&J’s vaccine reduces both symptomatic and never-symptomatic cases. The never-symptomatic efficacy is improve after 29 days compared to days 14-29. 
+From this data we get a ratio of rougly .18 asymptomatic cases per symptomatic case.
 
-We calculate overall effect on contagiousness:
+We are currently unable to find research of Johnson & Johnson's vaccine's effectiveness vs the Delta variant. In lieu of 
+data for Delta variant:
 
-Days 14-29:
-Control Group:  \`351 / 19544 * 1 + 182 / 19809 * 0.42 = 0.02\`  
-Vaccinated Group: \`117 / 19514 * 1 + 159 / 19739 * 0.42 = 0.0094\`
-Contagiousness ratio: \`0.0076 / 0.020 = 0.43\`
+* [Tada et al.](https://www.biorxiv.org/content/10.1101/2021.07.02.450959v1.full.pdf) found that the Beta and Delta variants had similar levels of antibody neutralization, roughly suggesting that the two variants have similar propensity for immune escape.
+* Johnson & Johnson's [phase 3 study](https://www.nejm.org/doi/full/10.1056/NEJMoa2101544) included data for subtrials in South Africa in which 95% of cases were the Beta variant. They found that vaccine efficacy against moderate to severe-critical COVID-19 was 64% in this subtrial.
 
-Days 29-71:
-Control Group: \`351 / 19544 * 1 + 54 / 19162 * 0.42 = 0.019\`
-Vaccinated Group: \`117 / 19514 * 1 + 22 / 19301 * 0.42 = 0.0065\`
-Contagiousness ratio: \`0.0062 / 0.019 = 0.34\`
+Therefore we provide the efficacy of the vaccine against the Beta variant, with the expectation that this is similar to the
+efficacy against the Delta variant.
 
-From this we estimate that the microCOVID multiplier for the Johnson and Johnson vaccine is 0.38 14 days after injection, dropping down to 0.33 29 days post infection. Because these two multipliers are close together and the higher multiplier only covers weeks 2-4, for simplicity’s sake we recommend using a multiplier of 1/3x for 14 days post-vaccination and onwards.
+|                     | Control Group                            | Vaccinated Group                    |
+| ------------------- | ---------------------------------------- | ----------------------------------- |
+| Symptomatic cases   | 1                                        | .36 (J&J Phase 3, South Africa arm) |
+| Never symptomatic   | .2 (Byambasuren)                         | .36 * .18 = .065                    |
+
+Treating never-symptomatic cases as .4 relative infectiousness, this gives an infectiousness adjusted ratio of:
+\`(.36 + .4 * .065) / (1 + .4 * .2) = 0.36\`
+
+We note that Johnson & Johnson reported significantly more never-symptomatic cases in days 0-29 of the trial compared to 29-71.
+Rather than complicate the calculator by adding a slightly higher second number for the first 29 days, we suggest simply
+noting this and being more cautious during days 14-29 while your immunity is still increasing.
 
 ### Sputnik V (Gamelaya Research)
+_Not yet updated for the Delta variant_
 
 The efficacy of the Sputnik V vaccine produced by the Gamelaya Research Institute is based on their phase 3 trial information [published in Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00234-8/fulltext). Our calculation is similar to the one used for Moderna & Pfizer. Non-symptomatic cases were not measured in this study, so based on Byambasuren et al. and the CDC study about Moderna/Pfizer, we estimate non-symptomatic cases to be 17% of all cases in the control group and 50% in the vaccinated one. As the control and the vaccinated group had a different size, we also have to normalize the adjusted infectiousness figures.
 
@@ -412,16 +443,18 @@ Now we can calculate the overall effect on contagiousness:
 The trial also measured efficacy 21 days after dose 1, on the day of dose 2, with practically equivalent numbers to what they saw 7 days after. This suggests that the Sputnik V vaccine offers a strong protection 2-3 weeks after the first dose, and the second dose is only required for long-term protection.
 
 ### Single Shot Efficacy
-For vaccines require 2 doses, we see reductions in symptomatic COVID after a single shot of about 50% across Moderna, Pfizer, and AstraZeneca. Moderna further provided data suggesting a 63% reduction in total cases (symptomatic and otherwise). This gives us the following estimated case distribution:
+For a single dose of vaccines require 2 doses, we used [Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1) 
+which reported 33.5% efficacy vs symptomatic COVID for a single dose of either Pfizer and AstraZeneca's vaccines.
+
+Moderna provided a [supplement](https://www.fda.gov/media/144453/download) from their Phase III trial that suggested .6
+asymptomatic infections per symptom infection 3 weeks after the first dose. 
 
 |                            | Control Group                         | Single Dose Vaccinated            |
 | -------------------------- | ------------------------------------- | --------------------------------- |
-| Symptomatic + Asymptomatic | 1                                     | <0.63 (from Moderna’s supplement) |
-| Symptomatic                | 0.8 (ratio from Byambasuren, Moderna) | 0.4 (~50% reported reduction)     |
-| Asymptomatic (subtract)    | .2                                    | <.23                              |
+| Symptomatic                | 1                                     | 0.665 (Bernal et al.)             |
+| Asymptomatic (subtract)    | .2 (ratio from Byambasuren)           | 0.4 (0.6 x symptomatic)           |
 
-This gives an overall multiplier of \`(0.4 + .42 * .23) / (0.8 + .42 * .2) = 0.56\`
-HOWEVER, data that immunity is much shorter-lived in individuals with one dose of a 2 dose vaccine. We recommend getting the second dose as soon as it is available.
+This gives an overall multiplier of \`(0.665 + .4 * .4) / (1 + .4 * .2) = 0.76\` for Moderna, Pfizer, and AstraZeneca.
 
 ### Others' Vaccines
 For the purposes of providing an estimate of the riskiness of an "average vaccinated person",

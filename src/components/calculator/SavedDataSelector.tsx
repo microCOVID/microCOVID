@@ -20,6 +20,7 @@ import { prepopulated } from 'data/prepopulated'
 
 interface PresetScenario {
   scenarioName: string
+  displayName: string
 }
 
 // Link that activates a preset.
@@ -182,7 +183,7 @@ export const SavedDataSelector: React.FunctionComponent<{
   const { t } = useTranslation()
   const prepopulatedOptions = Object.keys(prepopulated).map(
     (preset): PresetScenario => {
-      return { scenarioName: preset }
+      return { scenarioName: preset, displayName: t('scenario.' + preset) }
     },
   )
   const [inputText, setInputText] = useState('')
@@ -211,7 +212,7 @@ export const SavedDataSelector: React.FunctionComponent<{
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
     return (
-      normalizeString(option.scenarioName).indexOf(
+      normalizeString(option.displayName).indexOf(
         normalizeString(propsText),
       ) !== -1
     )

@@ -123,7 +123,8 @@
             "cases_stable_or_decreasing": "Az esetek száma állandó vagy csökken.",
             "percent_increase_in_cases": "Növekedés a múlt hétről a mostanira",
             "positive_case_percentage": "Pozitív tesztek aránya",
-            "data_last_updated": "Utolsó frissítés"
+            "data_last_updated": "Utolsó frissítés",
+            "completed_vaccinations": "Teljesen beoltottak aránya"
         },
         "location_subprompt_country_or_regions": "Az egész terület (vagy válassz régiót)",
         "location_subprompt_US-LA": "Az egész terület (vagy válassz megyét)",
@@ -133,7 +134,7 @@
         "select_location_placeholder": "Válassz országot vagy államot...",
         "select_location_enter_manually": "Add meg kézzel...",
         "prevalence_info_source_information": "A jelentett esetek számát a <1>Johns Hopkins CSSE adatbázisból</1>, a pozitív tesztek arányát a USA-ban a <4>Covid Act Now-ról</4>, a világ többi részén pedig az <7>Our World in Data-ról</7> gyűjtjük le. A román regionális adatok forrása a <10>Coronavirus COVID-19 România</10>.",
-        "select_scenario": "Válassz a kész példák közül vagy <2>add meg a részleteket lentebb.</2>",
+        "select_scenario": "Válassz a kész példák közül vagy <2>add meg a részleteket lentebb.</2>:",
         "baseline_risk": "alapkockázat",
         "risk_modifier_frac_2nd": "{{frac}} kockázat",
         "risk_modifier_frac_3rd": "{{frac}} kockázat",
@@ -151,9 +152,11 @@
         "risk_tolerance_point1_percent_explanation": "Évi 0.1% esély a fertőzésre (20 microCOVID hetente). Válaszd ezt, ha veszélyeztetett vagy, vagy gyakran találkozol veszélyeztetettel.",
         "intro": {
             "whats_this": "Ennek az oldalnak a segítségével meg tudod becsülni, hogy milyen eséllyel fertőződsz meg a koronavírussal különböző tevékenységek során. A <1>legjobb kutatási eredményeket</1> felhasználva hoztuk létre azzal a céllal, hogy segítsen használható intuíciót és megfelelő ártalomcsökkentési stratégiákat kialakítani, és csökkenteni a vírussal kapcsolatos stresszt.</p><p>A legfontosabb lépés a családod és a környezeted megóvására, ha te magad nem kapod el a koronavírust.",
-            "call_to_action": "Számold ki egy tevékenység vagy kapcsolat COVID-kockázatát!",
+            "call_to_action": "Számold ki, hogy mekkora eséllyel kapod el a koronavírust!",
             "see_video": "A kalkulátor használatát részletesen bemutatja egy <1>angol nyelvű videó itt</1>.",
-            "whats_this2": "Ennek a kalkulátornak a segítségével meg tudod becsülni különböző tevékenységek fertőzési kockázatát és megnézheted, hogy mi lehet egy hatékony védekezés ezekben a helyzetekben. Például megnézheted, hogy milyen kockázattal jár <1>elmenni a boltba</1>, <3>meglátogatni egy barátot/3>, vagy hogy mennyit érne <5>jobb maszkot hordani a munkahelyen</5>."
+            "whats_this2": "Ennek a kalkulátornak a segítségével meg tudod becsülni különböző tevékenységek fertőzési kockázatát és megnézheted, hogy mi lehet egy hatékony védekezés ezekben a helyzetekben. Például megnézheted, hogy milyen kockázattal jár <1>elmenni a boltba</1>, <3>meglátogatni egy barátot</3>, vagy hogy mennyit érne <5>jobb maszkot hordani a munkahelyen</5>.",
+            "delta_warning": "A kockázati szintek erősen megnőttek, még a beoltottak számára is.",
+            "delta_warning_heading": "A delta variáns terjedési adataival frissítve"
         },
         "risk_step_label": "2. lépés: Mit csinálsz, kivel találkozol?",
         "type_of_interaction": "Mit szeretnél tudni?",
@@ -163,7 +166,7 @@
             "body": "Ebben az eszközben megpróbáltuk a legjobb tudományos eredményeket felhasználni, még azokat is, amik egyelőre nem teljesen konkluzívak. Sok kutatási eredményt végigolvastunk hozzá, de mi magunk nem vagyunk a terület szakemberei, és ezt az eszköz nem is ment át tudományos szintű felülvizsgálaton. Még mindig elég sok mindent nem tudunk a COVID-ról biztosan. Az orvosodra hallgass, ne ránk. Kövesd a helyi előírásokat."
         },
         "frontline_worker_acknowledgement": "Tudjuk, hogy mekkora kockázatot és áldozatot vállalnak az egészségügyi és szociális ágazatok dolgozói. Hálásak vagyunk a munkájukért, és arra kérünk mindenkit, hogy találjuk meg a módját, hogy segítsük őket, és ne vágjuk el őket a társas kapcsolatainkból, még ha valamivel magasabb kockázatot is jelent velük találkozni. Egy jelentős részük az elkövetkező hónapokban várhatóan megkapja a védőoltást, és így jelentősen lecsökken ez a kockázat.",
-        "saved_scenario_loaded_message": "Ha gondolod, nyugodtan állíts az alábbi paraméterekent, hogy azok jobban megfeleljenek a te saját <strong>{{ scenarioName }}</strong> tevékenységednek.",
+        "saved_scenario_loaded_message": "Állíts az alábbi paramétereken, hogy azok jobban megfeleljenek a tevékenységednek vagy hogy megnézd, hogy mit mondanak a <4>kutatási eredmények</4> arról, hogy hogyan csökkentheted a kockázatod.",
         "alerts": {
             "survey_request": "<0>Kíváncsiak vagyunk a véleményedre!</0> <2>Ezen a linken</2> ki tudsz tölteni egy angol nyelvű kérdőívet. A válaszaid segítenek eldönteni, hogy mire fordítsuk az energiáinkat.",
             "b117": "<0>Frissítés:</0> Mostantól figyelembe vesszük az egyre elterjedtebb új COVID-19 variánst, a B117-et. <3>Itt olvashatsz</3> erről többet angolul.",
@@ -171,7 +174,11 @@
             "full_changelog": "régebbi változtatások...",
             "vaccines_update": "<0>2020. február 23. :</0> A kalkulátorban megadhatod a védőoltásod. A részletekről többet olvashatsz angolul a tanulmány <2>gyakori kérdések</2>-részében.",
             "vaccines_update_2": "<0>2021. március 16:</0> A Kockázatkövetőben meg tudod adni, ha valakit már beoltottak. <2>Itt találsz</2> erről több információt.",
-            "vaccines_update_3": "<0>2021. március 30.</0> A kalkulátor és a kockázatkövetőben most már a Johnson & Johnson-vakcinát is meg lehet adni. Pontosítottuk a Pfizer- és Moderna-oltások hatásosságát. Megnöveltük az oltások hatására való kivárási időt 14 napra. <2>Itt olvashatsz többet erről</2>."
+            "vaccines_update_3": "<0>2021. március 30.</0> A kalkulátor és a kockázatkövetőben most már a Johnson & Johnson-vakcinát is meg lehet adni. Pontosítottuk a Pfizer- és Moderna-oltások hatásosságát. Megnöveltük az oltások hatására való kivárási időt 14 napra. <2>Itt olvashatsz többet erről</2>.",
+            "delta_numbers": "<0>2021 július 26.:</0> Frissítettük a számításokat a delta variáns terjedési számaival. Jelentősen megnőttek a kockázatok, beoltottak számára is. <2>Itt olvashatsz többet</2> a részletekről.",
+            "average_vaccine": "<0>2021 június 22.:</0> Hozzáadtuk a lehetőségét annak, hogy az átlagemberek oltottsági státuszát meg lehessen adni. <2>Itt olvashatsz részletesebben</2> arról (angolul), hogy milyen számításokat végeztünk ehhez.",
+            "sputnik_added": "<0>2021 április 10.:</0>Hozzáadtuk a Sputnik V oltást is a listához. <2>Itt olvashatsz</2> többet arról, hogy milyen adatok alapján becsültük meg a hatásosságát.",
+            "december_covid19projections": "<0>2021 május 27.:</0> Frissítettük a modellünket a <2>COVID19 Projections</2> frissített adatai alapján. Ez enyhén csökkentette a kockázati becsléseket."
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -190,18 +197,28 @@
             "US-LA": "Az egész terület (vagy válassz megyét)",
             "country_or_regions": "Az egész terület (vagy válassz régiót)"
         },
-        "no_prebuilt_scenario_found": "Még nincs ilyen kész példánk, de kézzel összeállíthatod lentebb.",
+        "no_prebuilt_scenario_found": "Még nincs ilyen kész példánk.",
         "whats_next_interaction_risk_message": "Mekkora eséllyel fertőzött valaki, akivel találkozol? Ez attól függ, hogy épp hol vagy és hogy ők milyen kockázatnak teszik ki maguk. Ez a kalkulátor végigvezet azon, hogy (megbízható <4>tudományos források szerint</4>) <1>te milyen döntéseket tudsz hozni</1>, hogy csökkentsd a saját kockázatod.",
         "partner_interaction_risk_message": "Ha az illető fertőzött, a továbbfertőzési esély alapértéke <1>hetente {{ percentage }}</1>.",
-        "repeated_interaction_risk_message": "Ha egyvalaki fertőzött, a továbbfertőzési esély alapértéke <1>hetente {{ percentage }}</1>.",
-        "one_time_interaction_risk_message": "Ha egyvalaki fertőzött, a továbbfertőzési esély alapértéke <1>óránként {{ percentage }}</1>.",
+        "repeated_interaction_risk_message": "<1>hetente {{ percentage }}</1> a továbbfertőzés esélyének alapértéke közelben lévő fertőzött emberenként.",
+        "one_time_interaction_risk_message": "<1>óránként {{ percentage }}</1> a továbbfertőzés esélyének alapértéke közelben lévő fertőzött emberenként.",
         "risk_modifier_multiple_short": "{{multiplier}}x",
         "baseline_risk_short": "alapérték",
         "post_results_survey": "Lenne időd <1>pár angol kérdést megválaszolni</1>, segítve ezzel az oldal fejlesztését?",
         "risk_tolerance_3_percent_explanation": "Évi 3% esély a fertőzésre (600 microCOVID hetente). Válaszd ezt, ha egészséges vagy és több kockázatot szeretnél vállalni (vagy kell vállalnod), és MINDENKI, akivel együtt élsz vagy egy légtérben tartózkodsz ugyanígy tesz.",
         "risk_tolerance_3_percent_label": "Kockázattűrő keret",
         "risk_tolerance_10_percent_explanation": "Évi 10% esély a fertőzésre (2000 microCOVID hetente). Válaszd ezt, ha nem tudod elkerülni a fertőzés kockázatát, de azért jó döntéseket akarsz hozni. Ne feledd: ha megfertőződsz, azt könnyen átadhatod bárkinek, akivel kapcsolatba kerülsz. Próbáld a lehető legkisebb kockázatot vállalni az ő érdekükben is.",
-        "risk_tolerance_10_percent_label": "Ártalomcsökkentő keret"
+        "risk_tolerance_10_percent_label": "Ártalomcsökkentő keret",
+        "location_risk_message": "<1>~{{ prevalence }} -a az embereknek fertőző jelenleg ezen a helyen.</1> Ebből az értékből indulunk ki, hogy kiszámoljuk az emberenkénti fertőzési esélyt, ha ennél többet nem tudunk a viselkedésükről.",
+        "saved_scenario_continue_custom": "Állítsd össze a saját példád!",
+        "no_vaccine_prevalence": "Egyelőre nincs információnk az oltásokról a kiválasztott helyszínen, emiatt nem tudod átállítani a többiek oltására vonatkozó beállítást.",
+        "set_interaction_type_to_continue": "Először válassz egy találkozásformát!",
+        "hide_math": "Rejtsd el a számításokat",
+        "show_math": "Mutasd a számításokat",
+        "change_interaction_type": "Törlés",
+        "select_scenario_start_over": "Újrakezdés",
+        "their_vaccine_question": "Megkapták az összes oltást?",
+        "their_vaccine_header": "A többiek oltása"
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
@@ -210,9 +227,9 @@
         "select_default_action": "Válassz egyet..."
     },
     "data": {
-        "oneTime": "Milyen kockázattal jár ez a tevékenység/összejövetel?",
-        "repeated": "Mekkora kockázattal jár együtt lakni valakivel (család, lakótársak)?",
-        "partner": "Milyen kockázattal jár a partnereddel élni?",
+        "oneTime": "Találkozó vagy tevékenység",
+        "repeated": "Családdal, lakótársakkal együttélni",
+        "partner": "Partnerrel együttélni",
         "indoor": "Beltér",
         "outdoor": "Kültér",
         "intimate_distance": "Csókolózás",
@@ -260,7 +277,8 @@
             "astra_zeneca": "AstraZeneca",
             "moderna": "Moderna",
             "pfizer": "Pfizer BioNTech",
-            "johnson_johnson": "Johnson & Johnson"
+            "johnson_johnson": "Johnson & Johnson",
+            "sputnik": "Sputnik V"
         },
         "p100_mask_short": "P100",
         "n95_sealed_mask_short": "N95 (légmentesen zárt)",
@@ -272,7 +290,15 @@
         "no_mask_short": "Maszk nélkül",
         "p100_mask_theirs": "P100 maszk, nem letakart kifújószeleppel",
         "p100_mask_yours": "P100 maszk, letakart kifújószeleppel",
-        "workplace": "Milyen kockázattal jár bemenni dolgozni?"
+        "workplace": "Munkába járni",
+        "their_vaccine": {
+            "yes_description": "Az utolsó oltását több, mint 2 hete megkapta",
+            "unknown": "Nem tudom",
+            "no": "Nem",
+            "yes": "Igen",
+            "unknown_description": "Nem ismert oltási státusz",
+            "no_description": "Nem vagy csak részlegesen oltották be"
+        }
     },
     "scenario": {
         "outdoorMasked2": "Találkozás két másik emberrel szabadban, maszkban",
@@ -292,7 +318,7 @@
         "indoorUnmaskedWithCovidPositive": "Találkozó beltéren, maszk nélkül egy koronavírusossal",
         "planeRideMiddleSeatEmpty": "Repülőút (üresen hagyott középső ülések)",
         "60minShoppingFew": "Egyórás bevásárlás (közel üres boltban)",
-        "custom": "Állítsd össze a saját szkenáriód",
+        "custom": "Saját szkenárió",
         "60minShoppingCrowded": "Egyórás bevásárlás (zsúfolt boltban)"
     },
     "about": {

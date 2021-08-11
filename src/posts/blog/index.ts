@@ -5,10 +5,12 @@ import negativetests from 'posts/blog/4-negative-tests/negativeTests'
 import b117 from 'posts/blog/5-b117/b117'
 import masks from 'posts/blog/6-masks/masks'
 import budget from 'posts/blog/7-budget/budget'
+import delta from 'posts/blog/8-delta/delta'
 import { BlogPostMap } from 'posts/post'
 
 // Note: the keys in this map are the public URL for the post. Changing them will break links.
 export const pages: BlogPostMap = {
+  delta,
   budget,
   masks,
   b117,

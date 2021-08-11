@@ -46,6 +46,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
+  const [showWarning, setShowWarning] = useState(true)
 
   // Mount / unmount
   useEffect(() => {
@@ -169,6 +170,23 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
+          {showWarning && (
+            <Alert
+              variant="primary"
+              onClose={() => setShowWarning(false)}
+              dismissible
+            >
+              <Alert.Heading>
+                {t('calculator.intro.delta_warning_heading')}
+              </Alert.Heading>
+              <Trans i18nKey="calculator.intro.delta_warning">
+                Risks have increased substantially, including for vaccinated
+                people.
+                <Link to="/blog/delta">See blog post</Link>
+                for more details.
+              </Trans>
+            </Alert>
+          )}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
@@ -192,29 +210,23 @@ export const Calculator = (): React.ReactElement => {
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.delta_blog">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.delta_numbers">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.average_vaccine">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/paper/14-research-sources#others-vaccines">
                 HERE_PLACEHOLDER
               </Link>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.december_covid19projections">
-              <strong>DATE PLACEHOLDER</strong>{' '}
-              <a href="https://covid19-projections.com/estimating-true-infections-revisited/">
-                COVID19-PROJECTIONS LINK PLACEHOLDER
-              </a>
-              .
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.sputnik_added">
-              <strong>DATE PLACEHOLDER:</strong>{' '}
-              <Link to="/paper/14-research-sources#sputnik-v-gamelaya-research">
-                {'DETAILS LINK PLACEHOLDER'}
-              </Link>
-              .
             </Trans>
           </Alert>
           <Link
@@ -321,28 +333,6 @@ export const Calculator = (): React.ReactElement => {
                         <Row>
                           <Col
                             xs="12"
-                            id="person-risk"
-                            className="calculator-params"
-                          >
-                            <PersonRiskControls
-                              data={calculatorData}
-                              setter={setCalculatorData}
-                              repeatedEvent={repeatedEvent}
-                            />
-                          </Col>
-                          <Col
-                            xs="12"
-                            id="modifiers"
-                            className="calculator-params"
-                          >
-                            <ActivityRiskControls
-                              data={calculatorData}
-                              setter={setCalculatorData}
-                              repeatedEvent={repeatedEvent}
-                            />
-                          </Col>
-                          <Col
-                            xs="12"
                             id="vaccines"
                             className="calculator-params"
                           >
@@ -369,6 +359,28 @@ export const Calculator = (): React.ReactElement => {
                                   yourVaccineType: newStatus.vaccineType,
                                 })
                               }}
+                            />
+                          </Col>
+                          <Col
+                            xs="12"
+                            id="person-risk"
+                            className="calculator-params"
+                          >
+                            <PersonRiskControls
+                              data={calculatorData}
+                              setter={setCalculatorData}
+                              repeatedEvent={repeatedEvent}
+                            />
+                          </Col>
+                          <Col
+                            xs="12"
+                            id="modifiers"
+                            className="calculator-params"
+                          >
+                            <ActivityRiskControls
+                              data={calculatorData}
+                              setter={setCalculatorData}
+                              repeatedEvent={repeatedEvent}
                             />
                           </Col>
                         </Row>
