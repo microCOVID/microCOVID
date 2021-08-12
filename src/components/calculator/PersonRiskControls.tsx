@@ -80,6 +80,11 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
 ): JSX.Element => {
   const [hours, setHours] = useState(Math.floor(props.value / 60))
   const [minutes, setMinutes] = useState(props.value % 60)
+  const calculateDuration = (hours: number, minutes: number) => {
+    const h = Number.isNaN(hours) ? 0 : hours
+    const m = Number.isNaN(minutes) ? 0 : minutes
+    return h * 60 + m
+  }
   return (
     <InputGroup className="mb-3">
       <input
@@ -91,7 +96,7 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
         onChange={(e) => {
           const newHours = Math.max(0, parseInt(e.target.value))
           setHours(newHours)
-          props.onChange(newHours * 60 + minutes)
+          props.onChange(calculateDuration(newHours, minutes))
         }}
       />
       <InputGroup.Text>Hours</InputGroup.Text>
@@ -104,7 +109,7 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
         onChange={(e) => {
           const newMinutes = Math.max(0, parseInt(e.target.value))
           setMinutes(newMinutes)
-          props.onChange(hours * 60 + newMinutes)
+          props.onChange(calculateDuration(hours, newMinutes))
         }}
       />
       <InputGroup.Text>Minutes</InputGroup.Text>
