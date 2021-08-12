@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, InputGroup, Popover } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsDash, BsPlus } from 'react-icons/bs'
@@ -69,6 +69,48 @@ const personRiskPopover = (
     </Popover.Content>
   </Popover>
 )
+
+interface DurationInputProps {
+  value: number
+  onChange: (duration: number) => void
+}
+
+const DurationInput: React.FunctionComponent<DurationInputProps> = (
+  props: DurationInputProps,
+): JSX.Element => {
+  const [hours, setHours] = useState(Math.floor(props.value / 60))
+  const [minutes, setMinutes] = useState(props.value % 60)
+  return (
+    <InputGroup className="mb-3">
+      <input
+        className="form-control form-control-lg col-md-3"
+        type="number"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        value={hours}
+        onChange={(e) => {
+          const newHours = Math.max(0, parseInt(e.target.value))
+          setHours(newHours)
+          props.onChange(newHours * 60 + minutes)
+        }}
+      />
+      <InputGroup.Text>Hours</InputGroup.Text>
+      <input
+        className="form-control form-control-lg col-md-3"
+        type="number"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        value={minutes}
+        onChange={(e) => {
+          const newMinutes = Math.max(0, parseInt(e.target.value))
+          setMinutes(newMinutes)
+          props.onChange(hours * 60 + newMinutes)
+        }}
+      />
+      <InputGroup.Text>Minutes</InputGroup.Text>
+    </InputGroup>
+  )
+}
 
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
@@ -175,16 +217,12 @@ export const PersonRiskControls: React.FunctionComponent<{
               </strong>{' '}
               <Trans>calculator.duration_question</Trans>
             </label>
-            <input
-              className="form-control form-control-lg col-md-3"
-              type="number"
-              inputMode="numeric"
-              pattern="[0-9]*"
+            <DurationInput
               value={data.duration}
-              onChange={(e) =>
+              onChange={(duration) =>
                 setter({
                   ...data,
-                  duration: Math.max(0, parseInt(e.target.value)),
+                  duration,
                 })
               }
             />
