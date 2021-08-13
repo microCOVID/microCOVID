@@ -323,8 +323,12 @@ export const calculatePersonRiskEach = (
           return unadjustedRisk * data.averageFullyVaccinatedMultiplier
         case 'unvaccinated':
           return unadjustedRisk
-        // falls through
         case 'undefined':
+          // data.unvaccinatedPrevalenceRatio is the average vaccine modifier
+          // applied across the entire population, including unvaccinated
+          // and partially vaccinated individuals.
+          // See the comment above unvaccinated_relative_prevalence() in
+          // update_prevalence.py for more details on how it is calculated.
           return unadjustedRisk / data.unvaccinatedPrevalenceRatio
         default:
           console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)

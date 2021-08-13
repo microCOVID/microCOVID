@@ -323,7 +323,8 @@ export const RiskProfile: { [key: string]: PersonRiskValue } = {
 }
 
 // This is an explicit list of risk profiles for which "their vaccine" modifiers
-// apply.
+// apply. It specifically does not include any of the special risk profiles in
+// RiskProfileEnum.
 export const VaccineModifiableRiskProfiles: (keyof typeof RiskProfile)[] = Object.keys(
   RiskProfile,
 )
