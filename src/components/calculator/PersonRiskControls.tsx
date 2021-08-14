@@ -11,8 +11,8 @@ import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
 import {
   Distance,
   RiskProfile,
+  RiskProfilesUnaffectedByVaccines,
   TheirVaccine,
-  VaccineModifiableRiskProfiles,
   intimateDurationFloor,
 } from 'data/data'
 
@@ -233,7 +233,10 @@ function TheirVaccineIfAvailable(
   setter: (newData: CalculatorData) => void,
 ) {
   const { t } = useTranslation()
-  if (VaccineModifiableRiskProfiles.includes(data.riskProfile)) {
+  if (
+    data.riskProfile !== '' &&
+    !Object.values(RiskProfilesUnaffectedByVaccines).includes(data.riskProfile)
+  ) {
     if (data.unvaccinatedPrevalenceRatio) {
       return (
         <SegmentedControl

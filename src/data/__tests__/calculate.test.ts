@@ -8,7 +8,7 @@ import {
 import {
   BUDGET_ONE_PERCENT,
   RiskProfile,
-  RiskProfileEnum,
+  RiskProfilesUnaffectedByVaccines,
   housemateMult,
   personRiskMultiplier,
 } from 'data/data'
@@ -216,12 +216,12 @@ describe('calculate', () => {
   })
 
   it.each`
-    profile                         | points
-    ${RiskProfileEnum.DECI_PERCENT} | ${1e6 / 1000 / 50}
-    ${RiskProfileEnum.ONE_PERCENT}  | ${1e6 / 100 / 50}
-    ${RiskProfileEnum.HAS_COVID}    | ${1e6}
+    profile                                          | points
+    ${RiskProfilesUnaffectedByVaccines.DECI_PERCENT} | ${1e6 / 1000 / 50}
+    ${RiskProfilesUnaffectedByVaccines.ONE_PERCENT}  | ${1e6 / 100 / 50}
+    ${RiskProfilesUnaffectedByVaccines.HAS_COVID}    | ${1e6}
   `(
-    'should treat $profile as independent of prevalance',
+    'should treat $profile as independent of prevalence',
     ({ profile, points }) => {
       const data = testData({
         ...baseTestData,

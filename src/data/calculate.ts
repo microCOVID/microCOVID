@@ -5,10 +5,9 @@ import {
   Interaction,
   PersonRiskValue,
   RiskProfile,
-  RiskProfileEnum,
+  RiskProfilesUnaffectedByVaccines,
   Setting,
   TheirMask,
-  VaccineModifiableRiskProfiles,
   VaccineValue,
   Vaccines,
   Voice,
@@ -271,11 +270,15 @@ export const calculatePersonRiskEach = (
       return null
     }
 
-    if (data.riskProfile === RiskProfileEnum.HAS_COVID) {
+    if (data.riskProfile === RiskProfilesUnaffectedByVaccines.HAS_COVID) {
       return ONE_MILLION
-    } else if (data.riskProfile === RiskProfileEnum.ONE_PERCENT) {
+    } else if (
+      data.riskProfile === RiskProfilesUnaffectedByVaccines.ONE_PERCENT
+    ) {
       return (ONE_MILLION * 0.01) / 50
-    } else if (data.riskProfile === RiskProfileEnum.DECI_PERCENT) {
+    } else if (
+      data.riskProfile === RiskProfilesUnaffectedByVaccines.DECI_PERCENT
+    ) {
       return (ONE_MILLION * 0.001) / 50
     } else if (data.riskProfile === '') {
       // If risk profile isn't selected, call it incomplete
@@ -293,7 +296,9 @@ export const calculatePersonRiskEach = (
       })
 
     if (
-      !VaccineModifiableRiskProfiles.includes(data.riskProfile) ||
+      Object.values(RiskProfilesUnaffectedByVaccines).includes(
+        data.riskProfile,
+      ) ||
       data.unvaccinatedPrevalenceRatio === null ||
       data.averageFullyVaccinatedMultiplier === null
     ) {
