@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, InputGroup, Popover } from 'react-bootstrap'
+import { Button, Col, Form, InputGroup, Popover, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsDash, BsPlus } from 'react-icons/bs'
 
@@ -78,6 +78,7 @@ interface DurationInputProps {
 const DurationInput: React.FunctionComponent<DurationInputProps> = (
   props: DurationInputProps,
 ): JSX.Element => {
+  const { t } = useTranslation()
   const [hours, setHours] = useState(Math.floor(props.value / 60))
   const [minutes, setMinutes] = useState(props.value % 60)
   const calculateDuration = (hours: number, minutes: number) => {
@@ -86,34 +87,46 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
     return h * 60 + m
   }
   return (
-    <InputGroup className="mb-3">
-      <input
-        className="form-control form-control-lg col-md-3"
-        type="number"
-        inputMode="numeric"
-        pattern="[0-9]*"
-        value={hours}
-        onChange={(e) => {
-          const newHours = Math.max(0, parseInt(e.target.value))
-          setHours(newHours)
-          props.onChange(calculateDuration(newHours, minutes))
-        }}
-      />
-      <InputGroup.Text>Hours</InputGroup.Text>
-      <input
-        className="form-control form-control-lg col-md-3"
-        type="number"
-        inputMode="numeric"
-        pattern="[0-9]*"
-        value={minutes}
-        onChange={(e) => {
-          const newMinutes = Math.max(0, parseInt(e.target.value))
-          setMinutes(newMinutes)
-          props.onChange(calculateDuration(hours, newMinutes))
-        }}
-      />
-      <InputGroup.Text>Minutes</InputGroup.Text>
-    </InputGroup>
+    <Row>
+      <Col md="4">
+        <InputGroup size="lg" className="mb-3">
+          <Form.Control
+            type="number"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            value={hours}
+            onChange={(e) => {
+              const newHours = Math.max(0, parseInt(e.target.value))
+              setHours(newHours)
+              props.onChange(calculateDuration(newHours, minutes))
+            }}
+          />
+          <InputGroup.Append>
+            <InputGroup.Text>{t('calculator.duration_hours')}</InputGroup.Text>
+          </InputGroup.Append>
+        </InputGroup>
+      </Col>
+      <Col md="4">
+        <InputGroup size="lg" className="mb-3">
+          <Form.Control
+            type="number"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            value={minutes}
+            onChange={(e) => {
+              const newMinutes = Math.max(0, parseInt(e.target.value))
+              setMinutes(newMinutes)
+              props.onChange(calculateDuration(hours, newMinutes))
+            }}
+          />
+          <InputGroup.Append>
+            <InputGroup.Text>
+              {t('calculator.duration_minutes')}
+            </InputGroup.Text>
+          </InputGroup.Append>
+        </InputGroup>
+      </Col>
+    </Row>
   )
 }
 
