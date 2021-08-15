@@ -8,7 +8,6 @@ import ControlLabel from '../controls/ControlLabel'
 
 import { PrevalenceResult } from './PrevalenceResult'
 import { CalculatorData } from 'data/calculate'
-import { doesLocationHaveVaccinationData } from 'data/locationHelpers'
 
 const PrevalenceField: React.FunctionComponent<{
   id: string
