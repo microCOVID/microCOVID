@@ -20,4 +20,8 @@
     border-radius: 12px;
     width: 20px;
   }
+
+  .field-label {
+    @include font-size($input-font-size-sm);
+  }
 }
