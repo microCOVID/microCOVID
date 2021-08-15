@@ -47,7 +47,3 @@ export function dataForLocation(location: string): PrevalanceData {
     averageFullyVaccinatedMultiplier: null,
   }
 }
-
-export function doesLocationHaveVaccinationData(location: string): boolean {
-  return dataForLocation(location).percentFullyVaccinated !== null
-}

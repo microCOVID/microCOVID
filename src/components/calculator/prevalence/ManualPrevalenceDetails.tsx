@@ -87,11 +87,6 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
-  const hasVaccinationDataFromLocation = doesLocationHaveVaccinationData(
-    props.data.subSubLocation ||
-      props.data.subLocation ||
-      props.data.topLocation,
-  );
   return (
     <div id={props.id}>
       <span className="details-header">
@@ -167,9 +162,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         max={100}
         min={0}
         className="hide-number-buttons"
-        readOnly={hasVaccinationDataFromLocation}
+        readOnly={props.data.unvaccinatedPrevalenceRatio !== null}
         helpText={
-          hasVaccinationDataFromLocation
+          props.data.unvaccinatedPrevalenceRatio !== null
             ? undefined
             : t('calculator.prevalence.completed_vaccinations_tooltip')
         }
