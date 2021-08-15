@@ -322,14 +322,17 @@ export const RiskProfile: { [key: string]: PersonRiskValue } = {
   },
 }
 
-// Special keys for RiskProfile that need to be checked elsewhere.
-export const RiskProfileEnum = {
+// This is an explicit list of risk profiles for which "their vaccine" modifiers
+// do not apply.
+export const RiskProfilesUnaffectedByVaccines: {
+  [key: string]: keyof typeof RiskProfile
+} = {
   ONE_PERCENT: 'onePercent',
   DECI_PERCENT: 'deciPercent',
   HAS_COVID: 'hasCovid',
 }
 
-RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
+RiskProfile[RiskProfilesUnaffectedByVaccines.ONE_PERCENT] = {
   label: i18n.t('data.person.microcovid_budget_one_percent'),
   personalMultiplier: NaN,
   numHousemates: NaN,
@@ -337,7 +340,7 @@ RiskProfile[RiskProfileEnum.ONE_PERCENT] = {
   contactsMultiplier: NaN,
 }
 
-RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
+RiskProfile[RiskProfilesUnaffectedByVaccines.DECI_PERCENT] = {
   label: i18n.t('data.person.microcovid_budget_deci_percent'),
   personalMultiplier: NaN,
   numHousemates: NaN,
@@ -345,7 +348,7 @@ RiskProfile[RiskProfileEnum.DECI_PERCENT] = {
   contactsMultiplier: NaN,
 }
 
-RiskProfile[RiskProfileEnum.HAS_COVID] = {
+RiskProfile[RiskProfilesUnaffectedByVaccines.HAS_COVID] = {
   label: i18n.t('data.person.hasCovid'),
   personalMultiplier: NaN,
   numHousemates: NaN,
