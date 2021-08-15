@@ -87,8 +87,8 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
     return h * 60 + m
   }
   return (
-    <Row>
-      <Form.Group controlId="duration-hours" as={Col} className="col-md-3">
+    <Row className="mb-0">
+      <Form.Group controlId="duration-hours" as={Col} className="col-md-3 mb-0">
         <Form.Label className="field-label mb-0">
           {t('calculator.duration_hours')}
         </Form.Label>
@@ -105,7 +105,11 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
           size="lg"
         />
       </Form.Group>
-      <Form.Group controlId="duration-minutes" as={Col} className="col-md-3">
+      <Form.Group
+        controlId="duration-minutes"
+        as={Col}
+        className="col-md-3 mb-0"
+      >
         <Form.Label className="field-label mb-0">
           {t('calculator.duration_minutes')}
         </Form.Label>
