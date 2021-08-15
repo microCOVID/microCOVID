@@ -28,7 +28,7 @@ export function dataForLocation(location: string): PrevalanceData {
           : Math.round(locationData.positiveCasePercentage * 10) / 10,
       prevalanceDataDate: new Date(PrevalenceDataDate),
       percentFullyVaccinated: locationData.completeVaccinations
-        ? locationData.completeVaccinations / population
+        ? Math.round((locationData.completeVaccinations / population) * 100)
         : null,
       unvaccinatedPrevalenceRatio: locationData.unvaccinatedPrevalenceRatio,
       averageFullyVaccinatedMultiplier:
@@ -46,4 +46,8 @@ export function dataForLocation(location: string): PrevalanceData {
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: null,
   }
+}
+
+export function doesLocationHaveVaccinationData(location: string): boolean {
+  return dataForLocation(location).percentFullyVaccinated !== null
 }

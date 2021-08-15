@@ -1,11 +1,14 @@
 import { isNumber } from 'lodash'
 import React from 'react'
-import { Form, InputGroup } from 'react-bootstrap'
+import { Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { BsDash } from 'react-icons/bs'
 
+import ControlLabel from '../controls/ControlLabel'
+
 import { PrevalenceResult } from './PrevalenceResult'
 import { CalculatorData } from 'data/calculate'
+import { doesLocationHaveVaccinationData } from 'data/locationHelpers'
 
 const PrevalenceField: React.FunctionComponent<{
   id: string
@@ -18,6 +21,7 @@ const PrevalenceField: React.FunctionComponent<{
   min?: number
   helpText?: string
   className?: string
+  readOnly?: boolean
 }> = ({
   id,
   label,
@@ -29,13 +33,14 @@ const PrevalenceField: React.FunctionComponent<{
   min,
   helpText,
   className,
+  readOnly,
 }): React.ReactElement => {
   let body: React.ReactElement = (
     <Form.Control
       className={'form-control form-control-lg col-md-3 col-lg-6 ' + className}
       type={inputType}
       value={value}
-      readOnly={false}
+      readOnly={readOnly}
       onChange={(e) => {
         if (isNumber(max) || isNumber(min)) {
           let newValue = Number.parseFloat(e.target.value)
@@ -53,21 +58,26 @@ const PrevalenceField: React.FunctionComponent<{
       <InputGroup className="mb-3">
         {body}
         <InputGroup.Append>
-          <InputGroup.Text>%</InputGroup.Text>
+          <InputGroup.Text>{unit}</InputGroup.Text>
         </InputGroup.Append>
       </InputGroup>
     )
   }
   return (
-    <Form.Group controlId={id} className="mb-3">
-      <Form.Label>{label}</Form.Label>
-      {body}
-      {helpText && (
-        <Form.Text id={id + 'HelpText'} muted>
-          {helpText}
-        </Form.Text>
-      )}
-    </Form.Group>
+    <Row>
+      <Form.Group controlId={id} className="mb-3">
+        <ControlLabel
+          id={`${id}-control-label`}
+          label={label}
+          popover={
+            helpText ? (
+              <Tooltip id={`${id}-tooltip`}>{helpText}</Tooltip>
+            ) : undefined
+          }
+        />
+        {body}
+      </Form.Group>
+    </Row>
   )
 }
 
@@ -77,6 +87,11 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   setter: (newData: CalculatorData) => void
 }> = (props): React.ReactElement => {
   const { t } = useTranslation()
+  const hasVaccinationDataFromLocation = doesLocationHaveVaccinationData(
+    props.data.subSubLocation ||
+      props.data.subLocation ||
+      props.data.topLocation,
+  );
   return (
     <div id={props.id}>
       <span className="details-header">
@@ -132,6 +147,32 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         max={100}
         min={0}
         className="hide-number-buttons"
+      />
+      <PrevalenceField
+        id="vaccinated-rate"
+        label={t('calculator.prevalence.completed_vaccinations')}
+        value={
+          props.data.percentFullyVaccinated
+            ? props.data.percentFullyVaccinated.toString()
+            : ''
+        }
+        unit="%"
+        setter={(value) => {
+          props.setter({
+            ...props.data,
+            percentFullyVaccinated: Number(value),
+          })
+        }}
+        inputType="number"
+        max={100}
+        min={0}
+        className="hide-number-buttons"
+        readOnly={hasVaccinationDataFromLocation}
+        helpText={
+          hasVaccinationDataFromLocation
+            ? undefined
+            : t('calculator.prevalence.completed_vaccinations_tooltip')
+        }
       />
     </div>
   )

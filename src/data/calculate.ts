@@ -294,21 +294,27 @@ export const calculatePersonRiskEach = (
     if (
       // TODO: Support vaccinated risk for other Risk Profiles.
       data.riskProfile !== 'average' ||
-      data.unvaccinatedPrevalenceRatio === null ||
+      data.percentFullyVaccinated === null ||
       data.averageFullyVaccinatedMultiplier === null
     ) {
       return unadjustedRisk
     }
+    const unvaccinatedPrevalenceRatio =
+      data.unvaccinatedPrevalenceRatio !== null
+        ? data.unvaccinatedPrevalenceRatio
+        : 1 /
+          (data.averageFullyVaccinatedMultiplier * data.percentFullyVaccinated +
+            (1 - data.percentFullyVaccinated))
 
     switch (data.theirVaccine) {
       case 'vaccinated':
         return (
           unadjustedRisk *
-          data.unvaccinatedPrevalenceRatio *
+          unvaccinatedPrevalenceRatio *
           data.averageFullyVaccinatedMultiplier
         )
       case 'unvaccinated':
-        return unadjustedRisk * data.unvaccinatedPrevalenceRatio
+        return unadjustedRisk * unvaccinatedPrevalenceRatio
       // falls through
       case 'undefined':
         return unadjustedRisk
