@@ -1,5 +1,5 @@
 import React from 'react'
-import {Accordion, Form } from 'react-bootstrap'
+import { Accordion, Form } from 'react-bootstrap'
 
 import ControlLabel from './ControlLabel'
 import { recordCalculatorOptionSelected } from 'components/Analytics'
