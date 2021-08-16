@@ -93,7 +93,7 @@
         "prevalence_info_source_information": "Datos de prevalencia recopilados de <1>Johns Hopkins CSSE</1> (casos notificados), <4>Covid Act Now</4> (tasas de pruebas positivas en EE. UU.) <7>Our World in Data</7> (tasas de prueba positivas internacionales), y <10>Coronavirus COVID-19 România</10> (casos reportados en Rumania).",
         "select_location_enter_manually": "Ingresa los datos manualmente...",
         "select_location_placeholder": "Elige tu país o un estado de EUA...",
-        "location_selector_header": "Paso 1: Selecciona tu localidad",
+        "step_1_header": "Paso 1: Selecciona tu localidad",
         "location_subprompt_US": "Estado completo o seleccione su condado...",
         "location_subprompt_US-AK": "Estado completo o seleccione su barrio...",
         "location_subprompt_US-LA": "Total del estado o provincia, o seleccione su municipio...",

@@ -156,7 +156,7 @@
         "risk_step_label": "Schritt 2: Beschreibe das Szenario",
         "select_location_enter_manually": "Daten manuell eingeben …",
         "select_location_placeholder": "Wähle ein Land oder US Bundesstaat …",
-        "location_selector_header": "Schritt 1: Gib deinen Aufenthaltsort ein",
+        "step_1_header": "Schritt 1: Gib deinen Aufenthaltsort ein",
         "location_subprompt_US": "Gesamtes Bundesland oder County auswählen …",
         "location_subprompt_US-AK": "Gesamtes Bundesland oder Borough auswählen …",
         "location_subprompt_US-LA": "Gesamtes Bundesland oder Parish auswählen …",

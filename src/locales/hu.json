@@ -130,7 +130,7 @@
         "location_subprompt_US-LA": "Az egész terület (vagy válassz megyét)",
         "location_subprompt_US-AK": "Az egész terület (vagy válassz megyét)",
         "location_subprompt_US": "Az egész terület (vagy válassz megyét)",
-        "location_selector_header": "1. lépés: Hol vagy?",
+        "step_1_header": "1. lépés: Hol vagy?",
         "select_location_placeholder": "Válassz országot vagy államot...",
         "select_location_enter_manually": "Add meg kézzel...",
         "prevalence_info_source_information": "A jelentett esetek számát a <1>Johns Hopkins CSSE adatbázisból</1>, a pozitív tesztek arányát a USA-ban a <4>Covid Act Now-ról</4>, a világ többi részén pedig az <7>Our World in Data-ról</7> gyűjtjük le. A román regionális adatok forrása a <10>Coronavirus COVID-19 România</10>.",

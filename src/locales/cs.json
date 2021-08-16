@@ -106,7 +106,7 @@
         "prevalence_info_source_information": "Data o prevalenci konsolidována z <1>Johns Hopkins CSSE</1> (počty případů), <4>Covid Act Now</4> (US pozitivita testů), <7>Our World in Data</7> (pozitivita testů ve světě) a <10>Coronavirus COVID-19 România</10> (počty případů v Rumunsku).",
         "select_location_enter_manually": "Vložit data manuálně ...",
         "select_location_placeholder": "Vyberte zemi nebo stát USA ...",
-        "location_selector_header": "Krok 1: Vyberte Vaši lokaci",
+        "step_1_header": "Krok 1: Vyberte Vaši lokaci",
         "location_subprompt_US": "Celý federální stát nebo jeho region ...",
         "location_subprompt_US-AK": "Celý stát, případně zvolte oblast...",
         "location_subprompt_US-LA": "Celý stát/region nebo subregion ...",

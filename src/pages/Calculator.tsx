@@ -1,7 +1,7 @@
 import copy from 'copy-to-clipboard'
 import { stringify } from 'query-string'
 import React, { useEffect, useMemo, useState } from 'react'
-import { Alert, Col, Row } from 'react-bootstrap'
+import { Alert, Col, Form, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsLink45Deg } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,9 @@ import {
 } from 'components/Analytics'
 import { AutoAlert } from 'components/AutoAlert'
 import { ActivityRiskControls } from 'components/calculator/ActivityRiskControls'
-import ExplanationCard from 'components/calculator/ExplanationCard/ExplanationCard'
+import { RadioControl } from 'components/calculator/controls/RadioControl'
+import CalculationBreakdown from 'components/calculator/ExplanationCard/CalculationBreakdown'
+import riskTolerancePopover from 'components/calculator/ExplanationCard/riskTolerancePopover'
 import { FirstTimeUserIntroduction } from 'components/calculator/FirstTimeUserIntroduction'
 import { PersonRiskControls } from 'components/calculator/PersonRiskControls'
 import PointsDisplay from 'components/calculator/PointsDisplay'
@@ -33,7 +35,7 @@ import {
   migrateDataToCurrent,
   parsePopulation,
 } from 'data/calculate'
-import { Interaction } from 'data/data'
+import { Interaction, budgetOptions } from 'data/data'
 import { PartialData, prepopulated } from 'data/prepopulated'
 import {
   filterParams,
@@ -252,6 +254,23 @@ export const Calculator = (): React.ReactElement => {
               data={calculatorData}
               setter={setCalculatorData}
             />
+            <Form.Group>
+              <RadioControl
+                id="budget-selector"
+                header={t(
+                  'calculator.explanationcard.risk_tolerance_selector_header',
+                )}
+                popover={riskTolerancePopover}
+                setter={(value) => {
+                  setCalculatorData({
+                    ...calculatorData,
+                    riskBudget: Number.parseInt(value),
+                  })
+                }}
+                value={calculatorData.riskBudget.toString()}
+                source={budgetOptions}
+              />
+            </Form.Group>
           </Card>
         </Col>
 
@@ -431,14 +450,16 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row className="explanation" id="explanation-row">
         <Col md="12" lg={{ span: 8, offset: 4 }}>
-          <ExplanationCard
-            points={points}
-            repeatedEvent={repeatedEvent}
-            data={calculatorData}
-            setter={setCalculatorData}
-            lowerBound={lowerBound}
-            upperBound={upperBound}
-          />
+          <Card>
+            <CalculationBreakdown
+              points={points}
+              repeatedEvent={repeatedEvent}
+              data={calculatorData}
+              setter={setCalculatorData}
+              lowerBound={lowerBound}
+              upperBound={upperBound}
+            />
+          </Card>
         </Col>
       </Row>
     </div>

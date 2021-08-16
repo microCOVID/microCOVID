@@ -208,7 +208,7 @@ export const PrevalenceControls: React.FunctionComponent<{
   return (
     <React.Fragment>
       <header id="location">
-        <Trans>calculator.location_selector_header</Trans>
+        <Trans>calculator.step_1_header</Trans>
       </header>
       <div className="form-group">
         <ControlLabel

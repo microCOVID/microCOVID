@@ -120,7 +120,7 @@
             "US-LA": "Область",
             "country_or_regions": "Страна или регион"
         },
-        "location_selector_header": "Шаг 1: Ваше местоположение",
+        "step_1_header": "Шаг 1: Ваше местоположение",
         "person_risk_profile_header": "Профиль риска",
         "person_risk_profile_question": "Какой у них профиль риска?",
         "no_prebuilt_scenario_found": "У нас нет такого сценария, но вы можете построить свой собственный ниже.",

@@ -14,7 +14,7 @@
         "prevalence_info_source_information": "Dades de prevalença consolidades a partir de <1> Johns Hopkins CSSE </1> (casos reportats), <4> Covid Act Now </4> (taxes de prova positives als EUA) i <7> Our World in Data </7> (taxes de prova positives internacionals).",
         "select_location_enter_manually": "Introduïu les dades manualment…",
         "select_location_placeholder": "Seleccioneu la ubicació…",
-        "location_selector_header": "Pas 1: introduïu la ubicació",
+        "step_1_header": "Pas 1: introduïu la ubicació",
         "location_subprompt_US": "Tot l'estat, o seleccioneu un comtat…",
         "location_subprompt_US-AK": "Tot l'estat, o seleccioneu un districte…",
         "location_subprompt_US-LA": "Tot l'estat, o seleccioneu una parròquia...",

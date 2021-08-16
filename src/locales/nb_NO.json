@@ -83,7 +83,7 @@
         },
         "select_location_enter_manually": "Skriv inn data manuelt …",
         "select_location_placeholder": "Velg sted …",
-        "location_selector_header": "Steg 1: Skriv inn hvor du er",
+        "step_1_header": "Steg 1: Skriv inn hvor du er",
         "location_subprompt_US": "Hele delstaten, eller velg fylke …",
         "location_subprompt_US-LA": "Hele delstaten, eller velg fylke …",
         "location_subprompt_country_or_regions": "Hele landet, eller velg region …",
