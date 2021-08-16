@@ -8,7 +8,7 @@ import {
 import {
   BUDGET_ONE_PERCENT,
   RiskProfile,
-  RiskProfileEnum,
+  RiskProfilesUnaffectedByVaccines,
   housemateMult,
   personRiskMultiplier,
 } from 'data/data'
@@ -148,7 +148,7 @@ describe('calculate', () => {
     ${'indoorUnmasked2'}                 | ${1680}
     ${'1person_15minCarRide'}            | ${210}
     ${'oneNightStand'}                   | ${3600}
-    ${'liveInPartner_noContacts'}        | ${84}
+    ${'liveInPartner_noContacts'}        | ${42}
     ${'60minShopping'}                   | ${93}
     ${'60minShoppingFew'}                | ${56}
     ${'60minShoppingCrowded'}            | ${187}
@@ -216,12 +216,12 @@ describe('calculate', () => {
   })
 
   it.each`
-    profile                         | points
-    ${RiskProfileEnum.DECI_PERCENT} | ${1e6 / 1000 / 50}
-    ${RiskProfileEnum.ONE_PERCENT}  | ${1e6 / 100 / 50}
-    ${RiskProfileEnum.HAS_COVID}    | ${1e6}
+    profile                                          | points
+    ${RiskProfilesUnaffectedByVaccines.DECI_PERCENT} | ${1e6 / 1000 / 50}
+    ${RiskProfilesUnaffectedByVaccines.ONE_PERCENT}  | ${1e6 / 100 / 50}
+    ${RiskProfilesUnaffectedByVaccines.HAS_COVID}    | ${1e6}
   `(
-    'should treat $profile as independent of prevalance',
+    'should treat $profile as independent of prevalence',
     ({ profile, points }) => {
       const data = testData({
         ...baseTestData,
@@ -262,9 +262,11 @@ describe('calculate', () => {
 
   describe('Interaction: partner', () => {
     const partner = testData(prepopulated['liveInPartner_noContacts'])
-    it('should not be affected by multipliers', () => {
+    const unvaccinatedPartner = { ...partner, theirVaccine: 'unvaccinated' }
+    const vaccinatedPartner = { ...partner, theirVaccine: 'vaccinated' }
+    it('should not be affected by these multipliers', () => {
       const bonuses: CalculatorData = {
-        ...partner,
+        ...unvaccinatedPartner,
         setting: 'outdoor',
         distance: 'tenFt',
         duration: 1,
@@ -273,11 +275,11 @@ describe('calculate', () => {
         voice: 'silent',
       }
 
-      expect(calcValue(partner)).toEqual(calcValue(bonuses))
+      expect(calcValue(unvaccinatedPartner)).toEqual(calcValue(bonuses))
     })
 
-    it('should apply 60% risk', () => {
-      expect(calcValue(partner)).toBeCloseTo(
+    it('should apply 60% risk for an unvaccinated partner', () => {
+      expect(calcValue(unvaccinatedPartner)).toBeCloseTo(
         PREVALENCE *
           0.6 *
           1e6 *
@@ -286,6 +288,16 @@ describe('calculate', () => {
             isHousemate: false,
             symptomsChecked: 'no',
           }),
+      )
+    })
+    it('should apply 30% risk for a partner with unknown vax status', () => {
+      expect(calcValue(partner)).toBeCloseTo(
+        0.5 * (calcValue(unvaccinatedPartner) || -1),
+      )
+    })
+    it('should apply 6% risk for a vaccinated partner', () => {
+      expect(calcValue(vaccinatedPartner)).toBeCloseTo(
+        0.1 * (calcValue(unvaccinatedPartner) || -1),
       )
     })
   })
