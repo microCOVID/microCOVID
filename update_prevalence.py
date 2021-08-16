@@ -464,14 +464,41 @@ class Place(pydantic.BaseModel):
             return reduce(lambda x, key: x + self.vaccines_by_type[key].partial_vaccinations, self.vaccines_by_type, 0)
         return self.vaccines_total.partial_vaccinations
 
-    # Compute the estimated risk ratio for an unvaccinated person vs an average person.
-    # Average prevalence = sum(prevalence in group * proportion of population in group)
-    #                    = sum(vaccine_mult * unvaccinated_prev * proportion of population)
-    # Unvaccinated risk / Average risk = sum(vaccine_mult * proportion of pop)
-    #                                  = population / sum(vaccine_mult * proportion of pop)
-    # Where the sum is taken over all vaccine types and status (incl no vaccine)
+    # Compute estimated risk ratio for an unvaccinated person vs an average person,
+    # so that we can convert average risk (which we know from prevalence data) to
+    # unvaccinated risk if we have sufficiently detailed vaccination information.
+    #
+    # Define risk_sum to be
+    #     sum(multiplier_from_vaccination_status) over the entire population
+    # where the multiplier from being unvaccinated is 1 and the multiplier from
+    # being vaccinated with e.g. 1 dose of Pfizer is determined from vaccine_table.csv.
+    #
+    # risk_sum / population will then be the average vaccine multiplier across the
+    # entire population, including unvaccinated individuals.
+    #
+    # Note that if absolutely nobody were vaccinated, the average vaccine multiplier
+    # would be 1 (since every person contributes a multiplier of 1 and then it all
+    # gets divided out by the number of people).
+    #
+    # If we then assume that vaccinated and unvaccinated people behave
+    # identically (have the same patterns of shopping, socializing, etc), then
+    #     average_person_risk
+    #         = average_unvaccinated_person_risk * average_vaccine_multiplier
+    #
+    # and so we can compute a conversion factor
+    # unvaccinated_relative_prevalence
+    #      := average_unvaccinated_person_risk / average_person_risk  <-- by definition
+    #       = average_unvaccinated_person_risk /                      <-- using above assumption
+    #           (average_unvaccinated_person_risk * average_vaccine_multiplier)
+    #       = 1 / avg_vaccine_multiplier
+    #       = 1 / (risk_sum / population)
+    #       = population / risk_sum
+    #
+    # that we can use like so:
+    # estimated_unvaccinated_person_risk
+    #   = unvaccinated_relative_prevalence * average_person_risk_from_prevalence_data
     def unvaccinated_relative_prevalence(self) -> float:
-        total_vaccinated = 0
+        total_vaccinated = 0  # combined total of partially and fully vaccinated people
         risk_sum = 0
 
         if (self.vaccines_by_type is not None):
@@ -499,7 +526,7 @@ class Place(pydantic.BaseModel):
             # This probably means people from other counties have gotten their
             # vaccine here. Just assume 100% vaccination.
             return total_vaccinated / risk_sum
-         
+
         total_unvaccinated = self.population - total_vaccinated
         risk_sum += 1 * total_unvaccinated
         return float(self.population) / risk_sum
