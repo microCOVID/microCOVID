@@ -1,6 +1,6 @@
 Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,521365,3,8e-06,2.082,1.0,1.6e-05
-Central,91201,1,2.2e-05,2.082,1.0,4.6e-05
-Eastern,317664,2,9e-06,2.082,1.0,2e-05
-Labrador-Grenfell,36069,0,2.8e-05,2.082,1.0,5.8e-05
-Western,76608,0,1.3e-05,2.082,1.0,2.7e-05
+Entire state,521365,7,1.5e-05,2.1276,2.0,6.5e-05
+Central,91201,0,1.1e-05,2.1276,1.0,2.3e-05
+Eastern,317664,6,2.2e-05,2.1276,2.0,9.4e-05
+Labrador-Grenfell,36069,1,5.5e-05,2.1276,1.0,0.000118
+Western,76608,0,1.3e-05,2.1276,1.0,2.8e-05
