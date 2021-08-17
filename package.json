@@ -42,7 +42,7 @@
     "lint": "eslint src",
     "fix": "eslint src --fix",
     "typecheck": "tsc",
-    "prevalence": "./prevalence_helper.sh"
+    "prevalence": "./scripts/prevalence_helper.sh"
   },
   "browserslist": {
     "production": [
