@@ -24,6 +24,33 @@ Requirements:
     ```
 1. Open http://localhost:3000
 
+
+
+# Prevalence updates
+
+1. Install `venv` to be able to run prevalence updates
+    ```sh
+    $ python3 -m venv .venv
+    $ source .venv/bin/activate
+    $ pip install pydantic requests
+    ```
+1. Install the [GitHub CLI](https://cli.github.com/) to be able to using the `gh` command with the `prevalence_helper.sh` script
+    ```sh
+    # using homebrew (see GitHub page for alternate install methods)
+    $ brew install gh
+    ```
+1. Get a [COVIDActNow.org API key from here](https://apidocs.covidactnow.org/). (If you're on the microCOVID team, you can ask for our existing API key.)
+1. Then configure your API key as such:
+    ```sh
+    $ cp .secure-keys.template .secure-keys
+    # Add your API key to the line in .secure-keys that is listed as CAN_API_KEY
+    ```
+1. Run a prevalence update
+    ```sh
+    $ yarn prevalence
+    ```
+
+
 ## Linting
 
 We use `eslint` to standardize our style across files. To check your files with the linter, run:

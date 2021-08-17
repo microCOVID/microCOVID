@@ -41,7 +41,8 @@
     "coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint src",
     "fix": "eslint src --fix",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "prevalence": "./prevalence_helper.sh"
   },
   "browserslist": {
     "production": [
