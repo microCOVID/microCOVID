@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // TODO(bshaya): Migrate from `type | null` to `?: type`
 export interface Location {
   label: string
