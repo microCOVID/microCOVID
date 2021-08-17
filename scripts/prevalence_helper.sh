@@ -1,13 +1,16 @@
 #!/bin/bash
 
+# Set script to stop if any command fails or an undefined variable is accessed
+set -euo pipefail
+
 if ! command -v gh &> /dev/null; then
   echo "GitHub CLI could not be found, please install from https://cli.github.com/"
   exit
 fi
 
-source .secure-keys
 KEYSTORE=".secure-keys"
-  if [ ! -f "$KEYSTORE" ]; then
+source "$KEYSTORE"
+if [ ! -f "$KEYSTORE" ]; then
   echo "$KEYSTORE does not exist. Please obtain an API key from https://apidocs.covidactnow.org/"
   exit
 fi
