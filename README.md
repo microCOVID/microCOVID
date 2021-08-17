@@ -40,7 +40,7 @@ Requirements:
     $ brew install gh
     ```
 1. Get a [COVIDActNow.org API key from here](https://apidocs.covidactnow.org/). (If you're on the microCOVID team, you can ask for our existing API key.)
-1. Then configure yoru API key as such:
+1. Then configure your API key as such:
     ```sh
     $ cp .secure-keys.template .secure-keys
     # Add your API key to the line in .secure-keys that is listed as CAN_API_KEY
