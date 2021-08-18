@@ -17,7 +17,7 @@ fi
 
 git checkout main
 git pull
-git push origin --delete auto-update-prevalence
+git push origin --delete auto-update-prevalence &> /dev/null
 git branch -D auto-update-prevalence
 git checkout -b auto-update-prevalence
 source .venv/bin/activate
