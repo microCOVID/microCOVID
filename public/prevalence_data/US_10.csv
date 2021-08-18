@@ -1,5 +1,5 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,973764,1822,0.001872,2.4598,1.372,0.006318
-Kent,180786,490,0.002716,2.5918,1.4412,0.010144
-New Castle,558753,851,0.001525,2.4314,1.366,0.005064
-Sussex,234225,480,0.002054,2.4528,1.326,0.006679
+Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire state,0.011849,0.002219,0.001872,2.4598,1.372,0.006318
+Kent,0.015728,0.002945,0.002716,2.5918,1.4412,0.010144
+New Castle,0.009406,0.001761,0.001525,2.4314,1.366,0.005064
+Sussex,0.012385,0.002319,0.002054,2.4528,1.326,0.006679
