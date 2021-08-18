@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See README.md for install/setup instructions for this script
+
 # Set script to stop if any command fails or an undefined variable is accessed
 set -euo pipefail
 
@@ -15,11 +17,18 @@ if [ ! -f "$KEYSTORE" ]; then
   exit
 fi
 
+# Update local branch
 git checkout main
 git pull
-git push origin --delete auto-update-prevalence
+
+# Delete the remote branch. It usually doesn't exist unless the script failed last time.
+git push origin --delete auto-update-prevalence &> /dev/null
+
+# Delete the local branch & create new one
 git branch -D auto-update-prevalence
 git checkout -b auto-update-prevalence
+
+# Activate the local virtual env.
 source .venv/bin/activate
 CAN_API_KEY=$CAN_API_KEY python3 update_prevalence.py
 
@@ -33,9 +42,11 @@ if [[ `git status --porcelain` ]]; then
   git add -A
   git commit -am "Automatic prevalence update $TODAY"
   git push
+  # Use the GitHub CLI to create a pull request and save the url
   PR_URL=`gh pr create --fill`
   echo "Pull request URL: $PR_URL"
   if [[ ! $PR_URL = "" ]]; then
+    # Set the pull request to auto merge
     gh pr merge --auto --delete-branch --squash "$PR_URL"
   else
     echo "ERROR: No pull request URL generated"
