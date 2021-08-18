@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { Button, Form, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { BsPlusSquareFill } from 'react-icons/bs'
 
-import ControlLabel from '../controls/ControlLabel'
+import { SegmentedControlNoDescriptions } from '../controls/SegmentedControl'
 
-import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { Vaccines } from 'data/data'
 
 import './VaccineSelector.scss'
@@ -46,103 +45,61 @@ export const VaccineSelector: React.FunctionComponent<{
   const typeId = props.id + 'Type'
   const dosesId = props.id + 'Doses'
 
+  const vaccineDoseList = props.current.vaccineType
+    ? Vaccines[props.current.vaccineType].multiplierPerDose
+    : []
+  const vaccineDoseMap = Object.fromEntries(Object.entries(vaccineDoseList))
   return (
     <div className="vaccine-selector">
-      <Form.Group controlId={typeId}>
-        <ControlLabel id={typeId} header={props.header} label={props.label} />
-        <div className="segmented-scrollable mobile-vertical">
-          <ToggleButtonGroup
-            type="radio"
-            name={typeId}
-            id={typeId}
-            className={'segmented-wrap segmented-scrollable'}
-            value={props.current.vaccineType}
-          >
-            {Object.keys(Vaccines).map((value: string, index) => (
-              <ToggleButton
-                key={index}
-                type="radio"
-                variant={props.variant}
-                name={typeId}
-                value={value}
-                className="segmented-button"
-                checked={props.current.vaccineType === value}
-                onChange={(e) => {
-                  recordCalculatorOptionSelected(typeId, e.currentTarget.value)
-                  props.setter({
-                    ...props.current,
-                    vaccineType: e.currentTarget.value,
-                  })
-                }}
-              >
-                <span className="segmented-label">{Vaccines[value].label}</span>
-              </ToggleButton>
-            ))}
-            <ToggleButton
-              type="radio"
-              value=""
-              variant={props.variant}
-              name="typeId"
-              className="segmented-button"
-              checked={false}
-              onChange={() => {
-                setExpanded(false)
-                recordCalculatorOptionSelected(typeId, '')
-                props.setter({
-                  ...props.current,
-                  vaccineType: '',
-                })
-              }}
-            >
-              <span className="segmented-wrap segmented-label">
-                {t('calculator.precautions.no_vaccine')}
-              </span>
-            </ToggleButton>
-          </ToggleButtonGroup>
-        </div>
-      </Form.Group>
-
+      <SegmentedControlNoDescriptions
+        id={typeId}
+        header={props.header}
+        label={props.label}
+        variant="outline-cyan"
+        hideRisk={true}
+        verticalOnMobile={true}
+        setter={(value: string) => {
+          if (value === '') {
+            setExpanded(false)
+          }
+          props.setter({
+            ...props.current,
+            vaccineType: value,
+          })
+        }}
+        source={{
+          ...Vaccines,
+          '': {
+            label: t('calculator.precautions.no_vaccine'),
+            multiplierPerDose: [],
+          },
+        }}
+        value={props.current.vaccineType}
+        multiplierFromSource={() => 0}
+        labelFromSource={(value) => value.label}
+      />
       {props.current.vaccineType === '' ? null : (
-        <Form.Group controlId={dosesId}>
-          <ControlLabel
-            id={dosesId}
-            header={props.dosesHeader}
-            label={props.dosesLabel}
-          />
-          <ToggleButtonGroup
-            name={dosesId}
-            id={dosesId}
-            className="segmented-wrap segmented-scrollable"
-            value={props.current.vaccineDoses}
-          >
-            {Vaccines[props.current.vaccineType].multiplierPerDose.map(
-              (value: number, index) => (
-                <ToggleButton
-                  key={index}
-                  type="radio"
-                  variant={props.variant}
-                  name={dosesId}
-                  value={index}
-                  className="segmented-button"
-                  checked={props.current.vaccineDoses === index}
-                  onChange={() => {
-                    recordCalculatorOptionSelected(dosesId, index.toString())
-                    props.setter({
-                      ...props.current,
-                      vaccineDoses: index,
-                    })
-                  }}
-                >
-                  <span className="segmented-label">{index}</span>
-                  <span className="segmented-multiplier">{value}x</span>
-                </ToggleButton>
-              ),
-            )}
-          </ToggleButtonGroup>
+        <SegmentedControlNoDescriptions
+          id={dosesId}
+          header={props.dosesHeader}
+          label={props.dosesLabel}
+          variant="outline-cyan"
+          showDecimals={true}
+          setter={(value: string) => {
+            props.setter({
+              ...props.current,
+              vaccineDoses: Number(value),
+            })
+          }}
+          source={vaccineDoseMap}
+          value={props.current.vaccineDoses.toString()}
+          multiplierFromSource={(value) => value}
+          labelFromSource={(value, key) => key}
+        >
           <Form.Text muted>
             {t('calculator.precautions.doses_7_days_ago')}
           </Form.Text>
-        </Form.Group>
+        </SegmentedControlNoDescriptions>
       )}
     </div>
   )

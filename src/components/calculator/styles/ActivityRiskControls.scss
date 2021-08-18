@@ -11,7 +11,7 @@
   padding-right: 1px;
 }
 
-.segmented-scrollable label {
+.segmented label {
   background-color: $white;
   border-color: $gray-400;
 }
@@ -20,12 +20,12 @@
   min-height: 3.1em
 }
 
-.segmented-label {
+.risk-modifier-label {
   font-weight: bold;
   display: block;
 }
 
-.segmented-multiplier {
+.risk-modifier-multiplier {
   font-size: small;
   color: $gray-600;
 }
@@ -34,15 +34,15 @@
   display: none;  // hide on desktop
 }
 
-.btn:hover .segmented-multiplier {
+.btn:hover .risk-modifier-multiplier {
   color: $white;
 }
 
-.active .segmented-label {
+.active .risk-modifier-label {
   font-weight: bold;
 }
 
-.active .segmented-multiplier {
+.active .risk-modifier-multiplier {
   color: $white;
   font-weight: bolder;
 }
@@ -52,24 +52,24 @@
   box-shadow: none !important;
 }
 
-.segmented-scrollable .btn-outline-secondary.btn:hover {
+.segmented .btn-outline-secondary.btn:hover {
   background-color: $gray-500;
 }
 
-.segmented-scrollable .btn-outline-secondary.active:hover {
+.segmented .btn-outline-secondary.active:hover {
   background-color: $secondary !important;
 }
 
-.segmented-scrollable .btn-outline-secondary.active:hover span {
+.segmented .btn-outline-secondary.active:hover span {
   color: $gray-300;
 }
 
-.segmented-scrollable .btn-outline-cyan.btn:hover {
+.segmented .btn-outline-cyan.btn:hover {
   background-color: color.adjust($cyan, $lightness: 15%, $saturation: -15%);
   color: color.mix($cyan, $white, 10%) !important;
 }
 
-.segmented-scrollable .btn-outline-cyan.active:hover {
+.segmented .btn-outline-cyan.active:hover {
   // Arrow keys do not move between options. Mouse is hovering over a currently
   // selected option.
   color: color.mix($cyan, $white, 20%) !important;
@@ -87,32 +87,39 @@
     width: 100%;
   }
 
-  .segmented-label {
+  .risk-modifier-label {
     text-align: left;
     min-height: 0;
     display: inline;
     float: left;
   }
 
-  .segmented-multiplier {
+  .risk-modifier-multiplier {
     display: inline;
     float: right;
   }
 
   .active .segmented-value {
     display: inline;
-    color: $gray-500;
     float: left;
     width: 100%;
+  }
+
+  .active.btn-outline-cyan .segmented-value {
+    color: color.mix($cyan, $white, 20%) !important;
+  }
+
+  .active.btn-outline-secondary .segmented-value {
+    color: color.mix($secondary, $white, 20%) !important;
   }
   .active:hover .segmented-value {
     color: $white;
   }
 
-  .segmented-scrollable .active span {
+  .segmented .active span {
     color: $white !important;
   }
-  .segmented-scrollable .active:hover span {
+  .segmented .active:hover span {
     color: $white !important;
   }
 

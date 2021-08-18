@@ -14,6 +14,119 @@ import { recordCalculatorOptionSelected } from 'components/Analytics'
 import { CalculatorData } from 'data/calculate'
 import { CheckBoxFormValue } from 'data/data'
 
+export interface SegmentedProps<SourceValue> {
+  id: string
+  header?: string
+  label?: string
+  variant?: string
+  hideRisk?: boolean
+  showDecimals?: boolean
+  verticalOnMobile?: boolean
+  setter: (value: string) => void
+  source: { [key: string]: SourceValue }
+  value: string
+  iconFactory?: (value: string) => JSX.Element
+  multiplierFromSource: (value: SourceValue, key: string) => number
+  labelFromSource: (value: SourceValue, key: string) => string
+  children?: React.ReactNode
+}
+
+// Mobile-friendly segmented button selector (generic version).
+// TODO(jy2wong) the old SegmentedControl still has functionality that this one
+// doesn't; port it over.
+export function SegmentedControlNoDescriptions<SourceValue>(
+  props: SegmentedProps<SourceValue>,
+): React.ReactElement {
+  const { t } = useTranslation()
+  // TODO(jy2wong) formatRiskMultiplier is copy and pasted from
+  // SegmentedControl to get access to useTranslation(). How do you do this
+  // properly?
+  // 0.25 -> "1/4x"
+  function formatRiskMultiplierInternal(multiplier: number): string {
+    if (multiplier === 1) {
+      return t('calculator.baseline_risk_short')
+    } else if (multiplier > 0 && multiplier < 1) {
+      const frac = num2fraction(multiplier)
+      return t('calculator.risk_modifier_multiple_short', { multiplier: frac })
+    } else {
+      return t('calculator.risk_modifier_multiple_short', {
+        multiplier: multiplier,
+      })
+    }
+  }
+  const formatRiskMultiplier = (
+    showDecimals?: boolean,
+    multiplier?: number,
+  ) => {
+    if (multiplier === undefined) {
+      return ''
+    } else if (showDecimals) {
+      return t('calculator.risk_modifier_multiple_short', {
+        multiplier: multiplier,
+      })
+    }
+    return formatRiskMultiplierInternal(multiplier)
+  }
+
+  return (
+    <Form.Group controlId={props.id}>
+      <ControlLabel id={props.id} header={props.header} label={props.label} />
+      <div
+        className={
+          'segmented' +
+          (props.verticalOnMobile
+            ? ' segmented-scrollable mobile-vertical'
+            : '')
+        }
+      >
+        <ToggleButtonGroup
+          id={props.id}
+          name={props.id}
+          type="radio"
+          defaultValue={props.value}
+          className={
+            props.verticalOnMobile ? 'segmented-wrap' : 'pl-0 pr-0 col-md-6'
+          }
+        >
+          {Object.keys(props.source).map((value, index) => {
+            return (
+              <ToggleButton
+                key={index}
+                value={value}
+                className="segmented-button"
+                variant={props.variant ? props.variant : 'outline-secondary'}
+                onChange={() => {
+                  recordCalculatorOptionSelected(props.id, value)
+                  props.setter(value)
+                }}
+              >
+                {props.iconFactory && props.iconFactory(value)}
+                <div className="risk-modifier-label">
+                  {props.labelFromSource(
+                    props.source[value.toString()],
+                    value.toString(),
+                  )}
+                </div>
+                <div className="risk-modifier-multiplier">
+                  {!props.hideRisk &&
+                    formatRiskMultiplier(
+                      props.showDecimals,
+                      props.multiplierFromSource(
+                        props.source[value.toString()],
+                        value.toString(),
+                      ),
+                    )}
+                </div>
+              </ToggleButton>
+            )
+          })}
+        </ToggleButtonGroup>
+      </div>
+      {props.children}
+    </Form.Group>
+  )
+}
+
 export const SegmentedControl: React.FunctionComponent<{
   id: keyof CalculatorData
   setter: (value: CalculatorData) => void
@@ -70,7 +183,7 @@ export const SegmentedControl: React.FunctionComponent<{
         header={props.header}
         popover={props.popover}
       />
-      <div className="segmented-scrollable mobile-vertical">
+      <div className="segmented segmented-scrollable mobile-vertical">
         <ToggleButtonGroup
           type="radio"
           name={props.id}
@@ -119,7 +232,8 @@ export const SegmentedControl: React.FunctionComponent<{
               >
                 <span
                   className={
-                    'segmented-label' + formValue.multiplier ? ' two-lines' : ''
+                    'risk-modifier-label' +
+                    (formValue.multiplier ? ' two-lines' : '')
                   }
                 >
                   {props.labelFactory
@@ -127,7 +241,7 @@ export const SegmentedControl: React.FunctionComponent<{
                     : formValue.label}
                 </span>
                 {formValue.multiplier ? (
-                  <div className="segmented-multiplier">
+                  <div className="risk-modifier-multiplier">
                     {props.labelFactory
                       ? ''
                       : formatRiskMultiplier(
