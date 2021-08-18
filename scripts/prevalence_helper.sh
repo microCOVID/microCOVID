@@ -22,7 +22,7 @@ git checkout main
 git pull
 
 # Delete the remote branch. It usually doesn't exist unless the script failed last time.
-git push origin --delete auto-update-prevalence &> /dev/null
+git push origin --delete auto-update-prevalence &> /dev/null || true
 
 # Delete the local branch & create new one
 git branch -D auto-update-prevalence
