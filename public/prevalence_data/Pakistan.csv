@@ -1,9 +1,9 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,220892331,28914,0.000131,2.4864,1.0,0.000325
-Azad Jammu and Kashmir,4045366,1891,0.000468,2.4864,1.0,0.001163
-Balochistan,12344408,388,3.2e-05,2.4864,1.0,7.8e-05
-Gilgit-Baltistan,1013584,541,0.000535,2.4864,1.0,0.00133
-Islamabad,2006572,3042,0.001517,2.4864,1.0154,0.003829
-Khyber Pakhtunkhwa,30523371,4304,0.000141,2.4864,1.1728,0.000411
-Punjab,110012442,7862,7.1e-05,2.4864,1.0167,0.000181
-Sindh,47886051,10886,0.000227,2.4864,1.0,0.000565
+Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,0.000345,0.000162,0.000131,2.4864,1.0,0.000325
+Azad Jammu and Kashmir,Unknown,Unknown,0.000468,2.4864,1.0,0.001163
+Balochistan,Unknown,Unknown,3.2e-05,2.4864,1.0,7.8e-05
+Gilgit-Baltistan,Unknown,Unknown,0.000535,2.4864,1.0,0.00133
+Islamabad,Unknown,Unknown,0.001517,2.4864,1.0154,0.003829
+Khyber Pakhtunkhwa,Unknown,Unknown,0.000141,2.4864,1.1728,0.000411
+Punjab,Unknown,Unknown,7.1e-05,2.4864,1.0167,0.000181
+Sindh,Unknown,Unknown,0.000227,2.4864,1.0,0.000565
