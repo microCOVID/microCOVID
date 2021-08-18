@@ -1,2 +1,2 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,114963583,5405,4.7e-05,2.6179,1.3141,0.000162
+Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire country,0.000163,7.6e-05,4.7e-05,2.6179,1.3141,0.000162
