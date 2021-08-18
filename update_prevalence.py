@@ -681,23 +681,23 @@ class AppLocation(pydantic.BaseModel):
         estimated_prevalence = reported * underreporting * delay
         return {
             "Name": self.label,
-            "Population": str(population),
-            "Cases in past week": str(self.casesPastWeek),
+            # These two columns were replaced after Risk Tracker version 2.2.5 to make room for vax/unvax prevalence
+            # "Population": str(population),
+            # "Cases in past week": str(self.casesPastWeek),
+            "Estimated unvaccinated prevalence": (
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence, 6))
+                if self.unvaccinatedPrevalenceRatio is not None
+                else "Unknown"
+            ),
+            "Estimated vaccinated prevalence": (
+                str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier, 6))
+                if self.unvaccinatedPrevalenceRatio is not None
+                else "Unknown"
+            ),
             "Reported prevalence": str(round(reported, 6)),
             "Underreporting factor": str(round(underreporting, 4)),
             "Delay factor": str(round(delay, 4)),
             "Estimated prevalence": str(round(estimated_prevalence, 6)),
-            # TODO: Figure out how to add vaccine data to export without breaking existing sheets.
-            # "Estimated unvaccinated prevalence": (
-            #     str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence, 6))
-            #     if self.unvaccinatedPrevalenceRatio is not None
-            #     else "Unknown"
-            # ),
-            # "Estimated vaccinated prevalence": (
-            #     str(round(self.unvaccinatedPrevalenceRatio * estimated_prevalence * self.averageFullyVaccinatedMultiplier, 6))
-            #     if self.unvaccinatedPrevalenceRatio is not None
-            #     else "Unknown"
-            # )
         }
 
 class AppLocations(pydantic.BaseModel):

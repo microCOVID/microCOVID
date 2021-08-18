@@ -2,10 +2,10 @@ import React from 'react'
 
 // See spreadsheet changelog and past versions here: https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#
 export const spreadsheetUrl =
-  'https://docs.google.com/spreadsheets/d/1HefpIbpD4HIqCzJYJex3_ydZ1j-vWZLI2ksouH0Jbco'
+  'https://docs.google.com/spreadsheets/d/1nlCE-WVIzMEzf9fESE9mD46OIDGnz9yyKTtm49YG2rw'
 // Do not include '/edit' at the end of the URL, because we append different paths like /copy or /template/preview depending on the use case. Dot not include a slash at the end of the URL.
-export const riskTrackerVersion = '2.2.5'
-export const riskTrackerReleaseDate = '2021-05-28'
+export const riskTrackerVersion = '2.2.6'
+export const riskTrackerReleaseDate = '2021-08-18'
 // Reminder: Make sure to bump the version number that gets imported into their copies of the spreadsheet. Located at: /public/tracker/latest_version_number.csv
 
 export const mailchimpSubscribeUrl = 'http://eepurl.com/hb6y4T'
