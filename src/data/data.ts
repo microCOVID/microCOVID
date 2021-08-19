@@ -337,6 +337,7 @@ export const RiskProfilesUnaffectedByVaccines: {
   ONE_PERCENT: 'onePercent',
   DECI_PERCENT: 'deciPercent',
   HAS_COVID: 'hasCovid',
+  CUSTOM: 'customBudget',
 }
 
 RiskProfile[RiskProfilesUnaffectedByVaccines.ONE_PERCENT] = {
@@ -357,6 +358,14 @@ RiskProfile[RiskProfilesUnaffectedByVaccines.DECI_PERCENT] = {
 
 RiskProfile[RiskProfilesUnaffectedByVaccines.HAS_COVID] = {
   label: i18n.t('data.person.hasCovid'),
+  personalMultiplier: NaN,
+  numHousemates: NaN,
+  numOtherTraceableContacts: NaN,
+  contactsMultiplier: NaN,
+}
+
+RiskProfile[RiskProfilesUnaffectedByVaccines.CUSTOM] = {
+  label: i18n.t('data.person.customBudget'),
   personalMultiplier: NaN,
   numHousemates: NaN,
   numOtherTraceableContacts: NaN,

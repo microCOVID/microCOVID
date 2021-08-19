@@ -41,6 +41,7 @@ export interface CalculatorData {
 
   // Person risk
   riskProfile: keyof typeof RiskProfile
+  riskProfileCustomBudget: number | null
   interaction: string
   personCount: number
   symptomsChecked: string
@@ -80,6 +81,7 @@ export const defaultValues: CalculatorData = {
   averageFullyVaccinatedMultiplier: null,
 
   riskProfile: '',
+  riskProfileCustomBudget: 200,
   interaction: '',
   personCount: 0,
   symptomsChecked: 'no',
@@ -280,6 +282,10 @@ export const calculatePersonRiskEach = (
       data.riskProfile === RiskProfilesUnaffectedByVaccines.DECI_PERCENT
     ) {
       return (ONE_MILLION * 0.001) / 50
+    } else if (data.riskProfile === RiskProfilesUnaffectedByVaccines.CUSTOM) {
+      return data.riskProfileCustomBudget && data.riskProfileCustomBudget > 0
+        ? data.riskProfileCustomBudget
+        : null
     } else if (data.riskProfile === '') {
       // If risk profile isn't selected, call it incomplete
       return null
