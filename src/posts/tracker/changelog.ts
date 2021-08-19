@@ -1,3 +1,5 @@
+import { mailchimpSubscribeUrl } from "components/RiskTrackerUtil"
+
 const title = 'Risk Tracker Changelog'
 const shortTitle = 'Changelog'
 
@@ -11,23 +13,6 @@ interface Change {
 }
 
 const changes: Change[] = [
-  {
-    date: new Date(2021, 6, 26),
-    whatsNew: `
-* Updated transmission and vaccine numbers for Delta variant:
-  |                         | Previous   | Delta Variant  |
-  | ----------------------- | ---------- | -------------- |
-  | Hourly Multiplier       |  9%        | 14%            |
-  | Housemate               |  30%       | 40%            |
-  | Partner                 |  48%       | 60%            |
-  | J&J                     |  .34       | .36            |
-  | AstraZeneca             |  .4        | .47            |
-  | AstraZeneca Single Dose |  .56       | 0.76           |
-  | Pfizer/Moderna          |  .1        | 0.17           |
-  | Pfizer/Moderna Single   |  .56       | 0.76           |
-* See [blog post](/blog/delta) or [Research Sources](/paper/14-research-sources#delta-variant) for more details.
-`,
-  },
   {
     date: new Date(2021, 7, 18),
     title: 'Add “average vaccinated person”',
@@ -47,17 +32,28 @@ const changes: Change[] = [
 2. **Pod Overview sheet:**
     * Update your version number in cell \`D2\` to 2.3
 3. (Optional, most people can disregard this step) If you care about being able to easily read the % prevalence numbers, then do the following in the 📍 Locations sheet
-    * Change cell F5 to be Unvaccinated average prevalence
-    * Change cell G5 to be Vaccinated average prevalence
-    * Highlight cell F6 through cell G30. On the toolbar, click the % button to change the formatting to percentages, so you can read the data in those cells.
+    * Change cell \`F5\` to be Unvaccinated average prevalence
+    * Change cell \`G5\` to be Vaccinated average prevalence
+    * Highlight cell \`F6\` through cell \`G30\`. On the toolbar, click the % button to change the formatting to percentages, so you can read the data in those cells.
 `,
+  },
+  {
+    date: new Date(2021, 6, 26),
+    title: 'Delta updates',
+    whatsNew: `
+The spreadsheet automatically pulls data on transmission rates and vaccine effectiveness from the website. So when we published the updates for the Delta variant, all spreadsheet users automatically got the update.
+
+
+* [See our blog post on the Delta variant](https://www.microcovid.org/blog/delta)
+* [See techinical details](https://www.microcovid.org/paper/changelog#7262021)`,
   },
 ]
 
 export const lastUpdated = changes[0].date
 
-// TODO(blanchardjeremy): Add a link to subscribe for updates at the top of this page
-const content = changes
+let content = `[Click here to subscribe for notifications about Risk Tracker version updates](${mailchimpSubscribeUrl}).  If you have any questions, you can email [tracker@microcovid.org](mailto:tracker@microcovid.org).\n\n`
+
+content += changes
   .map((change) => {
     let markdownContent = `## ${change.date.toLocaleDateString()}`
     if (change.versionNum) {
@@ -78,7 +74,7 @@ const content = changes
       markdownContent += `${change.whatsNew}\n\n`
     }
     if (change.instructions) {
-      markdownContent += `**Instructions to manually apply these changes:**\n${change.instructions}\n\n`
+      markdownContent += `**Instructions to manually update your copy of the spreadsheet:**\n${change.instructions}\n\n`
     }
     return markdownContent
   })
