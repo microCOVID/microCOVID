@@ -1,4 +1,4 @@
-import { mailchimpSubscribeUrl } from 'components/RiskTrackerUtil'
+export const mailchimpSubscribe = 'http://eepurl.com/hb6y4T'
 
 const title = 'Risk Tracker Changelog'
 const shortTitle = 'Changelog'
@@ -7,18 +7,20 @@ interface Change {
   date: Date
   versionNum?: string
   title?: string
-  linkToCurrentSpreadsheet?: string
+  spreadsheetURL?: string
   whatsNew: string
   instructions?: string
 }
+
+// NOTE: Do not include '' at the end of the URL, because we append different paths like /copy or /template/preview depending on the use case. Dot not include a slash at the end of the URL.
 
 const changes: Change[] = [
   {
     date: new Date(2021, 7, 18),
     versionNum: '2.3',
     title: 'Add “average vaccinated person”',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1nlCE-WVIzMEzf9fESE9mD46OIDGnz9yyKTtm49YG2rw/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1nlCE-WVIzMEzf9fESE9mD46OIDGnz9yyKTtm49YG2rw',
     whatsNew: `
 * Adds “Avg local resident (vaccinated)” and “Avg local resident (unvaccinated)” as risk profiles you can select.`,
     instructions: `
@@ -51,8 +53,8 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
     date: new Date(2021, 4, 28),
     versionNum: '2.2.5',
     title: 'Update true infections model & fix budget calculation',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1HefpIbpD4HIqCzJYJex3_ydZ1j-vWZLI2ksouH0Jbco/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1HefpIbpD4HIqCzJYJex3_ydZ1j-vWZLI2ksouH0Jbco',
     whatsNew: `
 * Fixed a bug where budgets were over-estimated using an 8-day time frame instead of a 7-day timeframe.
 * For manual location data: Update the “adjusted prevalence” formula to match the [December 10, 2020 updates](https://covid19-projections.com/estimating-true-infections-revisited/).`,
@@ -72,8 +74,8 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
     versionNum: '2.2.4',
     title:
       'Bugfix - vaccine multiplier not applying properly to some activities',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1ivoRA8fFGKwm-XoflKFKeWIpRQJVpTFP6W1KN45_tSs/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1ivoRA8fFGKwm-XoflKFKeWIpRQJVpTFP6W1KN45_tSs',
     whatsNew: `
 * Fixed a bug in the custom people tab where vaccine multiplier wouldn’t apply to every activity row if there was a 0% activity risk`,
     instructions: `
@@ -90,8 +92,8 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
     date: new Date(2021, 3, 1),
     versionNum: '2.2.3',
     title: 'Bugfix - Vaccine time to effectiveness',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1W3_RxaLrqILJae6Uw-I1D9opP5tKVA694OhdGusNwMs/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1W3_RxaLrqILJae6Uw-I1D9opP5tKVA694OhdGusNwMs',
     whatsNew: `
 * Changed delay for getting benefits of a vaccine dose to 14 days, consistent with AZ, J&J, and Moderna studies.
 * (Also, you’ll see the new [Johnson & Johnson vaccine numbers](/paper/13-q-and-a#vaccines-qa) have been automatically added to your spreadsheet since the last release. No action needed.)
@@ -110,7 +112,7 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
     date: new Date(2021, 2, 29),
     versionNum: '2.2.2',
     title: 'Bugfix - Kissing',
-    linkToCurrentSpreadsheet:
+    spreadsheetURL:
       'https://docs.google.com/spreadsheets/d/1aCj6tkxC70sT9WBwLjBYFxbr_eLbAv8FPF-fjrBtdaU',
     whatsNew: `
 * Fixed a bug with kissing receiving a 30% activity risk cap (now 48% as intended)
@@ -204,8 +206,8 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
     date: new Date(2021, 2, 18),
     versionNum: '2.2.1',
     title: 'Bug fixes',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1lFM0di7j4MaGXbUzbe6GYNeigK1qyl0xuvSxlfIO1us/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1lFM0di7j4MaGXbUzbe6GYNeigK1qyl0xuvSxlfIO1us',
     whatsNew: `
 * Fixed a bug that caused vaccines to show up under the wrong podmate in some conditions
 * Fixed a bug in the Risk to Others Forecast that was showing an erroneously large number
@@ -226,7 +228,7 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
         )</pre></code>
     * Drag this through entire section (C81:X100)
     * Edit cell E2 (which appears to be blank but has a formula in it) to be:
-        <pre><code>=IF(D2&lt;&gt;D3, HYPERLINK("https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit", "NOTICE: Your spreadsheet is behind the latest version. Please click here for upgrade instructions."), )</pre></code>
+        <pre><code>=IF(D2&lt;&gt;D3, HYPERLINK("https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8", "NOTICE: Your spreadsheet is behind the latest version. Please click here for upgrade instructions."), )</pre></code>
     * Update your version number in cell \`D2\` to **2.2.1**
 `,
   },
@@ -234,8 +236,8 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
     date: new Date(2021, 2, 16),
     versionNum: '2.2',
     title: 'Vaccines! 🎉 (& additional decay updates)',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1aCj6tkxC70sT9WBwLjBYFxbr_eLbAv8FPF-fjrBtdaU/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1aCj6tkxC70sT9WBwLjBYFxbr_eLbAv8FPF-fjrBtdaU',
     whatsNew: `
 * **_Vaccines are now supported_** for Pod Members and Custom People! 🎉
     * You can read more in the [White Paper explanation of vaccines](/paper/13-q-and-a#vaccines-qa)
@@ -253,7 +255,7 @@ _Since this is such a large change, these instructions show you how to make a ne
 
 _Steps_
     
-1. **Make a copy** of the [latest version of the spreadsheet](https://docs.google.com/spreadsheets/d/1aCj6tkxC70sT9WBwLjBYFxbr_eLbAv8FPF-fjrBtdaU/edit#gid=1845362878)
+1. **Make a copy** of the [latest version of the spreadsheet](https://docs.google.com/spreadsheets/d/1aCj6tkxC70sT9WBwLjBYFxbr_eLbAv8FPF-fjrBtdaU#gid=1845362878)
 2. **Podmate names:** Copy-paste the names of each of your podmates (Pod Overview > row 20)
 3. **Locations:** Copy-paste your location settings. (Location > B6 through E26)
 4. **Custom People data:** Copy-paste the columns from your Custom People sheet (from “Is this a generic person profile that should be adjustable by location?” to “Volume”)
@@ -276,8 +278,8 @@ _Note: Known Issue with vaccines:_ The vaccine logic will apply your vaccination
     date: new Date(2021, 1, 15),
     versionNum: '2.1',
     title: 'Manually enter person risk number',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA',
     whatsNew: `
 * If you know the microCOVID score of the person you’re seeing, you can enter it directly into the “Risk profile” column (instead of selecting an item from the dropdown)
 `,
@@ -307,8 +309,8 @@ _Note: Known Issue with vaccines:_ The vaccine logic will apply your vaccination
     date: new Date(2021, 0, 31),
     versionNum: '2.0',
     title: 'Version 2.0 release 🎉',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA',
     whatsNew: `
 * [Read the full details for this release on our blog](/blog/budget)
 `,
@@ -319,24 +321,24 @@ _Note: Known Issue with vaccines:_ The vaccine logic will apply your vaccination
   {
     date: new Date(2021, 0, 31),
     title: 'Version 1 is being retired',
-    linkToCurrentSpreadsheet:
-      'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA/edit',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1-IEwUHHC-V8yzA4R6cShxlev63Ykm0uK61GUL_IynmA',
     whatsNew: `
-Now that we’re launching [version 2 of the Risk Tracker spreadsheet](/tracker), we are retiring version 1. You can find a copy of [Version 1](https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ/edit) here if you need it for any reason.
+Now that we’re launching [version 2 of the Risk Tracker spreadsheet](/tracker), we are retiring version 1. You can find a copy of [Version 1](https://docs.google.com/spreadsheets/d/1DYIJgjG3H5rwt52NT2TX_m429snmIU-jGw1a8ZODwGQ) here if you need it for any reason.
 `,
   },
   {
     date: new Date(2021, 0, 31),
     title: 'Previous changelog entries',
     whatsNew: `
-Previous changelog entries can be found in the [old risk tracker changelog google doc](https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8/edit#heading=h.lvpswyvu999r)
+Previous changelog entries can be found in the [old risk tracker changelog google doc](https://docs.google.com/document/d/1iwTFoCS8lOIWWm-ZzcMZ_mPHgA8tHVVA3yhKY23gDu8#heading=h.lvpswyvu999r)
 `,
   },
 ]
 
 export const lastUpdated = changes[0].date
 
-let content = `See below for each update that has been made to the [Risk Tracker](/tracker) spreadsheet and instructions for how to migrate your copy of the spreadsheet with the latest changes. [Click here to subscribe for notifications about Risk Tracker version updates](${mailchimpSubscribeUrl}). If you have any questions, you can email [tracker@microcovid.org](mailto:tracker@microcovid.org).\n\n`
+let content = `See below for each update that has been made to the [Risk Tracker](/tracker) spreadsheet and instructions for how to migrate your copy of the spreadsheet with the latest changes. [Click here to subscribe for notifications about Risk Tracker version updates](${mailchimpSubscribe}). If you have any questions, you can email [tracker@microcovid.org](mailto:tracker@microcovid.org).\n\n`
 
 content += changes
   .map((change) => {
@@ -352,11 +354,11 @@ content += changes
     markdownContent += '\n'
 
     // Link
-    if (change.linkToCurrentSpreadsheet) {
+    if (change.spreadsheetURL) {
       if (change.versionNum) {
-        markdownContent += `[Direct link to v${change.versionNum} of the spreadsheet](${change.linkToCurrentSpreadsheet})\n\n`
+        markdownContent += `[Direct link to v${change.versionNum} of the spreadsheet](${change.spreadsheetURL})\n\n`
       } else {
-        markdownContent += `[Direct link to this version of the spreadsheet](${change.linkToCurrentSpreadsheet})\n\n`
+        markdownContent += `[Direct link to this version of the spreadsheet](${change.spreadsheetURL})\n\n`
       }
     }
 
@@ -376,3 +378,8 @@ content += changes
 
 export const post = { title, shortTitle, content }
 export default post
+
+export const latestRiskTrackerVersion = changes[0].versionNum
+export const latestRiskTrackerReleaseDate = changes[0].date
+export const latestRiskTrackerSpreadsheetURL = changes[0].spreadsheetURL
+
