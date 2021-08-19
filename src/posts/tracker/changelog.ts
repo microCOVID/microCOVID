@@ -12,7 +12,7 @@ interface Change {
   instructions?: string
 }
 
-// NOTE: Do not include '' at the end of the URL, because we append different paths like /copy or /template/preview depending on the use case. Dot not include a slash at the end of the URL.
+// NOTE: Do not include '/edit' at the end of the URL, because we append different paths like /copy or /template/preview depending on the use case. Dot not include a slash at the end of the URL.
 
 const changes: Change[] = [
   {
