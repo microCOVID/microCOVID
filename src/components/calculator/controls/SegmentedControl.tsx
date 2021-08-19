@@ -1,4 +1,3 @@
-import num2fraction from 'num2fraction'
 import React, { useState } from 'react'
 import {
   Form,
@@ -7,7 +6,8 @@ import {
   ToggleButtonGroup,
   Tooltip,
 } from 'react-bootstrap'
-import { useTranslation } from 'react-i18next'
+
+import { FormattedRiskMultiplier } from '../util/FormattedRiskMultiplier'
 
 import ControlLabel from './ControlLabel'
 import { recordCalculatorOptionSelected } from 'components/Analytics'
@@ -37,37 +37,6 @@ export interface SegmentedProps<SourceValue> {
 export function SegmentedControlNoDescriptions<SourceValue>(
   props: SegmentedProps<SourceValue>,
 ): React.ReactElement {
-  const { t } = useTranslation()
-  // TODO(jy2wong) formatRiskMultiplier is copy and pasted from
-  // SegmentedControl to get access to useTranslation(). How do you do this
-  // properly?
-  // 0.25 -> "1/4x"
-  function formatRiskMultiplierInternal(multiplier: number): string {
-    if (multiplier === 1) {
-      return t('calculator.baseline_risk_short')
-    } else if (multiplier > 0 && multiplier < 1) {
-      const frac = num2fraction(multiplier)
-      return t('calculator.risk_modifier_multiple_short', { multiplier: frac })
-    } else {
-      return t('calculator.risk_modifier_multiple_short', {
-        multiplier: multiplier,
-      })
-    }
-  }
-  const formatRiskMultiplier = (
-    showDecimals?: boolean,
-    multiplier?: number,
-  ) => {
-    if (multiplier === undefined) {
-      return ''
-    } else if (showDecimals) {
-      return t('calculator.risk_modifier_multiple_short', {
-        multiplier: multiplier,
-      })
-    }
-    return formatRiskMultiplierInternal(multiplier)
-  }
-
   return (
     <Form.Group controlId={props.id}>
       <ControlLabel id={props.id} header={props.header} label={props.label} />
@@ -107,16 +76,14 @@ export function SegmentedControlNoDescriptions<SourceValue>(
                     value.toString(),
                   )}
                 </div>
-                <div className="risk-modifier-multiplier">
-                  {!props.hideRisk &&
-                    formatRiskMultiplier(
-                      props.showDecimals,
-                      props.multiplierFromSource(
-                        props.source[value.toString()],
-                        value.toString(),
-                      ),
-                    )}
-                </div>
+                <FormattedRiskMultiplier
+                  hideRisk={props.hideRisk}
+                  showDecimals={props.showDecimals}
+                  multiplier={props.multiplierFromSource(
+                    props.source[value.toString()],
+                    value.toString(),
+                  )}
+                />
               </ToggleButton>
             )
           })}
@@ -147,26 +114,6 @@ export const SegmentedControl: React.FunctionComponent<{
   const dataValue = props.id in props.data ? props.data[props.id] : ''
   const activeValue = typeof dataValue === 'string' ? dataValue : ''
   const [hoverDesc, setHoverDesc] = useState<string>('')
-  const { t } = useTranslation()
-  // 0.25 -> "1/4x"
-  function formatRiskMultiplierInternal(multiplier: number): string {
-    if (multiplier === 1) {
-      return t('calculator.baseline_risk_short')
-    } else if (multiplier > 0 && multiplier < 1) {
-      const frac = num2fraction(multiplier)
-      return t('calculator.risk_modifier_multiple_short', { multiplier: frac })
-    } else {
-      return t('calculator.risk_modifier_multiple_short', {
-        multiplier: multiplier,
-      })
-    }
-  }
-  const formatRiskMultiplier = (hideRisk?: boolean, multiplier?: number) => {
-    if (hideRisk || multiplier === undefined) {
-      return ''
-    }
-    return formatRiskMultiplierInternal(multiplier)
-  }
 
   const hoverDescIfPresentOtherwiseActiveDesc =
     hoverDesc !== ''
@@ -240,16 +187,10 @@ export const SegmentedControl: React.FunctionComponent<{
                     ? props.labelFactory(key)
                     : formValue.label}
                 </span>
-                {formValue.multiplier ? (
-                  <div className="risk-modifier-multiplier">
-                    {props.labelFactory
-                      ? ''
-                      : formatRiskMultiplier(
-                          props.hideRisk,
-                          formValue.multiplier,
-                        )}
-                  </div>
-                ) : null}
+                <FormattedRiskMultiplier
+                  hideRisk={!!props.labelFactory || props.hideRisk}
+                  multiplier={formValue.multiplier}
+                />
                 <span className="segmented-value">{formValue.description}</span>
               </ToggleButton>
             </OverlayTrigger>
