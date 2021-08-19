@@ -1,4 +1,4 @@
-import { mailchimpSubscribeUrl } from "components/RiskTrackerUtil"
+import { mailchimpSubscribeUrl } from 'components/RiskTrackerUtil'
 
 const title = 'Risk Tracker Changelog'
 const shortTitle = 'Changelog'
@@ -70,7 +70,8 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
   {
     date: new Date(2021, 4, 12),
     versionNum: '2.2.4',
-    title: 'Bugfix - vaccine multiplier not applying properly to some activities',
+    title:
+      'Bugfix - vaccine multiplier not applying properly to some activities',
     linkToCurrentSpreadsheet:
       'https://docs.google.com/spreadsheets/d/1ivoRA8fFGKwm-XoflKFKeWIpRQJVpTFP6W1KN45_tSs/edit',
     whatsNew: `
