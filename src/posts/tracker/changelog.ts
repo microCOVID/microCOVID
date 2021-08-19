@@ -382,4 +382,3 @@ export default post
 export const latestRiskTrackerVersion = changes[0].versionNum
 export const latestRiskTrackerReleaseDate = changes[0].date
 export const latestRiskTrackerSpreadsheetURL = changes[0].spreadsheetURL
-
