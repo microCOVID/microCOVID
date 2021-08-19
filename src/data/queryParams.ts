@@ -8,6 +8,7 @@ import {
   defaultValues,
   sanitizeData,
 } from './calculate'
+import { RiskProfilesUnaffectedByVaccines } from './data'
 
 export const queryConfig: QueryParamConfigMap = {
   riskBudget: NumberParam,
@@ -22,6 +23,7 @@ export const queryConfig: QueryParamConfigMap = {
   positiveCasePercentage: NumberParam,
 
   riskProfile: StringParam,
+  riskProfileCustomBudget: NumberParam,
   interaction: StringParam,
   personCount: NumberParam,
 
@@ -54,6 +56,10 @@ export const filterParams = (data: CalculatorData): QueryData => {
     delete filtered.positiveCasePercentage
   }
 
+  if (filtered.riskProfile !== RiskProfilesUnaffectedByVaccines.CUSTOM) {
+    // Keep custom person risk out of the URL if risk profile is not custom.
+    delete filtered.riskProfileCustomBudget
+  }
   return filtered
 }
 

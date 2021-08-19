@@ -97,8 +97,8 @@
     "duration_header": "Duration",
     "duration_question": "How long is the activity, in minutes? (For a repeated activity: minutes per week?)",
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
-    "person_risk_profile_question": "What is their risk profile?",
-    "person_risk_profile_header": "Risk Profile",
+    "behavior_question": "How did they spend their last 10 days?",
+    "behavior_header": "Behavior",
     "their_vaccine_header": "Their vaccine",
     "their_vaccine_question": "Are they fully vaccinated?",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
@@ -277,7 +277,15 @@
       "bars": "Went to a bar in the last 10 days",
       "microcovid_budget_one_percent": "Keeps to a budget of 200 microCOVID per week (\"Standard Caution Budget\")",
       "microcovid_budget_deci_percent": "Keeps to a budget of 20 microCOVID per week (\"High Caution Budget\")",
-      "hasCovid": "Has COVID"
+      "hasCovid": "Has COVID",
+      "notSure_short": "Not sure",
+      "hasCovidRightNow_short": "Infected with COVID",
+      "minimalExposure_short": "1-2 person household, minimal exposure",
+      "minimalExposure": "Once a week groceries; all socializing masked, outdoors and distanced",
+      "worksOrSocializes_short": "Worked or socialized outside home",
+      "largeGathering_short": "Attended large indoor gathering, unmasked",
+      "largeGathering": "Like a conference, night at a bar or large wedding",
+      "customBudget_short": "Followed a risk budget"
     },
     "vaccine": {
       "pfizer": "Pfizer BioNTech",

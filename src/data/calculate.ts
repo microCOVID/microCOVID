@@ -5,6 +5,7 @@ import {
   Interaction,
   PersonRiskValue,
   RiskProfile,
+  RiskProfileDeprecated,
   RiskProfilesUnaffectedByVaccines,
   Setting,
   TheirMask,
@@ -41,7 +42,7 @@ export interface CalculatorData {
 
   // Person risk
   riskProfile: keyof typeof RiskProfile
-  riskProfileCustomBudget: number | null
+  riskProfileCustomBudget: number
   interaction: string
   personCount: number
   symptomsChecked: string
@@ -161,6 +162,13 @@ export const sanitizeData = (
     (data['yourVaccineDoses'] > 2 || data['yourVaccineDoses'] < 0)
   ) {
     delete data['yourVaccineDoses']
+  }
+
+  if (
+    typeof data['riskProfile'] === 'string' &&
+    Object.keys(RiskProfileDeprecated).includes(data['riskProfile'])
+  ) {
+    delete data['riskProfileCustomBudget']
   }
 
   // No scenario name. Must be old stored data or an old query. For backwards

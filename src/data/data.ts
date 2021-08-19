@@ -20,6 +20,7 @@ export interface FormValue extends BaseFormValue {
 
 export interface PersonRiskValue extends BaseFormValue {
   label: string
+  description?: string
   personalMultiplier: number
   numHousemates: number
   numOtherTraceableContacts: number // Not including housemates
@@ -239,24 +240,45 @@ const noContacts = {
   contactsMultiplier: 0,
 }
 
-export const RiskProfile: { [key: string]: PersonRiskValue } = {
+export const RiskProfileCurrent: { [key: string]: PersonRiskValue } = {
   average: {
-    label: i18n.t('data.person.average'),
+    label: i18n.t('data.person.notSure_short'),
     personalMultiplier: 1.0,
     ...noContacts,
   },
-  livingAlone: {
-    label: i18n.t('data.person.livingAlone'),
-    personalMultiplier: livingAloneMult,
-    ...noContacts,
-  },
-
   livingWithPartner: {
-    label: i18n.t('data.person.livingWithPartner'),
+    label: i18n.t('data.person.minimalExposure_short'),
+    description: i18n.t('data.person.minimalExposure'),
     personalMultiplier: livingAloneMult,
     numHousemates: 1,
     numOtherTraceableContacts: 0,
     contactsMultiplier: livingAloneMult,
+  },
+  worksOrSocializes: {
+    label: i18n.t('data.person.worksOrSocializes_short'),
+    personalMultiplier: 1.0,
+    ...noContacts,
+  },
+  largeGathering: {
+    label: i18n.t('data.person.largeGathering_short'),
+    description: i18n.t('data.person.largeGathering'),
+    /*
+     * Six hours of indoor exposure to a dozen people (2 near you, 10 six feet away)
+     * who are not wearing masks and are talking loudly.
+     */
+    personalMultiplier:
+      6 *
+      Interaction.oneTime.multiplier *
+      (2 + 10 * Distance.sixFt.multiplier * Voice.loud.multiplier),
+    ...noContacts,
+  },
+}
+
+export const RiskProfileDeprecated: { [key: string]: PersonRiskValue } = {
+  livingAlone: {
+    label: i18n.t('data.person.livingAlone'),
+    personalMultiplier: livingAloneMult,
+    ...noContacts,
   },
 
   closedPod4: {
@@ -340,7 +362,7 @@ export const RiskProfilesUnaffectedByVaccines: {
   CUSTOM: 'customBudget',
 }
 
-RiskProfile[RiskProfilesUnaffectedByVaccines.ONE_PERCENT] = {
+RiskProfileDeprecated[RiskProfilesUnaffectedByVaccines.ONE_PERCENT] = {
   label: i18n.t('data.person.microcovid_budget_one_percent'),
   personalMultiplier: NaN,
   numHousemates: NaN,
@@ -348,7 +370,7 @@ RiskProfile[RiskProfilesUnaffectedByVaccines.ONE_PERCENT] = {
   contactsMultiplier: NaN,
 }
 
-RiskProfile[RiskProfilesUnaffectedByVaccines.DECI_PERCENT] = {
+RiskProfileDeprecated[RiskProfilesUnaffectedByVaccines.DECI_PERCENT] = {
   label: i18n.t('data.person.microcovid_budget_deci_percent'),
   personalMultiplier: NaN,
   numHousemates: NaN,
@@ -356,20 +378,25 @@ RiskProfile[RiskProfilesUnaffectedByVaccines.DECI_PERCENT] = {
   contactsMultiplier: NaN,
 }
 
-RiskProfile[RiskProfilesUnaffectedByVaccines.HAS_COVID] = {
-  label: i18n.t('data.person.hasCovid'),
+RiskProfileCurrent[RiskProfilesUnaffectedByVaccines.HAS_COVID] = {
+  label: i18n.t('data.person.hasCovidRightNow_short'),
   personalMultiplier: NaN,
   numHousemates: NaN,
   numOtherTraceableContacts: NaN,
   contactsMultiplier: NaN,
 }
 
-RiskProfile[RiskProfilesUnaffectedByVaccines.CUSTOM] = {
-  label: i18n.t('data.person.customBudget'),
+RiskProfileCurrent[RiskProfilesUnaffectedByVaccines.CUSTOM] = {
+  label: i18n.t('data.person.customBudget_short'),
   personalMultiplier: NaN,
   numHousemates: NaN,
   numOtherTraceableContacts: NaN,
   contactsMultiplier: NaN,
+}
+
+export const RiskProfile: { [key: string]: PersonRiskValue } = {
+  ...RiskProfileCurrent,
+  ...RiskProfileDeprecated,
 }
 
 export interface VaccineValue {

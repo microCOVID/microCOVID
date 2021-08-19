@@ -6,6 +6,7 @@ import { BsDash, BsPlus } from 'react-icons/bs'
 import ControlLabel from './controls/ControlLabel'
 import { SegmentedControl } from './controls/SegmentedControl'
 import { SelectControl } from './controls/SelectControl'
+import { RiskProfileSelector } from './selectors/RiskProfileSelector'
 import { fixedPointPrecision } from './util/FormatPrecision'
 import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
 import {
@@ -77,6 +78,7 @@ export const PersonRiskControls: React.FunctionComponent<{
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
   const { t } = useTranslation()
+  const currentPersonRisk = calculatePersonRiskEach(data)
   return (
     <React.Fragment>
       <h3 className="h2 accent">
@@ -152,7 +154,6 @@ export const PersonRiskControls: React.FunctionComponent<{
           <GroupSizeWarning people={data.personCount} />
         </div>
       )}
-
       {!repeatedEvent ? (
         <React.Fragment>
           <SelectControl
@@ -222,8 +223,20 @@ export const PersonRiskControls: React.FunctionComponent<{
           )
         }}
       />
+      <RiskProfileSelector
+        id="riskProfile"
+        data={data}
+        setter={setter}
+        value={data.riskProfile}
+      />
       {TheirVaccineIfAvailable(data, setter)}
-      <br />
+      {currentPersonRisk && (
+        <p>
+          Their behavior, vaccination and infection status suggest that their
+          baseline risk exposure is about{' '}
+          {fixedPointPrecision(currentPersonRisk)} microCOVIDs this week.
+        </p>
+      )}
     </React.Fragment>
   )
 }
