@@ -25,10 +25,10 @@ const changes: Change[] = [
 1. **INTERNAL_PERSON sheet**
     * Highlight and *copy* all 4 of these cells (in the table below)
     * Click on cell \`B9\` and press *paste*
-      |                                       |             |
-      | ------------------------------------- | ----------- |
-      | Avg local resident (vaccinated)       |  \`=1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE)\`  |
-      | Avg local resident (unvaccinated)     |  \`=1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 2, FALSE)\`  |
+      <table style="border: 1px solid #b4bcc2;">
+        <tr><td>Avg local resident (vaccinated)</td>    <td><code>=1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE)</code></td></tr>
+        <tr><td>Avg local resident (unvaccinated)</td>    <td><code>=1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 2, FALSE)</code></td></tr>
+      </table>
 2. **Pod Overview sheet:**
     * Update your version number in cell \`D2\` to 2.3
 3. (Optional, most people can disregard this step) If you care about being able to easily read the % prevalence numbers, then do the following in the 📍 Locations sheet
@@ -45,7 +45,7 @@ The spreadsheet automatically pulls data on transmission rates and vaccine effec
 
 
 * [See our blog post on the Delta variant](/blog/delta)
-* [See techinical details](/paper/changelog#7262021)`,
+* [See technical details](/paper/changelog#7262021)`,
   },
   {
     date: new Date(2021, 4, 28),
