@@ -1,5 +1,6 @@
 import { PostMap } from 'posts/post'
 import basicUsage from 'posts/tracker/basics'
+import changelog from 'posts/tracker/changelog'
 import householdPod from 'posts/tracker/household-pod'
 import quickstart from 'posts/tracker/quickstart'
 import faq from 'posts/tracker/tracker-faq'
@@ -10,4 +11,5 @@ export const pages: PostMap = {
   basics: basicUsage,
   faq: faq,
   'household-pod': householdPod,
+  changelog: changelog,
 }
