@@ -43,22 +43,20 @@ export const RiskProfileSelector: React.FunctionComponent<{
           }
           className="col-5"
           value={
-            personRiskForDeprecatedProfile ||
-            props.data.riskProfileCustomBudget ||
-            0
+            personRiskForDeprecatedProfile || props.data.customPersonRisk || 0
           }
           onChange={(e) => {
             if (!e.target.value) {
               props.setter({
                 ...props.data,
                 riskProfile: RiskProfilesUnaffectedByVaccines.CUSTOM,
-                riskProfileCustomBudget: 0,
+                customPersonRisk: 0,
               })
             }
             props.setter({
               ...props.data,
               riskProfile: RiskProfilesUnaffectedByVaccines.CUSTOM,
-              riskProfileCustomBudget: Number(e.target.value),
+              customPersonRisk: Number(e.target.value),
             })
           }}
         ></Form.Control>
@@ -97,8 +95,7 @@ export const RiskProfileSelector: React.FunctionComponent<{
                   props.setter({
                     ...props.data,
                     riskProfile: key || '',
-                    riskProfileCustomBudget:
-                      personRiskForDeprecatedProfile || 0,
+                    customPersonRisk: personRiskForDeprecatedProfile || 0,
                   })
                 } else {
                   props.setter({

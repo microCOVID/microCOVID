@@ -17,7 +17,7 @@ export type PartialData = Omit<
   | 'averageFullyVaccinatedMultiplier'
   | 'yourVaccineType'
   | 'yourVaccineDoses'
-  | 'riskProfileCustomBudget'
+  | 'customPersonRisk'
 >
 
 export const prepopulated: {

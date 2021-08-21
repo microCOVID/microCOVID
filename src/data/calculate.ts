@@ -42,7 +42,7 @@ export interface CalculatorData {
 
   // Person risk
   riskProfile: keyof typeof RiskProfile
-  riskProfileCustomBudget: number
+  customPersonRisk: number
   interaction: string
   personCount: number
   symptomsChecked: string
@@ -82,7 +82,7 @@ export const defaultValues: CalculatorData = {
   averageFullyVaccinatedMultiplier: null,
 
   riskProfile: '',
-  riskProfileCustomBudget: 200,
+  customPersonRisk: 200,
   interaction: '',
   personCount: 0,
   symptomsChecked: 'no',
@@ -168,7 +168,7 @@ export const sanitizeData = (
     typeof data['riskProfile'] === 'string' &&
     Object.keys(RiskProfileDeprecated).includes(data['riskProfile'])
   ) {
-    delete data['riskProfileCustomBudget']
+    delete data['customPersonRisk']
   }
 
   // No scenario name. Must be old stored data or an old query. For backwards
@@ -291,8 +291,8 @@ export const calculatePersonRiskEach = (
     ) {
       return (ONE_MILLION * 0.001) / 50
     } else if (data.riskProfile === RiskProfilesUnaffectedByVaccines.CUSTOM) {
-      return data.riskProfileCustomBudget && data.riskProfileCustomBudget > 0
-        ? data.riskProfileCustomBudget
+      return data.customPersonRisk && data.customPersonRisk > 0
+        ? data.customPersonRisk
         : null
     } else if (data.riskProfile === '') {
       // If risk profile isn't selected, call it incomplete

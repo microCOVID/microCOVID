@@ -23,7 +23,7 @@ export const queryConfig: QueryParamConfigMap = {
   positiveCasePercentage: NumberParam,
 
   riskProfile: StringParam,
-  riskProfileCustomBudget: NumberParam,
+  customPersonRisk: NumberParam,
   interaction: StringParam,
   personCount: NumberParam,
 
@@ -58,7 +58,7 @@ export const filterParams = (data: CalculatorData): QueryData => {
 
   if (filtered.riskProfile !== RiskProfilesUnaffectedByVaccines.CUSTOM) {
     // Keep custom person risk out of the URL if risk profile is not custom.
-    delete filtered.riskProfileCustomBudget
+    delete filtered.customPersonRisk
   }
   return filtered
 }
