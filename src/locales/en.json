@@ -99,6 +99,7 @@
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "behavior_question": "How did they spend their last 10 days?",
     "behavior_header": "Behavior",
+    "person_risk_note": "Each nearby person has a person risk of <1>{{ personRisk }} $t(calculator.pointsdisplay.microCOVIDs)</1> this week. Person risk (chance they currently have COVID) is calculated from their location, behavior, vaccination status, and infection status.",
     "their_vaccine_header": "Their vaccine",
     "their_vaccine_question": "Are they fully vaccinated?",
     "household_members_note": "If you are modeling exposure from members of your household, only count their contacts outside the house to avoid double-counting",
@@ -284,7 +285,7 @@
       "minimalExposure": "Once a week groceries; all socializing masked, outdoors and distanced",
       "worksOrSocializes_short": "Worked or socialized outside home",
       "largeGathering_short": "Attended large indoor gathering, unmasked",
-      "largeGathering": "Like a conference, night at a bar or large wedding",
+      "largeGathering": "Like a conference, night at a bar, or large wedding",
       "customBudget_short": "Followed a risk budget"
     },
     "vaccine": {

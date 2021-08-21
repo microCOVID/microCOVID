@@ -232,9 +232,15 @@ export const PersonRiskControls: React.FunctionComponent<{
       {TheirVaccineIfAvailable(data, setter)}
       {currentPersonRisk && (
         <p>
-          Their behavior, vaccination and infection status suggest that their
-          baseline risk exposure is about{' '}
-          {fixedPointPrecision(currentPersonRisk)} microCOVIDs this week.
+          <Trans
+            i18nKey="calculator.person_risk_note"
+            values={{ personRisk: fixedPointPrecision(currentPersonRisk) }}
+          >
+            Each nearby person has a person risk of{' '}
+            <strong>200 microCOVIDs</strong> this week. Person risk (chance they
+            currently have COVID) is calculated from their location, behavior,
+            vaccination status, and infection status.
+          </Trans>
         </p>
       )}
     </React.Fragment>

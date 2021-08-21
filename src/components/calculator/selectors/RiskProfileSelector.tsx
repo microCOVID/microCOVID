@@ -32,7 +32,7 @@ export const RiskProfileSelector: React.FunctionComponent<{
     : null
 
   const customMicroCovidBudgetInput = (
-    <Form.Group controlId="customMicrocovidBudget">
+    <Form.Group controlId="customMicrocovidBudget" className="mb-0">
       <InputGroup>
         <Form.Control
           type="number"
@@ -61,12 +61,11 @@ export const RiskProfileSelector: React.FunctionComponent<{
           }}
         ></Form.Control>
         <InputGroup.Append>
-          <InputGroup.Text>{t('per week')}</InputGroup.Text>
+          <InputGroup.Text>
+            {t('microCOVIDs') + ' ' + t('per week')}
+          </InputGroup.Text>
         </InputGroup.Append>
       </InputGroup>
-      <Form.Label>
-        <Form.Text>{t('microCOVIDs')}</Form.Text>
-      </Form.Label>
     </Form.Group>
   )
   return (
