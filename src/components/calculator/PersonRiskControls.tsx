@@ -11,7 +11,6 @@ import { fixedPointPrecision } from './util/FormatPrecision'
 import { CalculatorData, calculatePersonRiskEach } from 'data/calculate'
 import {
   Distance,
-  RiskProfile,
   RiskProfilesUnaffectedByVaccines,
   TheirVaccine,
   intimateDurationFloor,
@@ -42,31 +41,6 @@ const personCountPopover = (
         account for that. For example, if you are at a backyard party where you
         are usually talking to 5 people, but the specific people change as you
         mingle, that is still just 5 nearby people on average.
-      </p>
-    </Popover.Content>
-  </Popover>
-)
-
-const personRiskPopover = (
-  <Popover id="popover-basic">
-    <Popover.Title as="h3">About "Person Risk"</Popover.Title>
-    <Popover.Content>
-      <p>
-        An "average risk person in your area" is based on the prevalence of
-        COVID in your geographic area, as explained in the{' '}
-        <a href="/paper/7-basic-method" target="_blank">
-          Basic Method
-        </a>{' '}
-        from the white paper.
-      </p>
-      <p>
-        We have modeled several additional Person Risk examples using the{' '}
-        <a href="/paper/9-advanced-method" target="_blank">
-          Advanced Method
-        </a>{' '}
-        from the white paper. Select the one that most closely matches the
-        person or people you are planning to interact with. We suggest you
-        "round up" if you are uncertain.
       </p>
     </Popover.Content>
   </Popover>
@@ -199,30 +173,6 @@ export const PersonRiskControls: React.FunctionComponent<{
           ) : null}
         </React.Fragment>
       ) : null}
-      <SelectControl
-        id="riskProfile"
-        label={t('calculator.person_risk_profile_question')}
-        header={t('calculator.person_risk_profile_header')}
-        helpText={!repeatedEvent ? '' : t('calculator.household_members_note')}
-        popover={personRiskPopover}
-        data={data}
-        setter={setter}
-        source={RiskProfile}
-        hideRisk={true}
-        labelFactory={(riskProfileKey: string) => {
-          const riskProfile = RiskProfile[riskProfileKey]
-          const personRisk = calculatePersonRiskEach({
-            ...data,
-            riskProfile: riskProfileKey,
-          })
-          return (
-            riskProfile.label +
-            (personRisk === null
-              ? ''
-              : ` [${fixedPointPrecision(personRisk)} microCOVIDs]`)
-          )
-        }}
-      />
       <RiskProfileSelector
         id="riskProfile"
         data={data}
