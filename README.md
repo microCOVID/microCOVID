@@ -47,7 +47,12 @@ Requirements:
     ```
 1. Run a prevalence update
     ```sh
+    # Run the prevalence update on the auto-prevalence-update branch
     $ yarn prevalence
+    # Run the prevalence update, commit changes, and submit auto-merge pull request
+    $ yarn prevalence -c
+    # Run the prevalence update without switching branches (useful when testing changes on a feature branch)
+    $ yarn prevalence -b
     ```
 
 
