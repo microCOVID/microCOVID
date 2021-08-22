@@ -60,6 +60,7 @@ jobs:
       with:
         author_name: Auto Prevalence Update Bot
         author_email: info@microcovid.org
+        branch: auto-update-prevalence
         message: "Automatic prevalence update $TODAY"
     
     # Create a pull request
