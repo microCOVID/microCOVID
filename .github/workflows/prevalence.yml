@@ -34,18 +34,19 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        git checkout main
         git push origin --delete auto-update-prevalence &> /dev/null || true
         git checkout -b auto-update-prevalence
         git push --set-upstream origin auto-update-prevalence
         TODAY=`date +%Y-%m-%d`
-        echo "Today's date: $TODAY"
-      # TODO remove this echo before committing
+      # TODO remove this echo before merging
 
     - name: Run prevalence update
       env:
         CAN_API_KEY: ${{ secrets.COVID_ACT_NOW_API_KEY }}
       run: |
         CAN_API_KEY="$CAN_API_KEY" python3 update_prevalence.py
+        echo "Today's date: $TODAY"
 
 
     # Run linter through directly yarn because it's confifgured properly
@@ -63,8 +64,14 @@ jobs:
         author_email: info@microcovid.org
         branch: auto-update-prevalence
         message: "Automatic prevalence update $TODAY"
-    
-    # Create a pull request
-    # Auto merge the pull request
 
+    - name: Create the pull request
+      run: h pr create --fill
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
+    - name: Enable Automerge
+      run: gh pr merge --auto --merge "$PR_URL"
+      env:
+        PR_URL: ${{github.event.pull_request.html_url}}
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
