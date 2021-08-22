@@ -36,7 +36,7 @@ jobs:
       run: |
         git push origin --delete auto-update-prevalence &> /dev/null || true
         git checkout -b auto-update-prevalence
-        git branch --set-upstream-to=origin/auto-update-prevalence auto-update-prevalence
+        git push --set-upstream origin auto-update-prevalence
         TODAY=`date +%Y-%m-%d`
         echo "Today's date: $TODAY"
       # TODO remove this echo before committing
