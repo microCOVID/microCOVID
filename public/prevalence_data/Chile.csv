@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000948,0.000446,0.000267,2.2094,1.0,0.000589
-Antofagasta,Unknown,Unknown,0.000281,2.2094,1.0,0.000622
-Araucania,Unknown,Unknown,0.000202,2.2094,1.0,0.000445
-Arica y Parinacota,Unknown,Unknown,0.000261,2.2094,1.0,0.000577
-Atacama,Unknown,Unknown,0.000173,2.2094,1.0,0.000382
-Aysen,Unknown,Unknown,0.000397,2.2094,2.0,0.001756
-Biobio,Unknown,Unknown,0.000268,2.2094,1.0,0.000593
-Coquimbo,Unknown,Unknown,0.000215,2.2094,1.0,0.000475
-Los Lagos,Unknown,Unknown,0.000216,2.2094,1.0,0.000477
-Los Rios,Unknown,Unknown,0.000314,2.2094,1.0,0.000695
-Magallanes,Unknown,Unknown,0.000258,2.2094,1.75,0.000998
-Maule,Unknown,Unknown,0.000322,2.2094,1.0,0.00071
-Metropolitana,Unknown,Unknown,0.000354,2.2094,1.0,0.000782
-Nuble,Unknown,Unknown,0.000246,2.2094,1.0,0.000542
-OHiggins,Unknown,Unknown,0.000173,2.2094,1.0,0.000382
-Tarapaca,Unknown,Unknown,0.000182,2.2094,1.0,0.000401
-Valparaiso,Unknown,Unknown,0.00028,2.2094,1.0,0.000619
+Entire country,0.000907,0.000426,0.000254,2.2087,1.0,0.000562
+Antofagasta,Unknown,Unknown,0.000288,2.2087,1.0,0.000636
+Araucania,Unknown,Unknown,0.000215,2.2087,1.0,0.000475
+Arica y Parinacota,Unknown,Unknown,0.000243,2.2087,1.0,0.000537
+Atacama,Unknown,Unknown,0.000194,2.2087,1.0,0.000428
+Aysen,Unknown,Unknown,0.000436,2.2087,2.0,0.001927
+Biobio,Unknown,Unknown,0.000265,2.2087,1.0,0.000585
+Coquimbo,Unknown,Unknown,0.00019,2.2087,1.0,0.00042
+Los Lagos,Unknown,Unknown,0.000217,2.2087,1.0,0.00048
+Los Rios,Unknown,Unknown,0.000244,2.2087,1.0,0.000539
+Magallanes,Unknown,Unknown,0.00021,2.2087,1.0625,0.000493
+Maule,Unknown,Unknown,0.000305,2.2087,1.0,0.000674
+Metropolitana,Unknown,Unknown,0.000323,2.2087,1.0,0.000713
+Nuble,Unknown,Unknown,0.000202,2.2087,1.0,0.000446
+OHiggins,Unknown,Unknown,0.000196,2.2087,1.1195,0.000484
+Tarapaca,Unknown,Unknown,0.000348,2.2087,1.0,0.000768
+Valparaiso,Unknown,Unknown,0.000258,2.2087,1.0,0.000569
