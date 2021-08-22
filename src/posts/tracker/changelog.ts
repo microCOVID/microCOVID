@@ -18,18 +18,28 @@ const changes: Change[] = [
   {
     date: new Date(2021, 7, 22),
     versionNum: '2.4',
-    title: 'Add pod vaccinatation budget adjustment',
+    title: 'Increase budgets if everyone is vaccianted',
     spreadsheetURL:
       'https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0',
     whatsNew: `
-* New: Allow pods to adjust their budget so everyone 
-* Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour"`,
+* New: Reduce the budget reductions from other podmates if everyone in the pod is vaccinated since transmission is lower. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget).
+* Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour"
+
+**Note on how the vaccination budget adjustment works:** This feature reduces the impact of other podmate's activities on each persons' budget, since transmission is lower between podmates now that you are all vaccinated. If some people in the pod are not vaccinated or received different types of vaccines, you have two main options. Let these two examples illustrate.
+  * **Example A:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J doesn't mind being exposed to a bit more than 1% per year. So we set this setting to "Pfizer" because most people got Pfizer. This will overestimate the protection the J&J housemate has from other podmates, but the difference won't be drastic.
+  * **Example B:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J definitely wants to stay under the 1% total budget. Therefore, the pod chooses "Johnson & Johnson" for this setting. Everyone doesn't get as much of an increase to their budget, but you all stay under the 1% annual budget.
+
+`,
     instructions: `
 1. **Bugfix**
-    * Go to Edit > Find & Replace
+    * Go to *Edit > Find & Replace*
     * Under *Find* enter: \`flow rate 5x room size\`
     * Under *Replace* enter: \`flow rate 5x room size per hour\`
 2. **Pod Overview sheet:**
+    * Open the [current spreadsheet](https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0) and copy all of \`Row 104\` (Where it says "Adjust budget as though everyone were fully vaccinated with...") to \`Row 104\` in your spreadsheet.
+    * Click no \`C104\` then go to *Data > Data validation*. Under *Criteria* set the range to \`=INTERNAL_ACTIVITY!$I$19:$I$32\` then press *Save*.
+    * In cell \`C124\` to be
+      <pre><code>=C123/(1+(C122-1)*HOUSEMATE*D104)</code></pre>
     * Update your version number in cell \`D2\` to 2.4
 `,
   },
