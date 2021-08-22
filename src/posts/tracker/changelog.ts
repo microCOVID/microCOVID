@@ -18,11 +18,11 @@ const changes: Change[] = [
   {
     date: new Date(2021, 7, 22),
     versionNum: '2.4',
-    title: 'Increase budgets if everyone is vaccianted',
+    title: 'Increase podmate budgets if everyone is vaccianted',
     spreadsheetURL:
       'https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0',
     whatsNew: `
-* New: Reduce the budget reductions from other podmates if everyone in the pod is vaccinated since transmission is lower. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget).
+* New: Low the budget reductions from other podmates if everyone in the pod is vaccinated since transmission is lower. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget).
 * Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour"
 
 **Note on how the vaccination budget adjustment works:** This feature reduces the impact of other podmate's activities on each persons' budget, since transmission is lower between podmates now that you are all vaccinated. If some people in the pod are not vaccinated or received different types of vaccines, you have two main options. Let these two examples illustrate.
