@@ -1,6 +1,6 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.00027,5e-05,2.7e-05,2.1701,2.0,0.000117
-Central,Unknown,Unknown,1.1e-05,2.1701,1.0,2.4e-05
-Eastern,Unknown,Unknown,4.1e-05,2.1701,2.0,0.000178
-Labrador-Grenfell,Unknown,Unknown,5.5e-05,2.1701,1.0,0.00012
-Western,Unknown,Unknown,1.3e-05,2.1701,1.0,2.8e-05
+Entire state,0.000231,4.3e-05,2.3e-05,2.1403,2.0,9.9e-05
+Central,Unknown,Unknown,1.1e-05,2.1403,1.0,2.3e-05
+Eastern,Unknown,Unknown,3.8e-05,2.1403,2.0,0.000162
+Labrador-Grenfell,Unknown,Unknown,2.8e-05,2.1403,1.0,5.9e-05
+Western,Unknown,Unknown,1.3e-05,2.1403,1.0,2.8e-05
