@@ -1120,23 +1120,27 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     max_attempts = 3
     retry_time_seconds = 60
     for attempt in range(max_attempts + 1):
+        # Error case
+        if attempt == max_attempts:
+            raise ValueError(f"Reached max attempts attmpting to get JSON from {url}")
+
+        # Normal JSON load attmempt
         try:
             contents_as_json = json.loads(cache.get(url))
             break
         except json.JSONDecodeError as e:
-            if attempt != max_attempts:
-                print(
-                    f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}"
-                )
-                print(
-                    f"Trying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
-                )
-                sleep(retry_time_seconds)
-                cache.remove(url)
-            else:
-                raise ValueError(
-                    f"Reached max attempts attmpting to get JSON from {url}"
-                ) from e
+            # Lengthen the delay time each time it fails, to give the API more of a break
+            # This can lead to very very long script runs, but it (usually) eventually works
+            # TODO: We can hopefully greatly redue the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
+            current_retry_time_seconds = retry_time_seconds * attempt
+            print(
+                f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}"
+            )
+            print(
+                f"Trying again after {current_retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
+            )
+            sleep(current_retry_time_seconds)
+            cache.remove(url)
 
     result = pydantic.parse_obj_as(model, contents_as_json)
     return result
