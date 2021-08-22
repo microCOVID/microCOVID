@@ -19,8 +19,6 @@ fi
 COMMIT_AND_PULL_REQUEST=0
 STAY_ON_CURRENT_BRANCH=0
 
-
-
 while getopts "cb:" OPTION; do
     case $OPTION in
     c)
