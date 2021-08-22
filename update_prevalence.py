@@ -1117,12 +1117,14 @@ def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Mode
 
 
 def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
-    max_attempts = 3
+    max_attempts = 4
     retry_time_seconds = 60
     for attempt in range(max_attempts + 1):
         # Error case
         if attempt == max_attempts:
-            raise ValueError(f"Reached max attempts attmpting to get JSON from {url}")
+            raise ValueError(
+                f"Reached max attempts ({attempt}) attmpting to get JSON from {url}"
+            )
 
         # Normal JSON load attmempt
         try:

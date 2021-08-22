@@ -8,36 +8,29 @@ on:
 
 jobs:
   prevalence:
-    # TODO(blanchardjeremy): This whole file is a work in progress.
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout git repo (with full history)
+      uses: actions/checkout@v2
       with:
           fetch-depth: 0
 
-    - uses: actions/setup-python@v2
+    - name: Set up python
+      uses: actions/setup-python@v2
 
-    - uses: syphar/restore-virtualenv@v1
+    - name: Set up virtualenv
+      uses: syphar/restore-virtualenv@v1
       id: cache-virtualenv
       with:
         requirement_files: requirements-manual.txt
 
-    - uses: syphar/restore-pip-download-cache@v1
+    - name: Set up pip cache
+      uses: syphar/restore-pip-download-cache@v1
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-      # the package installation will only be executed when the
-      # requirements-files have changed.
-    - run: pip install -r requirements-manual.txt
+    - name: Install python dependencies
+      run: pip install -r requirements-manual.txt
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-    - name: Create a branch
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git checkout main
-        git push origin --delete auto-update-prevalence &> /dev/null || true
-        git checkout -b auto-update-prevalence
-        git push --set-upstream origin auto-update-prevalence
 
     - name: Run prevalence update
       env:
@@ -46,11 +39,25 @@ jobs:
         CAN_API_KEY="$CAN_API_KEY" python3 update_prevalence.py
 
 
+    # We do this after the update_prevalence script in case we are running it from a branch (during testing)
+    - name: Create a branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git stash
+        git checkout main
+        git stash pop
+        git push origin --delete auto-update-prevalence &> /dev/null || true
+        git checkout -b auto-update-prevalence
+        git push --set-upstream origin auto-update-prevalence
+
     # Run linter through directly yarn because it's confifgured properly
-    - uses: borales/actions-yarn@v2.3.0
+    - name: Setting up yarn
+      uses: borales/actions-yarn@v2.3.0
       with:
         cmd: install
-    - uses: borales/actions-yarn@v2.3.0
+    - name: Running linter fixes
+      uses: borales/actions-yarn@v2.3.0
       with:
         cmd: fix
 
@@ -67,8 +74,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
-    - name: Enable Automerge
-      run: gh pr merge --auto --merge "$PR_URL"
+    - name: Enable automerge on the pull request
+      run: echo "$PR_URL" && gh pr merge --auto --merge "$PR_URL"
       env:
         PR_URL: ${{github.event.pull_request.html_url}}
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
