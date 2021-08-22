@@ -1119,7 +1119,7 @@ def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Mode
 def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     max_attempts = 3
     retry_time_seconds = 5
-    for attempt in range(max_attempts):
+    for attempt in range(max_attempts + 1):
         try:
             contents_as_json = json.loads(cache.get(url))
             break
