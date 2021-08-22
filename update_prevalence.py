@@ -1062,7 +1062,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             sleep(current_retry_time_seconds)
             cache.remove(url)
 
-    result = pydantic.parse_obj_as(model, contents_as_json)
+    result = pydantic.parse_obj_as(model, json.loads(cache.get(url)))
     return result
 
 
