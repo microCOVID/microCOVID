@@ -1,3 +1,3 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.000224,4.1e-05,4.4e-05,2.131,1.0,9.4e-05
-Prince Edward Island,0.000229,4.1e-05,4.5e-05,2.131,1.0,9.5e-05
+Entire state,0.000449,8.1e-05,4.4e-05,2.1306,2.0,0.000189
+Prince Edward Island,0.000457,8.3e-05,4.5e-05,2.1306,2.0,0.00019
