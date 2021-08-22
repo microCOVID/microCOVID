@@ -16,6 +16,24 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 7, 22),
+    versionNum: '2.4',
+    title: 'Add pod vaccinatation budget adjustment',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0',
+    whatsNew: `
+* New: Allow pods to adjust their budget so everyone 
+* Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour"`,
+    instructions: `
+1. **Bugfix**
+    * Go to Edit > Find & Replace
+    * Under *Find* enter: \`flow rate 5x room size\`
+    * Under *Replace* enter: \`flow rate 5x room size per hour\`
+2. **Pod Overview sheet:**
+    * Update your version number in cell \`D2\` to 2.4
+`,
+  },
+  {
     date: new Date(2021, 7, 18),
     versionNum: '2.3',
     title: 'Add “average vaccinated person”',
