@@ -1,4 +1,4 @@
-name: Prevalence
+name: Update COVID prevalence data
 
 on:
   schedule:
@@ -30,9 +30,9 @@ jobs:
 
     - name: Run update preavlence
       env:
-        COVID_ACT_NOW_API_KEY: ${{ secrets.COVID_ACT_NOW_API_KEY }}
+        CAN_API_KEY: ${{ secrets.COVID_ACT_NOW_API_KEY }}
       run: |
-        CAN_API_KEY=$COVID_ACT_NOW_API_KEY python3 update_prevalence.py
+        CAN_API_KEY="$CAN_API_KEY" python3 update_prevalence.py
 
     # TODO: Delete branch we're going to use in case it exists
 
