@@ -1,0 +1,47 @@
+name: Prevalence
+
+on:
+  # schedule:
+  #   # 9:00am Pacific = 16:00 UTC
+  #   - cron:  '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  prevalence:
+    # TODO(blanchardjeremy): This whole file is a work in progress.
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-python@v2
+
+    - uses: syphar/restore-virtualenv@v1
+      id: cache-virtualenv
+      with:
+        requirement_files: requirements-manual.txt
+
+    - uses: syphar/restore-pip-download-cache@v1
+      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+
+      # the package installation will only be executed when the
+      # requirements-files have changed.
+    - run: pip install -r requirements.txt
+      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+
+    - name: Run update preavlence
+      run: |
+        CAN_API_KEY=COVID_ACT_NOW_API_KEY python3 update_prevalence.py
+
+    # TODO: Delete branch we're going to use in case it exists
+
+    # Checkout a separate branch
+    
+    # Run update_prevalence.py including the CAN API KEY
+    
+    # Run linter (may need to set up all of yarn first?)
+
+    # Commit the updated files with the current date
+    # Create a pull request
+    # Auto merge the pull request
+
+    
