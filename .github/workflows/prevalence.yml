@@ -70,7 +70,7 @@ jobs:
         message: "Automatic prevalence update $TODAY"
 
     - name: Create the pull request
-      run: h pr create --fill
+      run: gh pr create --fill
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
