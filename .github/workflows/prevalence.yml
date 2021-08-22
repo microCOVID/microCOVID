@@ -38,15 +38,12 @@ jobs:
         git push origin --delete auto-update-prevalence &> /dev/null || true
         git checkout -b auto-update-prevalence
         git push --set-upstream origin auto-update-prevalence
-        TODAY=`date +%Y-%m-%d`
-      # TODO remove this echo before merging
 
     - name: Run prevalence update
       env:
         CAN_API_KEY: ${{ secrets.COVID_ACT_NOW_API_KEY }}
       run: |
         CAN_API_KEY="$CAN_API_KEY" python3 update_prevalence.py
-        echo "Today's date: $TODAY"
 
 
     # Run linter through directly yarn because it's confifgured properly
