@@ -18,7 +18,7 @@ const changes: Change[] = [
   {
     date: new Date(2021, 7, 22),
     versionNum: '2.4',
-    title: 'Increase podmate budgets if everyone is vaccianted',
+    title: 'Increase podmate budgets if everyone is vaccinated',
     spreadsheetURL:
       'https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0',
     whatsNew: `
