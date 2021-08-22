@@ -1124,7 +1124,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             contents_as_json = json.loads(cache.get(url))
             break
         except json.JSONDecodeError as e:
-            if attempt != attempt:
+            if attempt != max_attempts:
                 print(
                     f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}"
                 )
@@ -1134,7 +1134,9 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
                 sleep(retry_time_seconds)
                 cache.remove(url)
             else:
-                raise ValueError("Reached max attempts attmpting to get JSON from {url}")
+                raise ValueError(
+                    "Reached max attempts attmpting to get JSON from {url}"
+                )
 
     result = pydantic.parse_obj_as(model, contents_as_json)
     return result
