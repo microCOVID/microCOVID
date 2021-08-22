@@ -32,6 +32,9 @@ while getopts "cb" OPTION; do
     esac
 done
 
+echo "command and PR: $COMMIT_AND_PULL_REQUEST"
+echo "stay on current: $STAY_ON_CURRENT_BRANCH"
+
 # Load the API key
 KEYSTORE=".secure-keys"
 source "$KEYSTORE"
@@ -40,7 +43,7 @@ if [ ! -f "$KEYSTORE" ]; then
   exit
 fi
 
-if [[ STAY_ON_CURRENT_BRANCH != 1 ]]; then
+if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
   echo "Creating auto-update-prevalence branch based on main"
   # Update local branch
   git checkout main
@@ -63,7 +66,7 @@ CAN_API_KEY=$CAN_API_KEY python3 update_prevalence.py
 yarn fix
 
 
-if [[ COMMIT_AND_PULL_REQUEST == 1 ]]; then
+if [[ $COMMIT_AND_PULL_REQUEST == 1 ]]; then
   echo "Committing the files and submitting an auto-merge pull request"
 
   # Only proceed if files have been changed
