@@ -13,6 +13,7 @@ set -euo pipefail
 if ! command -v gh &> /dev/null; then
   echo "GitHub CLI could not be found, please install from https://cli.github.com/"
   exit
+fi
 
 # Set defaults
 COMMIT_AND_PULL_REQUEST=0
