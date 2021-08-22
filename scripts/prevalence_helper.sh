@@ -3,7 +3,7 @@
 # See README.md for install/setup instructions for this script
 
 # Set script to stop if any command fails or an undefined variable is accessed
-set -euo pipefail
+# set -euo pipefail
 
 if ! command -v gh &> /dev/null; then
   echo "GitHub CLI could not be found, please install from https://cli.github.com/"
