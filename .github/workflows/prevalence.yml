@@ -13,7 +13,7 @@ jobs:
     - name: Checkout git repo (with full history)
       uses: actions/checkout@v2
       with:
-          fetch-depth: 0
+          fetch-depth: 2
 
     - name: Set up python
       uses: actions/setup-python@v2
