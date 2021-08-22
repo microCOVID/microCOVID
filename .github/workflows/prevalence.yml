@@ -1,4 +1,4 @@
-name: Update COVID prevalence data
+name: Prevalence
 
 on:
   schedule:
