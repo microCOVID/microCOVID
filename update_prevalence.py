@@ -1134,7 +1134,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             # Lengthen the delay time each time it fails, to give the API more of a break
             # This can lead to very very long script runs, but it (usually) eventually works
             # TODO: We can hopefully greatly redue the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
-            current_retry_time_seconds = retry_time_seconds * attempt
+            current_retry_time_seconds = retry_time_seconds * (attempt + 1)
             print(
                 f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}"
             )
