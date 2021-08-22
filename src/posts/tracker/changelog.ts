@@ -31,10 +31,11 @@ const changes: Change[] = [
 
 `,
     instructions: `
-1. **Bugfix**
-    * Go to *Edit > Find & Replace*
+1. **Bugfix to clarify HEPA filter paramters**
+    * Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
     * Under *Find* enter: \`flow rate 5x room size\`
     * Under *Replace* enter: \`flow rate 5x room size per hour\`
+    * Reminder, we have a [air flow calculator](/blog/hepafilters) to determine the flow rate of you air purifier.
 2. **Pod Overview sheet:**
     * Open the [current spreadsheet](https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0) and copy all of \`Row 104\` (Where it says "Adjust budget as though everyone were fully vaccinated with...") to \`Row 104\` in your spreadsheet.
     * Click no \`C104\` then go to *Data > Data validation*. Under *Criteria* set the range to \`=INTERNAL_ACTIVITY!$I$19:$I$32\` then press *Save*.
