@@ -3,8 +3,8 @@
 ###
 # Usage: prevalence_helper.sh
 # Parameters:
-#      -c = Commit changes to the auto-update-prevalence branch and submit pull request
-#      -b = Use current branch instead of checking out a fresh one
+#      -b = Run the script on the current branch (instead of checking out auto-update-prevalence)
+#      -c = Commit changes and submit a pull request
 # See README.md for install/setup instructions for this script
 
 # Set script to stop if any command fails or an undefined variable is accessed
@@ -19,21 +19,18 @@ fi
 COMMIT_AND_PULL_REQUEST=0
 STAY_ON_CURRENT_BRANCH=0
 
-while getopts "cb" OPTION; do
+while getopts "bc" OPTION; do
     case $OPTION in
-    c)
-        COMMIT_AND_PULL_REQUEST=1
-        ;;
     b)
         STAY_ON_CURRENT_BRANCH=1
+        ;;
+    c)
+        COMMIT_AND_PULL_REQUEST=1
         ;;
     *)
         ;;
     esac
 done
-
-echo "command and PR: $COMMIT_AND_PULL_REQUEST"
-echo "stay on current: $STAY_ON_CURRENT_BRANCH"
 
 # Load the API key
 KEYSTORE=".secure-keys"
