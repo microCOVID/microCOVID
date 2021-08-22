@@ -3,7 +3,7 @@
 [![Translate on Weblate](https://hosted.weblate.org/widgets/microcovid/-/microcovid/svg-badge.svg)](https://hosted.weblate.org/engage/microcovid/)
 
 
-# microcovid.org
+# microCOVID.org
 
 ## Local Development
 
