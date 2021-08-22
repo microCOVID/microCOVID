@@ -32,7 +32,7 @@ Requirements:
     ```sh
     $ python3 -m venv .venv
     $ source .venv/bin/activate
-    $ pip install -R requirements.txt
+    $ pip install -r requirements.txt
     ```
 1. Install the [GitHub CLI](https://cli.github.com/) to be able to using the `gh` command with the `prevalence_helper.sh` script
     ```sh

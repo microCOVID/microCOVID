@@ -1,0 +1,14 @@
+name: Prevalence
+
+on:
+  schedule:
+    # 9:00am Pacific = 16:00 UTC
+    - cron:  '0 16 * * *'
+
+jobs:
+  prevalence:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    
