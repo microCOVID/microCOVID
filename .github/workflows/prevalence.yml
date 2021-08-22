@@ -1,9 +1,9 @@
 name: Prevalence
 
 on:
-  # schedule:
-  #   # 9:00am Pacific = 16:00 UTC
-  #   - cron:  '0 16 * * *'
+  schedule:
+    # 9:00am Pacific = 16:00 UTC
+    - cron:  '0 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
 
       # the package installation will only be executed when the
       # requirements-files have changed.
-    - run: pip install -r requirements.txt
+    - run: pip install -r requirements-manual.txt
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
     - name: Run update preavlence
