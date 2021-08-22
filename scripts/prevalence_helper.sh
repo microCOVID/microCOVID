@@ -19,7 +19,7 @@ fi
 COMMIT_AND_PULL_REQUEST=0
 STAY_ON_CURRENT_BRANCH=0
 
-while getopts "cb:" OPTION; do
+while getopts "cb" OPTION; do
     case $OPTION in
     c)
         COMMIT_AND_PULL_REQUEST=1
@@ -32,6 +32,7 @@ while getopts "cb:" OPTION; do
     esac
 done
 
+# Load the API key
 KEYSTORE=".secure-keys"
 source "$KEYSTORE"
 if [ ! -f "$KEYSTORE" ]; then
@@ -40,6 +41,7 @@ if [ ! -f "$KEYSTORE" ]; then
 fi
 
 if [[ STAY_ON_CURRENT_BRANCH != 1 ]]; then
+  echo "Creating auto-update-prevalence branch based on main"
   # Update local branch
   git checkout main
   git pull
@@ -62,6 +64,7 @@ yarn fix
 
 
 if [[ COMMIT_AND_PULL_REQUEST == 1 ]]; then
+  echo "Committing the files and submitting an auto-merge pull request"
 
   # Only proceed if files have been changed
   # TODO(blanchardjeremy): Could use better error checking
