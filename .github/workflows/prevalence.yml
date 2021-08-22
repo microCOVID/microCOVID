@@ -61,20 +61,24 @@ jobs:
       with:
         cmd: fix
 
+    - name: Get the current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
       with:
         author_name: Auto Prevalence Update Bot
         author_email: info@microcovid.org
         branch: auto-update-prevalence
-        message: "Automatic prevalence update $TODAY"
+        message: "Automatic prevalence update ${{ steps.date.outputs.date }}"
 
     - name: Create the pull request
       run: echo "PR_URL=$(gh pr create --fill)" >> $GITHUB_ENV
       env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN_JEREMY}}
     
     - name: Enable automerge on the pull request
       run: echo $PR_URL && gh pr merge --auto --delete-branch --squash "$PR_URL"
       env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        GITHUB_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN_JEREMY}}
