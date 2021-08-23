@@ -440,15 +440,18 @@ class Place(pydantic.BaseModel):
 
             if values[0] > min(values[:-1]) and possibly_suspect_correction:
                 print(
-                    f"Warning: Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}")
+                    f"Warning: Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} \
+                        negative cumulative case corrections {negative_corrections}, values={values}")
             if min(values[:-1]) == values[-1] and max(values) > values[-1]:
                 print(
-                    f"Warning: Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}")
+                    f"Warning: Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} \
+                        negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}")
             return values[-1] - min(values[:-1])
 
         # looks complicated. Print a warning.
         print(
-            f"Warning: Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}")
+            f"Warning: Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative \
+                cumulative case corrections {negative_corrections}, values={values}")
         return 0
 
     @property
