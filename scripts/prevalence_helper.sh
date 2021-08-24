@@ -34,6 +34,7 @@ while getopts "bck:v:" OPTION; do
         ;;
     v)
         VIRTUAL_ENV_DIR=${OPTARG}
+        echo "Using a manual virtualenv directory: $VIRTUAL_ENV_DIR"
         ;;
     *)
         ;;
@@ -71,12 +72,11 @@ fi
 if [[ $INVENV == 1 ]]; then
   echo "Activating the virtualenv"
   FULL_VENV_COMMAND = "$VIRTUAL_ENV_DIR/bin/activate"
-  echo "Activate virtulenv: $FULL_VENV_COMMAND"
+  echo "Activating virtulenv: $FULL_VENV_COMMAND"
   source "$VIRTUAL_ENV_DIR/bin/activate"
 else
   echo "Virtualenv already active"
 fi
-exit 0 # TODO: Remove this line
 
 # Run the update script
 echo "Running prevalence script"
