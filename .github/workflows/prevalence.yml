@@ -37,20 +37,9 @@ jobs:
       with:
         cmd: install
       
-    - name: Run update preavlence
-      run: |
-        CAN_API_KEY=COVID_ACT_NOW_API_KEY python3 update_prevalence.py
-
-    # TODO: Delete branch we're going to use in case it exists
-
-    # Checkout a separate branch
-    
-    # Run update_prevalence.py including the CAN API KEY
-    
-    # Run linter (may need to set up all of yarn first?)
-
-    # Commit the updated files with the current date
-    # Create a pull request
-    # Auto merge the pull request
-
-    
+    - name: Run update preavlence and merge results
+      uses: borales/actions-yarn@v2.3.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
+      with:
+        cmd: prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }}
