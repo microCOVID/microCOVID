@@ -45,7 +45,9 @@ jobs:
       # maybe pass virtual env in as an opt arg
 
     - name: testing the outputs
-      run: echo "testing {{ steps.cache-virtualenv.outputs.virtualenv-directory }}"
+      env: 
+        TESTENV: ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+      run: echo "testing $TESTENV"
 
 
     # - name: Set up node
