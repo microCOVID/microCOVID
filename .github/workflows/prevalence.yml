@@ -34,8 +34,6 @@ jobs:
       run: pip install -r requirements-manual.txt
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-
-
       # where I left off: trying to get the virtualenv in scope inside 
       # ideas: 
       # use `source ./scripts/prevalence_helper` to pass the virtualenv into the new script
@@ -44,20 +42,17 @@ jobs:
       # figure out what the virtualenv github action path is and just activate it withint prevalence_helper
       # maybe pass virtual env in as an opt arg
 
-    - name: testing the outputs
-      env: 
-        TESTENV: ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
-      run: echo "testing $TESTENV"
+    - name: Set up node
+      uses: actions/setup-node@v2
 
-
-    # - name: Set up node
-    #   uses: actions/setup-node@v2
-
-    # - name: Set up yarn
-    #   run: yarn install
+    - name: Set up yarn
+      run: yarn install
       
-    # - name: Run update preavlence and merge results
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
-    #   run: yarn prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }}
+    - name: Run update preavlence and merge results
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
+        # VENV_DIR: ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+      run: |
+        echo
+        yarn prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
 

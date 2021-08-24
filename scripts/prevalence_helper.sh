@@ -19,8 +19,9 @@ fi
 COMMIT_AND_PULL_REQUEST=0
 STAY_ON_CURRENT_BRANCH=0
 CAN_API_KEY=""
+VIRTUAL_ENV_DIR=".venv"
 
-while getopts "bck:" OPTION; do
+while getopts "bck:v:" OPTION; do
     case $OPTION in
     b)
         STAY_ON_CURRENT_BRANCH=1
@@ -30,6 +31,9 @@ while getopts "bck:" OPTION; do
         ;;
     k)
         CAN_API_KEY=${OPTARG}
+        ;;
+    v)
+        VIRTUAL_ENV_DIR=${OPTARG}
         ;;
     *)
         ;;
@@ -66,11 +70,13 @@ fi
 [[ "$VIRTUAL_ENV" == "" ]]; INVENV=$?
 if [[ $INVENV == 1 ]]; then
   echo "Activating the virtualenv"
-  source .venv/bin/activate
+  FULL_VENV_COMMAND = "$VIRTUAL_ENV_DIR/bin/activate"
+  echo "Activate virtulenv: $FULL_VENV_COMMAND"
+  source "$VIRTUAL_ENV_DIR/bin/activate"
 else
   echo "Virtualenv already active"
 fi
-exit 0
+exit 0 # TODO: Remove this line
 
 # Run the update script
 echo "Running prevalence script"
