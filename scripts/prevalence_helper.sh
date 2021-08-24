@@ -68,15 +68,10 @@ fi
 
 
 # Activate the local virtual env
-[[ "$VIRTUAL_ENV" == "" ]]; INVENV=$?
-if [[ $INVENV == 1 ]]; then
-  echo "Activating the virtualenv"
-  FULL_VENV_COMMAND = "$VIRTUAL_ENV_DIR/bin/activate"
-  echo "Activating virtulenv: $FULL_VENV_COMMAND"
-  source "$VIRTUAL_ENV_DIR/bin/activate"
-else
-  echo "Virtualenv already active"
-fi
+echo "Activating the virtualenv"
+FULL_VENV_COMMAND = "$VIRTUAL_ENV_DIR/bin/activate"
+echo "Activating virtulenv: $FULL_VENV_COMMAND"
+source "$VIRTUAL_ENV_DIR/bin/activate"
 
 # Run the update script
 echo "Running prevalence script"
