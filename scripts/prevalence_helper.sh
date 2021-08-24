@@ -18,8 +18,9 @@ fi
 # Set defaults
 COMMIT_AND_PULL_REQUEST=0
 STAY_ON_CURRENT_BRANCH=0
+CAN_API_KEY=""
 
-while getopts "bc" OPTION; do
+while getopts "bck:" OPTION; do
     case $OPTION in
     b)
         STAY_ON_CURRENT_BRANCH=1
@@ -27,17 +28,26 @@ while getopts "bc" OPTION; do
     c)
         COMMIT_AND_PULL_REQUEST=1
         ;;
+    k)
+        CAN_API_KEY=${OPTARG}
+        ;;
     *)
         ;;
     esac
 done
 
-# Load the API key
-KEYSTORE=".secure-keys"
-source "$KEYSTORE"
-if [ ! -f "$KEYSTORE" ]; then
-  echo "$KEYSTORE does not exist. Please obtain an API key from https://apidocs.covidactnow.org/"
-  exit
+
+# Prefer the manually passed in API key over the KEYSTORE file
+if [[ $CAN_API_KEY == "" ]]; then
+  # Load the API key
+  KEYSTORE=".secure-keys"
+  echo "Loading keystore file: $KEYSTORE"
+  source "$KEYSTORE"
+
+  if [ ! -f "$KEYSTORE" ]; then
+    echo "You must either pass in the COVIDActNow.org API Key either as the first pameter to this script (yarn prevalence a123a123a123 or specify it in $KEYSTORE file does not exist. Please obtain an API key from https://apidocs.covidactnow.org/"
+    exit
+  fi
 fi
 
 if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
@@ -46,8 +56,7 @@ if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
   git checkout main
   git pull
 
-  # Delete the remote branch. It usually doesn't exist unless the script failed last time.
-  git push origin --delete auto-update-prevalence &> /dev/null || true
+  BRANCH=auto-update-prevalence-$(date +%Y-%m-%d-%H-%M)
 
   # Delete the local branch & create new one
   git branch -D auto-update-prevalence
@@ -73,7 +82,8 @@ echo "Committing the files and submitting an auto-merge pull request"
 # Only proceed if files have been changed
 # TODO(blanchardjeremy): Could use better error checking
 if [[ `git status --porcelain` ]]; then
-  TODAY=`date +%Y-%m-%d`
+  TODAY=$(date +%Y-%m-%d)
+
   git add -A
   git commit -am "Automatic prevalence update $TODAY"
   git push
