@@ -94,7 +94,7 @@ if [[ `git status --porcelain` ]]; then
   TODAY=$(date +%Y-%m-%d)
 
   git add -A
-  git commit -am "Automatic prevalence update $TODAY"
+  git commit -am "Automatic prevalence update $TODAY" --author="Jeremy Blanchard <blanchard.jeremy@gmail.com>"
   git push
   # Use the GitHub CLI to create a pull request and save the url
   PR_URL=$(gh pr create --fill)

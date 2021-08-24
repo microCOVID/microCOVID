@@ -51,6 +51,6 @@ jobs:
     - name: Run update preavlence and merge results
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
-        # VENV_DIR: ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
       run: yarn prevalence -c -b -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+      # TODO: remove -b flag before committing
 
