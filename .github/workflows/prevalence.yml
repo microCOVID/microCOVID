@@ -1,33 +1,42 @@
 name: Prevalence
 
 on:
-  # schedule:
-  #   # 9:00am Pacific = 16:00 UTC
-  #   - cron:  '0 16 * * *'
+  schedule:
+    # 7:00am Pacific = 14:00 UTC
+    - cron:  '0 14 * * *'
   workflow_dispatch:
 
 jobs:
   prevalence:
-    # TODO(blanchardjeremy): This whole file is a work in progress.
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout git repo (with full history)
+      uses: actions/checkout@v2
+      with:
+          fetch-depth: 0
 
-    - uses: actions/setup-python@v2
+    - name: Set up python
+      uses: actions/setup-python@v2
 
-    - uses: syphar/restore-virtualenv@v1
+    - name: Set up virtualenv
+      uses: syphar/restore-virtualenv@v1
       id: cache-virtualenv
       with:
         requirement_files: requirements-manual.txt
 
-    - uses: syphar/restore-pip-download-cache@v1
+    - name: Set up pip cache
+      uses: syphar/restore-pip-download-cache@v1
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-      # the package installation will only be executed when the
-      # requirements-files have changed.
-    - run: pip install -r requirements.txt
+    - name: Install python dependencies
+      run: pip install -r requirements-manual.txt
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
+    - name: Setting up yarn
+      uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: install
+      
     - name: Run update preavlence
       run: |
         CAN_API_KEY=COVID_ACT_NOW_API_KEY python3 update_prevalence.py
