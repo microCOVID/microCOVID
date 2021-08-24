@@ -53,6 +53,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
         # VENV_DIR: ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
       run: |
-        echo
+        echo ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
         yarn prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
 
