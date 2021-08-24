@@ -45,9 +45,14 @@ Requirements:
     $ cp .secure-keys.template .secure-keys
     # Add your API key to the line in .secure-keys that is listed as CAN_API_KEY
     ```
-1. Run a prevalence update
+1. Run a prevalence update. Pick one of the three following examples:
     ```sh
+    # Run the prevalence update on the auto-prevalence-update branch
     $ yarn prevalence
+    # Run the prevalence update, commit changes, and submit auto-merge pull request
+    $ yarn prevalence -c
+    # Run the prevalence update without switching branches (useful when testing changes on a feature branch)
+    $ yarn prevalence -b
     ```
 
 
