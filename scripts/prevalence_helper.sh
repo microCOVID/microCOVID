@@ -58,10 +58,12 @@ if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
 
   BRANCH=auto-update-prevalence-$(date +%Y-%m-%d--%H-%M-%S)
   git checkout -b $BRANCH
+  echo "Created branch $BRANCH"
 fi
 
 
 # Activate the local virtual env.
+echo "Running prevalence script"
 source .venv/bin/activate
 CAN_API_KEY=$CAN_API_KEY python3 update_prevalence.py
 
@@ -85,7 +87,7 @@ if [[ `git status --porcelain` ]]; then
   git commit -am "Automatic prevalence update $TODAY"
   git push
   # Use the GitHub CLI to create a pull request and save the url
-  PR_URL=`gh pr create --fill`
+  PR_URL=$(gh pr create --fill)
   echo "Pull request URL: $PR_URL"
   if [[ ! $PR_URL = "" ]]; then
     # Set the pull request to auto merge
