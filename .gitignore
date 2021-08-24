@@ -34,3 +34,6 @@ src/locales/*_old.json
 
 # python
 __pycache__/
+
+# emacs
+\#*
