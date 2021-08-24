@@ -3,7 +3,7 @@
 ###
 # Usage: prevalence_helper.sh
 # Parameters:
-#      -b = Run the script on the current branch (instead of checking out auto-update-prevalence)
+#      -b = Run the script on the current branch (instead of checking out $BRANCH)
 #      -c = Commit changes and submit a pull request
 # See README.md for install/setup instructions for this script
 
@@ -51,7 +51,7 @@ if [[ $CAN_API_KEY == "" ]]; then
 fi
 
 if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
-  echo "Creating auto-update-prevalence branch based on main"
+  echo "Creating a branch based on main"
   # Update local branch
   git checkout main
   git pull
@@ -59,8 +59,8 @@ if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
   BRANCH=auto-update-prevalence-$(date +%Y-%m-%d-%H-%M)
 
   # Delete the local branch & create new one
-  git branch -D auto-update-prevalence
-  git checkout -b auto-update-prevalence
+  git branch -D $BRANCH
+  git checkout -b $BRANCH
 fi
 
 
