@@ -17,22 +17,22 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
 
-    # - name: Set up python
-    #   uses: actions/setup-python@v2
+    - name: Set up python
+      uses: actions/setup-python@v2
 
-    # - name: Set up virtualenv
-    #   uses: syphar/restore-virtualenv@v1
-    #   id: cache-virtualenv
-    #   with:
-    #     requirement_files: requirements-manual.txt
+    - name: Set up virtualenv
+      uses: syphar/restore-virtualenv@v1
+      id: cache-virtualenv
+      with:
+        requirement_files: requirements-manual.txt
 
-    # - name: Set up pip cache
-    #   uses: syphar/restore-pip-download-cache@v1
-    #   if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+    - name: Set up pip cache
+      uses: syphar/restore-pip-download-cache@v1
+      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-    # - name: Install python dependencies
-    #   run: pip install -r requirements-manual.txt
-    #   if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+    - name: Install python dependencies
+      run: pip install -r requirements-manual.txt
+      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
     - name: Set up node
       uses: actions/setup-node@v2
