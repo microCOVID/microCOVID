@@ -57,9 +57,6 @@ if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
   git pull
 
   BRANCH=auto-update-prevalence-$(date +%Y-%m-%d-%H-%M)
-
-  # Delete the local branch & create new one
-  git branch -D $BRANCH
   git checkout -b $BRANCH
 fi
 
