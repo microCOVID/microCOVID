@@ -14,32 +14,42 @@ jobs:
       uses: actions/checkout@v2
       with:
           fetch-depth: 0
-
-    - name: Set up python
-      uses: actions/setup-python@v2
-
-    - name: Set up virtualenv
-      uses: syphar/restore-virtualenv@v1
-      id: cache-virtualenv
-      with:
-        requirement_files: requirements-manual.txt
-
-    - name: Set up pip cache
-      uses: syphar/restore-pip-download-cache@v1
-      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-    - name: Install python dependencies
-      run: pip install -r requirements-manual.txt
-      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-    - name: Setting up yarn
-      uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: install
-      
-    - name: Run update preavlence and merge results
-      uses: borales/actions-yarn@v2.3.0
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
-      with:
-        cmd: prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }}
+
+    - name: Test line
+      run: |
+        pwd
+        echo "print current"
+        ls -lah
+        echo "print scripts directory"
+        ls scripts
+
+    # - name: Set up python
+    #   uses: actions/setup-python@v2
+
+    # - name: Set up virtualenv
+    #   uses: syphar/restore-virtualenv@v1
+    #   id: cache-virtualenv
+    #   with:
+    #     requirement_files: requirements-manual.txt
+
+    # - name: Set up pip cache
+    #   uses: syphar/restore-pip-download-cache@v1
+    #   if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+
+    # - name: Install python dependencies
+    #   run: pip install -r requirements-manual.txt
+    #   if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+
+    # - name: Setting up yarn
+    #   uses: borales/actions-yarn@v2.3.0
+    #   with:
+    #     cmd: install
+      
+    # - name: Run update preavlence and merge results
+    #   uses: borales/actions-yarn@v2.3.0
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
+    #   with:
+    #     cmd: prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }}
