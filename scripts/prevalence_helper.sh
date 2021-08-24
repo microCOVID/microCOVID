@@ -69,9 +69,9 @@ fi
 
 # Activate the local virtual env
 echo "Activating the virtualenv"
-FULL_VENV_COMMAND = "$VIRTUAL_ENV_DIR/bin/activate"
+FULL_VENV_COMMAND="$VIRTUAL_ENV_DIR/bin/activate"
 echo "Activating virtulenv: $FULL_VENV_COMMAND"
-source "$VIRTUAL_ENV_DIR/bin/activate"
+source "$FULL_VENV_COMMAND"
 
 # Run the update script
 echo "Running prevalence script"
