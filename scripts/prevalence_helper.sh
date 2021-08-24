@@ -56,7 +56,7 @@ if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
   git checkout main
   git pull
 
-  BRANCH=auto-update-prevalence-$(date +%Y-%m-%d-%H-%M)
+  BRANCH=auto-update-prevalence-$(date +%Y-%m-%d--%H-%M-%S)
   git checkout -b $BRANCH
 fi
 
