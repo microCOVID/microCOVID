@@ -63,6 +63,7 @@ if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
 
   BRANCH=auto-update-prevalence-$(date +%Y-%m-%d--%H-%M-%S)
   git checkout -b $BRANCH
+  git push --set-upstream origin $BRANCH
   echo "Created branch $BRANCH"
 fi
 
