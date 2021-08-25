@@ -3,6 +3,8 @@
 [![Translate on Weblate](https://hosted.weblate.org/widgets/microcovid/-/microcovid/svg-badge.svg)](https://hosted.weblate.org/engage/microcovid/)
 
 
+![](https://www.microcovid.org/logo192.png)
+
 # microCOVID.org
 
 ## Local Development
@@ -26,7 +28,7 @@ Requirements:
 
 
 
-# Prevalence updates
+## Prevalence updates
 
 1. Install `venv` to be able to run prevalence updates
     ```sh
@@ -55,8 +57,8 @@ Requirements:
     $ yarn prevalence -b
     # Specify the COVIDActNow.org API key
     $ yarn prevalence -k 111aaa222bbb
-    # Specify where your virtualenv lives
-    $ yarn prevalence -v .venv
+    # Specify where your virtualenv lives (defaults to `.venv`)
+    $ yarn prevalence -v .venv-custom
     ```
 
 
