@@ -1,47 +1,46 @@
 name: Prevalence
 
 on:
-  # schedule:
-  #   # 9:00am Pacific = 16:00 UTC
-  #   - cron:  '0 16 * * *'
+  schedule:
+    # 7:00am Pacific = 14:00 UTC
+    - cron:  '0 14 * * *'
   workflow_dispatch:
 
 jobs:
   prevalence:
-    # TODO(blanchardjeremy): This whole file is a work in progress.
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout git repo (with full history)
+      uses: actions/checkout@v2
+      with:
+          fetch-depth: 0
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
 
-    - uses: actions/setup-python@v2
+    - name: Set up python
+      uses: actions/setup-python@v2
 
-    - uses: syphar/restore-virtualenv@v1
+    - name: Set up virtualenv
+      uses: syphar/restore-virtualenv@v1
       id: cache-virtualenv
       with:
         requirement_files: requirements-manual.txt
 
-    - uses: syphar/restore-pip-download-cache@v1
+    - name: Set up pip cache
+      uses: syphar/restore-pip-download-cache@v1
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-      # the package installation will only be executed when the
-      # requirements-files have changed.
-    - run: pip install -r requirements.txt
+    - name: Install python dependencies
+      run: pip install -r requirements-manual.txt
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-    - name: Run update preavlence
-      run: |
-        CAN_API_KEY=COVID_ACT_NOW_API_KEY python3 update_prevalence.py
+    - name: Set up node
+      uses: actions/setup-node@v2
 
-    # TODO: Delete branch we're going to use in case it exists
-
-    # Checkout a separate branch
-    
-    # Run update_prevalence.py including the CAN API KEY
-    
-    # Run linter (may need to set up all of yarn first?)
-
-    # Commit the updated files with the current date
-    # Create a pull request
-    # Auto merge the pull request
-
-    
+    - name: Set up yarn
+      run: yarn install
+      
+    - name: Run update prevalence and merge results
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
+      run: yarn prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}

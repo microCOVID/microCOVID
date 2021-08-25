@@ -53,6 +53,10 @@ Requirements:
     $ yarn prevalence -c
     # Run the prevalence update without switching branches (useful when testing changes on a feature branch)
     $ yarn prevalence -b
+    # Specify the COVIDActNow.org API key
+    $ yarn prevalence -k 111aaa222bbb
+    # Specify where your virtualenv lives
+    $ yarn prevalence -v .venv
     ```
 
 
