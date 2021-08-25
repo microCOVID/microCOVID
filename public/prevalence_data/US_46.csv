@@ -1,5 +1,5 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.013105,0.002403,0.002362,2.7963,1.2124,0.008009
+Entire state,0.01311,0.002404,0.002362,2.7963,1.2124,0.008009
 Aurora,0.00632,0.001159,0.001454,2.7963,1.0,0.004066
 Beadle,0.005843,0.001071,0.001138,2.6564,1.25,0.003779
 Bennett,0.001518,0.000278,0.000594,2.2354,1.0,0.001329
