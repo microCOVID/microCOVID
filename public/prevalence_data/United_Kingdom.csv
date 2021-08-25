@@ -1,17 +1,17 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.013883,0.006525,0.003387,2.3552,1.1362,0.009063
-England,Unknown,Unknown,0.003321,2.3552,1.065,0.008331
-Northern Ireland,Unknown,Unknown,0.006211,2.3552,1.1915,0.01743
-Scotland,Unknown,Unknown,0.003874,2.3552,2.0,0.018249
-Wales,Unknown,Unknown,0.003255,2.3552,1.4651,0.011232
-Bermuda,Unknown,Unknown,0.001413,2.3552,1.7755,0.005909
-British Virgin Islands,Unknown,Unknown,0.000562,2.3552,1.0,0.001324
-Cayman Islands,Unknown,Unknown,0.000198,2.3552,2.0,0.000932
-Channel Islands,Unknown,Unknown,0.001894,2.3552,1.0126,0.004518
+Entire country,0.014166,0.006658,0.003446,2.3552,1.138,0.009237
+England,Unknown,Unknown,0.003335,2.3552,1.0569,0.008301
+Northern Ireland,Unknown,Unknown,0.006256,2.3552,1.1692,0.017226
+Scotland,Unknown,Unknown,0.004332,2.3552,2.0,0.020407
+Wales,Unknown,Unknown,0.003456,2.3552,1.5086,0.012281
+Bermuda,Unknown,Unknown,0.002088,2.3552,2.0,0.009833
+British Virgin Islands,Unknown,Unknown,0.000265,2.3552,1.0,0.000623
+Cayman Islands,Unknown,Unknown,0.000274,2.3552,2.0,0.00129
+Channel Islands,Unknown,Unknown,0.002094,2.3552,1.2899,0.006361
 Falkland Islands (Malvinas),Unknown,Unknown,0.000287,2.3552,1.0,0.000676
-Gibraltar,Unknown,Unknown,0.002107,2.3552,1.0,0.004963
-Isle of Man,Unknown,Unknown,0.004163,2.3552,1.0,0.009805
+Gibraltar,Unknown,Unknown,0.001929,2.3552,1.0,0.004544
+Isle of Man,Unknown,Unknown,0.004116,2.3552,1.0,0.009694
 Montserrat,Unknown,Unknown,0.0006,2.3552,2.0,0.002827
-Turks and Caicos Islands,Unknown,Unknown,0.001188,2.3552,1.0,0.002798
+Turks and Caicos Islands,Unknown,Unknown,0.001188,2.3552,1.2162,0.003403
 Anguilla,Unknown,Unknown,0.002,2.3552,1.2083,0.005691
 Saint Helena, Ascension and Tristan da Cunha,Unknown,Unknown,0.000177,2.3552,1.0,0.000416
