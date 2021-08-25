@@ -1,7 +1,39 @@
-import React, { useState } from 'react'
-import { Collapse } from 'react-bootstrap'
+import React, { useContext, useState } from 'react'
+import {
+  Accordion,
+  AccordionContext,
+  Card,
+  useAccordionToggle,
+} from 'react-bootstrap'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 import 'components/styles/Expandable.scss'
+
+interface AccordionToggleProps {
+  eventKey: string
+  header: string
+  headerExpanded?: string
+  onClick: () => void
+}
+
+function AccordionToggle(props: AccordionToggleProps): JSX.Element {
+  const currentEventKey = useContext(AccordionContext)
+
+  const decoratedOnClick = useAccordionToggle(props.eventKey, props.onClick)
+
+  const isCurrentEventKey = currentEventKey === props.eventKey
+  return (
+    <span onClick={decoratedOnClick}>
+      {isCurrentEventKey ? (
+        <BsChevronDown className="expandable-icon" />
+      ) : (
+        <BsChevronRight className="expandable-icon" />
+      )}
+      {isCurrentEventKey && props.headerExpanded
+        ? props.headerExpanded
+        : props.header}
+    </span>
+  )
+}
 
 export const ControlledExpandable: React.FunctionComponent<{
   id: string
@@ -12,28 +44,25 @@ export const ControlledExpandable: React.FunctionComponent<{
   headerClassName?: string
   className?: string
 }> = (props): React.ReactElement => {
+  const eventKey = 'eventKey' // This is arbitrary since this is a single-item Accordion
   return (
-    <div className={`expandable-section ${props.className || ''}`}>
-      <span
-        className={`expandable-header ${props.headerClassName || ''}`}
-        onClick={() => props.setter(!props.open)}
-        aria-controls={props.id}
-        aria-expanded={props.open}
-      >
-        {props.open ? (
-          <>
-            <BsChevronDown /> {props.headerExpanded || props.header}
-          </>
-        ) : (
-          <>
-            <BsChevronRight /> {props.header}
-          </>
-        )}
-      </span>
-      <Collapse in={props.open}>
-        <div id={props.id}>{props.children}</div>
-      </Collapse>
-    </div>
+    <Accordion activeKey={props.open ? eventKey : undefined}>
+      <Card className={`expandable-section ${props.className || ''}`}>
+        <Card.Header
+          className={`expandable-header ${props.headerClassName || ''}`}
+        >
+          <AccordionToggle
+            eventKey={eventKey}
+            header={props.header}
+            headerExpanded={props.headerExpanded}
+            onClick={() => props.setter(!props.open)}
+          />
+        </Card.Header>
+        <Accordion.Collapse eventKey={eventKey}>
+          <Card.Body>{props.children}</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   )
 }
 
