@@ -34,14 +34,6 @@ jobs:
       run: pip install -r requirements-manual.txt
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-      # where I left off: trying to get the virtualenv in scope inside 
-      # ideas: 
-      # use `source ./scripts/prevalence_helper` to pass the virtualenv into the new script
-      # need to find someway to test that
-      # need to conditionally  activate virtualenv if it's already active
-      # figure out what the virtualenv github action path is and just activate it withint prevalence_helper
-      # maybe pass virtual env in as an opt arg
-
     - name: Set up node
       uses: actions/setup-node@v2
 
