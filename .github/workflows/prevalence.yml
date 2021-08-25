@@ -14,8 +14,12 @@ jobs:
       uses: actions/checkout@v2
       with:
           fetch-depth: 0
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
+    
+    - uses: navikt/github-app-token-generator@v1
+      id: get-token
+      with:
+        private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
+        app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
     - name: Set up python
       uses: actions/setup-python@v2
@@ -42,5 +46,7 @@ jobs:
       
     - name: Run update prevalence and merge results
       env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
-      run: yarn prevalence -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+      run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+      # Always us -b to base branch on current branch. Works both for development on a feature branch
+      # and when being run on `main` during normal usage.

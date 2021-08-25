@@ -17,14 +17,14 @@ fi
 
 # Set defaults
 COMMIT_AND_PULL_REQUEST=0
-STAY_ON_CURRENT_BRANCH=0
+BASE_ON_CURRENT_BRANCH=0
 CAN_API_KEY=""
 VIRTUAL_ENV_DIR=".venv"
 
 while getopts "bck:v:" OPTION; do
     case $OPTION in
     b)
-        STAY_ON_CURRENT_BRANCH=1
+        BASE_ON_CURRENT_BRANCH=1
         ;;
     c)
         COMMIT_AND_PULL_REQUEST=1
@@ -55,17 +55,21 @@ if [[ $CAN_API_KEY == "" ]]; then
   fi
 fi
 
-if [[ $STAY_ON_CURRENT_BRANCH != 1 ]]; then
+if [[ $BASE_ON_CURRENT_BRANCH == 0 ]]; then
   echo "Creating a branch based on main"
   # Update local branch
   git checkout main
   git pull
-
-  BRANCH=auto-update-prevalence-$(date +%Y-%m-%d--%H-%M-%S)
-  git checkout -b $BRANCH
-  git push --set-upstream origin $BRANCH
-  echo "Created branch $BRANCH"
+else
+  echo "Branch will be based on the currently checked out branch"
 fi
+
+
+# Create the new branch
+BRANCH=auto-update-prevalence-$(date +%Y-%m-%d--%H-%M-%S)
+git checkout -b $BRANCH
+git push --set-upstream origin $BRANCH
+echo "Created branch $BRANCH"
 
 
 # Activate the local virtual env
@@ -94,8 +98,8 @@ echo "Committing the files and submitting an auto-merge pull request"
 if [[ `git status --porcelain` ]]; then
   TODAY=$(date +%Y-%m-%d)
 
-  git config --global user.name "Jeremy Blanchard"
-  git config --global user.email "blanchard.jeremy@gmail.com"
+  git config --global user.name "microCOVID[bot]"
+  git config --global user.email "123456789+microcovid[bot]@users.noreply.github.com"
 
   git add -A
   git commit -am "Automatic prevalence update $TODAY"
