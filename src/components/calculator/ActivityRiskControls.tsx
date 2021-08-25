@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import { Alert, Button, Popover, Table } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
+import {
+  BsVolumeDownFill,
+  BsVolumeMuteFill,
+  BsVolumeUpFill,
+  BsX,
+} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
-import { SegmentedControl } from './controls/SegmentedControl'
+import {
+  SegmentedControl,
+  SegmentedControlNoDescriptions,
+} from './controls/SegmentedControl'
 import { SelectControl } from './controls/SelectControl'
 import { CalculatorData } from 'data/calculate'
 import {
@@ -88,13 +97,30 @@ export const ActivityRiskControls: React.FunctionComponent<{
         helpPrompt={t('calculator.precautions.mask_not_listed.their_prompt')}
         variant="outline-secondary"
       />
-      <SelectControl
+      <SegmentedControlNoDescriptions
         id="voice"
         header={t('calculator.precautions.volume_header')}
-        label={t('calculator.precautions.volume_question')}
-        data={data}
-        setter={setter}
+        setter={(value: string) => {
+          setter({ ...data, voice: value.toString() })
+        }}
         source={Voice}
+        value={data.voice}
+        iconFactory={(value: string) => {
+          const iconProps = { size: 24 }
+          switch (value) {
+            case 'silent':
+              return <BsVolumeMuteFill {...iconProps} />
+            case 'normal':
+              return <BsVolumeDownFill {...iconProps} />
+            case 'loud':
+              return <BsVolumeUpFill {...iconProps} />
+          }
+          return <BsX {...iconProps} />
+        }}
+        multiplierFromSource={(value) => value.multiplier}
+        labelFromSource={(value) =>
+          value.label_short ? value.label_short : ''
+        }
       />
     </React.Fragment>
   )

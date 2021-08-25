@@ -1,6 +1,6 @@
-Name,Population,Cases in past week,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,1415872,3645,0.002575,2.4991,1.4516,0.009342
-Hawaii,201513,666,0.00331,2.5023,1.2734,0.010547
-Honolulu,974563,2506,0.002572,2.4792,1.5393,0.009817
-Kauai,72293,91,0.001273,2.301,1.6545,0.004845
-Maui,167417,382,0.002288,2.4141,1.2525,0.006917
+Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
+Entire state,0.017652,0.003195,0.003522,2.5085,1.0561,0.00933
+Hawaii,0.025739,0.004659,0.004486,2.5175,1.133,0.012796
+Honolulu,0.018607,0.003368,0.003284,2.563,1.0,0.008416
+Kauai,0.012184,0.002206,0.002504,2.3763,1.0,0.005949
+Maui,0.028343,0.005131,0.004205,2.4708,1.4318,0.014876
