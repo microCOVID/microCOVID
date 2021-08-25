@@ -15,8 +15,6 @@ import {
   intimateDurationFloor,
 } from 'data/data'
 
-import 'components/calculator/styles/PersonRiskControls.scss'
-
 const personCountPopover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">About "Number of People"</Popover.Title>
