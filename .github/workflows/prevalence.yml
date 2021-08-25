@@ -48,3 +48,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
       run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+      # Always us -b to base branch on current branch. Works both for development on a feature branch
+      # and when being run on `main` during normal usage.

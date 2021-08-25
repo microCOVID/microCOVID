@@ -98,8 +98,8 @@ echo "Committing the files and submitting an auto-merge pull request"
 if [[ `git status --porcelain` ]]; then
   TODAY=$(date +%Y-%m-%d)
 
-  git config --global user.name "microCOVID Bot"
-  git config --global user.email "info@microcovid.org"
+  git config --global user.name "microCOVID[bot]"
+  git config --global user.email "123456789+microcovid[bot]@users.noreply.github.com"
 
   git add -A
   git commit -am "Automatic prevalence update $TODAY"
