@@ -15,6 +15,8 @@ import {
   intimateDurationFloor,
 } from 'data/data'
 
+import 'components/calculator/styles/PersonRiskControls.scss'
+
 const personCountPopover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">About "Number of People"</Popover.Title>
@@ -88,44 +90,44 @@ const DurationInput: React.FunctionComponent<DurationInputProps> = (
   }
   return (
     <Row>
-      <Col md="4">
-        <InputGroup size="lg" className="mb-3">
-          <Form.Control
-            type="number"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            value={hours}
-            onChange={(e) => {
-              const newHours = Math.max(0, parseInt(e.target.value))
-              setHours(newHours)
-              props.onChange(calculateDuration(newHours, minutes))
-            }}
-          />
-          <InputGroup.Append>
-            <InputGroup.Text>{t('calculator.duration_hours')}</InputGroup.Text>
-          </InputGroup.Append>
-        </InputGroup>
-      </Col>
-      <Col md="4">
-        <InputGroup size="lg" className="mb-3">
-          <Form.Control
-            type="number"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            value={minutes}
-            onChange={(e) => {
-              const newMinutes = Math.max(0, parseInt(e.target.value))
-              setMinutes(newMinutes)
-              props.onChange(calculateDuration(hours, newMinutes))
-            }}
-          />
-          <InputGroup.Append>
-            <InputGroup.Text>
-              {t('calculator.duration_minutes')}
-            </InputGroup.Text>
-          </InputGroup.Append>
-        </InputGroup>
-      </Col>
+      <Form.Group controlId="duration-hours" as={Col} className="col-md-2 mb-0">
+        <Form.Label className="field-label mb-0">
+          {t('calculator.duration_hours')}
+        </Form.Label>
+        <Form.Control
+          type="number"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          value={hours}
+          onChange={(e) => {
+            const newHours = Math.max(0, parseInt(e.target.value))
+            setHours(newHours)
+            props.onChange(calculateDuration(newHours, minutes))
+          }}
+          size="lg"
+        />
+      </Form.Group>
+      <Form.Group
+        controlId="duration-minutes"
+        as={Col}
+        className="col-md-2 mb-0"
+      >
+        <Form.Label className="field-label mb-0">
+          {t('calculator.duration_minutes')}
+        </Form.Label>
+        <Form.Control
+          type="number"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          value={minutes}
+          onChange={(e) => {
+            const newMinutes = Math.max(0, parseInt(e.target.value))
+            setMinutes(newMinutes)
+            props.onChange(calculateDuration(hours, newMinutes))
+          }}
+          size="lg"
+        />
+      </Form.Group>
     </Row>
   )
 }
