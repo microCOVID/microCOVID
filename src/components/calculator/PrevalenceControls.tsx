@@ -174,10 +174,15 @@ export const PrevalenceControls: React.FunctionComponent<{
     },
   )
 
+  const locationOptionCompareFn = (
+    a: { label: string; value: string },
+    b: { label: string; value: string },
+  ) => a.label.localeCompare(b.label)
+
   // reorder the list according to the current locale, but keep
   // English as-is to make sure US states remain at the top
   if (i18n.language !== 'en-US') {
-    topLocationOptions.sort((a, b) => a.label.localeCompare(b.label))
+    topLocationOptions.sort(locationOptionCompareFn)
   }
 
   const selectedTopLocation = topLocationOptions.find(
@@ -186,21 +191,25 @@ export const PrevalenceControls: React.FunctionComponent<{
 
   const subLocationOptions = !showSubLocation
     ? []
-    : Locations[data.topLocation].subdivisions.map((locKey) => {
-        // We assume that sublocation names are either localized or don't have
-        // proper localized names. This is not always true, but the overhead of
-        // providing locallizations for them would not be worth it.
-        return { label: Locations[locKey].label, value: locKey }
-      })
+    : Locations[data.topLocation].subdivisions
+        .map((locKey) => {
+          // We assume that sublocation names are either localized or don't have
+          // proper localized names. This is not always true, but the overhead of
+          // providing locallizations for them would not be worth it.
+          return { label: Locations[locKey].label, value: locKey }
+        })
+        .sort(locationOptionCompareFn)
   const selectedSubLocation = subLocationOptions.find(
     (option) => option.value === data.subLocation,
   )
 
   const subSubLocationOptions = !showSubSubLocation
     ? []
-    : Locations[data.subLocation].subdivisions.map((locKey) => {
-        return { label: Locations[locKey].label, value: locKey }
-      })
+    : Locations[data.subLocation].subdivisions
+        .map((locKey) => {
+          return { label: Locations[locKey].label, value: locKey }
+        })
+        .sort(locationOptionCompareFn)
   const selectedSubSubLocation = subSubLocationOptions.find(
     (option) => option.value === data.subSubLocation,
   )

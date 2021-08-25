@@ -5,7 +5,7 @@ import {
   Interaction,
   PersonRiskValue,
   RiskProfile,
-  RiskProfileEnum,
+  RiskProfilesUnaffectedByVaccines,
   Setting,
   TheirMask,
   VaccineValue,
@@ -270,11 +270,15 @@ export const calculatePersonRiskEach = (
       return null
     }
 
-    if (data.riskProfile === RiskProfileEnum.HAS_COVID) {
+    if (data.riskProfile === RiskProfilesUnaffectedByVaccines.HAS_COVID) {
       return ONE_MILLION
-    } else if (data.riskProfile === RiskProfileEnum.ONE_PERCENT) {
+    } else if (
+      data.riskProfile === RiskProfilesUnaffectedByVaccines.ONE_PERCENT
+    ) {
       return (ONE_MILLION * 0.01) / 50
-    } else if (data.riskProfile === RiskProfileEnum.DECI_PERCENT) {
+    } else if (
+      data.riskProfile === RiskProfilesUnaffectedByVaccines.DECI_PERCENT
+    ) {
       return (ONE_MILLION * 0.001) / 50
     } else if (data.riskProfile === '') {
       // If risk profile isn't selected, call it incomplete
@@ -292,29 +296,49 @@ export const calculatePersonRiskEach = (
       })
 
     if (
-      // TODO: Support vaccinated risk for other Risk Profiles.
-      data.riskProfile !== 'average' ||
+      Object.values(RiskProfilesUnaffectedByVaccines).includes(
+        data.riskProfile,
+      ) ||
       data.unvaccinatedPrevalenceRatio === null ||
       data.averageFullyVaccinatedMultiplier === null
     ) {
       return unadjustedRisk
     }
 
-    switch (data.theirVaccine) {
-      case 'vaccinated':
-        return (
-          unadjustedRisk *
-          data.unvaccinatedPrevalenceRatio *
-          data.averageFullyVaccinatedMultiplier
-        )
-      case 'unvaccinated':
-        return unadjustedRisk * data.unvaccinatedPrevalenceRatio
-      // falls through
-      case 'undefined':
-        return unadjustedRisk
-      default:
-        console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
-        return null
+    if (data.riskProfile === 'average') {
+      switch (data.theirVaccine) {
+        case 'vaccinated':
+          return (
+            unadjustedRisk *
+            data.unvaccinatedPrevalenceRatio *
+            data.averageFullyVaccinatedMultiplier
+          )
+        case 'unvaccinated':
+          return unadjustedRisk * data.unvaccinatedPrevalenceRatio
+        case 'undefined':
+          return unadjustedRisk
+        default:
+          console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
+          return null
+      }
+    } else {
+      // These are risk profiles that were set up for unvaccinated people.
+      switch (data.theirVaccine) {
+        case 'vaccinated':
+          return unadjustedRisk * data.averageFullyVaccinatedMultiplier
+        case 'unvaccinated':
+          return unadjustedRisk
+        case 'undefined':
+          // data.unvaccinatedPrevalenceRatio is the average vaccine modifier
+          // applied across the entire population, including unvaccinated
+          // and partially vaccinated individuals.
+          // See the comment above unvaccinated_relative_prevalence() in
+          // update_prevalence.py for more details on how it is calculated.
+          return unadjustedRisk / data.unvaccinatedPrevalenceRatio
+        default:
+          console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
+          return null
+      }
     }
   } catch (e) {
     return null

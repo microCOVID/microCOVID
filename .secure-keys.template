@@ -1,0 +1,6 @@
+#!/bin/bash
+# Make a copy of this file named .secure-keys in the root of the repo
+
+
+# You can acquire an API key here: https://apidocs.covidactnow.org/
+CAN_API_KEY=aaa111
