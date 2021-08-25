@@ -53,6 +53,14 @@
 
   code {
     color: $cyan;
+    white-space: pre-wrap;
+  }
+
+  pre {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    padding: 1em;
+    margin: 1em;
   }
 
   .pageTitle {
