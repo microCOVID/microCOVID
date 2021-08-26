@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint-check:
+  lint-fix:
     runs-on: ubuntu-latest
 
     steps:
