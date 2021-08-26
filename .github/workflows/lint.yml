@@ -19,26 +19,46 @@ jobs:
         private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
         app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
-    - uses: EndBug/add-and-commit@v7
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
-      with:
-        message: "GitHub Action lint fix auto-commit"
-        default_author: github_actions
+    # - uses: EndBug/add-and-commit@v7
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}
+    #   with:
+    #     message: "GitHub Action lint fix auto-commit"
+    #     default_author: github_actions
 
-    - name: Wait for status checks
-      id: waitforstatuschecks
-      uses: WyriHaximus/github-action-wait-for-status@v1.4
-      with:
-        ignoreActions: automerge
-        checkInterval: 13
+    - name: Commit changes
       env:
-        GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}"
+        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+      run: |
+        git config --global user.name "microCOVID Automation"
+        git config --global user.name "info@microcovid.org"
+        git commit -am "Automatically committing lint fix changes"
+        git push --set-upstream
 
-    - name: Merge
-      uses: pascalgn/automerge-action@v0.14.2
+
+    - name: Commit changes
+      env:
+        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+      run: |
+        git config --global user.name "microCOVID Automation"
+        git config --global user.name "info@microcovid.org"
+        git commit -am "Automatically committing lint fix changes"
+        git push --set-upstream
+
+
+    # - name: Wait for status checks
+    #   id: waitforstatuschecks
+    #   uses: WyriHaximus/github-action-wait-for-status@v1.4
+    #   with:
+    #     ignoreActions: automerge
+    #     checkInterval: 13
+    #   env:
+    #     GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}"
+
+    
+
+    - name: Set to auto merge
       if: steps.waitforstatuschecks.outputs.status == 'success'
       env:
-        GITHUB_TOKEN: "${{ steps.get-token.outputs.token }}"
-        LABELS: automerge
-        MERGE_DELETE_BRANCH: true
+        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+      run: gh pr merge --auto --delete-branch --squash 1060
