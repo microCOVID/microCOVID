@@ -28,7 +28,7 @@ jobs:
 
     - name: Wait for status checks
       id: waitforstatuschecks
-      uses: WyriHaximus/github-action-wait-for-status@v2
+      uses: WyriHaximus/github-action-wait-for-status@v1.4
       with:
         ignoreActions: automerge
         checkInterval: 13
@@ -36,7 +36,7 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}"
 
     - name: Merge
-      uses: pascalgn/automerge-action@v0.4.0
+      uses: pascalgn/automerge-action@v0.14.2
       if: steps.waitforstatuschecks.outputs.status == 'success'
       env:
         GITHUB_TOKEN: "${{ steps.get-token.outputs.token }}"
