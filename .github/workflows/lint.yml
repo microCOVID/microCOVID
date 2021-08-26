@@ -46,9 +46,7 @@ jobs:
     #     GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN_JEREMY }}"
 
     
-
     - name: Set to auto merge
-      if: steps.waitforstatuschecks.outputs.status == 'success'
       env:
         GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
       run: gh pr merge --auto --delete-branch --squash 1060
