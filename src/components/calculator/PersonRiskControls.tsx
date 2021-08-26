@@ -248,6 +248,7 @@ function TheirVaccineIfAvailable(
           source={TheirVaccine}
           className="segmented-scrollable"
           variant="outline-cyan"
+          hideRisk={true}
           showTooltip={true}
           useHoverDesc={false}
         />

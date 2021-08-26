@@ -19,6 +19,7 @@
 .env.production.local
 .venv
 .prevalence_data.json
+.secure-keys
 
 npm-debug.log*
 yarn-debug.log*
@@ -33,3 +34,6 @@ src/locales/*_old.json
 
 # python
 __pycache__/
+
+# emacs
+\#*
