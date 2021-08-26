@@ -12,8 +12,3 @@ jobs:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
     - run: yarn fix
-
-    - uses: EndBug/add-and-commit@v7
-      with:
-        message: "GitHub Action lint fix auto-commit"
-        default_author: github_actions
