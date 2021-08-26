@@ -31,17 +31,7 @@ jobs:
         GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
       run: |
         git config --global user.name "microCOVID Automation"
-        git config --global user.name "info@microcovid.org"
-        git commit -am "Automatically committing lint fix changes"
-        git push --set-upstream
-
-
-    - name: Commit changes
-      env:
-        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
-      run: |
-        git config --global user.name "microCOVID Automation"
-        git config --global user.name "info@microcovid.org"
+        git config --global user.email info@microcovid.org
         git commit -am "Automatically committing lint fix changes"
         git push --set-upstream
 
