@@ -1,0 +1,14 @@
+name: Lint fix
+
+# Can be run manually to fix lint server side on a branch of your choice
+on:
+  workflow_dispatch:
+
+jobs:
+  lint-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: bahmutov/npm-install@v1
+    - run: yarn fix
