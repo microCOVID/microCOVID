@@ -44,11 +44,11 @@
     "category_postfix": "Risk",
     "category_very_high": "Very High",
     "category_very_low": "Very Low",
-    "duration_question": "How long is the activity, in minutes? (For a repeated activity: minutes per week?)",
     "change_interaction_type": "Clear",
     "distance_header": "Distance",
     "distance_question": "How close are these nearby people, on average?",
     "duration_header": "Duration",
+    "duration_question": "How long is the activity, in minutes? (For a repeated activity: minutes per week?)",
     "explanationcard": {
       "activity_risk_capped_note": "(NOTE: We have <2>capped this number at the maximum Activity Risk</2>.)",
       "chance": "chance",
