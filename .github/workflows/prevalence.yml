@@ -26,6 +26,9 @@ jobs:
 
     - run: echo $GITHUB_CONTEXT
 
+    - name: Echo github obj
+      run: echo ${{ toJson(github) }} && exit 0
+
     - run: printenv
 
     - name: Set up python
