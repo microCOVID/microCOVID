@@ -2,14 +2,14 @@ name: "Merge prevalence updates"
 
 on:
   pull_request:
-    # types: [opened]
+    types: [labeled, unlabeled, opened, edited, reopened, synchronize]
   workflow_dispatch:
 
 jobs:
   automerge:
     runs-on: ubuntu-latest
 
-    # if: contains(github.event.pull_request.labels.*.name, 'auto-prevalence-update')
+    if: contains(github.event.pull_request.labels.*.name, 'auto-prevalence-update')
     steps:
 
       - uses: navikt/github-app-token-generator@v1
@@ -18,12 +18,7 @@ jobs:
           private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
           app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
-      - run: printenv
-
-      - name: Echo github obj
-        run: echo "${{ toJson(github) }}" && exit 0
-
-      - name: 'Wait for status checks'
+      - name: "Wait for status checks"
         id: waitforstatuschecks
         uses: WyriHaximus/github-action-wait-for-status@v1.4.0
         with:
@@ -32,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
 
-      - name: 'Merge'
+      - name: "Merge"
         uses: pascalgn/automerge-action@v0.14.2
         if: steps.waitforstatuschecks.outputs.status == 'success'
         env:
