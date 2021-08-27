@@ -1,4 +1,4 @@
-name: "Dependabot Automerge - Action"
+name: "Merge prevalence updates"
 
 on:
   pull_request:
@@ -18,9 +18,6 @@ jobs:
         with:
           private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
           app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
-
-      - name: Echo github obj
-        run: echo ${{ toJson(github) }} && exit 0
 
       - name: 'Wait for status checks'
         id: waitforstatuschecks
