@@ -3,13 +3,14 @@ name: "Dependabot Automerge - Action"
 on:
   pull_request:
     types: [opened]
+  workflow_dispatch:
 
 jobs:
   automerge:
     runs-on: ubuntu-latest
 
     # if: github.actor == 'dependabot[bot]'
-    if: contains(github.event.pull_request.labels.*.name, 'auto merge')
+    # if: contains(github.event.pull_request.labels.*.name, 'auto merge')
     steps:
 
       - uses: navikt/github-app-token-generator@v1
