@@ -20,10 +20,11 @@ jobs:
     - name: Checkout git repo (with full history)
       uses: actions/checkout@v2
       with:
-          # persist-credentials: false
+          persist-credentials: false
           token: ${{ steps.get-token.outputs.token }}
           fetch-depth: 0
-    
+
+    - run: echo "$GITHUB_CONTEXT"
 
     - name: Set up python
       uses: actions/setup-python@v2
