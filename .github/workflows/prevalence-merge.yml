@@ -33,3 +33,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
           MERGE_DELETE_BRANCH: true
+          MERGE_LABELS: auto-prevalence-update
