@@ -21,7 +21,7 @@ jobs:
       - run: printenv
 
       - name: Echo github obj
-        run: echo ${{ toJson(github) }} && exit 0
+        run: echo "${{ toJson(github) }}" && exit 0
 
       - name: 'Wait for status checks'
         id: waitforstatuschecks
