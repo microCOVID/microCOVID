@@ -32,6 +32,4 @@ jobs:
         if: steps.waitforstatuschecks.outputs.status == 'success'
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
-          MERGE_LABELS: bot auto merge
-          UPDATE_LABELS: bot auto merge
           MERGE_DELETE_BRANCH: true
