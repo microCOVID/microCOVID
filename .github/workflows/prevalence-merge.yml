@@ -1,0 +1,40 @@
+name: "Dependabot Automerge - Action"
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+
+    # if: github.actor == 'dependabot[bot]'
+    if: contains(github.event.pull_request.labels.*.name, 'auto merge')
+    steps:
+
+      - uses: navikt/github-app-token-generator@v1
+        id: get-token
+        with:
+          private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
+          app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
+
+      - name: Echo github obj
+        run: echo ${{ toJson(github) }} && exit 0
+
+      - name: 'Wait for status checks'
+        id: waitforstatuschecks
+        uses: WyriHaximus/github-action-wait-for-status@v1.4.0
+        with:
+          ignoreActions: automerge
+          checkInterval: 10
+        env:
+          GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+
+      - name: 'Merge'
+        uses: pascalgn/automerge-action@v0.14.2
+        if: steps.waitforstatuschecks.outputs.status == 'success'
+        env:
+          GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+          MERGE_LABELS: bot auto merge
+          UPDATE_LABELS: bot auto merge
+          MERGE_DELETE_BRANCH: true
