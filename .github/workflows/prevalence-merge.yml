@@ -9,7 +9,7 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
 
-    if: contains(github.event.pull_request.labels.*.name, 'auto-prevalence-update')
+    # if: contains(github.event.pull_request.labels.*.name, 'auto-prevalence-update')
     steps:
 
       - uses: navikt/github-app-token-generator@v1
