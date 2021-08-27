@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000825,0.000388,0.000233,2.1922,1.0,0.00051
-Antofagasta,Unknown,Unknown,0.000288,2.1922,1.0,0.000631
-Araucania,Unknown,Unknown,0.000203,2.1922,1.0,0.000444
-Arica y Parinacota,Unknown,Unknown,0.000226,2.1922,1.0,0.000495
-Atacama,Unknown,Unknown,0.000204,2.1922,1.0357,0.000464
-Aysen,Unknown,Unknown,0.000407,2.1922,1.4138,0.001262
-Biobio,Unknown,Unknown,0.000247,2.1922,1.0,0.000541
-Coquimbo,Unknown,Unknown,0.000137,2.1922,1.0,0.000301
-Los Lagos,Unknown,Unknown,0.000203,2.1922,1.0,0.000444
-Los Rios,Unknown,Unknown,0.000164,2.1922,1.0,0.000359
-Magallanes,Unknown,Unknown,0.000198,2.1922,1.1034,0.000479
-Maule,Unknown,Unknown,0.000278,2.1922,1.0,0.00061
-Metropolitana,Unknown,Unknown,0.000294,2.1922,1.0,0.000644
-Nuble,Unknown,Unknown,0.000164,2.1922,1.0,0.00036
-OHiggins,Unknown,Unknown,0.000224,2.1922,1.2216,0.0006
-Tarapaca,Unknown,Unknown,0.000372,2.1922,1.0,0.000816
-Valparaiso,Unknown,Unknown,0.000223,2.1922,1.0,0.000489
+Entire country,0.000793,0.000373,0.000223,2.1915,1.0,0.00049
+Antofagasta,Unknown,Unknown,0.000244,2.1915,1.0,0.000534
+Araucania,Unknown,Unknown,0.000204,2.1915,1.0104,0.000451
+Arica y Parinacota,Unknown,Unknown,0.000221,2.1915,1.0,0.000485
+Atacama,Unknown,Unknown,0.000225,2.1915,1.3061,0.000644
+Aysen,Unknown,Unknown,0.000397,2.1915,1.0,0.000871
+Biobio,Unknown,Unknown,0.000219,2.1915,1.0,0.00048
+Coquimbo,Unknown,Unknown,0.000125,2.1915,1.0,0.000275
+Los Lagos,Unknown,Unknown,0.000203,2.1915,1.0,0.000444
+Los Rios,Unknown,Unknown,0.000174,2.1915,1.0,0.000382
+Magallanes,Unknown,Unknown,0.000138,2.1915,1.0,0.000303
+Maule,Unknown,Unknown,0.000262,2.1915,1.0,0.000575
+Metropolitana,Unknown,Unknown,0.000284,2.1915,1.0,0.000621
+Nuble,Unknown,Unknown,0.00015,2.1915,1.0,0.000328
+OHiggins,Unknown,Unknown,0.000231,2.1915,1.3376,0.000676
+Tarapaca,Unknown,Unknown,0.000463,2.1915,2.0,0.002029
+Valparaiso,Unknown,Unknown,0.000202,2.1915,1.0,0.000442
