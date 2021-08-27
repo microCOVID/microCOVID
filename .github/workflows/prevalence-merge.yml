@@ -9,8 +9,7 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
 
-    # if: github.actor == 'dependabot[bot]'
-    # if: contains(github.event.pull_request.labels.*.name, 'auto merge')
+    if: contains(github.event.pull_request.labels.*.name, 'auto-prevalence-update')
     steps:
 
       - uses: navikt/github-app-token-generator@v1
@@ -20,7 +19,7 @@ jobs:
           app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
       - run: printenv
-      
+
       - name: Echo github obj
         run: echo ${{ toJson(github) }} && exit 0
 
