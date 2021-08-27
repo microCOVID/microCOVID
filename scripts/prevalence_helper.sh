@@ -109,7 +109,7 @@ if [[ `git status --porcelain` ]]; then
   git commit -am "Automatic prevalence update $TODAY"
   git push
   # Use the GitHub CLI to create a pull request and save the url
-  PR_URL=$(gh pr create --fill)
+  PR_URL=$(gh pr create --fill --label auto-prevalence-update)
   echo "Pull request URL: $PR_URL"
   if [[ ! $PR_URL = "" ]]; then
     if [[ $AUTOMERGE == 1 ]]; then
