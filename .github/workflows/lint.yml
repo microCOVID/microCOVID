@@ -20,7 +20,7 @@ jobs:
         app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
 
-    - run: echo "${{ github.action }}""
+    - run: echo ${{ github.actor }}"
 
     # - name: Commit changes
     #   env:
