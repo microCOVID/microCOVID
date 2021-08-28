@@ -10,6 +10,7 @@ jobs:
   prevalence:
     runs-on: ubuntu-latest
     steps:
+
     - name: Get INSTALLATION_ACCESS_TOKEN
       uses: navikt/github-app-token-generator@v1
       id: get-token
@@ -20,19 +21,8 @@ jobs:
     - name: Checkout git repo (with full history)
       uses: actions/checkout@v2
       with:
-          persist-credentials: false
           token: ${{ steps.get-token.outputs.token }}
           fetch-depth: 0
-
-    - run: echo $GITHUB_CONTEXT
-
-    - name: Echo github obj
-      run: echo ${{ toJson(github) }} && exit 0
-
-    - run: printenv
-
-    - name: Set up python
-      uses: actions/setup-python@v2
 
     - name: Set up virtualenv
       uses: syphar/restore-virtualenv@v1
