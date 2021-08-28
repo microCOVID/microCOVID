@@ -25,6 +25,7 @@ const changes: Change[] = [
 * New: Low the budget reductions from other podmates if everyone in the pod is vaccinated since transmission is lower. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget). ([#1013](https://github.com/microCOVID/microCOVID/issues/1013))
 * Bugfix: Handles the case where we don't have vaccination data for a location, and the users selects "Avg local resident (vaccinated)" as the risk profile. ([#1037](https://github.com/microCOVID/microCOVID/issues/1037))
 * Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour". ([#968](https://github.com/microCOVID/microCOVID/issues/968))
+* Bugfix: Now correctly ignores "environment" when distance is set to "close" ([#1033](https://github.com/microCOVID/microCOVID/issues/1033))
 
 **Note on how the vaccination budget adjustment works:** This feature reduces the impact of other podmate's activities on each persons' budget, since transmission is lower between podmates now that you are all vaccinated. If some people in the pod are not vaccinated or received different types of vaccines, you have two main options. Let these two examples illustrate.
   * **Example A:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J doesn't mind being exposed to a bit more than 1% per year. So we set this setting to "Pfizer" because most people got Pfizer. This will overestimate the protection the J&J housemate has from other podmates, but the difference won't be drastic.
@@ -32,7 +33,19 @@ const changes: Change[] = [
 
 `,
     instructions: `
-1. **Bugfix for "Avg local residenet (vaccinated)" in locations without vaccinations data**
+1. **Bugfix to clarify HEPA filter paramters**
+    1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
+    1. Under **Find** enter: \`flow rate 5x room size\`
+    1. Under **Replace** enter: \`flow rate 5x room size per hour\`
+    1. Click the **Replace all** button
+    1. Reminder, we have a [air flow calculator](/blog/hepafilters) to determine the flow rate of you air purifier.
+1. **Bugfix for distance set to "close"**
+    1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
+    1. Under **Find** enter: \`AND\\(([a-zA-Z]+\\d+)=ACTIVITY_TITLE_CUDDLING,[ \\n]*([a-zA-Z]+\\d+)=ACTIVITY_TITLE_OUTDOOR\\)\`
+    1. Under **Replace** enter: \`$1=ACTIVITY_TITLE_CUDDLING\`
+    1. Check the box for **Search using regular expressions**
+    1. Check the box for **Also search withing formulas**
+1. **Bugfix for "Avg local resident (vaccinated)" in locations without vaccinations data**
     1 In the **Activity Log** sheet, edit cell \`N3\` to contain: 
       <pre><code>=IF(ISTEXT(P3), "", IF(AND(OR(T3="Avg local resident (vaccinated)", T3="Avg local resident (unvaccinated)"), REGEXMATCH(TO_TEXT(VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE)), "Unknown")), "Error: Vaccination data not available in your region. Please use the 'Avg local resident' risk profile instead",
       IF(
@@ -57,12 +70,7 @@ const changes: Change[] = [
         <tr><td>Avg local resident (vaccinated)</td>    <td><code>=IF(VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE)="Unknown", "Vaccination data not available in your region, use avg local resident profile instead", 1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE))</code></td></tr>
         <tr><td>Avg local resident (unvaccinated)</td>    <td><code>=IF(VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 2, FALSE)="Unknown", "Vaccination data not available in your region, use avg local resident profile instead", 1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 2, FALSE))</code></td></tr>
       </table>
-2. **Bugfix to clarify HEPA filter paramters**
-    * Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
-    * Under *Find* enter: \`flow rate 5x room size\`
-    * Under *Replace* enter: \`flow rate 5x room size per hour\`
-    * Reminder, we have a [air flow calculator](/blog/hepafilters) to determine the flow rate of you air purifier.
-3. **Pod Overview sheet:**
+1. **Pod Overview sheet:**
     * Open the [current spreadsheet](https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0) and copy all of \`Row 104\` (Where it says "Adjust budget as though everyone were fully vaccinated with...") to \`Row 104\` in your spreadsheet.
     * Click no \`C104\` then go to *Data > Data validation*. Under *Criteria* set the range to \`=INTERNAL_ACTIVITY!$I$19:$I$32\` then press *Save*.
     * In cell \`C124\` to be
