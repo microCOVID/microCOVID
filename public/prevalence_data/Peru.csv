@@ -1,5 +1,5 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000422,0.000198,0.000152,2.383,1.0,0.000363
+Entire country,0.00063,0.000296,0.000228,2.383,1.0,0.000542
 Amazonas,Unknown,Unknown,0.000211,2.383,1.0,0.000503
 Ancash,Unknown,Unknown,0.00023,2.383,1.1732,0.000644
 Apurimac,Unknown,Unknown,0.000202,2.383,1.3231,0.000637

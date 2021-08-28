@@ -1,4 +1,4 @@
-name: Prevalence
+name: Bot Merge
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
         required: true
 
 jobs:
-  prevalence:
+  bot-merge:
     runs-on: ubuntu-latest
     steps:
 
@@ -26,7 +26,7 @@ jobs:
         token: ${{ steps.get-token.outputs.token }}
         fetch-depth: 0
         
-    - name: Run update prevalence and merge results
+    - name: Run the merge command
       env:
         GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
       run: gh pr merge --delete-branch --squash ${{ github.event.inputs.prnum }}
