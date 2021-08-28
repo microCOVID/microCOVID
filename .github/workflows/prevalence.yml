@@ -50,3 +50,22 @@ jobs:
       run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
       # Always us -b to base branch on current branch. Works both for development on a feature branch
       # and when being run on `main` during normal usage.
+
+    - name: Wait for status checks
+      id: waitforstatuschecks
+      uses: WyriHaximus/github-action-wait-for-status@v1.4.0
+      with:
+        ignoreActions: automerge
+        checkInterval: 10
+      env:
+        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+
+    - name: Merge
+      uses: pascalgn/automerge-action@v0.14.2
+      if: steps.waitforstatuschecks.outputs.status == 'success'
+      env:
+        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+        MERGE_DELETE_BRANCH: true
+        MERGE_METHOD: squash
+        MERGE_LABELS: auto-prevalence-update
+        UPDATE_LABELS: auto-prevalence-update
