@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.0042,0.001974,0.001082,2.4782,1.0243,0.002746
-Drenthe,Unknown,Unknown,0.000721,2.4782,1.4143,0.002528
-Flevoland,Unknown,Unknown,0.001622,2.4782,1.1398,0.004581
-Friesland,Unknown,Unknown,0.000846,2.4782,1.03,0.00216
-Gelderland,Unknown,Unknown,0.000819,2.4782,1.0041,0.002038
-Groningen,Unknown,Unknown,0.000787,2.4782,1.0575,0.002062
-Limburg,Unknown,Unknown,0.000892,2.4782,1.0,0.002212
-Noord-Brabant,Unknown,Unknown,0.000804,2.4782,1.0223,0.002036
-Noord-Holland,Unknown,Unknown,0.001176,2.4782,1.0368,0.00302
-Overijssel,Unknown,Unknown,0.00105,2.4782,1.1193,0.002914
-Utrecht,Unknown,Unknown,0.000914,2.4782,1.1528,0.002611
-Zeeland,Unknown,Unknown,0.000764,2.4782,1.0,0.001893
-Zuid-Holland,Unknown,Unknown,0.001061,2.4782,1.0438,0.002745
-Aruba,Unknown,Unknown,0.007409,2.4782,1.0,0.01836
-Curacao,Unknown,Unknown,0.00248,2.4782,1.0,0.006146
-Sint Maarten,Unknown,Unknown,0.006506,2.4782,1.4112,0.022753
-Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.001068,2.4782,1.08,0.002858
+Entire country,0.004429,0.002082,0.001104,2.4936,1.0479,0.002884
+Drenthe,Unknown,Unknown,0.000737,2.4936,1.0772,0.00198
+Flevoland,Unknown,Unknown,0.001638,2.4936,1.0,0.004085
+Friesland,Unknown,Unknown,0.001155,2.4936,1.4071,0.004054
+Gelderland,Unknown,Unknown,0.000865,2.4936,1.0816,0.002333
+Groningen,Unknown,Unknown,0.000879,2.4936,1.0913,0.002392
+Limburg,Unknown,Unknown,0.000727,2.4936,1.0,0.001812
+Noord-Brabant,Unknown,Unknown,0.000731,2.4936,1.0,0.001822
+Noord-Holland,Unknown,Unknown,0.001322,2.4936,1.1372,0.003748
+Overijssel,Unknown,Unknown,0.001128,2.4936,1.1018,0.003099
+Utrecht,Unknown,Unknown,0.000956,2.4936,1.0892,0.002596
+Zeeland,Unknown,Unknown,0.000756,2.4936,1.0321,0.001946
+Zuid-Holland,Unknown,Unknown,0.001145,2.4936,1.1209,0.0032
+Aruba,Unknown,Unknown,0.004721,2.4936,1.0,0.011771
+Curacao,Unknown,Unknown,0.001718,2.4936,1.0,0.004285
+Sint Maarten,Unknown,Unknown,0.004361,2.4936,1.0,0.010874
+Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.000725,2.4936,1.0,0.001807
