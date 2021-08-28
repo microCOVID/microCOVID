@@ -227,7 +227,7 @@
     "partner": "Living/staying with a partner/spouse",
     "repeated": "Living/staying with others (like roommates or family)",
     "indoor": "Indoor",
-    "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
+    "filtered": "Indoors with a HEPA filter (flow rate 5x room size per hour)",
     "transit": "A train with air filtration",
     "plane": "An airplane",
     "car_windows_down": "A moving car with the windows rolled down",
