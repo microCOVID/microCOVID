@@ -1,8 +1,8 @@
 ---
-name: Calculator/Website - Bug report
-about: Create a report to help us improve
+name: Risk Tracker - Bug report
+about: Create a report to help us improve the risk tracker
 title: ''
-labels: 'type: bug'
+labels: 'type: bug', 'risk tracker (spreadsheet)'
 assignees: ''
 
 ---
@@ -10,8 +10,8 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
-**Link to microCOVID scenario**
-If applicable, please copy-paste the URL to the scenario that you modeled on the calculator, so we can easily reproduce it.
+**Risk Tracker version**
+What version are you using? You can find your version number at the top of the Pod Overview tab in bold.
 
 **To Reproduce**
 Steps to reproduce the behavior:
