@@ -1,4 +1,4 @@
-name: "Merge prevalence updates"
+name: Merge prevalence updates
 
 on:
   pull_request:
