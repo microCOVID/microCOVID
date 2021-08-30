@@ -44,9 +44,23 @@ jobs:
     - name: Set up yarn
       run: yarn install
       
-    - name: Run update prevalence and merge results
+    - name: Run update prevalence and commit changes
       env:
         GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
-      run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
-      # Always us -b to base branch on current branch. Works both for development on a feature branch
+      # Always use -b to base branch on current branch. Works both for development on a feature branch
       # and when being run on `main` during normal usage.
+      run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+
+    - name: Create pull request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ steps.get-token.outputs.token }}
+
+    - name: Enable pull request automerge
+      if: steps.cpr.outputs.pull-request-operation == 'created'
+      uses: peter-evans/enable-pull-request-automerge@v1
+      with:
+        token: ${{ steps.get-token.outputs.token }}
+        pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+        merge-method: squash

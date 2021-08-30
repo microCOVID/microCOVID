@@ -17,18 +17,22 @@ fi
 
 # Set defaults
 BASE_ON_CURRENT_BRANCH=0
-COMMIT_AND_PULL_REQUEST=0
+COMMIT_CHANGES=0
+CREATE_PULL_REQUEST=0
 AUTOMERGE=0
 CAN_API_KEY=""
 VIRTUAL_ENV_DIR=".venv"
 
-while getopts "bcak:v:" OPTION; do
+while getopts "bcpak:v:" OPTION; do
     case $OPTION in
     b)
         BASE_ON_CURRENT_BRANCH=1
         ;;
     c)
-        COMMIT_AND_PULL_REQUEST=1
+        COMMIT_CHANGES=1
+        ;;
+    a)
+        CREATE_PULL_REQUEST=1
         ;;
     a)
         AUTOMERGE=1
@@ -90,7 +94,8 @@ CAN_API_KEY=$CAN_API_KEY python3 update_prevalence.py
 yarn fix
 
 # exit early if commit isn't needed
-if [[ $COMMIT_AND_PULL_REQUEST == 0 ]]; then
+if [[ $COMMIT_CHANGES == 0 ]]; then
+  echo "Not committing changes, exiting successfully ✅"
   exit 0
 fi
 
@@ -107,6 +112,13 @@ if [[ `git status --porcelain` ]]; then
 
   git add -A
   git commit -am "Automatic prevalence update $TODAY"
+
+  if [[ $CREATE_PULL_REQUEST == 0 ]]; then
+    echo "Not creating pull request, exiting successfully ✅"
+    exit 0
+  fi
+
+  echo "Pushing & creating pull request"
   git push
   # Use the GitHub CLI to create a pull request and save the url
   PR_URL=$(gh pr create --fill --label auto-prevalence-update)
@@ -114,10 +126,10 @@ if [[ `git status --porcelain` ]]; then
   if [[ ! $PR_URL = "" ]]; then
     if [[ $AUTOMERGE == 1 ]]; then
       # Set the pull request to auto merge
-      echo "Setting auto merge"
+      echo "Setting auto-merge"
       gh pr merge --auto --delete-branch --squash "$PR_URL"
     else 
-      echo "Not doing any kind of a merge"
+      echo "Not doing a merge, pull request will require manual merging"
     fi
   else
     echo "ERROR: No pull request URL generated"
