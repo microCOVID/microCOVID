@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a situation you're tyring to understnad with microCOVID? Please describe.**
+**Is your feature request related to a situation you're trying to understand with microCOVID? Please describe.**
 A clear and concise description of what the situation you're trying to understand by using microCOVID.
 
 **Describe the solution you'd like**
