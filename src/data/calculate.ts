@@ -304,12 +304,14 @@ export const calculatePersonRiskEach = (
     ) {
       return unadjustedRisk
     }
+    const fractionFullyVaccinated = data.percentFullyVaccinated / 100
     const unvaccinatedPrevalenceRatio =
       data.unvaccinatedPrevalenceRatio !== null
         ? data.unvaccinatedPrevalenceRatio
         : 1 /
-          (data.averageFullyVaccinatedMultiplier * data.percentFullyVaccinated +
-            (1 - data.percentFullyVaccinated))
+          (data.averageFullyVaccinatedMultiplier * fractionFullyVaccinated +
+            (1 - fractionFullyVaccinated))
+
 
     if (data.riskProfile === 'average') {
       switch (data.theirVaccine) {
