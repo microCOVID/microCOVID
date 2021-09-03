@@ -3,12 +3,14 @@ const shortTitle = 'Changelog'
 
 interface Change {
   date: Date
+  title?: string
   content: string
 }
 
 const changes: Change[] = [
   {
     date: new Date(2021, 6, 26),
+    title: 'Delta variant updates',
     content: `
 * Updated transmission and vaccine numbers for Delta variant:
   |                         | Previous   | Delta Variant  |
@@ -26,6 +28,7 @@ const changes: Change[] = [
   },
   {
     date: new Date(2021, 5, 22),
+    title: 'Add "Average vaccinated person" risk profiles',
     content: `
 * Added the option to select the vaccination state of average people
   * Imported vaccination data from JHU and Covid Act Now.
@@ -46,6 +49,7 @@ const changes: Change[] = [
   },
   {
     date: new Date(2021, 2, 30),
+    title: "Add Johnson & Johnson's vaccine",
     content: `
 * Vaccine updates: 
   * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
@@ -55,6 +59,7 @@ const changes: Change[] = [
   },
   {
     date: new Date(2021, 2, 16),
+    title: 'Add vaccines to Risk Tracker',
     content: `
 * The latest version of the [Risk Tracker](/tracker) now supports modeling the risk of someone you are seeing who is vaccinated.`,
   },
@@ -109,7 +114,7 @@ export const lastUpdated = changes[0].date
 const content = changes
   .map((change) => {
     return `
-## ${change.date.toLocaleDateString()}
+## ${change.date.toLocaleDateString()}${change.title ? ': ' + change.title : ''}
 ${change.content}`
   })
   .join('\n\n')
