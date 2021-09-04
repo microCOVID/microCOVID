@@ -1,5 +1,5 @@
-const title = "Uncertainty Estimation";
-const shortTitle = title;
+const title = 'Uncertainty Estimation'
+const shortTitle = title
 const content = `
 _Warning: the entire uncertainty estimation section needs to be revisited for the Delta variant. Proceed with caution._
 
@@ -74,8 +74,8 @@ We note the following:
 * Multiplying the calculator result by 3 yields in each case a value that is close to or above the upper end of the 90% confidence interval from the model. Dividing the calculator result by 3 yields a value that is somewhere between 1.2x and 2.6x higher than the lower end of the 90% confidence interval from the model. For ease of communication, we'll call that a **3x margin of error in either direction**. We think we might be overestimating by a greater factor than we might be underestimating, but that's the direction we'd prefer to err in if we must — no disaster will befall if some action turns out to be safer than we told our users it might be.
 
 **Note:** This analysis is about _known_ unknowns, i.e., places where we know there's uncertainty and can reasonably estimate how much. We have not characterized the uncertainty in all parameters of the model; we have only demonstrated that, under some typical scenarios, the uncertainty might be low enough to make the results usable. Additionally, it is entirely possible that there is more uncertainty beyond what we've calculated here, due to some unforeseen problem in our (individual or society-wide) understanding of COVID transmission dynamics. At the beginning of this section we quoted bounds of 10x, not 3x; this discrepancy is intended as a hedge against such "unknown unknowns", but we have no way of knowing if it's enough. Use our model with care.
-`;
+`
 
-const post = { title, shortTitle, content };
+const post = { title, shortTitle, content }
 
-export default post;
+export default post

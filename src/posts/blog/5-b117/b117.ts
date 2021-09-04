@@ -1,10 +1,10 @@
-const title = "Model updates for the new, more contagious COVID-19 variant";
+const title = 'Model updates for the new, more contagious COVID-19 variant'
 
-const author = "Ben Shaya";
-const date = "January 5, 2021";
+const author = 'Ben Shaya'
+const date = 'January 5, 2021'
 
 const summary =
-  "The new variant of COVID, B117, is ~50% more contagious than the viruses that were circulating before. We explain why that matters and how microCOVID is changing to account for this.";
+  'The new variant of COVID, B117, is ~50% more contagious than the viruses that were circulating before. We explain why that matters and how microCOVID is changing to account for this.'
 const content = `
 If you’ve been keeping tabs on COVID-19 news, you might have seen news of a new variant, first spotted in the UK, that is more contagious than the previous variants. We’ve been following research from the UK on this variant, and have concluded that there is sufficient evidence to make some major changes to microCOVID.
 
@@ -92,7 +92,7 @@ The good news is it should be over soon - between vaccinations ramping up and la
 It’s possible that a government response or people choosing to be more vigilant will drive cases down sooner. We would absolutely love to be wrong about the trajectory of the virus. If that happens, microCOVID will reflect conditions as they change.
 
 [^1]: [https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf](https://www.medrxiv.org/content/10.1101/2020.12.24.20248822v1.full.pdf)
-`;
+`
 
-export const post = { title, summary, content, author, date };
-export default post;
+export const post = { title, summary, content, author, date }
+export default post

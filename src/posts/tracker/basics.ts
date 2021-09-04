@@ -1,7 +1,7 @@
-import { spreadsheetUrl } from "components/RiskTrackerUtil";
+import { spreadsheetUrl } from 'components/RiskTrackerUtil'
 
-const title = "Basic Risk Tracker Usage";
-const shortTitle = "Basic Usage";
+const title = 'Basic Risk Tracker Usage'
+const shortTitle = 'Basic Usage'
 const content = `
 ## Orienting yourself to the Risk Tracker
 
@@ -184,7 +184,7 @@ Note that after the initial modeling of this group of people, Bob will want to k
 
 To see how you might model this situation, go to the [_Custom People_ sheet](${spreadsheetUrl}/edit#gid=311635422), then scroll to the **Example: Sam (Bob's partner)** section.
 
-`;
+`
 
-const post = { title, shortTitle, content };
-export default post;
+const post = { title, shortTitle, content }
+export default post

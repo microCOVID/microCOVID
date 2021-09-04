@@ -1,11 +1,11 @@
-import budgetSetting from "./img/budget-setting.png";
-import editable from "./img/colors-editable.png";
-import expired from "./img/colors-expired.png";
-import formula from "./img/colors-formula.png";
-import overview from "./img/colors-overview.png";
+import budgetSetting from './img/budget-setting.png'
+import editable from './img/colors-editable.png'
+import expired from './img/colors-expired.png'
+import formula from './img/colors-formula.png'
+import overview from './img/colors-overview.png'
 
-const title = "Risk Tracker FAQ";
-const shortTitle = "FAQ";
+const title = 'Risk Tracker FAQ'
+const shortTitle = 'FAQ'
 const content = `
 Jump to: [General](#general-risk-tracker-faq) | [Activity Modeling](#activity-modeling) | [Custom Person Modeling](#custom-person-modeling) | [Risk Budget](#risk-budget)
 
@@ -268,7 +268,7 @@ A 2-9 day range is when you would most likely be contagious to others if you wer
 
 _A note here:_ We use a 2-9 day range because it is convenient for working with a weekly budget. This is fine when working with lower microCOVID values. But when working with higher risk scenarios (100x or more over your weekly budget), a 21-day range without symptoms would be important to ensure full safety. Higher risk activities to think about might include: flights, parties/bars, or contact with someone who has COVID. If you want to include a higher risk activity in the Custom Person model, the easiest way is to just not put a date next to the activity when you enter it, and then remove it after day 21.
 
-`;
+`
 
-const post = { title, shortTitle, content };
-export default post;
+const post = { title, shortTitle, content }
+export default post

@@ -1,5 +1,5 @@
-const title = "Understanding COVID transmission";
-const shortTitle = "COVID transmission";
+const title = 'Understanding COVID transmission'
+const shortTitle = 'COVID transmission'
 
 const content = `
 
@@ -31,7 +31,7 @@ In order to answer these questions with microCOVID numbers (not just “high” 
      If you’re worried about surfaces, the best thing to do is to be careful not to touch your face (mouth, nose, or eyes) when out and about, unless you’ve just washed or sanitized your hands thoroughly. Getting the virus on your hands isn’t harmful in itself; it has to get to your mucous membranes in order to infect you.
 
 
-`;
+`
 
-const post = { title, shortTitle, content };
-export default post;
+const post = { title, shortTitle, content }
+export default post

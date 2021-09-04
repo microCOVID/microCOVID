@@ -1,5 +1,5 @@
-const title = "Comparing Person Risk methods with an example";
-const shortTitle = "Comparing Methods";
+const title = 'Comparing Person Risk methods with an example'
+const shortTitle = 'Comparing Methods'
 const content = `
 
 Let’s work through a quick example to compare the different approaches for estimating Person Risk.
@@ -36,7 +36,7 @@ Now that we’ve looked at Person Risk, we can combine it with Activity Risk to 
      If Reasonable Rosie keeps up this rate of 381 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is much lower than the average American!
 
 [^essential]: By “essential worker” we mean roughly the same thing as the following two definitions. First: “Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers.” ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)) Second: “Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60.” (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/))
-`;
+`
 
-const post = { title, shortTitle, content };
-export default post;
+const post = { title, shortTitle, content }
+export default post

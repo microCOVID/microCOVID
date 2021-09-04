@@ -1,5 +1,5 @@
-const title = "Risk Questions";
-const shortTitle = "Risk Questions";
+const title = 'Risk Questions'
+const shortTitle = 'Risk Questions'
 const content = `
 The more you know about a person’s specific risks in the last 9 days, the better you can estimate the risk of being in contact with them.
 
@@ -52,7 +52,7 @@ To be most accurate, ask each of these questions for yourself **_AND for each pe
 12. **Sharing indoor air space in any other ways (other stores/buildings, etc):** Have you shared indoor air space with anyone else in the last 9 days? For how long? Were you wearing a mask? Were they? What kind of mask was it?
 
 
-`;
+`
 
-const post = { title, shortTitle, content };
-export default post;
+const post = { title, shortTitle, content }
+export default post

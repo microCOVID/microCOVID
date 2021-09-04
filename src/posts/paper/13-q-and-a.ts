@@ -1,5 +1,5 @@
-const title = "Q&A";
-const shortTitle = title;
+const title = 'Q&A'
+const shortTitle = title
 const content = `
 
 Jump to: [General](#general-qa) | [Activity Risk](#activity-risk-qa) | [Person Risk](#person-risk-qa) | [Vaccines](#vaccines-qa) | [Specific Activities](#specific-activities-qa) | [Related Work](#related-work)
@@ -409,8 +409,8 @@ In terms of qualitative scales, we like the following:
 [^isolation]: Perhaps a _lot_ less likely that I get it from Alice if Alice isolates promptly: [Li et al.](https://www.ncbi.nlm.nih.gov/research/coronavirus/publication/32301964) found that isolating an infected household member from the rest of the household as soon as they showed symptoms was effective in _all_ the 105 cases they studied at preventing anyone else in the household from getting sick.
 [^ons]: The data from the study are truncated at 130 days (~18.5 weeks), at which point 12% of the study participants infected with COVID continued to experience symptoms (Figure 3 from [Prevalence of ongoing symptoms following coronavirus (COVID-19) infection in the UK: 1 April 2021](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021)).
 
-`;
+`
 
-const post = { title, shortTitle, content };
+const post = { title, shortTitle, content }
 
-export default post;
+export default post

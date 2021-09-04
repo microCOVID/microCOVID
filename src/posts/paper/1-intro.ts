@@ -1,5 +1,5 @@
-const title = "Introduction";
-const shortTitle = title;
+const title = 'Introduction'
+const shortTitle = title
 const content = `
 
 You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet (1 meter) apart, and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
@@ -57,7 +57,7 @@ _Feedback & assistance thanks to: Ajeya Cotra, Andrew Critch, Andy Matuschak, Da
 
 [^demo]: Throughout the text, you will see footnotes like this. Usually they will have some content, but this one is just a demo! You can click the arrow to return to where you came from in the text:
 
-`;
+`
 
-const post = { title, shortTitle, content };
-export default post;
+const post = { title, shortTitle, content }
+export default post

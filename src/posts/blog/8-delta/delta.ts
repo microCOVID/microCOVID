@@ -1,20 +1,20 @@
-import deltaHospitalization from "./img/delta_hospitalization.png";
-import deltaLongCovid from "./img/delta_longcovid.png";
-import { ImageMeta } from "posts/post";
+import deltaHospitalization from './img/delta_hospitalization.png'
+import deltaLongCovid from './img/delta_longcovid.png'
+import { ImageMeta } from 'posts/post'
 
 const image: ImageMeta = {
   url: deltaLongCovid,
   width: 1200,
   height: 406,
-};
+}
 
-const title = "The Delta Variant";
+const title = 'The Delta Variant'
 
-const author = "Team microCOVID";
-const date = "August 10, 2021";
+const author = 'Team microCOVID'
+const date = 'August 10, 2021'
 
 const summary =
-  "The Delta variant, now the most common worldwide, has substantially increased COVID risk, including for vaccinated people. We discuss the risk of hospitalization, death, long-term symptoms, and of passing the infection to the people around you.";
+  'The Delta variant, now the most common worldwide, has substantially increased COVID risk, including for vaccinated people. We discuss the risk of hospitalization, death, long-term symptoms, and of passing the infection to the people around you.'
 
 const content = `
 The Delta[^delta] variant has substantially increased COVID risk, including for vaccinated people. We have adjusted the [microCOVID calculator] to provide updated numbers. Vaccines still provide substantial protection, but it’s gotten more complicated — read on to learn more about the latest findings, and please consider visiting the calculator to get updated risk numbers for your activities and relationships.
@@ -109,7 +109,7 @@ We dug into claims that the [effectiveness of vaccines in Israel is 64%](https:/
 Therefore, we instead used data from research in the UK that compared # of cases of Delta vs Alpha among vaccinated and unvaccinated individuals, which attempts to assess the vaccines’ efficacy in isolation ([Bernal et al.](https://www.medrxiv.org/content/10.1101/2021.05.22.21257658v1)), ([Stowe et al.](https://khub.net/web/phe-national/public-library/-/document_library/v2WsRK3ZlEig/view_file/479607329?_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_v2WsRK3ZlEig_redirect=https%3A%2F%2Fkhub.net%3A443%2Fweb%2Fphe-national%2Fpublic-library%2F-%2Fdocument_library%2Fv2WsRK3ZlEig%2Fview%2F479607266)). These studies found 88% vaccine efficacy vs symptomatic COVID, which we adjusted to 84% to account for asymptomatic cases.
 
 [^alpha]: Alpha is the new name for the B.1.1.7 variant, also sometimes referred to in the media as the “UK variant.”
-`;
+`
 
-export const post = { title, summary, content, author, date, image };
-export default post;
+export const post = { title, summary, content, author, date, image }
+export default post

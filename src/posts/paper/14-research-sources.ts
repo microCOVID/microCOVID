@@ -1,11 +1,11 @@
-import ferrettiFig2 from "./img/ferretti-infectiousness.gif";
-import heExtended from "./img/he-extended-fig-1.png";
-import infectiousDecayModel from "./img/infectious_decay_model.png";
-import mcaloonIncubationPeriod from "./img/mcaloon_incubation_period.png";
-import positiveTestRate from "./img/positive-test-rate.png";
+import ferrettiFig2 from './img/ferretti-infectiousness.gif'
+import heExtended from './img/he-extended-fig-1.png'
+import infectiousDecayModel from './img/infectious_decay_model.png'
+import mcaloonIncubationPeriod from './img/mcaloon_incubation_period.png'
+import positiveTestRate from './img/positive-test-rate.png'
 
-const title = "Research Sources";
-const shortTitle = title;
+const title = 'Research Sources'
+const shortTitle = title
 const content = `
 
 Read this section if you are interested in the epistemic nitty-gritty behind our estimates of Activity Risk and Person Risk.
@@ -498,8 +498,8 @@ person whose behaviors are known.
 [^heupdate]: If you were previously familiar with this source, note that it was substantially updated in a [07 Aug 2020 author correction](https://www.nature.com/articles/s41591-020-1016-z).
 
 [^ferretti]: There's an inconsistency in Ferretti et al, where the main text states that total transmissions come "10% from asymptomatic individuals (who never show symptoms), and 6% from environmentally mediated transmission via contamination.", whereas Figure 1 and Table 2 report the reverse, 6% from asymptomatic and 10% from environmental. We choose to go with the Figure 1 and Table 2 estimates.
-`;
+`
 
-const post = { title, shortTitle, content };
+const post = { title, shortTitle, content }
 
-export default post;
+export default post
