@@ -11,7 +11,10 @@ import 'components/styles/Expandable.scss'
 interface AccordionToggleProps {
   eventKey: string
   header: string
+  headerId: string
+  headerClassName?: string
   headerExpanded?: string
+  bodyId: string
   onClick: () => void
 }
 
@@ -22,7 +25,13 @@ function AccordionToggle(props: AccordionToggleProps): JSX.Element {
 
   const isCurrentEventKey = currentEventKey === props.eventKey
   return (
-    <span onClick={decoratedOnClick}>
+    <button
+      id={props.headerId}
+      className={`card-header expandable-header ${props.headerClassName || ''}`}
+      onClick={decoratedOnClick}
+      aria-expanded={isCurrentEventKey ? 'true' : 'false'}
+      aria-controls={props.bodyId}
+    >
       {isCurrentEventKey ? (
         <BsChevronDown className="expandable-icon" />
       ) : (
@@ -31,7 +40,7 @@ function AccordionToggle(props: AccordionToggleProps): JSX.Element {
       {isCurrentEventKey && props.headerExpanded
         ? props.headerExpanded
         : props.header}
-    </span>
+    </button>
   )
 }
 
@@ -45,21 +54,24 @@ export const ControlledExpandable: React.FunctionComponent<{
   className?: string
 }> = (props): React.ReactElement => {
   const eventKey = 'eventKey' // This is arbitrary since this is a single-item Accordion
+  const headerId = `${props.id}-header`
+  const bodyId = `${props.id}-body`
   return (
     <Accordion activeKey={props.open ? eventKey : undefined}>
       <Card className={`expandable-section ${props.className || ''}`}>
-        <Card.Header
-          className={`expandable-header ${props.headerClassName || ''}`}
-        >
-          <AccordionToggle
-            eventKey={eventKey}
-            header={props.header}
-            headerExpanded={props.headerExpanded}
-            onClick={() => props.setter(!props.open)}
-          />
-        </Card.Header>
+        <AccordionToggle
+          eventKey={eventKey}
+          header={props.header}
+          headerId={headerId}
+          headerClassName={props.headerClassName}
+          headerExpanded={props.headerExpanded}
+          bodyId={bodyId}
+          onClick={() => props.setter(!props.open)}
+        />
         <Accordion.Collapse eventKey={eventKey}>
-          <Card.Body>{props.children}</Card.Body>
+          <Card.Body id={bodyId} role="region" aria-labelledby={headerId}>
+            {props.children}
+          </Card.Body>
         </Accordion.Collapse>
       </Card>
     </Accordion>

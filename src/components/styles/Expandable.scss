@@ -1,8 +1,16 @@
 .expandable-section .expandable-header {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   cursor: pointer;
-  display: block;
   padding-bottom: 0.5em;
+  text-align: left;
+  border-style: none;
+}
+
+.expandable-section .card-body {
+  padding-bottom: 0;
+  margin-bottom: 0.5em;
 }
 
 .expandable-icon {
