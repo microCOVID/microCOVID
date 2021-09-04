@@ -15,6 +15,7 @@ export interface BaseFormValue {
 
 export interface FormValue extends BaseFormValue {
   multiplier: number
+  label_micro?: string
   housemateMultiplier?: number // Different multiplier to apply if the contact is a housemate.
 }
 
@@ -26,16 +27,21 @@ export interface PersonRiskValue extends BaseFormValue {
   contactsMultiplier: number
 }
 
-const formValue = function (label: string, multiplier: number): FormValue {
-  return { label, multiplier }
+const formValue = function (
+  label: string,
+  multiplier: number,
+  label_micro?: string,
+): FormValue {
+  return { label, label_micro, multiplier }
 }
 
 const segmentedFormValue = function (
   label: string,
   description: string,
   multiplier: number,
+  label_micro?: string,
 ): CheckBoxFormValue {
-  return { label, multiplier, description }
+  return { label, label_micro, multiplier, description }
 }
 
 export const oneTimeMult = 0.14
@@ -72,13 +78,30 @@ export const Interaction: { [key: string]: FormValue } = {
 export const Setting: { [key: string]: FormValue } = {
   indoor: { label: i18n.t('data.indoor'), multiplier: 1 },
   outdoor: { label: i18n.t('data.outdoor'), multiplier: 0.05 },
-  filtered: { label: i18n.t('data.filtered'), multiplier: 0.25 },
-  transit: { label: i18n.t('data.transit'), multiplier: 0.25 },
-  plane: { label: i18n.t('data.plane'), multiplier: 1 / 6 },
-  carWindowsDown: { label: i18n.t('data.car_windows_down'), multiplier: 0.25 },
+  filtered: {
+    label: i18n.t('data.filtered'),
+    multiplier: 0.25,
+    label_micro: i18n.t('data.filtered_micro'),
+  },
+  transit: {
+    label: i18n.t('data.transit'),
+    multiplier: 0.25,
+    label_micro: i18n.t('data.transit_micro'),
+  },
+  plane: {
+    label: i18n.t('data.plane'),
+    multiplier: 1 / 6,
+    label_micro: i18n.t('data.plane_micro'),
+  },
+  carWindowsDown: {
+    label: i18n.t('data.car_windows_down'),
+    multiplier: 0.25,
+    label_micro: i18n.t('data.car_windows_down_micro'),
+  },
   partiallyEnclosed: {
     label: i18n.t('data.partially_enclosed'),
     multiplier: 0.25,
+    label_micro: i18n.t('data.partially_enclosed_micro'),
   },
 }
 
@@ -86,10 +109,22 @@ export const intimateDurationFloor = 20
 
 export const Distance: { [key: string]: FormValue } = {
   intimate: formValue(i18n.t('data.intimate_distance'), 5),
-  close: formValue(i18n.t('data.close_distance'), 2),
+  close: formValue(
+    i18n.t('data.close_distance'),
+    2,
+    i18n.t('data.close_distance_micro'),
+  ),
   normal: formValue(i18n.t('data.normal_distance'), 1),
-  sixFt: formValue(i18n.t('data.sixft_distance'), 0.5),
-  tenFt: formValue(i18n.t('data.tenft_distance'), 0.25),
+  sixFt: formValue(
+    i18n.t('data.sixft_distance'),
+    0.5,
+    i18n.t('data.sixft_distance_micro'),
+  ),
+  tenFt: formValue(
+    i18n.t('data.tenft_distance'),
+    0.25,
+    i18n.t('data.tenft_distance_micro'),
+  ),
 }
 
 const noneLabel = i18n.t('data.no_mask_short')
@@ -100,6 +135,11 @@ const filteredLabel = i18n.t('data.filtered_mask_short')
 const n95Label = i18n.t('data.n95_mask_short')
 const n95SealedLabel = i18n.t('data.n95_sealed_mask_short')
 const p100Label = i18n.t('data.p100_mask_short')
+
+const thinLabelMicro = i18n.t('data.thin_mask_micro')
+const basicLabelMicro = i18n.t('data.basic_mask_micro')
+const n95LabelMicro = i18n.t('data.n95_mask_micro')
+const p100LabelMicro = i18n.t('data.p100_mask_micro')
 
 const noneDesc = i18n.t('data.no_mask')
 const thinDesc = i18n.t('data.thin_mask')
@@ -112,23 +152,23 @@ const p100DescTheirs = i18n.t('data.p100_mask_theirs')
 const p100DescYours = i18n.t('data.p100_mask_yours')
 export const TheirMask: { [key: string]: CheckBoxFormValue } = {
   none: segmentedFormValue(noneLabel, noneDesc, 1.0),
-  thin: segmentedFormValue(thinLabel, thinDesc, 1 / 2),
-  basic: segmentedFormValue(basicLabel, basicDesc, 1 / 3),
+  thin: segmentedFormValue(thinLabel, thinDesc, 1 / 2, thinLabelMicro),
+  basic: segmentedFormValue(basicLabel, basicDesc, 1 / 3, basicLabelMicro),
   surgical: segmentedFormValue(surgicalLabel, surgicalDesc, 1 / 4),
   filtered: segmentedFormValue(filteredLabel, filteredDesc, 1 / 4),
-  n95: segmentedFormValue(n95Label, n95Desc, 1 / 6),
+  n95: segmentedFormValue(n95Label, n95Desc, 1 / 6, n95LabelMicro),
   n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 16),
-  p100: segmentedFormValue(p100Label, p100DescTheirs, 1 / 3),
+  p100: segmentedFormValue(p100Label, p100DescTheirs, 1 / 3, p100LabelMicro),
 }
 export const YourMask: { [key: string]: CheckBoxFormValue } = {
   none: segmentedFormValue(noneLabel, noneDesc, 1.0),
-  thin: segmentedFormValue(thinLabel, thinDesc, 1.0),
-  basic: segmentedFormValue(basicLabel, basicDesc, 2 / 3),
+  thin: segmentedFormValue(thinLabel, thinDesc, 1.0, thinLabelMicro),
+  basic: segmentedFormValue(basicLabel, basicDesc, 2 / 3, basicLabelMicro),
   surgical: segmentedFormValue(surgicalLabel, surgicalDesc, 1 / 2),
   filtered: segmentedFormValue(filteredLabel, filteredDesc, 1 / 2),
-  n95: segmentedFormValue(n95Label, n95Desc, 1 / 3),
+  n95: segmentedFormValue(n95Label, n95Desc, 1 / 3, n95LabelMicro),
   n95Sealed: segmentedFormValue(n95SealedLabel, n95SealedDesc, 1 / 8),
-  p100: segmentedFormValue(p100Label, p100DescYours, 1 / 20),
+  p100: segmentedFormValue(p100Label, p100DescYours, 1 / 20, p100LabelMicro),
 }
 export const Voice: { [key: string]: FormValue } = {
   silent: {

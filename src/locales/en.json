@@ -233,9 +233,13 @@
   "data": {
     "basic_mask": "Multi-layer cloth mask with tight, secure fit",
     "basic_mask_short": "Cloth, thick and snug",
+    "basic_mask_micro": "Cloth",
     "car_windows_down": "A moving car with the windows rolled down",
+    "car_windows_down_micro": "car",
     "close_distance": "Close (less than 1 foot / 0.3 meters apart)",
+    "close_distance_micro": "close distance",
     "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
+    "filtered_micro": "filtered air",
     "filtered_mask": "Cloth mask with removable filter insert",
     "filtered_mask_short": "Filter Insert",
     "indoor": "Indoor",
@@ -244,6 +248,7 @@
     "loud_voice_short": "Loud",
     "n95_mask": "It fits, but you are NOT sure if it is sealed",
     "n95_mask_short": "N95, KN95, or FFP2",
+    "n95_mask_micro": "N95",
     "n95_sealed_mask": "Air-tight seal. No valve, no earloops, no beard",
     "n95_sealed_mask_short": "N95 (sealed)",
     "no_mask": "No mask; possibly eating or drinking",
@@ -254,9 +259,11 @@
     "oneTime": "A gathering, activity, or errand",
     "outdoor": "Outdoor",
     "p100_mask_short": "P100 respirator",
+    "p100_mask_micro": "P100",
     "p100_mask_theirs": "P100 respirator, NIOSH-certified reusable, unclear if outflow valve is covered",
     "p100_mask_yours": "P100 respirator, NIOSH-certified reusable, with covered outflow valve",
     "partially_enclosed": "A space with one or more sides open to the outdoors",
+    "partially_enclosed_micro": "partially enclosed space",
     "partner": "Living/staying with a partner/spouse",
     "person": {
       "average": "An average person in your area",
@@ -277,13 +284,16 @@
       "nonFrontline": "An average person in your area who works from home"
     },
     "plane": "An airplane",
+    "plane_micro": "plane",
     "repeated": "Living/staying with others (like roommates or family)",
     "silent_voice": "Not talking (such as quietly riding the train)",
     "silent_voice_short": "Silent",
     "sixft_distance": "6+ feet / 2+ meters apart",
+    "sixft_distance_micro": "6+ feet",
     "surgical_mask": "Loose-fitting disposable blue (or green) surgical mask",
     "surgical_mask_short": "Surgical",
     "tenft_distance": "10+ feet / 3+ meters apart",
+    "tenft_distance_micro": "10+ feet",
     "their_vaccine": {
       "no": "No",
       "no_description": "Has received no vaccine or partial vaccination",
@@ -294,7 +304,9 @@
     },
     "thin_mask": "Cloth mask, thin or loose (bandana, buff; or: loose fit, falls down)",
     "thin_mask_short": "Cloth, thin or loose",
+    "thin_mask_micro": "thin",
     "transit": "A train with air filtration",
+    "transit_micro": "train",
     "vaccine": {
       "astra_zeneca": "AstraZeneca",
       "johnson_johnson": "Johnson & Johnson",
@@ -307,6 +319,8 @@
   },
   "each time": "each time",
   "each time you do it": "each time you do it",
+  "for": "for",
+  "mask": "mask",
   "menu": {
     "about": "About",
     "blog": "Blog",
@@ -339,5 +353,7 @@
     "restaurantOutdoors": "Eating in restaurant, outdoors",
     "smallIndoorParty25": "Indoor party: 25 people, unmasked",
     "votingInPerson": "Voting in-person"
-  }
+  },
+  "their": "their",
+  "your": "your"
 }

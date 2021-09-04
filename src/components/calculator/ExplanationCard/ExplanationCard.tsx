@@ -1,3 +1,5 @@
+// @ts-expect-error
+import { Fraction } from 'fractional'
 import React from 'react'
 import { Form } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
@@ -24,6 +26,7 @@ import {
   MAX_ACTIVITY_RISK,
   calculateActivityRisk,
   calculatePersonRiskEach,
+  getActivityRiskVariables,
 } from 'data/calculate'
 import {
   Interaction,
@@ -39,6 +42,43 @@ const calculationStepHeader = (header: string, value: string): JSX.Element => {
     <strong>
       {header}: <code>{value}</code>
     </strong>
+  )
+}
+
+function numberToReadable(value: number): string {
+  let fraction = new Fraction(value)
+  if (fraction.denominator === 100) {
+    return `${fraction.numerator}%`
+  }
+  if (fraction.denominator === 50) {
+    return `${fraction.numerator * 2}%`
+  }
+  if (value === 1 / 6) {
+    fraction = new Fraction(1, 6)
+  } else if (value === 1 / 3) {
+    fraction = new Fraction(1, 3)
+  } else if (value === 2 / 3) {
+    fraction = new Fraction(1, 6)
+  }
+  return fraction.toString()
+}
+
+
+function getActivityRiskCalcuation(data: CalculatorData): JSX.Element | null {
+  const activityRisk = calculateActivityRisk(data)
+  const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)
+  if (!activityRisk) {
+    return null
+  }
+  const activityRiskVariables = getActivityRiskVariables(data)
+    .filter(({ value }) => value !== 1)
+    .map(({ name, value }) => {
+      return `${numberToReadable(value)} ${name.toLowerCase()}`
+    })
+  return (
+    <code>
+      {`(${activityRiskVariables.join(') x (')}) = ${activityRiskFormatted}`}
+    </code>
   )
 }
 
@@ -83,6 +123,8 @@ export default function ExplanationCard(props: {
     props.data.distance === 'intimate'
       ? Interaction.partner.label.split(' [')[0]
       : Interaction.repeated.label.split(' [')[0]
+
+  const activityRiskCalculation = getActivityRiskCalcuation(props.data)
   const calculationBreakdown = () => {
     return (
       <>
@@ -159,6 +201,8 @@ export default function ExplanationCard(props: {
                 )}`,
               )}
               <br />
+              {activityRiskCalculation}
+              {activityRiskCalculation && <br />}
               <Trans values={{ activity_risk: activityRiskFormatted }}>
                 calculator.explanationcard.details_activity_risk_explanation
               </Trans>

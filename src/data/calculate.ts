@@ -1,3 +1,5 @@
+import i18n from 'i18n'
+
 import {
   BUDGET_ONE_PERCENT,
   Distance,
@@ -360,25 +362,39 @@ const getVaccineMultiplier = (data: CalculatorData): number | null => {
   return vaccineMultiplierPerDose[data.yourVaccineDoses]
 }
 
-export const calculateActivityRisk = (data: CalculatorData): number | null => {
+export const getActivityRiskVariables = (
+  data: CalculatorData,
+): Array<{ name: string; value: number }> => {
   try {
     if (data.interaction === '') {
-      return null
+      return []
     }
-
     const vaccineMultiplier = getVaccineMultiplier(data)
     if (vaccineMultiplier === null) {
-      return null
+      return []
     }
+
+    const forWord = i18n.t('for')
+
+    const variables = [
+      {
+        name: i18n.t('calculator.baseline_risk'),
+        value: Interaction[data.interaction].multiplier,
+      },
+      {
+        name: `${forWord} ${i18n.t(
+          'calculator.precautions.your_vaccine_header',
+        )}`,
+        value: vaccineMultiplier,
+      },
+    ]
 
     if (data.interaction === 'partner' || data.interaction === 'repeated') {
-      return Interaction[data.interaction].multiplier * vaccineMultiplier
+      return variables
     }
 
-    let multiplier = Interaction[data.interaction].multiplier
-
     if (data.duration === 0) {
-      return null
+      return []
     }
     // If something isn't selected, use the "baseline" value (indoor, unmasked,
     // undistanced, regular conversation)
@@ -387,8 +403,21 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       given: string,
     ): number => (given === '' ? 1 : table[given].multiplier)
 
+    const labelFor = (
+      table: { [key: string]: FormValue },
+      given: string,
+    ): string =>
+      given === ''
+        ? ''
+        : table[given].label_micro ||
+          table[given].label_short ||
+          table[given].label
+
     let effectiveDuration = data.duration
-    multiplier *= mulFor(Distance, data.distance)
+    variables.push({
+      name: `${forWord} ${labelFor(Distance, data.distance)}`,
+      value: mulFor(Distance, data.distance),
+    })
     if (data.distance === 'intimate') {
       // Even a brief kiss probably has a non-trivial chance of transmission.
       effectiveDuration = Math.max(effectiveDuration, intimateDurationFloor)
@@ -396,25 +425,61 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       if (data.distance !== 'close') {
         // Being outdoors only helps if you're not literally breathing each
         // others' exhalation.
-        multiplier *= mulFor(Setting, data.setting)
+        variables.push({
+          name: `${forWord} ${labelFor(Setting, data.setting)}`,
+          value: mulFor(Setting, data.setting),
+        })
       }
       // Talking modifiers not allowed when kissing.
-      multiplier *= mulFor(Voice, data.voice)
+      variables.push({
+        name: `${forWord} ${labelFor(Voice, data.voice)}`,
+        value: mulFor(Voice, data.voice),
+      })
 
       // You can't wear a mask if you're kissing!
-      multiplier *= mulFor(TheirMask, data.theirMask)
-      multiplier *= mulFor(YourMask, data.yourMask)
+      variables.push({
+        name: `${forWord} ${i18n.t('their')} ${labelFor(
+          TheirMask,
+          data.theirMask,
+        )} ${i18n.t('mask')}`,
+        value: mulFor(TheirMask, data.theirMask),
+      })
+      variables.push({
+        name: `${forWord} ${i18n.t('your')} ${labelFor(
+          YourMask,
+          data.yourMask,
+        )} ${i18n.t('mask')}`,
+        value: mulFor(YourMask, data.yourMask),
+      })
     }
 
-    multiplier *= effectiveDuration / 60.0
-    if (multiplier > MAX_ACTIVITY_RISK) {
-      multiplier = MAX_ACTIVITY_RISK
-    }
-
-    return multiplier * vaccineMultiplier
+    variables.push({ name: 'minutes', value: effectiveDuration })
+    return variables
   } catch (e) {
+    return []
+  }
+}
+
+export const calculateActivityRisk = (data: CalculatorData): number | null => {
+  const activityRiskVariables = getActivityRiskVariables(data)
+  if (activityRiskVariables.length === 0) {
     return null
   }
+  let activityRisk = activityRiskVariables
+    .map((variable) => variable.value)
+    .reduce((accumulator, currentValue) => (accumulator *= currentValue))
+
+  if (!['partner', 'repeated'].includes(data.interaction)) {
+    activityRisk = activityRisk / 60.0
+    const vaccineMultiplier = getVaccineMultiplier(data)
+    if (
+      vaccineMultiplier &&
+      activityRisk / vaccineMultiplier > MAX_ACTIVITY_RISK
+    ) {
+      return MAX_ACTIVITY_RISK
+    }
+  }
+  return activityRisk
 }
 
 export const calculate = (data: CalculatorData): CalculatorResult | null => {
