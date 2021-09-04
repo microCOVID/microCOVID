@@ -63,7 +63,6 @@ function numberToReadable(value: number): string {
   return fraction.toString()
 }
 
-
 function getActivityRiskCalcuation(data: CalculatorData): JSX.Element | null {
   const activityRisk = calculateActivityRisk(data)
   const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)

@@ -476,7 +476,7 @@ export const calculateActivityRisk = (data: CalculatorData): number | null => {
       vaccineMultiplier &&
       activityRisk / vaccineMultiplier > MAX_ACTIVITY_RISK
     ) {
-      return MAX_ACTIVITY_RISK
+      return MAX_ACTIVITY_RISK * vaccineMultiplier
     }
   }
   return activityRisk
