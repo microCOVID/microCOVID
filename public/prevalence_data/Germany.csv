@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00323,0.001518,0.000842,2.5006,1.0265,0.002161
-Baden-Wurttemberg,Unknown,Unknown,0.000898,2.5006,1.2652,0.002842
-Bayern,Unknown,Unknown,0.000781,2.5006,1.2181,0.002379
-Berlin,Unknown,Unknown,0.000839,2.5006,1.0761,0.002257
-Brandenburg,Unknown,Unknown,0.000326,2.5006,1.2176,0.000991
-Bremen,Unknown,Unknown,0.001013,2.5006,1.5187,0.003848
-Hamburg,Unknown,Unknown,0.00094,2.5006,1.0908,0.002564
-Hessen,Unknown,Unknown,0.001072,2.5006,1.5137,0.004059
-Mecklenburg-Vorpommern,Unknown,Unknown,0.000359,2.5006,1.3264,0.001191
-Niedersachsen,Unknown,Unknown,0.000682,2.5006,1.2726,0.00217
-Nordrhein-Westfalen,Unknown,Unknown,0.001261,2.5006,1.0,0.003153
-Rheinland-Pfalz,Unknown,Unknown,0.000966,2.5006,1.4772,0.00357
-Saarland,Unknown,Unknown,0.000911,2.5006,1.1778,0.002682
-Sachsen,Unknown,Unknown,0.000273,2.5006,1.28,0.000873
-Sachsen-Anhalt,Unknown,Unknown,0.000219,2.5006,1.4041,0.00077
-Schleswig-Holstein,Unknown,Unknown,0.000503,2.5006,1.0139,0.001275
-Thuringen,Unknown,Unknown,0.000298,2.5006,1.519,0.001133
+Entire country,0.0037,0.001739,0.000853,2.4997,1.1589,0.002472
+Baden-Wurttemberg,Unknown,Unknown,0.000935,2.4997,1.2303,0.002874
+Bayern,Unknown,Unknown,0.000785,2.4997,1.1423,0.002242
+Berlin,Unknown,Unknown,0.000898,2.4997,1.2104,0.002718
+Brandenburg,Unknown,Unknown,0.000346,2.4997,1.2631,0.001094
+Bremen,Unknown,Unknown,0.00107,2.4997,1.4398,0.003852
+Hamburg,Unknown,Unknown,0.000914,2.4997,1.0139,0.002315
+Hessen,Unknown,Unknown,0.001139,2.4997,1.5252,0.004344
+Mecklenburg-Vorpommern,Unknown,Unknown,0.000341,2.4997,1.1071,0.000944
+Niedersachsen,Unknown,Unknown,0.000636,2.4997,1.105,0.001756
+Nordrhein-Westfalen,Unknown,Unknown,0.001244,2.4997,1.0,0.00311
+Rheinland-Pfalz,Unknown,Unknown,0.000993,2.4997,1.424,0.003533
+Saarland,Unknown,Unknown,0.000918,2.4997,1.1963,0.002744
+Sachsen,Unknown,Unknown,0.000288,2.4997,1.4196,0.001022
+Sachsen-Anhalt,Unknown,Unknown,0.00023,2.4997,1.3994,0.000806
+Schleswig-Holstein,Unknown,Unknown,0.000502,2.4997,1.0247,0.001287
+Thuringen,Unknown,Unknown,0.000325,2.4997,1.5432,0.001255
