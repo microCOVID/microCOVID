@@ -1,7 +1,7 @@
-import { spreadsheetUrl } from 'components/RiskTrackerUtil'
+import { spreadsheetUrl } from "components/RiskTrackerUtil";
 
-const title = 'Basic Risk Tracker Usage'
-const shortTitle = 'Basic Usage'
+const title = "Basic Risk Tracker Usage";
+const shortTitle = "Basic Usage";
 const content = `
 ## Orienting yourself to the Risk Tracker
 
@@ -19,7 +19,7 @@ const content = `
 To accurately track your risk against your budget, you will want to log any activity where:
 
 * You are sharing indoor air space with anyone
-* You are outdooors and within 15 feet of someone for more than a passing moment
+* You are outdoors and within 15 feet (5 meters) of someone for more than a passing moment
 
 We've developed a detailed list of [risk activity questions](/questions) that you can use to help you think of which activities you've done that you would want to log.
 
@@ -95,19 +95,19 @@ This table provides a fuller explanation for each of the Built-in Person Risk pr
   <tr>
    <td>Lives with partner, both people isolating
    </td>
-   <td>A known person who cohabitates with only their partner and collectively goes on one grocery/errand run a week. No other in-person socialization or contact with the outside world; unless masked, outdoors, and beyond 20 feet masked.
+   <td>A known person who cohabitates with only their partner and collectively goes on one grocery/errand run a week. No other in-person socialization or contact with the outside world; unless masked, outdoors, and beyond 20 feet (7 meters).
    </td>
   </tr>
   <tr>
    <td>In a closed pod of 4/10/20 people (who only get groceries and see each other)</strong>
    </td>
-   <td>A known person who only interacts with 4/10/20 people who only interact with each other. This means collectively one grocery/errand run a week. No other in-person socialization or contact with the outside world for the entire group; unless masked, outdoors, and beyond 20 feet.
+   <td>A known person who only interacts with 4/10/20 people who only interact with each other. This means collectively one grocery/errand run a week. No other in-person socialization or contact with the outside world for the entire group; unless masked, outdoors, and beyond 20 feet (7 meters).
    </td>
   </tr>
   <tr>
    <td>Has 1/4/10 close contacts whose risk profile we don't know. No other risk activities.
    </td>
-   <td>A known person who has close contact (including roommates) with 1/4/10 people who are in contact with the outside world (may be unmasked, indoors, or within 20 feet of others). Assumes all people have done one grocery/errand run in the past week.
+   <td>A known person who has close contact (including roommates) with 1/4/10 people who are in contact with the outside world (may be unmasked, indoors, or within 20 feet (7 meters) of others). Assumes all people have done one grocery/errand run in the past week.
    </td>
   </tr>
   <tr>
@@ -184,7 +184,7 @@ Note that after the initial modeling of this group of people, Bob will want to k
 
 To see how you might model this situation, go to the [_Custom People_ sheet](${spreadsheetUrl}/edit#gid=311635422), then scroll to the **Example: Sam (Bob's partner)** section.
 
-`
+`;
 
-const post = { title, shortTitle, content }
-export default post
+const post = { title, shortTitle, content };
+export default post;

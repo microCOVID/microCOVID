@@ -101,7 +101,7 @@
       "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
       "whats_this2": "This calculator lets you estimate COVID risk and find effective safety measures for customizable situations. Examples: how risky is <1>a trip to my grocery store</1>? What's the safest way to <3>see a friend</3>? How much would it help to <5>wear a better mask at my workplace</5>?"
     },
-    "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
+    "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15  (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
     "location_risk_message": "<1>~{{ prevalence }} of people here are currently infectious.</1> We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
     "location_selector_header": "Step 1: Enter your location",
     "location_sublabel": {
@@ -328,7 +328,7 @@
     "custom": "A custom scenario",
     "indoorUnmasked2": "Indoor unmasked hangout with 2 other people",
     "indoorUnmaskedWithCovidPositive": "Indoor, unmasked hangout with person who has COVID",
-    "largeOutdoorParty": "Outdoor party: 80 people, masked, with 3 feet between people",
+    "largeOutdoorParty": "Outdoor party: 80 people, masked, with 3 feet (1 meter) between people",
     "liveInPartner_noContacts": "Live-in partner who has no indoor interactions besides you",
     "oneNightStand": "One-night stand with a random person",
     "outdoorMasked2": "Outdoor masked hangout with 2 other people",
