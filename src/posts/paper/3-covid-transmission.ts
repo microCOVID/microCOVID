@@ -7,7 +7,7 @@ First, let’s strengthen our intuitive model of COVID transmission.
 
 COVID is transmitted primarily through tiny droplets produced when an infected person talks, coughs, or sneezes ([CDC FAQ](https://www.cdc.gov/coronavirus/2019-ncov/faq.html)), many of which can [remain suspended in the air](https://docs.google.com/document/d/1Kx4Mka_nORa8LlEwziRYZxOX0J8_fFfgnt-9TBjxusc/edit) for minutes to hours. Touching contaminated surfaces or objects is _possibly_ a way that COVID spreads, but the [CDC](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html) believes the _main_ way it spreads is person-to-person through respiratory droplets. Therefore, in this writeup, we focus primarily on the risk from exhaled droplets in the air.[^1]
 
-To visualize how exhaled droplets work, we suggest a helpful metaphor from our friend [Matt Bell](https://medium.com/@llebttam_45762/summer-vacations-in-the-era-of-covid-ab5576a7b302). Think of everyone around you exhaling cigarette smoke. If someone is smoking a cigarette in a park 30 feet away from you, you might not even smell it. But in a crowded bar where indoor smoking is permitted, the air will be thick with people’s smoky exhalations.
+To visualize how exhaled droplets work, we suggest a helpful metaphor from our friend [Matt Bell](https://medium.com/@llebttam_45762/summer-vacations-in-the-era-of-covid-ab5576a7b302). Think of everyone around you exhaling cigarette smoke. If someone is smoking a cigarette in a park 30 feet (10 meters) away from you, you might not even smell it. But in a crowded bar where indoor smoking is permitted, the air will be thick with people’s smoky exhalations.
 
 If you inhale just a bit of “smoke” (exhaled air) from someone with COVID, you might be fine. But if you inhale lots of “smoke,” you’re likely to get COVID. If you’re wondering about the riskiness of a situation, then it’s helpful to imagine, “What if everyone here were smoking a cigarette? How much smoke would I breathe in?” If you’d be breathing in other people’s smoke, then it’s a risky situation.
 
@@ -21,7 +21,7 @@ Concretely, this means it’s important to avoid situations that feature the [3 
 ## "MOD" hangouts: Masked, Outdoors, Distance
 So we know what to _avoid:_ the 3 C’s. But besides staying in our homes, what should we _do_? We can choose to have **“MOD” hangouts**: 1-on-1 or small-group socializing that is Masked, Outdoors, and Distanced. These hangouts are **MODified** from normal. The COVID “smoke” gets stopped by your mask, falls to the ground before it reaches the other person, and dissipates into the air. MODified hangouts are much safer, especially when they don’t involve many people.
 
-Later in this document, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet away or 10 feet?
+Later in this document, we’ll try to answer questions like: How much does a mask actually help? Is it safer to be indoors with a mask, or outdoors without one? Should you stay 6 feet (2 meters) away or 10 feet (3 meters)?
 
 In order to answer these questions with microCOVID numbers (not just “high” or “low” risk), we’ll now dive into the research. You can also skip right to the [calculator](/calculator) to start playing with numbers if you prefer.
 

@@ -77,7 +77,7 @@ We in the Ibasho community are anticipating significant changes in what activiti
     - We had been using microCOVID to budget for indoor hangouts between households that use the system. 
     - As case rates rose, these have become more infrequent.
     - If case rates continue to rise as we are predicting, we anticipate being completely locked down.
-- Wearing a mask in outdoor areas unless 15+ feet away from other people.
+- Wearing a mask in outdoor areas unless 15+ feet (5+ meters) away from other people.
 - Avoiding crowded outdoor areas, even when wearing masks.
 - Prioritizing doing any elective medical procedures (dental cleaning, checkup, etc) ASAP, since we expect things to get worse over the next 3 months.
 
