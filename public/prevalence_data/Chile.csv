@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000666,0.000313,0.000187,2.1808,1.0,0.000407
-Antofagasta,Unknown,Unknown,0.000165,2.1808,1.0,0.000359
-Araucania,Unknown,Unknown,0.000195,2.1808,1.0,0.000426
-Arica y Parinacota,Unknown,Unknown,0.000186,2.1808,1.0,0.000405
-Atacama,Unknown,Unknown,0.000204,2.1808,1.0,0.000445
-Aysen,Unknown,Unknown,7.8e-05,2.1808,1.0,0.000169
-Biobio,Unknown,Unknown,0.000169,2.1808,1.0,0.000368
-Coquimbo,Unknown,Unknown,0.000148,2.1808,1.1809,0.000381
-Los Lagos,Unknown,Unknown,0.000208,2.1808,1.0179,0.000461
-Los Rios,Unknown,Unknown,0.000247,2.1808,1.4462,0.000779
-Magallanes,Unknown,Unknown,4.2e-05,2.1808,1.0,9.2e-05
-Maule,Unknown,Unknown,0.000176,2.1808,1.0,0.000384
-Metropolitana,Unknown,Unknown,0.000246,2.1808,1.0,0.000536
-Nuble,Unknown,Unknown,0.000114,2.1808,1.0,0.00025
-OHiggins,Unknown,Unknown,0.000171,2.1808,1.0,0.000372
-Tarapaca,Unknown,Unknown,0.000306,2.1808,1.0,0.000666
-Valparaiso,Unknown,Unknown,0.000161,2.1808,1.0,0.000351
+Entire country,0.000642,0.000302,0.00018,2.1805,1.0,0.000392
+Antofagasta,Unknown,Unknown,0.000166,2.1805,1.0,0.000363
+Araucania,Unknown,Unknown,0.000196,2.1805,1.0625,0.000455
+Arica y Parinacota,Unknown,Unknown,0.00019,2.1805,1.0244,0.000425
+Atacama,Unknown,Unknown,0.000218,2.1805,1.1071,0.000526
+Aysen,Unknown,Unknown,4.8e-05,2.1805,1.0,0.000106
+Biobio,Unknown,Unknown,0.000173,2.1805,1.0,0.000378
+Coquimbo,Unknown,Unknown,0.000152,2.1805,1.2,0.000397
+Los Lagos,Unknown,Unknown,0.000187,2.1805,1.0,0.000408
+Los Rios,Unknown,Unknown,0.000229,2.1805,1.1757,0.000586
+Magallanes,Unknown,Unknown,3.6e-05,2.1805,1.0,7.9e-05
+Maule,Unknown,Unknown,0.00018,2.1805,1.0,0.000392
+Metropolitana,Unknown,Unknown,0.000228,2.1805,1.0,0.000498
+Nuble,Unknown,Unknown,0.000139,2.1805,1.1,0.000334
+OHiggins,Unknown,Unknown,0.000177,2.1805,1.0,0.000386
+Tarapaca,Unknown,Unknown,0.000324,2.1805,1.06,0.000748
+Valparaiso,Unknown,Unknown,0.000147,2.1805,1.0,0.000321
