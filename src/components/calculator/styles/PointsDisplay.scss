@@ -39,6 +39,11 @@ $sticky-z-index: 100;
 .text-risk-low { color: $thermometer-light-green; }
 .text-risk-very-low { color: $thermometer-green; }
 
+.jump-to-error { 
+  color: $link-color;
+  text-decoration: underline
+}
+
 #calculator .top-half-card {
   background: white;
   border-top-left-radius: 8px;

@@ -138,6 +138,7 @@
     "person_risk_profile_question": "What is their risk profile?",
     "pointsdisplay": {
       "empty_warning": "Fill in calculator to see risk level",
+      "jump_to_error": "Jump to error",
       "microCOVIDs": "microCOVIDs",
       "range": "probably between: {{ from }} to {{ to }}"
     },

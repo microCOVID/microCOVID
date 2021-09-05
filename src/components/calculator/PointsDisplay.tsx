@@ -12,7 +12,7 @@ import {
   displayPoints,
   showPoints,
 } from 'components/calculator/util/displayUtil'
-import { ONE_MILLION } from 'data/calculate'
+import { CalculatorData, ONE_MILLION } from 'data/calculate'
 import 'components/calculator/styles/PointsDisplay.scss'
 
 export interface RiskLevel {
@@ -113,14 +113,47 @@ function Thermometer(props: {
   )
 }
 
+function getErrorElementSelector(data: CalculatorData) {
+  if (data.interaction === '') {
+    return null
+  }
+  if (data.duration === 0) {
+    return '#durationInput'
+  } else if (data.riskProfile === '') {
+    return '#riskProfile'
+  }
+  return null
+}
+
+function MissingDataWarning(props: { data: CalculatorData }): JSX.Element {
+  const selector = getErrorElementSelector(props.data)
+  return (
+    <>
+      <Trans>calculator.pointsdisplay.empty_warning</Trans>{' '}
+      {selector && (
+        <a
+          className="jump-to-error"
+          onClick={() => {
+            const errorElement = document.querySelector(selector) as HTMLElement
+            errorElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            errorElement.focus({ preventScroll: true })
+          }}
+        >
+          (<Trans>calculator.pointsdisplay.jump_to_error</Trans>)
+        </a>
+      )}
+    </>
+  )
+}
+
 export default function PointsDisplay(props: {
+  data: CalculatorData
   points: number
   repeatedEvent: boolean
-  riskBudget: number
   upperBound: number
   lowerBound: number
 }): React.ReactElement {
-  const activeRiskLevel = howRisky(props.points, props.riskBudget)
+  const activeRiskLevel = howRisky(props.points, props.data.riskBudget)
   const doShowPoints = showPoints(props.points)
   const { t } = useTranslation()
   const riskLabel = (name: string): string => {
@@ -163,7 +196,7 @@ export default function PointsDisplay(props: {
             <>
               {budgetConsumption(
                 props.points,
-                props.riskBudget,
+                props.data.riskBudget,
                 t('calculator.explanationcard.multiple_suffix'),
                 t('calculator.explanationcard.percentage_suffix'),
               )}
@@ -194,7 +227,7 @@ export default function PointsDisplay(props: {
               </span>
             </>
           ) : (
-            <Trans>calculator.pointsdisplay.empty_warning</Trans>
+            <MissingDataWarning data={props.data} />
           )}
         </div>
       </Col>
