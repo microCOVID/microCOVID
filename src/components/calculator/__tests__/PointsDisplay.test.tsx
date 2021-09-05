@@ -7,9 +7,36 @@ import PointsDisplay from 'components/calculator/PointsDisplay'
 
 const standardPointsDisplay = (
   <PointsDisplay
+    data={{
+      riskBudget: 10000,
+      useManualEntry: 0,
+      topLocation: '',
+      subLocation: '',
+      subSubLocation: null,
+      population: '',
+      casesPastWeek: 0,
+      casesIncreasingPercentage: 0,
+      positiveCasePercentage: null,
+      prevalanceDataDate: new Date(),
+      percentFullyVaccinated: null,
+      unvaccinatedPrevalenceRatio: null,
+      averageFullyVaccinatedMultiplier: null,
+      riskProfile: 'average',
+      interaction: '',
+      personCount: 0,
+      symptomsChecked: '',
+      setting: '',
+      distance: '',
+      duration: 0,
+      theirMask: '',
+      yourMask: '',
+      voice: '',
+      yourVaccineType: '',
+      yourVaccineDoses: 0,
+      theirVaccine: '',
+    }}
     points={10}
     repeatedEvent={false}
-    riskBudget={10000}
     upperBound={300}
     lowerBound={30}
   />
