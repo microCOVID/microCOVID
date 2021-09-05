@@ -22,14 +22,14 @@ const changes: Change[] = [
     spreadsheetURL:
       'https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0',
     whatsNew: `
-* New: Low the budget reductions from other podmates if everyone in the pod is vaccinated since transmission is lower. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget). ([#1013](https://github.com/microCOVID/microCOVID/issues/1013))
+* New: Increase individual budgets if everyone in the pod is vaccinated since household transmission is less likely. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget). ([#1013](https://github.com/microCOVID/microCOVID/issues/1013))
 * New: Activity Risk now caps at the partner level (60%) instead of the housemate level (40%). ([#1012](https://github.com/microCOVID/microCOVID/issues/1012))
 * Bugfix: Handles the case where we don't have vaccination data for a location, and the users selects "Avg local resident (vaccinated)" as the risk profile. ([#1037](https://github.com/microCOVID/microCOVID/issues/1037))
 * Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour". ([#968](https://github.com/microCOVID/microCOVID/issues/968))
 * Bugfix: Now correctly ignores "environment" when distance is set to "close" ([#1033](https://github.com/microCOVID/microCOVID/issues/1033))
 
 **Note on how the vaccination budget adjustment works:** This feature reduces the impact of other podmate's activities on each persons' budget, since transmission is lower between podmates now that you are all vaccinated. If some people in the pod are not vaccinated or received different types of vaccines, you have two main options. Let these two examples illustrate.
-  * **Example A:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J doesn't mind being exposed to a bit more than 1% per year. So we set this setting to "Pfizer" because most people got Pfizer. This will overestimate the protection the J&J housemate has from other podmates, but the difference won't be drastic.
+  * **Example A:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J doesn't mind being exposed to a bit more than 1% per year. So we set this setting to "Pfizer" because most people got Pfizer. This will set individual budgets that, if completely used, will put the housemate with J&J at above 1% risk of getting COVID. In this particular scenario, the podmate with the J&J vaccine may be exposed to up to a 0.07% chance of getting COVID per year.
   * **Example B:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J definitely wants to stay under the 1% total budget. Therefore, the pod chooses "Johnson & Johnson" for this setting. Everyone doesn't get as much of an increase to their budget, but you all stay under the 1% annual budget.
 
 `,
