@@ -8,9 +8,9 @@ In this section we explain how we estimate Activity Risk for an activity involvi
 
 ### Our estimate starts with indoor unmasked conversation
 
-We start by first estimating the risk of interacting with a single COVID-positive person indoors for 1 hour at a normal socializing distance of 3 feet while having a normal-volume conversation.
+We start by first estimating the risk of interacting with a single COVID-positive person indoors for 1 hour at a normal socializing distance of 3 feet (1 meter) while having a normal-volume conversation.
 
-<p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet = 14%</p>
+<p class="calloutText">Activity Risk of talking to 1 person who has COVID, for 1 hour, indoors, unmasked, at 3 feet (1 meter) = 14%</p>
 
 So if you have a friend over to your house to chat for an hour, and your friend turns out to have COVID, we estimate the chance of you getting COVID from that single interaction as 14%.
 
@@ -30,7 +30,7 @@ Think of this as our “reference interaction.” We can now use it as a startin
 
 ### Modifiers: duration, masks, location, distance, volume
 
-Not all interactions are exactly an hour, at a distance of 3 feet, etc.
+Not all interactions are exactly an hour, at a distance of 3 feet (1 meter), etc.
 
 To estimate the Activity Risk of a different interaction (an outdoor picnic, or being in a restaurant), we modify our estimate based on how the interaction in question is different from the “reference interaction” above, based on the following factors:
 
@@ -40,9 +40,9 @@ To estimate the Activity Risk of a different interaction (an outdoor picnic, or 
 * distance from each other, and
 * volume of conversation.
 
-For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet away (distance), without masks because you are eating, talking at a normal volume.
+For example, we might consider having lunch with a friend in the park as interacting for 2 hours (duration), outdoors (location), with someone who is sitting about 6 feet (2 meters) away (distance), without masks because you are eating, talking at a normal volume.
 
-Or we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet away most of the time (distance), who are wearing masks, and who are not talking.
+Or we might think of a trip to the grocery store as interacting for 30 minutes (duration), indoors (location), with people who are more than 6 feet (2 meters) away most of the time (distance), who are wearing masks, and who are not talking.
 
 
 Here are our estimates for the change in risk based on these modifiers:
@@ -52,8 +52,8 @@ Here are our estimates for the change in risk based on these modifiers:
 | I’m wearing a surgical mask[^1] | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis (2–3x), [Liang et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7253999/?fbclid=IwAR2jeBEkkl2YvR184no95tVQ-jER-59apwyUk2l6Xz8FXMEVbISmlrWqDCI) meta-analysis (2x),  [Lai et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3306645/) mannequin study (2x)</super></sub> |
 | Other person is wearing a surgical mask | / 4 | <sub><super>[Lindsley et al.](https://www.medrxiv.org/content/10.1101/2020.10.05.20207241v1), [van der Sande et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2440799/), [Milton et al.](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003205), [Kumar et al.](https://arxiv.org/pdf/2005.03444.pdf), [Davies et al.](https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic), [Fischer et al. ](https://advances.sciencemag.org/content/6/36/eabd3083), [O'Kelly et al.](https://www.medrxiv.org/content/10.1101/2020.08.17.20176735v1.full.pdf)</super></sub> |
 | Outdoors | / 20 or more | <sub><super>Speculative. Suggestive evidence: [Qian et al.](https://www.medrxiv.org/content/10.1101/2020.04.04.20053058v1) study of cases in China, [Jimenez’s Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277), lack of surge from [BLM protests](https://www.nytimes.com/2020/07/01/nyregion/nyc-coronavirus-protests.html), anecdotal CO2 data from protests, [zero outdoor outbreaks of any kind, many indoor dining outbreaks](https://www.nytimes.com/2020/08/12/health/Covid-restaurants-bars.html), despite both indoor and outdoor dining being open in the US</super></sub> |
-| 6+ feet distance | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
-| Each additional 3 feet of distance (up to 12 feet) | / 2 | <sub><super>Same as above</super></sub> |
+| 6+ feet (2+ meters) distance | / 2 | <sub><super>[Chu et al.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)31142-9/fulltext) meta-analysis, [Hu et al.](https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaa1057/5877944) train passenger study |
+| Each additional 3 feet (1 meter) of distance (up to 12 feet (4 meters)) | / 2 | <sub><super>Same as above</super></sub> |
 | Loud talking (shouting, talking over music, singing) | ⨉ 5 | [<sub><super>Jimenez Aerosol Transmission Model](https://docs.google.com/spreadsheets/d/16K1OQkLD4BjgBdO8ePj6ytf-RpPMlJ6aXFg3PrIQBbQ/edit#gid=519189277)</super></sub> |
 | Not talking (such as riding the train) | / 5 | <sub><super>Same as above</super></sub> |
 
@@ -69,9 +69,9 @@ There is substantial uncertainty in many of these numbers. We’ve taken uncerta
 
 ### Example calculations
 
-To calculate the Activity Risk of lunch in the park with your friend, start with 14% (the Activity Risk for our “reference interaction”) and apply modifiers as needed: \`14% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet) = 0.7%\`. You have a **0.7%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks or volume because the reference interaction is already unmasked and at normal volume.
+To calculate the Activity Risk of lunch in the park with your friend, start with 14% (the Activity Risk for our “reference interaction”) and apply modifiers as needed: \`14% * 2 (hours) / 20 (outdoors) / 2 (distance of 6-9 feet (2-3 meters)) = 0.7%\`. You have a **0.7%** chance of getting COVID from this single activity if the other person has COVID. Note that there is no modifier for masks or volume because the reference interaction is already unmasked and at normal volume.
 
-What about indoor dining with that friend? You’re there for 2 hours, indoors, at a distance of about 3 feet, without masks. Start the same way with 14% and apply modifiers: \`14% * 2 (hours) = 28%\`. Since the reference interaction is already indoors, at a distance of about 3 feet, without masks, and at normal volume, you don’t need further modifiers. You have a **28%** chance of getting COVID from your indoor lunch if your friend has COVID.
+What about indoor dining with that friend? You’re there for 2 hours, indoors, at a distance of about 3 feet (1 meter), without masks. Start the same way with 14% and apply modifiers: \`14% * 2 (hours) = 28%\`. Since the reference interaction is already indoors, at a distance of about 3 feet (1 meter), without masks, and at normal volume, you don’t need further modifiers. You have a **28%** chance of getting COVID from your indoor lunch if your friend has COVID.
 
 Compare the risk of getting sick from these interactions: 28% for indoor dining vs. 0.7% for lunch in the park. That’s a big difference! Remember, your friend won’t necessarily know that they have COVID, and it’s very common to be infectious before you show symptoms. And that’s with only one person!
 
@@ -88,13 +88,13 @@ Indoor unmasked interactions are quite risky, but being outdoors and wearing mas
 
 **Outdoors**: We estimate that being outside reduces your risk by 20x or more because the outdoors is well-ventilated, so small respiratory droplets are less likely to accumulate. With any wind, the risk is even less. We think being outdoors is by far the most valuable thing you can do for your safety, although even that is not a guarantee.
 
-**Distance** seems to be not quite as beneficial as wearing a mask or being outdoors. We estimate keeping 6 feet apart reduces your risk by 2x, and another 2x for each additional 3 feet, up to 12 feet. This gives a total risk reduction of:
+**Distance** seems to be not quite as beneficial as wearing a mask or being outdoors. We estimate keeping 6 feet (2 meters) apart reduces your risk by 2x, and another 2x for each additional 3 feet (1 meter), up to 12 feet (4 meters). This gives a total risk reduction of:
 
-* 2x if you’re 6-9 feet away
-* 4x if you’re 9-12 feet away
-* 8x if you’re >12 feet away
+* 2x if you’re 6-9 feet (2-3 meters) away
+* 4x if you’re 9-12 feet (3-4 meters) away
+* 8x if you’re >12 feet (>4 meters) away
 
-If you’re outdoors _and_ 20 feet away from a person, you can probably ignore the risk from them.
+If you’re outdoors _and_ 20 feet (7 meters) away from a person, you can probably ignore the risk from them.
 
 **Volume of conversation** also matters. If the other person isn't talking, we estimate that reduces the risk to you by about 5x, because they are not expelling as many respiratory droplets. This actually makes some activities where people don't talk much, such as taking public transportation, safer than they would otherwise be. On the other hand, we estimate that loud talking, shouting, or singing _increases_ the risk by about 5x (as compared to a conversation at normal volume) because more respiratory droplets are exhaled and expelled when you are speaking or breathing forcefully.
 

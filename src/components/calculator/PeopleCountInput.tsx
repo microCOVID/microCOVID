@@ -26,14 +26,14 @@ const personCountPopover = (
         For a dense crowd, you can use the following maximums:
         <ul>
           <li>
-            <strong>1 ft spacing</strong> (mosh pit): 700
+            <strong>1 ft (30 cm) spacing</strong> (mosh pit): 700
           </li>
           <li>
-            <strong>3 ft spacing</strong> (crowded party/bar): 80
+            <strong>3 ft (1 m) spacing</strong> (crowded party/bar): 80
           </li>
           <li>
-            <strong>6 ft spacing</strong> (properly distanced dining, outdoor
-            gatherings): 20
+            <strong>6 ft (2 m) spacing</strong> (properly distanced dining,
+            outdoor gatherings): 20
           </li>
         </ul>
       </p>

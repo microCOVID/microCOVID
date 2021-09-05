@@ -30,7 +30,7 @@ The Delta variant’s increased infectiousness means that COVID cases are surgin
 
 [^santaclara]: At our recommended caution budget, the 7x increase meant indoor dining went from a once-a-week activity to a less than once a month activity.
 
-One thing that the Delta variant *hasn’t* changed is the effectiveness of simple precautions. In particular, **shifting activities from indoors to outdoors still reduces your risk 20x** as long as you maintain a distance of at least 3 feet. N95 and KN95 masks are still [extremely effective](https://www.microcovid.org/blog/masks) when used properly and are now available cheaply online.
+One thing that the Delta variant *hasn’t* changed is the effectiveness of simple precautions. In particular, **shifting activities from indoors to outdoors still reduces your risk 20x** as long as you maintain a distance of at least 3 feet (1 meter). N95 and KN95 masks are still [extremely effective](https://www.microcovid.org/blog/masks) when used properly and are now available cheaply online.
 
 Still, the Delta variant *has* affected the consequences of contracting COVID. We’ll discuss the risk of hospitalization, death, long-term symptoms, and of passing the infection to the people around you.
 

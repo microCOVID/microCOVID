@@ -6,7 +6,7 @@ _Warning: the entire uncertainty estimation section needs to be revisited for th
 In this writeup, we've presented individual numbers for all the parameters of our model:
 * 30% Activity Risk from a housemate per week, or 48% from a partner
 * 6% baseline Activity Risk per hour (indoor, unmasked, undistanced)
-* Various multiplicative risk reductions (2x per 3 feet, 2x for your mask, 4x for their mask, 20x for outdoors, etc)
+* Various multiplicative risk reductions (2x per 3 feet (1 meter), 2x for your mask, 4x for their mask, 20x for outdoors, etc)
 * Person Risk underreporting factors of 6x/8x/10x depending on positive test rate
 
 Based on the sources we've described so far, we think these numbers are the best estimate of the truth — that's why we're presenting them instead of some other numbers. But of course there's still a lot of uncertainty about the details of COVID transmission, which means that it's possible, even likely, that some or all of the numbers we're using will turn out to be off by a little or a lot. In this section, we attempt to answer the question: "if we're wrong, how wrong might we be?".
