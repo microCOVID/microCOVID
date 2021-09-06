@@ -43,7 +43,7 @@ const changes: Change[] = [
 1. **Adjusting Activity Risk cap to "Partner" level (60%)**
     1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
     1. Under **Find** enter:
-        <pre><code>IF\\(([a-zA-Z]+\\d+)<>ACTIVITY_TITLE_ONE_TIME, 1E\\+99,[ \\n]*IF\\(OR\\(([a-zA-Z]+\\d+)=ACTIVITY_TITLE_KISSING,[ \\n]*AD7=ACTIVITY_TITLE_CUDDLING\\),[ \\n]*INTERNAL_ACTIVITY!\\$B\\$4,[ \\n]*INTERNAL_ACTIVITY!\\$B\\$3[ \\n]*\\)\\)</code></pre>
+        <pre><code>IF\\(([a-zA-Z]+\\d+)<>ACTIVITY_TITLE_ONE_TIME, 1E\\+99,[ \\n]*IF\\(OR\\(([a-zA-Z]+\\d+)=ACTIVITY_TITLE_KISSING,[ \\n]*([a-zA-Z]+\\d+)=ACTIVITY_TITLE_CUDDLING\\),[ \\n]*INTERNAL_ACTIVITY!\\$B\\$4,[ \\n]*INTERNAL_ACTIVITY!\\$B\\$3[ \\n]*\\)\\)</code></pre>
     1. Under **Replace** enter:
         <pre><code>PARTNER</code></pre>
     1. The **Search using regular expressions** checkbox should be checked
