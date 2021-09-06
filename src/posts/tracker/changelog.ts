@@ -16,7 +16,7 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(2021, 7, 22),
+    date: new Date(2021, 8, 6),
     versionNum: '2.4',
     title: 'Increase podmate budgets if everyone is vaccinated',
     spreadsheetURL:
