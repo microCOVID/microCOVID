@@ -41,7 +41,11 @@ $sticky-z-index: 100;
 
 .jump-to-error { 
   color: $link-color;
-  text-decoration: underline
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: bold;
 }
 
 #calculator .top-half-card {

@@ -131,7 +131,7 @@ function MissingDataWarning(props: { data: CalculatorData }): JSX.Element {
     <>
       <Trans>calculator.pointsdisplay.empty_warning</Trans>{' '}
       {selector && (
-        <a
+        <button
           className="jump-to-error"
           onClick={() => {
             const errorElement = document.querySelector(selector) as HTMLElement
@@ -140,7 +140,7 @@ function MissingDataWarning(props: { data: CalculatorData }): JSX.Element {
           }}
         >
           (<Trans>calculator.pointsdisplay.jump_to_error</Trans>)
-        </a>
+        </button>
       )}
     </>
   )
