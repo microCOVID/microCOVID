@@ -16,18 +16,22 @@ if ! command -v gh &> /dev/null; then
 fi
 
 # Set defaults
-COMMIT_AND_PULL_REQUEST=0
 BASE_ON_CURRENT_BRANCH=0
+COMMIT_AND_PULL_REQUEST=0
+AUTOMERGE=0
 CAN_API_KEY=""
 VIRTUAL_ENV_DIR=".venv"
 
-while getopts "bck:v:" OPTION; do
+while getopts "bcak:v:" OPTION; do
     case $OPTION in
     b)
         BASE_ON_CURRENT_BRANCH=1
         ;;
     c)
         COMMIT_AND_PULL_REQUEST=1
+        ;;
+    a)
+        AUTOMERGE=1
         ;;
     k)
         CAN_API_KEY=${OPTARG}
@@ -98,18 +102,23 @@ echo "Committing the files and submitting an auto-merge pull request"
 if [[ `git status --porcelain` ]]; then
   TODAY=$(date +%Y-%m-%d)
 
-  git config --global user.name "microCOVID[bot]"
-  git config --global user.email "123456789+microcovid[bot]@users.noreply.github.com"
+  git config --global user.name "microCOVID Automation[bot]"
+  git config --global user.email "89503524+microcovid-automation[bot]@users.noreply.github.com"
 
   git add -A
   git commit -am "Automatic prevalence update $TODAY"
   git push
   # Use the GitHub CLI to create a pull request and save the url
-  PR_URL=$(gh pr create --fill)
+  PR_URL=$(gh pr create --fill --label auto-prevalence-update)
   echo "Pull request URL: $PR_URL"
   if [[ ! $PR_URL = "" ]]; then
-    # Set the pull request to auto merge
-    gh pr merge --auto --delete-branch --squash "$PR_URL"
+    if [[ $AUTOMERGE == 1 ]]; then
+      # Set the pull request to auto merge
+      echo "Setting auto merge"
+      gh pr merge --auto --delete-branch --squash "$PR_URL"
+    else 
+      echo "Not doing any kind of a merge"
+    fi
   else
     echo "ERROR: No pull request URL generated"
     exit 2
@@ -118,3 +127,5 @@ else
   echo "ERROR: No changes to add to git commit, earlier script must have failed"
   exit 2
 fi
+
+echo "✅ Successfully completed prevalence update"

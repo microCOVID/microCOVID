@@ -2,7 +2,7 @@ const title = 'Introduction'
 const shortTitle = title
 const content = `
 
-You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart, and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
+You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet (1 meter) apart, and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
 
 We, the authors, were really struggling with this. We wanted a better way to make decisions about COVID risk. So we read some papers and crunched some numbers. We spent hours building a model to estimate the COVID risk of various activities. And in this writeup, we’ll share our model (and some practical tools!) with you.
 
