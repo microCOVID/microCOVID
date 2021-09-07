@@ -48,7 +48,10 @@
     "distance_header": "Distance",
     "distance_question": "How close are these nearby people, on average?",
     "duration_header": "Duration",
-    "duration_question": "How long is the activity, in minutes? (For a repeated activity: minutes per week?)",
+    "duration_hours": "Hours",
+    "duration_minutes": "Minutes",
+    "duration_question": "How long is the activity?",
+    "duration_question_workplace": "How much time total per week?",
     "explanationcard": {
       "activity_risk_capped_note": "(NOTE: We have <2>capped this number at the maximum Activity Risk</2>.)",
       "chance": "chance",

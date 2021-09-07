@@ -1,4 +1,4 @@
-@import '~styles/_variables.scss';
+@import "~styles/_variables.scss";
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/_variables.scss";
 @import "~rfs/scss";
@@ -19,5 +19,9 @@
     cursor: pointer;
     border-radius: 12px;
     width: 20px;
+  }
+
+  .field-label {
+    @include font-size($input-font-size-sm);
   }
 }
