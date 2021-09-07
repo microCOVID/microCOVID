@@ -238,7 +238,7 @@
     "basic_mask_short": "Cloth, thick and snug",
     "car_windows_down": "A moving car with the windows rolled down",
     "close_distance": "Close (less than 1 foot / 0.3 meters apart)",
-    "filtered": "Indoors with a HEPA filter (flow rate 5x room size)",
+    "filtered": "Indoors with a HEPA filter (flow rate 5x room size per hour)",
     "filtered_mask": "Cloth mask with removable filter insert",
     "filtered_mask_short": "Filter Insert",
     "indoor": "Indoor",

@@ -24,7 +24,9 @@ Follow these steps to set up a copy of the Risk Tracker for yourself or your hou
 
     <img src="${budgetSetting}" alt="Budget setting" style="max-width: 500px;">
 
-    **Important note:** The RIsk Tracker is designed to ensure that you are only exposing your podmates to that total amount of risk. Certain features allow you to take on more risk than your budget amount, but because of certain precautions (like symptoms reporting), the risk you introduce to your podmates will still be within the agreed upon budget. [Read more about this in the Risk Tracker FAQ](./faq).
+    **Important note:** The Risk Tracker is designed to ensure that you are only exposing your podmates to that total amount of risk. Certain features allow you to take on more risk than your budget amount, but because of certain precautions (like symptoms reporting), the risk you introduce to your podmates will still be within the agreed upon budget. [Read more about this in the Risk Tracker FAQ](./faq).
+
+    1. If everyone in your pod is vaccinated, you can set the field labeled **Adjust budget as though everyone were fully vaccinated with...** to the vaccine that most people in your pod have. This will increase everyone's budgets, because you aren't exposing one another to as much risk anymore. Hover on the cell for examples of how to use this feature.
 
 4. **Add the name of each person in your pod to the _Pod Activity Log_ sheet.**
     1. Begin by replacing the example names (Alice, Bob, etc) with the names of people in your pod.
