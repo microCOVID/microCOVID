@@ -18,6 +18,7 @@ export function DurationInput(props: {
           <Trans>calculator.duration_question</Trans>
         </label>
         <input
+          id="durationInput"
           className="form-control form-control-lg col-md-3"
           type="number"
           inputMode="numeric"

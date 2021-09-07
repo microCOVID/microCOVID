@@ -421,9 +421,9 @@ export const Calculator = (): React.ReactElement => {
       <Row className="sticky" id="points-row">
         <Col md="12" lg={{ span: 8, offset: 4 }}>
           <PointsDisplay
+            data={calculatorData}
             points={points}
             repeatedEvent={repeatedEvent}
-            riskBudget={calculatorData.riskBudget}
             lowerBound={lowerBound}
             upperBound={upperBound}
           />
