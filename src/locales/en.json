@@ -175,6 +175,7 @@
       "adjusted_prevalence": "Adjusted prevalence",
       "cases_stable_or_decreasing": "Cases are stable or decreasing.",
       "completed_vaccinations": "Percent of population fully vaccinated",
+      "completed_vaccinations_tooltip": "This field is only editable if we are missing vaccination data for your location",
       "data_last_updated": "Data last updated",
       "details_header": "Details",
       "last_week_cases": "Reported cases in past week",
