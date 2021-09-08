@@ -21,4 +21,8 @@
     width: 20px;
     margin-left: 15px;
   }
+
+  .field-label {
+    @include font-size($input-font-size-sm);
+  }
 }

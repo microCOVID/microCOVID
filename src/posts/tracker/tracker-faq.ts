@@ -73,7 +73,7 @@ By default, the Risk Tracker automatically imports the latest data for each of t
 
 ## How do the different precautions affect the risk score?
 
-For the purposes of calculating the microCOVID risk score for an activity, we assume a default activity is **indoors, no mask, 3 feet apart, normal talking volume**. Any variation from that decreases/increases the risk. You can read the [explanation behind each of these modifiers here](/paper/5-activity-risk#modifiers-duration-masks-location-distance-volume) and the [in-depth research here](/paper/14-research-sources#activity-risk).
+For the purposes of calculating the microCOVID risk score for an activity, we assume a default activity is **indoors, no mask, 3 feet (1 meter) apart, normal talking volume**. Any variation from that decreases/increases the risk. You can read the [explanation behind each of these modifiers here](/paper/5-activity-risk#modifiers-duration-masks-location-distance-volume) and the [in-depth research here](/paper/14-research-sources#activity-risk).
 
 ### Risk modifiers to me
 
@@ -131,9 +131,9 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
    <td><strong><em>Distance</em></strong>
    </td>
    <td>
-☕ 3 feet: <strong><code>Baseline</code></strong><br />
-↔️  6+ feet: <strong><code>x1/2</code></strong><br />
-🏈  10+ feet: <strong><code>x1/4</code></strong><br />
+☕ 3 feet (1 meter): <strong><code>Baseline</code></strong><br />
+↔️  6+ feet (2+ meters): <strong><code>x1/2</code></strong><br />
+🏈  10+ feet (3+ meters): <strong><code>x1/4</code></strong><br />
 ❤️ 0 feet: <strong><code>x2</code></strong><br />
    </td>
   </tr>
@@ -199,7 +199,7 @@ If some people are circulating, you only need to account for the people who are 
 
 *   if you are at a backyard party where you are usually near 5 people at any given time, but the specific people change as you mingle, that is still just 5 nearby people on average.
 *   If you see 5 different co-workers outdoors for brief interactions throughout the day, and you are near each person for 10 minutes at a time, you can either log that as “5 people for 10 minutes” or “1 person for 50 minutes.”
-*   If you’re in a store, you want to model the number of people who are 3+ feet, 6+ feet and 10-15 feet away from you _on average_. You can use the tool in the _Utilities_ sheet to help you convert those 3 distances to a total number of people who are 6 feet away.
+*   If you’re in a store, you want to model the number of people who are 3+ feet (1+ meters), 6+ feet (2+ meters) and 10-15 feet (3-4 meters) away from you _on average_. You can use the tool in the _Utilities_ sheet to help you convert those 3 distances to a total number of people who are 6 feet away.
 
 When the people you’re seeing all have the same risk profile, with the same precautions, you can enter them all as one "Custom Person" because they function together as a unit. If you're seeing people at different times or for different lengths of time each, you'll need to model them as separate Custom Person sections. 
 

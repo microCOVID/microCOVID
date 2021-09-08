@@ -16,6 +16,72 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 8, 7),
+    versionNum: '2.4',
+    title: 'Increase podmate budgets if everyone is vaccinated',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0',
+    whatsNew: `
+* New: Increase individual budgets if everyone in the pod is vaccinated since household transmission is less likely. Follows the [formula outlined here](/paper/13-q-and-a#2-if-a-vaccinated-individual-contracts-covid-how-much-less-or-more-likely-is-this-to-result-in-negative-consequences-increased-budget). ([#1013](https://github.com/microCOVID/microCOVID/issues/1013))
+* New: Activity Risk now caps at the partner level (60%) instead of the housemate level (40%). ([#1012](https://github.com/microCOVID/microCOVID/issues/1012))
+* Bugfix: Handles the case where we don't have vaccination data for a location, and the users selects "Avg local resident (vaccinated)" as the risk profile. ([#1037](https://github.com/microCOVID/microCOVID/issues/1037))
+* Bugfix: Corrects the name of the *HEPA filter* location type to include "per hour". ([#968](https://github.com/microCOVID/microCOVID/issues/968))
+* Bugfix: Now correctly ignores "environment" when distance is set to "close" ([#1033](https://github.com/microCOVID/microCOVID/issues/1033))
+
+**Note on how the vaccination budget adjustment works:** This feature reduces the impact of other podmate's activities on each persons' budget, since transmission is lower between podmates now that you are all vaccinated. If some people in the pod are not vaccinated or received different types of vaccines, you have two main options. Let these two examples illustrate.
+  * **Example A:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J doesn't mind being exposed to a bit more than 1% per year. So we set this setting to "Pfizer" because most people got Pfizer. This will set individual budgets that, if completely used, will put the housemate with J&J at above 1% risk of getting COVID. In this particular scenario, the podmate with the J&J vaccine may be exposed to up to a 0.07% chance of getting COVID per year.
+  * **Example B:** 5 podmates got Pfizer and 1 got J&J. The pod has a 1% annual risk budget. The person who got J&J definitely wants to stay under the 1% total budget. Therefore, the pod chooses "Johnson & Johnson" for this setting. Everyone doesn't get as much of an increase to their budget, but you all stay under the 1% annual budget.
+
+`,
+    instructions: `
+1. **Bugfix to clarify HEPA filter paramters**
+    1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
+    1. Under **Find** enter: \`flow rate 5x room size\`
+    1. Under **Replace** enter: \`flow rate 5x room size per hour\`
+    1. Click **Replace all**
+    1. Reminder, we have a [air flow calculator](/blog/hepafilters) to determine the flow rate of you air purifier.
+1. **Adjusting Activity Risk cap to "Partner" level (60%)**
+    1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
+    1. Under **Find** enter:
+        <pre><code>IF\\(([a-zA-Z]+\\d+)<>ACTIVITY_TITLE_ONE_TIME, 1E\\+99,[ \\n]*IF\\(OR\\(([a-zA-Z]+\\d+)=ACTIVITY_TITLE_KISSING,[ \\n]*([a-zA-Z]+\\d+)=ACTIVITY_TITLE_CUDDLING\\),[ \\n]*INTERNAL_ACTIVITY!\\$B\\$4,[ \\n]*INTERNAL_ACTIVITY!\\$B\\$3[ \\n]*\\)\\)</code></pre>
+    1. Under **Replace** enter:
+        <pre><code>PARTNER</code></pre>
+    1. The **Search using regular expressions** checkbox should be checked
+    1. The **Also search withing formulas** checkbox should be checked
+    1. Click **Replace all**. When prompted if you are sure you want to replace all values in all sheets, click **Ok**. (It may take a 10+ seconds to complete. If it was successful, you will see *Replaced 100+ instances of...*)
+1. **Bugfix for distance set to "close"**
+    1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
+    1. Under **Find** enter:
+        <pre><code>AND\\(([a-zA-Z]+\\d+)=ACTIVITY_TITLE_CUDDLING,[ \\n]*([a-zA-Z]+\\d+)=ACTIVITY_TITLE_OUTDOOR\\)</code></pre>
+    1. Under **Replace** enter:
+        <pre><code>$1=ACTIVITY_TITLE_CUDDLING</code></pre>
+    1. The **Search using regular expressions** checkbox should be checked
+    1. The **Also search withing formulas** checkbox should be checked
+    1. Click **Replace all**. When prompted if you are sure you want to replace all values in all sheets, click **Ok**. (It may take a 10+ seconds to complete. If it was successful, you will see *Replaced 100+ instances of...*)
+1. **Bugfix for "Avg local resident (vaccinated)" in locations without vaccinations data**
+    1. Go to *Edit > Find & Replace* (it doesn't matter what sheet you are currently viewing)
+    1. Under **Find** enter:
+        <pre><code>=IF\\(ISTEXT\\(([a-zA-Z]+(\\d+))\\), "",[\\n ]+IF\\([\\n ]+ISNUMBER\\(([\\w\\W]*)</code></pre>
+    1. Under **Replace** enter:
+        <pre><code>=IF(ISTEXT($1), "", IF(AND(OR(T$2="Avg local resident (vaccinated)", T$2="Avg local resident (unvaccinated)"), REGEXMATCH(TO_TEXT(VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE)), "Unknown")), "Error: Vaccination data not available in your region. Please use the 'Avg local resident' risk profile instead", IF(ISNUMBER($3)</code></pre>
+    1. The **Search using regular expressions** checkbox should be checked
+    1. The **Also search withing formulas** checkbox should be checked
+    1. Click **Replace all**. When prompted if you are sure you want to replace all values in all sheets, click **Ok**. (It may take a 10+ seconds to complete. If it was successful, you will see *Replaced 100+ instances of...*)
+    1. In the **Activity Log** sheet, click on Column N (to highlight the whole column) an go to *Format > Text wrapping > Wrap*. Repeat for the **Custom People** sheet.
+    1. In the **INTERNAL_PERSON** sheet, click on cell \`B9\` and press *paste*
+      <table style="border: 1px solid #b4bcc2;">
+        <tr><td>Avg local resident (vaccinated)</td>    <td><code>=IF(VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE)="Unknown", "Vaccination data not available in your region, use avg local resident profile instead", 1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 3, FALSE))</code></td></tr>
+        <tr><td>Avg local resident (unvaccinated)</td>    <td><code>=IF(VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 2, FALSE)="Unknown", "Vaccination data not available in your region, use avg local resident profile instead", 1000000*VLOOKUP(PREVALENCE_LOCAL_NAME, LOCATION_TABLE_COMPLETE, 2, FALSE))</code></td></tr>
+      </table>
+1. **Pod Overview sheet:**
+    1. Open the [current spreadsheet](https://docs.google.com/spreadsheets/d/1Es4ZzLlNiBSxG5jJsGPUYewrCw2NqB5kDXlNfmdSdD0) and copy all of \`Row 104\` (Where it says "Adjust budget as though everyone were fully vaccinated with...") to \`Row 104\` in your spreadsheet.
+    1. Click on \`C104\` then go to *Data > Data validation*. Under *Criteria* set the range to \`=INTERNAL_ACTIVITY!$I$19:$I$32\` then press *Save*.
+    1. In cell \`C124\` to be
+      <pre><code>=C123/(1+(C122-1)*HOUSEMATE*D104)</code></pre>
+    1. Update your version number in cell \`D2\` to **2.4**
+`,
+  },
+  {
     date: new Date(2021, 7, 18),
     versionNum: '2.3',
     title: 'Add “average vaccinated person”',
