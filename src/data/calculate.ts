@@ -312,7 +312,6 @@ export const calculatePersonRiskEach = (
           (data.averageFullyVaccinatedMultiplier * fractionFullyVaccinated +
             (1 - fractionFullyVaccinated))
 
-
     if (data.riskProfile === 'average') {
       switch (data.theirVaccine) {
         case 'vaccinated':
