@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000584,0.000274,0.000163,2.1796,1.0,0.000356
-Antofagasta,Unknown,Unknown,0.000234,2.1796,1.3558,0.000691
-Araucania,Unknown,Unknown,0.000151,2.1796,1.0,0.00033
-Arica y Parinacota,Unknown,Unknown,0.000199,2.1796,1.0,0.000434
-Atacama,Unknown,Unknown,0.00026,2.1796,1.2333,0.000698
-Aysen,Unknown,Unknown,1.9e-05,2.1796,1.0,4.2e-05
-Biobio,Unknown,Unknown,0.000178,2.1796,1.0337,0.000401
-Coquimbo,Unknown,Unknown,0.000137,2.1796,1.03,0.000308
-Los Lagos,Unknown,Unknown,0.000165,2.1796,1.0,0.00036
-Los Rios,Unknown,Unknown,0.000172,2.1796,1.0,0.000374
-Magallanes,Unknown,Unknown,3e-05,2.1796,1.0,6.5e-05
-Maule,Unknown,Unknown,0.00015,2.1796,1.0,0.000327
-Metropolitana,Unknown,Unknown,0.000203,2.1796,1.0,0.000443
-Nuble,Unknown,Unknown,0.000162,2.1796,1.4,0.000495
-OHiggins,Unknown,Unknown,0.000173,2.1796,1.0,0.000377
-Tarapaca,Unknown,Unknown,0.000278,2.1796,1.0,0.000607
-Valparaiso,Unknown,Unknown,0.000112,2.1796,1.0,0.000245
+Entire country,0.00056,0.000263,0.000158,2.1529,1.0,0.000341
+Antofagasta,Unknown,Unknown,0.000226,2.1529,1.2477,0.000606
+Araucania,Unknown,Unknown,0.000143,2.1529,1.0,0.000308
+Arica y Parinacota,Unknown,Unknown,0.000217,2.1529,1.0,0.000467
+Atacama,Unknown,Unknown,0.000263,2.1529,1.25,0.000708
+Aysen,Unknown,Unknown,2.9e-05,2.1529,1.0,6.3e-05
+Biobio,Unknown,Unknown,0.000154,2.1529,1.0,0.000331
+Coquimbo,Unknown,Unknown,0.000121,2.1529,1.0,0.000261
+Los Lagos,Unknown,Unknown,0.000148,2.1529,1.0,0.00032
+Los Rios,Unknown,Unknown,0.000172,2.1529,1.0,0.000369
+Magallanes,Unknown,Unknown,2.4e-05,2.1529,1.0,5.2e-05
+Maule,Unknown,Unknown,0.000157,2.1529,1.0,0.000338
+Metropolitana,Unknown,Unknown,0.000204,2.1529,1.0,0.00044
+Nuble,Unknown,Unknown,0.000164,2.1529,1.5,0.000531
+OHiggins,Unknown,Unknown,0.00016,2.1529,1.0,0.000344
+Tarapaca,Unknown,Unknown,0.000221,2.1529,1.0,0.000475
+Valparaiso,Unknown,Unknown,0.000109,2.1529,1.0,0.000235
