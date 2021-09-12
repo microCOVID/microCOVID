@@ -334,8 +334,6 @@
   },
   "each time": "each time",
   "each time you do it": "each time you do it",
-  "for": "for",
-  "mask": "mask",
   "menu": {
     "about": "About",
     "blog": "Blog",
@@ -368,7 +366,5 @@
     "restaurantOutdoors": "Eating in restaurant, outdoors",
     "smallIndoorParty25": "Indoor party: 25 people, unmasked",
     "votingInPerson": "Voting in-person"
-  },
-  "their": "their",
-  "your": "your"
+  }
 }
