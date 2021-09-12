@@ -374,16 +374,14 @@ export const getActivityRiskVariables = (
       return []
     }
 
-    const forWord = i18n.t('for')
-
     const variables = [
       {
         name: i18n.t('calculator.baseline_risk'),
         value: Interaction[data.interaction].multiplier,
       },
       {
-        name: `${forWord} ${i18n.t(
-          'calculator.precautions.your_vaccine_header',
+        name: `${i18n.t(
+          'calculator.precautions.your_vaccine_breakdown_label',
         )}`,
         value: vaccineMultiplier,
       },
@@ -407,15 +405,11 @@ export const getActivityRiskVariables = (
       table: { [key: string]: FormValue },
       given: string,
     ): string =>
-      given === ''
-        ? ''
-        : table[given].label_micro ||
-          table[given].label_short ||
-          table[given].label
+      given === '' ? '' : table[given].label_breakdown || table[given].label
 
     let effectiveDuration = data.duration
     variables.push({
-      name: `${forWord} ${labelFor(Distance, data.distance)}`,
+      name: labelFor(Distance, data.distance),
       value: mulFor(Distance, data.distance),
     })
     if (data.distance === 'intimate') {
@@ -426,29 +420,23 @@ export const getActivityRiskVariables = (
         // Being outdoors only helps if you're not literally breathing each
         // others' exhalation.
         variables.push({
-          name: `${forWord} ${labelFor(Setting, data.setting)}`,
+          name: labelFor(Setting, data.setting),
           value: mulFor(Setting, data.setting),
         })
       }
       // Talking modifiers not allowed when kissing.
       variables.push({
-        name: `${forWord} ${labelFor(Voice, data.voice)}`,
+        name: labelFor(Voice, data.voice),
         value: mulFor(Voice, data.voice),
       })
 
       // You can't wear a mask if you're kissing!
       variables.push({
-        name: `${forWord} ${i18n.t('their')} ${labelFor(
-          TheirMask,
-          data.theirMask,
-        )} ${i18n.t('mask')}`,
+        name: labelFor(TheirMask, data.theirMask),
         value: mulFor(TheirMask, data.theirMask),
       })
       variables.push({
-        name: `${forWord} ${i18n.t('your')} ${labelFor(
-          YourMask,
-          data.yourMask,
-        )} ${i18n.t('mask')}`,
+        name: labelFor(YourMask, data.yourMask),
         value: mulFor(YourMask, data.yourMask),
       })
     }

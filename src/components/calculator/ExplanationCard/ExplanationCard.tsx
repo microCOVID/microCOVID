@@ -1,5 +1,4 @@
-// @ts-expect-error
-import { Fraction } from 'fractional'
+import num2fraction from 'num2fraction'
 import React from 'react'
 import { Form } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
@@ -46,24 +45,23 @@ const calculationStepHeader = (header: string, value: string): JSX.Element => {
 }
 
 function numberToReadable(value: number): string {
-  let fraction = new Fraction(value)
-  if (fraction.denominator === 100) {
-    return `${fraction.numerator}%`
+  const fraction = num2fraction(value)
+  const [numerator, denominator] = fraction
+    .split('/')
+    .map((num) => parseInt(num))
+  if (denominator === 1) {
+    return `${numerator}`
   }
-  if (fraction.denominator === 50) {
-    return `${fraction.numerator * 2}%`
+  if (denominator === 100) {
+    return `${numerator}%`
   }
-  if (value === 1 / 6) {
-    fraction = new Fraction(1, 6)
-  } else if (value === 1 / 3) {
-    fraction = new Fraction(1, 3)
-  } else if (value === 2 / 3) {
-    fraction = new Fraction(1, 6)
+  if (denominator === 50) {
+    return `${numerator * 2}%`
   }
   return fraction.toString()
 }
 
-function getActivityRiskCalcuation(data: CalculatorData): JSX.Element | null {
+function getActivityRiskCalculation(data: CalculatorData): JSX.Element | null {
   const activityRisk = calculateActivityRisk(data)
   const activityRiskFormatted = fixedPointPrecisionPercent(activityRisk)
   if (!activityRisk) {
@@ -123,7 +121,7 @@ export default function ExplanationCard(props: {
       ? Interaction.partner.label.split(' [')[0]
       : Interaction.repeated.label.split(' [')[0]
 
-  const activityRiskCalculation = getActivityRiskCalcuation(props.data)
+  const activityRiskCalculation = getActivityRiskCalculation(props.data)
   const calculationBreakdown = () => {
     return (
       <>
