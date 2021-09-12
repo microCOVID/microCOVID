@@ -1,35 +1,35 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000693,0.000326,0.000234,2.3693,1.0,0.000554
-Amazonas,Unknown,Unknown,0.00017,2.3693,1.0,0.000402
-Antioquia,Unknown,Unknown,0.000356,2.3693,1.0,0.000843
-Arauca,Unknown,Unknown,0.000156,2.3693,1.0,0.000371
-Atlantico,Unknown,Unknown,0.000482,2.3693,1.0617,0.001212
-Bolivar,Unknown,Unknown,0.000209,2.3693,1.0286,0.000509
-Boyaca,Unknown,Unknown,0.000114,2.3693,1.0,0.000271
-Caldas,Unknown,Unknown,0.000126,2.3693,1.0,0.000299
-Capital District,Unknown,Unknown,0.00038,2.3693,1.0115,0.00091
-Caqueta,Unknown,Unknown,0.000127,2.3693,1.0,0.000301
-Casanare,Unknown,Unknown,0.000136,2.3693,1.0,0.000321
-Cauca,Unknown,Unknown,0.000129,2.3693,1.0,0.000306
-Cesar,Unknown,Unknown,0.000189,2.3693,1.0,0.000448
-Choco,Unknown,Unknown,5e-05,2.3693,1.0,0.00012
-Cordoba,Unknown,Unknown,0.000108,2.3693,1.0,0.000256
-Cundinamarca,Unknown,Unknown,9.2e-05,2.3693,1.0,0.000219
-Guainia,Unknown,Unknown,6.2e-05,2.3693,1.0,0.000148
-Guaviare,Unknown,Unknown,0.000133,2.3693,2.0,0.00063
-Huila,Unknown,Unknown,0.000107,2.3693,1.0,0.000254
-La Guajira,Unknown,Unknown,7.3e-05,2.3693,1.0,0.000172
-Magdalena,Unknown,Unknown,0.000374,2.3693,1.0,0.000886
-Meta,Unknown,Unknown,0.000138,2.3693,1.0,0.000328
-Narino,Unknown,Unknown,0.000125,2.3693,1.015,0.000301
-Norte de Santander,Unknown,Unknown,0.000283,2.3693,1.074,0.00072
-Putumayo,Unknown,Unknown,0.000152,2.3693,1.0612,0.000383
-Quindio,Unknown,Unknown,0.000315,2.3693,1.3852,0.001033
-Risaralda,Unknown,Unknown,0.000162,2.3693,1.0,0.000384
-San Andres y Providencia,Unknown,Unknown,0.000359,2.3693,1.9091,0.001624
-Santander,Unknown,Unknown,0.000151,2.3693,1.0,0.000358
-Sucre,Unknown,Unknown,0.000103,2.3693,1.0,0.000244
-Tolima,Unknown,Unknown,0.000162,2.3693,1.5035,0.000578
-Valle del Cauca,Unknown,Unknown,0.000296,2.3693,1.0,0.000702
-Vaupes,Unknown,Unknown,7.4e-05,2.3693,1.0,0.000174
-Vichada,Unknown,Unknown,7.4e-05,2.3693,1.0,0.000176
+Entire country,0.000678,0.000318,0.000228,2.3687,1.0,0.00054
+Amazonas,Unknown,Unknown,0.000144,2.3687,1.0,0.00034
+Antioquia,Unknown,Unknown,0.000354,2.3687,1.0,0.000838
+Arauca,Unknown,Unknown,0.00013,2.3687,1.0,0.000307
+Atlantico,Unknown,Unknown,0.000502,2.3687,1.0617,0.001264
+Bolivar,Unknown,Unknown,0.000194,2.3687,1.0,0.000459
+Boyaca,Unknown,Unknown,9.9e-05,2.3687,1.0,0.000235
+Caldas,Unknown,Unknown,0.000107,2.3687,1.0,0.000254
+Capital District,Unknown,Unknown,0.000383,2.3687,1.0,0.000907
+Caqueta,Unknown,Unknown,0.00011,2.3687,1.0,0.00026
+Casanare,Unknown,Unknown,0.000121,2.3687,1.0,0.000287
+Cauca,Unknown,Unknown,0.000123,2.3687,1.0,0.000291
+Cesar,Unknown,Unknown,0.000168,2.3687,1.0,0.000399
+Choco,Unknown,Unknown,5.2e-05,2.3687,1.0,0.000124
+Cordoba,Unknown,Unknown,8.9e-05,2.3687,1.0,0.00021
+Cundinamarca,Unknown,Unknown,8.4e-05,2.3687,1.0,0.0002
+Guainia,Unknown,Unknown,8.3e-05,2.3687,1.5,0.000295
+Guaviare,Unknown,Unknown,0.000145,2.3687,2.0,0.000687
+Huila,Unknown,Unknown,0.000104,2.3687,1.0,0.000245
+La Guajira,Unknown,Unknown,7.4e-05,2.3687,1.0,0.000175
+Magdalena,Unknown,Unknown,0.000335,2.3687,1.0,0.000793
+Meta,Unknown,Unknown,0.000139,2.3687,1.0,0.00033
+Narino,Unknown,Unknown,0.000124,2.3687,1.0576,0.000312
+Norte de Santander,Unknown,Unknown,0.000239,2.3687,1.0,0.000565
+Putumayo,Unknown,Unknown,0.000164,2.3687,1.2727,0.000494
+Quindio,Unknown,Unknown,0.000302,2.3687,1.4211,0.001016
+Risaralda,Unknown,Unknown,0.000165,2.3687,1.0,0.000392
+San Andres y Providencia,Unknown,Unknown,0.000163,2.3687,1.0,0.000387
+Santander,Unknown,Unknown,0.00014,2.3687,1.0,0.000331
+Sucre,Unknown,Unknown,0.000103,2.3687,1.0,0.000243
+Tolima,Unknown,Unknown,0.00016,2.3687,1.6308,0.000619
+Valle del Cauca,Unknown,Unknown,0.000293,2.3687,1.0,0.000694
+Vaupes,Unknown,Unknown,7.4e-05,2.3687,1.0,0.000174
+Vichada,Unknown,Unknown,8.3e-05,2.3687,1.0,0.000198
