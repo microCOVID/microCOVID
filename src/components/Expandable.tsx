@@ -27,7 +27,7 @@ function AccordionToggle(props: AccordionToggleProps): JSX.Element {
   return (
     <button
       id={props.headerId}
-      className={`card-header expandable-header ${props.headerClassName || ''}`}
+      className={`${props.headerClassName || ''} card-header expandable-header`}
       onClick={decoratedOnClick}
       aria-expanded={isCurrentEventKey ? 'true' : 'false'}
       aria-controls={props.bodyId}
