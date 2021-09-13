@@ -1,17 +1,17 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.01442,0.006777,0.003787,2.3182,1.0534,0.009249
-England,Unknown,Unknown,0.003302,2.3182,1.0421,0.007978
-Northern Ireland,Unknown,Unknown,0.005791,2.3182,1.1945,0.016036
-Scotland,Unknown,Unknown,0.007838,2.3182,1.0097,0.018345
-Wales,Unknown,Unknown,0.005572,2.3182,1.2296,0.015882
-Bermuda,Unknown,Unknown,0.006712,2.3182,2.0,0.031121
-British Virgin Islands,Unknown,Unknown,9.9e-05,2.3182,1.0,0.00023
-Cayman Islands,Unknown,Unknown,0.000609,2.3182,1.8571,0.00262
-Channel Islands,Unknown,Unknown,0.001713,2.3182,1.1548,0.004585
-Falkland Islands (Malvinas),Unknown,Unknown,0.000287,2.3182,1.0,0.000666
-Gibraltar,Unknown,Unknown,0.001009,2.3182,1.0,0.002339
-Isle of Man,Unknown,Unknown,0.002234,2.3182,1.0,0.00518
-Montserrat,Unknown,Unknown,0.0002,2.3182,1.0,0.000464
-Turks and Caicos Islands,Unknown,Unknown,0.001601,2.3182,1.4524,0.005391
-Anguilla,Unknown,Unknown,0.002266,2.3182,1.0,0.005254
-Saint Helena, Ascension and Tristan da Cunha,Unknown,Unknown,0.000177,2.3182,1.0,0.000409
+Entire country,0.01336,0.006279,0.003671,2.3176,1.0064,0.008562
+England,Unknown,Unknown,0.003174,2.3176,1.0,0.007356
+Northern Ireland,Unknown,Unknown,0.005685,2.3176,1.1715,0.015435
+Scotland,Unknown,Unknown,0.007754,2.3176,1.0167,0.018271
+Wales,Unknown,Unknown,0.005549,2.3176,1.2217,0.015711
+Bermuda,Unknown,Unknown,0.006712,2.3176,2.0,0.031114
+British Virgin Islands,Unknown,Unknown,9.9e-05,2.3176,1.0,0.00023
+Cayman Islands,Unknown,Unknown,0.000609,2.3176,1.8571,0.00262
+Channel Islands,Unknown,Unknown,0.001713,2.3176,1.1548,0.004583
+Falkland Islands (Malvinas),Unknown,Unknown,0.000287,2.3176,1.0,0.000665
+Gibraltar,Unknown,Unknown,0.001306,2.3176,1.0,0.003027
+Isle of Man,Unknown,Unknown,0.002082,2.3176,1.0,0.004824
+Montserrat,Unknown,Unknown,0.0002,2.3176,1.0,0.000464
+Turks and Caicos Islands,Unknown,Unknown,0.001601,2.3176,1.2979,0.004817
+Anguilla,Unknown,Unknown,0.002266,2.3176,1.0,0.005253
+Saint Helena, Ascension and Tristan da Cunha,Unknown,Unknown,0.000177,2.3176,1.0,0.000409
