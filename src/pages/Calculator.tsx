@@ -31,7 +31,6 @@ import {
   calculate,
   defaultValues,
   migrateDataToCurrent,
-  parsePopulation,
 } from 'data/calculate'
 import { Interaction } from 'data/data'
 import { PartialData, prepopulated } from 'data/prepopulated'
@@ -140,7 +139,7 @@ export const Calculator = (): React.ReactElement => {
   const prevalenceIsFilled =
     (!calculatorData.useManualEntry && calculatorData.topLocation !== '') ||
     (calculatorData.useManualEntry &&
-      parsePopulation(calculatorData.population) > 0 &&
+      calculatorData.population > 0 &&
       calculatorData.casesPastWeek > 0 &&
       calculatorData.casesIncreasingPercentage >= 0 &&
       calculatorData.positiveCasePercentage !== null &&

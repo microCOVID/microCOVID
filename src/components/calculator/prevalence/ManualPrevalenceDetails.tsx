@@ -106,8 +106,10 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         id="population"
         label={t('calculator.prevalence.population')}
         value={props.data.population}
-        setter={(value) => props.setter({ ...props.data, population: value })}
-        inputType="text"
+        setter={(value) =>
+          props.setter({ ...props.data, population: parseInt(value || '') })
+        }
+        inputType="number"
         className="hide-number-buttons"
       />
       <PrevalenceField

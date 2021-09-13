@@ -603,7 +603,7 @@ class Place(pydantic.BaseModel):
 
         return AppLocation(
             label=self.name,
-            population=f"{self.population:,}",
+            population=self.population,
             casesPastWeek=self.cases_last_week,
             casesIncreasingPercentage=increase * 100,
             positiveCasePercentage=(
@@ -685,7 +685,7 @@ class Country(Place):
 class AppLocation(pydantic.BaseModel):
     label: str
     iso3: Optional[str]
-    population: str
+    population: int
     casesPastWeek: int
     casesIncreasingPercentage: float
     positiveCasePercentage: Optional[float]
@@ -710,8 +710,7 @@ class AppLocation(pydantic.BaseModel):
         return final
 
     def as_csv_data(self) -> Dict[str, str]:
-        population = int(self.population.replace(",", ""))
-        reported = (self.casesPastWeek + 1) / population
+        reported = (self.casesPastWeek + 1) / self.population
         underreporting = self.prevalenceRatio()
         delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
         estimated_prevalence = reported * underreporting * delay

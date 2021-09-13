@@ -30,7 +30,7 @@ export interface CalculatorData {
   topLocation: string
   subLocation: string
   subSubLocation: string | null // non-US county
-  population: string
+  population: number
   casesPastWeek: number
   casesIncreasingPercentage: number
   positiveCasePercentage: number | null
@@ -70,7 +70,7 @@ export const defaultValues: CalculatorData = {
   topLocation: '',
   subLocation: '',
   subSubLocation: '',
-  population: '',
+  population: 0,
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
@@ -198,9 +198,6 @@ export const MAX_POINTS = 100000
 // in either direction
 export const ERROR_FACTOR = 3
 
-export const parsePopulation = (input: string): number =>
-  Number(input.replace(/[^0-9.e]/g, ''))
-
 // Convention: all of these functions return null if they determine
 // that we have insufficient data filled in to do the calculation.
 // We also turn exceptions into null returns, to deal with outdated
@@ -210,8 +207,7 @@ export const calculateLocationReportedPrevalence = (
   data: CalculatorData,
 ): number | null => {
   try {
-    const population = parsePopulation(data.population)
-    if (population === 0) {
+    if (!data.population) {
       return null
     }
 
@@ -223,7 +219,7 @@ export const calculateLocationReportedPrevalence = (
     }
 
     // Additive smoothing, only relevant for super low case numbers
-    const prevalence = (lastWeek + 1) / population
+    const prevalence = (lastWeek + 1) / data.population
     return prevalence
   } catch (e) {
     return null

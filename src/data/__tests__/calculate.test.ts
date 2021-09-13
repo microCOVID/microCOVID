@@ -34,7 +34,7 @@ const baseTestData = {
   useManualEntry: 0,
   subLocation: 'mock city',
   topLocation: 'mock state',
-  population: '1,000,000',
+  population: 1000000,
   casesPastWeek: 2999, // will add 1 in pseudocount
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,
