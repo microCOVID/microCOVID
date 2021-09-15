@@ -76,7 +76,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
         value={
           props.data.percentFullyVaccinated === null
             ? 'no data available'
-            : (100 * props.data.percentFullyVaccinated).toFixed(0)
+            : props.data.percentFullyVaccinated.toString()
         }
         unit="%"
       />

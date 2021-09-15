@@ -11,7 +11,7 @@ The **Option A** questions are simpler, but don't provide as many prompts to ass
 1. **Symptoms now:** Do you currently have any new, concerning, or unexplainable COVID symptoms?  \
 [See symptoms list here →](/symptoms)
 2. **Symptoms reporting:** Are you willing to report any [symptoms](/symptoms) you develop in the 10 days after we see each other? (If so, please report them to me within 24 hours of them coming on.)
-3. **Your risk:** In the last 9 days:  Who have you been **within 6 feet of** or **shared indoor air space with**? (including grocery shopping, housemates, social, work, travel, doctor, exercise, etc.). For each interaction:
+3. **Your risk:** In the last 9 days:  Who have you been **within 6 feet (2 meters) of** or **shared indoor air space with**? (including grocery shopping, housemates, social, work, travel, doctor, exercise, etc.). For each interaction:
     1. How many people were around?
     2. **For each of those people:** what do you know (or not know) about their specific risks in the last 9 days? (_Sometimes you may only know generally (ex: “they are an average person in our area” or “they are a front line worker.”) If it’s someone you know personally, you may be able to ask them the above questions to get a more detailed picture of their current risk level)_
     3. Did you explicitly confirm that they have [no symptoms](/symptoms) before seeing them? 
@@ -45,10 +45,10 @@ To be most accurate, ask each of these questions for yourself **_AND for each pe
     2. Did they agree to report [symptoms](/symptoms) in the 10 days after the interaction?
     <br /><br />
 7. **Grocery:** Do you go grocery shopping? (Or does someone in your house?) What kind of mask do you wear? Do you go more than once a week? Are you in the store for more than an hour?
-8. **Work:** Do you work outside your home? If so, how many people are you within six feet of or sharing indoor air space with? Are you wearing a mask? Are the people you see wearing a mask? What kind? How far apart are you on average? What do you know about the risk profiles of the people you’re in contact with?
-9. **Travel:** Have you used public transit? Have you been on an airplane? Have you been in a car or rideshare with people outside your pod? How many people were within 3-15 feet of you?
+8. **Work:** Do you work outside your home? If so, how many people are you within six feet (two meters) of or sharing indoor air space with? Are you wearing a mask? Are the people you see wearing a mask? What kind? How far apart are you on average? What do you know about the risk profiles of the people you’re in contact with?
+9. **Travel:** Have you used public transit? Have you been on an airplane? Have you been in a car or rideshare with people outside your pod? How many people were within 3-15 feet (1-5 meters) of you?
 10. **Medical:** Have you had any medical or health-related appointments?
-11. **Exercise:** Have you been to the gym, pool, etc? If so, how many people were within 15 feet of you in the main area? How many people were within 15 feet of you in the locker room, and for how long?
+11. **Exercise:** Have you been to the gym, pool, etc? If so, how many people were within 15 feet (5 meters) of you in the main area? How many people were within 15 feet (5 meters) of you in the locker room, and for how long?
 12. **Sharing indoor air space in any other ways (other stores/buildings, etc):** Have you shared indoor air space with anyone else in the last 9 days? For how long? Were you wearing a mask? Were they? What kind of mask was it?
 
 
