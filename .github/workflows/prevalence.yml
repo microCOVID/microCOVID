@@ -10,19 +10,19 @@ jobs:
   prevalence:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout git repo (with full history)
-      uses: actions/checkout@v2
-      with:
-          fetch-depth: 0
-    
-    - uses: navikt/github-app-token-generator@v1
+
+    - name: Get INSTALLATION_ACCESS_TOKEN
+      uses: navikt/github-app-token-generator@v1
       id: get-token
       with:
         private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
         app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
-    - name: Set up python
-      uses: actions/setup-python@v2
+    - name: Checkout git repo (with full history)
+      uses: actions/checkout@v2
+      with:
+          token: ${{ steps.get-token.outputs.token }}
+          fetch-depth: 0
 
     - name: Set up virtualenv
       uses: syphar/restore-virtualenv@v1
