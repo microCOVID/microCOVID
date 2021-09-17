@@ -89,6 +89,7 @@ export default function ExplanationCard(props: {
         <Expandable
           id="calculation-explanation"
           header={t('calculator.explanationcard.details_header_closed')}
+          headerClassName="expandable-header-light"
           headerExpanded={t('calculator.explanationcard.details_header_open')}
         >
           <div id="changelog">
