@@ -34,7 +34,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
     <ControlledExpandable
       id={props.id}
       header={props.header}
-      headerClassName={props.hide ? 'd-none' : ''}
+      headerClassName={`expandable-header-light ${props.hide ? 'd-none' : ''}`}
       open={props.open}
       setter={props.setter}
     >
