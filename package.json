@@ -40,8 +40,8 @@
     "build": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage --watchAll=false",
-    "lint": "eslint src && prettier --check src/locales/en.json *.json",
-    "fix": "eslint src --fix && prettier --write src/locales/en.json *.json",
+    "lint": "black *.py --diff && eslint src && prettier --check src/locales/en.json *.json",
+    "fix": "eslint src --fix && prettier --write src/locales/en.json *.json && black *.py",
     "typecheck": "tsc",
     "prevalence": "./scripts/prevalence_helper.sh"
   },
