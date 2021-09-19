@@ -23,7 +23,7 @@ const changes: Change[] = [
       'https://docs.google.com/spreadsheets/d/1x8OdUOdaZl2tKEHSijPZh_geHVLzIWyaQQGVTtxfoPw',
     whatsNew: `
 * Fix: Shared budget reductions now account for whole-pod vaccines
-* Fix: Shared budget reductions now account for whole-pod vaccines`,
+* Fix: Fix missing automatic name generation for two location rows`,
     instructions: `
 1. **Pod Overview sheet**
     * Edit cell \`D109\` to contain this formula:
