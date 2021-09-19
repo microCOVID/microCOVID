@@ -240,7 +240,7 @@ class RomaniaPrevalenceData(pydantic.BaseModel):
 
     Date: date = pydantic.Field(alias="Data")
     County: str = pydantic.Field(alias="Judet")
-    Population: int = pydantic.Field(alias="Populatie")
+    Population: str = pydantic.Field(alias="Populatie")
     TotalCases: int = pydantic.Field(alias="Cazuri total")
 
 
@@ -1258,7 +1258,7 @@ def main() -> None:
         # Romanian county (judet) data. Treat as states internally.
         for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
             state = data.get_state(line.County, country="Romania")
-            state.population = line.Population
+            state.population = int(float(line.Population.replace(',', '')))
             state.cumulative_cases[line.Date] = line.TotalCases
         # Add Canada Public Health Unit (county-level) data
         populate_since = canada_effective_date - timedelta(days=16)
