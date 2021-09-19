@@ -102,15 +102,9 @@ You should add someone to your pod if you know you want to collaborate with some
 
 ### What happens when multiple people in the house see someone at once? How do we enter that activity?
 
-When multiple people in your pod see the same person on the same day, you all need to log the activity. Here are two approaches you can consider for how to log it.
+When multiple people in your pod see the same person on the same day, you all need to log the activity. 
 
-Let’s use an example where in a pod of 4 people, 2 of the podmates have dinner with someone outside the pod.
-
-The simplest option is to have everyone log that interaction as though it happened independently. This is very easy, because it’s just like any other interaction you would have.
-
-If the activity is 10 points, each podmate would just log it as 10 points.
-
-The downside is that, for a large pod, this overcalculates  the risk quite a bit. (See Option B for an explanation). If you aren’t too concerned about saving every last point in your budget, then this option might be a good choice because it’s simple. 
+The simplest approach is to have everyone log that interaction as though it happened independently. This is very easy, because it’s just like any other interaction you would have. If the activity is 10 points, each podmate would just log it as 10 points. The downside is that, for a large pod, this overcalculates the risk quite a bit.
 
 
 ### If an outside-of-pod person interacts with one person in our pod, does that mean we can all see them and it’s the same thing?
