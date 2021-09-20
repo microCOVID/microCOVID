@@ -49,7 +49,23 @@
             "environment_header": "Ambiente",
             "label": "Precauciones",
             "no_intimate_bonus_outdoors": "Estamos ignorando la elección del entorno en este cálculo. No estamos seguros de que una buena ventilación o estar al aire libre reduzca sustancialmente el riesgo cuando hay tanta cercanía física entre personas.",
-            "their_mask_header": "La mascarilla de los demás"
+            "their_mask_header": "La mascarilla de los demás",
+            "mask_not_listed": {
+                "mask_type": "",
+                "instructions": "",
+                "others_fallback": "",
+                "their_prompt": "",
+                "others": "",
+                "n95_like": "",
+                "select_instead": "",
+                "your_prompt": ""
+            },
+            "your_vaccine_label": "",
+            "your_vaccine_doses_label": "",
+            "your_vaccine_header": "",
+            "i_have_been_vaccinated": "",
+            "no_vaccine": "",
+            "doses_7_days_ago": ""
         },
         "prevalence": {
             "percent_increase_in_cases": "Incremento porcentual en casos desde la semana anterior a esta semana",
@@ -60,7 +76,9 @@
             "adjusted_prevalence": "Prevalencia ajustada",
             "reported_prevalence": "Prevalencia reportada",
             "positive_case_percentage": "Porcentaje de pruebas con resultados positivos",
-            "data_last_updated": "Última actualización de datos"
+            "data_last_updated": "Última actualización de datos",
+            "completed_vaccinations": "",
+            "completed_vaccinations_tooltip": ""
         },
         "category_postfix": "Riesgo",
         "category_extreme": "Extremo",
@@ -86,7 +104,8 @@
             "onetime_tips": "<li>Modifica tus actividades (hazlas con Mascarilla, con Distancia sana y en Exteriores)</li> <li>!Usa la mejor mascarilla facial que puedas! <br/><1/></li> <li>Visita lugares públicos durante las horas de menor aforo</li> <li>Reduce las idas a tiendas haciendo un solo viaje para comprar para varias personas, pidiendo que te entreguen a domicilio o comprando en línea</li> <li>Si esta actividad es con amigos, pídeles que no asistan si ellos o cualquiera de sus conocidos se sienten mal</li>",
             "onetime_header": "Estas son algunas formas de reducir el riesgo de esta actividad",
             "housemates_tips": "<li>Habla con ellos acerca de cómo sus acciones afectan tu riesgo, tanto como el de ellos</li> <li>Pídeles que MoDifiquEn sus actividades (Mascarillas, sana Distancia y ambientes al Exterior) </li> <li>Los trabajadores esenciales pueden usar una mascarilla de alta calidad (ej. N95 o KN95) para trabajar <1/></li> <li>Pídeles que reduzcan las actividades sociales sin sana distancia al mínimo número de personas posibles</li> <li>Alienta a tus conocidos que se aíslen y se realicen pruebas de diagnóstico a la primera señal de síntomas de COVID-19</li> <li>Si ellos tienen alto riesgo de adquirir COVID-19 y debes estar en interiores con ellos:<ul> <li>Usen mascarillas en espacios cerrados</li> <li>Maximicen la ventilación abriendo ventanas, encendiendo ventiladores que introduzcan aire desde el exterior y usen filtros de aire HEPA</li> <li>Aíslense dentro de la casa manteniéndose cada uno en cuartos distintos.</li> </ul></li>",
-            "housemates_header": "Aquí hay algunas maneras en las que puedes colaborar con tus conocidos cercanos para reducir su nivel de riesgo"
+            "housemates_header": "Aquí hay algunas maneras en las que puedes colaborar con tus conocidos cercanos para reducir su nivel de riesgo",
+            "link_to_mask_blog": ""
         },
         "risk_modifier_frac_2nd": "{{frac}} del riesgo",
         "select_scenario": "Opcional: comienza con una actividad común predefinida",
@@ -108,13 +127,23 @@
         "nearby_people_label": "Gente cercana",
         "intro": {
             "whats_this": "Hemos construido un estimador que te permite calcular el riesgo de contraer COVID-19 de una actividad o persona en tu vida diaria, utilizando la <1>mejor investigación disponible</1>. Esperamos que esta herramienta te ayude a mejorar tu intuición, a reducir tus niveles de estrés y a descubrir buenas estrategias de reducción de daños. </p> <p>El primer paso para proteger a tu familia y comunidad es evitar contraer COVID-19.",
-            "call_to_action": "Calcula el riesgo aproximado de contraer COVID-19 de una actividad o persona"
+            "call_to_action": "Calcula el riesgo aproximado de contraer COVID-19 de una actividad o persona",
+            "whats_this2": "",
+            "delta_warning_heading": "",
+            "see_video": "",
+            "delta_warning": ""
         },
         "risk_tolerance_1_percent_label": "Presupuesto estándar de seguridad",
         "alerts": {
             "survey_request": "<0>Nos encantaría recibir tus comentarios:</0> ¡Queremos tu ayuda para que el estimador de microCOVIDs sea lo más útil posible! <2>Por favor, participa en nuestra encuesta de usuarios</2> para ayudarnos a priorizar nuevas funciones.",
             "b117": "<0>Actualización del modelo:</0> Hemos ajustado los parámetros para la nueva variante del COVID-19, B117. Lee más <3>aquí</3>",
-            "masks_update": "<0> Actualización del modelo: </0> Nuestras opciones de mascarillas se han ampliado y actualizado. Para obtener más detalles, consulta la sección de Mascarillas de la <3>Publicación</3>."
+            "masks_update": "<0> Actualización del modelo: </0> Nuestras opciones de mascarillas se han ampliado y actualizado. Para obtener más detalles, consulta la sección de Mascarillas de la <3>Publicación</3>.",
+            "delta_numbers": "",
+            "sputnik_added": "",
+            "average_vaccine": "",
+            "delta_blog": "",
+            "december_covid19projections": "",
+            "full_changelog": ""
         },
         "saved_scenario_loaded_message": "Has seleccionado este escenario: <strong>{{ scenarioName }}</strong>. ¿Lo que se muestra a continuación se parece a la actividad que tienes en mente? Si no es así, ajústalos hasta que sean similares.",
         "warning": {
@@ -145,16 +174,57 @@
             "country_or_regions": "Provincia, región o estado",
             "US": "Condado o municipalidad",
             "US-AK": "Población",
-            "US-LA": "Municipio o población"
+            "US-LA": "Municipio o población",
+            "CA": ""
         },
         "location_subprompt": {
             "US": "Total a nivel provincia/región/estado o elige tu condado o municipio...",
             "US-AK": "Total a nivel provincia/región/estado o elige una población...",
             "US-LA": "Total a nivel provincia/región/estado, o elige un municipio...",
-            "country_or_regions": "Total a nivel país, o elige una provincia, región o estado..."
+            "country_or_regions": "Total a nivel país, o elige una provincia, región o estado...",
+            "CA": ""
         },
         "select_location_label": "País o estado de EUA",
-        "no_prebuilt_scenario_found": "Todavía no tenemos este escenario, pero puedes crear uno a continuación."
+        "no_prebuilt_scenario_found": "Todavía no tenemos este escenario, pero puedes crear uno a continuación.",
+        "no_vaccine_prevalence": "",
+        "their_vaccine_header": "",
+        "prevalence_info_supplementary_sources": {
+            "romania": "",
+            "canada2": "",
+            "canada1": ""
+        },
+        "location_subsubprompt": {
+            "CA": "",
+            "country_or_regions": ""
+        },
+        "select_scenario_start_over": "",
+        "repeated_interaction_risk_message": "",
+        "risk_tolerance_10_percent_explanation": "",
+        "duration_hours": "",
+        "location_subsublabel": {
+            "CA": "",
+            "country_or_regions": ""
+        },
+        "show_math": "",
+        "baseline_risk_short": "",
+        "partner_interaction_risk_message": "",
+        "select_location_label_clarifications": {
+            "US_state": "",
+            "country": ""
+        },
+        "their_vaccine_question": "",
+        "risk_tolerance_3_percent_label": "",
+        "risk_tolerance_3_percent_explanation": "",
+        "hide_math": "",
+        "location_risk_message": "",
+        "duration_minutes": "",
+        "one_time_interaction_risk_message": "",
+        "set_interaction_type_to_continue": "",
+        "duration_question_workplace": "",
+        "risk_tolerance_10_percent_label": "",
+        "saved_scenario_continue_custom": "",
+        "change_interaction_type": "",
+        "risk_modifier_multiple_short": ""
     },
     "current_lang_two_letter_code": "es",
     "menu": {
@@ -186,7 +256,11 @@
         "data_inputs_lead": "Este sitio contiene tres resultados de nuestra investigación",
         "where_to_start_header": "¿Por dónde empiezo?",
         "basic_description": "Es un proyecto para estimar cuantitativamente tu riesgo de contraer COVID-19 a causa de tus actividades cotidianas. Hemos buscado cifras en artículos científicos sobre las probabilidades de contraer COVID-19 en diferentes situaciones, y combinamos esos datos en un modelo que pueda ser usado por diferentes personas. Estimamos el riesgo de contraer COVID-19 en unidades de microCOVIDs, donde 1 microCOVID es igual a la probabilidad de 1 en un millón de contraer COVID-19.",
-        "intro_header": "¿Qué es el proyecto microCOVID?"
+        "intro_header": "¿Qué es el proyecto microCOVID?",
+        "affiliations_body": "",
+        "affiliations_header": "",
+        "who_are_we_header": "",
+        "who_are_we_body": ""
     },
     "scenario": {
         "votingInPerson": "Votación en persona",
@@ -205,7 +279,9 @@
         "1person_15minCarRide": "Viaje en coche con otra persona durante 15 minutos",
         "indoorUnmasked2": "Actividad relajada al interior con mascarillas con otras 2 personas además de ti",
         "outdoorMasked2": "Actividad o salida relajada al aire libre con mascarillas con otras 2 personas además de ti",
-        "oneNightStand": "Sexo casual con una persona desconocida"
+        "oneNightStand": "Sexo casual con una persona desconocida",
+        "custom": "",
+        "60minShoppingCrowded": ""
     },
     "data": {
         "person": {
@@ -252,7 +328,37 @@
         "n95_sealed_mask": "Mascarilla N95 de tipo médico con sello hermético",
         "kn95_mask": "Mascarilla KN95",
         "surgical_mask": "Mascarilla quirúrgica",
-        "thin_mask": "Mascarilla de algodón, delgada o floja (bandana, bufanda elástica, o cuelga floja, se cae)"
+        "thin_mask": "Mascarilla de algodón, delgada o floja (bandana, bufanda elástica, o cuelga floja, se cae)",
+        "their_vaccine": {
+            "yes": "",
+            "no_description": "",
+            "unknown": "",
+            "unknown_description": "",
+            "yes_description": "",
+            "no": ""
+        },
+        "vaccine": {
+            "astra_zeneca": "",
+            "moderna": "",
+            "sputnik": "",
+            "unknown": "",
+            "johnson_johnson": "",
+            "pfizer": ""
+        },
+        "p100_mask_yours": "",
+        "p100_mask_theirs": "",
+        "thin_mask_short": "",
+        "basic_mask_short": "",
+        "p100_mask_short": "",
+        "normal_voice_short": "",
+        "n95_sealed_mask_short": "",
+        "filtered_mask_short": "",
+        "n95_mask_short": "",
+        "surgical_mask_short": "",
+        "loud_voice_short": "",
+        "no_mask_short": "",
+        "silent_voice_short": "",
+        "workplace": ""
     },
     "buttons": {
         "select_default_action": "Elige uno..."
