@@ -1,4 +1,4 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001722,0.000809,0.000475,2.1769,1.0,0.001033
-Faroe Islands,Unknown,Unknown,0.000491,2.1769,1.0,0.001069
-Greenland,Unknown,Unknown,0.001145,2.1769,2.0,0.004985
+Entire country,0.001425,0.00067,0.000392,2.176,1.0,0.000854
+Faroe Islands,Unknown,Unknown,0.000675,2.176,1.6,0.002351
+Greenland,Unknown,Unknown,0.001233,2.176,1.6429,0.004408
