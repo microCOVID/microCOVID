@@ -7,7 +7,11 @@
             "data_last_updated": "Время обновления данных",
             "positive_case_percentage": "Процент положительных тестов",
             "percent_increase_in_cases": "Процент роста случаев с прошлой недели до текущей",
-            "last_week_cases": "Зарегистрированные случаи за прошедшую неделю"
+            "last_week_cases": "Зарегистрированные случаи за прошедшую неделю",
+            "adjusted_prevalence": "",
+            "reported_prevalence": "",
+            "completed_vaccinations": "",
+            "completed_vaccinations_tooltip": ""
         },
         "category_postfix": "Риск",
         "category_extreme": "Экстремальный",
@@ -101,7 +105,9 @@
             "onetime_warning": "Возможно, они не подойдут для вашего конкретного занятия.",
             "onetime_header": "Вот несколько способов снизить риск этой активности",
             "housemates_tips": "<li>Поговорите с ними о том, как их действия влияют на ваш и их риски заражения</li> <li>Попросите их носить маску, соблюдать дистанцию и проводить время на улице</li> <li>Работники, выполняющие необходимую работу, могут носить маски высокого уровня защиты (напр. N95 или KN95) <1/></li> <li>Попросите их ограничить количество людей, с которыми они общаются без дистанцирования, до минимума</li> <li>Убедите ваших близких изолироваться и сдать анализы при первых признаках симптомов COVID</li> <li>Если они находятся в категории риска, и вам необходимо находиться с ними в одном помещении: <ul> <li>Носите маски</li> <li>Тщательнее проветривайте помещение, открыв окна, установив вентиляторы и HEPA-фильтры</li> <li>Изолируйтесь внутри помещения по разным комнатам.</li> </ul></li>",
-            "housemates_header": "Вот несколько способов снизить риски людей, с которыми вы встречаетесь на работе"
+            "housemates_header": "Вот несколько способов снизить риски людей, с которыми вы встречаетесь на работе",
+            "onetime_tips": "",
+            "link_to_mask_blog": ""
         },
         "risk_note_about_household_members": "При расчёте риска заражения от члена вашей семьи или партнёра мы предполагаем, что вы общаетесь в помещении без масок и соблюдаете дистанцию.",
         "select_scenario": "Начните с подготовленного сценария или <2>сделайте свой собственный</2>:",
@@ -114,11 +120,15 @@
             "US": "Страна",
             "US-AK": "Район",
             "US-LA": "Приход",
-            "country_or_regions": "Регион"
+            "country_or_regions": "Регион",
+            "CA": ""
         },
         "location_subprompt": {
             "US-LA": "Область",
-            "country_or_regions": "Страна или регион"
+            "country_or_regions": "Страна или регион",
+            "US-AK": "",
+            "CA": "",
+            "US": ""
         },
         "location_selector_header": "Шаг 1: Ваше местоположение",
         "person_risk_profile_header": "Профиль риска",
@@ -131,8 +141,76 @@
         "risk_modifier_frac_plural": "{{frac}} рисков",
         "firsttime": {
             "microcovid_header": "Что такое microCOVID?",
-            "budget_header": "Что такое бюджет риска?"
-        }
+            "budget_header": "Что такое бюджет риска?",
+            "budget_explanation": "",
+            "microcovid_explanation": ""
+        },
+        "risk_step_label": "",
+        "location_subsubprompt": {
+            "country_or_regions": "",
+            "CA": ""
+        },
+        "prevalence_info_supplementary_sources": {
+            "canada1": "",
+            "canada2": "",
+            "romania": ""
+        },
+        "change_interaction_type": "",
+        "saved_scenario_continue_custom": "",
+        "prevalence_info_source_information": "",
+        "partner_interaction_risk_message": "",
+        "duration_minutes": "",
+        "location_subsublabel": {
+            "country_or_regions": "",
+            "CA": ""
+        },
+        "alerts": {
+            "delta_numbers": "",
+            "full_changelog": "",
+            "december_covid19projections": "",
+            "delta_blog": "",
+            "sputnik_added": "",
+            "average_vaccine": ""
+        },
+        "show_math": "",
+        "their_vaccine_question": "",
+        "select_scenario_start_over": "",
+        "intro": {
+            "whats_this2": "",
+            "see_video": "",
+            "delta_warning": "",
+            "whats_this": "",
+            "delta_warning_heading": "",
+            "call_to_action": ""
+        },
+        "risk_tolerance_point1_percent_explanation": "",
+        "one_time_interaction_risk_message": "",
+        "risk_group_empty_warning": "",
+        "duration_question_workplace": "",
+        "risk_tolerance_10_percent_explanation": "",
+        "select_location_label_clarifications": {
+            "US_state": "",
+            "country": ""
+        },
+        "location_risk_message": "",
+        "risk_tolerance_10_percent_label": "",
+        "risk_tolerance_3_percent_label": "",
+        "risk_tolerance_1_percent_explanation": "",
+        "no_vaccine_prevalence": "",
+        "repeated_interaction_risk_message": "",
+        "risk_modifier_multiple_short": "",
+        "household_members_note": "",
+        "duration_hours": "",
+        "large_group_warning": "",
+        "risk_tolerance_3_percent_explanation": "",
+        "set_interaction_type_to_continue": "",
+        "their_vaccine_header": "",
+        "hide_math": "",
+        "intimate_risk_warning": "",
+        "risk_modifier_multiple": "",
+        "risk_tolerance_point1_percent_label": "",
+        "saved_scenario_loaded_message": "",
+        "risk_tolerance_1_percent_label": ""
     },
     "current_lang_two_letter_code": "ru",
     "menu": {
@@ -151,16 +229,125 @@
         "restaurantOutdoors": "Приём пищи в ресторане, вне помещения",
         "planeRideMiddleSeatEmpty": "Полёт на самолёте (средняя наполненность салона)",
         "planeRide": "Полёт на самолёте (все места заняты)",
-        "restaurantIndoors": "Приём пищи в ресторане, в помещении"
+        "restaurantIndoors": "Приём пищи в ресторане, в помещении",
+        "60minShoppingFew": "",
+        "oneNightStand": "",
+        "60minShoppingCrowded": "",
+        "liveInPartner_noContacts": "",
+        "smallIndoorParty25": "",
+        "indoorUnmasked2": "",
+        "largeOutdoorParty": "",
+        "indoorUnmaskedWithCovidPositive": "",
+        "1person_15minCarRide": "",
+        "60minShopping": "",
+        "outdoorMaskedWithCovidPositive": "",
+        "outdoorMasked2": "",
+        "votingInPerson": "",
+        "custom": "",
+        "bar": ""
     },
     "button": {
-        "copy_link": "Скопируйте ссылку на этот сценарий"
+        "copy_link": "Скопируйте ссылку на этот сценарий",
+        "reset_form": ""
     },
     "about": {
         "donations_header": "Помочь проекту",
         "feedback": "Если у вас есть вопросы, предложения или вы хотели бы помочь, пожалуйста, <1>свяжитесь с нами </1>.",
-        "contact_us_header": "Контакты"
+        "contact_us_header": "Контакты",
+        "donations_details": "",
+        "affiliations_header": "",
+        "intro_header": "",
+        "disclaimer": "",
+        "data_inputs_whitepaper": "",
+        "data_inputs_calculator": "",
+        "data_inputs_lead": "",
+        "who_are_we_body": "",
+        "basic_description": "",
+        "affiliations_body": "",
+        "data_inputs_spreadsheet": "",
+        "where_to_start_header": "",
+        "who_are_we_header": "",
+        "data_inputs_recommendation": ""
     },
     "each time you do it": "всякий раз когда вы делаете это",
-    "per week": "в неделю"
+    "per week": "в неделю",
+    "data": {
+        "vaccine": {
+            "johnson_johnson": "",
+            "moderna": "",
+            "astra_zeneca": "",
+            "sputnik": "",
+            "unknown": "",
+            "pfizer": ""
+        },
+        "transit": "",
+        "tenft_distance": "",
+        "p100_mask_short": "",
+        "their_vaccine": {
+            "unknown_description": "",
+            "yes_description": "",
+            "no": "",
+            "unknown": "",
+            "no_description": "",
+            "yes": ""
+        },
+        "loud_voice_short": "",
+        "person": {
+            "contact1": "",
+            "closedPod4": "",
+            "average": "",
+            "frontline": "",
+            "contact4": "",
+            "closedPod20": "",
+            "contactWorks": "",
+            "livingWithPartner": "",
+            "bars": "",
+            "nonFrontline": "",
+            "hasCovid": "",
+            "closedPod10": "",
+            "microcovid_budget_one_percent": "",
+            "microcovid_budget_deci_percent": "",
+            "livingAlone": "",
+            "contact10": ""
+        },
+        "outdoor": "",
+        "normal_voice": "",
+        "no_mask_short": "",
+        "n95_sealed_mask": "",
+        "surgical_mask_short": "",
+        "silent_voice_short": "",
+        "normal_voice_short": "",
+        "partially_enclosed": "",
+        "n95_sealed_mask_short": "",
+        "thin_mask_short": "",
+        "p100_mask_theirs": "",
+        "filtered": "",
+        "n95_mask_short": "",
+        "oneTime": "",
+        "partner": "",
+        "surgical_mask": "",
+        "n95_mask": "",
+        "normal_distance": "",
+        "intimate_distance": "",
+        "loud_voice": "",
+        "filtered_mask": "",
+        "no_mask": "",
+        "filtered_mask_short": "",
+        "thin_mask": "",
+        "indoor": "",
+        "basic_mask": "",
+        "silent_voice": "",
+        "p100_mask_yours": "",
+        "sixft_distance": "",
+        "basic_mask_short": "",
+        "workplace": "",
+        "plane": "",
+        "car_windows_down": "",
+        "close_distance": "",
+        "repeated": ""
+    },
+    "buttons": {
+        "select_default_action": ""
+    },
+    "each time": ""
 }
