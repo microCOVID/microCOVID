@@ -34,7 +34,8 @@
                 "select_instead": "{{ mask_type }} auswählen",
                 "instructions": "Anleitung",
                 "mask_type": "Maskenart",
-                "their_prompt": "Ist die Maske der Anderen nicht in der Liste?"
+                "their_prompt": "Ist die Maske der Anderen nicht in der Liste?",
+                "n95_like": ""
             },
             "i_have_been_vaccinated": "Deine Impfung hinzufügen",
             "doses_7_days_ago": "Wenn deine letzte Dosis weniger als 1 Woche her ist, zieh 1 von deiner Antwort ab -- möglicherweise schützt dich die letzte Dosis noch nicht.",
@@ -122,7 +123,9 @@
             "last_week_cases": "Gemeldete Fälle der letzten Woche",
             "details_header": "Details",
             "adjusted_prevalence": "Angepasste Prävalenz",
-            "reported_prevalence": "Gemeldete Prävalenz"
+            "reported_prevalence": "Gemeldete Prävalenz",
+            "completed_vaccinations": "",
+            "completed_vaccinations_tooltip": ""
         },
         "risk_tolerance_point1_percent_explanation": "0,1 %-Chance einer COVID-Infektion pro Jahr (200 microCOVIDs pro Woche) Empfohlen, wenn du oder deine engen Kontakte durch COVID stärker gefährdet seid.",
         "risk_tolerance_point1_percent_label": "Hochvorsichtiges Budget",
@@ -145,7 +148,9 @@
             "call_to_action": "Berechne das ungefähre COVID-Risiko einer Aktivität oder Beziehung",
             "whats_this": "Wir haben einen Modellrechner entworfen, der das Risiko einer COVID-Infektion bei einer Aktivitäte oder einer Beziehung in deinem Alltag einschätzen soll und der sich auf die <1>besten verfügbaren Forschungsergebnisse</1> stützt. Wir hoffen, dass dieses Werkzeug dein Gespür schärft, deinen Stresslevel senkt und dich gute Strategien zur Schadensminimierung finden lässt.</p><p>Der erste Schritt um deine Familie und deine Umgebung zu schützen ist zu verhindern, dass du selbst COVID bekommst.",
             "see_video": "Wenn du eine Video-Erklärung über den Rechner und wie man ihn benutzt sehen möchtest, klicke <1>hier</1>.",
-            "whats_this2": "Dieser Rechner erlaubt es dir, dein COVID-Infektionsrisiko abzuschätzen und effektive Sicherheits-Konzepte für anpassbare Situationen zu finden. Beispiele: wie risikoreich ist <1>ein Gang zu meinem Supermarkt</1>? Was ist der sicherste Weg, <3>einen Freund zu treffen</3>? Wie viel würde es bringen, <5>eine bessere Maske auf der Arbeit zu tragen</5>?"
+            "whats_this2": "Dieser Rechner erlaubt es dir, dein COVID-Infektionsrisiko abzuschätzen und effektive Sicherheits-Konzepte für anpassbare Situationen zu finden. Beispiele: wie risikoreich ist <1>ein Gang zu meinem Supermarkt</1>? Was ist der sicherste Weg, <3>einen Freund zu treffen</3>? Wie viel würde es bringen, <5>eine bessere Maske auf der Arbeit zu tragen</5>?",
+            "delta_warning": "",
+            "delta_warning_heading": ""
         },
         "warning": {
             "important": "Wichtig",
@@ -168,7 +173,12 @@
             "full_changelog": "Zeige alle Updates...",
             "masks_update": "<0>28. Januar 2021:</0> Wir haben neue Maskentypen hinzugefügt und die Multiplikatoren für bestehende aktualisiert. Erfahre mehr in <3>unserem neuen Blog-Post über Masken</3>.",
             "vaccines_update": "<0> 23. Februar 2021:</0> Der Rechner vermindert jetzt dein Risiko, wenn du geimpft wurdest. Mehr erfährst du in dem <2>Q&A</2>.",
-            "vaccines_update_2": "<0>16. März 2021:</0> Der Risiko-Zähler erlaubt jetzt Szenarien, bei denen du eine Person triffst, die bereits geimpft wurde. Siehe dazu mehr<2>hier</2>."
+            "vaccines_update_2": "<0>16. März 2021:</0> Der Risiko-Zähler erlaubt jetzt Szenarien, bei denen du eine Person triffst, die bereits geimpft wurde. Siehe dazu mehr<2>hier</2>.",
+            "delta_numbers": "",
+            "average_vaccine": "",
+            "december_covid19projections": "",
+            "sputnik_added": "",
+            "delta_blog": ""
         },
         "frontline_worker_acknowledgement": "Wir schätzen die Opfer, die die Frontarbeiter während der Pandemie bringen, sehr. Wir ermutigen dich, sichere Wege zu finden, diese Menschen zu unterstützen, sie sozial einzubeziehen und zu pflegen. Wir gehen davon aus, dass die meisten dieser Arbeitnehmer in den nächsten Monaten geimpft werden, was ihr Infektionsrisiko/die Übertragung erheblich verringern dürfte.",
         "switch_button": {
@@ -180,13 +190,15 @@
             "US": "Landkreis",
             "US-AK": "Stadtbezirk",
             "US-LA": "Kommune",
-            "country_or_regions": "Bundesland"
+            "country_or_regions": "Bundesland",
+            "CA": ""
         },
         "location_subprompt": {
             "US": "Gesamtes Bundesland, oder Landkreis auswählen…",
             "US-AK": "Gesamtes Bundesland, oder Bezirk auswählen…",
             "US-LA": "Gesamtes Bundesland, oder Kommune auswählen…",
-            "country_or_regions": "Gesamtes Land oder Region auswählen …"
+            "country_or_regions": "Gesamtes Land oder Region auswählen …",
+            "CA": ""
         },
         "whats_next_interaction_risk_message": "Wie wahrscheinlich ist es, dass jemand infiziert ist? Das hängt von deinem Aufenthaltsort und dem Verhalten der Leute um dich herum ab. Dieser Rechner wird dich außerdem durch <1>Entscheidungen, die du treffen kannst</1> führen, um dein Ausgangsrisiko zu verändern (belegt durch <4>Forschung</4>!)",
         "partner_interaction_risk_message": "Wenn diese Person infiziert ist, gilt der Ausgangswert einer <1>{{ percentage }} Chance der Übertragung pro Woche</1>.",
@@ -199,7 +211,37 @@
         "risk_tolerance_10_percent_label": "Schadensminimierung-Risikobudget",
         "risk_modifier_multiple_short": "{{multiplier}}-fach",
         "baseline_risk_short": "Basisrisiko",
-        "post_results_survey": "Würdest du <1>ein paar Fragen beantworten, um microCOVID zu verbessern</1>?"
+        "post_results_survey": "Würdest du <1>ein paar Fragen beantworten, um microCOVID zu verbessern</1>?",
+        "no_vaccine_prevalence": "",
+        "select_location_label_clarifications": {
+            "country": "",
+            "US_state": ""
+        },
+        "saved_scenario_continue_custom": "",
+        "duration_question_workplace": "",
+        "select_scenario_start_over": "",
+        "change_interaction_type": "",
+        "hide_math": "",
+        "prevalence_info_supplementary_sources": {
+            "canada2": "",
+            "romania": "",
+            "canada1": ""
+        },
+        "location_subsubprompt": {
+            "CA": "",
+            "country_or_regions": ""
+        },
+        "location_risk_message": "",
+        "location_subsublabel": {
+            "country_or_regions": "",
+            "CA": ""
+        },
+        "set_interaction_type_to_continue": "",
+        "duration_minutes": "",
+        "duration_hours": "",
+        "show_math": "",
+        "their_vaccine_header": "",
+        "their_vaccine_question": ""
     },
     "data": {
         "person": {
@@ -252,7 +294,9 @@
             "unknown": "Unbekannt oder andere",
             "astra_zeneca": "AstraZeneca",
             "moderna": "Moderna",
-            "pfizer": "Pfizer BioNTech"
+            "pfizer": "Pfizer BioNTech",
+            "johnson_johnson": "",
+            "sputnik": ""
         },
         "p100_mask_short": "P100-Schutzmaske",
         "n95_mask_short": "N95, KN95, oder FFP2",
@@ -260,7 +304,21 @@
         "surgical_mask_short": "Medizinisch",
         "basic_mask_short": "Stoff, dick und enganliegend",
         "thin_mask_short": "Stoff, dünn oder lose",
-        "no_mask_short": "Keine Maske"
+        "no_mask_short": "Keine Maske",
+        "their_vaccine": {
+            "yes": "",
+            "no_description": "",
+            "unknown": "",
+            "yes_description": "",
+            "unknown_description": "",
+            "no": ""
+        },
+        "p100_mask_yours": "",
+        "normal_voice_short": "",
+        "p100_mask_theirs": "",
+        "n95_sealed_mask_short": "",
+        "loud_voice_short": "",
+        "silent_voice_short": ""
     },
     "scenario": {
         "votingInPerson": "Stimmabgabe im Wahllokal",
