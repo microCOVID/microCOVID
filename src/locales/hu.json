@@ -124,7 +124,8 @@
             "percent_increase_in_cases": "Növekedés a múlt hétről a mostanira",
             "positive_case_percentage": "Pozitív tesztek aránya",
             "data_last_updated": "Utolsó frissítés",
-            "completed_vaccinations": "Teljesen beoltottak aránya"
+            "completed_vaccinations": "Teljesen beoltottak aránya",
+            "completed_vaccinations_tooltip": ""
         },
         "location_subprompt_country_or_regions": "Az egész terület (vagy válassz régiót)",
         "location_subprompt_US-LA": "Az egész terület (vagy válassz megyét)",
@@ -178,7 +179,8 @@
             "delta_numbers": "<0>2021 július 26.:</0> Frissítettük a számításokat a delta variáns terjedési számaival. Jelentősen megnőttek a kockázatok, beoltottak számára is. <2>Itt olvashatsz többet</2> a részletekről.",
             "average_vaccine": "<0>2021 június 22.:</0> Hozzáadtuk a lehetőségét annak, hogy az átlagemberek oltottsági státuszát meg lehessen adni. <2>Itt olvashatsz részletesebben</2> arról (angolul), hogy milyen számításokat végeztünk ehhez.",
             "sputnik_added": "<0>2021 április 10.:</0>Hozzáadtuk a Sputnik V oltást is a listához. <2>Itt olvashatsz</2> többet arról, hogy milyen adatok alapján becsültük meg a hatásosságát.",
-            "december_covid19projections": "<0>2021 május 27.:</0> Frissítettük a modellünket a <2>COVID19 Projections</2> frissített adatai alapján. Ez enyhén csökkentette a kockázati becsléseket."
+            "december_covid19projections": "<0>2021 május 27.:</0> Frissítettük a modellünket a <2>COVID19 Projections</2> frissített adatai alapján. Ez enyhén csökkentette a kockázati becsléseket.",
+            "delta_blog": ""
         },
         "switch_button": {
             "select_location": "Kész fertőzési adatok használata",
@@ -189,13 +191,15 @@
             "US": "Megye",
             "US-AK": "Megye",
             "US-LA": "Megye",
-            "country_or_regions": "Régió"
+            "country_or_regions": "Régió",
+            "CA": ""
         },
         "location_subprompt": {
             "US": "Az egész terület (vagy válassz megyét)",
             "US-AK": "Az egész terület (vagy válassz megyét)",
             "US-LA": "Az egész terület (vagy válassz megyét)",
-            "country_or_regions": "Az egész terület (vagy válassz régiót)"
+            "country_or_regions": "Az egész terület (vagy válassz régiót)",
+            "CA": ""
         },
         "no_prebuilt_scenario_found": "Még nincs ilyen kész példánk.",
         "whats_next_interaction_risk_message": "Mekkora eséllyel fertőzött valaki, akivel találkozol? Ez attól függ, hogy épp hol vagy és hogy ők milyen kockázatnak teszik ki maguk. Ez a kalkulátor végigvezet azon, hogy (megbízható <4>tudományos források szerint</4>) <1>te milyen döntéseket tudsz hozni</1>, hogy csökkentsd a saját kockázatod.",
@@ -218,7 +222,27 @@
         "change_interaction_type": "Törlés",
         "select_scenario_start_over": "Újrakezdés",
         "their_vaccine_question": "Megkapták az összes oltást?",
-        "their_vaccine_header": "A többiek oltása"
+        "their_vaccine_header": "A többiek oltása",
+        "duration_question_workplace": "",
+        "prevalence_info_supplementary_sources": {
+            "canada2": "",
+            "romania": "",
+            "canada1": ""
+        },
+        "duration_minutes": "",
+        "location_subsubprompt": {
+            "CA": "",
+            "country_or_regions": ""
+        },
+        "duration_hours": "",
+        "location_subsublabel": {
+            "CA": "",
+            "country_or_regions": ""
+        },
+        "select_location_label_clarifications": {
+            "US_state": "",
+            "country": ""
+        }
     },
     "per week": "hetente",
     "each time you do it": "minden egyes alkalommal",
@@ -298,7 +322,10 @@
             "yes": "Igen",
             "unknown_description": "Nem ismert oltási státusz",
             "no_description": "Nem vagy csak részlegesen oltották be"
-        }
+        },
+        "loud_voice_short": "",
+        "silent_voice_short": "",
+        "normal_voice_short": ""
     },
     "scenario": {
         "outdoorMasked2": "Találkozás két másik emberrel szabadban, maszkban",
