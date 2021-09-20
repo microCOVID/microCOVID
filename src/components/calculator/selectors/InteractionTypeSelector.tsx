@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs'
 
 import { VerticalControl } from 'components/calculator/controls/VerticalControl'
-import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
+import { formatPercent } from 'components/calculator/util/FormatPrecision'
 import { CalculatorData, calculateLocationPersonAverage } from 'data/calculate'
 import { BaseFormValue, Interaction } from 'data/data'
 import 'components/calculator/styles/InteractionTypeSelector.scss'
@@ -99,7 +99,7 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
               <Trans
                 i18nKey={getInteractionRiskMessage(props.interactionType)}
                 values={{
-                  percentage: fixedPointPrecisionPercent(
+                  percentage: formatPercent(
                     Interaction[props.interactionType].multiplier,
                   ),
                 }}
@@ -112,13 +112,11 @@ export const InteractionTypeDisplay: React.FunctionComponent<{
               <Trans
                 i18nKey="calculator.location_risk_message"
                 values={{
-                  prevalence:
-                    (
-                      ((calculateLocationPersonAverage(props.currentData) ||
-                        0) *
-                        100) /
-                      1e6
-                    ).toFixed(2) + '%',
+                  prevalence: formatPercent(
+                    (calculateLocationPersonAverage(props.currentData) || 0) /
+                      1e6,
+                    { decimalPointsToShow: 2 },
+                  ),
                 }}
               >
                 [<strong>~0.03%</strong> of people here are currently

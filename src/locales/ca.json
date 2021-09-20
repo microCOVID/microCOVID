@@ -90,8 +90,8 @@
             "details_overview_header": "Càlcul",
             "details_header_open": "Amaga els detalls del càlcul",
             "details_header_closed": "Mostra els detalls del càlcul",
-            "percentage_suffix": "% del pressupost de risc setmanal",
-            "multiple_suffix": "× del pressupost de risc setmanal",
+            "percentage_suffix": "{{ percentage }} del pressupost de risc setmanal",
+            "multiple_suffix": "{{ multiple }}× del pressupost de risc setmanal",
             "person": "persona",
             "person_plural": "persones"
         },
