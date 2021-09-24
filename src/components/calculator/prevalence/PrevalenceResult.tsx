@@ -2,6 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Trans } from 'react-i18next'
 
+import { formatPercent } from 'components/calculator/util/FormatPrecision'
 import {
   CalculatorData,
   calculateLocationPersonAverage,
@@ -16,19 +17,17 @@ export const PrevalenceResult = (props: {
       <Card.Body>
         <div>
           <Trans>calculator.prevalence.reported_prevalence</Trans>:{' '}
-          {(
-            (calculateLocationReportedPrevalence(props.data) || 0) * 100
-          ).toFixed(2)}
-          %
+          {formatPercent(calculateLocationReportedPrevalence(props.data) || 0, {
+            decimalPointsToShow: 2,
+          })}
         </div>
         <div>
           <strong>
             <Trans>calculator.prevalence.adjusted_prevalence</Trans>:{' '}
-            {(
-              ((calculateLocationPersonAverage(props.data) || 0) * 100) /
-              1e6
-            ).toFixed(2)}
-            %
+            {formatPercent(
+              (calculateLocationPersonAverage(props.data) || 0) / 1e6,
+              { decimalPointsToShow: 2 },
+            )}
           </strong>
         </div>
       </Card.Body>
