@@ -1,9 +1,9 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000147,6.9e-05,5.7e-05,2.3341,1.0,0.000132
-Azad Jammu and Kashmir,Unknown,Unknown,5.1e-05,2.3341,1.0,0.000118
-Balochistan,Unknown,Unknown,9e-06,2.3341,1.0,2e-05
-Gilgit-Baltistan,Unknown,Unknown,4.4e-05,2.3341,1.0,0.000104
-Islamabad,Unknown,Unknown,0.000398,2.3341,1.0,0.000929
-Khyber Pakhtunkhwa,Unknown,Unknown,5.2e-05,2.3341,1.0,0.000121
-Punjab,Unknown,Unknown,4.9e-05,2.3341,1.0,0.000114
-Sindh,Unknown,Unknown,9.2e-05,2.3341,1.0,0.000215
+Entire country,0.000137,6.4e-05,5.3e-05,2.3211,1.0,0.000123
+Azad Jammu and Kashmir,Unknown,Unknown,5e-05,2.3211,1.0,0.000116
+Balochistan,Unknown,Unknown,8e-06,2.3211,1.0,1.9e-05
+Gilgit-Baltistan,Unknown,Unknown,4.2e-05,2.3211,1.0,9.8e-05
+Islamabad,Unknown,Unknown,0.000375,2.3211,1.0,0.000871
+Khyber Pakhtunkhwa,Unknown,Unknown,5e-05,2.3211,1.0,0.000116
+Punjab,Unknown,Unknown,4.6e-05,2.3211,1.0,0.000106
+Sindh,Unknown,Unknown,8.5e-05,2.3211,1.0,0.000197
