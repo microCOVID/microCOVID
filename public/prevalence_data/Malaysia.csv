@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.010492,0.004931,0.002576,2.6078,1.0,0.006717
-Johor,Unknown,Unknown,0.002354,2.6078,1.0,0.006138
-Kedah,Unknown,Unknown,0.002365,2.6078,1.0,0.006168
-Kelantan,Unknown,Unknown,0.004112,2.6078,1.0,0.010724
-Melaka,Unknown,Unknown,0.002337,2.6078,1.1016,0.006715
-Negeri Sembilan,Unknown,Unknown,0.000948,2.6078,1.0,0.002472
-Pahang,Unknown,Unknown,0.00281,2.6078,1.0,0.007328
-Perak,Unknown,Unknown,0.002423,2.6078,1.0,0.00632
-Perlis,Unknown,Unknown,0.00183,2.6078,1.052,0.005021
-Pulau Pinang,Unknown,Unknown,0.003274,2.6078,1.0,0.008537
-Sabah,Unknown,Unknown,0.00165,2.6078,1.0,0.004303
-Sarawak,Unknown,Unknown,0.006392,2.6078,1.0,0.016669
-Selangor,Unknown,Unknown,0.001532,2.6078,1.0,0.003996
-Terengganu,Unknown,Unknown,0.003887,2.6078,1.0,0.010136
-W.P. Kuala Lumpur,Unknown,Unknown,0.000949,2.6078,1.0,0.002475
-W.P. Labuan,Unknown,Unknown,0.000211,2.6078,1.0,0.000551
-W.P. Putrajaya,Unknown,Unknown,0.001622,2.6078,1.0,0.004231
+Entire country,0.010007,0.004703,0.002451,2.6068,1.0,0.006389
+Johor,Unknown,Unknown,0.002228,2.6068,1.0,0.005808
+Kedah,Unknown,Unknown,0.002342,2.6068,1.0,0.006105
+Kelantan,Unknown,Unknown,0.003895,2.6068,1.0,0.010155
+Melaka,Unknown,Unknown,0.00217,2.6068,1.0,0.005657
+Negeri Sembilan,Unknown,Unknown,0.000971,2.6068,1.0,0.002531
+Pahang,Unknown,Unknown,0.002826,2.6068,1.0,0.007366
+Perak,Unknown,Unknown,0.002294,2.6068,1.0,0.00598
+Perlis,Unknown,Unknown,0.001775,2.6068,1.0112,0.00468
+Pulau Pinang,Unknown,Unknown,0.003085,2.6068,1.0,0.008042
+Sabah,Unknown,Unknown,0.00157,2.6068,1.0,0.004094
+Sarawak,Unknown,Unknown,0.005851,2.6068,1.0,0.015252
+Selangor,Unknown,Unknown,0.001447,2.6068,1.0,0.003772
+Terengganu,Unknown,Unknown,0.004,2.6068,1.0,0.010428
+W.P. Kuala Lumpur,Unknown,Unknown,0.00091,2.6068,1.0,0.002373
+W.P. Labuan,Unknown,Unknown,0.000171,2.6068,1.0,0.000446
+W.P. Putrajaya,Unknown,Unknown,0.001622,2.6068,1.0,0.004229
