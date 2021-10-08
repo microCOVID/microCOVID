@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.009006,0.004233,0.00219,2.6038,1.0,0.005702
-Johor,Unknown,Unknown,0.001946,2.6038,1.0,0.005067
-Kedah,Unknown,Unknown,0.002172,2.6038,1.0,0.005656
-Kelantan,Unknown,Unknown,0.003926,2.6038,1.0,0.010221
-Melaka,Unknown,Unknown,0.001785,2.6038,1.0,0.004648
-Negeri Sembilan,Unknown,Unknown,0.001018,2.6038,1.0869,0.00288
-Pahang,Unknown,Unknown,0.002617,2.6038,1.0,0.006814
-Perak,Unknown,Unknown,0.002011,2.6038,1.0,0.005236
-Perlis,Unknown,Unknown,0.001681,2.6038,1.0071,0.004408
-Pulau Pinang,Unknown,Unknown,0.002815,2.6038,1.0,0.00733
-Sabah,Unknown,Unknown,0.001457,2.6038,1.0,0.003793
-Sarawak,Unknown,Unknown,0.004433,2.6038,1.0,0.011543
-Selangor,Unknown,Unknown,0.001383,2.6038,1.0,0.0036
-Terengganu,Unknown,Unknown,0.003812,2.6038,1.007,0.009994
-W.P. Kuala Lumpur,Unknown,Unknown,0.000844,2.6038,1.0,0.002198
-W.P. Labuan,Unknown,Unknown,0.000221,2.6038,1.0,0.000576
-W.P. Putrajaya,Unknown,Unknown,0.00167,2.6038,1.0938,0.004756
+Entire country,0.008663,0.004072,0.002102,2.6028,1.0,0.005471
+Johor,Unknown,Unknown,0.00188,2.6028,1.0,0.004894
+Kedah,Unknown,Unknown,0.00193,2.6028,1.0,0.005023
+Kelantan,Unknown,Unknown,0.00382,2.6028,1.0,0.009943
+Melaka,Unknown,Unknown,0.001856,2.6028,1.0,0.004831
+Negeri Sembilan,Unknown,Unknown,0.00106,2.6028,1.1801,0.003256
+Pahang,Unknown,Unknown,0.002538,2.6028,1.0,0.006605
+Perak,Unknown,Unknown,0.001964,2.6028,1.0,0.005111
+Perlis,Unknown,Unknown,0.002086,2.6028,1.299,0.007052
+Pulau Pinang,Unknown,Unknown,0.002791,2.6028,1.0,0.007266
+Sabah,Unknown,Unknown,0.001412,2.6028,1.0,0.003676
+Sarawak,Unknown,Unknown,0.004052,2.6028,1.0,0.010547
+Selangor,Unknown,Unknown,0.0013,2.6028,1.0,0.003385
+Terengganu,Unknown,Unknown,0.00379,2.6028,1.0,0.009865
+W.P. Kuala Lumpur,Unknown,Unknown,0.00084,2.6028,1.0,0.002185
+W.P. Labuan,Unknown,Unknown,0.000211,2.6028,1.1111,0.000611
+W.P. Putrajaya,Unknown,Unknown,0.001964,2.6028,1.1839,0.006052
