@@ -466,10 +466,14 @@ class Place(pydantic.BaseModel):
         ...
 
     def set_total_vaccines(self, partial_vaccinations: int, complete_vaccinations: int):
+        if partial_vaccinations is None or complete_vaccinations is None:
+            return
         self.vaccines_total.partial_vaccinations = partial_vaccinations
         self.vaccines_total.completed_vaccinations = complete_vaccinations
 
     def set_vaccines_of_type(self, vaccine_type: str, partial: int, complete: int):
+        if partial is None or complete is None:
+            return
         if self.vaccines_by_type is None:
             self.vaccines_by_type = {}
 
@@ -1203,22 +1207,23 @@ def main() -> None:
         for item in parse_csv(cache, JHUVaccinesHourlyUs, JHUVaccinesHourlyUs.SOURCE):
             try:
                 state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
-                if item.Vaccine_Type == "All":
-                    state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
-                elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
-                    # If listed, Stage_One_Doses appears to include people with second doses.
-                    partially_vaccinated = (
-                        item.Stage_One_Doses - item.Stage_Two_Doses
-                        if item.Stage_One_Doses is not None
-                        else item.Doses_admin - item.Stage_Two_Doses * 2
-                    )
-                    state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
-                elif item.Vaccine_Type == "Janssen":
-                    state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
             except KeyError:
                 continue
                 # Suppressed debug info - includes things like DoD, VHA, etc.
                 # print(f"Could not find state {item.Province_State}")
+            if item.Vaccine_Type == "All":
+                state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
+            elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
+                # If listed, Stage_One_Doses appears to include people with second doses.
+                if item.Stage_Two_Doses is None:
+                    partially_vaccinated = None
+                elif item.Stage_One_Doses is None:
+                    partially_vaccinated = item.Doses_admin - item.Stage_Two_Doses * 2
+                else:
+                    partially_vaccinated = item.Stage_One_Doses - item.Stage_Two_Doses
+                state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
+            elif item.Vaccine_Type == "Janssen":
+                state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
 
         # Test positivity and vaccination status per US county and state
         for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
