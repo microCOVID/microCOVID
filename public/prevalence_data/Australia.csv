@@ -1,10 +1,10 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.002073,0.000974,0.000619,2.1816,1.0,0.001351
-Australian Capital Territory,Unknown,Unknown,0.000374,2.1816,1.0,0.000815
-New South Wales,Unknown,Unknown,0.000261,2.1816,1.0,0.000569
-Northern Territory,Unknown,Unknown,1.6e-05,2.1816,1.0,3.6e-05
-Queensland,Unknown,Unknown,3e-06,2.1816,1.1667,7e-06
-South Australia,Unknown,Unknown,2e-06,2.1816,1.0,5e-06
-Tasmania,Unknown,Unknown,2e-06,2.1816,1.0,4e-06
-Victoria,Unknown,Unknown,0.002032,2.1816,1.0553,0.004678
-Western Australia,Unknown,Unknown,1e-06,2.1816,1.0,2e-06
+Entire country,0.002029,0.000954,0.000604,2.1813,1.0,0.001317
+Australian Capital Territory,Unknown,Unknown,0.000383,2.1813,1.0,0.000836
+New South Wales,Unknown,Unknown,0.00026,2.1813,1.0,0.000568
+Northern Territory,Unknown,Unknown,8e-06,2.1813,1.0,1.8e-05
+Queensland,Unknown,Unknown,2e-06,2.1813,1.0,5e-06
+South Australia,Unknown,Unknown,2e-06,2.1813,1.0,5e-06
+Tasmania,Unknown,Unknown,2e-06,2.1813,1.0,4e-06
+Victoria,Unknown,Unknown,0.001973,2.1813,1.0199,0.004389
+Western Australia,Unknown,Unknown,0.0,2.1813,1.0,1e-06
