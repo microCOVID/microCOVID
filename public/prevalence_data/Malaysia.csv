@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.005071,0.002383,0.001282,2.3723,1.0,0.003042
-Johor,Unknown,Unknown,0.001151,2.3723,1.0,0.00273
-Kedah,Unknown,Unknown,0.001123,2.3723,1.0,0.002664
-Kelantan,Unknown,Unknown,0.002141,2.3723,1.0,0.005079
-Melaka,Unknown,Unknown,0.001436,2.3723,1.0,0.003406
-Negeri Sembilan,Unknown,Unknown,0.001029,2.3723,1.0,0.002441
-Pahang,Unknown,Unknown,0.00116,2.3723,1.0,0.002751
-Perak,Unknown,Unknown,0.001088,2.3723,1.0,0.00258
-Perlis,Unknown,Unknown,0.00086,2.3723,1.0,0.002041
-Pulau Pinang,Unknown,Unknown,0.001463,2.3723,1.0,0.003471
-Sabah,Unknown,Unknown,0.001026,2.3723,1.0,0.002434
-Sarawak,Unknown,Unknown,0.001775,2.3723,1.0,0.004211
-Selangor,Unknown,Unknown,0.001088,2.3723,1.0,0.002581
-Terengganu,Unknown,Unknown,0.002071,2.3723,1.0,0.004913
-W.P. Kuala Lumpur,Unknown,Unknown,0.000996,2.3723,1.0051,0.002374
-W.P. Labuan,Unknown,Unknown,0.000272,2.3723,2.0,0.001289
-W.P. Putrajaya,Unknown,Unknown,0.001556,2.3723,1.0,0.003691
+Entire country,0.00502,0.002359,0.001268,2.3717,1.0,0.003007
+Johor,Unknown,Unknown,0.001107,2.3717,1.0,0.002625
+Kedah,Unknown,Unknown,0.001146,2.3717,1.0,0.002719
+Kelantan,Unknown,Unknown,0.002086,2.3717,1.0,0.004948
+Melaka,Unknown,Unknown,0.001496,2.3717,1.0,0.003547
+Negeri Sembilan,Unknown,Unknown,0.001033,2.3717,1.0,0.002449
+Pahang,Unknown,Unknown,0.001128,2.3717,1.0,0.002676
+Perak,Unknown,Unknown,0.001043,2.3717,1.0,0.002474
+Perlis,Unknown,Unknown,0.000817,2.3717,1.0,0.001938
+Pulau Pinang,Unknown,Unknown,0.001374,2.3717,1.0,0.003258
+Sabah,Unknown,Unknown,0.001026,2.3717,1.0,0.002433
+Sarawak,Unknown,Unknown,0.001784,2.3717,1.0,0.004231
+Selangor,Unknown,Unknown,0.001094,2.3717,1.0,0.002595
+Terengganu,Unknown,Unknown,0.002037,2.3717,1.0,0.004832
+W.P. Kuala Lumpur,Unknown,Unknown,0.000985,2.3717,1.0,0.002335
+W.P. Labuan,Unknown,Unknown,0.000312,2.3717,2.0,0.001479
+W.P. Putrajaya,Unknown,Unknown,0.001632,2.3717,1.0,0.00387
