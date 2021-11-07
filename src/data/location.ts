@@ -61651,4 +61651,5 @@ export const Locations: { [key: string]: Location } = {
   // update_prevalence locations end
 }
 
+// TODO remove once updated date is included per-location
 export const PrevalenceDataDate = 'November 05, 2021' // update_prevalence date

@@ -611,6 +611,9 @@ class Place(pydantic.BaseModel):
             completeVaccinations=self.completed_vaccination_total() or None,
             unvaccinatedPrevalenceRatio=self.unvaccinated_relative_prevalence(),
             averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
+            # we have to format the date like this to get it to be parsed correctly by JS
+            # Otherwise it assumes UTC time and will sometimes subtract a day
+            updatedAt="{}T00:00:00".format(effective_date.strftime("%B %d, %Y"))
         )
 
 
@@ -685,6 +688,7 @@ class AppLocation(pydantic.BaseModel):
     completeVaccinations: Optional[int]
     unvaccinatedPrevalenceRatio: Optional[float]
     averageFullyVaccinatedMultiplier: float
+    updatedAt: str
 
     # https://covid19-projections.com/estimating-true-infections-revisited/
     def prevalenceRatio(self) -> float:
@@ -1468,19 +1472,11 @@ def main() -> None:
 
     output: List[str] = []
     skipping = False
-    missing_markers = {"locations", "date"}
+    missing_markers = {"locations"}
     for line in lines:
         if "// update_prevalence locations end" in line:
             assert skipping
             skipping = False
-        if "// update_prevalence date" in line:
-            output.append(
-                "export const PrevalenceDataDate = '{}' // update_prevalence date\n".format(
-                    effective_date.strftime("%B %d, %Y")
-                )
-            )
-            missing_markers.remove("date")
-            continue
         if not skipping:
             output.append(line)
         if "// update_prevalence locations start" in line:
