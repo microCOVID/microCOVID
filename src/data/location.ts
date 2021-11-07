@@ -12,6 +12,7 @@ export interface Location {
   completeVaccinations: number | null
   unvaccinatedPrevalenceRatio: number | null
   averageFullyVaccinatedMultiplier: number | null
+  updatedAt?: string
 }
 
 // NOTE: anything between 'locations start' and 'locations end',
