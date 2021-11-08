@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004312,0.002027,0.001091,2.333,1.0,0.002545
-Johor,Unknown,Unknown,0.000759,2.333,1.0,0.001771
-Kedah,Unknown,Unknown,0.001057,2.333,1.0,0.002465
-Kelantan,Unknown,Unknown,0.001768,2.333,1.0,0.004126
-Melaka,Unknown,Unknown,0.001502,2.333,1.0,0.003504
-Negeri Sembilan,Unknown,Unknown,0.001024,2.333,1.0,0.002388
-Pahang,Unknown,Unknown,0.001166,2.333,1.0,0.00272
-Perak,Unknown,Unknown,0.000594,2.333,1.0,0.001385
-Perlis,Unknown,Unknown,0.000919,2.333,1.0,0.002144
-Pulau Pinang,Unknown,Unknown,0.001062,2.333,1.0,0.002478
-Sabah,Unknown,Unknown,0.000984,2.333,1.0,0.002296
-Sarawak,Unknown,Unknown,0.001308,2.333,1.0,0.003051
-Selangor,Unknown,Unknown,0.001156,2.333,1.0,0.002696
-Terengganu,Unknown,Unknown,0.001317,2.333,1.0,0.003072
-W.P. Kuala Lumpur,Unknown,Unknown,0.000912,2.333,1.0,0.002128
-W.P. Labuan,Unknown,Unknown,0.000634,2.333,1.55,0.002292
-W.P. Putrajaya,Unknown,Unknown,0.0024,2.333,1.2727,0.007127
+Entire country,0.004228,0.001987,0.001071,2.3325,1.0,0.002498
+Johor,Unknown,Unknown,0.000764,2.3325,1.0,0.001782
+Kedah,Unknown,Unknown,0.001036,2.3325,1.0,0.002416
+Kelantan,Unknown,Unknown,0.001771,2.3325,1.0,0.004132
+Melaka,Unknown,Unknown,0.001424,2.3325,1.0,0.003321
+Negeri Sembilan,Unknown,Unknown,0.001,2.3325,1.0,0.002332
+Pahang,Unknown,Unknown,0.001144,2.3325,1.0,0.002669
+Perak,Unknown,Unknown,0.000579,2.3325,1.0,0.00135
+Perlis,Unknown,Unknown,0.000931,2.3325,1.0,0.002171
+Pulau Pinang,Unknown,Unknown,0.001056,2.3325,1.0,0.002464
+Sabah,Unknown,Unknown,0.000973,2.3325,1.0,0.002271
+Sarawak,Unknown,Unknown,0.001252,2.3325,1.0,0.002921
+Selangor,Unknown,Unknown,0.001133,2.3325,1.0,0.002643
+Terengganu,Unknown,Unknown,0.001244,2.3325,1.0,0.002901
+W.P. Kuala Lumpur,Unknown,Unknown,0.000919,2.3325,1.0,0.002144
+W.P. Labuan,Unknown,Unknown,0.000694,2.3325,1.6585,0.002685
+W.P. Putrajaya,Unknown,Unknown,0.002249,2.3325,1.1741,0.006158
