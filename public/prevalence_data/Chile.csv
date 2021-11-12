@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004156,0.001953,0.000833,2.2803,1.2146,0.002308
-Antofagasta,Unknown,Unknown,0.000836,2.2803,1.0974,0.002092
-Araucania,Unknown,Unknown,0.000515,2.2803,1.651,0.001939
-Arica y Parinacota,Unknown,Unknown,0.000836,2.2803,1.6637,0.003172
-Atacama,Unknown,Unknown,0.000883,2.2803,1.4432,0.002904
-Aysen,Unknown,Unknown,0.002365,2.2803,2.0,0.010787
-Biobio,Unknown,Unknown,0.000892,2.2803,1.6563,0.00337
-Coquimbo,Unknown,Unknown,0.000818,2.2803,1.3198,0.002463
-Los Lagos,Unknown,Unknown,0.000725,2.2803,1.626,0.002689
-Los Rios,Unknown,Unknown,0.000748,2.2803,1.4422,0.002461
-Magallanes,Unknown,Unknown,0.000462,2.2803,1.5833,0.001669
-Maule,Unknown,Unknown,0.000815,2.2803,1.3173,0.002449
-Metropolitana,Unknown,Unknown,0.001096,2.2803,1.0662,0.002664
-Nuble,Unknown,Unknown,0.000493,2.2803,1.2103,0.001361
-OHiggins,Unknown,Unknown,0.000498,2.2803,1.0,0.001134
-Tarapaca,Unknown,Unknown,0.000895,2.2803,1.0926,0.002231
-Valparaiso,Unknown,Unknown,0.000905,2.2803,1.4762,0.003048
+Entire country,0.004705,0.002211,0.000877,2.2799,1.3036,0.002607
+Antofagasta,Unknown,Unknown,0.000912,2.2799,1.2921,0.002686
+Araucania,Unknown,Unknown,0.000553,2.2799,1.7368,0.002188
+Arica y Parinacota,Unknown,Unknown,0.000814,2.2799,1.3657,0.002534
+Atacama,Unknown,Unknown,0.000983,2.2799,1.581,0.003543
+Aysen,Unknown,Unknown,0.002724,2.2799,2.0,0.012421
+Biobio,Unknown,Unknown,0.000992,2.2799,1.7534,0.003965
+Coquimbo,Unknown,Unknown,0.000871,2.2799,1.458,0.002896
+Los Lagos,Unknown,Unknown,0.000819,2.2799,1.7937,0.003351
+Los Rios,Unknown,Unknown,0.000878,2.2799,1.7831,0.00357
+Magallanes,Unknown,Unknown,0.000492,2.2799,1.5283,0.001716
+Maule,Unknown,Unknown,0.000853,2.2799,1.4495,0.002818
+Metropolitana,Unknown,Unknown,0.001115,2.2799,1.1195,0.002847
+Nuble,Unknown,Unknown,0.000553,2.2799,1.4021,0.001769
+OHiggins,Unknown,Unknown,0.000542,2.2799,1.0,0.001236
+Tarapaca,Unknown,Unknown,0.00098,2.2799,1.2052,0.002693
+Valparaiso,Unknown,Unknown,0.000958,2.2799,1.5998,0.003495
