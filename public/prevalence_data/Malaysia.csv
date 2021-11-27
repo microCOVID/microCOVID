@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004829,0.00227,0.001219,2.32,1.0,0.002828
-Johor,Unknown,Unknown,0.000935,2.32,1.0,0.00217
-Kedah,Unknown,Unknown,0.001276,2.32,1.0356,0.003067
-Kelantan,Unknown,Unknown,0.002251,2.32,1.0,0.005223
-Melaka,Unknown,Unknown,0.001558,2.32,1.0133,0.003662
-Negeri Sembilan,Unknown,Unknown,0.001138,2.32,1.0,0.002639
-Pahang,Unknown,Unknown,0.001444,2.32,1.0,0.00335
-Perak,Unknown,Unknown,0.000657,2.32,1.0,0.001524
-Perlis,Unknown,Unknown,0.000711,2.32,1.0465,0.001726
-Pulau Pinang,Unknown,Unknown,0.001145,2.32,1.0779,0.002864
-Sabah,Unknown,Unknown,0.00094,2.32,1.0,0.002182
-Sarawak,Unknown,Unknown,0.000547,2.32,1.0,0.001269
-Selangor,Unknown,Unknown,0.001553,2.32,1.0113,0.003643
-Terengganu,Unknown,Unknown,0.001252,2.32,1.0,0.002904
-W.P. Kuala Lumpur,Unknown,Unknown,0.001326,2.32,1.0,0.003076
-W.P. Labuan,Unknown,Unknown,0.001358,2.32,1.3535,0.004265
-W.P. Putrajaya,Unknown,Unknown,0.004042,2.32,1.1155,0.01046
+Entire country,0.004732,0.002224,0.001192,2.323,1.0,0.00277
+Johor,Unknown,Unknown,0.000918,2.323,1.0,0.002132
+Kedah,Unknown,Unknown,0.001286,2.323,1.0226,0.003055
+Kelantan,Unknown,Unknown,0.002097,2.323,1.0,0.00487
+Melaka,Unknown,Unknown,0.001554,2.323,1.0593,0.003823
+Negeri Sembilan,Unknown,Unknown,0.001089,2.323,1.0,0.00253
+Pahang,Unknown,Unknown,0.001444,2.323,1.0,0.003355
+Perak,Unknown,Unknown,0.000648,2.323,1.0,0.001506
+Perlis,Unknown,Unknown,0.000766,2.323,1.4478,0.002576
+Pulau Pinang,Unknown,Unknown,0.001153,2.323,1.0291,0.002756
+Sabah,Unknown,Unknown,0.000926,2.323,1.0014,0.002154
+Sarawak,Unknown,Unknown,0.000495,2.323,1.0,0.001149
+Selangor,Unknown,Unknown,0.001513,2.323,1.0,0.003515
+Terengganu,Unknown,Unknown,0.001197,2.323,1.0,0.00278
+W.P. Kuala Lumpur,Unknown,Unknown,0.001369,2.323,1.0648,0.003385
+W.P. Labuan,Unknown,Unknown,0.001439,2.323,1.2909,0.004314
+W.P. Putrajaya,Unknown,Unknown,0.003918,2.323,1.0591,0.009641
