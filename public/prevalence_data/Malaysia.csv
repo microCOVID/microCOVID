@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004307,0.002024,0.001083,2.3095,1.0,0.002501
-Johor,Unknown,Unknown,0.00085,2.3095,1.0,0.001962
-Kedah,Unknown,Unknown,0.001182,2.3095,1.0,0.00273
-Kelantan,Unknown,Unknown,0.001866,2.3095,1.0,0.004308
-Melaka,Unknown,Unknown,0.001343,2.3095,1.0,0.003103
-Negeri Sembilan,Unknown,Unknown,0.001,2.3095,1.0,0.002309
-Pahang,Unknown,Unknown,0.001352,2.3095,1.0,0.003123
-Perak,Unknown,Unknown,0.000621,2.3095,1.0,0.001435
-Perlis,Unknown,Unknown,0.000982,2.3095,1.3833,0.003137
-Pulau Pinang,Unknown,Unknown,0.001127,2.3095,1.0,0.002602
-Sabah,Unknown,Unknown,0.000761,2.3095,1.0,0.001757
-Sarawak,Unknown,Unknown,0.000301,2.3095,1.0,0.000695
-Selangor,Unknown,Unknown,0.001443,2.3095,1.0,0.003332
-Terengganu,Unknown,Unknown,0.001098,2.3095,1.0,0.002537
-W.P. Kuala Lumpur,Unknown,Unknown,0.001238,2.3095,1.0,0.00286
-W.P. Labuan,Unknown,Unknown,0.001087,2.3095,1.0,0.002509
-W.P. Putrajaya,Unknown,Unknown,0.003245,2.3095,1.0,0.007494
+Entire country,0.004313,0.002027,0.001084,2.309,1.0,0.002504
+Johor,Unknown,Unknown,0.000847,2.309,1.0,0.001957
+Kedah,Unknown,Unknown,0.001164,2.309,1.0,0.002687
+Kelantan,Unknown,Unknown,0.001927,2.309,1.0,0.00445
+Melaka,Unknown,Unknown,0.00134,2.309,1.0,0.003095
+Negeri Sembilan,Unknown,Unknown,0.001053,2.309,1.0,0.002431
+Pahang,Unknown,Unknown,0.001329,2.309,1.0,0.003069
+Perak,Unknown,Unknown,0.000616,2.309,1.0,0.001422
+Perlis,Unknown,Unknown,0.001057,2.309,1.3814,0.00337
+Pulau Pinang,Unknown,Unknown,0.001083,2.309,1.0,0.002501
+Sabah,Unknown,Unknown,0.000732,2.309,1.0,0.00169
+Sarawak,Unknown,Unknown,0.000287,2.309,1.0,0.000664
+Selangor,Unknown,Unknown,0.001479,2.309,1.0,0.003416
+Terengganu,Unknown,Unknown,0.00113,2.309,1.0,0.00261
+W.P. Kuala Lumpur,Unknown,Unknown,0.001217,2.309,1.0,0.00281
+W.P. Labuan,Unknown,Unknown,0.000875,2.309,1.0,0.002021
+W.P. Putrajaya,Unknown,Unknown,0.002922,2.309,1.0,0.006747

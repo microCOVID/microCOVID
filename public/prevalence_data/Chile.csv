@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.003217,0.001512,0.00077,2.267,1.0,0.001746
-Antofagasta,Unknown,Unknown,0.000637,2.267,1.0,0.001444
-Araucania,Unknown,Unknown,0.000723,2.267,1.0,0.001639
-Arica y Parinacota,Unknown,Unknown,0.000398,2.267,1.0,0.000903
-Atacama,Unknown,Unknown,0.001672,2.267,1.0,0.00379
-Aysen,Unknown,Unknown,0.002666,2.267,1.0,0.006043
-Biobio,Unknown,Unknown,0.001359,2.267,1.0105,0.003114
-Coquimbo,Unknown,Unknown,0.001026,2.267,1.0572,0.002458
-Los Lagos,Unknown,Unknown,0.001981,2.267,1.1548,0.005187
-Los Rios,Unknown,Unknown,0.00125,2.267,1.039,0.002944
-Magallanes,Unknown,Unknown,0.000474,2.267,1.1818,0.001271
-Maule,Unknown,Unknown,0.000757,2.267,1.0,0.001716
-Metropolitana,Unknown,Unknown,0.000579,2.267,1.0,0.001312
-Nuble,Unknown,Unknown,0.001067,2.267,1.1663,0.002822
-OHiggins,Unknown,Unknown,0.000446,2.267,1.0,0.001011
-Tarapaca,Unknown,Unknown,0.000905,2.267,1.0,0.002051
-Valparaiso,Unknown,Unknown,0.000876,2.267,1.0,0.001986
+Entire country,0.003092,0.001453,0.00074,2.2666,1.0,0.001677
+Antofagasta,Unknown,Unknown,0.000706,2.2666,1.0,0.001601
+Araucania,Unknown,Unknown,0.000675,2.2666,1.0,0.00153
+Arica y Parinacota,Unknown,Unknown,0.000376,2.2666,1.0,0.000852
+Atacama,Unknown,Unknown,0.001544,2.2666,1.0,0.003499
+Aysen,Unknown,Unknown,0.002666,2.2666,1.0,0.006042
+Biobio,Unknown,Unknown,0.001344,2.2666,1.0014,0.00305
+Coquimbo,Unknown,Unknown,0.000979,2.2666,1.0,0.00222
+Los Lagos,Unknown,Unknown,0.00189,2.2666,1.0235,0.004384
+Los Rios,Unknown,Unknown,0.001164,2.2666,1.0,0.002639
+Magallanes,Unknown,Unknown,0.000504,2.2666,1.1216,0.001282
+Maule,Unknown,Unknown,0.000711,2.2666,1.0,0.001612
+Metropolitana,Unknown,Unknown,0.000544,2.2666,1.0,0.001234
+Nuble,Unknown,Unknown,0.001076,2.2666,1.0955,0.002671
+OHiggins,Unknown,Unknown,0.000429,2.2666,1.0,0.000972
+Tarapaca,Unknown,Unknown,0.000768,2.2666,1.0,0.001742
+Valparaiso,Unknown,Unknown,0.000862,2.2666,1.0,0.001955
