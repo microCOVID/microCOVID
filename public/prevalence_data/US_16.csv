@@ -1,46 +1,46 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.00931,0.001742,0.001739,2.4722,1.2599,0.005417
-Ada,Unknown,Unknown,0.001615,2.4307,1.146,0.0045
-Adams,Unknown,Unknown,0.001164,2.458,1.0,0.002862
-Bannock,Unknown,Unknown,0.001378,2.4433,1.0,0.003367
-Bear Lake,Unknown,Unknown,0.001796,2.5039,2.0,0.008994
-Benewah,Unknown,Unknown,0.011078,2.4069,1.2439,0.033166
-Bingham,Unknown,Unknown,0.000897,2.4531,1.0,0.002201
-Blaine,Unknown,Unknown,0.002259,2.4746,1.8214,0.010181
-Boise,Unknown,Unknown,0.000766,2.3516,1.0,0.001802
-Bonner,Unknown,Unknown,0.002055,2.4973,1.0,0.005132
-Bonneville,Unknown,Unknown,0.002268,2.5697,1.3186,0.007684
-Boundary,Unknown,Unknown,0.001307,2.4883,1.0,0.003251
-Butte,Unknown,Unknown,0.001155,2.5104,1.0,0.0029
-Camas,Unknown,Unknown,0.000904,2.4722,1.0,0.002235
-Canyon,Unknown,Unknown,0.001623,2.548,1.646,0.006806
-Caribou,Unknown,Unknown,0.001957,2.3875,1.4444,0.006748
-Cassia,Unknown,Unknown,0.001498,2.5774,2.0,0.007723
-Clark,Unknown,Unknown,0.001183,2.4722,1.0,0.002926
-Clearwater,Unknown,Unknown,0.002627,2.4307,1.5714,0.010033
-Custer,Unknown,Unknown,0.000695,2.4722,1.0,0.001719
-Elmore,Unknown,Unknown,0.001563,2.4604,1.4483,0.00557
-Franklin,Unknown,Unknown,0.00209,2.585,1.0,0.005402
-Fremont,Unknown,Unknown,0.001603,2.4255,1.1765,0.004575
-Gem,Unknown,Unknown,0.00127,2.4408,1.5714,0.004871
-Gooding,Unknown,Unknown,0.001515,2.3117,2.0,0.007006
-Idaho,Unknown,Unknown,0.00174,2.7188,1.4,0.006623
-Jefferson,Unknown,Unknown,0.00221,2.6036,2.0,0.011505
-Jerome,Unknown,Unknown,0.001393,2.4383,1.32,0.004483
-Kootenai,Unknown,Unknown,0.00213,2.5104,1.2351,0.006605
-Latah,Unknown,Unknown,0.000997,2.5126,1.5,0.003759
-Lemhi,Unknown,Unknown,0.003488,2.7806,1.9286,0.018706
-Lewis,Unknown,Unknown,0.003127,2.9002,1.0,0.009068
-Lincoln,Unknown,Unknown,0.0041,2.7649,1.1667,0.013225
-Madison,Unknown,Unknown,0.002055,2.7264,1.2656,0.00709
-Minidoka,Unknown,Unknown,0.00076,2.1243,1.1538,0.001864
-Nez Perce,Unknown,Unknown,0.001633,2.4203,1.8571,0.007342
-Oneida,Unknown,Unknown,0.002207,2.7355,1.0,0.006037
-Owyhee,Unknown,Unknown,0.00093,2.6072,1.0,0.002426
-Payette,Unknown,Unknown,0.000919,2.4229,2.0,0.004451
-Power,Unknown,Unknown,0.000521,2.4229,1.0,0.001262
-Shoshone,Unknown,Unknown,0.003027,2.6561,1.027,0.008259
-Teton,Unknown,Unknown,0.002306,2.4628,2.0,0.011359
-Twin Falls,Unknown,Unknown,0.001922,2.4096,1.8444,0.008543
-Valley,Unknown,Unknown,0.001843,2.5295,1.1765,0.005486
-Washington,Unknown,Unknown,0.001079,2.3289,2.0,0.005026
+Entire state,0.010043,0.001879,0.001738,2.4668,1.3612,0.005836
+Ada,Unknown,Unknown,0.001686,2.4274,1.2672,0.005186
+Adams,Unknown,Unknown,0.001397,2.4426,1.0,0.003413
+Bannock,Unknown,Unknown,0.001469,2.4144,1.4066,0.004989
+Bear Lake,Unknown,Unknown,0.001796,2.5953,2.0,0.009322
+Benewah,Unknown,Unknown,0.009895,2.4036,1.2133,0.028856
+Bingham,Unknown,Unknown,0.000812,2.4376,1.0,0.001979
+Blaine,Unknown,Unknown,0.001911,2.4738,1.4828,0.007011
+Boise,Unknown,Unknown,0.000638,2.2654,1.0,0.001446
+Bonner,Unknown,Unknown,0.002361,2.5075,1.0,0.005921
+Bonneville,Unknown,Unknown,0.0021,2.5411,1.3245,0.007067
+Boundary,Unknown,Unknown,0.001143,2.3925,1.0,0.002735
+Butte,Unknown,Unknown,0.00077,2.4573,1.0,0.001892
+Camas,Unknown,Unknown,0.000904,2.4668,1.0,0.00223
+Canyon,Unknown,Unknown,0.001692,2.5308,2.0,0.008566
+Caribou,Unknown,Unknown,0.002096,2.3925,1.5556,0.007802
+Cassia,Unknown,Unknown,0.001415,2.5822,2.0,0.007307
+Clark,Unknown,Unknown,0.001183,2.4668,1.0,0.002919
+Clearwater,Unknown,Unknown,0.002056,2.3077,1.0,0.004744
+Custer,Unknown,Unknown,0.000232,2.4668,1.0,0.000572
+Elmore,Unknown,Unknown,0.001163,2.4573,1.0,0.002858
+Franklin,Unknown,Unknown,0.002162,2.5784,1.381,0.007698
+Fremont,Unknown,Unknown,0.001603,2.4009,1.3333,0.005132
+Gem,Unknown,Unknown,0.001215,2.4426,1.9091,0.005664
+Gooding,Unknown,Unknown,0.001318,2.3182,1.4615,0.004464
+Idaho,Unknown,Unknown,0.00222,2.6207,2.0,0.011636
+Jefferson,Unknown,Unknown,0.002009,2.6008,1.439,0.007518
+Jerome,Unknown,Unknown,0.000983,2.4117,1.0,0.002371
+Kootenai,Unknown,Unknown,0.002317,2.4831,1.4788,0.008509
+Latah,Unknown,Unknown,0.001147,2.5182,2.0,0.005776
+Lemhi,Unknown,Unknown,0.003737,2.7418,1.6111,0.01651
+Lewis,Unknown,Unknown,0.002866,2.7162,1.0,0.007785
+Lincoln,Unknown,Unknown,0.002982,2.7695,1.0,0.008258
+Madison,Unknown,Unknown,0.00203,2.6783,1.2903,0.007014
+Minidoka,Unknown,Unknown,0.000713,2.1327,1.1667,0.001774
+Nez Perce,Unknown,Unknown,0.001782,2.4144,1.8684,0.008038
+Oneida,Unknown,Unknown,0.001986,2.7724,1.0,0.005507
+Owyhee,Unknown,Unknown,0.000677,2.599,1.0,0.001759
+Payette,Unknown,Unknown,0.001002,2.4326,2.0,0.004875
+Power,Unknown,Unknown,0.000781,2.5009,1.0,0.001954
+Shoshone,Unknown,Unknown,0.00295,2.6535,1.1562,0.00905
+Teton,Unknown,Unknown,0.001977,2.45,1.9167,0.009282
+Twin Falls,Unknown,Unknown,0.001565,2.3925,1.1842,0.004435
+Valley,Unknown,Unknown,0.00158,2.5009,1.0,0.003952
+Washington,Unknown,Unknown,0.00157,2.3542,1.0,0.003695
