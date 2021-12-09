@@ -177,9 +177,9 @@ export const Calculator = (): React.ReactElement => {
               dismissible
             >
               <Alert.Heading>
-                {t('calculator.intro.omicron_warning_heading')}
+                {t('calculator.alerts.omicron_warning_heading')}
               </Alert.Heading>
-              <Trans i18nKey="calculator.intro.omicron_warning">
+              <Trans i18nKey="calculator.alerts.omicron_warning">
                 Research is in progress to determine Omicron's impact on our
                 models. Preliminary findings suggest an increase in the risk for
                 re-infection.
