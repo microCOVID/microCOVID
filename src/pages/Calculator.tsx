@@ -177,13 +177,12 @@ export const Calculator = (): React.ReactElement => {
               dismissible
             >
               <Alert.Heading>
-                {t('calculator.intro.delta_warning_heading')}
+                {t('calculator.intro.omicron_warning_heading')}
               </Alert.Heading>
-              <Trans i18nKey="calculator.intro.delta_warning">
-                Risks have increased substantially, including for vaccinated
-                people.
-                <Link to="/blog/delta">See blog post</Link>
-                for more details.
+              <Trans i18nKey="calculator.intro.omicron_warning">
+                Research is in progress to determine Omicron's impact on our
+                models. Preliminary findings suggest an increase in the risk for
+                re-infection.
               </Trans>
             </Alert>
           )}
