@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00432,0.002031,0.001088,2.3036,1.0,0.002507
-Johor,Unknown,Unknown,0.000869,2.3036,1.0325,0.002066
-Kedah,Unknown,Unknown,0.001129,2.3036,1.0,0.002601
-Kelantan,Unknown,Unknown,0.002029,2.3036,1.1456,0.005356
-Melaka,Unknown,Unknown,0.001594,2.3036,1.0918,0.00401
-Negeri Sembilan,Unknown,Unknown,0.001165,2.3036,1.1441,0.003071
-Pahang,Unknown,Unknown,0.001323,2.3036,1.0,0.003047
-Perak,Unknown,Unknown,0.000625,2.3036,1.0,0.00144
-Perlis,Unknown,Unknown,0.001123,2.3036,1.1728,0.003035
-Pulau Pinang,Unknown,Unknown,0.001171,2.3036,1.0505,0.002834
-Sabah,Unknown,Unknown,0.000638,2.3036,1.0,0.00147
-Sarawak,Unknown,Unknown,0.000226,2.3036,1.0,0.000521
-Selangor,Unknown,Unknown,0.001467,2.3036,1.0333,0.003493
-Terengganu,Unknown,Unknown,0.001178,2.3036,1.0433,0.00283
-W.P. Kuala Lumpur,Unknown,Unknown,0.001207,2.3036,1.0,0.002781
-W.P. Labuan,Unknown,Unknown,0.000996,2.3036,1.0,0.002294
-W.P. Putrajaya,Unknown,Unknown,0.002296,2.3036,1.0,0.005289
+Entire country,0.004268,0.002006,0.001075,2.3032,1.0,0.002476
+Johor,Unknown,Unknown,0.000847,2.3032,1.0063,0.001963
+Kedah,Unknown,Unknown,0.001146,2.3032,1.0,0.00264
+Kelantan,Unknown,Unknown,0.001958,2.3032,1.0891,0.00491
+Melaka,Unknown,Unknown,0.0016,2.3032,1.1522,0.004245
+Negeri Sembilan,Unknown,Unknown,0.001228,2.3032,1.2292,0.003476
+Pahang,Unknown,Unknown,0.001374,2.3032,1.0,0.003165
+Perak,Unknown,Unknown,0.000616,2.3032,1.0,0.00142
+Perlis,Unknown,Unknown,0.001064,2.3032,1.0887,0.002669
+Pulau Pinang,Unknown,Unknown,0.001171,2.3032,1.0384,0.0028
+Sabah,Unknown,Unknown,0.000601,2.3032,1.0,0.001384
+Sarawak,Unknown,Unknown,0.000203,2.3032,1.0,0.000467
+Selangor,Unknown,Unknown,0.001449,2.3032,1.0129,0.003381
+Terengganu,Unknown,Unknown,0.001158,2.3032,1.0233,0.00273
+W.P. Kuala Lumpur,Unknown,Unknown,0.001202,2.3032,1.0,0.002768
+W.P. Labuan,Unknown,Unknown,0.000926,2.3032,1.0,0.002132
+W.P. Putrajaya,Unknown,Unknown,0.002334,2.3032,1.0,0.005376
