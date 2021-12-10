@@ -1,9 +1,9 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.006762,0.001231,0.00081,2.3604,1.2317,0.002354
-Zone 1 (Moncton area),Unknown,Unknown,0.000489,2.3604,1.0,0.001155
-Zone 2 (Saint John area),Unknown,Unknown,0.000789,2.3604,1.0222,0.001903
-Zone 3 (Fredericton area),Unknown,Unknown,0.001407,2.3604,2.0,0.00664
-Zone 4 (Edmundston area),Unknown,Unknown,0.000269,2.3604,1.0,0.000636
-Zone 5 (Campbellton area),Unknown,Unknown,0.000556,2.3604,1.0,0.001311
-Zone 6 (Bathurst area),Unknown,Unknown,7.8e-05,2.3604,1.0,0.000184
-Zone 7 (Miramichi area),Unknown,Unknown,0.002397,2.3604,1.2963,0.007335
+Entire state,0.008608,0.001567,0.00091,2.3748,1.3842,0.002991
+Zone 1 (Moncton area),Unknown,Unknown,0.00048,2.3748,1.0,0.001141
+Zone 2 (Saint John area),Unknown,Unknown,0.000874,2.3748,1.2047,0.002499
+Zone 3 (Fredericton area),Unknown,Unknown,0.001756,2.3748,2.0,0.008338
+Zone 4 (Edmundston area),Unknown,Unknown,0.000352,2.3748,1.0,0.000837
+Zone 5 (Campbellton area),Unknown,Unknown,0.000714,2.3748,1.3077,0.002218
+Zone 6 (Bathurst area),Unknown,Unknown,0.00013,2.3748,1.0,0.000309
+Zone 7 (Miramichi area),Unknown,Unknown,0.002171,2.3748,1.1728,0.006047
