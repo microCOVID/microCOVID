@@ -26,9 +26,9 @@ export function dataForLocation(location: string): PrevalanceData {
         locationData.positiveCasePercentage === null
           ? null
           : Math.round(locationData.positiveCasePercentage * 10) / 10,
-      // TODO just use locationData.updatedAt once update_prevalence has added it
+      // TODO use locationData.updatedAt once date format in update_prevalence is fixed
       prevalanceDataDate: new Date(
-        locationData.updatedAt || PrevalenceDataDate,
+        PrevalenceDataDate,
       ),
       percentFullyVaccinated: locationData.completeVaccinations
         ? Math.round((locationData.completeVaccinations / population) * 100)
