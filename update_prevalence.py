@@ -1134,6 +1134,284 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             return True
     return False
 
+def parse_jhu_place_facts(cache, data, country_by_iso3):
+    # List of regions and their population
+    for line in parse_csv(cache, JHUPlaceFacts, JHUPlaceFacts.SOURCE):
+        if ignore_jhu_place(line):
+            continue
+        if {line.Country_Region, line.Province_State} & {"Unknown", "Unassigned"}:
+            # These mark cases not attached to a more specific region.
+            # We want to count their cases, but they don't have population.
+            continue
+        if line.Province_State == "Alaska" and line.Admin2 == "Bristol Bay plus Lake Peninsula":
+            # These are strangely combined; Lake and Peninsula already
+            # has its own entry so turn the combo into just Bristol Bay
+            line.Admin2 = "Bristol Bay"
+            line.Population = 877  # from Google
+        if line.Province_State == "Alaska" and line.Admin2 == "Yakutat plus Hoonah-Angoon":
+            # These are strangely combined; Lake and Peninsula already
+            # has its own entry so turn the combo into just Bristol Bay
+            line.Admin2 = "Yakutat"
+            line.Population = 604  # from Google
+        if line.Country_Region == "Korea, South":
+            line.Country_Region = "South Korea"
+        place = data.get_jhu_place(line)
+        data.add_place_to_uid_cache(line.UID, place)
+        if place.population != 0:
+            raise ValueError(f"Duplicate population info for {place!r}: {line.Population}")
+        if isinstance(place, Country):
+            place.iso3 = line.iso3
+            country_by_iso3[line.iso3] = place
+        place.population = line.Population
+        if isinstance(place, (County, State)) and line.FIPS is not None:
+            place.fips = str(line.FIPS)
+
+def parse_jhu_daily_report(cache, data, current):
+    # Cumulative cases per region
+    for line in parse_csv(cache, JHUDailyReport, current.strftime(JHUDailyReport.SOURCE)):
+        if ignore_jhu_place(line):
+            continue
+        place = data.get_jhu_place(line)
+        if place.population == 0 and place.name not in (
+            "Unassigned",
+            "Unknown",
+        ):
+            raise ValueError(
+                f"JHU data has cases but no population for {place!r} with line data: {line!r}"
+            )
+        place.cumulative_cases[current] = line.Confirmed
+
+def parse_jhu_vaccines_global(cache, data):
+    # Global vaccination rates
+    for item in parse_csv(cache, JHUVaccinesGlobal, JHUVaccinesGlobal.SOURCE):
+        if item.UID is None or item.People_partially_vaccinated is None:
+            continue
+        try:
+            place = data.uid_to_place[item.UID]
+            place.set_total_vaccines(
+                item.People_partially_vaccinated - item.People_fully_vaccinated,
+                item.People_fully_vaccinated,
+            )
+        except KeyError:
+            print(f"Could not find UID {item.UID}")
+
+def parse_jhu_vaccines_hourly_us(cache, data):
+    # US vaccination rates
+    for item in parse_csv(cache, JHUVaccinesHourlyUs, JHUVaccinesHourlyUs.SOURCE):
+        try:
+            state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
+        except KeyError:
+            continue
+            # Suppressed debug info - includes things like DoD, VHA, etc.
+            # print(f"Could not find state {item.Province_State}")
+        if item.Vaccine_Type == "All":
+            state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
+        elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
+            # If listed, Stage_One_Doses appears to include people with second doses.
+            if item.Stage_Two_Doses is None:
+                partially_vaccinated = None
+            elif item.Stage_One_Doses is None:
+                partially_vaccinated = item.Doses_admin - item.Stage_Two_Doses * 2
+            else:
+                partially_vaccinated = item.Stage_One_Doses - item.Stage_Two_Doses
+            state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
+        elif item.Vaccine_Type == "Janssen":
+            state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
+
+def parse_can_region_summary_by_county(cache, data):
+    # Test positivity and vaccination status per US county
+    for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
+        assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
+        if item.fips not in data.fips_to_county:
+            # Ignore e.g. Northern Mariana Islands
+            print(f"ignoring unknown county fips {item.fips}")
+            continue
+        county = data.fips_to_county[item.fips]
+        assert (
+            us_state_name_by_abbrev[item.state] == county.state
+        ), f"expected {item.state} to be {county.state}"
+        if item.metrics is not None:
+            county.test_positivity_rate = item.metrics.testPositivityRatio
+        if item.actuals is not None and item.actuals.vaccinationsCompleted is not None:
+            completed_vaccinations = item.actuals.vaccinationsCompleted
+            partial_vaccinations = item.actuals.vaccinationsInitiated - completed_vaccinations
+            county.set_total_vaccines(partial_vaccinations, completed_vaccinations)
+
+def parse_can_region_summary_by_state(cache, data):
+    # Test positivity and vaccination status per US state
+    for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
+        state_name = us_state_name_by_abbrev[item.state]
+        state = data.countries["US"].states[state_name]
+        if item.metrics is not None:
+            state.test_positivity_rate = item.metrics.testPositivityRatio
+
+def parse_owid_testing_data(cache, country_by_iso3):
+    # Test positivity per non-US country
+    for line in parse_csv(cache, OWIDTestingData, OWIDTestingData.SOURCE):
+        # These are in sorted order so we'll keep overwriting with
+        # more recent data per country
+        country = country_by_iso3.get(line.ISO_code)
+        if country is not None:
+            if line.Short_term_positive_rate is not None:
+                country.test_positivity_rate = line.Short_term_positive_rate
+            elif line.Seven_day_smoothed_daily_change:
+                country.tests_in_past_week = line.Seven_day_smoothed_daily_change * 7
+
+def parse_romania_prevalence_data(cache, data):
+    for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
+        state = data.get_state(line.County, country="Romania")
+        state.population = int(float(line.Population.replace(",", "")))
+        state.cumulative_cases[line.Date] = line.TotalCases
+
+def parse_canada_prevalence_data(cache, data):
+    populate_since = canada_effective_date - timedelta(days=16)
+    canada_one_week_ago = canada_effective_date - timedelta(days=6)
+    canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
+
+    def get_partially_vaccinated(total_shots, total_fully_vaccinated, shots_for_full_vaccination) -> int:
+        return total_shots - shots_for_full_vaccination * total_fully_vaccinated
+
+    counter = 0
+    for region in canada_regions.hr:
+        if region.HR_UID == 9999:  # Repatriated/not reported. Skip.
+            continue
+        counter += 1
+        print(f"Fetching region {counter}: {region.health_region} ({region.HR_UID})")
+
+        # add population data
+        place = data.get_canada_region_place(region)
+        if place.population != 0:
+            raise ValueError(f"Duplicate population info for {place!r}: {region.Population}")
+        if region.pop != "NULL":
+            place.population = region.pop
+
+        def process_regional_vaccination_reports():
+            vaccination_reports = parse_json(
+                cache,
+                CanadaRegionalVaccinationReports,
+                CanadaRegionalVaccinationReports.SOURCE.format(
+                    hr_uid=region.HR_UID,
+                    before=canada_effective_date.strftime("%Y-%m-%d"),
+                    after=populate_since.strftime("%Y-%m-%d"),
+                ),
+            )
+
+            # get region vaccination counts from covid19tracker.ca.
+            # Canada is not using J&J as of 2021-07-14; all vaccines in use are 2-shot.
+            for report in vaccination_reports.data:
+                shots_for_full_vaccination = 2
+                if report.total_vaccinated and report.total_vaccinations:
+                    people_partially_vaccinated = get_partially_vaccinated(
+                        report.total_vaccinations, report.total_vaccinated, shots_for_full_vaccination
+                    )
+                    place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
+
+        def process_regional_case_reports():
+            # get region case counts from opencovid.ca, which seems to have
+            # cleaner data than covid19tracker.ca
+            case_reports = parse_json(
+                cache,
+                CanadaOpenCovidCases,
+                CanadaOpenCovidCases.SOURCE.format(
+                    hr_uid=region.HR_UID,
+                    before=canada_effective_date.strftime("%Y-%m-%d"),
+                    after=populate_since.strftime("%Y-%m-%d"),
+                ),
+            )
+            for report in case_reports.cases:
+                place.cumulative_cases[report.date_report] = report.cumulative_cases
+
+        process_regional_vaccination_reports()
+        process_regional_case_reports()
+
+    # get test rates per-province from opencovid.ca.
+    # canada_one_week_ago + timedelta(days=1) is the start of one week ago,
+    # but go back one day to properly count.
+    canada_one_week_cumulative_baseline = canada_one_week_ago - timedelta(days=1)
+    vaccine_distribution_reports = parse_json(
+        cache, CanadaVaccineDistribution, CanadaVaccineDistribution.SOURCE
+    )
+    provinces = parse_json(cache, CanadaOpenCovidProvinces, CanadaOpenCovidProvinces.SOURCE)
+    for province in provinces.prov:
+        min_test_count = None
+        max_test_count = None
+        place = data.get_state(province.province_full, country="Canada")
+        provincial_reports = parse_json(
+            cache,
+            CanadaOpenCovidProvincialSummary,
+            CanadaOpenCovidProvincialSummary.SOURCE.format(
+                province=province.province_short,
+                before=canada_effective_date.strftime("%Y-%m-%d"),
+                after=populate_since.strftime("%Y-%m-%d"),
+            ),
+        )
+        for report in provincial_reports.summary:
+            # check bounds just in case the reports interval gets changed later
+            if (
+                canada_one_week_cumulative_baseline <= report.date_
+                and report.date_ <= canada_effective_date
+            ):
+                if report.cumulative_testing:
+                    min_test_count = (
+                        report.cumulative_testing
+                        if min_test_count is None
+                        else min(min_test_count, report.cumulative_testing)
+                    )
+                    max_test_count = (
+                        report.cumulative_testing
+                        if max_test_count is None
+                        else max(max_test_count, report.cumulative_testing)
+                    )
+
+        if min_test_count is not None and max_test_count is not None:
+            place.tests_in_past_week = max_test_count - min_test_count
+
+        # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
+        provincial_dist = next(
+            (d for d in vaccine_distribution_reports.data if d.province == province.province_short), None
+        )
+        if provincial_dist is not None:
+            # Use distribution numbers as a proxy if administered numbers
+            # aren't available under the assumption that the relative
+            # proportions of distribution by manufacturer is roughly the
+            # same as relative proportions of administration by manufacturer
+            administered_shots_by_manufacturer = {
+                manufacturer: administered if administered is not None else (distributed or 0)
+                for (manufacturer, administered, distributed) in zip(
+                    # match JHU naming convention
+                    ["Pfizer", "Moderna", "AstraZeneca"],
+                    [
+                        provincial_dist.pfizer_biontech_administered,
+                        provincial_dist.moderna_administered,
+                        provincial_dist.astrazeneca_administered,
+                    ],
+                    [
+                        provincial_dist.pfizer_biontech,
+                        provincial_dist.moderna,
+                        provincial_dist.astrazeneca,
+                    ],
+                )
+            }
+            total_administered_shots = sum(
+                [shots for shots in administered_shots_by_manufacturer.values()]
+            )
+
+            proportional_weights = {
+                manufacturer: shots / total_administered_shots
+                for (manufacturer, shots) in administered_shots_by_manufacturer.items()
+            }
+            for k, v in proportional_weights.items():
+                place.set_vaccines_of_type(
+                    k,
+                    v
+                    * get_partially_vaccinated(
+                        provincial_reports.summary[-1].cumulative_avaccine,
+                        provincial_reports.summary[-1].cumulative_cvaccine,
+                        2,
+                    ),
+                    v * provincial_reports.summary[-1].cumulative_cvaccine,
+                )
+
 
 def main() -> None:
     if not CAN_API_KEY:
@@ -1145,278 +1423,34 @@ def main() -> None:
         country_by_iso3: Dict[str, Country] = {}
 
         # List of regions and their population
-        for line in parse_csv(cache, JHUPlaceFacts, JHUPlaceFacts.SOURCE):
-            if ignore_jhu_place(line):
-                continue
-            if {line.Country_Region, line.Province_State} & {"Unknown", "Unassigned"}:
-                # These mark cases not attached to a more specific region.
-                # We want to count their cases, but they don't have population.
-                continue
-            if line.Province_State == "Alaska" and line.Admin2 == "Bristol Bay plus Lake Peninsula":
-                # These are strangely combined; Lake and Peninsula already
-                # has its own entry so turn the combo into just Bristol Bay
-                line.Admin2 = "Bristol Bay"
-                line.Population = 877  # from Google
-            if line.Province_State == "Alaska" and line.Admin2 == "Yakutat plus Hoonah-Angoon":
-                # These are strangely combined; Lake and Peninsula already
-                # has its own entry so turn the combo into just Bristol Bay
-                line.Admin2 = "Yakutat"
-                line.Population = 604  # from Google
-            if line.Country_Region == "Korea, South":
-                line.Country_Region = "South Korea"
-            place = data.get_jhu_place(line)
-            data.add_place_to_uid_cache(line.UID, place)
-            if place.population != 0:
-                raise ValueError(f"Duplicate population info for {place!r}: {line.Population}")
-            if isinstance(place, Country):
-                place.iso3 = line.iso3
-                country_by_iso3[line.iso3] = place
-            place.population = line.Population
-            if isinstance(place, (County, State)) and line.FIPS is not None:
-                place.fips = str(line.FIPS)
+        parse_jhu_place_facts(cache, data, country_by_iso3)
         data.populate_fips_cache()
 
         # Cumulative cases per region
         populate_since = effective_date - timedelta(days=16)
         current = effective_date
         while current >= populate_since:
-            for line in parse_csv(cache, JHUDailyReport, current.strftime(JHUDailyReport.SOURCE)):
-                if ignore_jhu_place(line):
-                    continue
-                place = data.get_jhu_place(line)
-                if place.population == 0 and place.name not in (
-                    "Unassigned",
-                    "Unknown",
-                ):
-                    raise ValueError(
-                        f"JHU data has cases but no population for {place!r} with line data: {line!r}"
-                    )
-                place.cumulative_cases[current] = line.Confirmed
+            parse_jhu_daily_report(cache, data, current)
             current -= timedelta(days=1)
 
         # Global vaccination rates
-        for item in parse_csv(cache, JHUVaccinesGlobal, JHUVaccinesGlobal.SOURCE):
-            if item.UID is None or item.People_partially_vaccinated is None:
-                continue
-            try:
-                place = data.uid_to_place[item.UID]
-                place.set_total_vaccines(
-                    item.People_partially_vaccinated - item.People_fully_vaccinated,
-                    item.People_fully_vaccinated,
-                )
-            except KeyError:
-                print(f"Could not find UID {item.UID}")
+        parse_jhu_vaccines_global(cache, data)
 
         # US vaccination rates
-        for item in parse_csv(cache, JHUVaccinesHourlyUs, JHUVaccinesHourlyUs.SOURCE):
-            try:
-                state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
-            except KeyError:
-                continue
-                # Suppressed debug info - includes things like DoD, VHA, etc.
-                # print(f"Could not find state {item.Province_State}")
-            if item.Vaccine_Type == "All":
-                state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
-            elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
-                # If listed, Stage_One_Doses appears to include people with second doses.
-                if item.Stage_Two_Doses is None:
-                    partially_vaccinated = None
-                elif item.Stage_One_Doses is None:
-                    partially_vaccinated = item.Doses_admin - item.Stage_Two_Doses * 2
-                else:
-                    partially_vaccinated = item.Stage_One_Doses - item.Stage_Two_Doses
-                state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
-            elif item.Vaccine_Type == "Janssen":
-                state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
+        parse_jhu_vaccines_hourly_us(cache, data)
 
         # Test positivity and vaccination status per US county and state
-        for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
-            assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
-            if item.fips not in data.fips_to_county:
-                # Ignore e.g. Northern Mariana Islands
-                print(f"ignoring unknown county fips {item.fips}")
-                continue
-            county = data.fips_to_county[item.fips]
-            assert (
-                us_state_name_by_abbrev[item.state] == county.state
-            ), f"expected {item.state} to be {county.state}"
-            if item.metrics is not None:
-                county.test_positivity_rate = item.metrics.testPositivityRatio
-            if item.actuals is not None and item.actuals.vaccinationsCompleted is not None:
-                completed_vaccinations = item.actuals.vaccinationsCompleted
-                partial_vaccinations = item.actuals.vaccinationsInitiated - completed_vaccinations
-                county.set_total_vaccines(partial_vaccinations, completed_vaccinations)
-
-        for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
-            state_name = us_state_name_by_abbrev[item.state]
-            state = data.countries["US"].states[state_name]
-            if item.metrics is not None:
-                state.test_positivity_rate = item.metrics.testPositivityRatio
+        parse_can_region_summary_by_county(cache, data)
+        parse_can_region_summary_by_state(cache, data)
 
         # Test positivity per non-US country
-        for line in parse_csv(cache, OWIDTestingData, OWIDTestingData.SOURCE):
-            # These are in sorted order so we'll keep overwriting with
-            # more recent data per country
-            country = country_by_iso3.get(line.ISO_code)
-            if country is not None:
-                if line.Short_term_positive_rate is not None:
-                    country.test_positivity_rate = line.Short_term_positive_rate
-                elif line.Seven_day_smoothed_daily_change:
-                    country.tests_in_past_week = line.Seven_day_smoothed_daily_change * 7
+        parse_owid_testing_data(cache, country_by_iso3)
 
         # Romanian county (judet) data. Treat as states internally.
-        for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
-            state = data.get_state(line.County, country="Romania")
-            state.population = int(float(line.Population.replace(",", "")))
-            state.cumulative_cases[line.Date] = line.TotalCases
+        parse_romania_prevalence_data(cache, data)
+
         # Add Canada Public Health Unit (county-level) data
-        populate_since = canada_effective_date - timedelta(days=16)
-        canada_one_week_ago = canada_effective_date - timedelta(days=6)
-        canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
-
-        def get_partially_vaccinated(total_shots, total_fully_vaccinated, shots_for_full_vaccination) -> int:
-            return total_shots - shots_for_full_vaccination * total_fully_vaccinated
-
-        counter = 0
-        for region in canada_regions.hr:
-            if region.HR_UID == 9999:  # Repatriated/not reported. Skip.
-                continue
-            counter += 1
-            print(f"Fetching region {counter}: {region.health_region} ({region.HR_UID})")
-
-            # add population data
-            place = data.get_canada_region_place(region)
-            if place.population != 0:
-                raise ValueError(f"Duplicate population info for {place!r}: {region.Population}")
-            if region.pop != "NULL":
-                place.population = region.pop
-
-            def process_regional_vaccination_reports():
-                vaccination_reports = parse_json(
-                    cache,
-                    CanadaRegionalVaccinationReports,
-                    CanadaRegionalVaccinationReports.SOURCE.format(
-                        hr_uid=region.HR_UID,
-                        before=canada_effective_date.strftime("%Y-%m-%d"),
-                        after=populate_since.strftime("%Y-%m-%d"),
-                    ),
-                )
-
-                # get region vaccination counts from covid19tracker.ca.
-                # Canada is not using J&J as of 2021-07-14; all vaccines in use are 2-shot.
-                for report in vaccination_reports.data:
-                    shots_for_full_vaccination = 2
-                    if report.total_vaccinated and report.total_vaccinations:
-                        people_partially_vaccinated = get_partially_vaccinated(
-                            report.total_vaccinations, report.total_vaccinated, shots_for_full_vaccination
-                        )
-                        place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
-
-            def process_regional_case_reports():
-                # get region case counts from opencovid.ca, which seems to have
-                # cleaner data than covid19tracker.ca
-                case_reports = parse_json(
-                    cache,
-                    CanadaOpenCovidCases,
-                    CanadaOpenCovidCases.SOURCE.format(
-                        hr_uid=region.HR_UID,
-                        before=canada_effective_date.strftime("%Y-%m-%d"),
-                        after=populate_since.strftime("%Y-%m-%d"),
-                    ),
-                )
-                for report in case_reports.cases:
-                    place.cumulative_cases[report.date_report] = report.cumulative_cases
-
-            process_regional_vaccination_reports()
-            process_regional_case_reports()
-
-        # get test rates per-province from opencovid.ca.
-        # canada_one_week_ago + timedelta(days=1) is the start of one week ago,
-        # but go back one day to properly count.
-        canada_one_week_cumulative_baseline = canada_one_week_ago - timedelta(days=1)
-        vaccine_distribution_reports = parse_json(
-            cache, CanadaVaccineDistribution, CanadaVaccineDistribution.SOURCE
-        )
-        provinces = parse_json(cache, CanadaOpenCovidProvinces, CanadaOpenCovidProvinces.SOURCE)
-        for province in provinces.prov:
-            min_test_count = None
-            max_test_count = None
-            place = data.get_state(province.province_full, country="Canada")
-            provincial_reports = parse_json(
-                cache,
-                CanadaOpenCovidProvincialSummary,
-                CanadaOpenCovidProvincialSummary.SOURCE.format(
-                    province=province.province_short,
-                    before=canada_effective_date.strftime("%Y-%m-%d"),
-                    after=populate_since.strftime("%Y-%m-%d"),
-                ),
-            )
-            for report in provincial_reports.summary:
-                # check bounds just in case the reports interval gets changed later
-                if (
-                    canada_one_week_cumulative_baseline <= report.date_
-                    and report.date_ <= canada_effective_date
-                ):
-                    if report.cumulative_testing:
-                        min_test_count = (
-                            report.cumulative_testing
-                            if min_test_count is None
-                            else min(min_test_count, report.cumulative_testing)
-                        )
-                        max_test_count = (
-                            report.cumulative_testing
-                            if max_test_count is None
-                            else max(max_test_count, report.cumulative_testing)
-                        )
-
-            if min_test_count is not None and max_test_count is not None:
-                place.tests_in_past_week = max_test_count - min_test_count
-
-            # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
-            provincial_dist = next(
-                (d for d in vaccine_distribution_reports.data if d.province == province.province_short), None
-            )
-            if provincial_dist is not None:
-                # Use distribution numbers as a proxy if administered numbers
-                # aren't available under the assumption that the relative
-                # proportions of distribution by manufacturer is roughly the
-                # same as relative proportions of administration by manufacturer
-                administered_shots_by_manufacturer = {
-                    manufacturer: administered if administered is not None else (distributed or 0)
-                    for (manufacturer, administered, distributed) in zip(
-                        # match JHU naming convention
-                        ["Pfizer", "Moderna", "AstraZeneca"],
-                        [
-                            provincial_dist.pfizer_biontech_administered,
-                            provincial_dist.moderna_administered,
-                            provincial_dist.astrazeneca_administered,
-                        ],
-                        [
-                            provincial_dist.pfizer_biontech,
-                            provincial_dist.moderna,
-                            provincial_dist.astrazeneca,
-                        ],
-                    )
-                }
-                total_administered_shots = sum(
-                    [shots for shots in administered_shots_by_manufacturer.values()]
-                )
-
-                proportional_weights = {
-                    manufacturer: shots / total_administered_shots
-                    for (manufacturer, shots) in administered_shots_by_manufacturer.items()
-                }
-                for k, v in proportional_weights.items():
-                    place.set_vaccines_of_type(
-                        k,
-                        v
-                        * get_partially_vaccinated(
-                            provincial_reports.summary[-1].cumulative_avaccine,
-                            provincial_reports.summary[-1].cumulative_cvaccine,
-                            2,
-                        ),
-                        v * provincial_reports.summary[-1].cumulative_cvaccine,
-                    )
+        parse_canada_prevalence_data(cache, data)
 
     finally:
         cache.save()
