@@ -12,6 +12,7 @@ export interface Location {
   completeVaccinations: number | null
   unvaccinatedPrevalenceRatio: number | null
   averageFullyVaccinatedMultiplier: number | null
+  updatedAt?: string
 }
 
 // NOTE: anything between 'locations start' and 'locations end',
@@ -61651,4 +61652,5 @@ export const Locations: { [key: string]: Location } = {
   // update_prevalence locations end
 }
 
+// TODO remove once updated date is included per-location
 export const PrevalenceDataDate = 'December 12, 2021' // update_prevalence date
