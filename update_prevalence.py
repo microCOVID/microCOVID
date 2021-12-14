@@ -613,7 +613,7 @@ class Place(pydantic.BaseModel):
             averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
             # we have to format the date like this to get it to be parsed correctly by JS
             # Otherwise it assumes UTC time and will sometimes subtract a day
-            updatedAt="{}T00:00:00".format(effective_date.strftime("%B %d, %Y"))
+            updatedAt="{}T00:00:00".format(effective_date.strftime("%B %d, %Y")),
         )
 
 
@@ -1134,6 +1134,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             return True
     return False
 
+
 def parse_jhu_place_facts(cache, data, country_by_iso3):
     # List of regions and their population
     for line in parse_csv(cache, JHUPlaceFacts, JHUPlaceFacts.SOURCE):
@@ -1166,6 +1167,7 @@ def parse_jhu_place_facts(cache, data, country_by_iso3):
         if isinstance(place, (County, State)) and line.FIPS is not None:
             place.fips = str(line.FIPS)
 
+
 def parse_jhu_daily_report(cache, data, current):
     # Cumulative cases per region
     for line in parse_csv(cache, JHUDailyReport, current.strftime(JHUDailyReport.SOURCE)):
@@ -1176,10 +1178,9 @@ def parse_jhu_daily_report(cache, data, current):
             "Unassigned",
             "Unknown",
         ):
-            raise ValueError(
-                f"JHU data has cases but no population for {place!r} with line data: {line!r}"
-            )
+            raise ValueError(f"JHU data has cases but no population for {place!r} with line data: {line!r}")
         place.cumulative_cases[current] = line.Confirmed
+
 
 def parse_jhu_vaccines_global(cache, data):
     # Global vaccination rates
@@ -1194,6 +1195,7 @@ def parse_jhu_vaccines_global(cache, data):
             )
         except KeyError:
             print(f"Could not find UID {item.UID}")
+
 
 def parse_jhu_vaccines_hourly_us(cache, data):
     # US vaccination rates
@@ -1218,6 +1220,7 @@ def parse_jhu_vaccines_hourly_us(cache, data):
         elif item.Vaccine_Type == "Janssen":
             state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
 
+
 def parse_can_region_summary_by_county(cache, data):
     # Test positivity and vaccination status per US county
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
@@ -1237,6 +1240,7 @@ def parse_can_region_summary_by_county(cache, data):
             partial_vaccinations = item.actuals.vaccinationsInitiated - completed_vaccinations
             county.set_total_vaccines(partial_vaccinations, completed_vaccinations)
 
+
 def parse_can_region_summary_by_state(cache, data):
     # Test positivity and vaccination status per US state
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
@@ -1244,6 +1248,7 @@ def parse_can_region_summary_by_state(cache, data):
         state = data.countries["US"].states[state_name]
         if item.metrics is not None:
             state.test_positivity_rate = item.metrics.testPositivityRatio
+
 
 def parse_owid_testing_data(cache, country_by_iso3):
     # Test positivity per non-US country
@@ -1257,11 +1262,13 @@ def parse_owid_testing_data(cache, country_by_iso3):
             elif line.Seven_day_smoothed_daily_change:
                 country.tests_in_past_week = line.Seven_day_smoothed_daily_change * 7
 
+
 def parse_romania_prevalence_data(cache, data):
     for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
         state = data.get_state(line.County, country="Romania")
         state.population = int(float(line.Population.replace(",", "")))
         state.cumulative_cases[line.Date] = line.TotalCases
+
 
 def parse_canada_prevalence_data(cache, data):
     populate_since = canada_effective_date - timedelta(days=16)
@@ -1347,10 +1354,7 @@ def parse_canada_prevalence_data(cache, data):
         )
         for report in provincial_reports.summary:
             # check bounds just in case the reports interval gets changed later
-            if (
-                canada_one_week_cumulative_baseline <= report.date_
-                and report.date_ <= canada_effective_date
-            ):
+            if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
                 if report.cumulative_testing:
                     min_test_count = (
                         report.cumulative_testing
@@ -1392,9 +1396,7 @@ def parse_canada_prevalence_data(cache, data):
                     ],
                 )
             }
-            total_administered_shots = sum(
-                [shots for shots in administered_shots_by_manufacturer.values()]
-            )
+            total_administered_shots = sum([shots for shots in administered_shots_by_manufacturer.values()])
 
             proportional_weights = {
                 manufacturer: shots / total_administered_shots
