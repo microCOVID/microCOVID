@@ -613,7 +613,7 @@ class Place(pydantic.BaseModel):
             averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
             # we have to format the date like this to get it to be parsed correctly by JS
             # Otherwise it assumes UTC time and will sometimes subtract a day
-            updatedAt="{}T00:00:00".format(effective_date.strftime("%B %d, %Y")),
+            updatedAt=effective_date.strftime("%B %d, %Y"),
         )
 
 
