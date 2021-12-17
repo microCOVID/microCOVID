@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.003659,0.00172,0.000931,2.2774,1.0,0.00212
-Johor,Unknown,Unknown,0.000815,2.2774,1.0,0.001856
-Kedah,Unknown,Unknown,0.00089,2.2774,1.0,0.002027
-Kelantan,Unknown,Unknown,0.001389,2.2774,1.0,0.003163
-Melaka,Unknown,Unknown,0.001468,2.2774,1.0,0.003343
-Negeri Sembilan,Unknown,Unknown,0.001142,2.2774,1.0,0.002601
-Pahang,Unknown,Unknown,0.001441,2.2774,1.0486,0.003442
-Perak,Unknown,Unknown,0.0006,2.2774,1.0,0.001366
-Perlis,Unknown,Unknown,0.000809,2.2774,1.0,0.001843
-Pulau Pinang,Unknown,Unknown,0.001116,2.2774,1.0,0.002541
-Sabah,Unknown,Unknown,0.000439,2.2774,1.0,0.001
-Sarawak,Unknown,Unknown,0.000159,2.2774,1.0,0.000361
-Selangor,Unknown,Unknown,0.001189,2.2774,1.0,0.002708
-Terengganu,Unknown,Unknown,0.001096,2.2774,1.0,0.002496
-W.P. Kuala Lumpur,Unknown,Unknown,0.001172,2.2774,1.0,0.002669
-W.P. Labuan,Unknown,Unknown,0.001117,2.2774,1.2088,0.003074
-W.P. Putrajaya,Unknown,Unknown,0.002002,2.2774,1.0,0.004559
+Entire country,0.003514,0.001651,0.000894,2.2755,1.0,0.002034
+Johor,Unknown,Unknown,0.000794,2.2755,1.0,0.001806
+Kedah,Unknown,Unknown,0.000855,2.2755,1.0,0.001946
+Kelantan,Unknown,Unknown,0.00122,2.2755,1.0,0.002777
+Melaka,Unknown,Unknown,0.001217,2.2755,1.0,0.002769
+Negeri Sembilan,Unknown,Unknown,0.001113,2.2755,1.0,0.002533
+Pahang,Unknown,Unknown,0.00139,2.2755,1.0,0.003163
+Perak,Unknown,Unknown,0.000586,2.2755,1.0,0.001333
+Perlis,Unknown,Unknown,0.000766,2.2755,1.0,0.001743
+Pulau Pinang,Unknown,Unknown,0.001101,2.2755,1.0,0.002505
+Sabah,Unknown,Unknown,0.000405,2.2755,1.0,0.000921
+Sarawak,Unknown,Unknown,0.000143,2.2755,1.0,0.000325
+Selangor,Unknown,Unknown,0.001177,2.2755,1.0,0.002678
+Terengganu,Unknown,Unknown,0.001106,2.2755,1.0,0.002516
+W.P. Kuala Lumpur,Unknown,Unknown,0.001163,2.2755,1.001,0.00265
+W.P. Labuan,Unknown,Unknown,0.000966,2.2755,1.0,0.002198
+W.P. Putrajaya,Unknown,Unknown,0.001935,2.2755,1.0,0.004404

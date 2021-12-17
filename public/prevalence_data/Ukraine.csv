@@ -1,29 +1,29 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004723,0.00222,0.001409,2.8055,1.0,0.003954
-Cherkasy Oblast,Unknown,Unknown,0.002582,2.8055,1.0,0.007244
-Chernihiv Oblast,Unknown,Unknown,0.001425,2.8055,1.0,0.003997
-Chernivtsi Oblast,Unknown,Unknown,0.000825,2.8055,1.0,0.002314
-Crimea Republic*,Unknown,Unknown,0.001014,2.8055,1.0,0.002846
-Dnipropetrovsk Oblast,Unknown,Unknown,0.000937,2.8055,1.0,0.002629
-Donetsk Oblast,Unknown,Unknown,0.000758,2.8055,1.0,0.002126
-Ivano-Frankivsk Oblast,Unknown,Unknown,0.001318,2.8055,1.0209,0.003775
-Kharkiv Oblast,Unknown,Unknown,0.000806,2.8055,1.0,0.002261
-Kherson Oblast,Unknown,Unknown,0.00059,2.8055,1.0,0.001655
-Khmelnytskyi Oblast,Unknown,Unknown,0.001679,2.8055,1.0,0.00471
-Kiev,Unknown,Unknown,0.002446,2.8055,1.0,0.006863
-Kiev Oblast,Unknown,Unknown,0.001588,2.8055,1.0,0.004456
-Kirovohrad Oblast,Unknown,Unknown,0.001086,2.8055,1.0,0.003047
-Luhansk Oblast,Unknown,Unknown,0.000325,2.8055,1.0,0.000913
-Lviv Oblast,Unknown,Unknown,0.001112,2.8055,1.0,0.00312
-Mykolaiv Oblast,Unknown,Unknown,0.000845,2.8055,1.0,0.002371
-Odessa Oblast,Unknown,Unknown,0.001701,2.8055,1.1916,0.005688
-Poltava Oblast,Unknown,Unknown,0.002616,2.8055,1.0,0.007338
-Rivne Oblast,Unknown,Unknown,0.001471,2.8055,1.0,0.004126
-Sevastopol*,Unknown,Unknown,0.002511,2.8055,1.0,0.007045
-Sumy Oblast,Unknown,Unknown,0.001394,2.8055,1.0,0.003912
-Ternopil Oblast,Unknown,Unknown,0.001201,2.8055,1.0,0.003369
-Vinnytsia Oblast,Unknown,Unknown,0.001264,2.8055,1.0,0.003546
-Volyn Oblast,Unknown,Unknown,0.002793,2.8055,1.0,0.007837
-Zakarpattia Oblast,Unknown,Unknown,0.001657,2.8055,1.0,0.004648
-Zaporizhia Oblast,Unknown,Unknown,0.00166,2.8055,1.0,0.004658
-Zhytomyr Oblast,Unknown,Unknown,0.001474,2.8055,1.0,0.004134
+Entire country,0.004452,0.002092,0.001341,2.7757,1.0,0.003723
+Cherkasy Oblast,Unknown,Unknown,0.002496,2.7757,1.0,0.006928
+Chernihiv Oblast,Unknown,Unknown,0.001321,2.7757,1.0,0.003668
+Chernivtsi Oblast,Unknown,Unknown,0.000788,2.7757,1.0,0.002188
+Crimea Republic*,Unknown,Unknown,0.000944,2.7757,1.0,0.002619
+Dnipropetrovsk Oblast,Unknown,Unknown,0.000911,2.7757,1.0,0.002528
+Donetsk Oblast,Unknown,Unknown,0.000734,2.7757,1.0,0.002036
+Ivano-Frankivsk Oblast,Unknown,Unknown,0.001164,2.7757,1.0,0.003232
+Kharkiv Oblast,Unknown,Unknown,0.000712,2.7757,1.0,0.001975
+Kherson Oblast,Unknown,Unknown,0.000596,2.7757,1.0,0.001653
+Khmelnytskyi Oblast,Unknown,Unknown,0.001568,2.7757,1.0,0.004352
+Kiev,Unknown,Unknown,0.002541,2.7757,1.0,0.007053
+Kiev Oblast,Unknown,Unknown,0.001539,2.7757,1.0,0.004272
+Kirovohrad Oblast,Unknown,Unknown,0.001104,2.7757,1.0048,0.003079
+Luhansk Oblast,Unknown,Unknown,0.000296,2.7757,1.0,0.000822
+Lviv Oblast,Unknown,Unknown,0.001009,2.7757,1.0,0.002801
+Mykolaiv Oblast,Unknown,Unknown,0.00082,2.7757,1.0,0.002277
+Odessa Oblast,Unknown,Unknown,0.001352,2.7757,1.0,0.003753
+Poltava Oblast,Unknown,Unknown,0.002691,2.7757,1.0,0.007468
+Rivne Oblast,Unknown,Unknown,0.001405,2.7757,1.0,0.0039
+Sevastopol*,Unknown,Unknown,0.00241,2.7757,1.0,0.006689
+Sumy Oblast,Unknown,Unknown,0.001342,2.7757,1.0,0.003724
+Ternopil Oblast,Unknown,Unknown,0.001165,2.7757,1.0,0.003232
+Vinnytsia Oblast,Unknown,Unknown,0.001147,2.7757,1.0,0.003182
+Volyn Oblast,Unknown,Unknown,0.002722,2.7757,1.0,0.007555
+Zakarpattia Oblast,Unknown,Unknown,0.001596,2.7757,1.0,0.00443
+Zaporizhia Oblast,Unknown,Unknown,0.001636,2.7757,1.0,0.004541
+Zhytomyr Oblast,Unknown,Unknown,0.001215,2.7757,1.0,0.003374
