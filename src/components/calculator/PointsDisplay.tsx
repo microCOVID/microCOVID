@@ -144,7 +144,13 @@ export default function PointsDisplay(props: {
           activeRiskLevel={activeRiskLevel}
         />
       </Col>
-      <Col md="11" sm="10" xs="10" className="points-container">
+      <Col
+        md="11"
+        sm="10"
+        xs="10"
+        className="points-container"
+        data-testid="points-container"
+      >
         {!doShowPoints ? (
           <div className="risk-level"></div>
         ) : (

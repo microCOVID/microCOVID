@@ -1,4 +1,6 @@
+import { within } from '@testing-library/dom'
 import { fireEvent, render } from '@testing-library/react'
+import i18n from 'i18n'
 import React from 'react'
 import { AllProviders } from 'test/utils'
 
@@ -144,5 +146,43 @@ describe('calculator page', () => {
     // present user with a typeahead to choose a scenario; don't start a custom
     // scenario automatically
     expect(queryByText(customScenarioStarted)).not.toBeInTheDocument()
+  })
+
+  it('results in sane values', () => {
+    const {
+      queryAllByRole,
+      getByText,
+      getByPlaceholderText,
+      getByTestId,
+    } = render(<Calculator />, {
+      wrapper: AllProviders,
+    })
+
+    const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
+    fireEvent.click(topLocationBox)
+    const californiaOption = getByText(/California/i)
+    fireEvent.click(californiaOption)
+
+    const typeaheads = queryAllByRole('combobox')
+    const presetScenarioTypeahead = typeaheads[2]
+    fireEvent.click(presetScenarioTypeahead)
+
+    const outdoorHangout = /Outdoor masked hangout with 2 other people/i
+    const nearbyPeople = /How many people/i
+    fireEvent.click(getByText(outdoorHangout))
+    expect(getByText(nearbyPeople)).toBeInTheDocument()
+    expect(getByText(outdoorHangout)).toBeInTheDocument()
+    const pointsDisplay = getByTestId('points-container')
+    const node = within(pointsDisplay).getByText(
+      new RegExp(
+        i18n.t('calculator.pointsdisplay.microCOVIDs') +
+          ' ' +
+          i18n.t('each time'),
+        'i',
+      ),
+    )
+    const microCOVIDs = parseFloat(node.textContent!.split(' ')[0].slice(1))
+    expect(microCOVIDs).toBeGreaterThan(0)
+    expect(microCOVIDs).toBeLessThan(1000)
   })
 })
