@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.002931,0.001378,0.000751,2.2573,1.0,0.001696
-Johor,Unknown,Unknown,0.000717,2.2573,1.0,0.001619
-Kedah,Unknown,Unknown,0.000716,2.2573,1.0,0.001617
-Kelantan,Unknown,Unknown,0.001302,2.2573,1.0667,0.003134
-Melaka,Unknown,Unknown,0.001102,2.2573,1.0,0.002488
-Negeri Sembilan,Unknown,Unknown,0.0008,2.2573,1.0,0.001806
-Pahang,Unknown,Unknown,0.000873,2.2573,1.0,0.00197
-Perak,Unknown,Unknown,0.000472,2.2573,1.0,0.001067
-Perlis,Unknown,Unknown,0.000628,2.2573,1.0,0.001419
-Pulau Pinang,Unknown,Unknown,0.000894,2.2573,1.0,0.002018
-Sabah,Unknown,Unknown,0.000316,2.2573,1.0,0.000713
-Sarawak,Unknown,Unknown,8.1e-05,2.2573,1.0,0.000183
-Selangor,Unknown,Unknown,0.000992,2.2573,1.0,0.002238
-Terengganu,Unknown,Unknown,0.001124,2.2573,1.0167,0.002579
-W.P. Kuala Lumpur,Unknown,Unknown,0.000929,2.2573,1.0,0.002097
-W.P. Labuan,Unknown,Unknown,0.000594,2.2573,1.0,0.00134
-W.P. Putrajaya,Unknown,Unknown,0.00186,2.2573,1.0,0.004198
+Entire country,0.002822,0.001327,0.000725,2.2503,1.0,0.001632
+Johor,Unknown,Unknown,0.000716,2.2503,1.0,0.001612
+Kedah,Unknown,Unknown,0.00073,2.2503,1.0,0.001642
+Kelantan,Unknown,Unknown,0.001288,2.2503,1.0689,0.003099
+Melaka,Unknown,Unknown,0.001066,2.2503,1.0,0.002398
+Negeri Sembilan,Unknown,Unknown,0.000761,2.2503,1.0,0.001713
+Pahang,Unknown,Unknown,0.000815,2.2503,1.0,0.001833
+Perak,Unknown,Unknown,0.000478,2.2503,1.0,0.001076
+Perlis,Unknown,Unknown,0.000625,2.2503,1.0,0.001405
+Pulau Pinang,Unknown,Unknown,0.000889,2.2503,1.0,0.002
+Sabah,Unknown,Unknown,0.000317,2.2503,1.0,0.000712
+Sarawak,Unknown,Unknown,7.9e-05,2.2503,1.0,0.000178
+Selangor,Unknown,Unknown,0.000901,2.2503,1.0,0.002027
+Terengganu,Unknown,Unknown,0.001158,2.2503,1.0735,0.002796
+W.P. Kuala Lumpur,Unknown,Unknown,0.000874,2.2503,1.0,0.001966
+W.P. Labuan,Unknown,Unknown,0.000533,2.2503,1.0,0.0012
+W.P. Putrajaya,Unknown,Unknown,0.001812,2.2503,1.0674,0.004353
