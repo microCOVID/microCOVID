@@ -748,50 +748,58 @@ class AllData:
         self.fips_to_county: Dict[int, County] = {}
         self.uid_to_place: Dict[int, Place] = {}
 
-    def get_country(self, name: str) -> Country:
-        if name not in self.countries:
+    def get_country(self, name: str, create_if_not_found=True) -> Optional[Country]:
+        if name not in self.countries and create_if_not_found:
             self.countries[name] = Country(name=name, fullname=name)
-        return self.countries[name]
+        return self.countries.get(name)
 
-    def get_state(self, name: str, *, country: str) -> State:
-        parent = self.get_country(country)
-        if name not in parent.states:
+    def get_state(self, name: str, *, country: str, create_if_not_found=True) -> State:
+        parent = self.get_country(country, create_if_not_found=create_if_not_found)
+        if not parent:
+            return None
+        if name not in parent.states and create_if_not_found:
             parent.states[name] = State(name=name, fullname=f"{name}, {country}", country=country)
-        return parent.states[name]
+        return parent.states.get(name)
 
     def get_state_or_raise(self, name: str, country: str) -> State:
         return self.countries[country].states[name]
 
-    def get_county(self, name: str, *, state: str, country: str) -> County:
-        parent = self.get_state(state, country=country)
-        if name not in parent.counties:
+    def get_county(self, name: str, *, state: str, country: str, create_if_not_found=True) -> County:
+        parent = self.get_state(state, country=country, create_if_not_found=create_if_not_found)
+        if not parent:
+            return None
+        if name not in parent.counties and create_if_not_found:
             parent.counties[name] = County(
                 name=name,
                 fullname=f"{name}, {state}, {country}",
                 state=state,
                 country=country,
             )
-        return parent.counties[name]
+        return parent.counties.get(name)
 
-    def get_jhu_place(self, jhu_line: JHUCommonFields) -> Place:
+    def get_jhu_place(self, jhu_line: JHUCommonFields, create_if_not_found=True) -> Place:
         if jhu_line.Admin2:
             return self.get_county(
                 jhu_line.Admin2,
                 state=jhu_line.Province_State,
                 country=jhu_line.Country_Region,
+                create_if_not_found=create_if_not_found,
             )
         elif jhu_line.Province_State:
             return self.get_state(
                 jhu_line.Province_State,
                 country=jhu_line.Country_Region,
+                create_if_not_found=create_if_not_found,
             )
         elif jhu_line.Country_Region == "Korea, South":
-            return self.get_country("South Korea")
+            return self.get_country("South Korea", create_if_not_found=create_if_not_found)
         else:
-            return self.get_country(jhu_line.Country_Region)
+            return self.get_country(jhu_line.Country_Region, create_if_not_found=create_if_not_found)
 
     def get_canada_region_place(self, line: CanadaOpenCovidRegions.RegionInfo) -> Place:
-        return self.get_county(line.health_region, state=line.province_full, country="Canada")
+        return self.get_county(
+            line.health_region, state=line.province_full, country="Canada", create_if_not_found=False
+        )
 
     def populate_fips_cache(self) -> None:
         self.fips_to_county.clear()
@@ -1173,7 +1181,9 @@ def parse_jhu_daily_report(cache, data, current):
     for line in parse_csv(cache, JHUDailyReport, current.strftime(JHUDailyReport.SOURCE)):
         if ignore_jhu_place(line):
             continue
-        place = data.get_jhu_place(line)
+        place = data.get_jhu_place(line, create_if_not_found=False)
+        if not place:
+            continue
         if place.population == 0 and place.name not in (
             "Unassigned",
             "Unknown",
@@ -1243,6 +1253,8 @@ def parse_can_region_summary_by_county(cache, data):
 
 def parse_can_region_summary_by_state(cache, data):
     # Test positivity and vaccination status per US state
+    if "US" not in data.countries:
+        return
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
         state_name = us_state_name_by_abbrev[item.state]
         state = data.countries["US"].states[state_name]
@@ -1287,6 +1299,8 @@ def parse_canada_prevalence_data(cache, data):
 
         # add population data
         place = data.get_canada_region_place(region)
+        if not place:
+            continue
         if place.population != 0:
             raise ValueError(f"Duplicate population info for {place!r}: {region.Population}")
         if region.pop != "NULL":
@@ -1342,7 +1356,9 @@ def parse_canada_prevalence_data(cache, data):
     for province in provinces.prov:
         min_test_count = None
         max_test_count = None
-        place = data.get_state(province.province_full, country="Canada")
+        place = data.get_state(province.province_full, country="Canada", create_if_not_found=False)
+        if not place:
+            continue
         provincial_reports = parse_json(
             cache,
             CanadaOpenCovidProvincialSummary,
@@ -1432,7 +1448,8 @@ def main() -> None:
         populate_since = effective_date - timedelta(days=16)
         current = effective_date
         while current >= populate_since:
-            parse_jhu_daily_report(cache, data, current)
+            # TODO test having some but not all daily reports missing
+            # parse_jhu_daily_report(cache, data, current)
             current -= timedelta(days=1)
 
         # Global vaccination rates
@@ -1462,14 +1479,15 @@ def main() -> None:
     app_locations: Dict[str, AppLocation] = {}
     namegetter = attrgetter("name")
 
-    # US states first so they float to the top of the list
-    for state in sorted(data.countries["US"].states.values(), key=namegetter):
-        if state.fips is not None and int(state.fips) < 60:  # real states
-            app_locations[state.app_key] = state.as_app_data()
+    if "US" in data.countries:
+        # US states first so they float to the top of the list
+        for state in sorted(data.countries["US"].states.values(), key=namegetter):
+            if state.fips is not None and int(state.fips) < 60:  # real states
+                app_locations[state.app_key] = state.as_app_data()
 
-    for state in sorted(data.countries["US"].states.values(), key=namegetter):
-        if state.app_key not in app_locations:  # then territories etc
-            app_locations[state.app_key] = state.as_app_data()
+        for state in sorted(data.countries["US"].states.values(), key=namegetter):
+            if state.app_key not in app_locations:  # then territories etc
+                app_locations[state.app_key] = state.as_app_data()
 
     # Then everything else
     for country in sorted(data.countries.values(), key=namegetter):
