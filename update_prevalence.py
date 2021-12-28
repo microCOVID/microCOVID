@@ -1485,7 +1485,7 @@ def main() -> None:
     # And use it to update the app code
     locations_path = "public/location.json"
     with open(locations_path, "w") as fp:
-        json.dump(json_content, fp)
+        json.dump(json_content, fp, indent=4)
 
     # Also write CSVs containing the data, for the spreadsheet to import.
     csvdir = Path("public/prevalence_data")
