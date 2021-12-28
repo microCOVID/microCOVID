@@ -9,20 +9,83 @@ import ControlLabel from './controls/ControlLabel'
 import { LocationPrevalenceDetails } from './prevalence/LocationPrevalenceDetails'
 import { ManualPrevalenceDetails } from './prevalence/ManualPrevalenceDetails'
 import { CalculatorData } from 'data/calculate'
-import { Locations } from 'data/location'
 import 'components/calculator/styles/PrevalenceControls.scss'
-import { dataForLocation } from 'data/locationHelpers'
 
 interface Option {
   label: string
   value: string
 }
 
+export interface Location {
+  label: string
+  iso3: string | null
+  population: string
+  casesPastWeek: number
+  casesIncreasingPercentage: number
+  positiveCasePercentage: number | null
+  topLevelGroup: string | null
+  subdivisions: string[]
+  incompleteVaccinations: number | null
+  completeVaccinations: number | null
+  unvaccinatedPrevalenceRatio: number | null
+  averageFullyVaccinatedMultiplier: number | null
+  updatedAt: string
+}
+
+interface PrevalanceData {
+  population: string
+  casesPastWeek: number
+  casesIncreasingPercentage: number
+  positiveCasePercentage: number | null
+  prevalanceDataDate: Date
+  percentFullyVaccinated: number | null
+  unvaccinatedPrevalenceRatio: number | null
+  averageFullyVaccinatedMultiplier: number | null
+}
+
+export function dataForLocation(locationData: Location): PrevalanceData {
+  if (locationData) {
+    const population = Number(locationData.population.replace(/[^0-9.e]/g, ''))
+
+    return {
+      population: locationData.population,
+      casesPastWeek: locationData.casesPastWeek,
+      casesIncreasingPercentage:
+        Math.round(locationData.casesIncreasingPercentage * 10) / 10,
+      positiveCasePercentage:
+        locationData.positiveCasePercentage === null
+          ? null
+          : Math.round(locationData.positiveCasePercentage * 10) / 10,
+      prevalanceDataDate: new Date(locationData.updatedAt),
+      percentFullyVaccinated: locationData.completeVaccinations
+        ? Math.round((locationData.completeVaccinations / population) * 100)
+        : null,
+      unvaccinatedPrevalenceRatio: locationData.unvaccinatedPrevalenceRatio,
+      averageFullyVaccinatedMultiplier:
+        locationData.averageFullyVaccinatedMultiplier,
+    }
+  }
+
+  return {
+    population: '',
+    casesPastWeek: 0,
+    casesIncreasingPercentage: 0,
+    positiveCasePercentage: 0,
+    prevalanceDataDate: new Date(),
+    percentFullyVaccinated: null,
+    unvaccinatedPrevalenceRatio: null,
+    averageFullyVaccinatedMultiplier: null,
+  }
+}
+
 const isFilled = (val: string): boolean => {
   return val !== null && val !== undefined && val !== ''
 }
 
-const isTopLocation = (val: string): boolean => {
+const isTopLocation = (
+  val: string,
+  Locations: { [key: string]: Location },
+): boolean => {
   return isFilled(val) && !!Locations[val]
 }
 
@@ -30,6 +93,26 @@ export const PrevalenceControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = ({ data, setter }): React.ReactElement => {
+  const [Locations, setLocations] = useState({} as { [key: string]: Location })
+  const getLocations = () => {
+    return fetch('location.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
+      .then(function (response) {
+        console.log(response)
+        return response.json()
+      })
+      .then(function (myJson) {
+        console.log(myJson)
+        setLocations(myJson)
+      })
+  }
+  useEffect(() => {
+    getLocations()
+  }, [])
   const { t } = useTranslation()
   for (const iso_code of Object.keys(i18n.services.resourceStore.data)) {
     countries.registerLocale(
@@ -54,9 +137,10 @@ export const PrevalenceControls: React.FunctionComponent<{
     subLocation: string,
     subSubLocation: string,
   ) => {
+    const locationKey = subSubLocation || subLocation || topLocation
     setter({
       ...data,
-      ...dataForLocation(subSubLocation || subLocation || topLocation),
+      ...dataForLocation(Locations[locationKey]),
       topLocation,
       subLocation,
       subSubLocation,
@@ -77,9 +161,10 @@ export const PrevalenceControls: React.FunctionComponent<{
       const topLocation = data.topLocation
       const subLocation = data.subLocation
       const subSubLocation = data.subSubLocation
+      const locationKey = subSubLocation || subLocation || topLocation
       setter({
         ...data,
-        ...dataForLocation(subSubLocation || subLocation || topLocation),
+        ...dataForLocation(Locations[locationKey]),
         useManualEntry,
       })
     }
@@ -91,7 +176,7 @@ export const PrevalenceControls: React.FunctionComponent<{
       !data.useManualEntry &&
       (isFilled(data.subSubLocation || '') ||
         isFilled(data.subLocation) ||
-        isTopLocation(data.topLocation))
+        isTopLocation(data.topLocation, Locations))
     ) {
       setLocationData(
         data.topLocation,
@@ -104,7 +189,7 @@ export const PrevalenceControls: React.FunctionComponent<{
   }, [])
 
   let subPromptType = 'country_or_regions'
-  if (isTopLocation(data.topLocation)) {
+  if (isTopLocation(data.topLocation, Locations)) {
     if (data.topLocation.startsWith('US_')) {
       if (Locations[data.topLocation].label === 'Louisiana') {
         subPromptType = 'US-LA'
@@ -119,14 +204,15 @@ export const PrevalenceControls: React.FunctionComponent<{
   }
 
   const showSubLocation =
-    isTopLocation(data.topLocation) &&
+    isTopLocation(data.topLocation, Locations) &&
     Locations[data.topLocation].subdivisions.length > 1
 
   const showSubSubLocation =
     isFilled(data.subLocation) &&
     Locations[data.subLocation].subdivisions.length > 1
 
-  const locationSet = !data.useManualEntry && isTopLocation(data.topLocation)
+  const locationSet =
+    !data.useManualEntry && isTopLocation(data.topLocation, Locations)
 
   const [isManualEntryCurrently, setIsManualEntryCurrently] = useState<boolean>(
     !!data.useManualEntry,

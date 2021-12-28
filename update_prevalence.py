@@ -1480,51 +1480,12 @@ def main() -> None:
             for county in state.counties.values():
                 app_locations[county.app_key] = county.as_app_data()
 
-    # Format the result
-    to_insert: List[str] = []
-
-    def format_obj(obj: Dict[str, Any], indent: str = "  ") -> None:
-        for key, value in obj.items():
-            if isinstance(value, dict):
-                to_insert.append(indent + key + ": {\n")
-                format_obj(value, indent + "  ")
-                to_insert.append(indent + "},\n")
-            elif isinstance(value, list) and len(value) > 5:
-                to_insert.append(indent + key + ": [\n")
-                for elem in value:
-                    to_insert.append(f"{indent}  {elem!r},\n")
-                to_insert.append(indent + "],\n")
-            elif value is None:
-                to_insert.append(f"{indent}{key}: null,\n")
-            else:
-                to_insert.append(f"{indent}{key}: {value!r},\n")
-
-    format_obj(json.loads(AppLocations(__root__=app_locations).json()))
+    json_content = json.loads(AppLocations(__root__=app_locations).json())
 
     # And use it to update the app code
-    locations_path = "src/data/location.ts"
-    with open(locations_path) as fp:
-        lines = fp.readlines()
-
-    output: List[str] = []
-    skipping = False
-    missing_markers = {"locations"}
-    for line in lines:
-        if "// update_prevalence locations end" in line:
-            assert skipping
-            skipping = False
-        if not skipping:
-            output.append(line)
-        if "// update_prevalence locations start" in line:
-            missing_markers.remove("locations")
-            skipping = True
-            output.extend(to_insert)
-
-    if missing_markers:
-        sys.exit(f"{locations_path} does not contain markers {list(missing_markers)}; " f"can't update")
-
+    locations_path = "public/location.json"
     with open(locations_path, "w") as fp:
-        fp.writelines(output)
+        json.dump(json_content, fp)
 
     # Also write CSVs containing the data, for the spreadsheet to import.
     csvdir = Path("public/prevalence_data")
