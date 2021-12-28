@@ -38,6 +38,10 @@ CAN_API_KEY = os.environ.get("CAN_API_KEY")
 Model = TypeVar("Model", bound=pydantic.BaseModel)
 
 
+class MissingDataError(Exception):
+    pass
+
+
 def calc_effective_date() -> date:
     now = datetime.utcnow() - timedelta(days=1)
     # JHU daily reports are posted between 04:45 and 05:15 UTC the next day
@@ -383,13 +387,13 @@ class Place(pydantic.BaseModel):
         daily_cumulative_cases = []
         current = effective_date
         if current not in self.cumulative_cases:
-            raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
+            raise MissingDataError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
         while len(daily_cumulative_cases) < 15:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
                 if prev > min(self.cumulative_cases.keys()):
                     # Gaps in the data shouldn't happen
-                    raise ValueError(f"Missing case count for {self.fullname} on {prev:%Y-%m-%d}")
+                    raise MissingDataError(f"Missing case count for {self.fullname} on {prev:%Y-%m-%d}")
                 # But missing data at the beginning is normal -- counties
                 # typically only show up when they have any cases.
                 self.cumulative_cases[prev] = self.cumulative_cases[current]
@@ -581,23 +585,26 @@ class Place(pydantic.BaseModel):
         return vaccine_multiplier / total_fully_vaccinated
 
     def as_app_data(self) -> "AppLocation":
-        last_week = self.cases_last_week
-        week_before = self.cases_week_before
-        if last_week <= week_before or week_before <= 0:
-            increase = 0
-        else:
-            increase = last_week / week_before - 1
+        try:
+            last_week = self.cases_last_week
+            week_before = self.cases_week_before
+            if last_week <= week_before or week_before <= 0:
+                increase = 0
+            else:
+                increase = last_week / week_before - 1
 
-        if self.population <= 0 and self.name != "Unknown":
-            raise ValueError(f"Population for {self.name} is {self.population}")
+            if self.population <= 0 and self.name != "Unknown":
+                raise ValueError(f"Population for {self.name} is {self.population}")
 
-        if self.cases_last_week < 0:
-            raise ValueError(f"Cases for {self.name} is {self.cases_last_week}.")
+            if self.cases_last_week < 0:
+                raise ValueError(f"Cases for {self.name} is {self.cases_last_week}.")
 
-        if self.test_positivity_rate is not None and (
-            self.test_positivity_rate < 0 or self.test_positivity_rate > 1
-        ):
-            raise ValueError(f"Positive test rate for {self.name} is {self.test_positivity_rate}")
+            if self.test_positivity_rate is not None and (
+                self.test_positivity_rate < 0 or self.test_positivity_rate > 1
+            ):
+                raise ValueError(f"Positive test rate for {self.name} is {self.test_positivity_rate}")
+        except (ValueError, MissingDataError):
+            return None
 
         return AppLocation(
             label=self.name,
@@ -646,6 +653,8 @@ class State(Place):
 
     def as_app_data(self) -> "AppLocation":
         result = super().as_app_data()
+        if not result:
+            return None
         if self.country == "US":
             result.topLevelGroup = "US states"
             result.subdivisions = [county.app_key for county in self.counties.values()]
@@ -666,6 +675,8 @@ class Country(Place):
 
     def as_app_data(self) -> "AppLocation":
         result = super().as_app_data()
+        if not result:
+            return None
         result.topLevelGroup = "Countries"
         if self.name == "US":
             result.label = "United States (all)"
@@ -748,50 +759,58 @@ class AllData:
         self.fips_to_county: Dict[int, County] = {}
         self.uid_to_place: Dict[int, Place] = {}
 
-    def get_country(self, name: str) -> Country:
-        if name not in self.countries:
+    def get_country(self, name: str, create_if_not_found=True) -> Optional[Country]:
+        if name not in self.countries and create_if_not_found:
             self.countries[name] = Country(name=name, fullname=name)
-        return self.countries[name]
+        return self.countries.get(name)
 
-    def get_state(self, name: str, *, country: str) -> State:
-        parent = self.get_country(country)
-        if name not in parent.states:
+    def get_state(self, name: str, *, country: str, create_if_not_found=True) -> State:
+        parent = self.get_country(country, create_if_not_found=create_if_not_found)
+        if not parent:
+            return None
+        if name not in parent.states and create_if_not_found:
             parent.states[name] = State(name=name, fullname=f"{name}, {country}", country=country)
-        return parent.states[name]
+        return parent.states.get(name)
 
     def get_state_or_raise(self, name: str, country: str) -> State:
         return self.countries[country].states[name]
 
-    def get_county(self, name: str, *, state: str, country: str) -> County:
-        parent = self.get_state(state, country=country)
-        if name not in parent.counties:
+    def get_county(self, name: str, *, state: str, country: str, create_if_not_found=True) -> County:
+        parent = self.get_state(state, country=country, create_if_not_found=create_if_not_found)
+        if not parent:
+            return None
+        if name not in parent.counties and create_if_not_found:
             parent.counties[name] = County(
                 name=name,
                 fullname=f"{name}, {state}, {country}",
                 state=state,
                 country=country,
             )
-        return parent.counties[name]
+        return parent.counties.get(name)
 
-    def get_jhu_place(self, jhu_line: JHUCommonFields) -> Place:
+    def get_jhu_place(self, jhu_line: JHUCommonFields, create_if_not_found=True) -> Place:
         if jhu_line.Admin2:
             return self.get_county(
                 jhu_line.Admin2,
                 state=jhu_line.Province_State,
                 country=jhu_line.Country_Region,
+                create_if_not_found=create_if_not_found,
             )
         elif jhu_line.Province_State:
             return self.get_state(
                 jhu_line.Province_State,
                 country=jhu_line.Country_Region,
+                create_if_not_found=create_if_not_found,
             )
         elif jhu_line.Country_Region == "Korea, South":
-            return self.get_country("South Korea")
+            return self.get_country("South Korea", create_if_not_found=create_if_not_found)
         else:
-            return self.get_country(jhu_line.Country_Region)
+            return self.get_country(jhu_line.Country_Region, create_if_not_found=create_if_not_found)
 
     def get_canada_region_place(self, line: CanadaOpenCovidRegions.RegionInfo) -> Place:
-        return self.get_county(line.health_region, state=line.province_full, country="Canada")
+        return self.get_county(
+            line.health_region, state=line.province_full, country="Canada", create_if_not_found=False
+        )
 
     def populate_fips_cache(self) -> None:
         self.fips_to_county.clear()
@@ -847,7 +866,11 @@ class AllData:
 
             if parent.test_positivity_rate is None:
                 if parent.tests_in_past_week:
-                    parent.test_positivity_rate = parent.cases_last_week / parent.tests_in_past_week
+                    try:
+                        parent.test_positivity_rate = parent.cases_last_week / parent.tests_in_past_week
+                    except MissingDataError:
+                        # TODO log to Sentry
+                        parent.test_positivity_rate = None
 
                 tests_last_week = 0
                 valid = bool(children)
@@ -913,6 +936,9 @@ class AllData:
                         print(
                             f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
                         )
+                        state.test_positivity_rate = None
+                    except MissingDataError:
+                        # TODO log to Sentry
                         state.test_positivity_rate = None
                 if state.vaccines_by_type is not None:
                     rolldown_vaccine_types(state, state.counties.values())
@@ -988,8 +1014,10 @@ class AllData:
                     elif country.test_positivity_rate is not None:
                         state.test_positivity_rate = country.test_positivity_rate
 
-            if not rollup_cases(country, "states"):
-                raise ValueError(f"Missing case data for {country!r}")
+            rollup_cases(country, "states")
+            # TODO log to Sentry
+            # if not rollup_cases(country, "states"):
+            #     raise ValueError(f"Missing case data for {country!r}")
             rollup_testing(country, "states")
             for state in list(country.states.values()):
                 if state.name in fake_names:
@@ -1173,7 +1201,9 @@ def parse_jhu_daily_report(cache, data, current):
     for line in parse_csv(cache, JHUDailyReport, current.strftime(JHUDailyReport.SOURCE)):
         if ignore_jhu_place(line):
             continue
-        place = data.get_jhu_place(line)
+        place = data.get_jhu_place(line, create_if_not_found=False)
+        if not place:
+            continue
         if place.population == 0 and place.name not in (
             "Unassigned",
             "Unknown",
@@ -1243,6 +1273,8 @@ def parse_can_region_summary_by_county(cache, data):
 
 def parse_can_region_summary_by_state(cache, data):
     # Test positivity and vaccination status per US state
+    if "US" not in data.countries:
+        return
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
         state_name = us_state_name_by_abbrev[item.state]
         state = data.countries["US"].states[state_name]
@@ -1287,6 +1319,8 @@ def parse_canada_prevalence_data(cache, data):
 
         # add population data
         place = data.get_canada_region_place(region)
+        if not place:
+            continue
         if place.population != 0:
             raise ValueError(f"Duplicate population info for {place!r}: {region.Population}")
         if region.pop != "NULL":
@@ -1342,7 +1376,9 @@ def parse_canada_prevalence_data(cache, data):
     for province in provinces.prov:
         min_test_count = None
         max_test_count = None
-        place = data.get_state(province.province_full, country="Canada")
+        place = data.get_state(province.province_full, country="Canada", create_if_not_found=False)
+        if not place:
+            continue
         provincial_reports = parse_json(
             cache,
             CanadaOpenCovidProvincialSummary,
@@ -1432,6 +1468,7 @@ def main() -> None:
         populate_since = effective_date - timedelta(days=16)
         current = effective_date
         while current >= populate_since:
+            # TODO test having some but not all daily reports missing
             parse_jhu_daily_report(cache, data, current)
             current -= timedelta(days=1)
 
@@ -1439,17 +1476,22 @@ def main() -> None:
         parse_jhu_vaccines_global(cache, data)
 
         # US vaccination rates
+        # TODO: if this is missing the data actually changes, so we should probably still raise?
         parse_jhu_vaccines_hourly_us(cache, data)
 
         # Test positivity and vaccination status per US county and state
-        parse_can_region_summary_by_county(cache, data)
+        parse_can_region_summary_by_county(
+            cache, data
+        )  # TODO look into this harder, is it actually changing data or just removing places?
+        # TODO: if this is missing the data actually changes, so we should probably still raise?
         parse_can_region_summary_by_state(cache, data)
 
         # Test positivity per non-US country
+         # TODO look into this harder, ensure it is only nulling out positiveCasePercentage if missing
         parse_owid_testing_data(cache, country_by_iso3)
 
         # Romanian county (judet) data. Treat as states internally.
-        parse_romania_prevalence_data(cache, data)
+        # parse_romania_prevalence_data(cache, data)
 
         # Add Canada Public Health Unit (county-level) data
         parse_canada_prevalence_data(cache, data)
@@ -1462,23 +1504,34 @@ def main() -> None:
     app_locations: Dict[str, AppLocation] = {}
     namegetter = attrgetter("name")
 
-    # US states first so they float to the top of the list
-    for state in sorted(data.countries["US"].states.values(), key=namegetter):
-        if state.fips is not None and int(state.fips) < 60:  # real states
-            app_locations[state.app_key] = state.as_app_data()
+    if "US" in data.countries:
+        # US states first so they float to the top of the list
+        for state in sorted(data.countries["US"].states.values(), key=namegetter):
+            if state.fips is not None and int(state.fips) < 60:  # real states
+                state_app_data = state.as_app_data()
+                if state_app_data:
+                    app_locations[state.app_key] = state_app_data
 
-    for state in sorted(data.countries["US"].states.values(), key=namegetter):
-        if state.app_key not in app_locations:  # then territories etc
-            app_locations[state.app_key] = state.as_app_data()
+        for state in sorted(data.countries["US"].states.values(), key=namegetter):
+            if state.app_key not in app_locations:  # then territories etc
+                state_app_data = state.as_app_data()
+                if state_app_data:
+                    app_locations[state.app_key] = state_app_data
 
     # Then everything else
     for country in sorted(data.countries.values(), key=namegetter):
-        app_locations[country.app_key] = country.as_app_data()
+        country_app_data = country.as_app_data()
+        if country_app_data:
+            app_locations[country.app_key] = country_app_data
         for state in country.states.values():
             if state.app_key not in app_locations:
-                app_locations[state.app_key] = state.as_app_data()
+                state_app_data = state.as_app_data()
+                if state_app_data:
+                    app_locations[state.app_key] = state_app_data
             for county in state.counties.values():
-                app_locations[county.app_key] = county.as_app_data()
+                county_app_data = county.as_app_data()
+                if county_app_data:
+                    app_locations[county.app_key] = county_app_data
 
     json_content = json.loads(AppLocations(__root__=app_locations).json())
 
@@ -1488,6 +1541,7 @@ def main() -> None:
         json.dump(json_content, fp, indent=4)
 
     # Also write CSVs containing the data, for the spreadsheet to import.
+    # TODO figure out what the hell to do about this part
     csvdir = Path("public/prevalence_data")
     if csvdir.exists():
         shutil.rmtree(csvdir)
