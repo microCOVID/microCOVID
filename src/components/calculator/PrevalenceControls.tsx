@@ -102,11 +102,9 @@ export const PrevalenceControls: React.FunctionComponent<{
       },
     })
       .then(function (response) {
-        console.log(response)
         return response.json()
       })
       .then(function (myJson) {
-        console.log(myJson)
         setLocations(myJson)
       })
   }
