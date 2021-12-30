@@ -1,3 +1,5 @@
+import locationsFromJSON from './location.json'
+
 // TODO(bshaya): Migrate from `type | null` to `?: type`
 export interface Location {
   label: string
@@ -12,13 +14,7 @@ export interface Location {
   completeVaccinations: number | null
   unvaccinatedPrevalenceRatio: number | null
   averageFullyVaccinatedMultiplier: number | null
-  updatedAt?: string
+  updatedAt: string
 }
 
-// NOTE: anything between 'locations start' and 'locations end',
-// or on the 'date' line, will be overwritten the next time someone
-// runs update_prevalence.py.
-
-import * as locationsFromJSON from './location.json'
-
-export const Locations = locationsFromJSON
+export const Locations: { [key: string]: Location } = locationsFromJSON
