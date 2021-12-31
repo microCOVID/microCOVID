@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sentry/react": "^6.16.1",
+    "@sentry/tracing": "^6.16.1",
     "@testing-library/dom": ">=5",
     "@types/react-bootstrap-typeahead": "^5.1.2",
     "bootstrap": "^4.5.0",
