@@ -1,6 +1,6 @@
 import copy from 'copy-to-clipboard'
 import { stringify } from 'query-string'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsLink45Deg } from 'react-icons/bs'
@@ -47,6 +47,9 @@ const FORM_STATE_KEY = 'formData'
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
   const [showWarning, setShowWarning] = useState(true)
+  const [points, setPoints] = useState(-1)
+  const [lowerBound, setLowerBound] = useState(-1)
+  const [upperBound, setUpperBound] = useState(-1)
 
   // Mount / unmount
   useEffect(() => {
@@ -102,12 +105,15 @@ export const Calculator = (): React.ReactElement => {
     addAlert('Link copied to clipboard!')
   }
 
-  const { points, lowerBound, upperBound } = useMemo(() => {
+  useEffect(() => {
     // Risk calculation
     const result = calculate(calculatorData)
     if (result === null) {
       document.getElementById('points-row')?.classList.remove('has-points')
-      return { points: -1, lowerBound: -1, upperBound: -1 }
+      setPoints(-1)
+      setLowerBound(-1)
+      setUpperBound(-1)
+      return
     }
 
     const { expectedValue, lowerBound, upperBound } = result
@@ -134,7 +140,9 @@ export const Calculator = (): React.ReactElement => {
     setQuery(filterParams(calculatorData), 'replace')
 
     document.getElementById('points-row')?.classList.add('has-points')
-    return { points: expectedValue, lowerBound, upperBound }
+    setPoints(expectedValue)
+    setLowerBound(lowerBound)
+    setUpperBound(upperBound)
   }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
