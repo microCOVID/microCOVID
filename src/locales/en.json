@@ -95,6 +95,8 @@
       "call_to_action": "Calculate approximate risk of contracting COVID",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
+      "omicron_warning": "Research is in progress to determine Omicron's impact on our models. The chance of infection is likely higher than the calculator currently shows, even if you are vaccinated.",
+      "omicron_warning_heading": "Not yet updated for the Omicron variant",
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
       "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
       "whats_this2": "This calculator lets you estimate COVID risk and find effective safety measures for customizable situations. Examples: how risky is <1>a trip to my grocery store</1>? What's the safest way to <3>see a friend</3>? How much would it help to <5>wear a better mask at my workplace</5>?"
