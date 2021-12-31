@@ -23,6 +23,7 @@ from us_state_abbrev import us_state_name_by_abbrev
 try:
     import pydantic
     import requests
+    import sentry_sdk
 except ImportError:
     print("Virtual environment not set up correctly.")
     print("Run:")
@@ -36,6 +37,11 @@ except ImportError:
 CAN_API_KEY = os.environ.get("CAN_API_KEY")
 
 Model = TypeVar("Model", bound=pydantic.BaseModel)
+
+
+def print_and_log_to_sentry(message):
+    sentry_sdk.capture_message(message)
+    print(message)
 
 
 def calc_effective_date() -> date:
@@ -437,17 +443,17 @@ class Place(pydantic.BaseModel):
                         break
 
             if values[0] > min(values[:-1]) and possibly_suspect_correction:
-                print(
+                print_and_log_to_sentry(
                     f"Warning: Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
                 )
             if min(values[:-1]) == values[-1] and max(values) > values[-1]:
-                print(
+                print_and_log_to_sentry(
                     f"Warning: Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
                 )
             return values[-1] - min(values[:-1])
 
         # looks complicated. Print a warning.
-        print(
+        print_and_log_to_sentry(
             f"Warning: Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
         )
         return 0
@@ -698,7 +704,7 @@ class AppLocation(pydantic.BaseModel):
         if positivityRate is None or positivityRate > 100:
             positivityRate = 100
         if positivityRate < 0:
-            print(f"Warning: Positivity rate is negative: {positivityRate}")
+            print_and_log_to_sentry(f"Warning: Positivity rate is negative: {positivityRate}")
             positivityRate = 0
         final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
@@ -811,7 +817,7 @@ class AllData:
     def add_place_to_uid_cache(self, uid: int, place: Place):
         self.uid_to_place[uid] = place
 
-    # Attempt to set the population, cases, and postitive test rates of a region
+    # Attempt to set the population, cases, and positive test rates of a region
     # based on the stats of all its sub-regions
     def rollup_totals(self) -> None:
         fake_names = ("Unknown", "Unassigned", "Recovered", "Repatriated")
@@ -910,7 +916,7 @@ class AllData:
                     try:
                         state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                     except ZeroDivisionError:
-                        print(
+                        print_and_log_to_sentry(
                             f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
                         )
                         state.test_positivity_rate = None
@@ -949,14 +955,14 @@ class AllData:
                         ):
                             pass  # don't warn
                         else:
-                            print(f"Discarding {county!r} with no case data")
+                            print_and_log_to_sentry(f"Discarding {county!r} with no case data")
                         del state.counties[county.name]
 
                     if county.test_positivity_rate is None:
                         if county.tests_in_past_week:
                             county.test_positivity_rate = county.cases_last_week / county.tests_in_past_week
                             if county.cases_last_week > county.tests_in_past_week:
-                                print(
+                                print_and_log_to_sentry(
                                     f"Falling back to state data for {county.name} because it has more cases than tests in the last week with a positivity rate of {county.test_positivity_rate}."
                                 )
                                 county.test_positivity_rate = state.test_positivity_rate
@@ -972,7 +978,7 @@ class AllData:
                     elif state.name in ("American Samoa", "Unknown", "Recovered"):
                         pass
                     else:
-                        print(f"Discarding {state!r} with no case data")
+                        print_and_log_to_sentry(f"Discarding {state!r} with no case data")
                     del country.states[state.name]
 
                 for county in list(state.counties.values()):
@@ -1010,6 +1016,7 @@ class DataCache(pydantic.BaseModel):
         except OSError:
             pass
         except Exception as exc:
+            sentry_sdk.capture_exception(exc)
             print(f"discarding corrupted cache: {exc!r}")
             os.unlink(".prevalence_data.json")
         else:
@@ -1078,19 +1085,18 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     for attempt in range(max_attempts + 1):
         # Error case
         if attempt == max_attempts:
-            raise ValueError(f"Reached max attempts ({attempt}) attmpting to get JSON from {url}")
+            raise ValueError(f"Reached max attempts ({attempt}) attempting to get JSON from {url}")
 
-        # Normal JSON load attmempt
+        # Normal JSON load attempt
         try:
             contents_as_json = json.loads(cache.get(url))
             break
         except json.JSONDecodeError as e:
             # Lengthen the delay time each time it fails, to give the API more of a break
             # This can lead to very very long script runs, but it (usually) eventually works
-            # TODO: We can hopefully greatly redue the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
+            # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
             retry_time_seconds *= 2
-            print(f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}")
-            print(f"Trying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)...")
+            print_and_log_to_sentry(f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)...")
             sleep(retry_time_seconds)
             cache.remove(url)
 
@@ -1194,7 +1200,7 @@ def parse_jhu_vaccines_global(cache, data):
                 item.People_fully_vaccinated,
             )
         except KeyError:
-            print(f"Could not find UID {item.UID}")
+            print_and_log_to_sentry(f"Could not find UID {item.UID}")
 
 
 def parse_jhu_vaccines_hourly_us(cache, data):
@@ -1203,6 +1209,7 @@ def parse_jhu_vaccines_hourly_us(cache, data):
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
+            sentry_sdk.capture_message("Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # print(f"Could not find state {item.Province_State}")
@@ -1227,7 +1234,7 @@ def parse_can_region_summary_by_county(cache, data):
         assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
         if item.fips not in data.fips_to_county:
             # Ignore e.g. Northern Mariana Islands
-            print(f"ignoring unknown county fips {item.fips}")
+            print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
             continue
         county = data.fips_to_county[item.fips]
         assert (
@@ -1416,6 +1423,15 @@ def parse_canada_prevalence_data(cache, data):
 
 
 def main() -> None:
+    sentry_sdk.init(
+        "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
+
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for performance monitoring.
+        # We recommend adjusting this value in production.
+        traces_sample_rate=1.0
+    )
+
     if not CAN_API_KEY:
         print("Usage: CAN_API_KEY=${COVID_ACT_NOW_API_KEY} python3 %s" % sys.argv[0])
         sys.exit(1)

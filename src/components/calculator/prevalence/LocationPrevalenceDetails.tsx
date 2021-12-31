@@ -93,7 +93,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
             </em>
           </div>
           <div>
-            <p className="mt-3">
+            <div className="mt-3">
               <Trans i18nKey="calculator.prevalence_info_source_information">
                 Prevalence data consolidated from {}
                 <a
@@ -175,7 +175,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
                   </Trans>
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
         </>
       )}
