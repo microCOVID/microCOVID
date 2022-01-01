@@ -13,7 +13,7 @@ Jump to: [General](#general-risk-tracker-faq) | [Activity Modeling](#activity-mo
 
 ## The points for an activity I entered recently just changed... What happened? (Automatic Location Data Imports)
 
-By default, the Risk Tracker automatically imports the latest data for each of the locations you’ve selected in the _Locations_ sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points. 
+By default, the Risk Tracker automatically imports the latest data for each of the locations you’ve selected in the _Locations_ sheet. We update the prevalence data every few days, which may cause an activity you’ve already entered to change points.
 
 **Note:** We adjust activities before the date of the last import to match the prevalence that has been observed, and activities after the date of the last import to account for a ”delay factor” if COVID prevalence is increasing in your area. Because of this, it’s possible to enter the exact same activity on two different dates and see slightly different microCOVID scores.
 
@@ -142,8 +142,8 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
    </td>
    <td>
    💬 Normal volume: <strong><code>Baseline</code></strong><br />
-   🤐 Silent: <strong><code>x1/5</code></strong><br />
-   ❗ Loud / Singing: <strong><code>x5</code></strong>
+   🤐 Silent: <strong><code>x1/3</code></strong><br />
+   ❗ Loud / Singing: <strong><code>x4.3</code></strong>
    </td>
   </tr>
   <tr>
@@ -182,7 +182,7 @@ For the purposes of calculating the microCOVID risk score for an activity, we as
 
 ## How do I insert new rows into the Activity Log?
 
-Because everyone is using the _ Pod Activity Log_, you will eventually run out of space need to enter activities. 
+Because everyone is using the _ Pod Activity Log_, you will eventually run out of space need to enter activities.
 
 Here is a video that demonstrates how to do so:
 
@@ -193,7 +193,7 @@ You can follow these same steps to insert rows on the _Pod Activity Log_ sheet a
 
 ## How do I log interacting with multiple different people over a period of time? (Example: an outdoor party)
 
-If some people are circulating, you only need to account for the people who are near you. 
+If some people are circulating, you only need to account for the people who are near you.
 
 **Some examples:**
 
@@ -201,7 +201,7 @@ If some people are circulating, you only need to account for the people who are 
 *   If you see 5 different co-workers outdoors for brief interactions throughout the day, and you are near each person for 10 minutes at a time, you can either log that as “5 people for 10 minutes” or “1 person for 50 minutes.”
 *   If you’re in a store, you want to model the number of people who are 3+ feet (1+ meters), 6+ feet (2+ meters) and 10-15 feet (3-4 meters) away from you _on average_. You can use the tool in the _Utilities_ sheet to help you convert those 3 distances to a total number of people who are 6 feet away.
 
-When the people you’re seeing all have the same risk profile, with the same precautions, you can enter them all as one "Custom Person" because they function together as a unit. If you're seeing people at different times or for different lengths of time each, you'll need to model them as separate Custom Person sections. 
+When the people you’re seeing all have the same risk profile, with the same precautions, you can enter them all as one "Custom Person" because they function together as a unit. If you're seeing people at different times or for different lengths of time each, you'll need to model them as separate Custom Person sections.
 
 
 # Custom Person Modeling
@@ -215,7 +215,7 @@ If you are only seeing one person in the household, it is more accurate to model
 
 ## What if I don’t want to keep updating the Custom Person activity log every time I see the person?
 
-If you’d rather overestimate your points and not need to do as much up-keep on the Risk Tracker, you could do the following: Model the person and overestimate each of their activities. For example, on any given week they spend anywhere from 1-5 hours of social time with a single friend at a time. You could just model it as 5 hours of time and not worry about updating it each time. 
+If you’d rather overestimate your points and not need to do as much up-keep on the Risk Tracker, you could do the following: Model the person and overestimate each of their activities. For example, on any given week they spend anywhere from 1-5 hours of social time with a single friend at a time. You could just model it as 5 hours of time and not worry about updating it each time.
 
 **Note:** Then you could work out an agreement with the person to notify you if their activities go beyond the range that you’ve modeled (for example: if they take a flight). It is very important that you trust that they will report any changes, since one risky activity on their part could make a huge difference in your budget. We also suggest proactively asking your contacts if they’ve had any additional activities.
 
@@ -236,14 +236,14 @@ If you’d rather overestimate your points and not need to do as much up-keep on
 
 The Risk Tracker is designed to ensure that you are only exposing your podmates to the budget you have specified. Certain features allow you to take on more risk but reduce the risk you pose to your podmates.
 
-One main place this occurs is with the “contact will report symptoms” checkbox, which reduces the risk to the pod by 50%. 
+One main place this occurs is with the “contact will report symptoms” checkbox, which reduces the risk to the pod by 50%.
 
 For example, If you log an activity that is 300 points, and the person you’re seeing  agrees to report symptoms, you still incur all 300 points as a risk to yourself. However you are only exposing your pod to 150 points, since you would quarantine after the person notified you about symptoms, and you would have spent less potentially-contagious time around your podmates.
 
 
 ## How do I know the risk I pose to other people outside my pod?
 
-On the _Pod Overview_ sheet, there is a section (in pink) called "Other Pod Stats." The row titled **"Your risk to other people you see outside of the house/pod"** contains your current risk score to other people outside the pod. 
+On the _Pod Overview_ sheet, there is a section (in pink) called "Other Pod Stats." The row titled **"Your risk to other people you see outside of the house/pod"** contains your current risk score to other people outside the pod.
 
 While your "risk to pod" is calculated over the last 0-7 days to make budgeting easy, your actually current risk to other people includes any activities in the 2-23 days and includes the risk your podmates pose to you.
 
@@ -260,9 +260,9 @@ One way some pods have addressed this is by allowing you to “save up” your p
 The Risk Tracker is not currently built to assist you with calculating your annual total points used and points remaining. You’re welcome to adapt it to that situation.
 
 
-## What’s up with the 0-7 day  range and 2-9 day range? What are they for? Why the difference? 
+## What’s up with the 0-7 day  range and 2-9 day range? What are they for? Why the difference?
 
-You may notice that the _Pod Activity Log_ sheet calculates your risk in the last 0-7 days.  This is because a 0-7 day range is easiest to work with for the purposes of helping you stay within your budget. 
+You may notice that the _Pod Activity Log_ sheet calculates your risk in the last 0-7 days.  This is because a 0-7 day range is easiest to work with for the purposes of helping you stay within your budget.
 
 A 2-9 day range is when you would most likely be contagious to others if you were exposed (or when <span style="text-decoration:underline;">they</span> are most likely contagious to <span style="text-decoration:underline;">you</span>). In the _Custom People_ sheet, we total the activities in the last 2-9 days because activities in the last 0-1 days wouldn’t yet present a significant risk of transmission to you.
 

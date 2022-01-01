@@ -139,12 +139,12 @@ export const Voice: { [key: string]: FormValue } = {
   normal: {
     label: i18n.t('data.normal_voice'),
     label_short: i18n.t('data.normal_voice_short'),
-    multiplier: 1,
+    multiplier: 0.6,
   },
   loud: {
     label: i18n.t('data.loud_voice'),
     label_short: i18n.t('data.loud_voice_short'),
-    multiplier: 5,
+    multiplier: 2.6,
   },
 }
 
