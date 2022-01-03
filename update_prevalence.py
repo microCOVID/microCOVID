@@ -973,9 +973,9 @@ class AllData:
                             county.test_positivity_rate = state.test_positivity_rate
 
                 if not rollup_cases(state, "counties"):
-                    if state.country == "Nigeria":
-                        pass  # Nigeria only reports nation-level cases
-                    elif state.name in ("American Samoa", "Unknown", "Recovered"):
+                    if state.country in ("Nigeria", "Poland"):
+                        pass  # Nigeria and Poland only report nation-level cases
+                    elif state.name in ("American Samoa", "Unknown", "Recovered", "Repatriated"):
                         pass
                     else:
                         print_and_log_to_sentry(f"Discarding {state!r} with no case data")
@@ -1209,7 +1209,7 @@ def parse_jhu_vaccines_hourly_us(cache, data):
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
-            sentry_sdk.capture_message("Could not find state {item.Province_State}")
+            sentry_sdk.capture_message(f"Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # print(f"Could not find state {item.Province_State}")
@@ -1234,7 +1234,8 @@ def parse_can_region_summary_by_county(cache, data):
         assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
         if item.fips not in data.fips_to_county:
             # Ignore e.g. Northern Mariana Islands
-            print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
+            if item.fips not in {69110, 69120}:
+                print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
             continue
         county = data.fips_to_county[item.fips]
         assert (
