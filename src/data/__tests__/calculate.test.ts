@@ -298,7 +298,7 @@ describe('calculate', () => {
     })
     it('should apply 6% risk for a vaccinated partner', () => {
       expect(calcValue(vaccinatedPartner)).toBeCloseTo(
-        0.1 * (calcValue(unvaccinatedPartner) || -1),
+        0.8 * (calcValue(unvaccinatedPartner) || -1),
       )
     })
   })
@@ -494,7 +494,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineLongScenario)).toBeCloseTo(
-        calcValue(noVaccineLongScenario)! * 0.17,
+        calcValue(noVaccineLongScenario)! * 0.8,
       )
     })
 
@@ -509,7 +509,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineHousemate)).toBeCloseTo(
-        calcValue(noVaccineHousemate)! * 0.17,
+        calcValue(noVaccineHousemate)! * 0.8,
       )
     })
 
@@ -523,7 +523,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccinePartner)).toBeCloseTo(
-        calcValue(noVaccinePartner)! * 0.17,
+        calcValue(noVaccinePartner)! * 0.8,
       )
     })
   })
@@ -545,7 +545,7 @@ describe('calculate', () => {
     it('Should decrease risk for vaccinated people', () => {
       expect(
         calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
-      ).toEqual(defaultValue * 2 * 0.1)
+    ).toEqual(defaultValue * 2 * 0.8)
     })
   })
 
