@@ -368,30 +368,31 @@ export interface VaccineValue {
   multiplierPerDose: number[] // muliplierPerDose[n] is the multiplier for having |n| doses of vaccine.
 }
 
-export const Vaccines: { [key: string]: VaccineValue } = {
+export cons
+t Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multiplierPerDose: [1, 0.76, 0.17],
+    multiplierPerDose: [1, 1, 0.8, 0.25],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multiplierPerDose: [1, 0.76, 0.17],
+    multiplierPerDose: [1, 1, 0.8, 0.25],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
-    multiplierPerDose: [1, 0.76, 0.47],
+    multiplierPerDose: [1, 1, 1, 0.3],
   },
   johnson: {
     label: i18n.t('data.vaccine.johnson_johnson'),
-    multiplierPerDose: [1, 0.36],
+    multiplierPerDose: [1, 0.95],
   },
   sputnik: {
     label: i18n.t('data.vaccine.sputnik'),
-    multiplierPerDose: [1, 0.76, 0.17],
+    multiplierPerDose: [1, 1, 0.8, 0.25],
   },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
-    multiplierPerDose: [1, 0.76, 0.47],
+    multiplierPerDose: [1, 1, 1, 0.3],
   },
 }
 

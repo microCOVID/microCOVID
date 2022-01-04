@@ -461,16 +461,19 @@ describe('calculate', () => {
     it.each`
       type             | doses | multiplier
       ${'pfizer'}      | ${0}  | ${1}
-      ${'pfizer'}      | ${1}  | ${0.76}
-      ${'pfizer'}      | ${2}  | ${0.17}
+      ${'pfizer'}      | ${1}  | ${1}
+      ${'pfizer'}      | ${2}  | ${0.8}
+      ${'pfizer'}      | ${3}  | ${0.25}
       ${'moderna'}     | ${0}  | ${1}
-      ${'moderna'}     | ${1}  | ${0.76}
-      ${'moderna'}     | ${2}  | ${0.17}
+      ${'moderna'}     | ${1}  | ${1}
+      ${'moderna'}     | ${2}  | ${0.8}
+      ${'moderna'}     | ${3}  | ${0.25}
       ${'astraZeneca'} | ${0}  | ${1}
-      ${'astraZeneca'} | ${1}  | ${0.76}
-      ${'astraZeneca'} | ${2}  | ${0.47}
+      ${'astraZeneca'} | ${1}  | ${1}
+      ${'astraZeneca'} | ${2}  | ${1}
+      ${'astraZeneca'} | ${3}  | ${0.3}
       ${'johnson'}     | ${0}  | ${1}
-      ${'johnson'}     | ${1}  | ${0.36}
+      ${'johnson'}     | ${1}  | ${0.95}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
