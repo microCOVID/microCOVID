@@ -368,8 +368,7 @@ export interface VaccineValue {
   multiplierPerDose: number[] // muliplierPerDose[n] is the multiplier for having |n| doses of vaccine.
 }
 
-export cons
-t Vaccines: { [key: string]: VaccineValue } = {
+export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
     multiplierPerDose: [1, 1, 0.8, 0.25],
