@@ -42,7 +42,7 @@ const baseTestData = {
   prevalanceDataDate: dateAfterDay0(30),
   unvaccinatedPrevalenceRatio: 2,
   percentFullyVaccinated: 40,
-  averageFullyVaccinatedMultiplier: 0.1,
+  averageFullyVaccinatedMultiplier: 0.8,
   symptomsChecked: 'no',
 }
 
