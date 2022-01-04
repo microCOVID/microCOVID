@@ -166,7 +166,7 @@
       "your_mask_header": "Your mask",
       "your_vaccine_doses_label": "How many doses?",
       "your_vaccine_header": "Your Vaccine",
-      "your_vaccine_label": "Which vaccine did you receive?"
+      "your_vaccine_label": "Which vaccine did you receive <em>most recently</em>?"
     },
     "prevalence": {
       "adjusted_prevalence": "Adjusted prevalence",
