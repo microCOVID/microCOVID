@@ -853,6 +853,8 @@ class AllData:
 
             if parent.test_positivity_rate is None:
                 if parent.tests_in_past_week:
+                    if parent.name == "Quebec":
+                        print("FIND 1")
                     parent.test_positivity_rate = parent.cases_last_week / parent.tests_in_past_week
 
                 tests_last_week = 0
@@ -863,6 +865,8 @@ class AllData:
                     elif child.test_positivity_rate > 0:
                         tests_last_week += child.cases_last_week / child.test_positivity_rate
                 if valid and tests_last_week:
+                    if parent.name == "Quebec":
+                        print("FIND 2")
                     parent.test_positivity_rate = parent.cases_last_week / tests_last_week
 
         def rollup_vaccines(parent: Place, child_attr: str) -> None:
@@ -914,11 +918,16 @@ class AllData:
             for state in country.states.values():
                 if state.test_positivity_rate is None and state.tests_in_past_week is not None:
                     try:
+                        if state.name == "Quebec":
+                            print("FIND 3")
                         state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                     except ZeroDivisionError:
                         print_and_log_to_sentry(
                             f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
                         )
+                        state.test_positivity_rate = None
+                    if state.test_positivity_rate > 1:
+                        print("FIND 4")
                         state.test_positivity_rate = None
                 if state.vaccines_by_type is not None:
                     rolldown_vaccine_types(state, state.counties.values())
@@ -992,6 +1001,8 @@ class AllData:
                     if state.counties or state.tests_in_past_week:
                         rollup_testing(state, "counties")
                     elif country.test_positivity_rate is not None:
+                        if state.name == "Quebec":
+                            print("FIND 5")
                         state.test_positivity_rate = country.test_positivity_rate
 
             if not rollup_cases(country, "states"):
