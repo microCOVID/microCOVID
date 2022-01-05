@@ -364,7 +364,7 @@ class Vaccination(pydantic.BaseModel):
 # Our unified representation:
 
 
-class Place(pydantic.BaseModel):
+class Place(pydantic.BaseModel, validate_assignment=True):
     fullname: str  # "San Francisco, California, US"
     name: str  # "San Francisco"
     population: int = 0  # 881549
@@ -378,6 +378,21 @@ class Place(pydantic.BaseModel):
 
     vaccines_by_type: Optional[Dict[str, Vaccination]]
     vaccines_total = Vaccination()
+
+    @pydantic.validator("test_positivity_rate", pre=True)
+    def test_positivity_rate_validator(cls, value, values):
+        if value is not None:
+            if value > 1:
+                print_and_log_to_sentry(
+                    f"Couldn't calculate {values.get('fullname')}'s test positivity rate because it was greater than 1."
+                )
+            elif value < 0:
+                print_and_log_to_sentry(
+                    f"Couldn't calculate {values.get('fullname')}'s test positivity rate because it was less than 0."
+                )
+            return None
+        else:
+            return value
 
     @property
     def recent_daily_cumulative_cases(self) -> List[int]:
@@ -835,10 +850,14 @@ class AllData:
             children: Dict[str, Place] = getattr(parent, child_attr)
 
             if not parent.cumulative_cases:
+                # cumulative_cases = collections.Counter()
                 for child in children.values():
+                    print("FIND ME parent", parent.fullname, parent.cumulative_cases)
+                    print("FIND ME child", child.fullname, child.cumulative_cases)
                     parent.cumulative_cases += child.cumulative_cases
                 if not parent.cumulative_cases:
                     return False
+                # parent.cumulative_cases = cumulative_cases
             if parent.population == 0:  # fake region (Unknown, etc)
                 try:
                     cases_last_week = parent.cases_last_week
