@@ -364,12 +364,12 @@ class Vaccination(pydantic.BaseModel):
 # Our unified representation:
 
 
-class Place(pydantic.BaseModel):
+class Place(pydantic.BaseModel, validate_assignment=True):
     fullname: str  # "San Francisco, California, US"
     name: str  # "San Francisco"
     population: int = 0  # 881549
     test_positivity_rate: Optional[float]  # 0.05
-    cumulative_cases: Dict[date, int] = collections.Counter()
+    cumulative_cases: Dict[date, int] = collections.defaultdict(int)
 
     # For some international data we don't get the positivity rate,
     # just the number of tests. We can approximate positivity rate
@@ -378,6 +378,17 @@ class Place(pydantic.BaseModel):
 
     vaccines_by_type: Optional[Dict[str, Vaccination]]
     vaccines_total = Vaccination()
+
+    @pydantic.validator('test_positivity_rate', pre=True)
+    def test_positivity_rate_validator(cls, value, values):
+        if value is not None and value > 1:
+            # print_and_log_to_sentry(
+            #     f"Couldn't calculate {self.fullname}'s test positivity rate because it was greater than 1. {self}"
+            # )
+            print("FIND ME", values)
+            return None
+        else:
+            return value
 
     @property
     def recent_daily_cumulative_cases(self) -> List[int]:
@@ -977,8 +988,8 @@ class AllData:
                         pass  # Nigeria only reports nation-level cases
                     elif state.name in ("American Samoa", "Unknown", "Recovered"):
                         pass
-                    else:
-                        print_and_log_to_sentry(f"Discarding {state!r} with no case data")
+                    # else:
+                    #     print_and_log_to_sentry(f"Discarding {state!r} with no case data")
                     del country.states[state.name]
 
                 for county in list(state.counties.values()):
