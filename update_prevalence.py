@@ -368,7 +368,7 @@ class Place(pydantic.BaseModel):
     fullname: str  # "San Francisco, California, US"
     name: str  # "San Francisco"
     population: int = 0  # 881549
-    test_positivity_rate: Optional[float]  # 0.05
+    _test_positivity_rate: Optional[float]  # 0.05
     cumulative_cases: Dict[date, int] = collections.Counter()
 
     # For some international data we don't get the positivity rate,
@@ -378,6 +378,20 @@ class Place(pydantic.BaseModel):
 
     vaccines_by_type: Optional[Dict[str, Vaccination]]
     vaccines_total = Vaccination()
+
+    @property
+    def test_positivity_rate(self) -> Optional[float]:
+        return self._test_positivity_rate
+
+    @test_positivity_rate.setter
+    def test_positivity_rate(self, value):
+        if value is not None and value > 1:
+            print_and_log_to_sentry(
+                f"Couldn't calculate {self.fullname}'s test positivity rate because it was greater than 1. {self}"
+            )
+            self._test_positivity_rate = None
+        else:
+            self._test_positivity_rate = value
 
     @property
     def recent_daily_cumulative_cases(self) -> List[int]:
