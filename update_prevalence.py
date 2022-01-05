@@ -460,6 +460,8 @@ class Place(pydantic.BaseModel):
 
     @property
     def cases_last_week(self) -> int:
+        if self.name == "Quebec":
+            print("recent daily cum cases", self.recent_daily_cumulative_cases[-8:])
         return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-8:])
 
     @property
@@ -914,6 +916,8 @@ class AllData:
             for state in country.states.values():
                 if state.test_positivity_rate is None and state.tests_in_past_week is not None:
                     try:
+                        if state.name == "Quebec":
+                            print("Updating L922", state.cases_last_week / state.tests_in_past_week, state.cases_last_week, state.tests_in_past_week)
                         state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                     except ZeroDivisionError:
                         print_and_log_to_sentry(
@@ -1365,6 +1369,8 @@ def parse_canada_prevalence_data(cache, data):
             # check bounds just in case the reports interval gets changed later
             if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
                 if report.cumulative_testing:
+                    if place.name == "Quebec":
+                        print("cumulative testing", report.cumulative_testing)
                     min_test_count = (
                         report.cumulative_testing
                         if min_test_count is None
@@ -1377,6 +1383,8 @@ def parse_canada_prevalence_data(cache, data):
                     )
 
         if min_test_count is not None and max_test_count is not None:
+            if place.name == "Quebec":
+                print("min, max", min_test_count, max_test_count)
             place.tests_in_past_week = max_test_count - min_test_count
 
         # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
