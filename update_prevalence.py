@@ -920,6 +920,11 @@ class AllData:
                             f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
                         )
                         state.test_positivity_rate = None
+                    if state.test_positivity_rate > 1:
+                        print_and_log_to_sentry(
+                            f"Couldn't calculate {state.fullname}'s test positivity rate because it was greater than 1. {state}"
+                        )
+                        state.test_positivity_rate = None
                 if state.vaccines_by_type is not None:
                     rolldown_vaccine_types(state, state.counties.values())
                 for county in state.counties.values():
