@@ -8,6 +8,27 @@ interface Change {
 }
 
 const changes: Change[] = [
+    {
+      date: new Date(2022, 1, 4),
+      title: 'Omicron variant vaccine updates',
+      content: `
+Made first-round updates for Omicron.
+
+* Vaccines
+  * Efficacy of vaccines vs any infection has greatlly decreased.
+  * Added the option to have a booster dose.
+  * Pfizer / AstraZenica data was drawn from Ferguson et al., Table 3.
+  * Pfizer multiplier changed to 1, 0.8, 0.25 with 1, 2, or 3 doses respectively.
+  * AstraZenica changed to 1, 1, 0.3.
+  * Moderna / Sputnik is assumed to be similar
+  * Johnson&Johson data is from Gray et al., calculated from data in table 1 as (Number of positive COVID19 tests With Vaccine / Number of tests With Vaccine) / (Number of positive COVID19 tests without Vaccine / Number of tests)
+    * New multipliers are 1, 0.95 with 1 or 2 doses.
+  * To handle mixed-vaccines, we are only looking at the most recent dose. This is a simplification to make the UI and research manageable. In reality, e.g J&J followed by Moderna is probably a little worse than 2 Modernas while Moderna followed by J&J is probably a little better than 2 J&J’s.
+  * We acknowledge that vaccine efficacy decays over time. We will attempt to add this to the model in the near future.
+* Other mutlipliers
+  * We do not have data to change other multipliers at this time. It is possible that the hourly base rate should be a bit higher. If you have contact tracing data that suggests a new housemate or hourly transmission rate, please send it our way.
+  `,
+    },
   {
     date: new Date(2021, 6, 26),
     title: 'Delta variant updates',
@@ -32,7 +53,7 @@ const changes: Change[] = [
     content: `
 * Added the option to select the vaccination state of average people
   * Imported vaccination data from JHU and Covid Act Now.
-  * See [Research Sources](/paper/14-research-sources#others-vaccines) for derivation and caveats.    
+  * See [Research Sources](/paper/14-research-sources#others-vaccines) for derivation and caveats.
 `,
   },
   {
@@ -51,7 +72,7 @@ const changes: Change[] = [
     date: new Date(2021, 2, 30),
     title: "Add Johnson & Johnson's vaccine",
     content: `
-* Vaccine updates: 
+* Vaccine updates:
   * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
   * Improved multiplier for Moderna and Pfizer's vaccines (0.2 -> 0.1) based on new data.
   * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZeneca / Johnson & Johnson (Pfizer's was the only study that used 7 days).
