@@ -853,6 +853,8 @@ class AllData:
 
             if parent.test_positivity_rate is None:
                 if parent.tests_in_past_week:
+                    if parent.name == "Quebec":
+                        print("Updating L857", parent.cases_last_week / parent.tests_in_past_week, parent.cases_last_week, parent.tests_in_past_week)
                     parent.test_positivity_rate = parent.cases_last_week / parent.tests_in_past_week
 
                 tests_last_week = 0
@@ -863,6 +865,8 @@ class AllData:
                     elif child.test_positivity_rate > 0:
                         tests_last_week += child.cases_last_week / child.test_positivity_rate
                 if valid and tests_last_week:
+                    if parent.name == "Quebec":
+                        print("Updating L868", parent.cases_last_week / tests_last_week, parent.cases_last_week, tests_last_week)
                     parent.test_positivity_rate = parent.cases_last_week / tests_last_week
 
         def rollup_vaccines(parent: Place, child_attr: str) -> None:
@@ -914,6 +918,8 @@ class AllData:
             for state in country.states.values():
                 if state.test_positivity_rate is None and state.tests_in_past_week is not None:
                     try:
+                        if state.name == "Quebec":
+                            print("Updating L922", state.cases_last_week / state.tests_in_past_week, state.cases_last_week, state.tests_in_past_week)
                         state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                     except ZeroDivisionError:
                         print_and_log_to_sentry(
@@ -992,6 +998,8 @@ class AllData:
                     if state.counties or state.tests_in_past_week:
                         rollup_testing(state, "counties")
                     elif country.test_positivity_rate is not None:
+                        if state.name == "Quebec":
+                            print("Updating L1002", country.test_positivity_rate)
                         state.test_positivity_rate = country.test_positivity_rate
 
             if not rollup_cases(country, "states"):
@@ -1256,6 +1264,8 @@ def parse_can_region_summary_by_state(cache, data):
         state_name = us_state_name_by_abbrev[item.state]
         state = data.countries["US"].states[state_name]
         if item.metrics is not None:
+            if state.name == "Quebec":
+                print("Updating L1268", item.metrics.testPositivityRatio)
             state.test_positivity_rate = item.metrics.testPositivityRatio
 
 
