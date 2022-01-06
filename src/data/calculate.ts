@@ -156,7 +156,7 @@ export const sanitizeData = (
 
   if (
     data['yourVaccineDoses'] !== undefined &&
-    (data['yourVaccineDoses'] > 2 || data['yourVaccineDoses'] < 0)
+    (data['yourVaccineDoses'] > 3 || data['yourVaccineDoses'] < 0)
   ) {
     delete data['yourVaccineDoses']
   }
