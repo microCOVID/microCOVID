@@ -8,10 +8,10 @@ interface Change {
 }
 
 const changes: Change[] = [
-    {
-      date: new Date(2022, 1, 4),
-      title: 'Omicron variant vaccine updates',
-      content: `
+  {
+    date: new Date(2022, 1, 4),
+    title: 'Omicron variant vaccine updates',
+    content: `
 Made first-round updates for Omicron.
 
 * Vaccines
@@ -28,7 +28,7 @@ Made first-round updates for Omicron.
 * Other mutlipliers
   * We do not have data to change other multipliers at this time. It is possible that the hourly base rate should be a bit higher. If you have contact tracing data that suggests a new housemate or hourly transmission rate, please send it our way.
   `,
-    },
+  },
   {
     date: new Date(2021, 6, 26),
     title: 'Delta variant updates',

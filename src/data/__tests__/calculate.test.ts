@@ -545,7 +545,7 @@ describe('calculate', () => {
     it('Should decrease risk for vaccinated people', () => {
       expect(
         calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
-    ).toEqual(defaultValue * 2 * 0.8)
+      ).toEqual(defaultValue * 2 * 0.8)
     })
   })
 
