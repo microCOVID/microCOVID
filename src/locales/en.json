@@ -32,6 +32,7 @@
       "delta_blog": "<0>August 10th, 2021:</0> Added a <2>blog post</2> about the Delta variant.",
       "delta_numbers": "<0>July 26th, 2021:</0> Updated for the Delta variant. Risks have increased substantially, including for vaccinated people. <2>Technical details here.</2>",
       "full_changelog": "see all updates…",
+      "omicron_numbers": "<0>January 4th, 2022:</0> Updated for the Omicron variant. Vaccines without boosters are much less effective than before (but still prevent serious or fatal illness). <2>Technical details here.</2>",
       "sputnik_added": "<0>April 10th, 2021:</0> Added the Sputnik V vaccine to the calculator. Learn more about our calculation of its efficacy <2>here</2>."
     },
     "baseline_risk": "baseline risk",
@@ -95,8 +96,8 @@
       "call_to_action": "Calculate approximate risk of contracting COVID",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
-      "omicron_warning": "Research is in progress to determine Omicron's impact on our models. The chance of infection is likely higher than the calculator currently shows, even if you are vaccinated.",
-      "omicron_warning_heading": "Not yet updated for the Omicron variant",
+      "omicron_warning": "<p>Vaccines without boosters are counted as much less effective against infection, but <em>unboosted vaccines still reduce your risk of severe or fatal illness.</em></p><p>Also note: COVID cases are reaching record highs in some areas, making activities riskier even if you are boosted.",
+      "omicron_warning_heading": "Updated for the omicron variant",
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
       "whats_this": "We’ve constructed a calculator that lets you estimate the risk of getting COVID from an activity or relationship in your daily life, using the <1>best research available</1>. We hope this tool will help hone your intuition, lower your stress levels, and figure out good harm-reduction strategies.</p><p>The first step in protecting your family and community is to avoid getting COVID yourself.",
       "whats_this2": "This calculator lets you estimate COVID risk and find effective safety measures for customizable situations. Examples: how risky is <1>a trip to my grocery store</1>? What's the safest way to <3>see a friend</3>? How much would it help to <5>wear a better mask at my workplace</5>?"
@@ -164,9 +165,9 @@
       "volume_header": "Their talking volume",
       "volume_question": "How much is everyone talking?",
       "your_mask_header": "Your mask",
-      "your_vaccine_doses_label": "How many doses?",
+      "your_vaccine_doses_label": "How many total doses of any vaccine?",
       "your_vaccine_header": "Your Vaccine",
-      "your_vaccine_label": "Which vaccine did you receive?"
+      "your_vaccine_label": "Which vaccine did you receive most recently?"
     },
     "prevalence": {
       "adjusted_prevalence": "Adjusted prevalence",

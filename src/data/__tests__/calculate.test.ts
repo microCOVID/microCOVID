@@ -42,7 +42,7 @@ const baseTestData = {
   prevalanceDataDate: dateAfterDay0(30),
   unvaccinatedPrevalenceRatio: 2,
   percentFullyVaccinated: 40,
-  averageFullyVaccinatedMultiplier: 0.1,
+  averageFullyVaccinatedMultiplier: 0.8,
   symptomsChecked: 'no',
 }
 
@@ -298,7 +298,7 @@ describe('calculate', () => {
     })
     it('should apply 6% risk for a vaccinated partner', () => {
       expect(calcValue(vaccinatedPartner)).toBeCloseTo(
-        0.1 * (calcValue(unvaccinatedPartner) || -1),
+        0.8 * (calcValue(unvaccinatedPartner) || -1),
       )
     })
   })
@@ -461,16 +461,19 @@ describe('calculate', () => {
     it.each`
       type             | doses | multiplier
       ${'pfizer'}      | ${0}  | ${1}
-      ${'pfizer'}      | ${1}  | ${0.76}
-      ${'pfizer'}      | ${2}  | ${0.17}
+      ${'pfizer'}      | ${1}  | ${1}
+      ${'pfizer'}      | ${2}  | ${0.8}
+      ${'pfizer'}      | ${3}  | ${0.25}
       ${'moderna'}     | ${0}  | ${1}
-      ${'moderna'}     | ${1}  | ${0.76}
-      ${'moderna'}     | ${2}  | ${0.17}
+      ${'moderna'}     | ${1}  | ${1}
+      ${'moderna'}     | ${2}  | ${0.8}
+      ${'moderna'}     | ${3}  | ${0.25}
       ${'astraZeneca'} | ${0}  | ${1}
-      ${'astraZeneca'} | ${1}  | ${0.76}
-      ${'astraZeneca'} | ${2}  | ${0.47}
+      ${'astraZeneca'} | ${1}  | ${1}
+      ${'astraZeneca'} | ${2}  | ${1}
+      ${'astraZeneca'} | ${3}  | ${0.3}
       ${'johnson'}     | ${0}  | ${1}
-      ${'johnson'}     | ${1}  | ${0.36}
+      ${'johnson'}     | ${1}  | ${0.95}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
@@ -491,7 +494,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineLongScenario)).toBeCloseTo(
-        calcValue(noVaccineLongScenario)! * 0.17,
+        calcValue(noVaccineLongScenario)! * 0.8,
       )
     })
 
@@ -506,7 +509,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineHousemate)).toBeCloseTo(
-        calcValue(noVaccineHousemate)! * 0.17,
+        calcValue(noVaccineHousemate)! * 0.8,
       )
     })
 
@@ -520,7 +523,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccinePartner)).toBeCloseTo(
-        calcValue(noVaccinePartner)! * 0.17,
+        calcValue(noVaccinePartner)! * 0.8,
       )
     })
   })
@@ -542,7 +545,7 @@ describe('calculate', () => {
     it('Should decrease risk for vaccinated people', () => {
       expect(
         calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
-      ).toEqual(defaultValue * 2 * 0.1)
+    ).toEqual(defaultValue * 2 * 0.8)
     })
   })
 

@@ -11,7 +11,8 @@ import {
 export const spreadsheetUrl = latestRiskTrackerSpreadsheetURL
 
 export const riskTrackerVersion = latestRiskTrackerVersion
-export const riskTrackerReleaseDate = latestRiskTrackerReleaseDate.toLocaleDateString()
+export const riskTrackerReleaseDate =
+  latestRiskTrackerReleaseDate.toLocaleDateString()
 // Reminder: Make sure to bump the version number that gets imported into their copies of the spreadsheet. Located at: /public/tracker/latest_version_number.csv
 
 export const mailchimpSubscribeUrl = mailchimpSubscribe
