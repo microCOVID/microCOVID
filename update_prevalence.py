@@ -603,7 +603,8 @@ class Place(pydantic.BaseModel):
         if self.test_positivity_rate is not None and (
             self.test_positivity_rate < 0 or self.test_positivity_rate > 1
         ):
-            raise ValueError(f"Positive test rate for {self.name} is {self.test_positivity_rate}")
+            print_and_log_to_sentry(f"Positive test rate for {self.name} is {self.test_positivity_rate}")
+            self.test_positivity_rate = None
 
         return AppLocation(
             label=self.name,
