@@ -168,12 +168,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           max={100}
           min={0}
           className="hide-number-buttons"
-          readOnly={props.data.unvaccinatedPrevalenceRatio !== null}
-          helpText={
-            props.data.unvaccinatedPrevalenceRatio !== null
-              ? undefined
-              : t('calculator.prevalence.completed_vaccinations_tooltip')
-          }
+          helpText={t('calculator.prevalence.completed_vaccinations_tooltip')}
         />
       </Card.Body>
     </Card>
