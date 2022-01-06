@@ -1096,7 +1096,9 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             # This can lead to very very long script runs, but it (usually) eventually works
             # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
             retry_time_seconds *= 2
-            print_and_log_to_sentry(f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)...")
+            print_and_log_to_sentry(
+                f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
+            )
             sleep(retry_time_seconds)
             cache.remove(url)
 
@@ -1425,11 +1427,10 @@ def parse_canada_prevalence_data(cache, data):
 def main() -> None:
     sentry_sdk.init(
         "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
-
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
         # We recommend adjusting this value in production.
-        traces_sample_rate=1.0
+        traces_sample_rate=1.0,
     )
 
     if not CAN_API_KEY:

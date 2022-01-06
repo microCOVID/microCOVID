@@ -6,6 +6,8 @@ import { AllProviders } from 'test/utils'
 
 import { Calculator } from 'pages/Calculator'
 
+window.scrollTo = jest.fn()
+
 describe('calculator page', () => {
   it('renders at all', () => {
     const { getByText } = render(<Calculator />, { wrapper: AllProviders })
@@ -149,14 +151,10 @@ describe('calculator page', () => {
   })
 
   it('results in sane values', () => {
-    const {
-      queryAllByRole,
-      getByText,
-      getByPlaceholderText,
-      getByTestId,
-    } = render(<Calculator />, {
-      wrapper: AllProviders,
-    })
+    const { queryAllByRole, getByText, getByPlaceholderText, getByTestId } =
+      render(<Calculator />, {
+        wrapper: AllProviders,
+      })
 
     const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
     fireEvent.click(topLocationBox)
