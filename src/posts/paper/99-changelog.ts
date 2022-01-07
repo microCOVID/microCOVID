@@ -9,7 +9,7 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(2022, 1, 4),
+    date: new Date(2022, 0, 4),
     title: 'Omicron variant vaccine updates',
     content: `
 Made first-round updates for Omicron.
@@ -21,7 +21,7 @@ Made first-round updates for Omicron.
   * Pfizer multiplier changed to 1, 0.8, 0.25 with 1, 2, or 3 doses respectively.
   * AstraZenica changed to 1, 1, 0.3.
   * Moderna / Sputnik is assumed to be similar
-  * Johnson&Johson data is from Gray et al., calculated from data in table 1 as (Number of positive COVID19 tests With Vaccine / Number of tests With Vaccine) / (Number of positive COVID19 tests without Vaccine / Number of tests)
+  * Johnson&Johnson data is from Gray et al., calculated from data in table 1 as (Number of positive COVID19 tests With Vaccine / Number of tests With Vaccine) / (Number of positive COVID19 tests without Vaccine / Number of tests)
     * New multipliers are 1, 0.95 with 1 or 2 doses.
   * To handle mixed-vaccines, we are only looking at the most recent dose. This is a simplification to make the UI and research manageable. In reality, e.g J&J followed by Moderna is probably a little worse than 2 Modernas while Moderna followed by J&J is probably a little better than 2 J&J’s.
   * We acknowledge that vaccine efficacy decays over time. We will attempt to add this to the model in the near future.
