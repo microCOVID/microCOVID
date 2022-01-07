@@ -37,7 +37,7 @@ export const Contact = (): React.ReactElement => {
           @microcovid
         </a>
         , or email us at{' '}
-        <a href="mailto: info@microcovid.org">info@microcovid.org</a>. We can't
+        <a href="mailto:info@microcovid.org">info@microcovid.org</a>. We can't
         promise we'll get to your suggestion promptly, but we do appreciate
         hearing about it.
       </p>
@@ -95,7 +95,7 @@ export const Contact = (): React.ReactElement => {
         If you have a question or something is confusing, and it's not in the
         relevant section of the <Link to="/paper">white paper</Link> or the{' '}
         <Link to="/paper/13-q-and-a">Q&A</Link> section, then drop us a line at{' '}
-        <a href="mailto: info@microcovid.org" target="_blank" rel="noreferrer">
+        <a href="mailto:info@microcovid.org" target="_blank" rel="noreferrer">
           info@microcovid.org
         </a>{' '}
         and we would be glad to help you out! We love helping more people use
