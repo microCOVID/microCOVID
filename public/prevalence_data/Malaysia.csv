@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001526,0.001526,0.00068,2.2461,1.0,0.001526
-Johor,Unknown,Unknown,0.000663,2.2461,1.0,0.00149
-Kedah,Unknown,Unknown,0.000722,2.2461,1.0,0.001621
-Kelantan,Unknown,Unknown,0.001217,2.2461,1.0,0.002734
-Melaka,Unknown,Unknown,0.001008,2.2461,1.0,0.002264
-Negeri Sembilan,Unknown,Unknown,0.000784,2.2461,1.035,0.001824
-Pahang,Unknown,Unknown,0.000844,2.2461,1.0,0.001895
-Perak,Unknown,Unknown,0.000388,2.2461,1.0,0.000872
-Perlis,Unknown,Unknown,0.000601,2.2461,1.3571,0.001832
-Pulau Pinang,Unknown,Unknown,0.000802,2.2461,1.0,0.001802
-Sabah,Unknown,Unknown,0.000414,2.2461,1.3721,0.001276
-Sarawak,Unknown,Unknown,5.7e-05,2.2461,1.0592,0.000137
-Selangor,Unknown,Unknown,0.000828,2.2461,1.0,0.001859
-Terengganu,Unknown,Unknown,0.000751,2.2461,1.0,0.001687
-W.P. Kuala Lumpur,Unknown,Unknown,0.000813,2.2461,1.1074,0.002021
-W.P. Labuan,Unknown,Unknown,0.000744,2.2461,1.973,0.003299
-W.P. Putrajaya,Unknown,Unknown,0.001717,2.2461,1.1765,0.004538
+Entire country,0.001513,0.001513,0.000675,2.24,1.0,0.001513
+Johor,Unknown,Unknown,0.00065,2.24,1.0,0.001456
+Kedah,Unknown,Unknown,0.000691,2.24,1.0,0.001548
+Kelantan,Unknown,Unknown,0.001204,2.24,1.0,0.002698
+Melaka,Unknown,Unknown,0.001026,2.24,1.0,0.002298
+Negeri Sembilan,Unknown,Unknown,0.000821,2.24,1.1193,0.00206
+Pahang,Unknown,Unknown,0.000815,2.24,1.0,0.001825
+Perak,Unknown,Unknown,0.000375,2.24,1.0,0.000841
+Perlis,Unknown,Unknown,0.000593,2.24,1.3889,0.001845
+Pulau Pinang,Unknown,Unknown,0.000781,2.24,1.0,0.00175
+Sabah,Unknown,Unknown,0.000397,2.24,1.1796,0.00105
+Sarawak,Unknown,Unknown,5.4e-05,2.24,1.0201,0.000124
+Selangor,Unknown,Unknown,0.000841,2.24,1.0,0.001883
+Terengganu,Unknown,Unknown,0.00071,2.24,1.0,0.001591
+W.P. Kuala Lumpur,Unknown,Unknown,0.000874,2.24,1.1632,0.002278
+W.P. Labuan,Unknown,Unknown,0.000775,2.24,2.0,0.00347
+W.P. Putrajaya,Unknown,Unknown,0.00166,2.24,1.2083,0.004494
