@@ -1,29 +1,29 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000373,0.000373,0.000154,2.4308,1.0,0.000373
-Acre,Unknown,Unknown,1.1e-05,3.4144,1.0,3.9e-05
-Alagoas,Unknown,Unknown,2.2e-05,3.4144,1.0,7.7e-05
-Amapa,Unknown,Unknown,0.00016,3.4144,1.0,0.000545
-Amazonas,Unknown,Unknown,7.1e-05,3.4144,1.0,0.000241
-Bahia,Unknown,Unknown,6.3e-05,3.4144,1.0,0.000214
-Ceara,Unknown,Unknown,5.1e-05,3.4144,1.0,0.000173
-Distrito Federal,Unknown,Unknown,0.000441,3.4144,1.4244,0.002145
-Espirito Santo,Unknown,Unknown,0.000277,3.4144,1.0,0.000947
-Goias,Unknown,Unknown,0.000102,3.4144,1.0,0.00035
-Maranhao,Unknown,Unknown,3e-05,3.4144,1.0,0.000104
-Mato Grosso,Unknown,Unknown,0.000317,3.4144,1.0,0.001083
-Mato Grosso do Sul,Unknown,Unknown,0.00011,3.4144,1.0,0.000376
-Minas Gerais,Unknown,Unknown,0.00019,3.4144,1.0,0.000649
-Para,Unknown,Unknown,0.000137,3.4144,1.0,0.000466
-Paraiba,Unknown,Unknown,3e-05,3.4144,1.0,0.000101
-Parana,Unknown,Unknown,0.000332,3.4144,1.0,0.001132
-Pernambuco,Unknown,Unknown,4.1e-05,3.4144,1.0,0.000139
-Piaui,Unknown,Unknown,3.6e-05,3.4144,1.0,0.000122
-Rio de Janeiro,Unknown,Unknown,0.000379,3.4144,2.0,0.002592
-Rio Grande do Norte,Unknown,Unknown,0.000162,3.4144,1.0,0.000553
-Rio Grande do Sul,Unknown,Unknown,0.000242,3.4144,1.0,0.000827
-Rondonia,Unknown,Unknown,0.000213,3.4144,1.0,0.000726
-Roraima,Unknown,Unknown,0.000223,3.4144,1.0,0.000761
-Santa Catarina,Unknown,Unknown,0.000379,3.4144,1.0,0.001293
-Sao Paulo,Unknown,Unknown,4.8e-05,3.4144,1.0,0.000165
-Sergipe,Unknown,Unknown,9e-06,3.4144,1.0,3e-05
-Tocantins,Unknown,Unknown,0.000634,3.4144,1.0,0.002164
+Entire country,0.006861,0.006861,0.00109,3.1465,2.0,0.006861
+Acre,Unknown,Unknown,2e-05,3.4124,2.0,0.000139
+Alagoas,Unknown,Unknown,0.000325,3.4124,2.0,0.002219
+Amapa,Unknown,Unknown,0.000588,3.4124,1.2917,0.00259
+Amazonas,Unknown,Unknown,0.000451,3.4124,2.0,0.003076
+Bahia,Unknown,Unknown,0.000434,3.4124,2.0,0.002962
+Ceara,Unknown,Unknown,0.000547,3.4124,1.9316,0.003607
+Distrito Federal,Unknown,Unknown,0.001693,3.4124,2.0,0.011557
+Espirito Santo,Unknown,Unknown,0.001586,3.4124,2.0,0.010823
+Goias,Unknown,Unknown,0.000801,3.4124,1.7615,0.004815
+Maranhao,Unknown,Unknown,0.000186,3.4124,2.0,0.001268
+Mato Grosso,Unknown,Unknown,0.001706,3.4124,2.0,0.01164
+Mato Grosso do Sul,Unknown,Unknown,0.00135,3.4124,2.0,0.009217
+Minas Gerais,Unknown,Unknown,0.001876,3.4124,2.0,0.012806
+Para,Unknown,Unknown,0.000423,3.4124,1.7599,0.002539
+Paraiba,Unknown,Unknown,0.000279,3.4124,1.1417,0.001087
+Parana,Unknown,Unknown,0.002625,3.4124,2.0,0.017917
+Pernambuco,Unknown,Unknown,0.000347,3.4124,1.7895,0.002119
+Piaui,Unknown,Unknown,0.003048,3.4124,2.0,0.020801
+Rio de Janeiro,Unknown,Unknown,0.001912,3.4124,2.0,0.013049
+Rio Grande do Norte,Unknown,Unknown,0.000838,3.4124,2.0,0.005716
+Rio Grande do Sul,Unknown,Unknown,0.002014,3.4124,2.0,0.013745
+Rondonia,Unknown,Unknown,0.000996,3.4124,1.7718,0.006025
+Roraima,Unknown,Unknown,0.001707,3.4124,2.0,0.01165
+Santa Catarina,Unknown,Unknown,0.002665,3.4124,2.0,0.018186
+Sao Paulo,Unknown,Unknown,0.000362,3.4124,2.0,0.002469
+Sergipe,Unknown,Unknown,0.000176,3.4124,2.0,0.001202
+Tocantins,Unknown,Unknown,0.002028,3.4124,2.0,0.013837
