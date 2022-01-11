@@ -1,23 +1,23 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.047594,0.047594,0.010087,2.3593,2.0,0.047594
-Blekinge,Unknown,Unknown,0.005382,2.3593,1.666,0.021154
-Dalarna,Unknown,Unknown,0.01021,2.3593,2.0,0.048174
-Gavleborg,Unknown,Unknown,0.005985,2.3593,1.9037,0.02688
-Gotland,Unknown,Unknown,0.009583,2.3593,2.0,0.04522
-Halland,Unknown,Unknown,0.014129,2.3593,2.0,0.066669
-Jamtland Harjedalen,Unknown,Unknown,0.013042,2.3593,2.0,0.061538
-Jonkoping,Unknown,Unknown,0.007244,2.3593,2.0,0.034182
-Kalmar,Unknown,Unknown,0.006067,2.3593,2.0,0.028625
-Kronoberg,Unknown,Unknown,0.007376,2.3593,2.0,0.034803
-Norrbotten,Unknown,Unknown,0.005598,2.3593,2.0,0.026414
-Orebro,Unknown,Unknown,0.010289,2.3593,2.0,0.048547
-Ostergotland,Unknown,Unknown,0.005414,2.3593,2.0,0.025544
-Skane,Unknown,Unknown,0.011387,2.3593,2.0,0.053732
-Sormland,Unknown,Unknown,0.007293,2.3593,2.0,0.034413
-Stockholm,Unknown,Unknown,0.01319,2.3593,2.0,0.062236
-Uppsala,Unknown,Unknown,0.007104,2.3593,2.0,0.033522
-Varmland,Unknown,Unknown,0.007981,2.3593,1.8302,0.034463
-Vasterbotten,Unknown,Unknown,0.006403,2.3593,2.0,0.030214
-Vasternorrland,Unknown,Unknown,0.004161,2.3593,1.6944,0.016635
-Vastmanland,Unknown,Unknown,0.007555,2.3593,1.8224,0.032483
-Vastra Gotaland,Unknown,Unknown,0.010238,2.3593,2.0,0.04831
+Entire country,0.047584,0.047584,0.010087,2.3588,2.0,0.047584
+Blekinge,Unknown,Unknown,0.005382,2.3588,1.666,0.02115
+Dalarna,Unknown,Unknown,0.01021,2.3588,2.0,0.048164
+Gavleborg,Unknown,Unknown,0.005985,2.3588,1.9037,0.026875
+Gotland,Unknown,Unknown,0.009583,2.3588,2.0,0.04521
+Halland,Unknown,Unknown,0.014129,2.3588,2.0,0.066655
+Jamtland Harjedalen,Unknown,Unknown,0.013042,2.3588,2.0,0.061525
+Jonkoping,Unknown,Unknown,0.007244,2.3588,2.0,0.034175
+Kalmar,Unknown,Unknown,0.006067,2.3588,2.0,0.028619
+Kronoberg,Unknown,Unknown,0.007376,2.3588,2.0,0.034796
+Norrbotten,Unknown,Unknown,0.005598,2.3588,2.0,0.026408
+Orebro,Unknown,Unknown,0.010289,2.3588,2.0,0.048536
+Ostergotland,Unknown,Unknown,0.005414,2.3588,2.0,0.025539
+Skane,Unknown,Unknown,0.011387,2.3588,2.0,0.053721
+Sormland,Unknown,Unknown,0.007293,2.3588,2.0,0.034406
+Stockholm,Unknown,Unknown,0.01319,2.3588,2.0,0.062223
+Uppsala,Unknown,Unknown,0.007104,2.3588,2.0,0.033515
+Varmland,Unknown,Unknown,0.007981,2.3588,1.8302,0.034455
+Vasterbotten,Unknown,Unknown,0.006403,2.3588,2.0,0.030208
+Vasternorrland,Unknown,Unknown,0.004161,2.3588,1.6944,0.016632
+Vastmanland,Unknown,Unknown,0.007555,2.3588,1.8224,0.032476
+Vastra Gotaland,Unknown,Unknown,0.010238,2.3588,2.0,0.048299
