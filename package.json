@@ -32,7 +32,7 @@
     "react-i18next": "^11.7.2",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.0-next.64",
+    "react-scripts": "^5.0.0",
     "rfs": "^9.0.3",
     "sass": "^1.35.1",
     "use-query-params": "^1.1.8"
@@ -44,6 +44,7 @@
     "coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "black *.py --diff && eslint src && prettier --check .",
     "fix": "eslint src --fix && prettier --write . && black *.py",
+    "clean": "rm -rf node_modules",
     "typecheck": "tsc",
     "prevalence": "./scripts/prevalence_helper.sh"
   },
