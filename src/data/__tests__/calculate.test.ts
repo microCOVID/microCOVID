@@ -1,10 +1,10 @@
 import {
   CalculatorData,
   DAY_0,
+  ONE_MILLION,
   calculate,
   calculateLocationPersonAverage,
   defaultValues,
-  ONE_MILLION,
 } from 'data/calculate'
 import {
   BUDGET_ONE_PERCENT,
