@@ -315,13 +315,17 @@ export const calculatePersonRiskEach = (
     if (data.riskProfile === 'average') {
       switch (data.theirVaccine) {
         case 'vaccinated':
-          return Math.min((
+          return Math.min(
             unadjustedRisk *
-            unvaccinatedPrevalenceRatio *
-            data.averageFullyVaccinatedMultiplier
-          ), ONE_MILLION)
+              unvaccinatedPrevalenceRatio *
+              data.averageFullyVaccinatedMultiplier,
+            ONE_MILLION,
+          )
         case 'unvaccinated':
-          return Math.min(unadjustedRisk * unvaccinatedPrevalenceRatio, ONE_MILLION)
+          return Math.min(
+            unadjustedRisk * unvaccinatedPrevalenceRatio,
+            ONE_MILLION,
+          )
         case 'undefined':
           return Math.min(unadjustedRisk, ONE_MILLION)
         default:
@@ -344,7 +348,10 @@ export const calculatePersonRiskEach = (
           // and partially vaccinated individuals.
           // See the comment above unvaccinated_relative_prevalence() in
           // update_prevalence.py for more details on how it is calculated.
-          return Math.min(unadjustedRisk / unvaccinatedPrevalenceRatio, ONE_MILLION)
+          return Math.min(
+            unadjustedRisk / unvaccinatedPrevalenceRatio,
+            ONE_MILLION,
+          )
         default:
           console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
           return null
