@@ -54,7 +54,7 @@ describe('formatPercent', () => {
   it('rounds numbers', () => {
     expect(formatPercent(0.478)).toEqual('48%')
     expect(formatPercent(0.0022)).toEqual('0.2%')
-    expect(formatPercent(0.00030000000000000002)).toEqual('0.03%')
+    expect(formatPercent(0.0003000000000000002)).toEqual('0.03%')
     expect(formatPercent(0.092)).toEqual('9%')
     expect(formatPercent(0.098)).toEqual('10%')
     expect(formatPercent(0.0098)).toEqual('1%')
