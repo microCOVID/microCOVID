@@ -9,10 +9,9 @@ module.exports = {
     react: { version: 'detect' },
   },
   extends: [
-    'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
   plugins: ['import'],
   rules: {
@@ -52,16 +51,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'prettier/prettier': [
-      1,
-      {
-        tabWidth: 2,
-        useTabs: false,
-        singleQuote: true,
-        semi: false,
-        trailingComma: 'all',
-      },
-    ],
+    'prettier/prettier': 'warn',
     eqeqeq: 'error',
   },
 }
