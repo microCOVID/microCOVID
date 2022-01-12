@@ -302,7 +302,7 @@ export const calculatePersonRiskEach = (
       data.percentFullyVaccinated === null ||
       data.averageFullyVaccinatedMultiplier === null
     ) {
-      return unadjustedRisk
+      return Math.min(unadjustedRisk, ONE_MILLION)
     }
     const fractionFullyVaccinated = data.percentFullyVaccinated / 100
     const unvaccinatedPrevalenceRatio =
@@ -315,15 +315,15 @@ export const calculatePersonRiskEach = (
     if (data.riskProfile === 'average') {
       switch (data.theirVaccine) {
         case 'vaccinated':
-          return (
+          return Math.min((
             unadjustedRisk *
             unvaccinatedPrevalenceRatio *
             data.averageFullyVaccinatedMultiplier
-          )
+          ), ONE_MILLION)
         case 'unvaccinated':
-          return unadjustedRisk * unvaccinatedPrevalenceRatio
+          return Math.min(unadjustedRisk * unvaccinatedPrevalenceRatio, ONE_MILLION)
         case 'undefined':
-          return unadjustedRisk
+          return Math.min(unadjustedRisk, ONE_MILLION)
         default:
           console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
           return null
@@ -332,16 +332,19 @@ export const calculatePersonRiskEach = (
       // These are risk profiles that were set up for unvaccinated people.
       switch (data.theirVaccine) {
         case 'vaccinated':
-          return unadjustedRisk * data.averageFullyVaccinatedMultiplier
+          return Math.min(
+            unadjustedRisk * data.averageFullyVaccinatedMultiplier,
+            ONE_MILLION,
+          )
         case 'unvaccinated':
-          return unadjustedRisk
+          return Math.min(unadjustedRisk, ONE_MILLION)
         case 'undefined':
           // data.unvaccinatedPrevalenceRatio is the average vaccine modifier
           // applied across the entire population, including unvaccinated
           // and partially vaccinated individuals.
           // See the comment above unvaccinated_relative_prevalence() in
           // update_prevalence.py for more details on how it is calculated.
-          return unadjustedRisk / unvaccinatedPrevalenceRatio
+          return Math.min(unadjustedRisk / unvaccinatedPrevalenceRatio, ONE_MILLION)
         default:
           console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
           return null
