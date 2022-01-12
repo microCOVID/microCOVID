@@ -3,50 +3,49 @@ name: Prevalence
 on:
   schedule:
     # 7:00am Pacific = 14:00 UTC
-    - cron:  '0 14 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 jobs:
   prevalence:
     runs-on: ubuntu-latest
     steps:
+      - name: Get INSTALLATION_ACCESS_TOKEN
+        uses: navikt/github-app-token-generator@v1
+        id: get-token
+        with:
+          private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
+          app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
-    - name: Get INSTALLATION_ACCESS_TOKEN
-      uses: navikt/github-app-token-generator@v1
-      id: get-token
-      with:
-        private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
-        app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
-
-    - name: Checkout git repo (with full history)
-      uses: actions/checkout@v2
-      with:
+      - name: Checkout git repo (with full history)
+        uses: actions/checkout@v2
+        with:
           token: ${{ steps.get-token.outputs.token }}
           fetch-depth: 0
 
-    - name: Set up virtualenv
-      uses: syphar/restore-virtualenv@v1
-      id: cache-virtualenv
-      with:
-        requirement_files: requirements-manual.txt
+      - name: Set up virtualenv
+        uses: syphar/restore-virtualenv@v1
+        id: cache-virtualenv
+        with:
+          requirement_files: requirements-manual.txt
 
-    - name: Set up pip cache
-      uses: syphar/restore-pip-download-cache@v1
-      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+      - name: Set up pip cache
+        uses: syphar/restore-pip-download-cache@v1
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-    - name: Install python dependencies
-      run: pip install -r requirements-manual.txt
-      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+      - name: Install python dependencies
+        run: pip install -r requirements-manual.txt
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-    - name: Set up node
-      uses: actions/setup-node@v2
+      - name: Set up node
+        uses: actions/setup-node@v2
 
-    - name: Set up yarn
-      run: yarn install
-      
-    - name: Run update prevalence and merge results
-      env:
-        GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
-      run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
-      # Always us -b to base branch on current branch. Works both for development on a feature branch
-      # and when being run on `main` during normal usage.
+      - name: Set up yarn
+        run: yarn install
+
+      - name: Run update prevalence and merge results
+        env:
+          GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+        run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
+        # Always us -b to base branch on current branch. Works both for development on a feature branch
+        # and when being run on `main` during normal usage.

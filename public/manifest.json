@@ -1,20 +1,20 @@
 {
-  "short_name": "microcovid.org",
-  "name": "microCOVID project",
+  "background_color": "#ffffff",
+  "display": "standalone",
   "icons": [
     {
-      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.ico",
       "type": "image/x-icon"
     },
     {
+      "sizes": "192x192",
       "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "type": "image/png"
     }
   ],
+  "name": "microCOVID project",
+  "short_name": "microcovid.org",
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#D018A1",
-  "background_color": "#ffffff"
+  "theme_color": "#D018A1"
 }

@@ -1,4 +1,4 @@
-name: "Merge prevalence updates"
+name: 'Merge prevalence updates'
 
 on:
   pull_request:
@@ -11,14 +11,13 @@ jobs:
 
     if: contains(github.event.pull_request.labels.*.name, 'auto-prevalence-update')
     steps:
-
       - uses: navikt/github-app-token-generator@v1
         id: get-token
         with:
           private-key: ${{ secrets.MICROCOVID_BOT_PRIVATE_KEY }}
           app-id: ${{ secrets.MICROCOVID_BOT_APP_ID }}
 
-      - name: "Wait for status checks"
+      - name: 'Wait for status checks'
         id: waitforstatuschecks
         uses: WyriHaximus/github-action-wait-for-status@v1.4.0
         with:
@@ -27,7 +26,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
 
-      - name: "Merge"
+      - name: 'Merge'
         uses: pascalgn/automerge-action@v0.14.2
         if: steps.waitforstatuschecks.outputs.status == 'success'
         env:

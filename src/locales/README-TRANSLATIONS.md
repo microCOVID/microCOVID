@@ -2,7 +2,7 @@
 
 # Localization process
 
-Localization throughout the codebase is based on [i18next](https://www.i18next.com/) and [react-i18next](https://react.i18next.com/). 
+Localization throughout the codebase is based on [i18next](https://www.i18next.com/) and [react-i18next](https://react.i18next.com/).
 
 Translations are handled through Weblate. The project is accessible at https://hosted.weblate.org/projects/microcovid/microcovid/
 The only file you should edit here directly is `en.json`. **Do not edit any other translation files directly.** Editing any translations will in most cases break the integration with Weblate.

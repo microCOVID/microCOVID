@@ -1,15 +1,22 @@
 @import '~styles/_variables.scss';
-@import "~rfs/scss";
-@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import '~rfs/scss';
+@import '~bootstrap/scss/mixins/_breakpoints.scss';
 
 .paperPage {
   font-size: 18px;
   line-height: 30px;
   max-width: 850px;
 
-  h1 { color: $primary}
+  h1 {
+    color: $primary;
+  }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     // Flip text and anchor links left-to-right
     display: flex;
     justify-content: flex-end;
@@ -32,23 +39,28 @@
     font-weight: normal;
   }
 
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     margin-bottom: 1.6rem;
-    ul, ol {
+    ul,
+    ol {
       // Don't add margin for nested lists
-      margin-bottom: 0rem
+      margin-bottom: 0rem;
     }
   }
-
-  
 
   .warning {
     border: 2px solid $warning-border;
     padding: 10px;
     margin: 2.4rem -12px 1.6rem -12px;
     background-color: $warning-fill;
-    h2:first-child { margin: 0; }
-    p:last-child { margin-bottom: 0; }
+    h2:first-child {
+      margin: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   code {
@@ -67,7 +79,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  
 
   .postByLine {
     color: $gray-700;
@@ -118,7 +129,8 @@
     color: white;
   }
 
-  td, th {
+  td,
+  th {
     border-right: 1px solid $gray-500;
     padding: 10px;
     @include media-breakpoint-up(md) {
@@ -135,8 +147,8 @@
   }
 
   .calloutText {
-    text-align:center;
-    font-size:1.5em;
+    text-align: center;
+    font-size: 1.5em;
     line-height: 1.5em;
     margin: 30px 50px;
     padding: 15px;
@@ -175,15 +187,15 @@
 
   blockquote {
     background-color: $gray-200;
-    margin-left: .5em;
-    padding: .2em;
+    margin-left: 0.5em;
+    padding: 0.2em;
     padding-left: 1em;
     border-radius: 8px;
 
     p {
       font-style: italic;
       margin: 0em;
-      padding: .5em;
+      padding: 0.5em;
       border-color: darkgray;
       border-width: 0px;
       border-left-width: 2px;
@@ -192,11 +204,12 @@
   }
 
   .calendar {
-    td, th {
-        min-width: 20px;
+    td,
+    th {
+      min-width: 20px;
     }
   }
-  
+
   .card {
     border: none;
     background: lighten($gray-200, 1.5);
@@ -219,7 +232,7 @@
     }
 
     .col {
-      margin-left: 10px
+      margin-left: 10px;
     }
 
     .hepa-result {
@@ -229,13 +242,13 @@
       font-weight: 700;
       height: calc(2em + 2rem + 2px);
       width: 90%;
-      padding-top: .25em;
+      padding-top: 0.25em;
       text-align: center;
     }
   }
   iframe {
-    width: 100%; 
-    height: 600px; 
+    width: 100%;
+    height: 600px;
     border: 0px none;
   }
 }

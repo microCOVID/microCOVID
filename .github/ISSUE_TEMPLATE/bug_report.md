@@ -4,7 +4,6 @@ about: Create a report to help us improve
 title: ''
 labels: 'type: bug'
 assignees: ''
-
 ---
 
 **Describe the bug**
@@ -15,6 +14,7 @@ If applicable, please copy-paste the URL to the scenario that you modeled on the
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. See error

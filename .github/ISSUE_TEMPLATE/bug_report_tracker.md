@@ -15,6 +15,7 @@ What version are you using? You can find your version number at the top of the P
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. See error

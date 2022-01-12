@@ -1,7 +1,7 @@
 // Override default variables before the import
 @import '~styles/_variables.scss';
-@import "~bootstrap/scss/mixins/_breakpoints.scss";
-@import "~rfs/scss";
+@import '~bootstrap/scss/mixins/_breakpoints.scss';
+@import '~rfs/scss';
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
@@ -9,8 +9,8 @@
 @font-face {
   font-family: 'LatoLocal';
   src: url('fonts/lato-normal.woff2') format('woff2'),
-       url('fonts/lato-normal.woff') format('woff'),
-       url('fonts/lato-normal.ttf')  format('truetype');
+    url('fonts/lato-normal.woff') format('woff'),
+    url('fonts/lato-normal.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -18,18 +18,17 @@
 @font-face {
   font-family: 'LatoLocal';
   src: url('fonts/Lato-Bold.woff2') format('woff2'),
-       url('fonts/Lato-Bold.woff') format('woff'),
-       url('fonts/Lato-Bold.ttf')  format('truetype');
+    url('fonts/Lato-Bold.woff') format('woff'),
+    url('fonts/Lato-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'LatoLocal';
   src: url('fonts/Lato-Italic.woff2') format('woff2'),
-       url('fonts/Lato-Italic.woff') format('woff'),
-       url('fonts/Lato-Italic.ttf')  format('truetype');
+    url('fonts/Lato-Italic.woff') format('woff'),
+    url('fonts/Lato-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -37,15 +36,15 @@
 @font-face {
   font-family: 'LatoLocal';
   src: url('fonts/Lato-BoldItalic.woff2') format('woff2'),
-       url('fonts/Lato-BoldItalic.woff') format('woff'),
-       url('fonts/Lato-BoldItalic.ttf')  format('truetype');
+    url('fonts/Lato-BoldItalic.woff') format('woff'),
+    url('fonts/Lato-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
 
-
-
-html, body, #root {
+html,
+body,
+#root {
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -66,10 +65,10 @@ a {
   text-decoration: underline;
 }
 
-a.btn  {
+a.btn {
   text-decoration: none;
 }
-  
+
 .alert a {
   font-weight: 700;
 }
@@ -82,7 +81,12 @@ a.btn  {
   color: #404848;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Roboto Slab';
   font-weight: 700;
   margin-bottom: 1.3rem;
@@ -142,7 +146,6 @@ h1,h2,h3,h4,h5,h6 {
       border-bottom: 2px solid $primary;
     }
   }
-
 }
 
 .warning {
@@ -151,7 +154,9 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0 -12px 1.5rem -12px;
   background-color: $warning-fill;
 
-  h2 { margin: 0; }
+  h2 {
+    margin: 0;
+  }
 }
 
 // Home page
@@ -163,11 +168,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 .accent span {
   display: inline-block;
-  position: relative;  
-  padding-bottom: .3em;
+  position: relative;
+  padding-bottom: 0.3em;
 }
 .accent span:after {
-  content: "";
+  content: '';
   position: absolute;
   height: 50%;
   border-bottom: 1px solid #aaa;

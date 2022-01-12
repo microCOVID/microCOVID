@@ -3,7 +3,7 @@
 
 // TODO(jy2wong) transfer to SegmentedControl.scss
 .form-group label.btn {
-  font-size: $font-size-base
+  font-size: $font-size-base;
 }
 
 .segmented-scrollable {
@@ -17,7 +17,7 @@
 }
 
 .two-lines {
-  min-height: 3.1em
+  min-height: 3.1em;
 }
 
 .risk-modifier-label {
@@ -31,7 +31,7 @@
 }
 
 .segmented-value {
-  display: none;  // hide on desktop
+  display: none; // hide on desktop
 }
 
 .btn:hover .risk-modifier-multiplier {
@@ -76,77 +76,76 @@
 }
 
 .mobile-vertical {
-@media (max-width: 768px) {
-  .segmented-wrap {
-    // everything but the first button loses its left border without this
-    padding-left: 1px;
-    flex-wrap: wrap;
-  }
-
-  .segmented-button {
-    width: 100%;
-  }
-
-  .risk-modifier-label {
-    text-align: left;
-    min-height: 0;
-    display: inline;
-    float: left;
-  }
-
-  .risk-modifier-multiplier {
-    display: inline;
-    float: right;
-  }
-
-  .active .segmented-value {
-    display: inline;
-    float: left;
-    width: 100%;
-  }
-
-  .active.btn-outline-cyan .segmented-value {
-    color: color.mix($cyan, $white, 20%) !important;
-  }
-
-  .active.btn-outline-secondary .segmented-value {
-    color: color.mix($secondary, $white, 20%) !important;
-  }
-  .active:hover .segmented-value {
-    color: $white;
-  }
-
-  .segmented .active span {
-    color: $white !important;
-  }
-  .segmented .active:hover span {
-    color: $white !important;
-  }
-
-  .segmented-tooltip {
-    display: none !important;
-    visibility: hidden;
-  }
-
-  .segmented-wrap.btn-group {
-    // Remove doubled borders on inner buttons
-    > .btn:not(:first-child),
-    > .btn-group:not(:first-child) > .btn {
-      border-top: 0 !important;
+  @media (max-width: 768px) {
+    .segmented-wrap {
+      // everything but the first button loses its left border without this
+      padding-left: 1px;
+      flex-wrap: wrap;
     }
 
-    > .btn:first-child {
-      border-radius: 0.25rem 0.25rem 0 0;
-      // first button ends up shifted 1px to the right without this?
-      margin-left: -1px;
+    .segmented-button {
+      width: 100%;
     }
 
-    > .btn:last-child {
-      border-radius: 0 0 0.25rem 0.25rem;
+    .risk-modifier-label {
+      text-align: left;
+      min-height: 0;
+      display: inline;
+      float: left;
+    }
+
+    .risk-modifier-multiplier {
+      display: inline;
+      float: right;
+    }
+
+    .active .segmented-value {
+      display: inline;
+      float: left;
+      width: 100%;
+    }
+
+    .active.btn-outline-cyan .segmented-value {
+      color: color.mix($cyan, $white, 20%) !important;
+    }
+
+    .active.btn-outline-secondary .segmented-value {
+      color: color.mix($secondary, $white, 20%) !important;
+    }
+    .active:hover .segmented-value {
+      color: $white;
+    }
+
+    .segmented .active span {
+      color: $white !important;
+    }
+    .segmented .active:hover span {
+      color: $white !important;
+    }
+
+    .segmented-tooltip {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    .segmented-wrap.btn-group {
+      // Remove doubled borders on inner buttons
+      > .btn:not(:first-child),
+      > .btn-group:not(:first-child) > .btn {
+        border-top: 0 !important;
+      }
+
+      > .btn:first-child {
+        border-radius: 0.25rem 0.25rem 0 0;
+        // first button ends up shifted 1px to the right without this?
+        margin-left: -1px;
+      }
+
+      > .btn:last-child {
+        border-radius: 0 0 0.25rem 0.25rem;
+      }
     }
   }
-
-}
 }
 // TODO(jy2wong) end transfer to SegmentedControl.scss
 
@@ -176,15 +175,16 @@
   color: $white;
 }
 
-#yourMaskHelpText, #theirMaskHelpText {
+#yourMaskHelpText,
+#theirMaskHelpText {
   padding-left: 0.5em;
 }
 
 @media (max-width: 768px) {
   // hide mask description from "YourMask: " line on mobile
-  label[for="yourMask"] span, label[for="theirMask"] span {
+  label[for='yourMask'] span,
+  label[for='theirMask'] span {
     display: none;
     height: 0;
   }
 }
-

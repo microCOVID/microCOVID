@@ -31,15 +31,14 @@ $black: #000 !default;
 
 $blue: #2c3e50 !default;
 $indigo: #6610f2 !default;
-$purple: #551CA0 !default;
+$purple: #551ca0 !default;
 $pink: #e83e8c !default;
 $red: #e74c3c !default;
 $orange: #fd7e14 !default;
 $yellow: #f39c12 !default;
 $green: #18bc9c !default;
 $teal: #20c997 !default;
-$cyan: #18ACD0 !default;
-
+$cyan: #18acd0 !default;
 
 $thermometer-dark-red: #c7022a;
 $thermometer-red: #ff0034;
@@ -48,8 +47,7 @@ $thermometer-yellow: #ffc900;
 $thermometer-light-green: #aacd27;
 $thermometer-green: #00d474;
 
-$microcov-brand: #D018A1;
-
+$microcov-brand: #d018a1;
 
 $primary: $microcov-brand !default;
 $secondary: $gray-700 !default;
@@ -63,7 +61,7 @@ $dark: $gray-700 !default;
 
 $theme-colors: (
   teal: $teal,
-  cyan: $cyan
+  cyan: $cyan,
 );
 
 $yiq-contrasted-threshold: 175 !default;
@@ -80,8 +78,8 @@ $link-color: $success !default;
 
 // Fonts
 
-$font-family-sans-serif: 'LatoLocal', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+$font-family-sans-serif: 'LatoLocal', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 
 $font-size-base: 0.9375rem !default;

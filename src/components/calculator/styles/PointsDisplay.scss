@@ -1,6 +1,6 @@
 @import '~styles/_variables.scss';
-@import "~bootstrap/scss/mixins/_breakpoints.scss";
-@import "~rfs/scss";
+@import '~bootstrap/scss/mixins/_breakpoints.scss';
+@import '~rfs/scss';
 
 $sticky-z-index: 100;
 
@@ -22,29 +22,51 @@ $sticky-z-index: 100;
   margin-right: auto;
 }
 
+.risk-dangerous {
+  background-color: $thermometer-dark-red;
+  color: #fff;
+}
+.risk-very-high {
+  background-color: $thermometer-red;
+}
+.risk-high {
+  background-color: $thermometer-orange;
+}
+.risk-moderate {
+  background-color: $thermometer-yellow;
+}
+.risk-low {
+  background-color: $thermometer-light-green;
+}
+.risk-very-low {
+  background-color: $thermometer-green;
+}
 
-.risk-dangerous { background-color: $thermometer-dark-red; color: #fff; }
-.risk-very-high { background-color: $thermometer-red; }
-.risk-high { background-color: $thermometer-orange; }
-.risk-moderate { background-color: $thermometer-yellow; }
-.risk-low { background-color: $thermometer-light-green; }
-.risk-very-low { background-color: $thermometer-green; }
-
-
-
-.text-risk-dangerous { color: $thermometer-dark-red; }
-.text-risk-very-high { color: $thermometer-red; }
-.text-risk-high { color: $thermometer-orange; }
-.text-risk-moderate { color: $thermometer-yellow; }
-.text-risk-low { color: $thermometer-light-green; }
-.text-risk-very-low { color: $thermometer-green; }
+.text-risk-dangerous {
+  color: $thermometer-dark-red;
+}
+.text-risk-very-high {
+  color: $thermometer-red;
+}
+.text-risk-high {
+  color: $thermometer-orange;
+}
+.text-risk-moderate {
+  color: $thermometer-yellow;
+}
+.text-risk-low {
+  color: $thermometer-light-green;
+}
+.text-risk-very-low {
+  color: $thermometer-green;
+}
 
 #calculator .top-half-card {
   background: white;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 1.25rem;
-  box-shadow: 0 -2px 6px 0px rgba(0,0,0,0.15);
+  box-shadow: 0 -2px 6px 0px rgba(0, 0, 0, 0.15);
 
   @include media-breakpoint-down(sm) {
     padding: 0.8rem;
@@ -58,33 +80,31 @@ $sticky-z-index: 100;
   $thermometer-corners: 10px;
   $thermometer-mobile-width-reduction: 10px;
 
-
   @include font-size(1.3rem);
   @include media-breakpoint-down(sm) {
     @include font-size(1rem);
   }
   @media (max-width: 321px) {
     // iPhone size
-    @include font-size(0.9rem); 
+    @include font-size(0.9rem);
   }
-
 
   .thermometer-container {
     display: flex;
     flex-direction: column;
     height: 100px;
     width: 100%;
-    max-width: $thermometer-width; 
+    max-width: $thermometer-width;
     @include media-breakpoint-down(sm) {
       height: 85px;
     }
-    
+
     :first-child {
       border-radius: $thermometer-corners $thermometer-corners 0px 0px;
     }
 
     :last-child {
-      border-radius: 0px 0px $thermometer-corners $thermometer-corners ;
+      border-radius: 0px 0px $thermometer-corners $thermometer-corners;
     }
 
     .thermometer-piece {
@@ -102,7 +122,8 @@ $sticky-z-index: 100;
       width: $thermometer-width + $thermometer-border;
       border: $thermometer-border solid black;
       @include media-breakpoint-down(sm) {
-        width: $thermometer-width + $thermometer-border - $thermometer-mobile-width-reduction;
+        width: $thermometer-width + $thermometer-border -
+          $thermometer-mobile-width-reduction;
         border-width: $thermometer-border - 1;
       }
     }
@@ -112,13 +133,11 @@ $sticky-z-index: 100;
     }
   }
 
-
   .risk-icon {
     color: white;
     margin: 2px 8px -2px 0;
     vertical-align: baseline;
   }
-
 
   .points-container {
     margin-left: 0.5em;
@@ -139,7 +158,7 @@ $sticky-z-index: 100;
     @include font-size(1.2em);
     line-height: 1.5;
     &.risk-dangerous {
-      color: #fff
+      color: #fff;
     }
   }
   .budget-consumption {
@@ -162,5 +181,4 @@ $sticky-z-index: 100;
     color: $secondary;
     font-weight: normal;
   }
-
 }
