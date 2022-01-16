@@ -74,9 +74,9 @@
                 "others_fallback": ""
             },
             "i_have_been_vaccinated": "",
-            "no_vaccine": "",
-            "your_vaccine_doses_label": "",
-            "your_vaccine_header": "",
+            "no_vaccine": "Aucun vaccin",
+            "your_vaccine_doses_label": "Combien de doses ?",
+            "your_vaccine_header": "Votre Vaccin",
             "doses_7_days_ago": "",
             "your_vaccine_label": ""
         },
