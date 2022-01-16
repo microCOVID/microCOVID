@@ -2,10 +2,10 @@
     "calculator": {
         "riskreduction": {
             "housemates_header": "Voici quelques manières de travailler avec des contacts étroits pour réduire le risque",
-            "onetime_tips": "<li>Modifiez vos activités (faites-les masquées, à l’extérieur, éloignées) </li> <li> Portez le meilleur masque que vous pouvez trouver ! <br/><1/></li> <li> Visitez les lieux publics à des heures de moindre affluence</li> <li> Réduisez vos achats en effectuant un voyage pour plusieurs personnes, en utilisant les services de livraison ou en faisant des achats en ligne </ li > <li> Si cette activité est avec des amis, encouragez-les à ne pas venir si un de leurs proches ne se sent pas bien </li>",
+            "onetime_tips": "<li>Modifiez vos activités (faites-les masquées, à l’extérieur, éloignées) </li> <li> Portez le meilleur masque que vous pouvez trouver ! <1/></li> <li> Visitez les lieux publics à des heures de moindre affluence</li> <li> Réduisez vos achats en effectuant un voyage pour plusieurs personnes, en utilisant les services de livraison ou en faisant des achats en ligne </ li > <li> Si cette activité est avec des amis, encouragez-les à ne pas venir si un de leurs proches ne se sent pas bien </li>",
             "housemates_tips": "<li>Expliquez-leur comment leurs choix affectent vos risques, ainsi que les leurs</li> <li>Demandez-leur de modifier leurs activités (masqué, extérieur, éloigné)</li> <li>Les travailleurs essentiels peuvent porter un masque de qualité supérieure (par exemple, N95 ou KN95) pour travailler<1/></li> <li>Demandez-leur de limiter les contacts en présentiel au moins de personnes possible</li> <li> Encouragez vos contacts proches à s’isoler et à se faire tester au premier signe de symptômes de COVID-19</li> <li>S’ils présentent un risque élevé de COVID-19 et que vous devez être à l’intérieur avec eux : <ul> <li>Portez des masques à l’intérieur</li> <li> Maximisez la ventilation en ouvrant les fenêtres, en utilisant des ventilateurs soufflant l’air extérieur vers l’intérieur et des filtres HEPA </li> <li>Isolez-vous à l’intérieur de la maison en restant dans des pièces différentes.</li> </ul></li>",
             "onetime_warning": "Ceci peut s’appliquer ou non à votre activité.",
-            "onetime_header": "Voici quelques manières de réduire le risque de cette activité",
+            "onetime_header": "Comment réduire le risque",
             "link_to_mask_blog": ""
         },
         "pointsdisplay": {
@@ -82,8 +82,8 @@
         },
         "firsttime": {
             "budget_explanation": "Nous avons décidé qu’un budget de risque annuel de 1 % de contracter la COVID-19 par an était raisonnable pour la plupart des personnes en bonne santé qui ne sont pas en contact avec des groupes vulnérables. Pour savoir comment nous sommes arrivés à ce nombre, <1>cliquez ici</1>. Si vous voulez suivre ce budget de 1 % de risque par an, vous voudrez que votre budget hebdomadaire d’activités soit inférieur à environ 200 microCOVIDs par semaine. Nous avons créé une <3>feuille de calcul</3> pratique qui vous permet de suivre vos activités au fil du temps.",
-            "microcovid_explanation": "<p>Le calculateur introduit un nouveau concept, le microCOVID. Un microCOVID est une chance sur un million de contracter la COVID-19.</p><p> Une activité comportant 20 000 microCOVIDs est très dangereuse, car vous avez un risque de 2 % de contracter la COVID-19<em> à chaque fois que vous la pratiquer</em>. Une activité comportant 20 microCOVIDs est relativement sûre, car vous pouvez la pratiquer chaque semaine pendant un an et n’avoir encore qu’environ 0,1 % de chances de contracter la COVID-19.</p>",
-            "budget_header": "Comment gérer mes risques à l’aide d’un budget de risque ?",
+            "microcovid_explanation": "<p>Nous avons créé le concept du « microcovid » comme une nouvelle unité quantitative pour le risque. Un microCOVID est une chance sur un million de contracter la COVID-19.</p><p> Une activité comportant 20 000 microCOVIDs signifie que vous avez un risque de 2 % de contracter la COVID-19<em> à chaque fois que vous la pratiquer</em>. Une activité comportant 20 microCOVIDs (ou 0,002 %) est relativement sûre, car vous pouvez la pratiquer <em>chaque semaine pendant un an</em> et n’avoir encore accumulé qu’environ 0,1 % de chances de contracter la COVID-19.</p>",
+            "budget_header": "Qu'est-ce qu'un budget de risque ?",
             "microcovid_header": "Qu’est-ce que microCOVID ?"
         },
         "warning": {
@@ -111,7 +111,7 @@
         "select_scenario": "Optionnel : commencez par une activité commune prédéfinie...",
         "prevalence_info_source_information": "Données de prévalence consolidées de <1>Johns Hopkins CSSE</1> (cas signalés), <4>Covid Act Now</4> (taux de tests positifs aux États-Unis) et <7>Our World in Data</7> (taux internationaux de tests positifs).",
         "select_location_enter_manually": "Entrez les données manuellement…",
-        "select_location_placeholder": "Sélectionnez le pays ou l'État américain...",
+        "select_location_placeholder": "Sélectionnez le pays ou l'État américain …",
         "location_selector_header": "Étape 1 : Entrez votre localisation",
         "location_subprompt_US": "État entier ou sélectionnez un comté…",
         "location_subprompt_US-AK": "État entier ou sélectionnez un arrondissement…",
@@ -128,7 +128,7 @@
             "adjusted_prevalence": "Prévalence ajustée",
             "reported_prevalence": "Prévalence signalée",
             "completed_vaccinations_tooltip": "",
-            "completed_vaccinations": ""
+            "completed_vaccinations": "Pour cent de la population entièrement vaccinée"
         },
         "category_postfix": "Risque",
         "category_extreme": "Extrême",
@@ -178,13 +178,13 @@
             "CA": ""
         },
         "location_subprompt": {
-            "US": "État entier ou sélectionnez un comté…",
+            "US": "État entier ou sélectionnez un comté …",
             "US-AK": "État entier ou sélectionnez un arrondissement…",
-            "US-LA": "État entier, ou sélectionnez une paroisse…",
-            "country_or_regions": "Pays entier ou sélectionnez une région ...",
+            "US-LA": "État entier, ou sélectionnez une paroisse …",
+            "country_or_regions": "Pays entier ou sélectionnez une région …",
             "CA": ""
         },
-        "risk_modifier_multiple_short": "",
+        "risk_modifier_multiple_short": "{{multiplier}} ×",
         "risk_tolerance_10_percent_label": "",
         "no_vaccine_prevalence": "",
         "duration_minutes": "",
@@ -195,12 +195,12 @@
             "canada1": ""
         },
         "risk_tolerance_10_percent_explanation": "",
-        "saved_scenario_continue_custom": "",
+        "saved_scenario_continue_custom": "Créer un scénario personnalisé",
         "partner_interaction_risk_message": "",
         "location_risk_message": "",
         "set_interaction_type_to_continue": "",
         "one_time_interaction_risk_message": "",
-        "select_scenario_start_over": "",
+        "select_scenario_start_over": "Recommencer",
         "duration_question_workplace": "",
         "location_subsubprompt": {
             "country_or_regions": "",
@@ -210,7 +210,7 @@
             "country_or_regions": "",
             "CA": ""
         },
-        "their_vaccine_question": "",
+        "their_vaccine_question": "Sont-ils entièrement vaccinés ?",
         "show_math": "",
         "duration_hours": "",
         "risk_tolerance_3_percent_explanation": "",
@@ -219,8 +219,8 @@
         "their_vaccine_header": "",
         "risk_tolerance_3_percent_label": "",
         "select_location_label_clarifications": {
-            "country": "",
-            "US_state": ""
+            "country": "pays",
+            "US_state": "état américain"
         },
         "baseline_risk_short": "",
         "hide_math": ""
