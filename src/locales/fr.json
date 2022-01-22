@@ -73,7 +73,7 @@
                 "your_prompt": "Vous ne voyez pas votre masque dans la liste ?",
                 "others_fallback": "Choisissez {{ mask_type }} comme estimation prudente."
             },
-            "i_have_been_vaccinated": "",
+            "i_have_been_vaccinated": "Ajoutez votre vaccin",
             "no_vaccine": "Aucun vaccin",
             "your_vaccine_doses_label": "Combien de doses au total, quel que soit le vaccin ?",
             "your_vaccine_header": "Votre Vaccin",
