@@ -111,7 +111,7 @@
         "risk_modifier_frac_2nd": "{{frac}} du risque",
         "baseline_risk": "risque de base",
         "select_scenario": "Commencez avec un scénario prédéfini ou <2>créez votre propre scénario</2> :",
-        "prevalence_info_source_information": "Données de prévalence consolidées de <1>Johns Hopkins CSSE</1> (cas signalés), <4>Covid Act Now</4> (taux de tests positifs aux États-Unis) et <7>Our World in Data</7> (taux internationaux de tests positifs).",
+        "prevalence_info_source_information": "Données de prévalence consolidées de <1>Johns Hopkins CSSE</1> (cas signalés), <4>Covid Act Now</4> (taux de tests positifs aux États-Unis),  <7>Our World in Data</7> (taux internationaux de tests positifs), et <10>Coronavirus COVID-19 România</10> (cas signalés en Roumanie).",
         "select_location_enter_manually": "Entrez les données manuellement…",
         "select_location_placeholder": "Sélectionnez le pays ou l'État américain …",
         "location_selector_header": "Étape 1 : Entrez votre localisation",
