@@ -911,99 +911,127 @@ class AllData:
                         )
                         child.set_vaccines_of_type(vaccine_type, child_partials, child_completes)
 
+        # Keep a list of countries where an exception was raised so we can discard them rather than fail the whole update
+        failed_countries = list()
+
         for country in self.countries.values():
-            for state in country.states.values():
-                if state.test_positivity_rate is None and state.tests_in_past_week is not None:
-                    try:
-                        state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
-                    except ZeroDivisionError:
-                        print_and_log_to_sentry(
-                            f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
-                        )
-                        state.test_positivity_rate = None
-                if state.vaccines_by_type is not None:
-                    rolldown_vaccine_types(state, state.counties.values())
-                for county in state.counties.values():
-                    if county.population == 0 and county.name not in fake_names:
-                        raise ValueError(f"Missing population data for {county!r}")
-                rollup_population(state, "counties")
-                rollup_vaccines(state, "counties")
-            rollup_population(country, "states")
+            try:
+                for state in country.states.values():
+                    if state.test_positivity_rate is None and state.tests_in_past_week is not None:
+                        try:
+                            state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
+                        except ZeroDivisionError:
+                            print_and_log_to_sentry(
+                                f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
+                            )
+                            state.test_positivity_rate = None
+                    if state.vaccines_by_type is not None:
+                        rolldown_vaccine_types(state, state.counties.values())
+                    for county in state.counties.values():
+                        if county.population == 0 and county.name not in fake_names:
+                            raise ValueError(f"Missing population data for {county!r}")
+                    rollup_population(state, "counties")
+                    rollup_vaccines(state, "counties")
+                rollup_population(country, "states")
+            except ValueError as err:
+                failed_countries.append(dict(country_name=country.name, error=err))
+
+        # Delete any countries that had an error
+        for country_data in failed_countries:
+            print_and_log_to_sentry(
+                f"Discarding country {country_data['country_name']} due to error: {country_data['error']!r}"
+            )
+            del self.countries[country_data["country_name"]]
+
+        # Clear out the list for the next pass below
+        failed_countries = list()
 
         for country in list(self.countries.values()):
-            for state in list(country.states.values()):
-                for county in list(state.counties.values()):
-                    if not county.cumulative_cases:
-                        if (
-                            county.fullname
-                            in (
-                                # These just don't have any reported cases
-                                "Hoonah-Angoon, Alaska, US",
-                                "Lake and Peninsula, Alaska, US",
-                                "Skagway, Alaska, US",
-                                "Unassigned, District of Columbia, US",
-                                "Kalawao, Hawaii, US",
-                                # These are reported under a combined name
-                                "Dukes, Massachusetts, US",
-                                "Nantucket, Massachusetts, US",
-                                "Bronx, New York, US",
-                                "Kings, New York, US",
-                                "Queens, New York, US",
-                                "Richmond, New York, US",
-                                # Utah reports by region, not county
-                            )
-                            or county.state == "Utah"
-                        ):
-                            pass  # don't warn
-                        else:
-                            print_and_log_to_sentry(f"Discarding {county!r} with no case data")
-                        del state.counties[county.name]
-
-                    if county.test_positivity_rate is None:
-                        if county.tests_in_past_week:
-                            county.test_positivity_rate = county.cases_last_week / county.tests_in_past_week
-                            if county.cases_last_week > county.tests_in_past_week:
-                                print_and_log_to_sentry(
-                                    f"Falling back to state data for {county.name} because it has more cases than tests in the last week with a positivity rate of {county.test_positivity_rate}."
+            try:
+                for state in list(country.states.values()):
+                    for county in list(state.counties.values()):
+                        if not county.cumulative_cases:
+                            if (
+                                county.fullname
+                                in (
+                                    # These just don't have any reported cases
+                                    "Hoonah-Angoon, Alaska, US",
+                                    "Lake and Peninsula, Alaska, US",
+                                    "Skagway, Alaska, US",
+                                    "Unassigned, District of Columbia, US",
+                                    "Kalawao, Hawaii, US",
+                                    # These are reported under a combined name
+                                    "Dukes, Massachusetts, US",
+                                    "Nantucket, Massachusetts, US",
+                                    "Bronx, New York, US",
+                                    "Kings, New York, US",
+                                    "Queens, New York, US",
+                                    "Richmond, New York, US",
+                                    # Utah reports by region, not county
                                 )
+                                or county.state == "Utah"
+                            ):
+                                pass  # don't warn
+                            else:
+                                print_and_log_to_sentry(f"Discarding {county!r} with no case data")
+                            del state.counties[county.name]
+
+                        if county.test_positivity_rate is None:
+                            if county.tests_in_past_week:
+                                county.test_positivity_rate = (
+                                    county.cases_last_week / county.tests_in_past_week
+                                )
+                                if county.cases_last_week > county.tests_in_past_week:
+                                    print_and_log_to_sentry(
+                                        f"Falling back to state data for {county.name} because it has more cases than tests in the last week with a positivity rate of {county.test_positivity_rate}."
+                                    )
+                                    county.test_positivity_rate = state.test_positivity_rate
+
+                            elif state.test_positivity_rate is not None:
+                                # Some US counties don't have data; fall back to
+                                # assuming they're average for their state.
                                 county.test_positivity_rate = state.test_positivity_rate
 
-                        elif state.test_positivity_rate is not None:
-                            # Some US counties don't have data; fall back to
-                            # assuming they're average for their state.
-                            county.test_positivity_rate = state.test_positivity_rate
+                    if not rollup_cases(state, "counties"):
+                        if state.country == "Nigeria":
+                            pass  # Nigeria only reports nation-level cases
+                        elif state.name in ("American Samoa", "Unknown", "Recovered"):
+                            pass
+                        else:
+                            print_and_log_to_sentry(f"Discarding {state!r} with no case data")
+                        del country.states[state.name]
 
-                if not rollup_cases(state, "counties"):
-                    if state.country == "Nigeria":
-                        pass  # Nigeria only reports nation-level cases
-                    elif state.name in ("American Samoa", "Unknown", "Recovered"):
-                        pass
-                    else:
-                        print_and_log_to_sentry(f"Discarding {state!r} with no case data")
-                    del country.states[state.name]
+                    for county in list(state.counties.values()):
+                        if county.name in fake_names:
+                            # Now that we've incorporated these unassigned/etc
+                            # cases into the state totals, we have no further need
+                            # of the county-level data.
+                            del state.counties[county.name]
 
-                for county in list(state.counties.values()):
-                    if county.name in fake_names:
-                        # Now that we've incorporated these unassigned/etc
-                        # cases into the state totals, we have no further need
-                        # of the county-level data.
-                        del state.counties[county.name]
+                    if state.test_positivity_rate is None:
+                        if state.counties or state.tests_in_past_week:
+                            rollup_testing(state, "counties")
+                        elif country.test_positivity_rate is not None:
+                            state.test_positivity_rate = country.test_positivity_rate
 
-                if state.test_positivity_rate is None:
-                    if state.counties or state.tests_in_past_week:
-                        rollup_testing(state, "counties")
-                    elif country.test_positivity_rate is not None:
-                        state.test_positivity_rate = country.test_positivity_rate
+                if not rollup_cases(country, "states"):
+                    raise ValueError(f"Missing case data for {country!r}")
+                rollup_testing(country, "states")
+                for state in list(country.states.values()):
+                    if state.name in fake_names:
+                        # Now that we've incorporated these unassigned/etc state
+                        # cases into the country totals, we have no further need
+                        # of the state-level data.
+                        del country.states[state.name]
+            except ValueError as err:
+                failed_countries.append(dict(country_name=country.name, error=err))
 
-            if not rollup_cases(country, "states"):
-                raise ValueError(f"Missing case data for {country!r}")
-            rollup_testing(country, "states")
-            for state in list(country.states.values()):
-                if state.name in fake_names:
-                    # Now that we've incorporated these unassigned/etc state
-                    # cases into the country totals, we have no further need
-                    # of the state-level data.
-                    del country.states[state.name]
+        # Delete any countries that had an error
+        for country_data in failed_countries:
+            print_and_log_to_sentry(
+                f"Discarding country {country_data['country_name']} due to error: {country_data['error']!r}"
+            )
+            del self.countries[country_data["country_name"]]
 
 
 class DataCache(pydantic.BaseModel):
