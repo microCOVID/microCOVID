@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.04592,0.04592,0.011898,2.68,1.4401,0.04592
-Antofagasta,Unknown,Unknown,0.017566,2.68,1.0588,0.049847
-Araucania,Unknown,Unknown,0.012759,2.68,1.5549,0.053167
-Arica y Parinacota,Unknown,Unknown,0.022268,2.68,1.0,0.059677
-Atacama,Unknown,Unknown,0.016529,2.68,1.4157,0.062711
-Aysen,Unknown,Unknown,0.019998,2.68,1.6522,0.088553
-Biobio,Unknown,Unknown,0.011405,2.68,1.8773,0.05738
-Coquimbo,Unknown,Unknown,0.013985,2.68,1.4833,0.055596
-Los Lagos,Unknown,Unknown,0.012295,2.68,1.9836,0.065363
-Los Rios,Unknown,Unknown,0.014365,2.68,1.7641,0.067913
-Magallanes,Unknown,Unknown,0.018927,2.68,1.041,0.052803
-Maule,Unknown,Unknown,0.011084,2.68,1.9888,0.059077
-Metropolitana,Unknown,Unknown,0.013022,2.68,1.4488,0.050562
-Nuble,Unknown,Unknown,0.011775,2.68,1.5997,0.050479
-OHiggins,Unknown,Unknown,0.009374,2.68,1.5978,0.040139
-Tarapaca,Unknown,Unknown,0.013096,2.68,1.0,0.035097
-Valparaiso,Unknown,Unknown,0.012505,2.68,1.4674,0.049179
+Entire country,0.044561,0.044561,0.012246,2.6791,1.3582,0.044561
+Antofagasta,Unknown,Unknown,0.017309,2.6791,1.0,0.046373
+Araucania,Unknown,Unknown,0.013373,2.6791,1.4791,0.052992
+Arica y Parinacota,Unknown,Unknown,0.020206,2.6791,1.0,0.054134
+Atacama,Unknown,Unknown,0.017592,2.6791,1.3772,0.064908
+Aysen,Unknown,Unknown,0.021346,2.6791,1.5654,0.089523
+Biobio,Unknown,Unknown,0.012023,2.6791,1.74,0.056047
+Coquimbo,Unknown,Unknown,0.014287,2.6791,1.3712,0.052486
+Los Lagos,Unknown,Unknown,0.013381,2.6791,1.873,0.067144
+Los Rios,Unknown,Unknown,0.01518,2.6791,1.6613,0.067563
+Magallanes,Unknown,Unknown,0.018285,2.6791,1.0,0.048986
+Maule,Unknown,Unknown,0.011883,2.6791,1.9211,0.061158
+Metropolitana,Unknown,Unknown,0.013334,2.6791,1.3596,0.04857
+Nuble,Unknown,Unknown,0.012474,2.6791,1.4258,0.047647
+OHiggins,Unknown,Unknown,0.009703,2.6791,1.483,0.038552
+Tarapaca,Unknown,Unknown,0.011574,2.6791,1.0,0.031009
+Valparaiso,Unknown,Unknown,0.012923,2.6791,1.403,0.048572
