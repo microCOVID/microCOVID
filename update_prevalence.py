@@ -1215,7 +1215,9 @@ def parse_jhu_daily_report(cache, data, current):
             "Unassigned",
             "Unknown",
         ):
-            print_and_log_to_sentry(f"JHU data has cases but no population for {place!r} with line data: {line!r}")
+            print_and_log_to_sentry(
+                f"JHU data has cases but no population for {place!r} with line data: {line!r}"
+            )
         place.cumulative_cases[current] = line.Confirmed
 
 
