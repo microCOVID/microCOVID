@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.030333,0.030333,0.011052,2.7445,1.0,0.030333
-Antofagasta,Unknown,Unknown,0.006143,2.7445,1.0,0.016859
-Araucania,Unknown,Unknown,0.017195,2.7445,1.0,0.047191
-Arica y Parinacota,Unknown,Unknown,0.006224,2.7445,1.0,0.017081
-Atacama,Unknown,Unknown,0.015615,2.7445,1.0,0.042857
-Aysen,Unknown,Unknown,0.017653,2.7445,1.0,0.048448
-Biobio,Unknown,Unknown,0.018587,2.7445,1.1446,0.058387
-Coquimbo,Unknown,Unknown,0.010675,2.7445,1.0,0.029297
-Los Lagos,Unknown,Unknown,0.017415,2.7445,1.0,0.047796
-Los Rios,Unknown,Unknown,0.021326,2.7445,1.0391,0.06082
-Magallanes,Unknown,Unknown,0.009055,2.7445,1.0,0.024852
-Maule,Unknown,Unknown,0.019348,2.7445,1.1463,0.060873
-Metropolitana,Unknown,Unknown,0.00882,2.7445,1.0,0.024208
-Nuble,Unknown,Unknown,0.016421,2.7445,1.0,0.045067
-OHiggins,Unknown,Unknown,0.011129,2.7445,1.0,0.030544
-Tarapaca,Unknown,Unknown,0.003585,2.7445,1.0,0.009839
-Valparaiso,Unknown,Unknown,0.011003,2.7445,1.0,0.030199
+Entire country,0.029614,0.029614,0.010794,2.7435,1.0,0.029614
+Antofagasta,Unknown,Unknown,0.005715,2.7435,1.0,0.015679
+Araucania,Unknown,Unknown,0.016575,2.7435,1.0,0.045474
+Arica y Parinacota,Unknown,Unknown,0.005998,2.7435,1.0,0.016456
+Atacama,Unknown,Unknown,0.015103,2.7435,1.0,0.041436
+Aysen,Unknown,Unknown,0.016712,2.7435,1.0,0.045851
+Biobio,Unknown,Unknown,0.018672,2.7435,1.1045,0.056583
+Coquimbo,Unknown,Unknown,0.010474,2.7435,1.0,0.028736
+Los Lagos,Unknown,Unknown,0.017907,2.7435,1.0,0.04913
+Los Rios,Unknown,Unknown,0.021622,2.7435,1.1048,0.065536
+Magallanes,Unknown,Unknown,0.008947,2.7435,1.0,0.024547
+Maule,Unknown,Unknown,0.019089,2.7435,1.0645,0.05575
+Metropolitana,Unknown,Unknown,0.008313,2.7435,1.0,0.022807
+Nuble,Unknown,Unknown,0.018416,2.7435,1.0,0.050526
+OHiggins,Unknown,Unknown,0.01074,2.7435,1.0,0.029465
+Tarapaca,Unknown,Unknown,0.0034,2.7435,1.0,0.009329
+Valparaiso,Unknown,Unknown,0.01049,2.7435,1.0,0.028778
