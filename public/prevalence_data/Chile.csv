@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.028855,0.028855,0.010589,2.7251,1.0,0.028855
-Antofagasta,Unknown,Unknown,0.005445,2.7251,1.0,0.014838
-Araucania,Unknown,Unknown,0.015998,2.7251,1.0,0.043597
-Arica y Parinacota,Unknown,Unknown,0.005436,2.7251,1.0,0.014815
-Atacama,Unknown,Unknown,0.014501,2.7251,1.0,0.039517
-Aysen,Unknown,Unknown,0.016053,2.7251,1.0,0.043746
-Biobio,Unknown,Unknown,0.018549,2.7251,1.0453,0.052837
-Coquimbo,Unknown,Unknown,0.010206,2.7251,1.0,0.027813
-Los Lagos,Unknown,Unknown,0.018476,2.7251,1.0,0.050348
-Los Rios,Unknown,Unknown,0.02077,2.7251,1.0161,0.057514
-Magallanes,Unknown,Unknown,0.008389,2.7251,1.0,0.02286
-Maule,Unknown,Unknown,0.019472,2.7251,1.0544,0.05595
-Metropolitana,Unknown,Unknown,0.008014,2.7251,1.0,0.021839
-Nuble,Unknown,Unknown,0.019078,2.7251,1.0,0.051989
-OHiggins,Unknown,Unknown,0.010239,2.7251,1.0,0.027902
-Tarapaca,Unknown,Unknown,0.003092,2.7251,1.0,0.008425
-Valparaiso,Unknown,Unknown,0.010199,2.7251,1.0,0.027794
+Entire country,0.027986,0.027986,0.010273,2.7241,1.0,0.027986
+Antofagasta,Unknown,Unknown,0.005106,2.7241,1.0,0.013909
+Araucania,Unknown,Unknown,0.015679,2.7241,1.0,0.042711
+Arica y Parinacota,Unknown,Unknown,0.005065,2.7241,1.0,0.013797
+Atacama,Unknown,Unknown,0.013733,2.7241,1.0,0.03741
+Aysen,Unknown,Unknown,0.015374,2.7241,1.0,0.041882
+Biobio,Unknown,Unknown,0.018069,2.7241,1.0,0.049223
+Coquimbo,Unknown,Unknown,0.009697,2.7241,1.0,0.026415
+Los Lagos,Unknown,Unknown,0.019127,2.7241,1.0,0.052106
+Los Rios,Unknown,Unknown,0.020346,2.7241,1.0,0.055426
+Magallanes,Unknown,Unknown,0.007884,2.7241,1.0,0.021478
+Maule,Unknown,Unknown,0.01989,2.7241,1.0444,0.056587
+Metropolitana,Unknown,Unknown,0.007552,2.7241,1.0,0.020572
+Nuble,Unknown,Unknown,0.01939,2.7241,1.0053,0.0531
+OHiggins,Unknown,Unknown,0.009878,2.7241,1.0,0.026909
+Tarapaca,Unknown,Unknown,0.002992,2.7241,1.0,0.00815
+Valparaiso,Unknown,Unknown,0.009517,2.7241,1.0,0.025926
