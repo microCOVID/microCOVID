@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.023343,0.023343,0.008636,2.703,1.0,0.023343
-Antofagasta,Unknown,Unknown,0.004168,2.703,1.0,0.011265
-Araucania,Unknown,Unknown,0.0128,2.703,1.0,0.034597
-Arica y Parinacota,Unknown,Unknown,0.004207,2.703,1.0,0.011371
-Atacama,Unknown,Unknown,0.011539,2.703,1.0,0.031189
-Aysen,Unknown,Unknown,0.012447,2.703,1.0,0.033644
-Biobio,Unknown,Unknown,0.01556,2.703,1.0,0.042059
-Coquimbo,Unknown,Unknown,0.007915,2.703,1.0,0.021393
-Los Lagos,Unknown,Unknown,0.016925,2.703,1.0,0.045749
-Los Rios,Unknown,Unknown,0.017288,2.703,1.0,0.046729
-Magallanes,Unknown,Unknown,0.006779,2.703,1.0,0.018325
-Maule,Unknown,Unknown,0.016453,2.703,1.0,0.044474
-Metropolitana,Unknown,Unknown,0.006235,2.703,1.0,0.016854
-Nuble,Unknown,Unknown,0.01744,2.703,1.0542,0.049697
-OHiggins,Unknown,Unknown,0.008458,2.703,1.0,0.022861
-Tarapaca,Unknown,Unknown,0.002363,2.703,1.0,0.006386
-Valparaiso,Unknown,Unknown,0.007866,2.703,1.0,0.02126
+Entire country,0.025016,0.025016,0.009258,2.7021,1.0,0.025016
+Antofagasta,Unknown,Unknown,0.004317,2.7021,1.0,0.011666
+Araucania,Unknown,Unknown,0.013334,2.7021,1.0,0.03603
+Arica y Parinacota,Unknown,Unknown,0.004415,2.7021,1.0,0.011929
+Atacama,Unknown,Unknown,0.01185,2.7021,1.0,0.03202
+Aysen,Unknown,Unknown,0.014386,2.7021,1.0,0.038871
+Biobio,Unknown,Unknown,0.016491,2.7021,1.0,0.044561
+Coquimbo,Unknown,Unknown,0.008453,2.7021,1.0,0.022841
+Los Lagos,Unknown,Unknown,0.018321,2.7021,1.052,0.052082
+Los Rios,Unknown,Unknown,0.018306,2.7021,1.0,0.049465
+Magallanes,Unknown,Unknown,0.006821,2.7021,1.0,0.018432
+Maule,Unknown,Unknown,0.018721,2.7021,1.0,0.050587
+Metropolitana,Unknown,Unknown,0.006688,2.7021,1.0,0.018071
+Nuble,Unknown,Unknown,0.018499,2.7021,1.1266,0.056315
+OHiggins,Unknown,Unknown,0.009227,2.7021,1.0,0.024933
+Tarapaca,Unknown,Unknown,0.002423,2.7021,1.0,0.006548
+Valparaiso,Unknown,Unknown,0.008259,2.7021,1.0,0.022316
