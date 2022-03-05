@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.014536,0.014536,0.005911,2.459,1.0,0.014536
-Johor,Unknown,Unknown,0.003751,2.459,1.0,0.009224
-Kedah,Unknown,Unknown,0.008564,2.459,1.0665,0.022461
-Kelantan,Unknown,Unknown,0.005608,2.459,1.0,0.013791
-Melaka,Unknown,Unknown,0.00514,2.459,1.0518,0.013294
-Negeri Sembilan,Unknown,Unknown,0.009568,2.459,1.0641,0.025035
-Pahang,Unknown,Unknown,0.006202,2.459,1.0,0.015252
-Perak,Unknown,Unknown,0.003976,2.459,1.7893,0.017492
-Perlis,Unknown,Unknown,0.006995,2.459,1.1174,0.019221
-Pulau Pinang,Unknown,Unknown,0.008736,2.459,1.0,0.021483
-Sabah,Unknown,Unknown,0.005161,2.459,1.0,0.01269
-Sarawak,Unknown,Unknown,0.002013,2.459,2.0,0.009898
-Selangor,Unknown,Unknown,0.007256,2.459,1.0144,0.018099
-Terengganu,Unknown,Unknown,0.004324,2.459,1.1317,0.012034
-W.P. Kuala Lumpur,Unknown,Unknown,0.007078,2.459,1.1964,0.020823
-W.P. Labuan,Unknown,Unknown,0.021801,2.459,1.0,0.053608
-W.P. Putrajaya,Unknown,Unknown,0.010351,2.459,1.0158,0.025856
+Entire country,0.014884,0.014884,0.005991,2.4845,1.0,0.014884
+Johor,Unknown,Unknown,0.003748,2.4845,1.0,0.009313
+Kedah,Unknown,Unknown,0.008765,2.4845,1.0864,0.023658
+Kelantan,Unknown,Unknown,0.005469,2.4845,1.0,0.013587
+Melaka,Unknown,Unknown,0.005151,2.4845,1.0082,0.012902
+Negeri Sembilan,Unknown,Unknown,0.009648,2.4845,1.086,0.026031
+Pahang,Unknown,Unknown,0.006137,2.4845,1.0,0.015247
+Perak,Unknown,Unknown,0.003962,2.4845,1.4923,0.01469
+Perlis,Unknown,Unknown,0.006984,2.4845,1.0698,0.018562
+Pulau Pinang,Unknown,Unknown,0.008771,2.4845,1.0,0.021791
+Sabah,Unknown,Unknown,0.004616,2.4845,1.0,0.01147
+Sarawak,Unknown,Unknown,0.002322,2.4845,2.0,0.01154
+Selangor,Unknown,Unknown,0.007502,2.4845,1.0219,0.019047
+Terengganu,Unknown,Unknown,0.004445,2.4845,1.1057,0.012211
+W.P. Kuala Lumpur,Unknown,Unknown,0.008216,2.4845,1.2973,0.026482
+W.P. Labuan,Unknown,Unknown,0.02004,2.4845,1.0,0.04979
+W.P. Putrajaya,Unknown,Unknown,0.010645,2.4845,1.0191,0.026953
