@@ -1,6 +1,6 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.010332,0.008321,0.002074,2.6349,1.6696,0.009126
-Zone 1 - Western,Unknown,Unknown,0.001572,2.6349,1.0541,0.004365
-Zone 2 - Northern,Unknown,Unknown,0.002041,2.6349,1.0634,0.005718
-Zone 3 - Eastern,Unknown,Unknown,0.001789,2.6349,1.0,0.004714
-Zone 4 - Central,Unknown,Unknown,0.001375,2.6349,1.0728,0.003888
+Entire state,0.013519,0.010889,0.002199,2.7148,2.0,0.011942
+Zone 1 - Western,Unknown,Unknown,0.001426,2.7148,1.0,0.003871
+Zone 2 - Northern,Unknown,Unknown,0.001657,2.7148,1.0,0.004498
+Zone 3 - Eastern,Unknown,Unknown,0.001641,2.7148,1.0,0.004455
+Zone 4 - Central,Unknown,Unknown,0.001087,2.7148,1.0,0.002952
