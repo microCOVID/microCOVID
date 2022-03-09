@@ -54,6 +54,10 @@
     "duration_question": "How long is the activity?",
     "duration_question_workplace": "How much time total per week?",
     "explanationcard": {
+      "chance": "chance",
+      "details_activity_risk": "Activity Risk",
+      "details_activity_risk_explanation": "Next, we calculate the risk of the activity. A person doing this activity with COVID-19 would have a <strong>{{activity_risk}} probability</strong> of transmitting it to you.",
+      "details_frequency": "Frequency",
       "details_header_closed": "Show calculation details",
       "details_header_open": "Hide calculation details",
       "details_number_of_people": "Number of people",
