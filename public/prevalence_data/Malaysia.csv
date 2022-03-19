@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.014219,0.014219,0.00573,2.4816,1.0,0.014219
-Johor,Unknown,Unknown,0.004263,2.4816,1.0,0.01058
-Kedah,Unknown,Unknown,0.007254,2.4816,1.0,0.018001
-Kelantan,Unknown,Unknown,0.004152,2.4816,1.0,0.010303
-Melaka,Unknown,Unknown,0.005194,2.4816,1.0,0.012888
-Negeri Sembilan,Unknown,Unknown,0.011011,2.4816,1.0234,0.027965
-Pahang,Unknown,Unknown,0.005799,2.4816,1.0,0.01439
-Perak,Unknown,Unknown,0.003885,2.4816,1.0142,0.009777
-Perlis,Unknown,Unknown,0.004717,2.4816,1.0,0.011706
-Pulau Pinang,Unknown,Unknown,0.009028,2.4816,1.0,0.022405
-Sabah,Unknown,Unknown,0.001411,2.4816,1.0,0.003501
-Sarawak,Unknown,Unknown,0.00369,2.4816,1.0,0.009156
-Selangor,Unknown,Unknown,0.007286,2.4816,1.0,0.01808
-Terengganu,Unknown,Unknown,0.005413,2.4816,1.0,0.013433
-W.P. Kuala Lumpur,Unknown,Unknown,0.010841,2.4816,1.0,0.026903
-W.P. Labuan,Unknown,Unknown,0.008119,2.4816,1.0,0.020147
-W.P. Putrajaya,Unknown,Unknown,0.011537,2.4816,1.0547,0.030196
+Entire country,0.013559,0.013559,0.005465,2.481,1.0,0.013559
+Johor,Unknown,Unknown,0.004013,2.481,1.0,0.009955
+Kedah,Unknown,Unknown,0.006806,2.481,1.0,0.016885
+Kelantan,Unknown,Unknown,0.003647,2.481,1.0,0.009048
+Melaka,Unknown,Unknown,0.004987,2.481,1.0,0.012372
+Negeri Sembilan,Unknown,Unknown,0.010595,2.481,1.0,0.026287
+Pahang,Unknown,Unknown,0.005199,2.481,1.0,0.012898
+Perak,Unknown,Unknown,0.003968,2.481,1.0413,0.010251
+Perlis,Unknown,Unknown,0.004234,2.481,1.0,0.010505
+Pulau Pinang,Unknown,Unknown,0.008779,2.481,1.0,0.02178
+Sabah,Unknown,Unknown,0.001262,2.481,1.0,0.003131
+Sarawak,Unknown,Unknown,0.003537,2.481,1.0,0.008776
+Selangor,Unknown,Unknown,0.007027,2.481,1.0,0.017435
+Terengganu,Unknown,Unknown,0.00522,2.481,1.0,0.01295
+W.P. Kuala Lumpur,Unknown,Unknown,0.010508,2.481,1.0,0.026071
+W.P. Labuan,Unknown,Unknown,0.007817,2.481,1.0,0.019393
+W.P. Putrajaya,Unknown,Unknown,0.010693,2.481,1.0,0.026528
