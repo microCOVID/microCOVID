@@ -178,22 +178,6 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {showWarning && (
-            <Alert
-              variant="primary"
-              onClose={() => setShowWarning(false)}
-              dismissible
-            >
-              <Alert.Heading>
-                {t('calculator.intro.omicron_warning_heading')}
-              </Alert.Heading>
-              <Trans i18nKey="calculator.intro.omicron_warning">
-                Research is in progress to determine Omicron's impact on our
-                models. Preliminary findings suggest an increase in the risk for
-                re-infection.
-              </Trans>
-            </Alert>
-          )}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
