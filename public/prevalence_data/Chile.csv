@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.010874,0.010874,0.004353,2.4979,1.0,0.010874
-Antofagasta,Unknown,Unknown,0.002295,2.4979,1.0,0.005731
-Araucania,Unknown,Unknown,0.006135,2.4979,1.0,0.015325
-Arica y Parinacota,Unknown,Unknown,0.002044,2.4979,1.0,0.005105
-Atacama,Unknown,Unknown,0.004987,2.4979,1.0,0.012457
-Aysen,Unknown,Unknown,0.008346,2.4979,1.0058,0.02097
-Biobio,Unknown,Unknown,0.007251,2.4979,1.0,0.018111
-Coquimbo,Unknown,Unknown,0.004479,2.4979,1.0,0.011187
-Los Lagos,Unknown,Unknown,0.00598,2.4979,1.0,0.014938
-Los Rios,Unknown,Unknown,0.006655,2.4979,1.0,0.016623
-Magallanes,Unknown,Unknown,0.00699,2.4979,1.1759,0.020531
-Maule,Unknown,Unknown,0.007777,2.4979,1.0,0.019427
-Metropolitana,Unknown,Unknown,0.003568,2.4979,1.0,0.008914
-Nuble,Unknown,Unknown,0.006852,2.4979,1.0,0.017115
-OHiggins,Unknown,Unknown,0.005054,2.4979,1.0,0.012624
-Tarapaca,Unknown,Unknown,0.001289,2.4979,1.0,0.003219
-Valparaiso,Unknown,Unknown,0.004399,2.4979,1.0,0.010989
+Entire country,0.009345,0.009345,0.003813,2.4508,1.0,0.009345
+Antofagasta,Unknown,Unknown,0.002184,2.4508,1.0,0.005353
+Araucania,Unknown,Unknown,0.005353,2.4508,1.0,0.013119
+Arica y Parinacota,Unknown,Unknown,0.001893,2.4508,1.0,0.00464
+Atacama,Unknown,Unknown,0.004752,2.4508,1.0,0.011646
+Aysen,Unknown,Unknown,0.007416,2.4508,1.0,0.018175
+Biobio,Unknown,Unknown,0.006398,2.4508,1.0,0.01568
+Coquimbo,Unknown,Unknown,0.004227,2.4508,1.0,0.010359
+Los Lagos,Unknown,Unknown,0.004794,2.4508,1.0,0.01175
+Los Rios,Unknown,Unknown,0.005426,2.4508,1.0,0.013297
+Magallanes,Unknown,Unknown,0.005212,2.4508,1.0,0.012774
+Maule,Unknown,Unknown,0.006696,2.4508,1.0,0.016411
+Metropolitana,Unknown,Unknown,0.003194,2.4508,1.0,0.007828
+Nuble,Unknown,Unknown,0.005709,2.4508,1.0,0.013993
+OHiggins,Unknown,Unknown,0.004332,2.4508,1.0,0.010617
+Tarapaca,Unknown,Unknown,0.001286,2.4508,1.0,0.003151
+Valparaiso,Unknown,Unknown,0.003827,2.4508,1.0,0.009379
