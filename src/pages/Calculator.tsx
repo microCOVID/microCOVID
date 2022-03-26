@@ -46,7 +46,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [showWarning, setShowWarning] = useState(true)
+  // const [showWarning, setShowWarning] = useState(true)
   const [points, setPoints] = useState(-1)
   const [lowerBound, setLowerBound] = useState(-1)
   const [upperBound, setUpperBound] = useState(-1)
@@ -178,7 +178,7 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {showWarning && (
+          {/*          {showWarning && (
             <Alert
               variant="primary"
               onClose={() => setShowWarning(false)}
@@ -194,6 +194,7 @@ export const Calculator = (): React.ReactElement => {
               </Trans>
             </Alert>
           )}
+*/}{' '}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
@@ -226,20 +227,6 @@ export const Calculator = (): React.ReactElement => {
             <Trans i18nKey="calculator.alerts.delta_blog">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.delta_numbers">
-              <strong>DATE_PLACEHOLDER</strong>{' '}
-              <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.average_vaccine">
-              <strong>DATE_PLACEHOLDER</strong>{' '}
-              <Link to="/paper/14-research-sources#others-vaccines">
-                HERE_PLACEHOLDER
-              </Link>
             </Trans>
           </Alert>
           <Link
