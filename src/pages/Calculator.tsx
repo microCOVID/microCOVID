@@ -46,7 +46,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  // const [showWarning, setShowWarning] = useState(true)
+  const [showWarning, setShowWarning] = useState(false)
   const [points, setPoints] = useState(-1)
   const [lowerBound, setLowerBound] = useState(-1)
   const [upperBound, setUpperBound] = useState(-1)
@@ -178,7 +178,7 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {/*          {showWarning && (
+          {showWarning && (
             <Alert
               variant="primary"
               onClose={() => setShowWarning(false)}
@@ -194,7 +194,7 @@ export const Calculator = (): React.ReactElement => {
               </Trans>
             </Alert>
           )}
-*/}{' '}
+{' '}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
