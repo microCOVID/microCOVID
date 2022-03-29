@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.024225,0.024225,0.00821,2.9507,1.0,0.024225
-Baden-Wurttemberg,Unknown,Unknown,0.016875,2.9507,1.0,0.049795
-Bayern,Unknown,Unknown,0.019849,2.9507,1.0,0.058568
-Berlin,Unknown,Unknown,0.011495,2.9507,1.0145,0.034411
-Brandenburg,Unknown,Unknown,0.014318,2.9507,1.0,0.04225
-Bremen,Unknown,Unknown,0.014596,2.9507,1.0202,0.04394
-Hamburg,Unknown,Unknown,0.013508,2.9507,1.0292,0.041025
-Hessen,Unknown,Unknown,0.013917,2.9507,1.0304,0.042312
-Mecklenburg-Vorpommern,Unknown,Unknown,0.020862,2.9507,1.0,0.061558
-Niedersachsen,Unknown,Unknown,0.0,2.9507,1.0,0.0
-Nordrhein-Westfalen,Unknown,Unknown,0.0,2.9507,1.0,0.0
-Rheinland-Pfalz,Unknown,Unknown,0.0,2.9507,1.0,1e-06
-Saarland,Unknown,Unknown,1e-06,2.9507,1.0,3e-06
-Sachsen,Unknown,Unknown,0.0,2.9507,1.0,1e-06
-Sachsen-Anhalt,Unknown,Unknown,0.0,2.9507,1.0,1e-06
-Schleswig-Holstein,Unknown,Unknown,0.0,2.9507,1.0,1e-06
-Thuringen,Unknown,Unknown,0.0,2.9507,1.0,1e-06
+Entire country,0.024213,0.024213,0.008209,2.9495,1.0,0.024213
+Baden-Wurttemberg,Unknown,Unknown,0.016872,2.9495,1.0,0.049764
+Bayern,Unknown,Unknown,0.019849,2.9495,1.0,0.058544
+Berlin,Unknown,Unknown,0.011495,2.9495,1.3102,0.044425
+Brandenburg,Unknown,Unknown,0.014318,2.9495,1.1195,0.04728
+Bremen,Unknown,Unknown,0.014596,2.9495,1.2244,0.05271
+Hamburg,Unknown,Unknown,0.013508,2.9495,1.1133,0.044358
+Hessen,Unknown,Unknown,0.013917,2.9495,1.2013,0.049313
+Mecklenburg-Vorpommern,Unknown,Unknown,0.020862,2.9495,1.0,0.061533
+Niedersachsen,Unknown,Unknown,0.0,2.9495,1.0,0.0
+Nordrhein-Westfalen,Unknown,Unknown,0.0,2.9495,1.0,0.0
+Rheinland-Pfalz,Unknown,Unknown,0.0,2.9495,1.0,1e-06
+Saarland,Unknown,Unknown,1e-06,2.9495,1.0,3e-06
+Sachsen,Unknown,Unknown,0.0,2.9495,1.0,1e-06
+Sachsen-Anhalt,Unknown,Unknown,0.0,2.9495,1.0,1e-06
+Schleswig-Holstein,Unknown,Unknown,0.0,2.9495,1.0,1e-06
+Thuringen,Unknown,Unknown,0.0,2.9495,1.0,1e-06
