@@ -193,8 +193,7 @@ export const Calculator = (): React.ReactElement => {
                 re-infection.
               </Trans>
             </Alert>
-          )}
-{' '}
+          )}{' '}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
