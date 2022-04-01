@@ -1,8 +1,8 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.003036,0.002452,0.000759,3.269,1.0757,0.002671
-Central,4.1e-05,3.3e-05,1e-05,3.269,1.0,3.3e-05
-Far North,0.000104,8.4e-05,2.6e-05,3.269,1.0,8.6e-05
-North,2e-05,1.6e-05,5e-06,3.269,1.0,1.7e-05
-Regina,1.2e-05,1e-05,3e-06,3.269,1.0,1.1e-05
-Saskatoon,1e-05,8e-06,3e-06,3.269,1.0,9e-06
-South,2.5e-05,2e-05,6e-06,3.269,1.0,2.1e-05
+Entire state,2e-06,2e-06,1e-06,2.0,1.0,2e-06
+Central,0.004094,0.003307,0.00142,2.0,1.178,0.003346
+Far North,0.008402,0.006787,0.001746,2.0,2.0,0.006982
+North,0.006038,0.004878,0.001529,2.0,1.6798,0.005136
+Regina,0.00236,0.001907,0.000756,2.0,1.355,0.002049
+Saskatoon,0.001921,0.001551,0.000657,2.0,1.2769,0.001678
+South,0.002707,0.002187,0.001132,2.0,1.0,0.002265
