@@ -1,19 +1,19 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.019313,0.019313,0.007941,2.432,1.0,0.019313
-England,Unknown,Unknown,0.008004,2.432,1.0,0.019467
-Northern Ireland,Unknown,Unknown,0.005505,2.432,1.0,0.013388
-Scotland,Unknown,Unknown,0.01151,2.432,1.0,0.027993
-Wales,Unknown,Unknown,0.003922,2.432,1.0,0.009539
-Bermuda,Unknown,Unknown,0.003388,2.432,1.0,0.008241
-British Virgin Islands,Unknown,Unknown,0.001257,2.432,1.0,0.003056
-Cayman Islands,Unknown,Unknown,0.004124,2.432,1.0266,0.010296
-Channel Islands,Unknown,Unknown,6e-06,2.432,1.0,1.4e-05
-Guernsey,Unknown,Unknown,0.023381,2.432,1.0,0.056863
-Jersey,Unknown,Unknown,0.017063,2.432,1.0,0.041498
-Falkland Islands (Malvinas),Unknown,Unknown,0.001436,2.432,1.0,0.003491
-Gibraltar,Unknown,Unknown,0.008014,2.432,1.0,0.01949
-Isle of Man,Unknown,Unknown,0.014818,2.432,1.0,0.036038
-Montserrat,Unknown,Unknown,0.0004,2.432,1.0,0.000973
-Turks and Caicos Islands,Unknown,Unknown,0.000594,2.432,1.5714,0.00227
-Anguilla,Unknown,Unknown,0.004533,2.432,1.7632,0.019437
-Saint Helena, Ascension and Tristan da Cunha,Unknown,Unknown,0.000177,2.432,1.0,0.00043
+Entire country,0.018933,0.018933,0.007817,2.4221,1.0,0.018933
+England,Unknown,Unknown,0.007945,2.4221,1.0,0.019244
+Northern Ireland,Unknown,Unknown,0.005137,2.4221,1.0,0.012443
+Scotland,Unknown,Unknown,0.010932,2.4221,1.0,0.026479
+Wales,Unknown,Unknown,0.003702,2.4221,1.0,0.008967
+Bermuda,Unknown,Unknown,0.003388,2.4221,1.0,0.008207
+British Virgin Islands,Unknown,Unknown,0.000496,2.4221,1.0,0.001202
+Cayman Islands,Unknown,Unknown,1.5e-05,2.4221,1.0,3.7e-05
+Channel Islands,Unknown,Unknown,6e-06,2.4221,1.0,1.4e-05
+Guernsey,Unknown,Unknown,0.023381,2.4221,1.0,0.056631
+Jersey,Unknown,Unknown,0.015901,2.4221,1.0,0.038514
+Falkland Islands (Malvinas),Unknown,Unknown,0.001723,2.4221,1.0,0.004172
+Gibraltar,Unknown,Unknown,0.009884,2.4221,1.0,0.02394
+Isle of Man,Unknown,Unknown,0.012031,2.4221,1.0,0.02914
+Montserrat,Unknown,Unknown,0.0004,2.4221,1.0,0.000969
+Turks and Caicos Islands,Unknown,Unknown,0.000594,2.4221,1.5714,0.002261
+Anguilla,Unknown,Unknown,0.004533,2.4221,1.7632,0.019357
+Saint Helena, Ascension and Tristan da Cunha,Unknown,Unknown,0.000177,2.4221,1.0,0.000428
