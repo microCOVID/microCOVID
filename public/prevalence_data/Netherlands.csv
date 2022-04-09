@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.017908,0.017908,0.005996,2.9868,1.0,0.017908
-Drenthe,Unknown,Unknown,0.007258,2.9868,1.0,0.021677
-Flevoland,Unknown,Unknown,0.005302,2.9868,1.0,0.015837
-Friesland,Unknown,Unknown,0.005539,2.9868,1.0,0.016543
-Gelderland,Unknown,Unknown,0.00671,2.9868,1.0,0.020042
-Groningen,Unknown,Unknown,0.00773,2.9868,1.0,0.023089
-Limburg,Unknown,Unknown,0.004093,2.9868,1.0,0.012226
-Noord-Brabant,Unknown,Unknown,0.004292,2.9868,1.0,0.01282
-Noord-Holland,Unknown,Unknown,0.005547,2.9868,1.0,0.016567
-Overijssel,Unknown,Unknown,0.007133,2.9868,1.0,0.021306
-Utrecht,Unknown,Unknown,0.00664,2.9868,1.0,0.019832
-Zeeland,Unknown,Unknown,0.006136,2.9868,1.0,0.018326
-Zuid-Holland,Unknown,Unknown,0.006089,2.9868,1.0,0.018186
-Aruba,Unknown,Unknown,0.001161,2.9868,1.0,0.003469
-Curacao,Unknown,Unknown,0.002785,2.9868,1.0,0.008318
-Sint Maarten,Unknown,Unknown,0.002495,2.9868,2.0,0.014905
-Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.013119,2.9868,1.0,0.039185
+Entire country,0.015995,0.015995,0.005368,2.98,1.0,0.015995
+Drenthe,Unknown,Unknown,0.006393,2.98,1.0,0.01905
+Flevoland,Unknown,Unknown,0.004834,2.98,1.0,0.014406
+Friesland,Unknown,Unknown,0.004983,2.98,1.0,0.01485
+Gelderland,Unknown,Unknown,0.005982,2.98,1.0,0.017827
+Groningen,Unknown,Unknown,0.006804,2.98,1.0,0.020274
+Limburg,Unknown,Unknown,0.003631,2.98,1.0,0.010819
+Noord-Brabant,Unknown,Unknown,0.00375,2.98,1.0,0.011174
+Noord-Holland,Unknown,Unknown,0.005056,2.98,1.0,0.015067
+Overijssel,Unknown,Unknown,0.006362,2.98,1.0,0.018958
+Utrecht,Unknown,Unknown,0.00593,2.98,1.0,0.017671
+Zeeland,Unknown,Unknown,0.005505,2.98,1.0,0.016404
+Zuid-Holland,Unknown,Unknown,0.005443,2.98,1.0,0.01622
+Aruba,Unknown,Unknown,0.001302,2.98,1.1311,0.004388
+Curacao,Unknown,Unknown,0.002943,2.98,1.0617,0.009312
+Sint Maarten,Unknown,Unknown,0.002145,2.98,1.5167,0.009696
+Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.01598,2.98,1.0,0.047618
