@@ -1,34 +1,34 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.002182,0.002182,0.000452,2.4142,2.0,0.002182
-Aguascalientes,Unknown,Unknown,0.00087,2.4142,2.0,0.0042
-Baja California,Unknown,Unknown,0.000366,2.4142,2.0,0.001765
-Baja California Sur,Unknown,Unknown,0.000167,2.4142,1.0,0.000402
-Campeche,Unknown,Unknown,7.8e-05,2.4142,1.0,0.000188
-Chiapas,Unknown,Unknown,9.8e-05,2.4142,1.0,0.000237
-Chihuahua,Unknown,Unknown,0.00024,2.4142,2.0,0.00116
-Ciudad de Mexico,Unknown,Unknown,0.000532,2.4142,1.2736,0.001637
-Coahuila,Unknown,Unknown,0.000345,2.4142,2.0,0.001668
-Colima,Unknown,Unknown,0.000103,2.4142,1.25,0.000311
-Durango,Unknown,Unknown,9e-05,2.4142,2.0,0.000437
-Guanajuato,Unknown,Unknown,5.1e-05,2.4142,1.0,0.000122
-Guerrero,Unknown,Unknown,1.1e-05,2.4142,1.0,2.6e-05
-Hidalgo,Unknown,Unknown,0.000249,2.4142,1.6717,0.001007
-Jalisco,Unknown,Unknown,0.000484,2.4142,2.0,0.002336
-Mexico,Unknown,Unknown,0.001809,2.4142,2.0,0.008736
-Michoacan,Unknown,Unknown,2.3e-05,2.4142,1.0,5.5e-05
-Morelos,Unknown,Unknown,0.000267,2.4142,1.013,0.000652
-Nayarit,Unknown,Unknown,2.4e-05,2.4142,1.0,5.8e-05
-Nuevo Leon,Unknown,Unknown,0.001116,2.4142,2.0,0.00539
-Oaxaca,Unknown,Unknown,1.1e-05,2.4142,1.0,2.6e-05
-Puebla,Unknown,Unknown,4.3e-05,2.4142,1.0,0.000104
-Queretaro,Unknown,Unknown,0.000199,2.4142,2.0,0.000962
-Quintana Roo,Unknown,Unknown,0.000162,2.4142,2.0,0.000782
-San Luis Potosi,Unknown,Unknown,0.000205,2.4142,1.0,0.000495
-Sinaloa,Unknown,Unknown,4.7e-05,2.4142,1.0,0.000113
-Sonora,Unknown,Unknown,0.000166,2.4142,1.0,0.0004
-Tabasco,Unknown,Unknown,8e-06,2.4142,1.0,2e-05
-Tamaulipas,Unknown,Unknown,0.000183,2.4142,2.0,0.000882
-Tlaxcala,Unknown,Unknown,5.3e-05,2.4142,1.0,0.000128
-Veracruz,Unknown,Unknown,4.6e-05,2.4142,1.0,0.00011
-Yucatan,Unknown,Unknown,3.7e-05,2.4142,2.0,0.00018
-Zacatecas,Unknown,Unknown,0.00015,2.4142,2.0,0.000724
+Entire country,0.002162,0.002162,0.000448,2.4137,2.0,0.002162
+Aguascalientes,Unknown,Unknown,0.000855,2.4137,2.0,0.004125
+Baja California,Unknown,Unknown,0.000333,2.4137,1.9485,0.001567
+Baja California Sur,Unknown,Unknown,0.000157,2.4137,1.0,0.000378
+Campeche,Unknown,Unknown,6.7e-05,2.4137,1.0,0.000162
+Chiapas,Unknown,Unknown,8.8e-05,2.4137,1.0,0.000212
+Chihuahua,Unknown,Unknown,0.000198,2.4137,1.8428,0.000879
+Ciudad de Mexico,Unknown,Unknown,0.000507,2.4137,1.0253,0.001255
+Coahuila,Unknown,Unknown,0.000331,2.4137,2.0,0.001597
+Colima,Unknown,Unknown,0.000103,2.4137,1.0256,0.000255
+Durango,Unknown,Unknown,8.9e-05,2.4137,2.0,0.000431
+Guanajuato,Unknown,Unknown,5.9e-05,2.4137,1.0,0.000142
+Guerrero,Unknown,Unknown,1.4e-05,2.4137,1.0,3.3e-05
+Hidalgo,Unknown,Unknown,0.000243,2.4137,1.2852,0.000753
+Jalisco,Unknown,Unknown,0.000478,2.4137,2.0,0.002308
+Mexico,Unknown,Unknown,0.001796,2.4137,2.0,0.008669
+Michoacan,Unknown,Unknown,2.1e-05,2.4137,1.0,5.2e-05
+Morelos,Unknown,Unknown,0.000268,2.4137,1.0,0.000647
+Nayarit,Unknown,Unknown,2.3e-05,2.4137,1.0,5.6e-05
+Nuevo Leon,Unknown,Unknown,0.00117,2.4137,2.0,0.005646
+Oaxaca,Unknown,Unknown,1.8e-05,2.4137,1.0,4.3e-05
+Puebla,Unknown,Unknown,3.9e-05,2.4137,1.0,9.5e-05
+Queretaro,Unknown,Unknown,0.000233,2.4137,2.0,0.001124
+Quintana Roo,Unknown,Unknown,0.000153,2.4137,2.0,0.00074
+San Luis Potosi,Unknown,Unknown,0.000202,2.4137,1.0,0.000487
+Sinaloa,Unknown,Unknown,4.8e-05,2.4137,1.0,0.000115
+Sonora,Unknown,Unknown,0.000152,2.4137,1.0,0.000367
+Tabasco,Unknown,Unknown,8e-06,2.4137,1.0,1.9e-05
+Tamaulipas,Unknown,Unknown,0.000221,2.4137,2.0,0.001065
+Tlaxcala,Unknown,Unknown,4.6e-05,2.4137,1.0,0.00011
+Veracruz,Unknown,Unknown,4.4e-05,2.4137,1.0,0.000105
+Yucatan,Unknown,Unknown,3e-05,2.4137,1.5714,0.000112
+Zacatecas,Unknown,Unknown,0.000145,2.4137,2.0,0.000698
