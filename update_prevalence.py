@@ -701,7 +701,7 @@ class AppLocation(pydantic.BaseModel):
     def prevalenceRatio(self) -> float:
         DAY_0 = datetime(2020, 2, 12)
         day_i = (datetime.now() - DAY_0).days
-        positivityRate = self.positiveCasePercentage or 100
+        positivityRate = min(self.positiveCasePercentage or 100, 100)
 
         if positivityRate < 0:
             print_and_log_to_sentry(f"Warning: Positivity rate is negative: {positivityRate}")
