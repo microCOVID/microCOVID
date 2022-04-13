@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.005856,0.005856,0.002382,2.4586,1.0,0.005856
-Johor,Unknown,Unknown,0.000958,2.4586,1.0,0.002355
-Kedah,Unknown,Unknown,0.001103,2.4586,1.0,0.002713
-Kelantan,Unknown,Unknown,0.000453,2.4586,1.0,0.001115
-Melaka,Unknown,Unknown,0.001629,2.4586,1.0,0.004004
-Negeri Sembilan,Unknown,Unknown,0.003481,2.4586,1.0,0.008559
-Pahang,Unknown,Unknown,0.001032,2.4586,1.0,0.002538
-Perak,Unknown,Unknown,0.001428,2.4586,1.0,0.003511
-Perlis,Unknown,Unknown,0.000872,2.4586,1.0,0.002144
-Pulau Pinang,Unknown,Unknown,0.00177,2.4586,1.0,0.004353
-Sabah,Unknown,Unknown,0.000264,2.4586,1.0,0.000649
-Sarawak,Unknown,Unknown,0.000842,2.4586,1.0,0.002069
-Selangor,Unknown,Unknown,0.006841,2.4586,1.0,0.01682
-Terengganu,Unknown,Unknown,0.001433,2.4586,1.0,0.003522
-W.P. Kuala Lumpur,Unknown,Unknown,0.003211,2.4586,1.0,0.007894
-W.P. Labuan,Unknown,Unknown,0.00169,2.4586,1.0,0.004155
-W.P. Putrajaya,Unknown,Unknown,0.002353,2.4586,1.0,0.005785
+Entire country,0.005626,0.005626,0.002289,2.458,1.0,0.005626
+Johor,Unknown,Unknown,0.000905,2.458,1.0,0.002224
+Kedah,Unknown,Unknown,0.001027,2.458,1.0,0.002523
+Kelantan,Unknown,Unknown,0.000417,2.458,1.0,0.001025
+Melaka,Unknown,Unknown,0.001586,2.458,1.0,0.003898
+Negeri Sembilan,Unknown,Unknown,0.003528,2.458,1.0,0.008672
+Pahang,Unknown,Unknown,0.000973,2.458,1.0,0.002392
+Perak,Unknown,Unknown,0.001427,2.458,1.0,0.003507
+Perlis,Unknown,Unknown,0.000833,2.458,1.0,0.002047
+Pulau Pinang,Unknown,Unknown,0.001713,2.458,1.0,0.004211
+Sabah,Unknown,Unknown,0.000251,2.458,1.0,0.000618
+Sarawak,Unknown,Unknown,0.000785,2.458,1.0,0.001928
+Selangor,Unknown,Unknown,0.006482,2.458,1.0,0.015933
+Terengganu,Unknown,Unknown,0.001402,2.458,1.0,0.003447
+W.P. Kuala Lumpur,Unknown,Unknown,0.00335,2.458,1.0,0.008234
+W.P. Labuan,Unknown,Unknown,0.001569,2.458,1.0,0.003858
+W.P. Putrajaya,Unknown,Unknown,0.002211,2.458,1.0,0.005434
