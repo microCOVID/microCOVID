@@ -701,14 +701,16 @@ class AppLocation(pydantic.BaseModel):
     def prevalenceRatio(self) -> float:
         DAY_0 = datetime(2020, 2, 12)
         day_i = (datetime.now() - DAY_0).days
-        positivityRate = self.positiveCasePercentage
-        if positivityRate is None or positivityRate > 100:
-            positivityRate = 100
+        positivityRate = self.positiveCasePercentage or 100
+
         if positivityRate < 0:
             print_and_log_to_sentry(f"Warning: Positivity rate is negative: {positivityRate}")
             positivityRate = 0
-        final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
-        return final
+
+        testingUnavailabilityCoefficient = (1500 / (day_i + 50))
+        positivityInferredPrevelenceRatio = (positivityRate / 100) ** 0.5 + 2
+
+        return testingUnavailabilityCoefficient * positivityInferredPrevelenceRatio
 
     def as_csv_data(self) -> Dict[str, str]:
         population = int(self.population.replace(",", ""))
