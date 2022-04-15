@@ -1,35 +1,35 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000384,0.000384,0.00013,2.0,1.4812,0.000384
+Entire country,0.000338,0.000338,0.000129,2.0,1.3149,0.000338
 Anhui,Unknown,Unknown,0.0,2.0,1.0,0.0
 Beijing,Unknown,Unknown,1e-06,2.0,1.0,2e-06
-Chongqing,Unknown,Unknown,0.0,2.0,1.0,0.0
+Chongqing,Unknown,Unknown,0.0,2.0,2.0,0.0
 Fujian,Unknown,Unknown,2e-06,2.0,1.0,3e-06
 Gansu,Unknown,Unknown,0.0,2.0,1.0,0.0
-Guangdong,Unknown,Unknown,1e-06,2.0,1.8596,3e-06
-Guangxi,Unknown,Unknown,1e-06,2.0,1.7895,2e-06
+Guangdong,Unknown,Unknown,1e-06,2.0,2.0,5e-06
+Guangxi,Unknown,Unknown,1e-06,2.0,1.0,1e-06
 Guizhou,Unknown,Unknown,0.0,2.0,1.0,0.0
-Hainan,Unknown,Unknown,5e-06,2.0,1.4706,1.5e-05
+Hainan,Unknown,Unknown,5e-06,2.0,1.3514,1.4e-05
 Hebei,Unknown,Unknown,0.0,2.0,1.0,0.0
-Heilongjiang,Unknown,Unknown,0.0,2.0,1.0,1e-06
-Henan,Unknown,Unknown,0.0,2.0,1.0,0.0
+Heilongjiang,Unknown,Unknown,1e-06,2.0,1.0,2e-06
+Henan,Unknown,Unknown,0.0,2.0,1.2,0.0
 Hubei,Unknown,Unknown,0.0,2.0,1.0,0.0
 Hunan,Unknown,Unknown,0.0,2.0,1.0,0.0
-Inner Mongolia,Unknown,Unknown,0.0,2.0,1.5,0.0
+Inner Mongolia,Unknown,Unknown,0.0,2.0,1.0,0.0
 Jiangsu,Unknown,Unknown,1e-06,2.0,1.0,1e-06
 Jiangxi,Unknown,Unknown,0.0,2.0,1.0,1e-06
-Jilin,Unknown,Unknown,7.1e-05,2.0,1.0,0.000141
+Jilin,Unknown,Unknown,6.6e-05,2.0,1.0,0.000131
 Liaoning,Unknown,Unknown,0.0,2.0,1.0,0.0
 Ningxia,Unknown,Unknown,0.0,2.0,1.0,0.0
-Qinghai,Unknown,Unknown,0.0,2.0,1.0,0.0
-Shaanxi,Unknown,Unknown,1e-06,2.0,2.0,3e-06
+Qinghai,Unknown,Unknown,1e-06,2.0,1.0,1e-06
+Shaanxi,Unknown,Unknown,1e-06,2.0,1.5,2e-06
 Shandong,Unknown,Unknown,0.0,2.0,1.0,0.0
-Shanghai,Unknown,Unknown,0.00024,2.0,2.0,0.00096
-Shanxi,Unknown,Unknown,1e-06,2.0,1.0,1e-06
+Shanghai,Unknown,Unknown,0.00031,2.0,2.0,0.00124
+Shanxi,Unknown,Unknown,1e-06,2.0,1.0,2e-06
 Sichuan,Unknown,Unknown,0.0,2.0,1.0,1e-06
 Tianjin,Unknown,Unknown,0.0,2.0,1.0,1e-06
 Tibet,Unknown,Unknown,0.0,2.0,1.0,1e-06
 Xinjiang,Unknown,Unknown,0.0,2.0,1.0,0.0
-Yunnan,Unknown,Unknown,0.0,2.0,1.0,0.0
+Yunnan,Unknown,Unknown,1e-06,2.0,2.0,3e-06
 Zhejiang,Unknown,Unknown,1e-06,2.0,1.0,2e-06
-Hong Kong,Unknown,Unknown,0.001828,2.0,1.0,0.003656
+Hong Kong,Unknown,Unknown,0.001615,2.0,1.0,0.003229
 Macau,Unknown,Unknown,2e-06,2.0,1.0,3e-06
