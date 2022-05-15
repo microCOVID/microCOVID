@@ -17,7 +17,7 @@ from datetime import date, datetime, timedelta
 from operator import attrgetter
 from pathlib import Path
 from time import sleep
-from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any, Union
+from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any, Union, TypedDict, Counter, Iterable
 from us_state_abbrev import us_state_name_by_abbrev
 
 try:
@@ -369,7 +369,7 @@ class Place(pydantic.BaseModel):
     name: str  # "San Francisco"
     population: int = 0  # 881549
     test_positivity_rate: Optional[float]  # 0.05
-    cumulative_cases: Dict[date, int] = collections.Counter()
+    cumulative_cases: Counter[date] = collections.Counter()
 
     # For some international data we don't get the positivity rate,
     # just the number of tests. We can approximate positivity rate
@@ -386,7 +386,7 @@ class Place(pydantic.BaseModel):
         So recent_daily_cumulative_cases[-5] is the total number of cases reported
         up to 5 days ago.
         """
-        daily_cumulative_cases = []
+        daily_cumulative_cases: List[int] = []
         current = effective_date
         if current not in self.cumulative_cases:
             raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
@@ -534,7 +534,7 @@ class Place(pydantic.BaseModel):
     # that we can use like so:
     # estimated_unvaccinated_person_risk
     #   = unvaccinated_relative_prevalence * average_person_risk_from_prevalence_data
-    def unvaccinated_relative_prevalence(self) -> float:
+    def unvaccinated_relative_prevalence(self) -> Optional[float]:
         total_vaccinated = 0  # combined total of partially and fully vaccinated people
         risk_sum = 0
 
@@ -556,7 +556,7 @@ class Place(pydantic.BaseModel):
             )
 
         if total_vaccinated == 0:
-            return
+            return None
 
         if total_vaccinated >= self.population:
             # This probably means people from other counties have gotten their
@@ -590,7 +590,7 @@ class Place(pydantic.BaseModel):
         last_week = self.cases_last_week
         week_before = self.cases_week_before
         if last_week <= week_before or week_before <= 0:
-            increase = 0
+            increase = 0.0
         else:
             increase = last_week / week_before - 1
 
@@ -782,6 +782,7 @@ class AllData:
 
     def get_jhu_place(self, jhu_line: JHUCommonFields) -> Place:
         if jhu_line.Admin2:
+            assert jhu_line.Province_State is not None
             return self.get_county(
                 jhu_line.Admin2,
                 state=jhu_line.Province_State,
@@ -832,7 +833,7 @@ class AllData:
                 if not parent.population and parent.name not in fake_names:
                     raise ValueError(f"Missing population data for {parent!r}")
 
-        def rollup_cases(parent: Place, child_attr: str) -> None:
+        def rollup_cases(parent: Place, child_attr: str) -> bool:
             children: Dict[str, Place] = getattr(parent, child_attr)
 
             if not parent.cumulative_cases:
@@ -862,7 +863,7 @@ class AllData:
                     if child.test_positivity_rate is None:
                         valid = False
                     elif child.test_positivity_rate > 0:
-                        tests_last_week += child.cases_last_week / child.test_positivity_rate
+                        tests_last_week += round(child.cases_last_week / child.test_positivity_rate)
                 if valid and tests_last_week:
                     parent.test_positivity_rate = parent.cases_last_week / tests_last_week
 
@@ -883,21 +884,22 @@ class AllData:
                     all_children_total_partial_vaccinations += child.vaccines_total.partial_vaccinations
                 if all_children_total_population > 0:
                     parent.set_total_vaccines(
-                        parent.population
-                        * all_children_total_partial_vaccinations
-                        / all_children_total_population,
-                        parent.population
-                        * all_children_total_completed_vaccinations
-                        / all_children_total_population,
+                        round(parent.population
+                              * all_children_total_partial_vaccinations
+                              / all_children_total_population),
+                        round(parent.population
+                              * all_children_total_completed_vaccinations
+                              / all_children_total_population),
                     )
 
-        def rolldown_vaccine_types(parent: Place, children: List[Place]):
+        def rolldown_vaccine_types(parent: Place, children: Iterable[Place]):
             for child in children:
                 if child.vaccines_by_type is None:
                     child_vaccinations = child.vaccines_total
                     # Assume that sub-places have the same ratio of vaccine types
                     completed_vaccination_total = parent.completed_vaccination_total()
                     partial_vaccination_total = parent.partial_vaccination_total()
+                    assert parent.vaccines_by_type is not None
                     for vaccine_type, parent_vaccinations in parent.vaccines_by_type.items():
                         child_partials = (
                             parent_vaccinations.partial_vaccinations
@@ -911,8 +913,12 @@ class AllData:
                         )
                         child.set_vaccines_of_type(vaccine_type, child_partials, child_completes)
 
+        class FailedCountry(TypedDict):
+            country_name: str
+            error: ValueError
+
         # Keep a list of countries where an exception was raised so we can discard them rather than fail the whole update
-        failed_countries = list()
+        failed_countries: List[FailedCountry] = list()
 
         for country in self.countries.values():
             try:
@@ -1077,7 +1083,7 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
 
     result = []
     for line in reader:
-        kw: Dict[str, Optional[str]] = {}
+        kw: Dict[str, Optional[Union[str, int]]] = {}
         for field, val in zip(fields, line):
             info = model.__fields__.get(field)
             if info is None:
@@ -1103,7 +1109,7 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
 
 def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
     print(f"Fetching {url}...", end=" ", flush=True)
-    result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url)))
+    result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url))) # type: ignore
     print(f"read {len(result)} objects")
     return result
 
@@ -1310,7 +1316,7 @@ def parse_romania_prevalence_data(cache, data):
         state.cumulative_cases[line.Date] = line.TotalCases
 
 
-def parse_canada_prevalence_data(cache, data):
+def parse_canada_prevalence_data(cache, data) -> None:
     populate_since = canada_effective_date - timedelta(days=16)
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
     canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
@@ -1328,11 +1334,11 @@ def parse_canada_prevalence_data(cache, data):
         # add population data
         place = data.get_canada_region_place(region)
         if place.population != 0:
-            raise ValueError(f"Duplicate population info for {place!r}: {region.Population}")
+            raise ValueError(f"Duplicate population info for {place!r}: {region.pop}")
         if region.pop != "NULL":
             place.population = region.pop
 
-        def process_regional_vaccination_reports():
+        def process_regional_vaccination_reports() -> None:
             vaccination_reports = parse_json(
                 cache,
                 CanadaRegionalVaccinationReports,
@@ -1399,12 +1405,12 @@ def parse_canada_prevalence_data(cache, data):
                     min_test_count = (
                         report.cumulative_testing
                         if min_test_count is None
-                        else min(min_test_count, report.cumulative_testing)
+                        else min(min_test_count, report.cumulative_testing) # type: ignore
                     )
                     max_test_count = (
                         report.cumulative_testing
                         if max_test_count is None
-                        else max(max_test_count, report.cumulative_testing)
+                        else max(max_test_count, report.cumulative_testing) # type: ignore
                     )
 
         if min_test_count is not None and max_test_count is not None:
@@ -1443,14 +1449,15 @@ def parse_canada_prevalence_data(cache, data):
                 for (manufacturer, shots) in administered_shots_by_manufacturer.items()
             }
             for k, v in proportional_weights.items():
+                assert isinstance(provincial_reports.summary[-1].cumulative_cvaccine, int)
                 place.set_vaccines_of_type(
                     k,
-                    v
-                    * get_partially_vaccinated(
-                        provincial_reports.summary[-1].cumulative_avaccine,
-                        provincial_reports.summary[-1].cumulative_cvaccine,
-                        2,
-                    ),
+                    round(v
+                          * get_partially_vaccinated(
+                              provincial_reports.summary[-1].cumulative_avaccine,
+                              provincial_reports.summary[-1].cumulative_cvaccine,
+                              2,
+                          )),
                     v * provincial_reports.summary[-1].cumulative_cvaccine,
                 )
 
@@ -1582,21 +1589,21 @@ def main() -> None:
     (csvdir / "date.csv").write_text("Date\n{}".format(effective_date.strftime("%Y-%m-%d")))
     with (csvdir / "index.csv").open("w") as topfile:
         topfile.write("Location,Slug\n")
-        for slug, data in app_locations.items():
-            if not data.topLevelGroup:
+        for slug, location_date in app_locations.items():
+            if not location_date.topLevelGroup:
                 continue
 
-            topfile.write(f"{data.label},{slug}\n")
+            topfile.write(f"{location_date.label},{slug}\n")
             with (csvdir / slug).with_suffix(".csv").open("w") as subfile:
-                top_row = data.as_csv_data()
+                top_row = location_date.as_csv_data()
                 subfile.write(",".join(top_row.keys()) + "\n")
-                if "states" in data.topLevelGroup.lower():
+                if "states" in location_date.topLevelGroup.lower():
                     top_row["Name"] = "Entire state"
                 else:
                     top_row["Name"] = "Entire country"
                 subfile.write(",".join(top_row.values()) + "\n")
 
-                for subkey in data.subdivisions:
+                for subkey in location_date.subdivisions:
                     subfile.write(",".join(app_locations[subkey].as_csv_data().values()) + "\n")
 
 
