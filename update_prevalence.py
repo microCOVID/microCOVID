@@ -1500,7 +1500,7 @@ def main() -> None:
         parse_romania_prevalence_data(cache, data)
 
         # Add Canada Public Health Unit (county-level) data
-        parse_canada_prevalence_data(cache, data)
+        # parse_canada_prevalence_data(cache, data)
 
     finally:
         cache.save()
