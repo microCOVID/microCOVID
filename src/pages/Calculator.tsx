@@ -178,7 +178,9 @@ export const Calculator = (): React.ReactElement => {
   const currentTimeMillis = new Date().getTime();
   const prevalenceDataDate = calculatorData.prevalanceDataDate;
   const prevalenceDataTimeMillis = prevalenceDataDate?.getTime()
-  const prevalenceIsStale = prevalenceDataTimeMillis != null && currentTimeMillis - prevalenceDataTimeMillis > oneWeekOfMilliseconds;
+  const prevalenceIsStale =
+    prevalenceDataTimeMillis !== null &&
+    currentTimeMillis - prevalenceDataTimeMillis > oneWeekOfMilliseconds
 
   const showStaleWarning = prevalenceIsStale && !suppressStaleWarning;
 
