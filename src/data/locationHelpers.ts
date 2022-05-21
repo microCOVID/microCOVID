@@ -1,4 +1,4 @@
-import { Locations, PrevalenceDataDate } from 'data/location'
+import { Locations } from 'data/location'
 
 interface PrevalanceData {
   population: string
@@ -26,9 +26,8 @@ export function dataForLocation(location: string): PrevalanceData {
         locationData.positiveCasePercentage === null
           ? null
           : Math.round(locationData.positiveCasePercentage * 10) / 10,
-      // TODO just use locationData.updatedAt once update_prevalence has added it
       prevalanceDataDate: new Date(
-        locationData.updatedAt || PrevalenceDataDate,
+        locationData.updatedAt
       ),
       percentFullyVaccinated: locationData.completeVaccinations
         ? Math.round((locationData.completeVaccinations / population) * 100)
