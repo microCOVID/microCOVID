@@ -188,24 +188,6 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {showStaleWarning && (
-            <Alert
-              variant="primary"
-              onClose={() => setSuppressStaleWarning(true)}
-              dismissible
-            >
-              <Alert.Heading>
-                {t('calculator.intro.stale_warning_heading')}
-              </Alert.Heading>
-              <Trans
-                values={{
-                  lastLoadedDate: prevalenceDataDate?.toLocaleDateString(),
-                }}
-              >
-                calculator.intro.stale_warning
-              </Trans>
-            </Alert>
-          )}{' '}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
@@ -258,6 +240,24 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
+          {showStaleWarning && (
+            <Alert
+              variant="primary"
+              onClose={() => setSuppressStaleWarning(true)}
+              dismissible
+            >
+              <Alert.Heading>
+                {t('calculator.intro.stale_warning_heading')}
+              </Alert.Heading>
+              <Trans
+                values={{
+                  lastLoadedDate: prevalenceDataDate?.toLocaleDateString(),
+                }}
+              >
+                calculator.intro.stale_warning
+              </Trans>
+            </Alert>
+          )}
           <Card id="location">
             <PrevalenceControls
               data={calculatorData}
