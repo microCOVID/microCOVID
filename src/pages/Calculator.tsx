@@ -174,15 +174,15 @@ export const Calculator = (): React.ReactElement => {
     </button>
   )
 
-  const oneWeekOfMilliseconds = 7 * 24 * 60 * 60 * 1000;
-  const currentTimeMillis = new Date().getTime();
-  const prevalenceDataDate = calculatorData.prevalanceDataDate;
+  const oneWeekOfMilliseconds = 7 * 24 * 60 * 60 * 1000
+  const currentTimeMillis = new Date().getTime()
+  const prevalenceDataDate = calculatorData.prevalanceDataDate
   const prevalenceDataTimeMillis = prevalenceDataDate?.getTime()
   const prevalenceIsStale =
     prevalenceDataTimeMillis !== null &&
     currentTimeMillis - prevalenceDataTimeMillis > oneWeekOfMilliseconds
 
-  const showStaleWarning = prevalenceIsStale && !suppressStaleWarning;
+  const showStaleWarning = prevalenceIsStale && !suppressStaleWarning
 
   return (
     <div id="calculator">
@@ -197,7 +197,11 @@ export const Calculator = (): React.ReactElement => {
               <Alert.Heading>
                 {t('calculator.intro.stale_warning_heading')}
               </Alert.Heading>
-              <Trans values={{ lastLoadedDate: prevalenceDataDate?.toLocaleDateString() }} >
+              <Trans
+                values={{
+                  lastLoadedDate: prevalenceDataDate?.toLocaleDateString(),
+                }}
+              >
                 calculator.intro.stale_warning
               </Trans>
             </Alert>
