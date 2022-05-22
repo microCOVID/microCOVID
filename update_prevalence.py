@@ -1304,7 +1304,14 @@ def parse_owid_testing_data(cache, country_by_iso3):
 
 
 def parse_romania_prevalence_data(cache, data):
-    for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
+    try:
+        romania_data = parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE)
+    except pydantic.error_wrappers.ValidationError as e:
+        print_and_log_to_sentry(
+            f"Discarding county-level data from Romania due to error: {e}"
+        )
+        return
+    for line in romania_data:
         state = data.get_state(line.County, country="Romania")
         state.population = int(float(line.Population.replace(",", "")))
         state.cumulative_cases[line.Date] = line.TotalCases
@@ -1313,7 +1320,14 @@ def parse_romania_prevalence_data(cache, data):
 def parse_canada_prevalence_data(cache, data):
     populate_since = canada_effective_date - timedelta(days=16)
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
-    canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
+    try:
+        canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
+    except pydantic.error_wrappers.ValidationError as e:
+        print_and_log_to_sentry(
+            f"Discarding county-level data from Canada due to error: {e}"
+        )
+        return
+
 
     def get_partially_vaccinated(total_shots, total_fully_vaccinated, shots_for_full_vaccination) -> int:
         return total_shots - shots_for_full_vaccination * total_fully_vaccinated
