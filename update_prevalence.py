@@ -1305,13 +1305,13 @@ def parse_owid_testing_data(cache, country_by_iso3):
 
 def parse_romania_prevalence_data(cache, data):
     try:
-        romania_data = parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE)
+        romania_regions = parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE)
     except pydantic.error_wrappers.ValidationError as e:
         print_and_log_to_sentry(
             f"Discarding county-level data from Romania due to error: {e}"
         )
         return
-    for line in romania_data:
+    for line in romania_regions:
         state = data.get_state(line.County, country="Romania")
         state.population = int(float(line.Population.replace(",", "")))
         state.cumulative_cases[line.Date] = line.TotalCases
