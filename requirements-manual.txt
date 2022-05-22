@@ -1,4 +1,4 @@
-pydantic==1.8.2
+pydantic==1.9.1
 requests==2.25.1
 types_requests==2.27.25
 black==21.8b0
