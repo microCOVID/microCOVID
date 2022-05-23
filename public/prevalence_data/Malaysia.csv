@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001304,0.001304,0.000502,2.2784,1.1412,0.001304
-Johor,Unknown,Unknown,0.000157,2.2784,1.0866,0.000388
-Kedah,Unknown,Unknown,0.000187,2.2784,1.0,0.000426
-Kelantan,Unknown,Unknown,6.3e-05,2.2784,1.0,0.000144
-Melaka,Unknown,Unknown,0.000629,2.2784,1.0209,0.001464
-Negeri Sembilan,Unknown,Unknown,0.000856,2.2784,1.1101,0.002165
-Pahang,Unknown,Unknown,0.000171,2.2784,1.1355,0.000441
-Perak,Unknown,Unknown,0.000343,2.2784,1.223,0.000955
-Perlis,Unknown,Unknown,0.000153,2.2784,1.0,0.000349
-Pulau Pinang,Unknown,Unknown,0.000676,2.2784,1.2097,0.001862
-Sabah,Unknown,Unknown,8.9e-05,2.2784,1.4599,0.000296
-Sarawak,Unknown,Unknown,0.000105,2.2784,1.0,0.000239
-Selangor,Unknown,Unknown,0.001129,2.2784,1.1724,0.003016
-Terengganu,Unknown,Unknown,0.000122,2.2784,1.0,0.000277
-W.P. Kuala Lumpur,Unknown,Unknown,0.001477,2.2784,1.237,0.004162
-W.P. Labuan,Unknown,Unknown,0.000342,2.2784,1.0,0.000779
-W.P. Putrajaya,Unknown,Unknown,0.003273,2.2784,1.2464,0.009295
+Entire country,0.000929,0.000929,0.000408,2.2771,1.0,0.000929
+Johor,Unknown,Unknown,0.000128,2.2771,1.0,0.000291
+Kedah,Unknown,Unknown,0.000199,2.2771,1.0,0.000454
+Kelantan,Unknown,Unknown,5.3e-05,2.2771,1.0,0.00012
+Melaka,Unknown,Unknown,0.000648,2.2771,1.0,0.001475
+Negeri Sembilan,Unknown,Unknown,0.000647,2.2771,1.0,0.001474
+Pahang,Unknown,Unknown,0.00012,2.2771,1.0,0.000274
+Perak,Unknown,Unknown,0.000274,2.2771,1.0,0.000623
+Perlis,Unknown,Unknown,0.000134,2.2771,1.0,0.000304
+Pulau Pinang,Unknown,Unknown,0.000517,2.2771,1.0,0.001177
+Sabah,Unknown,Unknown,8.2e-05,2.2771,1.0,0.000187
+Sarawak,Unknown,Unknown,0.000107,2.2771,1.0,0.000243
+Selangor,Unknown,Unknown,0.00084,2.2771,1.0,0.001913
+Terengganu,Unknown,Unknown,8e-05,2.2771,1.0,0.000182
+W.P. Kuala Lumpur,Unknown,Unknown,0.001386,2.2771,1.0,0.003156
+W.P. Labuan,Unknown,Unknown,0.000312,2.2771,1.0,0.00071
+W.P. Putrajaya,Unknown,Unknown,0.00296,2.2771,1.0,0.006741
