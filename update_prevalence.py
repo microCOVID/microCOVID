@@ -17,7 +17,20 @@ from datetime import date, datetime, timedelta
 from operator import attrgetter
 from pathlib import Path
 from time import sleep
-from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any, Union, TypedDict, Counter, Iterable
+from typing import (
+    Optional,
+    ClassVar,
+    Iterator,
+    List,
+    Dict,
+    Type,
+    TypeVar,
+    Any,
+    Union,
+    TypedDict,
+    Counter,
+    Iterable,
+)
 from us_state_abbrev import us_state_name_by_abbrev
 
 try:
@@ -471,13 +484,17 @@ class Place(pydantic.BaseModel):
     def app_key(self) -> str:
         ...
 
-    def set_total_vaccines(self, partial_vaccinations: Optional[int], complete_vaccinations: Optional[int]) -> None:
+    def set_total_vaccines(
+        self, partial_vaccinations: Optional[int], complete_vaccinations: Optional[int]
+    ) -> None:
         if partial_vaccinations is None or complete_vaccinations is None:
             return
         self.vaccines_total.partial_vaccinations = partial_vaccinations
         self.vaccines_total.completed_vaccinations = complete_vaccinations
 
-    def set_vaccines_of_type(self, vaccine_type: str, partial: Optional[int], complete: Optional[int]) -> None:
+    def set_vaccines_of_type(
+        self, vaccine_type: str, partial: Optional[int], complete: Optional[int]
+    ) -> None:
         if partial is None or complete is None:
             return
         if self.vaccines_by_type is None:
@@ -542,14 +559,16 @@ class Place(pydantic.BaseModel):
             for vaccine_type, vaccine_status in self.vaccines_by_type.items():
                 total_vaccinated += vaccine_status.completed_vaccinations
                 total_vaccinated += vaccine_status.partial_vaccinations
-                risk_sum += (
-                    round(VACCINE_MULTIPLIERS[vaccine_type]["complete"] * vaccine_status.completed_vaccinations)
+                risk_sum += round(
+                    VACCINE_MULTIPLIERS[vaccine_type]["complete"] * vaccine_status.completed_vaccinations
                 )
-                risk_sum += round(VACCINE_MULTIPLIERS[vaccine_type]["partial"] * vaccine_status.partial_vaccinations)
+                risk_sum += round(
+                    VACCINE_MULTIPLIERS[vaccine_type]["partial"] * vaccine_status.partial_vaccinations
+                )
         else:
-            risk_sum = (
-                round(VACCINE_MULTIPLIERS["Unknown"]["complete"] * self.vaccines_total.completed_vaccinations
-                      + VACCINE_MULTIPLIERS["Unknown"]["partial"] * self.vaccines_total.partial_vaccinations)
+            risk_sum = round(
+                VACCINE_MULTIPLIERS["Unknown"]["complete"] * self.vaccines_total.completed_vaccinations
+                + VACCINE_MULTIPLIERS["Unknown"]["partial"] * self.vaccines_total.partial_vaccinations
             )
             total_vaccinated = (
                 self.vaccines_total.completed_vaccinations + self.vaccines_total.partial_vaccinations
@@ -578,8 +597,8 @@ class Place(pydantic.BaseModel):
         total_fully_vaccinated = 0
         for vaccine_type, vaccine_status in self.vaccines_by_type.items():
             total_fully_vaccinated += vaccine_status.completed_vaccinations
-            vaccine_multiplier += (
-                round(vaccine_status.completed_vaccinations * VACCINE_MULTIPLIERS[vaccine_type]["complete"])
+            vaccine_multiplier += round(
+                vaccine_status.completed_vaccinations * VACCINE_MULTIPLIERS[vaccine_type]["complete"]
             )
 
         if total_fully_vaccinated == 0:
@@ -884,12 +903,16 @@ class AllData:
                     all_children_total_partial_vaccinations += child.vaccines_total.partial_vaccinations
                 if all_children_total_population > 0:
                     parent.set_total_vaccines(
-                        round(parent.population
-                              * all_children_total_partial_vaccinations
-                              / all_children_total_population),
-                        round(parent.population
-                              * all_children_total_completed_vaccinations
-                              / all_children_total_population),
+                        round(
+                            parent.population
+                            * all_children_total_partial_vaccinations
+                            / all_children_total_population
+                        ),
+                        round(
+                            parent.population
+                            * all_children_total_completed_vaccinations
+                            / all_children_total_population
+                        ),
                     )
 
         def rolldown_vaccine_types(parent: Place, children: Iterable[Place]) -> None:
@@ -901,15 +924,15 @@ class AllData:
                     partial_vaccination_total = parent.partial_vaccination_total()
                     assert parent.vaccines_by_type is not None
                     for vaccine_type, parent_vaccinations in parent.vaccines_by_type.items():
-                        child_partials = (
-                            round(parent_vaccinations.partial_vaccinations
-                                  * child_vaccinations.partial_vaccinations
-                                  / partial_vaccination_total)
+                        child_partials = round(
+                            parent_vaccinations.partial_vaccinations
+                            * child_vaccinations.partial_vaccinations
+                            / partial_vaccination_total
                         )
-                        child_completes = (
-                            round(parent_vaccinations.completed_vaccinations
-                                  * child_vaccinations.completed_vaccinations
-                                  / completed_vaccination_total)
+                        child_completes = round(
+                            parent_vaccinations.completed_vaccinations
+                            * child_vaccinations.completed_vaccinations
+                            / completed_vaccination_total
                         )
                         child.set_vaccines_of_type(vaccine_type, child_partials, child_completes)
 
@@ -1109,7 +1132,7 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
 
 def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
     print(f"Fetching {url}...", end=" ", flush=True)
-    result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url))) # type: ignore
+    result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url)))  # type: ignore
     print(f"read {len(result)} objects")
     return result
 
@@ -1178,9 +1201,7 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
     return False
 
 
-def parse_jhu_place_facts(cache: DataCache,
-                          data: AllData,
-                          country_by_iso3: Dict[str, Country]) -> None:
+def parse_jhu_place_facts(cache: DataCache, data: AllData, country_by_iso3: Dict[str, Country]) -> None:
     # List of regions and their population
     for line in parse_csv(cache, JHUPlaceFacts, JHUPlaceFacts.SOURCE):
         if ignore_jhu_place(line):
@@ -1320,9 +1341,7 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
     try:
         romania_regions = parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE)
     except pydantic.error_wrappers.ValidationError as e:
-        print_and_log_to_sentry(
-            f"Discarding county-level data from Romania due to error: {e}"
-        )
+        print_and_log_to_sentry(f"Discarding county-level data from Romania due to error: {e}")
         return
     for line in romania_regions:
         state = data.get_state(line.County, country="Romania")
@@ -1336,13 +1355,12 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
     try:
         canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
     except pydantic.error_wrappers.ValidationError as e:
-        print_and_log_to_sentry(
-            f"Discarding county-level data from Canada due to error: {e}"
-        )
+        print_and_log_to_sentry(f"Discarding county-level data from Canada due to error: {e}")
         return
 
-
-    def get_partially_vaccinated(total_shots: int, total_fully_vaccinated: int, shots_for_full_vaccination: int) -> int:
+    def get_partially_vaccinated(
+        total_shots: int, total_fully_vaccinated: int, shots_for_full_vaccination: int
+    ) -> int:
         return total_shots - shots_for_full_vaccination * total_fully_vaccinated
 
     counter = 0
@@ -1427,12 +1445,12 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                     min_test_count = (
                         report.cumulative_testing
                         if min_test_count is None
-                        else min(min_test_count, report.cumulative_testing) # type: ignore
+                        else min(min_test_count, report.cumulative_testing)  # type: ignore
                     )
                     max_test_count = (
                         report.cumulative_testing
                         if max_test_count is None
-                        else max(max_test_count, report.cumulative_testing) # type: ignore
+                        else max(max_test_count, report.cumulative_testing)  # type: ignore
                     )
 
         if min_test_count is not None and max_test_count is not None:
@@ -1475,12 +1493,14 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 assert isinstance(provincial_reports.summary[-1].cumulative_avaccine, int)
                 place.set_vaccines_of_type(
                     k,
-                    round(v
-                          * get_partially_vaccinated(
-                              provincial_reports.summary[-1].cumulative_avaccine,
-                              provincial_reports.summary[-1].cumulative_cvaccine,
-                              2,
-                          )),
+                    round(
+                        v
+                        * get_partially_vaccinated(
+                            provincial_reports.summary[-1].cumulative_avaccine,
+                            provincial_reports.summary[-1].cumulative_cvaccine,
+                            2,
+                        )
+                    ),
                     round(v * provincial_reports.summary[-1].cumulative_cvaccine),
                 )
 
