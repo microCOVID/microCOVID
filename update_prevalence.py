@@ -42,10 +42,10 @@ except ImportError:
     print("Run:")
     print("  python3 -m venv .venv")
     print("  source .venv/bin/activate")
-    print("  pip install pydantic requests")
+    print("  pip install -r requirements-manual.txt")
     print("and then try running this script again.")
     print()
-    sys.exit(1)
+    raise
 
 CAN_API_KEY = os.environ.get("CAN_API_KEY")
 
