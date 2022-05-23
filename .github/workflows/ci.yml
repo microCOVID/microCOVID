@@ -20,13 +20,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install black
     - run: yarn lint --max-warnings 0
-  typecheck:
+  typecheck-js:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
     - run: yarn typecheck
+  typecheck-py:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v3
+    - run: pip install -r requirements-manual.txt
+    - run: mypy .
   test:
     runs-on: ubuntu-latest
 
