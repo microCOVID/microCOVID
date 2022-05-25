@@ -293,11 +293,9 @@ class CanadaOpenCovidCases(pydantic.BaseModel):
     class Data(pydantic.BaseModel):
         class Report(pydantic.BaseModel):
             name: Literal["cases"]
-            region: str
-            sub_region_1: str
             date: date
-            value: int
-            value_daily: int
+            value: int  # cumulative cases - e.g. 4744
+            value_daily: int  # cases on this day - e.g. 6
 
         cases: List[Report]
 
