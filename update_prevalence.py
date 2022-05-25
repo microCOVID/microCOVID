@@ -1370,15 +1370,18 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
 
     try:
+        # pull lists of health regions, provinces and territories and
+        # their abbreviations
+
         canada_regions = parse_csv(cache, CovidTimelineCanadaRegion, CovidTimelineCanadaRegion.SOURCE)
+
+        canada_provinces = parse_csv(
+            cache, CovidTimelineCanadaProvinceOrTerritory, CovidTimelineCanadaProvinceOrTerritory.SOURCE
+        )
     except pydantic.error_wrappers.ValidationError as e:
         print_and_log_to_sentry(f"Discarding county-level data from Canada due to error: {e}")
         return
 
-    # pull list of provinces and territories and their abbreviations
-    canada_provinces = parse_csv(
-        cache, CovidTimelineCanadaProvinceOrTerritory, CovidTimelineCanadaProvinceOrTerritory.SOURCE
-    )
     province_by_two_letter_abbrev = {
         province.region: province.name_canonical for province in canada_provinces
     }
@@ -1449,10 +1452,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
     vaccine_distribution_reports = parse_json(
         cache, CanadaVaccineDistribution, CanadaVaccineDistribution.SOURCE
     )
-    provinces = parse_csv(
-        cache, CovidTimelineCanadaProvinceOrTerritory, CovidTimelineCanadaProvinceOrTerritory.SOURCE
-    )
-    for province in provinces:
+    for province in canada_provinces:
         min_test_count = None
         max_test_count = None
         place = data.get_state(province.name_canonical, country="Canada")
