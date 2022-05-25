@@ -320,17 +320,19 @@ class CanadaOpenCovidProvincialSummary(pydantic.BaseModel):
 
     class Report(pydantic.BaseModel):
         cases: int
-        tests_completed: int  # number of total people tested
+        # number of total tests given cumulatively - e.g. 9129
+        tests_completed: int
 
-        # number of total shots administered
-        vaccine_administration_total_doses: int
+        # number of tests given on this date - e.g. 0
+        tests_completed_daily: int
+
         # Note that in Canada it is common for people to have mixed
         # shots (e.g.  first shot Pfizer second shot Moderna).
 
-        # number of people who have had at least one shot
-        vaccine_coverage_dose_1: int
-        # number of people who have had at least two shots
-        vaccine_coverage_dose_2: int
+        # cumulative number of people who have had at least one shot
+        vaccine_administration_dose_1: int
+        # cumulative number of people who have had at least two shots
+        vaccine_administration_dose_2: int
         date_: date = pydantic.Field(alias="date")
 
     data: List[Report]
@@ -1513,9 +1515,9 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             }
             for manufacturer, proportion in proportional_weights.items():
                 most_recent = provincial_reports.data[-1]
-                total_fully_vaccinated = most_recent.vaccine_coverage_dose_2
+                total_fully_vaccinated = most_recent.vaccine_administration_dose_2
                 partially_vaccinated = (
-                    most_recent.vaccine_coverage_dose_1 - most_recent.vaccine_coverage_dose_2
+                    most_recent.vaccine_administration_dose_1 - most_recent.vaccine_administration_dose_2
                 )
                 place.set_vaccines_of_type(
                     manufacturer,
