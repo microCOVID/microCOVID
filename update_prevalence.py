@@ -1369,9 +1369,6 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
     populate_since = canada_effective_date - timedelta(days=16)
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
 
-    # pull list of health regions and their population
-    canada_regions = parse_csv(cache, CovidTimelineCanadaRegion, CovidTimelineCanadaRegion.SOURCE)
-
     try:
         canada_regions = parse_csv(cache, CovidTimelineCanadaRegion, CovidTimelineCanadaRegion.SOURCE)
     except pydantic.error_wrappers.ValidationError as e:
