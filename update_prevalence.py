@@ -270,15 +270,15 @@ class CovidTimelineCanadaRegion(pydantic.BaseModel):
         str
     ] = "https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/health_regions.csv"
 
+    # two letter province/territory - e.g. AB
     region: str
+    # numeric health region ID - e.g. 4831
     hruid: int
+    # english full health region name - e.g. South Zone
     name_canonical: str
-    name_canonical_fr: str
+    # brief health region name - e.g. South
     name_short: str
-    name_ccodwg: str
-    name_other_1: str
-    name_other_2: str
-    name_other_3: str
+    # number of people who live in health region as of last count - e.g. 308346
     pop: int
 
 
