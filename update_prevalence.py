@@ -348,8 +348,9 @@ class CanadaRegionalVaccinationReports(pydantic.BaseModel):
 
     class Report(pydantic.BaseModel):
         date_: date = pydantic.Field(alias="date")
-        total_vaccinations: Optional[int]  # number of shots delivered
-        # number of people who have completed all shots
+        # number of shots delivered - e.g. 92155
+        total_vaccinations: Optional[int]
+        # number of people who have completed all shots - e.g. 35206
         total_vaccinated: Optional[int]
 
     hr_uid: int
