@@ -329,9 +329,9 @@ class CanadaOpenCovidProvincialSummary(pydantic.BaseModel):
         # Note that in Canada it is common for people to have mixed
         # shots (e.g.  first shot Pfizer second shot Moderna).
 
-        # cumulative number of people who have had at least one shot
+        # cumulative number of people who have had at least one shot - e.g. 36267
         vaccine_administration_dose_1: int
-        # cumulative number of people who have had at least two shots
+        # cumulative number of people who have had at least two shots - e.g. 34945
         vaccine_administration_dose_2: int
         date_: date = pydantic.Field(alias="date")
 
