@@ -274,8 +274,6 @@ class CovidTimelineCanadaRegion(pydantic.BaseModel):
     region: str
     # numeric health region ID - e.g. 4831
     hruid: int
-    # english full health region name - e.g. South Zone
-    name_canonical: str
     # brief health region name - e.g. South
     name_short: str
     # number of people who live in health region as of last count - e.g. 308346
@@ -1392,7 +1390,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         if region.hruid == 9999:  # Repatriated/not reported. Skip.
             continue
         counter += 1
-        print(f"Fetching region {counter}: {region.name_canonical} ({region.hruid})")
+        print(f"Fetching region {counter}: {region.name_short} ({region.hruid})")
 
         # pull or create our master record of this region
         place = data.get_canada_region_place(region, province_by_two_letter_abbrev[region.region])
