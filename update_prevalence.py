@@ -1402,9 +1402,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         place = data.get_canada_region_place(region, province_by_two_letter_abbrev[region.region])
         if place.population != 0:
             raise ValueError(f"Duplicate population info for {place!r}: {region.pop}")
-        if region.pop != "NULL":
-            assert isinstance(region.pop, int)
-            place.population = region.pop
+        place.population = region.pop
 
         def process_regional_vaccination_reports() -> None:
             vaccination_reports = parse_json(
