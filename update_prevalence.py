@@ -290,10 +290,16 @@ class CanadaOpenCovidCases(pydantic.BaseModel):
 
     class Data(pydantic.BaseModel):
         class Report(pydantic.BaseModel):
+            # type of reporting returned - always "cases" - with
+            # Literal type, pydantic will ensure we got only cases
+            # reports back
             name: Literal["cases"]
+            # date of report - e.g. "2022-05-08"
             date: date
-            value: int  # cumulative cases - e.g. 4744
-            value_daily: int  # cases on this day - e.g. 6
+            # cumulative cases - e.g. 4744
+            value: int
+            # cases on this day - e.g. 6
+            value_daily: int
 
         cases: List[Report]
 
