@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000941,0.000941,0.000417,2.2563,1.0,0.000941
-Johor,Unknown,Unknown,0.000129,2.2563,1.0,0.000292
-Kedah,Unknown,Unknown,0.000204,2.2563,1.009,0.000466
-Kelantan,Unknown,Unknown,5.1e-05,2.2563,1.0,0.000116
-Melaka,Unknown,Unknown,0.000773,2.2563,1.1339,0.001978
-Negeri Sembilan,Unknown,Unknown,0.000664,2.2563,1.0,0.001499
-Pahang,Unknown,Unknown,0.000104,2.2563,1.0,0.000235
-Perak,Unknown,Unknown,0.000257,2.2563,1.0,0.00058
-Perlis,Unknown,Unknown,0.000126,2.2563,1.0,0.000284
-Pulau Pinang,Unknown,Unknown,0.000485,2.2563,1.0,0.001094
-Sabah,Unknown,Unknown,8.7e-05,2.2563,1.0,0.000197
-Sarawak,Unknown,Unknown,0.000109,2.2563,1.0,0.000247
-Selangor,Unknown,Unknown,0.000892,2.2563,1.0,0.002012
-Terengganu,Unknown,Unknown,7.4e-05,2.2563,1.0,0.000168
-W.P. Kuala Lumpur,Unknown,Unknown,0.001351,2.2563,1.0,0.003048
-W.P. Labuan,Unknown,Unknown,0.000231,2.2563,1.0,0.000522
-W.P. Putrajaya,Unknown,Unknown,0.002846,2.2563,1.0,0.006422
+Entire country,0.00097,0.00097,0.00043,2.256,1.0,0.00097
+Johor,Unknown,Unknown,0.000132,2.256,1.0,0.000297
+Kedah,Unknown,Unknown,0.000207,2.256,1.1054,0.000516
+Kelantan,Unknown,Unknown,4.9e-05,2.256,1.0,0.00011
+Melaka,Unknown,Unknown,0.000782,2.256,1.2423,0.002191
+Negeri Sembilan,Unknown,Unknown,0.000651,2.256,1.0,0.001469
+Pahang,Unknown,Unknown,0.000101,2.256,1.0,0.000227
+Perak,Unknown,Unknown,0.000266,2.256,1.0,0.0006
+Perlis,Unknown,Unknown,0.000118,2.256,1.0,0.000266
+Pulau Pinang,Unknown,Unknown,0.00047,2.256,1.0,0.001061
+Sabah,Unknown,Unknown,9.3e-05,2.256,1.052,0.000222
+Sarawak,Unknown,Unknown,0.000109,2.256,1.0374,0.000254
+Selangor,Unknown,Unknown,0.000956,2.256,1.0,0.002157
+Terengganu,Unknown,Unknown,7e-05,2.256,1.0,0.000159
+W.P. Kuala Lumpur,Unknown,Unknown,0.001341,2.256,1.0,0.003026
+W.P. Labuan,Unknown,Unknown,0.000241,2.256,1.0,0.000545
+W.P. Putrajaya,Unknown,Unknown,0.002837,2.256,1.0,0.0064
