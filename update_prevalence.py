@@ -291,8 +291,8 @@ class CanadaOpenCovidCases(pydantic.BaseModel):
     class Data(pydantic.BaseModel):
         class Report(pydantic.BaseModel):
             # type of reporting returned - always "cases" - with
-            # Literal type, pydantic will ensure we got only cases
-            # reports back
+            # Literal type, pydantic will validate that we got only
+            # cases reports back
             name: Literal["cases"]
             # date of report - e.g. "2022-05-08"
             date: date
@@ -416,7 +416,9 @@ class Place(pydantic.BaseModel):
         daily_cumulative_cases: List[int] = []
         current = effective_date
         if current not in self.cumulative_cases:
-            raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
+            raise ValueError(
+                f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
+            )
         while len(daily_cumulative_cases) < 15:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
@@ -1157,6 +1159,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     max_attempts = 4
     retry_time_seconds = 60
     for attempt in range(max_attempts + 1):
+        print(f"Fetching {url} (try {attempt + 1}/{max_attempts})...", end=" ", flush=True)
         # Error case
         if attempt == max_attempts:
             raise ValueError(f"Reached max attempts ({attempt}) attempting to get JSON from {url}")
@@ -1175,7 +1178,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             )
             sleep(retry_time_seconds)
             cache.remove(url)
-
+    print(f"read {len(cache.get(url))} bytes")
     result = pydantic.parse_obj_as(model, json.loads(cache.get(url)))
     return result
 
@@ -1379,7 +1382,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             cache, CovidTimelineCanadaProvinceOrTerritory, CovidTimelineCanadaProvinceOrTerritory.SOURCE
         )
     except pydantic.error_wrappers.ValidationError as e:
-        print_and_log_to_sentry(f"Discarding county-level data from Canada due to error: {e}")
+        print_and_log_to_sentry(f"Discarding supplemental data from Canada due to error: {e}")
         return
 
     province_by_two_letter_abbrev = {
