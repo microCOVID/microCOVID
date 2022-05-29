@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000931,0.000931,0.000416,2.2393,1.0,0.000931
-Johor,Unknown,Unknown,0.00012,2.2393,1.0,0.00027
-Kedah,Unknown,Unknown,0.000178,2.2393,1.0,0.0004
-Kelantan,Unknown,Unknown,4.6e-05,2.2393,1.0,0.000103
-Melaka,Unknown,Unknown,0.000657,2.2393,1.0756,0.001583
-Negeri Sembilan,Unknown,Unknown,0.000668,2.2393,1.0,0.001495
-Pahang,Unknown,Unknown,8.8e-05,2.2393,1.0,0.000196
-Perak,Unknown,Unknown,0.000263,2.2393,1.0,0.00059
-Perlis,Unknown,Unknown,7.5e-05,2.2393,1.0,0.000167
-Pulau Pinang,Unknown,Unknown,0.000465,2.2393,1.0,0.001041
-Sabah,Unknown,Unknown,0.000102,2.2393,1.2,0.000273
-Sarawak,Unknown,Unknown,0.000112,2.2393,1.0825,0.000272
-Selangor,Unknown,Unknown,0.000969,2.2393,1.0411,0.002259
-Terengganu,Unknown,Unknown,6.9e-05,2.2393,1.0,0.000154
-W.P. Kuala Lumpur,Unknown,Unknown,0.001161,2.2393,1.0,0.002599
-W.P. Labuan,Unknown,Unknown,0.000181,2.2393,1.0,0.000406
-W.P. Putrajaya,Unknown,Unknown,0.002799,2.2393,1.0208,0.006398
+Entire country,0.000905,0.000905,0.000404,2.2391,1.0,0.000905
+Johor,Unknown,Unknown,0.000112,2.2391,1.0,0.00025
+Kedah,Unknown,Unknown,0.000171,2.2391,1.0,0.000383
+Kelantan,Unknown,Unknown,4.3e-05,2.2391,1.0,9.7e-05
+Melaka,Unknown,Unknown,0.000614,2.2391,1.0,0.001376
+Negeri Sembilan,Unknown,Unknown,0.000641,2.2391,1.0,0.001436
+Pahang,Unknown,Unknown,8.5e-05,2.2391,1.0,0.000191
+Perak,Unknown,Unknown,0.000255,2.2391,1.0,0.000572
+Perlis,Unknown,Unknown,8.6e-05,2.2391,1.0,0.000193
+Pulau Pinang,Unknown,Unknown,0.000462,2.2391,1.0,0.001035
+Sabah,Unknown,Unknown,0.000106,2.2391,1.2875,0.000305
+Sarawak,Unknown,Unknown,0.000108,2.2391,1.0305,0.00025
+Selangor,Unknown,Unknown,0.000948,2.2391,1.055,0.002239
+Terengganu,Unknown,Unknown,6.4e-05,2.2391,1.0,0.000143
+W.P. Kuala Lumpur,Unknown,Unknown,0.001125,2.2391,1.0,0.002519
+W.P. Labuan,Unknown,Unknown,0.000171,2.2391,1.0,0.000383
+W.P. Putrajaya,Unknown,Unknown,0.002571,2.2391,1.0,0.005757
