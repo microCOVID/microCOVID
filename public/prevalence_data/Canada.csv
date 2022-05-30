@@ -1,15 +1,15 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001137,0.001137,0.000478,2.3773,1.0,0.001137
-Alberta,Unknown,Unknown,0.000583,2.3773,1.0,0.001386
-British Columbia,Unknown,Unknown,0.00026,2.3773,1.0,0.000619
-Manitoba,Unknown,Unknown,0.000389,2.3773,1.0,0.000924
-New Brunswick,Unknown,Unknown,0.000974,2.3773,1.0,0.002316
-Newfoundland and Labrador,Unknown,Unknown,0.000705,2.3773,1.0,0.001676
-Northwest Territories,Unknown,Unknown,0.000461,2.3773,1.0,0.001097
-Nova Scotia,Unknown,Unknown,0.001598,2.3773,1.0,0.003798
-Ontario,Unknown,Unknown,0.000442,2.3773,1.0,0.001052
-Prince Edward Island,Unknown,Unknown,0.002769,2.3773,1.0,0.006583
-Quebec,Unknown,Unknown,0.000425,2.3773,1.0,0.001009
-Saskatchewan,Unknown,Unknown,0.00032,2.3773,1.0,0.00076
-Yukon,Unknown,Unknown,0.000698,2.3773,1.0,0.001659
-Nunavut,Unknown,Unknown,2.5e-05,2.3773,1.0,6e-05
+Entire country,0.001111,0.001111,0.000467,2.3792,1.0,0.001111
+Alberta,Unknown,Unknown,0.000583,2.3792,1.0,0.001388
+British Columbia,Unknown,Unknown,0.00026,2.3792,1.0,0.00062
+Manitoba,Unknown,Unknown,0.000389,2.3792,1.0,0.000925
+New Brunswick,Unknown,Unknown,0.000974,2.3792,1.0,0.002318
+Newfoundland and Labrador,Unknown,Unknown,0.000705,2.3792,1.0,0.001677
+Northwest Territories,Unknown,Unknown,0.000461,2.3792,1.0,0.001098
+Nova Scotia,Unknown,Unknown,0.001598,2.3792,1.0,0.003801
+Ontario,Unknown,Unknown,0.000437,2.3792,1.0,0.001039
+Prince Edward Island,Unknown,Unknown,0.002769,2.3792,1.0,0.006588
+Quebec,Unknown,Unknown,0.000383,2.3792,1.0,0.000912
+Saskatchewan,Unknown,Unknown,0.00032,2.3792,1.0,0.00076
+Yukon,Unknown,Unknown,0.000698,2.3792,1.0,0.00166
+Nunavut,Unknown,Unknown,2.5e-05,2.3792,1.0,6e-05
