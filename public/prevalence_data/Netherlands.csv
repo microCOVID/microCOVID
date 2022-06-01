@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001333,0.001333,0.000468,2.851,1.0,0.001333
-Drenthe,Unknown,Unknown,0.000223,2.851,1.0,0.000635
-Flevoland,Unknown,Unknown,0.00044,2.851,1.0,0.001254
-Friesland,Unknown,Unknown,0.000222,2.851,1.0,0.000632
-Gelderland,Unknown,Unknown,0.000298,2.851,1.0,0.00085
-Groningen,Unknown,Unknown,0.000278,2.851,1.0,0.000793
-Limburg,Unknown,Unknown,0.000224,2.851,1.0,0.000638
-Noord-Brabant,Unknown,Unknown,0.000238,2.851,1.0,0.000677
-Noord-Holland,Unknown,Unknown,0.000638,2.851,1.0,0.00182
-Overijssel,Unknown,Unknown,0.000184,2.851,1.0,0.000525
-Utrecht,Unknown,Unknown,0.000497,2.851,1.0,0.001416
-Zeeland,Unknown,Unknown,0.000331,2.851,1.0,0.000944
-Zuid-Holland,Unknown,Unknown,0.00049,2.851,1.0,0.001397
-Aruba,Unknown,Unknown,0.006734,2.851,1.1525,0.022127
-Curacao,Unknown,Unknown,0.00209,2.851,1.0,0.005959
-Sint Maarten,Unknown,Unknown,0.003848,2.851,2.0,0.02194
-Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.001831,2.851,1.0,0.005219
+Entire country,0.001343,0.001343,0.000471,2.85,1.0,0.001343
+Drenthe,Unknown,Unknown,0.000251,2.85,1.0,0.000716
+Flevoland,Unknown,Unknown,0.00047,2.85,1.0,0.001341
+Friesland,Unknown,Unknown,0.000238,2.85,1.0,0.00068
+Gelderland,Unknown,Unknown,0.000291,2.85,1.0,0.000831
+Groningen,Unknown,Unknown,0.000306,2.85,1.0,0.000871
+Limburg,Unknown,Unknown,0.000218,2.85,1.0,0.000622
+Noord-Brabant,Unknown,Unknown,0.000242,2.85,1.0,0.000691
+Noord-Holland,Unknown,Unknown,0.000666,2.85,1.0656,0.002024
+Overijssel,Unknown,Unknown,0.000143,2.85,1.0,0.000407
+Utrecht,Unknown,Unknown,0.000512,2.85,1.0,0.001458
+Zeeland,Unknown,Unknown,0.000295,2.85,1.0,0.00084
+Zuid-Holland,Unknown,Unknown,0.000507,2.85,1.0,0.001445
+Aruba,Unknown,Unknown,0.006734,2.85,1.1525,0.02212
+Curacao,Unknown,Unknown,0.00209,2.85,1.0,0.005957
+Sint Maarten,Unknown,Unknown,0.001749,2.85,1.0,0.004985
+Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.001831,2.85,1.0,0.005217
