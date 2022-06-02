@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001474,0.001474,0.000517,2.8523,1.0,0.001474
-Drenthe,Unknown,Unknown,0.000357,2.8523,1.1364,0.001156
-Flevoland,Unknown,Unknown,0.000499,2.8523,1.0,0.001423
-Friesland,Unknown,Unknown,0.000311,2.8523,1.0,0.000886
-Gelderland,Unknown,Unknown,0.000339,2.8523,1.0,0.000967
-Groningen,Unknown,Unknown,0.000389,2.8523,1.0,0.00111
-Limburg,Unknown,Unknown,0.000252,2.8523,1.0,0.000717
-Noord-Brabant,Unknown,Unknown,0.000279,2.8523,1.0,0.000797
-Noord-Holland,Unknown,Unknown,0.000643,2.8523,1.0,0.001833
-Overijssel,Unknown,Unknown,0.000331,2.8523,1.0,0.000945
-Utrecht,Unknown,Unknown,0.000525,2.8523,1.0,0.001497
-Zeeland,Unknown,Unknown,0.000425,2.8523,1.0,0.001212
-Zuid-Holland,Unknown,Unknown,0.000534,2.8523,1.0,0.001523
-Aruba,Unknown,Unknown,0.005845,2.8523,1.2361,0.020606
-Curacao,Unknown,Unknown,0.003083,2.8523,1.1222,0.00987
-Sint Maarten,Unknown,Unknown,0.001562,2.8523,1.0,0.004457
-Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.00225,2.8523,1.0,0.006418
+Entire country,0.001343,0.001343,0.000471,2.85,1.0,0.001343
+Drenthe,Unknown,Unknown,0.000251,2.85,1.0,0.000716
+Flevoland,Unknown,Unknown,0.00047,2.85,1.0,0.001341
+Friesland,Unknown,Unknown,0.000238,2.85,1.0,0.00068
+Gelderland,Unknown,Unknown,0.000291,2.85,1.0,0.000831
+Groningen,Unknown,Unknown,0.000306,2.85,1.0,0.000871
+Limburg,Unknown,Unknown,0.000218,2.85,1.0,0.000622
+Noord-Brabant,Unknown,Unknown,0.000242,2.85,1.0,0.000691
+Noord-Holland,Unknown,Unknown,0.000666,2.85,1.0656,0.002024
+Overijssel,Unknown,Unknown,0.000143,2.85,1.0,0.000407
+Utrecht,Unknown,Unknown,0.000512,2.85,1.0,0.001458
+Zeeland,Unknown,Unknown,0.000295,2.85,1.0,0.00084
+Zuid-Holland,Unknown,Unknown,0.000507,2.85,1.0,0.001445
+Aruba,Unknown,Unknown,0.006734,2.85,1.1525,0.02212
+Curacao,Unknown,Unknown,0.00209,2.85,1.0,0.005957
+Sint Maarten,Unknown,Unknown,0.001749,2.85,1.0,0.004985
+Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.001831,2.85,1.0,0.005217
