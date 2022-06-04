@@ -1,4 +1,5 @@
 import copy from 'copy-to-clipboard'
+import { sub as date_sub } from 'date-fns'
 import { stringify } from 'query-string'
 import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
@@ -174,14 +175,10 @@ export const Calculator = (): React.ReactElement => {
     </button>
   )
 
-  const oneWeekOfMilliseconds = 7 * 24 * 60 * 60 * 1000
-  const currentTimeMillis = new Date().getTime()
+  const oneWeekAgo = date_sub(new Date(), { weeks: 1 })
   const prevalenceDataDate = calculatorData.prevalanceDataDate
-  const prevalenceDataTimeMillis = prevalenceDataDate?.getTime()
   const prevalenceIsStale =
-    prevalenceDataTimeMillis !== null &&
-    currentTimeMillis - prevalenceDataTimeMillis > oneWeekOfMilliseconds
-
+    prevalenceDataDate !== null && prevalenceDataDate < oneWeekAgo
   const showStaleWarning = prevalenceIsStale && !suppressStaleWarning
 
   return (
