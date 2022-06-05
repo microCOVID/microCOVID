@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000771,0.000771,0.000343,2.2456,1.0,0.000771
-Johor,Unknown,Unknown,7.8e-05,2.2456,1.0,0.000175
-Kedah,Unknown,Unknown,0.000136,2.2456,1.0,0.000305
-Kelantan,Unknown,Unknown,4e-05,2.2456,1.0,8.9e-05
-Melaka,Unknown,Unknown,0.000398,2.2456,1.0,0.000893
-Negeri Sembilan,Unknown,Unknown,0.000557,2.2456,1.0,0.001252
-Pahang,Unknown,Unknown,6.6e-05,2.2456,1.0,0.000147
-Perak,Unknown,Unknown,0.000293,2.2456,1.112,0.000731
-Perlis,Unknown,Unknown,0.000122,2.2456,1.6667,0.000456
-Pulau Pinang,Unknown,Unknown,0.000416,2.2456,1.0,0.000935
-Sabah,Unknown,Unknown,7.3e-05,2.2456,1.0,0.000164
-Sarawak,Unknown,Unknown,6.8e-05,2.2456,1.0,0.000153
-Selangor,Unknown,Unknown,0.000764,2.2456,1.0,0.001716
-Terengganu,Unknown,Unknown,5.4e-05,2.2456,1.0,0.00012
-W.P. Kuala Lumpur,Unknown,Unknown,0.001152,2.2456,1.0,0.002587
-W.P. Labuan,Unknown,Unknown,5e-05,2.2456,1.0,0.000113
-W.P. Putrajaya,Unknown,Unknown,0.002277,2.2456,1.0,0.005113
+Entire country,0.000767,0.000767,0.000342,2.2453,1.0,0.000767
+Johor,Unknown,Unknown,7.3e-05,2.2453,1.0,0.000164
+Kedah,Unknown,Unknown,0.000131,2.2453,1.0,0.000295
+Kelantan,Unknown,Unknown,3.9e-05,2.2453,1.0,8.8e-05
+Melaka,Unknown,Unknown,0.000372,2.2453,1.0,0.000835
+Negeri Sembilan,Unknown,Unknown,0.000544,2.2453,1.0,0.001222
+Pahang,Unknown,Unknown,6.2e-05,2.2453,1.0,0.000139
+Perak,Unknown,Unknown,0.000298,2.2453,1.1685,0.000783
+Perlis,Unknown,Unknown,0.000122,2.2453,1.4286,0.000391
+Pulau Pinang,Unknown,Unknown,0.00041,2.2453,1.0,0.00092
+Sabah,Unknown,Unknown,7.2e-05,2.2453,1.0,0.000163
+Sarawak,Unknown,Unknown,6.2e-05,2.2453,1.0,0.00014
+Selangor,Unknown,Unknown,0.000767,2.2453,1.0,0.001721
+Terengganu,Unknown,Unknown,5.4e-05,2.2453,1.0,0.000122
+W.P. Kuala Lumpur,Unknown,Unknown,0.001161,2.2453,1.0315,0.002688
+W.P. Labuan,Unknown,Unknown,7e-05,2.2453,1.0,0.000158
+W.P. Putrajaya,Unknown,Unknown,0.002296,2.2453,1.0,0.005155
