@@ -17,7 +17,7 @@
     "i18next-http-backend": "^1.0.20",
     "jquery": "^3.5.1",
     "lodash": "^4.17.21",
-    "markdown-it": "^11.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-github-headings": "^2.0.0",
     "markdown-it-link-attributes": "^3.0.0",
