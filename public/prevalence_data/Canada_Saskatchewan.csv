@@ -1,15 +1,15 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.000842,0.00068,0.000309,2.3197,1.0,0.000718
-Far North West,Unknown,Unknown,0.000302,2.3197,1.0,0.0007
-Far North Central,Unknown,Unknown,0.000755,2.3197,1.0,0.001751
-Far North East,Unknown,Unknown,0.000412,2.3197,2.0,0.001913
-North West,Unknown,Unknown,0.000303,2.3197,1.0,0.000704
-North Central,Unknown,Unknown,0.000157,2.3197,1.0,0.000365
-North East,Unknown,Unknown,0.000168,2.3197,1.0,0.000391
-Central West,Unknown,Unknown,0.000243,2.3197,1.0,0.000565
-Central East,Unknown,Unknown,0.000305,2.3197,1.0,0.000707
-Saskatoon,Unknown,Unknown,0.000234,2.3197,1.0,0.000542
-Regina,Unknown,Unknown,0.000205,2.3197,1.0,0.000475
-South West,Unknown,Unknown,0.000155,2.3197,1.0,0.00036
-South Central,Unknown,Unknown,0.000165,2.3197,1.0,0.000384
-South East,Unknown,Unknown,0.000325,2.3197,2.0,0.001507
+Entire state,0.000673,0.000543,0.000242,2.3657,1.0,0.000573
+Far North West,Unknown,Unknown,0.000302,2.3657,1.0,0.000714
+Far North Central,Unknown,Unknown,0.000755,2.3657,1.0,0.001786
+Far North East,Unknown,Unknown,0.000412,2.3657,2.0,0.001951
+North West,Unknown,Unknown,0.000303,2.3657,1.0,0.000718
+North Central,Unknown,Unknown,0.000157,2.3657,1.0,0.000372
+North East,Unknown,Unknown,0.000168,2.3657,1.0,0.000398
+Central West,Unknown,Unknown,0.000243,2.3657,1.0,0.000576
+Central East,Unknown,Unknown,0.000305,2.3657,1.0,0.000721
+Saskatoon,Unknown,Unknown,0.000234,2.3657,1.0,0.000553
+Regina,Unknown,Unknown,0.000205,2.3657,1.0,0.000485
+South West,Unknown,Unknown,0.000155,2.3657,1.0,0.000367
+South Central,Unknown,Unknown,0.000165,2.3657,1.0,0.000391
+South East,Unknown,Unknown,0.000325,2.3657,2.0,0.001537
