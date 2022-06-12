@@ -1,38 +1,38 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000116,0.000116,3e-05,2.1305,1.8309,0.000116
-Andaman and Nicobar Islands,Unknown,Unknown,1.7e-05,2.1305,1.5,5.4e-05
-Andhra Pradesh,Unknown,Unknown,2e-06,2.1305,1.8125,8e-06
-Arunachal Pradesh,Unknown,Unknown,1e-06,2.1305,1.0,3e-06
-Assam,Unknown,Unknown,1e-06,2.1305,2.0,2e-06
-Bihar,Unknown,Unknown,1e-06,2.1305,1.6415,2e-06
-Chandigarh,Unknown,Unknown,0.000132,2.1305,1.2063,0.000339
-Chhattisgarh,Unknown,Unknown,3e-06,2.1305,1.4783,1.1e-05
-Dadra and Nagar Haveli and Daman and Diu,Unknown,Unknown,2e-06,2.1305,1.0,3e-06
-Delhi,Unknown,Unknown,0.000176,2.1305,1.3304,0.000498
-Goa,Unknown,Unknown,0.000246,2.1305,1.8932,0.000994
-Gujarat,Unknown,Unknown,1e-05,2.1305,2.0,4.1e-05
-Haryana,Unknown,Unknown,5.7e-05,2.1305,1.2194,0.000148
-Himachal Pradesh,Unknown,Unknown,1.7e-05,2.1305,1.9394,7.2e-05
-Jammu and Kashmir,Unknown,Unknown,4e-06,2.1305,1.2273,1.1e-05
-Jharkhand,Unknown,Unknown,1e-06,2.1305,1.0588,2e-06
-Karnataka,Unknown,Unknown,3.7e-05,2.1305,1.6121,0.000126
-Kerala,Unknown,Unknown,0.000358,2.1305,1.7951,0.001368
-Ladakh,Unknown,Unknown,4.4e-05,2.1305,1.375,0.000128
-Madhya Pradesh,Unknown,Unknown,3e-06,2.1305,1.1496,8e-06
-Maharashtra,Unknown,Unknown,0.000117,2.1305,2.0,0.000497
-Manipur,Unknown,Unknown,1e-06,2.1305,1.0,1e-06
-Meghalaya,Unknown,Unknown,1e-06,2.1305,1.0,1e-06
-Mizoram,Unknown,Unknown,0.000125,2.1305,1.2623,0.000336
-Nagaland,Unknown,Unknown,1e-06,2.1305,1.0,3e-06
-Odisha,Unknown,Unknown,3e-06,2.1305,1.9524,1.1e-05
-Puducherry,Unknown,Unknown,2.6e-05,2.1305,1.0,5.6e-05
-Punjab,Unknown,Unknown,7e-06,2.1305,1.7179,2.5e-05
-Rajasthan,Unknown,Unknown,5e-06,2.1305,1.0704,1.2e-05
-Sikkim,Unknown,Unknown,1.9e-05,2.1305,1.0,4e-05
-Tamil Nadu,Unknown,Unknown,1.3e-05,2.1305,1.4575,4.2e-05
-Telangana,Unknown,Unknown,1.8e-05,2.1305,1.8942,7.4e-05
-Tripura,Unknown,Unknown,1e-06,2.1305,1.0,2e-06
-Uttar Pradesh,Unknown,Unknown,4e-06,2.1305,1.039,1e-05
-Uttarakhand,Unknown,Unknown,1.2e-05,2.1305,1.8732,4.8e-05
-West Bengal,Unknown,Unknown,5e-06,2.1305,1.6931,1.8e-05
-Lakshadweep,Unknown,Unknown,1.6e-05,2.1305,1.0,3.3e-05
+Entire country,0.000133,0.000133,3.3e-05,2.1304,1.9012,0.000133
+Andaman and Nicobar Islands,Unknown,Unknown,1.9e-05,2.1304,1.75,7.2e-05
+Andhra Pradesh,Unknown,Unknown,2e-06,2.1304,2.0,1e-05
+Arunachal Pradesh,Unknown,Unknown,1e-06,2.1304,1.0,3e-06
+Assam,Unknown,Unknown,0.0,2.1304,1.5,1e-06
+Bihar,Unknown,Unknown,1e-06,2.1304,1.6087,3e-06
+Chandigarh,Unknown,Unknown,0.000151,2.1304,1.4032,0.000452
+Chhattisgarh,Unknown,Unknown,4e-06,2.1304,1.9375,1.8e-05
+Dadra and Nagar Haveli and Daman and Diu,Unknown,Unknown,2e-06,2.1304,1.0,3e-06
+Delhi,Unknown,Unknown,0.000197,2.1304,1.5109,0.000633
+Goa,Unknown,Unknown,0.000269,2.1304,1.8478,0.001057
+Gujarat,Unknown,Unknown,1.1e-05,2.1304,2.0,4.8e-05
+Haryana,Unknown,Unknown,6.6e-05,2.1304,1.5178,0.000215
+Himachal Pradesh,Unknown,Unknown,1.7e-05,2.1304,1.6447,5.9e-05
+Jammu and Kashmir,Unknown,Unknown,5e-06,2.1304,1.4524,1.4e-05
+Jharkhand,Unknown,Unknown,1e-06,2.1304,1.0,2e-06
+Karnataka,Unknown,Unknown,4.2e-05,2.1304,1.8032,0.00016
+Kerala,Unknown,Unknown,0.000386,2.1304,1.7891,0.00147
+Ladakh,Unknown,Unknown,5.1e-05,2.1304,1.8571,0.000202
+Madhya Pradesh,Unknown,Unknown,4e-06,2.1304,1.2337,1e-05
+Maharashtra,Unknown,Unknown,0.000129,2.1304,2.0,0.000551
+Manipur,Unknown,Unknown,1e-06,2.1304,1.0,1e-06
+Meghalaya,Unknown,Unknown,1e-06,2.1304,1.0,3e-06
+Mizoram,Unknown,Unknown,0.00014,2.1304,1.5872,0.000475
+Nagaland,Unknown,Unknown,1e-06,2.1304,2.0,6e-06
+Odisha,Unknown,Unknown,3e-06,2.1304,2.0,1.3e-05
+Puducherry,Unknown,Unknown,2.8e-05,2.1304,1.0,6e-05
+Punjab,Unknown,Unknown,8e-06,2.1304,1.9752,3.4e-05
+Rajasthan,Unknown,Unknown,6e-06,2.1304,1.2175,1.5e-05
+Sikkim,Unknown,Unknown,2e-05,2.1304,1.0,4.3e-05
+Tamil Nadu,Unknown,Unknown,1.5e-05,2.1304,1.5104,4.8e-05
+Telangana,Unknown,Unknown,2e-05,2.1304,1.91,8.1e-05
+Tripura,Unknown,Unknown,1e-06,2.1304,1.0,2e-06
+Uttar Pradesh,Unknown,Unknown,5e-06,2.1304,1.1464,1.2e-05
+Uttarakhand,Unknown,Unknown,1.2e-05,2.1304,1.6585,4.3e-05
+West Bengal,Unknown,Unknown,6e-06,2.1304,2.0,2.6e-05
+Lakshadweep,Unknown,Unknown,1.6e-05,2.1304,1.0,3.3e-05
