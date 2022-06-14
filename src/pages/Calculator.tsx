@@ -1,4 +1,5 @@
 import copy from 'copy-to-clipboard'
+import { sub as date_sub } from 'date-fns'
 import { stringify } from 'query-string'
 import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
@@ -46,7 +47,7 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [showWarning, setShowWarning] = useState(false)
+  const [suppressStaleWarning, setSuppressStaleWarning] = useState(false)
   const [points, setPoints] = useState(-1)
   const [lowerBound, setLowerBound] = useState(-1)
   const [upperBound, setUpperBound] = useState(-1)
@@ -174,26 +175,16 @@ export const Calculator = (): React.ReactElement => {
     </button>
   )
 
+  const oneWeekAgo = date_sub(new Date(), { weeks: 1 })
+  const prevalenceDataDate = calculatorData.prevalanceDataDate
+  const prevalenceIsStale =
+    prevalenceDataDate !== null && prevalenceDataDate < oneWeekAgo
+  const showStaleWarning = prevalenceIsStale && !suppressStaleWarning
+
   return (
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {showWarning && (
-            <Alert
-              variant="primary"
-              onClose={() => setShowWarning(false)}
-              dismissible
-            >
-              <Alert.Heading>
-                {t('calculator.intro.omicron_warning_heading')}
-              </Alert.Heading>
-              <Trans i18nKey="calculator.intro.omicron_warning">
-                Research is in progress to determine Omicron's impact on our
-                models. Preliminary findings suggest an increase in the risk for
-                re-infection.
-              </Trans>
-            </Alert>
-          )}{' '}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
@@ -246,6 +237,24 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
+          {showStaleWarning && (
+            <Alert
+              variant="primary"
+              onClose={() => setSuppressStaleWarning(true)}
+              dismissible
+            >
+              <Alert.Heading>
+                {t('calculator.intro.stale_warning_heading')}
+              </Alert.Heading>
+              <Trans
+                values={{
+                  lastLoadedDate: prevalenceDataDate?.toLocaleDateString(),
+                }}
+              >
+                calculator.intro.stale_warning
+              </Trans>
+            </Alert>
+          )}
           <Card id="location">
             <PrevalenceControls
               data={calculatorData}
