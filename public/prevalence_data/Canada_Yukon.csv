@@ -1,2 +1,3 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,Unknown,Unknown,0.000582,2.3783,1.0,0.001383
+Entire state,0.001085,0.000868,0.000326,2.7905,1.0,0.000909
+Yukon,0.001037,0.000829,0.000326,2.7905,1.0,0.000909
