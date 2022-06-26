@@ -1362,6 +1362,11 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
     except pydantic.error_wrappers.ValidationError as e:
         print_and_log_to_sentry(f"Discarding county-level data from Romania due to error: {e}")
         return
+    latest_date = max([region.Date for region in romania_regions])
+    if effective_date > latest_date:
+        print_and_log_to_sentry(f"Discarding county-level data from Romania due to staleness - last update was {latest_date}")
+        return
+
     for line in romania_regions:
         state = data.get_state(line.County, country="Romania")
         state.population = int(float(line.Population.replace(",", "")))
