@@ -1,2 +1,2 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001005,0.001005,0.000364,2.7627,1.0,0.001005
+Entire country,1e-06,1e-06,0.0,2.7556,1.0,1e-06
