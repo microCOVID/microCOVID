@@ -1,5 +1,5 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.004405,0.00358,0.001635,2.419,1.0,0.003955
-Kent,0.004264,0.003465,0.001593,2.3917,1.0,0.00381
-New Castle,0.004765,0.003872,0.001716,2.4127,1.0,0.004141
-Sussex,0.003956,0.003215,0.001443,2.385,1.0,0.003442
+Entire state,0.004296,0.003492,0.001595,2.4185,1.0,0.003857
+Kent,0.0041,0.003332,0.001532,2.3912,1.0,0.003664
+New Castle,0.004635,0.003767,0.00167,2.4122,1.0,0.004028
+Sussex,0.003909,0.003176,0.001426,2.3846,1.0,0.0034
