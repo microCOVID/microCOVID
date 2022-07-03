@@ -1,9 +1,9 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,2.9e-05,2.9e-05,1.1e-05,2.0454,1.3448,2.9e-05
-Anhui,Unknown,Unknown,1e-06,2.0454,1.0,2e-06
+Entire country,3.1e-05,3.1e-05,1.1e-05,2.0454,1.3641,3.1e-05
+Anhui,Unknown,Unknown,2e-06,2.0454,1.0,4e-06
 Beijing,Unknown,Unknown,0.0,2.0454,1.0,1e-06
-Chongqing,Unknown,Unknown,0.0,2.0454,2.0,1e-06
-Fujian,Unknown,Unknown,1e-06,2.0454,1.0513,2e-06
+Chongqing,Unknown,Unknown,0.0,2.0454,2.0,2e-06
+Fujian,Unknown,Unknown,1e-06,2.0454,1.1944,3e-06
 Gansu,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Guangdong,Unknown,Unknown,0.0,2.0454,1.0,1e-06
 Guangxi,Unknown,Unknown,0.0,2.0454,1.0,0.0
@@ -16,20 +16,20 @@ Hubei,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Hunan,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Inner Mongolia,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Jiangsu,Unknown,Unknown,0.0,2.0454,2.0,1e-06
-Jiangxi,Unknown,Unknown,0.0,2.0454,1.3333,0.0
+Jiangxi,Unknown,Unknown,0.0,2.0454,1.6667,0.0
 Jilin,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Liaoning,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Ningxia,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Qinghai,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Shaanxi,Unknown,Unknown,0.0,2.0454,1.0,1e-06
-Shandong,Unknown,Unknown,0.0,2.0454,1.0,0.0
+Shandong,Unknown,Unknown,0.0,2.0454,2.0,1e-06
 Shanghai,Unknown,Unknown,1e-06,2.0454,1.0,3e-06
 Shanxi,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Sichuan,Unknown,Unknown,0.0,2.0454,1.0,0.0
-Tianjin,Unknown,Unknown,1e-06,2.0454,1.6,4e-06
+Tianjin,Unknown,Unknown,1e-06,2.0454,1.0,1e-06
 Tibet,Unknown,Unknown,0.0,2.0454,1.0,1e-06
 Xinjiang,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Yunnan,Unknown,Unknown,0.0,2.0454,1.0,0.0
 Zhejiang,Unknown,Unknown,0.0,2.0454,1.4,0.0
-Hong Kong,Unknown,Unknown,0.001861,2.0454,1.3902,0.005291
-Macau,Unknown,Unknown,0.00031,2.0454,2.0,0.001266
+Hong Kong,Unknown,Unknown,0.001919,2.0454,1.363,0.005348
+Macau,Unknown,Unknown,0.000339,2.0454,2.0,0.001386
