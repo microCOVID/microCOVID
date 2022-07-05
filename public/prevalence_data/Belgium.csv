@@ -1,13 +1,13 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.011369,0.011369,0.003008,2.5775,1.4665,0.011369
-Antwerp,Unknown,Unknown,0.003552,2.5775,1.5767,0.014436
-Brussels,Unknown,Unknown,0.003097,2.5775,1.438,0.011479
-East Flanders,Unknown,Unknown,0.003723,2.5775,1.4416,0.013832
-Flemish Brabant,Unknown,Unknown,0.003455,2.5775,1.4319,0.012749
-Hainaut,Unknown,Unknown,0.002443,2.5775,1.3762,0.008664
-Liege,Unknown,Unknown,0.001545,2.5775,1.5483,0.006167
-Limburg,Unknown,Unknown,0.002522,2.5775,1.6122,0.010481
-Luxembourg,Unknown,Unknown,0.002731,2.5775,1.619,0.011395
-Namur,Unknown,Unknown,0.002033,2.5775,1.4963,0.00784
-Walloon Brabant,Unknown,Unknown,0.003251,2.5775,1.5892,0.013316
-West Flanders,Unknown,Unknown,0.003181,2.5775,1.3362,0.010955
+Entire country,0.012917,0.012917,0.003487,2.5768,1.4375,0.012917
+Antwerp,Unknown,Unknown,0.004092,2.5768,1.4791,0.015596
+Brussels,Unknown,Unknown,0.003684,2.5768,1.4863,0.014109
+East Flanders,Unknown,Unknown,0.004149,2.5768,1.3511,0.014444
+Flemish Brabant,Unknown,Unknown,0.003898,2.5768,1.3677,0.013737
+Hainaut,Unknown,Unknown,0.002859,2.5768,1.4125,0.010404
+Liege,Unknown,Unknown,0.001995,2.5768,1.7062,0.008771
+Limburg,Unknown,Unknown,0.002909,2.5768,1.4806,0.011097
+Luxembourg,Unknown,Unknown,0.003261,2.5768,1.5567,0.013079
+Namur,Unknown,Unknown,0.002838,2.5768,1.9,0.013893
+Walloon Brabant,Unknown,Unknown,0.003963,2.5768,1.608,0.01642
+West Flanders,Unknown,Unknown,0.003437,2.5768,1.2483,0.011057
