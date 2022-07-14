@@ -1,2 +1,44 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004474,0.004474,0.000987,2.2665,2.0,0.004474
+Entire country,0.005363,0.005363,0.001183,2.2662,2.0,0.005363
+Alba,Unknown,Unknown,0.000266,2.2662,1.3492,0.000812
+Arad,Unknown,Unknown,0.000407,2.2662,1.3333,0.001228
+Bihor,Unknown,Unknown,0.000259,2.2662,1.0286,0.000604
+Cluj,Unknown,Unknown,0.000719,2.2662,1.1017,0.001795
+Covasna,Unknown,Unknown,0.000119,2.2662,1.0,0.00027
+Dolj,Unknown,Unknown,0.00044,2.2662,1.3878,0.001382
+Giurgiu,Unknown,Unknown,0.000365,2.2662,1.3571,0.001122
+Gorj,Unknown,Unknown,0.000282,2.2662,1.7755,0.001135
+Harghita,Unknown,Unknown,0.000166,2.2662,1.1667,0.000439
+Hunedoara,Unknown,Unknown,0.000329,2.2662,1.181,0.00088
+Ilfov,Unknown,Unknown,0.000949,2.2662,1.344,0.002892
+Olt,Unknown,Unknown,0.000226,2.2662,1.5536,0.000795
+Prahova,Unknown,Unknown,0.000548,2.2662,1.4624,0.001815
+Satu Mare,Unknown,Unknown,0.000257,2.2662,1.2,0.000698
+Sibiu,Unknown,Unknown,0.000773,2.2662,1.2983,0.002274
+Suceava,Unknown,Unknown,0.000207,2.2662,1.219,0.000572
+Teleorman,Unknown,Unknown,0.000359,2.2662,1.8571,0.001511
+Tulcea,Unknown,Unknown,0.000198,2.2662,1.7619,0.00079
+Vaslui,Unknown,Unknown,0.000178,2.2662,1.0317,0.000416
+Vrancea,Unknown,Unknown,0.000132,2.2662,1.1714,0.000351
+Argeș,Unknown,Unknown,0.000235,2.2662,1.1261,0.000599
+Bacău,Unknown,Unknown,0.000195,2.2662,1.3333,0.000588
+Bistrița-Năsăud,Unknown,Unknown,0.000331,2.2662,1.3,0.000976
+Botoșani,Unknown,Unknown,0.00013,2.2662,1.0,0.000295
+Brașov,Unknown,Unknown,0.00086,2.2662,1.2566,0.00245
+Brăila,Unknown,Unknown,0.000154,2.2662,1.2286,0.000429
+București,Unknown,Unknown,0.001489,2.2662,1.1103,0.003746
+Buzău,Unknown,Unknown,0.000262,2.2662,1.6825,0.000997
+Caraș-Severin,Unknown,Unknown,0.000141,2.2662,1.0,0.00032
+Călărași,Unknown,Unknown,0.000278,2.2662,1.375,0.000868
+Constanța,Unknown,Unknown,0.000607,2.2662,1.1401,0.001569
+Dâmbovița,Unknown,Unknown,0.000267,2.2662,1.1518,0.000697
+Galați,Unknown,Unknown,0.0003,2.2662,1.419,0.000965
+Ialomița,Unknown,Unknown,0.000201,2.2662,1.0204,0.000464
+Iași,Unknown,Unknown,0.000379,2.2662,1.1865,0.001019
+Maramureș,Unknown,Unknown,0.000312,2.2662,1.127,0.000797
+Mehedinți,Unknown,Unknown,0.000176,2.2662,1.0,0.000398
+Mureș,Unknown,Unknown,0.000366,2.2662,1.205,0.000999
+Neamț,Unknown,Unknown,0.00021,2.2662,1.4444,0.000687
+Sălaj,Unknown,Unknown,0.000272,2.2662,1.1429,0.000703
+Timiș,Unknown,Unknown,0.00057,2.2662,1.0809,0.001395
+Vâlcea,Unknown,Unknown,0.000278,2.2662,1.1429,0.000721
