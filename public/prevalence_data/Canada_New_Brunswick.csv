@@ -1,9 +1,9 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,5e-06,4e-06,1e-06,3.1198,1.0,4e-06
-South East (Moncton),Unknown,Unknown,0.001197,3.1198,1.7468,0.006522
-South Central (Saint John),Unknown,Unknown,0.001959,3.1198,1.2168,0.007438
-Central West (Fredericton),Unknown,Unknown,0.001189,3.1198,1.4379,0.005334
-North West (Edmundston),Unknown,Unknown,0.000731,3.1198,1.0,0.002279
-North Central (Campbellton),Unknown,Unknown,0.001807,3.1198,2.0,0.011276
-North East (Bathurst),Unknown,Unknown,0.001017,3.1198,1.1846,0.003759
-Central East (Miramichi),Unknown,Unknown,0.001039,3.1198,1.0,0.003241
+Entire state,3e-06,2e-06,1e-06,2.0,1.0,3e-06
+South East (Moncton),Unknown,Unknown,0.001197,2.0,1.7468,0.004181
+South Central (Saint John),Unknown,Unknown,0.001959,2.0,1.2168,0.004768
+Central West (Fredericton),Unknown,Unknown,0.001189,2.0,1.4379,0.00342
+North West (Edmundston),Unknown,Unknown,0.000731,2.0,1.0,0.001461
+North Central (Campbellton),Unknown,Unknown,0.001807,2.0,2.0,0.007229
+North East (Bathurst),Unknown,Unknown,0.001017,2.0,1.1846,0.00241
+Central East (Miramichi),Unknown,Unknown,0.001039,2.0,1.0,0.002078

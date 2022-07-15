@@ -1,38 +1,38 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00021,0.00021,8.9e-05,2.1867,1.0757,0.00021
-Andaman and Nicobar Islands,Unknown,Unknown,0.000141,2.1867,1.0545,0.000326
-Andhra Pradesh,Unknown,Unknown,4.1e-05,2.1867,1.3678,0.000123
-Arunachal Pradesh,Unknown,Unknown,0.000136,2.1867,2.0,0.000593
-Assam,Unknown,Unknown,6.3e-05,2.1867,2.0,0.000274
-Bihar,Unknown,Unknown,2.4e-05,2.1867,1.8164,9.4e-05
-Chandigarh,Unknown,Unknown,0.000353,2.1867,1.0303,0.000795
-Chhattisgarh,Unknown,Unknown,7e-05,2.1867,1.9211,0.000292
-Dadra and Nagar Haveli and Daman and Diu,Unknown,Unknown,1.8e-05,2.1867,1.0,3.9e-05
-Delhi,Unknown,Unknown,0.000174,2.1867,1.0,0.000381
-Goa,Unknown,Unknown,0.000527,2.1867,1.0,0.001152
-Gujarat,Unknown,Unknown,6.9e-05,2.1867,1.1359,0.000171
-Haryana,Unknown,Unknown,8.3e-05,2.1867,1.0,0.000181
-Himachal Pradesh,Unknown,Unknown,0.000213,2.1867,1.8815,0.000877
-Jammu and Kashmir,Unknown,Unknown,5.2e-05,2.1867,1.2079,0.000137
-Jharkhand,Unknown,Unknown,2.4e-05,2.1867,2.0,0.000103
-Karnataka,Unknown,Unknown,0.000101,2.1867,1.0273,0.000227
-Kerala,Unknown,Unknown,0.000597,2.1867,1.0,0.001307
-Ladakh,Unknown,Unknown,0.000182,2.1867,1.0,0.000399
-Madhya Pradesh,Unknown,Unknown,1.1e-05,2.1867,1.158,2.7e-05
-Maharashtra,Unknown,Unknown,0.000139,2.1867,1.0,0.000305
-Manipur,Unknown,Unknown,8.7e-05,2.1867,2.0,0.000381
-Meghalaya,Unknown,Unknown,3.8e-05,2.1867,1.3404,0.000111
-Mizoram,Unknown,Unknown,0.000588,2.1867,1.6071,0.002067
-Nagaland,Unknown,Unknown,1.7e-05,2.1867,1.8095,6.9e-05
-Odisha,Unknown,Unknown,8.2e-05,2.1867,1.9885,0.000357
-Puducherry,Unknown,Unknown,0.000681,2.1867,1.4732,0.002195
-Punjab,Unknown,Unknown,4.6e-05,2.1867,1.2482,0.000127
-Rajasthan,Unknown,Unknown,1.2e-05,2.1867,1.2148,3.3e-05
-Sikkim,Unknown,Unknown,0.000466,2.1867,2.0,0.00204
-Tamil Nadu,Unknown,Unknown,0.000227,2.1867,1.0,0.000497
-Telangana,Unknown,Unknown,9.5e-05,2.1867,1.076,0.000223
-Tripura,Unknown,Unknown,0.000144,2.1867,2.0,0.000628
-Uttar Pradesh,Unknown,Unknown,1e-05,2.1867,1.0,2.2e-05
-Uttarakhand,Unknown,Unknown,3.8e-05,2.1867,1.3981,0.000118
-West Bengal,Unknown,Unknown,0.000194,2.1867,1.6047,0.000681
-Lakshadweep,Unknown,Unknown,1.6e-05,2.1867,1.0,3.4e-05
+Entire country,0.000211,0.000211,9e-05,2.1865,1.0701,0.000211
+Andaman and Nicobar Islands,Unknown,Unknown,0.000149,2.1865,1.22,0.000397
+Andhra Pradesh,Unknown,Unknown,4.4e-05,2.1865,1.3563,0.00013
+Arunachal Pradesh,Unknown,Unknown,0.000136,2.1865,2.0,0.000593
+Assam,Unknown,Unknown,7.5e-05,2.1865,2.0,0.000328
+Bihar,Unknown,Unknown,2.5e-05,2.1865,1.7425,9.4e-05
+Chandigarh,Unknown,Unknown,0.000384,2.1865,1.1623,0.000976
+Chhattisgarh,Unknown,Unknown,7.5e-05,2.1865,1.9191,0.000314
+Dadra and Nagar Haveli and Daman and Diu,Unknown,Unknown,1.5e-05,2.1865,1.0,3.2e-05
+Delhi,Unknown,Unknown,0.000171,2.1865,1.0,0.000374
+Goa,Unknown,Unknown,0.000515,2.1865,1.0,0.001126
+Gujarat,Unknown,Unknown,6.9e-05,2.1865,1.093,0.000165
+Haryana,Unknown,Unknown,8.7e-05,2.1865,1.0,0.00019
+Himachal Pradesh,Unknown,Unknown,0.000244,2.1865,1.9434,0.001039
+Jammu and Kashmir,Unknown,Unknown,5.5e-05,2.1865,1.2156,0.000147
+Jharkhand,Unknown,Unknown,2.6e-05,2.1865,2.0,0.000113
+Karnataka,Unknown,Unknown,0.000103,2.1865,1.0497,0.000237
+Kerala,Unknown,Unknown,0.000586,2.1865,1.0,0.00128
+Ladakh,Unknown,Unknown,0.000219,2.1865,1.0,0.000478
+Madhya Pradesh,Unknown,Unknown,1.1e-05,2.1865,1.1615,2.8e-05
+Maharashtra,Unknown,Unknown,0.000136,2.1865,1.0,0.000297
+Manipur,Unknown,Unknown,0.000105,2.1865,2.0,0.000458
+Meghalaya,Unknown,Unknown,4.1e-05,2.1865,1.3333,0.000119
+Mizoram,Unknown,Unknown,0.000597,2.1865,1.4692,0.001918
+Nagaland,Unknown,Unknown,2e-05,2.1865,1.6296,7.1e-05
+Odisha,Unknown,Unknown,9e-05,2.1865,1.9123,0.000378
+Puducherry,Unknown,Unknown,0.000751,2.1865,1.5165,0.002489
+Punjab,Unknown,Unknown,4.7e-05,2.1865,1.2308,0.000126
+Rajasthan,Unknown,Unknown,1.3e-05,2.1865,1.2067,3.4e-05
+Sikkim,Unknown,Unknown,0.000526,2.1865,2.0,0.0023
+Tamil Nadu,Unknown,Unknown,0.000221,2.1865,1.0,0.000483
+Telangana,Unknown,Unknown,9.3e-05,2.1865,1.0165,0.000206
+Tripura,Unknown,Unknown,0.000198,2.1865,2.0,0.000864
+Uttar Pradesh,Unknown,Unknown,1e-05,2.1865,1.0,2.3e-05
+Uttarakhand,Unknown,Unknown,4.3e-05,2.1865,1.511,0.000141
+West Bengal,Unknown,Unknown,0.000195,2.1865,1.4517,0.00062
+Lakshadweep,Unknown,Unknown,1.6e-05,2.1865,1.0,3.4e-05
