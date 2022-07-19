@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.006723,0.006723,0.002764,2.4321,1.0,0.006723
-Antofagasta,Unknown,Unknown,0.00584,2.4321,1.1332,0.016095
-Araucania,Unknown,Unknown,0.002923,2.4321,1.0,0.007109
-Arica y Parinacota,Unknown,Unknown,0.005883,2.4321,1.0,0.014308
-Atacama,Unknown,Unknown,0.01031,2.4321,1.0,0.025074
-Aysen,Unknown,Unknown,0.003742,2.4321,1.0,0.0091
-Biobio,Unknown,Unknown,0.00323,2.4321,1.0,0.007856
-Coquimbo,Unknown,Unknown,0.004752,2.4321,1.0,0.011557
-Los Lagos,Unknown,Unknown,0.002113,2.4321,1.0,0.005139
-Los Rios,Unknown,Unknown,0.003123,2.4321,1.0,0.007596
-Magallanes,Unknown,Unknown,0.00517,2.4321,1.0275,0.01292
-Maule,Unknown,Unknown,0.002844,2.4321,1.0,0.006917
-Metropolitana,Unknown,Unknown,0.002098,2.4321,1.0,0.005103
-Nuble,Unknown,Unknown,0.003292,2.4321,1.0,0.008006
-OHiggins,Unknown,Unknown,0.002776,2.4321,1.0,0.006752
-Tarapaca,Unknown,Unknown,0.005621,2.4321,1.1302,0.015451
-Valparaiso,Unknown,Unknown,0.003029,2.4321,1.0,0.007368
+Entire country,0.00652,0.00652,0.002681,2.4316,1.0,0.00652
+Antofagasta,Unknown,Unknown,0.005776,2.4316,1.0854,0.015244
+Araucania,Unknown,Unknown,0.002855,2.4316,1.0,0.006942
+Arica y Parinacota,Unknown,Unknown,0.005839,2.4316,1.0,0.014198
+Atacama,Unknown,Unknown,0.009853,2.4316,1.0,0.023959
+Aysen,Unknown,Unknown,0.003781,2.4316,1.0,0.009193
+Biobio,Unknown,Unknown,0.003126,2.4316,1.0,0.007602
+Coquimbo,Unknown,Unknown,0.004485,2.4316,1.0,0.010906
+Los Lagos,Unknown,Unknown,0.002028,2.4316,1.0,0.004932
+Los Rios,Unknown,Unknown,0.0031,2.4316,1.0,0.007538
+Magallanes,Unknown,Unknown,0.005248,2.4316,1.062,0.013553
+Maule,Unknown,Unknown,0.002789,2.4316,1.0,0.006781
+Metropolitana,Unknown,Unknown,0.002001,2.4316,1.0,0.004865
+Nuble,Unknown,Unknown,0.003269,2.4316,1.0,0.007948
+OHiggins,Unknown,Unknown,0.002716,2.4316,1.0,0.006604
+Tarapaca,Unknown,Unknown,0.005491,2.4316,1.0492,0.014007
+Valparaiso,Unknown,Unknown,0.002997,2.4316,1.0,0.007288
