@@ -1,7 +1,7 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.000365,0.000294,0.000124,2.4795,1.0,0.000308
-Winnipeg,0.000406,0.000327,0.000144,2.4795,1.0,0.000357
-Prairie Mountain,0.000313,0.000252,8.7e-05,2.4795,1.2727,0.000274
-Interlake-Eastern,0.00064,0.000515,0.000162,2.4795,1.4,0.000561
-Northern,0.00034,0.000274,0.000119,2.4795,1.0,0.000295
-Southern,0.000256,0.000206,7.9e-05,2.4795,1.1429,0.000225
+Entire state,0.00038,0.000306,0.000124,2.5816,1.0,0.000321
+Winnipeg,4e-06,3e-06,1e-06,2.5816,1.0,3e-06
+Prairie Mountain,1.7e-05,1.4e-05,6e-06,2.5816,1.0,1.5e-05
+Interlake-Eastern,2.2e-05,1.7e-05,7e-06,2.5816,1.0,1.9e-05
+Northern,3.9e-05,3.2e-05,1.3e-05,2.5816,1.0,3.4e-05
+Southern,1.4e-05,1.1e-05,5e-06,2.5816,1.0,1.2e-05
