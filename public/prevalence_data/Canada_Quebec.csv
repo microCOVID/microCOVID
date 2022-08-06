@@ -1,20 +1,20 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.003045,0.002457,0.00104,2.4568,1.0,0.002556
-Bas-Saint-Laurent,Unknown,Unknown,0.001105,2.4568,1.0,0.002715
-Saguenay-Lac-Saint-Jean,Unknown,Unknown,2.5e-05,2.4568,1.0,6.1e-05
-Capitale-Nationale,Unknown,Unknown,0.000208,2.4568,1.0,0.00051
-Mauricie et Centre-du-Québec,Unknown,Unknown,0.001042,2.4568,1.0,0.002559
-Estrie,Unknown,Unknown,2e-05,2.4568,1.0,4.9e-05
-Montréal,Unknown,Unknown,0.000606,2.4568,1.0,0.001488
-Outaouais,Unknown,Unknown,0.00043,2.4568,1.0,0.001057
-Abitibi-Témiscamingue,Unknown,Unknown,0.000108,2.4568,1.0,0.000265
-Côte-Nord,Unknown,Unknown,0.001381,2.4568,1.0,0.003392
-Nord-du-Québec,Unknown,Unknown,0.002012,2.4568,1.0,0.004944
-Gaspésie-Îles-de-la-Madeleine,Unknown,Unknown,4.3e-05,2.4568,1.0,0.000107
-Chaudière-Appalaches,Unknown,Unknown,0.000778,2.4568,1.0,0.001912
-Laval,Unknown,Unknown,1.4e-05,2.4568,1.0,3.3e-05
-Lanaudière,Unknown,Unknown,0.000566,2.4568,1.0,0.001391
-Laurentides,Unknown,Unknown,8.7e-05,2.4568,1.0,0.000213
-Montérégie,Unknown,Unknown,0.000506,2.4568,1.0,0.001242
-Nunavik,Unknown,Unknown,0.00096,2.4568,1.0,0.00236
-Terres-Cries-de-la-Baie-James,Unknown,Unknown,0.000803,2.4568,1.0,0.001973
+Entire state,0.002945,0.002377,0.000988,2.5017,1.0,0.002472
+Bas-Saint-Laurent,Unknown,Unknown,0.000879,2.5017,1.0,0.002199
+Saguenay-Lac-Saint-Jean,Unknown,Unknown,1.4e-05,2.5017,1.0,3.6e-05
+Capitale-Nationale,Unknown,Unknown,0.00018,2.5017,1.0,0.00045
+Mauricie et Centre-du-Québec,Unknown,Unknown,0.000689,2.5017,1.0,0.001723
+Estrie,Unknown,Unknown,1.6e-05,2.5017,1.0,4e-05
+Montréal,Unknown,Unknown,0.000473,2.5017,1.0,0.001184
+Outaouais,Unknown,Unknown,0.000329,2.5017,1.0,0.000823
+Abitibi-Témiscamingue,Unknown,Unknown,7.4e-05,2.5017,1.0,0.000186
+Côte-Nord,Unknown,Unknown,0.001104,2.5017,1.0,0.002763
+Nord-du-Québec,Unknown,Unknown,0.001491,2.5017,1.0,0.003729
+Gaspésie-Îles-de-la-Madeleine,Unknown,Unknown,3.3e-05,2.5017,1.0,8.2e-05
+Chaudière-Appalaches,Unknown,Unknown,0.0006,2.5017,1.0,0.001502
+Laval,Unknown,Unknown,9e-06,2.5017,1.0,2.3e-05
+Lanaudière,Unknown,Unknown,0.000443,2.5017,1.0,0.001108
+Laurentides,Unknown,Unknown,7.9e-05,2.5017,1.0,0.000197
+Montérégie,Unknown,Unknown,0.000402,2.5017,1.0,0.001007
+Nunavik,Unknown,Unknown,0.000755,2.5017,1.0,0.001888
+Terres-Cries-de-la-Baie-James,Unknown,Unknown,0.000696,2.5017,1.0,0.001741
