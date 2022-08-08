@@ -1,21 +1,21 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
 Entire country,5.1e-05,5.1e-05,2.5e-05,2.0436,1.0,5.1e-05
 Anhui,Unknown,Unknown,0.0,2.0436,1.0,0.0
-Beijing,Unknown,Unknown,2e-06,2.0436,1.9444,7e-06
+Beijing,Unknown,Unknown,2e-06,2.0436,1.8421,6e-06
 Chongqing,Unknown,Unknown,1e-06,2.0436,2.0,2e-06
-Fujian,Unknown,Unknown,2e-06,2.0436,1.1642,5e-06
-Gansu,Unknown,Unknown,1e-06,2.0436,1.0,3e-06
-Guangdong,Unknown,Unknown,1e-06,2.0436,1.3719,4e-06
+Fujian,Unknown,Unknown,2e-06,2.0436,1.209,5e-06
+Gansu,Unknown,Unknown,1e-06,2.0436,1.0,2e-06
+Guangdong,Unknown,Unknown,2e-06,2.0436,1.8108,6e-06
 Guangxi,Unknown,Unknown,1e-06,2.0436,1.0,2e-06
 Guizhou,Unknown,Unknown,0.0,2.0436,1.0,0.0
-Hainan,Unknown,Unknown,4.2e-05,2.0436,1.0,8.7e-05
+Hainan,Unknown,Unknown,7.2e-05,2.0436,1.0,0.000147
 Hebei,Unknown,Unknown,0.0,2.0436,1.0,0.0
 Heilongjiang,Unknown,Unknown,0.0,2.0436,2.0,2e-06
 Henan,Unknown,Unknown,0.0,2.0436,1.0,0.0
 Hubei,Unknown,Unknown,0.0,2.0436,1.0,0.0
 Hunan,Unknown,Unknown,0.0,2.0436,2.0,0.0
-Inner Mongolia,Unknown,Unknown,3e-06,2.0436,1.0,6e-06
-Jiangsu,Unknown,Unknown,0.0,2.0436,2.0,0.0
+Inner Mongolia,Unknown,Unknown,3e-06,2.0436,2.0,1.4e-05
+Jiangsu,Unknown,Unknown,0.0,2.0436,2.0,1e-06
 Jiangxi,Unknown,Unknown,0.0,2.0436,1.0,0.0
 Jilin,Unknown,Unknown,0.0,2.0436,1.0,0.0
 Liaoning,Unknown,Unknown,0.0,2.0436,1.0,0.0
@@ -31,5 +31,5 @@ Tibet,Unknown,Unknown,0.0,2.0436,1.0,1e-06
 Xinjiang,Unknown,Unknown,0.0,2.0436,1.0,0.0
 Yunnan,Unknown,Unknown,0.0,2.0436,2.0,1e-06
 Zhejiang,Unknown,Unknown,1e-06,2.0436,2.0,2e-06
-Hong Kong,Unknown,Unknown,0.004216,2.0436,1.0,0.008616
+Hong Kong,Unknown,Unknown,0.004168,2.0436,1.0,0.008518
 Macau,Unknown,Unknown,2e-06,2.0436,1.0,3e-06

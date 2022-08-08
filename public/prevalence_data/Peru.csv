@@ -1,27 +1,27 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004231,0.004231,0.002002,2.1035,1.0045,0.004231
-Amazonas,Unknown,Unknown,0.0015,2.1035,1.0,0.003154
-Ancash,Unknown,Unknown,0.001349,2.1035,1.0,0.002838
-Apurimac,Unknown,Unknown,0.002628,2.1035,1.2032,0.006652
-Arequipa,Unknown,Unknown,0.003965,2.1035,1.0,0.00834
-Ayacucho,Unknown,Unknown,0.000988,2.1035,1.0,0.002078
-Cajamarca,Unknown,Unknown,0.001546,2.1035,1.0,0.003251
-Callao,Unknown,Unknown,0.00146,2.1035,1.0,0.003072
-Cusco,Unknown,Unknown,0.001619,2.1035,1.0,0.003405
-Huancavelica,Unknown,Unknown,0.001177,2.1035,1.0,0.002476
-Huanuco,Unknown,Unknown,0.001207,2.1035,1.0,0.00254
-Ica,Unknown,Unknown,0.001445,2.1035,1.0,0.003039
-Junin,Unknown,Unknown,0.002015,2.1035,1.0,0.004238
-La Libertad,Unknown,Unknown,0.00175,2.1035,1.0,0.003681
-Lambayeque,Unknown,Unknown,0.001369,2.1035,1.0,0.00288
-Lima,Unknown,Unknown,0.003347,2.1035,1.0,0.00704
-Loreto,Unknown,Unknown,0.000799,2.1035,1.0,0.001681
-Madre de Dios,Unknown,Unknown,0.001824,2.1035,1.0,0.003837
-Moquegua,Unknown,Unknown,0.006279,2.1035,1.0,0.013208
-Pasco,Unknown,Unknown,0.001519,2.1035,1.0,0.003195
-Piura,Unknown,Unknown,0.000816,2.1035,1.051,0.001804
-Puno,Unknown,Unknown,0.000637,2.1035,1.0077,0.001349
-San Martin,Unknown,Unknown,0.001095,2.1035,1.0,0.002303
-Tacna,Unknown,Unknown,0.001717,2.1035,1.0,0.003612
-Tumbes,Unknown,Unknown,0.002974,2.1035,1.0247,0.00641
-Ucayali,Unknown,Unknown,0.001282,2.1035,1.0,0.002696
+Entire country,0.003638,0.003638,0.00173,2.1033,1.0,0.003638
+Amazonas,Unknown,Unknown,2e-06,2.1033,1.0,5e-06
+Ancash,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Apurimac,Unknown,Unknown,2e-06,2.1033,1.0,5e-06
+Arequipa,Unknown,Unknown,1e-06,2.1033,1.0,1e-06
+Ayacucho,Unknown,Unknown,1e-06,2.1033,1.0,3e-06
+Cajamarca,Unknown,Unknown,1e-06,2.1033,1.0,1e-06
+Callao,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Cusco,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Huancavelica,Unknown,Unknown,3e-06,2.1033,1.0,6e-06
+Huanuco,Unknown,Unknown,1e-06,2.1033,1.0,3e-06
+Ica,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Junin,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+La Libertad,Unknown,Unknown,0.0,2.1033,1.0,1e-06
+Lambayeque,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Lima,Unknown,Unknown,0.0,2.1033,1.0,0.0
+Loreto,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Madre de Dios,Unknown,Unknown,6e-06,2.1033,1.0,1.2e-05
+Moquegua,Unknown,Unknown,5e-06,2.1033,1.0,1.1e-05
+Pasco,Unknown,Unknown,4e-06,2.1033,1.0,8e-06
+Piura,Unknown,Unknown,0.0,2.1033,1.0,1e-06
+Puno,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+San Martin,Unknown,Unknown,1e-06,2.1033,1.0,2e-06
+Tacna,Unknown,Unknown,3e-06,2.1033,1.0,6e-06
+Tumbes,Unknown,Unknown,4e-06,2.1033,1.0,8e-06
+Ucayali,Unknown,Unknown,2e-06,2.1033,1.0,4e-06
