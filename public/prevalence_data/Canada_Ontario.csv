@@ -1,36 +1,36 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.006281,0.005068,0.00118,3.0893,1.4501,0.005287
-Algoma,Unknown,Unknown,0.000222,3.0893,1.0,0.000685
-Brant,Unknown,Unknown,0.000173,3.0893,1.0,0.000533
-Durham,Unknown,Unknown,0.000177,3.0893,1.0,0.000548
-Grey Bruce,Unknown,Unknown,0.000151,3.0893,1.0,0.000467
-Haldimand-Norfolk,Unknown,Unknown,0.000254,3.0893,1.0,0.000784
-Haliburton, Kawartha, Pine Ridge,Unknown,Unknown,0.000274,3.0893,1.0,0.000848
-Halton,Unknown,Unknown,0.000129,3.0893,1.0,0.000399
-Hamilton,Unknown,Unknown,0.000283,3.0893,1.0,0.000873
-Hastings and Prince Edward,Unknown,Unknown,0.000431,3.0893,1.0,0.001332
-Huron Perth,Unknown,Unknown,0.000142,3.0893,1.0,0.000438
-Chatham-Kent,Unknown,Unknown,0.00013,3.0893,1.0,0.000401
-Kingston, Frontenac and Lennox and Addington,Unknown,Unknown,0.000205,3.0893,1.0,0.000633
-Lambton,Unknown,Unknown,0.000204,3.0893,1.0,0.000629
-Leeds, Grenville and Lanark,Unknown,Unknown,0.000292,3.0893,1.0,0.000902
-Middlesex-London,Unknown,Unknown,0.000237,3.0893,1.0,0.000732
-Niagara,Unknown,Unknown,0.000264,3.0893,1.0,0.000816
-North Bay Parry Sound,Unknown,Unknown,0.000382,3.0893,1.0,0.001181
-Northwestern,Unknown,Unknown,0.000159,3.0893,1.0,0.000492
-Ottawa,Unknown,Unknown,0.000155,3.0893,1.0,0.000477
-Peel,Unknown,Unknown,0.000161,3.0893,1.0,0.000497
-Peterborough,Unknown,Unknown,0.000237,3.0893,1.0,0.000732
-Porcupine,Unknown,Unknown,0.000178,3.0893,1.0,0.00055
-Renfrew,Unknown,Unknown,0.000101,3.0893,1.0,0.000311
-Eastern,Unknown,Unknown,0.000124,3.0893,1.0,0.000383
-Simcoe Muskoka,Unknown,Unknown,0.000159,3.0893,1.0,0.000491
-Sudbury,Unknown,Unknown,0.000336,3.0893,1.0,0.001037
-Thunder Bay,Unknown,Unknown,0.000365,3.0893,1.0,0.001129
-Timiskaming,Unknown,Unknown,0.000234,3.0893,1.0,0.000723
-Waterloo,Unknown,Unknown,0.000172,3.0893,1.0,0.00053
-Wellington-Dufferin-Guelph,Unknown,Unknown,0.000196,3.0893,1.0,0.000605
-Windsor-Essex,Unknown,Unknown,0.000256,3.0893,1.0,0.00079
-York,Unknown,Unknown,0.000238,3.0893,1.0,0.000735
-Southwestern,Unknown,Unknown,0.000162,3.0893,1.0,0.000499
-Toronto,Unknown,Unknown,0.000212,3.0893,1.0,0.000654
+Entire state,0.006278,0.005066,0.00118,3.0881,1.4501,0.005285
+Algoma,Unknown,Unknown,0.000179,3.0881,1.0,0.000553
+Brant,Unknown,Unknown,0.000115,3.0881,1.0,0.000355
+Durham,Unknown,Unknown,0.000124,3.0881,1.0,0.000382
+Grey Bruce,Unknown,Unknown,0.000101,3.0881,1.0,0.000311
+Haldimand-Norfolk,Unknown,Unknown,0.000172,3.0881,1.0,0.000531
+Haliburton, Kawartha, Pine Ridge,Unknown,Unknown,0.000176,3.0881,1.0,0.000544
+Halton,Unknown,Unknown,8.7e-05,3.0881,1.0,0.000269
+Hamilton,Unknown,Unknown,0.000216,3.0881,1.0,0.000668
+Hastings and Prince Edward,Unknown,Unknown,0.000305,3.0881,1.0,0.000941
+Huron Perth,Unknown,Unknown,9.5e-05,3.0881,1.0,0.000292
+Chatham-Kent,Unknown,Unknown,4.6e-05,3.0881,1.0,0.000143
+Kingston, Frontenac and Lennox and Addington,Unknown,Unknown,0.000162,3.0881,1.0,0.000501
+Lambton,Unknown,Unknown,0.000128,3.0881,1.0,0.000396
+Leeds, Grenville and Lanark,Unknown,Unknown,0.00016,3.0881,1.0,0.000493
+Middlesex-London,Unknown,Unknown,0.000181,3.0881,1.0,0.000558
+Niagara,Unknown,Unknown,0.000186,3.0881,1.0,0.000573
+North Bay Parry Sound,Unknown,Unknown,0.000275,3.0881,1.0,0.00085
+Northwestern,Unknown,Unknown,0.000123,3.0881,1.0,0.000378
+Ottawa,Unknown,Unknown,9.2e-05,3.0881,1.0,0.000284
+Peel,Unknown,Unknown,9.8e-05,3.0881,1.0,0.000303
+Peterborough,Unknown,Unknown,0.000169,3.0881,1.0,0.000523
+Porcupine,Unknown,Unknown,0.000107,3.0881,1.0,0.00033
+Renfrew,Unknown,Unknown,6.4e-05,3.0881,1.0,0.000198
+Eastern,Unknown,Unknown,8.3e-05,3.0881,1.0,0.000255
+Simcoe Muskoka,Unknown,Unknown,0.000109,3.0881,1.0,0.000336
+Sudbury,Unknown,Unknown,0.000214,3.0881,1.0,0.000661
+Thunder Bay,Unknown,Unknown,0.000295,3.0881,1.0,0.00091
+Timiskaming,Unknown,Unknown,0.000234,3.0881,1.0,0.000723
+Waterloo,Unknown,Unknown,0.000114,3.0881,1.0,0.000354
+Wellington-Dufferin-Guelph,Unknown,Unknown,0.000145,3.0881,1.0,0.000449
+Windsor-Essex,Unknown,Unknown,0.00015,3.0881,1.0,0.000464
+York,Unknown,Unknown,0.000148,3.0881,1.0,0.000457
+Southwestern,Unknown,Unknown,0.000135,3.0881,1.0,0.000416
+Toronto,Unknown,Unknown,0.000148,3.0881,1.0,0.000458
