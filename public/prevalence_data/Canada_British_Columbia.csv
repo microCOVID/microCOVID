@@ -1,7 +1,7 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.000658,0.000531,0.000189,2.7351,1.0696,0.000552
-Interior,4e-06,3e-06,1e-06,2.7351,1.0,3e-06
-Fraser,2e-06,1e-06,1e-06,2.7351,1.0,1e-06
-Vancouver Coastal,2e-06,2e-06,1e-06,2.7351,1.0,2e-06
-Island,4e-06,3e-06,1e-06,2.7351,1.0,3e-06
-Northern,1e-05,8e-06,3e-06,2.7351,1.0,9e-06
+Entire state,0.000742,0.0006,0.000189,3.087,1.0696,0.000623
+Interior,4e-06,3e-06,1e-06,3.087,1.0,4e-06
+Fraser,2e-06,1e-06,1e-06,3.087,1.0,2e-06
+Vancouver Coastal,3e-06,2e-06,1e-06,3.087,1.0,2e-06
+Island,4e-06,3e-06,1e-06,3.087,1.0,4e-06
+Northern,1.2e-05,9e-06,3e-06,3.087,1.0,1e-05
