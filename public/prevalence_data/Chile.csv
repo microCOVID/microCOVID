@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.009962,0.009962,0.003511,2.4213,1.1718,0.009962
-Antofagasta,Unknown,Unknown,0.006444,2.4213,1.0044,0.015671
-Araucania,Unknown,Unknown,0.004446,2.4213,1.3594,0.014635
-Arica y Parinacota,Unknown,Unknown,0.007794,2.4213,1.0,0.018872
-Atacama,Unknown,Unknown,0.008763,2.4213,1.0,0.021217
-Aysen,Unknown,Unknown,0.005332,2.4213,1.3759,0.017762
-Biobio,Unknown,Unknown,0.004393,2.4213,1.2281,0.013063
-Coquimbo,Unknown,Unknown,0.006003,2.4213,1.041,0.015131
-Los Lagos,Unknown,Unknown,0.00345,2.4213,1.3714,0.011456
-Los Rios,Unknown,Unknown,0.006496,2.4213,1.4893,0.023425
-Magallanes,Unknown,Unknown,0.003507,2.4213,1.0,0.008491
-Maule,Unknown,Unknown,0.005131,2.4213,1.4145,0.017574
-Metropolitana,Unknown,Unknown,0.002283,2.4213,1.0827,0.005984
-Nuble,Unknown,Unknown,0.005206,2.4213,1.3757,0.01734
-OHiggins,Unknown,Unknown,0.003379,2.4213,1.1922,0.009753
-Tarapaca,Unknown,Unknown,0.009448,2.4213,1.4146,0.032359
-Valparaiso,Unknown,Unknown,0.003567,2.4213,1.147,0.009906
+Entire country,0.010229,0.010229,0.003583,2.4208,1.1792,0.010229
+Antofagasta,Unknown,Unknown,0.006391,2.4208,1.0,0.015472
+Araucania,Unknown,Unknown,0.004679,2.4208,1.3894,0.015738
+Arica y Parinacota,Unknown,Unknown,0.007927,2.4208,1.0147,0.019472
+Atacama,Unknown,Unknown,0.008673,2.4208,1.0,0.020996
+Aysen,Unknown,Unknown,0.005787,2.4208,1.544,0.021632
+Biobio,Unknown,Unknown,0.004565,2.4208,1.2386,0.013688
+Coquimbo,Unknown,Unknown,0.005986,2.4208,1.0433,0.015118
+Los Lagos,Unknown,Unknown,0.003659,2.4208,1.4482,0.012826
+Los Rios,Unknown,Unknown,0.006779,2.4208,1.4793,0.024278
+Magallanes,Unknown,Unknown,0.003711,2.4208,1.0232,0.009192
+Maule,Unknown,Unknown,0.005266,2.4208,1.3842,0.017646
+Metropolitana,Unknown,Unknown,0.002293,2.4208,1.0859,0.006028
+Nuble,Unknown,Unknown,0.005537,2.4208,1.389,0.018618
+OHiggins,Unknown,Unknown,0.003475,2.4208,1.1868,0.009983
+Tarapaca,Unknown,Unknown,0.009408,2.4208,1.3102,0.02984
+Valparaiso,Unknown,Unknown,0.003632,2.4208,1.1623,0.010219
