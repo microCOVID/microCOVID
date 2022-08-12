@@ -1,7 +1,7 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.001807,0.001464,0.000678,2.3634,1.0,0.001602
-Bristol,5.6e-05,4.6e-05,2.1e-05,2.3109,1.0,4.8e-05
-Kent,1.7e-05,1.4e-05,6e-06,2.3746,1.0,1.4e-05
-Newport,3.4e-05,2.8e-05,1.2e-05,2.393,1.0,2.9e-05
-Providence,4e-06,3e-06,2e-06,2.3585,1.0,4e-06
-Washington,2.2e-05,1.8e-05,8e-06,2.3915,1.0,1.9e-05
+Entire state,0.002725,0.002208,0.00102,2.3678,1.0,0.002416
+Bristol,0.004385,0.003553,0.001609,2.3106,1.0,0.003718
+Kent,0.006644,0.005384,0.002246,2.3741,1.0575,0.005639
+Newport,0.004501,0.003647,0.001474,2.3926,1.0909,0.003848
+Providence,0.006858,0.005557,0.002088,2.3581,1.2031,0.005923
+Washington,0.004267,0.003457,0.001513,2.3911,1.0,0.003618
