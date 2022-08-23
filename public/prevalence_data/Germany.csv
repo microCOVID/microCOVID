@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00884,0.00884,0.003282,2.6937,1.0,0.00884
-Baden-Wurttemberg,Unknown,Unknown,0.002363,2.6937,1.0,0.006366
-Bayern,Unknown,Unknown,0.002472,2.6937,1.0,0.006657
-Berlin,Unknown,Unknown,0.002264,2.6937,1.0,0.006098
-Brandenburg,Unknown,Unknown,0.003468,2.6937,1.0,0.009341
-Bremen,Unknown,Unknown,0.003408,2.6937,1.0,0.009181
-Hamburg,Unknown,Unknown,0.002647,2.6937,1.0,0.007131
-Hessen,Unknown,Unknown,0.003796,2.6937,1.0,0.010225
-Mecklenburg-Vorpommern,Unknown,Unknown,0.003922,2.6937,1.0,0.010564
-Niedersachsen,Unknown,Unknown,0.003912,2.6937,1.0,0.010538
-Nordrhein-Westfalen,Unknown,Unknown,0.004309,2.6937,1.0066,0.011683
-Rheinland-Pfalz,Unknown,Unknown,0.003131,2.6937,1.0,0.008435
-Saarland,Unknown,Unknown,0.003095,2.6937,1.0,0.008336
-Sachsen,Unknown,Unknown,0.003093,2.6937,1.0,0.008331
-Sachsen-Anhalt,Unknown,Unknown,0.00317,2.6937,1.0123,0.008644
-Schleswig-Holstein,Unknown,Unknown,0.003873,2.6937,1.0,0.010432
-Thuringen,Unknown,Unknown,0.002138,2.6937,1.0,0.005759
+Entire country,0.008729,0.008729,0.003242,2.693,1.0,0.008729
+Baden-Wurttemberg,Unknown,Unknown,0.002229,2.693,1.0,0.006002
+Bayern,Unknown,Unknown,0.003141,2.693,1.1979,0.010133
+Berlin,Unknown,Unknown,0.001808,2.693,1.0,0.004868
+Brandenburg,Unknown,Unknown,0.00316,2.693,1.0,0.008508
+Bremen,Unknown,Unknown,0.003146,2.693,1.0,0.008473
+Hamburg,Unknown,Unknown,0.002726,2.693,1.0,0.00734
+Hessen,Unknown,Unknown,0.003566,2.693,1.0,0.009603
+Mecklenburg-Vorpommern,Unknown,Unknown,0.003766,2.693,1.0,0.010141
+Niedersachsen,Unknown,Unknown,0.00387,2.693,1.0,0.010422
+Nordrhein-Westfalen,Unknown,Unknown,0.004097,2.693,1.0,0.011032
+Rheinland-Pfalz,Unknown,Unknown,0.002983,2.693,1.0,0.008033
+Saarland,Unknown,Unknown,0.003925,2.693,1.5297,0.016168
+Sachsen,Unknown,Unknown,0.002943,2.693,1.0,0.007926
+Sachsen-Anhalt,Unknown,Unknown,0.002962,2.693,1.0,0.007976
+Schleswig-Holstein,Unknown,Unknown,0.003445,2.693,1.0,0.009277
+Thuringen,Unknown,Unknown,0.002031,2.693,1.0,0.005469
