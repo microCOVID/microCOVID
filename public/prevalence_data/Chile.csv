@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.007619,0.007619,0.003155,2.4149,1.0,0.007619
-Antofagasta,Unknown,Unknown,0.003929,2.4149,1.0,0.009488
-Araucania,Unknown,Unknown,0.00481,2.4149,1.0,0.011615
-Arica y Parinacota,Unknown,Unknown,0.005264,2.4149,1.0,0.012712
-Atacama,Unknown,Unknown,0.006001,2.4149,1.0,0.014492
-Aysen,Unknown,Unknown,0.005768,2.4149,1.0,0.013929
-Biobio,Unknown,Unknown,0.004467,2.4149,1.0,0.010787
-Coquimbo,Unknown,Unknown,0.004683,2.4149,1.0,0.01131
-Los Lagos,Unknown,Unknown,0.003518,2.4149,1.0,0.008495
-Los Rios,Unknown,Unknown,0.005756,2.4149,1.0,0.0139
-Magallanes,Unknown,Unknown,0.004498,2.4149,1.0,0.010861
-Maule,Unknown,Unknown,0.005496,2.4149,1.0,0.013272
-Metropolitana,Unknown,Unknown,0.002138,2.4149,1.0,0.005163
-Nuble,Unknown,Unknown,0.005223,2.4149,1.0,0.012612
-OHiggins,Unknown,Unknown,0.002937,2.4149,1.0,0.007093
-Tarapaca,Unknown,Unknown,0.005479,2.4149,1.0,0.013231
-Valparaiso,Unknown,Unknown,0.003019,2.4149,1.0,0.00729
+Entire country,0.007889,0.007889,0.003267,2.4145,1.0,0.007889
+Antofagasta,Unknown,Unknown,0.004102,2.4145,1.0,0.009904
+Araucania,Unknown,Unknown,0.004831,2.4145,1.0,0.011664
+Arica y Parinacota,Unknown,Unknown,0.005144,2.4145,1.0,0.012421
+Atacama,Unknown,Unknown,0.006503,2.4145,1.0,0.015701
+Aysen,Unknown,Unknown,0.005787,2.4145,1.0,0.013973
+Biobio,Unknown,Unknown,0.004635,2.4145,1.0,0.011192
+Coquimbo,Unknown,Unknown,0.004732,2.4145,1.0,0.011426
+Los Lagos,Unknown,Unknown,0.003619,2.4145,1.0,0.008738
+Los Rios,Unknown,Unknown,0.005922,2.4145,1.0,0.014299
+Magallanes,Unknown,Unknown,0.00469,2.4145,1.0848,0.012284
+Maule,Unknown,Unknown,0.005755,2.4145,1.0,0.013896
+Metropolitana,Unknown,Unknown,0.002252,2.4145,1.0129,0.005507
+Nuble,Unknown,Unknown,0.00521,2.4145,1.0,0.01258
+OHiggins,Unknown,Unknown,0.003126,2.4145,1.0,0.007548
+Tarapaca,Unknown,Unknown,0.005352,2.4145,1.0,0.012921
+Valparaiso,Unknown,Unknown,0.003139,2.4145,1.0,0.007579
