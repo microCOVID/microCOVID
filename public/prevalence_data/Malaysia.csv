@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00141,0.00141,0.000626,2.252,1.0,0.00141
-Johor,Unknown,Unknown,0.000196,2.252,1.0,0.000441
-Kedah,Unknown,Unknown,0.000299,2.252,1.0,0.000673
-Kelantan,Unknown,Unknown,0.000276,2.252,1.0,0.000622
-Melaka,Unknown,Unknown,0.000868,2.252,1.0,0.001956
-Negeri Sembilan,Unknown,Unknown,0.001151,2.252,1.0,0.002592
-Pahang,Unknown,Unknown,0.000309,2.252,1.0319,0.000719
-Perak,Unknown,Unknown,0.000638,2.252,1.0,0.001437
-Perlis,Unknown,Unknown,0.00024,2.252,1.0,0.00054
-Pulau Pinang,Unknown,Unknown,0.000446,2.252,1.0,0.001003
-Sabah,Unknown,Unknown,0.000443,2.252,1.0,0.000998
-Sarawak,Unknown,Unknown,0.000293,2.252,1.0469,0.000692
-Selangor,Unknown,Unknown,0.000907,2.252,1.0,0.002043
-Terengganu,Unknown,Unknown,0.000286,2.252,1.0439,0.000673
-W.P. Kuala Lumpur,Unknown,Unknown,0.00216,2.252,1.0,0.004864
-W.P. Labuan,Unknown,Unknown,0.000392,2.252,1.0,0.000884
-W.P. Putrajaya,Unknown,Unknown,0.005152,2.252,1.0,0.011602
+Entire country,0.001349,0.001349,0.000599,2.2517,1.0,0.001349
+Johor,Unknown,Unknown,0.000192,2.2517,1.0,0.000433
+Kedah,Unknown,Unknown,0.000307,2.2517,1.0,0.000692
+Kelantan,Unknown,Unknown,0.000282,2.2517,1.0,0.000634
+Melaka,Unknown,Unknown,0.000828,2.2517,1.0,0.001864
+Negeri Sembilan,Unknown,Unknown,0.001033,2.2517,1.0,0.002325
+Pahang,Unknown,Unknown,0.000287,2.2517,1.0,0.000646
+Perak,Unknown,Unknown,0.000622,2.2517,1.0,0.001402
+Perlis,Unknown,Unknown,0.000263,2.2517,1.0,0.000593
+Pulau Pinang,Unknown,Unknown,0.000417,2.2517,1.0,0.00094
+Sabah,Unknown,Unknown,0.000447,2.2517,1.0,0.001007
+Sarawak,Unknown,Unknown,0.000271,2.2517,1.0,0.00061
+Selangor,Unknown,Unknown,0.000851,2.2517,1.0,0.001917
+Terengganu,Unknown,Unknown,0.000274,2.2517,1.0,0.000618
+W.P. Kuala Lumpur,Unknown,Unknown,0.002078,2.2517,1.0,0.00468
+W.P. Labuan,Unknown,Unknown,0.000382,2.2517,1.0,0.000861
+W.P. Putrajaya,Unknown,Unknown,0.005,2.2517,1.0,0.011258
