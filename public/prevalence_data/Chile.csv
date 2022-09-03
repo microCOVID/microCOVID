@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004705,0.004705,0.001951,2.411,1.0,0.004705
-Antofagasta,Unknown,Unknown,0.002178,2.411,1.0,0.00525
-Araucania,Unknown,Unknown,0.002905,2.411,1.0,0.007005
-Arica y Parinacota,Unknown,Unknown,0.002331,2.411,1.0,0.00562
-Atacama,Unknown,Unknown,0.004267,2.411,1.0,0.010288
-Aysen,Unknown,Unknown,0.002491,2.411,1.0,0.006007
-Biobio,Unknown,Unknown,0.002988,2.411,1.0,0.007204
-Coquimbo,Unknown,Unknown,0.002656,2.411,1.0,0.006403
-Los Lagos,Unknown,Unknown,0.001876,2.411,1.0,0.004524
-Los Rios,Unknown,Unknown,0.003105,2.411,1.0,0.007487
-Magallanes,Unknown,Unknown,0.002354,2.411,1.0,0.005675
-Maule,Unknown,Unknown,0.00341,2.411,1.0,0.008221
-Metropolitana,Unknown,Unknown,0.001438,2.411,1.0,0.003466
-Nuble,Unknown,Unknown,0.00351,2.411,1.0,0.008463
-OHiggins,Unknown,Unknown,0.001776,2.411,1.0,0.004281
-Tarapaca,Unknown,Unknown,0.002844,2.411,1.0,0.006856
-Valparaiso,Unknown,Unknown,0.001847,2.411,1.0,0.004453
+Entire country,0.005378,0.005378,0.002231,2.4105,1.0,0.005378
+Antofagasta,Unknown,Unknown,0.002387,2.4105,1.0,0.005753
+Araucania,Unknown,Unknown,0.003187,2.4105,1.0,0.007683
+Arica y Parinacota,Unknown,Unknown,0.002451,2.4105,1.0,0.005907
+Atacama,Unknown,Unknown,0.004811,2.4105,1.0,0.011596
+Aysen,Unknown,Unknown,0.002792,2.4105,1.0,0.00673
+Biobio,Unknown,Unknown,0.003359,2.4105,1.0,0.008097
+Coquimbo,Unknown,Unknown,0.00295,2.4105,1.0,0.007111
+Los Lagos,Unknown,Unknown,0.002127,2.4105,1.0,0.005128
+Los Rios,Unknown,Unknown,0.003399,2.4105,1.0,0.008193
+Magallanes,Unknown,Unknown,0.002738,2.4105,1.0,0.006601
+Maule,Unknown,Unknown,0.00396,2.4105,1.0,0.009546
+Metropolitana,Unknown,Unknown,0.001697,2.4105,1.0,0.00409
+Nuble,Unknown,Unknown,0.004066,2.4105,1.0,0.009801
+OHiggins,Unknown,Unknown,0.002027,2.4105,1.0,0.004887
+Tarapaca,Unknown,Unknown,0.003198,2.4105,1.0,0.007708
+Valparaiso,Unknown,Unknown,0.002133,2.4105,1.0,0.005141
