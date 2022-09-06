@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.0,0.0,0.0,2.8749,1.0,0.0
-Drenthe,Unknown,Unknown,2e-06,2.8749,1.0,6e-06
-Flevoland,Unknown,Unknown,2e-06,2.8749,1.0,7e-06
-Friesland,Unknown,Unknown,2e-06,2.8749,1.0,4e-06
-Gelderland,Unknown,Unknown,0.0,2.8749,1.0,1e-06
-Groningen,Unknown,Unknown,2e-06,2.8749,1.0,5e-06
-Limburg,Unknown,Unknown,1e-06,2.8749,1.0,3e-06
-Noord-Brabant,Unknown,Unknown,0.000273,2.8749,1.0,0.000785
-Noord-Holland,Unknown,Unknown,0.000301,2.8749,1.0,0.000866
-Overijssel,Unknown,Unknown,0.000291,2.8749,1.0,0.000836
-Utrecht,Unknown,Unknown,1e-06,2.8749,1.0,2e-06
-Zeeland,Unknown,Unknown,3e-06,2.8749,1.0,7e-06
-Zuid-Holland,Unknown,Unknown,0.000295,2.8749,1.0,0.000849
-Aruba,Unknown,Unknown,0.000927,2.8749,1.0,0.002666
-Curacao,Unknown,Unknown,0.000158,2.8749,1.0,0.000455
-Sint Maarten,Unknown,Unknown,0.000257,2.8749,1.0,0.000737
-Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.002212,2.8749,1.0,0.006359
+Entire country,0.246682,0.246682,0.042917,2.874,2.0,0.246682
+Drenthe,Unknown,Unknown,0.080461,2.874,2.0,0.462483
+Flevoland,Unknown,Unknown,0.105874,2.874,2.0,0.608558
+Friesland,Unknown,Unknown,0.083479,2.874,2.0,0.479834
+Gelderland,Unknown,Unknown,0.106498,2.874,2.0,0.612144
+Groningen,Unknown,Unknown,0.084967,2.874,2.0,0.488382
+Limburg,Unknown,Unknown,0.119138,2.874,2.0,0.684797
+Noord-Brabant,Unknown,Unknown,0.000278,2.874,1.0,0.0008
+Noord-Holland,Unknown,Unknown,0.000272,2.874,1.0,0.000781
+Overijssel,Unknown,Unknown,0.000305,2.874,1.0,0.000875
+Utrecht,Unknown,Unknown,0.114796,2.874,2.0,0.659838
+Zeeland,Unknown,Unknown,0.090068,2.874,2.0,0.517705
+Zuid-Holland,Unknown,Unknown,0.00027,2.874,1.0,0.000777
+Aruba,Unknown,Unknown,0.001152,2.874,1.2708,0.004208
+Curacao,Unknown,Unknown,0.000158,2.874,1.0,0.000455
+Sint Maarten,Unknown,Unknown,2.3e-05,2.874,1.0,6.7e-05
+Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.002212,2.874,1.0,0.006357

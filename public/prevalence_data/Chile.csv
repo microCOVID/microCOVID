@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00481,0.00481,0.001996,2.4097,1.0,0.00481
-Antofagasta,Unknown,Unknown,0.002077,2.4097,1.0,0.005006
-Araucania,Unknown,Unknown,0.002746,2.4097,1.0,0.006618
-Arica y Parinacota,Unknown,Unknown,0.002101,2.4097,1.0,0.005063
-Atacama,Unknown,Unknown,0.004426,2.4097,1.0,0.010666
-Aysen,Unknown,Unknown,0.002317,2.4097,1.0,0.005583
-Biobio,Unknown,Unknown,0.00306,2.4097,1.0,0.007374
-Coquimbo,Unknown,Unknown,0.002631,2.4097,1.0,0.006339
-Los Lagos,Unknown,Unknown,0.00188,2.4097,1.0,0.00453
-Los Rios,Unknown,Unknown,0.003058,2.4097,1.0,0.00737
-Magallanes,Unknown,Unknown,0.00227,2.4097,1.0,0.00547
-Maule,Unknown,Unknown,0.003393,2.4097,1.0,0.008177
-Metropolitana,Unknown,Unknown,0.001527,2.4097,1.0,0.003678
-Nuble,Unknown,Unknown,0.003625,2.4097,1.0,0.008734
-OHiggins,Unknown,Unknown,0.001939,2.4097,1.0,0.004672
-Tarapaca,Unknown,Unknown,0.002689,2.4097,1.0,0.006481
-Valparaiso,Unknown,Unknown,0.001989,2.4097,1.0,0.004793
+Entire country,0.004683,0.004683,0.001944,2.4092,1.0,0.004683
+Antofagasta,Unknown,Unknown,0.001923,2.4092,1.0,0.004632
+Araucania,Unknown,Unknown,0.002619,2.4092,1.0,0.00631
+Arica y Parinacota,Unknown,Unknown,0.001955,2.4092,1.0,0.00471
+Atacama,Unknown,Unknown,0.004361,2.4092,1.0,0.010506
+Aysen,Unknown,Unknown,0.002142,2.4092,1.0,0.005161
+Biobio,Unknown,Unknown,0.002951,2.4092,1.0,0.007109
+Coquimbo,Unknown,Unknown,0.002603,2.4092,1.0,0.006271
+Los Lagos,Unknown,Unknown,0.001805,2.4092,1.0,0.004349
+Los Rios,Unknown,Unknown,0.002871,2.4092,1.0,0.006918
+Magallanes,Unknown,Unknown,0.002306,2.4092,1.0,0.005555
+Maule,Unknown,Unknown,0.003347,2.4092,1.0,0.008063
+Metropolitana,Unknown,Unknown,0.001521,2.4092,1.0,0.003665
+Nuble,Unknown,Unknown,0.003458,2.4092,1.0,0.008331
+OHiggins,Unknown,Unknown,0.001887,2.4092,1.0,0.004547
+Tarapaca,Unknown,Unknown,0.002553,2.4092,1.0,0.006151
+Valparaiso,Unknown,Unknown,0.001913,2.4092,1.0,0.004609

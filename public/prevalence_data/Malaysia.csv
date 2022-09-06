@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001061,0.001061,0.000472,2.249,1.0,0.001061
-Johor,Unknown,Unknown,0.000139,2.249,1.0,0.000313
-Kedah,Unknown,Unknown,0.00023,2.249,1.0,0.000516
-Kelantan,Unknown,Unknown,0.000267,2.249,1.0,0.0006
-Melaka,Unknown,Unknown,0.000729,2.249,1.0,0.00164
-Negeri Sembilan,Unknown,Unknown,0.000662,2.249,1.0,0.00149
-Pahang,Unknown,Unknown,0.000244,2.249,1.0,0.00055
-Perak,Unknown,Unknown,0.000519,2.249,1.0,0.001168
-Perlis,Unknown,Unknown,0.000251,2.249,1.0,0.000565
-Pulau Pinang,Unknown,Unknown,0.000344,2.249,1.0,0.000773
-Sabah,Unknown,Unknown,0.000361,2.249,1.0,0.000812
-Sarawak,Unknown,Unknown,0.000225,2.249,1.0,0.000506
-Selangor,Unknown,Unknown,0.000676,2.249,1.0,0.001521
-Terengganu,Unknown,Unknown,0.000199,2.249,1.0,0.000448
-W.P. Kuala Lumpur,Unknown,Unknown,0.00165,2.249,1.0,0.00371
-W.P. Labuan,Unknown,Unknown,0.000372,2.249,1.0,0.000837
-W.P. Putrajaya,Unknown,Unknown,0.002249,2.249,1.0,0.005057
+Entire country,0.001054,0.001054,0.000469,2.2488,1.0,0.001054
+Johor,Unknown,Unknown,0.000135,2.2488,1.0,0.000304
+Kedah,Unknown,Unknown,0.000258,2.2488,1.009,0.000585
+Kelantan,Unknown,Unknown,0.000248,2.2488,1.0,0.000559
+Melaka,Unknown,Unknown,0.000701,2.2488,1.0,0.001577
+Negeri Sembilan,Unknown,Unknown,0.000622,2.2488,1.0,0.001398
+Pahang,Unknown,Unknown,0.000247,2.2488,1.0,0.000556
+Perak,Unknown,Unknown,0.000508,2.2488,1.0,0.001143
+Perlis,Unknown,Unknown,0.000251,2.2488,1.0,0.000565
+Pulau Pinang,Unknown,Unknown,0.00034,2.2488,1.0,0.000764
+Sabah,Unknown,Unknown,0.000356,2.2488,1.0,0.0008
+Sarawak,Unknown,Unknown,0.000231,2.2488,1.0,0.00052
+Selangor,Unknown,Unknown,0.000622,2.2488,1.0,0.001398
+Terengganu,Unknown,Unknown,0.000193,2.2488,1.0,0.000434
+W.P. Kuala Lumpur,Unknown,Unknown,0.001841,2.2488,1.1842,0.004902
+W.P. Labuan,Unknown,Unknown,0.000372,2.2488,1.0,0.000837
+W.P. Putrajaya,Unknown,Unknown,0.002533,2.2488,1.0,0.005697
