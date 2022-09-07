@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004683,0.004683,0.001944,2.4092,1.0,0.004683
-Antofagasta,Unknown,Unknown,0.001923,2.4092,1.0,0.004632
-Araucania,Unknown,Unknown,0.002619,2.4092,1.0,0.00631
-Arica y Parinacota,Unknown,Unknown,0.001955,2.4092,1.0,0.00471
-Atacama,Unknown,Unknown,0.004361,2.4092,1.0,0.010506
-Aysen,Unknown,Unknown,0.002142,2.4092,1.0,0.005161
-Biobio,Unknown,Unknown,0.002951,2.4092,1.0,0.007109
-Coquimbo,Unknown,Unknown,0.002603,2.4092,1.0,0.006271
-Los Lagos,Unknown,Unknown,0.001805,2.4092,1.0,0.004349
-Los Rios,Unknown,Unknown,0.002871,2.4092,1.0,0.006918
-Magallanes,Unknown,Unknown,0.002306,2.4092,1.0,0.005555
-Maule,Unknown,Unknown,0.003347,2.4092,1.0,0.008063
-Metropolitana,Unknown,Unknown,0.001521,2.4092,1.0,0.003665
-Nuble,Unknown,Unknown,0.003458,2.4092,1.0,0.008331
-OHiggins,Unknown,Unknown,0.001887,2.4092,1.0,0.004547
-Tarapaca,Unknown,Unknown,0.002553,2.4092,1.0,0.006151
-Valparaiso,Unknown,Unknown,0.001913,2.4092,1.0,0.004609
+Entire country,0.00456,0.00456,0.001893,2.4088,1.0,0.00456
+Antofagasta,Unknown,Unknown,0.001885,2.4088,1.0,0.00454
+Araucania,Unknown,Unknown,0.002481,2.4088,1.0,0.005977
+Arica y Parinacota,Unknown,Unknown,0.001845,2.4088,1.0,0.004443
+Atacama,Unknown,Unknown,0.004157,2.4088,1.0,0.010012
+Aysen,Unknown,Unknown,0.002113,2.4088,1.0,0.00509
+Biobio,Unknown,Unknown,0.002912,2.4088,1.0,0.007014
+Coquimbo,Unknown,Unknown,0.002484,2.4088,1.0,0.005984
+Los Lagos,Unknown,Unknown,0.001746,2.4088,1.0,0.004206
+Los Rios,Unknown,Unknown,0.00284,2.4088,1.0,0.006841
+Magallanes,Unknown,Unknown,0.002108,2.4088,1.0,0.005077
+Maule,Unknown,Unknown,0.003265,2.4088,1.0,0.007865
+Metropolitana,Unknown,Unknown,0.001487,2.4088,1.0,0.003581
+Nuble,Unknown,Unknown,0.003358,2.4088,1.0,0.008089
+OHiggins,Unknown,Unknown,0.00183,2.4088,1.0,0.004409
+Tarapaca,Unknown,Unknown,0.002408,2.4088,1.0,0.005801
+Valparaiso,Unknown,Unknown,0.00191,2.4088,1.0,0.0046
