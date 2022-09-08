@@ -1,35 +1,35 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000141,0.000141,5.9e-05,2.0422,1.1743,0.000141
-Anhui,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Beijing,Unknown,Unknown,2e-06,2.0422,1.6786,8e-06
-Chongqing,Unknown,Unknown,1e-06,2.0422,1.0,2e-06
-Fujian,Unknown,Unknown,2e-06,2.0422,1.1791,5e-06
-Gansu,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Guangdong,Unknown,Unknown,4e-06,2.0422,2.0,1.6e-05
-Guangxi,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Guizhou,Unknown,Unknown,0.0,2.0422,2.0,1e-06
-Hainan,Unknown,Unknown,1.7e-05,2.0422,1.0,3.5e-05
-Hebei,Unknown,Unknown,0.0,2.0422,1.5714,1e-06
-Heilongjiang,Unknown,Unknown,4e-06,2.0422,2.0,1.6e-05
-Henan,Unknown,Unknown,0.0,2.0422,1.0,1e-06
-Hubei,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Hunan,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Inner Mongolia,Unknown,Unknown,6e-06,2.0422,2.0,2.5e-05
-Jiangsu,Unknown,Unknown,0.0,2.0422,1.125,0.0
-Jiangxi,Unknown,Unknown,0.0,2.0422,2.0,1e-06
-Jilin,Unknown,Unknown,1e-06,2.0422,1.0,2e-06
-Liaoning,Unknown,Unknown,1e-06,2.0422,2.0,5e-06
-Ningxia,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Qinghai,Unknown,Unknown,5e-06,2.0422,1.5263,1.6e-05
-Shaanxi,Unknown,Unknown,1e-06,2.0422,1.0,2e-06
-Shandong,Unknown,Unknown,0.0,2.0422,2.0,2e-06
-Shanghai,Unknown,Unknown,2e-06,2.0422,1.5676,8e-06
-Shanxi,Unknown,Unknown,0.0,2.0422,1.0,0.0
-Sichuan,Unknown,Unknown,9e-06,2.0422,1.1355,2.1e-05
-Tianjin,Unknown,Unknown,2e-06,2.0422,1.0,5e-06
-Tibet,Unknown,Unknown,0.000112,2.0422,1.2601,0.000288
-Xinjiang,Unknown,Unknown,1e-06,2.0422,1.0,1e-06
-Yunnan,Unknown,Unknown,0.0,2.0422,1.3636,1e-06
-Zhejiang,Unknown,Unknown,0.0,2.0422,2.0,1e-06
-Hong Kong,Unknown,Unknown,0.009402,2.0422,1.1787,0.022632
-Macau,Unknown,Unknown,2e-06,2.0422,1.0,3e-06
+Entire country,0.000139,0.000139,5.9e-05,2.0421,1.1522,0.000139
+Anhui,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Beijing,Unknown,Unknown,3e-06,2.0421,1.8667,1e-05
+Chongqing,Unknown,Unknown,1e-06,2.0421,1.0,1e-06
+Fujian,Unknown,Unknown,2e-06,2.0421,1.1493,4e-06
+Gansu,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Guangdong,Unknown,Unknown,4e-06,2.0421,2.0,1.6e-05
+Guangxi,Unknown,Unknown,0.0,2.0421,2.0,1e-06
+Guizhou,Unknown,Unknown,0.0,2.0421,2.0,1e-06
+Hainan,Unknown,Unknown,1.5e-05,2.0421,1.0,3.1e-05
+Hebei,Unknown,Unknown,0.0,2.0421,1.8333,1e-06
+Heilongjiang,Unknown,Unknown,4e-06,2.0421,2.0,1.6e-05
+Henan,Unknown,Unknown,0.0,2.0421,1.0,1e-06
+Hubei,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Hunan,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Inner Mongolia,Unknown,Unknown,8e-06,2.0421,2.0,3.4e-05
+Jiangsu,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Jiangxi,Unknown,Unknown,0.0,2.0421,2.0,1e-06
+Jilin,Unknown,Unknown,1e-06,2.0421,2.0,3e-06
+Liaoning,Unknown,Unknown,1e-06,2.0421,1.4242,3e-06
+Ningxia,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Qinghai,Unknown,Unknown,5e-06,2.0421,1.3,1.2e-05
+Shaanxi,Unknown,Unknown,1e-06,2.0421,1.0,2e-06
+Shandong,Unknown,Unknown,1e-06,2.0421,2.0,2e-06
+Shanghai,Unknown,Unknown,2e-06,2.0421,1.4878,8e-06
+Shanxi,Unknown,Unknown,0.0,2.0421,1.0,0.0
+Sichuan,Unknown,Unknown,8e-06,2.0421,1.0,1.7e-05
+Tianjin,Unknown,Unknown,2e-06,2.0421,1.0,3e-06
+Tibet,Unknown,Unknown,0.000102,2.0421,1.0973,0.000229
+Xinjiang,Unknown,Unknown,1e-06,2.0421,1.0,1e-06
+Yunnan,Unknown,Unknown,0.0,2.0421,1.2857,1e-06
+Zhejiang,Unknown,Unknown,0.0,2.0421,2.0,1e-06
+Hong Kong,Unknown,Unknown,0.009495,2.0421,1.1592,0.022477
+Macau,Unknown,Unknown,2e-06,2.0421,1.0,3e-06
