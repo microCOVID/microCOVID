@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001029,0.001029,0.000458,2.2482,1.0,0.001029
-Johor,Unknown,Unknown,0.000131,2.2482,1.0,0.000295
-Kedah,Unknown,Unknown,0.000221,2.2482,1.0,0.000498
-Kelantan,Unknown,Unknown,0.00021,2.2482,1.0,0.000472
-Melaka,Unknown,Unknown,0.000642,2.2482,1.0,0.001444
-Negeri Sembilan,Unknown,Unknown,0.000602,2.2482,1.0,0.001352
-Pahang,Unknown,Unknown,0.000243,2.2482,1.0,0.000546
-Perak,Unknown,Unknown,0.000473,2.2482,1.0,0.001064
-Perlis,Unknown,Unknown,0.000224,2.2482,1.0,0.000503
-Pulau Pinang,Unknown,Unknown,0.000312,2.2482,1.0,0.000701
-Sabah,Unknown,Unknown,0.000327,2.2482,1.0,0.000734
-Sarawak,Unknown,Unknown,0.000234,2.2482,1.0,0.000526
-Selangor,Unknown,Unknown,0.000705,2.2482,1.0,0.001585
-Terengganu,Unknown,Unknown,0.000183,2.2482,1.0,0.000412
-W.P. Kuala Lumpur,Unknown,Unknown,0.001637,2.2482,1.0,0.003681
-W.P. Labuan,Unknown,Unknown,0.000322,2.2482,1.0,0.000724
-W.P. Putrajaya,Unknown,Unknown,0.002334,2.2482,1.0,0.005247
+Entire country,0.00102,0.00102,0.000454,2.248,1.0,0.00102
+Johor,Unknown,Unknown,0.000128,2.248,1.0,0.000288
+Kedah,Unknown,Unknown,0.000237,2.248,1.0,0.000533
+Kelantan,Unknown,Unknown,0.000218,2.248,1.0,0.000489
+Melaka,Unknown,Unknown,0.000658,2.248,1.0,0.00148
+Negeri Sembilan,Unknown,Unknown,0.00063,2.248,1.0,0.001416
+Pahang,Unknown,Unknown,0.000241,2.248,1.0,0.000543
+Perak,Unknown,Unknown,0.000485,2.248,1.0,0.00109
+Perlis,Unknown,Unknown,0.000212,2.248,1.0,0.000477
+Pulau Pinang,Unknown,Unknown,0.000301,2.248,1.0,0.000677
+Sabah,Unknown,Unknown,0.000317,2.248,1.0,0.000713
+Sarawak,Unknown,Unknown,0.000252,2.248,1.136,0.000644
+Selangor,Unknown,Unknown,0.000655,2.248,1.0,0.001473
+Terengganu,Unknown,Unknown,0.000187,2.248,1.0,0.000421
+W.P. Kuala Lumpur,Unknown,Unknown,0.001676,2.248,1.0,0.003768
+W.P. Labuan,Unknown,Unknown,0.000332,2.248,1.0,0.000746
+W.P. Putrajaya,Unknown,Unknown,0.002495,2.248,1.0,0.005609
