@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.00102,0.00102,0.000454,2.248,1.0,0.00102
-Johor,Unknown,Unknown,0.000128,2.248,1.0,0.000288
-Kedah,Unknown,Unknown,0.000237,2.248,1.0,0.000533
-Kelantan,Unknown,Unknown,0.000218,2.248,1.0,0.000489
-Melaka,Unknown,Unknown,0.000658,2.248,1.0,0.00148
-Negeri Sembilan,Unknown,Unknown,0.00063,2.248,1.0,0.001416
-Pahang,Unknown,Unknown,0.000241,2.248,1.0,0.000543
-Perak,Unknown,Unknown,0.000485,2.248,1.0,0.00109
-Perlis,Unknown,Unknown,0.000212,2.248,1.0,0.000477
-Pulau Pinang,Unknown,Unknown,0.000301,2.248,1.0,0.000677
-Sabah,Unknown,Unknown,0.000317,2.248,1.0,0.000713
-Sarawak,Unknown,Unknown,0.000252,2.248,1.136,0.000644
-Selangor,Unknown,Unknown,0.000655,2.248,1.0,0.001473
-Terengganu,Unknown,Unknown,0.000187,2.248,1.0,0.000421
-W.P. Kuala Lumpur,Unknown,Unknown,0.001676,2.248,1.0,0.003768
-W.P. Labuan,Unknown,Unknown,0.000332,2.248,1.0,0.000746
-W.P. Putrajaya,Unknown,Unknown,0.002495,2.248,1.0,0.005609
+Entire country,0.000996,0.000996,0.000443,2.2477,1.0,0.000996
+Johor,Unknown,Unknown,0.000134,2.2477,1.0,0.000301
+Kedah,Unknown,Unknown,0.000235,2.2477,1.0,0.000528
+Kelantan,Unknown,Unknown,0.000212,2.2477,1.0,0.000478
+Melaka,Unknown,Unknown,0.000614,2.2477,1.0,0.001381
+Negeri Sembilan,Unknown,Unknown,0.000596,2.2477,1.0,0.00134
+Pahang,Unknown,Unknown,0.000236,2.2477,1.0,0.000531
+Perak,Unknown,Unknown,0.000486,2.2477,1.0,0.001092
+Perlis,Unknown,Unknown,0.000208,2.2477,1.0,0.000468
+Pulau Pinang,Unknown,Unknown,0.000307,2.2477,1.0,0.000689
+Sabah,Unknown,Unknown,0.000311,2.2477,1.0,0.0007
+Sarawak,Unknown,Unknown,0.000234,2.2477,1.0,0.000526
+Selangor,Unknown,Unknown,0.000622,2.2477,1.0,0.001399
+Terengganu,Unknown,Unknown,0.000174,2.2477,1.0,0.000392
+W.P. Kuala Lumpur,Unknown,Unknown,0.001698,2.2477,1.0,0.003817
+W.P. Labuan,Unknown,Unknown,0.000342,2.2477,1.0,0.000769
+W.P. Putrajaya,Unknown,Unknown,0.002457,2.2477,1.0157,0.00561
