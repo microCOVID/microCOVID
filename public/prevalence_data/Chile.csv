@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004151,0.004151,0.001724,2.4075,1.0,0.004151
-Antofagasta,Unknown,Unknown,0.00157,2.4075,1.0,0.00378
-Araucania,Unknown,Unknown,0.002197,2.4075,1.0,0.005289
-Arica y Parinacota,Unknown,Unknown,0.001451,2.4075,1.0,0.003493
-Atacama,Unknown,Unknown,0.003392,2.4075,1.0,0.008166
-Aysen,Unknown,Unknown,0.002772,2.4075,1.0,0.006675
-Biobio,Unknown,Unknown,0.002681,2.4075,1.0,0.006455
-Coquimbo,Unknown,Unknown,0.002222,2.4075,1.0,0.005348
-Los Lagos,Unknown,Unknown,0.001627,2.4075,1.0,0.003916
-Los Rios,Unknown,Unknown,0.002536,2.4075,1.0,0.006106
-Magallanes,Unknown,Unknown,0.001633,2.4075,1.0,0.003932
-Maule,Unknown,Unknown,0.002928,2.4075,1.0,0.00705
-Metropolitana,Unknown,Unknown,0.001411,2.4075,1.0,0.003397
-Nuble,Unknown,Unknown,0.002898,2.4075,1.0,0.006978
-OHiggins,Unknown,Unknown,0.001597,2.4075,1.0,0.003846
-Tarapaca,Unknown,Unknown,0.001806,2.4075,1.0,0.004348
-Valparaiso,Unknown,Unknown,0.00183,2.4075,1.0,0.004407
+Entire country,0.004063,0.004063,0.001688,2.4071,1.0,0.004063
+Antofagasta,Unknown,Unknown,0.001475,2.4071,1.0,0.00355
+Araucania,Unknown,Unknown,0.002091,2.4071,1.0,0.005034
+Arica y Parinacota,Unknown,Unknown,0.001358,2.4071,1.0,0.003269
+Atacama,Unknown,Unknown,0.003066,2.4071,1.0,0.007381
+Aysen,Unknown,Unknown,0.002734,2.4071,1.0934,0.007195
+Biobio,Unknown,Unknown,0.002616,2.4071,1.0,0.006296
+Coquimbo,Unknown,Unknown,0.00215,2.4071,1.0,0.005176
+Los Lagos,Unknown,Unknown,0.001551,2.4071,1.0,0.003732
+Los Rios,Unknown,Unknown,0.002424,2.4071,1.0,0.005836
+Magallanes,Unknown,Unknown,0.001645,2.4071,1.0,0.00396
+Maule,Unknown,Unknown,0.002885,2.4071,1.0,0.006945
+Metropolitana,Unknown,Unknown,0.001411,2.4071,1.0,0.003397
+Nuble,Unknown,Unknown,0.002819,2.4071,1.0,0.006786
+OHiggins,Unknown,Unknown,0.001554,2.4071,1.0,0.00374
+Tarapaca,Unknown,Unknown,0.001706,2.4071,1.0,0.004107
+Valparaiso,Unknown,Unknown,0.001832,2.4071,1.0,0.004409
