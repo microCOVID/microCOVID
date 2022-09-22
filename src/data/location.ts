@@ -13282,7 +13282,7 @@ export const Locations: { [key: string]: Location } = {
     label: 'Peru',
     iso3: 'PER',
     population: '32,971,846',
-    casesPastWeek: 6656,
+    casesPastWeek: 8634,
     casesIncreasingPercentage: 0.0,
     positiveCasePercentage: 0.8999999999999999,
     topLevelGroup: 'Countries',
