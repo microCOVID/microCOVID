@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,Unknown,Unknown,0.001147,2.4024,1.0,0.002756
-Antofagasta,Unknown,Unknown,0.0008,2.4024,1.0,0.001922
-Araucania,Unknown,Unknown,0.001357,2.4024,1.0,0.00326
-Arica y Parinacota,Unknown,Unknown,0.000898,2.4024,1.0,0.002157
-Atacama,Unknown,Unknown,0.001692,2.4024,1.0,0.004066
-Aysen,Unknown,Unknown,0.001551,2.4024,1.0,0.003726
-Biobio,Unknown,Unknown,0.00185,2.4024,1.0,0.004444
-Coquimbo,Unknown,Unknown,0.001098,2.4024,1.0,0.002638
-Los Lagos,Unknown,Unknown,0.000812,2.4024,1.0,0.001951
-Los Rios,Unknown,Unknown,0.001637,2.4024,1.0,0.003933
-Magallanes,Unknown,Unknown,0.000733,2.4024,1.0,0.00176
-Maule,Unknown,Unknown,0.001883,2.4024,1.0,0.004525
-Metropolitana,Unknown,Unknown,0.001053,2.4024,1.0,0.002529
-Nuble,Unknown,Unknown,0.002264,2.4024,1.0784,0.005865
-OHiggins,Unknown,Unknown,0.001034,2.4024,1.0,0.002485
-Tarapaca,Unknown,Unknown,0.000729,2.4024,1.0,0.001752
-Valparaiso,Unknown,Unknown,0.001343,2.4024,1.0,0.003225
+Entire country,Unknown,Unknown,0.001361,2.402,1.4016,0.004583
+Antofagasta,Unknown,Unknown,0.000974,2.402,1.168,0.002734
+Araucania,Unknown,Unknown,0.001544,2.402,1.2485,0.004631
+Arica y Parinacota,Unknown,Unknown,0.001017,2.402,1.3237,0.003235
+Atacama,Unknown,Unknown,0.002007,2.402,1.2241,0.005902
+Aysen,Unknown,Unknown,0.001832,2.402,1.5285,0.006727
+Biobio,Unknown,Unknown,0.002195,2.402,1.4891,0.007851
+Coquimbo,Unknown,Unknown,0.001309,2.402,1.13,0.003554
+Los Lagos,Unknown,Unknown,0.000926,2.402,1.0268,0.002283
+Los Rios,Unknown,Unknown,0.001912,2.402,1.4272,0.006556
+Magallanes,Unknown,Unknown,0.000961,2.402,1.1691,0.002698
+Maule,Unknown,Unknown,0.002287,2.402,1.3221,0.007263
+Metropolitana,Unknown,Unknown,0.001248,2.402,1.5074,0.004519
+Nuble,Unknown,Unknown,0.00269,2.402,1.6501,0.010663
+OHiggins,Unknown,Unknown,0.00125,2.402,1.4116,0.004238
+Tarapaca,Unknown,Unknown,0.000929,2.402,1.0813,0.002412
+Valparaiso,Unknown,Unknown,0.00159,2.402,1.4647,0.005596
