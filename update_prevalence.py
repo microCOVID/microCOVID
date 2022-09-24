@@ -1109,7 +1109,9 @@ class DataCache(pydantic.BaseModel):
             return self.data[url]
         except KeyError:
             pass
-        self.data[url] = requests.get(url).text
+        response = requests.get(url)
+        response.raise_for_status()
+        self.data[url] = response.text
         return self.data[url]
 
     def remove(self, url: str) -> None:
