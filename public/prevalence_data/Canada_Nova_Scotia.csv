@@ -1,6 +1,6 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.003895,0.003137,0.001101,2.9064,1.0121,0.003238
-Western,Unknown,Unknown,5e-06,2.9064,1.0,1.4e-05
-Northern,Unknown,Unknown,7e-06,2.9064,1.0,1.9e-05
-Eastern,Unknown,Unknown,6e-06,2.9064,1.0,1.8e-05
-Central,Unknown,Unknown,2e-06,2.9064,1.0,6e-06
+Entire state,0.003546,0.002856,0.000971,3.0363,1.0,0.002947
+Western,Unknown,Unknown,5e-06,3.0363,1.0,1.5e-05
+Northern,Unknown,Unknown,7e-06,3.0363,1.0,2e-05
+Eastern,Unknown,Unknown,6e-06,3.0363,1.0,1.9e-05
+Central,Unknown,Unknown,2e-06,3.0363,1.0,6e-06
