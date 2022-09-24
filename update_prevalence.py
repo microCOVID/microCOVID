@@ -1177,7 +1177,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
                 # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
                 retry_time_seconds *= 2
                 print_and_log_to_sentry(
-                    f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
+                    f"requests.exceptions.HTTPError: {e}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
                 )
                 sleep(retry_time_seconds)
                 cache.remove(url)
