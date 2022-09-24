@@ -1170,16 +1170,19 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
         try:
             contents_as_json = json.loads(cache.get(url))
             break
-        except json.JSONDecodeError as e:
-            # Lengthen the delay time each time it fails, to give the API more of a break
-            # This can lead to very very long script runs, but it (usually) eventually works
-            # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
-            retry_time_seconds *= 2
-            print_and_log_to_sentry(
-                f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
-            )
-            sleep(retry_time_seconds)
-            cache.remove(url)
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 529:
+                # Lengthen the delay time each time it fails, to give the API more of a break
+                # This can lead to very very long script runs, but it (usually) eventually works
+                # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
+                retry_time_seconds *= 2
+                print_and_log_to_sentry(
+                    f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
+                )
+                sleep(retry_time_seconds)
+                cache.remove(url)
+            else:
+                raise
     print(f"read {len(cache.get(url))} bytes")
     result = pydantic.parse_obj_as(model, json.loads(cache.get(url)))
     return result
