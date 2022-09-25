@@ -1617,7 +1617,7 @@ def main() -> None:
                 for key, appdata in county_data.items():
                     app_locations[key] = appdata
             except ValueError as e:
-                print_and_log_to_sentry(f"Couldn't calculate {state}: {e}")
+                print_and_log_to_sentry(f"Discarding state-level data from {state} due to error: {e}")
 
                 # calculator expects all subdivisions to have data populated
                 if state.app_key in app_locations[country.app_key].subdivisions:
