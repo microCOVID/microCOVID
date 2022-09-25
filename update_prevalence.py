@@ -170,30 +170,57 @@ class JHUCasesTimeseriesGlobal(pydantic.BaseModel):
     cumulative_cases: Dict[date, int] = {}
 
 
-class JHUVaccinesHourlyUs(pydantic.BaseModel):
+class JHUVaccinesTimeseriesUS(pydantic.BaseModel):
     SOURCE: ClassVar[
         str
-    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/us_data/hourly/vaccine_data_us.csv"
+    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/us_data/time_series/time_series_covid19_vaccine_us.csv"
 
-    FIPS: Optional[int]
-    Province_State: Optional[str]
-    Country_Region: Optional[str]
-    Vaccine_Type: Optional[str]
-    Doses_admin: Optional[int]  # raw numbers of doses
-    Stage_One_Doses: Optional[int]
-    Stage_Two_Doses: Optional[int]
+    # Data collection date
+    Date: date
+    # Name of the state
+    Province_State: str
+    # Name of the country (US)
+    Country_Region: Literal["US"]
+    # Cumulative number of doses administered including booster doses
+    # for states where it is reported as part of the total.
+    Doses_admin: int
+    # Cumulative number of people who received at least one vaccine
+    # dose. When the person receives a prescribed second dose it is
+    # not counted twice
+    People_at_least_one_dose: int
+    # Cumulative number of people who received a complete primary
+    # series. This means having received one dose of a single-dose
+    # vaccine or two doses on different days (regardless of time
+    # interval) of either a mRNA or a protein-based series. When the
+    # vaccine manufacturer is not reported the recipient is considered
+    # fully vaccinated with two doses.
+    People_fully_vaccinated: int
+    # Cumulative number of all the additional or booster doses
+    # administered. This metric does not reflect individual people and
+    # each dose is counted independently
+    Total_additional_doses: int
 
 
-class JHUVaccinesGlobal(pydantic.BaseModel):
+class JHUVaccinesTimeseriesGlobal(pydantic.BaseModel):
     SOURCE: ClassVar[
         str
-    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/vaccine_data_global.csv"
-
+    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/time_series_covid19_vaccine_global.csv"
+    # Data collection date
+    Date: date
+    # Country code:
+    # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv
     UID: Optional[int]
+    # Province or State name
     Province_State: Optional[str]
-    Country_Region: Optional[str]
-    People_partially_vaccinated: Optional[int]  # raw number of people
-    People_fully_vaccinated: Optional[int]
+    # Country or region name
+    Country_Region: str
+    # Cumulative number of doses administered. When a vaccine requires
+    # multiple doses, each one is counted independently
+    Doses_admin: Optional[int]
+    # Cumulative number of people who received at least one vaccine
+    # dose. When the person receives a prescribed second dose, it is
+    # not counted twice
+    People_at_least_one_dose: Optional[int]
 
 
 # Our World in Data dataset:
@@ -1122,6 +1149,11 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
     reader = csv.reader(lines)
     fields = [re.sub("^7", "Seven", re.sub("[^A-Za-z0-9_]", "_", name)) for name in next(reader)]
 
+    # verify we have every field we expect
+    for field_name in model.__fields__:
+        if field_name not in fields:
+            raise ValueError(f"Did not find expected '{field_name}' column in header of {url}")
+
     result = []
     for line in reader:
         kw: Dict[str, Optional[Union[str, int]]] = {}
@@ -1270,24 +1302,60 @@ def parse_jhu_daily_report(cache: DataCache, data: AllData, current: date) -> No
 
 
 def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
+    num_success = 0
     # Global vaccination rates
-    for item in parse_csv(cache, JHUVaccinesGlobal, JHUVaccinesGlobal.SOURCE):
-        if item.UID is None or item.People_partially_vaccinated is None:
+    for item in parse_csv(cache, JHUVaccinesTimeseriesGlobal, JHUVaccinesTimeseriesGlobal.SOURCE):
+        if effective_date > item.Date:
+            # this file is an entire timeseries history - only pay
+            # attention to most recent date
             continue
+
+        if item.UID is None:
+            if item.Country_Region == "World":
+                continue
+            else:
+                raise ValueError(f"Unexpected None for UID: {item}")
+        if item.Doses_admin is None or item.People_at_least_one_dose is None:
+            if item.Country_Region == "Eritrea":
+                # https://er.usembassy.gov/covid-19-information/
+                # "Has the government of Eritrea approved a COVID-19 vaccine for use?  No"
+                item.Doses_admin = 0
+                item.People_at_least_one_dose = 0
+            else:
+                raise ValueError(f"Unexpected Doses_admin for {item}")
         try:
-            assert item.People_fully_vaccinated is not None
             place = data.uid_to_place[item.UID]
-            place.set_total_vaccines(
-                item.People_partially_vaccinated - item.People_fully_vaccinated,
-                item.People_fully_vaccinated,
-            )
         except KeyError:
             print_and_log_to_sentry(f"Could not find UID {item.UID}")
+            continue
+
+        # as of 2022-09, at least in the US, a healthy person
+        # could have had two base doses of an mRNA vaccine, and
+        # two boosters.
+        max_doses_available = 4
+
+        # This is not the right type of data to figure out the
+        # total number of partial and complete vaccinations, so
+        # let's do a conservative approximation and assume a
+        # maximum number of the total doses administered went to
+        # healthy and safe people getting fully boosted
+        complete_vaccinations: int = min(place.population, round(item.Doses_admin / max_doses_available))
+        partial_vaccinations: int = item.People_at_least_one_dose - complete_vaccinations
+        place.set_total_vaccines(partial_vaccinations, complete_vaccinations)
+        num_success += 1
+    if num_success == 0:
+        raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
 
 
 def parse_jhu_vaccines_hourly_us(cache: DataCache, data: AllData) -> None:
+    num_success = 0
     # US vaccination rates
-    for item in parse_csv(cache, JHUVaccinesHourlyUs, JHUVaccinesHourlyUs.SOURCE):
+    for item in parse_csv(cache, JHUVaccinesTimeseriesUS, JHUVaccinesTimeseriesUS.SOURCE):
+        if effective_date > item.Date:
+            # this file is an entire timeseries history - only pay
+            # attention to most recent date
+            continue
+
         assert item.Province_State is not None
         assert item.Country_Region is not None
         try:
@@ -1297,20 +1365,13 @@ def parse_jhu_vaccines_hourly_us(cache: DataCache, data: AllData) -> None:
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # print(f"Could not find state {item.Province_State}")
-        if item.Vaccine_Type == "All":
-            state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
-        elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
-            # If listed, Stage_One_Doses appears to include people with second doses.
-            if item.Stage_Two_Doses is None:
-                partially_vaccinated = None
-            elif item.Stage_One_Doses is None:
-                assert item.Doses_admin is not None
-                partially_vaccinated = item.Doses_admin - item.Stage_Two_Doses * 2
-            else:
-                partially_vaccinated = item.Stage_One_Doses - item.Stage_Two_Doses
-            state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
-        elif item.Vaccine_Type == "Janssen":
-            state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
+
+        partial_vaccinations: int = item.People_at_least_one_dose - item.People_fully_vaccinated
+        complete_vaccinations: int = item.People_fully_vaccinated
+        state.set_total_vaccines(partial_vaccinations, complete_vaccinations)
+        num_success += 1
+    if num_success == 0:
+        raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
 
 
 def parse_can_region_summary_by_county(cache: DataCache, data: AllData) -> None:
