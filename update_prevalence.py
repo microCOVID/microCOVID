@@ -1347,7 +1347,7 @@ def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
         raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
 
 
-def parse_jhu_vaccines_hourly_us(cache: DataCache, data: AllData) -> None:
+def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
     num_success = 0
     # US vaccination rates
     for item in parse_csv(cache, JHUVaccinesTimeseriesUS, JHUVaccinesTimeseriesUS.SOURCE):
@@ -1629,7 +1629,7 @@ def main() -> None:
         parse_jhu_vaccines_global(cache, data)
 
         # US vaccination rates
-        parse_jhu_vaccines_hourly_us(cache, data)
+        parse_jhu_vaccines_us(cache, data)
 
         # Test positivity and vaccination status per US county and state
         parse_can_region_summary_by_county(cache, data)
