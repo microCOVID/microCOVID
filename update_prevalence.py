@@ -1301,6 +1301,34 @@ def parse_jhu_daily_report(cache: DataCache, data: AllData, current: date) -> No
         place.cumulative_cases[current] = line.Confirmed
 
 
+# returns estimate of number of people who completed their primary
+# series (regardless of their booster status) given number of people
+# with at least one dose
+def estimate_primary_series_complete(
+    # people with at least one dose
+    partial_vaccinations: int,
+) -> int:
+    # https://covid.cdc.gov/covid-data-tracker/#vaccinations_vacc-people-additional-dose-totalpop
+    #
+    # As of 2022-09, CDC says: 68% of population has completed
+    # primary series; 49% of those who completed a primary series
+    # got first booster, 36% of those who got a first booster shot
+    # got a second.
+    #
+    # 1 dose: 263,812,108
+    # completed primary series: 224,980,931
+    # People with a First Booster Dose: 109,578,270
+    # People with a Second Booster Dose: 23,118,101
+    #
+    # Let's assume that these trends can be applied world-wide,
+    # and thus if n people had at least one dose,
+    # 224980931/263812108 = 85% of them completed the primary
+    # series.
+    primary_series_completion_ratio = 0.85
+
+    return round(partial_vaccinations * primary_series_completion_ratio)
+
+
 def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
     num_success = 0
     # Global vaccination rates
@@ -1329,17 +1357,7 @@ def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
             print_and_log_to_sentry(f"Could not find UID {item.UID}")
             continue
 
-        # as of 2022-09, at least in the US, a healthy person
-        # could have had two base doses of an mRNA vaccine, and
-        # two boosters.
-        max_doses_available = 4
-
-        # This is not the right type of data to figure out the
-        # total number of partial and complete vaccinations, so
-        # let's do a conservative approximation and assume a
-        # maximum number of the total doses administered went to
-        # healthy and safe people getting fully boosted
-        complete_vaccinations: int = min(place.population, round(item.Doses_admin / max_doses_available))
+        complete_vaccinations: int = estimate_primary_series_complete(item.People_at_least_one_dose)
         partial_vaccinations: int = item.People_at_least_one_dose - complete_vaccinations
         place.set_total_vaccines(partial_vaccinations, complete_vaccinations)
         num_success += 1
