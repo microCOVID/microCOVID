@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,Unknown,Unknown,0.000401,2.2439,1.0,0.000899
-Johor,Unknown,Unknown,8.6e-05,2.2439,1.0,0.000192
-Kedah,Unknown,Unknown,0.000235,2.2439,1.0039,0.000529
-Kelantan,Unknown,Unknown,0.000214,2.2439,1.0,0.000479
-Melaka,Unknown,Unknown,0.000529,2.2439,1.0,0.001186
-Negeri Sembilan,Unknown,Unknown,0.000594,2.2439,1.077,0.001435
-Pahang,Unknown,Unknown,0.000178,2.2439,1.0,0.0004
-Perak,Unknown,Unknown,0.000468,2.2439,1.0,0.00105
-Perlis,Unknown,Unknown,0.000173,2.2439,1.0,0.000388
-Pulau Pinang,Unknown,Unknown,0.000318,2.2439,1.0,0.000713
-Sabah,Unknown,Unknown,0.00028,2.2439,1.0,0.000629
-Sarawak,Unknown,Unknown,0.000234,2.2439,1.0,0.000525
-Selangor,Unknown,Unknown,0.000562,2.2439,1.0,0.00126
-Terengganu,Unknown,Unknown,0.000153,2.2439,1.0,0.000343
-W.P. Kuala Lumpur,Unknown,Unknown,0.001501,2.2439,1.0,0.003369
-W.P. Labuan,Unknown,Unknown,0.000282,2.2439,1.0,0.000632
-W.P. Putrajaya,Unknown,Unknown,0.001641,2.2439,1.0,0.003683
+Entire country,Unknown,Unknown,0.0004,2.2436,1.0,0.000897
+Johor,Unknown,Unknown,8.6e-05,2.2436,1.0,0.000193
+Kedah,Unknown,Unknown,0.000234,2.2436,1.0,0.000526
+Kelantan,Unknown,Unknown,0.00021,2.2436,1.0,0.000471
+Melaka,Unknown,Unknown,0.000524,2.2436,1.0,0.001176
+Negeri Sembilan,Unknown,Unknown,0.000602,2.2436,1.1664,0.001574
+Pahang,Unknown,Unknown,0.000176,2.2436,1.0,0.000395
+Perak,Unknown,Unknown,0.000481,2.2436,1.0211,0.001103
+Perlis,Unknown,Unknown,0.000212,2.2436,1.0,0.000476
+Pulau Pinang,Unknown,Unknown,0.000329,2.2436,1.0,0.000738
+Sabah,Unknown,Unknown,0.00028,2.2436,1.0,0.000627
+Sarawak,Unknown,Unknown,0.000231,2.2436,1.0,0.000518
+Selangor,Unknown,Unknown,0.000544,2.2436,1.0,0.001221
+Terengganu,Unknown,Unknown,0.000159,2.2436,1.0,0.000357
+W.P. Kuala Lumpur,Unknown,Unknown,0.001512,2.2436,1.006,0.003413
+W.P. Labuan,Unknown,Unknown,0.000252,2.2436,1.0,0.000564
+W.P. Putrajaya,Unknown,Unknown,0.001755,2.2436,1.0,0.003938
