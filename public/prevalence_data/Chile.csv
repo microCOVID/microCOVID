@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,Unknown,Unknown,0.00219,2.4004,2.0,0.010512
-Antofagasta,Unknown,Unknown,0.001463,2.4004,2.0,0.007025
-Araucania,Unknown,Unknown,0.002532,2.4004,2.0,0.012157
-Arica y Parinacota,Unknown,Unknown,0.001429,2.4004,2.0,0.006859
-Atacama,Unknown,Unknown,0.002845,2.4004,2.0,0.013657
-Aysen,Unknown,Unknown,0.002617,2.4004,2.0,0.012565
-Biobio,Unknown,Unknown,0.003594,2.4004,2.0,0.017253
-Coquimbo,Unknown,Unknown,0.002107,2.4004,2.0,0.010114
-Los Lagos,Unknown,Unknown,0.001425,2.4004,2.0,0.006842
-Los Rios,Unknown,Unknown,0.003084,2.4004,2.0,0.014808
-Magallanes,Unknown,Unknown,0.001675,2.4004,2.0,0.008043
-Maule,Unknown,Unknown,0.003771,2.4004,2.0,0.018106
-Metropolitana,Unknown,Unknown,0.00201,2.4004,2.0,0.009648
-Nuble,Unknown,Unknown,0.004394,2.4004,2.0,0.021096
-OHiggins,Unknown,Unknown,0.002196,2.4004,2.0,0.010541
-Tarapaca,Unknown,Unknown,0.001389,2.4004,2.0,0.006666
-Valparaiso,Unknown,Unknown,0.002474,2.4004,2.0,0.011878
+Entire country,Unknown,Unknown,0.001242,2.4,1.185,0.003533
+Antofagasta,Unknown,Unknown,0.00077,2.4,1.0197,0.001885
+Araucania,Unknown,Unknown,0.001384,2.4,1.0997,0.003653
+Arica y Parinacota,Unknown,Unknown,0.000664,2.4,1.0,0.001592
+Atacama,Unknown,Unknown,0.001364,2.4,1.0,0.003273
+Aysen,Unknown,Unknown,0.001241,2.4,1.0,0.002978
+Biobio,Unknown,Unknown,0.002083,2.4,1.2369,0.006184
+Coquimbo,Unknown,Unknown,0.001199,2.4,1.1934,0.003433
+Los Lagos,Unknown,Unknown,0.00071,2.4,1.0,0.001703
+Los Rios,Unknown,Unknown,0.00172,2.4,1.1147,0.004602
+Magallanes,Unknown,Unknown,0.001165,2.4,1.8558,0.005188
+Maule,Unknown,Unknown,0.002259,2.4,1.3214,0.007165
+Metropolitana,Unknown,Unknown,0.001141,2.4,1.1941,0.00327
+Nuble,Unknown,Unknown,0.002636,2.4,1.3215,0.008361
+OHiggins,Unknown,Unknown,0.001341,2.4,1.392,0.004479
+Tarapaca,Unknown,Unknown,0.000774,2.4,1.1233,0.002088
+Valparaiso,Unknown,Unknown,0.001362,2.4,1.1175,0.003654
