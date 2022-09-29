@@ -10,6 +10,7 @@ import collections
 import csv
 from functools import reduce
 import json
+import logging
 import re
 import os
 import shutil
@@ -48,14 +49,50 @@ except ImportError:
     print()
     raise
 
+logger = logging.getLogger("update_prevalence")
+
+
+def configure_logging() -> None:
+    #
+    # Configure logging so we can treat filter messages from this script
+    # separately from those from libraries
+    #
+    # https://docs.python.org/3/howto/logging.html
+    logger.setLevel(logging.DEBUG)
+
+    #
+    # Configure how things appear on stdout separately from how sentry
+    # backend treats things
+    #
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.INFO)
+    # don't decorate messages for readability on console
+    formatter = logging.Formatter("%(message)s")
+    ch.setFormatter(formatter)
+
+    # use this formatting for all logging; set it on the root handler
+    logging.getLogger().addHandler(ch)
+
+    # https://docs.sentry.io/platforms/python/guides/logging/
+    # https://getsentry.github.io/sentry-python/integrations.html#module-sentry_sdk.integrations.logging
+    sentry_sdk.init(
+        "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for performance monitoring.
+        # We recommend adjusting this value in production.
+        traces_sample_rate=1.0,
+    )
+    # set which level of logging will also be sent to sentry
+    sentry_sdk.set_level("warning")
+
+
 CAN_API_KEY = os.environ.get("CAN_API_KEY")
 
 Model = TypeVar("Model", bound=pydantic.BaseModel)
 
 
 def print_and_log_to_sentry(message: str) -> None:
-    sentry_sdk.capture_message(message)
-    print(message)
+    logger.warning(message)
 
 
 def calc_effective_date() -> date:
@@ -1093,7 +1130,7 @@ class DataCache(pydantic.BaseModel):
             pass
         except Exception as exc:
             sentry_sdk.capture_exception(exc)
-            print(f"discarding corrupted cache: {exc!r}")
+            logger.warning(f"discarding corrupted cache: {exc!r}")
             os.unlink(".prevalence_data.json")
         else:
             if result.effective_date == effective_date:
@@ -1117,7 +1154,7 @@ class DataCache(pydantic.BaseModel):
 
 
 def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
-    print(f"Fetching {url}...", end=" ", flush=True)
+    logger.info(f"Fetching {url}...")
     lines = cache.get(url).splitlines()
     reader = csv.reader(lines)
     fields = [re.sub("^7", "Seven", re.sub("[^A-Za-z0-9_]", "_", name)) for name in next(reader)]
@@ -1144,14 +1181,14 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
                 kw[field] = val
         result.append(model(**kw))
 
-    print(f"read {len(lines)} objects")
+    logger.info(f"read {len(lines)} objects")
     return result
 
 
 def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
-    print(f"Fetching {url}...", end=" ", flush=True)
+    logger.info(f"Fetching {url}...")
     result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url)))  # type: ignore
-    print(f"read {len(result)} objects")
+    logger.debug(f"read {len(result)} objects")
     return result
 
 
@@ -1159,7 +1196,11 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     max_attempts = 4
     retry_time_seconds = 60
     for attempt in range(max_attempts + 1):
-        print(f"Fetching {url} (try {attempt + 1}/{max_attempts})...", end=" ", flush=True)
+        log_message = f"Fetching {url}"
+        if attempt > 0:
+            log_message += " (try {attempt + 1}/{max_attempts})"
+        log_message += "..."
+        logger.info(log_message)
         # Error case
         if attempt == max_attempts:
             raise ValueError(f"Reached max attempts ({attempt}) attempting to get JSON from {url}")
@@ -1178,7 +1219,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             )
             sleep(retry_time_seconds)
             cache.remove(url)
-    print(f"read {len(cache.get(url))} bytes")
+    logger.debug(f"read {len(cache.get(url))} bytes")
     result = pydantic.parse_obj_as(model, json.loads(cache.get(url)))
     return result
 
@@ -1296,7 +1337,7 @@ def parse_jhu_vaccines_hourly_us(cache: DataCache, data: AllData) -> None:
             sentry_sdk.capture_message("Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
-            # print(f"Could not find state {item.Province_State}")
+            # logger.warning(f"Could not find state {item.Province_State}")
         if item.Vaccine_Type == "All":
             state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
         elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
@@ -1406,7 +1447,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         if region.hruid == 9999:  # Repatriated/not reported. Skip.
             continue
         counter += 1
-        print(f"Fetching region {counter}: {region.name_short} ({region.hruid})")
+        logger.info(f"Fetching region {counter}: {region.name_short} ({region.hruid})")
 
         # pull or create our master record of this region
         place = data.get_canada_region_place(region, province_by_two_letter_abbrev[region.region])
@@ -1537,13 +1578,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 
 def main() -> None:
-    sentry_sdk.init(
-        "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
-        # Set traces_sample_rate to 1.0 to capture 100%
-        # of transactions for performance monitoring.
-        # We recommend adjusting this value in production.
-        traces_sample_rate=1.0,
-    )
+    configure_logging()
 
     if not CAN_API_KEY:
         print("Usage: CAN_API_KEY=${COVID_ACT_NOW_API_KEY} python3 %s" % sys.argv[0])
