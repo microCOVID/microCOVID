@@ -52,6 +52,36 @@ except ImportError:
 logger = logging.getLogger("update_prevalence")
 
 
+class PopulationFilteredLogging(abc.ABC):
+    @property
+    @abc.abstractmethod
+    def population_as_int(self) -> int:
+        ...
+
+    @property
+    def issue_log_level(self) -> int:
+        if self.population_as_int < 10000:
+            return logging.DEBUG
+        elif self.population_as_int < 100000:
+            return logging.INFO
+        else:
+            return logging.WARNING
+
+    def issue(self, msg: str) -> None:
+        logger.log(self.issue_log_level, msg)
+
+
+class ExtraWarningAnnotationFormatter(logging.Formatter):
+    def __init__(self) -> None:
+        super().__init__("%(message)s")
+
+    def format(self, record: logging.LogRecord) -> str:
+        s = super().format(record)
+        if record.levelno >= logging.WARNING:
+            s = f"{record.levelname}: {s}"
+        return s
+
+
 def configure_logging() -> None:
     #
     # Configure logging so we can treat filter messages from this script
@@ -67,7 +97,7 @@ def configure_logging() -> None:
     ch = logging.StreamHandler()
     ch.setLevel(logging.INFO)
     # don't decorate messages for readability on console
-    formatter = logging.Formatter("%(message)s")
+    formatter = ExtraWarningAnnotationFormatter()
     ch.setFormatter(formatter)
 
     # use this formatting for all logging; set it on the root handler
@@ -428,7 +458,7 @@ class Vaccination(pydantic.BaseModel):
 # Our unified representation:
 
 
-class Place(pydantic.BaseModel):
+class Place(pydantic.BaseModel, PopulationFilteredLogging):
     fullname: str  # "San Francisco, California, US"
     name: str  # "San Francisco"
     population: int = 0  # 881549
@@ -442,6 +472,10 @@ class Place(pydantic.BaseModel):
 
     vaccines_by_type: Optional[Dict[str, Vaccination]]
     vaccines_total = Vaccination()
+
+    @property
+    def population_as_int(self) -> int:
+        return self.population
 
     @property
     def recent_daily_cumulative_cases(self) -> List[int]:
@@ -509,18 +543,18 @@ class Place(pydantic.BaseModel):
                         break
 
             if values[0] > min(values[:-1]) and possibly_suspect_correction:
-                print_and_log_to_sentry(
-                    f"Warning: Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+                self.issue(
+                    f"Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
                 )
             if min(values[:-1]) == values[-1] and max(values) > values[-1]:
-                print_and_log_to_sentry(
-                    f"Warning: Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
+                self.issue(
+                    f"Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
                 )
             return values[-1] - min(values[:-1])
 
         # looks complicated. Print a warning.
-        print_and_log_to_sentry(
-            f"Warning: Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+        self.issue(
+            f"Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
         )
         return 0
 
@@ -754,7 +788,7 @@ class Country(Place):
         return result
 
 
-class AppLocation(pydantic.BaseModel):
+class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
     label: str
     iso3: Optional[str]
     population: str
@@ -777,13 +811,17 @@ class AppLocation(pydantic.BaseModel):
         if positivityRate is None or positivityRate > 100:
             positivityRate = 100
         if positivityRate < 0:
-            print_and_log_to_sentry(f"Warning: Positivity rate is negative: {positivityRate}")
+            self.issue(f"Positivity rate is negative: {positivityRate}")
             positivityRate = 0
         final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
 
+    @property
+    def population_as_int(self) -> int:
+        return int(self.population.replace(",", ""))
+
     def as_csv_data(self) -> Dict[str, str]:
-        population = int(self.population.replace(",", ""))
+        population = self.population_as_int
         reported = (self.casesPastWeek + 1) / population
         underreporting = self.prevalenceRatio()
         delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
@@ -1005,7 +1043,7 @@ class AllData:
                         try:
                             state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                         except ZeroDivisionError:
-                            print_and_log_to_sentry(
+                            state.issue(
                                 f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
                             )
                             state.test_positivity_rate = None
@@ -1334,7 +1372,7 @@ def parse_jhu_vaccines_hourly_us(cache: DataCache, data: AllData) -> None:
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
-            sentry_sdk.capture_message("Could not find state {item.Province_State}")
+            print_and_log_to_sentry("Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # logger.warning(f"Could not find state {item.Province_State}")
