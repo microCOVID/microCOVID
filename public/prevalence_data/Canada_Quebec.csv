@@ -1,20 +1,20 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.002606,0.002103,0.000649,3.032,1.112,0.002187
-Bas-Saint-Laurent,3.3e-05,2.7e-05,1e-05,3.032,1.0,3e-05
-Saguenay-Lac-Saint-Jean,1.2e-05,1e-05,4e-06,3.032,1.0,1.1e-05
-Capitale-Nationale,2.2e-05,1.8e-05,7e-06,3.032,1.0,2e-05
-Mauricie et Centre-du-Québec,0.000151,0.000122,4.5e-05,3.032,1.0,0.000137
-Estrie,1.3e-05,1.1e-05,4e-06,3.032,1.0,1.2e-05
-Montréal,2e-06,1e-06,0.0,3.032,1.0,1e-06
-Outaouais,6.7e-05,5.4e-05,2e-05,3.032,1.0,6e-05
-Abitibi-Témiscamingue,2.3e-05,1.8e-05,7e-06,3.032,1.0,2e-05
-Côte-Nord,0.000258,0.000209,7.7e-05,3.032,1.0,0.000234
-Nord-du-Québec,0.000251,0.000202,7.5e-05,3.032,1.0,0.000226
-Gaspésie-Îles-de-la-Madeleine,3.6e-05,2.9e-05,1.1e-05,3.032,1.0,3.3e-05
-Chaudière-Appalaches,8e-06,6e-06,2e-06,3.032,1.0,7e-06
-Laval,8e-06,6e-06,2e-06,3.032,1.0,7e-06
-Lanaudière,0.000157,0.000126,4.7e-05,3.032,1.0,0.000142
-Laurentides,5e-06,4e-06,2e-06,3.032,1.0,5e-06
-Montérégie,5e-06,4e-06,1e-06,3.032,1.0,4e-06
-Nunavik,0.001404,0.001133,0.000206,3.032,2.0,0.001248
-Terres-Cries-de-la-Baie-James,0.000181,0.000146,5.4e-05,3.032,1.0,0.000162
+Entire state,0.002433,0.001963,0.000674,3.0309,1.0,0.002042
+Bas-Saint-Laurent,1.7e-05,1.3e-05,5e-06,3.0309,1.0,1.5e-05
+Saguenay-Lac-Saint-Jean,2.4e-05,1.9e-05,7e-06,3.0309,1.0,2.2e-05
+Capitale-Nationale,0.000312,0.000252,7.5e-05,3.0309,1.2444,0.000283
+Mauricie et Centre-du-Québec,0.002978,0.002403,0.000754,3.0309,1.1794,0.002697
+Estrie,1.3e-05,1.1e-05,4e-06,3.0309,1.0,1.2e-05
+Montréal,1.7e-05,1.3e-05,3e-06,3.0309,1.6667,1.5e-05
+Outaouais,0.00144,0.001162,0.000425,3.0309,1.0059,0.001297
+Abitibi-Témiscamingue,9e-05,7.3e-05,2.7e-05,3.0309,1.0,8.2e-05
+Côte-Nord,0.005104,0.004119,0.000806,3.0309,1.8947,0.00463
+Nord-du-Québec,0.00025,0.000202,7.5e-05,3.0309,1.0,0.000226
+Gaspésie-Îles-de-la-Madeleine,7.2e-05,5.8e-05,2.2e-05,3.0309,1.0,6.6e-05
+Chaudière-Appalaches,1.5e-05,1.2e-05,5e-06,3.0309,1.0,1.4e-05
+Laval,2.3e-05,1.8e-05,7e-06,3.0309,1.0,2.1e-05
+Lanaudière,0.001747,0.00141,0.000467,3.0309,1.1166,0.001581
+Laurentides,9.3e-05,7.5e-05,2.8e-05,3.0309,1.0,8.4e-05
+Montérégie,7.4e-05,6e-05,2.2e-05,3.0309,1.0,6.7e-05
+Nunavik,0.001754,0.001415,0.000412,3.0309,1.25,0.00156
+Terres-Cries-de-la-Baie-James,0.000903,0.000729,0.000268,3.0309,1.0,0.000811
