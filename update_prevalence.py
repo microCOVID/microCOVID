@@ -1277,9 +1277,8 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
         if attempt == max_attempts:
             raise ValueError(f"Reached max attempts ({attempt}) attempting to get JSON from {url}")
 
-        # Normal JSON load attempt
         try:
-            contents_as_json = json.loads(cache.get(url))
+            cache.get(url)
             break
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 429:
@@ -1291,7 +1290,6 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
                     f"requests.exceptions.HTTPError: {e}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
                 )
                 sleep(retry_time_seconds)
-                cache.remove(url)
             else:
                 raise
     logger.debug(f"read {len(cache.get(url))} bytes")
