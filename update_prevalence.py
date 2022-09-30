@@ -1484,7 +1484,6 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
         raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
 
 
-
 def parse_can_region_summary_by_county(cache: DataCache, data: AllData) -> None:
     # Test positivity and vaccination status per US county
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
