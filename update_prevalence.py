@@ -182,8 +182,8 @@ class JHUCommonFields(pydantic.BaseModel):
     Admin2: Optional[str]
     Province_State: Optional[str]
     Country_Region: str
-    Lat: float
-    Long_: float
+    Lat: Optional[float]
+    Long_: Optional[float]
     Combined_Key: str
 
 
@@ -195,8 +195,8 @@ class JHUPlaceFacts(JHUCommonFields):
     UID: int
     iso2: str
     iso3: str
-    code3: int
-    Population: int
+    code3: Optional[int]
+    Population: Optional[int]
 
 
 class JHUDailyReport(JHUCommonFields):
@@ -207,8 +207,8 @@ class JHUDailyReport(JHUCommonFields):
     # Last_Update: datetime, but not always in consistent format - we ignore
     Confirmed: int
     Deaths: int
-    Recovered: int
-    Active: int
+    Recovered: Optional[int]
+    Active: Optional[int]
     # Incident_Rate: float, was renamed from Incidence_Rate in early November
     # Case_Fatality_Ratio: float
 
@@ -305,12 +305,12 @@ class OWIDTestingData(pydantic.BaseModel):
     Source_URL: str
     Source_label: str
     Notes: str
-    Daily_change_in_cumulative_total: int  # new tests today
-    Cumulative_total: int
-    Cumulative_total_per_thousand: float  # "per thousand" means population
-    Daily_change_in_cumulative_total_per_thousand: float
-    Seven_day_smoothed_daily_change: float  # 7-day moving average
-    Seven_day_smoothed_daily_change_per_thousand: float
+    Daily_change_in_cumulative_total: Optional[int]  # new tests today
+    Cumulative_total: Optional[int]
+    Cumulative_total_per_thousand: Optional[float]  # "per thousand" means population
+    Daily_change_in_cumulative_total_per_thousand: Optional[float]
+    Seven_day_smoothed_daily_change: Optional[float]  # 7-day moving average
+    Seven_day_smoothed_daily_change_per_thousand: Optional[float]
     Short_term_tests_per_case: Optional[float]  # appears to also be 7-day
     Short_term_positive_rate: Optional[float]
 
@@ -1242,7 +1242,7 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
                 if not info.required:
                     kw[field] = None
                 elif info.type_ in (int, float):
-                    kw[field] = "0"
+                    raise ValueError(f"Expected an int in column {field} in this line: {line} of {url}")
                 else:
                     kw[field] = ""
             elif val.endswith(".0") and val[:-2].isdigit():
@@ -1321,6 +1321,8 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Micronesia",
         "Palau",
         "Summer Olympics 2020",
+        "Winter Olympics 2022",
+        "Antarctica",
     ):
         return True
     if line.Country_Region == "US":
@@ -1332,6 +1334,9 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             "Federal Correctional Institution (FCI)",
             "Michigan Department of Corrections (MDOC)",
         ):
+            return True
+    if line.Country_Region == "Canada":
+        if line.Province_State == "Recovered":
             return True
     return False
 
@@ -1355,6 +1360,11 @@ def parse_jhu_place_facts(cache: DataCache, data: AllData, country_by_iso3: Dict
             # has its own entry so turn the combo into just Bristol Bay
             line.Admin2 = "Yakutat"
             line.Population = 604  # from Google
+        if line.Population is None:
+            if line.Admin2 == "Unassigned":
+                line.Population = 0
+            else:
+                raise ValueError(f"Please manually provide population for {line}")
         if line.Country_Region == "Korea, South":
             line.Country_Region = "South Korea"
         place = data.get_jhu_place(line)
