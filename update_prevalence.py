@@ -1282,7 +1282,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
             contents_as_json = json.loads(cache.get(url))
             break
         except requests.exceptions.HTTPError as e:
-            if e.response.status_code == 529:
+            if e.response.status_code == 429:
                 # Lengthen the delay time each time it fails, to give the API more of a break
                 # This can lead to very very long script runs, but it (usually) eventually works
                 # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
