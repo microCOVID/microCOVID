@@ -1467,7 +1467,7 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
             continue
 
         assert item.Province_State is not None
-        if item.Country_Region == '':
+        if item.Country_Region == "":
             # overall US stats - not currently used, and was
             # unreliably populated as of 2022-09 - empty values were
             # being manually fixed up but then broken again by JHU
@@ -1483,9 +1483,11 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # logger.warning(f"Could not find state {item.Province_State}")
 
-        if (item.People_at_least_one_dose is None or
-            item.People_fully_vaccinated is None or
-            item.People_fully_vaccinated is None):
+        if (
+            item.People_at_least_one_dose is None
+            or item.People_fully_vaccinated is None
+            or item.People_fully_vaccinated is None
+        ):
             raise ValueError(f"Vaccination data missing for {state}")
         partial_vaccinations: int = item.People_at_least_one_dose - item.People_fully_vaccinated
         complete_vaccinations: int = item.People_fully_vaccinated
