@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000886,0.000886,0.000391,2.2426,1.0107,0.000886
-Johor,Unknown,Unknown,9.9e-05,2.2426,1.0877,0.000241
-Kedah,Unknown,Unknown,0.000203,2.2426,1.0,0.000456
-Kelantan,Unknown,Unknown,0.000192,2.2426,1.0,0.00043
-Melaka,Unknown,Unknown,0.000517,2.2426,1.0642,0.001233
-Negeri Sembilan,Unknown,Unknown,0.000559,2.2426,1.021,0.00128
-Pahang,Unknown,Unknown,0.000153,2.2426,1.0,0.000342
-Perak,Unknown,Unknown,0.000445,2.2426,1.0,0.000998
-Perlis,Unknown,Unknown,0.000157,2.2426,1.0,0.000352
-Pulau Pinang,Unknown,Unknown,0.000336,2.2426,1.1076,0.000836
-Sabah,Unknown,Unknown,0.000278,2.2426,1.0,0.000623
-Sarawak,Unknown,Unknown,0.000189,2.2426,1.0,0.000424
-Selangor,Unknown,Unknown,0.000565,2.2426,1.0602,0.001344
-Terengganu,Unknown,Unknown,0.000138,2.2426,1.0,0.00031
-W.P. Kuala Lumpur,Unknown,Unknown,0.001512,2.2426,1.0545,0.003576
-W.P. Labuan,Unknown,Unknown,0.000211,2.2426,1.0,0.000474
-W.P. Putrajaya,Unknown,Unknown,0.001546,2.2426,1.0,0.003468
+Entire country,0.000872,0.000872,0.000389,2.2424,1.0,0.000872
+Johor,Unknown,Unknown,9.9e-05,2.2424,1.1346,0.000251
+Kedah,Unknown,Unknown,0.000214,2.2424,1.0,0.00048
+Kelantan,Unknown,Unknown,0.000177,2.2424,1.0,0.000397
+Melaka,Unknown,Unknown,0.000473,2.2424,1.0,0.00106
+Negeri Sembilan,Unknown,Unknown,0.000564,2.2424,1.0,0.001264
+Pahang,Unknown,Unknown,0.000143,2.2424,1.0,0.00032
+Perak,Unknown,Unknown,0.000424,2.2424,1.0,0.000952
+Perlis,Unknown,Unknown,0.000153,2.2424,1.0,0.000343
+Pulau Pinang,Unknown,Unknown,0.000341,2.2424,1.1079,0.000848
+Sabah,Unknown,Unknown,0.000278,2.2424,1.0,0.000623
+Sarawak,Unknown,Unknown,0.000181,2.2424,1.0,0.000407
+Selangor,Unknown,Unknown,0.000581,2.2424,1.0588,0.001378
+Terengganu,Unknown,Unknown,0.000136,2.2424,1.0,0.000305
+W.P. Kuala Lumpur,Unknown,Unknown,0.001492,2.2424,1.0457,0.003498
+W.P. Labuan,Unknown,Unknown,0.000181,2.2424,1.0,0.000406
+W.P. Putrajaya,Unknown,Unknown,0.001565,2.2424,1.0,0.00351
