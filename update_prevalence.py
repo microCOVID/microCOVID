@@ -250,22 +250,22 @@ class JHUVaccinesTimeseriesUS(pydantic.BaseModel):
     Country_Region: Literal["US"]
     # Cumulative number of doses administered including booster doses
     # for states where it is reported as part of the total.
-    Doses_admin: int
+    Doses_admin: Optional[int]
     # Cumulative number of people who received at least one vaccine
     # dose. When the person receives a prescribed second dose it is
     # not counted twice
-    People_at_least_one_dose: int
+    People_at_least_one_dose: Optional[int]
     # Cumulative number of people who received a complete primary
     # series. This means having received one dose of a single-dose
     # vaccine or two doses on different days (regardless of time
     # interval) of either a mRNA or a protein-based series. When the
     # vaccine manufacturer is not reported the recipient is considered
     # fully vaccinated with two doses.
-    People_fully_vaccinated: int
+    People_fully_vaccinated: Optional[int]
     # Cumulative number of all the additional or booster doses
     # administered. This metric does not reflect individual people and
     # each dose is counted independently
-    Total_additional_doses: int
+    Total_additional_doses: Optional[int]
 
 
 class JHUVaccinesTimeseriesGlobal(pydantic.BaseModel):
@@ -1467,15 +1467,26 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
             continue
 
         assert item.Province_State is not None
-        assert item.Country_Region is not None
+        if item.Country_Region == '':
+            # overall US stats - not currently used, and was
+            # unreliably populated as of 2022-09 - empty values were
+            # being manually fixed up but then broken again by JHU
+            # pipeline - see
+            # https://github.com/govex/COVID-19/commit/426347815a55c14579ce2c6a8a534b28def924c4
+            continue
+
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
-            print_and_log_to_sentry("Could not find state {item.Province_State}")
+            print_and_log_to_sentry(f"Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # logger.warning(f"Could not find state {item.Province_State}")
 
+        if (item.People_at_least_one_dose is None or
+            item.People_fully_vaccinated is None or
+            item.People_fully_vaccinated is None):
+            raise ValueError(f"Vaccination data missing for {state}")
         partial_vaccinations: int = item.People_at_least_one_dose - item.People_fully_vaccinated
         complete_vaccinations: int = item.People_fully_vaccinated
         state.set_total_vaccines(partial_vaccinations, complete_vaccinations)
