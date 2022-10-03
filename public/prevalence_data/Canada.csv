@@ -1,15 +1,15 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001023,0.001023,0.000444,2.3037,1.0,0.001023
-Alberta,0.001526,0.001231,0.000345,2.8968,1.2994,0.001299
-British Columbia,0.000439,0.000355,0.000122,3.0277,1.0,0.000369
-Manitoba,0.000744,0.000599,0.000207,3.0277,1.0,0.000628
-New Brunswick,5e-06,4e-06,1e-06,3.0277,1.0,4e-06
-Newfoundland and Labrador,7e-06,6e-06,2e-06,3.0277,1.0,6e-06
-Northwest Territories,7.8e-05,6.2e-05,2.2e-05,3.0277,1.0,6.7e-05
-Nova Scotia,4e-06,3e-06,1e-06,3.0277,1.0,3e-06
-Ontario,0.002047,0.001652,0.000569,3.0277,1.0,0.001723
-Prince Edward Island,2.2e-05,1.8e-05,6e-06,3.0277,1.0,1.8e-05
-Quebec,0.002882,0.002325,0.000707,3.0277,1.1306,0.002419
-Saskatchewan,3e-06,2e-06,1e-06,3.0277,1.0,3e-06
-Yukon,0.00142,0.001136,0.000419,2.831,1.0,0.001185
-Nunavut,9e-05,7.2e-05,2.5e-05,3.0277,1.0,7.7e-05
+Entire country,0.001021,0.001021,0.000443,2.3034,1.0,0.001021
+Alberta,0.001595,0.001286,0.000345,3.0267,1.2994,0.001357
+British Columbia,0.00035,0.000282,0.000122,2.4084,1.0,0.000293
+Manitoba,0.000744,0.000599,0.000207,3.0267,1.0,0.000628
+New Brunswick,5e-06,4e-06,1e-06,3.0267,1.0,4e-06
+Newfoundland and Labrador,5e-06,4e-06,2e-06,2.0,1.0,4e-06
+Northwest Territories,5.1e-05,4.1e-05,2.2e-05,2.0,1.0,4.4e-05
+Nova Scotia,4e-06,3e-06,1e-06,3.0267,1.0,3e-06
+Ontario,0.001833,0.001479,0.000569,2.7107,1.0,0.001542
+Prince Edward Island,1.5e-05,1.2e-05,6e-06,2.0,1.0,1.2e-05
+Quebec,0.002333,0.001883,0.000704,2.5444,1.0935,0.001959
+Saskatchewan,2e-06,2e-06,1e-06,2.0,1.0,2e-06
+Yukon,0.001518,0.001215,0.000419,3.0267,1.0,0.001267
+Nunavut,9e-05,7.2e-05,2.5e-05,3.0267,1.0,7.7e-05
