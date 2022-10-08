@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.002715,0.002715,0.001133,2.3963,1.0,0.002715
-Antofagasta,Unknown,Unknown,0.000846,2.3963,1.0,0.002027
-Araucania,Unknown,Unknown,0.001191,2.3963,1.0,0.002854
-Arica y Parinacota,Unknown,Unknown,0.000708,2.3963,1.0,0.001696
-Atacama,Unknown,Unknown,0.001222,2.3963,1.0,0.002928
-Aysen,Unknown,Unknown,0.000998,2.3963,1.0,0.002393
-Biobio,Unknown,Unknown,0.001678,2.3963,1.0,0.004022
-Coquimbo,Unknown,Unknown,0.000969,2.3963,1.0,0.002322
-Los Lagos,Unknown,Unknown,0.00067,2.3963,1.0,0.001605
-Los Rios,Unknown,Unknown,0.001515,2.3963,1.0,0.00363
-Magallanes,Unknown,Unknown,0.000937,2.3963,1.0,0.002245
-Maule,Unknown,Unknown,0.001844,2.3963,1.0,0.004419
-Metropolitana,Unknown,Unknown,0.001201,2.3963,1.0,0.002879
-Nuble,Unknown,Unknown,0.002151,2.3963,1.0,0.005155
-OHiggins,Unknown,Unknown,0.001068,2.3963,1.0,0.00256
-Tarapaca,Unknown,Unknown,0.000587,2.3963,1.0,0.001406
-Valparaiso,Unknown,Unknown,0.001147,2.3963,1.0,0.002749
+Entire country,0.00267,0.00267,0.001114,2.3959,1.0,0.00267
+Antofagasta,Unknown,Unknown,0.000767,2.3959,1.0,0.001838
+Araucania,Unknown,Unknown,0.001171,2.3959,1.0,0.002806
+Arica y Parinacota,Unknown,Unknown,0.000668,2.3959,1.0,0.0016
+Atacama,Unknown,Unknown,0.001253,2.3959,1.0,0.003002
+Aysen,Unknown,Unknown,0.00095,2.3959,1.0,0.002276
+Biobio,Unknown,Unknown,0.001635,2.3959,1.0,0.003918
+Coquimbo,Unknown,Unknown,0.000935,2.3959,1.0,0.002239
+Los Lagos,Unknown,Unknown,0.000642,2.3959,1.0,0.001538
+Los Rios,Unknown,Unknown,0.001523,2.3959,1.0,0.003648
+Magallanes,Unknown,Unknown,0.000925,2.3959,1.0,0.002216
+Maule,Unknown,Unknown,0.001746,2.3959,1.0,0.004184
+Metropolitana,Unknown,Unknown,0.001204,2.3959,1.0,0.002884
+Nuble,Unknown,Unknown,0.002039,2.3959,1.0,0.004885
+OHiggins,Unknown,Unknown,0.001013,2.3959,1.0,0.002426
+Tarapaca,Unknown,Unknown,0.000608,2.3959,1.0,0.001457
+Valparaiso,Unknown,Unknown,0.001158,2.3959,1.0,0.002773
