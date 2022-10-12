@@ -42,10 +42,11 @@
     "start": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts start",
     "build": "REACT_APP_DEPLOY_PRIME_URL=\"$DEPLOY_PRIME_URL\" react-scripts build",
     "test": "react-scripts test",
+    "test-once": "pytest . && react-scripts test --watchAll=false",
     "coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "black *.py --diff && eslint src && prettier --check src/locales/en.json *.json",
     "fix": "eslint src --fix && prettier --write src/locales/en.json *.json && black *.py",
-    "typecheck": "tsc",
+    "typecheck": "mypy . && tsc",
     "prevalence": "./scripts/prevalence_helper.sh"
   },
   "browserslist": {
