@@ -5,3 +5,4 @@ black==22.3.0
 sentry-sdk==1.5.11
 mypy==0.950
 pytest==7.1.2
+coverage==5.5
