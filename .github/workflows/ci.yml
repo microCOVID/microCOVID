@@ -49,4 +49,9 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v3
     - run: pip install -r requirements-manual.txt
-    - run: pytest .
+    - run: coverage run -m pytest
+    - run: coverage report -m
+    - run: coverage xml
+    - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - run: chmod +x codecov
+    - run: ./codecov --file coverage.xml --nonZero
