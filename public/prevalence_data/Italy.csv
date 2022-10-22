@@ -1,23 +1,23 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.010745,0.010745,0.004374,2.4568,1.0,0.010745
-Abruzzo,Unknown,Unknown,0.004931,2.4568,1.0,0.012114
-Basilicata,Unknown,Unknown,0.002066,2.4568,1.0,0.005076
-Calabria,Unknown,Unknown,0.002777,2.4568,1.0,0.006822
-Campania,Unknown,Unknown,0.002531,2.4568,1.0,0.006219
-Emilia-Romagna,Unknown,Unknown,0.005121,2.4568,1.0,0.012582
-Friuli Venezia Giulia,Unknown,Unknown,0.006759,2.4568,1.0,0.016606
-Lazio,Unknown,Unknown,0.003878,2.4568,1.0,0.009527
-Liguria,Unknown,Unknown,0.004677,2.4568,1.0,0.01149
-Lombardia,Unknown,Unknown,0.005187,2.4568,1.0,0.012742
-Marche,Unknown,Unknown,0.004867,2.4568,1.0,0.011958
-Molise,Unknown,Unknown,0.002899,2.4568,1.0,0.007122
-P.A. Bolzano,Unknown,Unknown,0.008491,2.4568,1.0,0.020861
-P.A. Trento,Unknown,Unknown,0.006945,2.4568,1.0,0.017061
-Piemonte,Unknown,Unknown,0.00632,2.4568,1.0,0.015528
-Puglia,Unknown,Unknown,0.002431,2.4568,1.0,0.005971
-Sardegna,Unknown,Unknown,0.002937,2.4568,1.0326,0.00745
-Sicilia,Unknown,Unknown,0.001909,2.4568,1.0443,0.004897
-Toscana,Unknown,Unknown,0.00398,2.4568,1.0,0.009779
-Umbria,Unknown,Unknown,0.006195,2.4568,1.0,0.015219
-Valle d'Aosta,Unknown,Unknown,0.006064,2.4568,1.0,0.014897
-Veneto,Unknown,Unknown,0.006951,2.4568,1.0,0.017077
+Entire country,0.010561,0.010561,0.0043,2.4563,1.0,0.010561
+Abruzzo,Unknown,Unknown,0.004784,2.4563,1.0,0.01175
+Basilicata,Unknown,Unknown,0.001963,2.4563,1.0,0.004822
+Calabria,Unknown,Unknown,0.002708,2.4563,1.0,0.006651
+Campania,Unknown,Unknown,0.002564,2.4563,1.0,0.006297
+Emilia-Romagna,Unknown,Unknown,0.005027,2.4563,1.0,0.012347
+Friuli Venezia Giulia,Unknown,Unknown,0.006585,2.4563,1.0,0.016174
+Lazio,Unknown,Unknown,0.003892,2.4563,1.0,0.00956
+Liguria,Unknown,Unknown,0.004548,2.4563,1.0,0.011171
+Lombardia,Unknown,Unknown,0.005068,2.4563,1.0,0.01245
+Marche,Unknown,Unknown,0.004693,2.4563,1.0,0.011527
+Molise,Unknown,Unknown,0.002883,2.4563,1.0,0.007081
+P.A. Bolzano,Unknown,Unknown,0.007858,2.4563,1.0,0.019302
+P.A. Trento,Unknown,Unknown,0.006647,2.4563,1.0,0.016328
+Piemonte,Unknown,Unknown,0.006335,2.4563,1.0,0.015561
+Puglia,Unknown,Unknown,0.002409,2.4563,1.0,0.005916
+Sardegna,Unknown,Unknown,0.002822,2.4563,1.0,0.006932
+Sicilia,Unknown,Unknown,0.001914,2.4563,1.0494,0.004933
+Toscana,Unknown,Unknown,0.003851,2.4563,1.0,0.009459
+Umbria,Unknown,Unknown,0.00606,2.4563,1.0,0.014885
+Valle d'Aosta,Unknown,Unknown,0.005841,2.4563,1.0,0.014347
+Veneto,Unknown,Unknown,0.0068,2.4563,1.0,0.016704
