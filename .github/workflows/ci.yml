@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
-    - run: yarn typecheck
+    - run: yarn tsc
   typecheck-py:
     runs-on: ubuntu-latest
 
@@ -35,10 +35,23 @@ jobs:
     - uses: actions/setup-python@v3
     - run: pip install -r requirements-manual.txt
     - run: mypy .
-  test:
+  test-js:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
     - run: yarn test --watchAll=false
+  test-py:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v3
+    - run: pip install -r requirements-manual.txt
+    - run: coverage run -m pytest
+    - run: coverage report -m
+    - run: coverage xml
+    - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - run: chmod +x codecov
+    - run: ./codecov --file coverage.xml --nonZero
