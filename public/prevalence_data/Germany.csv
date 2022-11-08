@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.008023,0.008023,0.003038,2.6408,1.0,0.008023
-Baden-Wurttemberg,Unknown,Unknown,0.002184,2.6408,1.0,0.005767
-Bayern,Unknown,Unknown,0.00211,2.6408,1.0,0.005572
-Berlin,Unknown,Unknown,0.002354,2.6408,1.0,0.006218
-Brandenburg,Unknown,Unknown,0.003416,2.6408,1.0,0.00902
-Bremen,Unknown,Unknown,0.003557,2.6408,1.0,0.009392
-Hamburg,Unknown,Unknown,0.003489,2.6408,1.0,0.009215
-Hessen,Unknown,Unknown,0.003371,2.6408,1.0,0.008902
-Mecklenburg-Vorpommern,Unknown,Unknown,0.004013,2.6408,1.0,0.010597
-Niedersachsen,Unknown,Unknown,0.004119,2.6408,1.0,0.010878
-Nordrhein-Westfalen,Unknown,Unknown,0.003898,2.6408,1.0,0.010294
-Rheinland-Pfalz,Unknown,Unknown,0.002664,2.6408,1.0,0.007034
-Saarland,Unknown,Unknown,0.002849,2.6408,1.0,0.007522
-Sachsen,Unknown,Unknown,0.002487,2.6408,1.0,0.006568
-Sachsen-Anhalt,Unknown,Unknown,0.00275,2.6408,1.0,0.007262
-Schleswig-Holstein,Unknown,Unknown,0.003381,2.6408,1.0,0.008929
-Thuringen,Unknown,Unknown,0.002051,2.6408,1.0,0.005417
+Entire country,0.008418,0.008418,0.003189,2.6401,1.0,0.008418
+Baden-Wurttemberg,Unknown,Unknown,0.002116,2.6401,1.0,0.005586
+Bayern,Unknown,Unknown,0.001988,2.6401,1.0,0.005248
+Berlin,Unknown,Unknown,0.002212,2.6401,1.0,0.005841
+Brandenburg,Unknown,Unknown,0.004088,2.6401,1.082,0.011679
+Bremen,Unknown,Unknown,0.004481,2.6401,1.3077,0.015473
+Hamburg,Unknown,Unknown,0.004165,2.6401,1.9206,0.02112
+Hessen,Unknown,Unknown,0.003108,2.6401,1.0,0.008205
+Mecklenburg-Vorpommern,Unknown,Unknown,0.00471,2.6401,1.076,0.013379
+Niedersachsen,Unknown,Unknown,0.005133,2.6401,1.2073,0.016362
+Nordrhein-Westfalen,Unknown,Unknown,0.003789,2.6401,1.0,0.010002
+Rheinland-Pfalz,Unknown,Unknown,0.002648,2.6401,1.0,0.006991
+Saarland,Unknown,Unknown,0.002598,2.6401,1.0,0.006858
+Sachsen,Unknown,Unknown,0.002961,2.6401,1.0218,0.007988
+Sachsen-Anhalt,Unknown,Unknown,0.003287,2.6401,1.0,0.008677
+Schleswig-Holstein,Unknown,Unknown,0.00421,2.6401,1.3271,0.01475
+Thuringen,Unknown,Unknown,0.002522,2.6401,1.0452,0.006959
