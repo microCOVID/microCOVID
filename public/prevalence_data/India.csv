@@ -1,38 +1,38 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,1e-05,1e-05,4e-06,2.1644,1.0,1e-05
-Andaman and Nicobar Islands,Unknown,Unknown,5e-06,2.1644,1.0,1e-05
-Andhra Pradesh,Unknown,Unknown,1e-06,2.1644,1.0,2e-06
-Arunachal Pradesh,Unknown,Unknown,2e-06,2.1644,1.0,4e-06
-Assam,Unknown,Unknown,0.0,2.1644,1.0,1e-06
-Bihar,Unknown,Unknown,0.0,2.1644,1.0,1e-06
-Chandigarh,Unknown,Unknown,6e-06,2.1644,1.0,1.3e-05
-Chhattisgarh,Unknown,Unknown,2e-06,2.1644,1.0,5e-06
-Dadra and Nagar Haveli and Daman and Diu,Unknown,Unknown,3e-06,2.1644,1.0,7e-06
-Delhi,Unknown,Unknown,1.4e-05,2.1644,1.0,3.1e-05
-Goa,Unknown,Unknown,5.9e-05,2.1644,1.0,0.000128
-Gujarat,Unknown,Unknown,3e-06,2.1644,1.0,7e-06
-Haryana,Unknown,Unknown,5e-06,2.1644,1.0,1e-05
-Himachal Pradesh,Unknown,Unknown,5e-06,2.1644,1.3704,1.5e-05
-Jammu and Kashmir,Unknown,Unknown,1e-06,2.1644,1.0,2e-06
-Jharkhand,Unknown,Unknown,0.0,2.1644,1.0,0.0
-Karnataka,Unknown,Unknown,1.3e-05,2.1644,1.0141,2.8e-05
-Kerala,Unknown,Unknown,3.4e-05,2.1644,1.0,7.3e-05
-Ladakh,Unknown,Unknown,1.1e-05,2.1644,1.0,2.4e-05
-Madhya Pradesh,Unknown,Unknown,1e-06,2.1644,1.0,2e-06
-Maharashtra,Unknown,Unknown,1e-05,2.1644,1.0,2.1e-05
-Manipur,Unknown,Unknown,4e-06,2.1644,1.0,8e-06
-Meghalaya,Unknown,Unknown,1e-06,2.1644,1.0,3e-06
-Mizoram,Unknown,Unknown,5.6e-05,2.1644,1.2321,0.000151
-Nagaland,Unknown,Unknown,1e-06,2.1644,1.0,3e-06
-Odisha,Unknown,Unknown,2e-06,2.1644,1.0,5e-06
-Puducherry,Unknown,Unknown,2.3e-05,2.1644,1.0,5.1e-05
-Punjab,Unknown,Unknown,4.2e-05,2.1644,1.0064,9.1e-05
-Rajasthan,Unknown,Unknown,3e-06,2.1644,1.0,7e-06
-Sikkim,Unknown,Unknown,1e-05,2.1644,1.0,2.2e-05
-Tamil Nadu,Unknown,Unknown,9e-06,2.1644,1.0,2e-05
-Telangana,Unknown,Unknown,8e-06,2.1644,1.0,1.6e-05
-Tripura,Unknown,Unknown,1e-06,2.1644,1.0,3e-06
-Uttar Pradesh,Unknown,Unknown,1e-06,2.1644,1.0,2e-06
-Uttarakhand,Unknown,Unknown,3e-06,2.1644,1.0,7e-06
-West Bengal,Unknown,Unknown,2e-06,2.1644,1.0,3e-06
-Lakshadweep,Unknown,Unknown,1.6e-05,2.1644,1.0,3.4e-05
+Entire country,1e-05,1e-05,4e-06,2.1643,1.0,1e-05
+Andaman and Nicobar Islands,Unknown,Unknown,5e-06,2.1643,1.0,1e-05
+Andhra Pradesh,Unknown,Unknown,1e-06,2.1643,1.0,2e-06
+Arunachal Pradesh,Unknown,Unknown,2e-06,2.1643,1.0,4e-06
+Assam,Unknown,Unknown,0.0,2.1643,1.0,1e-06
+Bihar,Unknown,Unknown,0.0,2.1643,1.0,1e-06
+Chandigarh,Unknown,Unknown,6e-06,2.1643,1.0,1.3e-05
+Chhattisgarh,Unknown,Unknown,2e-06,2.1643,1.0,4e-06
+Dadra and Nagar Haveli and Daman and Diu,Unknown,Unknown,3e-06,2.1643,1.0,7e-06
+Delhi,Unknown,Unknown,1.4e-05,2.1643,1.0,3e-05
+Goa,Unknown,Unknown,5.7e-05,2.1643,1.0,0.000123
+Gujarat,Unknown,Unknown,3e-06,2.1643,1.0,7e-06
+Haryana,Unknown,Unknown,4e-06,2.1643,1.0,9e-06
+Himachal Pradesh,Unknown,Unknown,5e-06,2.1643,1.0968,1.1e-05
+Jammu and Kashmir,Unknown,Unknown,1e-06,2.1643,1.0,2e-06
+Jharkhand,Unknown,Unknown,0.0,2.1643,1.0,0.0
+Karnataka,Unknown,Unknown,1.2e-05,2.1643,1.029,2.7e-05
+Kerala,Unknown,Unknown,3.3e-05,2.1643,1.0,7.1e-05
+Ladakh,Unknown,Unknown,1.1e-05,2.1643,1.0,2.4e-05
+Madhya Pradesh,Unknown,Unknown,1e-06,2.1643,1.0,1e-06
+Maharashtra,Unknown,Unknown,9e-06,2.1643,1.0,2e-05
+Manipur,Unknown,Unknown,4e-06,2.1643,1.5714,1.3e-05
+Meghalaya,Unknown,Unknown,1e-06,2.1643,1.3333,4e-06
+Mizoram,Unknown,Unknown,3.8e-05,2.1643,1.0,8.2e-05
+Nagaland,Unknown,Unknown,1e-06,2.1643,1.0,3e-06
+Odisha,Unknown,Unknown,2e-06,2.1643,1.0,4e-06
+Puducherry,Unknown,Unknown,2.3e-05,2.1643,1.0,5.1e-05
+Punjab,Unknown,Unknown,4.2e-05,2.1643,1.0,9e-05
+Rajasthan,Unknown,Unknown,3e-06,2.1643,1.0,6e-06
+Sikkim,Unknown,Unknown,9e-06,2.1643,1.0,1.9e-05
+Tamil Nadu,Unknown,Unknown,9e-06,2.1643,1.0,1.9e-05
+Telangana,Unknown,Unknown,7e-06,2.1643,1.0,1.6e-05
+Tripura,Unknown,Unknown,1e-06,2.1643,1.0,2e-06
+Uttar Pradesh,Unknown,Unknown,1e-06,2.1643,1.0,1e-06
+Uttarakhand,Unknown,Unknown,3e-06,2.1643,1.0,6e-06
+West Bengal,Unknown,Unknown,1e-06,2.1643,1.0,3e-06
+Lakshadweep,Unknown,Unknown,1.6e-05,2.1643,1.0,3.4e-05
