@@ -1,85 +1,85 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000531,0.000531,0.000245,2.1656,1.0,0.000531
-Adygea Republic,Unknown,Unknown,0.000106,2.1656,1.2368,0.000284
-Altai Krai,Unknown,Unknown,0.000283,2.1656,1.0,0.000613
-Altai Republic,Unknown,Unknown,0.000165,2.1656,1.129,0.000404
-Amur Oblast,Unknown,Unknown,0.000367,2.1656,1.0,0.000795
-Arkhangelsk Oblast,Unknown,Unknown,0.000356,2.1656,1.0,0.000771
-Astrakhan Oblast,Unknown,Unknown,8.3e-05,2.1656,2.0,0.000358
-Bashkortostan Republic,Unknown,Unknown,0.000321,2.1656,1.0,0.000696
-Belgorod Oblast,Unknown,Unknown,0.000223,2.1656,1.0,0.000483
-Bryansk Oblast,Unknown,Unknown,0.000107,2.1656,1.0,0.000231
-Buryatia Republic,Unknown,Unknown,0.000171,2.1656,1.0437,0.000386
-Chechen Republic,Unknown,Unknown,1.1e-05,2.1656,1.0714,2.6e-05
-Chelyabinsk Oblast,Unknown,Unknown,0.000189,2.1656,1.0,0.000409
-Chukotka Autonomous Okrug,Unknown,Unknown,0.000263,2.1656,1.5,0.000856
-Chuvashia Republic,Unknown,Unknown,0.00021,2.1656,1.0239,0.000465
-Dagestan Republic,Unknown,Unknown,1.2e-05,2.1656,1.0,2.5e-05
-Ingushetia Republic,Unknown,Unknown,2e-05,2.1656,1.0,4.4e-05
-Irkutsk Oblast,Unknown,Unknown,0.000281,2.1656,1.0,0.000608
-Ivanovo Oblast,Unknown,Unknown,0.000207,2.1656,1.0,0.000448
-Jewish Autonomous Okrug,Unknown,Unknown,0.000167,2.1656,1.0,0.000361
-Kabardino-Balkarian Republic,Unknown,Unknown,6.2e-05,2.1656,1.0,0.000135
-Kaliningrad Oblast,Unknown,Unknown,0.000277,2.1656,1.0,0.000601
-Kalmykia Republic,Unknown,Unknown,0.000116,2.1656,1.0,0.000252
-Kaluga Oblast,Unknown,Unknown,0.000191,2.1656,1.0,0.000413
-Kamchatka Krai,Unknown,Unknown,0.000174,2.1656,1.0,0.000377
-Karachay-Cherkess Republic,Unknown,Unknown,4.3e-05,2.1656,1.0,9.3e-05
-Karelia Republic,Unknown,Unknown,0.0005,2.1656,1.0164,0.0011
-Kemerovo Oblast,Unknown,Unknown,0.000185,2.1656,1.0,0.000401
-Khabarovsk Krai,Unknown,Unknown,0.000179,2.1656,1.0,0.000388
-Khakassia Republic,Unknown,Unknown,0.000281,2.1656,1.0,0.000608
-Khanty-Mansi Autonomous Okrug,Unknown,Unknown,0.00035,2.1656,1.0,0.000758
-Kirov Oblast,Unknown,Unknown,0.000204,2.1656,1.0,0.000442
-Komi Republic,Unknown,Unknown,0.000358,2.1656,1.0,0.000775
-Kostroma Oblast,Unknown,Unknown,0.000216,2.1656,1.0,0.000468
-Krasnodar Krai,Unknown,Unknown,8.5e-05,2.1656,1.0,0.000184
-Krasnoyarsk Krai,Unknown,Unknown,0.000169,2.1656,1.0,0.000366
-Kurgan Oblast,Unknown,Unknown,0.000378,2.1656,1.0,0.00082
-Kursk Oblast,Unknown,Unknown,0.00026,2.1656,1.0,0.000563
-Leningrad Oblast,Unknown,Unknown,0.000225,2.1656,1.0653,0.00052
-Lipetsk Oblast,Unknown,Unknown,0.00022,2.1656,1.0,0.000476
-Magadan Oblast,Unknown,Unknown,0.000527,2.1656,1.0,0.001142
-Mari El Republic,Unknown,Unknown,0.000356,2.1656,1.6242,0.001253
-Mordovia Republic,Unknown,Unknown,0.000139,2.1656,1.0,0.000301
-Moscow,Unknown,Unknown,0.000485,2.1656,1.3025,0.001368
-Moscow Oblast,Unknown,Unknown,0.000162,2.1656,1.0704,0.000376
-Murmansk Oblast,Unknown,Unknown,0.0002,2.1656,1.1111,0.000482
-Nenets Autonomous Okrug,Unknown,Unknown,0.000205,2.1656,1.3333,0.000591
-Nizhny Novgorod Oblast,Unknown,Unknown,0.000226,2.1656,1.0,0.00049
-North Ossetia - Alania Republic,Unknown,Unknown,3e-05,2.1656,1.0,6.5e-05
-Novgorod Oblast,Unknown,Unknown,0.000162,2.1656,1.0,0.00035
-Novosibirsk Oblast,Unknown,Unknown,0.000223,2.1656,1.0,0.000484
-Omsk Oblast,Unknown,Unknown,0.00013,2.1656,1.0,0.000281
-Orel Oblast,Unknown,Unknown,0.000195,2.1656,1.0,0.000423
-Orenburg Oblast,Unknown,Unknown,7e-05,2.1656,1.0,0.000152
-Penza Oblast,Unknown,Unknown,0.000257,2.1656,1.0,0.000556
-Perm Krai,Unknown,Unknown,0.000409,2.1656,1.0,0.000886
-Primorsky Krai,Unknown,Unknown,0.000118,2.1656,1.0,0.000255
-Pskov Oblast,Unknown,Unknown,0.000173,2.1656,1.0,0.000374
-Rostov Oblast,Unknown,Unknown,6.2e-05,2.1656,1.0,0.000134
-Ryazan Oblast,Unknown,Unknown,0.00018,2.1656,1.0,0.00039
-Saint Petersburg,Unknown,Unknown,0.000444,2.1656,1.0,0.000962
-Sakha (Yakutiya) Republic,Unknown,Unknown,0.000276,2.1656,1.0,0.000597
-Sakhalin Oblast,Unknown,Unknown,0.000273,2.1656,1.0,0.000592
-Samara Oblast,Unknown,Unknown,0.000395,2.1656,1.0,0.000856
-Saratov Oblast,Unknown,Unknown,0.000233,2.1656,1.0,0.000506
-Smolensk Oblast,Unknown,Unknown,0.000106,2.1656,1.0,0.00023
-Stavropol Krai,Unknown,Unknown,0.000126,2.1656,1.0966,0.000299
-Sverdlovsk Oblast,Unknown,Unknown,0.000548,2.1656,1.0,0.001187
-Tambov Oblast,Unknown,Unknown,0.000133,2.1656,1.0,0.000287
-Tatarstan Republic,Unknown,Unknown,0.000195,2.1656,1.0,0.000423
-Tomsk Oblast,Unknown,Unknown,0.000276,2.1656,1.0,0.000598
-Tula Oblast,Unknown,Unknown,0.000145,2.1656,1.0,0.000314
-Tver Oblast,Unknown,Unknown,0.000124,2.1656,1.0,0.000268
-Tyumen Oblast,Unknown,Unknown,0.000187,2.1656,1.0,0.000406
-Tyva Republic,Unknown,Unknown,1.9e-05,2.1656,1.0,4e-05
-Udmurt Republic,Unknown,Unknown,0.000556,2.1656,1.0,0.001204
-Ulyanovsk Oblast,Unknown,Unknown,0.000125,2.1656,1.0197,0.000276
-Vladimir Oblast,Unknown,Unknown,0.000143,2.1656,1.0,0.00031
-Volgograd Oblast,Unknown,Unknown,0.000105,2.1656,1.0,0.000228
-Vologda Oblast,Unknown,Unknown,0.000236,2.1656,1.0,0.000512
-Voronezh Oblast,Unknown,Unknown,0.000271,2.1656,1.0,0.000586
-Yamalo-Nenets Autonomous Okrug,Unknown,Unknown,0.000303,2.1656,1.0452,0.000685
-Yaroslavl Oblast,Unknown,Unknown,0.000393,2.1656,1.0,0.000852
-Zabaykalsky Krai,Unknown,Unknown,0.000304,2.1656,1.0,0.000658
+Entire country,0.000533,0.000533,0.000246,2.1654,1.0,0.000533
+Adygea Republic,Unknown,Unknown,0.000104,2.1654,1.2432,0.000279
+Altai Krai,Unknown,Unknown,0.000278,2.1654,1.0,0.000602
+Altai Republic,Unknown,Unknown,0.000147,2.1654,1.0,0.000318
+Amur Oblast,Unknown,Unknown,0.000356,2.1654,1.0,0.00077
+Arkhangelsk Oblast,Unknown,Unknown,0.000361,2.1654,1.0,0.000782
+Astrakhan Oblast,Unknown,Unknown,9.4e-05,2.1654,2.0,0.000409
+Bashkortostan Republic,Unknown,Unknown,0.000316,2.1654,1.0,0.000685
+Belgorod Oblast,Unknown,Unknown,0.000207,2.1654,1.0,0.000448
+Bryansk Oblast,Unknown,Unknown,0.000111,2.1654,1.0,0.000241
+Buryatia Republic,Unknown,Unknown,0.000175,2.1654,1.0755,0.000407
+Chechen Republic,Unknown,Unknown,1.1e-05,2.1654,1.25,3e-05
+Chelyabinsk Oblast,Unknown,Unknown,0.000188,2.1654,1.0,0.000406
+Chukotka Autonomous Okrug,Unknown,Unknown,0.000263,2.1654,2.0,0.001141
+Chuvashia Republic,Unknown,Unknown,0.000216,2.1654,1.1373,0.000532
+Dagestan Republic,Unknown,Unknown,1.2e-05,2.1654,1.0,2.5e-05
+Ingushetia Republic,Unknown,Unknown,1.4e-05,2.1654,1.0,3.1e-05
+Irkutsk Oblast,Unknown,Unknown,0.000284,2.1654,1.0,0.000614
+Ivanovo Oblast,Unknown,Unknown,0.000209,2.1654,1.0,0.000452
+Jewish Autonomous Okrug,Unknown,Unknown,0.000173,2.1654,1.0,0.000374
+Kabardino-Balkarian Republic,Unknown,Unknown,6.6e-05,2.1654,1.0,0.000143
+Kaliningrad Oblast,Unknown,Unknown,0.000298,2.1654,1.0279,0.000662
+Kalmykia Republic,Unknown,Unknown,0.00012,2.1654,1.0,0.000259
+Kaluga Oblast,Unknown,Unknown,0.000209,2.1654,1.0,0.000454
+Kamchatka Krai,Unknown,Unknown,0.000181,2.1654,1.0,0.000391
+Karachay-Cherkess Republic,Unknown,Unknown,3.9e-05,2.1654,1.0,8.4e-05
+Karelia Republic,Unknown,Unknown,0.000527,2.1654,1.1122,0.001269
+Kemerovo Oblast,Unknown,Unknown,0.000181,2.1654,1.0,0.000391
+Khabarovsk Krai,Unknown,Unknown,0.000184,2.1654,1.0,0.000398
+Khakassia Republic,Unknown,Unknown,0.000287,2.1654,1.0,0.00062
+Khanty-Mansi Autonomous Okrug,Unknown,Unknown,0.000356,2.1654,1.0149,0.000783
+Kirov Oblast,Unknown,Unknown,0.000198,2.1654,1.0,0.000429
+Komi Republic,Unknown,Unknown,0.000363,2.1654,1.0,0.000785
+Kostroma Oblast,Unknown,Unknown,0.000222,2.1654,1.0,0.000481
+Krasnodar Krai,Unknown,Unknown,8.4e-05,2.1654,1.0,0.000183
+Krasnoyarsk Krai,Unknown,Unknown,0.000158,2.1654,1.0,0.000342
+Kurgan Oblast,Unknown,Unknown,0.000374,2.1654,1.0,0.000809
+Kursk Oblast,Unknown,Unknown,0.000256,2.1654,1.0,0.000553
+Leningrad Oblast,Unknown,Unknown,0.000238,2.1654,1.1841,0.000611
+Lipetsk Oblast,Unknown,Unknown,0.000223,2.1654,1.0,0.000482
+Magadan Oblast,Unknown,Unknown,0.000569,2.1654,1.0,0.001232
+Mari El Republic,Unknown,Unknown,0.000378,2.1654,1.7133,0.001403
+Mordovia Republic,Unknown,Unknown,0.000138,2.1654,1.0,0.000299
+Moscow,Unknown,Unknown,0.000488,2.1654,1.309,0.001385
+Moscow Oblast,Unknown,Unknown,0.000157,2.1654,1.0425,0.000354
+Murmansk Oblast,Unknown,Unknown,0.000199,2.1654,1.1037,0.000476
+Nenets Autonomous Okrug,Unknown,Unknown,0.000205,2.1654,1.1429,0.000506
+Nizhny Novgorod Oblast,Unknown,Unknown,0.000242,2.1654,1.0,0.000525
+North Ossetia - Alania Republic,Unknown,Unknown,3.4e-05,2.1654,1.0,7.4e-05
+Novgorod Oblast,Unknown,Unknown,0.000157,2.1654,1.0,0.000339
+Novosibirsk Oblast,Unknown,Unknown,0.000223,2.1654,1.0,0.000483
+Omsk Oblast,Unknown,Unknown,0.000127,2.1654,1.0,0.000275
+Orel Oblast,Unknown,Unknown,0.000186,2.1654,1.0,0.000403
+Orenburg Oblast,Unknown,Unknown,7.1e-05,2.1654,1.0,0.000153
+Penza Oblast,Unknown,Unknown,0.000257,2.1654,1.0,0.000556
+Perm Krai,Unknown,Unknown,0.000408,2.1654,1.0,0.000883
+Primorsky Krai,Unknown,Unknown,0.000113,2.1654,1.0,0.000244
+Pskov Oblast,Unknown,Unknown,0.000181,2.1654,1.0,0.000391
+Rostov Oblast,Unknown,Unknown,6.2e-05,2.1654,1.0,0.000133
+Ryazan Oblast,Unknown,Unknown,0.00018,2.1654,1.0,0.00039
+Saint Petersburg,Unknown,Unknown,0.000455,2.1654,1.0,0.000984
+Sakha (Yakutiya) Republic,Unknown,Unknown,0.000276,2.1654,1.0,0.000597
+Sakhalin Oblast,Unknown,Unknown,0.000261,2.1654,1.0,0.000565
+Samara Oblast,Unknown,Unknown,0.00041,2.1654,1.0,0.000887
+Saratov Oblast,Unknown,Unknown,0.000263,2.1654,1.0819,0.000616
+Smolensk Oblast,Unknown,Unknown,0.000105,2.1654,1.0,0.000228
+Stavropol Krai,Unknown,Unknown,0.000126,2.1654,1.0862,0.000297
+Sverdlovsk Oblast,Unknown,Unknown,0.000524,2.1654,1.0,0.001135
+Tambov Oblast,Unknown,Unknown,0.000131,2.1654,1.0,0.000283
+Tatarstan Republic,Unknown,Unknown,0.000192,2.1654,1.0,0.000415
+Tomsk Oblast,Unknown,Unknown,0.000296,2.1654,1.108,0.00071
+Tula Oblast,Unknown,Unknown,0.000143,2.1654,1.0,0.000309
+Tver Oblast,Unknown,Unknown,0.000126,2.1654,1.0,0.000273
+Tyumen Oblast,Unknown,Unknown,0.000183,2.1654,1.0,0.000395
+Tyva Republic,Unknown,Unknown,1.6e-05,2.1654,1.0,3.4e-05
+Udmurt Republic,Unknown,Unknown,0.000562,2.1654,1.0,0.001216
+Ulyanovsk Oblast,Unknown,Unknown,0.000128,2.1654,1.053,0.000293
+Vladimir Oblast,Unknown,Unknown,0.000139,2.1654,1.0,0.0003
+Volgograd Oblast,Unknown,Unknown,0.000103,2.1654,1.0,0.000223
+Vologda Oblast,Unknown,Unknown,0.000232,2.1654,1.0,0.000502
+Voronezh Oblast,Unknown,Unknown,0.00028,2.1654,1.0219,0.00062
+Yamalo-Nenets Autonomous Okrug,Unknown,Unknown,0.00029,2.1654,1.0,0.000627
+Yaroslavl Oblast,Unknown,Unknown,0.000379,2.1654,1.0,0.000821
+Zabaykalsky Krai,Unknown,Unknown,0.000313,2.1654,1.0,0.000678
