@@ -35,23 +35,21 @@ jobs:
     - uses: actions/setup-python@v3
     - run: pip install -r requirements-manual.txt
     - run: mypy .
-  test-js:
+  test:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+      # Increased fetch-depth needed for codecov
+      with:
+        fetch-depth: 2
     - uses: bahmutov/npm-install@v1
-    - run: yarn test --watchAll=false
-  test-py:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
     - uses: actions/setup-python@v3
+    - run: yarn coverage
     - run: pip install -r requirements-manual.txt
     - run: coverage run -m pytest
     - run: coverage report -m
     - run: coverage xml
     - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
     - run: chmod +x codecov
-    - run: ./codecov --file coverage.xml --nonZero
+    - run: ./codecov --file coverage/lcov.info --file coverage/py/coverage.xml --nonZero
