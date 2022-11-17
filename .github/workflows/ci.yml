@@ -54,4 +54,4 @@ jobs:
     - run: coverage xml
     - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
     - run: chmod +x codecov
-    - run: ./codecov --file coverage.xml --nonZero
+    - run: ./codecov --file coverage/lcov.info coverage/py/coverage.xml --nonZero
