@@ -205,6 +205,24 @@ export const Calculator = (): React.ReactElement => {
               </a>
             </Trans>
           </p>
+          <Alert
+            variant="primary"
+          >
+            <Alert.Heading>
+              {t('calculator.intro.maintenance_warning_heading')}
+            </Alert.Heading>
+            <Trans
+              i18nKey="calculator.intro.maintenance_warning"
+            >
+              <a
+                href="https://github.com/microCOVID/microCOVID/discussions/1626"
+                target="_blank"
+                rel="noreferrer"
+              >
+                HERE_PLACEHOLDER
+              </a>
+            </Trans>
+          </Alert>
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
