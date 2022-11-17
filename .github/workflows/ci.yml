@@ -40,6 +40,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      # Increased fetch-depth needed for codecov
+      fetch-depth: 2
     - uses: bahmutov/npm-install@v1
     - uses: actions/setup-python@v3
     - run: yarn coverage
