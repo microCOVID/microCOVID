@@ -35,19 +35,14 @@ jobs:
     - uses: actions/setup-python@v3
     - run: pip install -r requirements-manual.txt
     - run: mypy .
-  test-js:
+  test:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
-    - run: yarn test --watchAll=false
-  test-py:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
     - uses: actions/setup-python@v3
+    - run: yarn test --watchAll=false
     - run: pip install -r requirements-manual.txt
     - run: coverage run -m pytest
     - run: coverage report -m
