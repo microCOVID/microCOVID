@@ -100,6 +100,8 @@
       "call_to_action": "Calculate approximate risk of contracting COVID",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
+      "maintenance_warning": "<p>The microCOVID Project is critically short of contributors and important updates to match current conditions are needed.  Please be skeptical of results.</p><p><0>Read more</0> for details and how you can help.</p>",
+      "maintenance_warning_heading": "Use caution",
       "omicron_warning": "<p>Vaccines without boosters are counted as much less effective against infection, but <em>unboosted vaccines still reduce your risk of severe or fatal illness.</em></p><p>Also note: COVID cases are reaching record highs in some areas, making activities riskier even if you are boosted.",
       "omicron_warning_heading": "Updated for the omicron variant",
       "see_video": "If you'd like to watch a video walkthrough of how to use the calculator, click <1>here</1>.",
