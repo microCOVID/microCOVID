@@ -205,15 +205,11 @@ export const Calculator = (): React.ReactElement => {
               </a>
             </Trans>
           </p>
-          <Alert
-            variant="primary"
-          >
+          <Alert variant="primary">
             <Alert.Heading>
               {t('calculator.intro.maintenance_warning_heading')}
             </Alert.Heading>
-            <Trans
-              i18nKey="calculator.intro.maintenance_warning"
-            >
+            <Trans i18nKey="calculator.intro.maintenance_warning">
               <a
                 href="https://github.com/microCOVID/microCOVID/discussions/1626"
                 target="_blank"
