@@ -1,3 +1,3 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,3e-06,3e-06,1e-06,2.232,1.0,3e-06
-District of Columbia,Unknown,Unknown,1e-06,2.232,1.0,3e-06
+Entire state,0.000851,0.000851,0.000381,2.2338,1.0,0.000851
+District of Columbia,Unknown,Unknown,0.000381,2.2338,1.0,0.000851
