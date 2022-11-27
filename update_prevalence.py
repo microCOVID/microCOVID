@@ -1454,7 +1454,7 @@ def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
         place.set_total_vaccines(partial_vaccinations, complete_vaccinations)
         num_success += 1
     if num_success == 0:
-        raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
+        print_and_log_to_sentry(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
 
 
 def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
@@ -1494,7 +1494,7 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
         state.set_total_vaccines(partial_vaccinations, complete_vaccinations)
         num_success += 1
     if num_success == 0:
-        raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
+        print_and_log_to_sentry(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
 
 
 def parse_can_region_summary_by_county(cache: DataCache, data: AllData) -> None:
