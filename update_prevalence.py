@@ -10,6 +10,7 @@ import collections
 import csv
 from functools import reduce
 import json
+import logging
 import re
 import os
 import shutil
@@ -17,7 +18,21 @@ from datetime import date, datetime, timedelta
 from operator import attrgetter
 from pathlib import Path
 from time import sleep
-from typing import Optional, ClassVar, Iterator, List, Dict, Type, TypeVar, Any, Union
+from typing import (
+    Optional,
+    ClassVar,
+    Iterator,
+    List,
+    Dict,
+    Type,
+    TypeVar,
+    Any,
+    Union,
+    TypedDict,
+    Counter,
+    Iterable,
+    Literal,
+)
 from us_state_abbrev import us_state_name_by_abbrev
 
 try:
@@ -29,19 +44,85 @@ except ImportError:
     print("Run:")
     print("  python3 -m venv .venv")
     print("  source .venv/bin/activate")
-    print("  pip install pydantic requests")
+    print("  pip install -r requirements-manual.txt")
     print("and then try running this script again.")
     print()
-    sys.exit(1)
+    raise
+
+logger = logging.getLogger("update_prevalence")
+
+
+class PopulationFilteredLogging(abc.ABC):
+    @property
+    @abc.abstractmethod
+    def population_as_int(self) -> int:
+        ...
+
+    @property
+    def issue_log_level(self) -> int:
+        if self.population_as_int < 10000:
+            return logging.DEBUG
+        elif self.population_as_int < 100000:
+            return logging.INFO
+        else:
+            return logging.WARNING
+
+    def issue(self, msg: str) -> None:
+        logger.log(self.issue_log_level, msg)
+
+
+class ExtraWarningAnnotationFormatter(logging.Formatter):
+    def __init__(self) -> None:
+        super().__init__("%(message)s")
+
+    def format(self, record: logging.LogRecord) -> str:
+        s = super().format(record)
+        if record.levelno >= logging.WARNING:
+            s = f"{record.levelname}: {s}"
+        return s
+
+
+def configure_logging() -> None:
+    #
+    # Configure logging so we can treat filter messages from this script
+    # separately from those from libraries
+    #
+    # https://docs.python.org/3/howto/logging.html
+    logger.setLevel(logging.DEBUG)
+
+    #
+    # Configure how things appear on stdout separately from how sentry
+    # backend treats things
+    #
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.INFO)
+    # don't decorate messages for readability on console
+    formatter = ExtraWarningAnnotationFormatter()
+    ch.setFormatter(formatter)
+
+    # use this formatting for all logging; set it on the root handler
+    logging.getLogger().addHandler(ch)
+
+    # https://docs.sentry.io/platforms/python/guides/logging/
+    # https://getsentry.github.io/sentry-python/integrations.html#module-sentry_sdk.integrations.logging
+    sentry_sdk.init(
+        "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for performance monitoring.
+        # We recommend adjusting this value in production.
+        traces_sample_rate=1.0,
+    )
+    # set which level of logging will also be sent to sentry
+    sentry_sdk.set_level("warning")
+
 
 CAN_API_KEY = os.environ.get("CAN_API_KEY")
 
 Model = TypeVar("Model", bound=pydantic.BaseModel)
 
 
-def print_and_log_to_sentry(message):
-    sentry_sdk.capture_message(message)
-    print(message)
+def print_and_log_to_sentry(message: str) -> None:
+    logger.warning(message)
 
 
 def calc_effective_date() -> date:
@@ -67,7 +148,7 @@ canada_effective_date = calc_effective_date()
 # Type,0 dose,1 dose,2 dose
 
 
-def import_vaccine_multipliers():
+def import_vaccine_multipliers() -> Dict[str, Dict[str, float]]:
     vaccines = {}
     with open("./public/tracker/vaccine_table.csv", newline="") as csvfile:
         reader = csv.reader(csvfile)
@@ -101,8 +182,8 @@ class JHUCommonFields(pydantic.BaseModel):
     Admin2: Optional[str]
     Province_State: Optional[str]
     Country_Region: str
-    Lat: float
-    Long_: float
+    Lat: Optional[float]
+    Long_: Optional[float]
     Combined_Key: str
 
 
@@ -114,8 +195,8 @@ class JHUPlaceFacts(JHUCommonFields):
     UID: int
     iso2: str
     iso3: str
-    code3: int
-    Population: int
+    code3: Optional[int]
+    Population: Optional[int]
 
 
 class JHUDailyReport(JHUCommonFields):
@@ -126,8 +207,8 @@ class JHUDailyReport(JHUCommonFields):
     # Last_Update: datetime, but not always in consistent format - we ignore
     Confirmed: int
     Deaths: int
-    Recovered: int
-    Active: int
+    Recovered: Optional[int]
+    Active: Optional[int]
     # Incident_Rate: float, was renamed from Incidence_Rate in early November
     # Case_Fatality_Ratio: float
 
@@ -156,30 +237,57 @@ class JHUCasesTimeseriesGlobal(pydantic.BaseModel):
     cumulative_cases: Dict[date, int] = {}
 
 
-class JHUVaccinesHourlyUs(pydantic.BaseModel):
+class JHUVaccinesTimeseriesUS(pydantic.BaseModel):
     SOURCE: ClassVar[
         str
-    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/us_data/hourly/vaccine_data_us.csv"
+    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/us_data/time_series/time_series_covid19_vaccine_us.csv"
 
-    FIPS: Optional[int]
-    Province_State: Optional[str]
-    Country_Region: Optional[str]
-    Vaccine_Type: Optional[str]
-    Doses_admin: Optional[int]  # raw numbers of doses
-    Stage_One_Doses: Optional[int]
-    Stage_Two_Doses: Optional[int]
-
-
-class JHUVaccinesGlobal(pydantic.BaseModel):
-    SOURCE: ClassVar[
-        str
-    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/vaccine_data_global.csv"
-
-    UID: Optional[int]
-    Province_State: Optional[str]
-    Country_Region: Optional[str]
-    People_partially_vaccinated: Optional[int]  # raw number of people
+    # Data collection date
+    Date: date
+    # Name of the state
+    Province_State: str
+    # Name of the country (US)
+    Country_Region: Literal["US"]
+    # Cumulative number of doses administered including booster doses
+    # for states where it is reported as part of the total.
+    Doses_admin: Optional[int]
+    # Cumulative number of people who received at least one vaccine
+    # dose. When the person receives a prescribed second dose it is
+    # not counted twice
+    People_at_least_one_dose: Optional[int]
+    # Cumulative number of people who received a complete primary
+    # series. This means having received one dose of a single-dose
+    # vaccine or two doses on different days (regardless of time
+    # interval) of either a mRNA or a protein-based series. When the
+    # vaccine manufacturer is not reported the recipient is considered
+    # fully vaccinated with two doses.
     People_fully_vaccinated: Optional[int]
+    # Cumulative number of all the additional or booster doses
+    # administered. This metric does not reflect individual people and
+    # each dose is counted independently
+    Total_additional_doses: Optional[int]
+
+
+class JHUVaccinesTimeseriesGlobal(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/time_series_covid19_vaccine_global.csv"
+    # Data collection date
+    Date: date
+    # Country code:
+    # https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv
+    UID: Optional[int]
+    # Province or State name
+    Province_State: Optional[str]
+    # Country or region name
+    Country_Region: str
+    # Cumulative number of doses administered. When a vaccine requires
+    # multiple doses, each one is counted independently
+    Doses_admin: Optional[int]
+    # Cumulative number of people who received at least one vaccine
+    # dose. When the person receives a prescribed second dose, it is
+    # not counted twice
+    People_at_least_one_dose: Optional[int]
 
 
 # Our World in Data dataset:
@@ -197,12 +305,12 @@ class OWIDTestingData(pydantic.BaseModel):
     Source_URL: str
     Source_label: str
     Notes: str
-    Daily_change_in_cumulative_total: int  # new tests today
-    Cumulative_total: int
-    Cumulative_total_per_thousand: float  # "per thousand" means population
-    Daily_change_in_cumulative_total_per_thousand: float
-    Seven_day_smoothed_daily_change: float  # 7-day moving average
-    Seven_day_smoothed_daily_change_per_thousand: float
+    Daily_change_in_cumulative_total: Optional[int]  # new tests today
+    Cumulative_total: Optional[int]
+    Cumulative_total_per_thousand: Optional[float]  # "per thousand" means population
+    Daily_change_in_cumulative_total_per_thousand: Optional[float]
+    Seven_day_smoothed_daily_change: Optional[float]  # 7-day moving average
+    Seven_day_smoothed_daily_change_per_thousand: Optional[float]
     Short_term_tests_per_case: Optional[float]  # appears to also be 7-day
     Short_term_positive_rate: Optional[float]
 
@@ -250,18 +358,20 @@ class RomaniaPrevalenceData(pydantic.BaseModel):
     TotalCases: int = pydantic.Field(alias="Cazuri total")
 
 
-# Canada Health Region population info dataset:
-class CanadaOpenCovidRegions(pydantic.BaseModel):
-    class RegionInfo(pydantic.BaseModel):
-        HR_UID: int
-        province: str
-        province_full: str
-        health_region: str
-        pop: Union[int, str]
+# Covid Timeline Canada region info dataset:
+class CovidTimelineCanadaRegion(pydantic.BaseModel):
+    SOURCE: ClassVar[
+        str
+    ] = "https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/health_regions.csv"
 
-    SOURCE: ClassVar[str] = "https://api.opencovid.ca/other?stat=hr"
-
-    hr: List[RegionInfo]
+    # two letter province/territory - e.g. AB
+    region: str
+    # numeric health region ID - e.g. 4831
+    hruid: int
+    # brief health region name - e.g. South
+    name_short: str
+    # number of people who live in health region as of last count - e.g. 308346
+    pop: int
 
 
 # Canada Health Region cases dataset:
@@ -270,26 +380,32 @@ class CanadaOpenCovidRegions(pydantic.BaseModel):
 class CanadaOpenCovidCases(pydantic.BaseModel):
     SOURCE: ClassVar[
         str
-    ] = "https://api.opencovid.ca/timeseries?stat=cases&loc={hr_uid}&ymd=true&before={before}&after={after}"
+    ] = "https://api.opencovid.ca/timeseries?stat=cases&loc={hr_uid}&geo=hr&ymd=true&fill=true&before={before}&after={after}"
 
-    class Report(pydantic.BaseModel):
-        province: str
-        health_region: str
-        date_report: date
-        cumulative_cases: int
+    class Data(pydantic.BaseModel):
+        class Report(pydantic.BaseModel):
+            # type of reporting returned - always "cases" - with
+            # Literal type, pydantic will validate that we got only
+            # cases reports back
+            name: Literal["cases"]
+            # date of report - e.g. "2022-05-08"
+            date: date
+            # cumulative cases - e.g. 4744
+            value: int
+            # cases on this day - e.g. 6
+            value_daily: int
 
-    cases: List[Report]
+        cases: List[Report]
+
+    data: Data
 
 
-class CanadaOpenCovidProvinces(pydantic.BaseModel):
-    SOURCE: ClassVar[str] = "https://api.opencovid.ca/other?stat=prov"
+class CovidTimelineCanadaProvinceOrTerritory(pydantic.BaseModel):
+    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"
 
-    class Report(pydantic.BaseModel):
-        province: str  # PEI
-        province_full: str  # Prince Edward Island
-        province_short: str  # PE
-
-    prov: List[Report]
+    region: str  # PE
+    name_ccodwg: str  # PEI
+    name_canonical: str  # Prince Edward Island
 
 
 # Canada provincial case and test data
@@ -301,17 +417,23 @@ class CanadaOpenCovidProvincialSummary(pydantic.BaseModel):
     ] = "https://api.opencovid.ca/summary?loc={province}&ymd=true&before={before}&after={after}"
 
     class Report(pydantic.BaseModel):
-        cumulative_cases: int
-        cumulative_testing: int  # number of total people tested
-        # number of total shots administered
-        cumulative_avaccine: Union[int, str]
-        # number of people who have received a complete sequence of shots. Note
-        # that in Canada it is common for people to have mixed shots (e.g.
-        # first shot Pfizer second shot Moderna).
-        cumulative_cvaccine: Union[int, str]
+        cases: int
+        # number of total tests given cumulatively - e.g. 9129
+        tests_completed: int
+
+        # number of tests given on this date - e.g. 0
+        tests_completed_daily: int
+
+        # Note that in Canada it is common for people to have mixed
+        # shots (e.g.  first shot Pfizer second shot Moderna).
+
+        # cumulative number of people who have had at least one shot - e.g. 36267
+        vaccine_administration_dose_1: int
+        # cumulative number of people who have had at least two shots - e.g. 34945
+        vaccine_administration_dose_2: int
         date_: date = pydantic.Field(alias="date")
 
-    summary: List[Report]
+    data: List[Report]
 
 
 # Canada Health Region vaccination dataset:
@@ -324,10 +446,9 @@ class CanadaRegionalVaccinationReports(pydantic.BaseModel):
 
     class Report(pydantic.BaseModel):
         date_: date = pydantic.Field(alias="date")
-        total_cases: int
-        total_tests: Optional[int]
-        total_vaccinations: Optional[int]  # number of shots delivered
-        # number of people who have completed all shots
+        # number of shots administered - e.g. 92155
+        total_vaccinations: Optional[int]
+        # number of people who have completed all shots - e.g. 35206
         total_vaccinated: Optional[int]
 
     hr_uid: int
@@ -364,12 +485,12 @@ class Vaccination(pydantic.BaseModel):
 # Our unified representation:
 
 
-class Place(pydantic.BaseModel):
+class Place(pydantic.BaseModel, PopulationFilteredLogging):
     fullname: str  # "San Francisco, California, US"
     name: str  # "San Francisco"
     population: int = 0  # 881549
     test_positivity_rate: Optional[float]  # 0.05
-    cumulative_cases: Dict[date, int] = collections.Counter()
+    cumulative_cases: Counter[date] = collections.Counter()
 
     # For some international data we don't get the positivity rate,
     # just the number of tests. We can approximate positivity rate
@@ -380,16 +501,22 @@ class Place(pydantic.BaseModel):
     vaccines_total = Vaccination()
 
     @property
+    def population_as_int(self) -> int:
+        return self.population
+
+    @property
     def recent_daily_cumulative_cases(self) -> List[int]:
         """Returns a list whose last entry is the most recent day's
         cumulative case count, and earlier entries are earlier days' counts.
         So recent_daily_cumulative_cases[-5] is the total number of cases reported
         up to 5 days ago.
         """
-        daily_cumulative_cases = []
+        daily_cumulative_cases: List[int] = []
         current = effective_date
         if current not in self.cumulative_cases:
-            raise ValueError(f"Missing data for {self.fullname} on {current:%Y-%m-%d}")
+            raise ValueError(
+                f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
+            )
         while len(daily_cumulative_cases) < 15:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
@@ -406,7 +533,7 @@ class Place(pydantic.BaseModel):
     # Makes an estimate of the number of new cases in a slice of daily cumulative
     # cases. Nominally is values[-1] - values[0], but sometimes regions post
     # corrections which result in the number of cases decreasing.
-    def cases_in_cum_cases(self, values) -> int:
+    def cases_in_cum_cases(self, values: List[int]) -> int:
         # list of indices right before negative corrections. If values = [3,2,3,0,5],
         # then negative_corrections == [0, 2]
         negative_corrections = [i for i, val in enumerate(values[:-1]) if val > values[i + 1]]
@@ -443,18 +570,18 @@ class Place(pydantic.BaseModel):
                         break
 
             if values[0] > min(values[:-1]) and possibly_suspect_correction:
-                print_and_log_to_sentry(
-                    f"Warning: Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+                self.issue(
+                    f"Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
                 )
             if min(values[:-1]) == values[-1] and max(values) > values[-1]:
-                print_and_log_to_sentry(
-                    f"Warning: Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
+                self.issue(
+                    f"Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
                 )
             return values[-1] - min(values[:-1])
 
         # looks complicated. Print a warning.
-        print_and_log_to_sentry(
-            f"Warning: Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+        self.issue(
+            f"Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
         )
         return 0
 
@@ -471,13 +598,17 @@ class Place(pydantic.BaseModel):
     def app_key(self) -> str:
         ...
 
-    def set_total_vaccines(self, partial_vaccinations: int, complete_vaccinations: int):
+    def set_total_vaccines(
+        self, partial_vaccinations: Optional[int], complete_vaccinations: Optional[int]
+    ) -> None:
         if partial_vaccinations is None or complete_vaccinations is None:
             return
         self.vaccines_total.partial_vaccinations = partial_vaccinations
         self.vaccines_total.completed_vaccinations = complete_vaccinations
 
-    def set_vaccines_of_type(self, vaccine_type: str, partial: int, complete: int):
+    def set_vaccines_of_type(
+        self, vaccine_type: str, partial: Optional[int], complete: Optional[int]
+    ) -> None:
         if partial is None or complete is None:
             return
         if self.vaccines_by_type is None:
@@ -487,17 +618,17 @@ class Place(pydantic.BaseModel):
         self.vaccines_by_type[vaccine_type].partial_vaccinations = partial
         self.vaccines_by_type[vaccine_type].completed_vaccinations = complete
 
-    def completed_vaccination_total(self):
+    def completed_vaccination_total(self) -> int:
         if self.vaccines_by_type is not None:
             return reduce(
-                lambda x, key: x + self.vaccines_by_type[key].completed_vaccinations, self.vaccines_by_type, 0
+                lambda x, key: x + self.vaccines_by_type[key].completed_vaccinations, self.vaccines_by_type, 0  # type: ignore
             )
         return self.vaccines_total.completed_vaccinations
 
-    def partial_vaccination_total(self):
+    def partial_vaccination_total(self) -> int:
         if self.vaccines_by_type is not None:
             return reduce(
-                lambda x, key: x + self.vaccines_by_type[key].partial_vaccinations, self.vaccines_by_type, 0
+                lambda x, key: x + self.vaccines_by_type[key].partial_vaccinations, self.vaccines_by_type, 0  # type: ignore
             )
         return self.vaccines_total.partial_vaccinations
 
@@ -534,7 +665,7 @@ class Place(pydantic.BaseModel):
     # that we can use like so:
     # estimated_unvaccinated_person_risk
     #   = unvaccinated_relative_prevalence * average_person_risk_from_prevalence_data
-    def unvaccinated_relative_prevalence(self) -> float:
+    def unvaccinated_relative_prevalence(self) -> Optional[float]:
         total_vaccinated = 0  # combined total of partially and fully vaccinated people
         risk_sum = 0
 
@@ -542,12 +673,14 @@ class Place(pydantic.BaseModel):
             for vaccine_type, vaccine_status in self.vaccines_by_type.items():
                 total_vaccinated += vaccine_status.completed_vaccinations
                 total_vaccinated += vaccine_status.partial_vaccinations
-                risk_sum += (
+                risk_sum += round(
                     VACCINE_MULTIPLIERS[vaccine_type]["complete"] * vaccine_status.completed_vaccinations
                 )
-                risk_sum += VACCINE_MULTIPLIERS[vaccine_type]["partial"] * vaccine_status.partial_vaccinations
+                risk_sum += round(
+                    VACCINE_MULTIPLIERS[vaccine_type]["partial"] * vaccine_status.partial_vaccinations
+                )
         else:
-            risk_sum = (
+            risk_sum = round(
                 VACCINE_MULTIPLIERS["Unknown"]["complete"] * self.vaccines_total.completed_vaccinations
                 + VACCINE_MULTIPLIERS["Unknown"]["partial"] * self.vaccines_total.partial_vaccinations
             )
@@ -556,7 +689,7 @@ class Place(pydantic.BaseModel):
             )
 
         if total_vaccinated == 0:
-            return
+            return None
 
         if total_vaccinated >= self.population:
             # This probably means people from other counties have gotten their
@@ -578,7 +711,7 @@ class Place(pydantic.BaseModel):
         total_fully_vaccinated = 0
         for vaccine_type, vaccine_status in self.vaccines_by_type.items():
             total_fully_vaccinated += vaccine_status.completed_vaccinations
-            vaccine_multiplier += (
+            vaccine_multiplier += round(
                 vaccine_status.completed_vaccinations * VACCINE_MULTIPLIERS[vaccine_type]["complete"]
             )
 
@@ -590,7 +723,7 @@ class Place(pydantic.BaseModel):
         last_week = self.cases_last_week
         week_before = self.cases_week_before
         if last_week <= week_before or week_before <= 0:
-            increase = 0
+            increase = 0.0
         else:
             increase = last_week / week_before - 1
 
@@ -682,7 +815,7 @@ class Country(Place):
         return result
 
 
-class AppLocation(pydantic.BaseModel):
+class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
     label: str
     iso3: Optional[str]
     population: str
@@ -707,7 +840,7 @@ class AppLocation(pydantic.BaseModel):
             positivityRate = 100
 
         if positivityRate < 0:
-            print_and_log_to_sentry(f"Warning: Positivity rate is negative: {positivityRate}")
+            self.issue(f"Positivity rate is negative: {positivityRate}")
             positivityRate = 0
 
         testingUnavailabilityCoefficient = (1500 / (day_i + 50))
@@ -715,8 +848,12 @@ class AppLocation(pydantic.BaseModel):
 
         return testingUnavailabilityCoefficient * positivityInferredPrevelenceRatio
 
+    @property
+    def population_as_int(self) -> int:
+        return int(self.population.replace(",", ""))
+
     def as_csv_data(self) -> Dict[str, str]:
-        population = int(self.population.replace(",", ""))
+        population = self.population_as_int
         reported = (self.casesPastWeek + 1) / population
         underreporting = self.prevalenceRatio()
         delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
@@ -787,6 +924,7 @@ class AllData:
 
     def get_jhu_place(self, jhu_line: JHUCommonFields) -> Place:
         if jhu_line.Admin2:
+            assert jhu_line.Province_State is not None
             return self.get_county(
                 jhu_line.Admin2,
                 state=jhu_line.Province_State,
@@ -802,8 +940,10 @@ class AllData:
         else:
             return self.get_country(jhu_line.Country_Region)
 
-    def get_canada_region_place(self, line: CanadaOpenCovidRegions.RegionInfo) -> Place:
-        return self.get_county(line.health_region, state=line.province_full, country="Canada")
+    def get_canada_region_place(
+        self, health_region: CovidTimelineCanadaRegion, province_or_territory: str
+    ) -> Place:
+        return self.get_county(health_region.name_short, state=province_or_territory, country="Canada")
 
     def populate_fips_cache(self) -> None:
         self.fips_to_county.clear()
@@ -820,7 +960,7 @@ class AllData:
                             )
                         self.fips_to_county[fips] = county
 
-    def add_place_to_uid_cache(self, uid: int, place: Place):
+    def add_place_to_uid_cache(self, uid: int, place: Place) -> None:
         self.uid_to_place[uid] = place
 
     # Attempt to set the population, cases, and positive test rates of a region
@@ -837,7 +977,7 @@ class AllData:
                 if not parent.population and parent.name not in fake_names:
                     raise ValueError(f"Missing population data for {parent!r}")
 
-        def rollup_cases(parent: Place, child_attr: str) -> None:
+        def rollup_cases(parent: Place, child_attr: str) -> bool:
             children: Dict[str, Place] = getattr(parent, child_attr)
 
             if not parent.cumulative_cases:
@@ -867,7 +1007,7 @@ class AllData:
                     if child.test_positivity_rate is None:
                         valid = False
                     elif child.test_positivity_rate > 0:
-                        tests_last_week += child.cases_last_week / child.test_positivity_rate
+                        tests_last_week += round(child.cases_last_week / child.test_positivity_rate)
                 if valid and tests_last_week:
                     parent.test_positivity_rate = parent.cases_last_week / tests_last_week
 
@@ -888,36 +1028,45 @@ class AllData:
                     all_children_total_partial_vaccinations += child.vaccines_total.partial_vaccinations
                 if all_children_total_population > 0:
                     parent.set_total_vaccines(
-                        parent.population
-                        * all_children_total_partial_vaccinations
-                        / all_children_total_population,
-                        parent.population
-                        * all_children_total_completed_vaccinations
-                        / all_children_total_population,
+                        round(
+                            parent.population
+                            * all_children_total_partial_vaccinations
+                            / all_children_total_population
+                        ),
+                        round(
+                            parent.population
+                            * all_children_total_completed_vaccinations
+                            / all_children_total_population
+                        ),
                     )
 
-        def rolldown_vaccine_types(parent: Place, children: List[Place]):
+        def rolldown_vaccine_types(parent: Place, children: Iterable[Place]) -> None:
             for child in children:
                 if child.vaccines_by_type is None:
                     child_vaccinations = child.vaccines_total
                     # Assume that sub-places have the same ratio of vaccine types
                     completed_vaccination_total = parent.completed_vaccination_total()
                     partial_vaccination_total = parent.partial_vaccination_total()
+                    assert parent.vaccines_by_type is not None
                     for vaccine_type, parent_vaccinations in parent.vaccines_by_type.items():
-                        child_partials = (
+                        child_partials = round(
                             parent_vaccinations.partial_vaccinations
                             * child_vaccinations.partial_vaccinations
                             / partial_vaccination_total
                         )
-                        child_completes = (
+                        child_completes = round(
                             parent_vaccinations.completed_vaccinations
                             * child_vaccinations.completed_vaccinations
                             / completed_vaccination_total
                         )
                         child.set_vaccines_of_type(vaccine_type, child_partials, child_completes)
 
+        class FailedCountry(TypedDict):
+            country_name: str
+            error: ValueError
+
         # Keep a list of countries where an exception was raised so we can discard them rather than fail the whole update
-        failed_countries = list()
+        failed_countries: List[FailedCountry] = list()
 
         for country in self.countries.values():
             try:
@@ -926,7 +1075,7 @@ class AllData:
                         try:
                             state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                         except ZeroDivisionError:
-                            print_and_log_to_sentry(
+                            state.issue(
                                 f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
                             )
                             state.test_positivity_rate = None
@@ -1051,7 +1200,7 @@ class DataCache(pydantic.BaseModel):
             pass
         except Exception as exc:
             sentry_sdk.capture_exception(exc)
-            print(f"discarding corrupted cache: {exc!r}")
+            logger.warning(f"discarding corrupted cache: {exc!r}")
             os.unlink(".prevalence_data.json")
         else:
             if result.effective_date == effective_date:
@@ -1067,22 +1216,29 @@ class DataCache(pydantic.BaseModel):
             return self.data[url]
         except KeyError:
             pass
-        self.data[url] = requests.get(url).text
+        response = requests.get(url)
+        response.raise_for_status()
+        self.data[url] = response.text
         return self.data[url]
 
-    def remove(self, url: str):
+    def remove(self, url: str) -> None:
         del self.data[url]
 
 
 def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
-    print(f"Fetching {url}...", end=" ", flush=True)
+    logger.info(f"Fetching {url}...")
     lines = cache.get(url).splitlines()
     reader = csv.reader(lines)
     fields = [re.sub("^7", "Seven", re.sub("[^A-Za-z0-9_]", "_", name)) for name in next(reader)]
 
+    # verify we have every field we expect
+    for field_name in model.__fields__:
+        if field_name not in fields:
+            raise ValueError(f"Did not find expected '{field_name}' column in header of {url}")
+
     result = []
     for line in reader:
-        kw: Dict[str, Optional[str]] = {}
+        kw: Dict[str, Optional[Union[str, int]]] = {}
         for field, val in zip(fields, line):
             info = model.__fields__.get(field)
             if info is None:
@@ -1091,7 +1247,7 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
                 if not info.required:
                     kw[field] = None
                 elif info.type_ in (int, float):
-                    kw[field] = "0"
+                    raise ValueError(f"Expected an int in column {field} in this line: {line} of {url}")
                 else:
                     kw[field] = ""
             elif val.endswith(".0") and val[:-2].isdigit():
@@ -1102,14 +1258,14 @@ def parse_csv(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
                 kw[field] = val
         result.append(model(**kw))
 
-    print(f"read {len(lines)} objects")
+    logger.info(f"read {len(lines)} objects")
     return result
 
 
 def parse_json_list(cache: DataCache, model: Type[Model], url: str) -> List[Model]:
-    print(f"Fetching {url}...", end=" ", flush=True)
-    result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url)))
-    print(f"read {len(result)} objects")
+    logger.info(f"Fetching {url}...")
+    result = pydantic.parse_obj_as(List[model], json.loads(cache.get(url)))  # type: ignore
+    logger.debug(f"read {len(result)} objects")
     return result
 
 
@@ -1117,25 +1273,31 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     max_attempts = 4
     retry_time_seconds = 60
     for attempt in range(max_attempts + 1):
+        log_message = f"Fetching {url}"
+        if attempt > 0:
+            log_message += " (try {attempt + 1}/{max_attempts})"
+        log_message += "..."
+        logger.info(log_message)
         # Error case
         if attempt == max_attempts:
             raise ValueError(f"Reached max attempts ({attempt}) attempting to get JSON from {url}")
 
-        # Normal JSON load attempt
         try:
-            contents_as_json = json.loads(cache.get(url))
+            cache.get(url)
             break
-        except json.JSONDecodeError as e:
-            # Lengthen the delay time each time it fails, to give the API more of a break
-            # This can lead to very very long script runs, but it (usually) eventually works
-            # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
-            retry_time_seconds *= 2
-            print_and_log_to_sentry(
-                f"JSONDecodeError: {e.msg} at line {e.lineno} col {e.colno}. Document:\n{e.doc}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
-            )
-            sleep(retry_time_seconds)
-            cache.remove(url)
-
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 429:
+                # Lengthen the delay time each time it fails, to give the API more of a break
+                # This can lead to very very long script runs, but it (usually) eventually works
+                # TODO: We can hopefully greatly reduce the delay time once this issue is resolved: https://github.com/andrewthong/covid19tracker-api/issues/88
+                retry_time_seconds *= 2
+                print_and_log_to_sentry(
+                    f"requests.exceptions.HTTPError: {e}\nTrying again after {retry_time_seconds} seconds ({attempt + 1} attempts so far)..."
+                )
+                sleep(retry_time_seconds)
+            else:
+                raise
+    logger.debug(f"read {len(cache.get(url))} bytes")
     result = pydantic.parse_obj_as(model, json.loads(cache.get(url)))
     return result
 
@@ -1162,6 +1324,8 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Micronesia",
         "Palau",
         "Summer Olympics 2020",
+        "Winter Olympics 2022",
+        "Antarctica",
     ):
         return True
     if line.Country_Region == "US":
@@ -1174,10 +1338,13 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
             "Michigan Department of Corrections (MDOC)",
         ):
             return True
+    if line.Country_Region == "Canada":
+        if line.Province_State == "Recovered":
+            return True
     return False
 
 
-def parse_jhu_place_facts(cache, data, country_by_iso3):
+def parse_jhu_place_facts(cache: DataCache, data: AllData, country_by_iso3: Dict[str, Country]) -> None:
     # List of regions and their population
     for line in parse_csv(cache, JHUPlaceFacts, JHUPlaceFacts.SOURCE):
         if ignore_jhu_place(line):
@@ -1196,6 +1363,11 @@ def parse_jhu_place_facts(cache, data, country_by_iso3):
             # has its own entry so turn the combo into just Bristol Bay
             line.Admin2 = "Yakutat"
             line.Population = 604  # from Google
+        if line.Population is None:
+            if line.Admin2 == "Unassigned":
+                line.Population = 0
+            else:
+                raise ValueError(f"Please manually provide population for {line}")
         if line.Country_Region == "Korea, South":
             line.Country_Region = "South Korea"
         place = data.get_jhu_place(line)
@@ -1210,7 +1382,7 @@ def parse_jhu_place_facts(cache, data, country_by_iso3):
             place.fips = str(line.FIPS)
 
 
-def parse_jhu_daily_report(cache, data, current):
+def parse_jhu_daily_report(cache: DataCache, data: AllData, current: date) -> None:
     # Cumulative cases per region
     for line in parse_csv(cache, JHUDailyReport, current.strftime(JHUDailyReport.SOURCE)):
         if ignore_jhu_place(line):
@@ -1226,47 +1398,111 @@ def parse_jhu_daily_report(cache, data, current):
         place.cumulative_cases[current] = line.Confirmed
 
 
-def parse_jhu_vaccines_global(cache, data):
+# returns estimate of number of people who completed their primary
+# series (regardless of their booster status) given number of people
+# with at least one dose
+def estimate_primary_series_complete(
+    # people with at least one dose
+    partial_vaccinations: int,
+) -> int:
+    # https://covid.cdc.gov/covid-data-tracker/#vaccinations_vacc-people-additional-dose-totalpop
+    #
+    # As of 2022-09, CDC says: 68% of population has completed
+    # primary series; 49% of those who completed a primary series
+    # got first booster, 36% of those who got a first booster shot
+    # got a second.
+    #
+    # 1 dose: 263,812,108
+    # completed primary series: 224,980,931
+    # People with a First Booster Dose: 109,578,270
+    # People with a Second Booster Dose: 23,118,101
+    #
+    # Let's assume that these trends can be applied world-wide,
+    # and thus if n people had at least one dose,
+    # 224980931/263812108 = 85% of them completed the primary
+    # series.
+    primary_series_completion_ratio = 0.85
+
+    return round(partial_vaccinations * primary_series_completion_ratio)
+
+
+def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
+    num_success = 0
     # Global vaccination rates
-    for item in parse_csv(cache, JHUVaccinesGlobal, JHUVaccinesGlobal.SOURCE):
-        if item.UID is None or item.People_partially_vaccinated is None:
+    for item in parse_csv(cache, JHUVaccinesTimeseriesGlobal, JHUVaccinesTimeseriesGlobal.SOURCE):
+        if effective_date > item.Date:
+            # this file is an entire timeseries history - only pay
+            # attention to most recent date
             continue
+
+        if item.UID is None:
+            if item.Country_Region == "World":
+                continue
+            else:
+                raise ValueError(f"Unexpected None for UID: {item}")
+        if item.Doses_admin is None or item.People_at_least_one_dose is None:
+            if item.Country_Region == "Eritrea":
+                # https://er.usembassy.gov/covid-19-information/
+                # "Has the government of Eritrea approved a COVID-19 vaccine for use?  No"
+                item.Doses_admin = 0
+                item.People_at_least_one_dose = 0
+            else:
+                raise ValueError(f"Unexpected Doses_admin for {item}")
         try:
             place = data.uid_to_place[item.UID]
-            place.set_total_vaccines(
-                item.People_partially_vaccinated - item.People_fully_vaccinated,
-                item.People_fully_vaccinated,
-            )
         except KeyError:
             print_and_log_to_sentry(f"Could not find UID {item.UID}")
+            continue
+
+        complete_vaccinations: int = estimate_primary_series_complete(item.People_at_least_one_dose)
+        partial_vaccinations: int = item.People_at_least_one_dose - complete_vaccinations
+        place.set_total_vaccines(partial_vaccinations, complete_vaccinations)
+        num_success += 1
+    if num_success == 0:
+        raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
 
 
-def parse_jhu_vaccines_hourly_us(cache, data):
+def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
+    num_success = 0
     # US vaccination rates
-    for item in parse_csv(cache, JHUVaccinesHourlyUs, JHUVaccinesHourlyUs.SOURCE):
+    for item in parse_csv(cache, JHUVaccinesTimeseriesUS, JHUVaccinesTimeseriesUS.SOURCE):
+        if effective_date > item.Date:
+            # this file is an entire timeseries history - only pay
+            # attention to most recent date
+            continue
+
+        assert item.Province_State is not None
+        if item.Country_Region == "":
+            # overall US stats - not currently used, and was
+            # unreliably populated as of 2022-09 - empty values were
+            # being manually fixed up but then broken again by JHU
+            # pipeline - see
+            # https://github.com/govex/COVID-19/commit/426347815a55c14579ce2c6a8a534b28def924c4
+            continue
+
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
-            sentry_sdk.capture_message("Could not find state {item.Province_State}")
+            print_and_log_to_sentry(f"Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
-            # print(f"Could not find state {item.Province_State}")
-        if item.Vaccine_Type == "All":
-            state.set_total_vaccines(item.Stage_One_Doses, item.Stage_Two_Doses)
-        elif item.Vaccine_Type in ["Pfizer", "Moderna"]:
-            # If listed, Stage_One_Doses appears to include people with second doses.
-            if item.Stage_Two_Doses is None:
-                partially_vaccinated = None
-            elif item.Stage_One_Doses is None:
-                partially_vaccinated = item.Doses_admin - item.Stage_Two_Doses * 2
-            else:
-                partially_vaccinated = item.Stage_One_Doses - item.Stage_Two_Doses
-            state.set_vaccines_of_type(item.Vaccine_Type, partially_vaccinated, item.Stage_Two_Doses)
-        elif item.Vaccine_Type == "Janssen":
-            state.set_vaccines_of_type(item.Vaccine_Type, 0, item.Stage_One_Doses)
+            # logger.warning(f"Could not find state {item.Province_State}")
+
+        if (
+            item.People_at_least_one_dose is None
+            or item.People_fully_vaccinated is None
+            or item.People_fully_vaccinated is None
+        ):
+            raise ValueError(f"Vaccination data missing for {state}")
+        partial_vaccinations: int = item.People_at_least_one_dose - item.People_fully_vaccinated
+        complete_vaccinations: int = item.People_fully_vaccinated
+        state.set_total_vaccines(partial_vaccinations, complete_vaccinations)
+        num_success += 1
+    if num_success == 0:
+        raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
 
 
-def parse_can_region_summary_by_county(cache, data):
+def parse_can_region_summary_by_county(cache: DataCache, data: AllData) -> None:
     # Test positivity and vaccination status per US county
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
         assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
@@ -1282,11 +1518,12 @@ def parse_can_region_summary_by_county(cache, data):
             county.test_positivity_rate = item.metrics.testPositivityRatio
         if item.actuals is not None and item.actuals.vaccinationsCompleted is not None:
             completed_vaccinations = item.actuals.vaccinationsCompleted
+            assert item.actuals.vaccinationsInitiated is not None
             partial_vaccinations = item.actuals.vaccinationsInitiated - completed_vaccinations
             county.set_total_vaccines(partial_vaccinations, completed_vaccinations)
 
 
-def parse_can_region_summary_by_state(cache, data):
+def parse_can_region_summary_by_state(cache: DataCache, data: AllData) -> None:
     # Test positivity and vaccination status per US state
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.STATE_SOURCE):
         state_name = us_state_name_by_abbrev[item.state]
@@ -1295,7 +1532,7 @@ def parse_can_region_summary_by_state(cache, data):
             state.test_positivity_rate = item.metrics.testPositivityRatio
 
 
-def parse_owid_testing_data(cache, country_by_iso3):
+def parse_owid_testing_data(cache: DataCache, country_by_iso3: Dict[str, Country]) -> None:
     # Test positivity per non-US country
     for line in parse_csv(cache, OWIDTestingData, OWIDTestingData.SOURCE):
         # These are in sorted order so we'll keep overwriting with
@@ -1305,44 +1542,73 @@ def parse_owid_testing_data(cache, country_by_iso3):
             if line.Short_term_positive_rate is not None:
                 country.test_positivity_rate = line.Short_term_positive_rate
             elif line.Seven_day_smoothed_daily_change:
-                country.tests_in_past_week = line.Seven_day_smoothed_daily_change * 7
+                country.tests_in_past_week = round(line.Seven_day_smoothed_daily_change * 7)
 
 
-def parse_romania_prevalence_data(cache, data):
-    for line in parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE):
+def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
+    try:
+        romania_regions = parse_json_list(cache, RomaniaPrevalenceData, RomaniaPrevalenceData.SOURCE)
+    except pydantic.error_wrappers.ValidationError as e:
+        print_and_log_to_sentry(f"Discarding county-level data from Romania due to error: {e}")
+        return
+    latest_date = max([region.Date for region in romania_regions])
+    if effective_date > latest_date:
+        print_and_log_to_sentry(
+            f"Discarding county-level data from Romania due to staleness - last update was {latest_date}"
+        )
+        return
+
+    for line in romania_regions:
         state = data.get_state(line.County, country="Romania")
         state.population = int(float(line.Population.replace(",", "")))
         state.cumulative_cases[line.Date] = line.TotalCases
 
 
-def parse_canada_prevalence_data(cache, data):
+def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
     populate_since = canada_effective_date - timedelta(days=16)
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
-    canada_regions = parse_json(cache, CanadaOpenCovidRegions, CanadaOpenCovidRegions.SOURCE)
 
-    def get_partially_vaccinated(total_shots, total_fully_vaccinated, shots_for_full_vaccination) -> int:
+    try:
+        # pull lists of health regions, provinces and territories and
+        # their abbreviations
+
+        canada_regions = parse_csv(cache, CovidTimelineCanadaRegion, CovidTimelineCanadaRegion.SOURCE)
+
+        canada_provinces = parse_csv(
+            cache, CovidTimelineCanadaProvinceOrTerritory, CovidTimelineCanadaProvinceOrTerritory.SOURCE
+        )
+    except pydantic.error_wrappers.ValidationError as e:
+        print_and_log_to_sentry(f"Discarding supplemental data from Canada due to error: {e}")
+        return
+
+    province_by_two_letter_abbrev = {
+        province.region: province.name_canonical for province in canada_provinces
+    }
+
+    def get_partially_vaccinated(
+        total_shots: int, total_fully_vaccinated: int, shots_for_full_vaccination: int
+    ) -> int:
         return total_shots - shots_for_full_vaccination * total_fully_vaccinated
 
     counter = 0
-    for region in canada_regions.hr:
-        if region.HR_UID == 9999:  # Repatriated/not reported. Skip.
+    for region in canada_regions:
+        if region.hruid == 9999:  # Repatriated/not reported. Skip.
             continue
         counter += 1
-        print(f"Fetching region {counter}: {region.health_region} ({region.HR_UID})")
+        logger.info(f"Fetching region {counter}: {region.name_short} ({region.hruid})")
 
-        # add population data
-        place = data.get_canada_region_place(region)
+        # pull or create our master record of this region
+        place = data.get_canada_region_place(region, province_by_two_letter_abbrev[region.region])
         if place.population != 0:
-            raise ValueError(f"Duplicate population info for {place!r}: {region.Population}")
-        if region.pop != "NULL":
-            place.population = region.pop
+            raise ValueError(f"Duplicate population info for {place!r}: {region.pop}")
+        place.population = region.pop
 
-        def process_regional_vaccination_reports():
+        def process_regional_vaccination_reports() -> None:
             vaccination_reports = parse_json(
                 cache,
                 CanadaRegionalVaccinationReports,
                 CanadaRegionalVaccinationReports.SOURCE.format(
-                    hr_uid=region.HR_UID,
+                    hr_uid=region.hruid,
                     before=canada_effective_date.strftime("%Y-%m-%d"),
                     after=populate_since.strftime("%Y-%m-%d"),
                 ),
@@ -1358,20 +1624,20 @@ def parse_canada_prevalence_data(cache, data):
                     )
                     place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
 
-        def process_regional_case_reports():
+        def process_regional_case_reports() -> None:
             # get region case counts from opencovid.ca, which seems to have
             # cleaner data than covid19tracker.ca
             case_reports = parse_json(
                 cache,
                 CanadaOpenCovidCases,
                 CanadaOpenCovidCases.SOURCE.format(
-                    hr_uid=region.HR_UID,
+                    hr_uid=region.hruid,
                     before=canada_effective_date.strftime("%Y-%m-%d"),
                     after=populate_since.strftime("%Y-%m-%d"),
                 ),
             )
-            for report in case_reports.cases:
-                place.cumulative_cases[report.date_report] = report.cumulative_cases
+            for report in case_reports.data.cases:
+                place.cumulative_cases[report.date] = report.value
 
         process_regional_vaccination_reports()
         process_regional_case_reports()
@@ -1383,33 +1649,32 @@ def parse_canada_prevalence_data(cache, data):
     vaccine_distribution_reports = parse_json(
         cache, CanadaVaccineDistribution, CanadaVaccineDistribution.SOURCE
     )
-    provinces = parse_json(cache, CanadaOpenCovidProvinces, CanadaOpenCovidProvinces.SOURCE)
-    for province in provinces.prov:
+    for province in canada_provinces:
         min_test_count = None
         max_test_count = None
-        place = data.get_state(province.province_full, country="Canada")
+        place = data.get_state(province.name_canonical, country="Canada")
         provincial_reports = parse_json(
             cache,
             CanadaOpenCovidProvincialSummary,
             CanadaOpenCovidProvincialSummary.SOURCE.format(
-                province=province.province_short,
+                province=province.region,
                 before=canada_effective_date.strftime("%Y-%m-%d"),
                 after=populate_since.strftime("%Y-%m-%d"),
             ),
         )
-        for report in provincial_reports.summary:
+        for report in provincial_reports.data:
             # check bounds just in case the reports interval gets changed later
             if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
-                if report.cumulative_testing:
+                if report.tests_completed:
                     min_test_count = (
-                        report.cumulative_testing
+                        report.tests_completed
                         if min_test_count is None
-                        else min(min_test_count, report.cumulative_testing)
+                        else min(min_test_count, report.tests_completed)  # type: ignore
                     )
                     max_test_count = (
-                        report.cumulative_testing
+                        report.tests_completed
                         if max_test_count is None
-                        else max(max_test_count, report.cumulative_testing)
+                        else max(max_test_count, report.tests_completed)  # type: ignore
                     )
 
         if min_test_count is not None and max_test_count is not None:
@@ -1417,7 +1682,7 @@ def parse_canada_prevalence_data(cache, data):
 
         # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
         provincial_dist = next(
-            (d for d in vaccine_distribution_reports.data if d.province == province.province_short), None
+            (d for d in vaccine_distribution_reports.data if d.province == province.region), None
         )
         if provincial_dist is not None:
             # Use distribution numbers as a proxy if administered numbers
@@ -1447,27 +1712,21 @@ def parse_canada_prevalence_data(cache, data):
                 manufacturer: shots / total_administered_shots
                 for (manufacturer, shots) in administered_shots_by_manufacturer.items()
             }
-            for k, v in proportional_weights.items():
+            for manufacturer, proportion in proportional_weights.items():
+                most_recent = provincial_reports.data[-1]
+                total_fully_vaccinated = most_recent.vaccine_administration_dose_2
+                partially_vaccinated = (
+                    most_recent.vaccine_administration_dose_1 - most_recent.vaccine_administration_dose_2
+                )
                 place.set_vaccines_of_type(
-                    k,
-                    v
-                    * get_partially_vaccinated(
-                        provincial_reports.summary[-1].cumulative_avaccine,
-                        provincial_reports.summary[-1].cumulative_cvaccine,
-                        2,
-                    ),
-                    v * provincial_reports.summary[-1].cumulative_cvaccine,
+                    manufacturer,
+                    round(proportion * partially_vaccinated),
+                    round(proportion * total_fully_vaccinated),
                 )
 
 
 def main() -> None:
-    sentry_sdk.init(
-        "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
-        # Set traces_sample_rate to 1.0 to capture 100%
-        # of transactions for performance monitoring.
-        # We recommend adjusting this value in production.
-        traces_sample_rate=1.0,
-    )
+    configure_logging()
 
     if not CAN_API_KEY:
         print("Usage: CAN_API_KEY=${COVID_ACT_NOW_API_KEY} python3 %s" % sys.argv[0])
@@ -1492,7 +1751,7 @@ def main() -> None:
         parse_jhu_vaccines_global(cache, data)
 
         # US vaccination rates
-        parse_jhu_vaccines_hourly_us(cache, data)
+        parse_jhu_vaccines_us(cache, data)
 
         # Test positivity and vaccination status per US county and state
         parse_can_region_summary_by_county(cache, data)
@@ -1587,21 +1846,21 @@ def main() -> None:
     (csvdir / "date.csv").write_text("Date\n{}".format(effective_date.strftime("%Y-%m-%d")))
     with (csvdir / "index.csv").open("w") as topfile:
         topfile.write("Location,Slug\n")
-        for slug, data in app_locations.items():
-            if not data.topLevelGroup:
+        for slug, location_date in app_locations.items():
+            if not location_date.topLevelGroup:
                 continue
 
-            topfile.write(f"{data.label},{slug}\n")
+            topfile.write(f"{location_date.label},{slug}\n")
             with (csvdir / slug).with_suffix(".csv").open("w") as subfile:
-                top_row = data.as_csv_data()
+                top_row = location_date.as_csv_data()
                 subfile.write(",".join(top_row.keys()) + "\n")
-                if "states" in data.topLevelGroup.lower():
+                if "states" in location_date.topLevelGroup.lower():
                     top_row["Name"] = "Entire state"
                 else:
                     top_row["Name"] = "Entire country"
                 subfile.write(",".join(top_row.values()) + "\n")
 
-                for subkey in data.subdivisions:
+                for subkey in location_date.subdivisions:
                     subfile.write(",".join(app_locations[subkey].as_csv_data().values()) + "\n")
 
 

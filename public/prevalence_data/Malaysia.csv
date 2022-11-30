@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004928,0.004928,0.002014,2.4472,1.0,0.004928
-Johor,Unknown,Unknown,0.000752,2.4472,1.0,0.001841
-Kedah,Unknown,Unknown,0.000863,2.4472,1.0,0.002111
-Kelantan,Unknown,Unknown,0.00036,2.4472,1.0,0.000882
-Melaka,Unknown,Unknown,0.001398,2.4472,1.0,0.003421
-Negeri Sembilan,Unknown,Unknown,0.003124,2.4472,1.0,0.007646
-Pahang,Unknown,Unknown,0.000671,2.4472,1.0,0.001643
-Perak,Unknown,Unknown,0.001255,2.4472,1.0,0.003071
-Perlis,Unknown,Unknown,0.000609,2.4472,1.0,0.00149
-Pulau Pinang,Unknown,Unknown,0.001338,2.4472,1.0,0.003275
-Sabah,Unknown,Unknown,0.000212,2.4472,1.0,0.000518
-Sarawak,Unknown,Unknown,0.000627,2.4472,1.0,0.001535
-Selangor,Unknown,Unknown,0.00587,2.4472,1.0,0.014365
-Terengganu,Unknown,Unknown,0.001072,2.4472,1.0,0.002623
-W.P. Kuala Lumpur,Unknown,Unknown,0.003063,2.4472,1.0,0.007496
-W.P. Labuan,Unknown,Unknown,0.001046,2.4472,1.0,0.00256
-W.P. Putrajaya,Unknown,Unknown,0.002277,2.4472,1.0,0.005572
+Entire country,0.001366,0.001366,0.000598,2.2285,1.0257,0.001366
+Johor,Unknown,Unknown,8.4e-05,2.2285,1.0,0.000188
+Kedah,Unknown,Unknown,0.00049,2.2285,1.0,0.001092
+Kelantan,Unknown,Unknown,0.000524,2.2285,1.2705,0.001484
+Melaka,Unknown,Unknown,0.001308,2.2285,1.0,0.002915
+Negeri Sembilan,Unknown,Unknown,0.000581,2.2285,1.0202,0.001321
+Pahang,Unknown,Unknown,0.000433,2.2285,1.1346,0.001095
+Perak,Unknown,Unknown,0.000331,2.2285,1.1274,0.000832
+Perlis,Unknown,Unknown,0.00022,2.2285,1.1702,0.000574
+Pulau Pinang,Unknown,Unknown,0.000547,2.2285,1.0,0.00122
+Sabah,Unknown,Unknown,0.000362,2.2285,1.0367,0.000837
+Sarawak,Unknown,Unknown,0.000384,2.2285,1.3433,0.001148
+Selangor,Unknown,Unknown,0.001087,2.2285,1.0,0.002422
+Terengganu,Unknown,Unknown,0.000452,2.2285,1.2155,0.001224
+W.P. Kuala Lumpur,Unknown,Unknown,0.000894,2.2285,1.0352,0.002063
+W.P. Labuan,Unknown,Unknown,0.001348,2.2285,1.5833,0.004757
+W.P. Putrajaya,Unknown,Unknown,0.005825,2.2285,1.0,0.012982
