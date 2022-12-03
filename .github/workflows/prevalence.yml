@@ -4,8 +4,6 @@ on:
   schedule:
     # 7:00am Pacific = 14:00 UTC
     - cron: '0 14 * * *'
-    # Failure emails sent to @apiology, the last person to change the above line
-    # https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/notifications-for-workflow-runs
   workflow_dispatch:
 
 jobs:
