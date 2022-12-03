@@ -1,5 +1,5 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.006929,0.006929,0.001709,2.0917,1.9382,0.006929
+Entire country,0.0074,0.0074,0.001878,2.0917,1.8837,0.0074
 Amazonas,Unknown,Unknown,0.000152,2.0917,1.2308,0.000392
 Ancash,Unknown,Unknown,0.000826,2.0917,2.0,0.003455
 Apurimac,Unknown,Unknown,0.000318,2.0917,2.0,0.001331
@@ -18,8 +18,8 @@ Lima,Unknown,Unknown,0.002424,2.0917,1.8363,0.00931
 Loreto,Unknown,Unknown,0.000108,2.0917,1.0476,0.000237
 Madre de Dios,Unknown,Unknown,0.00038,2.0917,2.0,0.001589
 Moquegua,Unknown,Unknown,0.000799,2.0917,2.0,0.003343
-Pasco,Unknown,Unknown,0.000386,2.0917,2.0,0.001616
-Piura,Unknown,Unknown,0.000141,2.0917,1.7186,0.000506
+Pasco,Unknown,Unknown,0.000386,2.0917,2.0,0.001615
+Piura,Unknown,Unknown,0.000141,2.0917,1.7186,0.000505
 Puno,Unknown,Unknown,0.000102,2.0917,1.3298,0.000283
 San Martin,Unknown,Unknown,0.000339,2.0917,2.0,0.001418
 Tacna,Unknown,Unknown,0.000833,2.0917,2.0,0.003484
