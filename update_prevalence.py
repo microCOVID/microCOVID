@@ -1316,8 +1316,6 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Grand Princess",
         "MS Zaandam",
         "Western Sahara",
-        "Micronesia",
-        "Palau",
         "Summer Olympics 2020",
         "Winter Olympics 2022",
         "Antarctica",
