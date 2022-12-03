@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001115,0.001115,0.0005,2.2278,1.0,0.001115
-Johor,Unknown,Unknown,8e-05,2.2278,1.0,0.000178
-Kedah,Unknown,Unknown,0.000484,2.2278,1.0677,0.00115
-Kelantan,Unknown,Unknown,0.000391,2.2278,1.0,0.000871
-Melaka,Unknown,Unknown,0.001146,2.2278,1.0,0.002553
-Negeri Sembilan,Unknown,Unknown,0.000526,2.2278,1.0,0.001171
-Pahang,Unknown,Unknown,0.000333,2.2278,1.0,0.000741
-Perak,Unknown,Unknown,0.000274,2.2278,1.0,0.00061
-Perlis,Unknown,Unknown,0.000192,2.2278,1.1163,0.000479
-Pulau Pinang,Unknown,Unknown,0.000456,2.2278,1.0,0.001015
-Sabah,Unknown,Unknown,0.000298,2.2278,1.0,0.000664
-Sarawak,Unknown,Unknown,0.000321,2.2278,1.0,0.000716
-Selangor,Unknown,Unknown,0.00091,2.2278,1.0,0.002028
-Terengganu,Unknown,Unknown,0.000366,2.2278,1.0,0.000816
-W.P. Kuala Lumpur,Unknown,Unknown,0.000719,2.2278,1.0,0.001601
-W.P. Labuan,Unknown,Unknown,0.001087,2.2278,1.0,0.002421
-W.P. Putrajaya,Unknown,Unknown,0.004478,2.2278,1.0,0.009977
+Entire country,0.001073,0.001073,0.000482,2.2276,1.0,0.001073
+Johor,Unknown,Unknown,7.7e-05,2.2276,1.0,0.000171
+Kedah,Unknown,Unknown,0.000488,2.2276,1.1129,0.001209
+Kelantan,Unknown,Unknown,0.000375,2.2276,1.0,0.000836
+Melaka,Unknown,Unknown,0.001023,2.2276,1.0,0.002278
+Negeri Sembilan,Unknown,Unknown,0.000488,2.2276,1.0,0.001088
+Pahang,Unknown,Unknown,0.000336,2.2276,1.0,0.000748
+Perak,Unknown,Unknown,0.000255,2.2276,1.0,0.000568
+Perlis,Unknown,Unknown,0.000224,2.2276,1.3659,0.000681
+Pulau Pinang,Unknown,Unknown,0.000413,2.2276,1.0,0.00092
+Sabah,Unknown,Unknown,0.000274,2.2276,1.0,0.000611
+Sarawak,Unknown,Unknown,0.000325,2.2276,1.0,0.000725
+Selangor,Unknown,Unknown,0.0009,2.2276,1.0,0.002005
+Terengganu,Unknown,Unknown,0.00036,2.2276,1.0,0.000802
+W.P. Kuala Lumpur,Unknown,Unknown,0.000691,2.2276,1.0,0.001539
+W.P. Labuan,Unknown,Unknown,0.001036,2.2276,1.0,0.002308
+W.P. Putrajaya,Unknown,Unknown,0.003615,2.2276,1.0,0.008052
