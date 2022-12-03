@@ -1,6 +1,7 @@
 import copy from 'copy-to-clipboard'
+import { sub as date_sub } from 'date-fns'
 import { stringify } from 'query-string'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsLink45Deg } from 'react-icons/bs'
@@ -46,7 +47,10 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [showWarning, setShowWarning] = useState(true)
+  const [suppressStaleWarning, setSuppressStaleWarning] = useState(false)
+  const [points, setPoints] = useState(-1)
+  const [lowerBound, setLowerBound] = useState(-1)
+  const [upperBound, setUpperBound] = useState(-1)
 
   // Mount / unmount
   useEffect(() => {
@@ -102,12 +106,15 @@ export const Calculator = (): React.ReactElement => {
     addAlert('Link copied to clipboard!')
   }
 
-  const { points, lowerBound, upperBound } = useMemo(() => {
+  useEffect(() => {
     // Risk calculation
     const result = calculate(calculatorData)
     if (result === null) {
       document.getElementById('points-row')?.classList.remove('has-points')
-      return { points: -1, lowerBound: -1, upperBound: -1 }
+      setPoints(-1)
+      setLowerBound(-1)
+      setUpperBound(-1)
+      return
     }
 
     const { expectedValue, lowerBound, upperBound } = result
@@ -134,7 +141,9 @@ export const Calculator = (): React.ReactElement => {
     setQuery(filterParams(calculatorData), 'replace')
 
     document.getElementById('points-row')?.classList.add('has-points')
-    return { points: expectedValue, lowerBound, upperBound }
+    setPoints(expectedValue)
+    setLowerBound(lowerBound)
+    setUpperBound(upperBound)
   }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
@@ -166,26 +175,16 @@ export const Calculator = (): React.ReactElement => {
     </button>
   )
 
+  const oneWeekAgo = date_sub(new Date(), { weeks: 1 })
+  const prevalenceDataDate = calculatorData.prevalanceDataDate
+  const prevalenceIsStale =
+    prevalenceDataDate !== null && prevalenceDataDate < oneWeekAgo
+  const showStaleWarning = prevalenceIsStale && !suppressStaleWarning
+
   return (
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {showWarning && (
-            <Alert
-              variant="primary"
-              onClose={() => setShowWarning(false)}
-              dismissible
-            >
-              <Alert.Heading>
-                {t('calculator.intro.omicron_warning_heading')}
-              </Alert.Heading>
-              <Trans i18nKey="calculator.intro.omicron_warning">
-                Research is in progress to determine Omicron's impact on our
-                models. Preliminary findings suggest an increase in the risk for
-                re-infection.
-              </Trans>
-            </Alert>
-          )}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
@@ -206,26 +205,32 @@ export const Calculator = (): React.ReactElement => {
               </a>
             </Trans>
           </p>
+          <Alert variant="primary">
+            <Alert.Heading>
+              {t('calculator.intro.maintenance_warning_heading')}
+            </Alert.Heading>
+            <Trans i18nKey="calculator.intro.maintenance_warning">
+              <a
+                href="https://github.com/microCOVID/microCOVID/discussions/1626"
+                target="_blank"
+                rel="noreferrer"
+              >
+                HERE_PLACEHOLDER
+              </a>
+            </Trans>
+          </Alert>
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.delta_blog">
-              <strong>DATE_PLACEHOLDER</strong>{' '}
-              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.delta_numbers">
+            <Trans i18nKey="calculator.alerts.omicron_numbers">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
             </Trans>
           </Alert>
           <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.average_vaccine">
+            <Trans i18nKey="calculator.alerts.delta_blog">
               <strong>DATE_PLACEHOLDER</strong>{' '}
-              <Link to="/paper/14-research-sources#others-vaccines">
-                HERE_PLACEHOLDER
-              </Link>
+              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
             </Trans>
           </Alert>
           <Link
@@ -246,6 +251,24 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
+          {showStaleWarning && (
+            <Alert
+              variant="primary"
+              onClose={() => setSuppressStaleWarning(true)}
+              dismissible
+            >
+              <Alert.Heading>
+                {t('calculator.intro.stale_warning_heading')}
+              </Alert.Heading>
+              <Trans
+                values={{
+                  lastLoadedDate: prevalenceDataDate?.toLocaleDateString(),
+                }}
+              >
+                calculator.intro.stale_warning
+              </Trans>
+            </Alert>
+          )}
           <Card id="location">
             <PrevalenceControls
               data={calculatorData}
