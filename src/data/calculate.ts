@@ -124,15 +124,15 @@ const prevalenceRatio = (positivityPercent: number | null, date: Date) => {
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
 
-// Replace any values that no longer exist with empty string (nothing selected).
-// This is used when restoring a previous saved scenario, in case we changed
-// the model in the meantime.
 // sanitizeData() is used to clean both query parameters in the URL and
 // anything in local storage.
 export const sanitizeData = (
   data: Partial<CalculatorData>,
   fillCustomIfScenarioMissing: boolean,
 ): CalculatorData => {
+  // Replace any values that no longer exist with empty string (nothing selected).
+  // This is used when restoring a previous saved scenario, in case we changed
+  // the model in the meantime.
   const fixOne = (
     table: {
       [key: string]: FormValue | PartialData | PersonRiskValue | VaccineValue
@@ -154,11 +154,17 @@ export const sanitizeData = (
   fixOne(Vaccines, 'yourVaccineType')
   fixOne(prepopulated, 'scenarioName')
 
+  // ensure yourVaccineDoses is in current range
   if (
     data['yourVaccineDoses'] !== undefined &&
-    (data['yourVaccineDoses'] > 2 || data['yourVaccineDoses'] < 0)
+    (data['yourVaccineDoses'] > 3 || data['yourVaccineDoses'] < 0)
   ) {
     delete data['yourVaccineDoses']
+  }
+
+  // rehydrate stringified objects from JSON stored in local storage
+  if (data['prevalanceDataDate'] !== undefined) {
+    data['prevalanceDataDate'] = new Date(data['prevalanceDataDate'])
   }
 
   // No scenario name. Must be old stored data or an old query. For backwards

@@ -151,10 +151,14 @@ describe('calculator page', () => {
   })
 
   it('results in sane values', () => {
-    const { queryAllByRole, getByText, getByPlaceholderText, getByTestId } =
-      render(<Calculator />, {
-        wrapper: AllProviders,
-      })
+    const {
+      queryAllByRole,
+      getByText,
+      getByPlaceholderText,
+      getByTestId,
+    } = render(<Calculator />, {
+      wrapper: AllProviders,
+    })
 
     const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
     fireEvent.click(topLocationBox)

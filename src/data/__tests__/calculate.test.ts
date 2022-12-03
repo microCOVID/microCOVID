@@ -473,7 +473,8 @@ describe('calculate', () => {
       ${'astraZeneca'} | ${2}  | ${1}
       ${'astraZeneca'} | ${3}  | ${0.3}
       ${'johnson'}     | ${0}  | ${1}
-      ${'johnson'}     | ${1}  | ${0.95}
+      ${'johnson'}     | ${1}  | ${1}
+      ${'johnson'}     | ${2}  | ${0.95}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
@@ -545,7 +546,7 @@ describe('calculate', () => {
     it('Should decrease risk for vaccinated people', () => {
       expect(
         calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
-    ).toEqual(defaultValue * 2 * 0.8)
+      ).toEqual(defaultValue * 2 * 0.8)
     })
   })
 
