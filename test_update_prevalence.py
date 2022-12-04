@@ -1,5 +1,6 @@
 from unittest.mock import Mock, patch
 import json
+import logging
 import pytest
 import requests
 import typing
@@ -12,9 +13,26 @@ from update_prevalence import (
     AllData,
     DataCache,
     County,
+    LogAggregator,
+    PopulationFilteredLogging,
 )
 from logging import Logger
 import update_prevalence
+
+
+@pytest.fixture
+def small_place() -> PopulationFilteredLogging:
+    class MyPlace(PopulationFilteredLogging):
+        pop: int
+
+        def __init__(self, pop: int):
+            self.pop = pop
+
+        @property
+        def population_as_int(self) -> int:
+            return self.pop
+
+    return MyPlace(5000)
 
 
 @pytest.fixture
@@ -197,3 +215,15 @@ def test_parse_can_region_summary_by_county_known_unknown_county(
     parse_can_region_summary_by_county(cache, data)
 
     mock_logger.warning.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_Log_Aggregator(
+        mock_logger: Mock,
+        small_place: PopulationFilteredLogging
+) -> None:
+    aggregator = LogAggregator()
+    aggregator.add_issue('issue type one', small_place)
+    aggregator.log()
+    mock_logger.log.assert_called_with(logging.DEBUG,
+                                       "5,000 people affected by issue type one")
