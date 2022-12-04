@@ -277,3 +277,16 @@ def test_PopulationFilteredLogging_issue_delegates_to_log_aggregator(
     small_place.issue("issue type five", "detail")
     log_aggregator.log()
     mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type five")
+
+def test_County_as_app_data(effective_date: date) -> None:
+    my_county = County(
+        fullname="My County, My State",
+        name="My County",
+        country="My Country",
+        state="My State",
+        population=123,
+    )
+    my_county.test_positivity_rate = 0.5
+    my_county.cumulative_cases[effective_date] = 123
+    app_location = my_county.as_app_data()
+    assert app_location.positiveCasePercentage == 50
