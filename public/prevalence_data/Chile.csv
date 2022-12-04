@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.003558,0.003558,0.001499,2.3745,1.0,0.003558
-Antofagasta,Unknown,Unknown,0.00172,2.3745,1.0,0.004084
-Araucania,Unknown,Unknown,0.0013,2.3745,1.0,0.003086
-Arica y Parinacota,Unknown,Unknown,0.001884,2.3745,1.0,0.004474
-Atacama,Unknown,Unknown,0.003097,2.3745,1.0,0.007355
-Aysen,Unknown,Unknown,0.002656,2.3745,1.1717,0.00739
-Biobio,Unknown,Unknown,0.001634,2.3745,1.0,0.00388
-Coquimbo,Unknown,Unknown,0.001964,2.3745,1.0,0.004664
-Los Lagos,Unknown,Unknown,0.001367,2.3745,1.0,0.003246
-Los Rios,Unknown,Unknown,0.002624,2.3745,1.0,0.006232
-Magallanes,Unknown,Unknown,0.00203,2.3745,1.0,0.004819
-Maule,Unknown,Unknown,0.001733,2.3745,1.0,0.004115
-Metropolitana,Unknown,Unknown,0.001357,2.3745,1.0,0.003222
-Nuble,Unknown,Unknown,0.00274,2.3745,1.0,0.006507
-OHiggins,Unknown,Unknown,0.001386,2.3745,1.0,0.003292
-Tarapaca,Unknown,Unknown,0.00186,2.3745,1.137,0.005023
-Valparaiso,Unknown,Unknown,0.001985,2.3745,1.0,0.004713
+Entire country,0.003476,0.003476,0.001464,2.3741,1.0,0.003476
+Antofagasta,Unknown,Unknown,0.001753,2.3741,1.0,0.004162
+Araucania,Unknown,Unknown,0.00119,2.3741,1.0,0.002825
+Arica y Parinacota,Unknown,Unknown,0.001986,2.3741,1.0492,0.004947
+Atacama,Unknown,Unknown,0.003174,2.3741,1.0,0.007534
+Aysen,Unknown,Unknown,0.002705,2.3741,1.2193,0.007829
+Biobio,Unknown,Unknown,0.001592,2.3741,1.0,0.003779
+Coquimbo,Unknown,Unknown,0.001911,2.3741,1.0,0.004538
+Los Lagos,Unknown,Unknown,0.001362,2.3741,1.0,0.003234
+Los Rios,Unknown,Unknown,0.002518,2.3741,1.0,0.005978
+Magallanes,Unknown,Unknown,0.00224,2.3741,1.1481,0.006105
+Maule,Unknown,Unknown,0.001655,2.3741,1.0,0.003928
+Metropolitana,Unknown,Unknown,0.001315,2.3741,1.0,0.003122
+Nuble,Unknown,Unknown,0.002607,2.3741,1.0,0.00619
+OHiggins,Unknown,Unknown,0.001414,2.3741,1.0,0.003356
+Tarapaca,Unknown,Unknown,0.001891,2.3741,1.1284,0.005065
+Valparaiso,Unknown,Unknown,0.001931,2.3741,1.0,0.004584
