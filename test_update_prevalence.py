@@ -141,3 +141,59 @@ def test_parse_can_region_summary_by_county(
     assert county.test_positivity_rate is None
     assert county.vaccines_total.partial_vaccinations == 401
     assert county.vaccines_total.completed_vaccinations == 2498
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_can_region_summary_by_county_unknown_unknown_county(
+    mock_get: Mock,
+    mock_logger: Mock,
+    data: AllData,
+    cache: DataCache,
+) -> None:
+    mock_response = Mock()
+    mock_response.status_code = 200
+    mock_response.text = json.dumps(
+        [
+            {
+                "fips": "8675309",
+                "country": "US",
+                "state": "MP",
+                "county": "aslkdjfa",
+                "population": 48000,
+            },
+        ]
+    )
+
+    mock_get.return_value = mock_response
+    parse_can_region_summary_by_county(cache, data)
+
+    mock_logger.warning.assert_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_can_region_summary_by_county_known_unknown_county(
+    mock_get: Mock,
+    mock_logger: Mock,
+    data: AllData,
+    cache: DataCache,
+) -> None:
+    mock_response = Mock()
+    mock_response.status_code = 200
+    mock_response.text = json.dumps(
+        [
+            {
+                "fips": "69100",
+                "country": "US",
+                "state": "MP",
+                "county": "Rota Municipality",
+                "population": 48000,
+            },
+        ]
+    )
+
+    mock_get.return_value = mock_response
+    parse_can_region_summary_by_county(cache, data)
+
+    mock_logger.warning.assert_not_called()
