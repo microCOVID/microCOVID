@@ -20,19 +20,30 @@ from logging import Logger
 import update_prevalence
 
 
+class MyPlace(PopulationFilteredLogging):
+    pop: int
+
+    def __init__(self, pop: int):
+        self.pop = pop
+
+    @property
+    def population_as_int(self) -> int:
+        return self.pop
+
+
 @pytest.fixture
 def small_place() -> PopulationFilteredLogging:
-    class MyPlace(PopulationFilteredLogging):
-        pop: int
-
-        def __init__(self, pop: int):
-            self.pop = pop
-
-        @property
-        def population_as_int(self) -> int:
-            return self.pop
-
     return MyPlace(5000)
+
+
+@pytest.fixture
+def medium_place() -> PopulationFilteredLogging:
+    return MyPlace(10000)
+
+
+@pytest.fixture
+def large_place() -> PopulationFilteredLogging:
+    return MyPlace(100000)
 
 
 @pytest.fixture
@@ -218,8 +229,41 @@ def test_parse_can_region_summary_by_county_known_unknown_county(
 
 
 @patch("update_prevalence.logger", spec=Logger)
-def test_Log_Aggregator(mock_logger: Mock, small_place: PopulationFilteredLogging) -> None:
+def test_Log_Aggregator_logs_small_impacts_as_debug(
+    mock_logger: Mock, small_place: PopulationFilteredLogging
+) -> None:
     aggregator = LogAggregator()
     aggregator.add_issue("issue type one", small_place)
     aggregator.log()
     mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type one")
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_Log_Aggregator_logs_small_impacts_as_info(
+    mock_logger: Mock, medium_place: PopulationFilteredLogging
+) -> None:
+    aggregator = LogAggregator()
+    aggregator.add_issue("issue type two", medium_place)
+    aggregator.log()
+    mock_logger.log.assert_called_with(logging.INFO, "10,000 people affected by issue type two")
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_Log_Aggregator_logs_large_impacts_as_warning(
+    mock_logger: Mock, large_place: PopulationFilteredLogging
+) -> None:
+    aggregator = LogAggregator()
+    aggregator.add_issue("issue type three", large_place)
+    aggregator.log()
+    mock_logger.log.assert_called_with(logging.WARNING, "100,000 people affected by issue type three")
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_Log_Aggregator_combines_small_impacts_as_info(
+    mock_logger: Mock, small_place: PopulationFilteredLogging
+) -> None:
+    aggregator = LogAggregator()
+    aggregator.add_issue("issue type four", small_place)
+    aggregator.add_issue("issue type four", small_place)
+    aggregator.log()
+    mock_logger.log.assert_called_with(logging.INFO, "10,000 people affected by issue type four")
