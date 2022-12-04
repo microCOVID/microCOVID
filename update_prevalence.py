@@ -1145,7 +1145,9 @@ class AllData:
                             ):
                                 pass  # don't warn
                             else:
-                                county.issue("No case data", f"discarding {county!r} with no case data")
+                                county.issue(
+                                    "No county-level case data", f"discarding {county!r} with no case data"
+                                )
                             del state.counties[county.name]
 
                         if county.test_positivity_rate is None:
@@ -1170,7 +1172,7 @@ class AllData:
                         elif state.name in ("American Samoa", "Unknown", "Recovered"):
                             pass
                         else:
-                            state.issue("No case data", f"Discarding {state!r} with no case data")
+                            state.issue("No state-level case data", f"Discarding {state!r} with no case data")
                         del country.states[state.name]
 
                     for county in list(state.counties.values()):
@@ -1187,7 +1189,7 @@ class AllData:
                             state.test_positivity_rate = country.test_positivity_rate
 
                 if not rollup_cases(country, "states"):
-                    raise ValueError(f"Missing case data for {country!r}")
+                    raise ValueError(f"No country-level case data for {country!r}")
                 rollup_testing(country, "states")
                 for state in list(country.states.values()):
                     if state.name in fake_names:
@@ -1596,7 +1598,7 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
     if effective_date > latest_date:
         romania = data.get_country_or_raise("Romania")
         romania.issue(
-            "Discarding stale county-level data",
+            "No county-level case data",
             f"from Romania due to staleness - last update was {latest_date}",
         )
         return

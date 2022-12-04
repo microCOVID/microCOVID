@@ -363,7 +363,7 @@ def test_AllData_rollup_totals_no_county_data(mock_logger: Mock, effective_date:
     all_data.rollup_totals()
     mock_logger.warning.assert_not_called()
     mock_logger.info.assert_called_with(
-        "No case data (10 people): discarding County(fullname='mumble, Wyoming, US', name='mumble', population=10, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', state='Wyoming', fips=None) with no case data"
+        "No county-level case data (10 people): discarding County(fullname='mumble, Wyoming, US', name='mumble', population=10, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', state='Wyoming', fips=None) with no case data"
     )
 
 
@@ -379,7 +379,7 @@ def test_AllData_rollup_totals_no_state_data(mock_logger: Mock, effective_date: 
     all_data.rollup_totals()
     mock_logger.warning.assert_not_called()
     mock_logger.info.assert_called_with(
-        "No case data (50 people): Discarding State(fullname='Montana, US', name='Montana', population=50, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', fips=None, counties={}) with no case data"
+        "No state-level case data (50 people): Discarding State(fullname='Montana, US', name='Montana', population=50, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', fips=None, counties={}) with no case data"
     )
 
 
@@ -400,5 +400,5 @@ def test_parse_romania_prevalence_data_stale(
 
     parse_romania_prevalence_data(cache, data)
     mock_logger.info.assert_called_with(
-        "Discarding stale county-level data (0 people): from Romania due to staleness - last update was 2020-04-02"
+        "No county-level case data (0 people): from Romania due to staleness - last update was 2020-04-02"
     )
