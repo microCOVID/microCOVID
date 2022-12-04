@@ -16,6 +16,7 @@ from update_prevalence import (
     LogAggregator,
     log_aggregator,
     PopulationFilteredLogging,
+    AppLocation,
 )
 from logging import Logger
 import update_prevalence
@@ -45,6 +46,19 @@ def medium_place() -> PopulationFilteredLogging:
 @pytest.fixture
 def large_place() -> PopulationFilteredLogging:
     return MyPlace(100000)
+
+
+@pytest.fixture
+def my_county(effective_date: date) -> County:
+    my_county = County(
+        fullname="My County, My State",
+        name="My County",
+        country="My Country",
+        state="My State",
+        population=123,
+    )
+    my_county.cumulative_cases[effective_date] = 123
+    return my_county
 
 
 @pytest.fixture
@@ -278,6 +292,7 @@ def test_PopulationFilteredLogging_issue_delegates_to_log_aggregator(
     log_aggregator.log()
     mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type five")
 
+
 def test_County_as_app_data(effective_date: date) -> None:
     my_county = County(
         fullname="My County, My State",
@@ -290,3 +305,30 @@ def test_County_as_app_data(effective_date: date) -> None:
     my_county.cumulative_cases[effective_date] = 123
     app_location = my_county.as_app_data()
     assert app_location.positiveCasePercentage == 50
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_as_app_data_validates_positivity_rate(mock_logger: Mock, effective_date: date, my_county: County) -> None:
+    my_county.test_positivity_rate = 1.5
+    app_location = my_county.as_app_data()
+    assert app_location.positiveCasePercentage is None
+    mock_logger.info.assert_called_with(
+        "Invalid test positivity rate (123 people): test rate for My County is 1.5"
+    )
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AppLocation_also_validates_positivity_rate(mock_logger: Mock, effective_date: date, my_county: County) -> None:
+    increase = 0.3
+    app_location = AppLocation(
+        label=my_county.name,
+        population=f"{my_county.population:,}",
+        casesPastWeek=my_county.cases_last_week,
+        casesIncreasingPercentage=increase * 100,
+        updatedAt=effective_date.strftime("%B %d, %Y"),
+    )
+    app_location.positiveCasePercentage = -23
+    ratio = app_location.prevalenceRatio()
+    assert ratio is not None
+    mock_logger.info.assert_called_with(
+        "Positivity rate is negative (123 people): -23"
+    )
