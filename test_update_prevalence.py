@@ -218,12 +218,8 @@ def test_parse_can_region_summary_by_county_known_unknown_county(
 
 
 @patch("update_prevalence.logger", spec=Logger)
-def test_Log_Aggregator(
-        mock_logger: Mock,
-        small_place: PopulationFilteredLogging
-) -> None:
+def test_Log_Aggregator(mock_logger: Mock, small_place: PopulationFilteredLogging) -> None:
     aggregator = LogAggregator()
-    aggregator.add_issue('issue type one', small_place)
+    aggregator.add_issue("issue type one", small_place)
     aggregator.log()
-    mock_logger.log.assert_called_with(logging.DEBUG,
-                                       "5,000 people affected by issue type one")
+    mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type one")

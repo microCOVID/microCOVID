@@ -55,10 +55,9 @@ logger = logging.getLogger("update_prevalence")
 class LogAggregator:
     population_affected_by_issue: Dict[str, int] = {}
 
-    def add_issue(self, msg: str, place: 'PopulationFilteredLogging') -> None:
+    def add_issue(self, msg: str, place: "PopulationFilteredLogging") -> None:
         existing_population = self.population_affected_by_issue.get(msg, 0)
-        self.population_affected_by_issue[msg] =\
-            existing_population + place.population_as_int
+        self.population_affected_by_issue[msg] = existing_population + place.population_as_int
 
     def log(self) -> None:
         for msg in self.population_affected_by_issue:
@@ -69,8 +68,7 @@ class LogAggregator:
             elif population_affected < 100000:
                 level = logging.INFO
 
-            logger.log(level,
-                       f"{population_affected:,d} people affected by {msg}")
+            logger.log(level, f"{population_affected:,d} people affected by {msg}")
 
 
 log_aggregator = LogAggregator()
@@ -588,19 +586,19 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
             if values[0] > min(values[:-1]) and possibly_suspect_correction:
                 self.issue(
                     "Negative correction is suspect",
-                    f"Check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+                    f"Check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}",
                 )
             if min(values[:-1]) == values[-1] and max(values) > values[-1]:
                 self.issue(
                     "Endpoints say no new cases and max(values) says new cases",
-                    f"check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
+                    f"check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}",
                 )
             return values[-1] - min(values[:-1])
 
         # looks complicated. Print a warning.
         self.issue(
             "Decreasing cumulative case counts.",
-            f"Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+            f"Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}",
         )
         return 0
 
@@ -755,8 +753,9 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         if self.test_positivity_rate is not None and (
             self.test_positivity_rate < 0 or self.test_positivity_rate > 1
         ):
-            self.issue("Invalid test positivity rate",
-                       f"test rate for {self.name} is {self.test_positivity_rate}")
+            self.issue(
+                "Invalid test positivity rate", f"test rate for {self.name} is {self.test_positivity_rate}"
+            )
             self.test_positivity_rate = None
 
         return AppLocation(
@@ -858,8 +857,7 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
         if positivityRate is None or positivityRate > 100:
             positivityRate = 100
         if positivityRate < 0:
-            self.issue("Positivity rate is negative",
-                       f"{positivityRate}")
+            self.issue("Positivity rate is negative", f"{positivityRate}")
             positivityRate = 0
         final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
@@ -1147,8 +1145,7 @@ class AllData:
                             ):
                                 pass  # don't warn
                             else:
-                                county.issue("No case data",
-                                             f"discarding {county!r} with no case data")
+                                county.issue("No case data", f"discarding {county!r} with no case data")
                             del state.counties[county.name]
 
                         if county.test_positivity_rate is None:
@@ -1173,8 +1170,7 @@ class AllData:
                         elif state.name in ("American Samoa", "Unknown", "Recovered"):
                             pass
                         else:
-                            state.issue("No case data",
-                                        f"Discarding {state!r} with no case data")
+                            state.issue("No case data", f"Discarding {state!r} with no case data")
                         del country.states[state.name]
 
                     for county in list(state.counties.values()):
@@ -1598,10 +1594,10 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
         return
     latest_date = max([region.Date for region in romania_regions])
     if effective_date > latest_date:
-        romania = data.get_country_or_raise('Romania')
+        romania = data.get_country_or_raise("Romania")
         romania.issue(
             "Discarding stale county-level data",
-            f"from Romania due to staleness - last update was {latest_date}"
+            f"from Romania due to staleness - last update was {latest_date}",
         )
         return
 
