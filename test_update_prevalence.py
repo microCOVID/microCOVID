@@ -14,6 +14,7 @@ from update_prevalence import (
     DataCache,
     County,
     LogAggregator,
+    log_aggregator,
     PopulationFilteredLogging,
 )
 from logging import Logger
@@ -267,3 +268,12 @@ def test_Log_Aggregator_combines_small_impacts_as_info(
     aggregator.add_issue("issue type four", small_place)
     aggregator.log()
     mock_logger.log.assert_called_with(logging.INFO, "10,000 people affected by issue type four")
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_PopulationFilteredLogging_issue_delegates_to_log_aggregator(
+    mock_logger: Mock, small_place: PopulationFilteredLogging
+) -> None:
+    small_place.issue('issue type five', 'detail')
+    log_aggregator.log()
+    mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type five")
