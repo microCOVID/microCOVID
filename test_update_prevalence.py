@@ -348,3 +348,19 @@ def test_AllData_get_country_or_raise_returns_data() -> None:
     all_data = AllData()
     all_data.get_country("new country")
     assert all_data.get_country_or_raise("new country") is not None
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    wyoming.cumulative_cases[effective_date] = 123
+    county = all_data.get_county("mumble", state="Wyoming", country="US")
+    county.population = 10
+    all_data.rollup_totals()
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_called_with(
+        "No case data (10 people): discarding County(fullname='mumble, Wyoming, US', name='mumble', population=10, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', state='Wyoming', fips=None) with no case data"
+    )
