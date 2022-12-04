@@ -274,6 +274,6 @@ def test_Log_Aggregator_combines_small_impacts_as_info(
 def test_PopulationFilteredLogging_issue_delegates_to_log_aggregator(
     mock_logger: Mock, small_place: PopulationFilteredLogging
 ) -> None:
-    small_place.issue('issue type five', 'detail')
+    small_place.issue("issue type five", "detail")
     log_aggregator.log()
     mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type five")
