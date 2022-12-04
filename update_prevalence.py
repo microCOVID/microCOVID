@@ -1461,12 +1461,12 @@ def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
 # Not being location-based categories, they wouldn't be helpful for
 # microCOVID users regardless, so silently ignore them.
 EXPECTED_MISSING_JHU_US_STATES = {
-    '', # Used to indicate all-of-USA values
-    'Department of Defense',
-    'Federal Bureau of Prisons',
-    'Indian Health Services',
-    'Long Term Care (LTC) Program',
-    'Veterans Health Administration',
+    "",  # Used to indicate all-of-USA values
+    "Department of Defense",
+    "Federal Bureau of Prisons",
+    "Indian Health Services",
+    "Long Term Care (LTC) Program",
+    "Veterans Health Administration",
 }
 
 
