@@ -308,7 +308,9 @@ def test_County_as_app_data(effective_date: date) -> None:
 
 
 @patch("update_prevalence.logger", spec=Logger)
-def test_County_as_app_data_validates_positivity_rate(mock_logger: Mock, effective_date: date, my_county: County) -> None:
+def test_County_as_app_data_validates_positivity_rate(
+    mock_logger: Mock, effective_date: date, my_county: County
+) -> None:
     my_county.test_positivity_rate = 1.5
     app_location = my_county.as_app_data()
     assert app_location.positiveCasePercentage is None
@@ -316,8 +318,11 @@ def test_County_as_app_data_validates_positivity_rate(mock_logger: Mock, effecti
         "Invalid test positivity rate (123 people): test rate for My County is 1.5"
     )
 
+
 @patch("update_prevalence.logger", spec=Logger)
-def test_AppLocation_also_validates_positivity_rate(mock_logger: Mock, effective_date: date, my_county: County) -> None:
+def test_AppLocation_also_validates_positivity_rate(
+    mock_logger: Mock, effective_date: date, my_county: County
+) -> None:
     increase = 0.3
     app_location = AppLocation(
         label=my_county.name,
