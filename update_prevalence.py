@@ -1511,13 +1511,22 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
         raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
 
 
+# Ignore places not in JHU place facts - it does not
+# recognize 'counties' inside the Northern Mariana Islands
+EXPECTED_MISSING_JHU_FIPS_CODES = (
+    69100,  # Rota, Northern Mariana Islands, population 1,893
+    69110,  # Saipan, Northern Mariana Islands, population 43,385
+    69120,  # Tinian, Northern Mariana Islands, population 3,136
+)
+
+
 def parse_can_region_summary_by_county(cache: DataCache, data: AllData) -> None:
     # Test positivity and vaccination status per US county
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
         assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
         if item.fips not in data.fips_to_county:
-            # Ignore e.g. Northern Mariana Islands
-            print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
+            if item.fips not in EXPECTED_MISSING_JHU_FIPS_CODES:
+                print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
             continue
         county = data.fips_to_county[item.fips]
         assert (
