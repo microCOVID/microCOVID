@@ -329,6 +329,7 @@ def test_AppLocation_also_validates_positivity_rate(
         population=f"{my_county.population:,}",
         casesPastWeek=my_county.cases_last_week,
         casesIncreasingPercentage=increase * 100,
+        averageFullyVaccinatedMultiplier=my_county.average_fully_vaccinated_multiplier(),
         updatedAt=effective_date.strftime("%B %d, %Y"),
     )
     app_location.positiveCasePercentage = -23
