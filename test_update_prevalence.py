@@ -385,7 +385,9 @@ def test_AllData_rollup_totals_no_state_data(mock_logger: Mock, effective_date: 
 
 @patch("update_prevalence.logger", spec=Logger)
 @patch("update_prevalence.requests.get", spec=requests.get)
-def test_parse_romania_prevalence_data_stale(mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData) -> None:
+def test_parse_romania_prevalence_data_stale(
+    mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
+) -> None:
     mock_response = Mock()
     mock_response.status_code = 200
     mock_response.text = json.dumps(
