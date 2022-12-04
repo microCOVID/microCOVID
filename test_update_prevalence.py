@@ -351,7 +351,7 @@ def test_AllData_get_country_or_raise_returns_data() -> None:
 
 
 @patch("update_prevalence.logger", spec=Logger)
-def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
+def test_AllData_rollup_totals_no_county_data(mock_logger: Mock, effective_date: date) -> None:
     all_data = AllData()
     us = all_data.get_country("US")
     wyoming = all_data.get_state("Wyoming", country="US")
@@ -363,4 +363,20 @@ def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
     mock_logger.warning.assert_not_called()
     mock_logger.info.assert_called_with(
         "No case data (10 people): discarding County(fullname='mumble, Wyoming, US', name='mumble', population=10, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', state='Wyoming', fips=None) with no case data"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_no_state_data(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    wyoming.cumulative_cases[effective_date] = 123
+    montana = all_data.get_state("Montana", country="US")
+    montana.population = 50
+    all_data.rollup_totals()
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_called_with(
+        "No case data (50 people): Discarding State(fullname='Montana, US', name='Montana', population=50, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', fips=None, counties={}) with no case data"
     )
