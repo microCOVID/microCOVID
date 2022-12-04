@@ -384,6 +384,17 @@ def test_AllData_rollup_totals_no_state_data(mock_logger: Mock, effective_date: 
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_no_country_data(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    us.population = 999
+    all_data.rollup_totals()
+    mock_logger.warning.assert_called_with(
+        "Discarding country US due to error: ValueError(\"No country-level case data for Country(fullname='US', name='US', population=999, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), iso3=None, states={})\")"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
 @patch("update_prevalence.requests.get", spec=requests.get)
 def test_parse_romania_prevalence_data_stale(
     mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
