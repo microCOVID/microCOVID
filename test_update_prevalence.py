@@ -1,11 +1,18 @@
 from unittest.mock import Mock, patch
+import json
 import pytest
 import requests
 import typing
 from datetime import timedelta, date, datetime
 
 
-from update_prevalence import parse_jhu_vaccines_us, AllData, DataCache
+from update_prevalence import (
+    parse_jhu_vaccines_us,
+    parse_can_region_summary_by_county,
+    AllData,
+    DataCache,
+    County,
+)
 from logging import Logger
 import update_prevalence
 
@@ -91,3 +98,46 @@ def test_parse_jhu_vaccines_us_unknown_unknown_state(
     parse_jhu_vaccines_us(cache, data)
 
     mock_logger.warning.assert_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_can_region_summary_by_county(
+    mock_get: Mock,
+    mock_logger: Mock,
+    data: AllData,
+    cache: DataCache,
+) -> None:
+    mock_response = Mock()
+    mock_response.status_code = 200
+    mock_response.text = json.dumps(
+        [
+            {
+                "fips": "02013",
+                "country": "US",
+                "state": "AK",
+                "population": 3337,
+                "metrics": {
+                    "testPositivityRatio": None,
+                },
+                "actuals": {
+                    "vaccinationsInitiated": 2899,
+                    "vaccinationsCompleted": 2498,
+                },
+            },
+        ]
+    )
+
+    _state = data.get_state("Alaska", country="US")
+    county = data.get_county("Aleutians East", state="Alaska", country="US")
+    county.fips = "02013"
+    data.populate_fips_cache()
+
+    mock_get.return_value = mock_response
+    parse_can_region_summary_by_county(cache, data)
+
+    mock_logger.warning.assert_not_called()
+
+    assert county.test_positivity_rate is None
+    assert county.vaccines_total.partial_vaccinations == 401
+    assert county.vaccines_total.completed_vaccinations == 2498
