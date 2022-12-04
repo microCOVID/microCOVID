@@ -197,3 +197,17 @@ def test_parse_can_region_summary_by_county_known_unknown_county(
     parse_can_region_summary_by_county(cache, data)
 
     mock_logger.warning.assert_not_called()
+
+
+def test_County_as_app_data(effective_date: date) -> None:
+    my_county = County(
+        fullname="My County, My State",
+        name="My County",
+        country="My Country",
+        state="My State",
+        population=123,
+    )
+    my_county.test_positivity_rate = 0.5
+    my_county.cumulative_cases[effective_date] = 123
+    app_location = my_county.as_app_data()
+    assert app_location.positiveCasePercentage == 50
