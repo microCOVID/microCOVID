@@ -1455,6 +1455,21 @@ def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
         raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
 
 
+# JHU provides these as 'states' in time_series_covid19_vaccine_us.csv
+# but does not map back in UID_ISO_FIPS_LookUp_Table.csv
+#
+# Not being location-based categories, they wouldn't be helpful for
+# microCOVID users regardless, so silently ignore them.
+EXPECTED_MISSING_JHU_US_STATES = {
+    "",  # Used to indicate all-of-USA values
+    "Department of Defense",
+    "Federal Bureau of Prisons",
+    "Indian Health Services",
+    "Long Term Care (LTC) Program",
+    "Veterans Health Administration",
+}
+
+
 def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
     num_success = 0
     # US vaccination rates
@@ -1476,7 +1491,8 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
-            print_and_log_to_sentry(f"Could not find state {item.Province_State}")
+            if item.Province_State not in EXPECTED_MISSING_JHU_US_STATES:
+                logger.warning(f"Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # logger.warning(f"Could not find state {item.Province_State}")
