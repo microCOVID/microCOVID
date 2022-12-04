@@ -330,6 +330,16 @@ def test_AppLocation_also_validates_positivity_rate(mock_logger: Mock, effective
     app_location.positiveCasePercentage = -23
     ratio = app_location.prevalenceRatio()
     assert ratio is not None
-    mock_logger.info.assert_called_with(
-        "Positivity rate is negative (123 people): -23"
-    )
+    mock_logger.info.assert_called_with("Positivity rate is negative (123 people): -23")
+
+
+def test_AllData_get_country_or_raise_raises() -> None:
+    all_data = AllData()
+    with pytest.raises(Exception):
+        all_data.get_country_or_raise("unknown country")
+
+
+def test_AllData_get_country_or_raise_returns_data() -> None:
+    all_data = AllData()
+    all_data.get_country("new country")
+    assert all_data.get_country_or_raise("new country") is not None
