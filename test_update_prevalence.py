@@ -3,6 +3,7 @@ import json
 import logging
 import pytest
 import requests
+from typing import List, Tuple, Optional
 import typing
 from datetime import timedelta, date, datetime
 
@@ -60,6 +61,20 @@ def my_county(effective_date: date) -> County:
     )
     my_county.cumulative_cases[effective_date] = 123
     return my_county
+
+
+@pytest.fixture
+def my_app_location(effective_date: date, my_county: County) -> AppLocation:
+    increase = 0.3
+    app_location = AppLocation(
+        label=my_county.name,
+        population=f"{my_county.population:,}",
+        casesPastWeek=my_county.cases_last_week,
+        casesIncreasingPercentage=increase * 100,
+        averageFullyVaccinatedMultiplier=my_county.average_fully_vaccinated_multiplier(),
+        updatedAt=effective_date.strftime("%B %d, %Y"),
+    )
+    return app_location
 
 
 @pytest.fixture
@@ -321,22 +336,23 @@ def test_County_as_app_data_validates_positivity_rate(
 
 
 @patch("update_prevalence.logger", spec=Logger)
-def test_AppLocation_also_validates_positivity_rate(
-    mock_logger: Mock, effective_date: date, my_county: County
+def test_AppLocation_prevalenceRatio_also_validates_positivity_rate(
+    mock_logger: Mock, my_app_location: AppLocation
 ) -> None:
-    increase = 0.3
-    app_location = AppLocation(
-        label=my_county.name,
-        population=f"{my_county.population:,}",
-        casesPastWeek=my_county.cases_last_week,
-        casesIncreasingPercentage=increase * 100,
-        averageFullyVaccinatedMultiplier=my_county.average_fully_vaccinated_multiplier(),
-        updatedAt=effective_date.strftime("%B %d, %Y"),
-    )
-    app_location.positiveCasePercentage = -23
-    ratio = app_location.prevalenceRatio()
+    my_app_location.positiveCasePercentage = -23
+    ratio = my_app_location.prevalenceRatio()
     assert ratio is not None
     mock_logger.info.assert_called_with("Positivity rate is negative (123 people): -23")
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AppLocation_prevalenceRatio_caps_positivity_rate(
+    mock_logger: Mock,
+    my_app_location: AppLocation,
+    effective_date: date,
+) -> None:
+    my_app_location.positiveCasePercentage = 150
+    assert my_app_location.prevalenceRatio() == 4.178272980501393
 
 
 def test_AllData_get_country_or_raise_raises() -> None:

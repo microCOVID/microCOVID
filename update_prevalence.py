@@ -853,14 +853,19 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
     def prevalenceRatio(self) -> float:
         DAY_0 = datetime(2020, 2, 12)
         day_i = (datetime.now() - DAY_0).days
-        positivityRate = self.positiveCasePercentage
-        if positivityRate is None or positivityRate > 100:
+        positivityRate = self.positiveCasePercentage or 100
+
+        if positivityRate > 100:
             positivityRate = 100
+
         if positivityRate < 0:
             self.issue("Positivity rate is negative", f"{positivityRate}")
             positivityRate = 0
-        final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
-        return final
+
+        testingUnavailabilityCoefficient = 1500 / (day_i + 50)
+        positivityInferredPrevelenceRatio = (positivityRate / 100) ** 0.5 + 2
+
+        return testingUnavailabilityCoefficient * positivityInferredPrevelenceRatio
 
     @property
     def population_as_int(self) -> int:
