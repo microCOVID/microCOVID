@@ -13,7 +13,7 @@ const changes: Change[] = [
     content: `
     * Updated constants for under-reporting factor
       * New numbers from [COVID 19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/) March 2021 update.
-      `
+      `,
   },
   {
     date: new Date(2022, 0, 4),
