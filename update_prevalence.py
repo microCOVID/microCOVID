@@ -52,23 +52,37 @@ except ImportError:
 logger = logging.getLogger("update_prevalence")
 
 
+class LogAggregator:
+    population_affected_by_issue: Dict[str, int] = {}
+
+    def add_issue(self, msg: str, place: "PopulationFilteredLogging") -> None:
+        existing_population = self.population_affected_by_issue.get(msg, 0)
+        self.population_affected_by_issue[msg] = existing_population + place.population_as_int
+
+    def log(self) -> None:
+        for msg in self.population_affected_by_issue:
+            population_affected = self.population_affected_by_issue[msg]
+            level = logging.WARNING
+            if population_affected < 10000:
+                level = logging.DEBUG
+            elif population_affected < 100000:
+                level = logging.INFO
+
+            logger.log(level, f"{population_affected:,d} people affected by {msg}")
+
+
+log_aggregator = LogAggregator()
+
+
 class PopulationFilteredLogging(abc.ABC):
     @property
     @abc.abstractmethod
     def population_as_int(self) -> int:
         ...
 
-    @property
-    def issue_log_level(self) -> int:
-        if self.population_as_int < 10000:
-            return logging.DEBUG
-        elif self.population_as_int < 100000:
-            return logging.INFO
-        else:
-            return logging.WARNING
-
-    def issue(self, msg: str) -> None:
-        logger.log(self.issue_log_level, msg)
+    def issue(self, category: str, detail: str) -> None:
+        log_aggregator.add_issue(category, self)
+        logger.info(f"{category} ({self.population_as_int:,d} people): {detail}")
 
 
 class ExtraWarningAnnotationFormatter(logging.Formatter):
@@ -571,17 +585,20 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
 
             if values[0] > min(values[:-1]) and possibly_suspect_correction:
                 self.issue(
-                    f"Negative correction is suspect; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+                    "Negative correction is suspect",
+                    f"Check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}",
                 )
             if min(values[:-1]) == values[-1] and max(values) > values[-1]:
                 self.issue(
-                    f"Endpoints say no new cases and max(values) says new cases; check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}"
+                    "Endpoints say no new cases and max(values) says new cases",
+                    f"check numbers manually for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}, discrepancy {max(values) - values[-1]}",
                 )
             return values[-1] - min(values[:-1])
 
         # looks complicated. Print a warning.
         self.issue(
-            f"Decreasing cumulative case counts. Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}"
+            "Decreasing cumulative case counts.",
+            f"Assuming no cases for {self.fullname}. {len(negative_corrections)} negative cumulative case corrections {negative_corrections}, values={values}",
         )
         return 0
 
@@ -736,7 +753,9 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         if self.test_positivity_rate is not None and (
             self.test_positivity_rate < 0 or self.test_positivity_rate > 1
         ):
-            print_and_log_to_sentry(f"Positive test rate for {self.name} is {self.test_positivity_rate}")
+            self.issue(
+                "Invalid test positivity rate", f"test rate for {self.name} is {self.test_positivity_rate}"
+            )
             self.test_positivity_rate = None
 
         return AppLocation(
@@ -840,7 +859,7 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
             positivityRate = 100
 
         if positivityRate < 0:
-            self.issue(f"Positivity rate is negative: {positivityRate}")
+            self.issue("Positivity rate is negative", f"{positivityRate}")
             positivityRate = 0
 
         testingUnavailabilityCoefficient = (1500 / (day_i + 50))
@@ -900,6 +919,9 @@ class AllData:
     def get_country(self, name: str) -> Country:
         if name not in self.countries:
             self.countries[name] = Country(name=name, fullname=name)
+        return self.countries[name]
+
+    def get_country_or_raise(self, name: str) -> Country:
         return self.countries[name]
 
     def get_state(self, name: str, *, country: str) -> State:
@@ -1076,7 +1098,8 @@ class AllData:
                             state.test_positivity_rate = state.cases_last_week / state.tests_in_past_week
                         except ZeroDivisionError:
                             state.issue(
-                                f"Couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week. {state}"
+                                "No tests last week",
+                                f"couldn't calculate {state.fullname}'s test positivity rate because there were no tests last week.",
                             )
                             state.test_positivity_rate = None
                     if state.vaccines_by_type is not None:
@@ -1127,7 +1150,9 @@ class AllData:
                             ):
                                 pass  # don't warn
                             else:
-                                print_and_log_to_sentry(f"Discarding {county!r} with no case data")
+                                county.issue(
+                                    "No county-level case data", f"discarding {county!r} with no case data"
+                                )
                             del state.counties[county.name]
 
                         if county.test_positivity_rate is None:
@@ -1152,7 +1177,7 @@ class AllData:
                         elif state.name in ("American Samoa", "Unknown", "Recovered"):
                             pass
                         else:
-                            print_and_log_to_sentry(f"Discarding {state!r} with no case data")
+                            state.issue("No state-level case data", f"Discarding {state!r} with no case data")
                         del country.states[state.name]
 
                     for county in list(state.counties.values()):
@@ -1169,7 +1194,7 @@ class AllData:
                             state.test_positivity_rate = country.test_positivity_rate
 
                 if not rollup_cases(country, "states"):
-                    raise ValueError(f"Missing case data for {country!r}")
+                    raise ValueError(f"No country-level case data for {country!r}")
                 rollup_testing(country, "states")
                 for state in list(country.states.values()):
                     if state.name in fake_names:
@@ -1321,8 +1346,6 @@ def ignore_jhu_place(line: JHUCommonFields) -> bool:
         "Grand Princess",
         "MS Zaandam",
         "Western Sahara",
-        "Micronesia",
-        "Palau",
         "Summer Olympics 2020",
         "Winter Olympics 2022",
         "Antarctica",
@@ -1462,6 +1485,21 @@ def parse_jhu_vaccines_global(cache: DataCache, data: AllData) -> None:
         raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesGlobal.SOURCE}")
 
 
+# JHU provides these as 'states' in time_series_covid19_vaccine_us.csv
+# but does not map back in UID_ISO_FIPS_LookUp_Table.csv
+#
+# Not being location-based categories, they wouldn't be helpful for
+# microCOVID users regardless, so silently ignore them.
+EXPECTED_MISSING_JHU_US_STATES = {
+    "",  # Used to indicate all-of-USA values
+    "Department of Defense",
+    "Federal Bureau of Prisons",
+    "Indian Health Services",
+    "Long Term Care (LTC) Program",
+    "Veterans Health Administration",
+}
+
+
 def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
     num_success = 0
     # US vaccination rates
@@ -1483,7 +1521,8 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
         try:
             state = data.get_state_or_raise(name=item.Province_State, country=item.Country_Region)
         except KeyError:
-            print_and_log_to_sentry(f"Could not find state {item.Province_State}")
+            if item.Province_State not in EXPECTED_MISSING_JHU_US_STATES:
+                logger.warning(f"Could not find state {item.Province_State}")
             continue
             # Suppressed debug info - includes things like DoD, VHA, etc.
             # logger.warning(f"Could not find state {item.Province_State}")
@@ -1502,13 +1541,22 @@ def parse_jhu_vaccines_us(cache: DataCache, data: AllData) -> None:
         raise ValueError(f"Not able to gain data from {JHUVaccinesTimeseriesUS.SOURCE}")
 
 
+# Ignore places not in JHU place facts - it does not
+# recognize 'counties' inside the Northern Mariana Islands
+EXPECTED_MISSING_JHU_FIPS_CODES = (
+    69100,  # Rota, Northern Mariana Islands, population 1,893
+    69110,  # Saipan, Northern Mariana Islands, population 43,385
+    69120,  # Tinian, Northern Mariana Islands, population 3,136
+)
+
+
 def parse_can_region_summary_by_county(cache: DataCache, data: AllData) -> None:
     # Test positivity and vaccination status per US county
     for item in parse_json_list(cache, CANRegionSummary, CANRegionSummary.COUNTY_SOURCE):
         assert type(item.fips) is int, "Expected item.fips to be int but got {}".format(type(item.fips))
         if item.fips not in data.fips_to_county:
-            # Ignore e.g. Northern Mariana Islands
-            print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
+            if item.fips not in EXPECTED_MISSING_JHU_FIPS_CODES:
+                print_and_log_to_sentry(f"ignoring unknown county fips {item.fips}")
             continue
         county = data.fips_to_county[item.fips]
         assert (
@@ -1553,8 +1601,10 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
         return
     latest_date = max([region.Date for region in romania_regions])
     if effective_date > latest_date:
-        print_and_log_to_sentry(
-            f"Discarding county-level data from Romania due to staleness - last update was {latest_date}"
+        romania = data.get_country_or_raise("Romania")
+        romania.issue(
+            "No county-level case data",
+            f"from Romania due to staleness - last update was {latest_date}",
         )
         return
 
@@ -1862,6 +1912,8 @@ def main() -> None:
 
                 for subkey in location_date.subdivisions:
                     subfile.write(",".join(app_locations[subkey].as_csv_data().values()) + "\n")
+
+    log_aggregator.log()
 
 
 if __name__ == "__main__":
