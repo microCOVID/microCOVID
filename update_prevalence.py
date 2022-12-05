@@ -862,7 +862,7 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
             self.issue("Positivity rate is negative", f"{positivityRate}")
             positivityRate = 0
 
-        testingUnavailabilityCoefficient = (1500 / (day_i + 50))
+        testingUnavailabilityCoefficient = 1500 / (day_i + 50)
         positivityInferredPrevelenceRatio = (positivityRate / 100) ** 0.5 + 2
 
         return testingUnavailabilityCoefficient * positivityInferredPrevelenceRatio
