@@ -5,7 +5,7 @@ import pytest
 import requests
 from typing import List, Tuple, Optional
 import typing
-from datetime import timedelta, date, datetime
+from datetime import timedelta, date, datetime, tzinfo
 
 
 from update_prevalence import (
@@ -345,6 +345,13 @@ def test_AppLocation_prevalenceRatio_also_validates_positivity_rate(
     mock_logger.info.assert_called_with("Positivity rate is negative (123 people): -23")
 
 
+class NewDatetime(datetime):
+    @classmethod
+    def now(cls, tz: Optional[tzinfo] = None) -> typing.Any:
+        return datetime(2022, 1, 1, 12, 0, 0)
+
+
+@patch("update_prevalence.datetime", new=NewDatetime)
 @patch("update_prevalence.logger", spec=Logger)
 def test_AppLocation_prevalenceRatio_caps_positivity_rate(
     mock_logger: Mock,
@@ -352,7 +359,7 @@ def test_AppLocation_prevalenceRatio_caps_positivity_rate(
     effective_date: date,
 ) -> None:
     my_app_location.positiveCasePercentage = 150
-    assert my_app_location.prevalenceRatio() == 4.178272980501393
+    assert my_app_location.prevalenceRatio() == 6.089309878213803
 
 
 def test_AllData_get_country_or_raise_raises() -> None:
