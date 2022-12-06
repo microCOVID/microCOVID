@@ -554,7 +554,6 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         corrections_within_bounds = min(values) == values[0] and max(values) == values[-1]
         if len(negative_corrections) == 0 or corrections_within_bounds:
             return values[-1] - values[0]
-
         # Always use values[-1] rather than max(values) because max(values) is
         # either values[-1] or there's been a negative correction that should be examined.
         if min(values[:-1]) <= values[-1]:
@@ -749,6 +748,9 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
 
         if self.cases_last_week < 0:
             raise ValueError(f"Cases for {self.name} is {self.cases_last_week}.")
+
+        if self.cases_last_week == 0 or self.cases_week_before == 0:
+            self.issue(f'No cases noted for a week - {type(self).__name__} level', f"No cases reported in at least one week in {self.fullname} for period")
 
         if self.test_positivity_rate is not None and (
             self.test_positivity_rate < 0 or self.test_positivity_rate > 1

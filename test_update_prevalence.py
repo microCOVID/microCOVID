@@ -1,4 +1,4 @@
-from unittest.mock import Mock, patch
+from unittest.mock import Mock, patch, call
 import json
 import logging
 import pytest
@@ -309,16 +309,8 @@ def test_PopulationFilteredLogging_issue_delegates_to_log_aggregator(
     mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type five")
 
 
-def test_County_as_app_data(effective_date: date) -> None:
-    my_county = County(
-        fullname="My County, My State",
-        name="My County",
-        country="My Country",
-        state="My State",
-        population=123,
-    )
+def test_County_as_app_data(effective_date: date, my_county: County) -> None:
     my_county.test_positivity_rate = 0.5
-    my_county.cumulative_cases[effective_date] = 123
     app_location = my_county.as_app_data()
     assert app_location.positiveCasePercentage == 50
 
@@ -330,8 +322,17 @@ def test_County_as_app_data_validates_positivity_rate(
     my_county.test_positivity_rate = 1.5
     app_location = my_county.as_app_data()
     assert app_location.positiveCasePercentage is None
+    mock_logger.info.assert_has_calls(
+        [call("Invalid test positivity rate (123 people): test rate for My County is 1.5")]
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_cases_last_week_logs_before_returning_zero(mock_logger: Mock, my_county: County) -> None:
+    cases_last_week = my_county.cases_last_week
+    assert cases_last_week == 0
     mock_logger.info.assert_called_with(
-        "Invalid test positivity rate (123 people): test rate for My County is 1.5"
+        "No cases noted (123 people): No cases reported in My County, My State for period: [123, 123, 123, 123, 123, 123, 123, 123]"
     )
 
 
