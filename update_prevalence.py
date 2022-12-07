@@ -554,6 +554,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         corrections_within_bounds = min(values) == values[0] and max(values) == values[-1]
         if len(negative_corrections) == 0 or corrections_within_bounds:
             return values[-1] - values[0]
+
         # Always use values[-1] rather than max(values) because max(values) is
         # either values[-1] or there's been a negative correction that should be examined.
         if min(values[:-1]) <= values[-1]:
