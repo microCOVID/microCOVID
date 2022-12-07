@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001264,0.001264,0.000406,3.1107,1.0,0.001264
-Johor,Unknown,Unknown,7.3e-05,3.1107,1.0,0.000226
-Kedah,Unknown,Unknown,0.000456,3.1107,1.0,0.001419
-Kelantan,Unknown,Unknown,0.00032,3.1107,1.0,0.000995
-Melaka,Unknown,Unknown,0.000939,3.1107,1.0,0.002922
-Negeri Sembilan,Unknown,Unknown,0.000403,3.1107,1.0,0.001253
-Pahang,Unknown,Unknown,0.000284,3.1107,1.0,0.000885
-Perak,Unknown,Unknown,0.000225,3.1107,1.0,0.0007
-Perlis,Unknown,Unknown,0.000236,3.1107,1.0727,0.000786
-Pulau Pinang,Unknown,Unknown,0.00038,3.1107,1.0,0.001183
-Sabah,Unknown,Unknown,0.00023,3.1107,1.0,0.000715
-Sarawak,Unknown,Unknown,0.000322,3.1107,1.0,0.001001
-Selangor,Unknown,Unknown,0.000672,3.1107,1.0,0.00209
-Terengganu,Unknown,Unknown,0.000272,3.1107,1.0,0.000846
-W.P. Kuala Lumpur,Unknown,Unknown,0.000675,3.1107,1.0,0.002101
-W.P. Labuan,Unknown,Unknown,0.001127,3.1107,1.0,0.003505
-W.P. Putrajaya,Unknown,Unknown,0.003083,3.1107,1.0,0.009592
+Entire country,0.00126,0.00126,0.000406,3.1079,1.0,0.00126
+Johor,Unknown,Unknown,7.3e-05,3.1079,1.0,0.000227
+Kedah,Unknown,Unknown,0.000448,3.1079,1.0,0.001393
+Kelantan,Unknown,Unknown,0.000328,3.1079,1.0,0.001018
+Melaka,Unknown,Unknown,0.000979,3.1079,1.0,0.003042
+Negeri Sembilan,Unknown,Unknown,0.000366,3.1079,1.0,0.001137
+Pahang,Unknown,Unknown,0.000282,3.1079,1.0,0.000877
+Perak,Unknown,Unknown,0.000222,3.1079,1.0,0.000691
+Perlis,Unknown,Unknown,0.000255,3.1079,1.2075,0.000958
+Pulau Pinang,Unknown,Unknown,0.000384,3.1079,1.0,0.001192
+Sabah,Unknown,Unknown,0.000224,3.1079,1.0,0.000696
+Sarawak,Unknown,Unknown,0.000354,3.1079,1.0386,0.001142
+Selangor,Unknown,Unknown,0.000658,3.1079,1.0,0.002046
+Terengganu,Unknown,Unknown,0.000254,3.1079,1.0,0.000788
+W.P. Kuala Lumpur,Unknown,Unknown,0.000696,3.1079,1.0,0.002162
+W.P. Labuan,Unknown,Unknown,0.001237,3.1079,1.0,0.003846
+W.P. Putrajaya,Unknown,Unknown,0.002913,3.1079,1.0,0.009052
