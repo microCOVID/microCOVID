@@ -5,7 +5,7 @@ import pytest
 import requests
 from typing import List, Tuple, Optional
 import typing
-from datetime import timedelta, date, datetime, tzinfo
+from datetime import timedelta, date, datetime, tzinfo, timedelta
 
 
 from update_prevalence import (
@@ -328,8 +328,38 @@ def test_County_as_app_data_validates_positivity_rate(
 
 
 @patch("update_prevalence.logger", spec=Logger)
-def test_County_as_app_data_logs_before_returning_zero_cases(mock_logger: Mock, my_county: County) -> None:
-    assert my_county.cases_last_week == 0
+def test_County_as_app_data_logs_before_returning_zero_cases_last_week(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    for i in range(0, 10):
+        d = effective_date - timedelta(days=i)
+        my_county.cumulative_cases[d] = 123
+    for i in range(10, 16):
+        d = effective_date - timedelta(days=i)
+        my_county.cumulative_cases[d] = 100
+    cases_last_week = my_county.cases_last_week
+    assert cases_last_week == 0
+    cases_week_before = my_county.cases_week_before
+    assert cases_week_before > 0
+    data = my_county.as_app_data()
+    assert data is not None
+    mock_logger.info.assert_called_with(
+        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    for i in range(0, 5):
+        d = effective_date - timedelta(days=i)
+        my_county.cumulative_cases[d] = 123
+    for i in range(5, 16):
+        d = effective_date - timedelta(days=i)
+        my_county.cumulative_cases[d] = 100
+    assert my_county.cases_last_week > 0
+    assert my_county.cases_week_before == 0
     data = my_county.as_app_data()
     assert data is not None
     mock_logger.info.assert_called_with(
