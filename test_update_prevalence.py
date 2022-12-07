@@ -332,7 +332,9 @@ def test_County_as_app_data_logs_before_returning_zero_cases(mock_logger: Mock, 
     assert my_county.cases_last_week == 0
     data = my_county.as_app_data()
     assert data is not None
-    mock_logger.info.assert_called_with("No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period")
+    mock_logger.info.assert_called_with(
+        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
+    )
 
 
 @patch("update_prevalence.logger", spec=Logger)
