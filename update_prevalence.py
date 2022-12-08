@@ -374,9 +374,7 @@ class RomaniaPrevalenceData(pydantic.BaseModel):
 
 # Covid Timeline Canada region info dataset:
 class CovidTimelineCanadaRegion(pydantic.BaseModel):
-    SOURCE: ClassVar[
-        str
-    ] = "https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/hr.csv"
+    SOURCE: ClassVar[str] = "https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/hr.csv"
 
     # two letter province/territory - e.g. AB
     region: str
