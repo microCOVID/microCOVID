@@ -102,7 +102,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2594922,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_02: {
     label: 'Alaska',
@@ -179,7 +179,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4777579,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05: {
     label: 'Arkansas',
@@ -561,7 +561,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14833950,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_13: {
     label: 'Georgia',
@@ -751,7 +751,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1148429,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16: {
     label: 'Idaho',
@@ -811,7 +811,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1004093,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_17: {
     label: 'Illinois',
@@ -1037,7 +1037,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3871219,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19: {
     label: 'Iowa',
@@ -1273,7 +1273,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1889155,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_21: {
     label: 'Kentucky',
@@ -1409,7 +1409,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2649669,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_22: {
     label: 'Louisiana',
@@ -1489,7 +1489,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2549795,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_23: {
     label: 'Maine',
@@ -1689,7 +1689,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6197737,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_27: {
     label: 'Minnesota',
@@ -1890,7 +1890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1591381,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29: {
     label: 'Missouri',
@@ -2094,7 +2094,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 629274,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_31: {
     label: 'Nebraska',
@@ -2236,7 +2236,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1944866,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_33: {
     label: 'New Hampshire',
@@ -2542,7 +2542,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6968422,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_38: {
     label: 'North Dakota',
@@ -2611,7 +2611,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 444012,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_39: {
     label: 'Ohio',
@@ -2860,7 +2860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3034041,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42: {
     label: 'Pennsylvania',
@@ -2943,7 +2943,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9301784,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_44: {
     label: 'Rhode Island',
@@ -3020,7 +3020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3066573,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_46: {
     label: 'South Dakota',
@@ -3102,7 +3102,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 582083,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_47: {
     label: 'Tennessee',
@@ -3213,7 +3213,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3830306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_48: {
     label: 'Texas',
@@ -3512,7 +3512,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2126964,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_50: {
     label: 'Vermont',
@@ -3542,7 +3542,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 530533,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51: {
     label: 'Virginia',
@@ -3746,7 +3746,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5753401,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54: {
     label: 'West Virginia',
@@ -3944,7 +3944,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 305543,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_60: {
     label: 'American Samoa',
@@ -3959,7 +3959,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42428,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_66: {
     label: 'Guam',
@@ -3974,7 +3974,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 143551,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_69: {
     label: 'Northern Mariana Islands',
@@ -3989,7 +3989,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43770,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_72: {
     label: 'Puerto Rico',
@@ -4158,7 +4158,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 49216,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Angola: {
     label: 'Angola',
@@ -4173,7 +4173,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12087706,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Antigua_and_Barbuda: {
     label: 'Antigua and Barbuda',
@@ -4188,7 +4188,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 54646,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Argentina: {
     label: 'Argentina',
@@ -4203,7 +4203,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35173264,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   Armenia: {
     label: 'Armenia',
@@ -4218,7 +4218,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 960219,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Australia: {
     label: 'Australia',
@@ -4332,7 +4332,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Australia_Victoria: {
     label: 'Victoria',
@@ -4407,7 +4407,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 148025,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Bahrain: {
     label: 'Bahrain',
@@ -4452,7 +4452,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 139247,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   Belarus: {
     label: 'Belarus',
@@ -4467,7 +4467,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5535556,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Belgium: {
     label: 'Belgium',
@@ -4674,7 +4674,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 214007,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Benin: {
     label: 'Benin',
@@ -4689,7 +4689,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2727984,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   Bhutan: {
     label: 'Bhutan',
@@ -4704,7 +4704,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 594249,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Bolivia: {
     label: 'Bolivia',
@@ -4719,7 +4719,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6307773,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Bosnia_and_Herzegovina: {
     label: 'Bosnia and Herzegovina',
@@ -4749,7 +4749,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1431287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Brazil: {
     label: 'Brazil',
@@ -4957,7 +4957,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Brazil_Mato_Grosso_do_Sul: {
     label: 'Mato Grosso do Sul',
@@ -5197,7 +5197,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Brunei: {
     label: 'Brunei',
@@ -5212,7 +5212,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 382843,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Bulgaria: {
     label: 'Bulgaria',
@@ -5242,7 +5242,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3711717,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Burma: {
     label: 'Burma',
@@ -5272,7 +5272,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22837,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Cabo_Verde: {
     label: 'Cabo Verde',
@@ -5287,7 +5287,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 303224,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Cambodia: {
     label: 'Cambodia',
@@ -5317,7 +5317,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2501296,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada: {
     label: 'Canada',
@@ -5356,18 +5356,12 @@ export const Locations: { [key: string]: Location } = {
     casesIncreasingPercentage: 0.0,
     positiveCasePercentage: 26.44512052422186,
     topLevelGroup: 'Canada states',
-    subdivisions: [
-      'Canada_Alberta_South',
-      'Canada_Alberta_Calgary',
-      'Canada_Alberta_Central',
-      'Canada_Alberta_Edmonton',
-      'Canada_Alberta_North',
-    ],
+    subdivisions: ['Canada_Alberta_South', 'Canada_Alberta_Calgary', 'Canada_Alberta_Central', 'Canada_Alberta_Edmonton', 'Canada_Alberta_North'],
     incompleteVaccinations: 175648,
     completeVaccinations: 3429733,
     unvaccinatedPrevalenceRatio: 1.1757822486184248,
     averageFullyVaccinatedMultiplier: 0.8063344872618364,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Alberta_South: {
     label: 'South',
@@ -5382,7 +5376,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 194858,
     unvaccinatedPrevalenceRatio: 1.1394521246521734,
     averageFullyVaccinatedMultiplier: 0.8063358958831559,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Alberta_Calgary: {
     label: 'Calgary',
@@ -5397,7 +5391,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1417004,
     unvaccinatedPrevalenceRatio: 1.1382230487091123,
     averageFullyVaccinatedMultiplier: 0.806334350502892,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Alberta_Central: {
     label: 'Central',
@@ -5412,7 +5406,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 290275,
     unvaccinatedPrevalenceRatio: 1.1341148908658445,
     averageFullyVaccinatedMultiplier: 0.8063353716303505,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Alberta_Edmonton: {
     label: 'Edmonton',
@@ -5427,7 +5421,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1153052,
     unvaccinatedPrevalenceRatio: 1.1396076229749559,
     averageFullyVaccinatedMultiplier: 0.8063339727956762,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Alberta_North: {
     label: 'North',
@@ -5442,7 +5436,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 322143,
     unvaccinatedPrevalenceRatio: 1.1463497023181184,
     averageFullyVaccinatedMultiplier: 0.806334453953679,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_British_Columbia: {
     label: 'British Columbia',
@@ -5452,18 +5446,12 @@ export const Locations: { [key: string]: Location } = {
     casesIncreasingPercentage: 0.0,
     positiveCasePercentage: null,
     topLevelGroup: 'Canada states',
-    subdivisions: [
-      'Canada_British_Columbia_Interior',
-      'Canada_British_Columbia_Fraser',
-      'Canada_British_Columbia_Vancouver_Coastal',
-      'Canada_British_Columbia_Island',
-      'Canada_British_Columbia_Northern',
-    ],
+    subdivisions: ['Canada_British_Columbia_Interior', 'Canada_British_Columbia_Fraser', 'Canada_British_Columbia_Vancouver_Coastal', 'Canada_British_Columbia_Island', 'Canada_British_Columbia_Northern'],
     incompleteVaccinations: 180744,
     completeVaccinations: 4386791,
     unvaccinatedPrevalenceRatio: 1.1929182158217295,
     averageFullyVaccinatedMultiplier: 0.8077556008480915,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_British_Columbia_Interior: {
     label: 'Interior',
@@ -5478,7 +5466,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 668413,
     unvaccinatedPrevalenceRatio: 1.0993695974610678,
     averageFullyVaccinatedMultiplier: 0.8077550855533929,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   Canada_British_Columbia_Fraser: {
     label: 'Fraser',
@@ -5493,7 +5481,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1621597,
     unvaccinatedPrevalenceRatio: 1.105210207458601,
     averageFullyVaccinatedMultiplier: 0.8077555644219865,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   Canada_British_Columbia_Vancouver_Coastal: {
     label: 'Vancouver Coastal',
@@ -5508,7 +5496,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1131959,
     unvaccinatedPrevalenceRatio: 1.0939513373234362,
     averageFullyVaccinatedMultiplier: 0.80775540456854,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   Canada_British_Columbia_Island: {
     label: 'Island',
@@ -5523,7 +5511,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 731128,
     unvaccinatedPrevalenceRatio: 1.0884102694420192,
     averageFullyVaccinatedMultiplier: 0.8077559606525807,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   Canada_British_Columbia_Northern: {
     label: 'Northern',
@@ -5538,7 +5526,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 207849,
     unvaccinatedPrevalenceRatio: 1.1102256207397845,
     averageFullyVaccinatedMultiplier: 0.8077546680522879,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   Canada_Manitoba: {
     label: 'Manitoba',
@@ -5548,18 +5536,12 @@ export const Locations: { [key: string]: Location } = {
     casesIncreasingPercentage: 0.0,
     positiveCasePercentage: null,
     topLevelGroup: 'Canada states',
-    subdivisions: [
-      'Canada_Manitoba_Winnipeg',
-      'Canada_Manitoba_Prairie_Mountain',
-      'Canada_Manitoba_Interlake_Eastern',
-      'Canada_Manitoba_Northern',
-      'Canada_Manitoba_Southern',
-    ],
+    subdivisions: ['Canada_Manitoba_Winnipeg', 'Canada_Manitoba_Prairie_Mountain', 'Canada_Manitoba_Interlake_Eastern', 'Canada_Manitoba_Northern', 'Canada_Manitoba_Southern'],
     incompleteVaccinations: 46255,
     completeVaccinations: 1111327,
     unvaccinatedPrevalenceRatio: 1.1849636486636923,
     averageFullyVaccinatedMultiplier: 0.8056422637081615,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Manitoba_Winnipeg: {
     label: 'Winnipeg',
@@ -5574,7 +5556,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 671460,
     unvaccinatedPrevalenceRatio: 1.124435409513439,
     averageFullyVaccinatedMultiplier: 0.8056414380603462,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Manitoba_Prairie_Mountain: {
     label: 'Prairie Mountain',
@@ -5589,7 +5571,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 132414,
     unvaccinatedPrevalenceRatio: 1.127416663778635,
     averageFullyVaccinatedMultiplier: 0.8056398870210099,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Manitoba_Interlake_Eastern: {
     label: 'Interlake-Eastern',
@@ -5604,7 +5586,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 103749,
     unvaccinatedPrevalenceRatio: 1.1257616864689557,
     averageFullyVaccinatedMultiplier: 0.8056463194825975,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Manitoba_Northern: {
     label: 'Northern',
@@ -5619,7 +5601,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57394,
     unvaccinatedPrevalenceRatio: 1.1478952601922439,
     averageFullyVaccinatedMultiplier: 0.8056417047078092,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Manitoba_Southern: {
     label: 'Southern',
@@ -5634,7 +5616,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 134673,
     unvaccinatedPrevalenceRatio: 1.1331657780129432,
     averageFullyVaccinatedMultiplier: 0.8056477541897782,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_New_Brunswick: {
     label: 'New Brunswick',
@@ -5657,7 +5639,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 664984,
     unvaccinatedPrevalenceRatio: 1.1949426999822854,
     averageFullyVaccinatedMultiplier: 0.8063803038870108,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_New_Brunswick_South_East__Moncton_: {
     label: 'South East (Moncton)',
@@ -5672,7 +5654,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_New_Brunswick_South_Central__Saint_John_: {
     label: 'South Central (Saint John)',
@@ -5687,7 +5669,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_New_Brunswick_Central_West__Fredericton_: {
     label: 'Central West (Fredericton)',
@@ -5702,7 +5684,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_New_Brunswick_North_West__Edmundston_: {
     label: 'North West (Edmundston)',
@@ -5717,7 +5699,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_New_Brunswick_North_Central__Campbellton_: {
     label: 'North Central (Campbellton)',
@@ -5732,7 +5714,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_New_Brunswick_North_East__Bathurst_: {
     label: 'North East (Bathurst)',
@@ -5747,7 +5729,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_New_Brunswick_Central_East__Miramichi_: {
     label: 'Central East (Miramichi)',
@@ -5762,7 +5744,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Canada_Newfoundland_and_Labrador: {
     label: 'Newfoundland and Labrador',
@@ -5772,17 +5754,12 @@ export const Locations: { [key: string]: Location } = {
     casesIncreasingPercentage: 11.409395973154357,
     positiveCasePercentage: null,
     topLevelGroup: 'Canada states',
-    subdivisions: [
-      'Canada_Newfoundland_and_Labrador_Eastern',
-      'Canada_Newfoundland_and_Labrador_Central',
-      'Canada_Newfoundland_and_Labrador_Western',
-      'Canada_Newfoundland_and_Labrador_Labrador_Grenfell',
-    ],
+    subdivisions: ['Canada_Newfoundland_and_Labrador_Eastern', 'Canada_Newfoundland_and_Labrador_Central', 'Canada_Newfoundland_and_Labrador_Western', 'Canada_Newfoundland_and_Labrador_Labrador_Grenfell'],
     incompleteVaccinations: 21098,
     completeVaccinations: 482298,
     unvaccinatedPrevalenceRatio: 1.2192107438887574,
     averageFullyVaccinatedMultiplier: 0.8059415548063645,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Newfoundland_and_Labrador_Eastern: {
     label: 'Eastern',
@@ -5797,7 +5774,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Newfoundland_and_Labrador_Central: {
     label: 'Central',
@@ -5812,7 +5789,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Newfoundland_and_Labrador_Western: {
     label: 'Western',
@@ -5827,7 +5804,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Newfoundland_and_Labrador_Labrador_Grenfell: {
     label: 'Labrador-Grenfell',
@@ -5842,7 +5819,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Northwest_Territories: {
     label: 'Northwest Territories',
@@ -5857,7 +5834,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33268,
     unvaccinatedPrevalenceRatio: 1.1712439834238502,
     averageFullyVaccinatedMultiplier: 0.8000180353492846,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Northwest_Territories_NWT: {
     label: 'NWT',
@@ -5872,7 +5849,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Nova_Scotia: {
     label: 'Nova Scotia',
@@ -5882,17 +5859,12 @@ export const Locations: { [key: string]: Location } = {
     casesIncreasingPercentage: 1.9011406844106515,
     positiveCasePercentage: null,
     topLevelGroup: 'Canada states',
-    subdivisions: [
-      'Canada_Nova_Scotia_Western',
-      'Canada_Nova_Scotia_Northern',
-      'Canada_Nova_Scotia_Eastern',
-      'Canada_Nova_Scotia_Central',
-    ],
+    subdivisions: ['Canada_Nova_Scotia_Western', 'Canada_Nova_Scotia_Northern', 'Canada_Nova_Scotia_Eastern', 'Canada_Nova_Scotia_Central'],
     incompleteVaccinations: 45971,
     completeVaccinations: 863893,
     unvaccinatedPrevalenceRatio: 1.2040320701406892,
     averageFullyVaccinatedMultiplier: 0.805402983934353,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Nova_Scotia_Western: {
     label: 'Western',
@@ -5907,7 +5879,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Nova_Scotia_Northern: {
     label: 'Northern',
@@ -5922,7 +5894,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Nova_Scotia_Eastern: {
     label: 'Eastern',
@@ -5937,7 +5909,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Nova_Scotia_Central: {
     label: 'Central',
@@ -5952,7 +5924,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Ontario: {
     label: 'Ontario',
@@ -6017,7 +5989,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 97198,
     unvaccinatedPrevalenceRatio: 1.127875530487265,
     averageFullyVaccinatedMultiplier: 0.8068684540834173,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Brant: {
     label: 'Brant',
@@ -6032,7 +6004,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 123516,
     unvaccinatedPrevalenceRatio: 1.1343989092589046,
     averageFullyVaccinatedMultiplier: 0.806867126526118,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Durham: {
     label: 'Durham',
@@ -6047,7 +6019,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 602940,
     unvaccinatedPrevalenceRatio: 1.1338514432322517,
     averageFullyVaccinatedMultiplier: 0.8068713304806449,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Grey_Bruce: {
     label: 'Grey Bruce',
@@ -6062,7 +6034,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 134330,
     unvaccinatedPrevalenceRatio: 1.1264137060660842,
     averageFullyVaccinatedMultiplier: 0.8068711382416437,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Haldimand_Norfolk: {
     label: 'Haldimand-Norfolk',
@@ -6077,7 +6049,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 91163,
     unvaccinatedPrevalenceRatio: 1.1326912061740677,
     averageFullyVaccinatedMultiplier: 0.8068734025865757,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Haliburton__Kawartha__Pine_Ridge: {
     label: 'Haliburton, Kawartha, Pine Ridge',
@@ -6092,7 +6064,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 156141,
     unvaccinatedPrevalenceRatio: 1.1271536638639872,
     averageFullyVaccinatedMultiplier: 0.8068732747964981,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Halton: {
     label: 'Halton',
@@ -6107,7 +6079,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 527158,
     unvaccinatedPrevalenceRatio: 1.130041818771698,
     averageFullyVaccinatedMultiplier: 0.8068700465515083,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Hamilton: {
     label: 'Hamilton',
@@ -6122,7 +6094,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 477200,
     unvaccinatedPrevalenceRatio: 1.1322973787717838,
     averageFullyVaccinatedMultiplier: 0.8068713327745181,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Hastings_and_Prince_Edward: {
     label: 'Hastings and Prince Edward',
@@ -6137,7 +6109,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 137595,
     unvaccinatedPrevalenceRatio: 1.126438094150561,
     averageFullyVaccinatedMultiplier: 0.8068679821214434,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Huron_Perth: {
     label: 'Huron Perth',
@@ -6152,7 +6124,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 118415,
     unvaccinatedPrevalenceRatio: 1.1277532301401543,
     averageFullyVaccinatedMultiplier: 0.8068656842460837,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Chatham_Kent: {
     label: 'Chatham-Kent',
@@ -6167,7 +6139,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 84221,
     unvaccinatedPrevalenceRatio: 1.1312879374919282,
     averageFullyVaccinatedMultiplier: 0.8068771446551335,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Kingston__Frontenac_and_Lennox_and_Addington: {
     label: 'Kingston, Frontenac and Lennox and Addington',
@@ -6182,7 +6154,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 183386,
     unvaccinatedPrevalenceRatio: 1.1235622259202278,
     averageFullyVaccinatedMultiplier: 0.8068663911094631,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Lambton: {
     label: 'Lambton',
@@ -6197,7 +6169,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 103120,
     unvaccinatedPrevalenceRatio: 1.1300741321315437,
     averageFullyVaccinatedMultiplier: 0.8068754848719938,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Leeds__Grenville_and_Lanark: {
     label: 'Leeds, Grenville and Lanark',
@@ -6212,7 +6184,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 159566,
     unvaccinatedPrevalenceRatio: 1.1254340083443575,
     averageFullyVaccinatedMultiplier: 0.8068761515611095,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Middlesex_London: {
     label: 'Middlesex-London',
@@ -6227,7 +6199,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 439037,
     unvaccinatedPrevalenceRatio: 1.1319281288800789,
     averageFullyVaccinatedMultiplier: 0.8068704915531038,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Niagara: {
     label: 'Niagara',
@@ -6242,7 +6214,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 396491,
     unvaccinatedPrevalenceRatio: 1.1309308652065597,
     averageFullyVaccinatedMultiplier: 0.8068707738637195,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_North_Bay_Parry_Sound: {
     label: 'North Bay Parry Sound',
@@ -6257,7 +6229,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 104278,
     unvaccinatedPrevalenceRatio: 1.1280463380362287,
     averageFullyVaccinatedMultiplier: 0.8068720151901647,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Northwestern: {
     label: 'Northwestern',
@@ -6272,7 +6244,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70685,
     unvaccinatedPrevalenceRatio: 1.1296982480142894,
     averageFullyVaccinatedMultiplier: 0.8068755747329702,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Ottawa: {
     label: 'Ottawa',
@@ -6287,7 +6259,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 909579,
     unvaccinatedPrevalenceRatio: 1.125966082248754,
     averageFullyVaccinatedMultiplier: 0.8068710909112897,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Peel: {
     label: 'Peel',
@@ -6302,7 +6274,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1310205,
     unvaccinatedPrevalenceRatio: 1.1408485905065984,
     averageFullyVaccinatedMultiplier: 0.8068706805423579,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Peterborough: {
     label: 'Peterborough',
@@ -6317,7 +6289,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 122072,
     unvaccinatedPrevalenceRatio: 1.1266036226163818,
     averageFullyVaccinatedMultiplier: 0.8068680778556917,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Porcupine: {
     label: 'Porcupine',
@@ -6332,7 +6304,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 68042,
     unvaccinatedPrevalenceRatio: 1.1344719257493119,
     averageFullyVaccinatedMultiplier: 0.8068692866170895,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Renfrew: {
     label: 'Renfrew',
@@ -6347,7 +6319,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 83992,
     unvaccinatedPrevalenceRatio: 1.1283043044943286,
     averageFullyVaccinatedMultiplier: 0.806874464234689,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Eastern: {
     label: 'Eastern',
@@ -6362,7 +6334,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 175849,
     unvaccinatedPrevalenceRatio: 1.1298257954271778,
     averageFullyVaccinatedMultiplier: 0.8068740794659054,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Simcoe_Muskoka: {
     label: 'Simcoe Muskoka',
@@ -6377,7 +6349,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 489597,
     unvaccinatedPrevalenceRatio: 1.1316014725224253,
     averageFullyVaccinatedMultiplier: 0.8068717741326029,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Sudbury: {
     label: 'Sudbury',
@@ -6392,7 +6364,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 169580,
     unvaccinatedPrevalenceRatio: 1.1308036088712092,
     averageFullyVaccinatedMultiplier: 0.8068699139049417,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Thunder_Bay: {
     label: 'Thunder Bay',
@@ -6407,7 +6379,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 130897,
     unvaccinatedPrevalenceRatio: 1.1291377196567225,
     averageFullyVaccinatedMultiplier: 0.8068710512845978,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Timiskaming: {
     label: 'Timiskaming',
@@ -6422,7 +6394,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26731,
     unvaccinatedPrevalenceRatio: 1.129793065298836,
     averageFullyVaccinatedMultiplier: 0.8068908757622236,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Waterloo: {
     label: 'Waterloo',
@@ -6437,7 +6409,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 507118,
     unvaccinatedPrevalenceRatio: 1.132199935208682,
     averageFullyVaccinatedMultiplier: 0.8068713790478744,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Wellington_Dufferin_Guelph: {
     label: 'Wellington-Dufferin-Guelph',
@@ -6452,7 +6424,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 259143,
     unvaccinatedPrevalenceRatio: 1.1302983835065075,
     averageFullyVaccinatedMultiplier: 0.8068711097733684,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Windsor_Essex: {
     label: 'Windsor-Essex',
@@ -6467,7 +6439,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 352604,
     unvaccinatedPrevalenceRatio: 1.1353882735599414,
     averageFullyVaccinatedMultiplier: 0.806871164252249,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_York: {
     label: 'York',
@@ -6482,7 +6454,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1008641,
     unvaccinatedPrevalenceRatio: 1.13092885641158,
     averageFullyVaccinatedMultiplier: 0.8068718205982108,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Southwestern: {
     label: 'Southwestern',
@@ -6497,7 +6469,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 170896,
     unvaccinatedPrevalenceRatio: 1.1330852140532826,
     averageFullyVaccinatedMultiplier: 0.8068708454264581,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Ontario_Toronto: {
     label: 'Toronto',
@@ -6512,7 +6484,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2540621,
     unvaccinatedPrevalenceRatio: 1.1297696255708052,
     averageFullyVaccinatedMultiplier: 0.8068712334504045,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Canada_Prince_Edward_Island: {
     label: 'Prince Edward Island',
@@ -6527,7 +6499,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 145396,
     unvaccinatedPrevalenceRatio: 1.2083272053416478,
     averageFullyVaccinatedMultiplier: 0.8051528240116647,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Canada_Prince_Edward_Island_PEI: {
     label: 'PEI',
@@ -6542,7 +6514,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   Canada_Quebec: {
     label: 'Quebec',
@@ -6591,7 +6563,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 170660,
     unvaccinatedPrevalenceRatio: 1.089646406223207,
     averageFullyVaccinatedMultiplier: 0.8070080862533693,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Saguenay_Lac_Saint_Jean: {
     label: 'Saguenay-Lac-Saint-Jean',
@@ -6606,7 +6578,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 241651,
     unvaccinatedPrevalenceRatio: 1.0898648856962279,
     averageFullyVaccinatedMultiplier: 0.8070067990614564,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Capitale_Nationale: {
     label: 'Capitale-Nationale',
@@ -6621,7 +6593,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 657588,
     unvaccinatedPrevalenceRatio: 1.0950868188884935,
     averageFullyVaccinatedMultiplier: 0.8070068188592249,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Mauricie_et_Centre_du_Qu_bec: {
     label: 'Mauricie et Centre-du-Québec',
@@ -6636,7 +6608,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 436686,
     unvaccinatedPrevalenceRatio: 1.0947936490797103,
     averageFullyVaccinatedMultiplier: 0.8070054913599245,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Estrie: {
     label: 'Estrie',
@@ -6651,7 +6623,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 422028,
     unvaccinatedPrevalenceRatio: 1.094431323990952,
     averageFullyVaccinatedMultiplier: 0.8070056963045106,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Montr_al: {
     label: 'Montréal',
@@ -6666,7 +6638,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1656098,
     unvaccinatedPrevalenceRatio: 1.103181341570184,
     averageFullyVaccinatedMultiplier: 0.8070059863607105,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Outaouais: {
     label: 'Outaouais',
@@ -6681,7 +6653,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 333793,
     unvaccinatedPrevalenceRatio: 1.1002202917309702,
     averageFullyVaccinatedMultiplier: 0.8070061385349603,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Abitibi_T_miscamingue: {
     label: 'Abitibi-Témiscamingue',
@@ -6696,7 +6668,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 122374,
     unvaccinatedPrevalenceRatio: 1.0947921892873629,
     averageFullyVaccinatedMultiplier: 0.8070096589144753,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_C_te_Nord: {
     label: 'Côte-Nord',
@@ -6711,7 +6683,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 74965,
     unvaccinatedPrevalenceRatio: 1.0944799618632168,
     averageFullyVaccinatedMultiplier: 0.8070032681918229,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Nord_du_Qu_bec: {
     label: 'Nord-du-Québec',
@@ -6726,7 +6698,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10846,
     unvaccinatedPrevalenceRatio: 1.099861700605656,
     averageFullyVaccinatedMultiplier: 0.806933431679882,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Gasp_sie__les_de_la_Madeleine: {
     label: 'Gaspésie-Îles-de-la-Madeleine',
@@ -6741,7 +6713,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 82528,
     unvaccinatedPrevalenceRatio: 1.0875804846398742,
     averageFullyVaccinatedMultiplier: 0.8069988367584335,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Chaudi_re_Appalaches: {
     label: 'Chaudière-Appalaches',
@@ -6756,7 +6728,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 361361,
     unvaccinatedPrevalenceRatio: 1.0983898660173272,
     averageFullyVaccinatedMultiplier: 0.8070046297193112,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Laval: {
     label: 'Laval',
@@ -6771,7 +6743,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 362699,
     unvaccinatedPrevalenceRatio: 1.103500434708036,
     averageFullyVaccinatedMultiplier: 0.8070052578033025,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Lanaudi_re: {
     label: 'Lanaudière',
@@ -6786,7 +6758,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 446248,
     unvaccinatedPrevalenceRatio: 1.0959542840335048,
     averageFullyVaccinatedMultiplier: 0.8070064179559349,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Laurentides: {
     label: 'Laurentides',
@@ -6801,7 +6773,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 541756,
     unvaccinatedPrevalenceRatio: 1.0969775893060865,
     averageFullyVaccinatedMultiplier: 0.8070053677301221,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Mont_r_gie: {
     label: 'Montérégie',
@@ -6816,7 +6788,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1249904,
     unvaccinatedPrevalenceRatio: 1.0955019191521287,
     averageFullyVaccinatedMultiplier: 0.8070059780591149,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Nunavik: {
     label: 'Nunavik',
@@ -6831,7 +6803,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8362,
     unvaccinatedPrevalenceRatio: 1.1245178213238698,
     averageFullyVaccinatedMultiplier: 0.8069839751255681,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Quebec_Terres_Cries_de_la_Baie_James: {
     label: 'Terres-Cries-de-la-Baie-James',
@@ -6846,7 +6818,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15638,
     unvaccinatedPrevalenceRatio: 1.1060249429123485,
     averageFullyVaccinatedMultiplier: 0.8070085688706996,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Canada_Saskatchewan: {
     label: 'Saskatchewan',
@@ -6875,7 +6847,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 914297,
     unvaccinatedPrevalenceRatio: 1.1750380941947436,
     averageFullyVaccinatedMultiplier: 0.8077714353213452,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   Canada_Saskatchewan_Far_North_West: {
     label: 'Far North West',
@@ -6890,7 +6862,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_Far_North_Central: {
     label: 'Far North Central',
@@ -6905,7 +6877,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_Far_North_East: {
     label: 'Far North East',
@@ -6920,7 +6892,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_North_West: {
     label: 'North West',
@@ -6935,7 +6907,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_North_Central: {
     label: 'North Central',
@@ -6950,7 +6922,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_North_East: {
     label: 'North East',
@@ -6965,7 +6937,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_Central_West: {
     label: 'Central West',
@@ -6980,7 +6952,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_Central_East: {
     label: 'Central East',
@@ -6995,7 +6967,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_Saskatoon: {
     label: 'Saskatoon',
@@ -7010,7 +6982,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_Regina: {
     label: 'Regina',
@@ -7025,7 +6997,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_South_West: {
     label: 'South West',
@@ -7040,7 +7012,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_South_Central: {
     label: 'South Central',
@@ -7055,7 +7027,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Saskatchewan_South_East: {
     label: 'South East',
@@ -7070,7 +7042,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Yukon: {
     label: 'Yukon',
@@ -7085,7 +7057,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35664,
     unvaccinatedPrevalenceRatio: 1.1989178334355999,
     averageFullyVaccinatedMultiplier: 0.8000224315836698,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Yukon_Yukon: {
     label: 'Yukon',
@@ -7100,7 +7072,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Nunavut: {
     label: 'Nunavut',
@@ -7115,7 +7087,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30373,
     unvaccinatedPrevalenceRatio: 1.1822436916799184,
     averageFullyVaccinatedMultiplier: 0.8000197543871201,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Canada_Nunavut_Nunavut: {
     label: 'Nunavut',
@@ -7130,7 +7102,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Central_African_Republic: {
     label: 'Central African Republic',
@@ -7145,7 +7117,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1601748,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Chad: {
     label: 'Chad',
@@ -7160,7 +7132,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3186964,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Chile: {
     label: 'Chile',
@@ -7496,7 +7468,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Beijing: {
     label: 'Beijing',
@@ -7586,7 +7558,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   China_Guizhou: {
     label: 'Guizhou',
@@ -7631,7 +7603,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Heilongjiang: {
     label: 'Heilongjiang',
@@ -7751,7 +7723,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Liaoning: {
     label: 'Liaoning',
@@ -7781,7 +7753,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Qinghai: {
     label: 'Qinghai',
@@ -7796,7 +7768,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Shaanxi: {
     label: 'Shaanxi',
@@ -7886,7 +7858,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Tibet: {
     label: 'Tibet',
@@ -7901,7 +7873,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   China_Xinjiang: {
     label: 'Xinjiang',
@@ -8025,7 +7997,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36453657,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Amazonas: {
     label: 'Amazonas',
@@ -8040,7 +8012,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Colombia_Antioquia: {
     label: 'Antioquia',
@@ -8055,7 +8027,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Arauca: {
     label: 'Arauca',
@@ -8070,7 +8042,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Atlantico: {
     label: 'Atlantico',
@@ -8085,7 +8057,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Bolivar: {
     label: 'Bolivar',
@@ -8100,7 +8072,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Boyaca: {
     label: 'Boyaca',
@@ -8115,7 +8087,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Caldas: {
     label: 'Caldas',
@@ -8130,7 +8102,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Capital_District: {
     label: 'Capital District',
@@ -8145,7 +8117,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Caqueta: {
     label: 'Caqueta',
@@ -8160,7 +8132,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Colombia_Casanare: {
     label: 'Casanare',
@@ -8175,7 +8147,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Cauca: {
     label: 'Cauca',
@@ -8190,7 +8162,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Cesar: {
     label: 'Cesar',
@@ -8205,7 +8177,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Choco: {
     label: 'Choco',
@@ -8220,7 +8192,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Colombia_Cordoba: {
     label: 'Cordoba',
@@ -8235,7 +8207,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Cundinamarca: {
     label: 'Cundinamarca',
@@ -8250,7 +8222,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Guainia: {
     label: 'Guainia',
@@ -8265,7 +8237,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Colombia_Guaviare: {
     label: 'Guaviare',
@@ -8280,7 +8252,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Colombia_Huila: {
     label: 'Huila',
@@ -8295,7 +8267,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_La_Guajira: {
     label: 'La Guajira',
@@ -8310,7 +8282,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Magdalena: {
     label: 'Magdalena',
@@ -8325,7 +8297,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Meta: {
     label: 'Meta',
@@ -8340,7 +8312,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Narino: {
     label: 'Narino',
@@ -8355,7 +8327,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Norte_de_Santander: {
     label: 'Norte de Santander',
@@ -8370,7 +8342,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Putumayo: {
     label: 'Putumayo',
@@ -8385,7 +8357,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Quindio: {
     label: 'Quindio',
@@ -8400,7 +8372,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Risaralda: {
     label: 'Risaralda',
@@ -8415,7 +8387,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_San_Andres_y_Providencia: {
     label: 'San Andres y Providencia',
@@ -8430,7 +8402,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Santander: {
     label: 'Santander',
@@ -8445,7 +8417,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Sucre: {
     label: 'Sucre',
@@ -8460,7 +8432,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Tolima: {
     label: 'Tolima',
@@ -8475,7 +8447,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Valle_del_Cauca: {
     label: 'Valle del Cauca',
@@ -8490,7 +8462,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Vaupes: {
     label: 'Vaupes',
@@ -8505,7 +8477,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Colombia_Vichada: {
     label: 'Vichada',
@@ -8520,7 +8492,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Comoros: {
     label: 'Comoros',
@@ -8535,7 +8507,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 373001,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Congo__Brazzaville_: {
     label: 'Congo (Brazzaville)',
@@ -8550,7 +8522,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 591396,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Congo__Kinshasa_: {
     label: 'Congo (Kinshasa)',
@@ -8565,7 +8537,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5590849,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Costa_Rica: {
     label: 'Costa Rica',
@@ -8580,7 +8552,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3893389,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Cote_d_Ivoire: {
     label: "Cote d'Ivoire",
@@ -8595,7 +8567,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10489107,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Croatia: {
     label: 'Croatia',
@@ -8640,7 +8612,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 569448,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Czechia: {
     label: 'Czechia',
@@ -8685,7 +8657,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Denmark_Greenland: {
     label: 'Greenland',
@@ -8700,7 +8672,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Djibouti: {
     label: 'Djibouti',
@@ -8715,7 +8687,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 262245,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Dominica: {
     label: 'Dominica',
@@ -8730,7 +8702,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28046,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Dominican_Republic: {
     label: 'Dominican Republic',
@@ -8745,7 +8717,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6202972,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Ecuador: {
     label: 'Ecuador',
@@ -8775,7 +8747,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45624408,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   El_Salvador: {
     label: 'El Salvador',
@@ -8790,7 +8762,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3954707,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Equatorial_Guinea: {
     label: 'Equatorial Guinea',
@@ -8805,7 +8777,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 229593,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Eritrea: {
     label: 'Eritrea',
@@ -8820,7 +8792,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Estonia: {
     label: 'Estonia',
@@ -8835,7 +8807,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 738058,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Eswatini: {
     label: 'Eswatini',
@@ -8850,7 +8822,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 418455,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   Ethiopia: {
     label: 'Ethiopia',
@@ -8880,7 +8852,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 604715,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Finland: {
     label: 'Finland',
@@ -8937,7 +8909,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   France_French_Polynesia: {
     label: 'French Polynesia',
@@ -8952,7 +8924,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   France_Guadeloupe: {
     label: 'Guadeloupe',
@@ -8967,7 +8939,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   France_Martinique: {
     label: 'Martinique',
@@ -8982,7 +8954,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   France_Mayotte: {
     label: 'Mayotte',
@@ -8997,7 +8969,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   France_New_Caledonia: {
     label: 'New Caledonia',
@@ -9012,7 +8984,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   France_Reunion: {
     label: 'Reunion',
@@ -9027,7 +8999,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   France_Saint_Barthelemy: {
     label: 'Saint Barthelemy',
@@ -9042,7 +9014,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   France_Saint_Pierre_and_Miquelon: {
     label: 'Saint Pierre and Miquelon',
@@ -9072,7 +9044,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   France_Wallis_and_Futuna: {
     label: 'Wallis and Futuna',
@@ -9087,7 +9059,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Gabon: {
     label: 'Gabon',
@@ -9102,7 +9074,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 264384,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   Gambia: {
     label: 'Gambia',
@@ -9117,7 +9089,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 794579,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Georgia: {
     label: 'Georgia',
@@ -9419,7 +9391,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10228992,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   Greece: {
     label: 'Greece',
@@ -9434,7 +9406,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6741994,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Grenada: {
     label: 'Grenada',
@@ -9449,7 +9421,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37553,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Guatemala: {
     label: 'Guatemala',
@@ -9479,7 +9451,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4938314,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Guinea_Bissau: {
     label: 'Guinea-Bissau',
@@ -9494,7 +9466,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 544334,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Guyana: {
     label: 'Guyana',
@@ -9524,7 +9496,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 338739,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   Holy_See: {
     label: 'Holy See',
@@ -9539,7 +9511,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Honduras: {
     label: 'Honduras',
@@ -9554,7 +9526,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5457651,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Hungary: {
     label: 'Hungary',
@@ -9569,7 +9541,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5457301,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Iceland: {
     label: 'Iceland',
@@ -9584,7 +9556,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 263304,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   India: {
     label: 'India',
@@ -9651,7 +9623,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   India_Andhra_Pradesh: {
     label: 'Andhra Pradesh',
@@ -9681,7 +9653,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   India_Assam: {
     label: 'Assam',
@@ -9696,7 +9668,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   India_Bihar: {
     label: 'Bihar',
@@ -9756,7 +9728,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   India_Delhi: {
     label: 'Delhi',
@@ -9861,7 +9833,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 27, 2022',
   },
   India_Karnataka: {
     label: 'Karnataka',
@@ -9906,7 +9878,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   India_Madhya_Pradesh: {
     label: 'Madhya Pradesh',
@@ -9966,7 +9938,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   India_Mizoram: {
     label: 'Mizoram',
@@ -9981,7 +9953,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   India_Nagaland: {
     label: 'Nagaland',
@@ -9996,7 +9968,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   India_Odisha: {
     label: 'Odisha',
@@ -10026,7 +9998,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   India_Punjab: {
     label: 'Punjab',
@@ -10041,7 +10013,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   India_Rajasthan: {
     label: 'Rajasthan',
@@ -10071,7 +10043,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   India_Tamil_Nadu: {
     label: 'Tamil Nadu',
@@ -10116,7 +10088,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   India_Uttar_Pradesh: {
     label: 'Uttar Pradesh',
@@ -10176,7 +10148,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Indonesia: {
     label: 'Indonesia',
@@ -10221,7 +10193,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9611813,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Ireland: {
     label: 'Ireland',
@@ -10236,7 +10208,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3488014,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Israel: {
     label: 'Israel',
@@ -10288,7 +10260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43231479,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Abruzzo: {
     label: 'Abruzzo',
@@ -10303,7 +10275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Basilicata: {
     label: 'Basilicata',
@@ -10318,7 +10290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Calabria: {
     label: 'Calabria',
@@ -10333,7 +10305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Campania: {
     label: 'Campania',
@@ -10348,7 +10320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Emilia_Romagna: {
     label: 'Emilia-Romagna',
@@ -10363,7 +10335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Friuli_Venezia_Giulia: {
     label: 'Friuli Venezia Giulia',
@@ -10378,7 +10350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Lazio: {
     label: 'Lazio',
@@ -10393,7 +10365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Liguria: {
     label: 'Liguria',
@@ -10408,7 +10380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Lombardia: {
     label: 'Lombardia',
@@ -10423,7 +10395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Marche: {
     label: 'Marche',
@@ -10438,7 +10410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Molise: {
     label: 'Molise',
@@ -10453,7 +10425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_P_A__Bolzano: {
     label: 'P.A. Bolzano',
@@ -10468,7 +10440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_P_A__Trento: {
     label: 'P.A. Trento',
@@ -10483,7 +10455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Piemonte: {
     label: 'Piemonte',
@@ -10498,7 +10470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Puglia: {
     label: 'Puglia',
@@ -10513,7 +10485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Sardegna: {
     label: 'Sardegna',
@@ -10528,7 +10500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Sicilia: {
     label: 'Sicilia',
@@ -10543,7 +10515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Toscana: {
     label: 'Toscana',
@@ -10558,7 +10530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Umbria: {
     label: 'Umbria',
@@ -10573,7 +10545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Valle_d_Aosta: {
     label: "Valle d'Aosta",
@@ -10588,7 +10560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Italy_Veneto: {
     label: 'Veneto',
@@ -10603,7 +10575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Jamaica: {
     label: 'Jamaica',
@@ -10618,7 +10590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 715368,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Japan: {
     label: 'Japan',
@@ -11401,7 +11373,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4098342,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Kazakhstan: {
     label: 'Kazakhstan',
@@ -11446,7 +11418,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 81756,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Korea__North: {
     label: 'Korea, North',
@@ -11461,7 +11433,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Kosovo: {
     label: 'Kosovo',
@@ -11476,7 +11448,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 770596,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Kuwait: {
     label: 'Kuwait',
@@ -11491,7 +11463,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2935866,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Kyrgyzstan: {
     label: 'Kyrgyzstan',
@@ -11506,7 +11478,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1385871,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Laos: {
     label: 'Laos',
@@ -11566,7 +11538,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 847181,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Liberia: {
     label: 'Liberia',
@@ -11581,7 +11553,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3251574,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Libya: {
     label: 'Libya',
@@ -11596,7 +11568,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1962415,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Liechtenstein: {
     label: 'Liechtenstein',
@@ -11611,7 +11583,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22749,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Lithuania: {
     label: 'Lithuania',
@@ -11656,7 +11628,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1669528,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   Malawi: {
     label: 'Malawi',
@@ -11671,7 +11643,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3332666,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Malaysia: {
     label: 'Malaysia',
@@ -11958,7 +11930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 339274,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Mali: {
     label: 'Mali',
@@ -12018,7 +11990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1747051,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   Mauritius: {
     label: 'Mauritius',
@@ -12033,7 +12005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 955207,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Mexico: {
     label: 'Mexico',
@@ -12576,7 +12548,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 59673,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Moldova: {
     label: 'Moldova',
@@ -12591,7 +12563,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 937778,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Monaco: {
     label: 'Monaco',
@@ -12606,7 +12578,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24544,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Mongolia: {
     label: 'Mongolia',
@@ -12666,7 +12638,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15881443,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   Namibia: {
     label: 'Namibia',
@@ -12681,7 +12653,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 509299,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Nauru: {
     label: 'Nauru',
@@ -12696,7 +12668,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8919,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Nepal: {
     label: 'Nepal',
@@ -12743,7 +12715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10860338,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Netherlands_Drenthe: {
     label: 'Drenthe',
@@ -12758,7 +12730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Flevoland: {
     label: 'Flevoland',
@@ -12773,7 +12745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Friesland: {
     label: 'Friesland',
@@ -12788,7 +12760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Gelderland: {
     label: 'Gelderland',
@@ -12803,7 +12775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Groningen: {
     label: 'Groningen',
@@ -12818,7 +12790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Limburg: {
     label: 'Limburg',
@@ -12833,7 +12805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Noord_Brabant: {
     label: 'Noord-Brabant',
@@ -12848,7 +12820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Noord_Holland: {
     label: 'Noord-Holland',
@@ -12863,7 +12835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Overijssel: {
     label: 'Overijssel',
@@ -12878,7 +12850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Utrecht: {
     label: 'Utrecht',
@@ -12893,7 +12865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Zeeland: {
     label: 'Zeeland',
@@ -12908,7 +12880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Zuid_Holland: {
     label: 'Zuid-Holland',
@@ -12923,7 +12895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Aruba: {
     label: 'Aruba',
@@ -12938,7 +12910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Netherlands_Curacao: {
     label: 'Curacao',
@@ -12953,7 +12925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   Netherlands_Sint_Maarten: {
     label: 'Sint Maarten',
@@ -12968,7 +12940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Netherlands_Bonaire__Sint_Eustatius_and_Saba: {
     label: 'Bonaire, Sint Eustatius and Saba',
@@ -12983,7 +12955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   New_Zealand: {
     label: 'New Zealand',
@@ -12998,7 +12970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3654279,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   New_Zealand_Cook_Islands: {
     label: 'Cook Islands',
@@ -13013,7 +12985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   New_Zealand_Niue: {
     label: 'Niue',
@@ -13043,7 +13015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5233068,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Niger: {
     label: 'Niger',
@@ -13058,7 +13030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5045004,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   Nigeria: {
     label: 'Nigeria',
@@ -13073,7 +13045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 54384842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   North_Macedonia: {
     label: 'North Macedonia',
@@ -13088,7 +13060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 726233,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Norway: {
     label: 'Norway',
@@ -13118,7 +13090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2768760,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   Pakistan: {
     label: 'Pakistan',
@@ -13156,7 +13128,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Pakistan_Balochistan: {
     label: 'Balochistan',
@@ -13186,7 +13158,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   Pakistan_Islamabad: {
     label: 'Islamabad',
@@ -13261,7 +13233,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17085,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Panama: {
     label: 'Panama',
@@ -13276,7 +13248,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2987152,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Papua_New_Guinea: {
     label: 'Papua New Guinea',
@@ -13306,7 +13278,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3378352,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru: {
     label: 'Peru',
@@ -13362,7 +13334,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Ancash: {
     label: 'Ancash',
@@ -13377,7 +13349,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Apurimac: {
     label: 'Apurimac',
@@ -13392,7 +13364,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Arequipa: {
     label: 'Arequipa',
@@ -13407,7 +13379,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Ayacucho: {
     label: 'Ayacucho',
@@ -13422,7 +13394,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Cajamarca: {
     label: 'Cajamarca',
@@ -13437,7 +13409,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Callao: {
     label: 'Callao',
@@ -13452,7 +13424,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Cusco: {
     label: 'Cusco',
@@ -13467,7 +13439,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Huancavelica: {
     label: 'Huancavelica',
@@ -13482,7 +13454,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Huanuco: {
     label: 'Huanuco',
@@ -13497,7 +13469,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Ica: {
     label: 'Ica',
@@ -13512,7 +13484,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Junin: {
     label: 'Junin',
@@ -13527,7 +13499,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_La_Libertad: {
     label: 'La Libertad',
@@ -13542,7 +13514,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Lambayeque: {
     label: 'Lambayeque',
@@ -13557,7 +13529,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Lima: {
     label: 'Lima',
@@ -13572,7 +13544,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Loreto: {
     label: 'Loreto',
@@ -13587,7 +13559,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Madre_de_Dios: {
     label: 'Madre de Dios',
@@ -13602,7 +13574,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Moquegua: {
     label: 'Moquegua',
@@ -13617,7 +13589,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Pasco: {
     label: 'Pasco',
@@ -13632,7 +13604,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Piura: {
     label: 'Piura',
@@ -13647,7 +13619,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_Puno: {
     label: 'Puno',
@@ -13662,7 +13634,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Peru_San_Martin: {
     label: 'San Martin',
@@ -13677,7 +13649,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Tacna: {
     label: 'Tacna',
@@ -13692,7 +13664,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Tumbes: {
     label: 'Tumbes',
@@ -13707,7 +13679,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Peru_Ucayali: {
     label: 'Ucayali',
@@ -13722,7 +13694,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Philippines: {
     label: 'Philippines',
@@ -13797,7 +13769,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6956038,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Russia: {
     label: 'Russia',
@@ -15156,7 +15128,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8987034,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Saint_Kitts_and_Nevis: {
     label: 'Saint Kitts and Nevis',
@@ -15171,7 +15143,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28725,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Saint_Lucia: {
     label: 'Saint Lucia',
@@ -15186,7 +15158,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 51119,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Saint_Vincent_and_the_Grenadines: {
     label: 'Saint Vincent and the Grenadines',
@@ -15201,7 +15173,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31731,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   Samoa: {
     label: 'Samoa',
@@ -15216,7 +15188,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 196814,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   San_Marino: {
     label: 'San Marino',
@@ -15231,7 +15203,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22403,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Sao_Tome_and_Principe: {
     label: 'Sao Tome and Principe',
@@ -15246,7 +15218,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 108322,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Saudi_Arabia: {
     label: 'Saudi Arabia',
@@ -15276,7 +15248,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1657006,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Serbia: {
     label: 'Serbia',
@@ -15306,7 +15278,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 72862,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   Sierra_Leone: {
     label: 'Sierra Leone',
@@ -15321,7 +15293,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3256314,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Singapore: {
     label: 'Singapore',
@@ -15381,7 +15353,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 292248,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Somalia: {
     label: 'Somalia',
@@ -15441,7 +15413,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1837747,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Spain: {
     label: 'Spain',
@@ -15476,7 +15448,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35114089,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Andalusia: {
     label: 'Andalusia',
@@ -15491,7 +15463,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Aragon: {
     label: 'Aragon',
@@ -15506,7 +15478,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Asturias: {
     label: 'Asturias',
@@ -15521,7 +15493,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Baleares: {
     label: 'Baleares',
@@ -15536,7 +15508,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Canarias: {
     label: 'Canarias',
@@ -15551,7 +15523,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Cantabria: {
     label: 'Cantabria',
@@ -15566,7 +15538,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Castilla___La_Mancha: {
     label: 'Castilla - La Mancha',
@@ -15581,7 +15553,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Castilla_y_Leon: {
     label: 'Castilla y Leon',
@@ -15596,7 +15568,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Catalonia: {
     label: 'Catalonia',
@@ -15611,7 +15583,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Ceuta: {
     label: 'Ceuta',
@@ -15626,7 +15598,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_C__Valenciana: {
     label: 'C. Valenciana',
@@ -15641,7 +15613,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Extremadura: {
     label: 'Extremadura',
@@ -15656,7 +15628,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Galicia: {
     label: 'Galicia',
@@ -15671,7 +15643,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Madrid: {
     label: 'Madrid',
@@ -15686,7 +15658,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Melilla: {
     label: 'Melilla',
@@ -15701,7 +15673,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Murcia: {
     label: 'Murcia',
@@ -15716,7 +15688,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Navarra: {
     label: 'Navarra',
@@ -15731,7 +15703,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_Pais_Vasco: {
     label: 'Pais Vasco',
@@ -15746,7 +15718,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Spain_La_Rioja: {
     label: 'La Rioja',
@@ -15761,7 +15733,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   Sri_Lanka: {
     label: 'Sri Lanka',
@@ -15806,7 +15778,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 227647,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   Sweden: {
     label: 'Sweden',
@@ -16173,7 +16145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5181181,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Syria: {
     label: 'Syria',
@@ -16218,7 +16190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4490434,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Tanzania: {
     label: 'Tanzania',
@@ -16233,7 +16205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24521337,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Thailand: {
     label: 'Thailand',
@@ -16248,7 +16220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 48770322,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 04, 2022',
   },
   Timor_Leste: {
     label: 'Timor-Leste',
@@ -16263,7 +16235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 741724,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Togo: {
     label: 'Togo',
@@ -16278,7 +16250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1903921,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Tonga: {
     label: 'Tonga',
@@ -16293,7 +16265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 78157,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Trinidad_and_Tobago: {
     label: 'Trinidad and Tobago',
@@ -16308,7 +16280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 641194,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Tunisia: {
     label: 'Tunisia',
@@ -16323,7 +16295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6133359,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Turkey: {
     label: 'Turkey',
@@ -16338,7 +16310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 49249893,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Tuvalu: {
     label: 'Tuvalu',
@@ -16353,7 +16325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8163,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US: {
     label: 'United States (all)',
@@ -16743,7 +16715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_72051: {
     label: 'Dorado',
@@ -17553,7 +17525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25576,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01003: {
     label: 'Baldwin',
@@ -17568,7 +17540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 118392,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01005: {
     label: 'Barbour',
@@ -17583,7 +17555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11656,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01007: {
     label: 'Bibb',
@@ -17598,7 +17570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8119,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01009: {
     label: 'Blount',
@@ -17613,7 +17585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18957,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01011: {
     label: 'Bullock',
@@ -17628,7 +17600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5704,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01013: {
     label: 'Butler',
@@ -17643,7 +17615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7928,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01015: {
     label: 'Calhoun',
@@ -17658,7 +17630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 55335,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01017: {
     label: 'Chambers',
@@ -17673,7 +17645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10976,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01019: {
     label: 'Cherokee',
@@ -17688,7 +17660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8430,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01021: {
     label: 'Chilton',
@@ -17703,7 +17675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16627,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01023: {
     label: 'Choctaw',
@@ -17718,7 +17690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8590,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_01025: {
     label: 'Clarke',
@@ -17733,7 +17705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12343,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01027: {
     label: 'Clay',
@@ -17748,7 +17720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5759,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01029: {
     label: 'Cleburne',
@@ -17763,7 +17735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4399,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01031: {
     label: 'Coffee',
@@ -17778,7 +17750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25485,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01033: {
     label: 'Colbert',
@@ -17793,7 +17765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27260,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01035: {
     label: 'Conecuh',
@@ -17808,7 +17780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5453,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01037: {
     label: 'Coosa',
@@ -17823,7 +17795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4463,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01039: {
     label: 'Covington',
@@ -17838,7 +17810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14450,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01041: {
     label: 'Crenshaw',
@@ -17853,7 +17825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4897,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01043: {
     label: 'Cullman',
@@ -17868,7 +17840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32796,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01045: {
     label: 'Dale',
@@ -17883,7 +17855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24272,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01047: {
     label: 'Dallas',
@@ -17898,7 +17870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17501,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01049: {
     label: 'DeKalb',
@@ -17913,7 +17885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25088,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01051: {
     label: 'Elmore',
@@ -17928,7 +17900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39081,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01053: {
     label: 'Escambia',
@@ -17943,7 +17915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13823,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01055: {
     label: 'Etowah',
@@ -17958,7 +17930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43280,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01057: {
     label: 'Fayette',
@@ -17973,7 +17945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5883,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01059: {
     label: 'Franklin',
@@ -17988,7 +17960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14144,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01061: {
     label: 'Geneva',
@@ -18003,7 +17975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10825,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01063: {
     label: 'Greene',
@@ -18018,7 +17990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4266,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01065: {
     label: 'Hale',
@@ -18033,7 +18005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9221,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01067: {
     label: 'Henry',
@@ -18048,7 +18020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01069: {
     label: 'Houston',
@@ -18063,7 +18035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 47175,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01071: {
     label: 'Jackson',
@@ -18078,7 +18050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26341,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01073: {
     label: 'Jefferson',
@@ -18093,7 +18065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 401236,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01075: {
     label: 'Lamar',
@@ -18108,7 +18080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6253,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01077: {
     label: 'Lauderdale',
@@ -18123,7 +18095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44738,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01079: {
     label: 'Lawrence',
@@ -18138,7 +18110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15835,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01081: {
     label: 'Lee',
@@ -18153,7 +18125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 68964,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01083: {
     label: 'Limestone',
@@ -18168,7 +18140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39747,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01085: {
     label: 'Lowndes',
@@ -18183,7 +18155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5187,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01087: {
     label: 'Macon',
@@ -18198,7 +18170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9116,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01089: {
     label: 'Madison',
@@ -18213,7 +18185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 242842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01091: {
     label: 'Marengo',
@@ -18228,7 +18200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10500,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01093: {
     label: 'Marion',
@@ -18243,7 +18215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11084,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01095: {
     label: 'Marshall',
@@ -18258,7 +18230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45703,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01097: {
     label: 'Mobile',
@@ -18273,7 +18245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 213990,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01099: {
     label: 'Monroe',
@@ -18288,7 +18260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9292,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01101: {
     label: 'Montgomery',
@@ -18303,7 +18275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 123622,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01103: {
     label: 'Morgan',
@@ -18318,7 +18290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 53673,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01105: {
     label: 'Perry',
@@ -18333,7 +18305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4470,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01107: {
     label: 'Pickens',
@@ -18348,7 +18320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10355,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01109: {
     label: 'Pike',
@@ -18363,7 +18335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14445,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01111: {
     label: 'Randolph',
@@ -18378,7 +18350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7752,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01113: {
     label: 'Russell',
@@ -18393,7 +18365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25554,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01115: {
     label: 'St. Clair',
@@ -18408,7 +18380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36116,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01117: {
     label: 'Shelby',
@@ -18423,7 +18395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 81835,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01119: {
     label: 'Sumter',
@@ -18438,7 +18410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6706,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01121: {
     label: 'Talladega',
@@ -18453,7 +18425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30140,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01123: {
     label: 'Tallapoosa',
@@ -18468,7 +18440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15998,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01125: {
     label: 'Tuscaloosa',
@@ -18483,7 +18455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 94729,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01127: {
     label: 'Walker',
@@ -18498,7 +18470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30922,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01129: {
     label: 'Washington',
@@ -18513,7 +18485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7677,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01131: {
     label: 'Wilcox',
@@ -18528,7 +18500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5727,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_01133: {
     label: 'Winston',
@@ -18543,7 +18515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5321,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_02013: {
     label: 'Aleutians East',
@@ -18558,7 +18530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2498,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02016: {
     label: 'Aleutians West',
@@ -18573,7 +18545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3616,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02020: {
     label: 'Anchorage',
@@ -18588,7 +18560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 203503,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02050: {
     label: 'Bethel',
@@ -18603,7 +18575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12627,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02060: {
     label: 'Bristol Bay',
@@ -18618,7 +18590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02066: {
     label: 'Copper River',
@@ -18633,7 +18605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02063: {
     label: 'Chugach',
@@ -18648,7 +18620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02068: {
     label: 'Denali',
@@ -18663,7 +18635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1164,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02070: {
     label: 'Dillingham',
@@ -18678,7 +18650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2629,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02090: {
     label: 'Fairbanks North Star',
@@ -18693,7 +18665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 61816,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02100: {
     label: 'Haines',
@@ -18708,7 +18680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1798,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02110: {
     label: 'Juneau',
@@ -18723,7 +18695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25437,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02122: {
     label: 'Kenai Peninsula',
@@ -18738,7 +18710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29328,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02130: {
     label: 'Ketchikan Gateway',
@@ -18753,7 +18725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9366,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02150: {
     label: 'Kodiak Island',
@@ -18768,7 +18740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8698,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02158: {
     label: 'Kusilvak',
@@ -18783,7 +18755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5720,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02164: {
     label: 'Bristol Bay plus Lake and Peninsula',
@@ -18798,7 +18770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 962,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02170: {
     label: 'Matanuska-Susitna',
@@ -18813,7 +18785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45843,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02180: {
     label: 'Nome',
@@ -18828,7 +18800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7158,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02185: {
     label: 'North Slope',
@@ -18843,7 +18815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3951,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02188: {
     label: 'Northwest Arctic',
@@ -18858,7 +18830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4793,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02195: {
     label: 'Petersburg',
@@ -18873,7 +18845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2559,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02198: {
     label: 'Prince of Wales-Hyder',
@@ -18888,7 +18860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3380,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02220: {
     label: 'Sitka',
@@ -18903,7 +18875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6859,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02230: {
     label: 'Skagway',
@@ -18918,7 +18890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 878,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02240: {
     label: 'Southeast Fairbanks',
@@ -18933,7 +18905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2955,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02261: {
     label: 'Valdez-Cordova',
@@ -18948,7 +18920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5950,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_02275: {
     label: 'Wrangell',
@@ -18963,7 +18935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1506,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02282: {
     label: 'Yakutat',
@@ -18978,7 +18950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 461,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_02290: {
     label: 'Yukon-Koyukuk',
@@ -18993,7 +18965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4130,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_04001: {
     label: 'Apache',
@@ -19008,7 +18980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 79231,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04003: {
     label: 'Cochise',
@@ -19023,7 +18995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 89374,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04005: {
     label: 'Coconino',
@@ -19038,7 +19010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 118369,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04007: {
     label: 'Gila',
@@ -19053,7 +19025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33720,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04009: {
     label: 'Graham',
@@ -19068,7 +19040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26229,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04011: {
     label: 'Greenlee',
@@ -19083,7 +19055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4316,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04012: {
     label: 'La Paz',
@@ -19098,7 +19070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10540,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04013: {
     label: 'Maricopa',
@@ -19113,7 +19085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2745962,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04015: {
     label: 'Mohave',
@@ -19128,7 +19100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 94588,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04017: {
     label: 'Navajo',
@@ -19143,7 +19115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 93772,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04019: {
     label: 'Pima',
@@ -19158,7 +19130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 779360,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04021: {
     label: 'Pinal',
@@ -19173,7 +19145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 267156,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04023: {
     label: 'Santa Cruz',
@@ -19188,7 +19160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37441,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04025: {
     label: 'Yavapai',
@@ -19203,7 +19175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 121317,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_04027: {
     label: 'Yuma',
@@ -19218,7 +19190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 162402,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05001: {
     label: 'Arkansas',
@@ -19308,7 +19280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6336,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05013: {
     label: 'Calhoun',
@@ -19323,7 +19295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2058,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_05015: {
     label: 'Carroll',
@@ -19353,7 +19325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5699,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05019: {
     label: 'Clark',
@@ -19413,7 +19385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4376,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05027: {
     label: 'Columbia',
@@ -19428,7 +19400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11912,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05029: {
     label: 'Conway',
@@ -19518,7 +19490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4074,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05041: {
     label: 'Desha',
@@ -19623,7 +19595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8771,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_05055: {
     label: 'Greene',
@@ -19773,7 +19745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2900,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05075: {
     label: 'Lawrence',
@@ -19803,7 +19775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3667,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05079: {
     label: 'Lincoln',
@@ -19818,7 +19790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4791,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_05081: {
     label: 'Little River',
@@ -20178,7 +20150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5212,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_05129: {
     label: 'Searcy',
@@ -20358,7 +20330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1401986,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06003: {
     label: 'Alpine',
@@ -20373,7 +20345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 646,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_06005: {
     label: 'Amador',
@@ -20388,7 +20360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22420,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06007: {
     label: 'Butte',
@@ -20403,7 +20375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 118478,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06009: {
     label: 'Calaveras',
@@ -20418,7 +20390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24752,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06011: {
     label: 'Colusa',
@@ -20433,7 +20405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13224,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06013: {
     label: 'Contra Costa',
@@ -20448,7 +20420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 970531,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06015: {
     label: 'Del Norte',
@@ -20463,7 +20435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13580,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06017: {
     label: 'El Dorado',
@@ -20478,7 +20450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 119385,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06019: {
     label: 'Fresno',
@@ -20493,7 +20465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 627022,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06021: {
     label: 'Glenn',
@@ -20508,7 +20480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15937,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06023: {
     label: 'Humboldt',
@@ -20538,7 +20510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 180302,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06027: {
     label: 'Inyo',
@@ -20553,7 +20525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11683,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06029: {
     label: 'Kern',
@@ -20583,7 +20555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70943,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06033: {
     label: 'Lake',
@@ -20598,7 +20570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35946,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06035: {
     label: 'Lassen',
@@ -20643,7 +20615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 87761,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06041: {
     label: 'Marin',
@@ -20658,7 +20630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 232838,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06043: {
     label: 'Mariposa',
@@ -20673,7 +20645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9227,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_06045: {
     label: 'Mendocino',
@@ -20688,7 +20660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60490,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06047: {
     label: 'Merced',
@@ -20703,7 +20675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 158472,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06049: {
     label: 'Modoc',
@@ -20718,7 +20690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3730,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06051: {
     label: 'Mono',
@@ -20733,7 +20705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9109,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06053: {
     label: 'Monterey',
@@ -20748,7 +20720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 323801,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06055: {
     label: 'Napa',
@@ -20763,7 +20735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 111003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06057: {
     label: 'Nevada',
@@ -20778,7 +20750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64124,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06059: {
     label: 'Orange',
@@ -20808,7 +20780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 272763,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06063: {
     label: 'Plumas',
@@ -20823,7 +20795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10471,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06065: {
     label: 'Riverside',
@@ -20838,7 +20810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1487427,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06067: {
     label: 'Sacramento',
@@ -20883,7 +20855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1269833,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06073: {
     label: 'San Diego',
@@ -20913,7 +20885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 755235,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06077: {
     label: 'San Joaquin',
@@ -20928,7 +20900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 509121,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06079: {
     label: 'San Luis Obispo',
@@ -20943,7 +20915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 184794,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06081: {
     label: 'San Mateo',
@@ -20958,7 +20930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 666381,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06083: {
     label: 'Santa Barbara',
@@ -20973,7 +20945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 316293,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06085: {
     label: 'Santa Clara',
@@ -21003,7 +20975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 211428,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06089: {
     label: 'Shasta',
@@ -21018,7 +20990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 84993,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06091: {
     label: 'Sierra',
@@ -21033,7 +21005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1582,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_06093: {
     label: 'Siskiyou',
@@ -21048,7 +21020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21645,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06095: {
     label: 'Solano',
@@ -21078,7 +21050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 397095,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06099: {
     label: 'Stanislaus',
@@ -21108,7 +21080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 59298,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06103: {
     label: 'Tehama',
@@ -21123,7 +21095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28495,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06105: {
     label: 'Trinity',
@@ -21138,7 +21110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6049,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06107: {
     label: 'Tulare',
@@ -21153,7 +21125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 259641,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06109: {
     label: 'Tuolumne',
@@ -21168,7 +21140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29206,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06111: {
     label: 'Ventura',
@@ -21183,7 +21155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 623025,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06113: {
     label: 'Yolo',
@@ -21198,7 +21170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 160501,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_06115: {
     label: 'Yuba',
@@ -21213,7 +21185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39725,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_08001: {
     label: 'Adams',
@@ -21303,7 +21275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1533,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_08013: {
     label: 'Boulder',
@@ -21363,7 +21335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 631,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_08019: {
     label: 'Clear Creek',
@@ -21378,7 +21350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4925,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_08021: {
     label: 'Conejos',
@@ -21438,7 +21410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2598,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_08029: {
     label: 'Delta',
@@ -21633,7 +21605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 566,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_08055: {
     label: 'Huerfano',
@@ -21663,7 +21635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 660,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_08059: {
     label: 'Jefferson',
@@ -21693,7 +21665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 537,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_08063: {
     label: 'Kit Carson',
@@ -21708,7 +21680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2841,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_08065: {
     label: 'Lake',
@@ -21783,7 +21755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2114,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_08075: {
     label: 'Logan',
@@ -21828,7 +21800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 672,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_08081: {
     label: 'Moffat',
@@ -21918,7 +21890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3437,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_08093: {
     label: 'Park',
@@ -22008,7 +21980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2512,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_08105: {
     label: 'Rio Grande',
@@ -22053,7 +22025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2521,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_08111: {
     label: 'San Juan',
@@ -22368,7 +22340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 185022,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12003: {
     label: 'Baker',
@@ -22383,7 +22355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10913,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12005: {
     label: 'Bay',
@@ -22398,7 +22370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 96473,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12007: {
     label: 'Bradford',
@@ -22413,7 +22385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13206,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12009: {
     label: 'Brevard',
@@ -22428,7 +22400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 401894,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12011: {
     label: 'Broward',
@@ -22443,7 +22415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1430541,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12013: {
     label: 'Calhoun',
@@ -22458,7 +22430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12015: {
     label: 'Charlotte',
@@ -22473,7 +22445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 127775,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12017: {
     label: 'Citrus',
@@ -22488,7 +22460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 86661,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12019: {
     label: 'Clay',
@@ -22503,7 +22475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 122447,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12021: {
     label: 'Collier',
@@ -22518,7 +22490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 280247,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12023: {
     label: 'Columbia',
@@ -22533,7 +22505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30982,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12027: {
     label: 'DeSoto',
@@ -22548,7 +22520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18465,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12029: {
     label: 'Dixie',
@@ -22563,7 +22535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5951,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12031: {
     label: 'Duval',
@@ -22578,7 +22550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 601918,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12033: {
     label: 'Escambia',
@@ -22593,7 +22565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 183112,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12035: {
     label: 'Flagler',
@@ -22608,7 +22580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 75378,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12037: {
     label: 'Franklin',
@@ -22623,7 +22595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5997,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12039: {
     label: 'Gadsden',
@@ -22638,7 +22610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27184,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12041: {
     label: 'Gilchrist',
@@ -22653,7 +22625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6982,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12043: {
     label: 'Glades',
@@ -22668,7 +22640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4815,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12045: {
     label: 'Gulf',
@@ -22683,7 +22655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7345,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12047: {
     label: 'Hamilton',
@@ -22698,7 +22670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5182,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12049: {
     label: 'Hardee',
@@ -22713,7 +22685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11816,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12051: {
     label: 'Hendry',
@@ -22728,7 +22700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21635,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12053: {
     label: 'Hernando',
@@ -22743,7 +22715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 109488,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12055: {
     label: 'Highlands',
@@ -22758,7 +22730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57428,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12057: {
     label: 'Hillsborough',
@@ -22773,7 +22745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 959479,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12059: {
     label: 'Holmes',
@@ -22788,7 +22760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5937,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12061: {
     label: 'Indian River',
@@ -22803,7 +22775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 110988,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12063: {
     label: 'Jackson',
@@ -22818,7 +22790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20676,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12065: {
     label: 'Jefferson',
@@ -22833,7 +22805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8665,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12067: {
     label: 'Lafayette',
@@ -22848,7 +22820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3396,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12069: {
     label: 'Lake',
@@ -22863,7 +22835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 249420,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12071: {
     label: 'Lee',
@@ -22878,7 +22850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 494440,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12073: {
     label: 'Leon',
@@ -22893,7 +22865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 172276,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12075: {
     label: 'Levy',
@@ -22908,7 +22880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20115,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12077: {
     label: 'Liberty',
@@ -22923,7 +22895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2895,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12079: {
     label: 'Madison',
@@ -22938,7 +22910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8899,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12081: {
     label: 'Manatee',
@@ -22953,7 +22925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 258031,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12083: {
     label: 'Marion',
@@ -22968,7 +22940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 214007,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12085: {
     label: 'Martin',
@@ -22983,7 +22955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 105447,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12086: {
     label: 'Miami-Dade',
@@ -22998,7 +22970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2382430,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12087: {
     label: 'Monroe',
@@ -23013,7 +22985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60040,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12089: {
     label: 'Nassau',
@@ -23028,7 +23000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 52918,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12091: {
     label: 'Okaloosa',
@@ -23043,7 +23015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 139464,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12093: {
     label: 'Okeechobee',
@@ -23058,7 +23030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20061,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12095: {
     label: 'Orange',
@@ -23073,7 +23045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 998854,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12097: {
     label: 'Osceola',
@@ -23088,7 +23060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 283789,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12099: {
     label: 'Palm Beach',
@@ -23103,7 +23075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1023505,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12101: {
     label: 'Pasco',
@@ -23118,7 +23090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 337539,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12103: {
     label: 'Pinellas',
@@ -23133,7 +23105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 650352,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12105: {
     label: 'Polk',
@@ -23148,7 +23120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 428745,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12107: {
     label: 'Putnam',
@@ -23163,7 +23135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32155,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12109: {
     label: 'St. Johns',
@@ -23178,7 +23150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 191515,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12111: {
     label: 'St. Lucie',
@@ -23193,7 +23165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 197983,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12113: {
     label: 'Santa Rosa',
@@ -23208,7 +23180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 102793,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12115: {
     label: 'Sarasota',
@@ -23223,7 +23195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 313453,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12117: {
     label: 'Seminole',
@@ -23238,7 +23210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 300932,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12119: {
     label: 'Sumter',
@@ -23253,7 +23225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 109965,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12121: {
     label: 'Suwannee',
@@ -23268,7 +23240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17518,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12123: {
     label: 'Taylor',
@@ -23283,7 +23255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8988,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12125: {
     label: 'Union',
@@ -23298,7 +23270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5604,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12127: {
     label: 'Volusia',
@@ -23313,7 +23285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 338863,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12129: {
     label: 'Wakulla',
@@ -23328,7 +23300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15510,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12131: {
     label: 'Walton',
@@ -23343,7 +23315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37721,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_12133: {
     label: 'Washington',
@@ -23358,7 +23330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8485,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_13001: {
     label: 'Appling',
@@ -23418,7 +23390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1601,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_13009: {
     label: 'Baldwin',
@@ -24408,7 +24380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4209,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_13143: {
     label: 'Haralson',
@@ -25128,7 +25100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 803,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_13241: {
     label: 'Rabun',
@@ -25758,7 +25730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 135630,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_15003: {
     label: 'Honolulu',
@@ -25773,7 +25745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 787855,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_15007: {
     label: 'Kauai',
@@ -25788,7 +25760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 51672,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_15009: {
     label: 'Maui',
@@ -25803,7 +25775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 116230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16001: {
     label: 'Ada',
@@ -25818,7 +25790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 322793,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16003: {
     label: 'Adams',
@@ -25833,7 +25805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1940,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16005: {
     label: 'Bannock',
@@ -25848,7 +25820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 47977,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16007: {
     label: 'Bear Lake',
@@ -25863,7 +25835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2946,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16009: {
     label: 'Benewah',
@@ -25878,7 +25850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5127,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_16011: {
     label: 'Bingham',
@@ -25893,7 +25865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23441,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16013: {
     label: 'Blaine',
@@ -25908,7 +25880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19627,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16015: {
     label: 'Boise',
@@ -25923,7 +25895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2712,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16017: {
     label: 'Bonner',
@@ -25938,7 +25910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20442,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16019: {
     label: 'Bonneville',
@@ -25953,7 +25925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 65875,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16021: {
     label: 'Boundary',
@@ -25968,7 +25940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4443,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16023: {
     label: 'Butte',
@@ -25983,7 +25955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1308,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16025: {
     label: 'Camas',
@@ -25998,7 +25970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 489,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16027: {
     label: 'Canyon',
@@ -26013,7 +25985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 110813,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16029: {
     label: 'Caribou',
@@ -26028,7 +26000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2967,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16031: {
     label: 'Cassia',
@@ -26043,7 +26015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10746,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16033: {
     label: 'Clark',
@@ -26058,7 +26030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 368,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_16035: {
     label: 'Clearwater',
@@ -26073,7 +26045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3881,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16037: {
     label: 'Custer',
@@ -26088,7 +26060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2096,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_16039: {
     label: 'Elmore',
@@ -26103,7 +26075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16570,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16041: {
     label: 'Franklin',
@@ -26118,7 +26090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6445,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16043: {
     label: 'Fremont',
@@ -26133,7 +26105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6145,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16045: {
     label: 'Gem',
@@ -26148,7 +26120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7485,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16047: {
     label: 'Gooding',
@@ -26163,7 +26135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6940,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16049: {
     label: 'Idaho',
@@ -26178,7 +26150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5285,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16051: {
     label: 'Jefferson',
@@ -26193,7 +26165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16053: {
     label: 'Jerome',
@@ -26208,7 +26180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11682,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16055: {
     label: 'Kootenai',
@@ -26223,7 +26195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 79618,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16057: {
     label: 'Latah',
@@ -26238,7 +26210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24982,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16059: {
     label: 'Lemhi',
@@ -26253,7 +26225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3941,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16061: {
     label: 'Lewis',
@@ -26268,7 +26240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2081,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16063: {
     label: 'Lincoln',
@@ -26283,7 +26255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2299,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16065: {
     label: 'Madison',
@@ -26298,7 +26270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22595,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16067: {
     label: 'Minidoka',
@@ -26313,7 +26285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9394,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16069: {
     label: 'Nez Perce',
@@ -26328,7 +26300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24121,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16071: {
     label: 'Oneida',
@@ -26343,7 +26315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2172,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16073: {
     label: 'Owyhee',
@@ -26358,7 +26330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4332,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16075: {
     label: 'Payette',
@@ -26373,7 +26345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7906,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16077: {
     label: 'Power',
@@ -26388,7 +26360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4044,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16079: {
     label: 'Shoshone',
@@ -26403,7 +26375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5691,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16081: {
     label: 'Teton',
@@ -26418,7 +26390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7961,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16083: {
     label: 'Twin Falls',
@@ -26433,7 +26405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44834,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16085: {
     label: 'Valley',
@@ -26448,7 +26420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7359,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_16087: {
     label: 'Washington',
@@ -26463,7 +26435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4190,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_17001: {
     label: 'Adams',
@@ -26823,7 +26795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2655,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_17049: {
     label: 'Effingham',
@@ -26868,7 +26840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7665,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_17055: {
     label: 'Franklin',
@@ -27753,7 +27725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2123,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_17173: {
     label: 'Shelby',
@@ -28008,7 +27980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12347,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18003: {
     label: 'Allen',
@@ -28023,7 +27995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 208302,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18005: {
     label: 'Bartholomew',
@@ -28038,7 +28010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 53696,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18007: {
     label: 'Benton',
@@ -28053,7 +28025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3836,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18009: {
     label: 'Blackford',
@@ -28068,7 +28040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5852,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18011: {
     label: 'Boone',
@@ -28083,7 +28055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 50369,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18013: {
     label: 'Brown',
@@ -28098,7 +28070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8071,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18015: {
     label: 'Carroll',
@@ -28113,7 +28085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7818,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18017: {
     label: 'Cass',
@@ -28128,7 +28100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18145,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18019: {
     label: 'Clark',
@@ -28143,7 +28115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 75224,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18021: {
     label: 'Clay',
@@ -28158,7 +28130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15498,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18023: {
     label: 'Clinton',
@@ -28173,7 +28145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16389,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18025: {
     label: 'Crawford',
@@ -28188,7 +28160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4112,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18027: {
     label: 'Daviess',
@@ -28203,7 +28175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11403,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18029: {
     label: 'Dearborn',
@@ -28218,7 +28190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32266,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18031: {
     label: 'Decatur',
@@ -28233,7 +28205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13295,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18033: {
     label: 'DeKalb',
@@ -28248,7 +28220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19105,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18035: {
     label: 'Delaware',
@@ -28263,7 +28235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57824,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18037: {
     label: 'Dubois',
@@ -28278,7 +28250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25377,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18039: {
     label: 'Elkhart',
@@ -28293,7 +28265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 93169,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18041: {
     label: 'Fayette',
@@ -28308,7 +28280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9743,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18043: {
     label: 'Floyd',
@@ -28323,7 +28295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46506,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18045: {
     label: 'Fountain',
@@ -28338,7 +28310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7955,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18047: {
     label: 'Franklin',
@@ -28353,7 +28325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9095,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18049: {
     label: 'Fulton',
@@ -28368,7 +28340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8321,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18051: {
     label: 'Gibson',
@@ -28383,7 +28355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16207,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18053: {
     label: 'Grant',
@@ -28398,7 +28370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28784,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18055: {
     label: 'Greene',
@@ -28413,7 +28385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13758,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18057: {
     label: 'Hamilton',
@@ -28428,7 +28400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 252671,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18059: {
     label: 'Hancock',
@@ -28443,7 +28415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 55152,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18061: {
     label: 'Harrison',
@@ -28458,7 +28430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21573,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18063: {
     label: 'Hendricks',
@@ -28473,7 +28445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 128780,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18065: {
     label: 'Henry',
@@ -28488,7 +28460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26055,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18067: {
     label: 'Howard',
@@ -28503,7 +28475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 40994,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18069: {
     label: 'Huntington',
@@ -28518,7 +28490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19132,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18071: {
     label: 'Jackson',
@@ -28533,7 +28505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24617,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18073: {
     label: 'Jasper',
@@ -28548,7 +28520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16710,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18075: {
     label: 'Jay',
@@ -28563,7 +28535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8284,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18077: {
     label: 'Jefferson',
@@ -28578,7 +28550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18824,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18079: {
     label: 'Jennings',
@@ -28593,7 +28565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11794,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18081: {
     label: 'Johnson',
@@ -28608,7 +28580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 97555,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18083: {
     label: 'Knox',
@@ -28623,7 +28595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18663,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18085: {
     label: 'Kosciusko',
@@ -28638,7 +28610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33655,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18087: {
     label: 'LaGrange',
@@ -28653,7 +28625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9247,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18089: {
     label: 'Lake',
@@ -28668,7 +28640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 289682,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18091: {
     label: 'LaPorte',
@@ -28683,7 +28655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64358,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18093: {
     label: 'Lawrence',
@@ -28698,7 +28670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23276,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18095: {
     label: 'Madison',
@@ -28713,7 +28685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70968,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18097: {
     label: 'Marion',
@@ -28728,7 +28700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 573047,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18099: {
     label: 'Marshall',
@@ -28743,7 +28715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21579,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18101: {
     label: 'Martin',
@@ -28758,7 +28730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4789,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18103: {
     label: 'Miami',
@@ -28773,7 +28745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14975,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18105: {
     label: 'Monroe',
@@ -28788,7 +28760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 91396,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18107: {
     label: 'Montgomery',
@@ -28803,7 +28775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18299,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18109: {
     label: 'Morgan',
@@ -28818,7 +28790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39744,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18111: {
     label: 'Newton',
@@ -28833,7 +28805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4712,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18113: {
     label: 'Noble',
@@ -28848,7 +28820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19140,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18115: {
     label: 'Ohio',
@@ -28863,7 +28835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4610,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18117: {
     label: 'Orange',
@@ -28878,7 +28850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11369,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18119: {
     label: 'Owen',
@@ -28893,7 +28865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9191,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18121: {
     label: 'Parke',
@@ -28908,7 +28880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7056,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18123: {
     label: 'Perry',
@@ -28923,7 +28895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11345,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18125: {
     label: 'Pike',
@@ -28938,7 +28910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7430,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18127: {
     label: 'Porter',
@@ -28953,7 +28925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 101708,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18129: {
     label: 'Posey',
@@ -28968,7 +28940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12513,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18131: {
     label: 'Pulaski',
@@ -28983,7 +28955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5808,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18133: {
     label: 'Putnam',
@@ -28998,7 +28970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16669,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18135: {
     label: 'Randolph',
@@ -29013,7 +28985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11767,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18137: {
     label: 'Ripley',
@@ -29028,7 +29000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14220,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18139: {
     label: 'Rush',
@@ -29043,7 +29015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8067,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18141: {
     label: 'St. Joseph',
@@ -29058,7 +29030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 166342,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18143: {
     label: 'Scott',
@@ -29073,7 +29045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10876,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18145: {
     label: 'Shelby',
@@ -29088,7 +29060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27197,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18147: {
     label: 'Spencer',
@@ -29103,7 +29075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9445,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18149: {
     label: 'Starke',
@@ -29118,7 +29090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8907,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18151: {
     label: 'Steuben',
@@ -29133,7 +29105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17058,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18153: {
     label: 'Sullivan',
@@ -29148,7 +29120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10670,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18155: {
     label: 'Switzerland',
@@ -29163,7 +29135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3466,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18157: {
     label: 'Tippecanoe',
@@ -29178,7 +29150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 117003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18159: {
     label: 'Tipton',
@@ -29193,7 +29165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7121,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18161: {
     label: 'Union',
@@ -29208,7 +29180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3742,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18163: {
     label: 'Vanderburgh',
@@ -29223,7 +29195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 108996,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18165: {
     label: 'Vermillion',
@@ -29238,7 +29210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7585,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18167: {
     label: 'Vigo',
@@ -29253,7 +29225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 55765,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18169: {
     label: 'Wabash',
@@ -29268,7 +29240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13327,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18171: {
     label: 'Warren',
@@ -29283,7 +29255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3947,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18173: {
     label: 'Warrick',
@@ -29298,7 +29270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 41079,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18175: {
     label: 'Washington',
@@ -29313,7 +29285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11703,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18177: {
     label: 'Wayne',
@@ -29328,7 +29300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 34417,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18179: {
     label: 'Wells',
@@ -29343,7 +29315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12276,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18181: {
     label: 'White',
@@ -29358,7 +29330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13688,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_18183: {
     label: 'Whitley',
@@ -29373,7 +29345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16561,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19001: {
     label: 'Adair',
@@ -29388,7 +29360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3611,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19003: {
     label: 'Adams',
@@ -29403,7 +29375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2069,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19005: {
     label: 'Allamakee',
@@ -29418,7 +29390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7635,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19007: {
     label: 'Appanoose',
@@ -29433,7 +29405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6044,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19009: {
     label: 'Audubon',
@@ -29448,7 +29420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3280,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19011: {
     label: 'Benton',
@@ -29463,7 +29435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15531,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19013: {
     label: 'Black Hawk',
@@ -29478,7 +29450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 81814,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19015: {
     label: 'Boone',
@@ -29493,7 +29465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17385,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19017: {
     label: 'Bremer',
@@ -29508,7 +29480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15437,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19019: {
     label: 'Buchanan',
@@ -29523,7 +29495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11665,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19021: {
     label: 'Buena Vista',
@@ -29538,7 +29510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13971,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19023: {
     label: 'Butler',
@@ -29553,7 +29525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8460,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19025: {
     label: 'Calhoun',
@@ -29568,7 +29540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5901,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19027: {
     label: 'Carroll',
@@ -29583,7 +29555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12705,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19029: {
     label: 'Cass',
@@ -29598,7 +29570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7654,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19031: {
     label: 'Cedar',
@@ -29613,7 +29585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11507,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19033: {
     label: 'Cerro Gordo',
@@ -29628,7 +29600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27635,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19035: {
     label: 'Cherokee',
@@ -29643,7 +29615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6117,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19037: {
     label: 'Chickasaw',
@@ -29658,7 +29630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6713,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19039: {
     label: 'Clarke',
@@ -29673,7 +29645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5281,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19041: {
     label: 'Clay',
@@ -29688,7 +29660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8564,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19043: {
     label: 'Clayton',
@@ -29703,7 +29675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8672,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19045: {
     label: 'Clinton',
@@ -29718,7 +29690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26182,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19047: {
     label: 'Crawford',
@@ -29733,7 +29705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9336,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19049: {
     label: 'Dallas',
@@ -29748,7 +29720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64654,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19051: {
     label: 'Davis',
@@ -29763,7 +29735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3399,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19053: {
     label: 'Decatur',
@@ -29778,7 +29750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3339,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19055: {
     label: 'Delaware',
@@ -29793,7 +29765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9544,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19057: {
     label: 'Des Moines',
@@ -29808,7 +29780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20671,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19059: {
     label: 'Dickinson',
@@ -29823,7 +29795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10582,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19061: {
     label: 'Dubuque',
@@ -29838,7 +29810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64599,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19063: {
     label: 'Emmet',
@@ -29853,7 +29825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4980,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19065: {
     label: 'Fayette',
@@ -29868,7 +29840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10960,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19067: {
     label: 'Floyd',
@@ -29883,7 +29855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8513,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19069: {
     label: 'Franklin',
@@ -29898,7 +29870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5634,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19071: {
     label: 'Fremont',
@@ -29913,7 +29885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3819,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19073: {
     label: 'Greene',
@@ -29928,7 +29900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5311,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19075: {
     label: 'Grundy',
@@ -29943,7 +29915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7783,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19077: {
     label: 'Guthrie',
@@ -29958,7 +29930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6415,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19079: {
     label: 'Hamilton',
@@ -29973,7 +29945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9627,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19081: {
     label: 'Hancock',
@@ -29988,7 +29960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5428,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19083: {
     label: 'Hardin',
@@ -30003,7 +29975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9594,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19085: {
     label: 'Harrison',
@@ -30018,7 +29990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7570,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19087: {
     label: 'Henry',
@@ -30033,7 +30005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11153,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19089: {
     label: 'Howard',
@@ -30048,7 +30020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4902,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19091: {
     label: 'Humboldt',
@@ -30063,7 +30035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4888,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19093: {
     label: 'Ida',
@@ -30078,7 +30050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3434,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19095: {
     label: 'Iowa',
@@ -30093,7 +30065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10381,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19097: {
     label: 'Jackson',
@@ -30108,7 +30080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10532,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19099: {
     label: 'Jasper',
@@ -30123,7 +30095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22276,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19101: {
     label: 'Jefferson',
@@ -30138,7 +30110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9089,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19103: {
     label: 'Johnson',
@@ -30153,7 +30125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 115324,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19105: {
     label: 'Jones',
@@ -30168,7 +30140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12371,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19107: {
     label: 'Keokuk',
@@ -30183,7 +30155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4885,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19109: {
     label: 'Kossuth',
@@ -30198,7 +30170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7870,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19111: {
     label: 'Lee',
@@ -30213,7 +30185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17786,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19113: {
     label: 'Linn',
@@ -30228,7 +30200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 155930,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19115: {
     label: 'Louisa',
@@ -30243,7 +30215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6023,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19117: {
     label: 'Lucas',
@@ -30258,7 +30230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4004,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19119: {
     label: 'Lyon',
@@ -30273,7 +30245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5131,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19121: {
     label: 'Madison',
@@ -30288,7 +30260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9032,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19123: {
     label: 'Mahaska',
@@ -30303,7 +30275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10043,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19125: {
     label: 'Marion',
@@ -30318,7 +30290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18086,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19127: {
     label: 'Marshall',
@@ -30333,7 +30305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26876,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19129: {
     label: 'Mills',
@@ -30348,7 +30320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8916,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19131: {
     label: 'Mitchell',
@@ -30363,7 +30335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5281,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19133: {
     label: 'Monona',
@@ -30378,7 +30350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4787,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19135: {
     label: 'Monroe',
@@ -30393,7 +30365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3638,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19137: {
     label: 'Montgomery',
@@ -30408,7 +30380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5830,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19139: {
     label: 'Muscatine',
@@ -30423,7 +30395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26694,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19141: {
     label: "O'Brien",
@@ -30438,7 +30410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7104,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19143: {
     label: 'Osceola',
@@ -30453,7 +30425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2760,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19145: {
     label: 'Page',
@@ -30468,7 +30440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8278,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19147: {
     label: 'Palo Alto',
@@ -30483,7 +30455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4641,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19149: {
     label: 'Plymouth',
@@ -30498,7 +30470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13596,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19151: {
     label: 'Pocahontas',
@@ -30513,7 +30485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3555,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19153: {
     label: 'Polk',
@@ -30528,7 +30500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 343542,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19155: {
     label: 'Pottawattamie',
@@ -30543,7 +30515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 56235,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19157: {
     label: 'Poweshiek',
@@ -30558,7 +30530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11254,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19159: {
     label: 'Ringgold',
@@ -30573,7 +30545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2650,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19161: {
     label: 'Sac',
@@ -30588,7 +30560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5252,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19163: {
     label: 'Scott',
@@ -30603,7 +30575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 111003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19165: {
     label: 'Shelby',
@@ -30618,7 +30590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6963,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19167: {
     label: 'Sioux',
@@ -30633,7 +30605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14923,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19169: {
     label: 'Story',
@@ -30648,7 +30620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 63447,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19171: {
     label: 'Tama',
@@ -30663,7 +30635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10839,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19173: {
     label: 'Taylor',
@@ -30678,7 +30650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2946,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19175: {
     label: 'Union',
@@ -30693,7 +30665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6438,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19177: {
     label: 'Van Buren',
@@ -30708,7 +30680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3025,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19179: {
     label: 'Wapello',
@@ -30723,7 +30695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18152,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19181: {
     label: 'Warren',
@@ -30738,7 +30710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31662,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19183: {
     label: 'Washington',
@@ -30753,7 +30725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19185: {
     label: 'Wayne',
@@ -30768,7 +30740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2770,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19187: {
     label: 'Webster',
@@ -30783,7 +30755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21187,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19189: {
     label: 'Winnebago',
@@ -30798,7 +30770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5575,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19191: {
     label: 'Winneshiek',
@@ -30813,7 +30785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12939,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19193: {
     label: 'Woodbury',
@@ -30828,7 +30800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60620,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19195: {
     label: 'Worth',
@@ -30843,7 +30815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3907,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_19197: {
     label: 'Wright',
@@ -30858,7 +30830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7413,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20001: {
     label: 'Allen',
@@ -30873,7 +30845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5991,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20003: {
     label: 'Anderson',
@@ -30888,7 +30860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3525,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20005: {
     label: 'Atchison',
@@ -30903,7 +30875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7820,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20007: {
     label: 'Barber',
@@ -30918,7 +30890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2163,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20009: {
     label: 'Barton',
@@ -30933,7 +30905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11571,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20011: {
     label: 'Bourbon',
@@ -30948,7 +30920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5561,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20013: {
     label: 'Brown',
@@ -30963,7 +30935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6059,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20015: {
     label: 'Butler',
@@ -30978,7 +30950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 34062,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20017: {
     label: 'Chase',
@@ -30993,7 +30965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1274,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20019: {
     label: 'Chautauqua',
@@ -31008,7 +30980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1390,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20021: {
     label: 'Cherokee',
@@ -31023,7 +30995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9625,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20023: {
     label: 'Cheyenne',
@@ -31038,7 +31010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1242,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20025: {
     label: 'Clark',
@@ -31053,7 +31025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 953,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20027: {
     label: 'Clay',
@@ -31068,7 +31040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5043,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20029: {
     label: 'Cloud',
@@ -31083,7 +31055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4354,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20031: {
     label: 'Coffey',
@@ -31098,7 +31070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4488,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20033: {
     label: 'Comanche',
@@ -31113,7 +31085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 796,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20035: {
     label: 'Cowley',
@@ -31128,7 +31100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17574,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20037: {
     label: 'Crawford',
@@ -31143,7 +31115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18924,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20039: {
     label: 'Decatur',
@@ -31158,7 +31130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1177,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20041: {
     label: 'Dickinson',
@@ -31173,7 +31145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11101,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20043: {
     label: 'Doniphan',
@@ -31188,7 +31160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3818,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20045: {
     label: 'Douglas',
@@ -31203,7 +31175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 80051,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20047: {
     label: 'Edwards',
@@ -31218,7 +31190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1391,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20049: {
     label: 'Elk',
@@ -31233,7 +31205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 900,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20051: {
     label: 'Ellis',
@@ -31248,7 +31220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14891,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20053: {
     label: 'Ellsworth',
@@ -31263,7 +31235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3572,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20055: {
     label: 'Finney',
@@ -31278,7 +31250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19046,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_20057: {
     label: 'Ford',
@@ -31293,7 +31265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16114,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20059: {
     label: 'Franklin',
@@ -31308,7 +31280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13786,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20061: {
     label: 'Geary',
@@ -31323,7 +31295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20063: {
     label: 'Gove',
@@ -31338,7 +31310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1295,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20065: {
     label: 'Graham',
@@ -31353,7 +31325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1254,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20067: {
     label: 'Grant',
@@ -31368,7 +31340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3499,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20069: {
     label: 'Gray',
@@ -31383,7 +31355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2824,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20071: {
     label: 'Greeley',
@@ -31398,7 +31370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 654,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_20073: {
     label: 'Greenwood',
@@ -31413,7 +31385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3084,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20075: {
     label: 'Hamilton',
@@ -31428,7 +31400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1088,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20077: {
     label: 'Harper',
@@ -31443,7 +31415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2746,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20079: {
     label: 'Harvey',
@@ -31458,7 +31430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16947,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20081: {
     label: 'Haskell',
@@ -31473,7 +31445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1609,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20083: {
     label: 'Hodgeman',
@@ -31488,7 +31460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 843,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20085: {
     label: 'Jackson',
@@ -31503,7 +31475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8719,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20087: {
     label: 'Jefferson',
@@ -31518,7 +31490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10722,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20089: {
     label: 'Jewell',
@@ -31533,7 +31505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1376,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20091: {
     label: 'Johnson',
@@ -31548,7 +31520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 492754,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20093: {
     label: 'Kearny',
@@ -31563,7 +31535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2145,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20095: {
     label: 'Kingman',
@@ -31578,7 +31550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3488,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20097: {
     label: 'Kiowa',
@@ -31593,7 +31565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20099: {
     label: 'Labette',
@@ -31608,7 +31580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10060,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20101: {
     label: 'Lane',
@@ -31623,7 +31595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 668,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20103: {
     label: 'Leavenworth',
@@ -31638,7 +31610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 50833,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20105: {
     label: 'Lincoln',
@@ -31653,7 +31625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1330,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_20107: {
     label: 'Linn',
@@ -31668,7 +31640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3577,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20109: {
     label: 'Logan',
@@ -31683,7 +31655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1343,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20111: {
     label: 'Lyon',
@@ -31698,7 +31670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19739,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20113: {
     label: 'McPherson',
@@ -31713,7 +31685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16365,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20115: {
     label: 'Marion',
@@ -31728,7 +31700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6120,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20117: {
     label: 'Marshall',
@@ -31743,7 +31715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6413,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20119: {
     label: 'Meade',
@@ -31758,7 +31730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1734,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_20121: {
     label: 'Miami',
@@ -31773,7 +31745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17114,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20123: {
     label: 'Mitchell',
@@ -31788,7 +31760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3240,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20125: {
     label: 'Montgomery',
@@ -31803,7 +31775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15121,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20127: {
     label: 'Morris',
@@ -31818,7 +31790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3222,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20129: {
     label: 'Morton',
@@ -31833,7 +31805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1116,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20131: {
     label: 'Nemaha',
@@ -31848,7 +31820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5706,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20133: {
     label: 'Neosho',
@@ -31863,7 +31835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4780,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20135: {
     label: 'Ness',
@@ -31878,7 +31850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1486,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20137: {
     label: 'Norton',
@@ -31893,7 +31865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2914,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20139: {
     label: 'Osage',
@@ -31908,7 +31880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8396,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20141: {
     label: 'Osborne',
@@ -31923,7 +31895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1466,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20143: {
     label: 'Ottawa',
@@ -31938,7 +31910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2690,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20145: {
     label: 'Pawnee',
@@ -31953,7 +31925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3604,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20147: {
     label: 'Phillips',
@@ -31968,7 +31940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2341,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20149: {
     label: 'Pottawatomie',
@@ -31983,7 +31955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10629,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20151: {
     label: 'Pratt',
@@ -31998,7 +31970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4716,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20153: {
     label: 'Rawlins',
@@ -32013,7 +31985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1116,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20155: {
     label: 'Reno',
@@ -32028,7 +32000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31785,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20157: {
     label: 'Republic',
@@ -32043,7 +32015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2408,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20159: {
     label: 'Rice',
@@ -32058,7 +32030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4323,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20161: {
     label: 'Riley',
@@ -32073,7 +32045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30587,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20163: {
     label: 'Rooks',
@@ -32088,7 +32060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2435,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20165: {
     label: 'Rush',
@@ -32103,7 +32075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1587,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20167: {
     label: 'Russell',
@@ -32118,7 +32090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3054,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20169: {
     label: 'Saline',
@@ -32133,7 +32105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28149,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20171: {
     label: 'Scott',
@@ -32148,7 +32120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2407,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20173: {
     label: 'Sedgwick',
@@ -32163,7 +32135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 297492,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20175: {
     label: 'Seward',
@@ -32178,7 +32150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10555,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20177: {
     label: 'Shawnee',
@@ -32193,7 +32165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 113579,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20179: {
     label: 'Sheridan',
@@ -32208,7 +32180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 936,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20181: {
     label: 'Sherman',
@@ -32223,7 +32195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2699,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20183: {
     label: 'Smith',
@@ -32238,7 +32210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1644,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20185: {
     label: 'Stafford',
@@ -32253,7 +32225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1987,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20187: {
     label: 'Stanton',
@@ -32268,7 +32240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1050,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20189: {
     label: 'Stevens',
@@ -32283,7 +32255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2240,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20191: {
     label: 'Sumner',
@@ -32298,7 +32270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10324,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20193: {
     label: 'Thomas',
@@ -32313,7 +32285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3320,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20195: {
     label: 'Trego',
@@ -32328,7 +32300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1116,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20197: {
     label: 'Wabaunsee',
@@ -32343,7 +32315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3421,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20199: {
     label: 'Wallace',
@@ -32358,7 +32330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 589,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20201: {
     label: 'Washington',
@@ -32373,7 +32345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20203: {
     label: 'Wichita',
@@ -32388,7 +32360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1105,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20205: {
     label: 'Wilson',
@@ -32403,7 +32375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3904,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20207: {
     label: 'Woodson',
@@ -32418,7 +32390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1373,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_20209: {
     label: 'Wyandotte',
@@ -32433,7 +32405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 101455,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_21001: {
     label: 'Adair',
@@ -32448,7 +32420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7754,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21003: {
     label: 'Allen',
@@ -32463,7 +32435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8652,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21005: {
     label: 'Anderson',
@@ -32478,7 +32450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13297,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21007: {
     label: 'Ballard',
@@ -32493,7 +32465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3138,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21009: {
     label: 'Barren',
@@ -32508,7 +32480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21059,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21011: {
     label: 'Bath',
@@ -32523,7 +32495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6922,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21013: {
     label: 'Bell',
@@ -32538,7 +32510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12239,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21015: {
     label: 'Boone',
@@ -32553,7 +32525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 86180,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21017: {
     label: 'Bourbon',
@@ -32568,7 +32540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11879,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21019: {
     label: 'Boyd',
@@ -32583,7 +32555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23890,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21021: {
     label: 'Boyle',
@@ -32598,7 +32570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17707,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21023: {
     label: 'Bracken',
@@ -32613,7 +32585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4032,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21025: {
     label: 'Breathitt',
@@ -32628,7 +32600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6815,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21027: {
     label: 'Breckinridge',
@@ -32643,7 +32615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10451,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21029: {
     label: 'Bullitt',
@@ -32658,7 +32630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38176,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21031: {
     label: 'Butler',
@@ -32673,7 +32645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6025,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21033: {
     label: 'Caldwell',
@@ -32688,7 +32660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6804,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21035: {
     label: 'Calloway',
@@ -32703,7 +32675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18600,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21037: {
     label: 'Campbell',
@@ -32718,7 +32690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 62370,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21039: {
     label: 'Carlisle',
@@ -32733,7 +32705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1997,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21041: {
     label: 'Carroll',
@@ -32748,7 +32720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5107,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21043: {
     label: 'Carter',
@@ -32763,7 +32735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13555,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21045: {
     label: 'Casey',
@@ -32778,7 +32750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6037,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21047: {
     label: 'Christian',
@@ -32793,7 +32765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26791,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21049: {
     label: 'Clark',
@@ -32808,7 +32780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20436,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21051: {
     label: 'Clay',
@@ -32823,7 +32795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9163,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21053: {
     label: 'Clinton',
@@ -32838,7 +32810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4341,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21055: {
     label: 'Crittenden',
@@ -32853,7 +32825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3701,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21057: {
     label: 'Cumberland',
@@ -32868,7 +32840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3050,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21059: {
     label: 'Daviess',
@@ -32883,7 +32855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 56498,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21061: {
     label: 'Edmonson',
@@ -32898,7 +32870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21063: {
     label: 'Elliott',
@@ -32913,7 +32885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2751,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21065: {
     label: 'Estill',
@@ -32928,7 +32900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7575,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21067: {
     label: 'Fayette',
@@ -32943,7 +32915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 224210,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21069: {
     label: 'Fleming',
@@ -32958,7 +32930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7724,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21071: {
     label: 'Floyd',
@@ -32973,7 +32945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20770,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21073: {
     label: 'Franklin',
@@ -32988,7 +32960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32399,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21075: {
     label: 'Fulton',
@@ -33003,7 +32975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3652,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21077: {
     label: 'Gallatin',
@@ -33018,7 +32990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3726,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21079: {
     label: 'Garrard',
@@ -33033,7 +33005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8724,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21081: {
     label: 'Grant',
@@ -33048,7 +33020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12636,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21083: {
     label: 'Graves',
@@ -33063,7 +33035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17513,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21085: {
     label: 'Grayson',
@@ -33078,7 +33050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14071,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21087: {
     label: 'Green',
@@ -33093,7 +33065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4880,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21089: {
     label: 'Greenup',
@@ -33108,7 +33080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19053,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21091: {
     label: 'Hancock',
@@ -33123,7 +33095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5315,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21093: {
     label: 'Hardin',
@@ -33138,7 +33110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 75035,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21095: {
     label: 'Harlan',
@@ -33153,7 +33125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12368,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21097: {
     label: 'Harrison',
@@ -33168,7 +33140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9720,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21099: {
     label: 'Hart',
@@ -33183,7 +33155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6989,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21101: {
     label: 'Henderson',
@@ -33198,7 +33170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24240,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21103: {
     label: 'Henry',
@@ -33213,7 +33185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8892,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21105: {
     label: 'Hickman',
@@ -33228,7 +33200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1687,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21107: {
     label: 'Hopkins',
@@ -33243,7 +33215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23837,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21109: {
     label: 'Jackson',
@@ -33258,7 +33230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5021,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21111: {
     label: 'Jefferson',
@@ -33273,7 +33245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 510858,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21113: {
     label: 'Jessamine',
@@ -33288,7 +33260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30092,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21115: {
     label: 'Johnson',
@@ -33303,7 +33275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11397,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21117: {
     label: 'Kenton',
@@ -33318,7 +33290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 105139,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21119: {
     label: 'Knott',
@@ -33333,7 +33305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7258,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21121: {
     label: 'Knox',
@@ -33348,7 +33320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11696,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21123: {
     label: 'Larue',
@@ -33363,7 +33335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6454,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21125: {
     label: 'Laurel',
@@ -33378,7 +33350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25184,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21127: {
     label: 'Lawrence',
@@ -33393,7 +33365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7619,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21129: {
     label: 'Lee',
@@ -33408,7 +33380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3769,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21131: {
     label: 'Leslie',
@@ -33423,7 +33395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5278,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21133: {
     label: 'Letcher',
@@ -33438,7 +33410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11672,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21135: {
     label: 'Lewis',
@@ -33453,7 +33425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5402,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21137: {
     label: 'Lincoln',
@@ -33468,7 +33440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10353,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21139: {
     label: 'Livingston',
@@ -33483,7 +33455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4650,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21141: {
     label: 'Logan',
@@ -33498,7 +33470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14228,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21143: {
     label: 'Lyon',
@@ -33513,7 +33485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4901,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21145: {
     label: 'McCracken',
@@ -33528,7 +33500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37693,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21147: {
     label: 'McCreary',
@@ -33543,7 +33515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6915,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21149: {
     label: 'McLean',
@@ -33558,7 +33530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4852,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21151: {
     label: 'Madison',
@@ -33573,7 +33545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46289,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21153: {
     label: 'Magoffin',
@@ -33588,7 +33560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6354,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21155: {
     label: 'Marion',
@@ -33603,7 +33575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9953,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21157: {
     label: 'Marshall',
@@ -33618,7 +33590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17079,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21159: {
     label: 'Martin',
@@ -33633,7 +33605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6205,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21161: {
     label: 'Mason',
@@ -33648,7 +33620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8946,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21163: {
     label: 'Meade',
@@ -33663,7 +33635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11611,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21165: {
     label: 'Menifee',
@@ -33678,7 +33650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2978,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21167: {
     label: 'Mercer',
@@ -33693,7 +33665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12294,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21169: {
     label: 'Metcalfe',
@@ -33708,7 +33680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4188,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21171: {
     label: 'Monroe',
@@ -33723,7 +33695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5028,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21173: {
     label: 'Montgomery',
@@ -33738,7 +33710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13552,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21175: {
     label: 'Morgan',
@@ -33753,7 +33725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6548,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21177: {
     label: 'Muhlenberg',
@@ -33768,7 +33740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16131,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21179: {
     label: 'Nelson',
@@ -33783,7 +33755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24891,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21181: {
     label: 'Nicholas',
@@ -33798,7 +33770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3930,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21183: {
     label: 'Ohio',
@@ -33813,7 +33785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9827,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21185: {
     label: 'Oldham',
@@ -33828,7 +33800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39588,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21187: {
     label: 'Owen',
@@ -33843,7 +33815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4227,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21189: {
     label: 'Owsley',
@@ -33858,7 +33830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2146,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21191: {
     label: 'Pendleton',
@@ -33873,7 +33845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6619,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21193: {
     label: 'Perry',
@@ -33888,7 +33860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16360,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21195: {
     label: 'Pike',
@@ -33903,7 +33875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31210,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21197: {
     label: 'Powell',
@@ -33918,7 +33890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6685,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21199: {
     label: 'Pulaski',
@@ -33933,7 +33905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30963,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21201: {
     label: 'Robertson',
@@ -33948,7 +33920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 834,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21203: {
     label: 'Rockcastle',
@@ -33963,7 +33935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6929,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21205: {
     label: 'Rowan',
@@ -33978,7 +33950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13163,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21207: {
     label: 'Russell',
@@ -33993,7 +33965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8438,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21209: {
     label: 'Scott',
@@ -34008,7 +33980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32803,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21211: {
     label: 'Shelby',
@@ -34023,7 +33995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23771,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21213: {
     label: 'Simpson',
@@ -34038,7 +34010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9719,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21215: {
     label: 'Spencer',
@@ -34053,7 +34025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6024,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21217: {
     label: 'Taylor',
@@ -34068,7 +34040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12706,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21219: {
     label: 'Todd',
@@ -34083,7 +34055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5394,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21221: {
     label: 'Trigg',
@@ -34098,7 +34070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7104,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21223: {
     label: 'Trimble',
@@ -34113,7 +34085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3853,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21225: {
     label: 'Union',
@@ -34128,7 +34100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6283,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21227: {
     label: 'Warren',
@@ -34143,7 +34115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 53244,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21229: {
     label: 'Washington',
@@ -34158,7 +34130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6364,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21231: {
     label: 'Wayne',
@@ -34173,7 +34145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8859,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21233: {
     label: 'Webster',
@@ -34188,7 +34160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6133,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21235: {
     label: 'Whitley',
@@ -34203,7 +34175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16555,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21237: {
     label: 'Wolfe',
@@ -34218,7 +34190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3933,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_21239: {
     label: 'Woodford',
@@ -34233,7 +34205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18336,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_22001: {
     label: 'Acadia',
@@ -34248,7 +34220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33516,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22003: {
     label: 'Allen',
@@ -34263,7 +34235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9511,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22005: {
     label: 'Ascension',
@@ -34278,7 +34250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 65862,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22007: {
     label: 'Assumption',
@@ -34293,7 +34265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9788,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22009: {
     label: 'Avoyelles',
@@ -34308,7 +34280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19672,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22011: {
     label: 'Beauregard',
@@ -34323,7 +34295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13844,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22013: {
     label: 'Bienville',
@@ -34338,7 +34310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6833,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22015: {
     label: 'Bossier',
@@ -34353,7 +34325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 66138,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22017: {
     label: 'Caddo',
@@ -34368,7 +34340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 119596,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22019: {
     label: 'Calcasieu',
@@ -34383,7 +34355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 88666,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22021: {
     label: 'Caldwell',
@@ -34398,7 +34370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3949,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22023: {
     label: 'Cameron',
@@ -34413,7 +34385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1279,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22025: {
     label: 'Catahoula',
@@ -34428,7 +34400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3972,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22027: {
     label: 'Claiborne',
@@ -34443,7 +34415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6538,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22029: {
     label: 'Concordia',
@@ -34458,7 +34430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8781,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22031: {
     label: 'De Soto',
@@ -34473,7 +34445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12028,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22033: {
     label: 'East Baton Rouge',
@@ -34488,7 +34460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 252671,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22035: {
     label: 'East Carroll',
@@ -34503,7 +34475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3262,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22037: {
     label: 'East Feliciana',
@@ -34518,7 +34490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8019,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22039: {
     label: 'Evangeline',
@@ -34533,7 +34505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13227,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22041: {
     label: 'Franklin',
@@ -34548,7 +34520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7604,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22043: {
     label: 'Grant',
@@ -34563,7 +34535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9881,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22045: {
     label: 'Iberia',
@@ -34578,7 +34550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33698,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22047: {
     label: 'Iberville',
@@ -34593,7 +34565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19045,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22049: {
     label: 'Jackson',
@@ -34608,7 +34580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6965,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22051: {
     label: 'Jefferson',
@@ -34623,7 +34595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 290009,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22053: {
     label: 'Jefferson Davis',
@@ -34638,7 +34610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11823,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22055: {
     label: 'Lafayette',
@@ -34653,7 +34625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 125719,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22057: {
     label: 'Lafourche',
@@ -34668,7 +34640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44983,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22059: {
     label: 'LaSalle',
@@ -34683,7 +34655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7001,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22061: {
     label: 'Lincoln',
@@ -34698,7 +34670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20806,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22063: {
     label: 'Livingston',
@@ -34713,7 +34685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57489,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22065: {
     label: 'Madison',
@@ -34728,7 +34700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5212,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22067: {
     label: 'Morehouse',
@@ -34743,7 +34715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11726,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22069: {
     label: 'Natchitoches',
@@ -34758,7 +34730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17043,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22071: {
     label: 'Orleans',
@@ -34773,7 +34745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 281568,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22073: {
     label: 'Ouachita',
@@ -34788,7 +34760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 71328,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22075: {
     label: 'Plaquemines',
@@ -34803,7 +34775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16458,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22077: {
     label: 'Pointe Coupee',
@@ -34818,7 +34790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12298,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22079: {
     label: 'Rapides',
@@ -34833,7 +34805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 66595,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22081: {
     label: 'Red River',
@@ -34848,7 +34820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3202,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22083: {
     label: 'Richland',
@@ -34863,7 +34835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8841,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22085: {
     label: 'Sabine',
@@ -34878,7 +34850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9469,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22087: {
     label: 'St. Bernard',
@@ -34893,7 +34865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23837,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22089: {
     label: 'St. Charles',
@@ -34908,7 +34880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30797,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22091: {
     label: 'St. Helena',
@@ -34923,7 +34895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3259,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22093: {
     label: 'St. James',
@@ -34938,7 +34910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11154,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22095: {
     label: 'St. John the Baptist',
@@ -34953,7 +34925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26363,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22097: {
     label: 'St. Landry',
@@ -34968,7 +34940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35355,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22099: {
     label: 'St. Martin',
@@ -34983,7 +34955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21980,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22101: {
     label: 'St. Mary',
@@ -34998,7 +34970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22778,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22103: {
     label: 'St. Tammany',
@@ -35013,7 +34985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 151499,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22105: {
     label: 'Tangipahoa',
@@ -35028,7 +35000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64427,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22107: {
     label: 'Tensas',
@@ -35043,7 +35015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2782,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22109: {
     label: 'Terrebonne',
@@ -35058,7 +35030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 51480,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22111: {
     label: 'Union',
@@ -35073,7 +35045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10307,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22113: {
     label: 'Vermilion',
@@ -35088,7 +35060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23339,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22115: {
     label: 'Vernon',
@@ -35103,7 +35075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28488,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22117: {
     label: 'Washington',
@@ -35118,7 +35090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19869,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22119: {
     label: 'Webster',
@@ -35133,7 +35105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16917,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22121: {
     label: 'West Baton Rouge',
@@ -35148,7 +35120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14530,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22123: {
     label: 'West Carroll',
@@ -35163,7 +35135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4502,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22125: {
     label: 'West Feliciana',
@@ -35178,7 +35150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14079,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_22127: {
     label: 'Winn',
@@ -35193,7 +35165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6794,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_23001: {
     label: 'Androscoggin',
@@ -36003,7 +35975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6186,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_26003: {
     label: 'Alger',
@@ -36018,7 +35990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5828,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26005: {
     label: 'Allegan',
@@ -36033,7 +36005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 63268,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26007: {
     label: 'Alpena',
@@ -36048,7 +36020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16152,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26009: {
     label: 'Antrim',
@@ -36063,7 +36035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13879,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26011: {
     label: 'Arenac',
@@ -36078,7 +36050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7746,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26013: {
     label: 'Baraga',
@@ -36093,7 +36065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5148,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26015: {
     label: 'Barry',
@@ -36108,7 +36080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31154,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26017: {
     label: 'Bay',
@@ -36123,7 +36095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60185,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26019: {
     label: 'Benzie',
@@ -36138,7 +36110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11404,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26021: {
     label: 'Berrien',
@@ -36153,7 +36125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 89200,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26023: {
     label: 'Branch',
@@ -36168,7 +36140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20205,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26025: {
     label: 'Calhoun',
@@ -36183,7 +36155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 71964,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26027: {
     label: 'Cass',
@@ -36198,7 +36170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23483,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26029: {
     label: 'Charlevoix',
@@ -36213,7 +36185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17232,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26031: {
     label: 'Cheboygan',
@@ -36228,7 +36200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14564,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26033: {
     label: 'Chippewa',
@@ -36243,7 +36215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26738,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26035: {
     label: 'Clare',
@@ -36258,7 +36230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14597,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26037: {
     label: 'Clinton',
@@ -36273,7 +36245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 47174,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26039: {
     label: 'Crawford',
@@ -36288,7 +36260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7344,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26041: {
     label: 'Delta',
@@ -36303,7 +36275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22792,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26043: {
     label: 'Dickinson',
@@ -36318,7 +36290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17494,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26045: {
     label: 'Eaton',
@@ -36333,7 +36305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64199,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26047: {
     label: 'Emmet',
@@ -36348,7 +36320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24758,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26049: {
     label: 'Genesee',
@@ -36363,7 +36335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 208692,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26051: {
     label: 'Gladwin',
@@ -36378,7 +36350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12383,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26053: {
     label: 'Gogebic',
@@ -36393,7 +36365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26055: {
     label: 'Grand Traverse',
@@ -36408,7 +36380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 63233,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26057: {
     label: 'Gratiot',
@@ -36423,7 +36395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19091,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26059: {
     label: 'Hillsdale',
@@ -36438,7 +36410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18080,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26061: {
     label: 'Houghton',
@@ -36453,7 +36425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19354,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26063: {
     label: 'Huron',
@@ -36468,7 +36440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17150,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26065: {
     label: 'Ingham',
@@ -36483,7 +36455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 170942,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26067: {
     label: 'Ionia',
@@ -36498,7 +36470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31107,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26069: {
     label: 'Iosco',
@@ -36513,7 +36485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14362,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26071: {
     label: 'Iron',
@@ -36528,7 +36500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6327,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26073: {
     label: 'Isabella',
@@ -36543,7 +36515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31934,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26075: {
     label: 'Jackson',
@@ -36558,7 +36530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 84882,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26077: {
     label: 'Kalamazoo',
@@ -36573,7 +36545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 168039,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26079: {
     label: 'Kalkaska',
@@ -36588,7 +36560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8543,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26081: {
     label: 'Kent',
@@ -36603,7 +36575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 415581,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26083: {
     label: 'Keweenaw',
@@ -36618,7 +36590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1276,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26085: {
     label: 'Lake',
@@ -36633,7 +36605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7762,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26087: {
     label: 'Lapeer',
@@ -36648,7 +36620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42096,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26089: {
     label: 'Leelanau',
@@ -36663,7 +36635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18205,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26091: {
     label: 'Lenawee',
@@ -36678,7 +36650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 53430,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26093: {
     label: 'Livingston',
@@ -36693,7 +36665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 117646,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26095: {
     label: 'Luce',
@@ -36708,7 +36680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26097: {
     label: 'Mackinac',
@@ -36723,7 +36695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8228,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26099: {
     label: 'Macomb',
@@ -36738,7 +36710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 503950,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26101: {
     label: 'Manistee',
@@ -36753,7 +36725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15066,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26103: {
     label: 'Marquette',
@@ -36768,7 +36740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44235,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26105: {
     label: 'Mason',
@@ -36783,7 +36755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18128,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26107: {
     label: 'Mecosta',
@@ -36798,7 +36770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18807,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26109: {
     label: 'Menominee',
@@ -36813,7 +36785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13644,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26111: {
     label: 'Midland',
@@ -36828,7 +36800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 50287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26113: {
     label: 'Missaukee',
@@ -36843,7 +36815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7492,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26115: {
     label: 'Monroe',
@@ -36858,7 +36830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 89107,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26117: {
     label: 'Montcalm',
@@ -36873,7 +36845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27767,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26119: {
     label: 'Montmorency',
@@ -36888,7 +36860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5174,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26121: {
     label: 'Muskegon',
@@ -36903,7 +36875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 97838,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26123: {
     label: 'Newaygo',
@@ -36918,7 +36890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22374,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26125: {
     label: 'Oakland',
@@ -36933,7 +36905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 850802,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26127: {
     label: 'Oceana',
@@ -36948,7 +36920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14896,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26129: {
     label: 'Ogemaw',
@@ -36963,7 +36935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9741,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26131: {
     label: 'Ontonagon',
@@ -36978,7 +36950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4087,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26133: {
     label: 'Osceola',
@@ -36993,7 +36965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10062,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26135: {
     label: 'Oscoda',
@@ -37008,7 +36980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3497,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26137: {
     label: 'Otsego',
@@ -37023,7 +36995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13938,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26139: {
     label: 'Ottawa',
@@ -37038,7 +37010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 172887,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26141: {
     label: 'Presque Isle',
@@ -37053,7 +37025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7714,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26143: {
     label: 'Roscommon',
@@ -37068,7 +37040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13790,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26145: {
     label: 'Saginaw',
@@ -37083,7 +37055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 102908,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26147: {
     label: 'St. Clair',
@@ -37098,7 +37070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 79764,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26149: {
     label: 'St. Joseph',
@@ -37113,7 +37085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27942,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26151: {
     label: 'Sanilac',
@@ -37128,7 +37100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17810,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26153: {
     label: 'Schoolcraft',
@@ -37143,7 +37115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4620,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26155: {
     label: 'Shiawassee',
@@ -37158,7 +37130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35584,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26157: {
     label: 'Tuscola',
@@ -37173,7 +37145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24398,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26159: {
     label: 'Van Buren',
@@ -37188,7 +37160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44508,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26161: {
     label: 'Washtenaw',
@@ -37203,7 +37175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 269934,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26163: {
     label: 'Wayne',
@@ -37218,7 +37190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 969565,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_26165: {
     label: 'Wexford',
@@ -37233,7 +37205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17631,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_27001: {
     label: 'Aitkin',
@@ -38553,7 +38525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17489,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28003: {
     label: 'Alcorn',
@@ -38568,7 +38540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14988,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28005: {
     label: 'Amite',
@@ -38583,7 +38555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5076,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28007: {
     label: 'Attala',
@@ -38598,7 +38570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10174,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28009: {
     label: 'Benton',
@@ -38613,7 +38585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4439,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28011: {
     label: 'Bolivar',
@@ -38628,7 +38600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18651,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28013: {
     label: 'Calhoun',
@@ -38643,7 +38615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6573,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28015: {
     label: 'Carroll',
@@ -38658,7 +38630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4254,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28017: {
     label: 'Chickasaw',
@@ -38673,7 +38645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8506,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28019: {
     label: 'Choctaw',
@@ -38688,7 +38660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3063,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28021: {
     label: 'Claiborne',
@@ -38703,7 +38675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5044,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28023: {
     label: 'Clarke',
@@ -38718,7 +38690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9133,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28025: {
     label: 'Clay',
@@ -38733,7 +38705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9342,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28027: {
     label: 'Coahoma',
@@ -38748,7 +38720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11869,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28029: {
     label: 'Copiah',
@@ -38763,7 +38735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15731,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28031: {
     label: 'Covington',
@@ -38778,7 +38750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10817,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28033: {
     label: 'DeSoto',
@@ -38793,7 +38765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 105855,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28035: {
     label: 'Forrest',
@@ -38808,7 +38780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 34007,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28037: {
     label: 'Franklin',
@@ -38823,7 +38795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3827,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28039: {
     label: 'George',
@@ -38838,7 +38810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10103,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28041: {
     label: 'Greene',
@@ -38853,7 +38825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5161,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28043: {
     label: 'Grenada',
@@ -38868,7 +38840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11240,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28045: {
     label: 'Hancock',
@@ -38883,7 +38855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21878,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28047: {
     label: 'Harrison',
@@ -38898,7 +38870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 119202,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28049: {
     label: 'Hinds',
@@ -38913,7 +38885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 139604,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28051: {
     label: 'Holmes',
@@ -38928,7 +38900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10601,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28053: {
     label: 'Humphreys',
@@ -38943,7 +38915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4896,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28055: {
     label: 'Issaquena',
@@ -38958,7 +38930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 602,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_28057: {
     label: 'Itawamba',
@@ -38973,7 +38945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8340,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28059: {
     label: 'Jackson',
@@ -38988,7 +38960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70555,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28061: {
     label: 'Jasper',
@@ -39003,7 +38975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8637,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28063: {
     label: 'Jefferson',
@@ -39018,7 +38990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5093,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28065: {
     label: 'Jefferson Davis',
@@ -39033,7 +39005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5202,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28067: {
     label: 'Jones',
@@ -39048,7 +39020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30466,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28069: {
     label: 'Kemper',
@@ -39063,7 +39035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4683,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28071: {
     label: 'Lafayette',
@@ -39078,7 +39050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30404,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28073: {
     label: 'Lamar',
@@ -39093,7 +39065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38718,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28075: {
     label: 'Lauderdale',
@@ -39108,7 +39080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39067,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28077: {
     label: 'Lawrence',
@@ -39123,7 +39095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7169,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28079: {
     label: 'Leake',
@@ -39138,7 +39110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11523,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28081: {
     label: 'Lee',
@@ -39153,7 +39125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38281,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28083: {
     label: 'Leflore',
@@ -39168,7 +39140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17968,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28085: {
     label: 'Lincoln',
@@ -39183,7 +39155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13722,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28087: {
     label: 'Lowndes',
@@ -39198,7 +39170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30908,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28089: {
     label: 'Madison',
@@ -39213,7 +39185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 69389,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28091: {
     label: 'Marion',
@@ -39228,7 +39200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11697,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28093: {
     label: 'Marshall',
@@ -39243,7 +39215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20128,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28095: {
     label: 'Monroe',
@@ -39258,7 +39230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18280,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28097: {
     label: 'Montgomery',
@@ -39273,7 +39245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5558,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28099: {
     label: 'Neshoba',
@@ -39288,7 +39260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12775,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28101: {
     label: 'Newton',
@@ -39303,7 +39275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11634,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28103: {
     label: 'Noxubee',
@@ -39318,7 +39290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5910,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28105: {
     label: 'Oktibbeha',
@@ -39333,7 +39305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26047,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28107: {
     label: 'Panola',
@@ -39348,7 +39320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28109: {
     label: 'Pearl River',
@@ -39363,7 +39335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27554,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28111: {
     label: 'Perry',
@@ -39378,7 +39350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4659,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28113: {
     label: 'Pike',
@@ -39393,7 +39365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20487,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28115: {
     label: 'Pontotoc',
@@ -39408,7 +39380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13723,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28117: {
     label: 'Prentiss',
@@ -39423,7 +39395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11011,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28119: {
     label: 'Quitman',
@@ -39438,7 +39410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3771,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28121: {
     label: 'Rankin',
@@ -39453,7 +39425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 81599,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28123: {
     label: 'Scott',
@@ -39468,7 +39440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14688,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28125: {
     label: 'Sharkey',
@@ -39483,7 +39455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2482,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28127: {
     label: 'Simpson',
@@ -39498,7 +39470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12429,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28129: {
     label: 'Smith',
@@ -39513,7 +39485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5610,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28131: {
     label: 'Stone',
@@ -39528,7 +39500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8673,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28133: {
     label: 'Sunflower',
@@ -39543,7 +39515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13705,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28135: {
     label: 'Tallahatchie',
@@ -39558,7 +39530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5885,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28137: {
     label: 'Tate',
@@ -39573,7 +39545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13118,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28139: {
     label: 'Tippah',
@@ -39588,7 +39560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9504,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28141: {
     label: 'Tishomingo',
@@ -39603,7 +39575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7695,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28143: {
     label: 'Tunica',
@@ -39618,7 +39590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5171,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28145: {
     label: 'Union',
@@ -39633,7 +39605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11612,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28147: {
     label: 'Walthall',
@@ -39648,7 +39620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6081,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28149: {
     label: 'Warren',
@@ -39663,7 +39635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26918,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28151: {
     label: 'Washington',
@@ -39678,7 +39650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23033,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28153: {
     label: 'Wayne',
@@ -39693,7 +39665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8102,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28155: {
     label: 'Webster',
@@ -39708,7 +39680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4768,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28157: {
     label: 'Wilkinson',
@@ -39723,7 +39695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5855,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28159: {
     label: 'Winston',
@@ -39738,7 +39710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8883,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28161: {
     label: 'Yalobusha',
@@ -39753,7 +39725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8128,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_28163: {
     label: 'Yazoo',
@@ -39768,7 +39740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15149,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_Missouri_Kansas_City: {
     label: 'Kansas City',
@@ -39783,7 +39755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29001: {
     label: 'Adair',
@@ -39798,7 +39770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12040,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29003: {
     label: 'Andrew',
@@ -39813,7 +39785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7156,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29005: {
     label: 'Atchison',
@@ -39828,7 +39800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2989,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29007: {
     label: 'Audrain',
@@ -39843,7 +39815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9990,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29009: {
     label: 'Barry',
@@ -39858,7 +39830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16483,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29011: {
     label: 'Barton',
@@ -39873,7 +39845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4029,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29013: {
     label: 'Bates',
@@ -39888,7 +39860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6494,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29015: {
     label: 'Benton',
@@ -39903,7 +39875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9720,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29017: {
     label: 'Bollinger',
@@ -39918,7 +39890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4132,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29019: {
     label: 'Boone',
@@ -39933,7 +39905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 117574,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29021: {
     label: 'Buchanan',
@@ -39948,7 +39920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35106,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29023: {
     label: 'Butler',
@@ -39963,7 +39935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15214,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29025: {
     label: 'Caldwell',
@@ -39978,7 +39950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3634,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29027: {
     label: 'Callaway',
@@ -39993,7 +39965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29029: {
     label: 'Camden',
@@ -40008,7 +39980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21878,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29031: {
     label: 'Cape Girardeau',
@@ -40023,7 +39995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39920,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29033: {
     label: 'Carroll',
@@ -40038,7 +40010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4399,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29035: {
     label: 'Carter',
@@ -40053,7 +40025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2041,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29037: {
     label: 'Cass',
@@ -40068,7 +40040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57809,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29039: {
     label: 'Cedar',
@@ -40083,7 +40055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4686,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29041: {
     label: 'Chariton',
@@ -40098,7 +40070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2911,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29043: {
     label: 'Christian',
@@ -40113,7 +40085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42083,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29045: {
     label: 'Clark',
@@ -40128,7 +40100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2233,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29047: {
     label: 'Clay',
@@ -40143,7 +40115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 141409,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29049: {
     label: 'Clinton',
@@ -40158,7 +40130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10218,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29051: {
     label: 'Cole',
@@ -40173,7 +40145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 41951,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29053: {
     label: 'Cooper',
@@ -40188,7 +40160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8202,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29055: {
     label: 'Crawford',
@@ -40203,7 +40175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8268,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29057: {
     label: 'Dade',
@@ -40218,7 +40190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3373,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29059: {
     label: 'Dallas',
@@ -40233,7 +40205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6099,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29061: {
     label: 'Daviess',
@@ -40248,7 +40220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2872,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29063: {
     label: 'DeKalb',
@@ -40263,7 +40235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3636,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29065: {
     label: 'Dent',
@@ -40278,7 +40250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5550,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29067: {
     label: 'Douglas',
@@ -40293,7 +40265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3264,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29069: {
     label: 'Dunklin',
@@ -40308,7 +40280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11311,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29071: {
     label: 'Franklin',
@@ -40323,7 +40295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57924,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29073: {
     label: 'Gasconade',
@@ -40338,7 +40310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7617,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29075: {
     label: 'Gentry',
@@ -40353,7 +40325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2991,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29077: {
     label: 'Greene',
@@ -40368,7 +40340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 150092,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29079: {
     label: 'Grundy',
@@ -40383,7 +40355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3651,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29081: {
     label: 'Harrison',
@@ -40398,7 +40370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2971,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29083: {
     label: 'Henry',
@@ -40413,7 +40385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10385,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29085: {
     label: 'Hickory',
@@ -40428,7 +40400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3754,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29087: {
     label: 'Holt',
@@ -40443,7 +40415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1916,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29089: {
     label: 'Howard',
@@ -40458,7 +40430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4454,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29091: {
     label: 'Howell',
@@ -40473,7 +40445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13823,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29093: {
     label: 'Iron',
@@ -40488,7 +40460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4050,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29095: {
     label: 'Jackson',
@@ -40518,7 +40490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 59471,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29099: {
     label: 'Jefferson',
@@ -40533,7 +40505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 104724,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29101: {
     label: 'Johnson',
@@ -40548,7 +40520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25188,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29103: {
     label: 'Knox',
@@ -40563,7 +40535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1627,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29105: {
     label: 'Laclede',
@@ -40578,7 +40550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13900,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29107: {
     label: 'Lafayette',
@@ -40593,7 +40565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15481,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29109: {
     label: 'Lawrence',
@@ -40608,7 +40580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15059,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29111: {
     label: 'Lewis',
@@ -40623,7 +40595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3462,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29113: {
     label: 'Lincoln',
@@ -40638,7 +40610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23936,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29115: {
     label: 'Linn',
@@ -40653,7 +40625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5740,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29117: {
     label: 'Livingston',
@@ -40668,7 +40640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6717,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29119: {
     label: 'McDonald',
@@ -40683,7 +40655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7981,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29121: {
     label: 'Macon',
@@ -40698,7 +40670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6393,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29123: {
     label: 'Madison',
@@ -40713,7 +40685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5000,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29125: {
     label: 'Maries',
@@ -40728,7 +40700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3952,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29127: {
     label: 'Marion',
@@ -40743,7 +40715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12352,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29129: {
     label: 'Mercer',
@@ -40758,7 +40730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1359,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29131: {
     label: 'Miller',
@@ -40773,7 +40745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8805,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29133: {
     label: 'Mississippi',
@@ -40788,7 +40760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5822,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29135: {
     label: 'Moniteau',
@@ -40803,7 +40775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5971,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29137: {
     label: 'Monroe',
@@ -40818,7 +40790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3959,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29139: {
     label: 'Montgomery',
@@ -40833,7 +40805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5792,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29141: {
     label: 'Morgan',
@@ -40848,7 +40820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7865,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29143: {
     label: 'New Madrid',
@@ -40863,7 +40835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5930,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29145: {
     label: 'Newton',
@@ -40878,7 +40850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15652,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29147: {
     label: 'Nodaway',
@@ -40893,7 +40865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11148,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_29149: {
     label: 'Oregon',
@@ -40908,7 +40880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3437,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29151: {
     label: 'Osage',
@@ -40923,7 +40895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5535,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29153: {
     label: 'Ozark',
@@ -40938,7 +40910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3035,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29155: {
     label: 'Pemiscot',
@@ -40953,7 +40925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5193,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29157: {
     label: 'Perry',
@@ -40968,7 +40940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7760,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29159: {
     label: 'Pettis',
@@ -40983,7 +40955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18830,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29161: {
     label: 'Phelps',
@@ -40998,7 +40970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20255,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29163: {
     label: 'Pike',
@@ -41013,7 +40985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7032,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29165: {
     label: 'Platte',
@@ -41028,7 +41000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 62531,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29167: {
     label: 'Polk',
@@ -41043,7 +41015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12880,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29169: {
     label: 'Pulaski',
@@ -41058,7 +41030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32206,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29171: {
     label: 'Putnam',
@@ -41073,7 +41045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1672,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29173: {
     label: 'Ralls',
@@ -41088,7 +41060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3040,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29175: {
     label: 'Randolph',
@@ -41103,7 +41075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9769,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29177: {
     label: 'Ray',
@@ -41118,7 +41090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9465,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29179: {
     label: 'Reynolds',
@@ -41133,7 +41105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1764,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29181: {
     label: 'Ripley',
@@ -41148,7 +41120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4044,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29183: {
     label: 'St. Charles',
@@ -41163,7 +41135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 256698,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29185: {
     label: 'St. Clair',
@@ -41178,7 +41150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3328,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29186: {
     label: 'Ste. Genevieve',
@@ -41193,7 +41165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8250,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29187: {
     label: 'St. Francois',
@@ -41208,7 +41180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30192,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29189: {
     label: 'St. Louis',
@@ -41238,7 +41210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10906,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29197: {
     label: 'Schuyler',
@@ -41253,7 +41225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1293,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29199: {
     label: 'Scotland',
@@ -41268,7 +41240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1336,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29201: {
     label: 'Scott',
@@ -41283,7 +41255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17090,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29203: {
     label: 'Shannon',
@@ -41298,7 +41270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2568,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29205: {
     label: 'Shelby',
@@ -41313,7 +41285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2857,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29207: {
     label: 'Stoddard',
@@ -41328,7 +41300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11900,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29209: {
     label: 'Stone',
@@ -41343,7 +41315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12416,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29211: {
     label: 'Sullivan',
@@ -41358,7 +41330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2705,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29213: {
     label: 'Taney',
@@ -41373,7 +41345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23401,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29215: {
     label: 'Texas',
@@ -41388,7 +41360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8541,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29217: {
     label: 'Vernon',
@@ -41403,7 +41375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7472,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29219: {
     label: 'Warren',
@@ -41418,7 +41390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15340,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29221: {
     label: 'Washington',
@@ -41433,7 +41405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8156,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29223: {
     label: 'Wayne',
@@ -41448,7 +41420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4805,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29225: {
     label: 'Webster',
@@ -41463,7 +41435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17203,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29227: {
     label: 'Worth',
@@ -41478,7 +41450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 855,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29229: {
     label: 'Wright',
@@ -41493,7 +41465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6696,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_29510: {
     label: 'St. Louis City',
@@ -41508,7 +41480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 189268,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_30001: {
     label: 'Beaverhead',
@@ -41523,7 +41495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5236,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30003: {
     label: 'Big Horn',
@@ -41538,7 +41510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12411,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30005: {
     label: 'Blaine',
@@ -41553,7 +41525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5907,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30007: {
     label: 'Broadwater',
@@ -41568,7 +41540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2181,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30009: {
     label: 'Carbon',
@@ -41583,7 +41555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30011: {
     label: 'Carter',
@@ -41598,7 +41570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 403,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30013: {
     label: 'Cascade',
@@ -41613,7 +41585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46014,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30015: {
     label: 'Chouteau',
@@ -41628,7 +41600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1943,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30017: {
     label: 'Custer',
@@ -41643,7 +41615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5174,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30019: {
     label: 'Daniels',
@@ -41658,7 +41630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 719,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30021: {
     label: 'Dawson',
@@ -41673,7 +41645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3331,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30023: {
     label: 'Deer Lodge',
@@ -41688,7 +41660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5454,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30025: {
     label: 'Fallon',
@@ -41703,7 +41675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1001,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30027: {
     label: 'Fergus',
@@ -41718,7 +41690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5368,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30029: {
     label: 'Flathead',
@@ -41733,7 +41705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46269,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30031: {
     label: 'Gallatin',
@@ -41748,7 +41720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70392,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30033: {
     label: 'Garfield',
@@ -41763,7 +41735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 251,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_30035: {
     label: 'Glacier',
@@ -41778,7 +41750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8057,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30037: {
     label: 'Golden Valley',
@@ -41793,7 +41765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 393,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30039: {
     label: 'Granite',
@@ -41808,7 +41780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1298,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30041: {
     label: 'Hill',
@@ -41823,7 +41795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12183,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30043: {
     label: 'Jefferson',
@@ -41838,7 +41810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6429,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30045: {
     label: 'Judith Basin',
@@ -41853,7 +41825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 826,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30047: {
     label: 'Lake',
@@ -41868,7 +41840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17984,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30049: {
     label: 'Lewis and Clark',
@@ -41883,7 +41855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43395,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30051: {
     label: 'Liberty',
@@ -41898,7 +41870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 812,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30053: {
     label: 'Lincoln',
@@ -41913,7 +41885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7315,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30055: {
     label: 'McCone',
@@ -41928,7 +41900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30057: {
     label: 'Madison',
@@ -41943,7 +41915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3979,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30059: {
     label: 'Meagher',
@@ -41958,7 +41930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 967,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30061: {
     label: 'Mineral',
@@ -41973,7 +41945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2474,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30063: {
     label: 'Missoula',
@@ -41988,7 +41960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 79970,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30065: {
     label: 'Musselshell',
@@ -42003,7 +41975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1654,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30067: {
     label: 'Park',
@@ -42018,7 +41990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10181,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30069: {
     label: 'Petroleum',
@@ -42033,7 +42005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 155,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_30071: {
     label: 'Phillips',
@@ -42048,7 +42020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1815,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30073: {
     label: 'Pondera',
@@ -42063,7 +42035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3340,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30075: {
     label: 'Powder River',
@@ -42078,7 +42050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 396,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30077: {
     label: 'Powell',
@@ -42093,7 +42065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3209,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 25, 2022',
   },
   US_30079: {
     label: 'Prairie',
@@ -42108,7 +42080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 416,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 25, 2022',
   },
   US_30081: {
     label: 'Ravalli',
@@ -42123,7 +42095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22123,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30083: {
     label: 'Richland',
@@ -42138,7 +42110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4430,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30085: {
     label: 'Roosevelt',
@@ -42153,7 +42125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9618,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30087: {
     label: 'Rosebud',
@@ -42168,7 +42140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7803,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30089: {
     label: 'Sanders',
@@ -42183,7 +42155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4834,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30091: {
     label: 'Sheridan',
@@ -42198,7 +42170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1639,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30093: {
     label: 'Silver Bow',
@@ -42213,7 +42185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22054,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30095: {
     label: 'Stillwater',
@@ -42228,7 +42200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4182,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30097: {
     label: 'Sweet Grass',
@@ -42243,7 +42215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1563,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 25, 2022',
   },
   US_30099: {
     label: 'Teton',
@@ -42258,7 +42230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2664,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30101: {
     label: 'Toole',
@@ -42273,7 +42245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2244,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30103: {
     label: 'Treasure',
@@ -42288,7 +42260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 344,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30105: {
     label: 'Valley',
@@ -42303,7 +42275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3602,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30107: {
     label: 'Wheatland',
@@ -42318,7 +42290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 780,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_30109: {
     label: 'Wibaux',
@@ -42333,7 +42305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 282,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 25, 2022',
   },
   US_30111: {
     label: 'Yellowstone',
@@ -42348,7 +42320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 86076,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_31001: {
     label: 'Adams',
@@ -42363,7 +42335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13651,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31003: {
     label: 'Antelope',
@@ -42378,7 +42350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2402,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31005: {
     label: 'Arthur',
@@ -42393,7 +42365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 93,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31007: {
     label: 'Banner',
@@ -42408,7 +42380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 249,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31009: {
     label: 'Blaine',
@@ -42423,7 +42395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 125,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31011: {
     label: 'Boone',
@@ -42438,7 +42410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2610,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31013: {
     label: 'Box Butte',
@@ -42453,7 +42425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3810,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31015: {
     label: 'Boyd',
@@ -42468,7 +42440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 705,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31017: {
     label: 'Brown',
@@ -42483,7 +42455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1123,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31019: {
     label: 'Buffalo',
@@ -42498,7 +42470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21754,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31021: {
     label: 'Burt',
@@ -42513,7 +42485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3902,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31023: {
     label: 'Butler',
@@ -42528,7 +42500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4219,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31025: {
     label: 'Cass',
@@ -42543,7 +42515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16882,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31027: {
     label: 'Cedar',
@@ -42558,7 +42530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3599,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31029: {
     label: 'Chase',
@@ -42573,7 +42545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1349,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31031: {
     label: 'Cherry',
@@ -42588,7 +42560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2055,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31033: {
     label: 'Cheyenne',
@@ -42603,7 +42575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3929,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31035: {
     label: 'Clay',
@@ -42618,7 +42590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2643,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31037: {
     label: 'Colfax',
@@ -42633,7 +42605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5257,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31039: {
     label: 'Cuming',
@@ -42648,7 +42620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4809,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31041: {
     label: 'Custer',
@@ -42663,7 +42635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4229,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31043: {
     label: 'Dakota',
@@ -42678,7 +42650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13613,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31045: {
     label: 'Dawes',
@@ -42693,7 +42665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3523,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31047: {
     label: 'Dawson',
@@ -42708,7 +42680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12069,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31049: {
     label: 'Deuel',
@@ -42723,7 +42695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 656,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31051: {
     label: 'Dixon',
@@ -42738,7 +42710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2553,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31053: {
     label: 'Dodge',
@@ -42753,7 +42725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20407,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31055: {
     label: 'Douglas',
@@ -42768,7 +42740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 399073,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31057: {
     label: 'Dundy',
@@ -42783,7 +42755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 674,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31059: {
     label: 'Fillmore',
@@ -42798,7 +42770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2930,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31061: {
     label: 'Franklin',
@@ -42813,7 +42785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1184,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31063: {
     label: 'Frontier',
@@ -42828,7 +42800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 760,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31065: {
     label: 'Furnas',
@@ -42843,7 +42815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2158,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31067: {
     label: 'Gage',
@@ -42858,7 +42830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10136,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31069: {
     label: 'Garden',
@@ -42873,7 +42845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 854,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31071: {
     label: 'Garfield',
@@ -42888,7 +42860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 614,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31073: {
     label: 'Gosper',
@@ -42903,7 +42875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 819,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31075: {
     label: 'Grant',
@@ -42918,7 +42890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 136,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31077: {
     label: 'Greeley',
@@ -42933,7 +42905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 976,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31079: {
     label: 'Hall',
@@ -42948,7 +42920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32645,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31081: {
     label: 'Hamilton',
@@ -42963,7 +42935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4449,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31083: {
     label: 'Harlan',
@@ -42978,7 +42950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1387,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_31085: {
     label: 'Hayes',
@@ -42993,7 +42965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 242,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31087: {
     label: 'Hitchcock',
@@ -43008,7 +42980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 975,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31089: {
     label: 'Holt',
@@ -43023,7 +42995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4432,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31091: {
     label: 'Hooker',
@@ -43038,7 +43010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 295,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_31093: {
     label: 'Howard',
@@ -43053,7 +43025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2814,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31095: {
     label: 'Jefferson',
@@ -43068,7 +43040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3999,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31097: {
     label: 'Johnson',
@@ -43083,7 +43055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2823,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31099: {
     label: 'Kearney',
@@ -43098,7 +43070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3140,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31101: {
     label: 'Keith',
@@ -43113,7 +43085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3132,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31103: {
     label: 'Keya Paha',
@@ -43128,7 +43100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 247,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31105: {
     label: 'Kimball',
@@ -43143,7 +43115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1314,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31107: {
     label: 'Knox',
@@ -43158,7 +43130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4337,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31109: {
     label: 'Lancaster',
@@ -43173,7 +43145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 219734,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31111: {
     label: 'Lincoln',
@@ -43188,7 +43160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12055,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31113: {
     label: 'Logan',
@@ -43203,7 +43175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 167,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31115: {
     label: 'Loup',
@@ -43218,7 +43190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 200,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_31117: {
     label: 'McPherson',
@@ -43233,7 +43205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 74,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_31119: {
     label: 'Madison',
@@ -43248,7 +43220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16723,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31121: {
     label: 'Merrick',
@@ -43263,7 +43235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3490,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31123: {
     label: 'Morrill',
@@ -43278,7 +43250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1694,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31125: {
     label: 'Nance',
@@ -43293,7 +43265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1047,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31127: {
     label: 'Nemaha',
@@ -43308,7 +43280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3607,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31129: {
     label: 'Nuckolls',
@@ -43323,7 +43295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2115,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31131: {
     label: 'Otoe',
@@ -43338,7 +43310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9272,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31133: {
     label: 'Pawnee',
@@ -43353,7 +43325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1162,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31135: {
     label: 'Perkins',
@@ -43368,7 +43340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1211,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31137: {
     label: 'Phelps',
@@ -43383,7 +43355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3770,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31139: {
     label: 'Pierce',
@@ -43398,7 +43370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2725,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31141: {
     label: 'Platte',
@@ -43413,7 +43385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16263,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31143: {
     label: 'Polk',
@@ -43428,7 +43400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2217,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31145: {
     label: 'Red Willow',
@@ -43443,7 +43415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4058,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31147: {
     label: 'Richardson',
@@ -43458,7 +43430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4241,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31149: {
     label: 'Rock',
@@ -43473,7 +43445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 523,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31151: {
     label: 'Saline',
@@ -43488,7 +43460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7814,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31153: {
     label: 'Sarpy',
@@ -43503,7 +43475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 129324,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31155: {
     label: 'Saunders',
@@ -43518,7 +43490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11823,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31157: {
     label: 'Scotts Bluff',
@@ -43533,7 +43505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15350,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31159: {
     label: 'Seward',
@@ -43548,7 +43520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8864,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31161: {
     label: 'Sheridan',
@@ -43563,7 +43535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1802,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31163: {
     label: 'Sherman',
@@ -43578,7 +43550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1225,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31165: {
     label: 'Sioux',
@@ -43593,7 +43565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 308,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_31167: {
     label: 'Stanton',
@@ -43608,7 +43580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1732,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31169: {
     label: 'Thayer',
@@ -43623,7 +43595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2439,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31171: {
     label: 'Thomas',
@@ -43638,7 +43610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 185,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31173: {
     label: 'Thurston',
@@ -43653,7 +43625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5965,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31175: {
     label: 'Valley',
@@ -43668,7 +43640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1422,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31177: {
     label: 'Washington',
@@ -43683,7 +43655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11999,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31179: {
     label: 'Wayne',
@@ -43698,7 +43670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4010,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31181: {
     label: 'Webster',
@@ -43713,7 +43685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1381,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31183: {
     label: 'Wheeler',
@@ -43728,7 +43700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 256,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_31185: {
     label: 'York',
@@ -43743,7 +43715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7325,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_32001: {
     label: 'Churchill',
@@ -43758,7 +43730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13919,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32003: {
     label: 'Clark',
@@ -43773,7 +43745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1359675,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32005: {
     label: 'Douglas',
@@ -43788,7 +43760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32007: {
     label: 'Elko',
@@ -43803,7 +43775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23390,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32009: {
     label: 'Esmeralda',
@@ -43818,7 +43790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 372,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_32011: {
     label: 'Eureka',
@@ -43833,7 +43805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 569,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32013: {
     label: 'Humboldt',
@@ -43848,7 +43820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7319,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32015: {
     label: 'Lander',
@@ -43863,7 +43835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2289,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32017: {
     label: 'Lincoln',
@@ -43878,7 +43850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2031,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32019: {
     label: 'Lyon',
@@ -43893,7 +43865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25043,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32021: {
     label: 'Mineral',
@@ -43908,7 +43880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2790,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32023: {
     label: 'Nye',
@@ -43923,7 +43895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22536,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32027: {
     label: 'Pershing',
@@ -43938,7 +43910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2501,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32029: {
     label: 'Storey',
@@ -43953,7 +43925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 999,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_32031: {
     label: 'Washoe',
@@ -43968,7 +43940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 315432,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32033: {
     label: 'White Pine',
@@ -43983,7 +43955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5272,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_32510: {
     label: 'Carson City',
@@ -43998,7 +43970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37338,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_33001: {
     label: 'Belknap',
@@ -44493,7 +44465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1502,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_35005: {
     label: 'Chaves',
@@ -44538,7 +44510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7045,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_35009: {
     label: 'Curry',
@@ -44643,7 +44615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 303,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_35023: {
     label: 'Hidalgo',
@@ -44658,7 +44630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_35025: {
     label: 'Lea',
@@ -44748,7 +44720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2634,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_35035: {
     label: 'Otero',
@@ -45273,7 +45245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3757,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_36043: {
     label: 'Herkimer',
@@ -45873,7 +45845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21115,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_36123: {
     label: 'Yates',
@@ -45903,7 +45875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 102501,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37003: {
     label: 'Alexander',
@@ -45918,7 +45890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17142,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37005: {
     label: 'Alleghany',
@@ -45933,7 +45905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6585,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37007: {
     label: 'Anson',
@@ -45948,7 +45920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11642,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37009: {
     label: 'Ashe',
@@ -45963,7 +45935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15370,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37011: {
     label: 'Avery',
@@ -45978,7 +45950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9639,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37013: {
     label: 'Beaufort',
@@ -45993,7 +45965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26217,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37015: {
     label: 'Bertie',
@@ -46008,7 +45980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10203,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37017: {
     label: 'Bladen',
@@ -46023,7 +45995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21386,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37019: {
     label: 'Brunswick',
@@ -46038,7 +46010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 90885,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37021: {
     label: 'Buncombe',
@@ -46053,7 +46025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 175398,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37023: {
     label: 'Burke',
@@ -46068,7 +46040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42373,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37025: {
     label: 'Cabarrus',
@@ -46083,7 +46055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 121624,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37027: {
     label: 'Caldwell',
@@ -46098,7 +46070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39513,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37029: {
     label: 'Camden',
@@ -46113,7 +46085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5841,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37031: {
     label: 'Carteret',
@@ -46128,7 +46100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45573,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37033: {
     label: 'Caswell',
@@ -46143,7 +46115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10839,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37035: {
     label: 'Catawba',
@@ -46158,7 +46130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 87691,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37037: {
     label: 'Chatham',
@@ -46173,7 +46145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45686,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37039: {
     label: 'Cherokee',
@@ -46188,7 +46160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13301,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37041: {
     label: 'Chowan',
@@ -46203,7 +46175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7983,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37043: {
     label: 'Clay',
@@ -46218,7 +46190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5335,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37045: {
     label: 'Cleveland',
@@ -46233,7 +46205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 49527,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37047: {
     label: 'Columbus',
@@ -46248,7 +46220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24168,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37049: {
     label: 'Craven',
@@ -46263,7 +46235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64942,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37051: {
     label: 'Cumberland',
@@ -46278,7 +46250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 206539,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37053: {
     label: 'Currituck',
@@ -46293,7 +46265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12280,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37055: {
     label: 'Dare',
@@ -46308,7 +46280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27252,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37057: {
     label: 'Davidson',
@@ -46323,7 +46295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 82859,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37059: {
     label: 'Davie',
@@ -46338,7 +46310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25050,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37061: {
     label: 'Duplin',
@@ -46353,7 +46325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27606,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37063: {
     label: 'Durham',
@@ -46368,7 +46340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 235339,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37065: {
     label: 'Edgecombe',
@@ -46383,7 +46355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24873,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37067: {
     label: 'Forsyth',
@@ -46398,7 +46370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 241648,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37069: {
     label: 'Franklin',
@@ -46413,7 +46385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38544,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37071: {
     label: 'Gaston',
@@ -46428,7 +46400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 113972,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37073: {
     label: 'Gates',
@@ -46443,7 +46415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4648,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37075: {
     label: 'Graham',
@@ -46458,7 +46430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3937,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37077: {
     label: 'Granville',
@@ -46473,7 +46445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38310,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37079: {
     label: 'Greene',
@@ -46488,7 +46460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14193,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37081: {
     label: 'Guilford',
@@ -46503,7 +46475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 335763,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37083: {
     label: 'Halifax',
@@ -46518,7 +46490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27086,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37085: {
     label: 'Harnett',
@@ -46533,7 +46505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 59102,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37087: {
     label: 'Haywood',
@@ -46548,7 +46520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36260,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37089: {
     label: 'Henderson',
@@ -46563,7 +46535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70233,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37091: {
     label: 'Hertford',
@@ -46578,7 +46550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11480,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37093: {
     label: 'Hoke',
@@ -46593,7 +46565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23663,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37095: {
     label: 'Hyde',
@@ -46608,7 +46580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3368,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37097: {
     label: 'Iredell',
@@ -46623,7 +46595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 97567,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37099: {
     label: 'Jackson',
@@ -46638,7 +46610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23777,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37101: {
     label: 'Johnston',
@@ -46653,7 +46625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 115532,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37103: {
     label: 'Jones',
@@ -46668,7 +46640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5339,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37105: {
     label: 'Lee',
@@ -46683,7 +46655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 34974,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37107: {
     label: 'Lenoir',
@@ -46698,7 +46670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31440,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37109: {
     label: 'Lincoln',
@@ -46713,7 +46685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42743,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37111: {
     label: 'McDowell',
@@ -46728,7 +46700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23899,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37113: {
     label: 'Macon',
@@ -46743,7 +46715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21265,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37115: {
     label: 'Madison',
@@ -46758,7 +46730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12371,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37117: {
     label: 'Martin',
@@ -46773,7 +46745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11048,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37119: {
     label: 'Mecklenburg',
@@ -46788,7 +46760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 708175,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37121: {
     label: 'Mitchell',
@@ -46803,7 +46775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7334,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37123: {
     label: 'Montgomery',
@@ -46818,7 +46790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11947,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37125: {
     label: 'Moore',
@@ -46833,7 +46805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 59706,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37127: {
     label: 'Nash',
@@ -46848,7 +46820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 54775,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37129: {
     label: 'New Hanover',
@@ -46863,7 +46835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 151099,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37131: {
     label: 'Northampton',
@@ -46878,7 +46850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8669,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37133: {
     label: 'Onslow',
@@ -46893,7 +46865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 120930,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37135: {
     label: 'Orange',
@@ -46908,7 +46880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 116488,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37137: {
     label: 'Pamlico',
@@ -46923,7 +46895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7017,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37139: {
     label: 'Pasquotank',
@@ -46938,7 +46910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21270,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37141: {
     label: 'Pender',
@@ -46953,7 +46925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32868,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37143: {
     label: 'Perquimans',
@@ -46968,7 +46940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6209,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37145: {
     label: 'Person',
@@ -46983,7 +46955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22632,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37147: {
     label: 'Pitt',
@@ -46998,7 +46970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 98705,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37149: {
     label: 'Polk',
@@ -47013,7 +46985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8528,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37151: {
     label: 'Randolph',
@@ -47028,7 +47000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 64126,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37153: {
     label: 'Richmond',
@@ -47043,7 +47015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22126,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37155: {
     label: 'Robeson',
@@ -47058,7 +47030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 56623,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37157: {
     label: 'Rockingham',
@@ -47073,7 +47045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46880,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37159: {
     label: 'Rowan',
@@ -47088,7 +47060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 62683,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37161: {
     label: 'Rutherford',
@@ -47103,7 +47075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28492,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37163: {
     label: 'Sampson',
@@ -47118,7 +47090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37165: {
     label: 'Scotland',
@@ -47133,7 +47105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17407,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37167: {
     label: 'Stanly',
@@ -47148,7 +47120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28141,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37169: {
     label: 'Stokes',
@@ -47163,7 +47135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21947,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37171: {
     label: 'Surry',
@@ -47178,7 +47150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36519,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37173: {
     label: 'Swain',
@@ -47193,7 +47165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8352,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37175: {
     label: 'Transylvania',
@@ -47208,7 +47180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19392,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37177: {
     label: 'Tyrrell',
@@ -47223,7 +47195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1997,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_37179: {
     label: 'Union',
@@ -47238,7 +47210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 132935,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37181: {
     label: 'Vance',
@@ -47253,7 +47225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26281,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37183: {
     label: 'Wake',
@@ -47268,7 +47240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 830872,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37185: {
     label: 'Warren',
@@ -47283,7 +47255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10997,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37187: {
     label: 'Washington',
@@ -47298,7 +47270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5985,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37189: {
     label: 'Watauga',
@@ -47313,7 +47285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31196,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37191: {
     label: 'Wayne',
@@ -47328,7 +47300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 61880,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37193: {
     label: 'Wilkes',
@@ -47343,7 +47315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32402,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37195: {
     label: 'Wilson',
@@ -47358,7 +47330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44247,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37197: {
     label: 'Yadkin',
@@ -47373,7 +47345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18878,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_37199: {
     label: 'Yancey',
@@ -47388,7 +47360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9237,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_38001: {
     label: 'Adams',
@@ -47403,7 +47375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1100,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38003: {
     label: 'Barnes',
@@ -47418,7 +47390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6279,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_38005: {
     label: 'Benson',
@@ -47433,7 +47405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3775,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38007: {
     label: 'Billings',
@@ -47448,7 +47420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 207,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_38009: {
     label: 'Bottineau',
@@ -47463,7 +47435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3337,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38011: {
     label: 'Bowman',
@@ -47478,7 +47450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1197,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38013: {
     label: 'Burke',
@@ -47493,7 +47465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 868,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   US_38015: {
     label: 'Burleigh',
@@ -47508,7 +47480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 51145,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38017: {
     label: 'Cass',
@@ -47523,7 +47495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 116126,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38019: {
     label: 'Cavalier',
@@ -47538,7 +47510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2360,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38021: {
     label: 'Dickey',
@@ -47553,7 +47525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2690,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38023: {
     label: 'Divide',
@@ -47568,7 +47540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 970,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38025: {
     label: 'Dunn',
@@ -47583,7 +47555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1176,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38027: {
     label: 'Eddy',
@@ -47598,7 +47570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1223,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38029: {
     label: 'Emmons',
@@ -47613,7 +47585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1146,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 25, 2022',
   },
   US_38031: {
     label: 'Foster',
@@ -47628,7 +47600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1798,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38033: {
     label: 'Golden Valley',
@@ -47643,7 +47615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 549,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_38035: {
     label: 'Grand Forks',
@@ -47658,7 +47630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43187,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38037: {
     label: 'Grant',
@@ -47673,7 +47645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 563,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38039: {
     label: 'Griggs',
@@ -47688,7 +47660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1063,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38041: {
     label: 'Hettinger',
@@ -47703,7 +47675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1009,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38043: {
     label: 'Kidder',
@@ -47718,7 +47690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 848,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38045: {
     label: 'LaMoure',
@@ -47733,7 +47705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2037,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_38047: {
     label: 'Logan',
@@ -47748,7 +47720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 724,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38049: {
     label: 'McHenry',
@@ -47763,7 +47735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2491,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38051: {
     label: 'McIntosh',
@@ -47778,7 +47750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1130,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 26, 2022',
   },
   US_38053: {
     label: 'McKenzie',
@@ -47793,7 +47765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3568,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38055: {
     label: 'McLean',
@@ -47808,7 +47780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4571,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_38057: {
     label: 'Mercer',
@@ -47823,7 +47795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3295,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38059: {
     label: 'Morton',
@@ -47838,7 +47810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14874,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38061: {
     label: 'Mountrail',
@@ -47853,7 +47825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4808,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38063: {
     label: 'Nelson',
@@ -47868,7 +47840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2110,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38065: {
     label: 'Oliver',
@@ -47883,7 +47855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 523,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38067: {
     label: 'Pembina',
@@ -47898,7 +47870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3933,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38069: {
     label: 'Pierce',
@@ -47913,7 +47885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1859,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38071: {
     label: 'Ramsey',
@@ -47928,7 +47900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6904,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38073: {
     label: 'Ransom',
@@ -47943,7 +47915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3259,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_38075: {
     label: 'Renville',
@@ -47958,7 +47930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 950,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_38077: {
     label: 'Richland',
@@ -47973,7 +47945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8847,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38079: {
     label: 'Rolette',
@@ -47988,7 +47960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11237,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38081: {
     label: 'Sargent',
@@ -48003,7 +47975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2393,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_38083: {
     label: 'Sheridan',
@@ -48018,7 +47990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 495,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_38085: {
     label: 'Sioux',
@@ -48033,7 +48005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2798,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38087: {
     label: 'Slope',
@@ -48048,7 +48020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 85,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38089: {
     label: 'Stark',
@@ -48063,7 +48035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12053,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38091: {
     label: 'Steele',
@@ -48078,7 +48050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 921,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_38093: {
     label: 'Stutsman',
@@ -48093,7 +48065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11528,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_38095: {
     label: 'Towner',
@@ -48108,7 +48080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1083,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   US_38097: {
     label: 'Traill',
@@ -48123,7 +48095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4524,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38099: {
     label: 'Walsh',
@@ -48138,7 +48110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6436,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38101: {
     label: 'Ward',
@@ -48153,7 +48125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35937,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38103: {
     label: 'Wells',
@@ -48168,7 +48140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1709,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_38105: {
     label: 'Williams',
@@ -48183,7 +48155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11798,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_39001: {
     label: 'Adams',
@@ -50673,7 +50645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11538,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41003: {
     label: 'Benton',
@@ -50688,7 +50660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 71901,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41005: {
     label: 'Clackamas',
@@ -50703,7 +50675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 297997,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41007: {
     label: 'Clatsop',
@@ -50718,7 +50690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27817,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41009: {
     label: 'Columbia',
@@ -50733,7 +50705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33072,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41011: {
     label: 'Coos',
@@ -50748,7 +50720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37949,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41013: {
     label: 'Crook',
@@ -50763,7 +50735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12858,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41015: {
     label: 'Curry',
@@ -50778,7 +50750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13277,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41017: {
     label: 'Deschutes',
@@ -50793,7 +50765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 141504,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41019: {
     label: 'Douglas',
@@ -50808,7 +50780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60177,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41021: {
     label: 'Gilliam',
@@ -50823,7 +50795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 888,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_41023: {
     label: 'Grant',
@@ -50838,7 +50810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3328,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41025: {
     label: 'Harney',
@@ -50853,7 +50825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3476,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41027: {
     label: 'Hood River',
@@ -50868,7 +50840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20615,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41029: {
     label: 'Jackson',
@@ -50883,7 +50855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 132191,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41031: {
     label: 'Jefferson',
@@ -50898,7 +50870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16143,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41033: {
     label: 'Josephine',
@@ -50913,7 +50885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45069,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41035: {
     label: 'Klamath',
@@ -50928,7 +50900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35582,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41037: {
     label: 'Lake',
@@ -50943,7 +50915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3173,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_41039: {
     label: 'Lane',
@@ -50958,7 +50930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 266166,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41041: {
     label: 'Lincoln',
@@ -50973,7 +50945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36640,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41043: {
     label: 'Linn',
@@ -50988,7 +50960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 73850,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41045: {
     label: 'Malheur',
@@ -51003,7 +50975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15282,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41047: {
     label: 'Marion',
@@ -51018,7 +50990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 226124,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41049: {
     label: 'Morrow',
@@ -51033,7 +51005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6701,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41051: {
     label: 'Multnomah',
@@ -51048,7 +51020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 669869,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41053: {
     label: 'Polk',
@@ -51063,7 +51035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 56100,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41055: {
     label: 'Sherman',
@@ -51078,7 +51050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1059,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_41057: {
     label: 'Tillamook',
@@ -51093,7 +51065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18013,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41059: {
     label: 'Umatilla',
@@ -51108,7 +51080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44825,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41061: {
     label: 'Union',
@@ -51123,7 +51095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13650,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41063: {
     label: 'Wallowa',
@@ -51138,7 +51110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4414,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_41065: {
     label: 'Wasco',
@@ -51153,7 +51125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18170,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41067: {
     label: 'Washington',
@@ -51168,7 +51140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 475195,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41069: {
     label: 'Wheeler',
@@ -51183,7 +51155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 739,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_41071: {
     label: 'Yamhill',
@@ -51198,7 +51170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 69786,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42001: {
     label: 'Adams',
@@ -51213,7 +51185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 54851,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42003: {
     label: 'Allegheny',
@@ -51228,7 +51200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 892527,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42005: {
     label: 'Armstrong',
@@ -51243,7 +51215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 40108,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42007: {
     label: 'Beaver',
@@ -51258,7 +51230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 94311,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42009: {
     label: 'Bedford',
@@ -51273,7 +51245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18309,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42011: {
     label: 'Berks',
@@ -51288,7 +51260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 258850,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42013: {
     label: 'Blair',
@@ -51303,7 +51275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 63646,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42015: {
     label: 'Bradford',
@@ -51318,7 +51290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25350,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42017: {
     label: 'Bucks',
@@ -51333,7 +51305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 467315,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42019: {
     label: 'Butler',
@@ -51348,7 +51320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 123230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42021: {
     label: 'Cambria',
@@ -51363,7 +51335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 73294,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42023: {
     label: 'Cameron',
@@ -51378,7 +51350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2501,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42025: {
     label: 'Carbon',
@@ -51393,7 +51365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42027: {
     label: 'Centre',
@@ -51408,7 +51380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 101657,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42029: {
     label: 'Chester',
@@ -51423,7 +51395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 416003,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42031: {
     label: 'Clarion',
@@ -51438,7 +51410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17212,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42033: {
     label: 'Clearfield',
@@ -51453,7 +51425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 40320,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42035: {
     label: 'Clinton',
@@ -51468,7 +51440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18334,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42037: {
     label: 'Columbia',
@@ -51483,7 +51455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39971,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42039: {
     label: 'Crawford',
@@ -51498,7 +51470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 41864,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42041: {
     label: 'Cumberland',
@@ -51513,7 +51485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 178534,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42043: {
     label: 'Dauphin',
@@ -51528,7 +51500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 178974,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42045: {
     label: 'Delaware',
@@ -51543,7 +51515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 433493,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42047: {
     label: 'Elk',
@@ -51558,7 +51530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17079,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42049: {
     label: 'Erie',
@@ -51573,7 +51545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 166326,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42051: {
     label: 'Fayette',
@@ -51588,7 +51560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 73198,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42053: {
     label: 'Forest',
@@ -51603,7 +51575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5292,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42055: {
     label: 'Franklin',
@@ -51618,7 +51590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 72321,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42057: {
     label: 'Fulton',
@@ -51633,7 +51605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4525,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42059: {
     label: 'Greene',
@@ -51648,7 +51620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17097,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42061: {
     label: 'Huntingdon',
@@ -51663,7 +51635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22506,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42063: {
     label: 'Indiana',
@@ -51678,7 +51650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38536,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42065: {
     label: 'Jefferson',
@@ -51693,7 +51665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42067: {
     label: 'Juniata',
@@ -51708,7 +51680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10323,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42069: {
     label: 'Lackawanna',
@@ -51723,7 +51695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 151510,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42071: {
     label: 'Lancaster',
@@ -51738,7 +51710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 331054,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42073: {
     label: 'Lawrence',
@@ -51753,7 +51725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46133,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42075: {
     label: 'Lebanon',
@@ -51768,7 +51740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 78214,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42077: {
     label: 'Lehigh',
@@ -51783,7 +51755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 273073,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42079: {
     label: 'Luzerne',
@@ -51798,7 +51770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 208042,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42081: {
     label: 'Lycoming',
@@ -51813,7 +51785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 62440,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42083: {
     label: 'McKean',
@@ -51828,7 +51800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19627,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42085: {
     label: 'Mercer',
@@ -51843,7 +51815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 58022,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42087: {
     label: 'Mifflin',
@@ -51858,7 +51830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23137,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42089: {
     label: 'Monroe',
@@ -51873,7 +51845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 101496,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42091: {
     label: 'Montgomery',
@@ -51888,7 +51860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 659305,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42093: {
     label: 'Montour',
@@ -51903,7 +51875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14825,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42095: {
     label: 'Northampton',
@@ -51918,7 +51890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 210081,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42097: {
     label: 'Northumberland',
@@ -51933,7 +51905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 53633,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42099: {
     label: 'Perry',
@@ -51948,7 +51920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23287,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42101: {
     label: 'Philadelphia',
@@ -51963,7 +51935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1077693,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42103: {
     label: 'Pike',
@@ -51978,7 +51950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31106,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42105: {
     label: 'Potter',
@@ -51993,7 +51965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6528,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42107: {
     label: 'Schuylkill',
@@ -52008,7 +51980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 85975,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42109: {
     label: 'Snyder',
@@ -52023,7 +51995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17818,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42111: {
     label: 'Somerset',
@@ -52038,7 +52010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36463,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42113: {
     label: 'Sullivan',
@@ -52053,7 +52025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3354,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42115: {
     label: 'Susquehanna',
@@ -52068,7 +52040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18172,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42117: {
     label: 'Tioga',
@@ -52083,7 +52055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18883,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42119: {
     label: 'Union',
@@ -52098,7 +52070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23106,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42121: {
     label: 'Venango',
@@ -52113,7 +52085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24456,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42123: {
     label: 'Warren',
@@ -52128,7 +52100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18904,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42125: {
     label: 'Washington',
@@ -52143,7 +52115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 134848,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42127: {
     label: 'Wayne',
@@ -52158,7 +52130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 31265,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42129: {
     label: 'Westmoreland',
@@ -52173,7 +52145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 208184,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42131: {
     label: 'Wyoming',
@@ -52188,7 +52160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16809,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_42133: {
     label: 'York',
@@ -52203,7 +52175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 262727,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_44001: {
     label: 'Bristol',
@@ -52293,7 +52265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10214,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45003: {
     label: 'Aiken',
@@ -52308,7 +52280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 82798,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45005: {
     label: 'Allendale',
@@ -52323,7 +52295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5290,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45007: {
     label: 'Anderson',
@@ -52338,7 +52310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 84558,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45009: {
     label: 'Bamberg',
@@ -52353,7 +52325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7410,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45011: {
     label: 'Barnwell',
@@ -52368,7 +52340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12071,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45013: {
     label: 'Beaufort',
@@ -52383,7 +52355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 137535,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45015: {
     label: 'Berkeley',
@@ -52398,7 +52370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 124516,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45017: {
     label: 'Calhoun',
@@ -52413,7 +52385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6221,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45019: {
     label: 'Charleston',
@@ -52428,7 +52400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 281239,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45021: {
     label: 'Cherokee',
@@ -52443,7 +52415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20268,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45023: {
     label: 'Chester',
@@ -52458,7 +52430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15380,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45025: {
     label: 'Chesterfield',
@@ -52473,7 +52445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17634,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45027: {
     label: 'Clarendon',
@@ -52488,7 +52460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17106,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45029: {
     label: 'Colleton',
@@ -52503,7 +52475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18960,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45031: {
     label: 'Darlington',
@@ -52518,7 +52490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 33558,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45033: {
     label: 'Dillon',
@@ -52533,7 +52505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14200,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45035: {
     label: 'Dorchester',
@@ -52548,7 +52520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 90252,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45037: {
     label: 'Edgefield',
@@ -52563,7 +52535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17116,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45039: {
     label: 'Fairfield',
@@ -52578,7 +52550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15044,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45041: {
     label: 'Florence',
@@ -52593,7 +52565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 78476,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45043: {
     label: 'Georgetown',
@@ -52608,7 +52580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35337,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45045: {
     label: 'Greenville',
@@ -52623,7 +52595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 301299,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45047: {
     label: 'Greenwood',
@@ -52638,7 +52610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 34974,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45049: {
     label: 'Hampton',
@@ -52653,7 +52625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12675,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45051: {
     label: 'Horry',
@@ -52668,7 +52640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 208161,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45053: {
     label: 'Jasper',
@@ -52683,7 +52655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12010,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45055: {
     label: 'Kershaw',
@@ -52698,7 +52670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 40572,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45057: {
     label: 'Lancaster',
@@ -52713,7 +52685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 48896,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45059: {
     label: 'Laurens',
@@ -52728,7 +52700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26892,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45061: {
     label: 'Lee',
@@ -52743,7 +52715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8355,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45063: {
     label: 'Lexington',
@@ -52758,7 +52730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 172482,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45065: {
     label: 'McCormick',
@@ -52773,7 +52745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5790,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45067: {
     label: 'Marion',
@@ -52788,7 +52760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15434,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45069: {
     label: 'Marlboro',
@@ -52803,7 +52775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12132,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45071: {
     label: 'Newberry',
@@ -52818,7 +52790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20903,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45073: {
     label: 'Oconee',
@@ -52833,7 +52805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37056,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45075: {
     label: 'Orangeburg',
@@ -52848,7 +52820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 49840,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45077: {
     label: 'Pickens',
@@ -52863,7 +52835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 61014,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45079: {
     label: 'Richland',
@@ -52878,7 +52850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 264823,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45081: {
     label: 'Saluda',
@@ -52893,7 +52865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6432,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45083: {
     label: 'Spartanburg',
@@ -52908,7 +52880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 144792,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45085: {
     label: 'Sumter',
@@ -52923,7 +52895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 62893,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45087: {
     label: 'Union',
@@ -52938,7 +52910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11803,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45089: {
     label: 'Williamsburg',
@@ -52953,7 +52925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17869,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_45091: {
     label: 'York',
@@ -52968,7 +52940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 148486,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_46003: {
     label: 'Aurora',
@@ -52983,7 +52955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1592,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46005: {
     label: 'Beadle',
@@ -52998,7 +52970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9705,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46007: {
     label: 'Bennett',
@@ -53013,7 +52985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2266,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46009: {
     label: 'Bon Homme',
@@ -53028,7 +53000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4187,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46011: {
     label: 'Brookings',
@@ -53043,7 +53015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19101,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46013: {
     label: 'Brown',
@@ -53058,7 +53030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23403,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46015: {
     label: 'Brule',
@@ -53073,7 +53045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3271,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46017: {
     label: 'Buffalo',
@@ -53088,7 +53060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1263,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46019: {
     label: 'Butte',
@@ -53103,7 +53075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4394,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46021: {
     label: 'Campbell',
@@ -53118,7 +53090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 670,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_46023: {
     label: 'Charles Mix',
@@ -53133,7 +53105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5826,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46025: {
     label: 'Clark',
@@ -53148,7 +53120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1979,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46027: {
     label: 'Clay',
@@ -53163,7 +53135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10121,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46029: {
     label: 'Codington',
@@ -53178,7 +53150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16379,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46031: {
     label: 'Corson',
@@ -53193,7 +53165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2457,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46033: {
     label: 'Custer',
@@ -53208,7 +53180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4766,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46035: {
     label: 'Davison',
@@ -53223,7 +53195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13238,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46037: {
     label: 'Day',
@@ -53238,7 +53210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3829,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46039: {
     label: 'Deuel',
@@ -53253,7 +53225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2122,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46041: {
     label: 'Dewey',
@@ -53268,7 +53240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4922,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46043: {
     label: 'Douglas',
@@ -53283,7 +53255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1641,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46045: {
     label: 'Edmunds',
@@ -53298,7 +53270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1844,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46047: {
     label: 'Fall River',
@@ -53313,7 +53285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4321,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46049: {
     label: 'Faulk',
@@ -53328,7 +53300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1319,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46051: {
     label: 'Grant',
@@ -53343,7 +53315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3727,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46053: {
     label: 'Gregory',
@@ -53358,7 +53330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2219,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46055: {
     label: 'Haakon',
@@ -53373,7 +53345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 828,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46057: {
     label: 'Hamlin',
@@ -53388,7 +53360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3010,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46059: {
     label: 'Hand',
@@ -53403,7 +53375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1612,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46061: {
     label: 'Hanson',
@@ -53418,7 +53390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1612,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46063: {
     label: 'Harding',
@@ -53433,7 +53405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 255,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_46065: {
     label: 'Hughes',
@@ -53448,7 +53420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13368,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46067: {
     label: 'Hutchinson',
@@ -53463,7 +53435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4086,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46069: {
     label: 'Hyde',
@@ -53478,7 +53450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 738,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46071: {
     label: 'Jackson',
@@ -53493,7 +53465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1977,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46073: {
     label: 'Jerauld',
@@ -53508,7 +53480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1093,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46075: {
     label: 'Jones',
@@ -53523,7 +53495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 733,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46077: {
     label: 'Kingsbury',
@@ -53538,7 +53510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3545,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46079: {
     label: 'Lake',
@@ -53553,7 +53525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6850,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46081: {
     label: 'Lawrence',
@@ -53568,7 +53540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15987,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46083: {
     label: 'Lincoln',
@@ -53583,7 +53555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39209,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46085: {
     label: 'Lyman',
@@ -53598,7 +53570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2645,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46087: {
     label: 'McCook',
@@ -53613,7 +53585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3372,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46089: {
     label: 'McPherson',
@@ -53628,7 +53600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 985,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46091: {
     label: 'Marshall',
@@ -53643,7 +53615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2715,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46093: {
     label: 'Meade',
@@ -53658,7 +53630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16167,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46095: {
     label: 'Mellette',
@@ -53673,7 +53645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 849,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46097: {
     label: 'Miner',
@@ -53688,7 +53660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1256,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46099: {
     label: 'Minnehaha',
@@ -53703,7 +53675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 139388,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46101: {
     label: 'Moody',
@@ -53718,7 +53690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3473,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46102: {
     label: 'Oglala Lakota',
@@ -53733,7 +53705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12623,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46103: {
     label: 'Pennington',
@@ -53748,7 +53720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 71583,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46105: {
     label: 'Perkins',
@@ -53763,7 +53735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 931,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46107: {
     label: 'Potter',
@@ -53778,7 +53750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1353,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46109: {
     label: 'Roberts',
@@ -53793,7 +53765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8415,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46111: {
     label: 'Sanborn',
@@ -53808,7 +53780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1356,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46115: {
     label: 'Spink',
@@ -53823,7 +53795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3473,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46117: {
     label: 'Stanley',
@@ -53838,7 +53810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1948,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46119: {
     label: 'Sully',
@@ -53853,7 +53825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 650,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_46121: {
     label: 'Todd',
@@ -53868,7 +53840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8032,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46123: {
     label: 'Tripp',
@@ -53883,7 +53855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2556,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46125: {
     label: 'Turner',
@@ -53898,7 +53870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4692,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46127: {
     label: 'Union',
@@ -53913,7 +53885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8918,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46129: {
     label: 'Walworth',
@@ -53928,7 +53900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2827,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46135: {
     label: 'Yankton',
@@ -53943,7 +53915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15684,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_46137: {
     label: 'Ziebach',
@@ -53958,7 +53930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1060,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_47001: {
     label: 'Anderson',
@@ -53973,7 +53945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 44161,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47003: {
     label: 'Bedford',
@@ -53988,7 +53960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22188,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47005: {
     label: 'Benton',
@@ -54003,7 +53975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7373,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47007: {
     label: 'Bledsoe',
@@ -54018,7 +53990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5721,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47009: {
     label: 'Blount',
@@ -54033,7 +54005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 71566,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47011: {
     label: 'Bradley',
@@ -54048,7 +54020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 46523,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47013: {
     label: 'Campbell',
@@ -54063,7 +54035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18011,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47015: {
     label: 'Cannon',
@@ -54078,7 +54050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4868,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47017: {
     label: 'Carroll',
@@ -54093,7 +54065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13948,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47019: {
     label: 'Carter',
@@ -54108,7 +54080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23488,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47021: {
     label: 'Cheatham',
@@ -54123,7 +54095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24722,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47023: {
     label: 'Chester',
@@ -54138,7 +54110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6371,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47025: {
     label: 'Claiborne',
@@ -54153,7 +54125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15259,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47027: {
     label: 'Clay',
@@ -54168,7 +54140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2329,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47029: {
     label: 'Cocke',
@@ -54183,7 +54155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18548,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47031: {
     label: 'Coffee',
@@ -54198,7 +54170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26890,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47033: {
     label: 'Crockett',
@@ -54213,7 +54185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7096,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47035: {
     label: 'Cumberland',
@@ -54228,7 +54200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29344,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47037: {
     label: 'Davidson',
@@ -54243,7 +54215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 470479,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47039: {
     label: 'Decatur',
@@ -54258,7 +54230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4560,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47041: {
     label: 'DeKalb',
@@ -54273,7 +54245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8714,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47043: {
     label: 'Dickson',
@@ -54288,7 +54260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27017,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47045: {
     label: 'Dyer',
@@ -54303,7 +54275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15502,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47047: {
     label: 'Fayette',
@@ -54318,7 +54290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24180,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47049: {
     label: 'Fentress',
@@ -54333,7 +54305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6462,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47051: {
     label: 'Franklin',
@@ -54348,7 +54320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18032,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47053: {
     label: 'Gibson',
@@ -54363,7 +54335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23016,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47055: {
     label: 'Giles',
@@ -54378,7 +54350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11952,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47057: {
     label: 'Grainger',
@@ -54393,7 +54365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11719,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47059: {
     label: 'Greene',
@@ -54408,7 +54380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32704,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47061: {
     label: 'Grundy',
@@ -54423,7 +54395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4215,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47063: {
     label: 'Hamblen',
@@ -54438,7 +54410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28429,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47065: {
     label: 'Hamilton',
@@ -54453,7 +54425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 214535,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47067: {
     label: 'Hancock',
@@ -54468,7 +54440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2199,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47069: {
     label: 'Hardeman',
@@ -54483,7 +54455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12095,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47071: {
     label: 'Hardin',
@@ -54498,7 +54470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10718,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47073: {
     label: 'Hawkins',
@@ -54513,7 +54485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25961,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47075: {
     label: 'Haywood',
@@ -54528,7 +54500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9370,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47077: {
     label: 'Henderson',
@@ -54543,7 +54515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11876,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47079: {
     label: 'Henry',
@@ -54558,7 +54530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15846,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47081: {
     label: 'Hickman',
@@ -54573,7 +54545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10959,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47083: {
     label: 'Houston',
@@ -54588,7 +54560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3647,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47085: {
     label: 'Humphreys',
@@ -54603,7 +54575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7869,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47087: {
     label: 'Jackson',
@@ -54618,7 +54590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4244,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47089: {
     label: 'Jefferson',
@@ -54633,7 +54605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 28016,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47091: {
     label: 'Johnson',
@@ -54648,7 +54620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6865,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47093: {
     label: 'Knox',
@@ -54663,7 +54635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 290880,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47095: {
     label: 'Lake',
@@ -54678,7 +54650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2537,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47097: {
     label: 'Lauderdale',
@@ -54693,7 +54665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9904,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47099: {
     label: 'Lawrence',
@@ -54708,7 +54680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16673,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47101: {
     label: 'Lewis',
@@ -54723,7 +54695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4461,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47103: {
     label: 'Lincoln',
@@ -54738,7 +54710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14541,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47105: {
     label: 'Loudon',
@@ -54753,7 +54725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35407,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47107: {
     label: 'McMinn',
@@ -54768,7 +54740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22152,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47109: {
     label: 'McNairy',
@@ -54783,7 +54755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12580,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47111: {
     label: 'Macon',
@@ -54798,7 +54770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8311,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47113: {
     label: 'Madison',
@@ -54813,7 +54785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 54726,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47115: {
     label: 'Marion',
@@ -54828,7 +54800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13692,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47117: {
     label: 'Marshall',
@@ -54843,7 +54815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15099,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47119: {
     label: 'Maury',
@@ -54858,7 +54830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 63842,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47121: {
     label: 'Meigs',
@@ -54873,7 +54845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8667,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47123: {
     label: 'Monroe',
@@ -54888,7 +54860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20677,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47125: {
     label: 'Montgomery',
@@ -54903,7 +54875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 129338,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47127: {
     label: 'Moore',
@@ -54918,7 +54890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1455,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47129: {
     label: 'Morgan',
@@ -54933,7 +54905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11330,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47131: {
     label: 'Obion',
@@ -54948,7 +54920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13049,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47133: {
     label: 'Overton',
@@ -54963,7 +54935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8068,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47135: {
     label: 'Perry',
@@ -54978,7 +54950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3386,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47137: {
     label: 'Pickett',
@@ -54993,7 +54965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2324,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_47139: {
     label: 'Polk',
@@ -55008,7 +54980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7126,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47141: {
     label: 'Putnam',
@@ -55023,7 +54995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 41958,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47143: {
     label: 'Rhea',
@@ -55038,7 +55010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14639,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47145: {
     label: 'Roane',
@@ -55053,7 +55025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24240,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47147: {
     label: 'Robertson',
@@ -55068,7 +55040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38654,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47149: {
     label: 'Rutherford',
@@ -55083,7 +55055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 186321,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47151: {
     label: 'Scott',
@@ -55098,7 +55070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8301,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47153: {
     label: 'Sequatchie',
@@ -55113,7 +55085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5353,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47155: {
     label: 'Sevier',
@@ -55128,7 +55100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 50723,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47157: {
     label: 'Shelby',
@@ -55143,7 +55115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 540538,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47159: {
     label: 'Smith',
@@ -55158,7 +55130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6844,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47161: {
     label: 'Stewart',
@@ -55173,7 +55145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6253,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47163: {
     label: 'Sullivan',
@@ -55188,7 +55160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 92104,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47165: {
     label: 'Sumner',
@@ -55203,7 +55175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 95478,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47167: {
     label: 'Tipton',
@@ -55218,7 +55190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25660,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47169: {
     label: 'Trousdale',
@@ -55233,7 +55205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4243,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47171: {
     label: 'Unicoi',
@@ -55248,7 +55220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9936,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47173: {
     label: 'Union',
@@ -55263,7 +55235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7140,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47175: {
     label: 'Van Buren',
@@ -55278,7 +55250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3497,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47177: {
     label: 'Warren',
@@ -55293,7 +55265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17533,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47179: {
     label: 'Washington',
@@ -55308,7 +55280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 79798,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47181: {
     label: 'Wayne',
@@ -55323,7 +55295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6966,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_47183: {
     label: 'Weakley',
@@ -55338,7 +55310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13133,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47185: {
     label: 'White',
@@ -55353,7 +55325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11856,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47187: {
     label: 'Williamson',
@@ -55368,7 +55340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 162735,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_47189: {
     label: 'Wilson',
@@ -55383,7 +55355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 79711,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 03, 2022',
   },
   US_48001: {
     label: 'Anderson',
@@ -55398,7 +55370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23268,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48003: {
     label: 'Andrews',
@@ -55413,7 +55385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8432,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48005: {
     label: 'Angelina',
@@ -55428,7 +55400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 41111,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48007: {
     label: 'Aransas',
@@ -55443,7 +55415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13588,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48009: {
     label: 'Archer',
@@ -55458,7 +55430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5108,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48011: {
     label: 'Armstrong',
@@ -55473,7 +55445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 756,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48013: {
     label: 'Atascosa',
@@ -55488,7 +55460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27256,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48015: {
     label: 'Austin',
@@ -55503,7 +55475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14382,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48017: {
     label: 'Bailey',
@@ -55518,7 +55490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2728,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48019: {
     label: 'Bandera',
@@ -55533,7 +55505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11954,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48021: {
     label: 'Bastrop',
@@ -55548,7 +55520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 52299,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48023: {
     label: 'Baylor',
@@ -55563,7 +55535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1441,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48025: {
     label: 'Bee',
@@ -55578,7 +55550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16880,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48027: {
     label: 'Bell',
@@ -55593,7 +55565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 226963,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48029: {
     label: 'Bexar',
@@ -55608,7 +55580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1447417,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48031: {
     label: 'Blanco',
@@ -55623,7 +55595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6882,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48033: {
     label: 'Borden',
@@ -55638,7 +55610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 199,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_48035: {
     label: 'Bosque',
@@ -55653,7 +55625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8461,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48037: {
     label: 'Bowie',
@@ -55668,7 +55640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37786,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48039: {
     label: 'Brazoria',
@@ -55683,7 +55655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 223540,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48041: {
     label: 'Brazos',
@@ -55698,7 +55670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 120247,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48043: {
     label: 'Brewster',
@@ -55713,7 +55685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5208,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48045: {
     label: 'Briscoe',
@@ -55728,7 +55700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 662,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48047: {
     label: 'Brooks',
@@ -55743,7 +55715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7113,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48049: {
     label: 'Brown',
@@ -55758,7 +55730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15794,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48051: {
     label: 'Burleson',
@@ -55773,7 +55745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9136,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48053: {
     label: 'Burnet',
@@ -55788,7 +55760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26295,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48055: {
     label: 'Caldwell',
@@ -55803,7 +55775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 24924,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48057: {
     label: 'Calhoun',
@@ -55818,7 +55790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11015,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48059: {
     label: 'Callahan',
@@ -55833,7 +55805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5874,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48061: {
     label: 'Cameron',
@@ -55848,7 +55820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 343197,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48063: {
     label: 'Camp',
@@ -55863,7 +55835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5334,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48065: {
     label: 'Carson',
@@ -55878,7 +55850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2142,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48067: {
     label: 'Cass',
@@ -55893,7 +55865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10775,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48069: {
     label: 'Castro',
@@ -55908,7 +55880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3337,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48071: {
     label: 'Chambers',
@@ -55923,7 +55895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21271,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48073: {
     label: 'Cherokee',
@@ -55938,7 +55910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21091,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48075: {
     label: 'Childress',
@@ -55953,7 +55925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3463,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48077: {
     label: 'Clay',
@@ -55968,7 +55940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4671,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48079: {
     label: 'Cochran',
@@ -55983,7 +55955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1107,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48081: {
     label: 'Coke',
@@ -55998,7 +55970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1611,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48083: {
     label: 'Coleman',
@@ -56013,7 +55985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2984,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48085: {
     label: 'Collin',
@@ -56028,7 +56000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 715162,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48087: {
     label: 'Collingsworth',
@@ -56043,7 +56015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 989,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48089: {
     label: 'Colorado',
@@ -56058,7 +56030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11079,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48091: {
     label: 'Comal',
@@ -56073,7 +56045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 99456,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48093: {
     label: 'Comanche',
@@ -56088,7 +56060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6286,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48095: {
     label: 'Concho',
@@ -56103,7 +56075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1425,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48097: {
     label: 'Cooke',
@@ -56118,7 +56090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15926,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48099: {
     label: 'Coryell',
@@ -56133,7 +56105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37347,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48101: {
     label: 'Cottle',
@@ -56148,7 +56120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 439,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48103: {
     label: 'Crane',
@@ -56163,7 +56135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1787,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48105: {
     label: 'Crockett',
@@ -56178,7 +56150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1649,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48107: {
     label: 'Crosby',
@@ -56193,7 +56165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2456,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48109: {
     label: 'Culberson',
@@ -56208,7 +56180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1130,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48111: {
     label: 'Dallam',
@@ -56223,7 +56195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48113: {
     label: 'Dallas',
@@ -56238,7 +56210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1628349,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48115: {
     label: 'Dawson',
@@ -56253,7 +56225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4327,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48117: {
     label: 'Deaf Smith',
@@ -56268,7 +56240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8127,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48119: {
     label: 'Delta',
@@ -56283,7 +56255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1892,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48121: {
     label: 'Denton',
@@ -56298,7 +56270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 554855,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 01, 2022',
   },
   US_48123: {
     label: 'DeWitt',
@@ -56313,7 +56285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9268,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48125: {
     label: 'Dickens',
@@ -56328,7 +56300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 723,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48127: {
     label: 'Dimmit',
@@ -56343,7 +56315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7180,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48129: {
     label: 'Donley',
@@ -56358,7 +56330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1106,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48131: {
     label: 'Duval',
@@ -56373,7 +56345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7093,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48133: {
     label: 'Eastland',
@@ -56388,7 +56360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6815,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48135: {
     label: 'Ector',
@@ -56403,7 +56375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 72642,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48137: {
     label: 'Edwards',
@@ -56418,7 +56390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1711,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 28, 2022',
   },
   US_48139: {
     label: 'Ellis',
@@ -56433,7 +56405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 102612,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48141: {
     label: 'El Paso',
@@ -56448,7 +56420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 716062,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48143: {
     label: 'Erath',
@@ -56463,7 +56435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16257,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48145: {
     label: 'Falls',
@@ -56478,7 +56450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8049,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48147: {
     label: 'Fannin',
@@ -56493,7 +56465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16018,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48149: {
     label: 'Fayette',
@@ -56508,7 +56480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12585,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48151: {
     label: 'Fisher',
@@ -56523,7 +56495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1397,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48153: {
     label: 'Floyd',
@@ -56538,7 +56510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2577,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48155: {
     label: 'Foard',
@@ -56553,7 +56525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 479,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48157: {
     label: 'Fort Bend',
@@ -56568,7 +56540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 598727,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48159: {
     label: 'Franklin',
@@ -56583,7 +56555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3921,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48161: {
     label: 'Freestone',
@@ -56598,7 +56570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7732,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48163: {
     label: 'Frio',
@@ -56613,7 +56585,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14130,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48165: {
     label: 'Gaines',
@@ -56628,7 +56600,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4759,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48167: {
     label: 'Galveston',
@@ -56643,7 +56615,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 210548,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48169: {
     label: 'Garza',
@@ -56658,7 +56630,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3255,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48171: {
     label: 'Gillespie',
@@ -56673,7 +56645,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14732,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48173: {
     label: 'Glasscock',
@@ -56688,7 +56660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 629,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48175: {
     label: 'Goliad',
@@ -56703,7 +56675,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3260,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48177: {
     label: 'Gonzales',
@@ -56718,7 +56690,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10587,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48179: {
     label: 'Gray',
@@ -56733,7 +56705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9034,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48181: {
     label: 'Grayson',
@@ -56748,7 +56720,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 62943,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48183: {
     label: 'Gregg',
@@ -56763,7 +56735,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 56766,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48185: {
     label: 'Grimes',
@@ -56778,7 +56750,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15640,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48187: {
     label: 'Guadalupe',
@@ -56793,7 +56765,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 94438,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48189: {
     label: 'Hale',
@@ -56808,7 +56780,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14653,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48191: {
     label: 'Hall',
@@ -56823,7 +56795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1284,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48193: {
     label: 'Hamilton',
@@ -56838,7 +56810,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4214,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48195: {
     label: 'Hansford',
@@ -56853,7 +56825,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2305,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48197: {
     label: 'Hardeman',
@@ -56868,7 +56840,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1833,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48199: {
     label: 'Hardin',
@@ -56883,7 +56855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21960,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48201: {
     label: 'Harris',
@@ -56898,7 +56870,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3083040,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48203: {
     label: 'Harrison',
@@ -56913,7 +56885,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27260,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48205: {
     label: 'Hartley',
@@ -56928,7 +56900,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2660,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48207: {
     label: 'Haskell',
@@ -56943,7 +56915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2199,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48209: {
     label: 'Hays',
@@ -56973,7 +56945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1596,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48213: {
     label: 'Henderson',
@@ -56988,7 +56960,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32743,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48215: {
     label: 'Hidalgo',
@@ -57003,7 +56975,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 689855,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48217: {
     label: 'Hill',
@@ -57018,7 +56990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15342,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48219: {
     label: 'Hockley',
@@ -57033,7 +57005,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9840,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48221: {
     label: 'Hood',
@@ -57048,7 +57020,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29851,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48223: {
     label: 'Hopkins',
@@ -57063,7 +57035,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14735,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48225: {
     label: 'Houston',
@@ -57078,7 +57050,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9688,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48227: {
     label: 'Howard',
@@ -57093,7 +57065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14117,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48229: {
     label: 'Hudspeth',
@@ -57108,7 +57080,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3345,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48231: {
     label: 'Hunt',
@@ -57123,7 +57095,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43007,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48233: {
     label: 'Hutchinson',
@@ -57138,7 +57110,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7455,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48235: {
     label: 'Irion',
@@ -57153,7 +57125,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2241,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48237: {
     label: 'Jack',
@@ -57168,7 +57140,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3636,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48239: {
     label: 'Jackson',
@@ -57183,7 +57155,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6669,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48241: {
     label: 'Jasper',
@@ -57198,7 +57170,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13073,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48243: {
     label: 'Jeff Davis',
@@ -57213,7 +57185,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1171,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_48245: {
     label: 'Jefferson',
@@ -57228,7 +57200,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 130776,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48247: {
     label: 'Jim Hogg',
@@ -57243,7 +57215,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3044,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48249: {
     label: 'Jim Wells',
@@ -57258,7 +57230,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22251,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48251: {
     label: 'Johnson',
@@ -57273,7 +57245,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 82634,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48253: {
     label: 'Jones',
@@ -57288,7 +57260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8774,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48255: {
     label: 'Karnes',
@@ -57303,7 +57275,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8732,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48257: {
     label: 'Kaufman',
@@ -57318,7 +57290,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 73120,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48259: {
     label: 'Kendall',
@@ -57333,7 +57305,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29808,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48261: {
     label: 'Kenedy',
@@ -57348,7 +57320,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 213,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48263: {
     label: 'Kent',
@@ -57363,7 +57335,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 301,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_48265: {
     label: 'Kerr',
@@ -57378,7 +57350,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27270,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48267: {
     label: 'Kimble',
@@ -57393,7 +57365,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1857,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48269: {
     label: 'King',
@@ -57408,7 +57380,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 58,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48271: {
     label: 'Kinney',
@@ -57423,7 +57395,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1959,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48273: {
     label: 'Kleberg',
@@ -57438,7 +57410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18992,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48275: {
     label: 'Knox',
@@ -57453,7 +57425,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1447,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48277: {
     label: 'Lamar',
@@ -57468,7 +57440,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19981,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48279: {
     label: 'Lamb',
@@ -57483,7 +57455,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5639,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48281: {
     label: 'Lampasas',
@@ -57498,7 +57470,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9885,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48283: {
     label: 'La Salle',
@@ -57513,7 +57485,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4753,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48285: {
     label: 'Lavaca',
@@ -57528,7 +57500,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8510,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48287: {
     label: 'Lee',
@@ -57543,7 +57515,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8128,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48289: {
     label: 'Leon',
@@ -57558,7 +57530,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6383,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48291: {
     label: 'Liberty',
@@ -57573,7 +57545,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38086,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48293: {
     label: 'Limestone',
@@ -57588,7 +57560,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8856,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48295: {
     label: 'Lipscomb',
@@ -57603,7 +57575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1110,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48297: {
     label: 'Live Oak',
@@ -57618,7 +57590,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48299: {
     label: 'Llano',
@@ -57633,7 +57605,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11236,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48301: {
     label: 'Loving',
@@ -57648,7 +57620,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48303: {
     label: 'Lubbock',
@@ -57663,7 +57635,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 154540,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48305: {
     label: 'Lynn',
@@ -57678,7 +57650,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2375,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48307: {
     label: 'McCulloch',
@@ -57693,7 +57665,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3065,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48309: {
     label: 'McLennan',
@@ -57708,7 +57680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 135144,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48311: {
     label: 'McMullen',
@@ -57723,7 +57695,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 331,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_48313: {
     label: 'Madison',
@@ -57738,7 +57710,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5982,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48315: {
     label: 'Marion',
@@ -57753,7 +57725,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3967,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48317: {
     label: 'Martin',
@@ -57768,7 +57740,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1873,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48319: {
     label: 'Mason',
@@ -57783,7 +57755,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2019,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48321: {
     label: 'Matagorda',
@@ -57798,7 +57770,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 17310,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48323: {
     label: 'Maverick',
@@ -57813,7 +57785,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60016,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48325: {
     label: 'Medina',
@@ -57828,7 +57800,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29124,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48327: {
     label: 'Menard',
@@ -57843,7 +57815,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1122,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48329: {
     label: 'Midland',
@@ -57858,7 +57830,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 77687,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48331: {
     label: 'Milam',
@@ -57873,7 +57845,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 11306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48333: {
     label: 'Mills',
@@ -57888,7 +57860,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2109,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48335: {
     label: 'Mitchell',
@@ -57903,7 +57875,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3103,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48337: {
     label: 'Montague',
@@ -57918,7 +57890,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7004,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48339: {
     label: 'Montgomery',
@@ -57933,7 +57905,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 343895,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48341: {
     label: 'Moore',
@@ -57948,7 +57920,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9938,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48343: {
     label: 'Morris',
@@ -57963,7 +57935,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5382,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48345: {
     label: 'Motley',
@@ -57978,7 +57950,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 342,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48347: {
     label: 'Nacogdoches',
@@ -57993,7 +57965,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30311,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48349: {
     label: 'Navarro',
@@ -58008,7 +57980,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22969,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48351: {
     label: 'Newton',
@@ -58023,7 +57995,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3422,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48353: {
     label: 'Nolan',
@@ -58038,7 +58010,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6191,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48355: {
     label: 'Nueces',
@@ -58053,7 +58025,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 211585,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_48357: {
     label: 'Ochiltree',
@@ -58068,7 +58040,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3824,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48359: {
     label: 'Oldham',
@@ -58083,7 +58055,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 757,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48361: {
     label: 'Orange',
@@ -58098,7 +58070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30732,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48363: {
     label: 'Palo Pinto',
@@ -58113,7 +58085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10974,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48365: {
     label: 'Panola',
@@ -58128,7 +58100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8812,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48367: {
     label: 'Parker',
@@ -58143,7 +58115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 67235,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48369: {
     label: 'Parmer',
@@ -58158,7 +58130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3924,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48371: {
     label: 'Pecos',
@@ -58173,7 +58145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9260,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48373: {
     label: 'Polk',
@@ -58188,7 +58160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25439,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48375: {
     label: 'Potter',
@@ -58218,7 +58190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6407,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48379: {
     label: 'Rains',
@@ -58233,7 +58205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4620,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48381: {
     label: 'Randall',
@@ -58248,7 +58220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 65320,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48383: {
     label: 'Reagan',
@@ -58263,7 +58235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1521,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48385: {
     label: 'Real',
@@ -58278,7 +58250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1745,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48387: {
     label: 'Red River',
@@ -58293,7 +58265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5011,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48389: {
     label: 'Reeves',
@@ -58308,7 +58280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14072,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48391: {
     label: 'Refugio',
@@ -58323,7 +58295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3751,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48393: {
     label: 'Roberts',
@@ -58338,7 +58310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 265,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48395: {
     label: 'Robertson',
@@ -58353,7 +58325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7658,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48397: {
     label: 'Rockwall',
@@ -58368,7 +58340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 63040,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48399: {
     label: 'Runnels',
@@ -58383,7 +58355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4553,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48401: {
     label: 'Rusk',
@@ -58398,7 +58370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21463,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48403: {
     label: 'Sabine',
@@ -58413,7 +58385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3900,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48405: {
     label: 'San Augustine',
@@ -58428,7 +58400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3339,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_48407: {
     label: 'San Jacinto',
@@ -58443,7 +58415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9970,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48409: {
     label: 'San Patricio',
@@ -58458,7 +58430,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37757,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48411: {
     label: 'San Saba',
@@ -58473,7 +58445,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2423,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48413: {
     label: 'Schleicher',
@@ -58488,7 +58460,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1166,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48415: {
     label: 'Scurry',
@@ -58503,7 +58475,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7826,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48417: {
     label: 'Shackelford',
@@ -58518,7 +58490,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1210,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48419: {
     label: 'Shelby',
@@ -58533,7 +58505,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9186,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48421: {
     label: 'Sherman',
@@ -58548,7 +58520,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1058,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48423: {
     label: 'Smith',
@@ -58563,7 +58535,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 109243,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48425: {
     label: 'Somervell',
@@ -58578,7 +58550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4165,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48427: {
     label: 'Starr',
@@ -58593,7 +58565,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 66252,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48429: {
     label: 'Stephens',
@@ -58608,7 +58580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3479,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48431: {
     label: 'Sterling',
@@ -58623,7 +58595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 504,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48433: {
     label: 'Stonewall',
@@ -58638,7 +58610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 557,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   US_48435: {
     label: 'Sutton',
@@ -58653,7 +58625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1675,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48437: {
     label: 'Swisher',
@@ -58668,7 +58640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3009,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48439: {
     label: 'Tarrant',
@@ -58698,7 +58670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70676,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48443: {
     label: 'Terrell',
@@ -58713,7 +58685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 411,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_48445: {
     label: 'Terry',
@@ -58728,7 +58700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5214,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48447: {
     label: 'Throckmorton',
@@ -58743,7 +58715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 611,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_48449: {
     label: 'Titus',
@@ -58758,7 +58730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13154,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48451: {
     label: 'Tom Green',
@@ -58773,7 +58745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 60568,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48453: {
     label: 'Travis',
@@ -58803,7 +58775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5725,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48457: {
     label: 'Tyler',
@@ -58818,7 +58790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7994,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48459: {
     label: 'Upshur',
@@ -58833,7 +58805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14422,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48461: {
     label: 'Upton',
@@ -58848,7 +58820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1466,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48463: {
     label: 'Uvalde',
@@ -58863,7 +58835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14845,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48465: {
     label: 'Val Verde',
@@ -58878,7 +58850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 34688,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48467: {
     label: 'Van Zandt',
@@ -58893,7 +58865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21456,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48469: {
     label: 'Victoria',
@@ -58908,7 +58880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45505,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48471: {
     label: 'Walker',
@@ -58923,7 +58895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 35622,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48473: {
     label: 'Waller',
@@ -58938,7 +58910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 23234,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48475: {
     label: 'Ward',
@@ -58953,7 +58925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4311,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48477: {
     label: 'Washington',
@@ -58968,7 +58940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18313,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48479: {
     label: 'Webb',
@@ -58983,7 +58955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 308539,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48481: {
     label: 'Wharton',
@@ -58998,7 +58970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21106,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48483: {
     label: 'Wheeler',
@@ -59013,7 +58985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2145,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48485: {
     label: 'Wichita',
@@ -59028,7 +59000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 70196,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48487: {
     label: 'Wilbarger',
@@ -59043,7 +59015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6754,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48489: {
     label: 'Willacy',
@@ -59058,7 +59030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14494,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48491: {
     label: 'Williamson',
@@ -59073,7 +59045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 417846,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48493: {
     label: 'Wilson',
@@ -59088,7 +59060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27227,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48495: {
     label: 'Winkler',
@@ -59103,7 +59075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3127,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48497: {
     label: 'Wise',
@@ -59118,7 +59090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27585,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48499: {
     label: 'Wood',
@@ -59133,7 +59105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19864,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48501: {
     label: 'Yoakum',
@@ -59148,7 +59120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3523,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48503: {
     label: 'Young',
@@ -59163,7 +59135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7451,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48505: {
     label: 'Zapata',
@@ -59178,7 +59150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8635,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_48507: {
     label: 'Zavala',
@@ -59193,7 +59165,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6214,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_Utah_Bear_River: {
     label: 'Bear River',
@@ -59208,7 +59180,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_Utah_Central_Utah: {
     label: 'Central Utah',
@@ -59223,7 +59195,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_Utah_Southeast_Utah: {
     label: 'Southeast Utah',
@@ -59238,7 +59210,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_Utah_Southwest_Utah: {
     label: 'Southwest Utah',
@@ -59253,7 +59225,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_Utah_TriCounty: {
     label: 'TriCounty',
@@ -59268,7 +59240,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_Utah_Weber_Morgan: {
     label: 'Weber-Morgan',
@@ -59283,7 +59255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49011: {
     label: 'Davis',
@@ -59298,7 +59270,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 246206,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49035: {
     label: 'Salt Lake',
@@ -59313,7 +59285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 840573,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49037: {
     label: 'San Juan',
@@ -59328,7 +59300,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10318,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49043: {
     label: 'Summit',
@@ -59343,7 +59315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 38776,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49045: {
     label: 'Tooele',
@@ -59358,7 +59330,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 43933,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49049: {
     label: 'Utah',
@@ -59373,7 +59345,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 381232,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_49051: {
     label: 'Wasatch',
@@ -59388,7 +59360,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21333,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   US_50001: {
     label: 'Addison',
@@ -59403,7 +59375,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 30284,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50003: {
     label: 'Bennington',
@@ -59418,7 +59390,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27400,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50005: {
     label: 'Caledonia',
@@ -59433,7 +59405,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21713,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50007: {
     label: 'Chittenden',
@@ -59448,7 +59420,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 139122,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50009: {
     label: 'Essex',
@@ -59463,7 +59435,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3532,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   US_50011: {
     label: 'Franklin',
@@ -59478,7 +59450,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 36281,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50013: {
     label: 'Grand Isle',
@@ -59493,7 +59465,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6210,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50015: {
     label: 'Lamoille',
@@ -59508,7 +59480,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 20945,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50017: {
     label: 'Orange',
@@ -59523,7 +59495,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21207,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50019: {
     label: 'Orleans',
@@ -59538,7 +59510,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 19306,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50021: {
     label: 'Rutland',
@@ -59553,7 +59525,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 45613,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50023: {
     label: 'Washington',
@@ -59568,7 +59540,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 48998,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50025: {
     label: 'Windham',
@@ -59583,7 +59555,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 32301,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_50027: {
     label: 'Windsor',
@@ -59598,7 +59570,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 41611,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51001: {
     label: 'Accomack',
@@ -59733,7 +59705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2273,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51019: {
     label: 'Bedford',
@@ -59943,7 +59915,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2433,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_51047: {
     label: 'Culpeper',
@@ -60018,7 +59990,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6954,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51059: {
     label: 'Fairfax',
@@ -60438,7 +60410,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7988,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51115: {
     label: 'Mathews',
@@ -61128,7 +61100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2848,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51590: {
     label: 'Danville',
@@ -61158,7 +61130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3006,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_51600: {
     label: 'Fairfax City',
@@ -61203,7 +61175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5307,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_51630: {
     label: 'Fredericksburg',
@@ -61578,7 +61550,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8969,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_51840: {
     label: 'Winchester',
@@ -61608,7 +61580,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 12388,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53003: {
     label: 'Asotin',
@@ -61623,7 +61595,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9915,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53005: {
     label: 'Benton',
@@ -61638,7 +61610,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 119897,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53007: {
     label: 'Chelan',
@@ -61653,7 +61625,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 55916,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53009: {
     label: 'Clallam',
@@ -61668,7 +61640,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 54578,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53011: {
     label: 'Clark',
@@ -61683,7 +61655,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 330657,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53013: {
     label: 'Columbia',
@@ -61698,7 +61670,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1892,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53015: {
     label: 'Cowlitz',
@@ -61713,7 +61685,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 67433,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53017: {
     label: 'Douglas',
@@ -61728,7 +61700,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 27432,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53019: {
     label: 'Ferry',
@@ -61743,7 +61715,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4462,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53021: {
     label: 'Franklin',
@@ -61758,7 +61730,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 52254,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53023: {
     label: 'Garfield',
@@ -61773,7 +61745,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 902,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53025: {
     label: 'Grant',
@@ -61788,7 +61760,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 57266,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53027: {
     label: 'Grays Harbor',
@@ -61803,7 +61775,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 47466,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53029: {
     label: 'Island',
@@ -61818,7 +61790,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 67162,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53031: {
     label: 'Jefferson',
@@ -61833,7 +61805,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25614,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53033: {
     label: 'King',
@@ -61848,7 +61820,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1911796,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53035: {
     label: 'Kitsap',
@@ -61863,7 +61835,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 198834,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53037: {
     label: 'Kittitas',
@@ -61878,7 +61850,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 26810,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53039: {
     label: 'Klickitat',
@@ -61893,7 +61865,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10980,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53041: {
     label: 'Lewis',
@@ -61908,7 +61880,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42898,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53043: {
     label: 'Lincoln',
@@ -61923,7 +61895,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6559,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53045: {
     label: 'Mason',
@@ -61938,7 +61910,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 42354,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53047: {
     label: 'Okanogan',
@@ -61953,7 +61925,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 29218,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53049: {
     label: 'Pacific',
@@ -61968,7 +61940,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13932,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53051: {
     label: 'Pend Oreille',
@@ -61983,7 +61955,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5845,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53053: {
     label: 'Pierce',
@@ -61998,7 +61970,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 622817,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53055: {
     label: 'San Juan',
@@ -62013,7 +61985,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 15000,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53057: {
     label: 'Skagit',
@@ -62028,7 +62000,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 89685,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53059: {
     label: 'Skamania',
@@ -62043,7 +62015,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4854,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53061: {
     label: 'Snohomish',
@@ -62058,7 +62030,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 602831,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53063: {
     label: 'Spokane',
@@ -62073,7 +62045,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 334178,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53065: {
     label: 'Stevens',
@@ -62088,7 +62060,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 18563,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53067: {
     label: 'Thurston',
@@ -62103,7 +62075,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 211326,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53069: {
     label: 'Wahkiakum',
@@ -62118,7 +62090,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2266,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53071: {
     label: 'Walla Walla',
@@ -62133,7 +62105,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 39912,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53073: {
     label: 'Whatcom',
@@ -62148,7 +62120,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 171225,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53075: {
     label: 'Whitman',
@@ -62163,7 +62135,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 25051,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_53077: {
     label: 'Yakima',
@@ -62178,7 +62150,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 162574,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54001: {
     label: 'Barbour',
@@ -62283,7 +62255,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2540,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54015: {
     label: 'Clay',
@@ -62313,7 +62285,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5177,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54019: {
     label: 'Fayette',
@@ -62343,7 +62315,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4872,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_54023: {
     label: 'Grant',
@@ -62688,7 +62660,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13230,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54069: {
     label: 'Ohio',
@@ -62733,7 +62705,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4035,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54075: {
     label: 'Pocahontas',
@@ -62823,7 +62795,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4854,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54087: {
     label: 'Roane',
@@ -62883,7 +62855,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4289,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54095: {
     label: 'Tyler',
@@ -62958,7 +62930,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 8780,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_54105: {
     label: 'Wirt',
@@ -62973,7 +62945,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2890,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   US_54107: {
     label: 'Wood',
@@ -63093,7 +63065,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 6744,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   US_55013: {
     label: 'Burnett',
@@ -63288,7 +63260,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2402,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_55039: {
     label: 'Fond du Lac',
@@ -63603,7 +63575,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3786,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_55079: {
     label: 'Milwaukee',
@@ -63708,7 +63680,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3713,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_55093: {
     label: 'Pierce',
@@ -64098,7 +64070,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22659,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56003: {
     label: 'Big Horn',
@@ -64113,7 +64085,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4825,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56005: {
     label: 'Campbell',
@@ -64128,7 +64100,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 14887,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56007: {
     label: 'Carbon',
@@ -64143,7 +64115,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 7127,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56009: {
     label: 'Converse',
@@ -64158,7 +64130,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 4882,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56011: {
     label: 'Crook',
@@ -64173,7 +64145,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2441,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56013: {
     label: 'Fremont',
@@ -64188,7 +64160,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 21749,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56015: {
     label: 'Goshen',
@@ -64203,7 +64175,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5494,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56017: {
     label: 'Hot Springs',
@@ -64218,7 +64190,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2260,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56019: {
     label: 'Johnson',
@@ -64233,7 +64205,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3753,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56021: {
     label: 'Laramie',
@@ -64248,7 +64220,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 58652,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56023: {
     label: 'Lincoln',
@@ -64263,7 +64235,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9039,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56025: {
     label: 'Natrona',
@@ -64278,7 +64250,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 37982,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56027: {
     label: 'Niobrara',
@@ -64293,7 +64265,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 756,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56029: {
     label: 'Park',
@@ -64308,7 +64280,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 13955,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56031: {
     label: 'Platte',
@@ -64323,7 +64295,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3601,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56033: {
     label: 'Sheridan',
@@ -64338,7 +64310,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16727,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56035: {
     label: 'Sublette',
@@ -64353,7 +64325,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3814,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56037: {
     label: 'Sweetwater',
@@ -64368,7 +64340,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22219,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56039: {
     label: 'Teton',
@@ -64383,7 +64355,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 22588,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56041: {
     label: 'Uinta',
@@ -64398,7 +64370,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 10850,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56043: {
     label: 'Washakie',
@@ -64413,7 +64385,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 3514,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_56045: {
     label: 'Weston',
@@ -64428,7 +64400,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2694,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   Uganda: {
     label: 'Uganda',
@@ -64443,7 +64415,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 16037014,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Ukraine: {
     label: 'Ukraine',
@@ -64501,7 +64473,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Chernihiv_Oblast: {
     label: 'Chernihiv Oblast',
@@ -64516,7 +64488,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Chernivtsi_Oblast: {
     label: 'Chernivtsi Oblast',
@@ -64531,7 +64503,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Crimea_Republic_: {
     label: 'Crimea Republic*',
@@ -64561,7 +64533,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Donetsk_Oblast: {
     label: 'Donetsk Oblast',
@@ -64576,7 +64548,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Ivano_Frankivsk_Oblast: {
     label: 'Ivano-Frankivsk Oblast',
@@ -64591,7 +64563,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Kharkiv_Oblast: {
     label: 'Kharkiv Oblast',
@@ -64606,7 +64578,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Kherson_Oblast: {
     label: 'Kherson Oblast',
@@ -64621,7 +64593,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Khmelnytskyi_Oblast: {
     label: 'Khmelnytskyi Oblast',
@@ -64636,7 +64608,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Kiev: {
     label: 'Kiev',
@@ -64651,7 +64623,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Kiev_Oblast: {
     label: 'Kiev Oblast',
@@ -64666,7 +64638,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Kirovohrad_Oblast: {
     label: 'Kirovohrad Oblast',
@@ -64681,7 +64653,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Luhansk_Oblast: {
     label: 'Luhansk Oblast',
@@ -64696,7 +64668,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Lviv_Oblast: {
     label: 'Lviv Oblast',
@@ -64711,7 +64683,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Mykolaiv_Oblast: {
     label: 'Mykolaiv Oblast',
@@ -64726,7 +64698,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Odessa_Oblast: {
     label: 'Odessa Oblast',
@@ -64741,7 +64713,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Poltava_Oblast: {
     label: 'Poltava Oblast',
@@ -64756,7 +64728,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Rivne_Oblast: {
     label: 'Rivne Oblast',
@@ -64771,7 +64743,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Sevastopol_: {
     label: 'Sevastopol*',
@@ -64801,7 +64773,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Ternopil_Oblast: {
     label: 'Ternopil Oblast',
@@ -64816,7 +64788,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Vinnytsia_Oblast: {
     label: 'Vinnytsia Oblast',
@@ -64831,7 +64803,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Volyn_Oblast: {
     label: 'Volyn Oblast',
@@ -64846,7 +64818,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Zakarpattia_Oblast: {
     label: 'Zakarpattia Oblast',
@@ -64861,7 +64833,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Zaporizhia_Oblast: {
     label: 'Zaporizhia Oblast',
@@ -64876,7 +64848,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Ukraine_Zhytomyr_Oblast: {
     label: 'Zhytomyr Oblast',
@@ -64891,7 +64863,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Arab_Emirates: {
     label: 'United Arab Emirates',
@@ -64970,7 +64942,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Scotland: {
     label: 'Scotland',
@@ -65015,7 +64987,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   United_Kingdom_British_Virgin_Islands: {
     label: 'British Virgin Islands',
@@ -65030,7 +65002,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Cayman_Islands: {
     label: 'Cayman Islands',
@@ -65045,7 +65017,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 30, 2022',
   },
   United_Kingdom_Channel_Islands: {
     label: 'Channel Islands',
@@ -65060,7 +65032,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Guernsey: {
     label: 'Guernsey',
@@ -65075,7 +65047,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   United_Kingdom_Jersey: {
     label: 'Jersey',
@@ -65090,7 +65062,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   United_Kingdom_Falkland_Islands__Malvinas_: {
     label: 'Falkland Islands (Malvinas)',
@@ -65105,7 +65077,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Gibraltar: {
     label: 'Gibraltar',
@@ -65120,7 +65092,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 02, 2022',
   },
   United_Kingdom_Isle_of_Man: {
     label: 'Isle of Man',
@@ -65135,7 +65107,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Montserrat: {
     label: 'Montserrat',
@@ -65150,7 +65122,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Turks_and_Caicos_Islands: {
     label: 'Turks and Caicos Islands',
@@ -65165,7 +65137,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Pitcairn_Islands: {
     label: 'Pitcairn Islands',
@@ -65180,7 +65152,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Anguilla: {
     label: 'Anguilla',
@@ -65195,7 +65167,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   United_Kingdom_Saint_Helena__Ascension_and_Tristan_da_Cunha: {
     label: 'Saint Helena, Ascension and Tristan da Cunha',
@@ -65210,7 +65182,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: null,
     unvaccinatedPrevalenceRatio: null,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 07, 2022',
   },
   Uruguay: {
     label: 'Uruguay',
@@ -65225,7 +65197,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 2552282,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 05, 2022',
   },
   Uzbekistan: {
     label: 'Uzbekistan',
@@ -65255,7 +65227,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 123100,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Venezuela: {
     label: 'Venezuela',
@@ -65300,7 +65272,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 1710852,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Yemen: {
     label: 'Yemen',
@@ -65315,7 +65287,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 852727,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 23, 2022',
   },
   Zambia: {
     label: 'Zambia',
@@ -65330,7 +65302,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 9215805,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'November 29, 2022',
   },
   Zimbabwe: {
     label: 'Zimbabwe',
@@ -65345,7 +65317,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 5574790,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   // update_prevalence locations end
 }
