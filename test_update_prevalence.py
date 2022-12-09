@@ -5,7 +5,7 @@ import pytest
 import requests
 from typing import List, Tuple, Optional
 import typing
-from datetime import timedelta, date, datetime, tzinfo, timedelta
+from datetime import timedelta, date, datetime, tzinfo
 
 
 from update_prevalence import (
@@ -309,10 +309,22 @@ def test_PopulationFilteredLogging_issue_delegates_to_log_aggregator(
     mock_logger.log.assert_called_with(logging.DEBUG, "5,000 people affected by issue type five")
 
 
-def test_County_as_app_data(effective_date: date, my_county: County) -> None:
+def test_County_as_app_data_positiveCasePercentage(effective_date: date, my_county: County) -> None:
     my_county.test_positivity_rate = 0.5
     app_location = my_county.as_app_data()
     assert app_location.positiveCasePercentage == 50
+
+
+def test_County_as_app_data_updatedAt(effective_date: date, my_county: County) -> None:
+    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    for i in range(0, len(cases_over_time)):
+        days_since_effective_date = len(cases_over_time) - i - 1
+        print(f"days_since_effective_date: {days_since_effective_date}")
+        my_county.cumulative_cases[
+            effective_date - timedelta(days=days_since_effective_date)
+        ] = cases_over_time[i]
+    app_location = my_county.as_app_data()
+    assert app_location.updatedAt == (effective_date - timedelta(days=8)).strftime("%B %d, %Y")
 
 
 @patch("update_prevalence.logger", spec=Logger)
@@ -346,6 +358,7 @@ def test_County_as_app_data_logs_before_returning_zero_cases_last_week(
     mock_logger.info.assert_called_with(
         "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
     )
+    assert data.updatedAt == (effective_date - timedelta(days=9)).strftime("%B %d, %Y")
 
 
 @patch("update_prevalence.logger", spec=Logger)
@@ -365,6 +378,7 @@ def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
     mock_logger.info.assert_called_with(
         "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
     )
+    assert data.updatedAt == (effective_date - timedelta(days=4)).strftime("%B %d, %Y")
 
 
 @patch("update_prevalence.logger", spec=Logger)
