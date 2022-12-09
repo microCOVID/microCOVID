@@ -148,7 +148,7 @@ export const Locations: { [key: string]: Location } = {
     completeVaccinations: 474396,
     unvaccinatedPrevalenceRatio: 1.0,
     averageFullyVaccinatedMultiplier: 1.0,
-    updatedAt: 'December 08, 2022',
+    updatedAt: 'December 06, 2022',
   },
   US_04: {
     label: 'Arizona',
