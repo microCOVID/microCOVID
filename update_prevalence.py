@@ -120,7 +120,7 @@ def configure_logging() -> None:
     # https://docs.sentry.io/platforms/python/guides/logging/
     # https://getsentry.github.io/sentry-python/integrations.html#module-sentry_sdk.integrations.logging
     sentry_sdk.init(
-        "https://20a4fef5bf06400eac36928f803e6097@o1100628.ingest.sentry.io/6125912",
+        "https://2f4e0fbfce7d40b8a0bf134a3c42a716@o4504284257255424.ingest.sentry.io/4504305860804608",
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
         # We recommend adjusting this value in production.
