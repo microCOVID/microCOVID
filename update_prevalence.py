@@ -119,8 +119,8 @@ def configure_logging() -> None:
     logging.getLogger().addHandler(ch)
 
     sentry_logging = LoggingIntegration(
-        level=logging.WARNING,        # Capture info and above as breadcrumbs
-        event_level=logging.WARNING   # Send errors as events
+        level=logging.WARNING,        # Capture warning and above as breadcrumbs
+        event_level=logging.WARNING   # Send warnings as events
     )   
 
     # https://docs.sentry.io/platforms/python/guides/logging/
