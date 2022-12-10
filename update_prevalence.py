@@ -39,6 +39,7 @@ try:
     import pydantic
     import requests
     import sentry_sdk
+    from sentry_sdk.integrations.logging import LoggingIntegration
 except ImportError:
     print("Virtual environment not set up correctly.")
     print("Run:")
@@ -117,14 +118,20 @@ def configure_logging() -> None:
     # use this formatting for all logging; set it on the root handler
     logging.getLogger().addHandler(ch)
 
+    sentry_logging = LoggingIntegration(
+        level=logging.WARNING,        # Capture info and above as breadcrumbs
+        event_level=logging.WARNING   # Send errors as events
+    )   
+
     # https://docs.sentry.io/platforms/python/guides/logging/
     # https://getsentry.github.io/sentry-python/integrations.html#module-sentry_sdk.integrations.logging
     sentry_sdk.init(
-        "https://2f4e0fbfce7d40b8a0bf134a3c42a716@o4504284257255424.ingest.sentry.io/4504305860804608",
+        dsn="https://2f4e0fbfce7d40b8a0bf134a3c42a716@o4504284257255424.ingest.sentry.io/4504305860804608",
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
         # We recommend adjusting this value in production.
         traces_sample_rate=1.0,
+        integrations=[sentry_logging],
     )
     # set which level of logging will also be sent to sentry
     sentry_sdk.set_level("warning")
@@ -137,7 +144,6 @@ Model = TypeVar("Model", bound=pydantic.BaseModel)
 
 def print_and_log_to_sentry(message: str) -> None:
     logger.warning(message)
-
 
 def calc_effective_date() -> date:
     now = datetime.utcnow() - timedelta(days=1)
