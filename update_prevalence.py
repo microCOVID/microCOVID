@@ -609,6 +609,16 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-15:-7])
 
     @property
+    def updatedAt(self) -> date:
+        cases_from_effective_date_on = self.recent_daily_cumulative_cases[::-1]
+        last_num_cases = cases_from_effective_date_on[0]
+        for i in range(len(cases_from_effective_date_on)):
+            if cases_from_effective_date_on[i] != last_num_cases:
+                return effective_date - timedelta(days=(i - 1))
+            last_num_cases = cases_from_effective_date_on[i]
+        return effective_date - timedelta(days=len(cases_from_effective_date_on))
+
+    @property
     @abc.abstractmethod
     def app_key(self) -> str:
         ...
@@ -776,7 +786,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
             averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
             # we have to format the date like this to get it to be parsed correctly by JS
             # Otherwise it assumes UTC time and will sometimes subtract a day
-            updatedAt=effective_date.strftime("%B %d, %Y"),
+            updatedAt=self.updatedAt.strftime("%B %d, %Y"),
         )
 
 
