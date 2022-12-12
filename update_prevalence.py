@@ -392,7 +392,7 @@ class CovidTimelineCanadaRegion(pydantic.BaseModel):
 class CanadaOpenCovidCases(pydantic.BaseModel):
     SOURCE: ClassVar[
         str
-    ] = "https://api.opencovid.ca/timeseries?stat=cases&loc={hr_uid}&geo=hr&ymd=true&fill=true&before={before}&after={after}"
+    ] = "https://api.opencovid.ca/timeseries?stat=cases&loc={hr_uid}&geo=hr&date=19"
 
     class Data(pydantic.BaseModel):
         class Report(pydantic.BaseModel):
@@ -1685,9 +1685,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 cache,
                 CanadaOpenCovidCases,
                 CanadaOpenCovidCases.SOURCE.format(
-                    hr_uid=region.hruid,
-                    before=canada_effective_date.strftime("%Y-%m-%d"),
-                    after=populate_since.strftime("%Y-%m-%d"),
+                    hr_uid=region.hruid
                 ),
             )
             for report in case_reports.data.cases:
