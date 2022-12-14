@@ -79,11 +79,11 @@ describe('calculateLocationPersonAverage', () => {
   it.each`
     positiveCasePercentage | result
     ${0}                   | ${PREVALENCE}
-    ${4}                   | ${REPORTED_PREVALENCE * (0.04 ** 0.5 * 18.75 + 2)}
-    ${6}                   | ${REPORTED_PREVALENCE * (0.06 ** 0.5 * 18.75 + 2)}
-    ${16}                  | ${REPORTED_PREVALENCE * (0.16 ** 0.5 * 18.75 + 2)}
-    ${100}                 | ${REPORTED_PREVALENCE * (18.75 + 2)}
-    ${null}                | ${REPORTED_PREVALENCE * (18.75 + 2)}
+    ${4}                   | ${REPORTED_PREVALENCE * (0.04 ** 0.5 * 25 + 2)}
+    ${6}                   | ${REPORTED_PREVALENCE * (0.06 ** 0.5 * 25 + 2)}
+    ${16}                  | ${REPORTED_PREVALENCE * (0.16 ** 0.5 * 25 + 2)}
+    ${100}                 | ${REPORTED_PREVALENCE * (25 + 2)}
+    ${null}                | ${REPORTED_PREVALENCE * (25 + 2)}
   `(
     'should compensate for underreporting, positiveCasePercentage = $positiveCasePercentage',
     ({ positiveCasePercentage, result }) => {
@@ -95,12 +95,12 @@ describe('calculateLocationPersonAverage', () => {
 
   it.each`
     day    | result
-    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1500) / 50 + 2)}
-    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1500) / 75 + 2)}
-    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1500) / 100 + 2)}
-    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1500) / 350 + 2)}
+    ${0}   | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 10 + 2)}
+    ${25}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 35 + 2)}
+    ${50}  | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 60 + 2)}
+    ${300} | ${REPORTED_PREVALENCE * ((0.25 ** 0.5 * 1000) / 310 + 2)}
   `(
-    'should reduce the effect of positiveCasePercentage as 1500 / (days + 50), days = $day',
+    'should reduce the effect of positiveCasePercentage as 1000 / (days + 10), days = $day',
     ({ day, result }) => {
       expect(
         calculateLocationPersonAverage(
