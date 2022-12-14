@@ -222,18 +222,6 @@ export const Calculator = (): React.ReactElement => {
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.under_reporting_constants_changed">
-              <strong>DATE_PLACEHOLDER</strong>{' '}
-              <a
-                href="https://covid19-projections.com/estimating-true-infections-revisited/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                HERE_PLACEHOLDER
-              </a>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.omicron_numbers">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
