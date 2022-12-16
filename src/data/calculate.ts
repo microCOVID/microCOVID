@@ -118,7 +118,7 @@ const prevalenceRatio = (positivityPercent: number | null, date: Date) => {
     positivityPercent = 100
   }
   const positivityRate = positivityPercent / 100
-  return (1500 / (day_i + 50)) * positivityRate ** 0.5 + 2
+  return (1000 / (day_i + 10)) * positivityRate ** 0.5 + 2
 }
 
 // These are the variables exposed via query parameters

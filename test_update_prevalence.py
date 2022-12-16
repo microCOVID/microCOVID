@@ -405,7 +405,7 @@ def test_AppLocation_prevalenceRatio_caps_positivity_rate(
     effective_date: date,
 ) -> None:
     my_app_location.positiveCasePercentage = 150
-    assert my_app_location.prevalenceRatio() == 6.089309878213803
+    assert my_app_location.prevalenceRatio() == 3.430615164520744
 
 
 def test_AllData_get_country_or_raise_raises() -> None:
