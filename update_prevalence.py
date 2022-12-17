@@ -119,9 +119,9 @@ def configure_logging() -> None:
     logging.getLogger().addHandler(ch)
 
     sentry_logging = LoggingIntegration(
-        level=logging.WARNING,        # Capture warning and above as breadcrumbs
-        event_level=logging.WARNING   # Send warnings as events
-    )   
+        level=logging.WARNING,  # Capture warning and above as breadcrumbs
+        event_level=logging.WARNING,  # Send warnings as events
+    )
 
     if os.environ.get("DAILY_RUN"):
         # https://docs.sentry.io/platforms/python/guides/logging/
@@ -145,6 +145,7 @@ Model = TypeVar("Model", bound=pydantic.BaseModel)
 
 def print_and_log_to_sentry(message: str) -> None:
     logger.warning(message)
+
 
 def calc_effective_date() -> date:
     now = datetime.utcnow() - timedelta(days=1)
