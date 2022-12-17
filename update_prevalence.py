@@ -123,18 +123,19 @@ def configure_logging() -> None:
         event_level=logging.WARNING   # Send warnings as events
     )   
 
-    # https://docs.sentry.io/platforms/python/guides/logging/
-    # https://getsentry.github.io/sentry-python/integrations.html#module-sentry_sdk.integrations.logging
-    sentry_sdk.init(
-        dsn="https://2f4e0fbfce7d40b8a0bf134a3c42a716@o4504284257255424.ingest.sentry.io/4504305860804608",
-        # Set traces_sample_rate to 1.0 to capture 100%
-        # of transactions for performance monitoring.
-        # We recommend adjusting this value in production.
-        traces_sample_rate=1.0,
-        integrations=[sentry_logging],
-    )
-    # set which level of logging will also be sent to sentry
-    sentry_sdk.set_level("warning")
+    if os.environ.get("DAILY_RUN"):
+        # https://docs.sentry.io/platforms/python/guides/logging/
+        # https://getsentry.github.io/sentry-python/integrations.html#module-sentry_sdk.integrations.logging
+        sentry_sdk.init(
+            dsn="https://2f4e0fbfce7d40b8a0bf134a3c42a716@o4504284257255424.ingest.sentry.io/4504305860804608",
+            # Set traces_sample_rate to 1.0 to capture 100%
+            # of transactions for performance monitoring.
+            # We recommend adjusting this value in production.
+            traces_sample_rate=1.0,
+            integrations=[sentry_logging],
+        )
+        # set which level of logging will also be sent to sentry
+        sentry_sdk.set_level("warning")
 
 
 CAN_API_KEY = os.environ.get("CAN_API_KEY")
@@ -1792,6 +1793,8 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 def main() -> None:
     configure_logging()
+
+    print_and_log_to_sentry("DAILY_RUN test")
 
     if not CAN_API_KEY:
         print("Usage: CAN_API_KEY=${COVID_ACT_NOW_API_KEY} python3 %s" % sys.argv[0])
