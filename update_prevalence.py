@@ -615,6 +615,16 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-15:-7])
 
     @property
+    def updatedAt(self) -> date:
+        cases_from_effective_date_on = self.recent_daily_cumulative_cases[::-1]
+        last_num_cases = cases_from_effective_date_on[0]
+        for i in range(len(cases_from_effective_date_on)):
+            if cases_from_effective_date_on[i] != last_num_cases:
+                return effective_date - timedelta(days=(i - 1))
+            last_num_cases = cases_from_effective_date_on[i]
+        return effective_date - timedelta(days=len(cases_from_effective_date_on))
+
+    @property
     @abc.abstractmethod
     def app_key(self) -> str:
         ...
@@ -782,7 +792,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
             averageFullyVaccinatedMultiplier=self.average_fully_vaccinated_multiplier(),
             # we have to format the date like this to get it to be parsed correctly by JS
             # Otherwise it assumes UTC time and will sometimes subtract a day
-            updatedAt=effective_date.strftime("%B %d, %Y"),
+            updatedAt=self.updatedAt.strftime("%B %d, %Y"),
         )
 
 
@@ -863,19 +873,14 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
     def prevalenceRatio(self) -> float:
         DAY_0 = datetime(2020, 2, 12)
         day_i = (datetime.now() - DAY_0).days
-        positivityRate = self.positiveCasePercentage or 100
-
-        if positivityRate > 100:
+        positivityRate = self.positiveCasePercentage
+        if positivityRate is None or positivityRate > 100:
             positivityRate = 100
-
         if positivityRate < 0:
             self.issue("Positivity rate is negative", f"{positivityRate}")
             positivityRate = 0
-
-        testingUnavailabilityCoefficient = 1500 / (day_i + 50)
-        positivityInferredPrevelenceRatio = (positivityRate / 100) ** 0.5 + 2
-
-        return testingUnavailabilityCoefficient * positivityInferredPrevelenceRatio
+        final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
+        return final
 
     @property
     def population_as_int(self) -> int:

@@ -58,7 +58,7 @@ You can use the _positive test rate_ (the percentage of tests that come back COV
 
 If you live in the US, you can look up the positive test rate in your state at [CovidActNow](https://covidactnow.org).
 
-We use the correction factor proposed by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/)[^15]:
+We use the correction factor proposed by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/):
 \`\`\`
 prevalance_ratio = 1250 / (day_i + 25) * positive_test_rate ** 0.5 + 2
 true_infections = prevalance_ratio * reported_infections
@@ -148,9 +148,6 @@ Compare this with San Francisco County in California, which had [749 new reporte
 
 [^14]:
      If Reasonable Rosie keeps up this rate of 369 microCOVIDs per week, she’ll incur about 20,000 microCOVIDs per year, which implies about a 2% chance of getting COVID during that year. This is lower than the average American, but is too high for comfort for some people!
-
-[^15]:
-     Since the original white paper, this has been [updated](https://github.com/microCOVID/microCOVID/pull/1421) to the 2021-03 model update from the author.
 
 [^essential]: By “essential worker” we mean roughly the same thing as the following two definitions. First: “Frontline workers include, but are not limited to, healthcare workers, protective service workers (police and EMTs), cashiers in grocery and general merchandise stores, production and food processing workers, janitors and maintenance workers, agricultural workers, and truck drivers” ([econofact.org](https://econofact.org/essential-and-frontline-workers-in-the-covid-19-crisis)). Second: “Essential workers are those who must leave their home to do their jobs AND: who interact in person with members of the public; OR who cannot maintain social distancing at their jobs; OR who work directly with people who are homeless or who have serious medical conditions or who are over age 60” (originally from [color.com](https://www.reddit.com/r/sanfrancisco/comments/gacw9v/covid19_testing_sites_falling_short_of_5000_test/)).
 

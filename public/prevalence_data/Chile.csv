@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004103,0.004103,0.00124,3.3099,1.0,0.004103
-Antofagasta,Unknown,Unknown,0.001567,3.3099,1.0,0.005187
-Araucania,Unknown,Unknown,0.001027,3.3099,1.0,0.003399
-Arica y Parinacota,Unknown,Unknown,0.002265,3.3099,1.2024,0.009013
-Atacama,Unknown,Unknown,0.003277,3.3099,1.0582,0.011479
-Aysen,Unknown,Unknown,0.002423,3.3099,1.0,0.008021
-Biobio,Unknown,Unknown,0.001419,3.3099,1.0,0.004697
-Coquimbo,Unknown,Unknown,0.001671,3.3099,1.0,0.005531
-Los Lagos,Unknown,Unknown,0.001275,3.3099,1.0,0.004222
-Los Rios,Unknown,Unknown,0.002126,3.3099,1.0,0.007035
-Magallanes,Unknown,Unknown,0.002072,3.3099,1.0208,0.006999
-Maule,Unknown,Unknown,0.001343,3.3099,1.0,0.004444
-Metropolitana,Unknown,Unknown,0.001031,3.3099,1.0,0.003413
-Nuble,Unknown,Unknown,0.002143,3.3099,1.0,0.007094
-OHiggins,Unknown,Unknown,0.001163,3.3099,1.0,0.003851
-Tarapaca,Unknown,Unknown,0.002224,3.3099,1.1954,0.008798
-Valparaiso,Unknown,Unknown,0.001545,3.3099,1.0,0.005115
+Entire country,0.00281,0.00281,0.001186,2.3695,1.0,0.00281
+Antofagasta,Unknown,Unknown,0.001773,2.3695,1.1314,0.004753
+Araucania,Unknown,Unknown,0.000943,2.3695,1.0,0.002235
+Arica y Parinacota,Unknown,Unknown,0.00299,2.3695,1.3209,0.009359
+Atacama,Unknown,Unknown,0.002578,2.3695,1.0,0.006109
+Aysen,Unknown,Unknown,0.002278,2.3695,1.0,0.005398
+Biobio,Unknown,Unknown,0.001303,2.3695,1.0,0.003088
+Coquimbo,Unknown,Unknown,0.001506,2.3695,1.0,0.003569
+Los Lagos,Unknown,Unknown,0.001049,2.3695,1.0,0.002485
+Los Rios,Unknown,Unknown,0.002084,2.3695,1.0,0.004938
+Magallanes,Unknown,Unknown,0.002102,2.3695,1.0145,0.005052
+Maule,Unknown,Unknown,0.001285,2.3695,1.0,0.003045
+Metropolitana,Unknown,Unknown,0.001007,2.3695,1.0,0.002387
+Nuble,Unknown,Unknown,0.001696,2.3695,1.0,0.004018
+OHiggins,Unknown,Unknown,0.001212,2.3695,1.0414,0.002989
+Tarapaca,Unknown,Unknown,0.002904,2.3695,1.3065,0.008991
+Valparaiso,Unknown,Unknown,0.001359,2.3695,1.0,0.003219
