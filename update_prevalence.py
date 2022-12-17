@@ -1794,8 +1794,6 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
 def main() -> None:
     configure_logging()
 
-    print_and_log_to_sentry("DAILY_RUN test")
-
     if not CAN_API_KEY:
         print("Usage: CAN_API_KEY=${COVID_ACT_NOW_API_KEY} python3 %s" % sys.argv[0])
         sys.exit(1)
