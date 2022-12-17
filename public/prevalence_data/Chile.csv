@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.002752,0.002752,0.001161,2.3695,1.0,0.002752
-Antofagasta,Unknown,Unknown,0.00173,2.3695,1.0938,0.004483
-Araucania,Unknown,Unknown,0.00094,2.3695,1.0,0.002228
-Arica y Parinacota,Unknown,Unknown,0.002853,2.3695,1.2652,0.008553
-Atacama,Unknown,Unknown,0.002637,2.3695,1.0,0.006249
-Aysen,Unknown,Unknown,0.002201,2.3695,1.0,0.005214
+Entire country,0.00281,0.00281,0.001186,2.3695,1.0,0.00281
+Antofagasta,Unknown,Unknown,0.001773,2.3695,1.1314,0.004753
+Araucania,Unknown,Unknown,0.000943,2.3695,1.0,0.002235
+Arica y Parinacota,Unknown,Unknown,0.00299,2.3695,1.3209,0.009359
+Atacama,Unknown,Unknown,0.002578,2.3695,1.0,0.006109
+Aysen,Unknown,Unknown,0.002278,2.3695,1.0,0.005398
 Biobio,Unknown,Unknown,0.001303,2.3695,1.0,0.003088
-Coquimbo,Unknown,Unknown,0.001502,2.3695,1.0,0.003559
-Los Lagos,Unknown,Unknown,0.001,2.3695,1.0,0.00237
-Los Rios,Unknown,Unknown,0.001964,2.3695,1.0,0.004655
-Magallanes,Unknown,Unknown,0.002078,2.3695,1.0,0.004923
-Maule,Unknown,Unknown,0.001271,2.3695,1.0,0.003011
-Metropolitana,Unknown,Unknown,0.000975,2.3695,1.0,0.002311
-Nuble,Unknown,Unknown,0.001692,2.3695,1.0,0.004008
-OHiggins,Unknown,Unknown,0.001152,2.3695,1.0,0.002731
-Tarapaca,Unknown,Unknown,0.002795,2.3695,1.3167,0.008721
-Valparaiso,Unknown,Unknown,0.001362,2.3695,1.0,0.003228
+Coquimbo,Unknown,Unknown,0.001506,2.3695,1.0,0.003569
+Los Lagos,Unknown,Unknown,0.001049,2.3695,1.0,0.002485
+Los Rios,Unknown,Unknown,0.002084,2.3695,1.0,0.004938
+Magallanes,Unknown,Unknown,0.002102,2.3695,1.0145,0.005052
+Maule,Unknown,Unknown,0.001285,2.3695,1.0,0.003045
+Metropolitana,Unknown,Unknown,0.001007,2.3695,1.0,0.002387
+Nuble,Unknown,Unknown,0.001696,2.3695,1.0,0.004018
+OHiggins,Unknown,Unknown,0.001212,2.3695,1.0414,0.002989
+Tarapaca,Unknown,Unknown,0.002904,2.3695,1.3065,0.008991
+Valparaiso,Unknown,Unknown,0.001359,2.3695,1.0,0.003219

@@ -1,17 +1,17 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001436,0.001436,0.000535,2.1721,1.2356,0.001436
+Entire country,0.001441,0.001441,0.00054,2.1721,1.2285,0.001441
 England,Unknown,Unknown,0.000578,2.1721,1.2276,0.001542
 Northern Ireland,Unknown,Unknown,1e-06,2.1721,1.0,1e-06
 Scotland,Unknown,Unknown,0.000419,2.1721,1.1847,0.001079
 Wales,Unknown,Unknown,0.000255,2.1721,1.5287,0.000845
-Bermuda,Unknown,Unknown,1.6e-05,2.1721,1.0,3.5e-05
+Bermuda,Unknown,Unknown,0.000626,2.1721,1.0,0.00136
 British Virgin Islands,Unknown,Unknown,3.3e-05,2.1721,1.0,7.2e-05
 Cayman Islands,Unknown,Unknown,1.5e-05,2.1721,1.0,3.3e-05
 Channel Islands,Unknown,Unknown,6e-06,2.1721,1.0,1.3e-05
 Guernsey,Unknown,Unknown,0.005873,2.1721,2.0,0.025514
-Jersey,Unknown,Unknown,0.004282,2.1721,1.5464,0.014382
+Jersey,Unknown,Unknown,0.006606,2.1721,1.5439,0.022152
 Falkland Islands (Malvinas),Unknown,Unknown,0.000287,2.1721,1.0,0.000624
-Gibraltar,Unknown,Unknown,3e-05,2.1721,1.0,6.4e-05
+Gibraltar,Unknown,Unknown,0.001365,2.1721,1.0,0.002966
 Isle of Man,Unknown,Unknown,1.2e-05,2.1721,1.0,2.6e-05
 Montserrat,Unknown,Unknown,0.0002,2.1721,1.0,0.000435
 Turks and Caicos Islands,Unknown,Unknown,0.000465,2.1721,1.0,0.00101
