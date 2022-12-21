@@ -1,13 +1,13 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.014289,0.014289,0.005825,2.4529,1.0,0.014289
-French Guiana,Unknown,Unknown,0.00381,2.4529,1.0,0.009346
-French Polynesia,Unknown,Unknown,0.000452,2.4529,1.0,0.001109
-Guadeloupe,Unknown,Unknown,2e-06,2.4529,1.0,6e-06
-Martinique,Unknown,Unknown,0.000957,2.4529,1.0,0.002347
-Mayotte,Unknown,Unknown,0.000253,2.4529,1.0,0.00062
-New Caledonia,Unknown,Unknown,0.003916,2.4529,1.0381,0.009972
-Reunion,Unknown,Unknown,0.002045,2.4529,1.3397,0.00672
-Saint Barthelemy,Unknown,Unknown,0.000101,2.4529,1.0,0.000248
-Saint Pierre and Miquelon,Unknown,Unknown,0.000173,2.4529,1.0,0.000423
-St Martin,Unknown,Unknown,2.6e-05,2.4529,1.0,6.3e-05
-Wallis and Futuna,Unknown,Unknown,6.5e-05,2.4529,1.0,0.00016
+Entire country,0.013368,0.013368,0.005451,2.4525,1.0,0.013368
+French Guiana,Unknown,Unknown,0.00144,2.4525,1.0,0.003531
+French Polynesia,Unknown,Unknown,0.000246,2.4525,1.0,0.000602
+Guadeloupe,Unknown,Unknown,2e-06,2.4525,1.0,6e-06
+Martinique,Unknown,Unknown,0.000957,2.4525,1.0,0.002346
+Mayotte,Unknown,Unknown,0.000253,2.4525,1.0,0.00062
+New Caledonia,Unknown,Unknown,0.002743,2.4525,1.0,0.006726
+Reunion,Unknown,Unknown,0.002045,2.4525,1.3397,0.006719
+Saint Barthelemy,Unknown,Unknown,0.000101,2.4525,1.0,0.000248
+Saint Pierre and Miquelon,Unknown,Unknown,0.000173,2.4525,1.0,0.000423
+St Martin,Unknown,Unknown,2.6e-05,2.4525,1.0,6.3e-05
+Wallis and Futuna,Unknown,Unknown,6.5e-05,2.4525,1.0,0.00016
