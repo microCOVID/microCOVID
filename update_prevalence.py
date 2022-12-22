@@ -771,6 +771,9 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
                 f"No cases noted for a week - {type(self).__name__} level",
                 f"No cases reported in at least one week in {self.fullname} for period",
             )
+        if self.cases_last_week != 0 and (cases_per_million < 1):
+            self.issue(f'Less than 1 case per million - {type(self).__name__} level',
+                       f'Only {self.cases_last_week} cases last week when population is {self.population} in {self.name}')
 
         if self.test_positivity_rate is not None and (
             self.test_positivity_rate < 0 or self.test_positivity_rate > 1
