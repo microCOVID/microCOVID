@@ -1,3 +1,3 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.004535,0.003651,0.001272,2.9479,1.0,0.003749
-PEI,Unknown,Unknown,6e-06,2.9479,1.0,1.8e-05
+Entire state,0.004533,0.00365,0.001272,2.947,1.0,0.003748
+PEI,Unknown,Unknown,0.001272,2.947,1.0,0.003748
