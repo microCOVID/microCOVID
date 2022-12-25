@@ -486,6 +486,32 @@ def test_AllData_rollup_totals_no_country_data(mock_logger: Mock, effective_date
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_state_no_population(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 0
+    wyoming.cumulative_cases[effective_date] = 123
+    all_data.rollup_totals()
+    mock_logger.warning.assert_called_with(
+        "Discarding country US due to error: ValueError(\"Missing population data for State(fullname='Wyoming, US', name='Wyoming', population=0, test_positivity_rate=None, cumulative_cases=Counter({datetime.date(2020, 12, 15): 123}), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', fips=None, counties={})\")"
+    )
+    mock_logger.info.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    wyoming.cumulative_cases[effective_date] = 123
+    all_data.rollup_totals()
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
 @patch("update_prevalence.requests.get", spec=requests.get)
 def test_parse_romania_prevalence_data_stale(
     mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
