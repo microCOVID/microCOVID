@@ -1037,11 +1037,7 @@ class AllData:
                 if not parent.cumulative_cases:
                     return False
             if parent.population == 0:  # fake region (Unknown, etc)
-                try:
-                    cases_last_week = parent.cases_last_week
-                except ValueError:
-                    logger.warning(f"Setting zero cases for {parent.name}")
-                    cases_last_week = 0
+                cases_last_week = parent.cases_last_week
                 if not cases_last_week:
                     return False
             return True
