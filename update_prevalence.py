@@ -1040,6 +1040,7 @@ class AllData:
                 try:
                     cases_last_week = parent.cases_last_week
                 except ValueError:
+                    logger.warning(f"Setting zero cases for {parent.name}")
                     cases_last_week = 0
                 if not cases_last_week:
                     return False
