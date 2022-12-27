@@ -16,6 +16,7 @@ from update_prevalence import (
     County,
     LogAggregator,
     log_aggregator,
+    Place,
     PopulationFilteredLogging,
     AppLocation,
     parse_romania_prevalence_data,
@@ -315,14 +316,26 @@ def test_County_as_app_data_positiveCasePercentage(effective_date: date, my_coun
     assert app_location.positiveCasePercentage == 50
 
 
-def test_County_as_app_data_updatedAt(effective_date: date, my_county: County) -> None:
-    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+def add_cumulative_cases(place: Place, effective_date: date, cases_over_time: List[int]) -> None:
     for i in range(0, len(cases_over_time)):
         days_since_effective_date = len(cases_over_time) - i - 1
-        print(f"days_since_effective_date: {days_since_effective_date}")
-        my_county.cumulative_cases[
-            effective_date - timedelta(days=days_since_effective_date)
-        ] = cases_over_time[i]
+        place.cumulative_cases[effective_date - timedelta(days=days_since_effective_date)] = cases_over_time[
+            i
+        ]
+
+
+def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
+    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    add_cumulative_cases(place, effective_date, cases_over_time)
+
+
+def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
+    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5]
+    add_cumulative_cases(place, effective_date, cases_over_time)
+
+
+def test_County_as_app_data_updatedAt(effective_date: date, my_county: County) -> None:
+    add_increasing_cumulative_cases(my_county, effective_date)
     app_location = my_county.as_app_data()
     assert app_location.updatedAt == (effective_date - timedelta(days=8)).strftime("%B %d, %Y")
 
@@ -483,6 +496,46 @@ def test_AllData_rollup_totals_no_country_data(mock_logger: Mock, effective_date
     mock_logger.warning.assert_called_with(
         "Discarding country US due to error: ValueError(\"No country-level case data for Country(fullname='US', name='US', population=999, test_positivity_rate=None, cumulative_cases=Counter(), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), iso3=None, states={})\")"
     )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_state_no_population(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 0
+    wyoming.cumulative_cases[effective_date] = 123
+    all_data.rollup_totals()
+    mock_logger.warning.assert_called_with(
+        "Discarding country US due to error: ValueError(\"Missing population data for State(fullname='Wyoming, US', name='Wyoming', population=0, test_positivity_rate=None, cumulative_cases=Counter({datetime.date(2020, 12, 15): 123}), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', fips=None, counties={})\")"
+    )
+    mock_logger.info.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_fake_region_with_no_cases_last_week_removed(
+    mock_logger: Mock, effective_date: date
+) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    us.population = 123
+    unk = all_data.get_state("Unknown", country="US")
+    unk.population = 0
+    add_stable_cumulative_cases(unk, effective_date)
+    all_data.rollup_totals()
+    assert len(us.states) == 0
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    wyoming.cumulative_cases[effective_date] = 123
+    all_data.rollup_totals()
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_not_called()
 
 
 @patch("update_prevalence.logger", spec=Logger)
