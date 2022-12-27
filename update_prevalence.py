@@ -1036,10 +1036,8 @@ class AllData:
                     parent.cumulative_cases += child.cumulative_cases
                 if not parent.cumulative_cases:
                     return False
-            if parent.population == 0:  # fake region (Unknown, etc)
-                cases_last_week = parent.cases_last_week
-                if not cases_last_week:
-                    return False
+            if parent.population == 0 and not parent.cases_last_week:  # fake region (Unknown, etc)
+                return False
             return True
 
         def rollup_testing(parent: Place, child_attr: str) -> None:
