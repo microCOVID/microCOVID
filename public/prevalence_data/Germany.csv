@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.007447,0.007447,0.002779,2.6122,1.0259,0.007447
-Baden-Wurttemberg,Unknown,Unknown,0.00162,2.6122,1.0289,0.004354
-Bayern,Unknown,Unknown,0.001398,2.6122,1.0975,0.004009
-Berlin,Unknown,Unknown,0.002631,2.6122,1.0,0.006872
-Brandenburg,Unknown,Unknown,0.003016,2.6122,1.0,0.007878
-Bremen,Unknown,Unknown,0.003554,2.6122,1.0,0.009283
-Hamburg,Unknown,Unknown,0.002597,2.6122,1.1442,0.007761
-Hessen,Unknown,Unknown,0.002553,2.6122,1.1398,0.007601
-Mecklenburg-Vorpommern,Unknown,Unknown,0.003615,2.6122,1.0,0.009443
-Niedersachsen,Unknown,Unknown,0.005116,2.6122,1.0419,0.013925
-Nordrhein-Westfalen,Unknown,Unknown,0.003934,2.6122,1.1095,0.011401
-Rheinland-Pfalz,Unknown,Unknown,0.002273,2.6122,1.0,0.005938
-Saarland,Unknown,Unknown,0.002543,2.6122,1.1488,0.007631
-Sachsen,Unknown,Unknown,0.002014,2.6122,1.0,0.00526
-Sachsen-Anhalt,Unknown,Unknown,0.002084,2.6122,1.0,0.005443
-Schleswig-Holstein,Unknown,Unknown,0.003348,2.6122,1.0107,0.00884
-Thuringen,Unknown,Unknown,0.001218,2.6122,1.0,0.003181
+Entire country,0.005528,0.005528,0.002118,2.6105,1.0,0.005528
+Baden-Wurttemberg,Unknown,Unknown,0.001219,2.6105,1.0,0.003183
+Bayern,Unknown,Unknown,0.001048,2.6105,1.0,0.002735
+Berlin,Unknown,Unknown,0.002177,2.6105,1.0,0.005683
+Brandenburg,Unknown,Unknown,0.002254,2.6105,1.0,0.005885
+Bremen,Unknown,Unknown,0.00262,2.6105,1.0,0.00684
+Hamburg,Unknown,Unknown,0.002009,2.6105,1.0,0.005244
+Hessen,Unknown,Unknown,0.001954,2.6105,1.0,0.0051
+Mecklenburg-Vorpommern,Unknown,Unknown,0.002857,2.6105,1.0,0.007458
+Niedersachsen,Unknown,Unknown,0.003901,2.6105,1.0,0.010183
+Nordrhein-Westfalen,Unknown,Unknown,0.003024,2.6105,1.0,0.007894
+Rheinland-Pfalz,Unknown,Unknown,0.00184,2.6105,1.0,0.004803
+Saarland,Unknown,Unknown,0.001865,2.6105,1.0,0.004868
+Sachsen,Unknown,Unknown,0.001375,2.6105,1.0,0.003591
+Sachsen-Anhalt,Unknown,Unknown,0.001555,2.6105,1.0,0.004061
+Schleswig-Holstein,Unknown,Unknown,0.002411,2.6105,1.0,0.006294
+Thuringen,Unknown,Unknown,0.000903,2.6105,1.0,0.002357
