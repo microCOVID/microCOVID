@@ -20,6 +20,7 @@ from update_prevalence import (
     PopulationFilteredLogging,
     AppLocation,
     parse_romania_prevalence_data,
+    parse_canada_prevalence_data,
 )
 from logging import Logger
 import update_prevalence
@@ -557,3 +558,47 @@ def test_parse_romania_prevalence_data_stale(
     mock_logger.info.assert_called_with(
         "No county-level case data (0 people): from Romania due to staleness - last update was 2020-04-02"
     )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_canada_prevalence_data_empty(
+    mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
+) -> None:
+    mock_regions_response = Mock()
+    mock_regions_response.status_code = 200
+    mock_regions_response.text = """region,hruid,name_short,pop"""
+
+    mock_provinces_response = Mock()
+    mock_provinces_response.status_code = 200
+    mock_provinces_response.text = """region,name_ccodwg,name_canonical"""
+
+    mock_vaccine_distribution_response = Mock()
+    mock_vaccine_distribution_response.status_code = 200
+    mock_vaccine_distribution_response.text = json.dumps(
+        {
+            "data": [
+                {
+                    "province": "ABC",
+                    # pfizer_biontech: Optional[int]
+                    # pfizer_biontech_administered: Optional[int]
+                    # moderna: Optional[int]
+                    # moderna_administered: Optional[int]
+                    # astrazeneca: Optional[int]
+                    # astrazeneca_administered: Optional[int]
+                    # johnson: Optional[int]
+                    # johnson_administered: Optional[int]
+                },
+            ]
+        }
+    )
+
+    mock_get.side_effect = [
+        mock_regions_response,
+        mock_provinces_response,
+        mock_vaccine_distribution_response,
+    ]
+    data.get_country("Canada")
+
+    parse_canada_prevalence_data(cache, data)
+    assert len(data.countries['Canada'].states) == 0
