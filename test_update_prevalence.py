@@ -6,6 +6,7 @@ import requests
 from typing import List, Tuple, Optional
 import typing
 from datetime import timedelta, date, datetime, tzinfo
+from sentry_sdk.integrations.logging import LoggingIntegration
 
 
 from update_prevalence import (
@@ -21,6 +22,7 @@ from update_prevalence import (
     AppLocation,
     parse_romania_prevalence_data,
     parse_canada_prevalence_data,
+    main,
 )
 from logging import Logger
 import update_prevalence
@@ -601,4 +603,62 @@ def test_parse_canada_prevalence_data_empty(
     data.get_country("Canada")
 
     parse_canada_prevalence_data(cache, data)
-    assert len(data.countries['Canada'].states) == 0
+    assert len(data.countries["Canada"].states) == 0
+
+
+@patch("update_prevalence.DataCache", spec=DataCache)
+@patch("update_prevalence.LoggingIntegration", spec=LoggingIntegration)
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_main_empty_data(
+    mock_get: Mock,
+    mock_logger: Mock,
+    mock_LoggingIntegration: Mock,
+    mock_DataCache: Mock,
+    cache: Mock,
+    data: AllData,
+) -> None:
+    mock_DataCache.load.return_value = cache
+
+    mock_jhu_place_facts_response = Mock()
+    mock_jhu_place_facts_response.status_code = 200
+    mock_jhu_place_facts_response.text = (
+        """UID,iso2,iso3,code3,FIPS,Admin2,Province_State,Country_Region,Lat,Long_,Combined_Key,Population"""
+    )
+
+    mock_jhu_daily_report = Mock()
+    mock_jhu_daily_report.status_code = 200
+    mock_jhu_daily_report.text = """FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incident_Rate,Case_Fatality_Ratio"""
+
+    # https://raw.githubusercontent.com/govex/COVID-19/master/data_tables/vaccine_data/global_data/time_series_covid19_vaccine_global.csv
+    mock_jhu_vaccine_global = Mock()
+    mock_jhu_vaccine_global.status_code = 200
+    mock_jhu_vaccine_global.text = (
+        """Date,UID,Province_State,Country_Region,Doses_admin,People_at_least_one_dose"""
+    )
+
+    mock_get.side_effect = [
+        mock_jhu_place_facts_response,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,
+        mock_jhu_daily_report,  # 12-02-2020
+        mock_jhu_daily_report,  # 12-01-2020
+        mock_jhu_daily_report,  # 11-30-2020
+        mock_jhu_daily_report,  # 11-29-2020
+        mock_jhu_vaccine_global,
+    ]
+    with pytest.raises(ValueError) as e:
+        main()
+
+    assert "Not able to gain data" in str(e.value)
