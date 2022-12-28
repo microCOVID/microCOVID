@@ -16,9 +16,11 @@ from update_prevalence import (
     County,
     LogAggregator,
     log_aggregator,
+    Place,
     PopulationFilteredLogging,
     AppLocation,
     parse_romania_prevalence_data,
+    parse_canada_prevalence_data,
 )
 from logging import Logger
 import update_prevalence
@@ -315,14 +317,26 @@ def test_County_as_app_data_positiveCasePercentage(effective_date: date, my_coun
     assert app_location.positiveCasePercentage == 50
 
 
-def test_County_as_app_data_updatedAt(effective_date: date, my_county: County) -> None:
-    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+def add_cumulative_cases(place: Place, effective_date: date, cases_over_time: List[int]) -> None:
     for i in range(0, len(cases_over_time)):
         days_since_effective_date = len(cases_over_time) - i - 1
-        print(f"days_since_effective_date: {days_since_effective_date}")
-        my_county.cumulative_cases[
-            effective_date - timedelta(days=days_since_effective_date)
-        ] = cases_over_time[i]
+        place.cumulative_cases[effective_date - timedelta(days=days_since_effective_date)] = cases_over_time[
+            i
+        ]
+
+
+def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
+    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    add_cumulative_cases(place, effective_date, cases_over_time)
+
+
+def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
+    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5]
+    add_cumulative_cases(place, effective_date, cases_over_time)
+
+
+def test_County_as_app_data_updatedAt(effective_date: date, my_county: County) -> None:
+    add_increasing_cumulative_cases(my_county, effective_date)
     app_location = my_county.as_app_data()
     assert app_location.updatedAt == (effective_date - timedelta(days=8)).strftime("%B %d, %Y")
 
@@ -336,6 +350,28 @@ def test_County_as_app_data_validates_positivity_rate(
     assert app_location.positiveCasePercentage is None
     mock_logger.info.assert_has_calls(
         [call("Invalid test positivity rate (123 people): test rate for My County is 1.5")]
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    for i in range(0, 5):
+        d = effective_date - timedelta(days=i)
+        my_county.cumulative_cases[d] = 101
+    for i in range(5, 16):
+        d = effective_date - timedelta(days=i)
+        my_county.cumulative_cases[d] = 100
+    my_county.population = 2_000_000
+    cases_last_week = my_county.cases_last_week
+    assert cases_last_week == 1
+    cases_week_before = my_county.cases_week_before
+    assert cases_week_before == 0
+    data = my_county.as_app_data()
+    assert data is not None
+    mock_logger.info.assert_called_with(
+        "Less than 1 case per million - County level (2,000,000 people): Only 1 cases last week when population is 2000000 in My County"
     )
 
 
@@ -464,6 +500,46 @@ def test_AllData_rollup_totals_no_country_data(mock_logger: Mock, effective_date
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_state_no_population(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 0
+    wyoming.cumulative_cases[effective_date] = 123
+    all_data.rollup_totals()
+    mock_logger.warning.assert_called_with(
+        "Discarding country US due to error: ValueError(\"Missing population data for State(fullname='Wyoming, US', name='Wyoming', population=0, test_positivity_rate=None, cumulative_cases=Counter({datetime.date(2020, 12, 15): 123}), tests_in_past_week=None, vaccines_by_type=None, vaccines_total=Vaccination(partial_vaccinations=0, completed_vaccinations=0), country='US', fips=None, counties={})\")"
+    )
+    mock_logger.info.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_fake_region_with_no_cases_last_week_removed(
+    mock_logger: Mock, effective_date: date
+) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    us.population = 123
+    unk = all_data.get_state("Unknown", country="US")
+    unk.population = 0
+    add_stable_cumulative_cases(unk, effective_date)
+    all_data.rollup_totals()
+    assert len(us.states) == 0
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    wyoming.cumulative_cases[effective_date] = 123
+    all_data.rollup_totals()
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
 @patch("update_prevalence.requests.get", spec=requests.get)
 def test_parse_romania_prevalence_data_stale(
     mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
@@ -482,3 +558,47 @@ def test_parse_romania_prevalence_data_stale(
     mock_logger.info.assert_called_with(
         "No county-level case data (0 people): from Romania due to staleness - last update was 2020-04-02"
     )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_canada_prevalence_data_empty(
+    mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
+) -> None:
+    mock_regions_response = Mock()
+    mock_regions_response.status_code = 200
+    mock_regions_response.text = """region,hruid,name_short,pop"""
+
+    mock_provinces_response = Mock()
+    mock_provinces_response.status_code = 200
+    mock_provinces_response.text = """region,name_ccodwg,name_canonical"""
+
+    mock_vaccine_distribution_response = Mock()
+    mock_vaccine_distribution_response.status_code = 200
+    mock_vaccine_distribution_response.text = json.dumps(
+        {
+            "data": [
+                {
+                    "province": "ABC",
+                    # pfizer_biontech: Optional[int]
+                    # pfizer_biontech_administered: Optional[int]
+                    # moderna: Optional[int]
+                    # moderna_administered: Optional[int]
+                    # astrazeneca: Optional[int]
+                    # astrazeneca_administered: Optional[int]
+                    # johnson: Optional[int]
+                    # johnson_administered: Optional[int]
+                },
+            ]
+        }
+    )
+
+    mock_get.side_effect = [
+        mock_regions_response,
+        mock_provinces_response,
+        mock_vaccine_distribution_response,
+    ]
+    data.get_country("Canada")
+
+    parse_canada_prevalence_data(cache, data)
+    assert len(data.countries['Canada'].states) == 0

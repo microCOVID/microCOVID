@@ -775,10 +775,22 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         if self.cases_last_week < 0:
             raise ValueError(f"Cases for {self.name} is {self.cases_last_week}.")
 
+        cases_per_million = (self.cases_last_week * 1_000_000) / self.population
+        if self.cases_last_week == 0 and self.cases_week_before == 0:
+            self.issue(
+                f"No cases noted for either week - {type(self).__name__} level",
+                f"No cases reported in either week in {self.fullname} for period",
+            )
         if self.cases_last_week == 0 or self.cases_week_before == 0:
             self.issue(
                 f"No cases noted for a week - {type(self).__name__} level",
                 f"No cases reported in at least one week in {self.fullname} for period",
+            )
+        cases_per_million = (1_000_000 * self.cases_last_week) / self.population
+        if self.cases_last_week != 0 and (cases_per_million < 1):
+            self.issue(
+                f"Less than 1 case per million - {type(self).__name__} level",
+                f"Only {self.cases_last_week} cases last week when population is {self.population} in {self.name}",
             )
 
         if self.test_positivity_rate is not None and (
@@ -1033,13 +1045,8 @@ class AllData:
                     parent.cumulative_cases += child.cumulative_cases
                 if not parent.cumulative_cases:
                     return False
-            if parent.population == 0:  # fake region (Unknown, etc)
-                try:
-                    cases_last_week = parent.cases_last_week
-                except ValueError:
-                    cases_last_week = 0
-                if not cases_last_week:
-                    return False
+            if parent.population == 0 and not parent.cases_last_week:  # fake region (Unknown, etc)
+                return False
             return True
 
         def rollup_testing(parent: Place, child_attr: str) -> None:
