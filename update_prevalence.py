@@ -52,6 +52,11 @@ except ImportError:
 
 logger = logging.getLogger("update_prevalence")
 
+# 7 for the current week
+# 7 for the week before
+# 1 more to compare numbers from the day before the week before
+NUM_DAYS_OF_HISTORY = 15
+
 
 class LogAggregator:
     population_affected_by_issue: Dict[str, int] = {}
@@ -537,7 +542,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
             raise ValueError(
                 f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
             )
-        while len(daily_cumulative_cases) < 15:
+        while len(daily_cumulative_cases) < NUM_DAYS_OF_HISTORY:
             prev = current - timedelta(days=1)
             if prev not in self.cumulative_cases:
                 if prev > min(self.cumulative_cases.keys()):
@@ -610,10 +615,14 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
 
     @property
     def cases_last_week(self) -> int:
+        # len([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16][-8:]) == 8
+        # [9, 10, 11, 12, 13, 14, 15, 16]
         return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-8:])
 
     @property
     def cases_week_before(self) -> int:
+        # len([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16][-15:-7]) == 8
+        # [2, 3, 4, 5, 6, 7, 8, 9]
         return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-15:-7])
 
     @property
@@ -1639,7 +1648,8 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 
 def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
-    populate_since = canada_effective_date - timedelta(days=16)
+    # adding one as the API compares with '>'
+    populate_since = canada_effective_date - timedelta(days=NUM_DAYS_OF_HISTORY + 1)
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
 
     try:
@@ -1815,7 +1825,8 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        populate_since = effective_date - timedelta(days=16)
+        # adding one as the API compares with '>'
+        populate_since = effective_date - timedelta(days=NUM_DAYS_OF_HISTORY + 1)
         current = effective_date
         while current >= populate_since:
             parse_jhu_daily_report(cache, data, current)
