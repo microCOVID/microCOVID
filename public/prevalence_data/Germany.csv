@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.005528,0.005528,0.002118,2.6105,1.0,0.005528
-Baden-Wurttemberg,Unknown,Unknown,0.001219,2.6105,1.0,0.003183
-Bayern,Unknown,Unknown,0.001048,2.6105,1.0,0.002735
-Berlin,Unknown,Unknown,0.002177,2.6105,1.0,0.005683
-Brandenburg,Unknown,Unknown,0.002254,2.6105,1.0,0.005885
-Bremen,Unknown,Unknown,0.00262,2.6105,1.0,0.00684
-Hamburg,Unknown,Unknown,0.002009,2.6105,1.0,0.005244
-Hessen,Unknown,Unknown,0.001954,2.6105,1.0,0.0051
-Mecklenburg-Vorpommern,Unknown,Unknown,0.002857,2.6105,1.0,0.007458
-Niedersachsen,Unknown,Unknown,0.003901,2.6105,1.0,0.010183
-Nordrhein-Westfalen,Unknown,Unknown,0.003024,2.6105,1.0,0.007894
-Rheinland-Pfalz,Unknown,Unknown,0.00184,2.6105,1.0,0.004803
-Saarland,Unknown,Unknown,0.001865,2.6105,1.0,0.004868
-Sachsen,Unknown,Unknown,0.001375,2.6105,1.0,0.003591
-Sachsen-Anhalt,Unknown,Unknown,0.001555,2.6105,1.0,0.004061
-Schleswig-Holstein,Unknown,Unknown,0.002411,2.6105,1.0,0.006294
-Thuringen,Unknown,Unknown,0.000903,2.6105,1.0,0.002357
+Entire country,0.005775,0.005775,0.002213,2.6099,1.0,0.005775
+Baden-Wurttemberg,Unknown,Unknown,0.001343,2.6099,1.0,0.003506
+Bayern,Unknown,Unknown,0.00119,2.6099,1.0,0.003105
+Berlin,Unknown,Unknown,0.002227,2.6099,1.0,0.005812
+Brandenburg,Unknown,Unknown,0.002132,2.6099,1.0,0.005563
+Bremen,Unknown,Unknown,0.003404,2.6099,1.0,0.008884
+Hamburg,Unknown,Unknown,0.002007,2.6099,1.0,0.005238
+Hessen,Unknown,Unknown,0.002359,2.6099,1.041,0.006409
+Mecklenburg-Vorpommern,Unknown,Unknown,0.002581,2.6099,1.0,0.006737
+Niedersachsen,Unknown,Unknown,0.003917,2.6099,1.0,0.010223
+Nordrhein-Westfalen,Unknown,Unknown,0.003146,2.6099,1.0,0.008211
+Rheinland-Pfalz,Unknown,Unknown,0.0018,2.6099,1.0,0.004697
+Saarland,Unknown,Unknown,0.00206,2.6099,1.0,0.005376
+Sachsen,Unknown,Unknown,0.001208,2.6099,1.0,0.003153
+Sachsen-Anhalt,Unknown,Unknown,0.001575,2.6099,1.0,0.00411
+Schleswig-Holstein,Unknown,Unknown,0.002515,2.6099,1.0,0.006563
+Thuringen,Unknown,Unknown,0.000981,2.6099,1.0,0.002559
