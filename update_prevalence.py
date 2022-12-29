@@ -538,21 +538,14 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         """
         daily_cumulative_cases: List[int] = []
         current = effective_date
-        if current not in self.cumulative_cases:
-            raise ValueError(
-                f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
-            )
+
         while len(daily_cumulative_cases) < NUM_DAYS_OF_HISTORY:
-            prev = current - timedelta(days=1)
-            if prev not in self.cumulative_cases:
-                if prev > min(self.cumulative_cases.keys()):
-                    # Gaps in the data shouldn't happen
-                    raise ValueError(f"Missing case count for {self.fullname} on {prev:%Y-%m-%d}")
-                # But missing data at the beginning is normal -- counties
-                # typically only show up when they have any cases.
-                self.cumulative_cases[prev] = self.cumulative_cases[current]
+            if current not in self.cumulative_cases:
+                raise ValueError(
+                    f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
+                )
             daily_cumulative_cases.append(self.cumulative_cases[current])
-            current = prev
+            current = current - timedelta(days=1)
         return daily_cumulative_cases[::-1]
 
     # Makes an estimate of the number of new cases in a slice of daily cumulative
@@ -617,13 +610,17 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
     def cases_last_week(self) -> int:
         # len([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16][-8:]) == 8
         # [9, 10, 11, 12, 13, 14, 15, 16]
-        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-8:])
+        last_week = self.recent_daily_cumulative_cases[-8:]
+        assert len(last_week) == 8
+        return self.cases_in_cum_cases(last_week)
 
     @property
     def cases_week_before(self) -> int:
         # len([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16][-15:-7]) == 8
         # [2, 3, 4, 5, 6, 7, 8, 9]
-        return self.cases_in_cum_cases(self.recent_daily_cumulative_cases[-15:-7])
+        week_before = self.recent_daily_cumulative_cases[-15:-7]
+        assert len(week_before) == 8
+        return self.cases_in_cum_cases(week_before)
 
     @property
     def updatedAt(self) -> date:
