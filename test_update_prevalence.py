@@ -68,7 +68,7 @@ def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
 
 
 def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
-    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5]
+    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
     add_cumulative_cases(place, effective_date, cases_over_time)
 
 
@@ -82,7 +82,6 @@ def my_county(effective_date: date) -> County:
         population=123,
     )
     add_stable_cumulative_cases(my_county, effective_date)
-    my_county.cumulative_cases[effective_date] = 123
     return my_county
 
 
