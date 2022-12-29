@@ -1822,10 +1822,9 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        # adding one as the API compares with '>'
-        populate_since = effective_date - timedelta(days=NUM_DAYS_OF_HISTORY + 1)
+        populate_from = effective_date - timedelta(days=NUM_DAYS_OF_HISTORY - 1)
         current = effective_date
-        while current >= populate_since:
+        while current >= populate_from:
             parse_jhu_daily_report(cache, data, current)
             current -= timedelta(days=1)
 
