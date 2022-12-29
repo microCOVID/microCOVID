@@ -420,6 +420,23 @@ def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_Place_recent_daily_cumulative_cases(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    assert [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] == my_county.recent_daily_cumulative_cases
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_Place_recent_daily_cumulative_cases_date_missing(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    del my_county.cumulative_cases[effective_date - timedelta(days=3)]
+    with pytest.raises(ValueError) as e:
+        my_county.recent_daily_cumulative_cases
+    assert "Missing data for" in str(e.value)
+
+
+@patch("update_prevalence.logger", spec=Logger)
 def test_AppLocation_prevalenceRatio_also_validates_positivity_rate(
     mock_logger: Mock, my_app_location: AppLocation
 ) -> None:
