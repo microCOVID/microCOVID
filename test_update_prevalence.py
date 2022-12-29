@@ -54,6 +54,24 @@ def large_place() -> PopulationFilteredLogging:
     return MyPlace(100000)
 
 
+def add_cumulative_cases(place: Place, effective_date: date, cases_over_time: List[int]) -> None:
+    for i in range(0, len(cases_over_time)):
+        days_since_effective_date = len(cases_over_time) - i - 1
+        place.cumulative_cases[effective_date - timedelta(days=days_since_effective_date)] = cases_over_time[
+            i
+        ]
+
+
+def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
+    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    add_cumulative_cases(place, effective_date, cases_over_time)
+
+
+def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
+    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5]
+    add_cumulative_cases(place, effective_date, cases_over_time)
+
+
 @pytest.fixture
 def my_county(effective_date: date) -> County:
     my_county = County(
@@ -63,6 +81,7 @@ def my_county(effective_date: date) -> County:
         state="My State",
         population=123,
     )
+    add_stable_cumulative_cases(my_county, effective_date)
     my_county.cumulative_cases[effective_date] = 123
     return my_county
 
@@ -317,24 +336,6 @@ def test_County_as_app_data_positiveCasePercentage(effective_date: date, my_coun
     my_county.test_positivity_rate = 0.5
     app_location = my_county.as_app_data()
     assert app_location.positiveCasePercentage == 50
-
-
-def add_cumulative_cases(place: Place, effective_date: date, cases_over_time: List[int]) -> None:
-    for i in range(0, len(cases_over_time)):
-        days_since_effective_date = len(cases_over_time) - i - 1
-        place.cumulative_cases[effective_date - timedelta(days=days_since_effective_date)] = cases_over_time[
-            i
-        ]
-
-
-def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
-    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-    add_cumulative_cases(place, effective_date, cases_over_time)
-
-
-def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
-    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5]
-    add_cumulative_cases(place, effective_date, cases_over_time)
 
 
 def test_County_as_app_data_updatedAt(effective_date: date, my_county: County) -> None:
