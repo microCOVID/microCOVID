@@ -667,8 +667,6 @@ def test_main_empty_data(
         mock_jhu_daily_report,
         mock_jhu_daily_report,
         mock_jhu_daily_report,
-        mock_jhu_daily_report,
-        mock_jhu_daily_report,
         mock_jhu_daily_report,  # 12-02-2020
         mock_jhu_daily_report,  # 12-01-2020
         mock_jhu_daily_report,  # 11-30-2020
