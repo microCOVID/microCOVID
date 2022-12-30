@@ -1,21 +1,21 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.001026,0.001026,0.000402,2.5248,1.0104,0.001026
-Andalusia,Unknown,Unknown,0.000194,2.5248,1.1126,0.000544
-Aragon,Unknown,Unknown,0.00024,2.5248,1.1408,0.000691
-Asturias,Unknown,Unknown,0.000388,2.5248,1.097,0.001076
-Baleares,Unknown,Unknown,0.000349,2.5248,2.0,0.001764
-Canarias,Unknown,Unknown,0.000643,2.5248,1.1409,0.001851
-Cantabria,Unknown,Unknown,0.00054,2.5248,1.0,0.001363
-Castilla - La Mancha,Unknown,Unknown,0.000511,2.5248,1.2488,0.001611
-Castilla y Leon,Unknown,Unknown,0.000559,2.5248,1.0726,0.001514
-Catalonia,Unknown,Unknown,0.000356,2.5248,1.0,0.000898
-Ceuta,Unknown,Unknown,0.000224,2.5248,1.0,0.000565
-C. Valenciana,Unknown,Unknown,0.000397,2.5248,1.0717,0.001073
-Extremadura,Unknown,Unknown,0.000386,2.5248,1.2424,0.00121
-Galicia,Unknown,Unknown,0.000602,2.5248,1.1437,0.001738
-Madrid,Unknown,Unknown,0.00042,2.5248,1.0,0.00106
-Melilla,Unknown,Unknown,0.000756,2.5248,1.1053,0.002109
-Murcia,Unknown,Unknown,0.000308,2.5248,1.0247,0.000796
-Navarra,Unknown,Unknown,0.000369,2.5248,1.4311,0.001334
-Pais Vasco,Unknown,Unknown,0.000694,2.5248,1.0,0.001753
-La Rioja,Unknown,Unknown,0.000504,2.5248,1.1805,0.001502
+Entire country,0.001026,0.001026,0.000402,2.5243,1.0104,0.001026
+Andalusia,Unknown,Unknown,0.000194,2.5243,1.1126,0.000544
+Aragon,Unknown,Unknown,0.00024,2.5243,1.1408,0.000691
+Asturias,Unknown,Unknown,0.000388,2.5243,1.097,0.001075
+Baleares,Unknown,Unknown,0.000349,2.5243,2.0,0.001763
+Canarias,Unknown,Unknown,0.000643,2.5243,1.1409,0.00185
+Cantabria,Unknown,Unknown,0.00054,2.5243,1.0,0.001363
+Castilla - La Mancha,Unknown,Unknown,0.000511,2.5243,1.2488,0.001611
+Castilla y Leon,Unknown,Unknown,0.000559,2.5243,1.0726,0.001514
+Catalonia,Unknown,Unknown,0.000356,2.5243,1.0,0.000897
+Ceuta,Unknown,Unknown,0.000224,2.5243,1.0,0.000565
+C. Valenciana,Unknown,Unknown,0.000397,2.5243,1.0717,0.001073
+Extremadura,Unknown,Unknown,0.000386,2.5243,1.2424,0.00121
+Galicia,Unknown,Unknown,0.000602,2.5243,1.1437,0.001737
+Madrid,Unknown,Unknown,0.00042,2.5243,1.0,0.00106
+Melilla,Unknown,Unknown,0.000756,2.5243,1.1053,0.002108
+Murcia,Unknown,Unknown,0.000308,2.5243,1.0247,0.000796
+Navarra,Unknown,Unknown,0.000369,2.5243,1.4311,0.001334
+Pais Vasco,Unknown,Unknown,0.000694,2.5243,1.0,0.001752
+La Rioja,Unknown,Unknown,0.000504,2.5243,1.1805,0.001501
