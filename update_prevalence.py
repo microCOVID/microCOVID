@@ -1645,8 +1645,7 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 
 def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
-    # adding one as the API compares with '>'
-    populate_since = canada_effective_date - timedelta(days=NUM_DAYS_OF_HISTORY + 1)
+    populate_since = canada_effective_date - timedelta(days=NUM_DAYS_OF_HISTORY - 1)
     canada_one_week_ago = canada_effective_date - timedelta(days=6)
 
     try:
