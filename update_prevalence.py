@@ -8,6 +8,7 @@ if sys.version_info < (3, 6):
 import abc
 import collections
 import csv
+from dataclasses import dataclass
 from functools import reduce
 import json
 import logging
@@ -24,6 +25,8 @@ from typing import (
     Iterator,
     List,
     Dict,
+    Generator,
+    Tuple,
     Type,
     TypeVar,
     Any,
@@ -51,11 +54,6 @@ except ImportError:
     raise
 
 logger = logging.getLogger("update_prevalence")
-
-# 7 for the current week
-# 7 for the week before
-# 1 more to compare numbers from the day before the week before
-NUM_DAYS_OF_HISTORY = 15
 
 
 class LogAggregator:
@@ -170,11 +168,35 @@ def calc_canada_effective_date() -> date:
 effective_date = calc_effective_date()
 canada_effective_date = calc_effective_date()
 
+# 7 for the current week
+# 7 for the week before
+# 1 more to compare numbers from the day before the week before
+num_days_of_history = 15
+
+
+@dataclass
+class DateSpan:
+    first_date: date
+    last_date: date
+
+    def __iter__(self) -> Iterator[date]:
+        num_days = (self.last_date - self.first_date).days + 1
+        return (self.first_date + timedelta(days=x) for x in range(0, num_days))
+
+    @staticmethod
+    def history_from(last_date: date, total_num_days: int) -> "DateSpan":
+        first_date = last_date - timedelta(days=(total_num_days - 1))
+        return DateSpan(first_date=first_date, last_date=last_date)
+
+
+evaluation_range = DateSpan.history_from(effective_date, num_days_of_history)
+
+canada_evaluation_range = evaluation_range
+
+
 # Read the Risk Tracker's vaccine table.
 # Format:
 # Type,0 dose,1 dose,2 dose
-
-
 def import_vaccine_multipliers() -> Dict[str, Dict[str, float]]:
     vaccines = {}
     with open("./public/tracker/vaccine_table.csv", newline="") as csvfile:
@@ -537,15 +559,13 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         up to 5 days ago.
         """
         daily_cumulative_cases: List[int] = []
-        current = effective_date
 
-        while len(daily_cumulative_cases) < NUM_DAYS_OF_HISTORY:
+        for current in reversed(list(evaluation_range)):
             if current not in self.cumulative_cases:
                 raise ValueError(
                     f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
                 )
             daily_cumulative_cases.append(self.cumulative_cases[current])
-            current = current - timedelta(days=1)
         return daily_cumulative_cases[::-1]
 
     # Makes an estimate of the number of new cases in a slice of daily cumulative
@@ -1645,8 +1665,8 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 
 def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
-    populate_since = canada_effective_date - timedelta(days=NUM_DAYS_OF_HISTORY - 1)
-    canada_one_week_ago = canada_effective_date - timedelta(days=6)
+    populate_since = canada_evaluation_range.first_date
+    canada_one_week_ago = canada_evaluation_range.last_date - timedelta(days=6)
 
     try:
         # pull lists of health regions, provinces and territories and
@@ -1821,11 +1841,8 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        populate_from = effective_date - timedelta(days=NUM_DAYS_OF_HISTORY - 1)
-        current = effective_date
-        while current >= populate_from:
+        for current in evaluation_range:
             parse_jhu_daily_report(cache, data, current)
-            current -= timedelta(days=1)
 
         # Global vaccination rates
         parse_jhu_vaccines_global(cache, data)

@@ -14,6 +14,7 @@ from update_prevalence import (
     parse_can_region_summary_by_county,
     AllData,
     DataCache,
+    DateSpan,
     County,
     LogAggregator,
     log_aggregator,
@@ -120,6 +121,9 @@ def cache(effective_date: date) -> DataCache:
 @pytest.fixture(autouse=True)
 def set_effective_date(effective_date: date) -> None:
     update_prevalence.effective_date = effective_date
+    update_prevalence.evaluation_range = DateSpan.history_from(
+        effective_date, update_prevalence.num_days_of_history
+    )
 
 
 @patch("update_prevalence.requests.get", spec=requests.get)
@@ -677,3 +681,23 @@ def test_main_empty_data(
         main()
 
     assert "Not able to gain data" in str(e.value)
+
+
+def test_DateSpan_history_from_one_day(effective_date: date) -> None:
+    date_span = DateSpan.history_from(effective_date, 1)
+    assert [effective_date] == list(date_span)
+
+
+def test_DateSpan_history_from_zero_days(effective_date: date) -> None:
+    date_span = DateSpan.history_from(effective_date, 0)
+    assert [] == list(date_span)
+
+
+def test_DateSpan_history_from_two_days(effective_date: date) -> None:
+    date_span = DateSpan.history_from(effective_date, 2)
+    assert [effective_date - timedelta(days=1), effective_date] == list(date_span)
+
+
+def test_DateSpan_constructor(effective_date: date) -> None:
+    date_span = DateSpan(first_date=effective_date - timedelta(days=1), last_date=effective_date)
+    assert [effective_date - timedelta(days=1), effective_date] == list(date_span)
