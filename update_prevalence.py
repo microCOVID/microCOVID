@@ -1715,7 +1715,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             # ask the API for an arbitrary number of days of history
             # to give a grace period for delayed reporting and then
             # take whatever the latest datapoint it gives.
-            buffer_days = 15
+            buffer_days = 14
             # this doesn't need to be tied to the case data date, but
             # we'll use this date in case we're doing historical
             # analysis or something like that.
@@ -1742,8 +1742,10 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                     )
                     place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
                 else:
-                    place.issue("No vaccination data",
-                                f"No vaccination data available from api.covid19tracker.ca in range for {place.fullname}")
+                    place.issue(
+                        "No vaccination data",
+                        f"No vaccination data available from api.covid19tracker.ca in range for {place.fullname}",
+                    )
 
         def process_regional_case_reports() -> None:
             # get region case counts from opencovid.ca, which seems to have
