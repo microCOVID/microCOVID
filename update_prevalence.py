@@ -1704,18 +1704,36 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         place.population = region.pop
 
         def process_regional_vaccination_reports() -> None:
+            # This API requires a date or date range, but will not
+            # provide data for any dates it doesn't itself have data
+            # for.
+            #
+            # While we of course want the latest data, it's
+            # realistically fine if it's delayed - total number of
+            # vaccinations is a relatively slow-moving number and
+            # won't affect the result significantly.  As a result, we
+            # ask the API for an arbitrary number of days of history
+            # to give a grace period for delayed reporting and then
+            # take whatever the latest datapoint it gives.
+            buffer_days = 14
+            # this doesn't need to be tied to the case data date, but
+            # we'll use this date in case we're doing historical
+            # analysis or something like that.
+            before_date = canada_effective_date
+            after_date = before_date - timedelta(days=buffer_days)
+
+            # get region vaccination counts from covid19tracker.ca.
+            # Canada is not using J&J as of 2021-07-14; all vaccines in use are 2-shot.
             vaccination_reports = parse_json(
                 cache,
                 CanadaRegionalVaccinationReports,
                 CanadaRegionalVaccinationReports.SOURCE.format(
                     hr_uid=region.hruid,
                     before=canada_effective_date.strftime("%Y-%m-%d"),
-                    after=populate_since.strftime("%Y-%m-%d"),
+                    after=after_date.strftime("%Y-%m-%d"),
                 ),
             )
 
-            # get region vaccination counts from covid19tracker.ca.
-            # Canada is not using J&J as of 2021-07-14; all vaccines in use are 2-shot.
             for report in vaccination_reports.data:
                 shots_for_full_vaccination = 2
                 if report.total_vaccinated and report.total_vaccinations:
@@ -1723,6 +1741,14 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                         report.total_vaccinations, report.total_vaccinated, shots_for_full_vaccination
                     )
                     place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
+            if (
+                place.vaccines_total.partial_vaccinations == 0
+                or place.vaccines_total.completed_vaccinations == 0
+            ):
+                place.issue(
+                    "No vaccination data",
+                    f"No vaccination data available from api.covid19tracker.ca in range for {place.fullname}",
+                )
 
         def process_regional_case_reports() -> None:
             # get region case counts from opencovid.ca, which seems to have
