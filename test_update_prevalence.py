@@ -4,7 +4,7 @@ import json
 import logging
 import pytest
 import requests
-from typing import List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional
 import typing
 from datetime import timedelta, date, datetime, tzinfo
 from sentry_sdk.integrations.logging import LoggingIntegration
@@ -29,6 +29,32 @@ from update_prevalence import (
 )
 from logging import Logger
 import update_prevalence
+
+
+@pytest.fixture
+def effective_date() -> date:
+    return date(2020, 12, 15)
+
+
+@pytest.fixture(autouse=True)
+def set_effective_date(effective_date: date) -> None:
+    update_prevalence.effective_date = effective_date
+    update_prevalence.evaluation_range = DateSpan.history_from(
+        effective_date, update_prevalence.num_days_of_history
+    )
+
+
+@pytest.fixture
+def canada_effective_date(effective_date: date) -> date:
+    return effective_date
+
+
+@pytest.fixture(autouse=True)
+def set_canada_effective_date(canada_effective_date: date) -> None:
+    update_prevalence.canada_effective_date = canada_effective_date
+    update_prevalence.canada_evaluation_range = DateSpan.history_from(
+        canada_effective_date, update_prevalence.num_days_of_history
+    )
 
 
 class MyPlace(PopulationFilteredLogging):
@@ -111,21 +137,8 @@ def data() -> AllData:
 
 
 @pytest.fixture
-def effective_date() -> date:
-    return date(2020, 12, 15)
-
-
-@pytest.fixture
 def cache(effective_date: date) -> DataCache:
     return DataCache(effective_date=effective_date, data={})
-
-
-@pytest.fixture(autouse=True)
-def set_effective_date(effective_date: date) -> None:
-    update_prevalence.effective_date = effective_date
-    update_prevalence.evaluation_range = DateSpan.history_from(
-        effective_date, update_prevalence.num_days_of_history
-    )
 
 
 @patch("update_prevalence.requests.get", spec=requests.get)
@@ -192,10 +205,10 @@ def test_parse_jhu_vaccines_us_unknown_unknown_state(
 @patch("update_prevalence.sleep", autospec=True)
 @patch("update_prevalence.logger", spec=Logger)
 def test_parse_json_retry(
-        mock_logger: Mock,
-        mock_sleep: Mock,
-        mock_get: Mock,
-        cache: DataCache,
+    mock_logger: Mock,
+    mock_sleep: Mock,
+    mock_get: Mock,
+    cache: DataCache,
 ) -> None:
     mock_response_failure = Mock()
     mock_response_failure.status_code = 429
@@ -215,10 +228,12 @@ def test_parse_json_retry(
 
     parse_json(cache, FakeModel, url)
 
-    mock_logger.info.assert_has_calls([
-        call('Fetching http://fake...'),
-        call('Fetching http://fake (try 2/4)...'),
-    ])
+    mock_logger.info.assert_has_calls(
+        [
+            call("Fetching http://fake..."),
+            call("Fetching http://fake (try 2/4)..."),
+        ]
+    )
 
 
 @patch("update_prevalence.logger", spec=Logger)
@@ -620,16 +635,84 @@ def test_parse_romania_prevalence_data_stale(
 
 @patch("update_prevalence.logger", spec=Logger)
 @patch("update_prevalence.requests.get", spec=requests.get)
-def test_parse_canada_prevalence_data_empty(
-    mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData
+def test_parse_canada_prevalence_data(
+    mock_get: Mock,
+    mock_logger: Mock,
+    cache: Mock,
+    data: AllData,
+    canada_effective_date: date,
 ) -> None:
     mock_regions_response = Mock()
     mock_regions_response.status_code = 200
-    mock_regions_response.text = """region,hruid,name_short,pop"""
+    mock_regions_response.text = """"region","pruid","hruid","name_canonical","name_canonical_fr","name_short","name_ccodwg","name_other_1","name_other_2","name_other_3","pop","pop_2019_07","pop_2020_07","pop_2021_07"
+"AB",48,4831,"South Zone","South Zone","South","South","South zone",,,308346,305937,307967,308346"""
 
     mock_provinces_response = Mock()
     mock_provinces_response.status_code = 200
-    mock_provinces_response.text = """region,name_ccodwg,name_canonical"""
+    mock_provinces_response.text = """"region","pruid","name_canonical","name_canonical_fr","name_ccodwg","pop","pop_2020_01","pop_2020_04","pop_2020_07","pop_2020_10","pop_2021_01","pop_2021_04","pop_2021_07","pop_2021_10","pop_2022_01","pop_2022_04","pop_2022_07"
+"AB",48,"Alberta","Alberta","Alberta",4543111,4401362,4414332,4416682,4421857,4429077,4436944,4443773,4466124,4482385,4502858,4543111
+"""
+
+    mock_regional_vaccination_reports_response = Mock()
+    mock_regional_vaccination_reports_response.status_code = 200
+    mock_regional_vaccination_reports_response.text = json.dumps(
+        {
+            "hr_uid": 4831,
+            "last_updated": "2022-12-30 23:55:06",
+            "data": [
+                {
+                    "date": "2022-12-21",
+                    "change_cases": 152,
+                    "change_fatalities": 14,
+                    "change_tests": None,
+                    "change_hospitalizations": -3,
+                    "change_criticals": 1,
+                    "change_recoveries": None,
+                    "change_vaccinations": 532,
+                    "change_vaccinated": 95,
+                    "change_boosters_1": 352,
+                    "change_boosters_2": None,
+                    "total_cases": 40637,
+                    "total_fatalities": 493,
+                    "total_tests": None,
+                    "total_hospitalizations": 70,
+                    "total_criticals": 3,
+                    "total_recoveries": 33617,
+                    "total_vaccinations": 494473,
+                    "total_vaccinated": 194952,
+                    "total_boosters_1": 94748,
+                    "total_boosters_2": None,
+                }
+            ],
+        }
+    )
+
+    mock_regional_case_reports_response = Mock()
+    mock_regional_case_reports_response.status_code = 200
+    mock_regional_case_reports_response.text = json.dumps(
+        {
+            "data": {
+                "cases": [
+                    {
+                        "name": "cases",
+                        "region": "AB",
+                        "sub_region_1": "4831",
+                        "date": "2022-12-16",
+                        "value": 40610,
+                        "value_daily": 8,
+                    },
+                    {
+                        "name": "cases",
+                        "region": "AB",
+                        "sub_region_1": "4831",
+                        "date": "2022-12-17",
+                        "value": 40623,
+                        "value_daily": 13,
+                    },
+                ],
+            },
+        }
+    )
 
     mock_vaccine_distribution_response = Mock()
     mock_vaccine_distribution_response.status_code = 200
@@ -637,29 +720,90 @@ def test_parse_canada_prevalence_data_empty(
         {
             "data": [
                 {
-                    "province": "ABC",
-                    # pfizer_biontech: Optional[int]
-                    # pfizer_biontech_administered: Optional[int]
-                    # moderna: Optional[int]
-                    # moderna_administered: Optional[int]
-                    # astrazeneca: Optional[int]
-                    # astrazeneca_administered: Optional[int]
-                    # johnson: Optional[int]
-                    # johnson_administered: Optional[int]
+                    "province": "AB",
+                    "date": "2022-02-03",
+                    "pfizer_biontech": 7056075,
+                    "pfizer_biontech_administered": None,
+                    "moderna": 2687654,
+                    "moderna_administered": None,
+                    "astrazeneca": 318700,
+                    "astrazeneca_administered": None,
+                    "johnson": 10000,
+                    "johnson_administered": None,
+                    "pfizer_biontech_paediatric": 394000,
+                    "pfizer_biontech_paediatric_administered": None,
                 },
             ]
+        }
+    )
+
+    mock_provincial_reports_response = Mock()
+    mock_provincial_reports_response.status_code = 200
+    mock_provincial_reports_response.text = json.dumps(
+        {
+            "data": [
+                {
+                    "region": "AB",
+                    "date": "2022-12-16",
+                    "cases": 622102,
+                    "cases_daily": 114,
+                    "deaths": 5308,
+                    "deaths_daily": 0,
+                    "hospitalizations": 1042,
+                    "hospitalizations_daily": 0,
+                    "icu": 38,
+                    "icu_daily": 0,
+                    "tests_completed": 7363742,
+                    "tests_completed_daily": 933,
+                    "vaccine_coverage_dose_1": 79.5,
+                    "vaccine_coverage_dose_1_daily": 0,
+                    "vaccine_coverage_dose_2": 75.6,
+                    "vaccine_coverage_dose_2_daily": 0,
+                    "vaccine_coverage_dose_3": 39.5,
+                    "vaccine_coverage_dose_3_daily": 0,
+                    "vaccine_coverage_dose_4": 16.4,
+                    "vaccine_coverage_dose_4_daily": 0,
+                    "vaccine_administration_total_doses": 9586987,
+                    "vaccine_administration_total_doses_daily": 0,
+                    "vaccine_administration_dose_1": 3609940,
+                    "vaccine_administration_dose_1_daily": 0,
+                    "vaccine_administration_dose_2": 3435139,
+                    "vaccine_administration_dose_2_daily": 0,
+                    "vaccine_administration_dose_3": 1795849,
+                    "vaccine_administration_dose_3_daily": 0,
+                    "vaccine_administration_dose_4": 746059,
+                    "vaccine_administration_dose_4_daily": 0,
+                },
+            ],
         }
     )
 
     mock_get.side_effect = [
         mock_regions_response,
         mock_provinces_response,
+        mock_regional_vaccination_reports_response,
+        mock_regional_case_reports_response,
         mock_vaccine_distribution_response,
+        mock_provincial_reports_response,
     ]
     data.get_country("Canada")
 
     parse_canada_prevalence_data(cache, data)
-    assert len(data.countries["Canada"].states) == 0
+    assert len(data.countries["Canada"].states) == 1
+    mock_get.assert_has_calls(
+        [
+            call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/hr.csv"),
+            call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"),
+            call(
+                "https://api.covid19tracker.ca/reports/regions/4831?fill_dates=true&after=2020-12-01&before=2020-12-15"
+            ),
+            call(
+                "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-12-15&after=2020-12-01"
+            ),
+            call("https://api.covid19tracker.ca/vaccines/distribution/split"),
+            call("https://api.opencovid.ca/summary?loc=AB&ymd=true&before=2020-12-15&after=2020-12-01"),
+        ]
+    )
 
 
 @patch("update_prevalence.DataCache", spec=DataCache)
