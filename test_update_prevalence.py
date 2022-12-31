@@ -200,6 +200,21 @@ def mock_canada_regional_vaccination_reports_response() -> Mock:
 
 
 @pytest.fixture
+def mock_canada_empty_regional_vaccination_reports_response() -> Mock:
+    mock_canada_regional_vaccination_reports_response = Mock()
+    mock_canada_regional_vaccination_reports_response.status_code = 200
+    mock_canada_regional_vaccination_reports_response.text = json.dumps(
+        {
+            "hr_uid": 4831,
+            "last_updated": "2022-12-30 23:55:06",
+            "data": [],
+        }
+    )
+
+    return mock_canada_regional_vaccination_reports_response
+
+
+@pytest.fixture
 def mock_canada_regional_case_reports_response() -> Mock:
     mock_canada_regional_case_reports_response = Mock()
     mock_canada_regional_case_reports_response.status_code = 200
@@ -837,6 +852,52 @@ def test_parse_canada_prevalence_data(
             call("https://api.covid19tracker.ca/vaccines/distribution/split"),
             call("https://api.opencovid.ca/summary?loc=AB&ymd=true&before=2020-12-15&after=2020-12-01"),
         ]
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_canada_prevalence_data_no_vaccination_data(
+    mock_get: Mock,
+    mock_logger: Mock,
+    cache: Mock,
+    data: AllData,
+    canada_effective_date: date,
+    mock_canada_regions_response: Mock,
+    mock_canada_provinces_response: Mock,
+    mock_canada_empty_regional_vaccination_reports_response: Mock,
+    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_vaccine_distribution_response: Mock,
+    mock_canada_provincial_reports_response: Mock,
+) -> None:
+    mock_get.side_effect = [
+        mock_canada_regions_response,
+        mock_canada_provinces_response,
+        mock_canada_empty_regional_vaccination_reports_response,
+        mock_canada_regional_case_reports_response,
+        mock_canada_vaccine_distribution_response,
+        mock_canada_provincial_reports_response,
+    ]
+    data.get_country("Canada")
+
+    parse_canada_prevalence_data(cache, data)
+    assert len(data.countries["Canada"].states) == 1
+    mock_get.assert_has_calls(
+        [
+            call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/hr.csv"),
+            call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"),
+            call(
+                "https://api.covid19tracker.ca/reports/regions/4831?fill_dates=true&after=2020-12-01&before=2020-12-15"
+            ),
+            call(
+                "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-12-15&after=2020-12-01"
+            ),
+            call("https://api.covid19tracker.ca/vaccines/distribution/split"),
+            call("https://api.opencovid.ca/summary?loc=AB&ymd=true&before=2020-12-15&after=2020-12-01"),
+        ]
+    )
+    mock_logger.info.assert_any_call(
+        "No vaccination data (308,346 people): No vaccination data available from api.covid19tracker.ca in range for South, Alberta, Canada"
     )
 
 

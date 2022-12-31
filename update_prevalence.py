@@ -1741,11 +1741,14 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                         report.total_vaccinations, report.total_vaccinated, shots_for_full_vaccination
                     )
                     place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
-                else:
-                    place.issue(
-                        "No vaccination data",
-                        f"No vaccination data available from api.covid19tracker.ca in range for {place.fullname}",
-                    )
+            if (
+                place.vaccines_total.partial_vaccinations == 0
+                or place.vaccines_total.completed_vaccinations == 0
+            ):
+                place.issue(
+                    "No vaccination data",
+                    f"No vaccination data available from api.covid19tracker.ca in range for {place.fullname}",
+                )
 
         def process_regional_case_reports() -> None:
             # get region case counts from opencovid.ca, which seems to have
