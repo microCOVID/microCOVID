@@ -1350,7 +1350,7 @@ def parse_json(cache: DataCache, model: Type[Model], url: str) -> Model:
     for attempt in range(max_attempts + 1):
         log_message = f"Fetching {url}"
         if attempt > 0:
-            log_message += " (try {attempt + 1}/{max_attempts})"
+            log_message += f" (try {attempt + 1}/{max_attempts})"
         log_message += "..."
         logger.info(log_message)
         # Error case

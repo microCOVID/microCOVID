@@ -1,4 +1,5 @@
 from unittest.mock import Mock, patch, call
+import pydantic
 import json
 import logging
 import pytest
@@ -23,6 +24,7 @@ from update_prevalence import (
     AppLocation,
     parse_romania_prevalence_data,
     parse_canada_prevalence_data,
+    parse_json,
     main,
 )
 from logging import Logger
@@ -184,6 +186,39 @@ def test_parse_jhu_vaccines_us_unknown_unknown_state(
     parse_jhu_vaccines_us(cache, data)
 
     mock_logger.warning.assert_called()
+
+
+@patch("update_prevalence.requests.get", spec=requests.get)
+@patch("update_prevalence.sleep", autospec=True)
+@patch("update_prevalence.logger", spec=Logger)
+def test_parse_json_retry(
+        mock_logger: Mock,
+        mock_sleep: Mock,
+        mock_get: Mock,
+        cache: DataCache,
+) -> None:
+    mock_response_failure = Mock()
+    mock_response_failure.status_code = 429
+    url = "http://fake"
+
+    e = requests.exceptions.HTTPError(response=mock_response_failure)
+    mock_response_failure.raise_for_status.side_effect = e
+
+    mock_response_success = Mock()
+    mock_response_success.status_code = 200
+    mock_response_success.text = """{"field1": 123}"""
+
+    mock_get.side_effect = [mock_response_failure, mock_response_success]
+
+    class FakeModel(pydantic.BaseModel):
+        field1: str
+
+    parse_json(cache, FakeModel, url)
+
+    mock_logger.info.assert_has_calls([
+        call('Fetching http://fake...'),
+        call('Fetching http://fake (try 2/4)...'),
+    ])
 
 
 @patch("update_prevalence.logger", spec=Logger)
