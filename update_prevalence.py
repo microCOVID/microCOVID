@@ -1698,10 +1698,10 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         logger.info(f"Fetching region {counter}: {region.name_short} ({region.hruid})")
 
         # pull or create our master record of this region
-        place = data.get_canada_region_place(region, province_by_two_letter_abbrev[region.region])
-        if place.population != 0:
-            raise ValueError(f"Duplicate population info for {place!r}: {region.pop}")
-        place.population = region.pop
+        region_place = data.get_canada_region_place(region, province_by_two_letter_abbrev[region.region])
+        if region_place.population != 0:
+            raise ValueError(f"Duplicate population info for {region_place!r}: {region.pop}")
+        region_place.population = region.pop
 
         def process_regional_vaccination_reports() -> None:
             # This API requires a date or date range, but will not
@@ -1740,14 +1740,14 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                     people_partially_vaccinated = get_partially_vaccinated(
                         report.total_vaccinations, report.total_vaccinated, shots_for_full_vaccination
                     )
-                    place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
+                    region_place.set_total_vaccines(people_partially_vaccinated, report.total_vaccinated)
             if (
-                place.vaccines_total.partial_vaccinations == 0
-                or place.vaccines_total.completed_vaccinations == 0
+                region_place.vaccines_total.partial_vaccinations == 0
+                or region_place.vaccines_total.completed_vaccinations == 0
             ):
-                place.issue(
+                region_place.issue(
                     "No vaccination data",
-                    f"No vaccination data available from api.covid19tracker.ca in range for {place.fullname}",
+                    f"No vaccination data available from api.covid19tracker.ca in range for {region_place.fullname}",
                 )
 
         def process_regional_case_reports() -> None:
@@ -1763,7 +1763,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 ),
             )
             for report in case_reports.data.cases:
-                place.cumulative_cases[report.date] = report.value
+                region_place.cumulative_cases[report.date] = report.value
 
         process_regional_vaccination_reports()
         process_regional_case_reports()
@@ -1778,7 +1778,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
     for province in canada_provinces:
         min_test_count = None
         max_test_count = None
-        place = data.get_state(province.name_canonical, country="Canada")
+        province_place = data.get_state(province.name_canonical, country="Canada")
         provincial_reports = parse_json(
             cache,
             CanadaOpenCovidProvincialSummary,
@@ -1804,7 +1804,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                     )
 
         if min_test_count is not None and max_test_count is not None:
-            place.tests_in_past_week = max_test_count - min_test_count
+            province_place.tests_in_past_week = max_test_count - min_test_count
 
         # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
         provincial_dist = next(
@@ -1844,7 +1844,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 partially_vaccinated = (
                     most_recent.vaccine_administration_dose_1 - most_recent.vaccine_administration_dose_2
                 )
-                place.set_vaccines_of_type(
+                province_place.set_vaccines_of_type(
                     manufacturer,
                     round(proportion * partially_vaccinated),
                     round(proportion * total_fully_vaccinated),
