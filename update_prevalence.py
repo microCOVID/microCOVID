@@ -158,15 +158,7 @@ def calc_effective_date() -> date:
     return now.date()
 
 
-def calc_canada_effective_date() -> date:
-    # take the current time in the westernmost timezone (PT), which is UTC -8 or
-    # UTC -7 depending on time of year. Other timezones may be 2 days behind.
-    last_full_day = datetime.utcnow() - timedelta(hours=8) - timedelta(days=1)
-    return last_full_day.date()
-
-
 effective_date = calc_effective_date()
-canada_effective_date = calc_effective_date()
 
 # 7 for the current week
 # 7 for the week before
@@ -190,8 +182,6 @@ class DateSpan:
 
 
 evaluation_range = DateSpan.history_from(effective_date, num_days_of_history)
-
-canada_evaluation_range = evaluation_range
 
 
 # Read the Risk Tracker's vaccine table.
@@ -1665,8 +1655,8 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 
 def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
-    populate_since = canada_evaluation_range.first_date
-    canada_one_week_ago = canada_evaluation_range.last_date - timedelta(days=6)
+    populate_since = evaluation_range.first_date
+    canada_one_week_ago = evaluation_range.last_date - timedelta(days=6)
 
     try:
         # pull lists of health regions, provinces and territories and
@@ -1719,7 +1709,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             # this doesn't need to be tied to the case data date, but
             # we'll use this date in case we're doing historical
             # analysis or something like that.
-            before_date = canada_effective_date
+            before_date = effective_date
             after_date = before_date - timedelta(days=buffer_days)
 
             # get region vaccination counts from covid19tracker.ca.
@@ -1729,7 +1719,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 CanadaRegionalVaccinationReports,
                 CanadaRegionalVaccinationReports.SOURCE.format(
                     hr_uid=region.hruid,
-                    before=canada_effective_date.strftime("%Y-%m-%d"),
+                    before=effective_date.strftime("%Y-%m-%d"),
                     after=after_date.strftime("%Y-%m-%d"),
                 ),
             )
@@ -1758,7 +1748,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 CanadaOpenCovidCases,
                 CanadaOpenCovidCases.SOURCE.format(
                     hr_uid=region.hruid,
-                    before=canada_effective_date.strftime("%Y-%m-%d"),
+                    before=effective_date.strftime("%Y-%m-%d"),
                     after=populate_since.strftime("%Y-%m-%d"),
                 ),
             )
@@ -1787,7 +1777,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             CanadaOpenCovidProvincialSummary,
             CanadaOpenCovidProvincialSummary.SOURCE.format(
                 province=province.region,
-                before=canada_effective_date.strftime("%Y-%m-%d"),
+                before=effective_date.strftime("%Y-%m-%d"),
                 after=populate_since.strftime("%Y-%m-%d"),
             ),
         )
@@ -1797,7 +1787,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         #
         for report in provincial_reports.data:
             # check bounds just in case the reports interval gets changed later
-            if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
+            if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= effective_date:
                 if report.tests_completed:
                     min_test_count = (
                         report.tests_completed
