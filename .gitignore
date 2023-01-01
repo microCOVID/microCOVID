@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# typechecking
+/typecover
+
 # production
 /build
 
