@@ -26,6 +26,7 @@ from update_prevalence import (
     parse_canada_prevalence_data,
     parse_json,
     main,
+    Vaccination,
 )
 from logging import Logger
 import update_prevalence
@@ -148,6 +149,16 @@ def mock_canada_regions_response() -> Mock:
     mock_canada_regions_response.text = """"region","pruid","hruid","name_canonical","name_canonical_fr","name_short","name_ccodwg","name_other_1","name_other_2","name_other_3","pop","pop_2019_07","pop_2020_07","pop_2021_07"
 "AB",48,4831,"South Zone","South Zone","South","South","South zone",,,308346,305937,307967,308346"""
     return mock_canada_regions_response
+
+
+@pytest.fixture
+def mock_canada_regions_response_with_duplicate_region() -> Mock:
+    mock_canada_regions_response_with_duplicate_region = Mock()
+    mock_canada_regions_response_with_duplicate_region.status_code = 200
+    mock_canada_regions_response_with_duplicate_region.text = """"region","pruid","hruid","name_canonical","name_canonical_fr","name_short","name_ccodwg","name_other_1","name_other_2","name_other_3","pop","pop_2019_07","pop_2020_07","pop_2021_07"
+"AB",48,4831,"South Zone","South Zone","South","South","South zone",,,308346,305937,307967,308346
+"AB",48,4831,"South Zone","South Zone","South","South","South zone",,,308346,305937,307967,308346"""
+    return mock_canada_regions_response_with_duplicate_region
 
 
 @pytest.fixture
@@ -283,7 +294,7 @@ def mock_canada_provincial_reports_response() -> Mock:
             "data": [
                 {
                     "region": "AB",
-                    "date": "2022-12-16",
+                    "date": "2020-12-14",
                     "cases": 622102,
                     "cases_daily": 114,
                     "deaths": 5308,
@@ -853,6 +864,12 @@ def test_parse_canada_prevalence_data(
             call("https://api.opencovid.ca/summary?loc=AB&ymd=true&before=2020-12-15&after=2020-12-01"),
         ]
     )
+    place = data.get_state_or_raise("Alberta", country="Canada")
+    assert place.vaccines_by_type == {
+        "AstraZeneca": Vaccination(partial_vaccinations=5536, completed_vaccinations=108799),
+        "Moderna": Vaccination(partial_vaccinations=46689, completed_vaccinations=917519),
+        "Pfizer": Vaccination(partial_vaccinations=122576, completed_vaccinations=2408822),
+    }
 
 
 @patch("update_prevalence.logger", spec=Logger)
@@ -899,6 +916,36 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
     mock_logger.info.assert_any_call(
         "No vaccination data (308,346 people): No vaccination data available from api.covid19tracker.ca in range for South, Alberta, Canada"
     )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+@patch("update_prevalence.requests.get", spec=requests.get)
+def test_parse_canada_prevalence_data_doubled_region_in_data(
+    mock_get: Mock,
+    mock_logger: Mock,
+    cache: Mock,
+    data: AllData,
+    canada_effective_date: date,
+    mock_canada_regions_response_with_duplicate_region: Mock,
+    mock_canada_provinces_response: Mock,
+    mock_canada_regional_vaccination_reports_response: Mock,
+    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_vaccine_distribution_response: Mock,
+    mock_canada_provincial_reports_response: Mock,
+) -> None:
+    mock_get.side_effect = [
+        mock_canada_regions_response_with_duplicate_region,
+        mock_canada_provinces_response,
+        mock_canada_regional_vaccination_reports_response,
+        mock_canada_regional_case_reports_response,
+        mock_canada_vaccine_distribution_response,
+        mock_canada_provincial_reports_response,
+    ]
+    data.get_country("Canada")
+
+    with pytest.raises(ValueError) as e:
+        parse_canada_prevalence_data(cache, data)
+    assert "Duplicate population info" in str(e.value)
 
 
 @patch("update_prevalence.DataCache", spec=DataCache)
