@@ -919,7 +919,7 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
         if positivityRate < 0:
             self.issue("Positivity rate is negative", f"{positivityRate}")
             positivityRate = 0
-        final = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
+        final: float = (1000 / (day_i + 10)) * (positivityRate / 100) ** 0.5 + 2
         return final
 
     @property
