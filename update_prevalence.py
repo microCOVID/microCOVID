@@ -1768,17 +1768,20 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         process_regional_vaccination_reports()
         process_regional_case_reports()
 
-    # get test rates per-province from opencovid.ca.
+    # get vaccination and test rates (number of tests given) per-province from
+    # opencovid.ca.
     # canada_one_week_ago + timedelta(days=1) is the start of one week ago,
     # but go back one day to properly count.
     canada_one_week_cumulative_baseline = canada_one_week_ago - timedelta(days=1)
     vaccine_distribution_reports = parse_json(
         cache, CanadaVaccineDistribution, CanadaVaccineDistribution.SOURCE
     )
+
     for province in canada_provinces:
         min_test_count = None
         max_test_count = None
         province_place = data.get_state(province.name_canonical, country="Canada")
+        # has both vaccination and number-of-tests-given information by province
         provincial_reports = parse_json(
             cache,
             CanadaOpenCovidProvincialSummary,
@@ -1788,6 +1791,10 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 after=populate_since.strftime("%Y-%m-%d"),
             ),
         )
+
+        #
+        # populate tests_in_past_week for the province
+        #
         for report in provincial_reports.data:
             # check bounds just in case the reports interval gets changed later
             if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
@@ -1806,7 +1813,9 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         if min_test_count is not None and max_test_count is not None:
             province_place.tests_in_past_week = max_test_count - min_test_count
 
-        # get vaccine distribution per-type (Pfizer, Moderna, etc) by province.
+        #
+        # populate vaccine distribution per-type (Pfizer, Moderna, etc) by province.
+        #
         provincial_dist = next(
             (d for d in vaccine_distribution_reports.data if d.province == province.region), None
         )
