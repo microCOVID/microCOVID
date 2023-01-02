@@ -12,6 +12,7 @@ from sentry_sdk.integrations.logging import LoggingIntegration
 
 from update_prevalence import (
     calc_last_two_weeks_evaluation_range,
+    calc_last_month_evaluation_range,
     calc_cumulative_cases_evaluation_ranges,
     parse_jhu_vaccines_us,
     parse_can_region_summary_by_county,
@@ -43,6 +44,7 @@ def effective_date() -> date:
 def set_effective_date(effective_date: date) -> None:
     update_prevalence.effective_date = effective_date
     update_prevalence.last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
+    update_prevalence.last_month_evaluation_range = calc_last_month_evaluation_range()
     update_prevalence.cumulative_cases_evaluation_ranges = calc_cumulative_cases_evaluation_ranges()
 
 
@@ -222,7 +224,7 @@ def mock_canada_empty_regional_vaccination_reports_response() -> Mock:
 
 
 @pytest.fixture
-def mock_canada_regional_case_reports_response() -> Mock:
+def mock_canada_regional_case_reports_response_last_two_weeks() -> Mock:
     mock_canada_regional_case_reports_response = Mock()
     mock_canada_regional_case_reports_response.status_code = 200
     mock_canada_regional_case_reports_response.text = json.dumps(
@@ -246,6 +248,21 @@ def mock_canada_regional_case_reports_response() -> Mock:
                         "value_daily": 13,
                     },
                 ],
+            },
+        }
+    )
+
+    return mock_canada_regional_case_reports_response
+
+
+@pytest.fixture
+def mock_canada_regional_case_reports_response_a_month_ago() -> Mock:
+    mock_canada_regional_case_reports_response = Mock()
+    mock_canada_regional_case_reports_response.status_code = 200
+    mock_canada_regional_case_reports_response.text = json.dumps(
+        {
+            "data": {
+                "cases": [],
             },
         }
     )
@@ -698,7 +715,7 @@ def test_County_as_app_data_logs_before_returning_zero_cases_last_week(
     data = my_county.as_app_data()
     assert data is not None
     mock_logger.info.assert_called_with(
-        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
+        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
     )
     assert data.updatedAt == (effective_date - timedelta(days=9)).strftime("%B %d, %Y")
 
@@ -718,7 +735,7 @@ def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
     data = my_county.as_app_data()
     assert data is not None
     mock_logger.info.assert_called_with(
-        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
+        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
     )
     assert data.updatedAt == (effective_date - timedelta(days=4)).strftime("%B %d, %Y")
 
@@ -894,7 +911,8 @@ def test_parse_canada_prevalence_data(
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
-    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_regional_case_reports_response_a_month_ago: Mock,
+    mock_canada_regional_case_reports_response_last_two_weeks: Mock,
     mock_canada_vaccine_distribution_response: Mock,
     mock_canada_provincial_reports_response: Mock,
 ) -> None:
@@ -902,7 +920,8 @@ def test_parse_canada_prevalence_data(
         mock_canada_regions_response,
         mock_canada_provinces_response,
         mock_canada_regional_vaccination_reports_response,
-        mock_canada_regional_case_reports_response,
+        mock_canada_regional_case_reports_response_a_month_ago,
+        mock_canada_regional_case_reports_response_last_two_weeks,
         mock_canada_vaccine_distribution_response,
         mock_canada_provincial_reports_response,
     ]
@@ -916,6 +935,9 @@ def test_parse_canada_prevalence_data(
             call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"),
             call(
                 "https://api.covid19tracker.ca/reports/regions/4831?fill_dates=true&after=2020-12-01&before=2020-12-15"
+            ),
+            call(
+                "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-11-15&after=2020-11-15"
             ),
             call(
                 "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-12-15&after=2020-12-01"
@@ -944,7 +966,8 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_empty_regional_vaccination_reports_response: Mock,
-    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_regional_case_reports_response_a_month_ago: Mock,
+    mock_canada_regional_case_reports_response_last_two_weeks: Mock,
     mock_canada_vaccine_distribution_response: Mock,
     mock_canada_provincial_reports_response: Mock,
 ) -> None:
@@ -952,7 +975,8 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
         mock_canada_regions_response,
         mock_canada_provinces_response,
         mock_canada_empty_regional_vaccination_reports_response,
-        mock_canada_regional_case_reports_response,
+        mock_canada_regional_case_reports_response_a_month_ago,
+        mock_canada_regional_case_reports_response_last_two_weeks,
         mock_canada_vaccine_distribution_response,
         mock_canada_provincial_reports_response,
     ]
@@ -966,6 +990,9 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
             call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"),
             call(
                 "https://api.covid19tracker.ca/reports/regions/4831?fill_dates=true&after=2020-12-01&before=2020-12-15"
+            ),
+            call(
+                "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-11-15&after=2020-11-15"
             ),
             call(
                 "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-12-15&after=2020-12-01"
@@ -990,7 +1017,8 @@ def test_parse_canada_prevalence_data_doubled_region_in_data(
     mock_canada_regions_response_with_duplicate_region: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
-    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_regional_case_reports_response_a_month_ago: Mock,
+    mock_canada_regional_case_reports_response_last_two_weeks: Mock,
     mock_canada_vaccine_distribution_response: Mock,
     mock_canada_provincial_reports_response: Mock,
 ) -> None:
@@ -998,7 +1026,8 @@ def test_parse_canada_prevalence_data_doubled_region_in_data(
         mock_canada_regions_response_with_duplicate_region,
         mock_canada_provinces_response,
         mock_canada_regional_vaccination_reports_response,
-        mock_canada_regional_case_reports_response,
+        mock_canada_regional_case_reports_response_a_month_ago,
+        mock_canada_regional_case_reports_response_last_two_weeks,
         mock_canada_vaccine_distribution_response,
         mock_canada_provincial_reports_response,
     ]
@@ -1042,6 +1071,7 @@ def test_main_empty_data(
 
     mock_get.side_effect = [
         mock_jhu_place_facts_response,
+        mock_jhu_daily_report,  # month ago
         mock_jhu_daily_report,
         mock_jhu_daily_report,
         mock_jhu_daily_report,
