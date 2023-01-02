@@ -12,6 +12,7 @@ from sentry_sdk.integrations.logging import LoggingIntegration
 
 from update_prevalence import (
     calc_last_two_weeks_evaluation_range,
+    calc_last_month_evaluation_range,
     calc_cumulative_cases_evaluation_ranges,
     parse_jhu_vaccines_us,
     parse_can_region_summary_by_county,
@@ -43,6 +44,7 @@ def effective_date() -> date:
 def set_effective_date(effective_date: date) -> None:
     update_prevalence.effective_date = effective_date
     update_prevalence.last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
+    update_prevalence.last_month_evaluation_range = calc_last_month_evaluation_range()
     update_prevalence.cumulative_cases_evaluation_ranges = calc_cumulative_cases_evaluation_ranges()
 
 
@@ -72,22 +74,30 @@ def large_place() -> PopulationFilteredLogging:
     return MyPlace(100000)
 
 
-def add_cumulative_cases(place: Place, effective_date: date, cases_over_time: List[int]) -> None:
-    for i in range(0, len(cases_over_time)):
-        days_since_effective_date = len(cases_over_time) - i - 1
-        place.cumulative_cases[effective_date - timedelta(days=days_since_effective_date)] = cases_over_time[
-            i
-        ]
+def add_cumulative_cases(
+    place: Place, effective_date: date, last_month_cases: int, last_two_weeks_cases: List[int]
+) -> None:
+    one_month_ago = effective_date - timedelta(days=30)
+    place.cumulative_cases[one_month_ago] = last_month_cases
+    print(f"Populated {one_month_ago} as {last_month_cases}")
+    assert len(last_two_weeks_cases) == 15, "Please simulate real data length for last two weeks range"
+    for i in range(0, len(last_two_weeks_cases)):
+        days_since_effective_date = len(last_two_weeks_cases) - i - 1
+        place.cumulative_cases[
+            effective_date - timedelta(days=days_since_effective_date)
+        ] = last_two_weeks_cases[i]
 
 
 def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
-    cases_over_time = [0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-    add_cumulative_cases(place, effective_date, cases_over_time)
+    last_month_cases = 1
+    cases_over_time = [5, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    add_cumulative_cases(place, effective_date, last_month_cases, cases_over_time)
 
 
 def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
-    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
-    add_cumulative_cases(place, effective_date, cases_over_time)
+    last_month_cases = 5
+    cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+    add_cumulative_cases(place, effective_date, last_month_cases, cases_over_time)
 
 
 @pytest.fixture
@@ -222,7 +232,7 @@ def mock_canada_empty_regional_vaccination_reports_response() -> Mock:
 
 
 @pytest.fixture
-def mock_canada_regional_case_reports_response() -> Mock:
+def mock_canada_regional_case_reports_response_last_two_weeks() -> Mock:
     mock_canada_regional_case_reports_response = Mock()
     mock_canada_regional_case_reports_response.status_code = 200
     mock_canada_regional_case_reports_response.text = json.dumps(
@@ -246,6 +256,21 @@ def mock_canada_regional_case_reports_response() -> Mock:
                         "value_daily": 13,
                     },
                 ],
+            },
+        }
+    )
+
+    return mock_canada_regional_case_reports_response
+
+
+@pytest.fixture
+def mock_canada_regional_case_reports_response_a_month_ago() -> Mock:
+    mock_canada_regional_case_reports_response = Mock()
+    mock_canada_regional_case_reports_response.status_code = 200
+    mock_canada_regional_case_reports_response.text = json.dumps(
+        {
+            "data": {
+                "cases": [],
             },
         }
     )
@@ -663,12 +688,9 @@ def test_County_as_app_data_validates_positivity_rate(
 def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
     mock_logger: Mock, my_county: County, effective_date: date
 ) -> None:
-    for i in range(0, 5):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 101
-    for i in range(5, 16):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 100
+    last_month_cases = 50
+    cases_over_time = [100, 100, 100, 100, 100, 101, 101, 100, 100, 100, 101, 101, 101, 101, 101]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
     my_county.population = 2_000_000
     cases_last_week = my_county.cases_last_week
     assert cases_last_week == 1
@@ -677,7 +699,30 @@ def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
     data = my_county.as_app_data()
     assert data is not None
     mock_logger.info.assert_called_with(
-        "Less than 1 case per million - County level (2,000,000 people): Only 1 cases last week when population is 2000000 in My County"
+        "Less than 1 case per million in last week - County level (2,000,000 people): Only 1 cases last week when population is 2000000 in My County"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_as_app_data_logs_before_returning_very_low_cases_last_month(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    last_month_cases = 99
+    cases_over_time = [100, 100, 100, 100, 100, 101, 101, 100, 100, 100, 101, 101, 101, 101, 101]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
+    my_county.population = 2_000_000
+    cases_last_week = my_county.cases_last_week
+    assert cases_last_week == 1
+    cases_week_before = my_county.cases_week_before
+    assert cases_week_before == 0
+    data = my_county.as_app_data()
+    assert data is not None
+    mock_logger.info.assert_has_calls(
+        [
+            call(
+                "Less than 4 cases per million in last month - County level (2,000,000 people): Only 2 cases last month when population is 2000000 in My County"
+            )
+        ]
     )
 
 
@@ -685,40 +730,85 @@ def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
 def test_County_as_app_data_logs_before_returning_zero_cases_last_week(
     mock_logger: Mock, my_county: County, effective_date: date
 ) -> None:
-    for i in range(0, 10):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 123
-    for i in range(10, 16):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 100
+    last_month_cases = 4
+    cases_over_time = [4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
+
     cases_last_week = my_county.cases_last_week
     assert cases_last_week == 0
     cases_week_before = my_county.cases_week_before
     assert cases_week_before > 0
     data = my_county.as_app_data()
+    assert my_county.cases_last_month_rough == 1
     assert data is not None
-    mock_logger.info.assert_called_with(
-        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
-    )
+    assert mock_logger.info.mock_calls == [
+        call(
+            "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
+        ),
+        call(
+            "No cases noted for last week - but there were some in the last month - County level (123 people): No cases reported for last week in My County, My State despite there being cases in the last month"
+        ),
+    ]
     assert data.updatedAt == (effective_date - timedelta(days=9)).strftime("%B %d, %Y")
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_as_app_data_logs_before_returning_zero_cases_last_month(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    last_month_cases = 100
+    cases_over_time = [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+    ]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
+    cases_last_week = my_county.cases_last_week
+    assert cases_last_week == 0
+    cases_week_before = my_county.cases_week_before
+    assert cases_week_before == 0
+    assert my_county.cases_last_month_rough == 0
+    data = my_county.as_app_data()
+    assert data is not None
+    assert [
+        call(
+            "No cases noted for a month - County level (123 people): No cases reported in at least one month in My County, My State"
+        ),
+        call(
+            "No cases noted for either week - County level (123 people): No cases reported in either week in My County, My State"
+        ),
+        call(
+            "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
+        ),
+    ] == mock_logger.info.mock_calls
+    assert data.updatedAt == (effective_date - timedelta(days=15)).strftime("%B %d, %Y")
 
 
 @patch("update_prevalence.logger", spec=Logger)
 def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
     mock_logger: Mock, my_county: County, effective_date: date
 ) -> None:
-    for i in range(0, 5):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 123
-    for i in range(5, 16):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 100
+    last_month_cases = 100
+    cases_over_time = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 123, 123, 123, 123, 123]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
     assert my_county.cases_last_week > 0
     assert my_county.cases_week_before == 0
     data = my_county.as_app_data()
     assert data is not None
     mock_logger.info.assert_called_with(
-        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State for period"
+        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
     )
     assert data.updatedAt == (effective_date - timedelta(days=4)).strftime("%B %d, %Y")
 
@@ -894,7 +984,8 @@ def test_parse_canada_prevalence_data(
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
-    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_regional_case_reports_response_a_month_ago: Mock,
+    mock_canada_regional_case_reports_response_last_two_weeks: Mock,
     mock_canada_vaccine_distribution_response: Mock,
     mock_canada_provincial_reports_response: Mock,
 ) -> None:
@@ -902,7 +993,8 @@ def test_parse_canada_prevalence_data(
         mock_canada_regions_response,
         mock_canada_provinces_response,
         mock_canada_regional_vaccination_reports_response,
-        mock_canada_regional_case_reports_response,
+        mock_canada_regional_case_reports_response_a_month_ago,
+        mock_canada_regional_case_reports_response_last_two_weeks,
         mock_canada_vaccine_distribution_response,
         mock_canada_provincial_reports_response,
     ]
@@ -916,6 +1008,9 @@ def test_parse_canada_prevalence_data(
             call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"),
             call(
                 "https://api.covid19tracker.ca/reports/regions/4831?fill_dates=true&after=2020-12-01&before=2020-12-15"
+            ),
+            call(
+                "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-11-15&after=2020-11-15"
             ),
             call(
                 "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-12-15&after=2020-12-01"
@@ -944,7 +1039,8 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_empty_regional_vaccination_reports_response: Mock,
-    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_regional_case_reports_response_a_month_ago: Mock,
+    mock_canada_regional_case_reports_response_last_two_weeks: Mock,
     mock_canada_vaccine_distribution_response: Mock,
     mock_canada_provincial_reports_response: Mock,
 ) -> None:
@@ -952,7 +1048,8 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
         mock_canada_regions_response,
         mock_canada_provinces_response,
         mock_canada_empty_regional_vaccination_reports_response,
-        mock_canada_regional_case_reports_response,
+        mock_canada_regional_case_reports_response_a_month_ago,
+        mock_canada_regional_case_reports_response_last_two_weeks,
         mock_canada_vaccine_distribution_response,
         mock_canada_provincial_reports_response,
     ]
@@ -966,6 +1063,9 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
             call("https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/geo/pt.csv"),
             call(
                 "https://api.covid19tracker.ca/reports/regions/4831?fill_dates=true&after=2020-12-01&before=2020-12-15"
+            ),
+            call(
+                "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-11-15&after=2020-11-15"
             ),
             call(
                 "https://api.opencovid.ca/timeseries?stat=cases&loc=4831&geo=hr&ymd=true&fill=true&before=2020-12-15&after=2020-12-01"
@@ -990,7 +1090,8 @@ def test_parse_canada_prevalence_data_doubled_region_in_data(
     mock_canada_regions_response_with_duplicate_region: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
-    mock_canada_regional_case_reports_response: Mock,
+    mock_canada_regional_case_reports_response_a_month_ago: Mock,
+    mock_canada_regional_case_reports_response_last_two_weeks: Mock,
     mock_canada_vaccine_distribution_response: Mock,
     mock_canada_provincial_reports_response: Mock,
 ) -> None:
@@ -998,7 +1099,8 @@ def test_parse_canada_prevalence_data_doubled_region_in_data(
         mock_canada_regions_response_with_duplicate_region,
         mock_canada_provinces_response,
         mock_canada_regional_vaccination_reports_response,
-        mock_canada_regional_case_reports_response,
+        mock_canada_regional_case_reports_response_a_month_ago,
+        mock_canada_regional_case_reports_response_last_two_weeks,
         mock_canada_vaccine_distribution_response,
         mock_canada_provincial_reports_response,
     ]
@@ -1042,6 +1144,7 @@ def test_main_empty_data(
 
     mock_get.side_effect = [
         mock_jhu_place_facts_response,
+        mock_jhu_daily_report,  # month ago
         mock_jhu_daily_report,
         mock_jhu_daily_report,
         mock_jhu_daily_report,

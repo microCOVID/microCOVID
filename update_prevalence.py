@@ -197,10 +197,17 @@ def calc_last_two_weeks_evaluation_range() -> DateSpan:
 last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
 
 
+def calc_last_month_evaluation_range() -> DateSpan:
+    return DateSpan.history_from(effective_date - timedelta(days=30), 1)
+
+
+last_month_evaluation_range = calc_last_month_evaluation_range()
+
+
 # The list of DateSpans used to determine which dates
 # Place#cumulative_cases should contain when we're done
 def calc_cumulative_cases_evaluation_ranges() -> List[DateSpan]:
-    return [last_two_weeks_evaluation_range]
+    return [last_month_evaluation_range, last_two_weeks_evaluation_range]
 
 
 cumulative_cases_evaluation_ranges = calc_cumulative_cases_evaluation_ranges()
@@ -639,6 +646,13 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         return 0
 
     @property
+    def cases_last_month_rough(self) -> int:
+        return (
+            self.cumulative_cases[effective_date]
+            - self.cumulative_cases[last_month_evaluation_range.first_date]
+        )
+
+    @property
     def cases_last_week(self) -> int:
         # len([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16][-8:]) == 8
         # [9, 10, 11, 12, 13, 14, 15, 16]
@@ -804,22 +818,38 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         if self.cases_last_week < 0:
             raise ValueError(f"Cases for {self.name} is {self.cases_last_week}.")
 
-        cases_per_million = (self.cases_last_week * 1_000_000) / self.population
+        if self.cases_last_month_rough == 0:
+            self.issue(
+                f"No cases noted for a month - {type(self).__name__} level",
+                f"No cases reported in at least one month in {self.fullname}",
+            )
         if self.cases_last_week == 0 and self.cases_week_before == 0:
             self.issue(
                 f"No cases noted for either week - {type(self).__name__} level",
-                f"No cases reported in either week in {self.fullname} for period",
+                f"No cases reported in either week in {self.fullname}",
             )
         if self.cases_last_week == 0 or self.cases_week_before == 0:
             self.issue(
                 f"No cases noted for a week - {type(self).__name__} level",
-                f"No cases reported in at least one week in {self.fullname} for period",
+                f"No cases reported in at least one week in {self.fullname}",
             )
-        cases_per_million = (1_000_000 * self.cases_last_week) / self.population
-        if self.cases_last_week != 0 and (cases_per_million < 1):
+        last_week_cases_per_million = (1_000_000 * self.cases_last_week) / self.population
+        if self.cases_last_week != 0 and (last_week_cases_per_million < 1):
             self.issue(
-                f"Less than 1 case per million - {type(self).__name__} level",
+                f"Less than 1 case per million in last week - {type(self).__name__} level",
                 f"Only {self.cases_last_week} cases last week when population is {self.population} in {self.name}",
+            )
+
+        last_month_cases_per_million = (1_000_000 * self.cases_last_month_rough) / self.population
+        if self.cases_last_month_rough != 0 and (last_month_cases_per_million < 4):
+            self.issue(
+                f"Less than 4 cases per million in last month - {type(self).__name__} level",
+                f"Only {self.cases_last_month_rough} cases last month when population is {self.population} in {self.name}",
+            )
+        if last_month_cases_per_million >= 4 and self.cases_last_week == 0:
+            self.issue(
+                f"No cases noted for last week - but there were some in the last month - {type(self).__name__} level",
+                f"No cases reported for last week in {self.fullname} despite there being cases in the last month",
             )
 
         if self.test_positivity_rate is not None and (
