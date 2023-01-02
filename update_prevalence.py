@@ -193,7 +193,6 @@ def calc_evaluation_ranges() -> List[DateSpan]:
 
 evaluation_ranges = calc_evaluation_ranges()
 
-
 # Read the Risk Tracker's vaccine table.
 # Format:
 # Type,0 dose,1 dose,2 dose
