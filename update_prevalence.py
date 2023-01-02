@@ -1092,6 +1092,8 @@ class AllData:
 
             if parent.population == 0:
                 for child in children.values():
+                    if child.population == 0:
+                        raise ValueError(f"Missing population data for {child.fullname}")
                     parent.population += child.population
                 if not parent.population and parent.name not in fake_names:
                     raise ValueError(f"Missing population data for {parent.fullname}")
