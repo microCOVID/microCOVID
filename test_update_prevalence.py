@@ -45,19 +45,6 @@ def set_effective_date(effective_date: date) -> None:
     )
 
 
-@pytest.fixture
-def canada_effective_date(effective_date: date) -> date:
-    return effective_date
-
-
-@pytest.fixture(autouse=True)
-def set_canada_effective_date(canada_effective_date: date) -> None:
-    update_prevalence.canada_effective_date = canada_effective_date
-    update_prevalence.canada_evaluation_range = DateSpan.history_from(
-        canada_effective_date, update_prevalence.num_days_of_history
-    )
-
-
 class MyPlace(PopulationFilteredLogging):
     pop: int
 
@@ -894,7 +881,7 @@ def test_parse_canada_prevalence_data(
     mock_logger: Mock,
     cache: Mock,
     data: AllData,
-    canada_effective_date: date,
+    effective_date: date,
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
@@ -944,7 +931,7 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
     mock_logger: Mock,
     cache: Mock,
     data: AllData,
-    canada_effective_date: date,
+    effective_date: date,
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_empty_regional_vaccination_reports_response: Mock,
@@ -990,7 +977,7 @@ def test_parse_canada_prevalence_data_doubled_region_in_data(
     mock_logger: Mock,
     cache: Mock,
     data: AllData,
-    canada_effective_date: date,
+    effective_date: date,
     mock_canada_regions_response_with_duplicate_region: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
