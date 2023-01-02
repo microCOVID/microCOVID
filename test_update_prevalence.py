@@ -12,7 +12,7 @@ from sentry_sdk.integrations.logging import LoggingIntegration
 
 from update_prevalence import (
     calc_last_two_weeks_evaluation_range,
-    calc_evaluation_ranges,
+    calc_cumulative_cases_evaluation_ranges,
     parse_jhu_vaccines_us,
     parse_can_region_summary_by_county,
     AllData,
@@ -43,7 +43,7 @@ def effective_date() -> date:
 def set_effective_date(effective_date: date) -> None:
     update_prevalence.effective_date = effective_date
     update_prevalence.last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
-    update_prevalence.evaluation_ranges = calc_evaluation_ranges()
+    update_prevalence.cumulative_cases_evaluation_ranges = calc_cumulative_cases_evaluation_ranges()
 
 
 class MyPlace(PopulationFilteredLogging):

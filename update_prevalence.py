@@ -177,6 +177,16 @@ effective_date = calc_effective_date()
 
 
 def calc_last_two_weeks_evaluation_range() -> DateSpan:
+    # Upstream data sources offer cumulative case counts for different
+    # places.
+    #
+    # To translate these to the number of cases in the last week and
+    # the week before that, we need to collect data points for two
+    # weeks, plus the day before that two week period starts as a
+    # baseline value.
+    #
+    # https://www.microcovid.org/paper/7-basic-method
+    #
     # 7 for the current week
     # 7 for the week before
     # 1 more to compare numbers from the day before the week before
@@ -187,11 +197,14 @@ def calc_last_two_weeks_evaluation_range() -> DateSpan:
 last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
 
 
-def calc_evaluation_ranges() -> List[DateSpan]:
+# The list of DateSpans used to determine which dates
+# Place#cumulative_cases should contain when we're done
+def calc_cumulative_cases_evaluation_ranges() -> List[DateSpan]:
     return [last_two_weeks_evaluation_range]
 
 
-evaluation_ranges = calc_evaluation_ranges()
+cumulative_cases_evaluation_ranges = calc_cumulative_cases_evaluation_ranges()
+
 
 # Read the Risk Tracker's vaccine table.
 # Format:
@@ -1762,7 +1775,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 region_place.cumulative_cases[report.date] = report.value
 
         process_regional_vaccination_reports()
-        for date_span in evaluation_ranges:
+        for date_span in cumulative_cases_evaluation_ranges:
             process_regional_case_reports(date_span)
 
     #
@@ -1881,7 +1894,7 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        for evaluation_range in evaluation_ranges:
+        for evaluation_range in cumulative_cases_evaluation_ranges:
             for current in evaluation_range:
                 parse_jhu_daily_report(cache, data, current)
 
