@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000259,0.000259,0.000116,2.2214,1.0,0.000259
-Johor,Unknown,Unknown,3.3e-05,2.2214,1.0,7.4e-05
-Kedah,Unknown,Unknown,0.000108,2.2214,1.0,0.000239
-Kelantan,Unknown,Unknown,6.3e-05,2.2214,1.0,0.000141
-Melaka,Unknown,Unknown,0.00027,2.2214,1.0,0.0006
-Negeri Sembilan,Unknown,Unknown,9.6e-05,2.2214,1.0,0.000214
-Pahang,Unknown,Unknown,6.9e-05,2.2214,1.0,0.000154
-Perak,Unknown,Unknown,7.3e-05,2.2214,1.0,0.000163
-Perlis,Unknown,Unknown,5.1e-05,2.2214,1.0,0.000113
-Pulau Pinang,Unknown,Unknown,0.000178,2.2214,1.0,0.000396
-Sabah,Unknown,Unknown,2.2e-05,2.2214,1.0,4.9e-05
-Sarawak,Unknown,Unknown,0.000117,2.2214,1.0,0.000261
-Selangor,Unknown,Unknown,0.000194,2.2214,1.0,0.00043
-Terengganu,Unknown,Unknown,4.6e-05,2.2214,1.0,0.000101
-W.P. Kuala Lumpur,Unknown,Unknown,0.000251,2.2214,1.0,0.000557
-W.P. Labuan,Unknown,Unknown,0.000151,2.2214,1.0,0.000335
-W.P. Putrajaya,Unknown,Unknown,0.001044,2.2214,1.0,0.002318
+Entire country,0.000246,0.000246,0.000111,2.2212,1.0,0.000246
+Johor,Unknown,Unknown,3.3e-05,2.2212,1.0336,7.6e-05
+Kedah,Unknown,Unknown,0.000103,2.2212,1.0,0.00023
+Kelantan,Unknown,Unknown,6.1e-05,2.2212,1.0,0.000136
+Melaka,Unknown,Unknown,0.000253,2.2212,1.0,0.000562
+Negeri Sembilan,Unknown,Unknown,8.3e-05,2.2212,1.0,0.000184
+Pahang,Unknown,Unknown,6e-05,2.2212,1.0,0.000134
+Perak,Unknown,Unknown,7.4e-05,2.2212,1.0,0.000164
+Perlis,Unknown,Unknown,3.5e-05,2.2212,1.0,7.9e-05
+Pulau Pinang,Unknown,Unknown,0.000173,2.2212,1.0,0.000384
+Sabah,Unknown,Unknown,2.3e-05,2.2212,1.0,5.1e-05
+Sarawak,Unknown,Unknown,0.000116,2.2212,1.0,0.000258
+Selangor,Unknown,Unknown,0.000179,2.2212,1.0,0.000397
+Terengganu,Unknown,Unknown,4.6e-05,2.2212,1.0,0.000101
+W.P. Kuala Lumpur,Unknown,Unknown,0.00025,2.2212,1.0,0.000555
+W.P. Labuan,Unknown,Unknown,0.000121,2.2212,1.0,0.000268
+W.P. Putrajaya,Unknown,Unknown,0.00092,2.2212,1.0,0.002044
