@@ -125,9 +125,17 @@ def data() -> AllData:
     return data
 
 
+# Don't save the cache from tests to actual disk
+class NonSavingDataCache(DataCache):
+    def save(self) -> None:
+        pass
+
+
 @pytest.fixture
 def cache(effective_date: date) -> DataCache:
-    return DataCache(effective_date=effective_date, data={})
+    cache = NonSavingDataCache(effective_date=effective_date, data={})
+    cache.save
+    return cache
 
 
 @pytest.fixture
