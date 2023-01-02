@@ -688,12 +688,9 @@ def test_County_as_app_data_validates_positivity_rate(
 def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
     mock_logger: Mock, my_county: County, effective_date: date
 ) -> None:
-    for i in range(0, 5):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 101
-    for i in range(5, 16):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 100
+    last_month_cases = 50
+    cases_over_time = [100, 100, 100, 100, 100, 101, 101, 100, 100, 100, 101, 101, 101, 101, 101]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
     my_county.population = 2_000_000
     cases_last_week = my_county.cases_last_week
     assert cases_last_week == 1
@@ -703,6 +700,29 @@ def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
     assert data is not None
     mock_logger.info.assert_called_with(
         "Less than 1 case per million in last week - County level (2,000,000 people): Only 1 cases last week when population is 2000000 in My County"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_County_as_app_data_logs_before_returning_very_low_cases_last_month(
+    mock_logger: Mock, my_county: County, effective_date: date
+) -> None:
+    last_month_cases = 99
+    cases_over_time = [100, 100, 100, 100, 100, 101, 101, 100, 100, 100, 101, 101, 101, 101, 101]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
+    my_county.population = 2_000_000
+    cases_last_week = my_county.cases_last_week
+    assert cases_last_week == 1
+    cases_week_before = my_county.cases_week_before
+    assert cases_week_before == 0
+    data = my_county.as_app_data()
+    assert data is not None
+    mock_logger.info.assert_has_calls(
+        [
+            call(
+                "Less than 4 cases per million in last month - County level (2,000,000 people): Only 2 cases last month when population is 2000000 in My County"
+            )
+        ]
     )
 
 
@@ -780,12 +800,9 @@ def test_County_as_app_data_logs_before_returning_zero_cases_last_month(
 def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
     mock_logger: Mock, my_county: County, effective_date: date
 ) -> None:
-    for i in range(0, 5):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 123
-    for i in range(5, 16):
-        d = effective_date - timedelta(days=i)
-        my_county.cumulative_cases[d] = 100
+    last_month_cases = 100
+    cases_over_time = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 123, 123, 123, 123, 123]
+    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
     assert my_county.cases_last_week > 0
     assert my_county.cases_week_before == 0
     data = my_county.as_app_data()

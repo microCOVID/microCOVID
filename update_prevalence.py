@@ -844,7 +844,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         if self.cases_last_month_rough != 0 and (last_month_cases_per_million < 4):
             self.issue(
                 f"Less than 4 cases per million in last month - {type(self).__name__} level",
-                f"Only {self.cases_last_week} cases last month when population is {self.population} in {self.name}",
+                f"Only {self.cases_last_month_rough} cases last month when population is {self.population} in {self.name}",
             )
         if last_month_cases_per_million >= 4 and self.cases_last_week == 0:
             self.issue(
