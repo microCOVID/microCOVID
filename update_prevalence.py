@@ -1094,7 +1094,7 @@ class AllData:
                 for child in children.values():
                     parent.population += child.population
                 if not parent.population and parent.name not in fake_names:
-                    raise ValueError(f"Missing population data for {parent!r}")
+                    raise ValueError(f"Missing population data for {parent.fullname}")
 
         def rollup_cases(parent: Place, child_attr: str) -> bool:
             children: Dict[str, Place] = getattr(parent, child_attr)
