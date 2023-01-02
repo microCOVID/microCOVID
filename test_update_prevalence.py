@@ -11,6 +11,8 @@ from sentry_sdk.integrations.logging import LoggingIntegration
 
 
 from update_prevalence import (
+    calc_last_two_weeks_evaluation_range,
+    calc_evaluation_ranges,
     parse_jhu_vaccines_us,
     parse_can_region_summary_by_county,
     AllData,
@@ -40,22 +42,8 @@ def effective_date() -> date:
 @pytest.fixture(autouse=True)
 def set_effective_date(effective_date: date) -> None:
     update_prevalence.effective_date = effective_date
-    update_prevalence.evaluation_range = DateSpan.history_from(
-        effective_date, update_prevalence.num_days_of_history
-    )
-
-
-@pytest.fixture
-def canada_effective_date(effective_date: date) -> date:
-    return effective_date
-
-
-@pytest.fixture(autouse=True)
-def set_canada_effective_date(canada_effective_date: date) -> None:
-    update_prevalence.canada_effective_date = canada_effective_date
-    update_prevalence.canada_evaluation_range = DateSpan.history_from(
-        canada_effective_date, update_prevalence.num_days_of_history
-    )
+    update_prevalence.last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
+    update_prevalence.evaluation_ranges = calc_evaluation_ranges()
 
 
 class MyPlace(PopulationFilteredLogging):
@@ -830,7 +818,7 @@ def test_parse_canada_prevalence_data(
     mock_logger: Mock,
     cache: Mock,
     data: AllData,
-    canada_effective_date: date,
+    effective_date: date,
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,
@@ -879,7 +867,7 @@ def test_parse_canada_prevalence_data_no_vaccination_data(
     mock_logger: Mock,
     cache: Mock,
     data: AllData,
-    canada_effective_date: date,
+    effective_date: date,
     mock_canada_regions_response: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_empty_regional_vaccination_reports_response: Mock,
@@ -925,7 +913,7 @@ def test_parse_canada_prevalence_data_doubled_region_in_data(
     mock_logger: Mock,
     cache: Mock,
     data: AllData,
-    canada_effective_date: date,
+    effective_date: date,
     mock_canada_regions_response_with_duplicate_region: Mock,
     mock_canada_provinces_response: Mock,
     mock_canada_regional_vaccination_reports_response: Mock,

@@ -150,30 +150,6 @@ def print_and_log_to_sentry(message: str) -> None:
     logger.warning(message)
 
 
-def calc_effective_date() -> date:
-    now = datetime.utcnow() - timedelta(days=1)
-    # JHU daily reports are posted between 04:45 and 05:15 UTC the next day
-    if now.hour < 6:
-        now -= timedelta(days=1)
-    return now.date()
-
-
-def calc_canada_effective_date() -> date:
-    # take the current time in the westernmost timezone (PT), which is UTC -8 or
-    # UTC -7 depending on time of year. Other timezones may be 2 days behind.
-    last_full_day = datetime.utcnow() - timedelta(hours=8) - timedelta(days=1)
-    return last_full_day.date()
-
-
-effective_date = calc_effective_date()
-canada_effective_date = calc_effective_date()
-
-# 7 for the current week
-# 7 for the week before
-# 1 more to compare numbers from the day before the week before
-num_days_of_history = 15
-
-
 @dataclass
 class DateSpan:
     first_date: date
@@ -189,9 +165,33 @@ class DateSpan:
         return DateSpan(first_date=first_date, last_date=last_date)
 
 
-evaluation_range = DateSpan.history_from(effective_date, num_days_of_history)
+def calc_effective_date() -> date:
+    now = datetime.utcnow() - timedelta(days=1)
+    # JHU daily reports are posted between 04:45 and 05:15 UTC the next day
+    if now.hour < 6:
+        now -= timedelta(days=1)
+    return now.date()
 
-canada_evaluation_range = evaluation_range
+
+effective_date = calc_effective_date()
+
+
+def calc_last_two_weeks_evaluation_range() -> DateSpan:
+    # 7 for the current week
+    # 7 for the week before
+    # 1 more to compare numbers from the day before the week before
+    num_days_of_history = 15
+    return DateSpan.history_from(effective_date, num_days_of_history)
+
+
+last_two_weeks_evaluation_range = calc_last_two_weeks_evaluation_range()
+
+
+def calc_evaluation_ranges() -> List[DateSpan]:
+    return [last_two_weeks_evaluation_range]
+
+
+evaluation_ranges = calc_evaluation_ranges()
 
 
 # Read the Risk Tracker's vaccine table.
@@ -560,7 +560,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         """
         daily_cumulative_cases: List[int] = []
 
-        for current in reversed(list(evaluation_range)):
+        for current in reversed(list(last_two_weeks_evaluation_range)):
             if current not in self.cumulative_cases:
                 raise ValueError(
                     f"Missing data for {self.fullname} on {current:%Y-%m-%d} - {self.cumulative_cases}"
@@ -1665,9 +1665,6 @@ def parse_romania_prevalence_data(cache: DataCache, data: AllData) -> None:
 
 
 def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
-    populate_since = canada_evaluation_range.first_date
-    canada_one_week_ago = canada_evaluation_range.last_date - timedelta(days=6)
-
     try:
         # pull lists of health regions, provinces and territories and
         # their abbreviations
@@ -1719,7 +1716,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             # this doesn't need to be tied to the case data date, but
             # we'll use this date in case we're doing historical
             # analysis or something like that.
-            before_date = canada_effective_date
+            before_date = effective_date
             after_date = before_date - timedelta(days=buffer_days)
 
             # get region vaccination counts from covid19tracker.ca.
@@ -1729,7 +1726,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 CanadaRegionalVaccinationReports,
                 CanadaRegionalVaccinationReports.SOURCE.format(
                     hr_uid=region.hruid,
-                    before=canada_effective_date.strftime("%Y-%m-%d"),
+                    before=before_date.strftime("%Y-%m-%d"),
                     after=after_date.strftime("%Y-%m-%d"),
                 ),
             )
@@ -1750,7 +1747,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                     f"No vaccination data available from api.covid19tracker.ca in range for {region_place.fullname}",
                 )
 
-        def process_regional_case_reports() -> None:
+        def process_regional_case_reports(date_span: DateSpan) -> None:
             # get region case counts from opencovid.ca, which seems to have
             # cleaner data than covid19tracker.ca
             case_reports = parse_json(
@@ -1758,21 +1755,34 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
                 CanadaOpenCovidCases,
                 CanadaOpenCovidCases.SOURCE.format(
                     hr_uid=region.hruid,
-                    before=canada_effective_date.strftime("%Y-%m-%d"),
-                    after=populate_since.strftime("%Y-%m-%d"),
+                    before=date_span.last_date.strftime("%Y-%m-%d"),
+                    after=date_span.first_date.strftime("%Y-%m-%d"),
                 ),
             )
             for report in case_reports.data.cases:
                 region_place.cumulative_cases[report.date] = report.value
 
         process_regional_vaccination_reports()
-        process_regional_case_reports()
+        for date_span in evaluation_ranges:
+            process_regional_case_reports(date_span)
 
+    #
     # get vaccination and test rates (number of tests given) per-province from
     # opencovid.ca.
-    # canada_one_week_ago + timedelta(days=1) is the start of one week ago,
-    # but go back one day to properly count.
-    canada_one_week_cumulative_baseline = canada_one_week_ago - timedelta(days=1)
+    #
+
+    populate_since = last_two_weeks_evaluation_range.first_date
+    one_week_ago = effective_date - timedelta(days=6)
+    # one_week_ago is the start of one week ago, but go back one day
+    # so we can compare the baseline number before this week as well
+    # when calculating tests_in_past_week.
+    one_week_cumulative_baseline = one_week_ago - timedelta(days=1)
+
+    # Pull vaccine distribution numbers for use a proxy if administered numbers
+    # aren't broken down by manufacturer under the assumption that the
+    # relative proportions of distribution by manufacturer is roughly
+    # the same as relative proportions of administration by
+    # manufacturer
     vaccine_distribution_reports = parse_json(
         cache, CanadaVaccineDistribution, CanadaVaccineDistribution.SOURCE
     )
@@ -1787,7 +1797,7 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             CanadaOpenCovidProvincialSummary,
             CanadaOpenCovidProvincialSummary.SOURCE.format(
                 province=province.region,
-                before=canada_effective_date.strftime("%Y-%m-%d"),
+                before=effective_date.strftime("%Y-%m-%d"),
                 after=populate_since.strftime("%Y-%m-%d"),
             ),
         )
@@ -1796,8 +1806,8 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
         # populate tests_in_past_week for the province
         #
         for report in provincial_reports.data:
-            # check bounds just in case the reports interval gets changed later
-            if canada_one_week_cumulative_baseline <= report.date_ and report.date_ <= canada_effective_date:
+            # only look at last week when calculating tests_in_past_week
+            if one_week_cumulative_baseline <= report.date_ and report.date_ <= effective_date:
                 if report.tests_completed:
                     min_test_count = (
                         report.tests_completed
@@ -1820,10 +1830,6 @@ def parse_canada_prevalence_data(cache: DataCache, data: AllData) -> None:
             (d for d in vaccine_distribution_reports.data if d.province == province.region), None
         )
         if provincial_dist is not None:
-            # Use distribution numbers as a proxy if administered numbers
-            # aren't available under the assumption that the relative
-            # proportions of distribution by manufacturer is roughly the
-            # same as relative proportions of administration by manufacturer
             administered_shots_by_manufacturer = {
                 manufacturer: administered if administered is not None else (distributed or 0)
                 for (manufacturer, administered, distributed) in zip(
@@ -1876,8 +1882,9 @@ def main() -> None:
         data.populate_fips_cache()
 
         # Cumulative cases per region
-        for current in evaluation_range:
-            parse_jhu_daily_report(cache, data, current)
+        for evaluation_range in evaluation_ranges:
+            for current in evaluation_range:
+                parse_jhu_daily_report(cache, data, current)
 
         # Global vaccination rates
         parse_jhu_vaccines_global(cache, data)
