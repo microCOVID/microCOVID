@@ -694,7 +694,7 @@ def test_County_as_app_data_logs_before_returning_very_low_cases_last_week(
     data = my_county.as_app_data()
     assert data is not None
     mock_logger.info.assert_called_with(
-        "Less than 1 case per million - County level (2,000,000 people): Only 1 cases last week when population is 2000000 in My County"
+        "Less than 1 case per million in last week - County level (2,000,000 people): Only 1 cases last week when population is 2000000 in My County"
     )
 
 
@@ -713,9 +713,17 @@ def test_County_as_app_data_logs_before_returning_zero_cases_last_week(
     cases_week_before = my_county.cases_week_before
     assert cases_week_before > 0
     data = my_county.as_app_data()
+    assert my_county.cases_last_month_rough == 123
     assert data is not None
-    mock_logger.info.assert_called_with(
-        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
+    mock_logger.info.assert_has_calls(
+        [
+            call(
+                "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
+            ),
+            call(
+                "No cases noted for last week - but there were some in the last month - County level (123 people): No cases reported for last week in My County, My State despite there being cases in the last month"
+            ),
+        ]
     )
     assert data.updatedAt == (effective_date - timedelta(days=9)).strftime("%B %d, %Y")
 
