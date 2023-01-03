@@ -79,13 +79,14 @@ def add_cumulative_cases(
 ) -> None:
     one_month_ago = effective_date - timedelta(days=30)
     place.cumulative_cases[one_month_ago] = last_month_cases
-    print(f"Populated {one_month_ago} as {last_month_cases}")
     assert len(last_two_weeks_cases) == 15, "Please simulate real data length for last two weeks range"
     for i in range(0, len(last_two_weeks_cases)):
         days_since_effective_date = len(last_two_weeks_cases) - i - 1
         place.cumulative_cases[
             effective_date - timedelta(days=days_since_effective_date)
         ] = last_two_weeks_cases[i]
+    if place.cases_last_week is not None and place.tests_in_past_week is not None:
+        place.test_positivity_rate = place.cases_last_week / place.tests_in_past_week
 
 
 def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
@@ -108,6 +109,7 @@ def my_county(effective_date: date) -> County:
         country="My Country",
         state="My State",
         population=123,
+        tests_in_past_week=50,
     )
     add_stable_cumulative_cases(my_county, effective_date)
     return my_county
