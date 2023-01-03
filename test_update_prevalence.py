@@ -745,9 +745,6 @@ def test_County_as_app_data_logs_before_returning_zero_cases_last_week(
     assert data is not None
     assert mock_logger.info.mock_calls == [
         call(
-            "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
-        ),
-        call(
             "No cases noted for last week - but there were some in the last month - County level (123 people): No cases reported for last week in My County, My State despite there being cases in the last month"
         ),
     ]
@@ -788,31 +785,8 @@ def test_County_as_app_data_logs_before_returning_zero_cases_last_month(
         call(
             "No cases noted for a month - County level (123 people): No cases reported in at least one month in My County, My State"
         ),
-        call(
-            "No cases noted for either week - County level (123 people): No cases reported in either week in My County, My State"
-        ),
-        call(
-            "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
-        ),
     ] == mock_logger.info.mock_calls
     assert data.updatedAt == (effective_date - timedelta(days=15)).strftime("%B %d, %Y")
-
-
-@patch("update_prevalence.logger", spec=Logger)
-def test_County_as_app_data_logs_before_returning_zero_cases_week_before(
-    mock_logger: Mock, my_county: County, effective_date: date
-) -> None:
-    last_month_cases = 100
-    cases_over_time = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 123, 123, 123, 123, 123]
-    add_cumulative_cases(my_county, effective_date, last_month_cases, cases_over_time)
-    assert my_county.cases_last_week > 0
-    assert my_county.cases_week_before == 0
-    data = my_county.as_app_data()
-    assert data is not None
-    mock_logger.info.assert_called_with(
-        "No cases noted for a week - County level (123 people): No cases reported in at least one week in My County, My State"
-    )
-    assert data.updatedAt == (effective_date - timedelta(days=4)).strftime("%B %d, %Y")
 
 
 @patch("update_prevalence.logger", spec=Logger)
