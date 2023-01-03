@@ -862,7 +862,7 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         if self.test_positivity_rate is None:
             self.issue(
                 f"No test positivity rate - {type(self).__name__} level",
-                f"Test positivity rate for {self.name} is not set"
+                f"Test positivity rate for {self.name} is not set",
             )
 
         return AppLocation(
