@@ -1024,6 +1024,22 @@ def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_cases_uses_suspicious_data(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    add_stable_cumulative_cases(wyoming, effective_date)
+    wyoming.population = 123
+    wyoming.tests_in_past_week = 123
+    assert wyoming.tests_in_past_week == 123
+    assert wyoming.cases_last_week == 0
+    all_data.rollup_totals()
+    assert us.cases_last_week == 0
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_called_with('Case roll-up is suspect (123 people): Tried to roll up Wyoming, US (population 123) into US (population 123), but cases last week on Wyoming, US was 0')
+
+
+@patch("update_prevalence.logger", spec=Logger)
 @patch("update_prevalence.requests.get", spec=requests.get)
 def test_parse_romania_prevalence_data_stale(
     mock_get: Mock, mock_logger: Mock, cache: Mock, data: AllData

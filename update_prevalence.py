@@ -1111,7 +1111,7 @@ class AllData:
                     if not child.cases_last_week:
                         parent.issue(
                             "Case roll-up is suspect",
-                            f"Tried to roll up {child.fullname} (population {child.population}) into {parent.fullname} (population {parent.population}), but cases last week on {child!r} was {child.cases_last_week}",
+                            f"Tried to roll up {child.fullname} (population {child.population}) into {parent.fullname} (population {parent.population}), but cases last week on {child.fullname} was {child.cases_last_week}",
                             impact=child.population / parent.population,
                         )
                 if not parent.cumulative_cases:
