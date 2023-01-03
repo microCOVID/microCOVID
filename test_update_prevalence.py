@@ -904,6 +904,40 @@ def test_AllData_rollup_totals_no_state_data(mock_logger: Mock, effective_date: 
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_county_has_no_population(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    add_increasing_cumulative_cases(wyoming, effective_date)
+    montana = all_data.get_state("Montana", country="US")
+    add_increasing_cumulative_cases(montana, effective_date)
+    montana.population = 0
+    random_county = all_data.get_county("Random county", state="Montana", country="US")
+    random_county.population = 0
+    all_data.rollup_totals()
+    mock_logger.warning.assert_called_with(
+        "Discarding country US due to error: ValueError('Missing population data for Random county, Montana, US')"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_totals_state_has_no_population(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    wyoming.population = 50
+    add_increasing_cumulative_cases(wyoming, effective_date)
+    montana = all_data.get_state("Montana", country="US")
+    add_increasing_cumulative_cases(montana, effective_date)
+    montana.population = 0
+    all_data.rollup_totals()
+    mock_logger.warning.assert_called_with(
+        "Discarding country US due to error: ValueError('Missing population data for Montana, US')"
+    )
+
+
+@patch("update_prevalence.logger", spec=Logger)
 def test_AllData_rollup_totals_no_country_data(mock_logger: Mock, effective_date: date) -> None:
     all_data = AllData()
     us = all_data.get_country("US")

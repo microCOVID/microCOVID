@@ -1092,6 +1092,7 @@ class AllData:
 
             if parent.population == 0:
                 for child in children.values():
+                    assert child.population != 0, "Should have been purged before this point"
                     parent.population += child.population
                 if not parent.population and parent.name not in fake_names:
                     raise ValueError(f"Missing population data for {parent.fullname}")
@@ -1198,7 +1199,7 @@ class AllData:
                         rolldown_vaccine_types(state, state.counties.values())
                     for county in state.counties.values():
                         if county.population == 0 and county.name not in fake_names:
-                            raise ValueError(f"Missing population data for {county!r}")
+                            raise ValueError(f"Missing population data for {county.fullname}")
                     rollup_population(state, "counties")
                     rollup_vaccines(state, "counties")
                 rollup_population(country, "states")
