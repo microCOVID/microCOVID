@@ -977,6 +977,39 @@ def test_AllData_rollup_totals_fake_region_with_no_cases_last_week_removed(
 
 
 @patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_testing(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    add_increasing_cumulative_cases(wyoming, effective_date)
+    wyoming.population = 123
+    wyoming.tests_in_past_week = 123
+    assert wyoming.tests_in_past_week == 123
+    assert wyoming.cases_last_week == 5
+    all_data.rollup_totals()
+    assert wyoming.test_positivity_rate == 5 / 123
+    assert us.cases_last_week == 5
+    assert us.test_positivity_rate == 5 / 123
+    mock_logger.warning.assert_not_called()
+    mock_logger.info.assert_not_called()
+
+
+@patch("update_prevalence.logger", spec=Logger)
+def test_AllData_rollup_testing_unexpected_rollup_fails_fast(mock_logger: Mock, effective_date: date) -> None:
+    all_data = AllData()
+    us = all_data.get_country("US")
+    wyoming = all_data.get_state("Wyoming", country="US")
+    add_increasing_cumulative_cases(wyoming, effective_date)
+    wyoming.population = 123
+    wyoming.tests_in_past_week = 123
+    us.population = 123
+    us.tests_in_past_week = 123
+    with pytest.raises(NotImplementedError) as e:
+        all_data.rollup_totals()
+    assert "Tried to overwrite" in str(e)
+
+
+@patch("update_prevalence.logger", spec=Logger)
 def test_AllData_rollup_totals(mock_logger: Mock, effective_date: date) -> None:
     all_data = AllData()
     us = all_data.get_country("US")
