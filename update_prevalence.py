@@ -59,9 +59,9 @@ logger = logging.getLogger("update_prevalence")
 class LogAggregator:
     population_affected_by_issue: Dict[str, int] = {}
 
-    def add_issue(self, msg: str, place: "PopulationFilteredLogging") -> None:
+    def add_issue(self, msg: str, place: "PopulationFilteredLogging", *, impact: float = 1.0) -> None:
         existing_population = self.population_affected_by_issue.get(msg, 0)
-        self.population_affected_by_issue[msg] = existing_population + place.population_as_int
+        self.population_affected_by_issue[msg] = int(existing_population + place.population_as_int * impact)
 
     def log(self) -> None:
         for msg in self.population_affected_by_issue:
@@ -84,8 +84,8 @@ class PopulationFilteredLogging(abc.ABC):
     def population_as_int(self) -> int:
         ...
 
-    def issue(self, category: str, detail: str) -> None:
-        log_aggregator.add_issue(category, self)
+    def issue(self, category: str, detail: str, *, impact: float = 1.0) -> None:
+        log_aggregator.add_issue(category, self, impact=impact)
         logger.info(f"{category} ({self.population_as_int:,d} people): {detail}")
 
 
@@ -1108,6 +1108,12 @@ class AllData:
             if not parent.cumulative_cases:
                 for child in children.values():
                     parent.cumulative_cases += child.cumulative_cases
+                    if not child.cases_last_week:
+                        parent.issue(
+                            "Case roll-up is suspect",
+                            f"Tried to roll up {child.fullname} (population {child.population}) into {parent.fullname} (population {parent.population}), but cases last week on {child!r} was {child.cases_last_week}",
+                            impact=child.population / parent.population,
+                        )
                 if not parent.cumulative_cases:
                     return False
             if parent.population == 0 and not parent.cases_last_week:  # fake region (Unknown, etc)
