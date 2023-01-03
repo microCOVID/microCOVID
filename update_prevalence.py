@@ -823,16 +823,6 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
                 f"No cases noted for a month - {type(self).__name__} level",
                 f"No cases reported in at least one month in {self.fullname}",
             )
-        if self.cases_last_week == 0 and self.cases_week_before == 0:
-            self.issue(
-                f"No cases noted for either week - {type(self).__name__} level",
-                f"No cases reported in either week in {self.fullname}",
-            )
-        if self.cases_last_week == 0 or self.cases_week_before == 0:
-            self.issue(
-                f"No cases noted for a week - {type(self).__name__} level",
-                f"No cases reported in at least one week in {self.fullname}",
-            )
         last_week_cases_per_million = (1_000_000 * self.cases_last_week) / self.population
         if self.cases_last_week != 0 and (last_week_cases_per_million < 1):
             self.issue(
