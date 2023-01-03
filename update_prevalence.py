@@ -1125,7 +1125,7 @@ class AllData:
                         tests_last_week += round(child.cases_last_week / child.test_positivity_rate)
                 if valid and tests_last_week:
                     if parent.test_positivity_rate is not None:
-                        raise ValueError('Tried to overwrite valid test_positivity_rate')
+                        raise NotImplementedError("Tried to overwrite valid test_positivity_rate")
                     parent.test_positivity_rate = parent.cases_last_week / tests_last_week
 
         def rollup_vaccines(parent: Place, child_attr: str) -> None:
