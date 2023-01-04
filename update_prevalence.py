@@ -681,7 +681,9 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
 
     @property
     def updatedAt(self) -> date:
-        new_data_dates: List[date] = self.new_case_data_dates(self.recent_daily_cumulative_cases, effective_date)
+        new_data_dates: List[date] = self.new_case_data_dates(
+            self.recent_daily_cumulative_cases, effective_date
+        )
         if len(new_data_dates) == 0:
             # This is probably wrong
             return effective_date - timedelta(days=len(self.recent_daily_cumulative_cases))
