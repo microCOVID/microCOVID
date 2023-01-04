@@ -95,6 +95,12 @@ def add_increasing_cumulative_cases(place: Place, effective_date: date) -> None:
     add_cumulative_cases(place, effective_date, last_month_cases, cases_over_time)
 
 
+def add_frequently_updated_cumulative_cases(place: Place, effective_date: date) -> None:
+    last_month_cases = 1
+    cases_over_time = [0, 1, 2, 3, 4, 5, 8, 8, 8, 8, 9, 9, 10, 10, 11]
+    add_cumulative_cases(place, effective_date, last_month_cases, cases_over_time)
+
+
 def add_stable_cumulative_cases(place: Place, effective_date: date) -> None:
     last_month_cases = 5
     cases_over_time = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
@@ -804,6 +810,34 @@ def test_Place_recent_daily_cumulative_cases_date_missing(
     with pytest.raises(ValueError) as e:
         my_county.recent_daily_cumulative_cases
     assert "Missing data for" in str(e.value)
+
+
+def test_Place_new_case_data_dates_stable(my_county: County, effective_date: date) -> None:
+    add_stable_cumulative_cases(my_county, effective_date)
+    new_dates = my_county.new_case_data_dates(my_county.recent_daily_cumulative_cases, effective_date)
+    assert new_dates == []
+
+
+def test_Place_new_case_data_dates_increasing(my_county: County, effective_date: date) -> None:
+    add_increasing_cumulative_cases(my_county, effective_date)
+    new_dates = my_county.new_case_data_dates(my_county.recent_daily_cumulative_cases, effective_date)
+    assert new_dates == [effective_date - timedelta(days=6)]
+
+
+def test_Place_new_case_data_dates_frequently_updated(my_county: County, effective_date: date) -> None:
+    add_frequently_updated_cumulative_cases(my_county, effective_date)
+    new_dates = my_county.new_case_data_dates(my_county.recent_daily_cumulative_cases, effective_date)
+    assert new_dates == [
+        effective_date - timedelta(days=13),
+        effective_date - timedelta(days=12),
+        effective_date - timedelta(days=11),
+        effective_date - timedelta(days=10),
+        effective_date - timedelta(days=9),
+        effective_date - timedelta(days=8),
+        effective_date - timedelta(days=4),
+        effective_date - timedelta(days=2),
+        effective_date - timedelta(days=0),
+    ]
 
 
 @patch("update_prevalence.logger", spec=Logger)
