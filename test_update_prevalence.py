@@ -812,21 +812,23 @@ def test_Place_recent_daily_cumulative_cases_date_missing(
     assert "Missing data for" in str(e.value)
 
 
-def test_Place_new_case_data_dates_stable(my_county: County, effective_date: date) -> None:
+def test_Place_recent_case_data_dates_rough_stable(my_county: County, effective_date: date) -> None:
     add_stable_cumulative_cases(my_county, effective_date)
-    new_dates = my_county.new_case_data_dates(my_county.recent_daily_cumulative_cases, effective_date)
+    new_dates = my_county.recent_case_data_dates_rough
     assert new_dates == []
 
 
-def test_Place_new_case_data_dates_increasing(my_county: County, effective_date: date) -> None:
+def test_Place_recent_case_data_dates_rough_increasing(my_county: County, effective_date: date) -> None:
     add_increasing_cumulative_cases(my_county, effective_date)
-    new_dates = my_county.new_case_data_dates(my_county.recent_daily_cumulative_cases, effective_date)
+    new_dates = my_county.recent_case_data_dates_rough
     assert new_dates == [effective_date - timedelta(days=6)]
 
 
-def test_Place_new_case_data_dates_frequently_updated(my_county: County, effective_date: date) -> None:
+def test_Place_recent_case_data_dates_rough_frequently_updated(
+    my_county: County, effective_date: date
+) -> None:
     add_frequently_updated_cumulative_cases(my_county, effective_date)
-    new_dates = my_county.new_case_data_dates(my_county.recent_daily_cumulative_cases, effective_date)
+    new_dates = my_county.recent_case_data_dates_rough
     assert new_dates == [
         effective_date - timedelta(days=13),
         effective_date - timedelta(days=12),

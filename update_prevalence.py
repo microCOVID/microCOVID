@@ -668,12 +668,13 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         assert len(week_before) == 8
         return self.cases_in_cum_cases(week_before)
 
-    def new_case_data_dates(self, cumulative_cases: List[int], last_date_in_data: date) -> List[date]:
-        cases_from_last_date_on = cumulative_cases[::-1]
+    @property
+    def recent_case_data_dates_rough(self) -> List[date]:
+        cases_from_last_date_on = self.recent_daily_cumulative_cases[::-1]
         last_num_cases = cases_from_last_date_on[0]
         new_data_dates: List[date] = []
         for i in range(len(cases_from_last_date_on)):
-            current_date = last_date_in_data - timedelta(days=(i - 1))
+            current_date = effective_date - timedelta(days=(i - 1))
             if cases_from_last_date_on[i] != last_num_cases:
                 new_data_dates.append(current_date)
             last_num_cases = cases_from_last_date_on[i]
@@ -681,11 +682,12 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
 
     @property
     def updatedAt(self) -> date:
-        new_data_dates: List[date] = self.new_case_data_dates(
-            self.recent_daily_cumulative_cases, effective_date
-        )
+        new_data_dates = self.recent_case_data_dates_rough
         if len(new_data_dates) == 0:
-            # This is probably wrong
+            # Until it's verified that the UI can handle 'we don't
+            # know when this was last reported' and we can safely
+            # return None here, let's report the last data date we
+            # have.
             return effective_date - timedelta(days=len(self.recent_daily_cumulative_cases))
         return new_data_dates[-1]
 
