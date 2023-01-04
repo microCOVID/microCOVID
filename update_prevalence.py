@@ -668,15 +668,24 @@ class Place(pydantic.BaseModel, PopulationFilteredLogging):
         assert len(week_before) == 8
         return self.cases_in_cum_cases(week_before)
 
+    def new_case_data_dates(self, cumulative_cases: List[int], last_date_in_data: date) -> List[date]:
+        cases_from_last_date_on = cumulative_cases[::-1]
+        last_num_cases = cases_from_last_date_on[0]
+        new_data_dates: List[date] = []
+        for i in range(len(cases_from_last_date_on)):
+            current_date = last_date_in_data - timedelta(days=(i - 1))
+            if cases_from_last_date_on[i] != last_num_cases:
+                new_data_dates.append(current_date)
+            last_num_cases = cases_from_last_date_on[i]
+        return new_data_dates[::-1]
+
     @property
     def updatedAt(self) -> date:
-        cases_from_effective_date_on = self.recent_daily_cumulative_cases[::-1]
-        last_num_cases = cases_from_effective_date_on[0]
-        for i in range(len(cases_from_effective_date_on)):
-            if cases_from_effective_date_on[i] != last_num_cases:
-                return effective_date - timedelta(days=(i - 1))
-            last_num_cases = cases_from_effective_date_on[i]
-        return effective_date - timedelta(days=len(cases_from_effective_date_on))
+        new_data_dates: List[date] = self.new_case_data_dates(self.recent_daily_cumulative_cases, effective_date)
+        if len(new_data_dates) == 0:
+            # This is probably wrong
+            return effective_date - timedelta(days=len(self.recent_daily_cumulative_cases))
+        return new_data_dates[-1]
 
     @property
     @abc.abstractmethod
