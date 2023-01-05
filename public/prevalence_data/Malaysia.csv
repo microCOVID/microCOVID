@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000231,0.000231,0.000104,2.2208,1.0,0.000231
-Johor,Unknown,Unknown,3.2e-05,2.2208,1.0,7.1e-05
-Kedah,Unknown,Unknown,9.9e-05,2.2208,1.0,0.00022
-Kelantan,Unknown,Unknown,6.1e-05,2.2208,1.0,0.000135
-Melaka,Unknown,Unknown,0.000233,2.2208,1.0,0.000517
-Negeri Sembilan,Unknown,Unknown,7.7e-05,2.2208,1.0,0.000171
-Pahang,Unknown,Unknown,6.2e-05,2.2208,1.0,0.000138
-Perak,Unknown,Unknown,7.2e-05,2.2208,1.0,0.00016
-Perlis,Unknown,Unknown,3.1e-05,2.2208,1.0,7e-05
-Pulau Pinang,Unknown,Unknown,0.000148,2.2208,1.0,0.000329
-Sabah,Unknown,Unknown,2.5e-05,2.2208,1.0,5.5e-05
-Sarawak,Unknown,Unknown,0.000111,2.2208,1.0,0.000246
-Selangor,Unknown,Unknown,0.000157,2.2208,1.0,0.00035
-Terengganu,Unknown,Unknown,5.1e-05,2.2208,1.0,0.000114
-W.P. Kuala Lumpur,Unknown,Unknown,0.000259,2.2208,1.0,0.000576
-W.P. Labuan,Unknown,Unknown,0.000101,2.2208,1.0,0.000223
-W.P. Putrajaya,Unknown,Unknown,0.00093,2.2208,1.0,0.002065
+Entire country,0.000228,0.000228,0.000103,2.2206,1.0,0.000228
+Johor,Unknown,Unknown,3.4e-05,2.2206,1.0678,8e-05
+Kedah,Unknown,Unknown,9.7e-05,2.2206,1.0,0.000216
+Kelantan,Unknown,Unknown,6.5e-05,2.2206,1.0517,0.000152
+Melaka,Unknown,Unknown,0.00024,2.2206,1.0,0.000533
+Negeri Sembilan,Unknown,Unknown,7.8e-05,2.2206,1.0,0.000173
+Pahang,Unknown,Unknown,5.8e-05,2.2206,1.0,0.00013
+Perak,Unknown,Unknown,6.6e-05,2.2206,1.0,0.000146
+Perlis,Unknown,Unknown,4.3e-05,2.2206,1.0,9.6e-05
+Pulau Pinang,Unknown,Unknown,0.000141,2.2206,1.0,0.000314
+Sabah,Unknown,Unknown,2.3e-05,2.2206,1.0,5.1e-05
+Sarawak,Unknown,Unknown,0.000112,2.2206,1.0,0.00025
+Selangor,Unknown,Unknown,0.000156,2.2206,1.0,0.000346
+Terengganu,Unknown,Unknown,4.9e-05,2.2206,1.0,0.000108
+W.P. Kuala Lumpur,Unknown,Unknown,0.00025,2.2206,1.0,0.000556
+W.P. Labuan,Unknown,Unknown,8e-05,2.2206,1.0,0.000179
+W.P. Putrajaya,Unknown,Unknown,0.00093,2.2206,1.0,0.002065
