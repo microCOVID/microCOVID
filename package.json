@@ -33,7 +33,7 @@
     "react-i18next": "^11.7.2",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.0-next.64",
+    "react-scripts": "4.0.1",
     "rfs": "^9.0.3",
     "sass": "^1.35.1",
     "use-query-params": "^1.1.8"
@@ -76,7 +76,6 @@
     "@types/testing-library__jest-dom": "^5.9.5",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
-    "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.1",
     "eslint-plugin-prettier": "^3.1.3",

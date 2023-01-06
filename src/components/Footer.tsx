@@ -21,7 +21,7 @@ export const Footer = (): React.ReactElement => (
         />
       </a>
       <p>
-        <span property="dct:title">microCOVID Project</span> (
+        <span>microCOVID Project</span> (
         <Link
           to="/paper/1-intro#authors"
           property="cc:attributionName"
