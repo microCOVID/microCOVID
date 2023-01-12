@@ -1,36 +1,36 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.004615,0.003724,0.000662,2.932,2.0,0.003881
-Algoma,2.8e-05,2.3e-05,9e-06,2.932,1.0,2.5e-05
-Brant,2.1e-05,1.7e-05,6e-06,2.932,1.0,1.9e-05
-Durham,5e-06,4e-06,1e-06,2.932,1.0,4e-06
-Grey Bruce,1.8e-05,1.5e-05,6e-06,2.932,1.0,1.6e-05
-Haldimand-Norfolk,2.7e-05,2.2e-05,8e-06,2.932,1.0,2.4e-05
-Haliburton, Kawartha, Pine Ridge,1.7e-05,1.4e-05,5e-06,2.932,1.0,1.5e-05
-Halton,5e-06,4e-06,2e-06,2.932,1.0,5e-06
-Hamilton,6e-06,5e-06,2e-06,2.932,1.0,5e-06
-Hastings and Prince Edward,1.9e-05,1.5e-05,6e-06,2.932,1.0,1.7e-05
-Huron Perth,2.2e-05,1.8e-05,7e-06,2.932,1.0,2e-05
-Chatham-Kent,3.1e-05,2.5e-05,9e-06,2.932,1.0,2.7e-05
-Kingston, Frontenac and Lennox and Addington,1.6e-05,1.3e-05,5e-06,2.932,1.0,1.4e-05
-Lambton,2.5e-05,2e-05,8e-06,2.932,1.0,2.2e-05
-Leeds, Grenville and Lanark,1.8e-05,1.5e-05,6e-06,2.932,1.0,1.6e-05
-Middlesex-London,6e-06,5e-06,2e-06,2.932,1.0,6e-06
-Niagara,7e-06,6e-06,2e-06,2.932,1.0,6e-06
-North Bay Parry Sound,2.5e-05,2e-05,8e-06,2.932,1.0,2.2e-05
-Northwestern,4.1e-05,3.3e-05,1.2e-05,2.932,1.0,3.6e-05
-Ottawa,3e-06,3e-06,1e-06,2.932,1.0,3e-06
-Peel,2e-06,2e-06,1e-06,2.932,1.0,2e-06
-Peterborough,2.2e-05,1.8e-05,7e-06,2.932,1.0,2e-05
-Porcupine,3.9e-05,3.2e-05,1.2e-05,2.932,1.0,3.5e-05
-Renfrew,3e-05,2.4e-05,9e-06,2.932,1.0,2.7e-05
-Eastern,1.5e-05,1.2e-05,5e-06,2.932,1.0,1.3e-05
-Simcoe Muskoka,5e-06,4e-06,2e-06,2.932,1.0,5e-06
-Sudbury,1.6e-05,1.3e-05,5e-06,2.932,1.0,1.4e-05
-Thunder Bay,2.1e-05,1.7e-05,6e-06,2.932,1.0,1.9e-05
-Timiskaming,9.7e-05,7.8e-05,2.9e-05,2.932,1.0,8.6e-05
-Waterloo,5e-06,4e-06,2e-06,2.932,1.0,5e-06
-Wellington-Dufferin-Guelph,1e-05,8e-06,3e-06,2.932,1.0,9e-06
-Windsor-Essex,8e-06,6e-06,2e-06,2.932,1.0,7e-06
-York,3e-06,2e-06,1e-06,2.932,1.0,2e-06
-Southwestern,1.5e-05,1.2e-05,4e-06,2.932,1.0,1.3e-05
-Toronto,1e-06,1e-06,0.0,2.932,1.0,1e-06
+Entire state,0.004635,0.00374,0.000665,2.9302,2.0,0.003897
+Algoma,2.8e-05,2.3e-05,9e-06,2.9302,1.0,2.5e-05
+Brant,2.1e-05,1.7e-05,6e-06,2.9302,1.0,1.9e-05
+Durham,5e-06,4e-06,1e-06,2.9302,1.0,4e-06
+Grey Bruce,1.8e-05,1.5e-05,6e-06,2.9302,1.0,1.6e-05
+Haldimand-Norfolk,2.7e-05,2.2e-05,8e-06,2.9302,1.0,2.4e-05
+Haliburton, Kawartha, Pine Ridge,1.7e-05,1.4e-05,5e-06,2.9302,1.0,1.5e-05
+Halton,5e-06,4e-06,2e-06,2.9302,1.0,5e-06
+Hamilton,6e-06,5e-06,2e-06,2.9302,1.0,5e-06
+Hastings and Prince Edward,1.9e-05,1.5e-05,6e-06,2.9302,1.0,1.7e-05
+Huron Perth,2.2e-05,1.8e-05,7e-06,2.9302,1.0,2e-05
+Chatham-Kent,3.1e-05,2.5e-05,9e-06,2.9302,1.0,2.7e-05
+Kingston, Frontenac and Lennox and Addington,1.6e-05,1.3e-05,5e-06,2.9302,1.0,1.4e-05
+Lambton,2.5e-05,2e-05,8e-06,2.9302,1.0,2.2e-05
+Leeds, Grenville and Lanark,1.8e-05,1.5e-05,6e-06,2.9302,1.0,1.6e-05
+Middlesex-London,6e-06,5e-06,2e-06,2.9302,1.0,6e-06
+Niagara,7e-06,6e-06,2e-06,2.9302,1.0,6e-06
+North Bay Parry Sound,2.5e-05,2e-05,8e-06,2.9302,1.0,2.2e-05
+Northwestern,4.1e-05,3.3e-05,1.2e-05,2.9302,1.0,3.6e-05
+Ottawa,3e-06,3e-06,1e-06,2.9302,1.0,3e-06
+Peel,2e-06,2e-06,1e-06,2.9302,1.0,2e-06
+Peterborough,2.2e-05,1.8e-05,7e-06,2.9302,1.0,2e-05
+Porcupine,3.9e-05,3.2e-05,1.2e-05,2.9302,1.0,3.5e-05
+Renfrew,3e-05,2.4e-05,9e-06,2.9302,1.0,2.7e-05
+Eastern,1.5e-05,1.2e-05,5e-06,2.9302,1.0,1.3e-05
+Simcoe Muskoka,5e-06,4e-06,2e-06,2.9302,1.0,5e-06
+Sudbury,1.6e-05,1.3e-05,5e-06,2.9302,1.0,1.4e-05
+Thunder Bay,2.1e-05,1.7e-05,6e-06,2.9302,1.0,1.9e-05
+Timiskaming,9.7e-05,7.8e-05,2.9e-05,2.9302,1.0,8.6e-05
+Waterloo,5e-06,4e-06,2e-06,2.9302,1.0,5e-06
+Wellington-Dufferin-Guelph,1e-05,8e-06,3e-06,2.9302,1.0,9e-06
+Windsor-Essex,8e-06,6e-06,2e-06,2.9302,1.0,7e-06
+York,3e-06,2e-06,1e-06,2.9302,1.0,2e-06
+Southwestern,1.5e-05,1.2e-05,4e-06,2.9302,1.0,1.3e-05
+Toronto,1e-06,1e-06,0.0,2.9302,1.0,1e-06
