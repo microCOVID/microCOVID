@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000208,0.000208,9.4e-05,2.2189,1.0,0.000208
-Johor,Unknown,Unknown,3.2e-05,2.2189,1.0,7.1e-05
-Kedah,Unknown,Unknown,7.1e-05,2.2189,1.0,0.000158
-Kelantan,Unknown,Unknown,3.1e-05,2.2189,1.0,6.8e-05
-Melaka,Unknown,Unknown,0.000234,2.2189,1.0188,0.000528
-Negeri Sembilan,Unknown,Unknown,0.000121,2.2189,1.4624,0.000393
-Pahang,Unknown,Unknown,4.9e-05,2.2189,1.0,0.000108
-Perak,Unknown,Unknown,5e-05,2.2189,1.0,0.000111
-Perlis,Unknown,Unknown,5.1e-05,2.2189,1.3333,0.000151
-Pulau Pinang,Unknown,Unknown,9.2e-05,2.2189,1.0,0.000205
-Sabah,Unknown,Unknown,2.2e-05,2.2189,1.0,4.8e-05
-Sarawak,Unknown,Unknown,9.2e-05,2.2189,1.0,0.000203
-Selangor,Unknown,Unknown,0.000151,2.2189,1.003,0.000337
-Terengganu,Unknown,Unknown,5.4e-05,2.2189,1.082,0.000129
-W.P. Kuala Lumpur,Unknown,Unknown,0.000265,2.2189,1.088,0.000639
-W.P. Labuan,Unknown,Unknown,0.000231,2.2189,2.0,0.001027
-W.P. Putrajaya,Unknown,Unknown,0.000759,2.2189,1.0,0.001684
+Entire country,0.000193,0.000193,8.7e-05,2.2187,1.0,0.000193
+Johor,Unknown,Unknown,2.9e-05,2.2187,1.0,6.5e-05
+Kedah,Unknown,Unknown,6.7e-05,2.2187,1.0,0.000148
+Kelantan,Unknown,Unknown,2.7e-05,2.2187,1.0,6.1e-05
+Melaka,Unknown,Unknown,0.00021,2.2187,1.0,0.000466
+Negeri Sembilan,Unknown,Unknown,0.000113,2.2187,1.2828,0.000322
+Pahang,Unknown,Unknown,4.8e-05,2.2187,1.0,0.000107
+Perak,Unknown,Unknown,4.5e-05,2.2187,1.0,0.0001
+Perlis,Unknown,Unknown,4.3e-05,2.2187,1.0,9.6e-05
+Pulau Pinang,Unknown,Unknown,8.3e-05,2.2187,1.0,0.000185
+Sabah,Unknown,Unknown,1.9e-05,2.2187,1.0,4.3e-05
+Sarawak,Unknown,Unknown,8.5e-05,2.2187,1.0,0.000188
+Selangor,Unknown,Unknown,0.000143,2.2187,1.0,0.000317
+Terengganu,Unknown,Unknown,4.7e-05,2.2187,1.0,0.000105
+W.P. Kuala Lumpur,Unknown,Unknown,0.000246,2.2187,1.0,0.000545
+W.P. Labuan,Unknown,Unknown,0.000262,2.2187,2.0,0.001161
+W.P. Putrajaya,Unknown,Unknown,0.000655,2.2187,1.0,0.001452
