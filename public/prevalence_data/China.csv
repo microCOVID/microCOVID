@@ -1,5 +1,5 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,7.9e-05,7.9e-05,3.9e-05,2.037,1.0,7.9e-05
+Entire country,7.1e-05,7.1e-05,3.5e-05,2.037,1.0,7.1e-05
 Anhui,Unknown,Unknown,0.0,2.037,1.0,0.0
 Beijing,Unknown,Unknown,0.0,2.037,1.0,0.0
 Chongqing,Unknown,Unknown,0.0,2.037,1.0,0.0
@@ -18,7 +18,7 @@ Inner Mongolia,Unknown,Unknown,0.0,2.037,1.0,0.0
 Jiangsu,Unknown,Unknown,0.0,2.037,1.0,0.0
 Jiangxi,Unknown,Unknown,0.0,2.037,1.0,0.0
 Jilin,Unknown,Unknown,0.0,2.037,1.0,0.0
-Liaoning,Unknown,Unknown,6e-06,2.037,1.0,1.3e-05
+Liaoning,Unknown,Unknown,0.0,2.037,1.0,0.0
 Ningxia,Unknown,Unknown,0.0,2.037,1.0,0.0
 Qinghai,Unknown,Unknown,0.0,2.037,1.0,0.0
 Shaanxi,Unknown,Unknown,0.0,2.037,1.0,0.0
@@ -31,5 +31,5 @@ Tibet,Unknown,Unknown,0.0,2.037,1.0,1e-06
 Xinjiang,Unknown,Unknown,0.0,2.037,1.0,0.0
 Yunnan,Unknown,Unknown,0.0,2.037,1.0,0.0
 Zhejiang,Unknown,Unknown,0.0,2.037,1.0,0.0
-Hong Kong,Unknown,Unknown,0.007308,2.037,1.0,0.014887
-Macau,Unknown,Unknown,0.000208,2.037,1.0,0.000424
+Hong Kong,Unknown,Unknown,0.00657,2.037,1.0,0.013383
+Macau,Unknown,Unknown,0.000243,2.037,1.0,0.000496
