@@ -48,3 +48,6 @@ __pycache__/
 
 # emacs
 \#*
+
+# test output
+computed_scenarios.json
