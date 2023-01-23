@@ -1,12 +1,12 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.00204,0.00204,0.000881,2.3153,1.0,0.00204
-Belknap,Unknown,Unknown,0.001729,2.2885,1.0,0.003957
-Carroll,Unknown,Unknown,0.000818,2.2403,1.0,0.001832
-Cheshire,Unknown,Unknown,0.000723,2.3297,1.0,0.001684
-Coos,Unknown,Unknown,0.000349,2.3522,1.0,0.00082
-Grafton,Unknown,Unknown,0.000634,2.278,1.0,0.001445
-Hillsborough,Unknown,Unknown,0.000906,2.3449,1.0,0.002125
-Merrimack,Unknown,Unknown,0.00107,2.3001,1.0,0.002461
-Rockingham,Unknown,Unknown,0.000742,2.2915,1.0,0.001701
-Strafford,Unknown,Unknown,0.000827,2.2639,1.0,0.001872
-Sullivan,Unknown,Unknown,0.000881,2.2734,1.0882,0.002179
+Entire state,0.002032,0.002032,0.000881,2.3068,1.0,0.002032
+Belknap,Unknown,Unknown,0.001729,2.2883,1.0,0.003957
+Carroll,Unknown,Unknown,0.000818,2.2401,1.0,0.001832
+Cheshire,Unknown,Unknown,0.000723,2.3294,1.0,0.001684
+Coos,Unknown,Unknown,0.000349,2.3518,1.0,0.00082
+Grafton,Unknown,Unknown,0.000634,2.2778,1.0,0.001444
+Hillsborough,Unknown,Unknown,0.000906,2.3445,1.0,0.002125
+Merrimack,Unknown,Unknown,0.00107,2.2998,1.0,0.002461
+Rockingham,Unknown,Unknown,0.000742,2.2912,1.0,0.001701
+Strafford,Unknown,Unknown,0.000827,2.2637,1.0,0.001871
+Sullivan,Unknown,Unknown,0.000881,2.2732,1.0882,0.002179
