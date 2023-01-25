@@ -1,5 +1,5 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,3.5e-05,3.5e-05,1.7e-05,2.0368,1.0,3.5e-05
+Entire country,3.2e-05,3.2e-05,1.6e-05,2.0368,1.0,3.2e-05
 Anhui,Unknown,Unknown,0.0,2.0368,1.0,0.0
 Beijing,Unknown,Unknown,0.0,2.0368,1.0,0.0
 Chongqing,Unknown,Unknown,0.0,2.0368,1.0,0.0
@@ -31,5 +31,5 @@ Tibet,Unknown,Unknown,0.0,2.0368,1.0,1e-06
 Xinjiang,Unknown,Unknown,0.0,2.0368,1.0,0.0
 Yunnan,Unknown,Unknown,0.0,2.0368,1.0,0.0
 Zhejiang,Unknown,Unknown,0.0,2.0368,1.0,0.0
-Hong Kong,Unknown,Unknown,0.003195,2.0368,1.0,0.006508
-Macau,Unknown,Unknown,8.9e-05,2.0368,1.0,0.000182
+Hong Kong,Unknown,Unknown,0.002948,2.0368,1.0,0.006004
+Macau,Unknown,Unknown,5.7e-05,2.0368,1.0,0.000116
