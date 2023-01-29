@@ -49,5 +49,12 @@ __pycache__/
 # emacs
 \#*
 
+# vim
+**.swp
+**.swo
+
 # test output
-computed_scenarios.json
+computed_scenarios*.json
+
+# jupyter
+.ipynb_checkpoints
