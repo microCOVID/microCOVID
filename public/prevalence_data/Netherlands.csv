@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000286,0.000286,0.000104,2.76,1.0,0.000286
-Drenthe,Unknown,Unknown,0.000111,2.76,1.0,0.000307
-Flevoland,Unknown,Unknown,4.5e-05,2.76,1.0,0.000124
-Friesland,Unknown,Unknown,7.7e-05,2.76,1.0,0.000212
-Gelderland,Unknown,Unknown,0.00011,2.76,1.0,0.000303
-Groningen,Unknown,Unknown,9.4e-05,2.76,1.0,0.000259
-Limburg,Unknown,Unknown,0.000118,2.76,1.0,0.000326
-Noord-Brabant,Unknown,Unknown,6.8e-05,2.76,1.0,0.000187
-Noord-Holland,Unknown,Unknown,0.000107,2.76,1.0,0.000294
-Overijssel,Unknown,Unknown,0.000113,2.76,1.0,0.000311
-Utrecht,Unknown,Unknown,0.000131,2.76,1.1722,0.000425
-Zeeland,Unknown,Unknown,0.000146,2.76,1.0,0.000403
-Zuid-Holland,Unknown,Unknown,9.9e-05,2.76,1.0,0.000273
-Aruba,Unknown,Unknown,0.000272,2.76,1.0,0.00075
-Curacao,Unknown,Unknown,6e-06,2.76,1.0,1.7e-05
-Sint Maarten,Unknown,Unknown,2.3e-05,2.76,1.0,6.4e-05
-Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.000191,2.76,1.0,0.000526
+Entire country,0.000277,0.000277,0.000101,2.7565,1.0,0.000277
+Drenthe,Unknown,Unknown,0.000107,2.7565,1.0612,0.000314
+Flevoland,Unknown,Unknown,6.1e-05,2.7565,1.0,0.000169
+Friesland,Unknown,Unknown,6.9e-05,2.7565,1.0,0.000191
+Gelderland,Unknown,Unknown,0.000114,2.7565,1.0,0.000315
+Groningen,Unknown,Unknown,8.5e-05,2.7565,1.0,0.000235
+Limburg,Unknown,Unknown,0.000123,2.7565,1.088,0.000368
+Noord-Brabant,Unknown,Unknown,7.3e-05,2.7565,1.0,0.000202
+Noord-Holland,Unknown,Unknown,9e-05,2.7565,1.0,0.000248
+Overijssel,Unknown,Unknown,0.000107,2.7565,1.0,0.000294
+Utrecht,Unknown,Unknown,0.000142,2.7565,1.2468,0.00049
+Zeeland,Unknown,Unknown,0.000112,2.7565,1.0,0.000309
+Zuid-Holland,Unknown,Unknown,9.3e-05,2.7565,1.0,0.000257
+Aruba,Unknown,Unknown,0.000272,2.7565,1.0,0.000749
+Curacao,Unknown,Unknown,6e-06,2.7565,1.0,1.7e-05
+Sint Maarten,Unknown,Unknown,2.3e-05,2.7565,1.0,6.4e-05
+Bonaire, Sint Eustatius and Saba,Unknown,Unknown,0.000191,2.7565,1.3333,0.000701
