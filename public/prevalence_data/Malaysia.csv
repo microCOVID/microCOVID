@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.000192,0.000192,6.1e-05,2.2146,1.4217,0.000192
-Johor,Unknown,Unknown,2.4e-05,2.2146,1.3538,7.1e-05
-Kedah,Unknown,Unknown,3e-05,2.2146,1.0,6.6e-05
-Kelantan,Unknown,Unknown,1e-05,2.2146,1.0,2.1e-05
-Melaka,Unknown,Unknown,0.000132,2.2146,1.3708,0.0004
-Negeri Sembilan,Unknown,Unknown,5.4e-05,2.2146,1.0,0.000119
-Pahang,Unknown,Unknown,2.4e-05,2.2146,2.0,0.000106
-Perak,Unknown,Unknown,3.1e-05,2.2146,1.5714,0.000108
-Perlis,Unknown,Unknown,2.7e-05,2.2146,1.5,9.1e-05
-Pulau Pinang,Unknown,Unknown,4.1e-05,2.2146,1.0,9.1e-05
-Sabah,Unknown,Unknown,6e-06,2.2146,1.0,1.4e-05
-Sarawak,Unknown,Unknown,4.2e-05,2.2146,1.3448,0.000125
-Selangor,Unknown,Unknown,0.000115,2.2146,1.8092,0.000459
-Terengganu,Unknown,Unknown,2e-05,2.2146,1.0,4.4e-05
-W.P. Kuala Lumpur,Unknown,Unknown,0.000249,2.2146,1.5806,0.00087
-W.P. Labuan,Unknown,Unknown,2e-05,2.2146,1.0,4.5e-05
-W.P. Putrajaya,Unknown,Unknown,0.000655,2.2146,2.0,0.0029
+Entire country,0.000186,0.000186,5.9e-05,2.2144,1.417,0.000186
+Johor,Unknown,Unknown,2.1e-05,2.2144,1.1642,5.4e-05
+Kedah,Unknown,Unknown,3.1e-05,2.2144,1.2407,8.5e-05
+Kelantan,Unknown,Unknown,1.1e-05,2.2144,1.0,2.5e-05
+Melaka,Unknown,Unknown,0.000144,2.2144,1.75,0.000557
+Negeri Sembilan,Unknown,Unknown,5.6e-05,2.2144,1.0164,0.000125
+Pahang,Unknown,Unknown,2.3e-05,2.2144,2.0,0.000103
+Perak,Unknown,Unknown,2.8e-05,2.2144,1.38,8.5e-05
+Perlis,Unknown,Unknown,2.7e-05,2.2144,1.2,7.3e-05
+Pulau Pinang,Unknown,Unknown,4.4e-05,2.2144,1.0,9.7e-05
+Sabah,Unknown,Unknown,7e-06,2.2144,1.0,1.5e-05
+Sarawak,Unknown,Unknown,3.9e-05,2.2144,1.2135,0.000104
+Selangor,Unknown,Unknown,0.000108,2.2144,1.6198,0.000386
+Terengganu,Unknown,Unknown,1.8e-05,2.2144,1.0,3.9e-05
+W.P. Kuala Lumpur,Unknown,Unknown,0.000256,2.2144,1.7433,0.00099
+W.P. Labuan,Unknown,Unknown,1e-05,2.2144,1.0,2.2e-05
+W.P. Putrajaya,Unknown,Unknown,0.000493,2.2144,1.186,0.001296
