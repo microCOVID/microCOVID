@@ -1,4 +1,4 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.005765,0.005765,0.002192,2.6308,1.0,0.005765
-Cook Islands,Unknown,Unknown,0.001203,2.9099,1.8182,0.006364
-Niue,Unknown,Unknown,0.004242,2.9099,1.0,0.012345
+Entire country,0.0,0.0,0.0,2.0,1.0,0.0
+Cook Islands,Unknown,Unknown,0.001203,2.9091,1.8182,0.006362
+Niue,Unknown,Unknown,0.004242,2.9091,1.0,0.012342
