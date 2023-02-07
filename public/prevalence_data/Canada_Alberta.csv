@@ -1,7 +1,7 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.000439,0.000354,0.000133,2.8036,1.0,0.000373
-South,5.2e-05,4.2e-05,1.6e-05,2.8036,1.0,4.5e-05
-Calgary,3.7e-05,3e-05,1.2e-05,2.8036,1.0,3.2e-05
-Central,6.7e-05,5.4e-05,2.1e-05,2.8036,1.0,5.9e-05
-Edmonton,4.5e-05,3.7e-05,1.4e-05,2.8036,1.0,4e-05
-North,2.8e-05,2.3e-05,9e-06,2.8036,1.0,2.5e-05
+Entire state,0.000455,0.000367,0.000133,2.9083,1.0,0.000387
+South,1.1e-05,9e-06,3e-06,2.9083,1.0,9e-06
+Calgary,2e-06,2e-06,1e-06,2.9083,1.0,2e-06
+Central,7e-06,6e-06,2e-06,2.9083,1.0,6e-06
+Edmonton,2e-06,2e-06,1e-06,2.9083,1.0,2e-06
+North,7e-06,6e-06,2e-06,2.9083,1.0,6e-06
