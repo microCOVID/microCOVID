@@ -205,13 +205,13 @@ export const Calculator = (): React.ReactElement => {
               </a>
             </Trans>
           </p>
-          <Alert variant="primary">
+          <Alert variant="info">
             <Alert.Heading>
-              {t('calculator.intro.maintenance_warning_heading')}
+              {t('calculator.intro.shutdown_warning_heading')}
             </Alert.Heading>
-            <Trans i18nKey="calculator.intro.maintenance_warning">
+            <Trans i18nKey="calculator.intro.shutdown_warning">
               <a
-                href="https://github.com/microCOVID/microCOVID/discussions/1626"
+                href="https://github.com/microCOVID/microCOVID/discussions/1791"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -221,6 +221,12 @@ export const Calculator = (): React.ReactElement => {
           </Alert>
         </Col>
         <Col lg="4" md="12">
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.contributor_warning">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
           <Alert className="changelog" variant="light">
             <Trans i18nKey="calculator.alerts.omicron_numbers">
               <strong>DATE_PLACEHOLDER</strong>{' '}
