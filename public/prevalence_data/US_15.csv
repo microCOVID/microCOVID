@@ -1,6 +1,6 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire state,0.001161,0.001161,0.000521,2.2299,1.0,0.001161
-Hawaii,0.000984,0.000984,0.000452,2.1781,1.0,0.000984
-Honolulu,0.001178,0.001178,0.000521,2.2598,1.0,0.001178
-Kauai,0.003675,0.003675,0.000968,2.255,1.6829,0.003675
-Maui,0.000952,0.000952,0.000424,2.2453,1.0,0.000952
+Entire state,2e-06,2e-06,1e-06,2.2134,1.0,2e-06
+Hawaii,1.1e-05,1.1e-05,5e-06,2.1958,1.0,1.1e-05
+Honolulu,2e-06,2e-06,1e-06,2.2261,1.0,2e-06
+Kauai,3.1e-05,3.1e-05,1.4e-05,2.2398,1.0,3.1e-05
+Maui,1.3e-05,1.3e-05,6e-06,2.2415,1.0,1.3e-05
