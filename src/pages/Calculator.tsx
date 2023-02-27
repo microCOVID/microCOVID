@@ -207,9 +207,9 @@ export const Calculator = (): React.ReactElement => {
           </p>
           <Alert variant="info">
             <Alert.Heading>
-              {t('calculator.intro.shutdown_warning_heading')}
+              {t('calculator.intro.changes_warning_heading')}
             </Alert.Heading>
-            <Trans i18nKey="calculator.intro.shutdown_warning">
+            <Trans i18nKey="calculator.intro.changes_warning">
               <a
                 href="https://github.com/microCOVID/microCOVID/discussions/1791"
                 target="_blank"
