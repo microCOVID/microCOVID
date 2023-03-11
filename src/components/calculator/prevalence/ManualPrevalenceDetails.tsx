@@ -88,9 +88,6 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   const { t } = useTranslation()
   return (
     <Card id={props.id}>
-      <Card.Header className="details-header">
-        <BsDash /> {t('calculator.prevalence.details_header')}
-      </Card.Header>
       <Card.Body>
         <PrevalenceResult data={props.data} />
         <PrevalenceField
