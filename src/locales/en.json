@@ -99,8 +99,8 @@
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "intro": {
       "call_to_action": "Calculate approximate risk of contracting COVID",
-      "changes_warning": "<p>In March, Johns Hopkins University will <0>stop providing</0> automated COVID prevalence data, meaning that microCOVID will no longer be able to look up the COVID rate in your area. Instead, users are asked to manually enter an estimated COVID rate. This site will provide resources to make this entry as easy as possible.</p><p>The team hopes to swap the new system into place without any downtime and plans to keep microCOVID running as long as people are willing to support it.</p>",
-      "changes_warning_heading": "microCOVID will soon switch to user-provided prevalence rates",
+      "changes_warning": "<p>microCOVID now asks you to manually input an estimate of COVID levels, since we <0>no longer have access to automatic data</0> about COVID rates in different areas. See below for detailed guidance on how to use our new system, including links and tools to help with COVID prevalence estimation (via weekly case counts, percent increase week over week, test positivity, and vaccination uptake). Reach out to info@microcovid.org with any questions about the change!</p>",
+      "changes_warning_heading": "The microCOVID Project has switched to user-provided prevalace rates",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
       "omicron_warning": "<p>Vaccines without boosters are counted as much less effective against infection, but <em>unboosted vaccines still reduce your risk of severe or fatal illness.</em></p><p>Also note: COVID cases are reaching record highs in some areas, making activities riskier even if you are boosted.",
