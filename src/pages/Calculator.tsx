@@ -422,7 +422,7 @@ export const Calculator = (): React.ReactElement => {
               </React.Fragment>
             ) : (
               <div className="empty">
-                <Trans>calculator.risk_group_empty_warning</Trans>
+                <Trans>calculator.risk_group_empty_warning_manual</Trans>
               </div>
             )}
           </Card>

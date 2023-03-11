@@ -198,7 +198,7 @@
       "romania": "<0>Coronavirus COVID-19 România</0> (Romania reported cases)"
     },
     "repeated_interaction_risk_message": "<1>{{ percentage }} per week baseline chance of transmission</1> for each infected person nearby",
-    "risk_group_empty_warning": "Enter your location first.",
+    "risk_group_empty_warning_manual": "Characterize community infection first.",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
     "risk_modifier_frac_3rd": "{{frac}}rd the risk",
     "risk_modifier_frac_plural": "{{frac}}th the risk",
