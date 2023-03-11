@@ -1,12 +1,8 @@
 import i18n from 'i18n'
 import countries from 'i18n-iso-countries'
-import React, { useEffect, useState } from 'react'
-import { ToggleButton } from 'react-bootstrap'
-import { Typeahead } from 'react-bootstrap-typeahead'
+import React, { useEffect } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 
-import ControlLabel from './controls/ControlLabel'
-import { LocationPrevalenceDetails } from './prevalence/LocationPrevalenceDetails'
 import { ManualPrevalenceDetails } from './prevalence/ManualPrevalenceDetails'
 import { CalculatorData } from 'data/calculate'
 import { Locations } from 'data/location'
@@ -63,28 +59,6 @@ export const PrevalenceControls: React.FunctionComponent<{
     })
   }
 
-  const setManualPrevalenceData = (isManualEntry: boolean) => {
-    setIsManualEntryCurrently(isManualEntry)
-    const useManualEntry = isManualEntry ? 1 : 0
-
-    if (isManualEntry) {
-      setter({
-        ...data,
-        useManualEntry,
-      })
-    } else if (!isManualEntry) {
-      // Going back to location mode. Reset location data so that details match the selected country/state and region.
-      const topLocation = data.topLocation
-      const subLocation = data.subLocation
-      const subSubLocation = data.subSubLocation
-      setter({
-        ...data,
-        ...dataForLocation(subSubLocation || subLocation || topLocation),
-        useManualEntry,
-      })
-    }
-  }
-
   // If a stored location exists, load latest data for that location.
   useEffect(() => {
     if (
@@ -102,39 +76,6 @@ export const PrevalenceControls: React.FunctionComponent<{
     // Intentionally not depending on data so that this runs once on mount.
     // eslint-disable-next-line
   }, [])
-
-  let subPromptType = 'country_or_regions'
-  if (isTopLocation(data.topLocation)) {
-    if (data.topLocation.startsWith('US_')) {
-      if (Locations[data.topLocation].label === 'Louisiana') {
-        subPromptType = 'US-LA'
-      } else if (Locations[data.topLocation].label === 'Alaska') {
-        subPromptType = 'US-AK'
-      } else {
-        subPromptType = 'US'
-      }
-    } else if (data.topLocation === 'Canada') {
-      subPromptType = 'CA'
-    }
-  }
-
-  const showSubLocation =
-    isTopLocation(data.topLocation) &&
-    Locations[data.topLocation].subdivisions.length > 1
-
-  const showSubSubLocation =
-    isFilled(data.subLocation) &&
-    Locations[data.subLocation].subdivisions.length > 1
-
-  const locationSet = !data.useManualEntry && isTopLocation(data.topLocation)
-
-  const [isManualEntryCurrently, setIsManualEntryCurrently] = useState<boolean>(
-    !!data.useManualEntry,
-  )
-
-  const [detailsOpen, setDetailsOpen] = useState(
-    false || isManualEntryCurrently,
-  )
 
   const topLocationOptions = Object.keys(locationGroups).flatMap(
     (groupName) => {
@@ -184,35 +125,6 @@ export const PrevalenceControls: React.FunctionComponent<{
   if (i18n.language !== 'en-US') {
     topLocationOptions.sort(locationOptionCompareFn)
   }
-
-  const selectedTopLocation = topLocationOptions.find(
-    (option) => option.value === data.topLocation,
-  )
-
-  const subLocationOptions = !showSubLocation
-    ? []
-    : Locations[data.topLocation].subdivisions
-        .map((locKey) => {
-          // We assume that sublocation names are either localized or don't have
-          // proper localized names. This is not always true, but the overhead of
-          // providing locallizations for them would not be worth it.
-          return { label: Locations[locKey].label, value: locKey }
-        })
-        .sort(locationOptionCompareFn)
-  const selectedSubLocation = subLocationOptions.find(
-    (option) => option.value === data.subLocation,
-  )
-
-  const subSubLocationOptions = !showSubSubLocation
-    ? []
-    : Locations[data.subLocation].subdivisions
-        .map((locKey) => {
-          return { label: Locations[locKey].label, value: locKey }
-        })
-        .sort(locationOptionCompareFn)
-  const selectedSubSubLocation = subSubLocationOptions.find(
-    (option) => option.value === data.subSubLocation,
-  )
 
   return (
     <React.Fragment>

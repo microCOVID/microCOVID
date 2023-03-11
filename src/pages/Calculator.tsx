@@ -1,5 +1,4 @@
 import copy from 'copy-to-clipboard'
-import { sub as date_sub } from 'date-fns'
 import { stringify } from 'query-string'
 import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
@@ -47,7 +46,6 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [suppressStaleWarning, setSuppressStaleWarning] = useState(false)
   const [points, setPoints] = useState(-1)
   const [lowerBound, setLowerBound] = useState(-1)
   const [upperBound, setUpperBound] = useState(-1)
@@ -174,12 +172,6 @@ export const Calculator = (): React.ReactElement => {
       <BsLink45Deg /> <Trans>button.copy_link</Trans>
     </button>
   )
-
-  const oneWeekAgo = date_sub(new Date(), { weeks: 1 })
-  const prevalenceDataDate = calculatorData.prevalanceDataDate
-  const prevalenceIsStale =
-    prevalenceDataDate !== null && prevalenceDataDate < oneWeekAgo
-  const showStaleWarning = prevalenceIsStale && !suppressStaleWarning
 
   return (
     <div id="calculator">

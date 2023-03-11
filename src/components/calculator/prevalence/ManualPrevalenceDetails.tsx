@@ -2,7 +2,6 @@ import { isNumber } from 'lodash'
 import React from 'react'
 import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { BsDash } from 'react-icons/bs'
 
 import ControlLabel from '../controls/ControlLabel'
 
