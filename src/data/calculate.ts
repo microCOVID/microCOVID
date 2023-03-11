@@ -66,7 +66,7 @@ export interface CalculatorData {
 export const defaultValues: CalculatorData = {
   riskBudget: BUDGET_ONE_PERCENT,
 
-  useManualEntry: 0,
+  useManualEntry: 1,
   topLocation: '',
   subLocation: '',
   subSubLocation: '',
