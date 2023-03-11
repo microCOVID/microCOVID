@@ -15,8 +15,8 @@ describe('calculator page', () => {
     expect(getByText(/new quantitative unit for risk/i)).toBeInTheDocument()
   })
 
-  it('Step two reveals after location is selected', () => {
-    const { getByText, queryByText, getByPlaceholderText } = render(
+  it('Step two reveals after prevalence entered', () => {
+    const { getByText, queryByText, getByPlaceholderText, getByLabelText } = render(
       <Calculator />,
       {
         wrapper: AllProviders,
@@ -25,10 +25,18 @@ describe('calculator page', () => {
 
     const stepTwoQuery = /Describe the scenario/i
     expect(queryByText(stepTwoQuery)).not.toBeInTheDocument()
-    const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
-    fireEvent.click(topLocationBox)
-    const californiaOption = getByText(/California/i)
-    fireEvent.click(californiaOption)
+    const reportedCases = getByLabelText('Reported cases in past week')
+    reportedCases.focus()
+    reportedCases.type('100')
+    const population = find('population')
+    population.focus()
+    population.type('100000')
+    const percentIncrease = find('percent-increase')
+    percentIncrease.focus()
+    percentIncrease.type('5')
+    const positiveTestRate = find('positive-test-rate')
+    positiveTestRate.focus()
+    positiveTestRate.type('10')
     expect(getByText(stepTwoQuery)).toBeInTheDocument()
   })
 
