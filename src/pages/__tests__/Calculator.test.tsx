@@ -16,12 +16,9 @@ describe('calculator page', () => {
   })
 
   it('Step two reveals after prevalence entered', () => {
-    const { getByText, queryByText, getByTestId } = render(
-      <Calculator />,
-      {
-        wrapper: AllProviders,
-      },
-    )
+    const { getByText, queryByText, getByTestId } = render(<Calculator />, {
+      wrapper: AllProviders,
+    })
 
     const stepTwoQuery = /Describe the scenario/i
     expect(queryByText(stepTwoQuery)).not.toBeInTheDocument()
@@ -44,12 +41,9 @@ describe('calculator page', () => {
   })
 
   it('Shows nearby people section only after selecting a scenario type', () => {
-    const { getByText, queryByText, getByTestId } = render(
-      <Calculator />,
-      {
-        wrapper: AllProviders,
-      },
-    )
+    const { getByText, queryByText, getByTestId } = render(<Calculator />, {
+      wrapper: AllProviders,
+    })
 
     // provide community metrics
     const reportedCases = getByTestId('reported-cases')
@@ -98,12 +92,9 @@ describe('calculator page', () => {
   })
 
   it('Applies preset scenarios', () => {
-    const { queryAllByRole, getByText, getByTestId } = render(
-      <Calculator />,
-      {
-        wrapper: AllProviders,
-      },
-    )
+    const { queryAllByRole, getByText, getByTestId } = render(<Calculator />, {
+      wrapper: AllProviders,
+    })
 
     // provide community metrics
     const reportedCases = getByTestId('reported-cases')
@@ -140,12 +131,9 @@ describe('calculator page', () => {
   })
 
   it('Does not launch into a custom scenario after resetting', () => {
-    const { getByText, queryByText, getByPlaceholderText, getByTestId } = render(
-      <Calculator />,
-      {
-        wrapper: AllProviders,
-      },
-    )
+    const { getByText, queryByText, getByTestId } = render(<Calculator />, {
+      wrapper: AllProviders,
+    })
 
     // provide community metrics
     const reportedCases = getByTestId('reported-cases')
@@ -194,12 +182,7 @@ describe('calculator page', () => {
   })
 
   it('results in sane values', () => {
-    const {
-      queryAllByRole,
-      getByText,
-      getByPlaceholderText,
-      getByTestId,
-    } = render(<Calculator />, {
+    const { queryAllByRole, getByText, getByTestId } = render(<Calculator />, {
       wrapper: AllProviders,
     })
 
