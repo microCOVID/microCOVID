@@ -36,6 +36,7 @@ const PrevalenceField: React.FunctionComponent<{
   let body: React.ReactElement = (
     <Form.Control
       className={'form-control form-control-lg col-md-3 col-lg-6 ' + className}
+      data-testid={id}
       type={inputType}
       value={value}
       readOnly={readOnly}

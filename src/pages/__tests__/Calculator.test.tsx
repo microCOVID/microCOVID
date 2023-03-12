@@ -16,7 +16,7 @@ describe('calculator page', () => {
   })
 
   it('Step two reveals after prevalence entered', () => {
-    const { getByText, queryByText, getByPlaceholderText, getByLabelText } = render(
+    const { getByText, queryByText, getByTestId } = render(
       <Calculator />,
       {
         wrapper: AllProviders,
@@ -25,33 +25,45 @@ describe('calculator page', () => {
 
     const stepTwoQuery = /Describe the scenario/i
     expect(queryByText(stepTwoQuery)).not.toBeInTheDocument()
-    const reportedCases = getByLabelText('Reported cases in past week')
+
+    // provide community metrics
+    const reportedCases = getByTestId('reported-cases')
     reportedCases.focus()
-    reportedCases.type('100')
-    const population = find('population')
+    fireEvent.change(reportedCases, { target: { value: '100' } })
+    const population = getByTestId('population')
     population.focus()
-    population.type('100000')
-    const percentIncrease = find('percent-increase')
+    fireEvent.change(population, { target: { value: '100000' } })
+    const percentIncrease = getByTestId('percent-increase')
     percentIncrease.focus()
-    percentIncrease.type('5')
-    const positiveTestRate = find('positive-test-rate')
+    fireEvent.change(percentIncrease, { target: { value: '5' } })
+    const positiveTestRate = getByTestId('positive-test-rate')
     positiveTestRate.focus()
-    positiveTestRate.type('10')
+    fireEvent.change(positiveTestRate, { target: { value: '10' } })
+
     expect(getByText(stepTwoQuery)).toBeInTheDocument()
   })
 
   it('Shows nearby people section only after selecting a scenario type', () => {
-    const { getByText, queryByText, getByPlaceholderText } = render(
+    const { getByText, queryByText, getByTestId } = render(
       <Calculator />,
       {
         wrapper: AllProviders,
       },
     )
 
-    const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
-    fireEvent.click(topLocationBox)
-    const californiaOption = getByText(/California/i)
-    fireEvent.click(californiaOption)
+    // provide community metrics
+    const reportedCases = getByTestId('reported-cases')
+    reportedCases.focus()
+    fireEvent.change(reportedCases, { target: { value: '100' } })
+    const population = getByTestId('population')
+    population.focus()
+    fireEvent.change(population, { target: { value: '100000' } })
+    const percentIncrease = getByTestId('percent-increase')
+    percentIncrease.focus()
+    fireEvent.change(percentIncrease, { target: { value: '5' } })
+    const positiveTestRate = getByTestId('positive-test-rate')
+    positiveTestRate.focus()
+    fireEvent.change(positiveTestRate, { target: { value: '10' } })
 
     const buildYourOwn = /build a custom scenario/i
     const gatheringOption = /A gathering/i
@@ -86,20 +98,29 @@ describe('calculator page', () => {
   })
 
   it('Applies preset scenarios', () => {
-    const { queryAllByRole, getByText, getByPlaceholderText } = render(
+    const { queryAllByRole, getByText, getByTestId } = render(
       <Calculator />,
       {
         wrapper: AllProviders,
       },
     )
 
-    const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
-    fireEvent.click(topLocationBox)
-    const californiaOption = getByText(/California/i)
-    fireEvent.click(californiaOption)
+    // provide community metrics
+    const reportedCases = getByTestId('reported-cases')
+    reportedCases.focus()
+    fireEvent.change(reportedCases, { target: { value: '100' } })
+    const population = getByTestId('population')
+    population.focus()
+    fireEvent.change(population, { target: { value: '100000' } })
+    const percentIncrease = getByTestId('percent-increase')
+    percentIncrease.focus()
+    fireEvent.change(percentIncrease, { target: { value: '5' } })
+    const positiveTestRate = getByTestId('positive-test-rate')
+    positiveTestRate.focus()
+    fireEvent.change(positiveTestRate, { target: { value: '10' } })
 
     const typeaheads = queryAllByRole('combobox')
-    const presetScenarioTypeahead = typeaheads[2]
+    const presetScenarioTypeahead = typeaheads[0]
     fireEvent.click(presetScenarioTypeahead)
 
     // Basic functionality check
@@ -119,18 +140,26 @@ describe('calculator page', () => {
   })
 
   it('Does not launch into a custom scenario after resetting', () => {
-    const { getByText, queryByText, getByPlaceholderText } = render(
+    const { getByText, queryByText, getByPlaceholderText, getByTestId } = render(
       <Calculator />,
       {
         wrapper: AllProviders,
       },
     )
 
-    // set location
-    const topLocationBox = /Select Country or US State/i
-    const californiaOption = /California/i
-    fireEvent.click(getByPlaceholderText(topLocationBox))
-    fireEvent.click(getByText(californiaOption))
+    // provide community metrics
+    const reportedCases = getByTestId('reported-cases')
+    reportedCases.focus()
+    fireEvent.change(reportedCases, { target: { value: '100' } })
+    const population = getByTestId('population')
+    population.focus()
+    fireEvent.change(population, { target: { value: '100000' } })
+    const percentIncrease = getByTestId('percent-increase')
+    percentIncrease.focus()
+    fireEvent.change(percentIncrease, { target: { value: '5' } })
+    const positiveTestRate = getByTestId('positive-test-rate')
+    positiveTestRate.focus()
+    fireEvent.change(positiveTestRate, { target: { value: '10' } })
 
     const customScenarioStarted = /Choose an interaction type to continue/i
     expect(queryByText(customScenarioStarted)).not.toBeInTheDocument()
@@ -149,9 +178,15 @@ describe('calculator page', () => {
     const startOver = getByText(/Reset form/i)
     fireEvent.click(startOver)
 
-    // set location again
-    fireEvent.click(getByPlaceholderText(topLocationBox))
-    fireEvent.click(getByText(californiaOption))
+    // set community metrics again
+    reportedCases.focus()
+    fireEvent.change(reportedCases, { target: { value: '100' } })
+    population.focus()
+    fireEvent.change(population, { target: { value: '100000' } })
+    percentIncrease.focus()
+    fireEvent.change(percentIncrease, { target: { value: '5' } })
+    positiveTestRate.focus()
+    fireEvent.change(positiveTestRate, { target: { value: '10' } })
 
     // present user with a typeahead to choose a scenario; don't start a custom
     // scenario automatically
@@ -168,13 +203,22 @@ describe('calculator page', () => {
       wrapper: AllProviders,
     })
 
-    const topLocationBox = getByPlaceholderText(/Select Country or US State/i)
-    fireEvent.click(topLocationBox)
-    const californiaOption = getByText(/California/i)
-    fireEvent.click(californiaOption)
+    // provide community metrics
+    const reportedCases = getByTestId('reported-cases')
+    reportedCases.focus()
+    fireEvent.change(reportedCases, { target: { value: '100' } })
+    const population = getByTestId('population')
+    population.focus()
+    fireEvent.change(population, { target: { value: '100000' } })
+    const percentIncrease = getByTestId('percent-increase')
+    percentIncrease.focus()
+    fireEvent.change(percentIncrease, { target: { value: '5' } })
+    const positiveTestRate = getByTestId('positive-test-rate')
+    positiveTestRate.focus()
+    fireEvent.change(positiveTestRate, { target: { value: '10' } })
 
     const typeaheads = queryAllByRole('combobox')
-    const presetScenarioTypeahead = typeaheads[2]
+    const presetScenarioTypeahead = typeaheads[0]
     fireEvent.click(presetScenarioTypeahead)
 
     const outdoorHangout = /Outdoor masked hangout with 2 other people/i
