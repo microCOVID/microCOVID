@@ -1,5 +1,4 @@
 import copy from 'copy-to-clipboard'
-import { sub as date_sub } from 'date-fns'
 import { stringify } from 'query-string'
 import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
@@ -47,7 +46,6 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [suppressStaleWarning, setSuppressStaleWarning] = useState(false)
   const [points, setPoints] = useState(-1)
   const [lowerBound, setLowerBound] = useState(-1)
   const [upperBound, setUpperBound] = useState(-1)
@@ -175,12 +173,6 @@ export const Calculator = (): React.ReactElement => {
     </button>
   )
 
-  const oneWeekAgo = date_sub(new Date(), { weeks: 1 })
-  const prevalenceDataDate = calculatorData.prevalanceDataDate
-  const prevalenceIsStale =
-    prevalenceDataDate !== null && prevalenceDataDate < oneWeekAgo
-  const showStaleWarning = prevalenceIsStale && !suppressStaleWarning
-
   return (
     <div id="calculator">
       <Row>
@@ -257,24 +249,6 @@ export const Calculator = (): React.ReactElement => {
       </Row>
       <Row id="calculator-fields">
         <Col md="12" lg="4">
-          {showStaleWarning && (
-            <Alert
-              variant="primary"
-              onClose={() => setSuppressStaleWarning(true)}
-              dismissible
-            >
-              <Alert.Heading>
-                {t('calculator.intro.stale_warning_heading')}
-              </Alert.Heading>
-              <Trans
-                values={{
-                  lastLoadedDate: prevalenceDataDate?.toLocaleDateString(),
-                }}
-              >
-                calculator.intro.stale_warning
-              </Trans>
-            </Alert>
-          )}
           <Card id="location">
             <PrevalenceControls
               data={calculatorData}
@@ -440,7 +414,7 @@ export const Calculator = (): React.ReactElement => {
               </React.Fragment>
             ) : (
               <div className="empty">
-                <Trans>calculator.risk_group_empty_warning</Trans>
+                <Trans>calculator.risk_group_empty_warning_manual</Trans>
               </div>
             )}
           </Card>

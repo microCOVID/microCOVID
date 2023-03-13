@@ -47,6 +47,7 @@
     "category_very_high": "Very High",
     "category_very_low": "Very Low",
     "change_interaction_type": "Clear",
+    "characterize_community_infection_header": "Step 1: Characterize community infection",
     "distance_header": "Distance",
     "distance_question": "How close are these nearby people, on average?",
     "duration_header": "Duration",
@@ -99,8 +100,8 @@
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "intro": {
       "call_to_action": "Calculate approximate risk of contracting COVID",
-      "changes_warning": "<p>In March, Johns Hopkins University will <0>stop providing</0> automated COVID prevalence data, meaning that microCOVID will no longer be able to look up the COVID rate in your area. Instead, users are asked to manually enter an estimated COVID rate. This site will provide resources to make this entry as easy as possible.</p><p>The team hopes to swap the new system into place without any downtime and plans to keep microCOVID running as long as people are willing to support it.</p>",
-      "changes_warning_heading": "microCOVID will soon switch to user-provided prevalence rates",
+      "changes_warning": "<p>The microCOVID calculator now asks you to manually input an estimate of COVID levels, since we <0>no longer have access to automatic data</0> about COVID rates in different areas. Follow the steps below and to provide the best case estimates. Focus on case estimates and positivity as those provide the primary signal. Reach out to info@microcovid.org with any questions about the change!</p>",
+      "changes_warning_heading": "The microCOVID Project has switched to user-provided prevalence rates",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
       "omicron_warning": "<p>Vaccines without boosters are counted as much less effective against infection, but <em>unboosted vaccines still reduce your risk of severe or fatal illness.</em></p><p>Also note: COVID cases are reaching record highs in some areas, making activities riskier even if you are boosted.",
@@ -113,7 +114,6 @@
     },
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
     "location_risk_message": "<1>~{{ prevalence }} of people here are currently infectious.</1> We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
-    "location_selector_header": "Step 1: Enter your location",
     "location_sublabel": {
       "CA": "Province/territory",
       "US": "County",
@@ -198,7 +198,7 @@
       "romania": "<0>Coronavirus COVID-19 România</0> (Romania reported cases)"
     },
     "repeated_interaction_risk_message": "<1>{{ percentage }} per week baseline chance of transmission</1> for each infected person nearby",
-    "risk_group_empty_warning": "Enter your location first.",
+    "risk_group_empty_warning_manual": "Characterize community infection first.",
     "risk_modifier_frac_2nd": "{{frac}} the risk",
     "risk_modifier_frac_3rd": "{{frac}}rd the risk",
     "risk_modifier_frac_plural": "{{frac}}th the risk",

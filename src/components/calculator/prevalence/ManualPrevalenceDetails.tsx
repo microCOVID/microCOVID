@@ -2,7 +2,6 @@ import { isNumber } from 'lodash'
 import React from 'react'
 import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { BsDash } from 'react-icons/bs'
 
 import ControlLabel from '../controls/ControlLabel'
 
@@ -37,6 +36,7 @@ const PrevalenceField: React.FunctionComponent<{
   let body: React.ReactElement = (
     <Form.Control
       className={'form-control form-control-lg col-md-3 col-lg-6 ' + className}
+      data-testid={id}
       type={inputType}
       value={value}
       readOnly={readOnly}
@@ -88,9 +88,6 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   const { t } = useTranslation()
   return (
     <Card id={props.id}>
-      <Card.Header className="details-header">
-        <BsDash /> {t('calculator.prevalence.details_header')}
-      </Card.Header>
       <Card.Body>
         <PrevalenceResult data={props.data} />
         <PrevalenceField
