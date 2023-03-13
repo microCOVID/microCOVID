@@ -129,7 +129,7 @@ export const PrevalenceControls: React.FunctionComponent<{
   return (
     <React.Fragment>
       <header id="location">
-        <Trans>calculator.location_selector_header</Trans>
+        <Trans>calculator.characterize_community_infection_header</Trans>
       </header>
       <ManualPrevalenceDetails
         id="prevalence-details"

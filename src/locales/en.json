@@ -47,6 +47,7 @@
     "category_very_high": "Very High",
     "category_very_low": "Very Low",
     "change_interaction_type": "Clear",
+    "characterize_community_infection_header": "Step 1: Characterize community infection",
     "distance_header": "Distance",
     "distance_question": "How close are these nearby people, on average?",
     "duration_header": "Duration",
@@ -113,7 +114,6 @@
     },
     "large_group_warning": "Warning: This is a large number of people. Remember, you only need to include the number of people who are within 15 feet (5 meters) of you (not everyone present in the area). However, gathering a large number of people could put everyone at risk and creates the possibility of superspreader event.",
     "location_risk_message": "<1>~{{ prevalence }} of people here are currently infectious.</1> We use this number to estimate the baseline chance of transmission per person nearby (given no further information about their behavior).",
-    "location_selector_header": "Step 1: Characterize community infection",
     "location_sublabel": {
       "CA": "Province/territory",
       "US": "County",
