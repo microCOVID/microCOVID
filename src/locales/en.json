@@ -99,7 +99,7 @@
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "intro": {
       "call_to_action": "Calculate approximate risk of contracting COVID",
-      "changes_warning": "<p>The microCOVID calculator now asks you to manually input an estimate of COVID levels, since we <0>no longer have access to automatic data</0> about COVID rates in different areas. See below for detailed guidance on how to use our new system, including links and tools to help with COVID prevalence estimation (via weekly case counts, percent increase week over week, test positivity, and vaccination uptake). Reach out to info@microcovid.org with any questions about the change!</p>",
+      "changes_warning": "<p>The microCOVID calculator now asks you to manually input an estimate of COVID levels, since we <0>no longer have access to automatic data</0> about COVID rates in different areas. Follow the steps below and to provide the best case estimates. Focus on case estimates and positivity as those provide the primary signal. Reach out to info@microcovid.org with any questions about the change!</p>",
       "changes_warning_heading": "The microCOVID Project has switched to user-provided prevalence rates",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
