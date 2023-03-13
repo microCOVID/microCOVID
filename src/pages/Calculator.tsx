@@ -203,7 +203,7 @@ export const Calculator = (): React.ReactElement => {
             </Alert.Heading>
             <Trans i18nKey="calculator.intro.changes_warning">
               <a
-                href="https://github.com/microCOVID/microCOVID/discussions/1791"
+                href="https://covidactnow.org"
                 target="_blank"
                 rel="noreferrer"
               >
