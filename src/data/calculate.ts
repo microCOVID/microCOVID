@@ -70,7 +70,7 @@ export const defaultValues: CalculatorData = {
   topLocation: '',
   subLocation: '',
   subSubLocation: '',
-  population: '',
+  population: '100000',
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
   positiveCasePercentage: 0,

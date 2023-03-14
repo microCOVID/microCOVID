@@ -42,7 +42,7 @@ import {
 } from 'data/queryParams'
 
 const localStorage = window.localStorage
-const FORM_STATE_KEY = 'formData'
+const FORM_STATE_KEY = 'manualFormData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
