@@ -62,13 +62,15 @@ export const Calculator = (): React.ReactElement => {
   }, [])
 
   const overrides = {
-    population: '100000'
+    population: '100000',
   }
 
-  const rawPreviousData = JSON.parse(localStorage.getItem(FORM_STATE_KEY) || 'null');
+  const rawPreviousData = JSON.parse(
+    localStorage.getItem(FORM_STATE_KEY) || 'null',
+  )
 
-  let previousData = null;
-  if (rawPreviousData != null) {
+  let previousData = null
+  if (rawPreviousData !== null) {
     previousData = { ...rawPreviousData, ...overrides }
   }
 
