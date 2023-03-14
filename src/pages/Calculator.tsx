@@ -42,7 +42,7 @@ import {
 } from 'data/queryParams'
 
 const localStorage = window.localStorage
-const FORM_STATE_KEY = 'manualFormData'
+const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
@@ -61,9 +61,16 @@ export const Calculator = (): React.ReactElement => {
     }
   }, [])
 
-  const previousData = JSON.parse(
-    localStorage.getItem(FORM_STATE_KEY) || 'null',
-  )
+  const overrides = {
+    population: '100000'
+  }
+
+  const rawPreviousData = JSON.parse(localStorage.getItem(FORM_STATE_KEY) || 'null');
+
+  let previousData = null;
+  if (rawPreviousData != null) {
+    previousData = { ...rawPreviousData, ...overrides }
+  }
 
   const migratedPreviousData = migrateDataToCurrent(previousData)
 
