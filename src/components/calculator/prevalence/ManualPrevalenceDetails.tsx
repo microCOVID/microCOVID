@@ -92,7 +92,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         <PrevalenceResult data={props.data} />
         <PrevalenceField
           id="reported-cases"
-          label={t('calculator.prevalence.last_week_cases')}
+          label={t('calculator.prevalence.last_week_cases_per_100000')}
           value={props.data.casesPastWeek || 0}
           setter={(value) =>
             props.setter({
@@ -101,14 +101,6 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             })
           }
           inputType="number"
-          className="hide-number-buttons"
-        />
-        <PrevalenceField
-          id="population"
-          label={t('calculator.prevalence.population')}
-          value={props.data.population}
-          setter={(value) => props.setter({ ...props.data, population: value })}
-          inputType="text"
           className="hide-number-buttons"
         />
         <PrevalenceField

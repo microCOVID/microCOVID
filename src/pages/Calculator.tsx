@@ -61,9 +61,18 @@ export const Calculator = (): React.ReactElement => {
     }
   }, [])
 
-  const previousData = JSON.parse(
+  const overrides = {
+    population: '100000',
+  }
+
+  const rawPreviousData = JSON.parse(
     localStorage.getItem(FORM_STATE_KEY) || 'null',
   )
+
+  let previousData = null
+  if (rawPreviousData !== null) {
+    previousData = { ...rawPreviousData, ...overrides }
+  }
 
   const migratedPreviousData = migrateDataToCurrent(previousData)
 

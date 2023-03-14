@@ -100,7 +100,7 @@
     "intimate_risk_warning": "We have applied a minimum Activity Risk for kissing due to the risk involved in exchanging fluids.",
     "intro": {
       "call_to_action": "Calculate approximate risk of contracting COVID",
-      "changes_warning": "<p>The microCOVID calculator's data source is no longer providing updates on COVID cases. To use the calculator, you'll need to provide the COVID prevalence in your area. Here's how:</p><p>Go to the red 'Step 1' heading below. Look up <strong>weekly new cases per 100k</strong> in your area and enter it in the first box. Then enter '100,000' in the 'total population' box just below it. The other boxes should be left on their defaults.</p><p><em>In the US, you can get this info at <0>covidactnow.org</0>: Click your state on the map, then your county. The first number, labeled 'weekly new reported cases per 100k', is what you need.</em></p><p>We hope to have an easier interface in place soon. Thank you for bearing with us during this change. Contact info@microcovid.org with any questions.</p>",
+      "changes_warning": "<p>The microCOVID calculator's data source is no longer providing updates on COVID cases. To use the calculator, you'll need to provide the COVID prevalence in your area. Here's how:</p><p>Go to the red 'Step 1' heading below. Look up <strong>weekly new cases per 100k</strong> in your area and enter it in the first box. The other boxes should be left on their defaults.</p><p><em>In the US, you can get this info at <0>covidactnow.org</0>: Click your state on the map, then your county. The first number, labeled 'weekly new reported cases per 100k', is what you need.</em></p><p>We hope to have an easier interface in place soon. Thank you for bearing with us during this change. Contact info@microcovid.org with any questions.</p>",
       "changes_warning_heading": "Finding COVID prevalence",
       "delta_warning": "Risks have increased substantially, including for vaccinated people. <1>See blog post</1> for more details.",
       "delta_warning_heading": "Now updated for the Delta variant",
@@ -186,6 +186,7 @@
       "data_last_updated": "Data last updated",
       "details_header": "Details",
       "last_week_cases": "Reported cases in past week",
+      "last_week_cases_per_100000": "Reported cases in past week per 100,000 people",
       "percent_increase_in_cases": "Percent increase in cases from last week to this week",
       "population": "Total population",
       "positive_case_percentage": "Percent of tests that come back positive",
