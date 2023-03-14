@@ -90,7 +90,15 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
     <Card id={props.id}>
       <Card.Body>
         <div>
-          <Trans>calculator.prevalence.instructions</Trans>
+          <Trans i18nKey="calculator.prevalence.instructions">
+            <a
+              href="https://covidactnow.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+          </Trans>
         </div>
         <PrevalenceResult data={props.data} />
         <PrevalenceField
