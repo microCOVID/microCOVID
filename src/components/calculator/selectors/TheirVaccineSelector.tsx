@@ -12,7 +12,7 @@ export function TheirVaccineSelector(props: {
 }): JSX.Element {
   const { t } = useTranslation()
 
-  if (props.data.unvaccinatedPrevalenceRatio) {
+  if (props.data.percentFullyVaccinated) {
     return (
       <SegmentedControl
         id="theirVaccine"
