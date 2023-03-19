@@ -185,6 +185,7 @@
       "completed_vaccinations_tooltip": "This field is only editable if we are missing vaccination data for your location",
       "data_last_updated": "Data last updated",
       "details_header": "Details",
+      "instructions": "<p>The microCOVID calculator's data source is no longer providing updates on COVID rates. To use the calculator, please look up <strong>weekly new cases per 100k</strong> in your area and enter it below. Then enter \"100,000\" in the \"total population\" box. The other boxes can be left on their defaults.</p><p>We hope to have a more usable version of the interface in place soon. Contact info@microcovid.org with any questions.</p><p><i>If you are in the US, go to <0>covidactnow.org</0>, click your state on the map, then your county. The first number on the screen is \"weekly new reported cases per 100k\".</p>",
       "last_week_cases": "Reported cases in past week",
       "percent_increase_in_cases": "Percent increase in cases from last week to this week",
       "population": "Total population",

@@ -1,7 +1,7 @@
 import { isNumber } from 'lodash'
 import React from 'react'
 import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 import ControlLabel from '../controls/ControlLabel'
 
@@ -89,6 +89,17 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   return (
     <Card id={props.id}>
       <Card.Body>
+        <div>
+          <Trans i18nKey="calculator.prevalence.instructions">
+            <a
+              href="https://covidactnow.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+          </Trans>
+        </div>
         <PrevalenceResult data={props.data} />
         <PrevalenceField
           id="reported-cases"
