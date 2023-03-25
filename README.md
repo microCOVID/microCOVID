@@ -77,3 +77,9 @@ $ yarn fix
 ```
 
 If there are errors it can't fix, please fix them manually before committing.
+
+## Validating model changes
+One of the tests generates `computed_scenarios.json`, a json of inputs and
+outputs for various situations. Use
+[`model_comparison.ipynb`](model_comparison.ipynb) to compare the model behavior
+before and after model changes.

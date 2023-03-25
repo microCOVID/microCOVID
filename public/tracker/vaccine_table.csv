@@ -1,6 +1,6 @@
-No Vaccine,1.00,1.00,1.00
-"Unknown vaccine, unknown date",0.47,0.47,0.47
-Pfizer,1.00,0.76,0.17
-Moderna,1.00,0.76,0.17
-AstraZenica,1.00,0.76,0.47
-"Johnson & Johnson",1.00,0.36,0.36
+No Vaccine,1.00,1.00,1.00,1.00
+"Unknown vaccine, unknown date",1.0,1.0,1.0,0.3
+Pfizer,1.00,1.0,0.8,0.25
+Moderna,1.00,1.0,0.8,0.25
+AstraZenica,1.00,1.00,1.00,0.3
+"Johnson & Johnson",1.00,1.00,0.95

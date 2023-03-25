@@ -216,12 +216,12 @@ There are two questions that are important for understanding vaccines:
 
 Below is our best estimates for the vaccine efficacies for various vaccines. These are based on a weighted average of the efficacy of each vaccine vs. symptomatic and never-symptomatic COVID-19 infections. See [Research Sources](/paper/14-research-sources#vaccines) for the full derivations.
 
-|             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
-| ----------- | -------------------------------------------- | -------------------------------------------- |
-| AstraZeneca | 0.76                                         | 0.47                                         |
-| Moderna     | 0.76                                         | 0.17                                         |
-| Pfizer      | 0.76                                         | 0.17                                         |
-| Johnson & Johnson | 0.36                                   | N/A                                          |
+|             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose | microCOVID multiplier 14 days after 3rd dose
+| ----------- | -------------------------------------------- | -------------------------------------------- | --------------------------------------------
+| AstraZeneca | 1                                            | 1                                            | 0.3
+| Moderna     | 1                                            | 0.8                                          | 0.25
+| Pfizer      | 1                                            | 0.8                                          | 0.25
+| Johnson & Johnson | 1                                      | 1                                            | 0.95
 
 For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s or a single dose of Johnson & Johnson's vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
 
@@ -248,15 +248,15 @@ As a result, getting a vaccination yourself confers a reduction in incoming micr
 You may additionally increase your budget based on how the vaccine reduces your own chances of negative outcomes, but this is a personal choice dependent on your own view of how averse to the various possible negative outcomes you are.
 
 Some ways you may want to change your budget in after you and your close contacts are vaccinated:
-* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been \`(200 / (1 + 0.4*N))\`. After everyone is vaccinated, this increases to \`(200 / (1 + 0.4*0.17*N))\`.
+* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been \`(200 / (1 + 0.4*N))\`. After everyone is vaccinated with three doses, this increases to \`(200 / (1 + 0.4*0.25*N))\`.
 * You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. ~6x for the mRNA vaccines) while still having the same impact on them.
 * If you are only concerned about the risk of your own hospitalization/death and unconcerned about effects of mild COVID or potential long-term symptoms, you may 5x your budget post vaccination.
 
 Example A:
 
-You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .4 * 5) = 67 microCOVID/week\`. All 6 of you are now vaccinated.
-* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .4 * .17 * 5) = 149 microCOVID/week\`.
-* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`67 / 0.17 = 394 microCOVID/week\`.
+You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .4 * 5) = 67 microCOVID/week\`. All 6 of you are now vaccinated with three doses.
+* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .4 * .25 * 5) = 133 microCOVID/week\`.
+* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`67 / 0.25 = 268 microCOVID/week\`.
 * If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further 5x your budget (accepting a higher risk of mild/asymptomatic COVID).
 
 Example B:
