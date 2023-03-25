@@ -3,7 +3,7 @@ name: Prevalence
 on:
   schedule:
     # 7:00am Pacific = 14:00 UTC
-    - cron:  '0 14 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 jobs:
@@ -47,6 +47,7 @@ jobs:
     - name: Run update prevalence and merge results
       env:
         GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+        DAILY_RUN: true
       run: yarn prevalence -b -c -k ${{ secrets.COVID_ACT_NOW_API_KEY }} -v ${{ steps.cache-virtualenv.outputs.virtualenv-directory }}
       # Always us -b to base branch on current branch. Works both for development on a feature branch
       # and when being run on `main` during normal usage.

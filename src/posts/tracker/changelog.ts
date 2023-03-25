@@ -16,6 +16,28 @@ interface Change {
 
 const changes: Change[] = [
   {
+    date: new Date(2021, 8, 18),
+    versionNum: '2.4.1',
+    title: 'Account for vaccines in shared budget reductions',
+    spreadsheetURL:
+      'https://docs.google.com/spreadsheets/d/1x8OdUOdaZl2tKEHSijPZh_geHVLzIWyaQQGVTtxfoPw',
+    whatsNew: `
+* Fix: Shared budget reductions now account for whole-pod vaccines
+* Fix: Fix missing automatic name generation for two location rows`,
+    instructions: `
+1. **Pod Overview sheet**
+    * Edit cell \`D109\` to contain this formula:
+        <pre><code>=GROCERY_ONE_HOUR_BASIC/MASK_MY_BASIC*VLOOKUP(F109, ACTIVITY_RISK_TABLE_MASK, 2, FALSE)*D104*E109</code></pre>
+2. **Locations sheet**
+    * Click on cell \`E9\` and go to *Edit > Copy*
+    * Click above on cell \`E8\` and go to *Edit > Paste*
+    * Click on cell \`E36\` and go to *Edit > Copy*
+    * Click above on cell \`E35\` and go to *Edit > Paste*
+3. **Pod Overview sheet:**
+    * Update your version number in cell \`D2\` to 2.4.1
+`,
+  },
+  {
     date: new Date(2021, 8, 7),
     versionNum: '2.4',
     title: 'Increase podmate budgets if everyone is vaccinated',

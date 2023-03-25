@@ -50,6 +50,7 @@ Washington,US_53
 West Virginia,US_54
 Wisconsin,US_55
 Wyoming,US_56
+American Samoa,US_60
 Guam,US_66
 Northern Mariana Islands,US_69
 Puerto Rico,US_72
@@ -158,6 +159,7 @@ Jordan,Jordan
 Kazakhstan,Kazakhstan
 Kenya,Kenya
 Kiribati,Kiribati
+Korea, North,Korea__North
 Kosovo,Kosovo
 Kuwait,Kuwait
 Kyrgyzstan,Kyrgyzstan
@@ -180,6 +182,7 @@ Marshall Islands,Marshall_Islands
 Mauritania,Mauritania
 Mauritius,Mauritius
 Mexico,Mexico
+Micronesia,Micronesia
 Moldova,Moldova
 Monaco,Monaco
 Mongolia,Mongolia
@@ -187,6 +190,7 @@ Montenegro,Montenegro
 Morocco,Morocco
 Mozambique,Mozambique
 Namibia,Namibia
+Nauru,Nauru
 Nepal,Nepal
 Netherlands,Netherlands
 New Zealand,New_Zealand
@@ -197,6 +201,7 @@ North Macedonia,North_Macedonia
 Norway,Norway
 Oman,Oman
 Pakistan,Pakistan
+Palau,Palau
 Panama,Panama
 Papua New Guinea,Papua_New_Guinea
 Paraguay,Paraguay
@@ -240,9 +245,11 @@ Tanzania,Tanzania
 Thailand,Thailand
 Timor-Leste,Timor_Leste
 Togo,Togo
+Tonga,Tonga
 Trinidad and Tobago,Trinidad_and_Tobago
 Tunisia,Tunisia
 Turkey,Turkey
+Tuvalu,Tuvalu
 United States (all),US
 Uganda,Uganda
 Ukraine,Ukraine

@@ -1,7 +1,31 @@
-
 .expandable-section .expandable-header {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   cursor: pointer;
-  display: block;
   padding-bottom: 0.5em;
+  text-align: left;
+  border-style: none;
+}
+
+.expandable-header:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.expandable-header:focus-visible {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.expandable-header-light {
+  background-color: #f0f3f4 !important;
+  padding-left: 0.75rem !important;
+}
+
+.expandable-section .card-body {
+  padding-bottom: 0;
+  margin-bottom: 0.5em;
+}
+
+.expandable-icon {
+  margin-right: 5px;
 }

@@ -1,13 +1,8 @@
-@import '~styles/_variables.scss';
+@import "~styles/_variables.scss";
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/_variables.scss";
 
 #calculator .explanation .card {
-  border: 1px solid $border-color;
-  border-top: 0px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-
   h4 {
     margin-top: 1em;
     margin-bottom: 0.75em;
@@ -23,13 +18,12 @@
     margin-top: 0.5em;
     margin-bottom: 1em;
   }
-  
-  #calculation-explanation {
+
+  #calculation-explanation-body {
     border: 1px solid $border-color;
     padding: 1em;
     margin: 1em 0;
     background-color: $gray-100;
-
 
     #calculation-breakdown {
       margin-left: 2em;

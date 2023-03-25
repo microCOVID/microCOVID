@@ -1,6 +1,6 @@
 import i18n from '../i18n'
 
-import { fixedPointPrecisionPercent } from 'components/calculator/util/FormatPrecision'
+import { formatPercent } from 'components/calculator/util/FormatPrecision'
 
 export interface CheckBoxFormValue extends FormValue {
   description?: string
@@ -45,25 +45,25 @@ export const partnerMult = 0.6
 export const Interaction: { [key: string]: FormValue } = {
   oneTime: {
     label: i18n.t('data.oneTime', {
-      percentage: fixedPointPrecisionPercent(oneTimeMult),
+      percentage: formatPercent(oneTimeMult, { decimalPointsToShow: 2 }),
     }),
     multiplier: oneTimeMult,
   },
   workplace: {
     label: i18n.t('data.workplace', {
-      percentage: fixedPointPrecisionPercent(oneTimeMult),
+      percentage: formatPercent(oneTimeMult),
     }),
     multiplier: oneTimeMult,
   },
   partner: {
     label: i18n.t('data.partner', {
-      percentage: fixedPointPrecisionPercent(partnerMult),
+      percentage: formatPercent(partnerMult),
     }),
     multiplier: partnerMult,
   },
   repeated: {
     label: i18n.t('data.repeated', {
-      percentage: fixedPointPrecisionPercent(housemateMult),
+      percentage: formatPercent(housemateMult),
     }),
     multiplier: housemateMult,
   },
@@ -371,27 +371,27 @@ export interface VaccineValue {
 export const Vaccines: { [key: string]: VaccineValue } = {
   pfizer: {
     label: i18n.t('data.vaccine.pfizer'),
-    multiplierPerDose: [1, 0.76, 0.17],
+    multiplierPerDose: [1, 1, 0.8, 0.25],
   },
   moderna: {
     label: i18n.t('data.vaccine.moderna'),
-    multiplierPerDose: [1, 0.76, 0.17],
+    multiplierPerDose: [1, 1, 0.8, 0.25],
   },
   astraZeneca: {
     label: i18n.t('data.vaccine.astra_zeneca'),
-    multiplierPerDose: [1, 0.76, 0.47],
+    multiplierPerDose: [1, 1, 1, 0.3],
   },
   johnson: {
     label: i18n.t('data.vaccine.johnson_johnson'),
-    multiplierPerDose: [1, 0.36],
+    multiplierPerDose: [1, 1, 0.95],
   },
   sputnik: {
     label: i18n.t('data.vaccine.sputnik'),
-    multiplierPerDose: [1, 0.76, 0.17],
+    multiplierPerDose: [1, 1, 0.8, 0.25],
   },
   unknown: {
     label: i18n.t('data.vaccine.unknown'),
-    multiplierPerDose: [1, 0.76, 0.47],
+    multiplierPerDose: [1, 1, 1, 0.3],
   },
 }
 

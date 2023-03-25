@@ -1,6 +1,6 @@
 import copy from 'copy-to-clipboard'
 import { stringify } from 'query-string'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Alert, Col, Row } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 import { BsLink45Deg } from 'react-icons/bs'
@@ -45,7 +45,9 @@ const FORM_STATE_KEY = 'formData'
 
 export const Calculator = (): React.ReactElement => {
   const [query, setQuery] = useQueryParams(queryConfig)
-  const [showWarning, setShowWarning] = useState(true)
+  const [points, setPoints] = useState(-1)
+  const [lowerBound, setLowerBound] = useState(-1)
+  const [upperBound, setUpperBound] = useState(-1)
 
   // Mount / unmount
   useEffect(() => {
@@ -101,12 +103,15 @@ export const Calculator = (): React.ReactElement => {
     addAlert('Link copied to clipboard!')
   }
 
-  const { points, lowerBound, upperBound } = useMemo(() => {
+  useEffect(() => {
     // Risk calculation
     const result = calculate(calculatorData)
     if (result === null) {
       document.getElementById('points-row')?.classList.remove('has-points')
-      return { points: -1, lowerBound: -1, upperBound: -1 }
+      setPoints(-1)
+      setLowerBound(-1)
+      setUpperBound(-1)
+      return
     }
 
     const { expectedValue, lowerBound, upperBound } = result
@@ -133,7 +138,9 @@ export const Calculator = (): React.ReactElement => {
     setQuery(filterParams(calculatorData), 'replace')
 
     document.getElementById('points-row')?.classList.add('has-points')
-    return { points: expectedValue, lowerBound, upperBound }
+    setPoints(expectedValue)
+    setLowerBound(lowerBound)
+    setUpperBound(upperBound)
   }, [calculatorData, setQuery])
 
   const prevalenceIsFilled =
@@ -169,23 +176,6 @@ export const Calculator = (): React.ReactElement => {
     <div id="calculator">
       <Row>
         <Col md="12" lg="8" id="calculator-introduction">
-          {showWarning && (
-            <Alert
-              variant="primary"
-              onClose={() => setShowWarning(false)}
-              dismissible
-            >
-              <Alert.Heading>
-                {t('calculator.intro.delta_warning_heading')}
-              </Alert.Heading>
-              <Trans i18nKey="calculator.intro.delta_warning">
-                Risks have increased substantially, including for vaccinated
-                people.
-                <Link to="/blog/delta">See blog post</Link>
-                for more details.
-              </Trans>
-            </Alert>
-          )}
           <p>
             <Trans i18nKey="calculator.intro.whats_this2">
               Lorem ipsum dolor sic amet...
@@ -206,26 +196,38 @@ export const Calculator = (): React.ReactElement => {
               </a>
             </Trans>
           </p>
+          <Alert variant="info">
+            <Alert.Heading>
+              {t('calculator.intro.changes_warning_heading')}
+            </Alert.Heading>
+            <Trans i18nKey="calculator.intro.changes_warning">
+              <a
+                href="https://covidactnow.org"
+                target="_blank"
+                rel="noreferrer"
+              >
+                HERE_PLACEHOLDER
+              </a>
+            </Trans>
+          </Alert>
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.delta_blog">
-              <strong>DATE_PLACEHOLDER</strong>{' '}
-              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
-            </Trans>
-          </Alert>
-          <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.delta_numbers">
+            <Trans i18nKey="calculator.alerts.contributor_warning">
               <strong>DATE_PLACEHOLDER</strong>{' '}
               <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
             </Trans>
           </Alert>
           <Alert className="changelog" variant="light">
-            <Trans i18nKey="calculator.alerts.average_vaccine">
+            <Trans i18nKey="calculator.alerts.omicron_numbers">
               <strong>DATE_PLACEHOLDER</strong>{' '}
-              <Link to="/paper/14-research-sources#others-vaccines">
-                HERE_PLACEHOLDER
-              </Link>
+              <Link to="/paper/changelog">HERE_PLACEHOLDER</Link>
+            </Trans>
+          </Alert>
+          <Alert className="changelog" variant="light">
+            <Trans i18nKey="calculator.alerts.delta_blog">
+              <strong>DATE_PLACEHOLDER</strong>{' '}
+              <Link to="/blog/delta">HERE_PLACEHOLDER</Link>
             </Trans>
           </Alert>
           <Link
@@ -411,7 +413,7 @@ export const Calculator = (): React.ReactElement => {
               </React.Fragment>
             ) : (
               <div className="empty">
-                <Trans>calculator.risk_group_empty_warning</Trans>
+                <Trans>calculator.risk_group_empty_warning_manual</Trans>
               </div>
             )}
           </Card>
