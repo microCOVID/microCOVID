@@ -9,7 +9,7 @@ interface Change {
 
 const changes: Change[] = [
   {
-    date: new Date(2022, 1, 4),
+    date: new Date(2022, 0, 4),
     title: 'Omicron variant vaccine updates',
     content: `
 Made first-round updates for Omicron.
@@ -17,16 +17,19 @@ Made first-round updates for Omicron.
 * Vaccines
   * Efficacy of vaccines vs any infection has greatlly decreased.
   * Added the option to have a booster dose.
-  * Pfizer / AstraZenica data was drawn from Ferguson et al., Table 3.
-  * Pfizer multiplier changed to 1, 0.8, 0.25 with 1, 2, or 3 doses respectively.
-  * AstraZenica changed to 1, 1, 0.3.
-  * Moderna / Sputnik is assumed to be similar
-  * Johnson&Johson data is from Gray et al., calculated from data in table 1 as (Number of positive COVID19 tests With Vaccine / Number of tests With Vaccine) / (Number of positive COVID19 tests without Vaccine / Number of tests)
+  * Pfizer / AstraZenica data was drawn from [Ferguson et al.](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2021-12-16-COVID19-Report-49.pdf), Table 3.
+    * Pfizer multiplier changed to 1, 0.8, 0.25 with 1, 2, or 3 doses respectively.
+    * AstraZenica changed to 1, 1, 0.3.
+    * Moderna / Sputnik is assumed to be similar
+  * Johnson&Johnson data is from [Gray et al.](https://www.medrxiv.org/content/10.1101/2021.12.28.21268436v1.full.pdf), calculated from data in table 1 as (Number of positive COVID19 tests With Vaccine / Number of tests With Vaccine) / (Number of positive COVID19 tests without Vaccine / Number of tests)
     * New multipliers are 1, 0.95 with 1 or 2 doses.
   * To handle mixed-vaccines, we are only looking at the most recent dose. This is a simplification to make the UI and research manageable. In reality, e.g J&J followed by Moderna is probably a little worse than 2 Modernas while Moderna followed by J&J is probably a little better than 2 J&J’s.
   * We acknowledge that vaccine efficacy decays over time. We will attempt to add this to the model in the near future.
 * Other mutlipliers
-  * We do not have data to change other multipliers at this time. It is possible that the hourly base rate should be a bit higher. If you have contact tracing data that suggests a new housemate or hourly transmission rate, please send it our way.
+  * We do not think Omicron affects the housemate or partner multipliers.
+    * [Lyngse et al](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2021-12-16-COVID19-Report-49.pdf) found that the secondary attack rate within households of unvaccinated individuals was nearly identical between Omicron and Delta.
+  * We therefore suspect that Omicron also does not affect the hourly multiplier, but do not have data for this. 
+    * If you have contact tracing data that suggests a new hourly transmission rate, please send it our way.
   `,
   },
   {

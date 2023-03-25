@@ -238,6 +238,12 @@ However, there are a few downsides.  P100s tend to get frustrating in environmen
 
 ### Modifying your P100 to protect others and meet requirements:
 
+**Update 2022-12-18:**
+
+3M now sells a [filter for exhaled air](https://www.3m.com/3M/en_US/p/d/v101254496/) for their P100 respirator. 3M sells them in lots of 6, other retailers might sell them in single units. As even then they can be somewhat expensive, the DIY exhalation filter can still be a viable option.
+
+Original text:
+
 Since P100s were designed for hazardous environments as opposed to pandemics, they do not provide any filtration of exhaled air, opting instead for a simple valve to vent away the air you’ve breathed.  As a result, you’ll need to make a minor modification to the mask to protect others as well.  The simplest thing to do is to cover the exhalation valve with a piece of surgical mask.  Just cut a square of the appropriate size out, then tape it over the outside of the exhalation valve so people can see that you’ve protected them.  THIS STEP IS VERY IMPORTANT!  Without it you won’t be protecting others, and you may not be allowed to board a plane or enter a hospital without doing this.  Even then, you may have to explain your modification to the person managing the gate so they understand that the mask also protects others.
 
 This modification is easy and takes no more than 5 minutes.  You’ll need your P100, a surgical mask, and some tape.  (If you don’t have a surgical mask, you can use a piece of cloth for this purpose, but surgical masks practically grow on trees at this point.)  Find the exhalation valve on the P100.  It should be obvious, but if not, put the mask on and feel where the air blows out of the mask when you breathe out.  Cut a piece of surgical mask that’s somewhat larger than the exhalation valve and then use the tape to attach it to the exhalation valve.  You’ll want to block as little of the exhalation valve with tape as possible since you want the surgical mask to filter this air instead of having the tape block it.  If you simply tape over the exhalation valve as you do with an N95, the mask will become very difficult to breathe through, as the air you exhale will have nowhere to go.  The inhalation filters often have one-way valves, and even if they don’t, you don’t want your moist breath degrading them.
