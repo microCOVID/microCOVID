@@ -1,4 +1,6 @@
-us_state_abbrev_by_name = {
+from typing import overload, Dict, Mapping, Tuple, TypeVar
+
+us_state_abbrev_by_name: Dict[str, str] = {
     "Alabama": "AL",
     "Alaska": "AK",
     "American Samoa": "AS",
@@ -57,4 +59,9 @@ us_state_abbrev_by_name = {
     "Wyoming": "WY",
 }
 
-us_state_name_by_abbrev = dict(map(reversed, us_state_abbrev_by_name.items()))
+
+def swap(a: Tuple[str, str]) -> Tuple[str, str]:
+    return (a[1], a[0])
+
+
+us_state_name_by_abbrev: Mapping[str, str] = dict(map(swap, us_state_abbrev_by_name.items()))

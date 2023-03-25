@@ -2,7 +2,7 @@ const title = 'Introduction'
 const shortTitle = title
 const content = `
 
-You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet (1 meter) apart, and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
+You’re already familiar with some rules of thumb for avoiding COVID-19 infection: wear a mask, stay 6 feet apart (or 2 meters, depending on where you live), and only socialize outdoors. But is it riskier to go to the grocery store, or to ride in a Lyft or Uber? It’s tough to make good choices when you don’t know how large or small the risks really are.
 
 We, the authors, were really struggling with this. We wanted a better way to make decisions about COVID risk. So we read some papers and crunched some numbers. We spent hours building a model to estimate the COVID risk of various activities. And in this writeup, we’ll share our model (and some practical tools!) with you.
 
@@ -42,7 +42,7 @@ Since then, the project has grown to include like-minded individuals around the 
 
 **Original White Paper and Model:** Catherine Olsson, Joshua Oreman, Rhys Lindmark, Anna Tsykalova, Stephanie Bachar, Sarah Dobro, MD, Matt Bell
 
-**Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon, Jeremy Blanchard, Matt Bell, Jenny Wong, Melody Chang, Josh Oreman, Peter Gyongyosi, Michael Cohn, and the microCOVID github community.
+**Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon, Jeremy Blanchard, Matt Bell, Jenny Wong, Melody Chang, Josh Oreman, Peter Gyongyosi, Michael Cohn, Justin Haaheim, Vince Broz and the microCOVID GitHub community.
 
 **Ongoing Model Researchers:** Catherine Olsson, Ben Shaya, Joshua Oreman, Riley Drake, Joshua Slocum
 

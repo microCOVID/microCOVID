@@ -6,7 +6,6 @@ import { PrevalenceResult } from './PrevalenceResult'
 import { formatPercent } from 'components/calculator/util/FormatPrecision'
 import { ControlledExpandable } from 'components/Expandable'
 import { CalculatorData } from 'data/calculate'
-import { PrevalenceDataDate } from 'data/location'
 
 const PrevalenceFieldStatic: React.FunctionComponent<{
   id: string
@@ -90,11 +89,11 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
           <div>
             <em>
               <Trans>calculator.prevalence.data_last_updated</Trans>:{' '}
-              {PrevalenceDataDate}
+              {props.data.prevalanceDataDate.toLocaleDateString()}
             </em>
           </div>
           <div>
-            <p className="mt-3">
+            <div className="mt-3">
               <Trans i18nKey="calculator.prevalence_info_source_information">
                 Prevalence data consolidated from {}
                 <a
@@ -176,7 +175,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
                   </Trans>
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
         </>
       )}

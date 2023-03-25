@@ -1,18 +1,18 @@
 Name,Estimated unvaccinated prevalence,Estimated vaccinated prevalence,Reported prevalence,Underreporting factor,Delay factor,Estimated prevalence
-Entire country,0.004454,0.002093,0.001126,2.3336,1.0,0.002629
-Johor,Unknown,Unknown,0.00077,2.3336,1.0,0.001797
-Kedah,Unknown,Unknown,0.001108,2.3336,1.0,0.002587
-Kelantan,Unknown,Unknown,0.001806,2.3336,1.0,0.004214
-Melaka,Unknown,Unknown,0.001557,2.3336,1.0,0.003633
-Negeri Sembilan,Unknown,Unknown,0.00108,2.3336,1.0,0.002521
-Pahang,Unknown,Unknown,0.001215,2.3336,1.0,0.002836
-Perak,Unknown,Unknown,0.000606,2.3336,1.0,0.001414
-Perlis,Unknown,Unknown,0.000939,2.3336,1.0,0.002191
-Pulau Pinang,Unknown,Unknown,0.001087,2.3336,1.0,0.002538
-Sabah,Unknown,Unknown,0.001005,2.3336,1.0106,0.00237
-Sarawak,Unknown,Unknown,0.00136,2.3336,1.0,0.003173
-Selangor,Unknown,Unknown,0.001207,2.3336,1.0146,0.002859
-Terengganu,Unknown,Unknown,0.001369,2.3336,1.0,0.003194
-W.P. Kuala Lumpur,Unknown,Unknown,0.000935,2.3336,1.0,0.002182
-W.P. Labuan,Unknown,Unknown,0.000543,2.3336,1.2619,0.0016
-W.P. Putrajaya,Unknown,Unknown,0.002287,2.3336,1.2698,0.006776
+Entire country,9.8e-05,9.8e-05,4.4e-05,2.2083,1.007,9.8e-05
+Johor,Unknown,Unknown,2.3e-05,2.2083,1.1757,6.1e-05
+Kedah,Unknown,Unknown,2.6e-05,2.2083,1.375,7.8e-05
+Kelantan,Unknown,Unknown,1.2e-05,2.2083,1.0,2.7e-05
+Melaka,Unknown,Unknown,9.2e-05,2.2083,1.0,0.000204
+Negeri Sembilan,Unknown,Unknown,2.5e-05,2.2083,1.0,5.5e-05
+Pahang,Unknown,Unknown,1.9e-05,2.2083,1.2917,5.4e-05
+Perak,Unknown,Unknown,2.6e-05,2.2083,1.0,5.7e-05
+Perlis,Unknown,Unknown,1.2e-05,2.2083,1.0,2.6e-05
+Pulau Pinang,Unknown,Unknown,2.3e-05,2.2083,1.1818,5.9e-05
+Sabah,Unknown,Unknown,4e-06,2.2083,1.0,9e-06
+Sarawak,Unknown,Unknown,1.5e-05,2.2083,1.0,3.2e-05
+Selangor,Unknown,Unknown,6.8e-05,2.2083,1.0,0.000151
+Terengganu,Unknown,Unknown,2.3e-05,2.2083,1.1667,6e-05
+W.P. Kuala Lumpur,Unknown,Unknown,0.00025,2.2083,1.2,0.000663
+W.P. Labuan,Unknown,Unknown,0.000121,2.2083,2.0,0.000533
+W.P. Putrajaya,Unknown,Unknown,0.000351,2.2083,1.0,0.000775
