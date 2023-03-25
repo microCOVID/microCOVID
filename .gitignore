@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# typechecking
+/typecover
+
 # production
 /build
 
@@ -34,3 +37,24 @@ src/locales/*_old.json
 
 # python
 __pycache__/
+/.coverage
+
+# personal tools developers might use
+/.envrc
+/.nvmrc
+/.python-version
+/tsfmt.json
+/Makefile
+
+# emacs
+\#*
+
+# vim
+**.swp
+**.swo
+
+# test output
+computed_scenarios*.json
+
+# jupyter
+.ipynb_checkpoints

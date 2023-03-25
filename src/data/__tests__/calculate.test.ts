@@ -41,7 +41,8 @@ const baseTestData = {
   // prevalance ratio = 1000 / (10 + i) * positivity_rate ** 0.5 + 2 = 25 * positivity_rate ** 0.5 + 2
   prevalanceDataDate: dateAfterDay0(30),
   unvaccinatedPrevalenceRatio: 2,
-  averageFullyVaccinatedMultiplier: 0.1,
+  percentFullyVaccinated: 40,
+  averageFullyVaccinatedMultiplier: 0.8,
   symptomsChecked: 'no',
 }
 
@@ -297,7 +298,7 @@ describe('calculate', () => {
     })
     it('should apply 6% risk for a vaccinated partner', () => {
       expect(calcValue(vaccinatedPartner)).toBeCloseTo(
-        0.1 * (calcValue(unvaccinatedPartner) || -1),
+        0.8 * (calcValue(unvaccinatedPartner) || -1),
       )
     })
   })
@@ -460,16 +461,20 @@ describe('calculate', () => {
     it.each`
       type             | doses | multiplier
       ${'pfizer'}      | ${0}  | ${1}
-      ${'pfizer'}      | ${1}  | ${0.76}
-      ${'pfizer'}      | ${2}  | ${0.17}
+      ${'pfizer'}      | ${1}  | ${1}
+      ${'pfizer'}      | ${2}  | ${0.8}
+      ${'pfizer'}      | ${3}  | ${0.25}
       ${'moderna'}     | ${0}  | ${1}
-      ${'moderna'}     | ${1}  | ${0.76}
-      ${'moderna'}     | ${2}  | ${0.17}
+      ${'moderna'}     | ${1}  | ${1}
+      ${'moderna'}     | ${2}  | ${0.8}
+      ${'moderna'}     | ${3}  | ${0.25}
       ${'astraZeneca'} | ${0}  | ${1}
-      ${'astraZeneca'} | ${1}  | ${0.76}
-      ${'astraZeneca'} | ${2}  | ${0.47}
+      ${'astraZeneca'} | ${1}  | ${1}
+      ${'astraZeneca'} | ${2}  | ${1}
+      ${'astraZeneca'} | ${3}  | ${0.3}
       ${'johnson'}     | ${0}  | ${1}
-      ${'johnson'}     | ${1}  | ${0.36}
+      ${'johnson'}     | ${1}  | ${1}
+      ${'johnson'}     | ${2}  | ${0.95}
     `(
       '$doses doses of $type should give a multiplier of $multiplier',
       ({ type, doses, multiplier }) => {
@@ -490,7 +495,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineLongScenario)).toBeCloseTo(
-        calcValue(noVaccineLongScenario)! * 0.17,
+        calcValue(noVaccineLongScenario)! * 0.8,
       )
     })
 
@@ -505,7 +510,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccineHousemate)).toBeCloseTo(
-        calcValue(noVaccineHousemate)! * 0.17,
+        calcValue(noVaccineHousemate)! * 0.8,
       )
     })
 
@@ -519,7 +524,7 @@ describe('calculate', () => {
         yourVaccineType: 'pfizer',
       }
       expect(calcValue(vaccinePartner)).toBeCloseTo(
-        calcValue(noVaccinePartner)! * 0.17,
+        calcValue(noVaccinePartner)! * 0.8,
       )
     })
   })
@@ -541,7 +546,89 @@ describe('calculate', () => {
     it('Should decrease risk for vaccinated people', () => {
       expect(
         calcValue({ ...noVaccineScenario, theirVaccine: 'vaccinated' }),
-      ).toEqual(defaultValue * 2 * 0.1)
+      ).toEqual(defaultValue * 2 * 0.8)
+    })
+  })
+
+  describe('percentFullyVaccinated', () => {
+    const defaultScenario = {
+      ...testData(prepopulated['1person_15minCarRide']),
+      averageFullyVaccinatedMultiplier: 0.4,
+      percentFullyVaccinated: 40,
+      unvaccinatedPrevalenceRatio: null,
+    }
+    const defaultUnvaccinatedPrevalenceRatio = 1 / (0.4 * 0.4 + 0.6)
+
+    it.each`
+      theirVaccine
+      ${'vaccinated'}
+      ${'unvaccinated'}
+    `(
+      'Should decrease risk for lower vaccination rate when interacting with $theirVaccine people',
+      ({ theirVaccine }) => {
+        const defaultValue = calcValue({ ...defaultScenario, theirVaccine })!
+        const value = calcValue({
+          ...defaultScenario,
+          theirVaccine,
+          percentFullyVaccinated: defaultScenario.percentFullyVaccinated! / 2,
+        })
+        const expectedUnvaccinatedPrevalenceRatio = 1 / (0.4 * 0.2 + 0.8)
+        expect(value).toBeCloseTo(
+          defaultValue *
+            (expectedUnvaccinatedPrevalenceRatio /
+              defaultUnvaccinatedPrevalenceRatio),
+        )
+      },
+    )
+
+    it.each`
+      theirVaccine
+      ${'vaccinated'}
+      ${'unvaccinated'}
+    `(
+      'Should increase risk for higher vaccination rate when interacting with $theirVaccine people',
+      ({ theirVaccine }) => {
+        const defaultValue = calcValue({ ...defaultScenario, theirVaccine })!
+        const value = calcValue({
+          ...defaultScenario,
+          theirVaccine,
+          percentFullyVaccinated: defaultScenario.percentFullyVaccinated! * 2,
+        })
+        const expectedUnvaccinatedPrevalenceRatio = 1 / (0.4 * 0.8 + 0.2)
+        expect(value).toBeCloseTo(
+          defaultValue *
+            (expectedUnvaccinatedPrevalenceRatio /
+              defaultUnvaccinatedPrevalenceRatio),
+        )
+      },
+    )
+
+    it('Should not change risk if theirVaccine is undefined', () => {
+      const defaultValue = calcValue({
+        ...defaultScenario,
+        theirVaccine: 'undefined',
+      })!
+      const value = calcValue({
+        ...defaultScenario,
+        theirVaccine: 'undefined',
+        percentFullyVaccinated: defaultScenario.percentFullyVaccinated! * 2,
+      })
+      expect(value).toEqual(defaultValue)
+    })
+
+    it('Should not change risk if unvaccinatedPrevalenceRatio is available', () => {
+      const defaultValue = calcValue({
+        ...defaultScenario,
+        theirVaccine: 'vaccinated',
+        unvaccinatedPrevalenceRatio: 0.2,
+      })!
+      const value = calcValue({
+        ...defaultScenario,
+        theirVaccine: 'vaccinated',
+        unvaccinatedPrevalenceRatio: 0.2,
+        percentFullyVaccinated: defaultScenario.percentFullyVaccinated! * 2,
+      })
+      expect(value).toEqual(defaultValue)
     })
   })
 })

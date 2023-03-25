@@ -66,14 +66,14 @@ export interface CalculatorData {
 export const defaultValues: CalculatorData = {
   riskBudget: BUDGET_ONE_PERCENT,
 
-  useManualEntry: 0,
+  useManualEntry: 1,
   topLocation: '',
   subLocation: '',
   subSubLocation: '',
-  population: '',
+  population: '100000',
   casesPastWeek: 0,
   casesIncreasingPercentage: 0,
-  positiveCasePercentage: 0,
+  positiveCasePercentage: 10,
   prevalanceDataDate: new Date(),
   percentFullyVaccinated: null,
   unvaccinatedPrevalenceRatio: null,
@@ -124,15 +124,15 @@ const prevalenceRatio = (positivityPercent: number | null, date: Date) => {
 // These are the variables exposed via query parameters
 export type QueryData = Partial<CalculatorData>
 
-// Replace any values that no longer exist with empty string (nothing selected).
-// This is used when restoring a previous saved scenario, in case we changed
-// the model in the meantime.
 // sanitizeData() is used to clean both query parameters in the URL and
 // anything in local storage.
 export const sanitizeData = (
   data: Partial<CalculatorData>,
   fillCustomIfScenarioMissing: boolean,
 ): CalculatorData => {
+  // Replace any values that no longer exist with empty string (nothing selected).
+  // This is used when restoring a previous saved scenario, in case we changed
+  // the model in the meantime.
   const fixOne = (
     table: {
       [key: string]: FormValue | PartialData | PersonRiskValue | VaccineValue
@@ -154,11 +154,17 @@ export const sanitizeData = (
   fixOne(Vaccines, 'yourVaccineType')
   fixOne(prepopulated, 'scenarioName')
 
+  // ensure yourVaccineDoses is in current range
   if (
     data['yourVaccineDoses'] !== undefined &&
-    (data['yourVaccineDoses'] > 2 || data['yourVaccineDoses'] < 0)
+    (data['yourVaccineDoses'] > 3 || data['yourVaccineDoses'] < 0)
   ) {
     delete data['yourVaccineDoses']
+  }
+
+  // rehydrate stringified objects from JSON stored in local storage
+  if (data['prevalanceDataDate'] !== undefined) {
+    data['prevalanceDataDate'] = new Date(data['prevalanceDataDate'])
   }
 
   // No scenario name. Must be old stored data or an old query. For backwards
@@ -299,22 +305,29 @@ export const calculatePersonRiskEach = (
       Object.values(RiskProfilesUnaffectedByVaccines).includes(
         data.riskProfile,
       ) ||
-      data.unvaccinatedPrevalenceRatio === null ||
+      data.percentFullyVaccinated === null ||
       data.averageFullyVaccinatedMultiplier === null
     ) {
       return unadjustedRisk
     }
+    const fractionFullyVaccinated = data.percentFullyVaccinated / 100
+    const unvaccinatedPrevalenceRatio =
+      data.unvaccinatedPrevalenceRatio !== null
+        ? data.unvaccinatedPrevalenceRatio
+        : 1 /
+          (data.averageFullyVaccinatedMultiplier * fractionFullyVaccinated +
+            (1 - fractionFullyVaccinated))
 
     if (data.riskProfile === 'average') {
       switch (data.theirVaccine) {
         case 'vaccinated':
           return (
             unadjustedRisk *
-            data.unvaccinatedPrevalenceRatio *
+            unvaccinatedPrevalenceRatio *
             data.averageFullyVaccinatedMultiplier
           )
         case 'unvaccinated':
-          return unadjustedRisk * data.unvaccinatedPrevalenceRatio
+          return unadjustedRisk * unvaccinatedPrevalenceRatio
         case 'undefined':
           return unadjustedRisk
         default:
@@ -334,7 +347,7 @@ export const calculatePersonRiskEach = (
           // and partially vaccinated individuals.
           // See the comment above unvaccinated_relative_prevalence() in
           // update_prevalence.py for more details on how it is calculated.
-          return unadjustedRisk / data.unvaccinatedPrevalenceRatio
+          return unadjustedRisk / unvaccinatedPrevalenceRatio
         default:
           console.error(`Unrecognized vaccination state: ${data.theirVaccine}`)
           return null

@@ -216,12 +216,12 @@ There are two questions that are important for understanding vaccines:
 
 Below is our best estimates for the vaccine efficacies for various vaccines. These are based on a weighted average of the efficacy of each vaccine vs. symptomatic and never-symptomatic COVID-19 infections. See [Research Sources](/paper/14-research-sources#vaccines) for the full derivations.
 
-|             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose |
-| ----------- | -------------------------------------------- | -------------------------------------------- |
-| AstraZeneca | 0.76                                         | 0.47                                         |
-| Moderna     | 0.76                                         | 0.17                                         |
-| Pfizer      | 0.76                                         | 0.17                                         |
-| Johnson & Johnson | 0.36                                   | N/A                                          |
+|             | microCOVID multiplier 14 days after 1st dose | microCOVID multiplier 14 days after 2nd dose | microCOVID multiplier 14 days after 3rd dose
+| ----------- | -------------------------------------------- | -------------------------------------------- | --------------------------------------------
+| AstraZeneca | 1                                            | 1                                            | 0.3
+| Moderna     | 1                                            | 0.8                                          | 0.25
+| Pfizer      | 1                                            | 0.8                                          | 0.25
+| Johnson & Johnson | 1                                      | 1                                            | 0.95
 
 For perspective, the first dose of either vaccine confers equivalent protection as wearing a good quality cloth mask all day, every day *on top of your actual mask* and *even when you normally couldn't wear a mask*. Completing the 2nd dose of AstraZeneca’s or a single dose of Johnson & Johnson's vaccine confers more protection than wearing a surgical mask 24/7, and Pfizer or Moderna’s vaccine is as protective as wearing a KN95 mask all the time.
 
@@ -248,15 +248,15 @@ As a result, getting a vaccination yourself confers a reduction in incoming micr
 You may additionally increase your budget based on how the vaccine reduces your own chances of negative outcomes, but this is a personal choice dependent on your own view of how averse to the various possible negative outcomes you are.
 
 Some ways you may want to change your budget in after you and your close contacts are vaccinated:
-* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been \`(200 / (1 + 0.4*N))\`. After everyone is vaccinated, this increases to \`(200 / (1 + 0.4*0.17*N))\`.
+* If you want to keep the same overall budget but live with housemates, you can increase your personal budget while maintaining the same annual risk; each housemate's activites has a reduced impact on others' microCOVID budget. I.e. if living with N housemates, before vaccination each person's allocation of microCOVIDs would have been \`(200 / (1 + 0.4*N))\`. After everyone is vaccinated with three doses, this increases to \`(200 / (1 + 0.4*0.25*N))\`.
 * You may have been choosing your microCOVID budget primarily based on mitigating risk to others, rather than concern for your own health; When both you and the people you are trying to protect are vaccinated, you may increase your budget by 1 / vaccine multiplier (i.e. ~6x for the mRNA vaccines) while still having the same impact on them.
 * If you are only concerned about the risk of your own hospitalization/death and unconcerned about effects of mild COVID or potential long-term symptoms, you may 5x your budget post vaccination.
 
 Example A:
 
-You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .4 * 5) = 67 microCOVID/week\`. All 6 of you are now vaccinated.
-* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .4 * .17 * 5) = 149 microCOVID/week\`.
-* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`67 / 0.17 = 394 microCOVID/week\`.
+You live in a pod of 6. Prior to vaccination, all 6 housemates had a personal budget of \`200 / (1 + .4 * 5) = 67 microCOVID/week\`. All 6 of you are now vaccinated with three doses.
+* If all 6 of you agree you want to keep to a 200 microCOVID budget, you adjust the formula to \`200 / (1 + .4 * .25 * 5) = 133 microCOVID/week\`.
+* If you agree to keeping the same impact on each other while individually choosing your own risks, you each may go up to \`67 / 0.25 = 268 microCOVID/week\`.
 * If you all decide that you want to keep the same risk of getting severe COVID as pre-vaccination, you further 5x your budget (accepting a higher risk of mild/asymptomatic COVID).
 
 Example B:
@@ -306,11 +306,11 @@ Yes! Based on the [Jimenez Aerosol Transmission Model](https://docs.google.com/s
 ×1 for a ‘normal room’ (~20ft across)
 ×0.5 for a ‘large room’ (~30ft across)
 
-These assume you are already sufficiently distanced (at least 6 feet) that the size of the room is relevant to the amount of aerosol you’ll breathe. In close quarters, we think the size of the room has less of an impact.
+These assume you are already sufficiently distanced (at least 6 feet/2 meters) that the size of the room is relevant to the amount of aerosol you’ll breathe. In close quarters, we think the size of the room has less of an impact.
 
 ### Should I use an extra multiplier for cuddling? Going on a date?
 
-We personally use an additional multiplier of at least 2x for cuddling, Our original take on this was based on the assumption that our data for infection risk under “no particular distance” (which were largely collected in hospitals) reflect a distance closer to 3 feet than 0 feet. If each additional 3 feet adds a 2x improvement in safety, then being right on top of each other (0ft apart) might involve a 2x reduction in safety. This looks consistent with recently released data from train passengers sitting directly adjacent to one another versus merely in the same row ([Hu et al.](https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa1057/5877944)). If you’re breathing right into each other’s faces, more so than train passengers would, maybe use a higher number.
+We personally use an additional multiplier of at least 2x for cuddling, Our original take on this was based on the assumption that our data for infection risk under “no particular distance” (which were largely collected in hospitals) reflect a distance closer to 3 feet (1 meter) than 0 feet. If each additional 3 feet (1 meter) adds a 2x improvement in safety, then being right on top of each other (0ft apart) might involve a 2x reduction in safety. This looks consistent with recently released data from train passengers sitting directly adjacent to one another versus merely in the same row ([Hu et al.](https://academic.oup.com/cid/article/doi/10.1093/cid/ciaa1057/5877944)). If you’re breathing right into each other’s faces, more so than train passengers would, maybe use a higher number.
 
 We think it doesn’t make sense to take the full “outdoor” bonus when cuddling, because your faces are very close together. Finally, we think a brief hug probably doesn’t meaningfully change your risk, but we don’t have any evidence for that. Basically, we really don’t know and don’t have any evidence here, so take this with more grain of salt than the rest of our more-research-backed numbers.
 
@@ -336,7 +336,7 @@ Health officials are often quoted as saying the risk from packages is “[very l
 
 ### Lyfts/Ubers?
 
-You’re indoors, about six feet away from one other person (the driver), and both of you are hopefully wearing masks. It’s an unusually tiny space with poor air circulation by default.
+You’re indoors, about six feet (two meters) away from one other person (the driver), and both of you are hopefully wearing masks. It’s an unusually tiny space with poor air circulation by default.
 
 We did some informal tests with a CO2 meter in a Lyft[^4], and found that if you crack the windows open by an inch or so, this makes it “just” as well ventilated as a normal indoor space, rather than much stuffier than usual. So we suggest to at least crack the windows, then count it like an indoor space. If they’re chatting or talking on the phone, you might consider politely asking them not to.
 
@@ -344,16 +344,16 @@ If you keep the windows all the way open, the air circulation according to our C
 
 ### Public transit?
 
-You can very conservatively treat transit as an indoor hangout with however many other people are in the bus or train car with you, continuing to take a decrease of 2x per additional 3 feet away that the people are. You’re also probably up to 5x safer in the likely event that nobody is talking (but if anyone starts yelling, which happens on public transit sometimes, you could be 5x _less_ safe). Overall, [very few transmission clusters](https://www.scientificamerican.com/article/there-is-little-evidence-that-mass-transit-poses-a-risk-of-coronavirus-outbreaks/) have been linked to public transit.
+You can very conservatively treat transit as an indoor hangout with however many other people are in the bus or train car with you, continuing to take a decrease of 2x per additional 3 feet (1 meter) away that the people are. You’re also probably up to 5x safer in the likely event that nobody is talking (but if anyone starts yelling, which happens on public transit sometimes, you could be 5x _less_ safe). Overall, [very few transmission clusters](https://www.scientificamerican.com/article/there-is-little-evidence-that-mass-transit-poses-a-risk-of-coronavirus-outbreaks/) have been linked to public transit.
 
 ### Airplanes?
 
 Unlike transit, airplanes have pretty good air filtration systems: all the air is replaced with new air from outside every 4–5 minutes, and all the air passes through a HEPA filter that eliminates 99.97% of particles (the same as a P100 respirator) every 2–3 minutes ([source](https://www.travelandleisure.com/airlines-airports/how-airplane-cabin-air-works)). That means your risk will primarily be from people near you.
 
-The exact numbers for the Activity Risk will depend on how full your flight is; we’ve used 20 people at 6 feet of distance as a reasonable estimate for a moderately full flight. The worst case of a middle seat on a totally packed flight might be twice as bad as that:
-- Two people right next to you: potentially equivalent to about 8 people six feet away (though there’s a lot of uncertainty about risk at extremely close quarters)
-- Six people in the rows ahead of you and behind you, about 3 feet away: equivalent to about 12 people six feet away
-- 21 other people within two rows of you (five full sets of 3 seats across the aisle, one that’s two rows ahead of you and one two rows behind), all of which are about six feet away
+The exact numbers for the Activity Risk will depend on how full your flight is; we’ve used 20 people at 6 feet (2 meters) of distance as a reasonable estimate for a moderately full flight. The worst case of a middle seat on a totally packed flight might be twice as bad as that:
+- Two people right next to you: potentially equivalent to about 8 people six feet (two meters) away (though there’s a lot of uncertainty about risk at extremely close quarters)
+- Six people in the rows ahead of you and behind you, about 3 feet (1 meter) away: equivalent to about 12 people six feet (2 meters) away
+- 21 other people within two rows of you (five full sets of 3 seats across the aisle, one that’s two rows ahead of you and one two rows behind), all of which are about six feet (two meters) away
 which adds up to 41 people. (The plane is divided into “zones” of 5–7 rows each with separate climate control systems, so 5 rows worth of people — yours, two in front of you, and two behind — is a pretty good estimate for how many you’re potentially sharing exhalations with). As with public transit, you probably get some benefit from the fact that few of the people around you are talking, though it’s hard to say how much. Anything you can do to reduce the number of people near you (such as flying at an inconvenient time, paying for a reserved or extra-legroom seat, or even buying a first-class ticket) will help reduce your risk.
 
 For the Person Risk, we suggest you use the maximum prevalence of your source or destination region.
@@ -364,7 +364,7 @@ Overall, there are very few documented cases of transmission on airplanes, which
 
 ### Grocery stores? Drug stores? Haircuts?
 
-For grocery stores, we count the average number of people near us: in our neighborhood this is usually about 5 people, keeping 6 feet away, everyone wearing masks. For drug stores, pharmacy pickup, or medical buildings, you might want to add an extra boost to Person Risk to account for the fact that the people you’re encountering are more likely than average to be sick.
+For grocery stores, we count the average number of people near us: in our neighborhood this is usually about 5 people, keeping 6 feet (2 meters) away, everyone wearing masks. For drug stores, pharmacy pickup, or medical buildings, you might want to add an extra boost to Person Risk to account for the fact that the people you’re encountering are more likely than average to be sick.
 
 Haircuts can be modeled by counting each person in the hair salon. We definitely recommend wearing the best mask you have that won’t interfere with the haircut, and checking in advance that your mask style will be fine. If your stylist is usually chatty, we suggest for an extra safety margin to ask the hair stylist to chat less! We found an anecdote [on Twitter](https://twitter.com/robshirkey/status/1269369868182315014) about 140 clients who were in close contact with two infected hair stylists, indoors, with both client and stylist wearing masks. 45 clients were tested – all negative – and we haven’t heard of any cases among the others. Last we checked this was statistically consistent with the Activity Risk and modifier suggestions we use in this writeup.
 
@@ -372,7 +372,7 @@ Haircuts can be modeled by counting each person in the hair salon. We definitely
 
 _Warning: This answer hasn't been updated for the Delta variant._
 
-The risk of attending a protest depends on how close you get to others, whether they are yelling/chanting, whether they are wearing masks, and other factors we have not modeled in this writeup (for example, we have heard anecdotally that it is lower risk to be in a group where people are moving constantly, rather than staying near the same people for a long time). If you are in a shoulder-to-shoulder group of yelling people without masks, you might be near 10 people within 6 feet: Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ 5x yelling (see earlier in Q&A) = 30% per hour. Alternately, if you are in a group of cyclists protesting by biking down the road banging drums and gongs, that might be more like Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ (1/5 silent) ⨉ (1/2 at least 6ft away) = 0.6% per hour. This is a 50 times less risky activity. There are many ways to protest. We encourage you to keep all the same heuristics in mind: if possible, avoid very dense crowds, yelling, and enclosed spaces; and wear masks to protect yourself and others.
+The risk of attending a protest depends on how close you get to others, whether they are yelling/chanting, whether they are wearing masks, and other factors we have not modeled in this writeup (for example, we have heard anecdotally that it is lower risk to be in a group where people are moving constantly, rather than staying near the same people for a long time). If you are in a shoulder-to-shoulder group of yelling people without masks, you might be near 10 people within 6 feet (2 meters): Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ 5x yelling (see earlier in Q&A) = 30% per hour. Alternately, if you are in a group of cyclists protesting by biking down the road banging drums and gongs, that might be more like Activity Risk = 6% per hour ⨉ 10 people ⨉ (1/10 outdoors) ⨉ (1/5 silent) ⨉ (1/2 at least 6ft away) = 0.6% per hour. This is a 50 times less risky activity. There are many ways to protest. We encourage you to keep all the same heuristics in mind: if possible, avoid very dense crowds, yelling, and enclosed spaces; and wear masks to protect yourself and others.
 
 The most important thing to remember in attending a protest is that you may not have control over what happens to you. Police might [pull your mask off](https://nypost.com/2020/05/31/nypd-cop-pulls-mask-off-man-pepper-sprays-him-in-the-face-video/). If pepper spray is used, people are likely to cough uncontrollably. You might get [kettled](https://en.wikipedia.org/wiki/Kettling) into a small area, even if you were planning to keep your distance from others. One thing you can do to help stay safer is to make a plan in advance about what you will and won’t do: for example, you might decide in advance that if you see any gas used near the protest, you will leave. By thinking about what you are and are not up for, and making choices that take into account the risks, we hope you can confidently and proudly participate in protests that make sense for your risk tolerance.
 

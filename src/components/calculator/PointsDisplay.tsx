@@ -7,7 +7,7 @@ import {
   BsExclamationTriangleFill,
 } from 'react-icons/bs'
 
-import { budgetConsumption } from 'components/calculator/util/budgetUtil'
+import { BudgetConsumption } from 'components/calculator/util/budgetUtil'
 import {
   displayPoints,
   showPoints,
@@ -144,7 +144,13 @@ export default function PointsDisplay(props: {
           activeRiskLevel={activeRiskLevel}
         />
       </Col>
-      <Col md="11" sm="10" xs="10" className="points-container">
+      <Col
+        md="11"
+        sm="10"
+        xs="10"
+        className="points-container"
+        data-testid="points-container"
+      >
         {!doShowPoints ? (
           <div className="risk-level"></div>
         ) : (
@@ -160,14 +166,10 @@ export default function PointsDisplay(props: {
         )}
         <div className="budget-consumption">
           {doShowPoints && (
-            <>
-              {budgetConsumption(
-                props.points,
-                props.riskBudget,
-                t('calculator.explanationcard.multiple_suffix'),
-                t('calculator.explanationcard.percentage_suffix'),
-              )}
-            </>
+            <BudgetConsumption
+              points={props.points}
+              budget={props.riskBudget}
+            />
           )}
         </div>
         <div className="points">

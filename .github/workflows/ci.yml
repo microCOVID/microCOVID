@@ -1,14 +1,9 @@
 name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on all branches.
+on: [push, pull_request]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -16,18 +11,40 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
+    - run: |
+          python -m pip install --upgrade pip
+          pip install black
     - run: yarn lint --max-warnings 0
-  typecheck:
+  typecheck-js:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
-    - run: yarn typecheck
+    - run: yarn tsc
+  typecheck-py:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v3
+    - run: pip install -r requirements-manual.txt
+    - run: mypy .
   test:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+      # Increased fetch-depth needed for codecov
+      with:
+        fetch-depth: 2
     - uses: bahmutov/npm-install@v1
-    - run: yarn test --watchAll=false
+    - uses: actions/setup-python@v3
+    - run: yarn coverage
+    - run: pip install -r requirements-manual.txt
+    - run: coverage run -m pytest
+    - run: coverage report -m
+    - run: coverage xml
+    - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - run: chmod +x codecov
+    - run: ./codecov --file coverage/lcov.info --file coverage/py/coverage.xml --nonZero

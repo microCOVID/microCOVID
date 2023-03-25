@@ -3,12 +3,38 @@ const shortTitle = 'Changelog'
 
 interface Change {
   date: Date
+  title?: string
   content: string
 }
 
 const changes: Change[] = [
   {
+    date: new Date(2022, 0, 4),
+    title: 'Omicron variant vaccine updates',
+    content: `
+Made first-round updates for Omicron.
+
+* Vaccines
+  * Efficacy of vaccines vs any infection has greatlly decreased.
+  * Added the option to have a booster dose.
+  * Pfizer / AstraZenica data was drawn from [Ferguson et al.](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2021-12-16-COVID19-Report-49.pdf), Table 3.
+    * Pfizer multiplier changed to 1, 0.8, 0.25 with 1, 2, or 3 doses respectively.
+    * AstraZenica changed to 1, 1, 0.3.
+    * Moderna / Sputnik is assumed to be similar
+  * Johnson&Johnson data is from [Gray et al.](https://www.medrxiv.org/content/10.1101/2021.12.28.21268436v1.full.pdf), calculated from data in table 1 as (Number of positive COVID19 tests With Vaccine / Number of tests With Vaccine) / (Number of positive COVID19 tests without Vaccine / Number of tests)
+    * New multipliers are 1, 0.95 with 1 or 2 doses.
+  * To handle mixed-vaccines, we are only looking at the most recent dose. This is a simplification to make the UI and research manageable. In reality, e.g J&J followed by Moderna is probably a little worse than 2 Modernas while Moderna followed by J&J is probably a little better than 2 J&J’s.
+  * We acknowledge that vaccine efficacy decays over time. We will attempt to add this to the model in the near future.
+* Other mutlipliers
+  * We do not think Omicron affects the housemate or partner multipliers.
+    * [Lyngse et al](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2021-12-16-COVID19-Report-49.pdf) found that the secondary attack rate within households of unvaccinated individuals was nearly identical between Omicron and Delta.
+  * We therefore suspect that Omicron also does not affect the hourly multiplier, but do not have data for this. 
+    * If you have contact tracing data that suggests a new hourly transmission rate, please send it our way.
+  `,
+  },
+  {
     date: new Date(2021, 6, 26),
+    title: 'Delta variant updates',
     content: `
 * Updated transmission and vaccine numbers for Delta variant:
   |                         | Previous   | Delta Variant  |
@@ -26,10 +52,11 @@ const changes: Change[] = [
   },
   {
     date: new Date(2021, 5, 22),
+    title: 'Add "Average vaccinated person" risk profiles',
     content: `
 * Added the option to select the vaccination state of average people
   * Imported vaccination data from JHU and Covid Act Now.
-  * See [Research Sources](/paper/14-research-sources#others-vaccines) for derivation and caveats.    
+  * See [Research Sources](/paper/14-research-sources#others-vaccines) for derivation and caveats.
 `,
   },
   {
@@ -46,8 +73,9 @@ const changes: Change[] = [
   },
   {
     date: new Date(2021, 2, 30),
+    title: "Add Johnson & Johnson's vaccine",
     content: `
-* Vaccine updates: 
+* Vaccine updates:
   * Added support for Johnson & Johnson's vaccine (single dose, 1/3 multiplier).
   * Improved multiplier for Moderna and Pfizer's vaccines (0.2 -> 0.1) based on new data.
   * Increase wait time before getting the effects of a vaccine (7 -> 14 days). This matches Moderna / AstraZeneca / Johnson & Johnson (Pfizer's was the only study that used 7 days).
@@ -55,6 +83,7 @@ const changes: Change[] = [
   },
   {
     date: new Date(2021, 2, 16),
+    title: 'Add vaccines to Risk Tracker',
     content: `
 * The latest version of the [Risk Tracker](/tracker) now supports modeling the risk of someone you are seeing who is vaccinated.`,
   },
@@ -109,7 +138,7 @@ export const lastUpdated = changes[0].date
 const content = changes
   .map((change) => {
     return `
-## ${change.date.toLocaleDateString()}
+## ${change.date.toLocaleDateString()}${change.title ? ': ' + change.title : ''}
 ${change.content}`
   })
   .join('\n\n')

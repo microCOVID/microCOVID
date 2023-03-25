@@ -1,21 +1,20 @@
+import i18n from 'i18n'
 import React from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 
 import { PrevalenceResult } from './PrevalenceResult'
+import { formatPercent } from 'components/calculator/util/FormatPrecision'
 import { ControlledExpandable } from 'components/Expandable'
 import { CalculatorData } from 'data/calculate'
-import { PrevalenceDataDate } from 'data/location'
 
 const PrevalenceFieldStatic: React.FunctionComponent<{
   id: string
   label: string
-  value: string | number
-  unit?: string
-}> = ({ id, label, value, unit }): React.ReactElement => {
+  value: string
+}> = ({ id, label, value }): React.ReactElement => {
   return (
     <div id={id}>
-      {label}: {typeof value === 'number' ? value.toLocaleString() : value}
-      {unit}
+      {label}: {value}
     </div>
   )
 }
@@ -34,7 +33,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
     <ControlledExpandable
       id={props.id}
       header={props.header}
-      headerClassName={props.hide ? 'd-none' : ''}
+      headerClassName={`expandable-header-light ${props.hide ? 'd-none' : ''}`}
       open={props.open}
       setter={props.setter}
     >
@@ -43,7 +42,9 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
       <PrevalenceFieldStatic
         id="reported-cases"
         label={t('calculator.prevalence.last_week_cases')}
-        value={props.data.casesPastWeek || 0}
+        value={Number(props.data.casesPastWeek || 0).toLocaleString(
+          i18n.language,
+        )}
       />
       <PrevalenceFieldStatic
         id="population"
@@ -56,8 +57,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
         <PrevalenceFieldStatic
           id="percent-increase"
           label={t('calculator.prevalence.percent_increase_in_cases')}
-          value={props.data.casesIncreasingPercentage}
-          unit="%"
+          value={formatPercent(props.data.casesIncreasingPercentage / 100)}
         />
       )}
       <PrevalenceFieldStatic
@@ -66,9 +66,14 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
         value={
           props.data.positiveCasePercentage === null
             ? 'no data available'
-            : props.data.positiveCasePercentage.toString()
+            : Number(props.data.positiveCasePercentage / 100).toLocaleString(
+                i18n.language,
+                {
+                  maximumFractionDigits: 1,
+                  style: 'percent',
+                },
+              )
         }
-        unit="%"
       />
       <PrevalenceFieldStatic
         id="vaccinated-rate"
@@ -76,20 +81,19 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
         value={
           props.data.percentFullyVaccinated === null
             ? 'no data available'
-            : (100 * props.data.percentFullyVaccinated).toFixed(0)
+            : formatPercent(props.data.percentFullyVaccinated / 100)
         }
-        unit="%"
       />
       {!props.locationSet ? null : (
         <>
           <div>
             <em>
               <Trans>calculator.prevalence.data_last_updated</Trans>:{' '}
-              {PrevalenceDataDate}
+              {props.data.prevalanceDataDate.toLocaleDateString()}
             </em>
           </div>
           <div>
-            <p className="mt-3">
+            <div className="mt-3">
               <Trans i18nKey="calculator.prevalence_info_source_information">
                 Prevalence data consolidated from {}
                 <a
@@ -171,7 +175,7 @@ export const LocationPrevalenceDetails: React.FunctionComponent<{
                   </Trans>
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
         </>
       )}
