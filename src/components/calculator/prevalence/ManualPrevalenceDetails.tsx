@@ -117,7 +117,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           setter={(value) =>
             props.setter({
               ...props.data,
-              casesPastWeek: parseInt(value || ''),
+              casesPastWeek: parseFloat(value || ''),
             })
           }
           inputType="number"
@@ -131,7 +131,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           inputType="text"
           className="hide-number-buttons"
           warningText="Warning: if you are entering cases per 100,000, this field should be set to 100,000"
-          showWarningText={props.data.population !== '100000'}
+          showWarningText={
+            parseInt(props.data.population.replace(/,/g, '')) !== 100000
+          }
         />
         <PrevalenceField
           id="percent-increase"
