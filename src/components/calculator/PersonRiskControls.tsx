@@ -5,18 +5,14 @@ import { DurationInput } from './DurationInput'
 import { PeopleCountInput } from './PeopleCountInput'
 import { DistanceSelector } from './selectors/DistanceSelector'
 import { RiskProfileSelector } from './selectors/RiskProfileSelector'
-import { TheirVaccineSelector } from './selectors/TheirVaccineSelector'
 import { CalculatorData } from 'data/calculate'
-import { RiskProfilesUnaffectedByVaccines } from 'data/data'
 
 export const PersonRiskControls: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
   repeatedEvent: boolean
 }> = ({ data, setter, repeatedEvent }): React.ReactElement => {
-  const showTheirVaccineSelector =
-    data.riskProfile !== '' &&
-    !Object.values(RiskProfilesUnaffectedByVaccines).includes(data.riskProfile)
+  
   return (
     <React.Fragment>
       <h3 className="h2 accent">
