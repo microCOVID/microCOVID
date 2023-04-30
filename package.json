@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "@sentry/react": "^6.16.1",
     "@sentry/tracing": "^6.16.1",
     "@testing-library/dom": ">=5",

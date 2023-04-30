@@ -248,7 +248,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row id="calculator-fields">
-        <Col md="12" lg="4">
+        <Col md="12" lg="12">
           <Card id="location">
             <PrevalenceControls
               data={calculatorData}
@@ -257,7 +257,7 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </Col>
 
-        <Col md="12" lg="8" id="activity-section">
+        <Col md="12" lg="12" id="activity-section">
           <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
@@ -421,7 +421,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col md="12" lg={{ span: 8, offset: 4 }}>
+        <Col md="12" lg="12">
           <PointsDisplay
             points={points}
             repeatedEvent={repeatedEvent}
@@ -432,7 +432,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
-        <Col md="12" lg={{ span: 8, offset: 4 }}>
+        <Col md="12" lg="12">
           <ExplanationCard
             points={points}
             repeatedEvent={repeatedEvent}

@@ -1,3 +1,4 @@
+import Slider from '@material-ui/core/Slider'
 import { isNumber } from 'lodash'
 import React from 'react'
 import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
@@ -110,6 +111,38 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           </Trans>
         </div>
         <PrevalenceResult data={props.data} />
+        <Slider
+          defaultValue={props.data.casesPastWeek || 0}
+          onChangeCommitted={(e, value) => {
+            props.setter({ ...props.data, casesPastWeek: (value as number) as any * 1000 })
+          }}
+          min={0}
+          max={10}
+          step={0.1}
+          valueLabelDisplay="auto"
+          valueLabelFormat={(value) => {
+            // show as percentage
+            return `${value}%`
+          }}
+          marks={[
+            {
+              value: 2,
+              label: 'Low',
+            },
+            {
+              value: 4,
+              label: 'Medium',
+            },
+            {
+              value: 6,
+              label: 'High',
+            },
+            {
+              value: 8,
+              label: 'Extreme',
+            },
+          ]}
+        />
         <PrevalenceField
           id="reported-cases"
           label={t('calculator.prevalence.last_week_cases')}

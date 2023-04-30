@@ -43,9 +43,6 @@ export const PersonRiskControls: React.FunctionComponent<{
         setter={setter}
         repeatedEvent={repeatedEvent}
       />
-      {showTheirVaccineSelector && (
-        <TheirVaccineSelector data={data} setter={setter} />
-      )}
       <br />
     </React.Fragment>
   )
