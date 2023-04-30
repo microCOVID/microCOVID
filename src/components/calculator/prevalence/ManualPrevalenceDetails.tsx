@@ -18,7 +18,10 @@ const PrevalenceField: React.FunctionComponent<{
   max?: number
   min?: number
   helpText?: string
+  warningText?: string
+  showWarningText?: boolean
   className?: string
+  rowClassName?: string
   readOnly?: boolean
 }> = ({
   id,
@@ -32,6 +35,9 @@ const PrevalenceField: React.FunctionComponent<{
   helpText,
   className,
   readOnly,
+  warningText,
+  showWarningText,
+  rowClassName,
 }): React.ReactElement => {
   let body: React.ReactElement = (
     <Form.Control
@@ -63,7 +69,7 @@ const PrevalenceField: React.FunctionComponent<{
     )
   }
   return (
-    <Row>
+    <Row className={rowClassName}>
       <Form.Group controlId={id} className="mb-3">
         <ControlLabel
           id={`${id}-control-label`}
@@ -75,6 +81,9 @@ const PrevalenceField: React.FunctionComponent<{
           }
         />
         {body}
+        {showWarningText && warningText ? (
+          <div className="mt-3 text-danger">{warningText}</div>
+        ) : null}
       </Form.Group>
     </Row>
   )
@@ -108,7 +117,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           setter={(value) =>
             props.setter({
               ...props.data,
-              casesPastWeek: parseInt(value || ''),
+              casesPastWeek: parseFloat(value || ''),
             })
           }
           inputType="number"
@@ -121,11 +130,16 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           setter={(value) => props.setter({ ...props.data, population: value })}
           inputType="text"
           className="hide-number-buttons"
+          warningText="Warning: if you are entering cases per 100,000, this field should be set to 100,000"
+          showWarningText={
+            parseInt(props.data.population.replace(/,/g, '')) !== 100000
+          }
         />
         <PrevalenceField
           id="percent-increase"
           label={t('calculator.prevalence.percent_increase_in_cases')}
-          value={props.data.casesIncreasingPercentage}
+          // value={props.data.casesIncreasingPercentage}
+          value={0} // this field is no longer adjustable
           unit="%"
           setter={(value) => {
             props.setter({
@@ -136,15 +150,17 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           inputType="number"
           min={0}
           className="hide-number-buttons"
+          rowClassName="d-none"
         />
         <PrevalenceField
           id="positive-test-rate"
           label={t('calculator.prevalence.positive_case_percentage')}
-          value={
-            props.data.positiveCasePercentage
-              ? props.data.positiveCasePercentage.toString()
-              : ''
-          }
+          // value={
+          //   props.data.positiveCasePercentage
+          //     ? props.data.positiveCasePercentage.toString()
+          //     : ''
+          // }
+          value={'10'} // this field is no longer adjustable
           unit="%"
           setter={(value) => {
             props.setter({
@@ -156,15 +172,17 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           max={100}
           min={0}
           className="hide-number-buttons"
+          rowClassName="d-none"
         />
         <PrevalenceField
           id="vaccinated-rate"
           label={t('calculator.prevalence.completed_vaccinations')}
-          value={
-            props.data.percentFullyVaccinated
-              ? props.data.percentFullyVaccinated.toString()
-              : ''
-          }
+          // value={
+          //   props.data.percentFullyVaccinated
+          //     ? props.data.percentFullyVaccinated.toString()
+          //     : ''
+          // }
+          value={'0'} // this field is no longer adjustable
           unit="%"
           setter={(value) => {
             props.setter({
@@ -176,6 +194,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           max={100}
           min={0}
           className="hide-number-buttons"
+          rowClassName="d-none"
           readOnly={props.data.unvaccinatedPrevalenceRatio !== null}
           helpText={
             props.data.unvaccinatedPrevalenceRatio !== null
