@@ -1,5 +1,6 @@
-import Slider from '@material-ui/core/Slider'
 import { isNumber } from 'lodash'
+import Slider from 'rc-slider'
+import 'rc-slider/assets/index.css'
 import React from 'react'
 import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
@@ -111,37 +112,79 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           </Trans>
         </div>
         <PrevalenceResult data={props.data} />
+
         <Slider
-          defaultValue={props.data.casesPastWeek || 0}
-          onChangeCommitted={(e, value) => {
-            props.setter({ ...props.data, casesPastWeek: (value as number) as any * 1000 })
+          className="my-5"
+          trackStyle={{
+            height: '8px',
           }}
-          min={0}
-          max={10}
-          step={0.1}
-          valueLabelDisplay="auto"
-          valueLabelFormat={(value) => {
-            // show as percentage
-            return `${value}%`
+          handleStyle={{
+            height: '30px',
+            width: '30px',
+            top: '-3px',
           }}
-          marks={[
-            {
-              value: 2,
+          dotStyle={{
+            height: '25px',
+            width: '25px',
+            top: '-10px',
+          }}
+          activeDotStyle={{
+            height: '25px',
+            width: '25px',
+            top: '-10px',
+          }}
+          value={props.data.casesPastWeek / 100 || 0}
+          onChange={(value) => {
+            props.setter({ ...props.data, casesPastWeek: (value as number) as never * 100 })
+          }}
+          marks={{
+            0: {
+              style: {
+                fontSize: '1.2em',
+                fontWeight: 'bold',
+              },
+              label: '0%',
+            },
+            20: {
+              style: {
+                color: 'green',
+                fontSize: '1.2em',
+                fontWeight: 'bold',
+              },
               label: 'Low',
             },
-            {
-              value: 4,
+            40: {
+              style: {
+                color: 'cornflowerblue',
+                fontSize: '1.2em',
+                fontWeight: 'bold',
+              },
               label: 'Medium',
             },
-            {
-              value: 6,
+            60: {
+              style: {
+                color: 'orange',
+                fontSize: '1.2em',
+                fontWeight: 'bold',
+              },
               label: 'High',
             },
-            {
-              value: 8,
+            80: {
+              style: {
+                color: 'red',
+                fontSize: '1.2em',
+                fontWeight: 'bold',
+              },
               label: 'Extreme',
             },
-          ]}
+            100: {
+              style: {
+                fontSize: '1.2em',
+                fontWeight: 'bold',
+              },
+              label: '10%',
+            }
+          }}
         />
         <PrevalenceField
           id="reported-cases"
