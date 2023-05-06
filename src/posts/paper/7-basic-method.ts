@@ -60,7 +60,7 @@ If you live in the US, you can look up the positive test rate in your state at [
 
 We use the correction factor proposed by [COVID-19 Projections](https://covid19-projections.com/estimating-true-infections-revisited/):
 \`\`\`
-underreporting_factor = 1250 / (day_i + 25) * positive_test_rate ** 0.5 + 2
+underreporting_factor = 1250 / (day_i + 25) * positive_test_rate ** 0.5 + 2 + 4
 true_infections = underreporting_factor * reported_infections
 where day_i = number of days since 2020-02-12
 \`\`\`
