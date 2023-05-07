@@ -114,7 +114,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         <PrevalenceResult data={props.data} />
 
         <Slider
-          className="my-5"
+          className="my-5 pb-5"
           trackStyle={{
             height: '8px',
           }}
@@ -122,6 +122,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             height: '30px',
             width: '30px',
             top: '-3px',
+            backgroundColor: '#D018A1',
           }}
           dotStyle={{
             height: '25px',
@@ -137,6 +138,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           onChange={(value) => {
             props.setter({ ...props.data, casesPastWeek: (value as number) as never * 100 })
           }}
+          max={20}
           marks={{
             0: {
               style: {
@@ -145,15 +147,21 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               },
               label: '0%',
             },
-            20: {
+            4: {
               style: {
                 color: 'green',
                 fontSize: '1.2em',
                 fontWeight: 'bold',
               },
-              label: 'Low',
+              label: (
+                <>
+                  Low
+                  <br/>
+                  (similar to US during late 2022)
+                </>
+              ),
             },
-            40: {
+            8: {
               style: {
                 color: 'cornflowerblue',
                 fontSize: '1.2em',
@@ -161,7 +169,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               },
               label: 'Medium',
             },
-            60: {
+            12: {
               style: {
                 color: 'orange',
                 fontSize: '1.2em',
@@ -169,7 +177,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               },
               label: 'High',
             },
-            80: {
+            16: {
               style: {
                 color: 'red',
                 fontSize: '1.2em',
@@ -177,12 +185,12 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               },
               label: 'Extreme',
             },
-            100: {
+            20: {
               style: {
                 fontSize: '1.2em',
                 fontWeight: 'bold',
               },
-              label: '10%',
+              label: '2%',
             }
           }}
         />

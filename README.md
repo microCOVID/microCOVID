@@ -83,3 +83,11 @@ One of the tests generates `computed_scenarios.json`, a json of inputs and
 outputs for various situations. Use
 [`model_comparison.ipynb`](model_comparison.ipynb) to compare the model behavior
 before and after model changes.
+
+
+### Updating Community Infection Values
+To update the values shown in the community infection Slider component, you can change the values in `src/components/CommunityInfectionSlider.tsx`. 
+The values are in the `marks` object. 0 represents no infections and 20 represents 2% of the population being infected (these values are multiplied by 100 to get the correct percentage).
+The `valueLabelFormat` function is used to format the values shown in the slider. 
+The `valueLabelDisplay` prop determines whether the values are shown or not. 
+The `step` prop determines the step size of the slider. The `defaultValue` prop determines the default value of the slider when no value has previously been selected.
