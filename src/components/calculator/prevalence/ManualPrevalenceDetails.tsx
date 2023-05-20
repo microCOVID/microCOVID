@@ -1,7 +1,7 @@
 import { isNumber } from 'lodash'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
@@ -43,7 +43,7 @@ const PrevalenceField: React.FunctionComponent<{
 }): React.ReactElement => {
   let body: React.ReactElement = (
     <Form.Control
-      className={'form-control form-control-lg col-md-3 col-lg-6 ' + className}
+      className={'form-control form-control-lg col-md-6' + className}
       data-testid={id}
       type={inputType}
       value={value}
@@ -96,6 +96,20 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = (props): React.ReactElement => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const { t } = useTranslation()
   return (
     <Card id={props.id}>
@@ -112,9 +126,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           </Trans>
         </div>
         <PrevalenceResult data={props.data} />
-
         <Slider
           className="my-5 pb-5"
+          step={0.01}
           trackStyle={{
             height: '8px',
           }}
@@ -142,27 +156,39 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           marks={{
             0: {
               style: {
-                fontSize: '1.2em',
+                paddingTop: '1em',
+                fontSize: !isMobile ? '1.2em' : '1em',
                 fontWeight: 'bold',
               },
               label: '0%',
             },
             4: {
               style: {
+                paddingTop: '1em',
                 color: 'green',
-                fontSize: '1.2em',
+                fontSize: !isMobile ? '1.2em' : '1em',
                 fontWeight: 'bold',
               },
-              label: (
-                <>
+              label: !isMobile ? (
+                <div className="px-4">
                   Low
                   <br/>
-                  (similar to US during late 2022)
-                </>
+                  (similar to US
+                  during late 2022)
+                </div>
+              ) : (
+                <div className="px-4">
+                  Low
+                  <br/>
+                  (similar to US
+                  <br/>
+                  during late 2022)
+                </div>
               ),
             },
             8: {
               style: {
+                paddingTop: '1em',
                 color: 'cornflowerblue',
                 fontSize: '1.2em',
                 fontWeight: 'bold',
@@ -171,6 +197,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             },
             12: {
               style: {
+                paddingTop: '1em',
                 color: 'orange',
                 fontSize: '1.2em',
                 fontWeight: 'bold',
@@ -179,6 +206,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             },
             16: {
               style: {
+                paddingTop: '1em',
                 color: 'red',
                 fontSize: '1.2em',
                 fontWeight: 'bold',
@@ -187,6 +215,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             },
             20: {
               style: {
+                paddingTop: '1em',
                 fontSize: '1.2em',
                 fontWeight: 'bold',
               },
@@ -196,7 +225,11 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         />
         <PrevalenceField
           id="reported-cases"
-          label={t('calculator.prevalence.last_week_cases')}
+          label={
+            parseInt(props.data.population) === 100000
+              ? t('calculator.prevalence.last_week_cases')
+              : t('calculator.prevalence.last_week_cases_no_pop')
+          }
           value={props.data.casesPastWeek || 0}
           setter={(value) =>
             props.setter({
