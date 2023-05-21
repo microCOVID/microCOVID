@@ -86,7 +86,7 @@ before and after model changes.
 
 
 ### Updating Community Infection Values
-To update the values shown in the community infection Slider component, you can change the values in `src/components/CommunityInfectionSlider.tsx`. 
+To update the values shown in the community infection Slider component, you can change the values in `/src/components/calculator/prevalence/ManualPrevalenceDetails.tsx`. 
 The values are in the `marks` object. 0 represents no infections and 20 represents 2% of the population being infected (these values are multiplied by 100 to get the correct percentage).
 The `valueLabelFormat` function is used to format the values shown in the slider. 
 The `valueLabelDisplay` prop determines whether the values are shown or not. 
