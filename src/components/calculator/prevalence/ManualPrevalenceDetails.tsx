@@ -148,9 +148,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             width: '25px',
             top: '-10px',
           }}
-          value={props.data.casesPastWeek / 100 || 0}
+          value={Math.ceil(props.data.casesPastWeek) / 100 || 0}
           onChange={(value) => {
-            props.setter({ ...props.data, casesPastWeek: (value as number) as never * 100 })
+            props.setter({ ...props.data, casesPastWeek: Math.ceil((value as number) as never * 100) })
           }}
           max={20}
           marks={{
