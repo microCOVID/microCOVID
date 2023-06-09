@@ -1,7 +1,7 @@
 import { isNumber } from 'lodash'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
-import React  from 'react'
+import React from 'react'
 import { Button, Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
@@ -116,7 +116,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
           <div className="d-flex flex-row">
             <Button
               className="mt-1 d-block mr-3 flex-fill"
-              style={{backgroundColor: "green", borderColor: "green"}}
+              style={{ backgroundColor: 'green', borderColor: 'green' }}
               onClick={() =>
                 props.setter({
                   ...props.data,
@@ -146,7 +146,10 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             </Button>
             <Button
               className="mt-1 d-block mr-3 flex-fill"
-              style={{backgroundColor: "darkorange", borderColor: "darkorange"}}
+              style={{
+                backgroundColor: 'darkorange',
+                borderColor: 'darkorange',
+              }}
               onClick={() =>
                 props.setter({
                   ...props.data,
@@ -161,7 +164,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             </Button>
             <Button
               className="mt-1 d-block mr-3 flex-fill"
-              style={{backgroundColor: "red", borderColor: "red"}}
+              style={{ backgroundColor: 'red', borderColor: 'red' }}
               onClick={() =>
                 props.setter({
                   ...props.data,
@@ -215,14 +218,18 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
                 },
                 label: (
                   <div className="slider-label">
-                    <Trans>calculator.prevalence.prevalance_slider_label_min_short</Trans>
+                    <Trans>
+                      calculator.prevalence.prevalance_slider_label_min_short
+                    </Trans>
                   </div>
                 ),
               },
               [dataJson.calculator.prevalence.prevalance_slider_value_2]: {
                 label: (
                   <div className="slider-label">
-                    <Trans>calculator.prevalence.prevalance_slider_label_2_short</Trans>
+                    <Trans>
+                      calculator.prevalence.prevalance_slider_label_2_short
+                    </Trans>
                   </div>
                 ),
               },
@@ -232,7 +239,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
                 },
                 label: (
                   <div className="slider-label">
-                    <Trans>calculator.prevalence.prevalance_slider_label_3_short</Trans>
+                    <Trans>
+                      calculator.prevalence.prevalance_slider_label_3_short
+                    </Trans>
                   </div>
                 ),
               },
@@ -242,7 +251,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
                 },
                 label: (
                   <div className="slider-label">
-                    <Trans>calculator.prevalence.prevalance_slider_label_max_short</Trans>
+                    <Trans>
+                      calculator.prevalence.prevalance_slider_label_max_short
+                    </Trans>
                   </div>
                 ),
               },
@@ -271,7 +282,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
             id="population"
             label={t('calculator.prevalence.population')}
             value={props.data.population}
-            setter={(value) => props.setter({ ...props.data, population: value })}
+            setter={(value) =>
+              props.setter({ ...props.data, population: value })
+            }
             inputType="text"
             className="hide-number-buttons"
             warningText="Warning: if you are entering cases per 100,000, this field should be set to 100,000"
