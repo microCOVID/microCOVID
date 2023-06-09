@@ -1,10 +1,13 @@
 import { isNumber } from 'lodash'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
-import React, { useEffect, useState } from 'react'
-import { Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
+import React  from 'react'
+import { Button, Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
+import '../../../components/styles/ManualPrevalenceSlider.scss'
+import dataJson from '../../../locales/en.json'
+import enData from '../../../locales/en.json'
 import ControlLabel from '../controls/ControlLabel'
 
 import { PrevalenceResult } from './PrevalenceResult'
@@ -96,162 +99,187 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = (props): React.ReactElement => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   const { t } = useTranslation()
   return (
     <Card id={props.id}>
       <Card.Body>
         <div>
           <Trans i18nKey="calculator.prevalence.instructions">
-            <a
-              href="https://covidactnow.org"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://covidactnow.org" target="_blank" rel="noreferrer">
               here
             </a>
           </Trans>
         </div>
         <PrevalenceResult data={props.data} />
-        <Slider
-          className="my-5 pb-5"
-          step={0.01}
-          trackStyle={{
-            height: '8px',
-          }}
-          handleStyle={{
-            height: '30px',
-            width: '30px',
-            top: '-3px',
-            backgroundColor: '#D018A1',
-          }}
-          dotStyle={{
-            height: '25px',
-            width: '25px',
-            top: '-10px',
-          }}
-          activeDotStyle={{
-            height: '25px',
-            width: '25px',
-            top: '-10px',
-          }}
-          value={Math.ceil(props.data.casesPastWeek) / 100 || 0}
-          onChange={(value) => {
-            props.setter({ ...props.data, casesPastWeek: Math.ceil((value as number) as never * 100) })
-          }}
-          max={20}
-          marks={{
-            0: {
-              style: {
-                paddingTop: '1em',
-                fontSize: !isMobile ? '1.2em' : '1em',
-                fontWeight: 'bold',
+        <div className="p-2">
+          <h3>Prevalence Presets</h3>
+          <div className="d-flex flex-row">
+            <Button
+              className="mt-1 d-block mr-3 flex-fill"
+              style={{backgroundColor: "green", borderColor: "green"}}
+              onClick={() =>
+                props.setter({
+                  ...props.data,
+                  casesPastWeek: Math.ceil(
+                    enData.calculator.prevalence.prevalance_slider_value_min *
+                      100,
+                  ),
+                })
+              }
+            >
+              <Trans>calculator.prevalence.prevalance_slider_label_min</Trans>
+            </Button>
+            <Button
+              className="mt-1 d-block mr-3 flex-fill"
+              variant="secondary"
+              onClick={() =>
+                props.setter({
+                  ...props.data,
+                  casesPastWeek: Math.ceil(
+                    enData.calculator.prevalence.prevalance_slider_value_2 *
+                      100,
+                  ),
+                })
+              }
+            >
+              <Trans>calculator.prevalence.prevalance_slider_label_2</Trans>
+            </Button>
+            <Button
+              className="mt-1 d-block mr-3 flex-fill"
+              style={{backgroundColor: "darkorange", borderColor: "darkorange"}}
+              onClick={() =>
+                props.setter({
+                  ...props.data,
+                  casesPastWeek: Math.ceil(
+                    enData.calculator.prevalence.prevalance_slider_value_3 *
+                      100,
+                  ),
+                })
+              }
+            >
+              <Trans>calculator.prevalence.prevalance_slider_label_3</Trans>
+            </Button>
+            <Button
+              className="mt-1 d-block mr-3 flex-fill"
+              style={{backgroundColor: "red", borderColor: "red"}}
+              onClick={() =>
+                props.setter({
+                  ...props.data,
+                  casesPastWeek: Math.ceil(
+                    enData.calculator.prevalence.prevalance_slider_value_max *
+                      100,
+                  ),
+                })
+              }
+            >
+              <Trans>calculator.prevalence.prevalance_slider_label_max</Trans>
+            </Button>
+          </div>
+        </div>
+        <div className="px-4">
+          <Slider
+            className="slider-component"
+            step={0.01}
+            trackStyle={{
+              height: '8px',
+            }}
+            handleStyle={{
+              height: '30px',
+              width: '30px',
+              top: '-3px',
+              backgroundColor: '#D018A1',
+            }}
+            dotStyle={{
+              height: '25px',
+              width: '25px',
+              top: '-10px',
+            }}
+            activeDotStyle={{
+              height: '25px',
+              width: '25px',
+              top: '-10px',
+            }}
+            value={Math.ceil(props.data.casesPastWeek) / 100 || 0}
+            onChange={(value) => {
+              props.setter({
+                ...props.data,
+                casesPastWeek: Math.ceil(((value as number) as never) * 100),
+              })
+            }}
+            min={dataJson.calculator.prevalence.prevalance_slider_value_min}
+            max={dataJson.calculator.prevalence.prevalance_slider_value_max}
+            marks={{
+              [dataJson.calculator.prevalence.prevalance_slider_value_min]: {
+                style: {
+                  color: 'green',
+                },
+                label: (
+                  <div className="slider-label">
+                    <Trans>calculator.prevalence.prevalance_slider_label_min_short</Trans>
+                  </div>
+                ),
               },
-              label: '0%',
-            },
-            4: {
-              style: {
-                paddingTop: '1em',
-                color: 'green',
-                fontSize: !isMobile ? '1.2em' : '1em',
-                fontWeight: 'bold',
+              [dataJson.calculator.prevalence.prevalance_slider_value_2]: {
+                label: (
+                  <div className="slider-label">
+                    <Trans>calculator.prevalence.prevalance_slider_label_2_short</Trans>
+                  </div>
+                ),
               },
-              label: !isMobile ? (
-                <div className="px-4">
-                  Low
-                  <br/>
-                  (similar to US
-                  during late 2022)
-                </div>
-              ) : (
-                <div className="px-4">
-                  Low
-                  <br/>
-                  (similar to US
-                  <br/>
-                  during late 2022)
-                </div>
-              ),
-            },
-            8: {
-              style: {
-                paddingTop: '1em',
-                color: 'cornflowerblue',
-                fontSize: '1.2em',
-                fontWeight: 'bold',
+              [dataJson.calculator.prevalence.prevalance_slider_value_3]: {
+                style: {
+                  color: 'darkorange',
+                },
+                label: (
+                  <div className="slider-label">
+                    <Trans>calculator.prevalence.prevalance_slider_label_3_short</Trans>
+                  </div>
+                ),
               },
-              label: 'Medium',
-            },
-            12: {
-              style: {
-                paddingTop: '1em',
-                color: 'orange',
-                fontSize: '1.2em',
-                fontWeight: 'bold',
+              [dataJson.calculator.prevalence.prevalance_slider_value_max]: {
+                style: {
+                  color: 'red',
+                },
+                label: (
+                  <div className="slider-label">
+                    <Trans>calculator.prevalence.prevalance_slider_label_max_short</Trans>
+                  </div>
+                ),
               },
-              label: 'High',
-            },
-            16: {
-              style: {
-                paddingTop: '1em',
-                color: 'red',
-                fontSize: '1.2em',
-                fontWeight: 'bold',
-              },
-              label: 'Extreme',
-            },
-            20: {
-              style: {
-                paddingTop: '1em',
-                fontSize: '1.2em',
-                fontWeight: 'bold',
-              },
-              label: '2%',
+            }}
+          />
+        </div>
+        <div className="px-4">
+          <PrevalenceField
+            id="reported-cases"
+            label={
+              parseInt(props.data.population) === 100000
+                ? t('calculator.prevalence.last_week_cases')
+                : t('calculator.prevalence.last_week_cases_no_pop')
             }
-          }}
-        />
-        <PrevalenceField
-          id="reported-cases"
-          label={
-            parseInt(props.data.population) === 100000
-              ? t('calculator.prevalence.last_week_cases')
-              : t('calculator.prevalence.last_week_cases_no_pop')
-          }
-          value={props.data.casesPastWeek || 0}
-          setter={(value) =>
-            props.setter({
-              ...props.data,
-              casesPastWeek: parseFloat(value || ''),
-            })
-          }
-          inputType="number"
-          className="hide-number-buttons"
-        />
-        <PrevalenceField
-          id="population"
-          label={t('calculator.prevalence.population')}
-          value={props.data.population}
-          setter={(value) => props.setter({ ...props.data, population: value })}
-          inputType="text"
-          className="hide-number-buttons"
-          warningText="Warning: if you are entering cases per 100,000, this field should be set to 100,000"
-          showWarningText={
-            parseInt(props.data.population.replace(/,/g, '')) !== 100000
-          }
-        />
+            value={props.data.casesPastWeek || 0}
+            setter={(value) =>
+              props.setter({
+                ...props.data,
+                casesPastWeek: parseFloat(value || ''),
+              })
+            }
+            inputType="number"
+            className="hide-number-buttons"
+          />
+          <PrevalenceField
+            id="population"
+            label={t('calculator.prevalence.population')}
+            value={props.data.population}
+            setter={(value) => props.setter({ ...props.data, population: value })}
+            inputType="text"
+            className="hide-number-buttons"
+            warningText="Warning: if you are entering cases per 100,000, this field should be set to 100,000"
+            showWarningText={
+              parseInt(props.data.population.replace(/,/g, '')) !== 100000
+            }
+          />
+        </div>
         <PrevalenceField
           id="percent-increase"
           label={t('calculator.prevalence.percent_increase_in_cases')}
