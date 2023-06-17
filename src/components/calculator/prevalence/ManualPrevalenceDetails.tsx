@@ -113,9 +113,9 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         <PrevalenceResult data={props.data} />
         <div className="p-2">
           <h3>Prevalence Presets</h3>
-          <div className="d-flex flex-row">
+          <div className="d-flex flex-column preset-buttons">
             <Button
-              className="mt-1 d-block mr-3 flex-fill"
+              className="mt-1 d-block mb-2"
               style={{ backgroundColor: 'green', borderColor: 'green' }}
               onClick={() =>
                 props.setter({
@@ -130,7 +130,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               <Trans>calculator.prevalence.prevalance_slider_label_min</Trans>
             </Button>
             <Button
-              className="mt-1 d-block mr-3 flex-fill"
+              className="mt-1 d-block mb-2"
               variant="secondary"
               onClick={() =>
                 props.setter({
@@ -145,7 +145,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               <Trans>calculator.prevalence.prevalance_slider_label_2</Trans>
             </Button>
             <Button
-              className="mt-1 d-block mr-3 flex-fill"
+              className="mt-1 d-block mb-2"
               style={{
                 backgroundColor: 'darkorange',
                 borderColor: 'darkorange',
@@ -163,7 +163,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               <Trans>calculator.prevalence.prevalance_slider_label_3</Trans>
             </Button>
             <Button
-              className="mt-1 d-block mr-3 flex-fill"
+              className="mt-1 d-block mb-2"
               style={{ backgroundColor: 'red', borderColor: 'red' }}
               onClick={() =>
                 props.setter({

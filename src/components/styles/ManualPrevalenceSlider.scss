@@ -19,11 +19,19 @@ $breakpoint-desktop: 992px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 576px;
 
+.preset-buttons {
+  width: 50%;
+}
+
 @media (max-width: $breakpoint-desktop) {
     .slider-label {
         display: inline-block;
         width: 150px;
         height: 200px;
+    }
+
+    .preset-buttons {
+      width: 100%;
     }
 }
 
