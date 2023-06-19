@@ -104,11 +104,20 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
     <Card id={props.id}>
       <Card.Body>
         <div>
-          <Trans i18nKey="calculator.prevalence.instructions">
-            <a href="https://covidactnow.org" target="_blank" rel="noreferrer">
-              here
+          <p>
+            Currently there is no consistent reporting on COVID prevalence in
+            the US. Please use the buttons or the sliders below to set a COVID
+            level based on your impression of whether cases are low or high
+            right now.
+            <br />
+            <br />
+            It may help to look at{' '}
+            <a href="https://publichealth.verily.com/?v=SC2_N&l=Coeur+d%27Alene%2C+ID">
+              wastewater data
             </a>
-          </Trans>
+            : Choose an area new you, set the graph to "all time," and see how
+            levels now compare to past highs and lows.
+          </p>
         </div>
         <PrevalenceResult data={props.data} />
         <div className="p-2">
@@ -182,7 +191,7 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
         <div className="px-4">
           <Slider
             className="slider-component"
-            step={0.01}
+            step={0.2}
             trackStyle={{
               height: '8px',
             }}
