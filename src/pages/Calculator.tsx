@@ -197,20 +197,6 @@ export const Calculator = (): React.ReactElement => {
               </a>
             </Trans>
           </p>
-          <Alert variant="info">
-            <Alert.Heading>
-              {t('calculator.intro.changes_warning_heading')}
-            </Alert.Heading>
-            <Trans i18nKey="calculator.intro.changes_warning">
-              <a
-                href="https://covidactnow.org"
-                target="_blank"
-                rel="noreferrer"
-              >
-                HERE_PLACEHOLDER
-              </a>
-            </Trans>
-          </Alert>
         </Col>
         <Col lg="4" md="12">
           <Alert className="changelog" variant="light">
@@ -248,7 +234,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row id="calculator-fields">
-        <Col md="12" lg="4">
+        <Col md="12" lg="12">
           <Card id="location">
             <PrevalenceControls
               data={calculatorData}
@@ -257,7 +243,7 @@ export const Calculator = (): React.ReactElement => {
           </Card>
         </Col>
 
-        <Col md="12" lg="8" id="activity-section">
+        <Col md="12" lg="12" id="activity-section">
           <Card id="person-risk">
             {prevalenceIsFilled ? (
               <React.Fragment>
@@ -421,7 +407,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="sticky" id="points-row">
-        <Col md="12" lg={{ span: 8, offset: 4 }}>
+        <Col md="12" lg="12">
           <PointsDisplay
             points={points}
             repeatedEvent={repeatedEvent}
@@ -432,7 +418,7 @@ export const Calculator = (): React.ReactElement => {
         </Col>
       </Row>
       <Row className="explanation" id="explanation-row">
-        <Col md="12" lg={{ span: 8, offset: 4 }}>
+        <Col md="12" lg="12">
           <ExplanationCard
             points={points}
             repeatedEvent={repeatedEvent}
