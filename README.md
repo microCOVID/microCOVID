@@ -83,3 +83,11 @@ One of the tests generates `computed_scenarios.json`, a json of inputs and
 outputs for various situations. Use
 [`model_comparison.ipynb`](model_comparison.ipynb) to compare the model behavior
 before and after model changes.
+
+
+## Updating Community Infection Values
+### Updating Slider Labels
+To update the prevalance slider Labels shown in the community infection Slider component, you can change the property values `prevalance_slider_label_1, prevalance_slider_label_2, prevalance_slider_label_3, prevalance_slider_label_4, prevalance_slider_label_5, prevalance_slider_label_6`  located in `/src/locals/en.json`.
+### Updating Slider Values
+You can add 4 values to the slider. To modify these values, you can update the property values `prevalance_slider_value_min, prevalance_slider_value_2, prevalance_slider_value_3, prevalance_slider_value_max`  located in `/src/locals/en.json`.
+**Please note that values are in multiples of 100. So a value set at 0.8 will correspond to 80 infections. Another example: a value of 7.5 will correspond to 750 infections.**
