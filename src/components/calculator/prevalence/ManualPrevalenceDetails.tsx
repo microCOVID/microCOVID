@@ -1,7 +1,7 @@
 import { isNumber } from 'lodash'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Card, Form, InputGroup, Row, Tooltip } from 'react-bootstrap'
 import { Trans, useTranslation } from 'react-i18next'
 
@@ -99,6 +99,8 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
   data: CalculatorData
   setter: (newData: CalculatorData) => void
 }> = (props): React.ReactElement => {
+  const [reportedCases, setReportedCases] = useState<string>('0')
+
   const { t } = useTranslation()
   return (
     <Card id={props.id}>
@@ -211,12 +213,15 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
               width: '25px',
               top: '-10px',
             }}
-            value={Math.ceil(props.data.casesPastWeek) / 100 || 0}
+            value={Math.ceil(props.data.casesPastWeek) / 100}
             onChange={(value) => {
               props.setter({
                 ...props.data,
                 casesPastWeek: Math.ceil(((value as number) as never) * 100),
               })
+              setReportedCases(
+                Math.ceil(((value as number) as never) * 100).toString(),
+              )
             }}
             min={dataJson.calculator.prevalence.prevalance_slider_value_min}
             max={dataJson.calculator.prevalence.prevalance_slider_value_max}
@@ -277,14 +282,31 @@ export const ManualPrevalenceDetails: React.FunctionComponent<{
                 ? t('calculator.prevalence.last_week_cases')
                 : t('calculator.prevalence.last_week_cases_no_pop')
             }
-            value={props.data.casesPastWeek || 0}
-            setter={(value) =>
+            // value={props.data.casesPastWeek.toString().charAt(0) === '0' ? props.data.casesPastWeek.toString().slice(1) : props.data.casesPastWeek}
+            value={reportedCases}
+            setter={(value) => {
+              let parsedValue = value
+              if (value.charAt(0) === '0') {
+                parsedValue = value.slice(1)
+              }
+              console.log('parsedValue', parsedValue)
+              setReportedCases(parsedValue.replace(/[^0-9.,]/g, ''))
+              const newVal = parseFloat(parsedValue.replace(/,/g, ''))
+              console.log('newVal', newVal)
+              if (isNaN(newVal)) {
+                console.log('isNaN')
+                props.setter({
+                  ...props.data,
+                  casesPastWeek: 0,
+                })
+                return
+              }
               props.setter({
                 ...props.data,
-                casesPastWeek: parseFloat(value || ''),
+                casesPastWeek: newVal,
               })
-            }
-            inputType="number"
+            }}
+            inputType="text"
             className="hide-number-buttons"
           />
           <PrevalenceField
