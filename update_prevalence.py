@@ -966,7 +966,7 @@ class AppLocation(pydantic.BaseModel, PopulationFilteredLogging):
     def as_csv_data(self) -> Dict[str, str]:
         population = self.population_as_int
         reported = (self.casesPastWeek + 1) / population
-        underreporting = self.prevalenceRatio()
+        underreporting = self.prevalenceRatio() + 4
         delay = min(1.0 + (self.casesIncreasingPercentage / 100), 2.0)
         estimated_prevalence = reported * underreporting * delay
         return {
