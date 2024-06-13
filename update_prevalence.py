@@ -1972,10 +1972,27 @@ def main() -> None:
     for country in sorted(data.countries.values(), key=namegetter):
         app_locations[country.app_key] = country.as_app_data()
         for state in country.states.values():
-            if state.app_key not in app_locations:
-                app_locations[state.app_key] = state.as_app_data()
-            for county in state.counties.values():
-                app_locations[county.app_key] = county.as_app_data()
+            try:
+                state_data: Optional[AppLocation] = None
+                county_data: Dict[str, AppLocation] = {}
+                if state.app_key not in app_locations:
+                    state_data = state.as_app_data()
+                for county in state.counties.values():
+                    county_data[county.app_key] = county.as_app_data()
+                # once everything succeeded, go ahead and attach
+                if state_data is not None:
+                    app_locations[state.app_key] = state_data
+                for key, appdata in county_data.items():
+                    app_locations[key] = appdata
+            except ValueError as e:
+                print_and_log_to_sentry(f"Discarding state-level data from {state} due to error: {e}")
+
+                # calculator expects all subdivisions to have data populated
+                if state.app_key in app_locations[country.app_key].subdivisions:
+                    print_and_log_to_sentry(
+                        f"Removing {state} from app_locations[{country.app_key}].subdivisions"
+                    )
+                    app_locations[country.app_key].subdivisions.remove(state.app_key)
 
     # Format the result
     to_insert: List[str] = []
