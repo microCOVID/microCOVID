@@ -1,6 +1,7 @@
 import {
   CalculatorData,
   DAY_0,
+  ONE_MILLION,
   calculate,
   calculateLocationPersonAverage,
   defaultValues,
@@ -214,6 +215,19 @@ describe('calculate', () => {
     expect(twoTimes?.expectedValue).toBeCloseTo(0.64e6)
     expect(twoTimes?.lowerBound).toBeCloseTo(248888.8, 0)
     expect(twoTimes?.upperBound).toBeCloseTo(1e6)
+  })
+
+  it('Should limit risk to one million', () => {
+    const data = testData({
+      ...baseTestData,
+      riskProfile: 'bars',
+      interaction: 'repeated',
+      personCount: 1,
+      casesPastWeek: 2000000,
+      population: '2,000,001',
+    })
+
+    expect(calcValue(data)).toBeLessThanOrEqual(ONE_MILLION)
   })
 
   it.each`
