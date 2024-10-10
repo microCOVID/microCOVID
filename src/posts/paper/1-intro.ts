@@ -44,7 +44,7 @@ Since then, the project has grown to include like-minded individuals around the 
 
 **Website and calculator:** Dominic Dagradi, Sarah Dobro, Ben Shaya, Deb Lyon, Jeremy Blanchard, Matt Bell, Jenny Wong, Melody Chang, Josh Oreman, Peter Gyongyosi, Michael Cohn, Justin Haaheim, Vince Broz and the microCOVID GitHub community.
 
-**Ongoing Model Researchers:** Catherine Olsson, Ben Shaya, Joshua Oreman, Riley Drake, Joshua Slocum
+**Ongoing Model Researchers:** Catherine Olsson, Ben Shaya, Joshua Oreman, Riley Drake, Alanna Slocum
 
 **Risk Tracker:** Jeremy Blanchard, Catherine Olsson, Joshua Oreman, Ben Shaya 
 
